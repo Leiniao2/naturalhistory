@@ -1,0 +1,267 @@
+{
+  "ages": [
+    {
+      "id": "Cambrian",
+      "displayName": "Cambrian",
+      "startMillionYearsAgo": 541,
+      "endMillionYearsAgo": 485,
+      "description": "The explosion of multicellular life. Seas teem with trilobites, brachiopods, and early arthropods. Land is barren.",
+      "keyEvents": [
+        "Cambrian Explosion — rapid diversification of animal body plans",
+        "First appearance of hard shells and exoskeletons",
+        "Burgess Shale fauna"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Warm",
+        "seaLevel": "High",
+        "oxygenLevel": "Rising",
+        "landCoverage": "Single supercontinent Gondwana"
+      },
+      "transitionEventKeys": ["late_cambrian_extinction", "ordovician_biodiversification"],
+      "slotExpansionAmount": 0,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain"]
+    },
+    {
+      "id": "Ordovician",
+      "displayName": "Ordovician",
+      "startMillionYearsAgo": 485,
+      "endMillionYearsAgo": 444,
+      "description": "Marine life diversifies enormously. First tentative colonization of land by primitive plants. Ends with one of the five great mass extinctions.",
+      "keyEvents": [
+        "Great Ordovician Biodiversification Event",
+        "First primitive land plants (liverworts)",
+        "Late Ordovician Mass Extinction — glaciation wipes out ~85% of species"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Warm then rapidly cooling",
+        "seaLevel": "High then dropping",
+        "oxygenLevel": "Moderate",
+        "landCoverage": "Gondwana drifting south"
+      },
+      "transitionEventKeys": ["late_ordovician_mass_extinction"],
+      "slotExpansionAmount": 1,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Wetland"]
+    },
+    {
+      "id": "Silurian",
+      "displayName": "Silurian",
+      "startMillionYearsAgo": 444,
+      "endMillionYearsAgo": 419,
+      "description": "Recovery from the Ordovician extinction. First vascular plants and jawed fish appear. Arthropods colonize land.",
+      "keyEvents": [
+        "First jawed fish (placoderms)",
+        "First vascular plants on land",
+        "First terrestrial arthropods (scorpions, millipedes)"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Warm and stable",
+        "seaLevel": "High",
+        "oxygenLevel": "Moderate",
+        "landCoverage": "Multiple continents, tropical seas"
+      },
+      "transitionEventKeys": ["land_colonization_surge", "silurian_devonian_boundary"],
+      "slotExpansionAmount": 1,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Wetland", "Hill"]
+    },
+    {
+      "id": "Devonian",
+      "displayName": "Devonian",
+      "startMillionYearsAgo": 419,
+      "endMillionYearsAgo": 359,
+      "description": "The Age of Fish. Forests spread across land. First amphibians emerge from water. Ends with mass extinction.",
+      "keyEvents": [
+        "Diversification of fish — lobe-finned fish evolve",
+        "First forests (Archaeopteris)",
+        "First tetrapods emerge from water",
+        "Late Devonian Mass Extinction — ~75% of species lost"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Warm then cooling",
+        "seaLevel": "High",
+        "oxygenLevel": "Increasing",
+        "landCoverage": "Euramerica and Gondwana"
+      },
+      "transitionEventKeys": ["late_devonian_mass_extinction", "first_tetrapod_emergence"],
+      "slotExpansionAmount": 1,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Wetland", "Hill", "Mountain"]
+    },
+    {
+      "id": "Carboniferous",
+      "displayName": "Carboniferous",
+      "startMillionYearsAgo": 359,
+      "endMillionYearsAgo": 299,
+      "description": "Vast coal swamp forests dominate. Oxygen peaks, enabling giant insects. First reptiles lay amniotic eggs.",
+      "keyEvents": [
+        "Giant coal swamp forests (Club mosses, horsetails)",
+        "Oxygen levels peak ~35% — giant insects possible",
+        "First reptiles with amniotic eggs",
+        "Carboniferous Rainforest Collapse fragments habitats"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Hot then cooling into glaciation",
+        "seaLevel": "Fluctuating",
+        "oxygenLevel": "Peak (35%)",
+        "landCoverage": "Pangaea forming"
+      },
+      "transitionEventKeys": ["rainforest_collapse", "first_amniote_radiation"],
+      "slotExpansionAmount": 2,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Wetland", "Hill", "Mountain", "Desert"]
+    },
+    {
+      "id": "Permian",
+      "displayName": "Permian",
+      "startMillionYearsAgo": 299,
+      "endMillionYearsAgo": 252,
+      "description": "Pangaea fully assembled. Synapsids (mammal ancestors) dominant. Ends with the Great Dying — the worst extinction event in Earth's history.",
+      "keyEvents": [
+        "Pangaea fully assembled — single supercontinent",
+        "Synapsids (pelycosaurs, therapsids) dominate land",
+        "Permian–Triassic Mass Extinction — ~96% of marine species, ~70% of land species lost",
+        "Siberian Traps mega-volcano eruptions trigger extinction"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Hot and arid",
+        "seaLevel": "Low",
+        "oxygenLevel": "Declining",
+        "landCoverage": "Pangaea — one vast supercontinent"
+      },
+      "transitionEventKeys": ["permian_triassic_extinction", "siberian_traps_eruption"],
+      "slotExpansionAmount": 0,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Desert", "Hill", "Mountain"]
+    },
+    {
+      "id": "Triassic",
+      "displayName": "Triassic",
+      "startMillionYearsAgo": 252,
+      "endMillionYearsAgo": 201,
+      "description": "Life slowly recovers. Archosaurs rise and diversify into dinosaurs and pterosaurs. First mammals appear.",
+      "keyEvents": [
+        "Slow recovery from the Great Dying",
+        "Archosaurs radiate — leading to dinosaurs and crocodilians",
+        "First true dinosaurs (late Triassic)",
+        "First mammals appear",
+        "Triassic–Jurassic Extinction — ~76% of species lost"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Hot and dry",
+        "seaLevel": "Moderate",
+        "oxygenLevel": "Low then recovering",
+        "landCoverage": "Pangaea beginning to rift"
+      },
+      "transitionEventKeys": ["triassic_jurassic_extinction", "dinosaur_first_appearance"],
+      "slotExpansionAmount": 2,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Desert", "Hill", "Mountain", "Wetland"]
+    },
+    {
+      "id": "Jurassic",
+      "displayName": "Jurassic",
+      "startMillionYearsAgo": 201,
+      "endMillionYearsAgo": 145,
+      "description": "The Age of Dinosaurs. Giants roam lush fern and conifer forests. First birds evolve from theropod dinosaurs.",
+      "keyEvents": [
+        "Pangaea splits into Laurasia and Gondwana",
+        "Sauropod giants (Brachiosaurus, Diplodocus)",
+        "First birds evolve from feathered theropods (Archaeopteryx)",
+        "Flowering plants begin to appear"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Warm and humid",
+        "seaLevel": "High",
+        "oxygenLevel": "Moderate",
+        "landCoverage": "Laurasia and Gondwana separated"
+      },
+      "transitionEventKeys": ["flowering_plant_first_appearance", "bird_evolution"],
+      "slotExpansionAmount": 2,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Wetland", "Hill", "Mountain"]
+    },
+    {
+      "id": "Cretaceous",
+      "displayName": "Cretaceous",
+      "startMillionYearsAgo": 145,
+      "endMillionYearsAgo": 66,
+      "description": "Flowering plants dominate. Dinosaurs reach peak diversity. Ends with asteroid impact wiping out non-avian dinosaurs.",
+      "keyEvents": [
+        "Flowering plants (angiosperms) radiate and dominate",
+        "Bees and pollination relationships evolve",
+        "Dinosaurs reach peak diversity (T. rex, Triceratops, raptors)",
+        "Chicxulub asteroid impact — Cretaceous–Paleogene Extinction kills ~76% of species including non-avian dinosaurs"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Very warm — no polar ice",
+        "seaLevel": "Very High",
+        "oxygenLevel": "High",
+        "landCoverage": "Continents near modern positions"
+      },
+      "transitionEventKeys": ["cretaceous_paleogene_extinction", "chicxulub_impact"],
+      "slotExpansionAmount": 2,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Wetland", "Hill", "Mountain", "Desert"]
+    },
+    {
+      "id": "Paleogene",
+      "displayName": "Paleogene",
+      "startMillionYearsAgo": 66,
+      "endMillionYearsAgo": 23,
+      "description": "Mammals and birds rapidly fill niches vacated by dinosaurs. Forests recover. Modern mammal orders emerge.",
+      "keyEvents": [
+        "Mammal radiation into all vacated niches",
+        "First primates, whales, bats, and horses appear",
+        "Birds diversify enormously",
+        "Antarctica drifts to pole, begins to freeze",
+        "Paleocene-Eocene Thermal Maximum — extreme warming event"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Warm then cooling",
+        "seaLevel": "High then falling",
+        "oxygenLevel": "Modern levels",
+        "landCoverage": "Near modern, Antarctica isolating"
+      },
+      "transitionEventKeys": ["grassland_expansion", "mammal_diversification_peak"],
+      "slotExpansionAmount": 3,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Wetland", "Hill", "Mountain", "Desert", "Tundra"]
+    },
+    {
+      "id": "Neogene",
+      "displayName": "Neogene",
+      "startMillionYearsAgo": 23,
+      "endMillionYearsAgo": 2.6,
+      "description": "Grasslands spread worldwide. Hominids evolve in Africa. Global cooling accelerates toward the ice ages.",
+      "keyEvents": [
+        "Grasslands dominate — grazing mammals radiate (horses, bison, antelope)",
+        "Great American Biotic Interchange — Americas connect",
+        "First hominids (Australopithecus)",
+        "Global cooling accelerates — Antarctic ice sheet established"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Cooling progressively",
+        "seaLevel": "Falling",
+        "oxygenLevel": "Modern levels",
+        "landCoverage": "Modern configuration"
+      },
+      "transitionEventKeys": ["ice_age_onset", "pleistocene_glaciation_begins"],
+      "slotExpansionAmount": 3,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Wetland", "Hill", "Mountain", "Desert", "Tundra"]
+    },
+    {
+      "id": "Quaternary",
+      "displayName": "Quaternary",
+      "startMillionYearsAgo": 2.6,
+      "endMillionYearsAgo": 0,
+      "description": "Repeated glacial cycles. Megafauna extinctions. Homo sapiens emerge and spread globally.",
+      "keyEvents": [
+        "Repeated glacial and interglacial cycles",
+        "Megafauna extinction — mammoths, sabre-toothed cats, giant sloths lost",
+        "Homo sapiens evolve and colonize every continent",
+        "Holocene — current warm interglacial period"
+      ],
+      "environmentalConditions": {
+        "globalTemp": "Cyclically cold — ice ages",
+        "seaLevel": "Cyclically low (glacials) and high (interglacials)",
+        "oxygenLevel": "Modern levels",
+        "landCoverage": "Modern with glacial exposure of continental shelves"
+      },
+      "transitionEventKeys": [],
+      "slotExpansionAmount": 5,
+      "availableTerrains": ["SaltWater", "FreshWater", "Plain", "Wetland", "Hill", "Mountain", "Desert", "Tundra", "IceSheet"]
+    }
+  ]
+}

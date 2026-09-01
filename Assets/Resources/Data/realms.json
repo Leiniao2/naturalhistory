@@ -1,0 +1,255 @@
+{
+  "realms": [
+    {
+      "id": "nearctic",
+      "displayName": "Nearctic",
+      "type": "Land",
+      "description": "Most of North America, Greenland, and the Mexican highlands.",
+      "subrealms": [
+        "Northeast American Forests",
+        "Great Plains",
+        "American West",
+        "Mexican Drylands",
+        "North Pacific Coast"
+      ],
+      "dominantTerrains": ["Plain", "Hill", "Mountain", "Tundra"],
+      "startingSlots": 5,
+      "color": "#4A90D9"
+    },
+    {
+      "id": "palearctic",
+      "displayName": "Palearctic",
+      "type": "Land",
+      "description": "Europe, Asia north of the Himalayas, and North Africa.",
+      "subrealms": [
+        "Subarctic Eurasia",
+        "Western Eurasia (Europe)",
+        "Central Eurasia",
+        "Eastern Eurasia",
+        "Southern Eurasia (Middle East / North Africa)"
+      ],
+      "dominantTerrains": ["Plain", "Desert", "Tundra", "Mountain"],
+      "startingSlots": 5,
+      "color": "#7B68EE"
+    },
+    {
+      "id": "neotropical",
+      "displayName": "Neotropical",
+      "type": "Land",
+      "description": "South America, Central America, the Caribbean, and Southern Florida.",
+      "subrealms": [
+        "Amazonia",
+        "Andes Mountains & Pacific Coast",
+        "South American Grasslands",
+        "Brazil Cerrado",
+        "Central America & Caribbean"
+      ],
+      "dominantTerrains": ["Wetland", "Plain", "Hill", "Mountain"],
+      "startingSlots": 5,
+      "color": "#2ECC71"
+    },
+    {
+      "id": "afrotropical",
+      "displayName": "Afrotropical",
+      "type": "Land",
+      "description": "Sub-Saharan Africa and the southern Arabian Peninsula.",
+      "subrealms": [
+        "West African Forests",
+        "East African Savannas",
+        "Southern African Deserts",
+        "Madagascar & Indian Ocean Islands"
+      ],
+      "dominantTerrains": ["Plain", "Desert", "Hill", "Wetland"],
+      "startingSlots": 5,
+      "color": "#E67E22"
+    },
+    {
+      "id": "indomalayan",
+      "displayName": "Indomalayan",
+      "type": "Land",
+      "description": "The Indian subcontinent, Southeast Asia, and southern China.",
+      "subrealms": [
+        "Indian Subcontinent",
+        "Southeast Asian Forests",
+        "Malaysia & Western Indonesia"
+      ],
+      "dominantTerrains": ["Wetland", "Plain", "Hill"],
+      "startingSlots": 5,
+      "color": "#F39C12"
+    },
+    {
+      "id": "australasian",
+      "displayName": "Australasian",
+      "type": "Land",
+      "description": "Australia, New Guinea, New Zealand, and surrounding islands.",
+      "subrealms": [
+        "Mainland Australia",
+        "New Zealand",
+        "Australasian Islands & East Indonesia"
+      ],
+      "dominantTerrains": ["Desert", "Plain", "Hill"],
+      "startingSlots": 5,
+      "color": "#E74C3C"
+    },
+    {
+      "id": "oceanian",
+      "displayName": "Oceanian",
+      "type": "Land",
+      "description": "Micronesia, Polynesia, and the Fijian Islands (excludes New Zealand).",
+      "subrealms": [
+        "Hawaii",
+        "Micronesia",
+        "Central Polynesia"
+      ],
+      "dominantTerrains": ["Plain", "Hill"],
+      "startingSlots": 5,
+      "color": "#1ABC9C"
+    },
+    {
+      "id": "antarctic",
+      "displayName": "Antarctic",
+      "type": "Land",
+      "description": "The continent of Antarctica and sub-Antarctic islands.",
+      "subrealms": [
+        "Main Ice-Covered Landmass",
+        "Antarctic Peninsula & Scotia Sea",
+        "Subantarctic Indian Ocean Islands"
+      ],
+      "dominantTerrains": ["IceSheet", "Tundra"],
+      "startingSlots": 5,
+      "color": "#BDC3C7"
+    },
+    {
+      "id": "arctic_ocean",
+      "displayName": "Arctic Ocean",
+      "type": "Marine",
+      "thermalZone": "Polar",
+      "description": "The entire Arctic Ocean, including coastal Alaska, Canada, Greenland, Scandinavia, and Russia.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater", "IceSheet"],
+      "startingSlots": 5,
+      "color": "#A8D8EA"
+    },
+    {
+      "id": "temperate_north_atlantic",
+      "displayName": "Temperate Northern Atlantic",
+      "type": "Marine",
+      "thermalZone": "Temperate",
+      "description": "The North Atlantic, spanning the eastern US/Canada coasts, European Atlantic coasts, Baltic Sea, and Mediterranean Sea.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#3498DB"
+    },
+    {
+      "id": "temperate_north_pacific",
+      "displayName": "Temperate Northern Pacific",
+      "type": "Marine",
+      "thermalZone": "Temperate",
+      "description": "The North Pacific, including the coasts of Russia, Japan, Korea, Alaska, Canada, and the western United States.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#2980B9"
+    },
+    {
+      "id": "tropical_atlantic",
+      "displayName": "Tropical Atlantic",
+      "type": "Marine",
+      "thermalZone": "Tropical",
+      "description": "Warm Atlantic waters including the Caribbean Sea, Gulf of Mexico, Brazil's northern coast, and West Africa.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#F1C40F"
+    },
+    {
+      "id": "western_indo_pacific",
+      "displayName": "Western Indo-Pacific",
+      "type": "Marine",
+      "thermalZone": "Tropical",
+      "description": "The western Indian Ocean, covering the Red Sea, Persian Gulf, East Africa, and Madagascar.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#27AE60"
+    },
+    {
+      "id": "central_indo_pacific",
+      "displayName": "Central Indo-Pacific",
+      "type": "Marine",
+      "thermalZone": "Tropical",
+      "description": "The Coral Triangle — Indonesia, Philippines, northern Australia, and New Guinea. Peak marine biodiversity.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#16A085"
+    },
+    {
+      "id": "eastern_indo_pacific",
+      "displayName": "Eastern Indo-Pacific",
+      "type": "Marine",
+      "thermalZone": "Tropical",
+      "description": "The tropical central and eastern Pacific islands, including Hawaii, Fiji, and French Polynesia.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#1ABC9C"
+    },
+    {
+      "id": "tropical_eastern_pacific",
+      "displayName": "Tropical Eastern Pacific",
+      "type": "Marine",
+      "thermalZone": "Tropical",
+      "description": "The Pacific coast of the Americas, from Baja California to Peru, including the Galápagos Islands.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#D4AC0D"
+    },
+    {
+      "id": "temperate_south_america",
+      "displayName": "Temperate South America",
+      "type": "Marine",
+      "thermalZone": "Temperate",
+      "description": "South American southern coasts, from Peru and southern Brazil down to Tierra del Fuego.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#5D6D7E"
+    },
+    {
+      "id": "temperate_southern_africa",
+      "displayName": "Temperate Southern Africa",
+      "type": "Marine",
+      "thermalZone": "Temperate",
+      "description": "Cooler coastal waters surrounding South Africa, Namibia, and southern Mozambique.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#6E2F1A"
+    },
+    {
+      "id": "temperate_australasia",
+      "displayName": "Temperate Australasia",
+      "type": "Marine",
+      "thermalZone": "Temperate",
+      "description": "The southern half of Australia and the entirety of New Zealand.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater"],
+      "startingSlots": 5,
+      "color": "#C0392B"
+    },
+    {
+      "id": "southern_ocean",
+      "displayName": "Southern Ocean",
+      "type": "Marine",
+      "thermalZone": "Polar",
+      "description": "The sub-Antarctic islands and the continent of Antarctica.",
+      "subrealms": [],
+      "dominantTerrains": ["SaltWater", "IceSheet"],
+      "startingSlots": 5,
+      "color": "#AAB7B8"
+    }
+  ]
+}

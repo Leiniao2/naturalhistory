@@ -1,0 +1,236 @@
+{
+  "genes": [
+    {
+      "id": "swimming_speed",
+      "displayName": "Swimming Speed",
+      "category": "Locomotion",
+      "defaultExpression": 0.3,
+      "description": "Efficiency and speed of aquatic movement. High expression enables deep-sea and open-ocean colonization.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "land_speed",
+      "displayName": "Land Speed",
+      "category": "Locomotion",
+      "defaultExpression": 0.1,
+      "description": "Speed and endurance on terrestrial terrain. Critical for escaping predators and covering large home ranges.",
+      "unlockAge": "Silurian"
+    },
+    {
+      "id": "flight_capability",
+      "displayName": "Flight Capability",
+      "category": "Locomotion",
+      "defaultExpression": 0.0,
+      "description": "Ability to achieve and sustain powered flight. Opens access to aerial and cliff terrain.",
+      "unlockAge": "Carboniferous"
+    },
+    {
+      "id": "burrowing",
+      "displayName": "Burrowing",
+      "category": "Locomotion",
+      "defaultExpression": 0.1,
+      "description": "Ability to excavate and inhabit underground tunnels. Provides shelter and access to subsurface food.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "climbing",
+      "displayName": "Climbing",
+      "category": "Locomotion",
+      "defaultExpression": 0.1,
+      "description": "Arboreal movement and grip strength. Enables exploitation of forest canopy niches.",
+      "unlockAge": "Devonian"
+    },
+    {
+      "id": "carnivory",
+      "displayName": "Carnivory",
+      "category": "Diet",
+      "defaultExpression": 0.3,
+      "description": "Preference and adaptation for consuming animal tissue. High expression increases predation efficiency but requires prey population.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "herbivory",
+      "displayName": "Herbivory",
+      "category": "Diet",
+      "defaultExpression": 0.2,
+      "description": "Adaptation for digesting plant material. Expands enormously with terrestrial plant colonization.",
+      "unlockAge": "Silurian"
+    },
+    {
+      "id": "omnivory",
+      "displayName": "Omnivory",
+      "category": "Diet",
+      "defaultExpression": 0.5,
+      "description": "Dietary flexibility to consume both plant and animal matter. Provides resilience when one food source declines.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "filter_feeding",
+      "displayName": "Filter Feeding",
+      "category": "Diet",
+      "defaultExpression": 0.2,
+      "description": "Ability to extract plankton and microorganisms from water. Very efficient in nutrient-rich marine zones.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "decomposition",
+      "displayName": "Decomposition",
+      "category": "Diet",
+      "defaultExpression": 0.2,
+      "description": "Detritivore ability — consuming dead organic matter. Primarily relevant for Fungi kingdom species.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "nectar_feeding",
+      "displayName": "Nectar Feeding",
+      "category": "Diet",
+      "defaultExpression": 0.0,
+      "description": "Specialization in consuming floral nectar. Enables mutualistic pollination relationships with plant species.",
+      "unlockAge": "Cretaceous"
+    },
+    {
+      "id": "reproduction_rate",
+      "displayName": "Reproduction Rate",
+      "category": "Reproduction",
+      "defaultExpression": 0.3,
+      "description": "Speed of population recovery. High expression enables rapid recovery after population crashes.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "clutch_size",
+      "displayName": "Clutch / Litter Size",
+      "category": "Reproduction",
+      "defaultExpression": 0.4,
+      "description": "Number of offspring produced per reproductive cycle. High clutch = high population ceiling but more resource demand.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "parental_care",
+      "displayName": "Parental Care",
+      "category": "Reproduction",
+      "defaultExpression": 0.1,
+      "description": "Investment in offspring survival after birth. High expression trades quantity for quality — fewer but more viable young.",
+      "unlockAge": "Triassic"
+    },
+    {
+      "id": "asexual_reproduction",
+      "displayName": "Asexual Reproduction",
+      "category": "Reproduction",
+      "defaultExpression": 0.0,
+      "description": "Ability to reproduce without a mate. Powerful colonizer trait — allows single individual to found a new population.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "armor_thickness",
+      "displayName": "Armor / Shell Thickness",
+      "category": "Defense",
+      "defaultExpression": 0.2,
+      "description": "Physical protection via exoskeleton, shell, or dermal armor. Reduces predation loss but increases metabolic cost.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "toxin_production",
+      "displayName": "Toxin Production",
+      "category": "Defense",
+      "defaultExpression": 0.0,
+      "description": "Chemical defense via venom, poison, or noxious secretions. Deters predators and can be used offensively.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "camouflage",
+      "displayName": "Camouflage",
+      "category": "Defense",
+      "defaultExpression": 0.2,
+      "description": "Visual concealment in the environment. Reduces both predation risk and prey detection — dual-edged trait.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "group_defense",
+      "displayName": "Group Defense",
+      "category": "Defense",
+      "defaultExpression": 0.1,
+      "description": "Coordinated pack, herd, or colony behavior for mutual protection. Scales with population size — stronger when populous.",
+      "unlockAge": "Devonian"
+    },
+    {
+      "id": "regeneration",
+      "displayName": "Regeneration",
+      "category": "Defense",
+      "defaultExpression": 0.1,
+      "description": "Ability to regrow lost tissue or limbs. Reduces mortality from injury.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "vision_acuity",
+      "displayName": "Vision Acuity",
+      "category": "Perception",
+      "defaultExpression": 0.3,
+      "description": "Sharpness and range of visual detection. Critical for both predators and prey in open terrain.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "echolocation",
+      "displayName": "Echolocation",
+      "category": "Perception",
+      "defaultExpression": 0.0,
+      "description": "Sound-based navigation and prey detection. Effective in dark, dense, or aquatic environments.",
+      "unlockAge": "Paleogene"
+    },
+    {
+      "id": "electroreception",
+      "displayName": "Electroreception",
+      "category": "Perception",
+      "defaultExpression": 0.0,
+      "description": "Detection of electric fields generated by muscle contractions. Dominant sense in murky aquatic environments.",
+      "unlockAge": "Devonian"
+    },
+    {
+      "id": "chemoreception",
+      "displayName": "Chemoreception",
+      "category": "Perception",
+      "defaultExpression": 0.4,
+      "description": "Sensitivity to chemical signals — smell and taste. Used for prey detection, mate finding, and territory marking.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "lateral_line",
+      "displayName": "Lateral Line",
+      "category": "Perception",
+      "defaultExpression": 0.3,
+      "description": "Pressure wave detection system in aquatic species. Enables schooling behavior and detecting approaching threats.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "cold_tolerance",
+      "displayName": "Cold Tolerance",
+      "category": "Thermoregulation",
+      "defaultExpression": 0.2,
+      "description": "Ability to survive and function in cold environments. Required to colonize Tundra and IceSheet terrain.",
+      "unlockAge": "Ordovician"
+    },
+    {
+      "id": "heat_tolerance",
+      "displayName": "Heat Tolerance",
+      "category": "Thermoregulation",
+      "defaultExpression": 0.3,
+      "description": "Resistance to high temperatures and arid conditions. Required to colonize Desert terrain.",
+      "unlockAge": "Cambrian"
+    },
+    {
+      "id": "endothermy",
+      "displayName": "Endothermy",
+      "category": "Thermoregulation",
+      "defaultExpression": 0.0,
+      "description": "Internal heat regulation — warm-bloodedness. Enables activity in cold climates but requires far higher food intake.",
+      "unlockAge": "Triassic"
+    },
+    {
+      "id": "hibernation",
+      "displayName": "Hibernation",
+      "category": "Thermoregulation",
+      "defaultExpression": 0.0,
+      "description": "Ability to enter dormancy during food-scarce cold periods. Dramatically reduces winter mortality.",
+      "unlockAge": "Carboniferous"
+    }
+  ]
+}

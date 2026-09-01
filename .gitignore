@@ -1,0 +1,29 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Unity asset meta files for ignored files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Steam — never commit a real App ID
+steam_appid.txt
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.sln
