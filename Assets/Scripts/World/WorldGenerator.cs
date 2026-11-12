@@ -43,9 +43,22 @@ namespace NaturalHistory.World
                 var kind = ClassifyTerrain(e, m, temp);
                 if (terrains.TryGetValue(kind, out var terrain))
                     cells[q, r].SetTerrain(terrain);
+                cells[q, r].SetElevation(ToElevationLevel(e, kind));
             }
 
             Debug.Log($"[WorldGenerator] Generated world (seed={seed}).");
+        }
+
+        public const int MaxElevation = 10;
+        const float WaterThreshold = 0.38f; // matches the FreshWater cutoff in ClassifyTerrain
+
+        // Quantize raw elevation into terrace levels: water = 0, land = 1..MaxElevation.
+        // Each land step spans an equal slice of the noise range above the waterline.
+        static int ToElevationLevel(float e, TerrainKind kind)
+        {
+            if (kind is TerrainKind.SaltWater or TerrainKind.FreshWater) return 0;
+            float t = Mathf.InverseLerp(WaterThreshold, 0.9f, e);
+            return Mathf.Clamp(1 + Mathf.FloorToInt(t * MaxElevation), 1, MaxElevation);
         }
 
         // Fractal Brownian Motion: sum octaves at doubling frequency, halving amplitude

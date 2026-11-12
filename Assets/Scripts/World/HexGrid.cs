@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace NaturalHistory.World
 {
+    // ExecuteAlways: the map is also built in Edit mode so it is visible in the
+    // Scene/Game views without pressing Play. Edit-mode cells are DontSave, so they
+    // never get written into Game.unity.
+    [ExecuteAlways]
     public class HexGrid : MonoBehaviour
     {
         public static HexGrid Instance { get; private set; }
@@ -12,7 +16,9 @@ namespace NaturalHistory.World
         [SerializeField] private float cellSize = 1f;
         [SerializeField] private HexCell cellPrefab;
         [SerializeField] private TerrainType defaultTerrain;
-        [SerializeField] private int seed = 0;
+        [SerializeField] private int seed = 0;          // 0 = random each Play
+        [SerializeField] private int previewSeed = 12345; // used in Edit mode when seed is 0
+        [SerializeField] private float elevationStep = 0.2f; // world height of one terrace level
 
         private HexCell[,] cells;
         private Mesh sharedHexMesh;
@@ -20,43 +26,98 @@ namespace NaturalHistory.World
 
         private void Awake()
         {
+            if (!Application.isPlaying) return;
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
         }
 
         private void Start()
         {
+            if (!Application.isPlaying) return;
             if (cellPrefab != null && defaultTerrain != null)
                 Generate();
             else
                 Debug.LogWarning("[HexGrid] Assign cellPrefab and defaultTerrain in the Inspector before entering Play mode.");
         }
 
+#if UNITY_EDITOR
+        private void OnEnable()
+        {
+            if (!Application.isPlaying) SchedulePreview();
+        }
+
+        private void OnDisable()
+        {
+            if (!Application.isPlaying) ClearCells();
+        }
+
+        // Inspector changes (size, seed…) rebuild the preview. Instantiate is not
+        // allowed inside OnValidate, so defer to the next editor tick.
+        private void OnValidate()
+        {
+            if (!Application.isPlaying) SchedulePreview();
+        }
+
+        private void SchedulePreview()
+        {
+            UnityEditor.EditorApplication.delayCall -= BuildPreview;
+            UnityEditor.EditorApplication.delayCall += BuildPreview;
+        }
+
+        private void BuildPreview()
+        {
+            if (this == null || !isActiveAndEnabled || Application.isPlaying) return;
+            if (cellPrefab == null || defaultTerrain == null) return;
+            Generate();
+        }
+
+        [ContextMenu("Regenerate Preview")]
+        private void RegeneratePreview() => BuildPreview();
+#endif
+
+        // Destroys any previously generated cells and meshes (Edit-mode preview or an earlier Generate call).
+        private void ClearCells()
+        {
+            for (int i = transform.childCount - 1; i >= 0; i--)
+            {
+                var child = transform.GetChild(i).gameObject;
+                if (Application.isPlaying) Destroy(child); else DestroyImmediate(child);
+            }
+            foreach (var mesh in meshCache.Values) DestroyMesh(mesh);
+            meshCache.Clear();
+            DestroyMesh(sharedHexMesh);
+            sharedHexMesh = null;
+            cells = null;
+        }
+
+        private static void DestroyMesh(Mesh mesh)
+        {
+            if (mesh == null) return;
+            if (Application.isPlaying) Destroy(mesh); else DestroyImmediate(mesh);
+        }
+
         public void Generate()
         {
+            ClearCells();
             sharedHexMesh = HexMeshGenerator.Create(cellSize * 0.95f);
+            sharedHexMesh.hideFlags = HideFlags.DontSave;
             cells = new HexCell[width, height];
             for (int r = 0; r < height; r++)
                 for (int q = 0; q < width; q++)
                     CreateCell(q, r);
             Debug.Log($"[HexGrid] Generated {width}×{height} grid ({width * height} cells)");
 
-            WorldGenerator.Generate(cells, width, height, seed == 0 ? System.Environment.TickCount : seed);
+            int worldSeed = seed != 0 ? seed : Application.isPlaying ? System.Environment.TickCount : previewSeed;
+            WorldGenerator.Generate(cells, width, height, worldSeed);
             UpdateCellMeshes();
         }
 
-        private static float TerrainVisualHeight(TerrainKind kind) => kind switch
+        // Water sits flat near sea level; land rises one elevationStep per terrace level.
+        private float CellVisualHeight(HexCell cell) => cell.Terrain.kind switch
         {
-            TerrainKind.Mountain   => 1.6f,
-            TerrainKind.IceSheet   => 1.0f,
-            TerrainKind.Hill       => 0.7f,
-            TerrainKind.Tundra     => 0.4f,
-            TerrainKind.Plain      => 0.2f,
-            TerrainKind.Desert     => 0.15f,
-            TerrainKind.Wetland    => 0.12f,
-            TerrainKind.FreshWater => 0.06f,
             TerrainKind.SaltWater  => 0.02f,
-            _                      => 0.2f,
+            TerrainKind.FreshWater => 0.06f,
+            _                      => 0.1f + cell.Elevation * elevationStep,
         };
 
         private void UpdateCellMeshes()
@@ -67,15 +128,16 @@ namespace NaturalHistory.World
             {
                 var cell = cells[q, r];
                 if (cell.Terrain == null) continue;
-                var h = TerrainVisualHeight(cell.Terrain.kind);
+                var h = CellVisualHeight(cell);
                 if (!meshCache.TryGetValue(h, out var mesh))
                 {
                     mesh = HexMeshGenerator.Create(cellSize * 0.95f, h);
+                    mesh.hideFlags = HideFlags.DontSave;
                     meshCache[h] = mesh;
                 }
                 var mf = cell.GetComponent<MeshFilter>();
                 var mc = cell.GetComponent<MeshCollider>();
-                if (mf != null) { mf.mesh = null; mf.sharedMesh = mesh; updated++; }
+                if (mf != null) { mf.sharedMesh = mesh; updated++; }
                 if (mc != null) mc.sharedMesh = mesh;
             }
             Debug.Log($"[HexGrid] UpdateCellMeshes — updated {updated} cells, {meshCache.Count} unique heights");
@@ -88,9 +150,10 @@ namespace NaturalHistory.World
 
             var cell = Instantiate(cellPrefab, worldPos, Quaternion.identity, transform);
             cell.name = $"Cell{coords}";
+            if (!Application.isPlaying) cell.gameObject.hideFlags = HideFlags.DontSave;
 
             var mf = cell.GetComponent<MeshFilter>();
-            if (mf != null) mf.mesh = sharedHexMesh;
+            if (mf != null) mf.sharedMesh = sharedHexMesh;
 
             var mc = cell.GetComponent<MeshCollider>();
             if (mc == null) mc = cell.gameObject.AddComponent<MeshCollider>();

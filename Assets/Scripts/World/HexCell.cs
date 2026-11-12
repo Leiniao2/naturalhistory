@@ -9,6 +9,9 @@ namespace NaturalHistory.World
         public HexCoordinates Coordinates { get; private set; }
         public TerrainType Terrain { get; private set; }
 
+        // Terrace level: 0 = water surface, 1..WorldGenerator.MaxElevation = land
+        public int Elevation { get; private set; }
+
         // Biorealm that currently controls this cell (null = unclaimed)
         public BioRealm ControllingRealm { get; private set; }
 
@@ -21,17 +24,22 @@ namespace NaturalHistory.World
         private Color baseColor = Color.white;
         private bool highlighted;
 
-        private void Awake()
+        private void Awake() => EnsureRenderer();
+
+        // Awake does not run for cells created by the Edit-mode map preview, so this
+        // is also called from Initialize.
+        private void EnsureRenderer()
         {
             if (meshRenderer == null)
                 meshRenderer = GetComponent<MeshRenderer>();
-            propBlock = new MaterialPropertyBlock();
+            propBlock ??= new MaterialPropertyBlock();
             if (meshRenderer == null)
-                Debug.LogError("[HexCell] Awake — MeshRenderer is NULL");
+                Debug.LogError("[HexCell] MeshRenderer is NULL");
         }
 
         public void Initialize(HexCoordinates coords, TerrainType terrain)
         {
+            EnsureRenderer();
             Coordinates = coords;
             SetTerrain(terrain);
         }
@@ -42,7 +50,7 @@ namespace NaturalHistory.World
             if (meshRenderer == null) return;
             if (terrain.material != null)
             {
-                meshRenderer.material = terrain.material;
+                meshRenderer.sharedMaterial = terrain.material;
                 baseColor = Color.white;
             }
             else
@@ -50,6 +58,11 @@ namespace NaturalHistory.World
                 baseColor = terrain.color;
             }
             ApplyColor();
+        }
+
+        public void SetElevation(int elevation)
+        {
+            Elevation = elevation;
         }
 
         public void SetHighlight(bool on)
@@ -83,6 +96,6 @@ namespace NaturalHistory.World
             inhabitants.Remove(species);
         }
 
-        public override string ToString() => $"HexCell{Coordinates}[{Terrain?.kind}]";
+        public override string ToString() => $"HexCell{Coordinates}[{Terrain?.kind}, elev {Elevation}]";
     }
 }
