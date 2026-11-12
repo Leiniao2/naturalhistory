@@ -17,6 +17,18 @@ namespace NaturalHistory.World
         public IReadOnlyList<Species> Inhabitants => inhabitants;
 
         [SerializeField] private MeshRenderer meshRenderer;
+        private MaterialPropertyBlock propBlock;
+        private Color baseColor = Color.white;
+        private bool highlighted;
+
+        private void Awake()
+        {
+            if (meshRenderer == null)
+                meshRenderer = GetComponent<MeshRenderer>();
+            propBlock = new MaterialPropertyBlock();
+            if (meshRenderer == null)
+                Debug.LogError("[HexCell] Awake — MeshRenderer is NULL");
+        }
 
         public void Initialize(HexCoordinates coords, TerrainType terrain)
         {
@@ -27,8 +39,32 @@ namespace NaturalHistory.World
         public void SetTerrain(TerrainType terrain)
         {
             Terrain = terrain;
-            if (meshRenderer && terrain.material)
+            if (meshRenderer == null) return;
+            if (terrain.material != null)
+            {
                 meshRenderer.material = terrain.material;
+                baseColor = Color.white;
+            }
+            else
+            {
+                baseColor = terrain.color;
+            }
+            ApplyColor();
+        }
+
+        public void SetHighlight(bool on)
+        {
+            if (highlighted == on) return;
+            highlighted = on;
+            ApplyColor();
+        }
+
+        private void ApplyColor()
+        {
+            if (meshRenderer == null) return;
+            meshRenderer.GetPropertyBlock(propBlock);
+            propBlock.SetColor("_Color", highlighted ? Color.Lerp(baseColor, Color.white, 0.4f) : baseColor);
+            meshRenderer.SetPropertyBlock(propBlock);
         }
 
         public void SetControllingRealm(BioRealm realm)

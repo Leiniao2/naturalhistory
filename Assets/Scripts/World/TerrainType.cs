@@ -25,7 +25,9 @@ namespace NaturalHistory.World
         public TerrainKind kind;
         public TerrainCategory category;
         [Range(0f, 1f)] public float movementCost;
-        public Material material;
+        public Color color = Color.white;
+        public float visualHeight = 0.1f;
+        public Material material; // optional override; if null, color is applied to the cell's base material
         [TextArea] public string description;
 
         public bool IsWater => category == TerrainCategory.Water;

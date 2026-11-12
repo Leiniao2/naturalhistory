@@ -1,7 +1,7 @@
 using NaturalHistory.Core;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace NaturalHistory.UI
 {
