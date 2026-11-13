@@ -18,37 +18,40 @@ namespace NaturalHistory.World
         static readonly Color NeedleTip = new(0.22f, 0.45f, 0.26f);
         static readonly Color Shrub     = new(0.24f, 0.40f, 0.17f);
 
-        // One large ridged peak plus 1–2 smaller ones, boulders around the foot and, on some
-        // rocky mountains, a few pines. snowLine = fraction of the main peak's height (from the
-        // top) where snow can lie; it only sticks to gentle faces, so cliffs stay bare rock.
-        public static Mesh CreateMountain(System.Random rng, float size, float snowLine)
+        // One large ridged peak plus 0–3 smaller ones, boulders around the foot and, where allowed,
+        // a few pines. snowLine = fraction of the main peak's height (from the top) where snow can
+        // lie; it only sticks to gentle faces, so cliffs stay bare rock. heightScale stretches the
+        // whole massif; rockTint recolours the stone (e.g. red sandstone, blue-grey granite).
+        public static Mesh CreateMountain(System.Random rng, float size, float snowLine, float heightScale, Color rockTint, bool allowTrees)
         {
             var b = new Builder();
-            bool icy         = snowLine >= 0.5f;
-            float mainHeight = size * Range(rng, 0.95f, 1.25f);
+            bool icy         = snowLine >= 0.65f;
+            float mainHeight = size * Range(rng, 0.95f, 1.25f) * heightScale;
             float snowY      = mainHeight * (1f - snowLine);
 
-            var mainCenter = new Vector3(Range(rng, -0.06f, 0.06f), 0f, Range(rng, -0.06f, 0.06f)) * size;
-            AddPeak(b, rng, mainCenter, size * Range(rng, 0.42f, 0.48f), mainHeight, snowY, !icy);
+            var mainCenter = new Vector3(Range(rng, -0.08f, 0.08f), 0f, Range(rng, -0.08f, 0.08f)) * size;
+            AddPeak(b, rng, mainCenter, size * Range(rng, 0.4f, 0.5f), mainHeight, snowY, allowTrees, rockTint);
 
-            int extra   = rng.Next(1, 3);
+            int extra   = rng.Next(0, 4);
             float angle = Range(rng, 0f, 360f);
-            for (int i = 0; i < extra; i++, angle += Range(rng, 110f, 160f))
+            for (int i = 0; i < extra; i++, angle += Range(rng, 90f, 160f))
             {
                 float a = angle * Mathf.Deg2Rad;
-                float d = size * Range(rng, 0.3f, 0.36f);
+                float d = size * Range(rng, 0.28f, 0.38f);
                 var center = new Vector3(Mathf.Sin(a) * d, 0f, Mathf.Cos(a) * d);
-                AddPeak(b, rng, center, size * Range(rng, 0.24f, 0.3f), mainHeight * Range(rng, 0.45f, 0.65f), snowY, !icy);
+                // Occasionally a near-twin summit, so some massifs read as a ridge rather than one cone
+                float rel = rng.NextDouble() < 0.2 ? Range(rng, 0.75f, 0.9f) : Range(rng, 0.4f, 0.65f);
+                AddPeak(b, rng, center, size * Range(rng, 0.22f, 0.32f), mainHeight * rel, snowY, allowTrees, rockTint);
             }
 
-            foreach (var p in Scatter(rng, rng.Next(3, 6), 0.68f * size, 0.08f * size, new List<Vector2>()))
+            foreach (var p in Scatter(rng, rng.Next(2, 7), 0.68f * size, 0.08f * size, new List<Vector2>()))
             {
                 if (p.magnitude < 0.5f * size) continue; // only around the foot, not buried in the slope
-                AddRock(b, rng, new Vector3(p.x, 0f, p.y), size * Range(rng, 0.03f, 0.055f), icy ? Snow * 0.85f : Rock);
+                AddRock(b, rng, new Vector3(p.x, 0f, p.y), size * Range(rng, 0.03f, 0.055f), icy ? Snow * 0.85f : Rock * rockTint);
             }
-            if (!icy && rng.NextDouble() < 0.6)
+            if (allowTrees && rng.NextDouble() < 0.75)
             {
-                foreach (var p in Scatter(rng, rng.Next(3, 7), 0.66f * size, 0.08f * size, new List<Vector2>()))
+                foreach (var p in Scatter(rng, rng.Next(3, 8), 0.66f * size, 0.08f * size, new List<Vector2>()))
                     if (p.magnitude > 0.5f * size)
                         AddConifer(b, rng, new Vector3(p.x, 0f, p.y), size * Range(rng, 0.3f, 0.42f));
             }
@@ -177,11 +180,11 @@ namespace NaturalHistory.World
 
         // Concave stratovolcano: gullied ash slopes turning to basalt near the top, a crater with a
         // lava lake, lava streams down the deepest gullies, a small side cone and a smoke plume.
-        public static Mesh CreateVolcano(System.Random rng, float size)
+        public static Mesh CreateVolcano(System.Random rng, float size, float heightScale)
         {
             const int sides = 16, rings = 6;
             var b = new Builder();
-            float h    = size * Range(rng, 0.8f, 1.0f);
+            float h    = size * Range(rng, 0.8f, 1.0f) * heightScale;
             var below  = Vector3.down * h;
             var g      = ConeGrid(rng, Vector3.zero, 0.58f * size, h, 0.15f * size, sides, rings, 0.22f, 0.05f, 1.7f, out var spokes);
 
@@ -349,9 +352,12 @@ namespace NaturalHistory.World
                     foreach (var p in Spots(0, 2, 0.12f)) AddRock(b, rng, At(p), size * 0.03f, Lichen);
                     break;
                 case TerrainKind.Desert:
-                    foreach (var p in Spots(1, 2, 0.35f))
-                        AddBlob(b, rng, At(p) - Vector3.up * 0.02f * size, Range(rng, 0.14f, 0.2f) * size, 0.22f, 1, Shade(rng, Sand, 0.05f));
-                    foreach (var p in Spots(1, 3, 0.12f)) AddRock(b, rng, At(p), size * Range(rng, 0.03f, 0.06f), Sandstone);
+                    foreach (var p in Spots(1, 3, 0.3f))
+                        AddDune(b, rng, At(p), Range(rng, 0.25f, 0.45f) * size, Range(rng, 0.035f, 0.08f) * size, Shade(rng, Sand, 0.06f));
+                    if (rng.NextDouble() < 0.3)
+                        foreach (var p in Spots(1, 1, 0.3f))
+                            AddButte(b, rng, At(p), Range(rng, 0.07f, 0.12f) * size, Range(rng, 0.1f, 0.2f) * size);
+                    foreach (var p in Spots(0, 3, 0.12f)) AddRock(b, rng, At(p), size * Range(rng, 0.03f, 0.06f), Sandstone);
                     break;
                 case TerrainKind.Hill:
                     foreach (var p in Spots(2, 4, 0.15f)) AddRock(b, rng, At(p), size * Range(rng, 0.04f, 0.07f), Rock);
@@ -382,6 +388,67 @@ namespace NaturalHistory.World
                     return null;
             }
             return b.ToMesh($"{kind}Detail");
+        }
+
+        // Crescent dune: a curved crest with a long, gentle windward face and a short, steep (shaded)
+        // slip face, tapering to nothing at both horns.
+        static void AddDune(Builder b, System.Random rng, Vector3 center, float length, float height, Color color)
+        {
+            const int segs = 8;
+            float yaw  = Range(rng, 0f, Mathf.PI * 2f);
+            var along  = new Vector3(Mathf.Sin(yaw), 0f, Mathf.Cos(yaw));
+            var across = new Vector3(along.z, 0f, -along.x);
+            float bend = Range(rng, -0.35f, 0.35f) * length;
+            var foot = new Vector3[segs + 1]; var crest = new Vector3[segs + 1];
+            var wind = new Vector3[segs + 1]; var slip  = new Vector3[segs + 1];
+            for (int i = 0; i <= segs; i++)
+            {
+                float u   = i / (float)segs * 2f - 1f;
+                float hgt = height * (1f - u * u);
+                foot[i]  = center + along * (u * length * 0.5f) + across * (bend * (1f - u * u)) - Vector3.up * 0.005f;
+                crest[i] = foot[i] + Vector3.up * hgt;
+                wind[i]  = foot[i] - across * hgt * 3f;
+                slip[i]  = foot[i] + across * hgt * 1.2f;
+            }
+            for (int i = 0; i < segs; i++)
+            {
+                var inside = (foot[i] + foot[i + 1]) * 0.5f + Vector3.up * 0.3f * (crest[i].y + crest[i + 1].y - foot[i].y - foot[i + 1].y) * 0.5f;
+                b.AddQuad(wind[i], wind[i + 1], crest[i + 1], crest[i], color * 1.06f, inside);
+                b.AddQuad(crest[i], crest[i + 1], slip[i + 1], slip[i], color * 0.8f, inside);
+            }
+        }
+
+        // Flat-topped sandstone butte: banded strata stepping in toward the top, with talus at the foot.
+        static void AddButte(Builder b, System.Random rng, Vector3 center, float radius, float height)
+        {
+            int sides  = rng.Next(6, 9);
+            var inside = center + Vector3.up * height * 0.5f;
+            var lower  = Ring(rng, center - Vector3.up * 0.01f, radius, sides, 0.2f);
+            const int bands = 3;
+            for (int k = 0; k < bands; k++)
+            {
+                float shrink = Range(rng, 0.88f, 0.96f);
+                float y      = height * (k + 1) / bands;
+                var upper    = new Vector3[sides];
+                for (int i = 0; i < sides; i++)
+                {
+                    var off  = (lower[i] - center) * shrink;
+                    upper[i] = center + new Vector3(off.x, y, off.z);
+                }
+                var band = Shade(rng, k % 2 == 0 ? Sandstone : Sandstone * new Color(0.95f, 0.78f, 0.68f), 0.05f);
+                for (int i = 0; i < sides; i++)
+                    b.AddQuad(lower[i], lower[(i + 1) % sides], upper[(i + 1) % sides], upper[i], band, inside);
+                lower = upper;
+            }
+            var top = center + Vector3.up * height;
+            for (int i = 0; i < sides; i++)
+                b.AddTri(lower[i], lower[(i + 1) % sides], top, Sandstone * 1.08f, inside);
+            for (int i = rng.Next(2, 5); i > 0; i--)
+            {
+                float a = Range(rng, 0f, Mathf.PI * 2f);
+                var at  = center + new Vector3(Mathf.Sin(a), 0f, Mathf.Cos(a)) * radius * Range(rng, 1f, 1.3f);
+                AddRock(b, rng, at, radius * Range(rng, 0.15f, 0.3f), Sandstone);
+            }
         }
 
         // A few thin blades fanning out from one spot.
@@ -427,10 +494,12 @@ namespace NaturalHistory.World
         // Ridged peak on a radial grid: spurs and gullies, concave slopes and a craggy summit.
         // Faces are coloured by height and slope: green-brown foot, banded rock strata, and snow
         // above a ragged snow line on faces gentle enough to hold it.
-        static void AddPeak(Builder b, System.Random rng, Vector3 center, float radius, float height, float snowY, bool vegetatedFoot)
+        static void AddPeak(Builder b, System.Random rng, Vector3 center, float radius, float height, float snowY, bool vegetatedFoot, Color rockTint)
         {
-            const int sides = 11, rings = 5;
-            var g = ConeGrid(rng, center, radius, height * 0.93f, radius * 0.1f, sides, rings, 0.35f, 0.08f, 1.35f, out _);
+            const int rings = 5;
+            int sides = rng.Next(9, 14);
+            var g = ConeGrid(rng, center, radius, height * 0.93f, radius * 0.1f, sides, rings,
+                             Range(rng, 0.2f, 0.5f), Range(rng, 0.05f, 0.11f), Range(rng, 1.1f, 1.6f), out _);
             var apex   = center + new Vector3(Range(rng, -0.06f, 0.06f) * radius, height, Range(rng, -0.06f, 0.06f) * radius);
             var below  = center + Vector3.down * height; // every face of a radial height field points away from here
             float band = height * Range(rng, 0.1f, 0.14f);
@@ -444,7 +513,7 @@ namespace NaturalHistory.World
                     return Shade(rng, Snow, 0.04f);
                 if (vegetatedFoot && y < height * 0.14f && up > 0.4f)
                     return Shade(rng, Foothill, 0.08f);
-                var rock = Mathf.FloorToInt(y / band) % 2 == 0 ? Rock : RockDark;
+                var rock = (Mathf.FloorToInt(y / band) % 2 == 0 ? Rock : RockDark) * rockTint;
                 return Shade(rng, rock, 0.07f) * Mathf.Lerp(0.85f, 1.05f, up); // cliffs a touch darker
             }
 

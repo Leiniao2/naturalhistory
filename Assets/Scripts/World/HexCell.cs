@@ -101,6 +101,33 @@ namespace NaturalHistory.World
             meshRenderer.SetPropertyBlock(propBlock);
         }
 
+        public bool IsWater => Terrain != null && Terrain.kind is TerrainKind.SaltWater or TerrainKind.FreshWater;
+
+        // Colour and texture this cell shows; neighbours blend toward them across the shared edge.
+        public Color BlendTint => baseColor * tintVariation;
+        public Texture BlendTexture =>
+            Terrain != null && Terrain.material != null && Terrain.material.HasProperty(BaseMapId) ? Terrain.material.GetTexture(BaseMapId) : null;
+
+        static readonly int BaseMapId = Shader.PropertyToID("_BaseMap");
+        static readonly int EdgeTintsId = Shader.PropertyToID("_EdgeTint");
+        static readonly int[] EdgeTexIds =
+        {
+            Shader.PropertyToID("_EdgeTex0"), Shader.PropertyToID("_EdgeTex1"), Shader.PropertyToID("_EdgeTex2"),
+            Shader.PropertyToID("_EdgeTex3"), Shader.PropertyToID("_EdgeTex4"), Shader.PropertyToID("_EdgeTex5"),
+        };
+
+        // Neighbour terrain for each of the 6 edges, read by the terrain shader to blend across borders.
+        // Edge e faces the direction 60e + 30 degrees clockwise from +Z. tint.a = 0 disables blending on that edge.
+        public void SetEdgeBlends(Texture[] textures, Vector4[] tints)
+        {
+            if (meshRenderer == null) return;
+            meshRenderer.GetPropertyBlock(propBlock);
+            for (int e = 0; e < 6; e++)
+                propBlock.SetTexture(EdgeTexIds[e], textures[e] != null ? textures[e] : Texture2D.whiteTexture);
+            propBlock.SetVectorArray(EdgeTintsId, tints);
+            meshRenderer.SetPropertyBlock(propBlock);
+        }
+
         public void SetTintVariation(Color tint)
         {
             tintVariation = tint;

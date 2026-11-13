@@ -12,6 +12,13 @@ Shader "NaturalHistory/HexTerrain"
         _SideDarken   ("Side Darken", Range(0, 1)) = 0.35
         _EdgeDarken   ("Hex Edge Darken", Range(0, 1)) = 0.25
         [HideInInspector] _WrapShift ("Map wrap shift (set per cell)", Float) = 0
+        // Neighbour terrain textures, one per edge (set per cell by HexGrid for border blending)
+        [HideInInspector] _EdgeTex0 ("Edge 0", 2D) = "white" {}
+        [HideInInspector] _EdgeTex1 ("Edge 1", 2D) = "white" {}
+        [HideInInspector] _EdgeTex2 ("Edge 2", 2D) = "white" {}
+        [HideInInspector] _EdgeTex3 ("Edge 3", 2D) = "white" {}
+        [HideInInspector] _EdgeTex4 ("Edge 4", 2D) = "white" {}
+        [HideInInspector] _EdgeTex5 ("Edge 5", 2D) = "white" {}
     }
 
     SubShader
@@ -22,6 +29,13 @@ Shader "NaturalHistory/HexTerrain"
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
         TEXTURE2D(_BaseMap); SAMPLER(sampler_BaseMap);
+        TEXTURE2D(_EdgeTex0); TEXTURE2D(_EdgeTex1); TEXTURE2D(_EdgeTex2);
+        TEXTURE2D(_EdgeTex3); TEXTURE2D(_EdgeTex4); TEXTURE2D(_EdgeTex5);
+
+        // Per cell: neighbour tint for each edge (a = 1 → blend across that edge). Globals: tile geometry.
+        float4 _EdgeTint[6];
+        float  _HexApothem;
+        float  _HexBlendWidth;
 
         CBUFFER_START(UnityPerMaterial)
             float4 _BaseMap_ST;
@@ -75,27 +89,66 @@ Shader "NaturalHistory/HexTerrain"
                 return o;
             }
 
+            // Explicit gradients: the sample sits inside a branch that varies across the tile.
+            half3 SampleEdgeTex(int e, float2 uv, float2 dx, float2 dy)
+            {
+                switch (e)
+                {
+                    case 0:  return SAMPLE_TEXTURE2D_GRAD(_EdgeTex0, sampler_BaseMap, uv, dx, dy).rgb;
+                    case 1:  return SAMPLE_TEXTURE2D_GRAD(_EdgeTex1, sampler_BaseMap, uv, dx, dy).rgb;
+                    case 2:  return SAMPLE_TEXTURE2D_GRAD(_EdgeTex2, sampler_BaseMap, uv, dx, dy).rgb;
+                    case 3:  return SAMPLE_TEXTURE2D_GRAD(_EdgeTex3, sampler_BaseMap, uv, dx, dy).rgb;
+                    case 4:  return SAMPLE_TEXTURE2D_GRAD(_EdgeTex4, sampler_BaseMap, uv, dx, dy).rgb;
+                    default: return SAMPLE_TEXTURE2D_GRAD(_EdgeTex5, sampler_BaseMap, uv, dx, dy).rgb;
+                }
+            }
+
+            // Distance from the tile's edge e (facing 60e + 30 degrees clockwise from +Z) toward the centre.
+            float EdgeDistance(int e, float2 local)
+            {
+                float a = radians(60.0 * e + 30.0);
+                return _HexApothem - dot(local, float2(sin(a), cos(a)));
+            }
+
             half4 frag(Varyings i) : SV_Target
             {
                 float3 n  = normalize(i.normalWS);
                 float3 p  = (i.positionWS - float3(_WrapShift, 0, 0)) * _Tiling;
-                bool   top = n.y > 0.5;
 
-                float2 uv = top ? p.xz : (abs(n.x) > abs(n.z) ? p.zy : p.xy);
-                half3 albedo = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, uv * _BaseMap_ST.xy + _BaseMap_ST.zw).rgb;
+                // Top and side projections are blended by surface angle, so the rounded tile edge
+                // fades from the top texture into the darker wall instead of switching at a hard line.
+                float2 topUV   = p.xz * _BaseMap_ST.xy + _BaseMap_ST.zw;
+                float2 sideUV  = abs(n.x) > abs(n.z) ? p.zy : p.xy;
+                half3  topTex  = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, topUV).rgb;
+                half3  sideTex = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, sideUV * _BaseMap_ST.xy + _BaseMap_ST.zw).rgb;
+                half   topW    = smoothstep(0.3, 0.9, n.y);
 
-                if (top)
+                // Border blending: fade toward the terrain across the nearest edge and, near a corner,
+                // the next edge too. Each neighbour weighs 1 at the border and 0 at _HexBlendWidth in,
+                // against 1 for this tile, so both sides of an edge meet at 50/50 and corners at a
+                // three-way mix. Textures are world-projected, so the two sides line up exactly.
+                float2 local  = i.positionWS.xz - UNITY_MATRIX_M._m03_m23;
+                float  angle  = atan2(local.x, local.y);
+                float  sector = (angle < 0 ? angle + TWO_PI : angle) / (PI / 3.0);
+                int    e1     = (int)floor(sector) % 6;
+                int    e2     = frac(sector) < 0.5 ? (e1 + 5) % 6 : (e1 + 1) % 6;
+                half   w1     = _EdgeTint[e1].a * (1.0 - smoothstep(0.0, _HexBlendWidth, EdgeDistance(e1, local)));
+                half   w2     = _EdgeTint[e2].a * (1.0 - smoothstep(0.0, _HexBlendWidth, EdgeDistance(e2, local)));
+                half3  top    = topTex * _Color.rgb;
+                float2 dx     = ddx(topUV), dy = ddy(topUV); // outside the branch: derivatives need uniform flow
+                [branch] if (w1 + w2 > 0.001)
                 {
-                    // Mesh UVs are radial on the top face: 0.5 at the centre, corners at distance 0.5.
-                    // Darken towards the rim so individual hexes stay readable.
-                    float r = length(i.uv - 0.5) * 2.0;
-                    albedo *= 1.0 - _EdgeDarken * smoothstep(0.72, 1.0, r);
+                    half3 n1 = SampleEdgeTex(e1, topUV, dx, dy) * _EdgeTint[e1].rgb;
+                    half3 n2 = SampleEdgeTex(e2, topUV, dx, dy) * _EdgeTint[e2].rgb;
+                    top = (top + n1 * w1 + n2 * w2) / (1.0 + w1 + w2);
                 }
-                else
-                {
-                    albedo *= 1.0 - _SideDarken;
-                }
-                albedo *= _Color.rgb;
+                half3 albedo = lerp(sideTex * (1.0 - _SideDarken) * _Color.rgb, top, topW);
+
+                // Mesh UVs are radial: 0.5 at the centre, corners at distance 0.5. A wide, gentle
+                // darkening toward the rim keeps hexes readable; it eases off where terrain blends
+                // into a neighbour so blended borders don't get an outline.
+                float r = length(i.uv - 0.5) * 2.0;
+                albedo *= 1.0 - _EdgeDarken * topW * smoothstep(0.55, 1.05, r) * (1.0 - 0.7 * saturate(max(w1, w2)));
 
                 Light mainLight = GetMainLight(TransformWorldToShadowCoord(i.positionWS));
                 half  ndotl     = saturate(dot(n, mainLight.direction));
