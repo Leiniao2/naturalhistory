@@ -18,8 +18,21 @@ namespace NaturalHistory.World
         public int Width => width;
         public int Height => height;
 
-        [SerializeField] private int width = 12;
-        [SerializeField] private int height = 8;
+        // World-space XZ extent of all cell centers (x → Rect.x, z → Rect.y).
+        // Odd rows are shifted right by half a cell (offset coordinates).
+        public Rect MapRectXZ
+        {
+            get
+            {
+                float xMax = Mathf.Sqrt(3f) * cellSize * (width - 1 + (height > 1 ? 0.5f : 0f));
+                float zMax = 1.5f * cellSize * (height - 1);
+                var origin = transform.position;
+                return new Rect(origin.x, origin.z, xMax, zMax);
+            }
+        }
+
+        [SerializeField] private int width = 20;
+        [SerializeField] private int height = 30;
         [SerializeField] private float cellSize = 1f;
         [SerializeField] private HexCell cellPrefab;
         [SerializeField] private TerrainType defaultTerrain;

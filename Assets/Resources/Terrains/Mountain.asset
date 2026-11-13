@@ -17,5 +17,5 @@ MonoBehaviour:
   movementCost: 1
   color: {r: 0.48, g: 0.46, b: 0.44, a: 1}
   visualHeight: 0.55
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: 12fa09f8109d04ab894aa75ffdc9a1e8, type: 2}
   description: 

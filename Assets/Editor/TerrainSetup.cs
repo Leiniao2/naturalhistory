@@ -19,10 +19,17 @@ namespace NaturalHistory.Editor
             (TerrainKind.IceSheet,   TerrainCategory.Land,  new Color(0.88f, 0.93f, 0.98f), 0.38f),
         };
 
+        const string ShaderName   = "NaturalHistory/HexTerrain";
+        const string TextureDir   = "Assets/Textures/Terrain";  // {kind}.png, generated with Google Flow
+        const string MaterialDir  = "Assets/Materials/Terrain";
+
         [MenuItem("NaturalHistory/Setup Terrain Materials")]
         public static void SetupTerrainMaterials()
         {
             EnsureFolder("Assets/Resources/Terrains");
+            EnsureFolder(MaterialDir);
+            var shader = Shader.Find(ShaderName);
+            if (shader == null) Debug.LogWarning($"[TerrainSetup] Shader '{ShaderName}' not found; terrains fall back to flat colors.");
 
             foreach (var (kind, cat, color, height) in Definitions)
             {
@@ -38,13 +45,37 @@ namespace NaturalHistory.Editor
                 terrain.movementCost = 1f;
                 terrain.color        = color;
                 terrain.visualHeight = height;
-                terrain.material     = null;
+                terrain.material     = shader != null ? SetupMaterial(kind, shader) : null;
                 EditorUtility.SetDirty(terrain);
             }
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Debug.Log("[TerrainSetup] Terrain assets updated for all 9 TerrainKinds.");
+        }
+
+        // Creates/updates the textured skin material for one terrain kind.
+        static Material SetupMaterial(TerrainKind kind, Shader shader)
+        {
+            var texture = AssetDatabase.LoadAssetAtPath<Texture2D>($"{TextureDir}/{kind}.png");
+            if (texture == null)
+            {
+                Debug.LogWarning($"[TerrainSetup] Missing texture {TextureDir}/{kind}.png; using flat color for {kind}.");
+                return null;
+            }
+
+            var path = $"{MaterialDir}/{kind}.mat";
+            var mat  = AssetDatabase.LoadAssetAtPath<Material>(path);
+            if (mat == null)
+            {
+                mat = new Material(shader);
+                AssetDatabase.CreateAsset(mat, path);
+            }
+            mat.shader = shader;
+            mat.SetTexture("_BaseMap", texture);
+            mat.SetColor("_Color", Color.white);
+            EditorUtility.SetDirty(mat);
+            return mat;
         }
 
         static void EnsureFolder(string path)

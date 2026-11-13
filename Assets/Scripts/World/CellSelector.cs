@@ -20,7 +20,8 @@ namespace NaturalHistory.World
 
         private void Update()
         {
-            if (!Input.GetMouseButtonDown(0)) return;
+            // Act on release so a left-drag that pans the camera doesn't also click a hex
+            if (!Input.GetMouseButtonUp(0) || CameraController.DraggedThisPress) return;
 
             var ray = cam.ScreenPointToRay(Input.mousePosition);
             var cell = Physics.Raycast(ray, out var hit) ? hit.collider.GetComponent<HexCell>() : null;
