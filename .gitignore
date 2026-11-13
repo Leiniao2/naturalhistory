@@ -27,3 +27,7 @@ steam_appid.txt
 *.userprefs
 *.csproj
 *.sln
+
+# Concept editor save backups
+tools/concept-editor/backups/
+__pycache__/

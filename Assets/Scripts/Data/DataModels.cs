@@ -120,4 +120,38 @@ namespace NaturalHistory.Data
         public List<ClimateKeyframe> keyframes;
         public List<string> sources;
     }
+
+    // --- Species templates (species.json) ---
+
+    [Serializable]
+    public class GeneValue
+    {
+        public string gene;           // gene id from genes.json
+        public float expression;      // 0..1
+    }
+
+    [Serializable]
+    public class SpeciesDefinition
+    {
+        public string id;
+        public string commonName;
+        public string scientificName;
+        public string kingdom;        // matches SpeciesKingdom enum
+        public string group;          // e.g. "Arthropod", "Chordate"
+        public string firstAge;       // GeologicalAge name
+        public string lastAge;        // GeologicalAge name; empty = extant
+        public List<string> habitats; // TerrainKind names
+        public string diet;
+        public float sizeCm;
+        public int startingPopulation;
+        public bool playable;
+        public List<GeneValue> genes;
+        public string description;
+    }
+
+    [Serializable]
+    public class SpeciesCollection
+    {
+        public List<SpeciesDefinition> species;
+    }
 }

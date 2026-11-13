@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Natural History · Concept Editor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-view="form">
+  <aside id="sidebar">
+    <div class="brand">Natural History<small>Concept Editor</small></div>
+    <nav id="datasets"></nav>
+    <div class="sidebar-actions">
+      <button id="save-all" class="primary" title="Save all changed files (Ctrl/⌘+S)">Save all</button>
+      <button id="reload" title="Discard changes and reload from disk">Reload</button>
+    </div>
+    <p class="hint">Edits files in <code>Assets/Resources/Data</code>. Previous versions are kept in <code>tools/concept-editor/backups</code>. Ctrl/⌘+Z undoes.</p>
+  </aside>
+
+  <main>
+    <header id="toolbar">
+      <h1 id="dataset-title"></h1>
+      <div id="view-tabs"></div>
+      <div class="spacer"></div>
+      <button id="add" title="Add after the selected entry">+ Add</button>
+      <button id="duplicate">Duplicate</button>
+      <button id="up" title="Move up">↑</button>
+      <button id="down" title="Move down">↓</button>
+      <button id="delete" class="danger">Delete</button>
+    </header>
+
+    <section id="workspace">
+      <div id="list-pane">
+        <input id="search" type="search" placeholder="Filter…">
+        <div id="list"></div>
+      </div>
+      <div id="view"></div>
+      <div id="form"></div>
+    </section>
+
+    <footer id="problems">
+      <button id="problems-summary">Checking…</button>
+      <ul id="problems-list"></ul>
+    </footer>
+  </main>
+
+  <div id="toast"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

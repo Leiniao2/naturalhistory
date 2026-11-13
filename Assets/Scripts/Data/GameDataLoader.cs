@@ -13,11 +13,13 @@ namespace NaturalHistory.Data
         public static IReadOnlyList<RealmDefinition> Realms { get; private set; }
         public static IReadOnlyList<AgeDefinition> Ages { get; private set; }
         public static IReadOnlyList<GeneDefinition> Genes { get; private set; }
+        public static IReadOnlyList<SpeciesDefinition> Species { get; private set; }
         public static IReadOnlyList<ClimateKeyframe> ClimateHistory { get; private set; } // sorted oldest → newest
 
         private static readonly Dictionary<string, RealmDefinition> realmById = new();
         private static readonly Dictionary<string, AgeDefinition> ageById = new();
         private static readonly Dictionary<string, GeneDefinition> geneById = new();
+        private static readonly Dictionary<string, SpeciesDefinition> speciesById = new();
 
         public static void Initialize()
         {
@@ -25,7 +27,8 @@ namespace NaturalHistory.Data
             LoadAges();
             LoadGenes();
             LoadClimateHistory();
-            Debug.Log($"[GameDataLoader] Loaded {Realms.Count} realms, {Ages.Count} ages, {Genes.Count} genes.");
+            LoadSpecies();
+            Debug.Log($"[GameDataLoader] Loaded {Realms.Count} realms, {Ages.Count} ages, {Genes.Count} genes, {Species.Count} species.");
         }
 
         // --- Loaders ---
@@ -64,6 +67,15 @@ namespace NaturalHistory.Data
             ClimateHistory = collection.keyframes.OrderByDescending(k => k.ma).ToList();
         }
 
+        private static void LoadSpecies()
+        {
+            var asset = Resources.Load<TextAsset>("Data/species");
+            var collection = asset != null ? JsonUtility.FromJson<SpeciesCollection>(asset.text) : null;
+            Species = collection?.species ?? new List<SpeciesDefinition>();
+            speciesById.Clear();
+            foreach (var s in Species) speciesById[s.id] = s;
+        }
+
         // --- Lookups ---
 
         public static RealmDefinition GetRealm(string id)
@@ -74,6 +86,9 @@ namespace NaturalHistory.Data
 
         public static GeneDefinition GetGene(string id)
             => geneById.TryGetValue(id, out var g) ? g : null;
+
+        public static SpeciesDefinition GetSpecies(string id)
+            => speciesById.TryGetValue(id, out var s) ? s : null;
 
         public static List<RealmDefinition> GetRealmsByType(string type)
             => Realms.Where(r => r.type == type).ToList();

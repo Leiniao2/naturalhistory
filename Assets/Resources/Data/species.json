@@ -1,0 +1,162 @@
+{
+  "notes": "Species templates (real organisms or groups). firstAge/lastAge are GeologicalAge names; empty lastAge = still alive today. Sizes are typical adult body lengths.",
+  "species": [
+    {
+      "id": "trilobite",
+      "commonName": "Trilobite",
+      "scientificName": "Trilobita",
+      "kingdom": "Animalia",
+      "group": "Arthropod",
+      "firstAge": "Cambrian",
+      "lastAge": "Permian",
+      "habitats": ["SaltWater"],
+      "diet": "Detritivore",
+      "sizeCm": 5,
+      "startingPopulation": 400,
+      "playable": true,
+      "genes": [
+        { "gene": "armor_thickness", "expression": 0.5 },
+        { "gene": "vision_acuity", "expression": 0.4 },
+        { "gene": "burrowing", "expression": 0.3 }
+      ],
+      "description": "Armored marine arthropods with compound eyes; one of the most successful animal groups, surviving almost 300 million years until the end-Permian extinction."
+    },
+    {
+      "id": "anomalocaris",
+      "commonName": "Anomalocaris",
+      "scientificName": "Anomalocaris canadensis",
+      "kingdom": "Animalia",
+      "group": "Radiodont",
+      "firstAge": "Cambrian",
+      "lastAge": "Cambrian",
+      "habitats": ["SaltWater"],
+      "diet": "Carnivore",
+      "sizeCm": 38,
+      "startingPopulation": 60,
+      "playable": true,
+      "genes": [
+        { "gene": "swimming_speed", "expression": 0.6 },
+        { "gene": "carnivory", "expression": 0.8 },
+        { "gene": "vision_acuity", "expression": 0.6 }
+      ],
+      "description": "A Cambrian apex predator from the Burgess Shale: a stem-group arthropod with grasping frontal appendages and large compound eyes."
+    },
+    {
+      "id": "opabinia",
+      "commonName": "Opabinia",
+      "scientificName": "Opabinia regalis",
+      "kingdom": "Animalia",
+      "group": "Stem arthropod",
+      "firstAge": "Cambrian",
+      "lastAge": "Cambrian",
+      "habitats": ["SaltWater"],
+      "diet": "Carnivore",
+      "sizeCm": 7,
+      "startingPopulation": 120,
+      "playable": false,
+      "genes": [
+        { "gene": "vision_acuity", "expression": 0.5 },
+        { "gene": "carnivory", "expression": 0.5 }
+      ],
+      "description": "Five-eyed Burgess Shale animal with a long flexible proboscis ending in a grasping claw."
+    },
+    {
+      "id": "hallucigenia",
+      "commonName": "Hallucigenia",
+      "scientificName": "Hallucigenia sparsa",
+      "kingdom": "Animalia",
+      "group": "Lobopodian",
+      "firstAge": "Cambrian",
+      "lastAge": "Cambrian",
+      "habitats": ["SaltWater"],
+      "diet": "Detritivore",
+      "sizeCm": 2.5,
+      "startingPopulation": 200,
+      "playable": false,
+      "genes": [
+        { "gene": "armor_thickness", "expression": 0.4 },
+        { "gene": "chemoreception", "expression": 0.3 }
+      ],
+      "description": "A small spiny worm on stilt-like legs, related to modern velvet worms; famously first reconstructed upside down."
+    },
+    {
+      "id": "pikaia",
+      "commonName": "Pikaia",
+      "scientificName": "Pikaia gracilens",
+      "kingdom": "Animalia",
+      "group": "Chordate",
+      "firstAge": "Cambrian",
+      "lastAge": "Cambrian",
+      "habitats": ["SaltWater"],
+      "diet": "Filter feeder",
+      "sizeCm": 4,
+      "startingPopulation": 250,
+      "playable": true,
+      "genes": [
+        { "gene": "swimming_speed", "expression": 0.4 },
+        { "gene": "filter_feeding", "expression": 0.6 },
+        { "gene": "lateral_line", "expression": 0.2 }
+      ],
+      "description": "An early chordate with a notochord and zig-zag muscle blocks, related to the ancestors of all vertebrates."
+    },
+    {
+      "id": "haikouichthys",
+      "commonName": "Haikouichthys",
+      "scientificName": "Haikouichthys ercaicunensis",
+      "kingdom": "Animalia",
+      "group": "Jawless vertebrate",
+      "firstAge": "Cambrian",
+      "lastAge": "Cambrian",
+      "habitats": ["SaltWater"],
+      "diet": "Filter feeder",
+      "sizeCm": 2.5,
+      "startingPopulation": 250,
+      "playable": true,
+      "genes": [
+        { "gene": "swimming_speed", "expression": 0.5 },
+        { "gene": "vision_acuity", "expression": 0.3 },
+        { "gene": "lateral_line", "expression": 0.3 }
+      ],
+      "description": "One of the earliest known vertebrates, from the Chengjiang biota of China: a tiny jawless fish with eyes and a skull of cartilage."
+    },
+    {
+      "id": "cameroceras",
+      "commonName": "Cameroceras",
+      "scientificName": "Cameroceras trentonense",
+      "kingdom": "Animalia",
+      "group": "Nautiloid cephalopod",
+      "firstAge": "Ordovician",
+      "lastAge": "Ordovician",
+      "habitats": ["SaltWater"],
+      "diet": "Carnivore",
+      "sizeCm": 300,
+      "startingPopulation": 40,
+      "playable": true,
+      "genes": [
+        { "gene": "armor_thickness", "expression": 0.7 },
+        { "gene": "carnivory", "expression": 0.8 },
+        { "gene": "swimming_speed", "expression": 0.3 }
+      ],
+      "description": "A giant straight-shelled nautiloid, among the largest animals of the Ordovician seas (maximum size is debated; often estimated at several metres)."
+    },
+    {
+      "id": "cooksonia",
+      "commonName": "Cooksonia",
+      "scientificName": "Cooksonia",
+      "kingdom": "Plantae",
+      "group": "Early vascular plant",
+      "firstAge": "Silurian",
+      "lastAge": "Devonian",
+      "habitats": ["FreshWater", "Wetland"],
+      "diet": "Photosynthetic",
+      "sizeCm": 5,
+      "startingPopulation": 1000,
+      "playable": false,
+      "genes": [
+        { "gene": "reproduction_rate", "expression": 0.5 },
+        { "gene": "heat_tolerance", "expression": 0.3 }
+      ],
+      "description": "One of the earliest vascular land plants: leafless, branching stems a few centimetres tall, tipped with spore capsules."
+    }
+  ]
+}
