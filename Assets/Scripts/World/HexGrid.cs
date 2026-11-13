@@ -32,6 +32,10 @@ namespace NaturalHistory.World
             }
         }
 
+        // The map wraps east–west (a cylinder): column -1 is column width-1. Cells are moved by
+        // whole map widths to whichever copy of the world is nearest the camera (RecenterWrap).
+        public float WrapWidth => Mathf.Sqrt(3f) * cellSize * width;
+
         [SerializeField] private int width = 50;
         [SerializeField] private int height = 80;
         [SerializeField] private float cellSize = 1f;
@@ -46,6 +50,7 @@ namespace NaturalHistory.World
         private readonly Dictionary<float, Mesh> meshCache = new();
         private readonly List<Mesh> featureMeshes = new();
         private Material featureMaterial;
+        private float wrapFocusX = float.NaN; // local X the cells were last recentred around
 
         private const int FeatureVariants = 4; // distinct meshes per prop type, reused with random rotation
 
@@ -147,6 +152,7 @@ namespace NaturalHistory.World
             WorldGenerator.Generate(cells, width, height, worldSeed);
             UpdateCellMeshes();
             PlaceFeatures(worldSeed);
+            wrapFocusX = float.NaN; // new cells sit in the base copy; recentre on the next call
             Generated?.Invoke();
         }
 
@@ -166,31 +172,58 @@ namespace NaturalHistory.World
             var icyPeaks   = CreateFeatureVariants(() => MapFeatureMeshes.CreateMountain(rng, cellSize, snowLine: 0.75f));
             var broadleaf  = CreateFeatureVariants(() => MapFeatureMeshes.CreateForest(rng, cellSize, conifer: false));
             var conifers   = CreateFeatureVariants(() => MapFeatureMeshes.CreateForest(rng, cellSize, conifer: true));
+            var jungles    = CreateFeatureVariants(() => MapFeatureMeshes.CreateJungle(rng, cellSize));
+            var reefs      = CreateFeatureVariants(() => MapFeatureMeshes.CreateReef(rng, cellSize));
+            var oases      = CreateFeatureVariants(() => MapFeatureMeshes.CreateOasis(rng, cellSize));
+            var volcanoes  = CreateFeatureVariants(() => MapFeatureMeshes.CreateVolcano(rng, cellSize));
+            // Small terrain props (grass, rocks, reeds…) for cells without a feature
+            var details = new Dictionary<TerrainKind, Mesh[]>();
+            foreach (TerrainKind kind in System.Enum.GetValues(typeof(TerrainKind)))
+            {
+                var variants = CreateFeatureVariants(() => MapFeatureMeshes.CreateDetail(rng, cellSize, kind));
+                if (variants != null) details[kind] = variants;
+            }
 
-            int mountains = 0, forests = 0;
+            int mountains = 0, forests = 0, others = 0;
             for (int r = 0; r < height; r++)
             for (int q = 0; q < width; q++)
             {
                 var cell = cells[q, r];
                 if (cell.Terrain == null) continue;
 
+                // Subtle per-hex brightness/hue jitter so same-terrain tiles don't look stamped
+                float v = 0.92f + 0.12f * (float)rng.NextDouble();
+                cell.SetTintVariation(new Color(v * (0.97f + 0.06f * (float)rng.NextDouble()), v, v * (0.97f + 0.06f * (float)rng.NextDouble())));
+
                 Mesh[] pool;
-                if (cell.IsMountain) { pool = cell.Terrain.kind == TerrainKind.IceSheet ? icyPeaks : rockyPeaks; mountains++; }
-                else if (cell.Feature == TerrainFeature.ConiferForest)   { pool = conifers;  forests++; }
-                else if (cell.Feature == TerrainFeature.BroadleafForest) { pool = broadleaf; forests++; }
-                else continue;
+                switch (cell.Feature)
+                {
+                    case TerrainFeature.Volcano:         pool = volcanoes; others++;    break;
+                    case TerrainFeature.ConiferForest:   pool = conifers;  forests++;   break;
+                    case TerrainFeature.BroadleafForest: pool = broadleaf; forests++;   break;
+                    case TerrainFeature.Jungle:          pool = jungles;   forests++;   break;
+                    case TerrainFeature.Reef:            pool = reefs;     others++;    break;
+                    case TerrainFeature.Oasis:           pool = oases;     others++;    break;
+                    default:
+                        if (cell.IsMountain) { pool = cell.Terrain.kind == TerrainKind.IceSheet ? icyPeaks : rockyPeaks; mountains++; }
+                        else pool = details.TryGetValue(cell.Terrain.kind, out var d) && rng.NextDouble() < 0.75 ? d : null;
+                        break;
+                }
+                if (pool == null) continue;
 
                 AddFeatureObject(cell, pool[rng.Next(pool.Length)], (float)rng.NextDouble() * 360f);
             }
-            Debug.Log($"[HexGrid] PlaceFeatures — {mountains} mountains, {forests} forests");
+            Debug.Log($"[HexGrid] PlaceFeatures — {mountains} mountains, {forests} forests/jungles, {others} volcanoes/reefs/oases");
         }
 
+        // Null if `create` returns null (e.g. a terrain with no detail props).
         private Mesh[] CreateFeatureVariants(System.Func<Mesh> create)
         {
             var variants = new Mesh[FeatureVariants];
             for (int i = 0; i < variants.Length; i++)
             {
                 variants[i] = create();
+                if (variants[i] == null) return null;
                 variants[i].hideFlags = HideFlags.DontSave;
                 featureMeshes.Add(variants[i]);
             }
@@ -261,10 +294,35 @@ namespace NaturalHistory.World
             cells[col, row] = cell;
         }
 
+        // Columns wrap around; rows don't (the poles are edges).
         public HexCell GetCell(int col, int row)
         {
-            if (col < 0 || col >= width || row < 0 || row >= height) return null;
+            if (cells == null || width <= 0 || row < 0 || row >= height) return null;
+            col = ((col % width) + width) % width;
             return cells[col, row];
+        }
+
+        // Shifts each cell by a whole number of map widths so it lies within half a map width
+        // of worldFocusX (normally the point the camera looks at). Called every frame by the
+        // camera; only does work when the focus has moved.
+        public void RecenterWrap(float worldFocusX)
+        {
+            if (cells == null) return;
+            float focus = worldFocusX - transform.position.x;
+            if (Mathf.Abs(focus - wrapFocusX) < 0.01f) return;
+            wrapFocusX = focus;
+
+            float wrap = WrapWidth;
+            for (int r = 0; r < height; r++)
+            for (int q = 0; q < width; q++)
+            {
+                var cell = cells[q, r];
+                var basePos = cell.Coordinates.ToWorldPosition(cellSize);
+                float shift = Mathf.Round((focus - basePos.x) / wrap) * wrap;
+                if (Mathf.Abs(cell.transform.localPosition.x - (basePos.x + shift)) < 0.001f) continue;
+                cell.transform.localPosition = basePos + Vector3.right * shift;
+                cell.SetWrapShift(shift);
+            }
         }
 
         public HexCell GetCell(HexCoordinates coords)

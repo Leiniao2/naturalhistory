@@ -17,6 +17,9 @@ namespace NaturalHistory.Editor
             (TerrainKind.Wetland,    TerrainCategory.Land,  new Color(0.18f, 0.48f, 0.38f), 0.05f),
             (TerrainKind.Tundra,     TerrainCategory.Land,  new Color(0.68f, 0.78f, 0.76f), 0.15f),
             (TerrainKind.IceSheet,   TerrainCategory.Land,  new Color(0.88f, 0.93f, 0.98f), 0.38f),
+            (TerrainKind.Savanna,    TerrainCategory.Land,  new Color(0.78f, 0.68f, 0.30f), 0.08f),
+            (TerrainKind.Rainforest, TerrainCategory.Land,  new Color(0.12f, 0.40f, 0.16f), 0.08f),
+            (TerrainKind.Steppe,     TerrainCategory.Land,  new Color(0.62f, 0.64f, 0.40f), 0.08f),
         };
 
         const string ShaderName   = "NaturalHistory/HexTerrain";
@@ -51,7 +54,7 @@ namespace NaturalHistory.Editor
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
-            Debug.Log("[TerrainSetup] Terrain assets updated for all 9 TerrainKinds.");
+            Debug.Log("[TerrainSetup] Terrain assets updated for all {Definitions.Length} TerrainKinds.");
         }
 
         // Creates/updates the textured skin material for one terrain kind.

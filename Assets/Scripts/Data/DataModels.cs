@@ -39,14 +39,16 @@ namespace NaturalHistory.Data
     [Serializable]
     public class AgeDefinition
     {
-        public string id;
+        public string id;             // GeologicalAge enum name
         public string displayName;
+        public string era;            // Paleozoic | Mesozoic | Cenozoic
         public float startMillionYearsAgo;
         public float endMillionYearsAgo;
+        public int turns;             // game turns spent in this period
         public string description;
         public List<string> keyEvents;
+        public string vegetation;
         public AgeEnvironment environmentalConditions;
-        public List<string> transitionEventKeys;
         public int slotExpansionAmount;
         public List<string> availableTerrains;
     }
@@ -96,5 +98,26 @@ namespace NaturalHistory.Data
     public class TreeNodeCollection
     {
         public List<TreeNodeDefinition> nodes;
+    }
+
+    // --- Climate history (climate_history.json) ---
+
+    [Serializable]
+    public class ClimateKeyframe
+    {
+        public float ma;              // millions of years ago
+        public float temperatureC;    // global mean surface temperature
+        public float co2ppm;
+        public float o2Percent;
+        public float seaLevelM;       // relative to today
+        public float humidityOffset;  // aridity nudge, percentage points of relative humidity
+        public string note;
+    }
+
+    [Serializable]
+    public class ClimateHistoryCollection
+    {
+        public List<ClimateKeyframe> keyframes;
+        public List<string> sources;
     }
 }

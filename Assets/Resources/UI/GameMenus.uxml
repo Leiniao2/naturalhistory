@@ -11,6 +11,51 @@
             <ui:Button name="menu-button" class="hud-button" text="Menu" />
         </ui:VisualElement>
 
+        <!-- Top-centre: turn, period, date -->
+        <ui:VisualElement name="date-bar" class="date-bar">
+            <ui:Button name="age-button" class="age-button">
+                <ui:Label name="age-label" class="age-label" text="Cambrian" picking-mode="Ignore" />
+                <ui:Label name="date-label" class="date-label" text="538.8 Ma · Turn 1" picking-mode="Ignore" />
+            </ui:Button>
+            <ui:Button name="end-turn-button" class="end-turn-button" text="End Turn" />
+        </ui:VisualElement>
+
+        <!-- Bottom-left: world averages -->
+        <ui:VisualElement name="world-panel" class="info-panel world-panel">
+            <ui:Label class="info-title" text="World Climate" />
+            <ui:Label name="world-stats" class="info-stats" text="" />
+            <ui:Label name="world-note" class="info-note" text="" />
+        </ui:VisualElement>
+
+        <!-- Bottom-right: selected tile -->
+        <ui:VisualElement name="tile-panel" class="info-panel tile-panel hidden">
+            <ui:Label name="tile-title" class="info-title" text="Tile" />
+            <ui:Label name="tile-zone" class="info-zone" text="" />
+            <ui:Label name="tile-stats" class="info-stats" text="" />
+        </ui:VisualElement>
+
+        <!-- Geologic timeline: all periods, details of the selected one -->
+        <ui:VisualElement name="age-overlay" class="overlay hidden">
+            <ui:VisualElement class="panel age-panel">
+                <ui:VisualElement class="tree-header">
+                    <ui:Label name="age-panel-title" class="panel-title tree-title" text="Geologic Time" />
+                    <ui:Button name="age-close-button" class="close-button" text="✕" />
+                </ui:VisualElement>
+                <ui:VisualElement class="age-body">
+                    <ui:ScrollView name="age-list" class="age-list" />
+                    <ui:ScrollView class="age-details">
+                        <ui:Label name="age-name" class="age-name" text="" />
+                        <ui:Label name="age-range" class="age-range" text="" />
+                        <ui:Label name="age-description" class="age-description" text="" />
+                        <ui:Label class="age-section" text="Key events" />
+                        <ui:Label name="age-events" class="age-text" text="" />
+                        <ui:Label class="age-section" text="Environment" />
+                        <ui:Label name="age-environment" class="age-text" text="" />
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
         <!-- Pause menu -->
         <ui:VisualElement name="pause-overlay" class="overlay hidden">
             <ui:VisualElement class="panel menu-panel">

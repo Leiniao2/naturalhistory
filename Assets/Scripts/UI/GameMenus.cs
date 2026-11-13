@@ -1,3 +1,5 @@
+using NaturalHistory.Climate;
+using NaturalHistory.Core;
 using NaturalHistory.Data;
 using NaturalHistory.Progression;
 using NaturalHistory.Save;
@@ -15,6 +17,8 @@ namespace NaturalHistory.UI
         private VisualElement root, pauseOverlay, slotsOverlay, slotList;
         private Label epLabel, slotsTitle, toast;
         private TreePanel treePanel;
+        private AgePanel agePanel;
+        private ClimateHud climateHud;
         private bool slotsAreForSaving;
         private float toastHideTime;
 
@@ -64,6 +68,8 @@ namespace NaturalHistory.UI
             slotsTitle   = root.Q<Label>("slots-title");
             toast        = root.Q<Label>("toast");
             treePanel    = new TreePanel(root);
+            agePanel     = new AgePanel(root);
+            climateHud   = new ClimateHud(root);
 
             root.Q<Button>("morphology-button").clicked += () => ToggleTree(Progression?.Morphology);
             root.Q<Button>("ethology-button").clicked   += () => ToggleTree(Progression?.Ethology);
@@ -73,17 +79,43 @@ namespace NaturalHistory.UI
             root.Q<Button>("load-button").clicked       += () => OpenSlots(saving: false);
             root.Q<Button>("quit-button").clicked       += Quit;
             root.Q<Button>("slots-back-button").clicked += CloseSlots;
+            root.Q<Button>("age-button").clicked        += ToggleAges;
 
             cellSelector     = FindAnyObjectByType<CellSelector>();
             cameraController = FindAnyObjectByType<CameraController>();
 
             if (Progression != null) Progression.Changed += OnProgressionChanged;
+            if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated += OnClimateUpdated;
+            if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition += OnAgeTransition;
             OnProgressionChanged();
+            OnClimateUpdated();
         }
 
         private void OnDestroy()
         {
             if (Progression != null) Progression.Changed -= OnProgressionChanged;
+            if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated -= OnClimateUpdated;
+            if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition -= OnAgeTransition;
+        }
+
+        // Fires after every turn (date → climate) and after loading
+        private void OnClimateUpdated()
+        {
+            climateHud.Refresh();
+            if (agePanel.IsOpen) agePanel.Refresh();
+        }
+
+        private void OnAgeTransition(GeologicalAge from, GeologicalAge to)
+        {
+            treePanel.Close();
+            agePanel.Open(newAge: true);
+        }
+
+        private void ToggleAges()
+        {
+            if (agePanel.IsOpen) { agePanel.Close(); return; }
+            treePanel.Close();
+            agePanel.Open();
         }
 
         private void Update()
@@ -91,6 +123,9 @@ namespace NaturalHistory.UI
             if (root == null) return;
 
             if (Input.GetKeyDown(KeyCode.Escape)) HandleEscape();
+            if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !AnyModalOpen())
+                ClimateHud.EndTurn();
+            climateHud.RefreshTile();
             if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)
             {
                 toast.AddToClassList("hidden");
@@ -104,6 +139,7 @@ namespace NaturalHistory.UI
         {
             if (IsOpen(slotsOverlay))  CloseSlots();
             else if (treePanel.IsOpen) treePanel.Close();
+            else if (agePanel.IsOpen)  agePanel.Close();
             else SetPauseOpen(!IsOpen(pauseOverlay));
         }
 
@@ -113,11 +149,13 @@ namespace NaturalHistory.UI
         {
             if (Input.GetMouseButton(0) || Input.GetMouseButton(1) || Input.GetMouseButton(2)) return;
 
-            bool modal = IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen;
+            bool modal = AnyModalOpen();
             bool mapInput = !modal && !PointerOverUI();
             if (cellSelector != null)     cellSelector.enabled     = mapInput;
             if (cameraController != null) cameraController.enabled = !modal; // keep edge/WASD panning near the HUD
         }
+
+        private bool AnyModalOpen() => IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen;
 
         private bool PointerOverUI()
         {
@@ -139,6 +177,7 @@ namespace NaturalHistory.UI
         private void ToggleTree(ProgressionTree tree)
         {
             if (tree == null) return;
+            agePanel.Close();
             if (treePanel.IsOpen && treePanel.CurrentTree == tree) treePanel.Close();
             else treePanel.Open(tree);
         }
@@ -147,7 +186,7 @@ namespace NaturalHistory.UI
 
         private void SetPauseOpen(bool open)
         {
-            if (open) treePanel.Close();
+            if (open) { treePanel.Close(); agePanel.Close(); }
             pauseOverlay.EnableInClassList("hidden", !open);
             if (!open) slotsOverlay.AddToClassList("hidden");
         }

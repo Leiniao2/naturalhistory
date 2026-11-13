@@ -26,6 +26,16 @@ namespace NaturalHistory.Core
         {
             GameDataLoader.Initialize();
             TransitionTo(GameState.MainMenu);
+
+            // There is no main menu scene yet: when the game scene is opened directly, start
+            // playing. Wait one frame so every Start() (map generation, listeners) has run.
+            if (FindAnyObjectByType<World.HexGrid>() != null) StartCoroutine(BeginPlayNextFrame());
+        }
+
+        private System.Collections.IEnumerator BeginPlayNextFrame()
+        {
+            yield return null;
+            BeginPlay();
         }
 
         public void StartNewGame()

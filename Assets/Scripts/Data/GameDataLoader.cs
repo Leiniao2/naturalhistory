@@ -13,6 +13,7 @@ namespace NaturalHistory.Data
         public static IReadOnlyList<RealmDefinition> Realms { get; private set; }
         public static IReadOnlyList<AgeDefinition> Ages { get; private set; }
         public static IReadOnlyList<GeneDefinition> Genes { get; private set; }
+        public static IReadOnlyList<ClimateKeyframe> ClimateHistory { get; private set; } // sorted oldest → newest
 
         private static readonly Dictionary<string, RealmDefinition> realmById = new();
         private static readonly Dictionary<string, AgeDefinition> ageById = new();
@@ -23,6 +24,7 @@ namespace NaturalHistory.Data
             LoadRealms();
             LoadAges();
             LoadGenes();
+            LoadClimateHistory();
             Debug.Log($"[GameDataLoader] Loaded {Realms.Count} realms, {Ages.Count} ages, {Genes.Count} genes.");
         }
 
@@ -53,6 +55,13 @@ namespace NaturalHistory.Data
             Genes = collection.genes;
             geneById.Clear();
             foreach (var g in Genes) geneById[g.id] = g;
+        }
+
+        private static void LoadClimateHistory()
+        {
+            var asset = Resources.Load<TextAsset>("Data/climate_history");
+            var collection = JsonUtility.FromJson<ClimateHistoryCollection>(asset.text);
+            ClimateHistory = collection.keyframes.OrderByDescending(k => k.ma).ToList();
         }
 
         // --- Lookups ---

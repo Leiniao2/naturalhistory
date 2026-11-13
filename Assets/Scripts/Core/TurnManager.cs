@@ -39,7 +39,8 @@ namespace NaturalHistory.Core
 
         public void EndTurn()
         {
-            if (GameManager.Instance.State != GameState.Playing) return;
+            if (GameManager.Instance != null && GameManager.Instance.State != GameState.Playing) return;
+            if (AgeManager.Instance != null && AgeManager.Instance.IsPresentDay) return; // reached 0 Ma
 
             OnTurnEnd?.Invoke(CurrentTurn);
             foreach (var l in listeners) l.OnTurnEnd(CurrentTurn);

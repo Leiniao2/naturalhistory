@@ -34,6 +34,7 @@ namespace NaturalHistory.World
         [SerializeField] private MeshRenderer meshRenderer;
         private MaterialPropertyBlock propBlock;
         private Color baseColor = Color.white;
+        private Color tintVariation = Color.white; // per-cell jitter so identical terrain doesn't look stamped
         private bool highlighted;
         private bool moveTarget;
 
@@ -90,6 +91,22 @@ namespace NaturalHistory.World
 
         public Vector3 SurfacePosition => transform.position + Vector3.up * SurfaceHeight;
 
+        // How far this cell has been moved from its base position by map wrapping. The terrain
+        // shader subtracts it so world-projected textures stay continuous across the seam.
+        public void SetWrapShift(float shift)
+        {
+            if (meshRenderer == null) return;
+            meshRenderer.GetPropertyBlock(propBlock);
+            propBlock.SetFloat("_WrapShift", shift);
+            meshRenderer.SetPropertyBlock(propBlock);
+        }
+
+        public void SetTintVariation(Color tint)
+        {
+            tintVariation = tint;
+            ApplyColor();
+        }
+
         public void SetHighlight(bool on)
         {
             if (highlighted == on) return;
@@ -108,7 +125,7 @@ namespace NaturalHistory.World
         private void ApplyColor()
         {
             if (meshRenderer == null) return;
-            var color = baseColor;
+            var color = baseColor * tintVariation;
             if (moveTarget)  color = Color.Lerp(color, new Color(1f, 0.92f, 0.4f), 0.35f);
             if (highlighted) color = Color.Lerp(color, Color.white, 0.4f);
             meshRenderer.GetPropertyBlock(propBlock);

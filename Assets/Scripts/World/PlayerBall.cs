@@ -18,6 +18,8 @@ namespace NaturalHistory.World
         private HexGrid grid;
         private readonly List<HexCell> moveTargets = new();
         private bool moving;
+        private HexCell hopFrom; // cell being left during a hop
+        private float hopT;      // 0..1 progress of the current hop
 
         // Spawns a ball in any scene that has a HexGrid, so Game.unity doesn't need editing.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -80,31 +82,41 @@ namespace NaturalHistory.World
             moving = false;
             SetCell(cell);
             transform.position = StandPosition(cell);
+            CameraController.Main?.Follow(transform, snap: true);
         }
 
         private void OnCellClicked(HexCell target)
         {
             if (moving || Cell == null || target == Cell) return;
             if (!moveTargets.Contains(target)) return;
+            CameraController.Main?.ResumeFollow();
             StartCoroutine(HopTo(target));
         }
 
         private IEnumerator HopTo(HexCell target)
         {
-            moving = true;
-            var from = transform.position;
-            var to   = StandPosition(target);
+            moving  = true;
+            hopFrom = Cell;
             SetCell(target);
-
-            for (float t = 0f; t < 1f; t += Time.deltaTime / moveTime)
-            {
-                var p = Vector3.Lerp(from, to, t);
-                p.y += Mathf.Sin(t * Mathf.PI) * hopHeight;
-                transform.position = p;
+            for (hopT = 0f; hopT < 1f; hopT += Time.deltaTime / moveTime)
                 yield return null;
-            }
-            transform.position = to;
             moving = false;
+        }
+
+        // Position is derived from the cells every frame, because map wrapping can move cells
+        // (by a whole map width) at any time.
+        private void LateUpdate()
+        {
+            if (Cell == null) return;
+            if (!moving) { transform.position = StandPosition(Cell); return; }
+
+            var from = StandPosition(hopFrom);
+            var to   = StandPosition(Cell);
+            // Hopping across the wrap seam: use the copy of the start cell next to the target
+            if (grid != null) from.x += Mathf.Round((to.x - from.x) / grid.WrapWidth) * grid.WrapWidth;
+            var p = Vector3.Lerp(from, to, hopT);
+            p.y += Mathf.Sin(hopT * Mathf.PI) * hopHeight;
+            transform.position = p;
         }
 
         private void SetCell(HexCell cell)

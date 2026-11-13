@@ -300,6 +300,216 @@
     opacity: 0.35;
 }
 
+/* ---------- Date bar ---------- */
+
+.date-bar {
+    position: absolute;
+    top: 12px;
+    left: 35%;
+    right: 35%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.age-button {
+    min-width: 260px;
+    height: 56px;
+    padding: 2px 16px;
+    background-color: rgba(28, 36, 30, 0.9);
+    border-color: rgb(110, 130, 100);
+    border-width: 1px;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.age-button:hover {
+    background-color: rgba(52, 70, 54, 0.95);
+}
+
+.age-label {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(240, 236, 220);
+}
+
+.date-label {
+    font-size: 14px;
+    color: rgb(190, 200, 180);
+}
+
+.end-turn-button {
+    height: 56px;
+    min-width: 130px;
+    margin-left: 8px;
+    font-size: 19px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgb(70, 120, 74);
+    border-width: 0;
+    border-radius: 6px;
+}
+
+.end-turn-button:hover {
+    background-color: rgb(90, 150, 94);
+}
+
+.end-turn-button:disabled {
+    opacity: 0.35;
+}
+
+/* ---------- Info panels ---------- */
+
+.info-panel {
+    position: absolute;
+    bottom: 12px;
+    width: 300px;
+    padding: 10px 14px;
+    background-color: rgba(28, 36, 30, 0.9);
+    border-color: rgb(110, 130, 100);
+    border-width: 1px;
+    border-radius: 6px;
+}
+
+.world-panel {
+    left: 12px;
+}
+
+.tile-panel {
+    right: 12px;
+}
+
+.info-title {
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: rgb(240, 236, 220);
+    margin-bottom: 4px;
+}
+
+.info-zone {
+    font-size: 16px;
+    color: rgb(240, 210, 110);
+    margin-bottom: 4px;
+}
+
+.info-stats {
+    font-size: 15px;
+    color: rgb(215, 220, 205);
+    white-space: normal;
+}
+
+.info-note {
+    font-size: 13px;
+    -unity-font-style: italic;
+    color: rgb(170, 185, 165);
+    white-space: normal;
+    margin-top: 4px;
+}
+
+/* ---------- Geologic timeline ---------- */
+
+.age-panel {
+    width: 80%;
+    height: 82%;
+    padding: 16px 20px;
+}
+
+.age-body {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.age-list {
+    width: 320px;
+    margin-right: 14px;
+}
+
+.age-row {
+    height: 58px;
+    margin: 3px 0;
+    padding: 4px 12px;
+    justify-content: center;
+    border-radius: 6px;
+    border-left-width: 8px;
+    background-color: rgb(40, 50, 42);
+}
+
+.age-row:hover {
+    background-color: rgb(56, 70, 58);
+}
+
+.age-row.past {
+    opacity: 0.7;
+}
+
+.age-row.future {
+    opacity: 0.45;
+}
+
+.age-row.current {
+    background-color: rgb(70, 92, 66);
+}
+
+.age-row.selected {
+    border-right-width: 3px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+}
+
+.age-row-name {
+    font-size: 17px;
+    -unity-font-style: bold;
+    color: rgb(240, 236, 220);
+}
+
+.age-row-range {
+    font-size: 13px;
+    color: rgb(180, 190, 172);
+}
+
+.age-details {
+    flex-grow: 1;
+    padding: 6px 14px;
+    background-color: rgb(40, 50, 42);
+    border-radius: 6px;
+}
+
+.age-name {
+    font-size: 28px;
+    -unity-font-style: bold;
+    color: rgb(240, 236, 220);
+}
+
+.age-range {
+    font-size: 15px;
+    color: rgb(240, 210, 110);
+    margin-bottom: 8px;
+}
+
+.age-description {
+    font-size: 17px;
+    color: rgb(220, 224, 210);
+    white-space: normal;
+    margin-bottom: 8px;
+}
+
+.age-section {
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: rgb(170, 210, 160);
+    margin-top: 8px;
+}
+
+.age-text {
+    font-size: 15px;
+    color: rgb(210, 214, 200);
+    white-space: normal;
+}
+
 /* ---------- Toast ---------- */
 
 .toast {

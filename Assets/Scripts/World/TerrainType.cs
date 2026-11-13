@@ -16,7 +16,11 @@ namespace NaturalHistory.World
         Desert,
         Wetland,
         Tundra,
-        IceSheet
+        IceSheet,
+        // Added later; appended so existing assets keep their serialized values
+        Savanna,
+        Rainforest,
+        Steppe
     }
 
     // Overlay on top of a cell's terrain (Civ-style). Chosen by WorldGenerator from climate.
@@ -24,7 +28,11 @@ namespace NaturalHistory.World
     {
         None,
         BroadleafForest,
-        ConiferForest
+        ConiferForest,
+        Jungle,   // dense tropical canopy on rainforest / hot wetland
+        Reef,     // coral in warm shallow water
+        Oasis,    // pond and palms in the desert
+        Volcano   // replaces the peaks on a few mountains
     }
 
     [CreateAssetMenu(menuName = "NaturalHistory/TerrainType")]
@@ -41,6 +49,7 @@ namespace NaturalHistory.World
         public bool IsWater => category == TerrainCategory.Water;
         public bool IsHabitable => kind is TerrainKind.Plain or TerrainKind.Hill or
                                           TerrainKind.Wetland or TerrainKind.Desert or
+                                          TerrainKind.Savanna or TerrainKind.Rainforest or TerrainKind.Steppe or
                                           TerrainKind.FreshWater or TerrainKind.SaltWater;
     }
 }

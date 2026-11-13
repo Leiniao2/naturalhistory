@@ -11,6 +11,7 @@ Shader "NaturalHistory/HexTerrain"
         _Tiling       ("World Tiling (texture repeats per unit)", Float) = 0.35
         _SideDarken   ("Side Darken", Range(0, 1)) = 0.35
         _EdgeDarken   ("Hex Edge Darken", Range(0, 1)) = 0.25
+        [HideInInspector] _WrapShift ("Map wrap shift (set per cell)", Float) = 0
     }
 
     SubShader
@@ -28,6 +29,7 @@ Shader "NaturalHistory/HexTerrain"
             float  _Tiling;
             half   _SideDarken;
             half   _EdgeDarken;
+            float  _WrapShift;
         CBUFFER_END
         ENDHLSL
 
@@ -76,7 +78,7 @@ Shader "NaturalHistory/HexTerrain"
             half4 frag(Varyings i) : SV_Target
             {
                 float3 n  = normalize(i.normalWS);
-                float3 p  = i.positionWS * _Tiling;
+                float3 p  = (i.positionWS - float3(_WrapShift, 0, 0)) * _Tiling;
                 bool   top = n.y > 0.5;
 
                 float2 uv = top ? p.xz : (abs(n.x) > abs(n.z) ? p.zy : p.xy);
@@ -176,6 +178,7 @@ Shader "NaturalHistory/HexTerrain"
         float     _Tiling;
         half      _SideDarken;
         half      _EdgeDarken;
+        float     _WrapShift;
 
         struct Input
         {
@@ -193,7 +196,7 @@ Shader "NaturalHistory/HexTerrain"
         void surf(Input IN, inout SurfaceOutput o)
         {
             float3 n   = normalize(IN.worldNormal);
-            float3 p   = IN.worldPos * _Tiling;
+            float3 p   = (IN.worldPos - float3(_WrapShift, 0, 0)) * _Tiling;
             bool   top = n.y > 0.5;
 
             float2 uv = top ? p.xz : (abs(n.x) > abs(n.z) ? p.zy : p.xy);

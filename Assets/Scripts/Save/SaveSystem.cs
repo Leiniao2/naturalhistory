@@ -27,7 +27,7 @@ namespace NaturalHistory.Save
         public int playerRow = -1;
 
         public int turn;                   // 0 when no TurnManager is running
-        public string age;                 // GeologicalAge name, empty when no AgeManager
+        public string age;                 // GeologicalAge name (informational; restored from turn)
 
         public int evolutionPoints;
         public List<string> morphology = new();
@@ -147,8 +147,7 @@ namespace NaturalHistory.Save
                 if (player != null && cell != null) player.PlaceAt(cell);
             }
 
-            if (AgeManager.Instance != null && Enum.TryParse<GeologicalAge>(data.age, out var age))
-                AgeManager.Instance.Restore(age);
+            // The period, date and climate all follow from the turn number
             if (TurnManager.Instance != null && data.turn > 0)
                 TurnManager.Instance.Restore(data.turn);
 
