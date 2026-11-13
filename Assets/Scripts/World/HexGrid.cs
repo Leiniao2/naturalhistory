@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,12 @@ namespace NaturalHistory.World
     public class HexGrid : MonoBehaviour
     {
         public static HexGrid Instance { get; private set; }
+
+        // Raised after every Generate(); listeners place units on the new map
+        public event Action Generated;
+        public bool IsGenerated => cells != null;
+        public int Width => width;
+        public int Height => height;
 
         [SerializeField] private int width = 12;
         [SerializeField] private int height = 8;
@@ -110,6 +117,7 @@ namespace NaturalHistory.World
             int worldSeed = seed != 0 ? seed : Application.isPlaying ? System.Environment.TickCount : previewSeed;
             WorldGenerator.Generate(cells, width, height, worldSeed);
             UpdateCellMeshes();
+            Generated?.Invoke();
         }
 
         // Water sits flat near sea level; land rises one elevationStep per terrace level.
@@ -129,6 +137,7 @@ namespace NaturalHistory.World
                 var cell = cells[q, r];
                 if (cell.Terrain == null) continue;
                 var h = CellVisualHeight(cell);
+                cell.SetSurfaceHeight(h);
                 if (!meshCache.TryGetValue(h, out var mesh))
                 {
                     mesh = HexMeshGenerator.Create(cellSize * 0.95f, h);

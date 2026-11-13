@@ -12,6 +12,9 @@ namespace NaturalHistory.World
         // Terrace level: 0 = water surface, 1..WorldGenerator.MaxElevation = land
         public int Elevation { get; private set; }
 
+        // Local Y of the tile's top face; units stand on this
+        public float SurfaceHeight { get; private set; }
+
         // Biorealm that currently controls this cell (null = unclaimed)
         public BioRealm ControllingRealm { get; private set; }
 
@@ -23,6 +26,7 @@ namespace NaturalHistory.World
         private MaterialPropertyBlock propBlock;
         private Color baseColor = Color.white;
         private bool highlighted;
+        private bool moveTarget;
 
         private void Awake() => EnsureRenderer();
 
@@ -65,6 +69,13 @@ namespace NaturalHistory.World
             Elevation = elevation;
         }
 
+        public void SetSurfaceHeight(float height)
+        {
+            SurfaceHeight = height;
+        }
+
+        public Vector3 SurfacePosition => transform.position + Vector3.up * SurfaceHeight;
+
         public void SetHighlight(bool on)
         {
             if (highlighted == on) return;
@@ -72,11 +83,22 @@ namespace NaturalHistory.World
             ApplyColor();
         }
 
+        // Marks a hex the player's unit can move to this turn (lighter yellow tint)
+        public void SetMoveTarget(bool on)
+        {
+            if (moveTarget == on) return;
+            moveTarget = on;
+            ApplyColor();
+        }
+
         private void ApplyColor()
         {
             if (meshRenderer == null) return;
+            var color = baseColor;
+            if (moveTarget)  color = Color.Lerp(color, new Color(1f, 0.92f, 0.4f), 0.35f);
+            if (highlighted) color = Color.Lerp(color, Color.white, 0.4f);
             meshRenderer.GetPropertyBlock(propBlock);
-            propBlock.SetColor("_Color", highlighted ? Color.Lerp(baseColor, Color.white, 0.4f) : baseColor);
+            propBlock.SetColor("_Color", color);
             meshRenderer.SetPropertyBlock(propBlock);
         }
 

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace NaturalHistory.World
@@ -5,6 +6,9 @@ namespace NaturalHistory.World
     public class CellSelector : MonoBehaviour
     {
         public static HexCell Selected { get; private set; }
+
+        // Fired on every left-click that lands on a hex
+        public static event Action<HexCell> CellClicked;
 
         private Camera cam;
         private GUIStyle boxStyle;
@@ -19,10 +23,9 @@ namespace NaturalHistory.World
             if (!Input.GetMouseButtonDown(0)) return;
 
             var ray = cam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out var hit))
-                Select(hit.collider.GetComponent<HexCell>());
-            else
-                Select(null);
+            var cell = Physics.Raycast(ray, out var hit) ? hit.collider.GetComponent<HexCell>() : null;
+            Select(cell);
+            if (cell != null) CellClicked?.Invoke(cell);
         }
 
         private static void Select(HexCell cell)
