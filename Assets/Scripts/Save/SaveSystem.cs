@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NaturalHistory.Core;
+using NaturalHistory.Players;
 using NaturalHistory.Progression;
 using NaturalHistory.World;
 using UnityEngine;
@@ -23,8 +24,10 @@ namespace NaturalHistory.Save
         public int mapHeight;
         public int worldSeed;
 
-        public int playerCol = -1;
+        public int playerCol = -1;         // human player's unit
         public int playerRow = -1;
+
+        public List<PlayerSetup> players = new(); // empty in saves from before players existed
 
         public int turn;                   // 0 when no TurnManager is running
         public string age;                 // GeologicalAge name (informational; restored from turn)
@@ -120,6 +123,8 @@ namespace NaturalHistory.Save
                 age        = AgeManager.Instance != null ? AgeManager.Instance.CurrentAge.ToString() : "",
             };
 
+            if (PlayerManager.Instance != null) data.players = PlayerManager.Instance.CurrentSetups();
+
             var player = UnityEngine.Object.FindAnyObjectByType<PlayerBall>();
             if (player != null && player.Cell != null)
                 (data.playerCol, data.playerRow) = player.Cell.Coordinates.ToOffsetCoordinates();
@@ -136,6 +141,9 @@ namespace NaturalHistory.Save
 
         private static void Apply(SaveData data)
         {
+            // Before the map: PlayerManager places everyone when it is generated
+            PlayerManager.Instance?.Restore(data.players);
+
             var grid = HexGrid.Instance;
             if (grid != null)
             {

@@ -510,6 +510,251 @@
     white-space: normal;
 }
 
+/* ---------- Players ---------- */
+
+.players-bar {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.player-chip {
+    flex-direction: row;
+    align-items: center;
+    height: 34px;
+    margin: 0 0 4px 0;
+    padding: 0 12px 0 6px;
+    background-color: rgba(28, 36, 30, 0.88);
+    border-color: rgb(110, 130, 100);
+    border-width: 1px;
+    border-radius: 6px;
+}
+
+.player-chip:hover {
+    background-color: rgba(52, 70, 54, 0.95);
+}
+
+.player-chip.human {
+    border-color: rgb(240, 210, 110);
+    border-width: 2px;
+}
+
+.player-chip-name {
+    font-size: 16px;
+    color: rgb(235, 232, 220);
+    margin-left: 8px;
+}
+
+.player-chip-tag {
+    font-size: 12px;
+    color: rgb(240, 210, 110);
+    margin-left: 6px;
+}
+
+/* Two-colour band: primary over secondary */
+.band {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    overflow: hidden;
+    border-color: rgba(0, 0, 0, 0.6);
+    border-width: 1px;
+}
+
+.band-half {
+    flex-grow: 1;
+}
+
+.band-large {
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+}
+
+.faction-panel {
+    width: 900px;
+    height: 80%;
+    padding: 16px 20px;
+}
+
+.faction-animals {
+    flex-grow: 1;
+    margin-top: 6px;
+}
+
+.animal-row {
+    margin: 4px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left-width: 6px;
+    border-left-color: rgb(90, 100, 90);
+    background-color: rgb(40, 50, 42);
+}
+
+.animal-row.active {
+    border-left-color: rgb(120, 200, 110);
+    background-color: rgb(50, 68, 50);
+}
+
+.animal-row.inactive {
+    opacity: 0.6;
+}
+
+.animal-header {
+    flex-direction: row;
+    align-items: center;
+}
+
+.animal-name {
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: rgb(240, 236, 220);
+}
+
+.animal-scientific {
+    font-size: 15px;
+    -unity-font-style: italic;
+    color: rgb(190, 200, 180);
+    margin-left: 8px;
+    flex-grow: 1;
+}
+
+.animal-status {
+    font-size: 14px;
+    color: rgb(240, 210, 110);
+}
+
+.animal-description {
+    font-size: 15px;
+    color: rgb(210, 214, 200);
+    white-space: normal;
+    margin-top: 2px;
+}
+
+/* ---------- New game ---------- */
+
+.setup-panel {
+    width: 1100px;
+    max-height: 90%;
+}
+
+.setup-count-row {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.setup-count-label {
+    font-size: 20px;
+    color: rgb(235, 232, 220);
+    margin-right: 12px;
+}
+
+.count-button {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: rgb(235, 232, 220);
+    background-color: rgb(52, 66, 54);
+    border-width: 0;
+    border-radius: 6px;
+}
+
+.count-button:hover {
+    background-color: rgb(76, 98, 78);
+}
+
+.setup-count {
+    width: 48px;
+    font-size: 22px;
+    -unity-font-style: bold;
+    color: rgb(240, 210, 110);
+    -unity-text-align: middle-center;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.setup-list {
+    flex-shrink: 1;
+    max-height: 600px;
+}
+
+.setup-row {
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    margin: 3px 0;
+    padding: 0 10px;
+    border-radius: 6px;
+    background-color: rgb(40, 50, 42);
+}
+
+.setup-seat {
+    width: 70px;
+    font-size: 16px;
+    color: rgb(240, 210, 110);
+}
+
+.setup-band {
+    width: 36px;
+    height: 36px;
+    margin: 0 12px 0 0;
+    padding: 0;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.setup-faction {
+    width: 260px;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.setup-name {
+    flex-grow: 1;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.setup-category {
+    width: 130px;
+    font-size: 13px;
+    color: rgb(180, 190, 172);
+}
+
+.setup-hint {
+    font-size: 14px;
+    color: rgb(170, 185, 165);
+    white-space: normal;
+    margin: 8px 0;
+}
+
+.setup-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.setup-action {
+    width: 180px;
+    margin-left: 10px;
+}
+
+.setup-action.start {
+    background-color: rgb(63, 122, 68);
+}
+
+.setup-action.start:hover {
+    background-color: rgb(80, 150, 85);
+}
+
 /* ---------- Toast ---------- */
 
 .toast {

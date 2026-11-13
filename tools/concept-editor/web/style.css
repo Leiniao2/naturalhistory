@@ -149,6 +149,12 @@ body[data-view="graph"] #form, body[data-view="chart"] #form, body[data-view="ti
 .table-row { display: grid; grid-template-columns: 1fr 110px 34px; gap: 6px; align-items: center; }
 .table-row.head { color: var(--muted); font-size: 12px; }
 .icon-btn { padding: 4px; }
+.records { display: flex; flex-direction: column; gap: 8px; }
+.record { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; background: #1a211c; }
+.record-head { display: flex; align-items: center; gap: 4px; margin-bottom: 6px; }
+.record .field { margin-bottom: 8px; }
+.band-preview { display: inline-flex; flex-direction: column; width: 14px; height: 14px; border-radius: 3px; overflow: hidden; border: 1px solid #000; vertical-align: middle; }
+.band-preview span { flex: 1; }
 
 /* ---------- Problems ---------- */
 

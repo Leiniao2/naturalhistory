@@ -28,7 +28,7 @@ BACKUP_DIR = EDITOR_DIR / "backups"
 STATIC_DIR = EDITOR_DIR / "web"
 
 # Only these files can be read or written through the API
-DATASETS = ["ages", "climate_history", "genes", "realms", "morphology", "ethology", "species"]
+DATASETS = ["ages", "climate_history", "genes", "realms", "morphology", "ethology", "species", "factions"]
 MAX_BACKUPS_PER_DATASET = 50
 
 

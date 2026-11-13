@@ -337,7 +337,9 @@ function renderList() {
       onclick: () => selectItem(i),
       title: errs.map(p => p.msg).join('\n'),
     },
-      h('div', { class: 'item-label' }, d.label(it), level ? h('span', { class: `dot ${level}` }) : null),
+      h('div', { class: 'item-label' },
+        d.swatch ? h('span', { class: 'band-preview' }, d.swatch(it).map(c => { const e = h('span'); e.style.background = c; return e; })) : null,
+        d.label(it), level ? h('span', { class: `dot ${level}` }) : null),
       d.sub ? h('div', { class: 'item-sub' }, d.sub(it)) : null));
   });
   $('#list').replaceChildren(...rows);
@@ -358,8 +360,8 @@ function renderForm() {
 }
 
 // One labelled field. `owner` is the object holding the value (item, or a nested object).
-function fieldRow(f, owner, item) {
-  const id = `f-${f.key}`;
+function fieldRow(f, owner, item, idPrefix = 'f') {
+  const id = `${idPrefix}-${f.key}`;
   return h('div', { class: `field type-${f.type}` },
     h('label', { for: id }, f.label),
     fieldInput(f, owner, item, id),
@@ -460,6 +462,22 @@ function fieldInput(f, owner, item, id) {
           h('button', { type: 'button', class: 'icon-btn', title: 'Remove row',
             onclick: () => mutate(() => rows.splice(r, 1), { structural: true }) }, '✕'))),
         h('button', { type: 'button', class: 'small', onclick: () => mutate(() => rows.push(f.newRow()), { structural: true }) }, '+ Add row'));
+    }
+    case 'records': {
+      // List of sub-forms, for rows with too many fields for a table
+      const rows = owner[f.key] ||= [];
+      const move = (r, d) => mutate(() => rows.splice(r + d, 0, rows.splice(r, 1)[0]), { structural: true });
+      return h('div', { class: 'records' },
+        rows.map((row, r) => h('div', { class: 'record' },
+          h('div', { class: 'record-head' },
+            h('b', {}, f.recordLabel ? f.recordLabel(row, r) : `#${r + 1}`),
+            h('span', { class: 'spacer' }),
+            h('button', { type: 'button', class: 'icon-btn', title: 'Move up', disabled: r === 0, onclick: () => move(r, -1) }, '↑'),
+            h('button', { type: 'button', class: 'icon-btn', title: 'Move down', disabled: r === rows.length - 1, onclick: () => move(r, 1) }, '↓'),
+            h('button', { type: 'button', class: 'icon-btn', title: 'Remove',
+              onclick: () => mutate(() => rows.splice(r, 1), { structural: true }) }, '✕')),
+          f.fields.map(sub => fieldRow(sub, row, item, `${id}-${r}`)))),
+        h('button', { type: 'button', class: 'small', onclick: () => mutate(() => rows.push(f.newRow()), { structural: true }) }, f.addLabel || '+ Add'));
     }
   }
   return h('span', {}, `Unsupported field type ${f.type}`);

@@ -145,6 +145,10 @@ namespace NaturalHistory.Data
         public float sizeCm;
         public int startingPopulation;
         public bool playable;
+        public string model;          // optional Resources path of a map model, e.g. "Models/Species/ActinophrysSol"
+        public string mapStyle;       // ColonyStyle name: Drift, Float, Ground, Soar, Swarm, Swim (default Drift)
+        public int colonySize;        // individuals shown on the map; 0 = the map style's default
+        public float mapScale;        // size multiplier on the map (e.g. a bird modelled on a tall perch); 0 = 1
         public List<GeneValue> genes;
         public string description;
     }
@@ -153,5 +157,38 @@ namespace NaturalHistory.Data
     public class SpeciesCollection
     {
         public List<SpeciesDefinition> species;
+    }
+
+    // --- Factions (factions.json) ---
+    // A faction is what a player plays as, like a civilization in Civ: a name, a two-colour band
+    // and iconic animals that activate when the game reaches their geological period.
+
+    [Serializable]
+    public class IconicAnimalDefinition
+    {
+        public string name;
+        public string scientificName;
+        public string age;                // GeologicalAge name; the animal activates when this period begins
+        public string description;
+        public int bonusEvolutionPoints;  // granted to the faction's player on activation
+    }
+
+    [Serializable]
+    public class FactionDefinition
+    {
+        public string id;
+        public string displayName;        // default player name; players can type their own
+        public string category;           // "Modern realm" | "Paleocontinent" | "Ancient ocean"
+        public string realm;              // optional realms.json id
+        public string primaryColor;       // hex, e.g. "#2F6DB5"
+        public string secondaryColor;
+        public string description;
+        public List<IconicAnimalDefinition> iconicAnimals;
+    }
+
+    [Serializable]
+    public class FactionCollection
+    {
+        public List<FactionDefinition> factions;
     }
 }

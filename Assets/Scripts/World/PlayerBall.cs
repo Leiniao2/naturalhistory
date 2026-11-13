@@ -12,6 +12,7 @@ namespace NaturalHistory.World
         [SerializeField] private float moveTime = 0.25f; // seconds per hop
         [SerializeField] private float hopHeight = 0.4f;
         [SerializeField] private Color color    = new(0.9f, 0.2f, 0.15f);
+        [SerializeField] private Color bandColor = new(0.95f, 0.9f, 0.8f);
 
         public HexCell Cell { get; private set; }
 
@@ -20,6 +21,9 @@ namespace NaturalHistory.World
         private bool moving;
         private HexCell hopFrom; // cell being left during a hop
         private float hopT;      // 0..1 progress of the current hop
+        private MeshRenderer ballRenderer, bandRenderer;
+        private TextMesh nameLabel;
+        private string playerName;
 
         // Spawns a ball in any scene that has a HexGrid, so Game.unity doesn't need editing.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -53,12 +57,42 @@ namespace NaturalHistory.World
             Destroy(sphere.GetComponent<Collider>()); // clicks should pass through to the hex below
             sphere.transform.SetParent(transform, false);
             sphere.transform.localScale = Vector3.one * radius * 2f;
-            sphere.GetComponent<MeshRenderer>().material.color = color;
+            ballRenderer = sphere.GetComponent<MeshRenderer>();
+
+            // Second colour of the player's band, around the equator
+            var band = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+            band.name = "Band";
+            Destroy(band.GetComponent<Collider>());
+            band.transform.SetParent(transform, false);
+            band.transform.localScale = new Vector3(radius * 2.08f, radius * 0.22f, radius * 2.08f);
+            bandRenderer = band.GetComponent<MeshRenderer>();
+            ApplyColors();
+        }
+
+        // The player's colour band and name (set by PlayerManager; may arrive before Start)
+        public void SetColors(Color primary, Color secondary, string displayName)
+        {
+            color      = primary;
+            bandColor  = secondary;
+            playerName = displayName;
+            ApplyColors();
+        }
+
+        private void ApplyColors()
+        {
+            if (ballRenderer == null) return;
+            ballRenderer.material.color = color;
+            bandRenderer.material.color = bandColor;
+            if (string.IsNullOrEmpty(playerName)) return;
+            if (nameLabel == null) nameLabel = Players.PlayerMarker.CreateLabel(transform, playerName, color, radius + 0.15f);
+            nameLabel.text  = playerName;
+            nameLabel.color = Color.Lerp(color, Color.white, 0.55f);
         }
 
         // Start on the land cell closest to the map center (any cell if the map is all water).
         private void PlaceOnStartCell()
         {
+            if (Players.PlayerManager.Instance != null) return; // it places the ball on the human player's start cell
             HexCell best = null;
             float bestDist = float.MaxValue;
             var center = new Vector2((grid.Width - 1) * 0.5f, (grid.Height - 1) * 0.5f);
@@ -78,6 +112,7 @@ namespace NaturalHistory.World
         // Teleports the ball onto a cell (start of game, loading a save).
         public void PlaceAt(HexCell cell)
         {
+            if (grid == null) grid = HexGrid.Instance; // may be called before Start
             StopAllCoroutines();
             moving = false;
             SetCell(cell);

@@ -15,11 +15,13 @@ namespace NaturalHistory.Data
         public static IReadOnlyList<GeneDefinition> Genes { get; private set; }
         public static IReadOnlyList<SpeciesDefinition> Species { get; private set; }
         public static IReadOnlyList<ClimateKeyframe> ClimateHistory { get; private set; } // sorted oldest → newest
+        public static IReadOnlyList<FactionDefinition> Factions { get; private set; }
 
         private static readonly Dictionary<string, RealmDefinition> realmById = new();
         private static readonly Dictionary<string, AgeDefinition> ageById = new();
         private static readonly Dictionary<string, GeneDefinition> geneById = new();
         private static readonly Dictionary<string, SpeciesDefinition> speciesById = new();
+        private static readonly Dictionary<string, FactionDefinition> factionById = new();
 
         public static void Initialize()
         {
@@ -28,7 +30,8 @@ namespace NaturalHistory.Data
             LoadGenes();
             LoadClimateHistory();
             LoadSpecies();
-            Debug.Log($"[GameDataLoader] Loaded {Realms.Count} realms, {Ages.Count} ages, {Genes.Count} genes, {Species.Count} species.");
+            LoadFactions();
+            Debug.Log($"[GameDataLoader] Loaded {Realms.Count} realms, {Ages.Count} ages, {Genes.Count} genes, {Species.Count} species, {Factions.Count} factions.");
         }
 
         // --- Loaders ---
@@ -76,6 +79,19 @@ namespace NaturalHistory.Data
             foreach (var s in Species) speciesById[s.id] = s;
         }
 
+        private static void LoadFactions()
+        {
+            var asset = Resources.Load<TextAsset>("Data/factions");
+            var collection = asset != null ? JsonUtility.FromJson<FactionCollection>(asset.text) : null;
+            Factions = collection?.factions ?? new List<FactionDefinition>();
+            factionById.Clear();
+            foreach (var f in Factions)
+            {
+                f.iconicAnimals ??= new List<IconicAnimalDefinition>();
+                factionById[f.id] = f;
+            }
+        }
+
         // --- Lookups ---
 
         public static RealmDefinition GetRealm(string id)
@@ -89,6 +105,9 @@ namespace NaturalHistory.Data
 
         public static SpeciesDefinition GetSpecies(string id)
             => speciesById.TryGetValue(id, out var s) ? s : null;
+
+        public static FactionDefinition GetFaction(string id)
+            => id != null && factionById.TryGetValue(id, out var f) ? f : null;
 
         public static List<RealmDefinition> GetRealmsByType(string type)
             => Realms.Where(r => r.type == type).ToList();

@@ -1,0 +1,791 @@
+{
+  "factions": [
+    {
+      "id": "palearctic",
+      "displayName": "Palearctic",
+      "category": "Modern realm",
+      "realm": "palearctic",
+      "primaryColor": "#6A5ACD",
+      "secondaryColor": "#F2E6C9",
+      "description": "Europe, Asia north of the Himalayas and North Africa: the largest realm on Earth.",
+      "iconicAnimals": [
+        {
+          "name": "Plateosaurus",
+          "scientificName": "Plateosaurus engelhardti",
+          "age": "Triassic",
+          "description": "Early long-necked sauropodomorph; mass bone beds at Trossingen, Germany.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Archaeopteryx",
+          "scientificName": "Archaeopteryx lithographica",
+          "age": "Jurassic",
+          "description": "Feathered dinosaur-bird from the Solnhofen limestone, Bavaria.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Iguanodon",
+          "scientificName": "Iguanodon bernissartensis",
+          "age": "Cretaceous",
+          "description": "Herd-living ornithopod; dozens of skeletons found in a Belgian coal mine at Bernissart.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Woolly mammoth",
+          "scientificName": "Mammuthus primigenius",
+          "age": "Quaternary",
+          "description": "Cold-adapted elephant of the Ice Age mammoth steppe.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "nearctic",
+      "displayName": "Nearctic",
+      "category": "Modern realm",
+      "realm": "nearctic",
+      "primaryColor": "#2F6DB5",
+      "secondaryColor": "#E8D44D",
+      "description": "North America, Greenland and the Mexican highlands.",
+      "iconicAnimals": [
+        {
+          "name": "Allosaurus",
+          "scientificName": "Allosaurus fragilis",
+          "age": "Jurassic",
+          "description": "Apex predator of the Morrison Formation floodplains.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Tyrannosaurus",
+          "scientificName": "Tyrannosaurus rex",
+          "age": "Cretaceous",
+          "description": "Giant tyrannosaurid of the latest Cretaceous Hell Creek ecosystem.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Dawn horse",
+          "scientificName": "Eohippus angustidens",
+          "age": "Paleogene",
+          "description": "Fox-sized early horse from the Eocene of Wyoming.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Sabre-toothed cat",
+          "scientificName": "Smilodon fatalis",
+          "age": "Quaternary",
+          "description": "Ambush predator preserved by the thousand in the La Brea tar pits.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "oriental",
+      "displayName": "Oriental",
+      "category": "Modern realm",
+      "realm": "indomalayan",
+      "primaryColor": "#E08A1E",
+      "secondaryColor": "#1F6E43",
+      "description": "The Indian subcontinent, Indochina, southern China and the Sunda islands (also called Indomalayan).",
+      "iconicAnimals": [
+        {
+          "name": "Rajasaurus",
+          "scientificName": "Rajasaurus narmadensis",
+          "age": "Cretaceous",
+          "description": "Horned abelisaurid from the Narmada valley, when India was an island drifting north.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Indohyus",
+          "scientificName": "Indohyus indirae",
+          "age": "Paleogene",
+          "description": "Small Eocene deer-like animal from Kashmir, a close relative of the first whales.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Sivapithecus",
+          "scientificName": "Sivapithecus indicus",
+          "age": "Neogene",
+          "description": "Miocene ape of the Siwalik Hills, related to orangutans.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Tiger",
+          "scientificName": "Panthera tigris",
+          "age": "Quaternary",
+          "description": "Largest living cat, from the Indian forests to the Sunda islands.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "afrotropic",
+      "displayName": "Afrotropic",
+      "category": "Modern realm",
+      "realm": "afrotropical",
+      "primaryColor": "#C8502A",
+      "secondaryColor": "#F1C232",
+      "description": "Africa south of the Sahara, Madagascar and southern Arabia.",
+      "iconicAnimals": [
+        {
+          "name": "Gorgonops",
+          "scientificName": "Gorgonops torvus",
+          "age": "Permian",
+          "description": "Sabre-toothed gorgonopsian predator of the Karoo Basin, South Africa.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Massospondylus",
+          "scientificName": "Massospondylus carinatus",
+          "age": "Jurassic",
+          "description": "Early sauropodomorph known from nesting sites with embryos in South Africa.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Lucy's kind",
+          "scientificName": "Australopithecus afarensis",
+          "age": "Neogene",
+          "description": "Upright-walking hominin of the Pliocene Afar region, Ethiopia.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "African bush elephant",
+          "scientificName": "Loxodonta africana",
+          "age": "Quaternary",
+          "description": "Largest living land animal, shaper of the savanna.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "neotropic",
+      "displayName": "Neotropic",
+      "category": "Modern realm",
+      "realm": "neotropical",
+      "primaryColor": "#2EA34A",
+      "secondaryColor": "#F2D43D",
+      "description": "South and Central America, the Caribbean and southern Florida.",
+      "iconicAnimals": [
+        {
+          "name": "Herrerasaurus",
+          "scientificName": "Herrerasaurus ischigualastensis",
+          "age": "Triassic",
+          "description": "One of the earliest dinosaurs, from the Ischigualasto valley, Argentina.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Argentinosaurus",
+          "scientificName": "Argentinosaurus huinculensis",
+          "age": "Cretaceous",
+          "description": "Titanosaur, among the heaviest land animals ever.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Titanoboa",
+          "scientificName": "Titanoboa cerrejonensis",
+          "age": "Paleogene",
+          "description": "13-metre snake from the Paleocene rainforest of Cerrejón, Colombia.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Terror bird",
+          "scientificName": "Phorusrhacos longissimus",
+          "age": "Neogene",
+          "description": "Flightless predatory bird of Miocene Patagonia.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Giant ground sloth",
+          "scientificName": "Megatherium americanum",
+          "age": "Quaternary",
+          "description": "Elephant-sized sloth of the Pleistocene pampas.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "australasia",
+      "displayName": "Australasia",
+      "category": "Modern realm",
+      "realm": "australasian",
+      "primaryColor": "#B3261E",
+      "secondaryColor": "#F4E3B5",
+      "description": "Australia, New Guinea, New Zealand and nearby islands east of Wallace's Line.",
+      "iconicAnimals": [
+        {
+          "name": "Gogonasus",
+          "scientificName": "Gogonasus andrewsae",
+          "age": "Devonian",
+          "description": "Lobe-finned fish from the Gogo reef of Western Australia, with limb-like fin bones.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Muttaburrasaurus",
+          "scientificName": "Muttaburrasaurus langdoni",
+          "age": "Cretaceous",
+          "description": "Large ornithopod of Early Cretaceous Queensland.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Thunder bird",
+          "scientificName": "Dromornis stirtoni",
+          "age": "Neogene",
+          "description": "Giant flightless mihirung of the Late Miocene.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Diprotodon",
+          "scientificName": "Diprotodon optatum",
+          "age": "Quaternary",
+          "description": "Rhino-sized wombat relative, the largest marsupial ever.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "oceanian",
+      "displayName": "Oceanian",
+      "category": "Modern realm",
+      "realm": "oceanian",
+      "primaryColor": "#14A3A3",
+      "secondaryColor": "#FFFFFF",
+      "description": "Polynesia, Micronesia and Fiji: volcanic islands and atolls of the Pacific.",
+      "iconicAnimals": [
+        {
+          "name": "Reef-building corals",
+          "scientificName": "Scleractinia",
+          "age": "Triassic",
+          "description": "Stony corals, which first appear in the Middle Triassic and later build the Pacific atolls.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Megalodon",
+          "scientificName": "Otodus megalodon",
+          "age": "Neogene",
+          "description": "The largest shark known, cruising the open Pacific in the Miocene and Pliocene.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Coconut crab",
+          "scientificName": "Birgus latro",
+          "age": "Quaternary",
+          "description": "The largest land arthropod, found on Indo-Pacific islands.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Nēnē",
+          "scientificName": "Branta sandvicensis",
+          "age": "Quaternary",
+          "description": "Hawaiian goose, descended from Canada geese that reached the islands.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "antarctic",
+      "displayName": "Antarctic",
+      "category": "Modern realm",
+      "realm": "antarctic",
+      "primaryColor": "#DCE6EF",
+      "secondaryColor": "#2C4A6B",
+      "description": "Antarctica and the sub-Antarctic islands. Ice-free and forested for most of its history.",
+      "iconicAnimals": [
+        {
+          "name": "Lystrosaurus",
+          "scientificName": "Lystrosaurus murrayi",
+          "age": "Triassic",
+          "description": "Burrowing dicynodont that survived the end-Permian extinction; found in the Fremouw Formation.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Cryolophosaurus",
+          "scientificName": "Cryolophosaurus ellioti",
+          "age": "Jurassic",
+          "description": "Crested predatory dinosaur from Mount Kirkpatrick.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Colossus penguin",
+          "scientificName": "Anthropornis nordenskjoeldi",
+          "age": "Paleogene",
+          "description": "1.7 m tall Eocene penguin from Seymour Island.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Emperor penguin",
+          "scientificName": "Aptenodytes forsteri",
+          "age": "Quaternary",
+          "description": "Breeds on sea ice through the Antarctic winter.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "laurentia",
+      "displayName": "Laurentia",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#8E3B46",
+      "secondaryColor": "#E9C46A",
+      "description": "The ancient core of North America, straddling the equator in the early Paleozoic.",
+      "iconicAnimals": [
+        {
+          "name": "Anomalocaris",
+          "scientificName": "Anomalocaris canadensis",
+          "age": "Cambrian",
+          "description": "Metre-long radiodont predator of the Burgess Shale, British Columbia.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Hallucigenia",
+          "scientificName": "Hallucigenia sparsa",
+          "age": "Cambrian",
+          "description": "Spiny lobopodian worm from the Burgess Shale.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Isotelus",
+          "scientificName": "Isotelus rex",
+          "age": "Ordovician",
+          "description": "The largest complete trilobite, 70 cm long, from Manitoba.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Sea scorpion",
+          "scientificName": "Eurypterus remipes",
+          "age": "Silurian",
+          "description": "Eurypterid of the salty lagoons of New York; its state fossil.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "baltica",
+      "displayName": "Baltica",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#1D3557",
+      "secondaryColor": "#A8DADC",
+      "description": "Scandinavia, the Baltic and western Russia, which drifted from cold southern seas to the tropics.",
+      "iconicAnimals": [
+        {
+          "name": "Agnostus",
+          "scientificName": "Agnostus pisiformis",
+          "age": "Cambrian",
+          "description": "Tiny blind arthropod abundant in the Swedish Alum Shale.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Stalk-eyed trilobite",
+          "scientificName": "Asaphus kowalewskii",
+          "age": "Ordovician",
+          "description": "Trilobite with eyes on long stalks, from the St Petersburg region.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Tremataspis",
+          "scientificName": "Tremataspis mammillata",
+          "age": "Silurian",
+          "description": "Armoured jawless fish from the reefs of Saaremaa, Estonia.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Panderichthys",
+          "scientificName": "Panderichthys rhombolepis",
+          "age": "Devonian",
+          "description": "Lobe-finned fish from Latvia, halfway between fish and tetrapod.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "avalonia",
+      "displayName": "Avalonia",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#6E2C8A",
+      "secondaryColor": "#F4A261",
+      "description": "A microcontinent (eastern Newfoundland, Nova Scotia, England, Wales, Belgium) that crossed the Iapetus Ocean.",
+      "iconicAnimals": [
+        {
+          "name": "Paradoxides",
+          "scientificName": "Paradoxides davidis",
+          "age": "Cambrian",
+          "description": "Giant trilobite found in both Wales and Newfoundland, early evidence that they were once joined.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Ogygiocarella",
+          "scientificName": "Ogygiocarella debuchii",
+          "age": "Ordovician",
+          "description": "Trilobite of the Welsh Ordovician seas.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Dudley bug",
+          "scientificName": "Calymene blumenbachii",
+          "age": "Silurian",
+          "description": "Trilobite of the Wenlock reefs at Dudley, England.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Hylonomus",
+          "scientificName": "Hylonomus lyelli",
+          "age": "Carboniferous",
+          "description": "One of the first reptiles, found inside fossil tree stumps at Joggins, Nova Scotia.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "siberia",
+      "displayName": "Siberia",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#5C6B73",
+      "secondaryColor": "#E63946",
+      "description": "The Siberian craton, later the heart of Angaraland and the Siberian Traps.",
+      "iconicAnimals": [
+        {
+          "name": "Archaeocyathids",
+          "scientificName": "Archaeocyatha",
+          "age": "Cambrian",
+          "description": "Sponge-like animals that built the first animal reefs, along the Lena River.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Kulindadromeus",
+          "scientificName": "Kulindadromeus zabaikalicus",
+          "age": "Jurassic",
+          "description": "Small feathered plant-eating dinosaur from Transbaikalia.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Psittacosaurus",
+          "scientificName": "Psittacosaurus sibiricus",
+          "age": "Cretaceous",
+          "description": "Parrot-beaked ceratopsian from Kemerovo, Siberia.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Woolly rhinoceros",
+          "scientificName": "Coelodonta antiquitatis",
+          "age": "Quaternary",
+          "description": "Shaggy rhino of the Ice Age steppe.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "cathaysia",
+      "displayName": "Cathaysia",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#A4161A",
+      "secondaryColor": "#FFD23F",
+      "description": "The North and South China blocks and Indochina, islands in the Paleo-Tethys.",
+      "iconicAnimals": [
+        {
+          "name": "Myllokunmingia",
+          "scientificName": "Myllokunmingia fengjiaoa",
+          "age": "Cambrian",
+          "description": "One of the earliest vertebrates, from the Chengjiang biota, Yunnan.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Guiyu",
+          "scientificName": "Guiyu oneiros",
+          "age": "Silurian",
+          "description": "Oldest articulated bony fish, from the Late Silurian of Yunnan.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Keichousaurus",
+          "scientificName": "Keichousaurus hui",
+          "age": "Triassic",
+          "description": "Small pachypleurosaur reptile of the Guizhou seas, bearing live young.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Sinosauropteryx",
+          "scientificName": "Sinosauropteryx prima",
+          "age": "Cretaceous",
+          "description": "First non-avian dinosaur found with feathers, from the Jehol biota, Liaoning.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "gondwana",
+      "displayName": "Gondwana",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#5B7F1E",
+      "secondaryColor": "#3E2723",
+      "description": "The great southern supercontinent: South America, Africa, Antarctica, India and Australia.",
+      "iconicAnimals": [
+        {
+          "name": "Sacabambaspis",
+          "scientificName": "Sacabambaspis janvieri",
+          "age": "Ordovician",
+          "description": "Jawless armoured fish from Bolivia.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Mesosaurus",
+          "scientificName": "Mesosaurus tenuidens",
+          "age": "Permian",
+          "description": "Freshwater reptile found in both Brazil and South Africa, key evidence for continental drift.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Cynognathus",
+          "scientificName": "Cynognathus crateronotus",
+          "age": "Triassic",
+          "description": "Dog-jawed cynodont found in Africa, South America and Antarctica.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Spinosaurus",
+          "scientificName": "Spinosaurus aegyptiacus",
+          "age": "Cretaceous",
+          "description": "Sail-backed semi-aquatic predator of North African rivers.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "euramerica",
+      "displayName": "Euramerica",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#264653",
+      "secondaryColor": "#E76F51",
+      "description": "Laurussia, the Old Red Sandstone continent formed when Laurentia, Baltica and Avalonia collided.",
+      "iconicAnimals": [
+        {
+          "name": "Dunkleosteus",
+          "scientificName": "Dunkleosteus terrelli",
+          "age": "Devonian",
+          "description": "Armoured placoderm with bony blade jaws, from the Cleveland Shale, Ohio.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Tiktaalik",
+          "scientificName": "Tiktaalik roseae",
+          "age": "Devonian",
+          "description": "Fish with a neck and wrist-like fins, from Ellesmere Island.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Arthropleura",
+          "scientificName": "Arthropleura armata",
+          "age": "Carboniferous",
+          "description": "Car-sized millipede of the coal forests.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Meganeura",
+          "scientificName": "Meganeura monyi",
+          "age": "Carboniferous",
+          "description": "Griffinfly with a 70 cm wingspan, from Commentry, France.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "pangaea",
+      "displayName": "Pangaea",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#8D6E63",
+      "secondaryColor": "#FFB74D",
+      "description": "The supercontinent that joined nearly all land from the late Paleozoic to the Early Jurassic.",
+      "iconicAnimals": [
+        {
+          "name": "Dimetrodon",
+          "scientificName": "Dimetrodon limbatus",
+          "age": "Permian",
+          "description": "Sail-backed synapsid, top predator of the Texas red beds.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Scutosaurus",
+          "scientificName": "Scutosaurus karpinskii",
+          "age": "Permian",
+          "description": "Armoured pareiasaur of the Russian Permian.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Coelophysis",
+          "scientificName": "Coelophysis bauri",
+          "age": "Triassic",
+          "description": "Slender early theropod from Ghost Ranch, New Mexico.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Dilophosaurus",
+          "scientificName": "Dilophosaurus wetherilli",
+          "age": "Jurassic",
+          "description": "Double-crested predator of Early Jurassic Arizona.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "laurasia",
+      "displayName": "Laurasia",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#3A5A40",
+      "secondaryColor": "#DAD7CD",
+      "description": "The northern supercontinent left after Pangaea split: North America and Eurasia.",
+      "iconicAnimals": [
+        {
+          "name": "Megalosaurus",
+          "scientificName": "Megalosaurus bucklandii",
+          "age": "Jurassic",
+          "description": "The first dinosaur ever named (1824), from Oxfordshire, England.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Velociraptor",
+          "scientificName": "Velociraptor mongoliensis",
+          "age": "Cretaceous",
+          "description": "Feathered dromaeosaur of the Gobi Desert.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Andrewsarchus",
+          "scientificName": "Andrewsarchus mongoliensis",
+          "age": "Paleogene",
+          "description": "Huge-skulled Eocene mammal of Inner Mongolia.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Paraceratherium",
+          "scientificName": "Paraceratherium transouralicum",
+          "age": "Paleogene",
+          "description": "Hornless rhino of Oligocene Asia, one of the largest land mammals.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "tethys",
+      "displayName": "Tethys",
+      "category": "Ancient ocean",
+      "realm": "",
+      "primaryColor": "#0077B6",
+      "secondaryColor": "#90E0EF",
+      "description": "The warm tropical ocean between Laurasia and Gondwana; its remnant is the Mediterranean.",
+      "iconicAnimals": [
+        {
+          "name": "Tanystropheus",
+          "scientificName": "Tanystropheus longobardicus",
+          "age": "Triassic",
+          "description": "Reptile with a neck longer than its body, from Monte San Giorgio, Switzerland.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Ichthyosaurus",
+          "scientificName": "Ichthyosaurus communis",
+          "age": "Jurassic",
+          "description": "Dolphin-shaped marine reptile collected by Mary Anning at Lyme Regis.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Mosasaurus",
+          "scientificName": "Mosasaurus hoffmannii",
+          "age": "Cretaceous",
+          "description": "Giant marine lizard first found at Maastricht, the Netherlands.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Basilosaurus",
+          "scientificName": "Basilosaurus isis",
+          "age": "Paleogene",
+          "description": "Serpentine early whale from Wadi Al-Hitan, Egypt.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "panthalassa",
+      "displayName": "Panthalassa",
+      "category": "Ancient ocean",
+      "realm": "",
+      "primaryColor": "#14213D",
+      "secondaryColor": "#FCA311",
+      "description": "The world ocean surrounding Pangaea; the ancestor of the Pacific.",
+      "iconicAnimals": [
+        {
+          "name": "Cameroceras",
+          "scientificName": "Cameroceras trentonense",
+          "age": "Ordovician",
+          "description": "Giant straight-shelled nautiloid, among the largest Ordovician predators.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Helicoprion",
+          "scientificName": "Helicoprion bessonowi",
+          "age": "Permian",
+          "description": "Ratfish relative with a spiral whorl of teeth.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Shonisaurus",
+          "scientificName": "Shonisaurus popularis",
+          "age": "Triassic",
+          "description": "Giant ichthyosaur from Nevada, on the shore of Panthalassa.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Leedsichthys",
+          "scientificName": "Leedsichthys problematicus",
+          "age": "Jurassic",
+          "description": "Enormous filter-feeding bony fish.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    },
+    {
+      "id": "zealandia",
+      "displayName": "Zealandia",
+      "category": "Paleocontinent",
+      "realm": "",
+      "primaryColor": "#1B1B1B",
+      "secondaryColor": "#B8C4C2",
+      "description": "A mostly sunken continent that split from Gondwana; New Zealand is its peak.",
+      "iconicAnimals": [
+        {
+          "name": "Tuarangisaurus",
+          "scientificName": "Tuarangisaurus keyesi",
+          "age": "Cretaceous",
+          "description": "Long-necked elasmosaur from the North Island.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Heracles",
+          "scientificName": "Heracles inexpectatus",
+          "age": "Neogene",
+          "description": "Giant Miocene parrot from St Bathans, about 1 m tall.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Giant moa",
+          "scientificName": "Dinornis robustus",
+          "age": "Quaternary",
+          "description": "Flightless bird up to 3.6 m tall with its neck raised.",
+          "bonusEvolutionPoints": 10
+        },
+        {
+          "name": "Haast's eagle",
+          "scientificName": "Hieraaetus moorei",
+          "age": "Quaternary",
+          "description": "The largest eagle known, which hunted moa.",
+          "bonusEvolutionPoints": 10
+        }
+      ]
+    }
+  ]
+}

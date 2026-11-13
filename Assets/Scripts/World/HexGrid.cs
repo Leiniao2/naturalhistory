@@ -43,7 +43,7 @@ namespace NaturalHistory.World
         [SerializeField] private TerrainType defaultTerrain;
         [SerializeField] private int seed = 0;          // 0 = random each Play
         [SerializeField] private int previewSeed = 12345; // used in Edit mode when seed is 0
-        [SerializeField] private float elevationStep = 0.2f; // world height of one terrace level
+        [SerializeField] private float elevationStep = 0.07f; // world height of one terrace level (kept small so land reads as continuous)
 
         private HexCell[,] cells;
         private Mesh sharedHexMesh;
@@ -406,7 +406,7 @@ namespace NaturalHistory.World
         {
             TerrainKind.SaltWater  => 0.02f,
             TerrainKind.FreshWater => 0.06f,
-            _                      => 0.1f + cell.Elevation * elevationStep,
+            _                      => 0.12f + cell.Elevation * elevationStep,
         };
 
         private void UpdateCellMeshes()

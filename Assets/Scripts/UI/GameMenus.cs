@@ -1,6 +1,7 @@
 using NaturalHistory.Climate;
 using NaturalHistory.Core;
 using NaturalHistory.Data;
+using NaturalHistory.Players;
 using NaturalHistory.Progression;
 using NaturalHistory.Save;
 using NaturalHistory.World;
@@ -19,8 +20,10 @@ namespace NaturalHistory.UI
         private TreePanel treePanel;
         private AgePanel agePanel;
         private ClimateHud climateHud;
+        private PlayersPanel playersPanel;
         private bool slotsAreForSaving;
         private float toastHideTime;
+        private int toastFrame = -1;
 
         private CellSelector cellSelector;
         private CameraController cameraController;
@@ -70,11 +73,15 @@ namespace NaturalHistory.UI
             treePanel    = new TreePanel(root);
             agePanel     = new AgePanel(root);
             climateHud   = new ClimateHud(root);
+            playersPanel = new PlayersPanel(root);
+            playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast("New game started"); };
+            playersPanel.SetupClosed    += () => pauseOverlay.RemoveFromClassList("hidden");
 
             root.Q<Button>("morphology-button").clicked += () => ToggleTree(Progression?.Morphology);
             root.Q<Button>("ethology-button").clicked   += () => ToggleTree(Progression?.Ethology);
             root.Q<Button>("menu-button").clicked       += () => SetPauseOpen(true);
             root.Q<Button>("resume-button").clicked     += () => SetPauseOpen(false);
+            root.Q<Button>("new-game-button").clicked   += OpenNewGame;
             root.Q<Button>("save-button").clicked       += () => OpenSlots(saving: true);
             root.Q<Button>("load-button").clicked       += () => OpenSlots(saving: false);
             root.Q<Button>("quit-button").clicked       += Quit;
@@ -87,6 +94,12 @@ namespace NaturalHistory.UI
             if (Progression != null) Progression.Changed += OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated += OnClimateUpdated;
             if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition += OnAgeTransition;
+            if (PlayerManager.Instance != null)
+            {
+                PlayerManager.Instance.PlayersChanged  += playersPanel.RefreshBar;
+                PlayerManager.Instance.AnimalActivated += OnAnimalActivated;
+            }
+            playersPanel.RefreshBar();
             OnProgressionChanged();
             OnClimateUpdated();
         }
@@ -96,6 +109,18 @@ namespace NaturalHistory.UI
             if (Progression != null) Progression.Changed -= OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated -= OnClimateUpdated;
             if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition -= OnAgeTransition;
+            if (PlayerManager.Instance != null)
+            {
+                PlayerManager.Instance.PlayersChanged  -= playersPanel.RefreshBar;
+                PlayerManager.Instance.AnimalActivated -= OnAnimalActivated;
+            }
+        }
+
+        private void OnAnimalActivated(Player player, IconicAnimalDefinition animal)
+        {
+            if (!player.IsHuman) return;
+            var bonus = animal.bonusEvolutionPoints > 0 ? $" (+{animal.bonusEvolutionPoints} EP)" : "";
+            ShowToast($"{player.Name}: {animal.name} appears{bonus}");
         }
 
         // Fires after every turn (date → climate) and after loading
@@ -108,6 +133,7 @@ namespace NaturalHistory.UI
         private void OnAgeTransition(GeologicalAge from, GeologicalAge to)
         {
             treePanel.Close();
+            playersPanel.CloseFaction();
             agePanel.Open(newAge: true);
         }
 
@@ -115,6 +141,7 @@ namespace NaturalHistory.UI
         {
             if (agePanel.IsOpen) { agePanel.Close(); return; }
             treePanel.Close();
+            playersPanel.CloseFaction();
             agePanel.Open();
         }
 
@@ -138,6 +165,8 @@ namespace NaturalHistory.UI
         private void HandleEscape()
         {
             if (IsOpen(slotsOverlay))  CloseSlots();
+            else if (playersPanel.SetupOpen) { playersPanel.CloseSetup(); pauseOverlay.RemoveFromClassList("hidden"); }
+            else if (playersPanel.FactionOpen) playersPanel.CloseFaction();
             else if (treePanel.IsOpen) treePanel.Close();
             else if (agePanel.IsOpen)  agePanel.Close();
             else SetPauseOpen(!IsOpen(pauseOverlay));
@@ -155,7 +184,8 @@ namespace NaturalHistory.UI
             if (cameraController != null) cameraController.enabled = !modal; // keep edge/WASD panning near the HUD
         }
 
-        private bool AnyModalOpen() => IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen;
+        private bool AnyModalOpen() => IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen
+                                       || playersPanel.FactionOpen || playersPanel.SetupOpen;
 
         private bool PointerOverUI()
         {
@@ -178,6 +208,7 @@ namespace NaturalHistory.UI
         {
             if (tree == null) return;
             agePanel.Close();
+            playersPanel.CloseFaction();
             if (treePanel.IsOpen && treePanel.CurrentTree == tree) treePanel.Close();
             else treePanel.Open(tree);
         }
@@ -186,9 +217,15 @@ namespace NaturalHistory.UI
 
         private void SetPauseOpen(bool open)
         {
-            if (open) { treePanel.Close(); agePanel.Close(); }
+            if (open) { treePanel.Close(); agePanel.Close(); playersPanel.CloseFaction(); }
             pauseOverlay.EnableInClassList("hidden", !open);
-            if (!open) slotsOverlay.AddToClassList("hidden");
+            if (!open) { slotsOverlay.AddToClassList("hidden"); playersPanel.CloseSetup(); }
+        }
+
+        private void OpenNewGame()
+        {
+            pauseOverlay.AddToClassList("hidden");
+            playersPanel.OpenSetup();
         }
 
         private void Quit()
@@ -252,7 +289,9 @@ namespace NaturalHistory.UI
             var when = data.SavedAt.ToString("yyyy-MM-dd HH:mm");
             var turn = data.turn > 0 ? $"  ·  Turn {data.turn}" : "";
             var age  = string.IsNullOrEmpty(data.age) ? "" : $"  ·  {data.age}";
-            return $"{when}{turn}{age}  ·  {data.evolutionPoints} EP  ·  {data.mapWidth}×{data.mapHeight} map";
+            var human   = data.players?.Find(p => p.human);
+            var players = data.players is { Count: > 0 } ? $"  ·  {human?.name ?? "?"} + {data.players.Count - 1} AI" : "";
+            return $"{when}{turn}{age}{players}  ·  {data.evolutionPoints} EP";
         }
 
         private void SaveTo(int slot)
@@ -270,9 +309,11 @@ namespace NaturalHistory.UI
             if (ok) SetPauseOpen(false);
         }
 
+        // Messages shown in the same frame (e.g. two animals arriving together) are combined
         private void ShowToast(string message)
         {
-            toast.text = message;
+            toast.text = toastFrame == Time.frameCount && !toast.ClassListContains("hidden") ? toast.text + "\n" + message : message;
+            toastFrame = Time.frameCount;
             toast.RemoveFromClassList("hidden");
             toastHideTime = Time.unscaledTime + 2.5f;
         }

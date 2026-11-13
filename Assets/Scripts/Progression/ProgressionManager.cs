@@ -18,6 +18,7 @@ namespace NaturalHistory.Progression
         public ProgressionTree Morphology { get; private set; }
         public ProgressionTree Ethology   { get; private set; }
         public int EvolutionPoints { get; private set; }
+        public int StartingPoints => startingPoints;
 
         // Raised whenever points or unlocks change, so UI can refresh
         public event Action Changed;
@@ -83,6 +84,14 @@ namespace NaturalHistory.Progression
             NodeUnlocked?.Invoke(tree, node);
             Changed?.Invoke();
             return true;
+        }
+
+        // Bonus points from outside the trees (e.g. a faction's iconic animal activating)
+        public void AddPoints(int amount)
+        {
+            if (amount == 0) return;
+            EvolutionPoints += amount;
+            Changed?.Invoke();
         }
 
         public void Restore(int points, IEnumerable<string> morphology, IEnumerable<string> ethology)

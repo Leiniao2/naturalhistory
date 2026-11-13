@@ -10,9 +10,12 @@ export const AGE_IDS = ['Cambrian', 'Ordovician', 'Silurian', 'Devonian', 'Carbo
 export const TERRAINS = ['SaltWater', 'FreshWater', 'Plain', 'Hill', 'Mountain', 'Desert', 'Wetland', 'Tundra', 'IceSheet'];
 // GeneCategory enum (Assets/Scripts/Biology/GeneMap.cs)
 export const GENE_CATEGORIES = ['Locomotion', 'Diet', 'Reproduction', 'Defense', 'Perception', 'Thermoregulation'];
-export const KINGDOMS = ['Animalia', 'Plantae', 'Fungi'];
+export const KINGDOMS = ['Animalia', 'Plantae', 'Fungi', 'Protista'];
+// ColonyStyle enum (Assets/Scripts/World/SpeciesColonies.cs)
+export const MAP_STYLES = ['Drift', 'Float', 'Ground', 'Soar', 'Swarm', 'Swim'];
 export const DIETS = ['Carnivore', 'Herbivore', 'Omnivore', 'Filter feeder', 'Detritivore', 'Photosynthetic'];
 export const ERAS = ['Paleozoic', 'Mesozoic', 'Cenozoic'];
+export const FACTION_CATEGORIES = ['Modern realm', 'Paleocontinent', 'Ancient ocean'];
 
 // Option helpers: ids (with labels) from another dataset
 const idsOf = (dataset, labelKey) => (all) =>
@@ -207,6 +210,11 @@ export const DATASETS = {
       { key: 'sizeCm', label: 'Body length (cm)', type: 'number', min: 0, step: 0.5 },
       { key: 'startingPopulation', label: 'Starting population', type: 'int', min: 0 },
       { key: 'playable', label: 'Playable', type: 'bool' },
+      { key: 'model', label: 'Map model', type: 'string', help: 'Optional Resources path of the model shown on the map, e.g. Models/Species/ActinophrysSol' },
+      { key: 'mapStyle', label: 'Map style', type: 'enum', options: [{ value: '', label: '— default (Drift) —' }, ...MAP_STYLES.map(m => ({ value: m, label: m }))],
+        help: 'How the group sits and moves on its tile: Drift (microbes), Float (on water), Ground, Soar (circling birds), Swarm (insects), Swim (fish schools)' },
+      { key: 'colonySize', label: 'Map group size', type: 'int', min: 0, help: 'Individuals shown on the map; 0 = the map style default' },
+      { key: 'mapScale', label: 'Map scale', type: 'number', min: 0, step: 0.05, help: 'Size multiplier on the map, e.g. for a bird modelled on a tall perch; 0 = 1' },
       { key: 'genes', label: 'Starting genes', type: 'table', newRow: () => ({ gene: '', expression: 0.5 }), columns: [
         { key: 'gene', label: 'Gene', type: 'enum', options: (all) => [{ value: '', label: '—' }, ...idsOf('genes', 'displayName')(all)] },
         { key: 'expression', label: 'Expression', type: 'number', min: 0, max: 1, step: 0.05 },
@@ -220,6 +228,50 @@ export const DATASETS = {
         const genes = (s.genes || []).map(g => g.gene);
         if (new Set(genes).size !== genes.length) out.push({ index: i, level: 'warn', msg: 'a gene is listed twice' });
         if ((s.genes || []).some(g => !g.gene)) out.push({ index: i, level: 'warn', msg: 'a starting gene row has no gene' });
+      });
+      return out;
+    },
+  },
+
+  factions: {
+    title: 'Factions', icon: '🏳️', arrayKey: 'factions', idField: 'id',
+    label: f => f.displayName || f.id,
+    swatch: f => [f.primaryColor, f.secondaryColor], // colour band shown in the list
+    sub: f => `${(f.iconicAnimals || []).length} iconic animals · ${[...new Set((f.iconicAnimals || []).map(a => a.age))].join(', ')}`,
+    views: ['form'],
+    groupBy: f => f.category,
+    newItem: () => ({ id: 'new_faction', displayName: 'New Faction', category: 'Paleocontinent', realm: '', primaryColor: '#888888', secondaryColor: '#EEEEEE',
+      description: '', iconicAnimals: [] }),
+    fields: [
+      { key: 'id', label: 'ID', type: 'id' },
+      { key: 'displayName', label: 'Name', type: 'string', help: 'Default player name. Players can type their own in the new-game screen.' },
+      { key: 'category', label: 'Category', type: 'enum', options: FACTION_CATEGORIES.map(c => ({ value: c, label: c })) },
+      { key: 'realm', label: 'Bio-realm', type: 'enum', options: (all) => [{ value: '', label: '—' }, ...idsOf('realms', 'displayName')(all)] },
+      { key: 'primaryColor', label: 'Band colour 1', type: 'color' },
+      { key: 'secondaryColor', label: 'Band colour 2', type: 'color' },
+      { key: 'description', label: 'Description', type: 'text' },
+      { key: 'iconicAnimals', label: 'Iconic animals', type: 'records', addLabel: '+ Add animal',
+        recordLabel: (a, i) => `${i + 1}. ${a.name || 'Unnamed'} — ${a.age || '?'}`,
+        newRow: () => ({ name: '', scientificName: '', age: 'Cambrian', description: '', bonusEvolutionPoints: 10 }),
+        fields: [
+          { key: 'name', label: 'Name', type: 'string' },
+          { key: 'scientificName', label: 'Scientific name', type: 'string', italic: true },
+          { key: 'age', label: 'Activates in', type: 'enum', options: ageOptions },
+          { key: 'bonusEvolutionPoints', label: 'Bonus EP on activation', type: 'int', min: 0 },
+          { key: 'description', label: 'Description', type: 'text' },
+        ] },
+    ],
+    validate: (items) => {
+      const out = [];
+      const bands = new Map();
+      items.forEach((f, i) => {
+        const band = `${f.primaryColor}/${f.secondaryColor}`.toUpperCase();
+        if (bands.has(band)) out.push({ index: i, level: 'warn', msg: `same colour band as "${bands.get(band)}"` });
+        else bands.set(band, f.displayName);
+        if ((f.primaryColor || '').toUpperCase() === (f.secondaryColor || '').toUpperCase()) out.push({ index: i, level: 'warn', msg: 'both band colours are the same' });
+        const animals = f.iconicAnimals || [];
+        if (animals.length === 0) out.push({ index: i, level: 'warn', msg: 'no iconic animals' });
+        animals.forEach(a => { if (!a.name) out.push({ index: i, level: 'warn', msg: 'an iconic animal has no name' }); });
       });
       return out;
     },
@@ -247,7 +299,7 @@ export const DATASETS = {
   },
 };
 
-export const DATASET_ORDER = ['ages', 'climate_history', 'morphology', 'ethology', 'species', 'genes', 'realms'];
+export const DATASET_ORDER = ['ages', 'climate_history', 'morphology', 'ethology', 'species', 'factions', 'genes', 'realms'];
 
 // Cross-dataset references: used for validation and to update references when an id is renamed.
 // kind: 'value' = field holds one id, 'array' = list of ids, 'table' = list of rows, `column` holds the id
@@ -262,4 +314,6 @@ export const REFERENCES = [
   { from: 'ethology', field: 'age', kind: 'value', to: 'ages' },
   { from: 'species', field: 'firstAge', kind: 'value', to: 'ages' },
   { from: 'species', field: 'lastAge', kind: 'value', to: 'ages', optional: true },
+  { from: 'factions', field: 'realm', kind: 'value', to: 'realms', optional: true },
+  { from: 'factions', field: 'iconicAnimals', kind: 'table', column: 'age', to: 'ages' },
 ];

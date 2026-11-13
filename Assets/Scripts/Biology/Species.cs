@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace NaturalHistory.Biology
 {
-    public enum SpeciesKingdom { Animalia, Plantae, Fungi }
+    public enum SpeciesKingdom { Animalia, Plantae, Fungi, Protista }
     public enum SpeciesStatus { Thriving, Stable, Threatened, Extinct }
 
     [Serializable]
