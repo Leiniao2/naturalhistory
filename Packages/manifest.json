@@ -2,6 +2,7 @@
   "dependencies": {
     "com.unity.render-pipelines.universal": "17.0.3",
     "com.unity.ugui": "2.0.0",
-    "com.rlabrecque.steamworks.net": "https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net"
+    "com.rlabrecque.steamworks.net": "https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net",
+    "com.unity.modules.uielements": "1.0.0"
   }
 }

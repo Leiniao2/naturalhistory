@@ -67,20 +67,25 @@ namespace NaturalHistory.World
                 if (cell == null) continue;
                 float d = Vector2.Distance(new Vector2(q, r), center);
                 if (cell.Terrain != null && cell.Terrain.IsWater) d += 1000f; // prefer land
+                if (cell.IsMountain) d += 2000f;                               // never start inside a peak
                 if (d < bestDist) { bestDist = d; best = cell; }
             }
-            if (best == null) return;
+            if (best != null) PlaceAt(best);
+        }
 
+        // Teleports the ball onto a cell (start of game, loading a save).
+        public void PlaceAt(HexCell cell)
+        {
             StopAllCoroutines();
             moving = false;
-            SetCell(best);
-            transform.position = StandPosition(best);
+            SetCell(cell);
+            transform.position = StandPosition(cell);
         }
 
         private void OnCellClicked(HexCell target)
         {
             if (moving || Cell == null || target == Cell) return;
-            if (Cell.Coordinates.DistanceTo(target.Coordinates) != 1) return;
+            if (!moveTargets.Contains(target)) return;
             StartCoroutine(HopTo(target));
         }
 
@@ -108,7 +113,7 @@ namespace NaturalHistory.World
             moveTargets.Clear();
 
             Cell = cell;
-            moveTargets.AddRange(grid.GetNeighbors(cell));
+            moveTargets.AddRange(grid.GetNeighbors(cell).FindAll(n => !n.IsMountain)); // mountains are impassable
             foreach (var c in moveTargets) c.SetMoveTarget(true);
         }
 

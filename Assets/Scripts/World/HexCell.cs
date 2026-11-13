@@ -9,6 +9,15 @@ namespace NaturalHistory.World
         public HexCoordinates Coordinates { get; private set; }
         public TerrainType Terrain { get; private set; }
 
+        // Forest or other overlay on the terrain
+        public TerrainFeature Feature { get; private set; }
+        public bool IsForest => Feature is TerrainFeature.BroadleafForest or TerrainFeature.ConiferForest;
+
+        // High enough to be drawn as mountain peaks; units can't enter these cells
+        public bool IsMountain => Terrain != null &&
+            (Terrain.kind == TerrainKind.Mountain ||
+             Terrain.kind == TerrainKind.IceSheet && Elevation >= WorldGenerator.MountainElevation);
+
         // Terrace level: 0 = water surface, 1..WorldGenerator.MaxElevation = land
         public int Elevation { get; private set; }
 
@@ -62,6 +71,11 @@ namespace NaturalHistory.World
                 baseColor = terrain.color;
             }
             ApplyColor();
+        }
+
+        public void SetFeature(TerrainFeature feature)
+        {
+            Feature = feature;
         }
 
         public void SetElevation(int elevation)
@@ -118,6 +132,7 @@ namespace NaturalHistory.World
             inhabitants.Remove(species);
         }
 
-        public override string ToString() => $"HexCell{Coordinates}[{Terrain?.kind}, elev {Elevation}]";
+        public override string ToString() =>
+            $"HexCell{Coordinates}[{Terrain?.kind}{(Feature != TerrainFeature.None ? $" + {Feature}" : "")}, elev {Elevation}]";
     }
 }

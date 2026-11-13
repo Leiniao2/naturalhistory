@@ -22,7 +22,10 @@ namespace NaturalHistory.World
             float eOY = (float)(rng.NextDouble() * 1000);
             float mOX = (float)(rng.NextDouble() * 1000);
             float mOY = (float)(rng.NextDouble() * 1000);
+            float fOX = (float)(rng.NextDouble() * 1000);
+            float fOY = (float)(rng.NextDouble() * 1000);
             const float scale = 0.2f;
+            const float forestScale = 0.35f; // finer than climate noise → patchy woods, not one huge forest
 
             for (int r = 0; r < height; r++)
             for (int q = 0; q < width; q++)
@@ -44,13 +47,20 @@ namespace NaturalHistory.World
                 if (terrains.TryGetValue(kind, out var terrain))
                     cells[q, r].SetTerrain(terrain);
                 cells[q, r].SetElevation(ToElevationLevel(e, kind));
+
+                float f = FBm(q * forestScale + fOX, r * forestScale + fOY, 3);
+                cells[q, r].SetFeature(ChooseFeature(kind, m, temp, f));
             }
 
             Debug.Log($"[WorldGenerator] Generated world (seed={seed}).");
         }
 
         public const int MaxElevation = 10;
-        const float WaterThreshold = 0.38f; // matches the FreshWater cutoff in ClassifyTerrain
+        const float WaterThreshold    = 0.38f; // matches the FreshWater cutoff in ClassifyTerrain
+        const float MountainThreshold = 0.82f; // matches the Mountain cutoff in ClassifyTerrain
+
+        // Lowest terrace level of mountain-height terrain (Mountain, or IceSheet at that altitude)
+        public static readonly int MountainElevation = ToElevationLevel(MountainThreshold, TerrainKind.Mountain);
 
         // Quantize raw elevation into terrace levels: water = 0, land = 1..MaxElevation.
         // Each land step spans an equal slice of the noise range above the waterline.
@@ -59,6 +69,22 @@ namespace NaturalHistory.World
             if (kind is TerrainKind.SaltWater or TerrainKind.FreshWater) return 0;
             float t = Mathf.InverseLerp(WaterThreshold, 0.9f, e);
             return Mathf.Clamp(1 + Mathf.FloorToInt(t * MaxElevation), 1, MaxElevation);
+        }
+
+        // Forests grow on moist, not-too-cold land; f is patchiness noise.
+        // Conifers take the cold end (tundra edge, high latitudes, altitude).
+        static TerrainFeature ChooseFeature(TerrainKind kind, float m, float temp, float f)
+        {
+            bool forested = kind switch
+            {
+                TerrainKind.Plain   => m > 0.45f && f > 0.45f,
+                TerrainKind.Hill    => m > 0.40f && f > 0.50f,
+                TerrainKind.Wetland => f > 0.55f,
+                TerrainKind.Tundra  => m > 0.50f && f > 0.50f,
+                _                   => false,
+            };
+            if (!forested) return TerrainFeature.None;
+            return kind == TerrainKind.Tundra || temp < 0.45f ? TerrainFeature.ConiferForest : TerrainFeature.BroadleafForest;
         }
 
         // Fractal Brownian Motion: sum octaves at doubling frequency, halving amplitude
@@ -84,7 +110,7 @@ namespace NaturalHistory.World
             if (e < 0.38f) return TerrainKind.FreshWater;
 
             // High-elevation terrain overrides climate
-            if (e > 0.82f) return temp < 0.20f ? TerrainKind.IceSheet : TerrainKind.Mountain;
+            if (e > MountainThreshold) return temp < 0.20f ? TerrainKind.IceSheet : TerrainKind.Mountain;
             if (e > 0.62f) return TerrainKind.Hill;
 
             // Lowland: Whittaker biome (temperature × moisture)

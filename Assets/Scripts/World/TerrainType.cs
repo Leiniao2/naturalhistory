@@ -19,6 +19,14 @@ namespace NaturalHistory.World
         IceSheet
     }
 
+    // Overlay on top of a cell's terrain (Civ-style). Chosen by WorldGenerator from climate.
+    public enum TerrainFeature
+    {
+        None,
+        BroadleafForest,
+        ConiferForest
+    }
+
     [CreateAssetMenu(menuName = "NaturalHistory/TerrainType")]
     public class TerrainType : ScriptableObject
     {

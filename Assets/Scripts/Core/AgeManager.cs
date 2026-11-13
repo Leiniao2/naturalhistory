@@ -55,6 +55,9 @@ namespace NaturalHistory.Core
             Debug.Log($"[AgeManager] Starting age: {CurrentAge}");
         }
 
+        // Resume from a save (no transition event)
+        public void Restore(GeologicalAge age) => CurrentAge = age;
+
         // Called by event system when a transition trigger fires
         public void TriggerAgeTransition(string eventKey)
         {

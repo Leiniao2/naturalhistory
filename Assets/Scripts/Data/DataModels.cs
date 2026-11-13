@@ -75,4 +75,26 @@ namespace NaturalHistory.Data
     {
         public List<GeneDefinition> genes;
     }
+
+    // --- Progression trees (Morphology = tech tree, Ethology = civics tree) ---
+
+    [Serializable]
+    public class TreeNodeDefinition
+    {
+        public string id;
+        public string displayName;
+        public int tier;                  // column in the tree view (left → right)
+        public int row;                   // vertical slot within the column
+        public int cost;                  // Evolution Points to unlock; 0 = unlocked from the start
+        public string age;                // earliest GeologicalAge it can be unlocked in
+        public List<string> prerequisites;
+        public List<string> unlocksGenes; // gene ids from genes.json
+        public string description;
+    }
+
+    [Serializable]
+    public class TreeNodeCollection
+    {
+        public List<TreeNodeDefinition> nodes;
+    }
 }

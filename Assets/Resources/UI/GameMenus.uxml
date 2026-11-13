@@ -1,0 +1,58 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <!-- Styles: GameMenusStyle.uss (added by GameMenus.cs). Picking is disabled on full-screen
+         containers so clicks pass through to the map except where there is actual UI. -->
+    <ui:VisualElement name="root" class="root" picking-mode="Ignore">
+
+        <!-- Top-right HUD -->
+        <ui:VisualElement name="top-bar" class="top-bar" picking-mode="Ignore">
+            <ui:Label name="ep-label" class="ep-label" text="EP 0" />
+            <ui:Button name="morphology-button" class="hud-button" text="Morphology" />
+            <ui:Button name="ethology-button" class="hud-button" text="Ethology" />
+            <ui:Button name="menu-button" class="hud-button" text="Menu" />
+        </ui:VisualElement>
+
+        <!-- Pause menu -->
+        <ui:VisualElement name="pause-overlay" class="overlay hidden">
+            <ui:VisualElement class="panel menu-panel">
+                <ui:Label class="panel-title" text="Natural History" />
+                <ui:Button name="resume-button" class="menu-button" text="Resume" />
+                <ui:Button name="save-button" class="menu-button" text="Save Game" />
+                <ui:Button name="load-button" class="menu-button" text="Load Game" />
+                <ui:Button name="quit-button" class="menu-button" text="Quit to Desktop" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Save / load slots (rows are created in code) -->
+        <ui:VisualElement name="slots-overlay" class="overlay hidden">
+            <ui:VisualElement class="panel slots-panel">
+                <ui:Label name="slots-title" class="panel-title" text="Save Game" />
+                <ui:VisualElement name="slot-list" class="slot-list" />
+                <ui:Button name="slots-back-button" class="menu-button" text="Back" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Morphology / Ethology tree -->
+        <ui:VisualElement name="tree-overlay" class="overlay hidden">
+            <ui:VisualElement class="panel tree-panel">
+                <ui:VisualElement class="tree-header">
+                    <ui:Label name="tree-title" class="panel-title tree-title" text="Morphology" />
+                    <ui:Label name="tree-ep-label" class="ep-label" text="EP 0" />
+                    <ui:Button name="tree-close-button" class="close-button" text="✕" />
+                </ui:VisualElement>
+                <ui:ScrollView name="tree-scroll" class="tree-scroll" mode="VerticalAndHorizontal">
+                    <ui:VisualElement name="tree-canvas" class="tree-canvas" />
+                </ui:ScrollView>
+                <ui:VisualElement name="tree-details" class="tree-details">
+                    <ui:VisualElement class="details-text">
+                        <ui:Label name="details-name" class="details-name" text="Select a trait" />
+                        <ui:Label name="details-description" class="details-description" text="" />
+                        <ui:Label name="details-meta" class="details-meta" text="" />
+                    </ui:VisualElement>
+                    <ui:Button name="evolve-button" class="evolve-button" text="Evolve" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:Label name="toast" class="toast hidden" text="" picking-mode="Ignore" />
+    </ui:VisualElement>
+</ui:UXML>

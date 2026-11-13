@@ -19,6 +19,9 @@ namespace NaturalHistory.World
             return new HexCoordinates(q, row);
         }
 
+        // Inverse of FromOffsetCoordinates (odd rows shifted right)
+        public (int col, int row) ToOffsetCoordinates() => (Q + (R - (R & 1)) / 2, R);
+
         public static HexCoordinates operator +(HexCoordinates a, HexCoordinates b)
             => new(a.Q + b.Q, a.R + b.R);
 

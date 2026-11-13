@@ -17,6 +17,7 @@ namespace NaturalHistory.World
         public bool IsGenerated => cells != null;
         public int Width => width;
         public int Height => height;
+        public int WorldSeed { get; private set; } // seed of the current map; saves store this instead of every cell
 
         // World-space XZ extent of all cell centers (x → Rect.x, z → Rect.y).
         // Odd rows are shifted right by half a cell (offset coordinates).
@@ -43,6 +44,10 @@ namespace NaturalHistory.World
         private HexCell[,] cells;
         private Mesh sharedHexMesh;
         private readonly Dictionary<float, Mesh> meshCache = new();
+        private readonly List<Mesh> featureMeshes = new();
+        private Material featureMaterial;
+
+        private const int FeatureVariants = 4; // distinct meshes per prop type, reused with random rotation
 
         private void Awake()
         {
@@ -105,6 +110,8 @@ namespace NaturalHistory.World
             }
             foreach (var mesh in meshCache.Values) DestroyMesh(mesh);
             meshCache.Clear();
+            foreach (var mesh in featureMeshes) DestroyMesh(mesh);
+            featureMeshes.Clear();
             DestroyMesh(sharedHexMesh);
             sharedHexMesh = null;
             cells = null;
@@ -118,6 +125,16 @@ namespace NaturalHistory.World
 
         public void Generate()
         {
+            int worldSeed = seed != 0 ? seed : Application.isPlaying ? System.Environment.TickCount : previewSeed;
+            Generate(width, height, worldSeed);
+        }
+
+        // Rebuilds the map at a given size from a known seed (used when loading a save).
+        public void Generate(int cols, int rows, int worldSeed)
+        {
+            width  = cols;
+            height = rows;
+            WorldSeed = worldSeed;
             ClearCells();
             sharedHexMesh = HexMeshGenerator.Create(cellSize * 0.95f);
             sharedHexMesh.hideFlags = HideFlags.DontSave;
@@ -127,10 +144,69 @@ namespace NaturalHistory.World
                     CreateCell(q, r);
             Debug.Log($"[HexGrid] Generated {width}×{height} grid ({width * height} cells)");
 
-            int worldSeed = seed != 0 ? seed : Application.isPlaying ? System.Environment.TickCount : previewSeed;
             WorldGenerator.Generate(cells, width, height, worldSeed);
             UpdateCellMeshes();
+            PlaceFeatures(worldSeed);
             Generated?.Invoke();
+        }
+
+        // Puts mountain peaks and forests on top of the tiles. Seeded from the world seed,
+        // so a regenerated map (e.g. a loaded save) looks the same.
+        private void PlaceFeatures(int worldSeed)
+        {
+            if (featureMaterial == null) featureMaterial = Resources.Load<Material>("Materials/MapFeatures");
+            if (featureMaterial == null)
+            {
+                Debug.LogWarning("[HexGrid] Resources/Materials/MapFeatures not found; skipping mountains and forests.");
+                return;
+            }
+
+            var rng = new System.Random(worldSeed);
+            var rockyPeaks = CreateFeatureVariants(() => MapFeatureMeshes.CreateMountain(rng, cellSize, snowLine: 0.35f));
+            var icyPeaks   = CreateFeatureVariants(() => MapFeatureMeshes.CreateMountain(rng, cellSize, snowLine: 0.75f));
+            var broadleaf  = CreateFeatureVariants(() => MapFeatureMeshes.CreateForest(rng, cellSize, conifer: false));
+            var conifers   = CreateFeatureVariants(() => MapFeatureMeshes.CreateForest(rng, cellSize, conifer: true));
+
+            int mountains = 0, forests = 0;
+            for (int r = 0; r < height; r++)
+            for (int q = 0; q < width; q++)
+            {
+                var cell = cells[q, r];
+                if (cell.Terrain == null) continue;
+
+                Mesh[] pool;
+                if (cell.IsMountain) { pool = cell.Terrain.kind == TerrainKind.IceSheet ? icyPeaks : rockyPeaks; mountains++; }
+                else if (cell.Feature == TerrainFeature.ConiferForest)   { pool = conifers;  forests++; }
+                else if (cell.Feature == TerrainFeature.BroadleafForest) { pool = broadleaf; forests++; }
+                else continue;
+
+                AddFeatureObject(cell, pool[rng.Next(pool.Length)], (float)rng.NextDouble() * 360f);
+            }
+            Debug.Log($"[HexGrid] PlaceFeatures — {mountains} mountains, {forests} forests");
+        }
+
+        private Mesh[] CreateFeatureVariants(System.Func<Mesh> create)
+        {
+            var variants = new Mesh[FeatureVariants];
+            for (int i = 0; i < variants.Length; i++)
+            {
+                variants[i] = create();
+                variants[i].hideFlags = HideFlags.DontSave;
+                featureMeshes.Add(variants[i]);
+            }
+            return variants;
+        }
+
+        // No collider: clicks pass through the prop to the hex tile underneath.
+        private void AddFeatureObject(HexCell cell, Mesh mesh, float yaw)
+        {
+            var go = new GameObject(mesh.name);
+            if (!Application.isPlaying) go.hideFlags = HideFlags.DontSave;
+            go.transform.SetParent(cell.transform, false);
+            go.transform.localPosition = Vector3.up * cell.SurfaceHeight;
+            go.transform.localRotation = Quaternion.Euler(0f, yaw, 0f);
+            go.AddComponent<MeshFilter>().sharedMesh = mesh;
+            go.AddComponent<MeshRenderer>().sharedMaterial = featureMaterial;
         }
 
         // Water sits flat near sea level; land rises one elevationStep per terrace level.

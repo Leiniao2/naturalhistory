@@ -27,6 +27,13 @@ namespace NaturalHistory.Core
             BroadcastTurnBegin();
         }
 
+        // Resume from a save
+        public void Restore(int turn)
+        {
+            CurrentTurn = turn;
+            BroadcastTurnBegin();
+        }
+
         public void Register(ITurnListener listener) => listeners.Add(listener);
         public void Unregister(ITurnListener listener) => listeners.Remove(listener);
 
