@@ -32,8 +32,8 @@ namespace NaturalHistory.World
             }
         }
 
-        [SerializeField] private int width = 20;
-        [SerializeField] private int height = 30;
+        [SerializeField] private int width = 50;
+        [SerializeField] private int height = 80;
         [SerializeField] private float cellSize = 1f;
         [SerializeField] private HexCell cellPrefab;
         [SerializeField] private TerrainType defaultTerrain;

@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151d1303c6504489abe2584d5e4b4e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NaturalHistory.World.HexGrid
-  width: 20
-  height: 30
+  width: 50
+  height: 80
   cellSize: 1
   cellPrefab: {fileID: 5985747473050339883, guid: 40d404cb3fc354a7598ed9c01fe3e42e, type: 3}
   defaultTerrain: {fileID: 11400000, guid: 7b9622877057b4f918edc48880a81927, type: 2}
@@ -305,7 +305,7 @@ MonoBehaviour:
   dragThreshold: 6
   zoomSpeed: 4
   minHeight: 4
-  maxHeight: 40
+  maxHeight: 70
   boundsMargin: 2
 --- !u!81 &1119131637
 AudioListener:

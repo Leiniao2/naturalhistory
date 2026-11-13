@@ -17,7 +17,7 @@ namespace NaturalHistory.World
         [Header("Zoom")]
         [SerializeField] private float zoomSpeed = 4f;
         [SerializeField] private float minHeight = 4f;
-        [SerializeField] private float maxHeight = 40f;
+        [SerializeField] private float maxHeight = 70f;
 
         [Header("Bounds")]
         [SerializeField] private float boundsMargin = 2f; // how far past the map edge the view may go
