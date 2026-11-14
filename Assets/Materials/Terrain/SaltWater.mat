@@ -30,6 +30,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _EdgeDarken: 0.25
+    - _Land: 0
     - _SideDarken: 0.35
     - _Tiling: 0.35
     m_Colors:

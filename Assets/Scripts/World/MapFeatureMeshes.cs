@@ -18,133 +18,195 @@ namespace NaturalHistory.World
         static readonly Color NeedleTip = new(0.22f, 0.45f, 0.26f);
         static readonly Color Shrub     = new(0.24f, 0.40f, 0.17f);
 
-        // A rock ridge from this tile's summit to the middle of one of its edges, where it meets the
-        // matching ridge of the neighbouring mountain. Everything at the edge is shared by both
-        // tiles (heights are relative to this tile's top face), so the two halves join seamlessly.
-        public struct MountainRidge
+        // What a mountain tile needs to build its piece of a range (see CreateMassif).
+        public struct MassifSite
         {
-            public int Edge;         // faces 60 * Edge + 30 degrees clockwise from +Z
-            public float Crest;      // crest height where the ridge crosses the edge
-            public float HalfWidth;  // half the ridge's width at its foot there
-            public float SnowY;      // snow line at the edge
-            public Color Tint;       // rock tint at the edge (a blend of both tiles' rock)
+            public float Apothem;       // tile centre to cell edge; the piece covers the whole cell
+            public float BaseY;         // world height of the tile top (rock strata line up across tiles)
+            public bool[] Joined;       // per edge (60e + 30° clockwise from +Z): the neighbour is mountain too
+            public Color Rock;          // rock tint here…
+            public Color[] EdgeRock;    // …and where each edge is crossed (shared with the neighbour)
+            public float Snow;          // snow line as a fraction of the massif height from the top
+            public float[] EdgeSnow;
+            public bool Green;          // grassy foot and conifers on the lower slopes
+            public System.Func<Vector2, float> GroundAt; // tile surface at a local point, relative to the tile top
+            public System.Func<Vector2, float> Relief;   // 0..1 ruggedness, continuous over the whole map
+            public System.Func<Vector2, float> Detail;   // 0..1 smooth small-scale noise for colour variation, also map-wide
         }
 
-        // One large ridged peak plus 0–3 smaller ones, boulders around the foot and, where allowed,
-        // a few pines. snowLine = fraction of the main peak's height (from the top) where snow can
-        // lie; it only sticks to gentle faces, so cliffs stay bare rock. heightScale stretches the
-        // whole massif; rockTint recolours the stone (e.g. red sandstone, blue-grey granite).
-        // Ridges run out to neighbouring mountains so a range reads as one body of rock; apothem is
-        // the distance from the tile centre to its edges. groundAt gives the tile surface height at
-        // a point (the tile slopes toward its neighbours), so the foot of the massif follows it.
-        public static Mesh CreateMountain(System.Random rng, float size, float snowLine, float heightScale, Color rockTint, bool allowTrees,
-                                          IReadOnlyList<MountainRidge> ridges = null, float apothem = 0f, System.Func<Vector2, float> groundAt = null)
+        // Tallest a summit gets above its tile, × cell size
+        public const float MassifHeight = 1.15f;
+
+        // One tile's piece of a continuous mountain surface. Height comes from map-wide relief noise
+        // (ridges, valleys, peaks) times a mask that is 1 toward neighbouring mountain tiles and falls
+        // to the ground toward every other neighbour. Everything at a shared edge depends only on
+        // world position and values both tiles agree on, so neighbouring pieces meet seamlessly and a
+        // range reads as one massif rather than a grid of separate peaks.
+        public static Mesh CreateMassif(System.Random rng, float size, MassifSite site)
         {
+            const int n = 20; // lattice steps along each edge of the hex (6 n² triangles)
             var b = new Builder();
-            ridges   ??= System.Array.Empty<MountainRidge>();
-            groundAt ??= _ => 0f;
-            bool icy         = snowLine >= 0.65f;
-            float mainHeight = size * Range(rng, 0.95f, 1.25f) * heightScale;
-            foreach (var ridge in ridges) mainHeight = Mathf.Max(mainHeight, ridge.Crest * 1.4f); // saddles stay below the summit
-            float snowY      = mainHeight * (1f - snowLine);
-
-            var mainCenter   = new Vector3(Range(rng, -0.08f, 0.08f), 0f, Range(rng, -0.08f, 0.08f)) * size;
-            float mainRadius = size * Range(rng, 0.4f, 0.5f);
-            AddPeak(b, rng, mainCenter, mainRadius, mainHeight, snowY, allowTrees, rockTint, groundAt);
-            foreach (var ridge in ridges)
-                AddRidge(b, rng, mainCenter, mainHeight * 0.6f, mainRadius * 0.55f, ridge, apothem, size, snowY, rockTint, groundAt);
-
-            int extra   = rng.Next(0, 4);
-            float angle = Range(rng, 0f, 360f);
-            for (int i = 0; i < extra; i++, angle += Range(rng, 90f, 160f))
+            float maxH = MassifHeight * size;
+            var corners = new Vector2[6];
+            var normals = new Vector2[6];
+            for (int i = 0; i < 6; i++)
             {
-                // Along a ridge when there is one, so the range keeps going rather than ending in a cone
-                float dirDeg = ridges.Count > 0 && rng.NextDouble() < 0.6
-                    ? 60f * ridges[rng.Next(ridges.Count)].Edge + 30f + Range(rng, -15f, 15f) : angle;
-                float a = dirDeg * Mathf.Deg2Rad;
-                float d = size * Range(rng, 0.28f, 0.38f);
-                var center = new Vector3(Mathf.Sin(a) * d, 0f, Mathf.Cos(a) * d);
-                // Occasionally a near-twin summit, so some massifs read as a ridge rather than one cone
-                float rel = rng.NextDouble() < 0.2 ? Range(rng, 0.75f, 0.9f) : Range(rng, 0.4f, 0.65f);
-                AddPeak(b, rng, center, size * Range(rng, 0.22f, 0.32f), mainHeight * rel, snowY, allowTrees, rockTint, groundAt);
+                float a = 60f * i * Mathf.Deg2Rad, e = (60f * i + 30f) * Mathf.Deg2Rad;
+                corners[i] = new Vector2(Mathf.Sin(a), Mathf.Cos(a)) * (site.Apothem / 0.8660254f);
+                normals[i] = new Vector2(Mathf.Sin(e), Mathf.Cos(e));
             }
 
-            Vector3 Ground(Vector2 p) => new(p.x, groundAt(p), p.y);
-            foreach (var p in Scatter(rng, rng.Next(2, 7), 0.68f * size, 0.08f * size, new List<Vector2>()))
+            float EdgeDistance(int e, Vector2 p) => site.Apothem - Vector2.Dot(p, normals[e]);
+            float Mask(Vector2 p)
             {
-                if (p.magnitude < 0.5f * size) continue; // only around the foot, not buried in the slope
-                AddRock(b, rng, Ground(p), size * Range(rng, 0.03f, 0.055f), icy ? Snow * 0.85f : Rock * rockTint);
+                float m = 1f;
+                for (int e = 0; e < 6; e++)
+                    if (!site.Joined[e]) m *= Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(EdgeDistance(e, p) / site.Apothem));
+                return m;
             }
-            if (allowTrees && rng.NextDouble() < 0.75)
+            // Below the tile surface where the mask is 0, so the massif's edge hides under the ground
+            Vector3 Point(Vector2 p)
             {
-                foreach (var p in Scatter(rng, rng.Next(3, 8), 0.66f * size, 0.08f * size, new List<Vector2>()))
-                    if (p.magnitude > 0.5f * size)
-                        AddConifer(b, rng, Ground(p), size * Range(rng, 0.3f, 0.42f));
+                float m = Mask(p);
+                float y = site.GroundAt(p) + m * maxH * (0.22f + 0.78f * site.Relief(p)) - 0.02f * size * (1f - m);
+                return new Vector3(p.x, y, p.y);
             }
-            return b.ToMesh("MountainPeaks");
+            // Snow line and rock tint: this tile's, easing to the shared edge value near each edge
+            (float snow, Color rock) Local(Vector2 p)
+            {
+                int near = 0; float best = float.MaxValue;
+                for (int e = 0; e < 6; e++) { float d = EdgeDistance(e, p); if (d < best) { best = d; near = e; } }
+                float w = 1f - Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(best / (0.5f * site.Apothem)));
+                return (Mathf.Lerp(site.Snow, site.EdgeSnow[near], w), Color.Lerp(site.Rock, site.EdgeRock[near], w));
+            }
+
+            float band = maxH * 0.12f;
+            void Face(Vector3 p0, Vector3 p1, Vector3 p2)
+            {
+                var c   = (p0 + p1 + p2) / 3f;
+                var at  = new Vector2(c.x, c.z);
+                float rel = c.y - site.GroundAt(at);
+                if (rel < -0.01f * size) return; // sunk under the tile surface: never seen
+                var below = c + Vector3.down * size;
+                float up  = FaceUp(p0, p1, p2, below);
+                var (snow, rockTint) = Local(at);
+                // Variation follows smooth map-wide noise rather than a random value per triangle,
+                // so neighbouring facets differ only by their lighting and the surface doesn't speckle
+                float detail = site.Detail(at);
+                float snowY  = maxH * (1f - snow) + maxH * 0.12f * (detail - 0.5f);
+                float shade  = 0.94f + 0.12f * detail;
+                Color color;
+                if (rel > snowY && (up > 0.45f || rel > snowY + 0.4f * (maxH - snowY)))
+                    color = Snow * (0.97f + 0.03f * detail);
+                else if (site.Green && rel < (0.1f + 0.08f * detail) * maxH && up > 0.55f)
+                    color = Foothill * shade;
+                else
+                {
+                    // Strata: soft bands by world height, wavering with the detail noise
+                    float strata = Mathf.Repeat((c.y + site.BaseY) / band + detail * 0.8f, 2f);
+                    var rock = Color.Lerp(Rock, RockDark, Mathf.SmoothStep(0f, 1f, Mathf.Abs(strata - 1f))) * rockTint;
+                    color = rock * shade * Mathf.Lerp(0.8f, 1.05f, up); // steep faces a touch darker
+                }
+                b.AddTri(p0, p1, p2, color, below);
+            }
+
+            // Each of the 6 triangles (centre, corner i, corner i+1) is cut into a lattice; points on
+            // the hex outline are the same in both neighbouring tiles.
+            var grid = new Vector3[n + 1, n + 1];
+            for (int i = 0; i < 6; i++)
+            {
+                var ca = corners[i]; var cb = corners[(i + 1) % 6];
+                for (int u = 0; u <= n; u++)
+                for (int v = 0; v <= n - u; v++)
+                    grid[u, v] = Point((ca * u + cb * v) / n);
+                for (int u = 0; u < n; u++)
+                for (int v = 0; v < n - u; v++)
+                {
+                    Face(grid[u, v], grid[u + 1, v], grid[u, v + 1]);
+                    if (u + v + 2 <= n) Face(grid[u + 1, v], grid[u + 1, v + 1], grid[u, v + 1]);
+                }
+            }
+
+            // Boulders and (where green) conifers on the lower slopes
+            foreach (var p in Scatter(rng, rng.Next(14, 22), site.Apothem * 0.95f, 0.07f * size, new List<Vector2>()))
+            {
+                float m = Mask(p);
+                if (m < 0.04f || m > 0.45f) continue;
+                var at = Point(p);
+                var (snow, rockTint) = Local(p);
+                if (site.Green && rng.NextDouble() < 0.7)
+                    AddConifer(b, rng, at - Vector3.up * 0.01f * size, size * Range(rng, 0.28f, 0.4f));
+                else if (rng.NextDouble() < 0.5)
+                    AddRock(b, rng, at, size * Range(rng, 0.03f, 0.055f), snow >= 0.65f ? Snow * 0.85f : Rock * rockTint);
+            }
+            return b.ToMesh("Massif");
         }
 
-        // Lofted ridge: a five-point cross-section (foot, shoulder, crest, shoulder, foot) swept from
-        // inside the summit out to the edge midpoint. The crest dips into a saddle and wanders a little
-        // in between; all jitter fades to zero at the edge, where the section is symmetric and built
-        // only from the shared ridge values, so it lines up with the neighbour's half.
-        static void AddRidge(Builder b, System.Random rng, Vector3 start, float startCrest, float startHalfWidth, MountainRidge ridge,
-                             float apothem, float size, float snowY, Color rockTint, System.Func<Vector2, float> groundAt)
+        // Sea stacks: pillars of bedded rock left standing off a cliffed coast as the sea cuts it
+        // back, with a grassy cap and fallen blocks round the foot. toLand points (local XZ) at the
+        // cliff; they stand in the near half of the sea tile.
+        public static Mesh CreateSeaStacks(System.Random rng, float size, Vector2 toLand, float apothem)
         {
-            const int sections = 7;
-            float a    = (60f * ridge.Edge + 30f) * Mathf.Deg2Rad;
-            var dir    = new Vector3(Mathf.Sin(a), 0f, Mathf.Cos(a));
-            var side   = new Vector3(dir.z, 0f, -dir.x);
-            var end    = dir * apothem;
-            float sway = Range(rng, -1f, 1f) * 0.06f * size;
-            float sink = 0.03f * size; // feet go a little under the ground so no gap shows on slopes
-            startCrest = Mathf.Max(startCrest, ridge.Crest);
-
-            float Ground(Vector3 p) => groundAt(new Vector2(p.x, p.z));
-            var prev = new Vector3[5];
-            var cur  = new Vector3[5];
-            Vector3 prevMid = start;
-            for (int s = 0; s < sections; s++)
+            var b    = new Builder();
+            var dir  = toLand.normalized;
+            var side = new Vector2(dir.y, -dir.x);
+            int count = rng.Next(1, 4);
+            for (int i = 0; i < count; i++)
             {
-                float t    = s / (sections - 1f);
-                float bump = Mathf.Sin(t * Mathf.PI); // 0 at both ends
-                var mid    = Vector3.Lerp(start, end, t) + side * sway * bump;
-                float crest = Mathf.Lerp(startCrest, ridge.Crest, Mathf.SmoothStep(0f, 1f, t)) + bump * Range(rng, -0.05f, 0.04f) * size;
-                float w     = Mathf.Lerp(startHalfWidth, ridge.HalfWidth, t) * (1f + bump * Range(rng, -0.15f, 0.15f));
-                float lean  = bump * Range(rng, -0.25f, 0.25f) * w; // crest off-centre → one steeper flank
-                float ground = Ground(mid);
-                crest = Mathf.Max(crest, ground + 0.05f * size);
+                var at = dir * apothem * Range(rng, 0.3f, 0.55f) // clear of the headlands, which reach about a third of the way out
+                        + side * apothem * Range(rng, -0.4f, 0.4f);
+                float r = size * Range(rng, 0.05f, 0.09f) * (i == 0 ? 1f : 0.75f);
+                float h = size * Range(rng, 0.25f, 0.5f) * (i == 0 ? 1f : Range(rng, 0.4f, 0.8f));
+                AddStack(b, rng, new Vector3(at.x, -0.03f, at.y), r, h);
+            }
+            return b.ToMesh("SeaStacks");
+        }
 
-                var footL = mid - side * w;
-                var footR = mid + side * w;
-                cur[0] = new Vector3(footL.x, Ground(footL) - sink, footL.z);
-                cur[4] = new Vector3(footR.x, Ground(footR) - sink, footR.z);
-                cur[1] = mid - side * (0.5f * w - 0.5f * lean) + Vector3.up * Mathf.Lerp(ground, crest, 0.62f);
-                cur[3] = mid + side * (0.5f * w + 0.5f * lean) + Vector3.up * Mathf.Lerp(ground, crest, 0.62f);
-                cur[2] = mid + side * lean + Vector3.up * crest;
-                cur[1].y = Mathf.Max(cur[1].y, Ground(cur[1]));
-                cur[3].y = Mathf.Max(cur[3].y, Ground(cur[3]));
+        static void AddStack(Builder b, System.Random rng, Vector3 foot, float radius, float height)
+        {
+            const int sides = 7, bands = 5;
+            var angles = new float[sides];
+            float rot = Range(rng, 0f, Mathf.PI * 2f);
+            for (int i = 0; i < sides; i++) angles[i] = rot + (i + Range(rng, -0.25f, 0.25f)) * Mathf.PI * 2f / sides;
+            var lean = new Vector3(Range(rng, -1f, 1f), 0f, Range(rng, -1f, 1f)) * 0.08f * height;
+            var inside = foot + Vector3.up * height * 0.5f;
 
-                if (s > 0)
+            Vector3[] RingAt(float t)
+            {
+                // Wider foot (talus), a waist where the waves notch it, near-vertical above
+                float rad = radius * (t < 0.12f ? Mathf.Lerp(1.35f, 0.9f, t / 0.12f) : Mathf.Lerp(1f, 0.8f, t));
+                var c = foot + Vector3.up * height * t + lean * t;
+                var ring = new Vector3[sides];
+                for (int i = 0; i < sides; i++)
                 {
-                    // Near the edge, snow line and rock colour fade to the shared values
-                    float blend   = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(0.3f, 0.8f, t - 0.5f / (sections - 1f)));
-                    float snowAt  = Mathf.Lerp(snowY, ridge.SnowY, blend);
-                    var rock      = Rock * Color.Lerp(rockTint, ridge.Tint, blend);
-                    var inside    = (prevMid + mid) * 0.5f + Vector3.down * size;
-                    for (int k = 0; k < 4; k++)
-                    {
-                        var p0 = prev[k]; var p1 = prev[k + 1]; var p2 = cur[k + 1]; var p3 = cur[k];
-                        float y  = (p0.y + p1.y + p2.y + p3.y) * 0.25f;
-                        float up = FaceUp(p0, p1, p2, inside);
-                        var color = y > snowAt && up > 0.45f
-                            ? Shade(rng, Snow, 0.04f)
-                            : Shade(rng, rock, 0.07f) * Mathf.Lerp(0.85f, 1.05f, up);
-                        b.AddQuad(p0, p1, p2, p3, color, inside);
-                    }
+                    float r = rad * Range(rng, 0.88f, 1.1f);
+                    ring[i] = c + new Vector3(Mathf.Sin(angles[i]) * r, 0f, Mathf.Cos(angles[i]) * r);
                 }
-                (prev, cur) = (cur, prev);
-                prevMid = mid;
+                return ring;
+            }
+
+            var lower = RingAt(0f);
+            for (int k = 1; k <= bands; k++)
+            {
+                float t   = k / (float)bands;
+                var upper = RingAt(t);
+                var color = (k % 2 == 0 ? Rock : RockDark * 1.15f) * (k == 1 ? 0.8f : 1f); // bedding; dark, wet base
+                for (int i = 0; i < sides; i++)
+                {
+                    int j = (i + 1) % sides;
+                    b.AddQuad(lower[i], lower[j], upper[j], upper[i], Shade(rng, color, 0.05f), inside);
+                }
+                lower = upper;
+            }
+            var top = foot + Vector3.up * height * 1.03f + lean;
+            for (int i = 0; i < sides; i++)
+                b.AddTri(lower[i], lower[(i + 1) % sides], top, Shade(rng, Foothill, 0.06f), inside); // grassy cap
+
+            for (int i = rng.Next(1, 4); i > 0; i--)
+            {
+                float a = Range(rng, 0f, Mathf.PI * 2f);
+                var at  = foot + new Vector3(Mathf.Sin(a), 0f, Mathf.Cos(a)) * radius * Range(rng, 1.4f, 2.2f) + Vector3.up * 0.03f;
+                AddRock(b, rng, at, radius * Range(rng, 0.25f, 0.45f), RockDark);
             }
         }
 
@@ -270,7 +332,7 @@ namespace NaturalHistory.World
 
         // Concave stratovolcano: gullied ash slopes turning to basalt near the top, a crater with a
         // lava lake, lava streams down the deepest gullies, a small side cone and a smoke plume.
-        // groundAt: tile surface height at a point (see CreateMountain); the base follows it.
+        // groundAt: tile surface height at a point (see CreateMassif); the base follows it.
         public static Mesh CreateVolcano(System.Random rng, float size, float heightScale, System.Func<Vector2, float> groundAt = null)
         {
             const int sides = 16, rings = 6;
@@ -584,51 +646,6 @@ namespace NaturalHistory.World
         static readonly Color Ash      = new(0.43f, 0.39f, 0.35f);
         static readonly Color LavaCool = new(0.75f, 0.16f, 0.05f);
         static readonly Color Smoke    = new(0.62f, 0.60f, 0.58f);
-
-        // Ridged peak on a radial grid: spurs and gullies, concave slopes and a craggy summit.
-        // Faces are coloured by height and slope: green-brown foot, banded rock strata, and snow
-        // above a ragged snow line on faces gentle enough to hold it.
-        static void AddPeak(Builder b, System.Random rng, Vector3 center, float radius, float height, float snowY, bool vegetatedFoot, Color rockTint,
-                            System.Func<Vector2, float> groundAt = null)
-        {
-            const int rings = 5;
-            int sides = rng.Next(9, 14);
-            var g = ConeGrid(rng, center, radius, height * 0.93f, radius * 0.1f, sides, rings,
-                             Range(rng, 0.2f, 0.5f), Range(rng, 0.05f, 0.11f), Range(rng, 1.1f, 1.6f), out _);
-            if (groundAt != null) // base ring follows the tile's slope down so it never floats
-                for (int i = 0; i < sides; i++)
-                    g[0, i].y = Mathf.Min(g[0, i].y, groundAt(new Vector2(g[0, i].x, g[0, i].z)) - 0.01f);
-            var apex   = center + new Vector3(Range(rng, -0.06f, 0.06f) * radius, height, Range(rng, -0.06f, 0.06f) * radius);
-            var below  = center + Vector3.down * height; // every face of a radial height field points away from here
-            float band = height * Range(rng, 0.1f, 0.14f);
-
-            Color FaceColor(Vector3 a, Vector3 c, Vector3 d)
-            {
-                float y  = (a.y + c.y + d.y) / 3f;
-                float up = FaceUp(a, c, d, below);
-                float snowAt = snowY + height * Range(rng, -0.06f, 0.06f);
-                if (y > snowAt && (up > 0.45f || y > snowAt + 0.4f * (height - snowAt)))
-                    return Shade(rng, Snow, 0.04f);
-                if (vegetatedFoot && y < height * 0.14f && up > 0.4f)
-                    return Shade(rng, Foothill, 0.08f);
-                var rock = (Mathf.FloorToInt(y / band) % 2 == 0 ? Rock : RockDark) * rockTint;
-                return Shade(rng, rock, 0.07f) * Mathf.Lerp(0.85f, 1.05f, up); // cliffs a touch darker
-            }
-
-            for (int k = 0; k < rings; k++)
-            for (int i = 0; i < sides; i++)
-            {
-                int j = (i + 1) % sides;
-                var p0 = g[k, i]; var p1 = g[k, j]; var p2 = g[k + 1, j]; var p3 = g[k + 1, i];
-                b.AddTri(p0, p1, p2, FaceColor(p0, p1, p2), below);
-                b.AddTri(p0, p2, p3, FaceColor(p0, p2, p3), below);
-            }
-            for (int i = 0; i < sides; i++)
-            {
-                var p0 = g[rings, i]; var p1 = g[rings, (i + 1) % sides];
-                b.AddTri(p0, p1, apex, FaceColor(p0, p1, apex), below);
-            }
-        }
 
         // Radial grid for cone-like landforms: ring 0 is the base (sunk slightly into the tile),
         // ring `rings` has topRadius. Height follows t^profile (profile > 1 → concave slopes).

@@ -102,9 +102,10 @@ namespace NaturalHistory.World
         //
         // Corner i points 60i degrees clockwise from +Z; edge e faces 60e + 30 (between corners e
         // and e+1). joined[e] = the edge reaches the full cell boundary (cellRadius) with no wall
-        // and no rim darkening, so the ground runs straight into that neighbour.
+        // and no rim darkening, so the ground runs straight into that neighbour. cliff[e] = the edge
+        // drops to the sea: its wall becomes a broken rock face (see AddCliff) instead of a flat side.
         public static Mesh CreateSloped(float tileRadius, float cellRadius, float height, float solid,
-                                        float[] cornerHeights, float[] edgeHeights, bool[] joined)
+                                        float[] cornerHeights, float[] edgeHeights, bool[] joined, bool[] cliff = null)
         {
             var mesh = new Mesh { name = "HexTileSloped" };
 
@@ -166,6 +167,7 @@ namespace NaturalHistory.World
             for (int e = 0; e < 6; e++)
             {
                 if (joined[e]) continue;
+                if (cliff != null && cliff[e]) { AddCliff(verts, uvs, tris, rim, e, dirs, tileRadius, Uv); continue; }
                 int b = verts.Count;
                 for (int s = 0; s < 3; s++)
                 {
@@ -189,6 +191,90 @@ namespace NaturalHistory.World
             mesh.RecalculateNormals();
             mesh.RecalculateBounds();
             return mesh;
+        }
+
+        // Sea cliff along edge e, shaped like a real rocky coast:
+        //  - in plan it isn't the straight hex edge: headlands bulge out over the sea between coves,
+        //    with a flat cap of clifftop joining them to the tile top
+        //  - in profile: a near-vertical face of bedded rock with small ledges, a wave-cut notch
+        //    just above the waterline, then a boulder apron / rock platform at sea level
+        // Both ends stay vertical on the hex corner, so it meets the walls of the neighbouring
+        // edges without gaps. Every facet has its own vertices (faceted rock); the shape is seeded
+        // from the edge's heights, so cached meshes repeat it exactly.
+        static void AddCliff(List<Vector3> verts, List<Vector2> uvs, List<int> tris, Vector3[] rim, int e, Vector3[] dirs,
+                             float tileRadius, System.Func<Vector3, float, Vector2> uv)
+        {
+            const int cols = 10;
+            var a = rim[2 * e]; var m = rim[2 * e + 1]; var c = rim[(2 * e + 2) % 12];
+            var outward = (dirs[e] + dirs[(e + 1) % 6]).normalized;
+            var rng = new System.Random(e * 7919 + Mathf.RoundToInt(a.y * 1e4f) * 31 + Mathf.RoundToInt(c.y * 1e4f) * 17 + Mathf.RoundToInt(m.y * 1e4f));
+            float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
+
+            // Plan: one or two headlands along the edge, nothing at the corners
+            float c1 = R(0.2f, 0.45f), c2 = R(0.55f, 0.8f), w1 = R(0.1f, 0.2f), w2 = R(0.1f, 0.2f);
+            float h1 = R(0.05f, 0.28f) * tileRadius, h2 = rng.NextDouble() < 0.6 ? R(0.04f, 0.22f) * tileRadius : 0f;
+            float Bulge(float t) =>
+                Mathf.Pow(Mathf.Sin(t * Mathf.PI), 0.7f) * (0.02f * tileRadius
+                + h1 * Mathf.Exp(-Mathf.Pow((t - c1) / w1, 2f)) + h2 * Mathf.Exp(-Mathf.Pow((t - c2) / w2, 2f)));
+
+            // Profile rows from the clifftop down: (height fraction, extra outward offset)
+            var rows = new (float f, float o)[]
+            {
+                (1.00f,  0.000f),
+                (0.82f,  0.008f), // ledges where harder beds stick out
+                (0.58f, -0.004f),
+                (0.34f,  0.010f),
+                (0.00f, -0.022f), // wave-cut notch (height set below)
+                (0.00f,  0.012f), // foot
+                (0.00f,  0.085f), // boulder apron / platform at sea level
+            };
+            var heightsAt = new[] { -1f, -1f, -1f, -1f, 0.085f, 0.03f, 0f }; // absolute heights near the waterline
+            int nRows = rows.Length;
+
+            var grid    = new Vector3[cols + 1, nRows];
+            var capEdge = new Vector3[cols + 1];
+            for (int k = 0; k <= cols; k++)
+            {
+                float t   = k / (float)cols;
+                var top   = t < 0.5f ? Vector3.Lerp(a, m, t * 2f) : Vector3.Lerp(m, c, t * 2f - 1f);
+                capEdge[k] = top;
+                float taper = Mathf.Sqrt(Mathf.Sin(t * Mathf.PI)); // 0 at the corners
+                float plan  = Bulge(t);
+                for (int r = 0; r < nRows; r++)
+                {
+                    float y = heightsAt[r] >= 0f ? Mathf.Min(heightsAt[r], top.y * 0.3f) : top.y * rows[r].f;
+                    if (r > 0 && heightsAt[r] < 0f) y += R(-0.03f, 0.03f) * top.y;
+                    float o = plan + taper * (rows[r].o * tileRadius / 0.985f + (r > 0 ? R(-0.012f, 0.012f) : 0f));
+                    if (r == 0) y -= 0.15f * plan; // headland caps dip slightly seaward
+                    grid[k, r] = new Vector3(top.x, Mathf.Max(0f, y), top.z) + outward * o;
+                }
+            }
+
+            void Facet(Vector3 x, Vector3 y, Vector3 z, Vector3 facing)
+            {
+                // Front faces are clockwise in Unity: make the normal point along `facing`
+                if (Vector3.Dot(Vector3.Cross(y - x, z - x), facing) < 0f) (y, z) = (z, y);
+                int i = verts.Count;
+                verts.Add(x); verts.Add(y); verts.Add(z);
+                uvs.Add(uv(x, 1f)); uvs.Add(uv(y, 1f)); uvs.Add(uv(z, 1f));
+                tris.Add(i); tris.Add(i + 1); tris.Add(i + 2);
+            }
+
+            for (int k = 0; k < cols; k++)
+            {
+                // Clifftop cap from the tile's rim out to the headland edge
+                Facet(capEdge[k], capEdge[k + 1], grid[k + 1, 0], Vector3.up);
+                Facet(capEdge[k], grid[k + 1, 0], grid[k, 0], Vector3.up);
+                for (int r = 0; r < nRows - 1; r++)
+                {
+                    // Columns run clockwise (seen from above) and rows downward, so down × along points
+                    // out of the rock, also on the flanks of a headland
+                    var face = Vector3.Cross(grid[k, r + 1] - grid[k, r], grid[k + 1, r] - grid[k, r]);
+                    if (face.sqrMagnitude < 1e-10f) face = outward;
+                    Facet(grid[k, r], grid[k, r + 1], grid[k + 1, r + 1], face);
+                    Facet(grid[k, r], grid[k + 1, r + 1], grid[k + 1, r], face);
+                }
+            }
         }
     }
 }

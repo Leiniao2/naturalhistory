@@ -30,7 +30,9 @@ namespace NaturalHistory.World
         private const float ChargeSpeed  = 1.7f;  // multiplier on the travel speed
         private const float BackOffSpeed = 0.6f;
 
-        private static readonly int FlapId = Shader.PropertyToID("_Flap");
+        private static readonly int FlapId        = Shader.PropertyToID("_Flap");
+        private static readonly int StrideId      = Shader.PropertyToID("_Stride");
+        private static readonly int StridePhaseId = Shader.PropertyToID("_StridePhase");
 
         public SpeciesDefinition Definition { get; private set; }
         public ColonyStyle Style { get; private set; }
@@ -39,6 +41,7 @@ namespace NaturalHistory.World
         public float MemberSpan { get; private set; }   // size of one member, in cells
 
         public bool CanMove => Style != ColonyStyle.Fixed && members.Count > 0;
+        public bool Backward => Definition != null && Definition.mapBackward; // swims tail first
         public bool IsBusy  => trip != null;
 
         public event Action<ColonyGroup> Arrived;            // finished a move or an attack and settled in
@@ -68,6 +71,16 @@ namespace NaturalHistory.World
             public float flapRate;      // radians per second; 0 = no flapping
             public float flapAmplitude;
             public float flapPhase;     // accumulated, so the beat can speed up without a jump
+
+            // Legs (Ground walkers and hoppers): the shader swings everything below the hips. The
+            // cycle advances with the distance actually covered, so feet don't slide.
+            public float strideAmplitude; // radians at full stride; 0 = no legs
+            public float legLength;       // hip height, in cells
+            public float stridePhase;
+            public float strideFactor;    // 0 standing .. 1 full stride
+            public float gaitSpeed;       // smoothed ground speed, cells per second
+            public Vector3 lastPosition;
+            public bool hasLastPosition;
 
             // Travelling: place in the formation (x = right, z = forward of the heading)
             public Vector3 slot;
@@ -299,7 +312,34 @@ namespace NaturalHistory.World
                 }
                 m.transform.localPosition = pos;
                 m.transform.localRotation = rot;
+                if (m.strideAmplitude > 0f) Stride(m, dt);
             }
+        }
+
+        // Advances the leg cycle by the ground the animal covered since last frame: one full cycle
+        // per stride length (each foot sweeps 2 · legLength · tan(amplitude) while planted).
+        private static void Stride(Member m, float dt)
+        {
+            var p = m.transform.position;
+            if (m.hasLastPosition && dt > 0f)
+            {
+                var d = p - m.lastPosition;
+                d.y = 0f;
+                float v = d.magnitude / dt;
+                if (v < 5f) // larger: the map wrap moved the whole tile, not the animal
+                {
+                    m.gaitSpeed    = Mathf.Lerp(m.gaitSpeed, v, 1f - Mathf.Exp(-dt * 10f));
+                    float strideLength = 2f * m.legLength * Mathf.Tan(m.strideAmplitude);
+                    m.stridePhase += v * dt / Mathf.Max(strideLength, 1e-4f) * Mathf.PI * 2f;
+                }
+            }
+            m.lastPosition    = p;
+            m.hasLastPosition = true;
+            // full stride from about one and a half leg lengths per second
+            m.strideFactor = Mathf.Clamp01(m.gaitSpeed / Mathf.Max(m.legLength * 1.5f, 1e-4f));
+            m.block.SetFloat(StrideId, m.strideAmplitude * m.strideFactor);
+            m.block.SetFloat(StridePhaseId, m.stridePhase);
+            m.renderer.SetPropertyBlock(m.block);
         }
 
         // Where the group centre is at trip time tt (relative to the tile it set out from), turning
@@ -398,21 +438,23 @@ namespace NaturalHistory.World
             {
                 case ColonyStyle.Ground:
                 {
-                    // a quicker, bouncier version of the wandering gait
-                    float step = t * 9f / Mathf.Sqrt(Mathf.Max(m.span, 0.3f)) + p;
+                    // a quicker, bouncier version of the wandering gait, in step with the legs
+                    float step = GaitCycle(m, t, 9f);
+                    float k    = GaitStrength(m);
                     float lift = 0f, roll = 0f, yaw = 0f, pitch = 0f;
                     switch (Gait)
                     {
                         case ColonyGait.Walk:
-                            lift  = Mathf.Abs(Mathf.Sin(step)) * 0.03f;
-                            roll  = Mathf.Sin(step) * 3f;
-                            pitch = Mathf.Sin(step * 2f) * 1.5f;
+                            // highest as the legs pass under the body
+                            lift  = Mathf.Abs(Mathf.Cos(step)) * 0.03f * k;
+                            roll  = Mathf.Sin(step) * 3f * k;
+                            pitch = Mathf.Sin(step * 2f) * 1.5f * k;
                             break;
                         case ColonyGait.Hop:
                         {
-                            float h = Mathf.Sin(step * 0.6f);
-                            lift  = Mathf.Abs(h) * 0.22f;
-                            pitch = -h * 8f; // nose up taking off, down on landing
+                            float h = Mathf.Sin(step * 0.5f);
+                            lift  = Mathf.Abs(h) * 0.22f * k;
+                            pitch = -h * 8f * k; // nose up taking off, down on landing
                             break;
                         }
                         case ColonyGait.Slither:
@@ -435,7 +477,15 @@ namespace NaturalHistory.World
                 }
                 case ColonyStyle.Swim:
                     pos += Vector3.up * (Mathf.Sin(t * 1.5f + p) * 0.006f) + forward * (lunge * 0.15f);
-                    rot = hq * Quaternion.Euler(0f, Mathf.Sin(t * 7f + p * 3f) * 10f, 0f);
+                    if (Backward && (trip == null || trip.strikeTarget == null))
+                    {
+                        // jetting tail first: surges with each mantle pulse instead of a tail wag
+                        float pulse = Mathf.Sin(t * 4f + p);
+                        pos += forward * (pulse * 0.02f * m.span);
+                        rot = hq * Quaternion.Euler(pulse * 2f, 180f, 0f);
+                    }
+                    else // attacks are made head first; a backward swimmer then backs off, still facing the target
+                        rot = hq * Quaternion.Euler(0f, Mathf.Sin(t * 7f + p * 3f) * 10f, 0f);
                     break;
                 case ColonyStyle.Float:
                     pos += Vector3.up * (Mathf.Sin(t * 2.2f + p) * 0.008f) + forward * (lunge * 0.1f);
@@ -489,7 +539,9 @@ namespace NaturalHistory.World
                     float a   = m.phase + t * m.speed;
                     var ahead = new Vector3(-Mathf.Sin(a), 0f, Mathf.Cos(a)) * Mathf.Sign(m.speed);
                     pos = new Vector3(Mathf.Cos(a) * m.radius, m.basePosition.y + Mathf.Sin(t * 0.9f + m.phase) * 0.008f, Mathf.Sin(a) * m.radius);
-                    rot = Quaternion.LookRotation(ahead) * Quaternion.Euler(0f, Mathf.Sin(t * 3f + m.phase * 3f) * 6f, 0f);
+                    rot = Backward
+                        ? Quaternion.LookRotation(-ahead) * Quaternion.Euler(Mathf.Sin(t * 2f + m.phase) * 2f, 0f, 0f)
+                        : Quaternion.LookRotation(ahead) * Quaternion.Euler(0f, Mathf.Sin(t * 3f + m.phase * 3f) * 6f, 0f);
                     break;
                 }
                 case ColonyStyle.Swarm:
@@ -543,12 +595,13 @@ namespace NaturalHistory.World
             }
 
             // gait: a small bob and sway while walking, bounds for hoppers, an S-wag for snakes
-            float step = t * 6f / Mathf.Sqrt(Mathf.Max(m.span, 0.3f)) + m.phase; // big animals take slower strides
+            float step = GaitCycle(m, t, 6f);
+            float k    = GaitStrength(m);
             float lift = 0f, roll = 0f, yaw = 0f;
             switch (Gait)
             {
-                case ColonyGait.Walk:    lift = Mathf.Abs(Mathf.Sin(step)) * 0.015f; roll = Mathf.Sin(step) * 2f; break;
-                case ColonyGait.Hop:     lift = Mathf.Abs(Mathf.Sin(step * 0.5f)) * 0.18f; break;
+                case ColonyGait.Walk:    lift = Mathf.Abs(Mathf.Cos(step)) * 0.015f * k; roll = Mathf.Sin(step) * 2f * k; break;
+                case ColonyGait.Hop:     lift = Mathf.Abs(Mathf.Sin(step * 0.5f)) * 0.18f * k; break;
                 case ColonyGait.Slither: yaw = Mathf.Sin(step * 0.6f) * 14f; break;
             }
             pos = m.position + Vector3.up * (lift * m.span);
@@ -582,6 +635,14 @@ namespace NaturalHistory.World
         }
 
         // ---- Helpers ---------------------------------------------------------------------------
+
+        // Where an animal is in its gait: the leg cycle for animals with legs, otherwise a steady
+        // beat that is slower for big animals (rate = beats per second at span 1).
+        private static float GaitCycle(Member m, float t, float rate) =>
+            m.strideAmplitude > 0f ? m.stridePhase : t * rate / Mathf.Sqrt(Mathf.Max(m.span, 0.3f)) + m.phase;
+
+        // How much the body bobs: with legs, only as much as it is actually striding
+        private static float GaitStrength(Member m) => m.strideAmplitude > 0f ? m.strideFactor : 1f;
 
         private static bool AreNeighbors(HexCell a, HexCell b)
         {

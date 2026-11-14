@@ -23,9 +23,11 @@ namespace NaturalHistory.World
             var mOff = RandomOffset();
             var fOff = RandomOffset();
             var rOff = RandomOffset();
+            var cOff = RandomOffset();
             const float scale       = 0.16f; // continent-sized elevation/moisture blobs
             const float ridgeScale  = 0.16f; // mountain ranges
             const float forestScale = 0.35f; // finer than climate noise → patchy woods, not one huge forest
+            const float cliffScale  = 0.22f; // stretches of rocky, cliffed coast
 
             // Pass 1: raw noise per cell (index = r * width + q)
             int n = width * height;
@@ -33,6 +35,7 @@ namespace NaturalHistory.World
             var rawM = new float[n];
             var rawF = new float[n];
             var rawR = new float[n];
+            var rawC = new float[n];
             for (int r = 0; r < height; r++)
             for (int q = 0; q < width; q++)
             {
@@ -45,6 +48,7 @@ namespace NaturalHistory.World
                 rawM[i] = FBm(OnCylinder(around, r, width, scale) + mOff, 4);
                 rawF[i] = FBm(OnCylinder(around, r, width, forestScale) + fOff, 3);
                 rawR[i] = RidgedFBm(OnCylinder(around, r, width, ridgeScale) + rOff, 4);
+                rawC[i] = FBm(OnCylinder(around, r, width, cliffScale) + cOff, 3);
             }
 
             // Pass 2: replace raw noise with ranks (0..1), so every threshold below is a share of
@@ -56,10 +60,20 @@ namespace NaturalHistory.World
             var m = Rank(rawM, all);
             var f = Rank(rawF, all);
 
+            var c = Rank(rawC, all);
+
             var land = all.FindAll(i => e[i] >= WaterThreshold);
-            // Ruggedness: ridged noise, nudged toward high ground so ranges favour the interior
+            var coast = CoastDistance(e, width, height);
+            // Ruggedness: ridged noise, nudged toward high ground so ranges favour the interior and
+            // away from the sea, so land usually steps down highland → lowland → shore. Only in a few
+            // stretches (CliffCoastShare of the map) may hills and mountains reach the water as cliffs.
             var ridge = new float[n];
-            foreach (int i in land) ridge[i] = rawR[i] + 0.3f * e[i];
+            foreach (int i in land)
+            {
+                bool cliffCoast = c[i] > 1f - CliffCoastShare;
+                float penalty = cliffCoast ? 0f : coast[i] switch { 1 => 0.6f, 2 => 0.3f, 3 => 0.1f, _ => 0f };
+                ridge[i] = rawR[i] + 0.3f * e[i] - penalty;
+            }
             var rugged = Rank(ridge, land);
             var landE  = Rank(rawE, land);
 
@@ -69,6 +83,8 @@ namespace NaturalHistory.World
                 int i = r * width + q;
                 bool isLand = e[i] >= WaterThreshold;
                 int level   = isLand ? ToElevationLevel(landE[i], rugged[i]) : 0;
+                // Lowland rises gently from the shore: level 1 on the coast, 2 one tile in, …
+                if (isLand && level < 5) level = Mathf.Min(level, coast[i]);
 
                 // Temperature: hot at equator (center row), cold at poles and altitude
                 float lat  = Mathf.Abs(r / (float)(height - 1) - 0.5f) * 2f;
@@ -95,6 +111,45 @@ namespace NaturalHistory.World
         const float MountainThreshold  = 0.80f; // …and the top 20% of land is mountains
 
         const float TropicalTemp = 0.68f; // warmer than this is the tropical belt
+        const float CliffCoastShare = 0.15f; // share of the map where highland may meet the sea
+
+        // Hex steps from each land cell to the nearest water (1 = on the coast); 0 for water.
+        // Odd rows are shifted right (offset coordinates); columns wrap, rows don't.
+        static int[] CoastDistance(float[] e, int width, int height)
+        {
+            var dist  = new int[width * height];
+            var queue = new Queue<int>();
+            for (int i = 0; i < dist.Length; i++)
+            {
+                if (e[i] < WaterThreshold) queue.Enqueue(i);
+                else dist[i] = int.MaxValue;
+            }
+            while (queue.Count > 0)
+            {
+                int i = queue.Dequeue(), q = i % width, r = i / width;
+                int shift = r & 1; // odd rows: diagonal neighbours are at q and q+1, even rows at q-1 and q
+                for (int k = 0; k < 6; k++)
+                {
+                    int nq, nr;
+                    switch (k)
+                    {
+                        case 0:  nq = q - 1; nr = r; break;
+                        case 1:  nq = q + 1; nr = r; break;
+                        case 2:  nq = q - 1 + shift; nr = r - 1; break;
+                        case 3:  nq = q + shift;     nr = r - 1; break;
+                        case 4:  nq = q - 1 + shift; nr = r + 1; break;
+                        default: nq = q + shift;     nr = r + 1; break;
+                    }
+                    if (nr < 0 || nr >= height) continue;
+                    int j = nr * width + ((nq % width) + width) % width;
+                    if (dist[j] <= dist[i] + 1) continue;
+                    dist[j] = dist[i] + 1;
+                    queue.Enqueue(j);
+                }
+            }
+            for (int i = 0; i < dist.Length; i++) if (dist[i] == int.MaxValue) dist[i] = 99; // no water on the map
+            return dist;
+        }
 
         // Terrace bands: lowland 1–4 (by elevation), hills 5–7 and mountains 8–10 (by ruggedness)
         public const int MountainElevation = 8;

@@ -23,4 +23,32 @@ void ApplyFlap(inout float3 p, inout float3 n)
     n.y = nOut * s + n.y * c;
 }
 
+// Walking legs for MapFeature.shader; needs _Stride, _StridePhase, _StrideLegs and _StrideMode.
+// The models are single static meshes, so everything below the hips (_StrideLegs.x, object space)
+// is treated as legs: it swings about the hip line by up to _Stride radians, front/back by z.
+// Legs are grouped into _StrideMode.x pairs along z (1 = biped, 2 = quadruped, 3 = insect...);
+// neighbouring pairs and the left/right legs of a pair step in opposite phase, which gives a
+// diagonal trot for four legs and a tripod gait for six. _StrideMode.y = 1 moves all legs together
+// (hoppers). A leg swinging forward lifts its foot. _Stride = 0 leaves the mesh untouched.
+void ApplyStride(inout float3 p)
+{
+    if (_Stride == 0) return;
+    float hip   = _StrideLegs.x;
+    float leg   = max(_StrideLegs.y, 1e-4);
+    float below = hip - p.y;
+    if (below <= 0) return;
+
+    float pairs  = max(_StrideMode.x, 1);
+    float zt     = saturate((p.z - _StrideLegs.z) / max(_StrideLegs.w - _StrideLegs.z, 1e-4));
+    float bucket = min(floor(zt * pairs), pairs - 1);
+    float side   = p.x >= 0 ? 0 : 1;
+    float phase  = _StridePhase + (_StrideMode.y > 0.5 ? 0 : fmod(bucket + side, 2) * 3.14159265);
+
+    float a    = _Stride * sin(phase);
+    float ease = smoothstep(0, leg * 0.25, below);  // the belly just under the hips barely moves
+    float foot = saturate(below / leg);
+    p.z += below * sin(a) * ease;
+    p.y += below * (1 - cos(a)) * ease + leg * 0.12 * max(0, cos(phase)) * foot * foot * (_Stride / 0.5);
+}
+
 #endif

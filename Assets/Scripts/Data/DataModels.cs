@@ -162,6 +162,9 @@ namespace NaturalHistory.Data
         public float mapScale;        // size multiplier on the map (e.g. a bird modelled on a tall perch); 0 = 1
         public float wingBeat;        // wing/fin beats per second on the map; 0 = the model doesn't flap
         public float wingRoot;        // body half-width as a fraction of the model's half-span (what stays still); 0 = 0.15
+        public int mapLegs;           // Ground walkers/hoppers: pairs of legs (1 = biped, 2 = quadruped, 3 = insect); 0 = 2
+        public float mapHip;          // Ground walkers/hoppers: hip height as a fraction of the model's height; 0 = 0.45
+        public bool mapBackward;      // swims tail first (squid, ammonites jetting backwards)
         public List<GeneValue> genes;
         public string description;
     }

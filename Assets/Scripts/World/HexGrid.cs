@@ -59,6 +59,7 @@ namespace NaturalHistory.World
         private readonly List<Mesh> featureMeshes = new();
         private readonly List<GameObject> featureObjects = new(); // props only; cells also carry colonies and markers
         private Dictionary<TerrainKind, TerrainType> terrainTypes;
+        private Vector3 reliefOffset; // mountain relief noise, from the world seed
         private Material featureMaterial;
         private float wrapFocusX = float.NaN; // local X the cells were last recentred around
 
@@ -69,6 +70,8 @@ namespace NaturalHistory.World
         private const float TileRadius = 0.985f; // tile size relative to cellSize; the rest is a thin groove between tiles
         private const float TileBevel  = 0.06f;  // width of each tile's rounded top edge, relative to cellSize
         private const float TileBlendWidth = 0.35f; // how far terrain fades into its neighbour from each edge, relative to cellSize
+        private const int   CliffElevation = 5;      // coastal land this high (hills, mountains) meets the water in a cliff
+        private const float ShoreHeight    = 0.075f; // lower coasts slope down to this at the water's edge (just above the lakes)
         private const float TileSolid  = 0.6f;   // flat middle of a land tile, relative to its radius; the rest slopes to meet the neighbours
 
         private void Awake()
@@ -244,6 +247,8 @@ namespace NaturalHistory.World
             }
 
             var rng = new System.Random(worldSeed);
+            var reliefRng = new System.Random(worldSeed ^ 0x2C1B3C6D);
+            reliefOffset  = new Vector3((float)reliefRng.NextDouble(), (float)reliefRng.NextDouble(), (float)reliefRng.NextDouble()) * 1000f;
             // The period decides the plants: lycopsids and tree ferns, cycads, Araucaria, flowering trees…
             var broadleaf  = CreateFeatureVariants(() => MapFeatureMeshes.CreateEraForest(rng, cellSize, age, TerrainFeature.BroadleafForest));
             var conifers   = CreateFeatureVariants(() => MapFeatureMeshes.CreateEraForest(rng, cellSize, age, TerrainFeature.ConiferForest));
@@ -285,6 +290,11 @@ namespace NaturalHistory.World
                     case TerrainFeature.Oasis:           mesh = Pick(oases);     others++;  break;
                     default:
                         if (cell.IsMountain) { mesh = Track(CreateMountainFor(cell, r, rng, age)); unique = true; mountains++; }
+                        else if (cell.Terrain.kind == TerrainKind.SaltWater && CliffEdge(cell, out var toCliff) && rng.NextDouble() < 0.3)
+                        {
+                            mesh = Track(MapFeatureMeshes.CreateSeaStacks(rng, cellSize, toCliff, cellSize * 0.8660254f));
+                            unique = true; others++;
+                        }
                         else if (details.TryGetValue(cell.Terrain.kind, out var d) && rng.NextDouble() < 0.75) mesh = Pick(d);
                         break;
                 }
@@ -304,48 +314,101 @@ namespace NaturalHistory.World
             Debug.Log($"[HexGrid] PlaceFeatures — {mountains} mountains, {forests} forests/jungles, {others} volcanoes/reefs/oases");
         }
 
-        // Each mountain is unique: taller in the middle of a range, rock coloured by the land around
-        // it (red sandstone near deserts, blue-grey near ice, grey/brown/dark elsewhere), snowier
-        // toward the poles, and pines at the foot only where the neighbours are green. Ridges join
-        // it to each neighbouring mountain, so a range reads as one continuous body of rock.
+        // A mountain tile's piece of a continuous massif: neighbouring mountain tiles carry the rock
+        // on across the shared edge, other neighbours get a foot that sinks into the ground. Rock
+        // colour comes from the land around (red sandstone near deserts, blue-grey near ice,
+        // grey/brown elsewhere) and snow from latitude; both ease to the pair's shared value at each
+        // edge. Pines only where the land around is green and conifers exist.
         private Mesh CreateMountainFor(HexCell cell, int row, System.Random rng, GeologicalAge age)
         {
-            float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
-            var (ridge, _, _, green) = Surroundings(cell);
+            var (_, _, _, green) = Surroundings(cell);
+            bool icy  = cell.Terrain.kind == TerrainKind.IceSheet;
+            var site  = new MapFeatureMeshes.MassifSite
+            {
+                Apothem  = cellSize * 0.8660254f,
+                BaseY    = cell.SurfaceHeight,
+                Joined   = new bool[6],
+                Rock     = MountainRock(cell),
+                EdgeRock = new Color[6],
+                Snow     = MountainSnow(cell),
+                EdgeSnow = new float[6],
+                Green    = !icy && green >= 2 && age >= GeologicalAge.Carboniferous, // first conifers
+                GroundAt = p => LocalGround(cell, p),
+            };
+            var origin = cell.Coordinates.ToWorldPosition(cellSize);
+            site.Relief = p => MountainRelief(new Vector2(origin.x + p.x, origin.z + p.y));
+            site.Detail = p => MountainDetail(new Vector2(origin.x + p.x, origin.z + p.y));
 
-            bool icy    = cell.Terrain.kind == TerrainKind.IceSheet;
-            float snow  = icy ? R(0.7f, 0.9f) : Mathf.Clamp01(Mathf.Lerp(0.12f, 0.6f, Latitude(row)) + R(-0.08f, 0.08f));
-            float scale = Mathf.Clamp(0.7f + 0.11f * ridge + R(-0.12f, 0.12f), 0.6f, 1.4f);
-            var rock    = MountainRock(cell);
-
-            // Saddle height, width, snow line and rock colour are drawn from the pair of tiles, so
-            // both mountains build the same cross-section where their ridges meet.
-            var ridges    = new List<MapFeatureMeshes.MountainRidge>();
             var neighbors = EdgeNeighbors(cell);
             for (int e = 0; e < 6; e++)
             {
                 var n = neighbors[e];
-                if (!JoinedByRidge(cell, n)) continue;
-                float top     = Mathf.Max(cell.SurfaceHeight, n.SurfaceHeight);
-                float pairLat = (Latitude(cell.Coordinates.R) + Latitude(n.Coordinates.R)) * 0.5f;
-                bool pairIcy  = icy || n.Terrain.kind == TerrainKind.IceSheet;
-                float pairSnow = pairIcy ? 0.8f : Mathf.Lerp(0.12f, 0.6f, pairLat);
-                ridges.Add(new MapFeatureMeshes.MountainRidge
-                {
-                    Edge      = e,
-                    Crest     = top + cellSize * Mathf.Lerp(0.25f, 0.45f, PairNoise(cell, n, 0)) - cell.SurfaceHeight,
-                    HalfWidth = cellSize * Mathf.Lerp(0.2f, 0.3f, PairNoise(cell, n, 1)),
-                    SnowY     = top + cellSize * 1.1f * (1f - pairSnow) - cell.SurfaceHeight,
-                    Tint      = (rock + MountainRock(n)) * 0.5f,
-                });
+                site.Joined[e]   = InSameMassif(cell, n);
+                site.EdgeRock[e] = site.Joined[e] ? (site.Rock + MountainRock(n)) * 0.5f : site.Rock;
+                site.EdgeSnow[e] = site.Joined[e] ? (site.Snow + MountainSnow(n)) * 0.5f : site.Snow;
             }
-            return MapFeatureMeshes.CreateMountain(rng, cellSize, snow, scale, rock, allowTrees: !icy && green >= 2 && age >= GeologicalAge.Carboniferous, // first conifers
-                                                   ridges, cellSize * 0.8660254f, p => LocalGround(cell, p));
+            return MapFeatureMeshes.CreateMassif(rng, cellSize, site);
         }
 
-        // Volcanoes stand alone; other neighbouring mountains are linked by a ridge.
-        private static bool JoinedByRidge(HexCell a, HexCell b) =>
+        // Direction (local XZ) from a sea cell toward a neighbouring cliffed coast, if it has one.
+        private bool CliffEdge(HexCell cell, out Vector2 toCliff)
+        {
+            var neighbors = EdgeNeighbors(cell);
+            for (int e = 0; e < 6; e++)
+            {
+                var n = neighbors[e];
+                if (n == null || n.Terrain == null || n.IsWater || n.Elevation < CliffElevation) continue;
+                float a = (60f * e + 30f) * Mathf.Deg2Rad;
+                toCliff = new Vector2(Mathf.Sin(a), Mathf.Cos(a));
+                return true;
+            }
+            toCliff = default;
+            return false;
+        }
+
+        // Volcanoes stand alone; other neighbouring mountains are one massif.
+        private static bool InSameMassif(HexCell a, HexCell b) =>
             b != null && a.IsMountain && b.IsMountain && a.Feature != TerrainFeature.Volcano && b.Feature != TerrainFeature.Volcano;
+
+        // Snow line (fraction of the massif height from the top): low on ice sheets, lower toward the poles
+        private float MountainSnow(HexCell cell) =>
+            cell.Terrain.kind == TerrainKind.IceSheet ? 0.8f : Mathf.Lerp(0.12f, 0.6f, Latitude(cell.Coordinates.R));
+
+        // Ruggedness of mountains at a map position (grid-local XZ), 0..1: ridged noise for crests and
+        // valleys, scaled by a broad field so some ranges are higher than others. Sampled around the
+        // map's east–west loop, so it matches up across the wrap seam.
+        private float MountainRelief(Vector2 pos)
+        {
+            var p = OnMapLoop(pos) + reliefOffset;
+
+            // 5 octaves: the finest (about 1/12 of a tile) gives the dense mesh gullies and spurs to show
+            float v = 0f, amp = 0.5f, freq = 1.3f / cellSize, max = 0f;
+            for (int o = 0; o < 5; o++)
+            {
+                float r = 1f - Mathf.Abs(PerlinNoise3D.Sample(p.x * freq, p.y * freq, p.z * freq));
+                v += r * r * amp; max += amp;
+                amp *= 0.5f; freq *= 2.1f;
+            }
+            v = Mathf.Clamp01((v / max - 0.3f) / 0.65f);
+            float broad = 0.5f + 0.5f * PerlinNoise3D.Sample(p.x * 0.25f / cellSize + 71f, p.y * 0.25f / cellSize, p.z * 0.25f / cellSize);
+            return Mathf.Clamp01(v * (0.55f + 0.6f * broad));
+        }
+
+        // Smooth 0..1 noise for rock colour, snow line and grass line on mountains
+        private float MountainDetail(Vector2 pos)
+        {
+            var p = OnMapLoop(pos) * (3f / cellSize) + reliefOffset * 0.5f;
+            return Mathf.Clamp01(0.5f + 0.6f * PerlinNoise3D.Sample(p.x, p.y, p.z + 37f) + 0.25f * PerlinNoise3D.Sample(p.x * 2.7f, p.y * 2.7f, p.z * 2.7f));
+        }
+
+        // A grid-local XZ position as a point on the map's east–west loop (a cylinder), so noise
+        // sampled there matches up across the wrap seam.
+        private Vector3 OnMapLoop(Vector2 pos)
+        {
+            float angle = pos.x / WrapWidth * Mathf.PI * 2f;
+            float rad   = WrapWidth / (Mathf.PI * 2f);
+            return new Vector3(Mathf.Cos(angle) * rad, Mathf.Sin(angle) * rad, pos.y);
+        }
 
         // 0 = equator, 1 = pole
         private float Latitude(int row) => height > 1 ? Mathf.Abs(row / (float)(height - 1) * 2f - 1f) : 0f;
@@ -576,6 +639,7 @@ namespace NaturalHistory.World
             var corners = new float[6];
             var edges   = new float[6];
             var joined  = new bool[6];
+            var cliff   = new bool[6];
             var key     = new System.Text.StringBuilder();
             for (int r = 0; r < height; r++)
             for (int q = 0; q < width; q++)
@@ -598,19 +662,27 @@ namespace NaturalHistory.World
                 else
                 {
                     var n = EdgeNeighbors(cell);
-                    bool Land(HexCell c) => c != null && c.Terrain != null && !c.IsWater;
+                    bool Land(HexCell c)  => c != null && c.Terrain != null && !c.IsWater;
+                    bool Water(HexCell c) => c != null && c.Terrain != null && c.IsWater;
+                    bool Low(HexCell c)   => c.Elevation < CliffElevation;
+                    // Coasts: low land slopes down to a beach at the water's edge; highland ends in
+                    // a cliff. Rim heights depend only on the cells sharing each edge / corner, so
+                    // neighbouring land tiles still agree on them.
                     for (int e = 0; e < 6; e++)
                     {
-                        edges[e]  = Land(n[e]) ? (h + n[e].SurfaceHeight) * 0.5f : h;
+                        bool shore = Water(n[e]);
+                        edges[e]  = Land(n[e]) ? (h + n[e].SurfaceHeight) * 0.5f : shore && Low(cell) ? ShoreHeight : h;
                         joined[e] = cell.IsMountain && Land(n[e]) && n[e].IsMountain;
+                        cliff[e]  = shore && !Low(cell);
                     }
                     for (int i = 0; i < 6; i++)
                     {
                         float sum = h; int count = 1;
                         var a = n[(i + 5) % 6]; var b = n[i]; // the two edges meeting at corner i
-                        if (Land(a)) { sum += a.SurfaceHeight; count++; }
-                        if (Land(b)) { sum += b.SurfaceHeight; count++; }
-                        corners[i] = sum / count;
+                        bool low = Low(cell);
+                        if (Land(a)) { sum += a.SurfaceHeight; count++; low &= Low(a); }
+                        if (Land(b)) { sum += b.SurfaceHeight; count++; low &= Low(b); }
+                        corners[i] = (Water(a) || Water(b)) && low ? ShoreHeight : sum / count;
                     }
 
                     var rim = new float[12];
@@ -620,13 +692,13 @@ namespace NaturalHistory.World
                         rim[2 * i]     = corners[i];
                         rim[2 * i + 1] = edges[i];
                         key.Append(',').Append(Mathf.RoundToInt(corners[i] * 10000f))
-                           .Append(',').Append(Mathf.RoundToInt(edges[i] * 10000f)).Append(joined[i] ? 'j' : '-');
+                           .Append(',').Append(Mathf.RoundToInt(edges[i] * 10000f)).Append(joined[i] ? 'j' : cliff[i] ? 'c' : '-');
                     }
                     cell.SetRimHeights(rim);
                     string landKey = key.ToString();
                     if (!meshCache.TryGetValue(landKey, out mesh))
                     {
-                        mesh = HexMeshGenerator.CreateSloped(cellSize * TileRadius, cellSize, h, TileSolid, corners, edges, joined);
+                        mesh = HexMeshGenerator.CreateSloped(cellSize * TileRadius, cellSize, h, TileSolid, corners, edges, joined, cliff);
                         mesh.hideFlags = HideFlags.DontSave;
                         meshCache[landKey] = mesh;
                     }

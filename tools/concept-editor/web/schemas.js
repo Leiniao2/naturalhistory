@@ -235,6 +235,9 @@ export const DATASETS = {
       { key: 'mapGait', label: 'Map gait', type: 'enum', options: [{ value: '', label: '— default (Walk) —' }, ...MAP_GAITS.map(g => ({ value: g, label: g }))], help: 'How a Ground animal moves around its tile' },
       { key: 'wingBeat', label: 'Wing beat (Hz)', type: 'number', min: 0, step: 0.1, help: 'Wing/fin beats per second on the map (Soar, Swarm, Swim); 0 = no flapping' },
       { key: 'wingRoot', label: 'Wing root', type: 'number', min: 0, max: 1, step: 0.01, help: 'Body half-width as a fraction of the half-span; that part stays still. 0 = 0.15' },
+      { key: 'mapLegs', label: 'Leg pairs', type: 'int', min: 0, max: 6, help: 'Ground walkers/hoppers: 1 = biped, 2 = quadruped, 3 = insect; 0 = 2' },
+      { key: 'mapHip', label: 'Hip height', type: 'number', min: 0, max: 1, step: 0.05, help: 'Ground walkers/hoppers: everything below this fraction of the model height swings as legs; 0 = 0.45' },
+      { key: 'mapBackward', label: 'Swims backward', type: 'bool', help: 'Moves tail first, like a squid or ammonite jetting' },
       { key: 'genes', label: 'Starting genes', type: 'table', newRow: () => ({ gene: '', expression: 0.5 }), columns: [
         { key: 'gene', label: 'Gene', type: 'enum', options: (all) => [{ value: '', label: '—' }, ...idsOf('genes', 'displayName')(all)] },
         { key: 'expression', label: 'Expression', type: 'number', min: 0, max: 1, step: 0.05 },

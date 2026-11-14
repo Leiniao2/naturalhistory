@@ -53,6 +53,12 @@ namespace NaturalHistory.World
         private const float SwimFlap  = 0.35f;
         private static readonly int FlapRootId = Shader.PropertyToID("_FlapRoot");
         private static readonly int FlapSpanId = Shader.PropertyToID("_FlapSpan");
+        private static readonly int StrideLegsId = Shader.PropertyToID("_StrideLegs");
+        private static readonly int StrideModeId = Shader.PropertyToID("_StrideMode");
+
+        // Leg swing at full stride (radians); hoppers kick both legs together, further
+        private const float WalkStride = 0.42f;
+        private const float HopStride  = 0.6f;
 
         public static SpeciesColonies Instance { get; private set; }
 
@@ -303,6 +309,16 @@ namespace NaturalHistory.World
                     block.SetFloat(FlapSpanId, halfSpan);
                     member.flapRate      = def.wingBeat * R(0.9f, 1.1f) * Mathf.PI * 2f;
                     member.flapAmplitude = flapAmplitude;
+                }
+                if (style == ColonyStyle.Ground && gait != ColonyGait.Slither)
+                {
+                    // everything below the hips swings as legs (see MapFeatureFlap.cginc)
+                    var b      = mesh.bounds;
+                    float hipY = b.min.y + (def.mapHip > 0f ? def.mapHip : 0.45f) * b.size.y;
+                    block.SetVector(StrideLegsId, new Vector4(hipY, hipY - b.min.y, b.min.z, b.max.z));
+                    block.SetVector(StrideModeId, new Vector4(def.mapLegs > 0 ? def.mapLegs : 2, gait == ColonyGait.Hop ? 1f : 0f, 0f, 0f));
+                    member.strideAmplitude = gait == ColonyGait.Hop ? HopStride : WalkStride;
+                    member.legLength       = (hipY - b.min.y) * (span / meshSpan);
                 }
                 mr.SetPropertyBlock(block);
 

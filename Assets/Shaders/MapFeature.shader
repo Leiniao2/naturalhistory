@@ -1,7 +1,8 @@
 // Flat-shaded props on top of hex tiles (mountain peaks, trees).
 // Albedo comes from mesh vertex colors, so every prop shares this one material.
 // _Flap bends everything beyond |x| > _FlapRoot (object space) up or down about the body's long
-// axis, so a single static mesh can beat its wings or fins; SpeciesColonies drives it per renderer.
+// axis, so a single static mesh can beat its wings or fins; _Stride swings everything below the hips
+// back and forth as legs. ColonyGroup drives both per renderer.
 Shader "NaturalHistory/MapFeature"
 {
     Properties
@@ -10,6 +11,10 @@ Shader "NaturalHistory/MapFeature"
         _Flap ("Wing angle (radians)", Float) = 0
         _FlapRoot ("Wing root (half body width)", Float) = 0
         _FlapSpan ("Wing tip (half span)", Float) = 1
+        [HideInInspector] _Stride ("Leg swing (radians)", Float) = 0
+        [HideInInspector] _StridePhase ("Leg cycle phase", Float) = 0
+        [HideInInspector] _StrideLegs ("Hip height, leg length, leg z min, leg z max", Vector) = (0, 1, -1, 1)
+        [HideInInspector] _StrideMode ("Leg pairs, all legs together", Vector) = (2, 0, 0, 0)
     }
 
     SubShader
@@ -24,6 +29,10 @@ Shader "NaturalHistory/MapFeature"
             float _Flap;
             float _FlapRoot;
             float _FlapSpan;
+            float _Stride;
+            float _StridePhase;
+            float4 _StrideLegs;
+            float4 _StrideMode;
         CBUFFER_END
 
         #include "MapFeatureFlap.cginc"
@@ -63,6 +72,7 @@ Shader "NaturalHistory/MapFeature"
             {
                 Varyings o;
                 ApplyFlap(v.positionOS.xyz, v.normalOS);
+                ApplyStride(v.positionOS.xyz);
                 VertexPositionInputs pos = GetVertexPositionInputs(v.positionOS.xyz);
                 o.positionCS = pos.positionCS;
                 o.positionWS = pos.positionWS;
@@ -108,6 +118,7 @@ Shader "NaturalHistory/MapFeature"
             float4 vert(Attributes v) : SV_POSITION
             {
                 ApplyFlap(v.positionOS.xyz, v.normalOS);
+                ApplyStride(v.positionOS.xyz);
                 float3 posWS    = TransformObjectToWorld(v.positionOS.xyz);
                 float3 normalWS = TransformObjectToWorldNormal(v.normalOS);
             #if _CASTING_PUNCTUAL_LIGHT_SHADOW
@@ -140,6 +151,7 @@ Shader "NaturalHistory/MapFeature"
             {
                 float3 normalOS = float3(0, 1, 0);
                 ApplyFlap(v.positionOS.xyz, normalOS);
+                ApplyStride(v.positionOS.xyz);
                 return TransformObjectToHClip(v.positionOS.xyz);
             }
             half4 frag() : SV_Target { return 0; }
@@ -160,6 +172,10 @@ Shader "NaturalHistory/MapFeature"
         float _Flap;
         float _FlapRoot;
         float _FlapSpan;
+        float _Stride;
+        float _StridePhase;
+        float4 _StrideLegs;
+        float4 _StrideMode;
         #include "MapFeatureFlap.cginc"
 
         struct Input
@@ -170,6 +186,7 @@ Shader "NaturalHistory/MapFeature"
         void vert(inout appdata_full v)
         {
             ApplyFlap(v.vertex.xyz, v.normal);
+            ApplyStride(v.vertex.xyz);
         }
 
         void surf(Input IN, inout SurfaceOutput o)
