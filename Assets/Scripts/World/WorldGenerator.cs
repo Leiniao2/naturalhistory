@@ -77,8 +77,10 @@ namespace NaturalHistory.World
                 var kind = ClassifyTerrain(e[i], rugged[i], m[i], temp);
                 if (terrains.TryGetValue(kind, out var terrain))
                     cells[q, r].SetTerrain(terrain);
+                var feature = ChooseFeature(kind, m[i], temp, f[i]);
                 cells[q, r].SetElevation(level);
-                cells[q, r].SetFeature(ChooseFeature(kind, m[i], temp, f[i]));
+                cells[q, r].SetFeature(feature);
+                cells[q, r].SetClimate(kind, feature, m[i]);
             }
 
             Debug.Log($"[WorldGenerator] Generated world (seed={seed}).");

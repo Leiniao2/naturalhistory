@@ -80,9 +80,10 @@ namespace NaturalHistory.UI
             var t = climate.Get(cell);
             tilePanel.RemoveFromClassList("hidden");
             var (col, row) = cell.Coordinates.ToOffsetCoordinates();
-            tileTitle.text = $"{cell.Terrain?.kind}{(cell.IsForest ? " (forest)" : "")}  ·  ({col}, {row})";
+            tileTitle.text = $"{(cell.Terrain != null ? EraFlora.DisplayName(cell.Terrain.kind) : "?")}  ·  ({col}, {row})";
             tileZone.text  = ClimateSystem.ZoneName(t.Zone);
-            tileStats.text =
+            var flora = HexGrid.Instance != null ? EraFlora.FloraOf(cell, HexGrid.Instance.DisplayedAge) : null;
+            tileStats.text = (flora != null ? $"Plants: {flora}\n" : "") +
                 $"Temperature: {t.TemperatureC:0.0} °C\n" +
                 $"Humidity: {t.Humidity:0} %\n" +
                 $"Oxygen: {t.O2Percent:0.00} %\n" +

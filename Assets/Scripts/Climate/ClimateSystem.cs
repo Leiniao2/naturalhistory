@@ -91,6 +91,7 @@ namespace NaturalHistory.Climate
             if (grid != null)
             {
                 grid.Generated += OnMapGenerated;
+                grid.TerrainChanged += OnMapGenerated; // a new period's vegetation changes humidity and gases
                 if (grid.IsGenerated) BuildGeography();
             }
             if (AgeManager.Instance != null) AgeManager.Instance.TimeChanged += Recompute;
@@ -99,7 +100,7 @@ namespace NaturalHistory.Climate
 
         private void OnDestroy()
         {
-            if (grid != null) grid.Generated -= OnMapGenerated;
+            if (grid != null) { grid.Generated -= OnMapGenerated; grid.TerrainChanged -= OnMapGenerated; }
             if (AgeManager.Instance != null) AgeManager.Instance.TimeChanged -= Recompute;
             if (Instance == this) Instance = null;
         }
@@ -194,6 +195,9 @@ namespace NaturalHistory.Climate
                     hum += kind switch
                     {
                         TerrainKind.Wetland  => 12f,
+                        TerrainKind.CoalSwamp => 14f,
+                        TerrainKind.MicrobialMat => 4f,
+                        TerrainKind.Barren   => -8f, // no plants to return water to the air
                         TerrainKind.Desert   => -25f,
                         TerrainKind.Mountain => -6f,
                         TerrainKind.IceSheet => -5f,
@@ -207,7 +211,7 @@ namespace NaturalHistory.Climate
                 // gases are well mixed in the real atmosphere.
                 float o2 = 0f, co2 = 0f;
                 if (cell.IsForest)                   { o2 += 0.010f; co2 -= 0.030f; }
-                if (kind == TerrainKind.Wetland)     { o2 += 0.004f; co2 += 0.010f; }
+                if (kind is TerrainKind.Wetland or TerrainKind.CoalSwamp) { o2 += 0.004f; co2 += 0.010f; }
                 if (kind == TerrainKind.Desert)      { o2 -= 0.004f; co2 += 0.008f; }
                 if (kind == TerrainKind.IceSheet)    { o2 -= 0.002f; }
                 if (kind == TerrainKind.SaltWater)   { co2 -= 0.010f; }  // ocean uptake

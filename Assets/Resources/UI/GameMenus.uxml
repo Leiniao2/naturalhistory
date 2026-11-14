@@ -11,6 +11,12 @@
             <ui:Button name="menu-button" class="hud-button" text="Menu" />
         </ui:VisualElement>
 
+        <!-- Admin tools under the top-right HUD (Editor / development builds; ` toggles) -->
+        <ui:VisualElement name="admin-bar" class="admin-bar hidden">
+            <ui:Label class="admin-tag" text="ADMIN" picking-mode="Ignore" />
+            <ui:DropdownField name="admin-age" class="admin-age" label="Age" />
+        </ui:VisualElement>
+
         <!-- Top-left: players and their colour bands (chips are created in code) -->
         <ui:VisualElement name="players-bar" class="players-bar" picking-mode="Ignore" />
 
@@ -85,9 +91,14 @@
             <ui:VisualElement class="panel tree-panel">
                 <ui:VisualElement class="tree-header">
                     <ui:Label name="tree-title" class="panel-title tree-title" text="Morphology" />
+                    <ui:Label name="tree-progress" class="tree-progress" text="" />
                     <ui:Label name="tree-ep-label" class="ep-label" text="EP 0" />
                     <ui:Button name="tree-close-button" class="close-button" text="✕" />
                 </ui:VisualElement>
+                <!-- One tab per branch (sub-tree); created in code -->
+                <ui:ScrollView name="tree-branches-scroll" class="tree-branches-scroll" mode="Horizontal">
+                    <ui:VisualElement name="tree-branches" class="tree-branches" />
+                </ui:ScrollView>
                 <ui:ScrollView name="tree-scroll" class="tree-scroll" mode="VerticalAndHorizontal">
                     <ui:VisualElement name="tree-canvas" class="tree-canvas" />
                 </ui:ScrollView>

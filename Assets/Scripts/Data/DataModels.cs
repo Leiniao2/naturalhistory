@@ -85,6 +85,7 @@ namespace NaturalHistory.Data
     {
         public string id;
         public string displayName;
+        public string branch;             // sub-tree id (TreeBranchDefinition.id); tier/row are within it
         public int tier;                  // column in the tree view (left → right)
         public int row;                   // vertical slot within the column
         public int cost;                  // Evolution Points to unlock; 0 = unlocked from the start
@@ -95,8 +96,17 @@ namespace NaturalHistory.Data
     }
 
     [Serializable]
+    public class TreeBranchDefinition
+    {
+        public string id;
+        public string displayName;        // tab title, e.g. "Nervous System"
+        public string description;
+    }
+
+    [Serializable]
     public class TreeNodeCollection
     {
+        public List<TreeBranchDefinition> branches; // tab order; nodes may require nodes in other branches
         public List<TreeNodeDefinition> nodes;
     }
 

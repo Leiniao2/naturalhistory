@@ -7,22 +7,28 @@ using UnityEngine.UIElements;
 
 namespace NaturalHistory.UI
 {
-    // Draws a ProgressionTree (Morphology or Ethology) as columns of nodes joined by
-    // prerequisite curves, with a details strip and an Evolve button underneath.
+    // Draws a ProgressionTree (Morphology or Ethology) in a near full-screen panel: one tab per
+    // branch (Nervous System, Hunting, …), the branch's nodes in columns joined by prerequisite
+    // curves, and a details strip with an Evolve button underneath. Prerequisites in another branch
+    // are listed on the node instead of drawn.
     public class TreePanel
     {
-        private const float ColumnWidth = 260f;
-        private const float RowHeight   = 92f;
+        private const float ColumnWidth = 250f;
+        private const float RowHeight   = 96f;
         private const float Padding     = 24f;
-        private const float NodeWidth   = 200f;
-        private const float NodeHeight  = 66f;
+        private const float NodeWidth   = 206f;
+        private const float NodeHeight  = 74f;
 
         private static readonly Color LineUnlocked = new(0.45f, 0.75f, 0.45f);
         private static readonly Color LineLocked   = new(0.40f, 0.42f, 0.40f);
 
         private readonly VisualElement overlay;
         private readonly Label title, epLabel, detailsName, detailsDescription, detailsMeta;
-        private readonly VisualElement canvas;
+        private readonly VisualElement canvas, branchTabs;
+        private readonly Label progressLabel;
+        private readonly Dictionary<string, Button> tabViews = new();
+        private readonly Dictionary<ProgressionTree, string> branchByTree = new(); // last tab per tree
+        private string branch;
         private readonly Button evolveButton;
         private readonly Dictionary<string, VisualElement> nodeViews = new();
         private VisualElement lines;
@@ -41,6 +47,8 @@ namespace NaturalHistory.UI
             title              = root.Q<Label>("tree-title");
             epLabel            = root.Q<Label>("tree-ep-label");
             canvas             = root.Q("tree-canvas");
+            branchTabs         = root.Q("tree-branches");
+            progressLabel      = root.Q<Label>("tree-progress");
             detailsName        = root.Q<Label>("details-name");
             detailsDescription = root.Q<Label>("details-description");
             detailsMeta        = root.Q<Label>("details-meta");
@@ -57,6 +65,8 @@ namespace NaturalHistory.UI
             {
                 tree = newTree;
                 selected = null;
+                BuildTabs();
+                branch = branchByTree.TryGetValue(tree, out var last) ? last : tree.Branches.FirstOrDefault()?.id;
                 Build();
             }
             overlay.RemoveFromClassList("hidden");
@@ -71,10 +81,12 @@ namespace NaturalHistory.UI
             if (tree == null || Progression == null) return;
             title.text   = tree.DisplayName;
             epLabel.text = $"EP {Progression.EvolutionPoints}";
+            progressLabel.text = $"{tree.UnlockedIds.Count()} / {tree.Nodes.Count} evolved";
+            RefreshTabs();
 
             foreach (var node in tree.Nodes)
             {
-                var view  = nodeViews[node.id];
+                if (!nodeViews.TryGetValue(node.id, out var view)) continue; // other branch
                 var state = Progression.GetState(tree, node);
                 view.EnableInClassList("unlocked",  state == NodeState.Unlocked);
                 view.EnableInClassList("available", state == NodeState.Available);
@@ -86,13 +98,59 @@ namespace NaturalHistory.UI
             RefreshDetails();
         }
 
+        // ---------- Branch tabs ----------
+
+        private void BuildTabs()
+        {
+            branchTabs.Clear();
+            tabViews.Clear();
+            foreach (var b in tree.Branches)
+            {
+                var id = b.id;
+                var tab = new Button(() => SelectBranch(id)).WithClass("branch-tab");
+                tab.Add(new Label(b.displayName) { pickingMode = PickingMode.Ignore }.WithClass("branch-tab-name"));
+                tab.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("branch-tab-count"));
+                tab.tooltip = b.description;
+                branchTabs.Add(tab);
+                tabViews[id] = tab;
+            }
+        }
+
+        private void SelectBranch(string id)
+        {
+            if (id == branch) return;
+            branch = id;
+            branchByTree[tree] = id;
+            if (selected != null && selected.branch != id) selected = null;
+            Build();
+            Refresh();
+        }
+
+        // "evolved / total" per tab; highlighted when something there can be evolved right now
+        private void RefreshTabs()
+        {
+            foreach (var b in tree.Branches)
+            {
+                if (!tabViews.TryGetValue(b.id, out var tab)) continue;
+                var members = tree.Nodes.Where(n => n.branch == b.id).ToList();
+                tab.Q<Label>(className: "branch-tab-count").text = $"{members.Count(n => tree.IsUnlocked(n.id))}/{members.Count}";
+                tab.EnableInClassList("selected", b.id == branch);
+                tab.EnableInClassList("has-available", members.Any(n => Progression.UnlockBlocker(tree, n) == null));
+            }
+        }
+
+        private IEnumerable<TreeNodeDefinition> BranchNodes => tree.Nodes.Where(n => n.branch == branch);
+
+        // ---------- Nodes ----------
+
         private void Build()
         {
             canvas.Clear();
             nodeViews.Clear();
 
-            int maxTier = tree.Nodes.Count > 0 ? tree.Nodes.Max(n => n.tier) : 0;
-            int maxRow  = tree.Nodes.Count > 0 ? tree.Nodes.Max(n => n.row)  : 0;
+            var nodes   = BranchNodes.ToList();
+            int maxTier = nodes.Count > 0 ? nodes.Max(n => n.tier) : 0;
+            int maxRow  = nodes.Count > 0 ? nodes.Max(n => n.row)  : 0;
             canvas.style.width  = Padding * 2 + maxTier * ColumnWidth + NodeWidth;
             canvas.style.height = Padding * 2 + maxRow  * RowHeight   + NodeHeight;
 
@@ -101,7 +159,7 @@ namespace NaturalHistory.UI
             lines.generateVisualContent += DrawLines;
             canvas.Add(lines);
 
-            foreach (var node in tree.Nodes)
+            foreach (var node in nodes)
             {
                 var view = new VisualElement();
                 view.AddToClassList("tree-node");
@@ -109,6 +167,10 @@ namespace NaturalHistory.UI
                 view.style.top  = NodePosition(node).y;
                 view.Add(new Label(node.displayName) { pickingMode = PickingMode.Ignore }.WithClass("node-name"));
                 view.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("node-cost"));
+                var external = node.prerequisites.Select(tree.Get).Where(p => p != null && p.branch != node.branch).ToList();
+                if (external.Count > 0)
+                    view.Add(new Label("Needs " + string.Join(", ", external.Select(p => p.displayName))) { pickingMode = PickingMode.Ignore }
+                        .WithClass("node-external"));
 
                 var captured = node;
                 view.RegisterCallback<ClickEvent>(e =>
@@ -134,11 +196,11 @@ namespace NaturalHistory.UI
             p.lineWidth = 3f;
             p.lineCap   = LineCap.Round;
 
-            foreach (var node in tree.Nodes)
+            foreach (var node in BranchNodes)
             foreach (var preId in node.prerequisites)
             {
                 var pre = tree.Get(preId);
-                if (pre == null) continue;
+                if (pre == null || pre.branch != node.branch) continue;
 
                 var from = NodePosition(pre)  + new Vector2(NodeWidth, NodeHeight * 0.5f);
                 var to   = NodePosition(node) + new Vector2(0f,        NodeHeight * 0.5f);
@@ -157,7 +219,7 @@ namespace NaturalHistory.UI
             if (selected == null)
             {
                 detailsName.text        = "Select a trait";
-                detailsDescription.text = $"Click a node to see details. Double-click to evolve it.";
+                detailsDescription.text = "Click a node to see details. Double-click to evolve it. Tabs above switch between branches.";
                 detailsMeta.text        = "";
                 evolveButton.SetEnabled(false);
                 return;
@@ -170,7 +232,7 @@ namespace NaturalHistory.UI
                 .Select(id => GameDataLoader.GetGene(id)?.displayName ?? id)
                 .ToList();
             var blocker = Progression.UnlockBlocker(tree, selected);
-            var meta = $"Cost {selected.cost} EP  ·  From the {selected.age}";
+            var meta = $"{tree.BranchName(selected.branch)}  ·  Cost {selected.cost} EP  ·  From the {selected.age}";
             if (genes.Count > 0) meta += $"  ·  Unlocks genes: {string.Join(", ", genes)}";
             if (blocker != null) meta += $"\n{blocker}";
             detailsMeta.text = meta;

@@ -1,18 +1,2904 @@
 {
+  "branches": [
+    {
+      "id": "body",
+      "displayName": "Body Plan",
+      "description": "Symmetry, segments, shells and skeletons: the architecture of the body."
+    },
+    {
+      "id": "locomotion",
+      "displayName": "Muscles & Movement",
+      "description": "Muscles, fins, limbs and wings: how the body moves."
+    },
+    {
+      "id": "nervous",
+      "displayName": "Nervous System",
+      "description": "From a diffuse nerve net to a folded cortex."
+    },
+    {
+      "id": "sensory",
+      "displayName": "Sense Organs",
+      "description": "Eyes, ears, noses and stranger senses."
+    },
+    {
+      "id": "circulatory",
+      "displayName": "Circulatory System",
+      "description": "Blood, hearts and kidneys."
+    },
+    {
+      "id": "respiratory",
+      "displayName": "Respiratory System",
+      "description": "Gills, tracheae, lungs and air sacs."
+    },
+    {
+      "id": "digestive",
+      "displayName": "Gastrointestinal System",
+      "description": "Mouths, teeth and guts."
+    },
+    {
+      "id": "endocrine",
+      "displayName": "Endocrine & Metabolism",
+      "description": "Hormones, body heat and dormancy."
+    },
+    {
+      "id": "integument",
+      "displayName": "Skin & Integument",
+      "description": "Skin, scales, feathers, fur, colour and armour."
+    },
+    {
+      "id": "reproductive",
+      "displayName": "Reproduction & Development",
+      "description": "Eggs, larvae, wombs and growing up."
+    }
+  ],
   "nodes": [
-    { "id": "bilateral_body",   "displayName": "Bilateral Body",   "tier": 0, "row": 2, "cost": 0,  "age": "Cambrian",      "prerequisites": [],                                   "unlocksGenes": ["swimming_speed", "burrowing"],  "description": "A head end and a tail end. The body plan everything else is built on." },
-    { "id": "compound_eyes",    "displayName": "Compound Eyes",    "tier": 1, "row": 0, "cost": 6,  "age": "Cambrian",      "prerequisites": ["bilateral_body"],                   "unlocksGenes": ["vision_acuity"],                "description": "Many-faceted eyes that detect motion across a wide field of view." },
-    { "id": "exoskeleton",      "displayName": "Exoskeleton",      "tier": 1, "row": 2, "cost": 6,  "age": "Cambrian",      "prerequisites": ["bilateral_body"],                   "unlocksGenes": ["armor_thickness"],              "description": "A hard outer shell of chitin or calcium that protects soft tissue." },
-    { "id": "notochord",        "displayName": "Notochord",        "tier": 1, "row": 4, "cost": 6,  "age": "Cambrian",      "prerequisites": ["bilateral_body"],                   "unlocksGenes": ["lateral_line"],                 "description": "A flexible rod along the back: the forerunner of the spine." },
-    { "id": "jaws",             "displayName": "Jaws",             "tier": 2, "row": 3, "cost": 10, "age": "Silurian",      "prerequisites": ["notochord"],                        "unlocksGenes": ["carnivory"],                    "description": "Hinged bones around the mouth that let animals bite and grip prey." },
-    { "id": "jointed_limbs",    "displayName": "Jointed Limbs",    "tier": 2, "row": 1, "cost": 10, "age": "Silurian",      "prerequisites": ["exoskeleton"],                      "unlocksGenes": ["land_speed"],                   "description": "Segmented legs that make the first steps onto land possible." },
-    { "id": "paired_fins",      "displayName": "Paired Fins",      "tier": 2, "row": 5, "cost": 10, "age": "Silurian",      "prerequisites": ["notochord"],                        "unlocksGenes": ["electroreception"],             "description": "Stabilising fins on each side of the body for precise steering." },
-    { "id": "lobe_fins",        "displayName": "Lobe Fins",        "tier": 3, "row": 4, "cost": 14, "age": "Devonian",      "prerequisites": ["paired_fins", "jaws"],              "unlocksGenes": ["climbing"],                     "description": "Fleshy, bony fins that can prop a body up in shallow water." },
-    { "id": "lungs",            "displayName": "Lungs",            "tier": 3, "row": 2, "cost": 14, "age": "Devonian",      "prerequisites": ["jaws"],                             "unlocksGenes": ["cold_tolerance"],               "description": "Air-breathing sacs that free animals from oxygen-poor water." },
-    { "id": "insect_wings",     "displayName": "Insect Wings",     "tier": 4, "row": 0, "cost": 18, "age": "Carboniferous", "prerequisites": ["jointed_limbs"],                    "unlocksGenes": ["flight_capability"],            "description": "Thin cuticle wings: the first powered flight in Earth's history." },
-    { "id": "amniotic_egg",     "displayName": "Amniotic Egg",     "tier": 4, "row": 3, "cost": 18, "age": "Carboniferous", "prerequisites": ["lungs", "lobe_fins"],               "unlocksGenes": ["clutch_size"],                  "description": "A shelled egg with its own pond inside, so reproduction no longer needs water." },
-    { "id": "feathers",         "displayName": "Feathers",         "tier": 5, "row": 2, "cost": 24, "age": "Jurassic",      "prerequisites": ["amniotic_egg"],                     "unlocksGenes": ["endothermy"],                   "description": "Insulating filaments that later become the airfoils of birds." },
-    { "id": "fur_and_glands",   "displayName": "Fur & Mammary Glands", "tier": 5, "row": 4, "cost": 24, "age": "Triassic",  "prerequisites": ["amniotic_egg"],                     "unlocksGenes": ["parental_care"],                "description": "Hair for warmth and milk for young: the mammalian toolkit." },
-    { "id": "echolocating_ears","displayName": "Echolocating Ears","tier": 6, "row": 4, "cost": 30, "age": "Paleogene",     "prerequisites": ["fur_and_glands"],                   "unlocksGenes": ["echolocation"],                 "description": "Inner ears tuned to read the world from returning sound." }
+    {
+      "id": "bilateral_body",
+      "displayName": "Bilateral Body",
+      "branch": "body",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [
+        "swimming_speed",
+        "burrowing"
+      ],
+      "description": "A front, a back and two mirrored sides: the body plan of most animals."
+    },
+    {
+      "id": "segmentation",
+      "displayName": "Segmentation",
+      "branch": "body",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "bilateral_body"
+      ],
+      "unlocksGenes": [],
+      "description": "The body is built from repeated segments that can specialise independently."
+    },
+    {
+      "id": "coelom",
+      "displayName": "Body Cavity",
+      "branch": "body",
+      "tier": 1,
+      "row": 1,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "bilateral_body"
+      ],
+      "unlocksGenes": [],
+      "description": "A fluid-filled cavity that cushions the organs and works as a hydrostatic skeleton."
+    },
+    {
+      "id": "exoskeleton",
+      "displayName": "Exoskeleton",
+      "branch": "body",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "segmentation"
+      ],
+      "unlocksGenes": [
+        "armor_thickness"
+      ],
+      "description": "A hard outer cuticle that protects the body and anchors the muscles."
+    },
+    {
+      "id": "notochord",
+      "displayName": "Notochord",
+      "branch": "body",
+      "tier": 2,
+      "row": 1,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "coelom"
+      ],
+      "unlocksGenes": [
+        "lateral_line"
+      ],
+      "description": "A stiff, flexible rod along the back: the first chordate skeleton."
+    },
+    {
+      "id": "mineralized_shell",
+      "displayName": "Mineralised Shell",
+      "branch": "body",
+      "tier": 2,
+      "row": 2,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "coelom"
+      ],
+      "unlocksGenes": [],
+      "description": "A calcium carbonate shell grown by a mantle, as in molluscs and brachiopods."
+    },
+    {
+      "id": "tagmata",
+      "displayName": "Tagmata",
+      "branch": "body",
+      "tier": 3,
+      "row": 0,
+      "cost": 10,
+      "age": "Cambrian",
+      "prerequisites": [
+        "exoskeleton"
+      ],
+      "unlocksGenes": [],
+      "description": "Segments fused into specialised regions: head, thorax and abdomen."
+    },
+    {
+      "id": "moulting",
+      "displayName": "Moulting",
+      "branch": "body",
+      "tier": 3,
+      "row": 1,
+      "cost": 10,
+      "age": "Cambrian",
+      "prerequisites": [
+        "exoskeleton"
+      ],
+      "unlocksGenes": [],
+      "description": "Shedding and regrowing the cuticle so the body can grow inside its armour."
+    },
+    {
+      "id": "chambered_shell",
+      "displayName": "Chambered Shell",
+      "branch": "body",
+      "tier": 3,
+      "row": 2,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "mineralized_shell"
+      ],
+      "unlocksGenes": [],
+      "description": "Gas-filled chambers make the shell buoyant, as in nautiloids."
+    },
+    {
+      "id": "vertebral_column",
+      "displayName": "Vertebrae",
+      "branch": "body",
+      "tier": 3,
+      "row": 3,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "notochord"
+      ],
+      "unlocksGenes": [],
+      "description": "Blocks of cartilage or bone protect the nerve cord and stiffen the back."
+    },
+    {
+      "id": "bony_skull",
+      "displayName": "Bony Skull",
+      "branch": "body",
+      "tier": 4,
+      "row": 3,
+      "cost": 14,
+      "age": "Silurian",
+      "prerequisites": [
+        "vertebral_column"
+      ],
+      "unlocksGenes": [],
+      "description": "A braincase of bone shields the brain and the main sense organs."
+    },
+    {
+      "id": "endochondral_bone",
+      "displayName": "Internal Bone",
+      "branch": "body",
+      "tier": 5,
+      "row": 3,
+      "cost": 16,
+      "age": "Silurian",
+      "prerequisites": [
+        "bony_skull"
+      ],
+      "unlocksGenes": [],
+      "description": "Bone that replaces cartilage: the inner skeleton of bony fish and their descendants."
+    },
+    {
+      "id": "complex_sutures",
+      "displayName": "Complex Sutures",
+      "branch": "body",
+      "tier": 4,
+      "row": 2,
+      "cost": 15,
+      "age": "Devonian",
+      "prerequisites": [
+        "chambered_shell"
+      ],
+      "unlocksGenes": [],
+      "description": "Folded chamber walls strengthen ammonoid shells against water pressure."
+    },
+    {
+      "id": "ribcage",
+      "displayName": "Ribcage",
+      "branch": "body",
+      "tier": 6,
+      "row": 3,
+      "cost": 19,
+      "age": "Devonian",
+      "prerequisites": [
+        "endochondral_bone"
+      ],
+      "unlocksGenes": [],
+      "description": "Ribs support the trunk and protect the heart and lungs."
+    },
+    {
+      "id": "weight_bearing_girdles",
+      "displayName": "Weight-bearing Girdles",
+      "branch": "body",
+      "tier": 6,
+      "row": 2,
+      "cost": 19,
+      "age": "Devonian",
+      "prerequisites": [
+        "endochondral_bone"
+      ],
+      "unlocksGenes": [],
+      "description": "Shoulder and hip girdles strong enough to carry the body out of water."
+    },
+    {
+      "id": "mobile_neck",
+      "displayName": "Mobile Neck",
+      "branch": "body",
+      "tier": 7,
+      "row": 2,
+      "cost": 21,
+      "age": "Devonian",
+      "prerequisites": [
+        "ribcage",
+        "weight_bearing_girdles"
+      ],
+      "unlocksGenes": [],
+      "description": "The head is freed from the shoulders and can turn on its own (Tiktaalik)."
+    },
+    {
+      "id": "temporal_openings",
+      "displayName": "Temporal Openings",
+      "branch": "body",
+      "tier": 5,
+      "row": 2,
+      "cost": 18,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "bony_skull"
+      ],
+      "unlocksGenes": [],
+      "description": "Openings behind the eye anchor bigger jaw muscles (synapsids and diapsids)."
+    },
+    {
+      "id": "turtle_shell",
+      "displayName": "Turtle Shell",
+      "branch": "body",
+      "tier": 7,
+      "row": 3,
+      "cost": 24,
+      "age": "Triassic",
+      "prerequisites": [
+        "ribcage"
+      ],
+      "unlocksGenes": [],
+      "description": "Ribs and skin bone fuse into a shell around the whole body."
+    },
+    {
+      "id": "hollow_bones",
+      "displayName": "Hollow Bones",
+      "branch": "body",
+      "tier": 7,
+      "row": 4,
+      "cost": 24,
+      "age": "Triassic",
+      "prerequisites": [
+        "ribcage"
+      ],
+      "unlocksGenes": [],
+      "description": "Air-filled bones are light and strong (dinosaurs, pterosaurs, birds)."
+    },
+    {
+      "id": "gigantism",
+      "displayName": "Gigantism",
+      "branch": "body",
+      "tier": 8,
+      "row": 3,
+      "cost": 27,
+      "age": "Jurassic",
+      "prerequisites": [
+        "hollow_bones",
+        "weight_bearing_girdles"
+      ],
+      "unlocksGenes": [],
+      "description": "Hollow bones and fast growth allow bodies of tens of tonnes."
+    },
+    {
+      "id": "ciliary_gliding",
+      "displayName": "Ciliary Gliding",
+      "branch": "locomotion",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Gliding over the sea floor on a carpet of beating cilia."
+    },
+    {
+      "id": "muscle_bands",
+      "displayName": "Muscle Bands",
+      "branch": "locomotion",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "ciliary_gliding"
+      ],
+      "unlocksGenes": [],
+      "description": "Long and circular muscles for crawling, wriggling and burrowing."
+    },
+    {
+      "id": "parapodia",
+      "displayName": "Parapodia",
+      "branch": "locomotion",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "muscle_bands"
+      ],
+      "unlocksGenes": [],
+      "description": "Paddle-like flaps on each segment, as on bristle worms."
+    },
+    {
+      "id": "jointed_limbs",
+      "displayName": "Jointed Limbs",
+      "branch": "locomotion",
+      "tier": 2,
+      "row": 1,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "muscle_bands"
+      ],
+      "unlocksGenes": [
+        "land_speed"
+      ],
+      "description": "Hinged legs inside the exoskeleton: the arthropod toolkit."
+    },
+    {
+      "id": "tube_feet",
+      "displayName": "Tube Feet",
+      "branch": "locomotion",
+      "tier": 2,
+      "row": 2,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "muscle_bands"
+      ],
+      "unlocksGenes": [],
+      "description": "Hundreds of hydraulic feet, as on starfish and sea urchins."
+    },
+    {
+      "id": "myomeres",
+      "displayName": "Myomeres",
+      "branch": "locomotion",
+      "tier": 2,
+      "row": 3,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "muscle_bands"
+      ],
+      "unlocksGenes": [],
+      "description": "Zig-zag muscle blocks that bend the body from side to side: fish-style swimming."
+    },
+    {
+      "id": "jet_propulsion",
+      "displayName": "Jet Propulsion",
+      "branch": "locomotion",
+      "tier": 2,
+      "row": 4,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "muscle_bands"
+      ],
+      "unlocksGenes": [],
+      "description": "Squirting water from a mantle cavity, as cephalopods do."
+    },
+    {
+      "id": "tail_fin",
+      "displayName": "Tail Fin",
+      "branch": "locomotion",
+      "tier": 3,
+      "row": 3,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "myomeres"
+      ],
+      "unlocksGenes": [],
+      "description": "A broad tail turns side-to-side bending into thrust."
+    },
+    {
+      "id": "paired_fins",
+      "displayName": "Paired Fins",
+      "branch": "locomotion",
+      "tier": 4,
+      "row": 3,
+      "cost": 14,
+      "age": "Silurian",
+      "prerequisites": [
+        "tail_fin"
+      ],
+      "unlocksGenes": [
+        "electroreception"
+      ],
+      "description": "Fins on both sides give steering, braking and lift."
+    },
+    {
+      "id": "terrestrial_legs",
+      "displayName": "Terrestrial Legs",
+      "branch": "locomotion",
+      "tier": 3,
+      "row": 1,
+      "cost": 12,
+      "age": "Silurian",
+      "prerequisites": [
+        "jointed_limbs"
+      ],
+      "unlocksGenes": [],
+      "description": "Legs that hold the body up out of water: the first land millipedes."
+    },
+    {
+      "id": "lobe_fins",
+      "displayName": "Lobe Fins",
+      "branch": "locomotion",
+      "tier": 5,
+      "row": 3,
+      "cost": 17,
+      "age": "Devonian",
+      "prerequisites": [
+        "paired_fins",
+        "jaws"
+      ],
+      "unlocksGenes": [
+        "climbing"
+      ],
+      "description": "Fleshy fins with a bony core, the starting point for legs."
+    },
+    {
+      "id": "digits",
+      "displayName": "Digits",
+      "branch": "locomotion",
+      "tier": 6,
+      "row": 3,
+      "cost": 19,
+      "age": "Devonian",
+      "prerequisites": [
+        "lobe_fins"
+      ],
+      "unlocksGenes": [],
+      "description": "Fingers and toes at the end of the limb (Acanthostega had eight)."
+    },
+    {
+      "id": "insect_wings",
+      "displayName": "Insect Wings",
+      "branch": "locomotion",
+      "tier": 4,
+      "row": 1,
+      "cost": 16,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "terrestrial_legs"
+      ],
+      "unlocksGenes": [
+        "flight_capability"
+      ],
+      "description": "Thin outgrowths of the thorax: the first animals to fly."
+    },
+    {
+      "id": "pentadactyl_limb",
+      "displayName": "Five-digit Limb",
+      "branch": "locomotion",
+      "tier": 7,
+      "row": 3,
+      "cost": 22,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "digits"
+      ],
+      "unlocksGenes": [],
+      "description": "Sturdy five-toed limbs held out to the sides for walking on land."
+    },
+    {
+      "id": "upright_stance",
+      "displayName": "Upright Stance",
+      "branch": "locomotion",
+      "tier": 8,
+      "row": 3,
+      "cost": 26,
+      "age": "Triassic",
+      "prerequisites": [
+        "pentadactyl_limb"
+      ],
+      "unlocksGenes": [],
+      "description": "Legs held under the body for efficient running and breathing."
+    },
+    {
+      "id": "bipedalism",
+      "displayName": "Bipedalism",
+      "branch": "locomotion",
+      "tier": 9,
+      "row": 3,
+      "cost": 28,
+      "age": "Triassic",
+      "prerequisites": [
+        "upright_stance"
+      ],
+      "unlocksGenes": [],
+      "description": "Running on the hind legs alone, which frees the arms."
+    },
+    {
+      "id": "membrane_wings",
+      "displayName": "Membrane Wings",
+      "branch": "locomotion",
+      "tier": 8,
+      "row": 2,
+      "cost": 26,
+      "age": "Triassic",
+      "prerequisites": [
+        "pentadactyl_limb"
+      ],
+      "unlocksGenes": [],
+      "description": "Skin stretched over long fingers: pterosaurs, and later bats."
+    },
+    {
+      "id": "flippers",
+      "displayName": "Flippers",
+      "branch": "locomotion",
+      "tier": 8,
+      "row": 4,
+      "cost": 26,
+      "age": "Triassic",
+      "prerequisites": [
+        "pentadactyl_limb"
+      ],
+      "unlocksGenes": [],
+      "description": "Limbs turned back into paddles (ichthyosaurs, plesiosaurs, later whales)."
+    },
+    {
+      "id": "feathered_wings",
+      "displayName": "Feathered Wings",
+      "branch": "locomotion",
+      "tier": 10,
+      "row": 3,
+      "cost": 31,
+      "age": "Jurassic",
+      "prerequisites": [
+        "bipedalism",
+        "feathers"
+      ],
+      "unlocksGenes": [],
+      "description": "Arms lined with flight feathers, as on Archaeopteryx."
+    },
+    {
+      "id": "hooves",
+      "displayName": "Hooves",
+      "branch": "locomotion",
+      "tier": 9,
+      "row": 2,
+      "cost": 31,
+      "age": "Paleogene",
+      "prerequisites": [
+        "upright_stance"
+      ],
+      "unlocksGenes": [],
+      "description": "Running on keratin-capped toe tips, as in early horses."
+    },
+    {
+      "id": "nerve_net",
+      "displayName": "Nerve Net",
+      "branch": "nervous",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "A diffuse web of neurons, like a jellyfish's."
+    },
+    {
+      "id": "nerve_cords",
+      "displayName": "Nerve Cords",
+      "branch": "nervous",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "nerve_net"
+      ],
+      "unlocksGenes": [],
+      "description": "Nerves bundled into cords along the body."
+    },
+    {
+      "id": "ganglia",
+      "displayName": "Ganglia",
+      "branch": "nervous",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "nerve_cords"
+      ],
+      "unlocksGenes": [],
+      "description": "Clusters of neurons in each segment that process signals locally."
+    },
+    {
+      "id": "cephalisation",
+      "displayName": "Cephalisation",
+      "branch": "nervous",
+      "tier": 2,
+      "row": 1,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "nerve_cords"
+      ],
+      "unlocksGenes": [],
+      "description": "Nerve tissue gathers at the front, next to the senses."
+    },
+    {
+      "id": "dorsal_nerve_cord",
+      "displayName": "Spinal Cord",
+      "branch": "nervous",
+      "tier": 3,
+      "row": 1,
+      "cost": 10,
+      "age": "Cambrian",
+      "prerequisites": [
+        "cephalisation"
+      ],
+      "unlocksGenes": [],
+      "description": "A hollow nerve cord along the back: the chordate spinal cord."
+    },
+    {
+      "id": "three_part_brain",
+      "displayName": "Three-part Brain",
+      "branch": "nervous",
+      "tier": 4,
+      "row": 1,
+      "cost": 13,
+      "age": "Ordovician",
+      "prerequisites": [
+        "dorsal_nerve_cord"
+      ],
+      "unlocksGenes": [],
+      "description": "Forebrain, midbrain and hindbrain, each with its own jobs."
+    },
+    {
+      "id": "giant_axons",
+      "displayName": "Giant Axons",
+      "branch": "nervous",
+      "tier": 3,
+      "row": 0,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "ganglia"
+      ],
+      "unlocksGenes": [],
+      "description": "Extra-wide nerve fibres for lightning-fast escapes (squid)."
+    },
+    {
+      "id": "reflex_arcs",
+      "displayName": "Reflex Arcs",
+      "branch": "nervous",
+      "tier": 4,
+      "row": 0,
+      "cost": 13,
+      "age": "Ordovician",
+      "prerequisites": [
+        "dorsal_nerve_cord"
+      ],
+      "unlocksGenes": [],
+      "description": "The spinal cord answers a stimulus before the brain is involved."
+    },
+    {
+      "id": "cerebellum",
+      "displayName": "Cerebellum",
+      "branch": "nervous",
+      "tier": 5,
+      "row": 1,
+      "cost": 16,
+      "age": "Silurian",
+      "prerequisites": [
+        "three_part_brain"
+      ],
+      "unlocksGenes": [],
+      "description": "Coordinates movement and balance (jawed vertebrates)."
+    },
+    {
+      "id": "myelin",
+      "displayName": "Myelin",
+      "branch": "nervous",
+      "tier": 5,
+      "row": 0,
+      "cost": 16,
+      "age": "Silurian",
+      "prerequisites": [
+        "three_part_brain"
+      ],
+      "unlocksGenes": [],
+      "description": "Insulated nerves carry signals far faster; first seen in jawed fish."
+    },
+    {
+      "id": "mushroom_bodies",
+      "displayName": "Mushroom Bodies",
+      "branch": "nervous",
+      "tier": 3,
+      "row": 2,
+      "cost": 13,
+      "age": "Devonian",
+      "prerequisites": [
+        "ganglia"
+      ],
+      "unlocksGenes": [],
+      "description": "Insect brain centres for learning and smell."
+    },
+    {
+      "id": "pallium",
+      "displayName": "Pallium",
+      "branch": "nervous",
+      "tier": 6,
+      "row": 1,
+      "cost": 19,
+      "age": "Devonian",
+      "prerequisites": [
+        "cerebellum"
+      ],
+      "unlocksGenes": [],
+      "description": "A forebrain roof that combines the senses: the ancestor of the cortex."
+    },
+    {
+      "id": "arm_ganglia",
+      "displayName": "Arm Ganglia",
+      "branch": "nervous",
+      "tier": 4,
+      "row": 2,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "giant_axons"
+      ],
+      "unlocksGenes": [],
+      "description": "Semi-independent 'brains' in each arm, as in octopuses."
+    },
+    {
+      "id": "large_brain",
+      "displayName": "Large Brain",
+      "branch": "nervous",
+      "tier": 7,
+      "row": 1,
+      "cost": 24,
+      "age": "Triassic",
+      "prerequisites": [
+        "pallium"
+      ],
+      "unlocksGenes": [],
+      "description": "More brain per kilo of body (early mammals and birds)."
+    },
+    {
+      "id": "rem_sleep",
+      "displayName": "REM Sleep",
+      "branch": "nervous",
+      "tier": 8,
+      "row": 1,
+      "cost": 27,
+      "age": "Jurassic",
+      "prerequisites": [
+        "large_brain"
+      ],
+      "unlocksGenes": [],
+      "description": "Dreaming sleep that consolidates memory."
+    },
+    {
+      "id": "neocortex",
+      "displayName": "Neocortex",
+      "branch": "nervous",
+      "tier": 8,
+      "row": 0,
+      "cost": 27,
+      "age": "Jurassic",
+      "prerequisites": [
+        "large_brain"
+      ],
+      "unlocksGenes": [],
+      "description": "Six-layered cortex for flexible behaviour (mammals)."
+    },
+    {
+      "id": "corpus_callosum",
+      "displayName": "Corpus Callosum",
+      "branch": "nervous",
+      "tier": 9,
+      "row": 0,
+      "cost": 30,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "neocortex"
+      ],
+      "unlocksGenes": [],
+      "description": "A thick bridge joining the brain's two halves (placental mammals)."
+    },
+    {
+      "id": "song_nuclei",
+      "displayName": "Song Nuclei",
+      "branch": "nervous",
+      "tier": 7,
+      "row": 0,
+      "cost": 27,
+      "age": "Paleogene",
+      "prerequisites": [
+        "pallium"
+      ],
+      "unlocksGenes": [],
+      "description": "Brain circuits for learning songs (songbirds)."
+    },
+    {
+      "id": "cortical_folding",
+      "displayName": "Cortical Folding",
+      "branch": "nervous",
+      "tier": 10,
+      "row": 0,
+      "cost": 33,
+      "age": "Paleogene",
+      "prerequisites": [
+        "corpus_callosum"
+      ],
+      "unlocksGenes": [],
+      "description": "A wrinkled cortex packs in more neurons (primates, whales)."
+    },
+    {
+      "id": "prefrontal_cortex",
+      "displayName": "Prefrontal Cortex",
+      "branch": "nervous",
+      "tier": 11,
+      "row": 0,
+      "cost": 36,
+      "age": "Neogene",
+      "prerequisites": [
+        "cortical_folding"
+      ],
+      "unlocksGenes": [],
+      "description": "Planning and self-control (great apes)."
+    },
+    {
+      "id": "sensory_cells",
+      "displayName": "Sensory Cells",
+      "branch": "sensory",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Specialised cells that respond to touch, chemicals or light."
+    },
+    {
+      "id": "chemoreceptors",
+      "displayName": "Chemoreceptors",
+      "branch": "sensory",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "sensory_cells"
+      ],
+      "unlocksGenes": [
+        "chemoreception"
+      ],
+      "description": "Smell and taste: detecting dissolved chemicals."
+    },
+    {
+      "id": "eyespots",
+      "displayName": "Eyespots",
+      "branch": "sensory",
+      "tier": 1,
+      "row": 1,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "sensory_cells"
+      ],
+      "unlocksGenes": [],
+      "description": "Patches of light-sensitive pigment."
+    },
+    {
+      "id": "statocysts",
+      "displayName": "Statocysts",
+      "branch": "sensory",
+      "tier": 1,
+      "row": 2,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "sensory_cells"
+      ],
+      "unlocksGenes": [],
+      "description": "Balance organs: a tiny stone rolling over sensory hairs."
+    },
+    {
+      "id": "antennae",
+      "displayName": "Antennae",
+      "branch": "sensory",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "chemoreceptors"
+      ],
+      "unlocksGenes": [],
+      "description": "Feelers for touch and smell."
+    },
+    {
+      "id": "pit_eyes",
+      "displayName": "Pit Eyes",
+      "branch": "sensory",
+      "tier": 2,
+      "row": 1,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "eyespots"
+      ],
+      "unlocksGenes": [],
+      "description": "A cupped retina that tells which direction light comes from."
+    },
+    {
+      "id": "compound_eyes",
+      "displayName": "Compound Eyes",
+      "branch": "sensory",
+      "tier": 2,
+      "row": 2,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "eyespots"
+      ],
+      "unlocksGenes": [
+        "vision_acuity"
+      ],
+      "description": "Hundreds of lenses, each seeing a pixel: the eyes of trilobites and insects."
+    },
+    {
+      "id": "camera_eyes",
+      "displayName": "Camera Eyes",
+      "branch": "sensory",
+      "tier": 3,
+      "row": 1,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "pit_eyes"
+      ],
+      "unlocksGenes": [],
+      "description": "A lens focuses an image on the retina (vertebrates, cephalopods)."
+    },
+    {
+      "id": "lateral_line_organ",
+      "displayName": "Lateral Line",
+      "branch": "sensory",
+      "tier": 2,
+      "row": 3,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "statocysts"
+      ],
+      "unlocksGenes": [
+        "lateral_line"
+      ],
+      "description": "Senses water movement along the flanks."
+    },
+    {
+      "id": "semicircular_canals",
+      "displayName": "Semicircular Canals",
+      "branch": "sensory",
+      "tier": 2,
+      "row": 4,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "statocysts"
+      ],
+      "unlocksGenes": [],
+      "description": "Three canals sense rotation in three dimensions."
+    },
+    {
+      "id": "colour_vision",
+      "displayName": "Colour Vision",
+      "branch": "sensory",
+      "tier": 4,
+      "row": 1,
+      "cost": 14,
+      "age": "Silurian",
+      "prerequisites": [
+        "camera_eyes"
+      ],
+      "unlocksGenes": [],
+      "description": "Four types of cone cell see a world of colour (fish, reptiles, birds)."
+    },
+    {
+      "id": "electroreceptors",
+      "displayName": "Electroreceptors",
+      "branch": "sensory",
+      "tier": 3,
+      "row": 3,
+      "cost": 13,
+      "age": "Devonian",
+      "prerequisites": [
+        "lateral_line_organ"
+      ],
+      "unlocksGenes": [
+        "electroreception"
+      ],
+      "description": "Sense the faint electric fields of hidden prey."
+    },
+    {
+      "id": "vomeronasal_organ",
+      "displayName": "Vomeronasal Organ",
+      "branch": "sensory",
+      "tier": 2,
+      "row": 5,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "chemoreceptors"
+      ],
+      "unlocksGenes": [],
+      "description": "A second nose for pheromones (tetrapods)."
+    },
+    {
+      "id": "polarised_vision",
+      "displayName": "Polarised-light Vision",
+      "branch": "sensory",
+      "tier": 3,
+      "row": 2,
+      "cost": 14,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "compound_eyes"
+      ],
+      "unlocksGenes": [],
+      "description": "Reading the sky's polarisation pattern to navigate (insects)."
+    },
+    {
+      "id": "eardrums",
+      "displayName": "Eardrums",
+      "branch": "sensory",
+      "tier": 3,
+      "row": 4,
+      "cost": 16,
+      "age": "Triassic",
+      "prerequisites": [
+        "semicircular_canals"
+      ],
+      "unlocksGenes": [],
+      "description": "Membranes that pick up sound in air."
+    },
+    {
+      "id": "middle_ear_bones",
+      "displayName": "Three Middle-ear Bones",
+      "branch": "sensory",
+      "tier": 4,
+      "row": 4,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "eardrums"
+      ],
+      "unlocksGenes": [],
+      "description": "Former jaw bones amplify high-pitched sound (mammals)."
+    },
+    {
+      "id": "magnetoreception",
+      "displayName": "Magnetic Sense",
+      "branch": "sensory",
+      "tier": 3,
+      "row": 5,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "semicircular_canals"
+      ],
+      "unlocksGenes": [],
+      "description": "Sensing the Earth's magnetic field (birds, turtles)."
+    },
+    {
+      "id": "uv_vision",
+      "displayName": "Ultraviolet Vision",
+      "branch": "sensory",
+      "tier": 5,
+      "row": 1,
+      "cost": 22,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "colour_vision"
+      ],
+      "unlocksGenes": [],
+      "description": "Seeing patterns on flowers and feathers that are invisible to us."
+    },
+    {
+      "id": "echolocating_ears",
+      "displayName": "Echolocating Ears",
+      "branch": "sensory",
+      "tier": 5,
+      "row": 4,
+      "cost": 23,
+      "age": "Paleogene",
+      "prerequisites": [
+        "middle_ear_bones"
+      ],
+      "unlocksGenes": [
+        "echolocation"
+      ],
+      "description": "Hearing returning echoes of your own calls (bats, toothed whales)."
+    },
+    {
+      "id": "infrared_pits",
+      "displayName": "Infrared Pits",
+      "branch": "sensory",
+      "tier": 2,
+      "row": 6,
+      "cost": 18,
+      "age": "Neogene",
+      "prerequisites": [
+        "chemoreceptors"
+      ],
+      "unlocksGenes": [],
+      "description": "Pits that 'see' body heat in total darkness (pit vipers)."
+    },
+    {
+      "id": "fluid_circulation",
+      "displayName": "Fluid Circulation",
+      "branch": "circulatory",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Body fluid is moved around by body movement and beating cilia."
+    },
+    {
+      "id": "pulsing_vessel",
+      "displayName": "Pulsing Vessel",
+      "branch": "circulatory",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "fluid_circulation"
+      ],
+      "unlocksGenes": [],
+      "description": "A muscular tube that squeezes blood along."
+    },
+    {
+      "id": "open_circulation",
+      "displayName": "Open Circulation",
+      "branch": "circulatory",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "pulsing_vessel"
+      ],
+      "unlocksGenes": [],
+      "description": "Blood bathes the organs directly (arthropods, most molluscs)."
+    },
+    {
+      "id": "closed_circulation",
+      "displayName": "Closed Circulation",
+      "branch": "circulatory",
+      "tier": 2,
+      "row": 1,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "pulsing_vessel"
+      ],
+      "unlocksGenes": [],
+      "description": "Blood stays inside vessels and moves faster (annelids, vertebrates)."
+    },
+    {
+      "id": "haemocyanin",
+      "displayName": "Haemocyanin",
+      "branch": "circulatory",
+      "tier": 3,
+      "row": 0,
+      "cost": 10,
+      "age": "Cambrian",
+      "prerequisites": [
+        "open_circulation"
+      ],
+      "unlocksGenes": [],
+      "description": "Copper-based blue blood that carries oxygen."
+    },
+    {
+      "id": "haemoglobin",
+      "displayName": "Haemoglobin",
+      "branch": "circulatory",
+      "tier": 3,
+      "row": 1,
+      "cost": 10,
+      "age": "Cambrian",
+      "prerequisites": [
+        "closed_circulation"
+      ],
+      "unlocksGenes": [],
+      "description": "Iron-based red pigment that carries oxygen."
+    },
+    {
+      "id": "red_blood_cells",
+      "displayName": "Red Blood Cells",
+      "branch": "circulatory",
+      "tier": 4,
+      "row": 1,
+      "cost": 13,
+      "age": "Ordovician",
+      "prerequisites": [
+        "haemoglobin"
+      ],
+      "unlocksGenes": [],
+      "description": "Haemoglobin packed into cells carries far more oxygen."
+    },
+    {
+      "id": "two_chambered_heart",
+      "displayName": "Two-chambered Heart",
+      "branch": "circulatory",
+      "tier": 3,
+      "row": 2,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "closed_circulation"
+      ],
+      "unlocksGenes": [],
+      "description": "An atrium and a ventricle (fish)."
+    },
+    {
+      "id": "three_hearts",
+      "displayName": "Three Hearts",
+      "branch": "circulatory",
+      "tier": 3,
+      "row": 3,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "closed_circulation"
+      ],
+      "unlocksGenes": [],
+      "description": "Extra hearts pump blood through the gills (cephalopods)."
+    },
+    {
+      "id": "glomerular_kidney",
+      "displayName": "Filtering Kidney",
+      "branch": "circulatory",
+      "tier": 4,
+      "row": 2,
+      "cost": 14,
+      "age": "Silurian",
+      "prerequisites": [
+        "two_chambered_heart"
+      ],
+      "unlocksGenes": [],
+      "description": "Kidneys filter waste out of the blood."
+    },
+    {
+      "id": "lymphatic_system",
+      "displayName": "Lymphatic System",
+      "branch": "circulatory",
+      "tier": 4,
+      "row": 3,
+      "cost": 15,
+      "age": "Devonian",
+      "prerequisites": [
+        "two_chambered_heart"
+      ],
+      "unlocksGenes": [],
+      "description": "Vessels that return fluid and carry immune cells."
+    },
+    {
+      "id": "three_chambered_heart",
+      "displayName": "Three-chambered Heart",
+      "branch": "circulatory",
+      "tier": 4,
+      "row": 0,
+      "cost": 15,
+      "age": "Devonian",
+      "prerequisites": [
+        "two_chambered_heart"
+      ],
+      "unlocksGenes": [],
+      "description": "Two atria keep lung blood and body blood partly apart (amphibians)."
+    },
+    {
+      "id": "uric_acid",
+      "displayName": "Uric Acid Waste",
+      "branch": "circulatory",
+      "tier": 5,
+      "row": 2,
+      "cost": 18,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "glomerular_kidney"
+      ],
+      "unlocksGenes": [],
+      "description": "Water-saving solid waste (reptiles, birds, insects)."
+    },
+    {
+      "id": "salt_glands",
+      "displayName": "Salt Glands",
+      "branch": "circulatory",
+      "tier": 5,
+      "row": 1,
+      "cost": 20,
+      "age": "Triassic",
+      "prerequisites": [
+        "glomerular_kidney"
+      ],
+      "unlocksGenes": [],
+      "description": "Glands that get rid of excess salt (marine reptiles, seabirds)."
+    },
+    {
+      "id": "four_chambered_heart",
+      "displayName": "Four-chambered Heart",
+      "branch": "circulatory",
+      "tier": 5,
+      "row": 0,
+      "cost": 20,
+      "age": "Triassic",
+      "prerequisites": [
+        "three_chambered_heart"
+      ],
+      "unlocksGenes": [],
+      "description": "Fully separate lung and body circuits (archosaurs, mammals)."
+    },
+    {
+      "id": "loop_of_henle",
+      "displayName": "Loop of Henle",
+      "branch": "circulatory",
+      "tier": 5,
+      "row": 3,
+      "cost": 21,
+      "age": "Jurassic",
+      "prerequisites": [
+        "glomerular_kidney"
+      ],
+      "unlocksGenes": [],
+      "description": "Concentrated urine saves water (mammals, birds)."
+    },
+    {
+      "id": "high_blood_pressure",
+      "displayName": "High Blood Pressure",
+      "branch": "circulatory",
+      "tier": 6,
+      "row": 0,
+      "cost": 23,
+      "age": "Jurassic",
+      "prerequisites": [
+        "four_chambered_heart"
+      ],
+      "unlocksGenes": [],
+      "description": "Enough pressure to push blood up a sauropod's long neck."
+    },
+    {
+      "id": "countercurrent_exchange",
+      "displayName": "Countercurrent Heat Exchange",
+      "branch": "circulatory",
+      "tier": 6,
+      "row": 1,
+      "cost": 24,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "four_chambered_heart"
+      ],
+      "unlocksGenes": [],
+      "description": "Outgoing warm blood heats returning cold blood in flippers and legs."
+    },
+    {
+      "id": "diving_reflex",
+      "displayName": "Diving Reflex",
+      "branch": "circulatory",
+      "tier": 6,
+      "row": 2,
+      "cost": 25,
+      "age": "Paleogene",
+      "prerequisites": [
+        "four_chambered_heart"
+      ],
+      "unlocksGenes": [],
+      "description": "On long dives the heart slows and blood goes to the brain (whales, seals)."
+    },
+    {
+      "id": "myoglobin_stores",
+      "displayName": "Myoglobin Stores",
+      "branch": "circulatory",
+      "tier": 7,
+      "row": 2,
+      "cost": 27,
+      "age": "Paleogene",
+      "prerequisites": [
+        "diving_reflex"
+      ],
+      "unlocksGenes": [],
+      "description": "Muscles packed with oxygen-storing myoglobin."
+    },
+    {
+      "id": "skin_breathing",
+      "displayName": "Skin Breathing",
+      "branch": "respiratory",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Oxygen diffuses in through a thin body wall."
+    },
+    {
+      "id": "gills",
+      "displayName": "Gills",
+      "branch": "respiratory",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "skin_breathing"
+      ],
+      "unlocksGenes": [],
+      "description": "Feathery surfaces for taking oxygen from water."
+    },
+    {
+      "id": "pharyngeal_slits",
+      "displayName": "Pharyngeal Slits",
+      "branch": "respiratory",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "gills"
+      ],
+      "unlocksGenes": [],
+      "description": "Slits in the throat that let water flow out past the gills."
+    },
+    {
+      "id": "book_gills",
+      "displayName": "Book Gills",
+      "branch": "respiratory",
+      "tier": 2,
+      "row": 1,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "gills"
+      ],
+      "unlocksGenes": [],
+      "description": "Stacked gill plates (horseshoe crabs, sea scorpions)."
+    },
+    {
+      "id": "gill_arches",
+      "displayName": "Gill Arches",
+      "branch": "respiratory",
+      "tier": 3,
+      "row": 0,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "pharyngeal_slits"
+      ],
+      "unlocksGenes": [],
+      "description": "Bony or cartilage arches support the gills."
+    },
+    {
+      "id": "tracheae",
+      "displayName": "Tracheae",
+      "branch": "respiratory",
+      "tier": 1,
+      "row": 1,
+      "cost": 8,
+      "age": "Silurian",
+      "prerequisites": [
+        "skin_breathing"
+      ],
+      "unlocksGenes": [],
+      "description": "Air tubes run straight to the tissues (insects, millipedes)."
+    },
+    {
+      "id": "spiracles",
+      "displayName": "Spiracles",
+      "branch": "respiratory",
+      "tier": 2,
+      "row": 2,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "tracheae"
+      ],
+      "unlocksGenes": [],
+      "description": "Closable openings to the tracheae that save water."
+    },
+    {
+      "id": "book_lungs",
+      "displayName": "Book Lungs",
+      "branch": "respiratory",
+      "tier": 3,
+      "row": 1,
+      "cost": 12,
+      "age": "Silurian",
+      "prerequisites": [
+        "book_gills"
+      ],
+      "unlocksGenes": [],
+      "description": "Air-breathing gill plates (scorpions, spiders)."
+    },
+    {
+      "id": "gill_cover",
+      "displayName": "Gill Cover",
+      "branch": "respiratory",
+      "tier": 4,
+      "row": 0,
+      "cost": 14,
+      "age": "Silurian",
+      "prerequisites": [
+        "gill_arches"
+      ],
+      "unlocksGenes": [],
+      "description": "A bony flap that pumps water over the gills."
+    },
+    {
+      "id": "lungs",
+      "displayName": "Lungs",
+      "branch": "respiratory",
+      "tier": 4,
+      "row": 1,
+      "cost": 15,
+      "age": "Devonian",
+      "prerequisites": [
+        "gill_arches"
+      ],
+      "unlocksGenes": [
+        "cold_tolerance"
+      ],
+      "description": "Air sacs off the gut let fish gulp air in stagnant water."
+    },
+    {
+      "id": "swim_bladder",
+      "displayName": "Swim Bladder",
+      "branch": "respiratory",
+      "tier": 5,
+      "row": 1,
+      "cost": 17,
+      "age": "Devonian",
+      "prerequisites": [
+        "lungs"
+      ],
+      "unlocksGenes": [],
+      "description": "The lung becomes a gas float for buoyancy (ray-finned fish)."
+    },
+    {
+      "id": "throat_pumping",
+      "displayName": "Throat Pumping",
+      "branch": "respiratory",
+      "tier": 5,
+      "row": 0,
+      "cost": 17,
+      "age": "Devonian",
+      "prerequisites": [
+        "lungs"
+      ],
+      "unlocksGenes": [],
+      "description": "Gulping air in with the floor of the mouth (amphibians)."
+    },
+    {
+      "id": "larynx",
+      "displayName": "Larynx",
+      "branch": "respiratory",
+      "tier": 5,
+      "row": 2,
+      "cost": 18,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "lungs"
+      ],
+      "unlocksGenes": [],
+      "description": "A valve that guards the airway; later the voice box."
+    },
+    {
+      "id": "rib_breathing",
+      "displayName": "Rib Breathing",
+      "branch": "respiratory",
+      "tier": 6,
+      "row": 0,
+      "cost": 20,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "throat_pumping"
+      ],
+      "unlocksGenes": [],
+      "description": "Expanding the ribcage to draw air in (amniotes)."
+    },
+    {
+      "id": "diaphragm",
+      "displayName": "Diaphragm",
+      "branch": "respiratory",
+      "tier": 7,
+      "row": 0,
+      "cost": 23,
+      "age": "Permian",
+      "prerequisites": [
+        "rib_breathing"
+      ],
+      "unlocksGenes": [],
+      "description": "A muscle sheet for powerful breathing (synapsids)."
+    },
+    {
+      "id": "turbinates",
+      "displayName": "Turbinates",
+      "branch": "respiratory",
+      "tier": 8,
+      "row": 0,
+      "cost": 25,
+      "age": "Permian",
+      "prerequisites": [
+        "diaphragm"
+      ],
+      "unlocksGenes": [],
+      "description": "Scrolled nose bones that warm and moisten the air (warm-blooded animals)."
+    },
+    {
+      "id": "air_sacs",
+      "displayName": "Air Sacs",
+      "branch": "respiratory",
+      "tier": 7,
+      "row": 1,
+      "cost": 24,
+      "age": "Triassic",
+      "prerequisites": [
+        "rib_breathing"
+      ],
+      "unlocksGenes": [],
+      "description": "Air flows one way through the lungs (dinosaurs, birds)."
+    },
+    {
+      "id": "plastron_gill",
+      "displayName": "Bubble Gill",
+      "branch": "respiratory",
+      "tier": 3,
+      "row": 2,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "spiracles"
+      ],
+      "unlocksGenes": [],
+      "description": "Breathing from a film of air held under water (water beetles)."
+    },
+    {
+      "id": "syrinx",
+      "displayName": "Syrinx",
+      "branch": "respiratory",
+      "tier": 8,
+      "row": 1,
+      "cost": 28,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "air_sacs"
+      ],
+      "unlocksGenes": [],
+      "description": "The twin voice box of birds."
+    },
+    {
+      "id": "labyrinth_organ",
+      "displayName": "Labyrinth Organ",
+      "branch": "respiratory",
+      "tier": 5,
+      "row": 3,
+      "cost": 23,
+      "age": "Paleogene",
+      "prerequisites": [
+        "gill_cover"
+      ],
+      "unlocksGenes": [],
+      "description": "A folded chamber above the gills for breathing air (gouramis)."
+    },
+    {
+      "id": "blind_gut",
+      "displayName": "Blind Gut",
+      "branch": "digestive",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "A sac with one opening, like a sea anemone's."
+    },
+    {
+      "id": "through_gut",
+      "displayName": "Through-gut",
+      "branch": "digestive",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "blind_gut"
+      ],
+      "unlocksGenes": [],
+      "description": "A mouth at one end and an anus at the other."
+    },
+    {
+      "id": "filter_apparatus",
+      "displayName": "Filter Apparatus",
+      "branch": "digestive",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "through_gut"
+      ],
+      "unlocksGenes": [
+        "filter_feeding"
+      ],
+      "description": "Mucus nets or gill rakers strain food from water."
+    },
+    {
+      "id": "radula",
+      "displayName": "Radula",
+      "branch": "digestive",
+      "tier": 2,
+      "row": 1,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "through_gut"
+      ],
+      "unlocksGenes": [],
+      "description": "A rasping tongue-ribbon (molluscs)."
+    },
+    {
+      "id": "mandibles",
+      "displayName": "Mandibles",
+      "branch": "digestive",
+      "tier": 2,
+      "row": 2,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "through_gut"
+      ],
+      "unlocksGenes": [],
+      "description": "Biting jaws of arthropods."
+    },
+    {
+      "id": "jaws",
+      "displayName": "Jaws",
+      "branch": "digestive",
+      "tier": 3,
+      "row": 0,
+      "cost": 12,
+      "age": "Silurian",
+      "prerequisites": [
+        "filter_apparatus",
+        "gill_arches"
+      ],
+      "unlocksGenes": [
+        "carnivory"
+      ],
+      "description": "Hinged jaws made from gill arches, so prey can be grabbed."
+    },
+    {
+      "id": "gizzard",
+      "displayName": "Gizzard",
+      "branch": "digestive",
+      "tier": 2,
+      "row": 3,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "through_gut"
+      ],
+      "unlocksGenes": [],
+      "description": "A muscular stomach that grinds food."
+    },
+    {
+      "id": "acid_stomach",
+      "displayName": "Acid Stomach",
+      "branch": "digestive",
+      "tier": 4,
+      "row": 0,
+      "cost": 14,
+      "age": "Silurian",
+      "prerequisites": [
+        "jaws"
+      ],
+      "unlocksGenes": [],
+      "description": "An acidic stomach digests large prey (jawed vertebrates)."
+    },
+    {
+      "id": "teeth",
+      "displayName": "Teeth",
+      "branch": "digestive",
+      "tier": 4,
+      "row": 1,
+      "cost": 14,
+      "age": "Silurian",
+      "prerequisites": [
+        "jaws"
+      ],
+      "unlocksGenes": [],
+      "description": "Hard teeth for gripping and cutting."
+    },
+    {
+      "id": "spiral_valve",
+      "displayName": "Spiral Valve",
+      "branch": "digestive",
+      "tier": 5,
+      "row": 0,
+      "cost": 16,
+      "age": "Silurian",
+      "prerequisites": [
+        "acid_stomach"
+      ],
+      "unlocksGenes": [],
+      "description": "A corkscrew intestine packs in more surface (sharks)."
+    },
+    {
+      "id": "tooth_replacement",
+      "displayName": "Tooth Replacement",
+      "branch": "digestive",
+      "tier": 5,
+      "row": 1,
+      "cost": 17,
+      "age": "Devonian",
+      "prerequisites": [
+        "teeth"
+      ],
+      "unlocksGenes": [],
+      "description": "Lost teeth are replaced all through life (sharks, reptiles)."
+    },
+    {
+      "id": "hindgut_fermentation",
+      "displayName": "Hindgut Fermentation",
+      "branch": "digestive",
+      "tier": 5,
+      "row": 2,
+      "cost": 19,
+      "age": "Permian",
+      "prerequisites": [
+        "acid_stomach"
+      ],
+      "unlocksGenes": [
+        "herbivory"
+      ],
+      "description": "Microbes in an enlarged gut break down plant fibre."
+    },
+    {
+      "id": "differentiated_teeth",
+      "displayName": "Differentiated Teeth",
+      "branch": "digestive",
+      "tier": 5,
+      "row": 3,
+      "cost": 19,
+      "age": "Permian",
+      "prerequisites": [
+        "teeth"
+      ],
+      "unlocksGenes": [],
+      "description": "Incisors, canines and molars for different jobs."
+    },
+    {
+      "id": "venom_glands",
+      "displayName": "Venom Glands",
+      "branch": "digestive",
+      "tier": 5,
+      "row": 4,
+      "cost": 20,
+      "age": "Triassic",
+      "prerequisites": [
+        "teeth"
+      ],
+      "unlocksGenes": [],
+      "description": "Saliva turned into venom, delivered through grooved teeth."
+    },
+    {
+      "id": "secondary_palate",
+      "displayName": "Secondary Palate",
+      "branch": "digestive",
+      "tier": 6,
+      "row": 3,
+      "cost": 22,
+      "age": "Triassic",
+      "prerequisites": [
+        "differentiated_teeth"
+      ],
+      "unlocksGenes": [],
+      "description": "A bony roof to the mouth: breathe while chewing."
+    },
+    {
+      "id": "gastroliths",
+      "displayName": "Gastroliths",
+      "branch": "digestive",
+      "tier": 3,
+      "row": 3,
+      "cost": 17,
+      "age": "Jurassic",
+      "prerequisites": [
+        "gizzard"
+      ],
+      "unlocksGenes": [],
+      "description": "Swallowed stones grind food (sauropods, birds)."
+    },
+    {
+      "id": "beak",
+      "displayName": "Beak",
+      "branch": "digestive",
+      "tier": 5,
+      "row": 5,
+      "cost": 21,
+      "age": "Jurassic",
+      "prerequisites": [
+        "teeth"
+      ],
+      "unlocksGenes": [],
+      "description": "A toothless keratin beak (turtles, birds, ceratopsians)."
+    },
+    {
+      "id": "cusped_molars",
+      "displayName": "Cusped Molars",
+      "branch": "digestive",
+      "tier": 6,
+      "row": 2,
+      "cost": 23,
+      "age": "Jurassic",
+      "prerequisites": [
+        "differentiated_teeth"
+      ],
+      "unlocksGenes": [],
+      "description": "Molars that both slice and crush (mammals)."
+    },
+    {
+      "id": "dental_batteries",
+      "displayName": "Dental Batteries",
+      "branch": "digestive",
+      "tier": 6,
+      "row": 1,
+      "cost": 24,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "tooth_replacement"
+      ],
+      "unlocksGenes": [],
+      "description": "Hundreds of stacked teeth grind tough plants (hadrosaurs)."
+    },
+    {
+      "id": "rumen",
+      "displayName": "Rumen",
+      "branch": "digestive",
+      "tier": 6,
+      "row": 0,
+      "cost": 25,
+      "age": "Paleogene",
+      "prerequisites": [
+        "hindgut_fermentation"
+      ],
+      "unlocksGenes": [],
+      "description": "A many-chambered stomach for chewing the cud (ruminants)."
+    },
+    {
+      "id": "hormone_signalling",
+      "displayName": "Hormone Signalling",
+      "branch": "endocrine",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Cells release chemical messages carried in body fluids."
+    },
+    {
+      "id": "neurosecretory_cells",
+      "displayName": "Neurosecretory Cells",
+      "branch": "endocrine",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "hormone_signalling"
+      ],
+      "unlocksGenes": [],
+      "description": "Nerve cells that release hormones."
+    },
+    {
+      "id": "insulin_signalling",
+      "displayName": "Insulin Signalling",
+      "branch": "endocrine",
+      "tier": 1,
+      "row": 1,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "hormone_signalling"
+      ],
+      "unlocksGenes": [],
+      "description": "Hormones that control growth and the use of sugar."
+    },
+    {
+      "id": "moulting_hormone",
+      "displayName": "Moulting Hormone",
+      "branch": "endocrine",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "neurosecretory_cells"
+      ],
+      "unlocksGenes": [],
+      "description": "Ecdysone decides when an arthropod moults."
+    },
+    {
+      "id": "pituitary",
+      "displayName": "Pituitary Gland",
+      "branch": "endocrine",
+      "tier": 2,
+      "row": 1,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "neurosecretory_cells"
+      ],
+      "unlocksGenes": [],
+      "description": "The master gland under the brain."
+    },
+    {
+      "id": "pineal_clock",
+      "displayName": "Pineal Clock",
+      "branch": "endocrine",
+      "tier": 2,
+      "row": 2,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "neurosecretory_cells"
+      ],
+      "unlocksGenes": [],
+      "description": "Melatonin keeps track of day length and season."
+    },
+    {
+      "id": "antifreeze_proteins",
+      "displayName": "Antifreeze Proteins",
+      "branch": "endocrine",
+      "tier": 2,
+      "row": 3,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "insulin_signalling"
+      ],
+      "unlocksGenes": [
+        "cold_tolerance"
+      ],
+      "description": "Proteins that stop ice crystals forming in the blood."
+    },
+    {
+      "id": "thyroid",
+      "displayName": "Thyroid",
+      "branch": "endocrine",
+      "tier": 3,
+      "row": 1,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "pituitary"
+      ],
+      "unlocksGenes": [],
+      "description": "Iodine hormones set the metabolic rate."
+    },
+    {
+      "id": "stress_hormones",
+      "displayName": "Stress Hormones",
+      "branch": "endocrine",
+      "tier": 3,
+      "row": 0,
+      "cost": 12,
+      "age": "Silurian",
+      "prerequisites": [
+        "pituitary"
+      ],
+      "unlocksGenes": [],
+      "description": "Adrenaline and cortisol: the fight-or-flight response."
+    },
+    {
+      "id": "sex_hormones",
+      "displayName": "Sex Hormones",
+      "branch": "endocrine",
+      "tier": 3,
+      "row": 2,
+      "cost": 12,
+      "age": "Silurian",
+      "prerequisites": [
+        "pituitary"
+      ],
+      "unlocksGenes": [],
+      "description": "Testosterone and oestrogen shape adult bodies."
+    },
+    {
+      "id": "juvenile_hormone",
+      "displayName": "Juvenile Hormone",
+      "branch": "endocrine",
+      "tier": 3,
+      "row": 3,
+      "cost": 14,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "moulting_hormone"
+      ],
+      "unlocksGenes": [],
+      "description": "Keeps insects as larvae until it is time to change."
+    },
+    {
+      "id": "metamorphosis_hormones",
+      "displayName": "Metamorphosis Trigger",
+      "branch": "endocrine",
+      "tier": 4,
+      "row": 1,
+      "cost": 16,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "thyroid"
+      ],
+      "unlocksGenes": [],
+      "description": "A thyroid surge turns tadpoles into frogs."
+    },
+    {
+      "id": "aestivation",
+      "displayName": "Aestivation",
+      "branch": "endocrine",
+      "tier": 4,
+      "row": 0,
+      "cost": 17,
+      "age": "Permian",
+      "prerequisites": [
+        "stress_hormones"
+      ],
+      "unlocksGenes": [
+        "heat_tolerance"
+      ],
+      "description": "Sleeping through droughts, like lungfish in mud cocoons."
+    },
+    {
+      "id": "raised_metabolism",
+      "displayName": "Raised Metabolism",
+      "branch": "endocrine",
+      "tier": 4,
+      "row": 2,
+      "cost": 17,
+      "age": "Permian",
+      "prerequisites": [
+        "thyroid"
+      ],
+      "unlocksGenes": [],
+      "description": "Faster cells for sustained activity (therapsids)."
+    },
+    {
+      "id": "prolactin",
+      "displayName": "Prolactin",
+      "branch": "endocrine",
+      "tier": 3,
+      "row": 4,
+      "cost": 16,
+      "age": "Triassic",
+      "prerequisites": [
+        "pituitary"
+      ],
+      "unlocksGenes": [],
+      "description": "The hormone behind brooding and milk."
+    },
+    {
+      "id": "endothermy_node",
+      "displayName": "Endothermy",
+      "branch": "endocrine",
+      "tier": 5,
+      "row": 2,
+      "cost": 20,
+      "age": "Triassic",
+      "prerequisites": [
+        "raised_metabolism"
+      ],
+      "unlocksGenes": [
+        "endothermy"
+      ],
+      "description": "Warm-blooded: body heat comes from metabolism."
+    },
+    {
+      "id": "torpor",
+      "displayName": "Torpor",
+      "branch": "endocrine",
+      "tier": 6,
+      "row": 2,
+      "cost": 23,
+      "age": "Jurassic",
+      "prerequisites": [
+        "endothermy_node"
+      ],
+      "unlocksGenes": [],
+      "description": "A daily drop in body temperature to save energy."
+    },
+    {
+      "id": "brown_fat",
+      "displayName": "Brown Fat",
+      "branch": "endocrine",
+      "tier": 6,
+      "row": 1,
+      "cost": 24,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "endothermy_node"
+      ],
+      "unlocksGenes": [],
+      "description": "Fat that burns to make heat."
+    },
+    {
+      "id": "oxytocin_bonding",
+      "displayName": "Oxytocin Bonding",
+      "branch": "endocrine",
+      "tier": 4,
+      "row": 4,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "prolactin"
+      ],
+      "unlocksGenes": [],
+      "description": "The hormone of pair bonds and mother–young attachment."
+    },
+    {
+      "id": "hibernation_node",
+      "displayName": "Hibernation",
+      "branch": "endocrine",
+      "tier": 7,
+      "row": 2,
+      "cost": 27,
+      "age": "Paleogene",
+      "prerequisites": [
+        "torpor"
+      ],
+      "unlocksGenes": [
+        "hibernation"
+      ],
+      "description": "Weeks-long deep torpor through the winter."
+    },
+    {
+      "id": "epidermis",
+      "displayName": "Epidermis",
+      "branch": "integument",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "A protective outer layer of cells."
+    },
+    {
+      "id": "mucus_coat",
+      "displayName": "Mucus Coat",
+      "branch": "integument",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "epidermis"
+      ],
+      "unlocksGenes": [],
+      "description": "Slippery slime that protects the skin and eases movement."
+    },
+    {
+      "id": "chitin_cuticle",
+      "displayName": "Chitin Cuticle",
+      "branch": "integument",
+      "tier": 1,
+      "row": 1,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "epidermis"
+      ],
+      "unlocksGenes": [],
+      "description": "A tough skin made of a sugar polymer."
+    },
+    {
+      "id": "spines",
+      "displayName": "Spines",
+      "branch": "integument",
+      "tier": 2,
+      "row": 1,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "chitin_cuticle"
+      ],
+      "unlocksGenes": [],
+      "description": "Sharp projections deter predators (Wiwaxia, Hallucigenia)."
+    },
+    {
+      "id": "chromatophores",
+      "displayName": "Chromatophores",
+      "branch": "integument",
+      "tier": 1,
+      "row": 2,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "epidermis"
+      ],
+      "unlocksGenes": [
+        "camouflage"
+      ],
+      "description": "Pigment cells that can change colour."
+    },
+    {
+      "id": "dermal_armour",
+      "displayName": "Dermal Armour",
+      "branch": "integument",
+      "tier": 1,
+      "row": 3,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "epidermis"
+      ],
+      "unlocksGenes": [
+        "armor_thickness"
+      ],
+      "description": "Bony plates in the skin (early jawless fish)."
+    },
+    {
+      "id": "placoid_scales",
+      "displayName": "Placoid Scales",
+      "branch": "integument",
+      "tier": 2,
+      "row": 3,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "dermal_armour"
+      ],
+      "unlocksGenes": [],
+      "description": "Tiny tooth-like scales that cut drag (sharks)."
+    },
+    {
+      "id": "bioluminescence",
+      "displayName": "Bioluminescence",
+      "branch": "integument",
+      "tier": 2,
+      "row": 2,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "chromatophores"
+      ],
+      "unlocksGenes": [],
+      "description": "Making light with a chemical reaction."
+    },
+    {
+      "id": "waterproof_cuticle",
+      "displayName": "Waterproof Cuticle",
+      "branch": "integument",
+      "tier": 2,
+      "row": 0,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "chitin_cuticle"
+      ],
+      "unlocksGenes": [],
+      "description": "A wax layer stops the body drying out on land."
+    },
+    {
+      "id": "toxic_skin",
+      "displayName": "Toxic Skin",
+      "branch": "integument",
+      "tier": 2,
+      "row": 4,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "mucus_coat"
+      ],
+      "unlocksGenes": [
+        "toxin_production"
+      ],
+      "description": "Skin glands that make poison (amphibians)."
+    },
+    {
+      "id": "keratin_scales",
+      "displayName": "Keratin Scales",
+      "branch": "integument",
+      "tier": 1,
+      "row": 4,
+      "cost": 10,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "epidermis"
+      ],
+      "unlocksGenes": [],
+      "description": "Dry, waterproof scales (reptiles)."
+    },
+    {
+      "id": "osteoderms",
+      "displayName": "Osteoderms",
+      "branch": "integument",
+      "tier": 2,
+      "row": 5,
+      "cost": 13,
+      "age": "Permian",
+      "prerequisites": [
+        "keratin_scales",
+        "dermal_armour"
+      ],
+      "unlocksGenes": [],
+      "description": "Bony plates under the scales (crocodiles, ankylosaurs)."
+    },
+    {
+      "id": "protofeathers",
+      "displayName": "Protofeathers",
+      "branch": "integument",
+      "tier": 2,
+      "row": 6,
+      "cost": 14,
+      "age": "Triassic",
+      "prerequisites": [
+        "keratin_scales"
+      ],
+      "unlocksGenes": [],
+      "description": "Fuzzy filaments for insulation."
+    },
+    {
+      "id": "fur_and_glands",
+      "displayName": "Fur and Glands",
+      "branch": "integument",
+      "tier": 2,
+      "row": 7,
+      "cost": 14,
+      "age": "Triassic",
+      "prerequisites": [
+        "keratin_scales"
+      ],
+      "unlocksGenes": [
+        "parental_care"
+      ],
+      "description": "Insulating hair and skin glands (mammals)."
+    },
+    {
+      "id": "feathers",
+      "displayName": "Feathers",
+      "branch": "integument",
+      "tier": 3,
+      "row": 6,
+      "cost": 17,
+      "age": "Jurassic",
+      "prerequisites": [
+        "protofeathers"
+      ],
+      "unlocksGenes": [
+        "endothermy"
+      ],
+      "description": "Vaned feathers for warmth, display and flight."
+    },
+    {
+      "id": "structural_colour",
+      "displayName": "Structural Colour",
+      "branch": "integument",
+      "tier": 4,
+      "row": 6,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "feathers"
+      ],
+      "unlocksGenes": [],
+      "description": "Iridescent colour from microscopic structure instead of pigment."
+    },
+    {
+      "id": "horns",
+      "displayName": "Horns",
+      "branch": "integument",
+      "tier": 2,
+      "row": 8,
+      "cost": 16,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "keratin_scales"
+      ],
+      "unlocksGenes": [],
+      "description": "Keratin-sheathed bony horns (ceratopsians, later antelopes and cattle)."
+    },
+    {
+      "id": "sweat_glands",
+      "displayName": "Sweat Glands",
+      "branch": "integument",
+      "tier": 3,
+      "row": 7,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "fur_and_glands"
+      ],
+      "unlocksGenes": [],
+      "description": "Cooling by evaporation."
+    },
+    {
+      "id": "blubber",
+      "displayName": "Blubber",
+      "branch": "integument",
+      "tier": 3,
+      "row": 8,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "fur_and_glands"
+      ],
+      "unlocksGenes": [],
+      "description": "A thick fat layer insulates in cold seas."
+    },
+    {
+      "id": "quills",
+      "displayName": "Quills",
+      "branch": "integument",
+      "tier": 3,
+      "row": 5,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "fur_and_glands"
+      ],
+      "unlocksGenes": [],
+      "description": "Hairs hardened into spines (porcupines, hedgehogs)."
+    },
+    {
+      "id": "broadcast_spawning",
+      "displayName": "Broadcast Spawning",
+      "branch": "reproductive",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [
+        "reproduction_rate"
+      ],
+      "description": "Releasing eggs and sperm into the sea."
+    },
+    {
+      "id": "budding",
+      "displayName": "Budding",
+      "branch": "reproductive",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "broadcast_spawning"
+      ],
+      "unlocksGenes": [
+        "asexual_reproduction"
+      ],
+      "description": "Growing copies of yourself."
+    },
+    {
+      "id": "planktonic_larvae",
+      "displayName": "Planktonic Larvae",
+      "branch": "reproductive",
+      "tier": 1,
+      "row": 1,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "broadcast_spawning"
+      ],
+      "unlocksGenes": [],
+      "description": "Drifting young that spread far."
+    },
+    {
+      "id": "yolky_eggs",
+      "displayName": "Yolky Eggs",
+      "branch": "reproductive",
+      "tier": 1,
+      "row": 2,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "broadcast_spawning"
+      ],
+      "unlocksGenes": [
+        "clutch_size"
+      ],
+      "description": "Bigger eggs with stored food."
+    },
+    {
+      "id": "regeneration_node",
+      "displayName": "Regeneration",
+      "branch": "reproductive",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "budding"
+      ],
+      "unlocksGenes": [
+        "regeneration"
+      ],
+      "description": "Regrowing lost body parts."
+    },
+    {
+      "id": "internal_fertilisation",
+      "displayName": "Internal Fertilisation",
+      "branch": "reproductive",
+      "tier": 2,
+      "row": 2,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "yolky_eggs"
+      ],
+      "unlocksGenes": [],
+      "description": "Sperm is delivered inside the female."
+    },
+    {
+      "id": "spermatophores",
+      "displayName": "Spermatophores",
+      "branch": "reproductive",
+      "tier": 2,
+      "row": 1,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "yolky_eggs"
+      ],
+      "unlocksGenes": [],
+      "description": "Sperm packets left for the female to pick up."
+    },
+    {
+      "id": "parthenogenesis",
+      "displayName": "Parthenogenesis",
+      "branch": "reproductive",
+      "tier": 2,
+      "row": 3,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "budding"
+      ],
+      "unlocksGenes": [],
+      "description": "Females reproduce without males."
+    },
+    {
+      "id": "claspers",
+      "displayName": "Claspers",
+      "branch": "reproductive",
+      "tier": 3,
+      "row": 2,
+      "cost": 13,
+      "age": "Devonian",
+      "prerequisites": [
+        "internal_fertilisation"
+      ],
+      "unlocksGenes": [],
+      "description": "Fin organs for mating (sharks, placoderms)."
+    },
+    {
+      "id": "egg_cases",
+      "displayName": "Egg Cases",
+      "branch": "reproductive",
+      "tier": 2,
+      "row": 4,
+      "cost": 11,
+      "age": "Devonian",
+      "prerequisites": [
+        "yolky_eggs"
+      ],
+      "unlocksGenes": [],
+      "description": "Tough capsules that protect the embryo (mermaid's purses)."
+    },
+    {
+      "id": "aquatic_larvae",
+      "displayName": "Aquatic Larvae",
+      "branch": "reproductive",
+      "tier": 2,
+      "row": 5,
+      "cost": 11,
+      "age": "Devonian",
+      "prerequisites": [
+        "planktonic_larvae"
+      ],
+      "unlocksGenes": [],
+      "description": "Tadpoles: amphibian young grow up in the water."
+    },
+    {
+      "id": "live_birth",
+      "displayName": "Live Birth",
+      "branch": "reproductive",
+      "tier": 3,
+      "row": 1,
+      "cost": 13,
+      "age": "Devonian",
+      "prerequisites": [
+        "internal_fertilisation"
+      ],
+      "unlocksGenes": [],
+      "description": "Young develop inside the mother (placoderms, ichthyosaurs)."
+    },
+    {
+      "id": "amniotic_egg",
+      "displayName": "Amniotic Egg",
+      "branch": "reproductive",
+      "tier": 3,
+      "row": 3,
+      "cost": 14,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "internal_fertilisation",
+        "lungs"
+      ],
+      "unlocksGenes": [
+        "clutch_size"
+      ],
+      "description": "An egg with its own membranes and water supply, so it can be laid on land."
+    },
+    {
+      "id": "complete_metamorphosis",
+      "displayName": "Complete Metamorphosis",
+      "branch": "reproductive",
+      "tier": 2,
+      "row": 6,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "planktonic_larvae"
+      ],
+      "unlocksGenes": [],
+      "description": "Larva, pupa and adult (beetles, flies, butterflies)."
+    },
+    {
+      "id": "temperature_sex",
+      "displayName": "Temperature Sex Determination",
+      "branch": "reproductive",
+      "tier": 4,
+      "row": 3,
+      "cost": 17,
+      "age": "Permian",
+      "prerequisites": [
+        "amniotic_egg"
+      ],
+      "unlocksGenes": [],
+      "description": "Nest temperature decides the sex of the young (crocodiles, turtles)."
+    },
+    {
+      "id": "hard_eggshell",
+      "displayName": "Hard Eggshell",
+      "branch": "reproductive",
+      "tier": 4,
+      "row": 2,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "amniotic_egg"
+      ],
+      "unlocksGenes": [],
+      "description": "Calcified shells (dinosaurs, birds)."
+    },
+    {
+      "id": "mammary_glands",
+      "displayName": "Mammary Glands",
+      "branch": "reproductive",
+      "tier": 4,
+      "row": 4,
+      "cost": 18,
+      "age": "Triassic",
+      "prerequisites": [
+        "amniotic_egg"
+      ],
+      "unlocksGenes": [],
+      "description": "Milk for the young."
+    },
+    {
+      "id": "placenta",
+      "displayName": "Placenta",
+      "branch": "reproductive",
+      "tier": 5,
+      "row": 4,
+      "cost": 22,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "mammary_glands"
+      ],
+      "unlocksGenes": [],
+      "description": "The embryo is fed through the womb wall."
+    },
+    {
+      "id": "pouch",
+      "displayName": "Pouch",
+      "branch": "reproductive",
+      "tier": 5,
+      "row": 3,
+      "cost": 22,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "mammary_glands"
+      ],
+      "unlocksGenes": [],
+      "description": "Tiny newborns finish growing in a pouch (marsupials)."
+    },
+    {
+      "id": "long_childhood",
+      "displayName": "Long Childhood",
+      "branch": "reproductive",
+      "tier": 6,
+      "row": 4,
+      "cost": 26,
+      "age": "Neogene",
+      "prerequisites": [
+        "placenta"
+      ],
+      "unlocksGenes": [],
+      "description": "Slow growth gives time for a bigger brain to develop."
+    }
   ]
 }

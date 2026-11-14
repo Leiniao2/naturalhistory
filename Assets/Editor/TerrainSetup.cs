@@ -20,6 +20,11 @@ namespace NaturalHistory.Editor
             (TerrainKind.Savanna,    TerrainCategory.Land,  new Color(0.78f, 0.68f, 0.30f), 0.08f),
             (TerrainKind.Rainforest, TerrainCategory.Land,  new Color(0.12f, 0.40f, 0.16f), 0.08f),
             (TerrainKind.Steppe,     TerrainCategory.Land,  new Color(0.62f, 0.64f, 0.40f), 0.08f),
+            (TerrainKind.Barren,       TerrainCategory.Land, new Color(0.58f, 0.50f, 0.44f), 0.08f),
+            (TerrainKind.MicrobialMat, TerrainCategory.Land, new Color(0.50f, 0.44f, 0.36f), 0.05f),
+            (TerrainKind.Mossland,     TerrainCategory.Land, new Color(0.36f, 0.52f, 0.24f), 0.08f),
+            (TerrainKind.FernPrairie,  TerrainCategory.Land, new Color(0.20f, 0.50f, 0.30f), 0.08f),
+            (TerrainKind.CoalSwamp,    TerrainCategory.Land, new Color(0.16f, 0.26f, 0.16f), 0.05f),
         };
 
         const string ShaderName   = "NaturalHistory/HexTerrain";

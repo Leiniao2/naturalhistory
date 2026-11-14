@@ -26,28 +26,42 @@ const ageOptions = (all) => {
   return ages.length ? ages : AGE_IDS.map(a => ({ value: a, label: a }));
 };
 
+// Branches (sub-trees shown as tabs) are listed at the top of the tree file
+export const branchesOf = (all, treeName) => (all[treeName] && all[treeName].branches) || [];
+const branchName = (all, treeName, id) => (branchesOf(all, treeName).find(b => b.id === id) || {}).displayName || id || '—';
+
 const treeFields = (treeName) => [
   { key: 'id', label: 'ID', type: 'id', help: 'Stable identifier (snake_case). Renaming updates prerequisites that point at it.' },
   { key: 'displayName', label: 'Name', type: 'string' },
+  { key: 'branch', label: 'Branch', type: 'enum', options: (all) => branchesOf(all, treeName).map(b => ({ value: b.id, label: b.displayName })),
+    help: 'Sub-tree (tab) the node is shown in. Column and row are positions within the branch.' },
   { key: 'tier', label: 'Column (tier)', type: 'int', min: 0, help: 'Left → right position. Prerequisites should be in earlier columns.' },
   { key: 'row', label: 'Row', type: 'int', min: 0 },
   { key: 'cost', label: 'Cost (EP)', type: 'int', min: 0, help: '0 with no prerequisites = known from the start.' },
   { key: 'age', label: 'Available from', type: 'enum', options: ageOptions },
-  { key: 'prerequisites', label: 'Prerequisites', type: 'refs', options: (all, item) => idsOf(treeName, 'displayName')(all).filter(o => o.value !== item.id) },
+  { key: 'prerequisites', label: 'Prerequisites', type: 'refs',
+    options: (all, item) => ((all[treeName] && all[treeName].nodes) || [])
+      .filter(n => n.id !== item.id)
+      .sort((a, b) => (a.branch === item.branch ? 0 : 1) - (b.branch === item.branch ? 0 : 1))
+      .map(n => ({ value: n.id, label: n.branch === item.branch ? n.displayName : `${n.displayName} (${branchName(all, treeName, n.branch)})` })),
+    help: 'Same-branch prerequisites are listed first. Prerequisites in other branches are allowed; the game lists them on the node instead of drawing a line.' },
   { key: 'unlocksGenes', label: 'Unlocks genes', type: 'refs', options: idsOf('genes', 'displayName') },
   { key: 'description', label: 'Description', type: 'text' },
 ];
 
-const treeValidate = (treeName) => (items) => {
+const treeValidate = (treeName) => (items, all) => {
   const out = [];
   const byId = new Map(items.map(n => [n.id, n]));
   const cells = new Map();
+  const branchIds = new Set(branchesOf(all || {}, treeName).map(b => b.id));
   items.forEach((n, i) => {
+    if (!n.branch) out.push({ index: i, level: 'warn', msg: 'no branch (shown in an "Other" tab)' });
+    else if (branchIds.size && !branchIds.has(n.branch)) out.push({ index: i, level: 'error', msg: `unknown branch "${n.branch}"` });
     for (const p of n.prerequisites || []) {
       const pre = byId.get(p);
-      if (pre && pre.tier >= n.tier) out.push({ index: i, level: 'warn', msg: `prerequisite "${pre.displayName || p}" is not in an earlier column` });
+      if (pre && pre.branch === n.branch && pre.tier >= n.tier) out.push({ index: i, level: 'warn', msg: `prerequisite "${pre.displayName || p}" is not in an earlier column` });
     }
-    const key = `${n.tier},${n.row}`;
+    const key = `${n.branch},${n.tier},${n.row}`;
     if (cells.has(key)) out.push({ index: i, level: 'warn', msg: `same position as "${cells.get(key)}"` });
     else cells.set(key, n.displayName || n.id);
     if (AGE_IDS.indexOf(n.age) >= 0) {
@@ -175,7 +189,8 @@ export const DATASETS = {
     label: n => n.displayName || n.id,
     sub: n => `col ${n.tier} · ${n.cost} EP · ${n.age}`,
     views: ['graph', 'form'],
-    newItem: () => ({ id: 'new_trait', displayName: 'New Trait', tier: 0, row: 0, cost: 10, age: 'Cambrian', prerequisites: [], unlocksGenes: [], description: '' }),
+    groupBy: (n, all) => branchName(all, 'morphology', n.branch),
+    newItem: (list, sel) => ({ id: 'new_trait', displayName: 'New Trait', branch: (sel && sel.branch) || '', tier: 0, row: 0, cost: 10, age: 'Cambrian', prerequisites: [], unlocksGenes: [], description: '' }),
     fields: treeFields('morphology'),
     validate: treeValidate('morphology'),
   },
@@ -185,7 +200,8 @@ export const DATASETS = {
     label: n => n.displayName || n.id,
     sub: n => `col ${n.tier} · ${n.cost} EP · ${n.age}`,
     views: ['graph', 'form'],
-    newItem: () => ({ id: 'new_behavior', displayName: 'New Behavior', tier: 0, row: 0, cost: 10, age: 'Cambrian', prerequisites: [], unlocksGenes: [], description: '' }),
+    groupBy: (n, all) => branchName(all, 'ethology', n.branch),
+    newItem: (list, sel) => ({ id: 'new_behavior', displayName: 'New Behavior', branch: (sel && sel.branch) || '', tier: 0, row: 0, cost: 10, age: 'Cambrian', prerequisites: [], unlocksGenes: [], description: '' }),
     fields: treeFields('ethology'),
     validate: treeValidate('ethology'),
   },

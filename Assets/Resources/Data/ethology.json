@@ -1,17 +1,2879 @@
 {
+  "branches": [
+    {
+      "id": "foraging",
+      "displayName": "Foraging & Feeding",
+      "description": "Finding, choosing and storing food."
+    },
+    {
+      "id": "predation",
+      "displayName": "Hunting",
+      "description": "Catching and killing prey."
+    },
+    {
+      "id": "defense",
+      "displayName": "Defence",
+      "description": "Hiding, fleeing, fighting back and bluffing."
+    },
+    {
+      "id": "movement",
+      "displayName": "Movement & Migration",
+      "description": "Steering, homing and long journeys."
+    },
+    {
+      "id": "social",
+      "displayName": "Social Life",
+      "description": "Groups, colonies, hierarchies and traditions."
+    },
+    {
+      "id": "communication",
+      "displayName": "Communication",
+      "description": "Scent, colour, sound and language."
+    },
+    {
+      "id": "mating",
+      "displayName": "Courtship & Mating",
+      "description": "Finding, choosing and winning a mate."
+    },
+    {
+      "id": "parenting",
+      "displayName": "Parental Care",
+      "description": "Protecting, feeding and teaching the young."
+    },
+    {
+      "id": "cognition",
+      "displayName": "Learning & Cognition",
+      "description": "From habituation to symbolic thought."
+    },
+    {
+      "id": "habitat",
+      "displayName": "Habitat & Construction",
+      "description": "Settling, building and conquering new environments."
+    }
+  ],
   "nodes": [
-    { "id": "foraging",          "displayName": "Foraging",          "tier": 0, "row": 2, "cost": 0,  "age": "Cambrian",      "prerequisites": [],                                  "unlocksGenes": ["filter_feeding"],  "description": "Seek out food rather than wait for it to drift by." },
-    { "id": "hiding",            "displayName": "Hiding",            "tier": 1, "row": 0, "cost": 6,  "age": "Cambrian",      "prerequisites": ["foraging"],                        "unlocksGenes": ["camouflage"],      "description": "Freeze, burrow or blend in when danger is near." },
-    { "id": "schooling",         "displayName": "Schooling",         "tier": 1, "row": 2, "cost": 6,  "age": "Ordovician",    "prerequisites": ["foraging"],                        "unlocksGenes": ["group_defense"],   "description": "Move as a coordinated group to confuse predators." },
-    { "id": "scavenging",        "displayName": "Scavenging",        "tier": 1, "row": 4, "cost": 6,  "age": "Cambrian",      "prerequisites": ["foraging"],                        "unlocksGenes": ["decomposition"],   "description": "Make a living from what others leave behind." },
-    { "id": "ambush_hunting",    "displayName": "Ambush Hunting",    "tier": 2, "row": 1, "cost": 10, "age": "Silurian",      "prerequisites": ["hiding"],                          "unlocksGenes": [],                  "description": "Wait, hidden, then strike: low energy, high reward." },
-    { "id": "territoriality",    "displayName": "Territoriality",    "tier": 2, "row": 3, "cost": 10, "age": "Devonian",      "prerequisites": ["schooling", "scavenging"],         "unlocksGenes": [],                  "description": "Claim and defend a patch of habitat against rivals." },
-    { "id": "seasonal_migration","displayName": "Seasonal Migration","tier": 3, "row": 4, "cost": 14, "age": "Carboniferous", "prerequisites": ["territoriality"],                   "unlocksGenes": ["hibernation"],     "description": "Follow food and warmth across the map as seasons turn." },
-    { "id": "courtship",         "displayName": "Courtship Display", "tier": 3, "row": 2, "cost": 14, "age": "Carboniferous", "prerequisites": ["territoriality"],                   "unlocksGenes": [],                  "description": "Ritual displays that pick strong mates and drive sexual selection." },
-    { "id": "nesting",           "displayName": "Nesting",           "tier": 4, "row": 2, "cost": 18, "age": "Triassic",      "prerequisites": ["courtship"],                       "unlocksGenes": ["parental_care"],   "description": "Build and guard nests, so far more young survive." },
-    { "id": "pack_hunting",      "displayName": "Pack Hunting",      "tier": 4, "row": 0, "cost": 18, "age": "Jurassic",      "prerequisites": ["ambush_hunting", "territoriality"],"unlocksGenes": [],                  "description": "Hunt cooperatively to bring down prey far larger than yourself." },
-    { "id": "vocal_communication","displayName": "Vocal Communication","tier": 5, "row": 1, "cost": 24, "age": "Cretaceous", "prerequisites": ["pack_hunting", "nesting"],         "unlocksGenes": [],                  "description": "Calls that warn, coordinate and bond a group together." },
-    { "id": "social_hierarchy",  "displayName": "Social Hierarchy",  "tier": 5, "row": 3, "cost": 24, "age": "Paleogene",     "prerequisites": ["nesting"],                         "unlocksGenes": [],                  "description": "Stable ranks that cut down on costly fights within a group." },
-    { "id": "tool_use",          "displayName": "Tool Use",          "tier": 6, "row": 2, "cost": 30, "age": "Neogene",       "prerequisites": ["vocal_communication", "social_hierarchy"], "unlocksGenes": [], "description": "Use sticks and stones to reach food no body part can." }
+    {
+      "id": "foraging",
+      "displayName": "Foraging",
+      "branch": "foraging",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [
+        "filter_feeding"
+      ],
+      "description": "Searching the sea floor for food."
+    },
+    {
+      "id": "mat_grazing",
+      "displayName": "Mat Grazing",
+      "branch": "foraging",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "foraging"
+      ],
+      "unlocksGenes": [],
+      "description": "Scraping microbial mats off the sea floor."
+    },
+    {
+      "id": "scavenging",
+      "displayName": "Scavenging",
+      "branch": "foraging",
+      "tier": 1,
+      "row": 1,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "foraging"
+      ],
+      "unlocksGenes": [
+        "decomposition"
+      ],
+      "description": "Feeding on the dead."
+    },
+    {
+      "id": "deposit_feeding",
+      "displayName": "Deposit Feeding",
+      "branch": "foraging",
+      "tier": 1,
+      "row": 2,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "foraging"
+      ],
+      "unlocksGenes": [],
+      "description": "Swallowing mud and digesting its organic matter."
+    },
+    {
+      "id": "current_feeding",
+      "displayName": "Current Feeding",
+      "branch": "foraging",
+      "tier": 1,
+      "row": 3,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "foraging"
+      ],
+      "unlocksGenes": [],
+      "description": "Holding feeding arms up into the current (crinoids)."
+    },
+    {
+      "id": "patch_foraging",
+      "displayName": "Patch Foraging",
+      "branch": "foraging",
+      "tier": 2,
+      "row": 0,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "mat_grazing"
+      ],
+      "unlocksGenes": [],
+      "description": "Moving on when a food patch runs low."
+    },
+    {
+      "id": "tidal_rhythm",
+      "displayName": "Tidal Rhythm",
+      "branch": "foraging",
+      "tier": 3,
+      "row": 0,
+      "cost": 11,
+      "age": "Ordovician",
+      "prerequisites": [
+        "patch_foraging"
+      ],
+      "unlocksGenes": [],
+      "description": "Feeding in time with the tides."
+    },
+    {
+      "id": "plant_feeding",
+      "displayName": "Plant Feeding",
+      "branch": "foraging",
+      "tier": 3,
+      "row": 1,
+      "cost": 12,
+      "age": "Silurian",
+      "prerequisites": [
+        "patch_foraging"
+      ],
+      "unlocksGenes": [
+        "herbivory"
+      ],
+      "description": "Eating land plants."
+    },
+    {
+      "id": "night_foraging",
+      "displayName": "Night Foraging",
+      "branch": "foraging",
+      "tier": 3,
+      "row": 2,
+      "cost": 13,
+      "age": "Devonian",
+      "prerequisites": [
+        "patch_foraging"
+      ],
+      "unlocksGenes": [],
+      "description": "Feeding in the dark, safe from predators."
+    },
+    {
+      "id": "coprophagy",
+      "displayName": "Dung Feeding",
+      "branch": "foraging",
+      "tier": 2,
+      "row": 1,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "scavenging"
+      ],
+      "unlocksGenes": [],
+      "description": "Eating dung for its leftover nutrients."
+    },
+    {
+      "id": "pollen_feeding",
+      "displayName": "Pollen Feeding",
+      "branch": "foraging",
+      "tier": 4,
+      "row": 1,
+      "cost": 17,
+      "age": "Permian",
+      "prerequisites": [
+        "plant_feeding"
+      ],
+      "unlocksGenes": [],
+      "description": "Eating pollen, the protein-rich food of plants."
+    },
+    {
+      "id": "omnivory_node",
+      "displayName": "Omnivory",
+      "branch": "foraging",
+      "tier": 4,
+      "row": 0,
+      "cost": 17,
+      "age": "Permian",
+      "prerequisites": [
+        "scavenging",
+        "plant_feeding"
+      ],
+      "unlocksGenes": [
+        "omnivory"
+      ],
+      "description": "Eating whatever is available."
+    },
+    {
+      "id": "high_browsing",
+      "displayName": "High Browsing",
+      "branch": "foraging",
+      "tier": 4,
+      "row": 2,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "plant_feeding"
+      ],
+      "unlocksGenes": [],
+      "description": "Reaching the treetops (sauropods)."
+    },
+    {
+      "id": "insect_gleaning",
+      "displayName": "Insect Gleaning",
+      "branch": "foraging",
+      "tier": 4,
+      "row": 3,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "night_foraging"
+      ],
+      "unlocksGenes": [],
+      "description": "Picking insects off leaves and bark."
+    },
+    {
+      "id": "nectar_feeding_node",
+      "displayName": "Nectar Feeding",
+      "branch": "foraging",
+      "tier": 5,
+      "row": 1,
+      "cost": 22,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "pollen_feeding"
+      ],
+      "unlocksGenes": [
+        "nectar_feeding"
+      ],
+      "description": "Drinking nectar and carrying pollen between flowers."
+    },
+    {
+      "id": "fruit_eating",
+      "displayName": "Fruit Eating",
+      "branch": "foraging",
+      "tier": 4,
+      "row": 4,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "plant_feeding"
+      ],
+      "unlocksGenes": [],
+      "description": "Eating fruit and spreading the seeds."
+    },
+    {
+      "id": "food_stealing",
+      "displayName": "Food Stealing",
+      "branch": "foraging",
+      "tier": 2,
+      "row": 2,
+      "cost": 16,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "scavenging"
+      ],
+      "unlocksGenes": [],
+      "description": "Robbing other animals of their catch (skuas)."
+    },
+    {
+      "id": "food_caching",
+      "displayName": "Food Caching",
+      "branch": "foraging",
+      "tier": 4,
+      "row": 5,
+      "cost": 21,
+      "age": "Paleogene",
+      "prerequisites": [
+        "night_foraging"
+      ],
+      "unlocksGenes": [],
+      "description": "Hiding food for later (squirrels, jays)."
+    },
+    {
+      "id": "fungus_farming",
+      "displayName": "Fungus Farming",
+      "branch": "foraging",
+      "tier": 3,
+      "row": 3,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "coprophagy"
+      ],
+      "unlocksGenes": [],
+      "description": "Growing fungus gardens for food (leafcutter ants, termites)."
+    },
+    {
+      "id": "grass_grazing",
+      "displayName": "Grass Grazing",
+      "branch": "foraging",
+      "tier": 4,
+      "row": 6,
+      "cost": 22,
+      "age": "Neogene",
+      "prerequisites": [
+        "plant_feeding"
+      ],
+      "unlocksGenes": [],
+      "description": "Grazing the new grasslands in herds."
+    },
+    {
+      "id": "active_predation",
+      "displayName": "Active Predation",
+      "branch": "predation",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [
+        "carnivory"
+      ],
+      "description": "Hunting other animals (Anomalocaris)."
+    },
+    {
+      "id": "ambush_hunting",
+      "displayName": "Ambush Hunting",
+      "branch": "predation",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "active_predation",
+        "hiding"
+      ],
+      "unlocksGenes": [],
+      "description": "Waiting hidden and striking at passing prey."
+    },
+    {
+      "id": "shell_drilling",
+      "displayName": "Shell Drilling",
+      "branch": "predation",
+      "tier": 1,
+      "row": 1,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "active_predation"
+      ],
+      "unlocksGenes": [],
+      "description": "Boring through shells to reach the animal inside."
+    },
+    {
+      "id": "burrow_ambush",
+      "displayName": "Burrow Ambush",
+      "branch": "predation",
+      "tier": 2,
+      "row": 0,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "ambush_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Lunging out of a hole (bobbit worms, trapdoor spiders)."
+    },
+    {
+      "id": "pursuit_hunting",
+      "displayName": "Pursuit Hunting",
+      "branch": "predation",
+      "tier": 1,
+      "row": 2,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "active_predation"
+      ],
+      "unlocksGenes": [],
+      "description": "Chasing prey down in open water."
+    },
+    {
+      "id": "venom_hunting",
+      "displayName": "Venomous Strike",
+      "branch": "predation",
+      "tier": 2,
+      "row": 1,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "ambush_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Subduing prey with venom (scorpions, later snakes)."
+    },
+    {
+      "id": "suction_feeding",
+      "displayName": "Suction Feeding",
+      "branch": "predation",
+      "tier": 2,
+      "row": 2,
+      "cost": 11,
+      "age": "Devonian",
+      "prerequisites": [
+        "pursuit_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Inhaling prey with a sudden gape."
+    },
+    {
+      "id": "aerial_hawking",
+      "displayName": "Aerial Hawking",
+      "branch": "predation",
+      "tier": 2,
+      "row": 3,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "pursuit_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Catching insects in mid-air (dragonflies)."
+    },
+    {
+      "id": "silk_traps",
+      "displayName": "Silk Traps",
+      "branch": "predation",
+      "tier": 2,
+      "row": 4,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "ambush_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Webs and trip-lines of silk."
+    },
+    {
+      "id": "stalking",
+      "displayName": "Stalking",
+      "branch": "predation",
+      "tier": 2,
+      "row": 5,
+      "cost": 13,
+      "age": "Permian",
+      "prerequisites": [
+        "ambush_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Creeping up on prey unseen."
+    },
+    {
+      "id": "pack_hunting",
+      "displayName": "Pack Hunting",
+      "branch": "predation",
+      "tier": 3,
+      "row": 5,
+      "cost": 17,
+      "age": "Jurassic",
+      "prerequisites": [
+        "stalking",
+        "territoriality"
+      ],
+      "unlocksGenes": [],
+      "description": "Hunting together to take bigger prey."
+    },
+    {
+      "id": "giant_prey",
+      "displayName": "Giant Prey",
+      "branch": "predation",
+      "tier": 3,
+      "row": 4,
+      "cost": 17,
+      "age": "Jurassic",
+      "prerequisites": [
+        "stalking"
+      ],
+      "unlocksGenes": [],
+      "description": "Taking prey bigger than yourself."
+    },
+    {
+      "id": "constriction",
+      "displayName": "Constriction",
+      "branch": "predation",
+      "tier": 2,
+      "row": 6,
+      "cost": 16,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "ambush_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Squeezing prey to death (snakes)."
+    },
+    {
+      "id": "luring",
+      "displayName": "Luring",
+      "branch": "predation",
+      "tier": 2,
+      "row": 7,
+      "cost": 16,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "ambush_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Wriggling a bait-like body part to attract prey (anglerfish)."
+    },
+    {
+      "id": "plunge_diving",
+      "displayName": "Plunge Diving",
+      "branch": "predation",
+      "tier": 3,
+      "row": 3,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "aerial_hawking"
+      ],
+      "unlocksGenes": [],
+      "description": "Diving from the air into water after fish."
+    },
+    {
+      "id": "echolocation_hunting",
+      "displayName": "Echolocation Hunting",
+      "branch": "predation",
+      "tier": 3,
+      "row": 2,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "aerial_hawking"
+      ],
+      "unlocksGenes": [
+        "echolocation"
+      ],
+      "description": "Finding prey by sound in the dark (bats)."
+    },
+    {
+      "id": "prey_herding",
+      "displayName": "Prey Herding",
+      "branch": "predation",
+      "tier": 4,
+      "row": 5,
+      "cost": 21,
+      "age": "Paleogene",
+      "prerequisites": [
+        "pack_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Driving fish into a tight ball (dolphins)."
+    },
+    {
+      "id": "electric_shock",
+      "displayName": "Electric Shock",
+      "branch": "predation",
+      "tier": 2,
+      "row": 8,
+      "cost": 18,
+      "age": "Neogene",
+      "prerequisites": [
+        "pursuit_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Stunning prey with electricity (electric eels)."
+    },
+    {
+      "id": "lunge_feeding",
+      "displayName": "Lunge Feeding",
+      "branch": "predation",
+      "tier": 3,
+      "row": 1,
+      "cost": 20,
+      "age": "Neogene",
+      "prerequisites": [
+        "suction_feeding"
+      ],
+      "unlocksGenes": [],
+      "description": "Engulfing a huge mouthful of krill (rorqual whales)."
+    },
+    {
+      "id": "persistence_hunting",
+      "displayName": "Persistence Hunting",
+      "branch": "predation",
+      "tier": 2,
+      "row": 9,
+      "cost": 19,
+      "age": "Quaternary",
+      "prerequisites": [
+        "pursuit_hunting"
+      ],
+      "unlocksGenes": [],
+      "description": "Running prey to exhaustion (humans)."
+    },
+    {
+      "id": "withdrawal",
+      "displayName": "Withdrawal Reflex",
+      "branch": "defense",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Pulling back into a tube or shell when touched."
+    },
+    {
+      "id": "hiding",
+      "displayName": "Hiding",
+      "branch": "defense",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "withdrawal"
+      ],
+      "unlocksGenes": [
+        "camouflage"
+      ],
+      "description": "Keeping still in cover."
+    },
+    {
+      "id": "burrowing_escape",
+      "displayName": "Burrowing Escape",
+      "branch": "defense",
+      "tier": 1,
+      "row": 1,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "withdrawal"
+      ],
+      "unlocksGenes": [
+        "burrowing"
+      ],
+      "description": "Digging into the sediment to escape."
+    },
+    {
+      "id": "rolling_up",
+      "displayName": "Rolling Up",
+      "branch": "defense",
+      "tier": 1,
+      "row": 2,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "withdrawal"
+      ],
+      "unlocksGenes": [],
+      "description": "Curling into an armoured ball (trilobites, pill bugs)."
+    },
+    {
+      "id": "autotomy",
+      "displayName": "Autotomy",
+      "branch": "defense",
+      "tier": 1,
+      "row": 3,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "withdrawal"
+      ],
+      "unlocksGenes": [],
+      "description": "Dropping a limb or tail to escape."
+    },
+    {
+      "id": "freezing",
+      "displayName": "Freezing",
+      "branch": "defense",
+      "tier": 2,
+      "row": 0,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "hiding"
+      ],
+      "unlocksGenes": [],
+      "description": "Staying motionless so predators lose interest."
+    },
+    {
+      "id": "startle_escape",
+      "displayName": "Startle Escape",
+      "branch": "defense",
+      "tier": 1,
+      "row": 4,
+      "cost": 8,
+      "age": "Silurian",
+      "prerequisites": [
+        "withdrawal"
+      ],
+      "unlocksGenes": [],
+      "description": "A lightning-fast flick of the body away from danger (fish)."
+    },
+    {
+      "id": "countershading",
+      "displayName": "Countershading",
+      "branch": "defense",
+      "tier": 2,
+      "row": 1,
+      "cost": 11,
+      "age": "Devonian",
+      "prerequisites": [
+        "hiding"
+      ],
+      "unlocksGenes": [],
+      "description": "Dark above and pale below, so the body looks flat."
+    },
+    {
+      "id": "ink_cloud",
+      "displayName": "Ink Cloud",
+      "branch": "defense",
+      "tier": 1,
+      "row": 5,
+      "cost": 10,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "withdrawal"
+      ],
+      "unlocksGenes": [],
+      "description": "A cloud of ink covers the escape (cephalopods)."
+    },
+    {
+      "id": "warning_colours",
+      "displayName": "Warning Colours",
+      "branch": "defense",
+      "tier": 3,
+      "row": 0,
+      "cost": 14,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "freezing"
+      ],
+      "unlocksGenes": [
+        "toxin_production"
+      ],
+      "description": "Bright colours that advertise poison."
+    },
+    {
+      "id": "chemical_spray",
+      "displayName": "Chemical Spray",
+      "branch": "defense",
+      "tier": 2,
+      "row": 5,
+      "cost": 13,
+      "age": "Permian",
+      "prerequisites": [
+        "ink_cloud"
+      ],
+      "unlocksGenes": [],
+      "description": "Spraying irritants (bombardier beetles, later skunks)."
+    },
+    {
+      "id": "playing_dead",
+      "displayName": "Playing Dead",
+      "branch": "defense",
+      "tier": 3,
+      "row": 1,
+      "cost": 15,
+      "age": "Permian",
+      "prerequisites": [
+        "freezing"
+      ],
+      "unlocksGenes": [],
+      "description": "Going limp until the predator gives up."
+    },
+    {
+      "id": "eyespot_display",
+      "displayName": "Eyespot Display",
+      "branch": "defense",
+      "tier": 4,
+      "row": 0,
+      "cost": 17,
+      "age": "Permian",
+      "prerequisites": [
+        "warning_colours"
+      ],
+      "unlocksGenes": [],
+      "description": "Flashing fake eyes to startle attackers."
+    },
+    {
+      "id": "group_vigilance",
+      "displayName": "Group Vigilance",
+      "branch": "defense",
+      "tier": 3,
+      "row": 2,
+      "cost": 16,
+      "age": "Triassic",
+      "prerequisites": [
+        "freezing"
+      ],
+      "unlocksGenes": [],
+      "description": "Many eyes: some watch while others feed."
+    },
+    {
+      "id": "nocturnal_refuge",
+      "displayName": "Nocturnal Refuge",
+      "branch": "defense",
+      "tier": 3,
+      "row": 3,
+      "cost": 16,
+      "age": "Triassic",
+      "prerequisites": [
+        "freezing"
+      ],
+      "unlocksGenes": [],
+      "description": "Active only at night (early mammals)."
+    },
+    {
+      "id": "mimicry",
+      "displayName": "Mimicry",
+      "branch": "defense",
+      "tier": 4,
+      "row": 1,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "warning_colours"
+      ],
+      "unlocksGenes": [],
+      "description": "Harmless species copying dangerous ones."
+    },
+    {
+      "id": "tail_weapons",
+      "displayName": "Tail Weapons",
+      "branch": "defense",
+      "tier": 1,
+      "row": 6,
+      "cost": 13,
+      "age": "Jurassic",
+      "prerequisites": [
+        "withdrawal"
+      ],
+      "unlocksGenes": [],
+      "description": "Clubs and spikes swung at attackers (stegosaurs, ankylosaurs)."
+    },
+    {
+      "id": "mobbing",
+      "displayName": "Mobbing",
+      "branch": "defense",
+      "tier": 4,
+      "row": 2,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "group_vigilance"
+      ],
+      "unlocksGenes": [],
+      "description": "Ganging up to drive a predator away."
+    },
+    {
+      "id": "distraction_display",
+      "displayName": "Distraction Display",
+      "branch": "defense",
+      "tier": 4,
+      "row": 3,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "playing_dead"
+      ],
+      "unlocksGenes": [],
+      "description": "Faking a broken wing to lure predators from the nest."
+    },
+    {
+      "id": "stotting",
+      "displayName": "Stotting",
+      "branch": "defense",
+      "tier": 2,
+      "row": 4,
+      "cost": 18,
+      "age": "Neogene",
+      "prerequisites": [
+        "startle_escape"
+      ],
+      "unlocksGenes": [],
+      "description": "Leaping high to show predators you are too fit to chase."
+    },
+    {
+      "id": "taxis",
+      "displayName": "Taxis",
+      "branch": "movement",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Steering toward food and away from danger by following gradients."
+    },
+    {
+      "id": "light_following",
+      "displayName": "Light Following",
+      "branch": "movement",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "taxis"
+      ],
+      "unlocksGenes": [],
+      "description": "Moving toward or away from light."
+    },
+    {
+      "id": "home_range",
+      "displayName": "Home Range",
+      "branch": "movement",
+      "tier": 1,
+      "row": 1,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "taxis"
+      ],
+      "unlocksGenes": [],
+      "description": "Staying in and returning to a familiar area."
+    },
+    {
+      "id": "vertical_migration",
+      "displayName": "Daily Vertical Migration",
+      "branch": "movement",
+      "tier": 2,
+      "row": 0,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "light_following"
+      ],
+      "unlocksGenes": [],
+      "description": "Rising at night and sinking by day (plankton)."
+    },
+    {
+      "id": "facing_current",
+      "displayName": "Facing the Current",
+      "branch": "movement",
+      "tier": 1,
+      "row": 2,
+      "cost": 8,
+      "age": "Silurian",
+      "prerequisites": [
+        "taxis"
+      ],
+      "unlocksGenes": [],
+      "description": "Holding position against flowing water."
+    },
+    {
+      "id": "land_excursions",
+      "displayName": "Land Excursions",
+      "branch": "movement",
+      "tier": 2,
+      "row": 1,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "home_range"
+      ],
+      "unlocksGenes": [],
+      "description": "Short trips out of the water onto land."
+    },
+    {
+      "id": "seasonal_migration",
+      "displayName": "Seasonal Migration",
+      "branch": "movement",
+      "tier": 2,
+      "row": 2,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "home_range"
+      ],
+      "unlocksGenes": [
+        "hibernation"
+      ],
+      "description": "Moving with the seasons."
+    },
+    {
+      "id": "sun_compass",
+      "displayName": "Sun Compass",
+      "branch": "movement",
+      "tier": 2,
+      "row": 3,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "light_following"
+      ],
+      "unlocksGenes": [],
+      "description": "Navigating by the sun's position."
+    },
+    {
+      "id": "mass_dispersal",
+      "displayName": "Mass Dispersal Flights",
+      "branch": "movement",
+      "tier": 3,
+      "row": 1,
+      "cost": 14,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "land_excursions"
+      ],
+      "unlocksGenes": [],
+      "description": "Swarms take off together to settle new ground."
+    },
+    {
+      "id": "gliding",
+      "displayName": "Gliding",
+      "branch": "movement",
+      "tier": 3,
+      "row": 0,
+      "cost": 15,
+      "age": "Permian",
+      "prerequisites": [
+        "land_excursions"
+      ],
+      "unlocksGenes": [],
+      "description": "Leaping and gliding between trees."
+    },
+    {
+      "id": "ballooning",
+      "displayName": "Ballooning",
+      "branch": "movement",
+      "tier": 4,
+      "row": 1,
+      "cost": 17,
+      "age": "Permian",
+      "prerequisites": [
+        "mass_dispersal"
+      ],
+      "unlocksGenes": [],
+      "description": "Drifting on the wind on silk threads (spiders)."
+    },
+    {
+      "id": "landmark_maps",
+      "displayName": "Landmark Maps",
+      "branch": "movement",
+      "tier": 2,
+      "row": 4,
+      "cost": 14,
+      "age": "Triassic",
+      "prerequisites": [
+        "home_range"
+      ],
+      "unlocksGenes": [],
+      "description": "Learning landmarks to find the way home."
+    },
+    {
+      "id": "natal_homing",
+      "displayName": "Natal Homing",
+      "branch": "movement",
+      "tier": 3,
+      "row": 2,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "seasonal_migration"
+      ],
+      "unlocksGenes": [],
+      "description": "Returning to the place of birth to breed (salmon, turtles)."
+    },
+    {
+      "id": "magnetic_navigation",
+      "displayName": "Magnetic Navigation",
+      "branch": "movement",
+      "tier": 4,
+      "row": 2,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "natal_homing"
+      ],
+      "unlocksGenes": [],
+      "description": "Steering by the Earth's magnetic field."
+    },
+    {
+      "id": "path_integration",
+      "displayName": "Path Integration",
+      "branch": "movement",
+      "tier": 3,
+      "row": 3,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "sun_compass"
+      ],
+      "unlocksGenes": [],
+      "description": "Counting steps and turns to head straight home (ants)."
+    },
+    {
+      "id": "star_navigation",
+      "displayName": "Star Navigation",
+      "branch": "movement",
+      "tier": 3,
+      "row": 4,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "sun_compass"
+      ],
+      "unlocksGenes": [],
+      "description": "Steering by the stars (migrating birds)."
+    },
+    {
+      "id": "ocean_migration",
+      "displayName": "Ocean Migration",
+      "branch": "movement",
+      "tier": 5,
+      "row": 2,
+      "cost": 23,
+      "age": "Paleogene",
+      "prerequisites": [
+        "magnetic_navigation"
+      ],
+      "unlocksGenes": [],
+      "description": "Journeys of thousands of kilometres every year (whales, terns)."
+    },
+    {
+      "id": "rafting",
+      "displayName": "Rafting",
+      "branch": "movement",
+      "tier": 3,
+      "row": 5,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "land_excursions"
+      ],
+      "unlocksGenes": [],
+      "description": "Crossing oceans on floating vegetation (monkeys to South America)."
+    },
+    {
+      "id": "nomadic_herds",
+      "displayName": "Nomadic Herds",
+      "branch": "movement",
+      "tier": 3,
+      "row": 6,
+      "cost": 20,
+      "age": "Neogene",
+      "prerequisites": [
+        "seasonal_migration"
+      ],
+      "unlocksGenes": [],
+      "description": "Following the rains and the grass (wildebeest)."
+    },
+    {
+      "id": "altitudinal_migration",
+      "displayName": "Altitudinal Migration",
+      "branch": "movement",
+      "tier": 3,
+      "row": 7,
+      "cost": 20,
+      "age": "Neogene",
+      "prerequisites": [
+        "seasonal_migration"
+      ],
+      "unlocksGenes": [],
+      "description": "Up the mountain in summer, down in winter."
+    },
+    {
+      "id": "aggregation",
+      "displayName": "Aggregation",
+      "branch": "social",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Gathering where conditions are good."
+    },
+    {
+      "id": "colonial_living",
+      "displayName": "Colonial Living",
+      "branch": "social",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "aggregation"
+      ],
+      "unlocksGenes": [],
+      "description": "Clones joined into one colony (corals, graptolites)."
+    },
+    {
+      "id": "schooling",
+      "displayName": "Schooling",
+      "branch": "social",
+      "tier": 1,
+      "row": 1,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "aggregation"
+      ],
+      "unlocksGenes": [
+        "group_defense"
+      ],
+      "description": "Swimming in coordinated groups for safety."
+    },
+    {
+      "id": "territoriality",
+      "displayName": "Territoriality",
+      "branch": "social",
+      "tier": 1,
+      "row": 2,
+      "cost": 9,
+      "age": "Devonian",
+      "prerequisites": [
+        "aggregation"
+      ],
+      "unlocksGenes": [],
+      "description": "Claiming and defending an area."
+    },
+    {
+      "id": "family_groups",
+      "displayName": "Family Groups",
+      "branch": "social",
+      "tier": 1,
+      "row": 3,
+      "cost": 11,
+      "age": "Permian",
+      "prerequisites": [
+        "aggregation"
+      ],
+      "unlocksGenes": [],
+      "description": "Parents and young stay together."
+    },
+    {
+      "id": "herding",
+      "displayName": "Herding",
+      "branch": "social",
+      "tier": 2,
+      "row": 1,
+      "cost": 14,
+      "age": "Triassic",
+      "prerequisites": [
+        "schooling"
+      ],
+      "unlocksGenes": [],
+      "description": "Moving and feeding in herds (dinosaurs)."
+    },
+    {
+      "id": "eusociality",
+      "displayName": "Eusociality",
+      "branch": "social",
+      "tier": 2,
+      "row": 3,
+      "cost": 16,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "family_groups"
+      ],
+      "unlocksGenes": [],
+      "description": "Sterile workers serve a breeding queen (termites, ants)."
+    },
+    {
+      "id": "castes",
+      "displayName": "Castes",
+      "branch": "social",
+      "tier": 3,
+      "row": 3,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "eusociality"
+      ],
+      "unlocksGenes": [],
+      "description": "Soldiers, workers and nurses, each built for its job."
+    },
+    {
+      "id": "social_hierarchy",
+      "displayName": "Social Hierarchy",
+      "branch": "social",
+      "tier": 3,
+      "row": 2,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "herding",
+        "territoriality"
+      ],
+      "unlocksGenes": [],
+      "description": "A pecking order settles who gets what."
+    },
+    {
+      "id": "cooperative_breeding",
+      "displayName": "Cooperative Breeding",
+      "branch": "social",
+      "tier": 2,
+      "row": 2,
+      "cost": 17,
+      "age": "Paleogene",
+      "prerequisites": [
+        "family_groups"
+      ],
+      "unlocksGenes": [],
+      "description": "Helpers raise young that are not their own."
+    },
+    {
+      "id": "social_grooming",
+      "displayName": "Social Grooming",
+      "branch": "social",
+      "tier": 4,
+      "row": 2,
+      "cost": 21,
+      "age": "Paleogene",
+      "prerequisites": [
+        "social_hierarchy"
+      ],
+      "unlocksGenes": [],
+      "description": "Cleaning each other to build bonds."
+    },
+    {
+      "id": "communal_roosts",
+      "displayName": "Communal Roosts",
+      "branch": "social",
+      "tier": 1,
+      "row": 4,
+      "cost": 15,
+      "age": "Paleogene",
+      "prerequisites": [
+        "aggregation"
+      ],
+      "unlocksGenes": [],
+      "description": "Sleeping together in large numbers."
+    },
+    {
+      "id": "superorganism",
+      "displayName": "Superorganism",
+      "branch": "social",
+      "tier": 4,
+      "row": 3,
+      "cost": 21,
+      "age": "Paleogene",
+      "prerequisites": [
+        "castes"
+      ],
+      "unlocksGenes": [],
+      "description": "A colony acting as one body (army ants)."
+    },
+    {
+      "id": "coalitions",
+      "displayName": "Coalitions",
+      "branch": "social",
+      "tier": 4,
+      "row": 1,
+      "cost": 22,
+      "age": "Neogene",
+      "prerequisites": [
+        "social_hierarchy"
+      ],
+      "unlocksGenes": [],
+      "description": "Allies band together to rise in rank."
+    },
+    {
+      "id": "fission_fusion",
+      "displayName": "Fission–fusion Groups",
+      "branch": "social",
+      "tier": 5,
+      "row": 1,
+      "cost": 24,
+      "age": "Neogene",
+      "prerequisites": [
+        "coalitions"
+      ],
+      "unlocksGenes": [],
+      "description": "Groups split and merge day by day (chimpanzees, elephants)."
+    },
+    {
+      "id": "reciprocal_altruism",
+      "displayName": "Reciprocal Altruism",
+      "branch": "social",
+      "tier": 5,
+      "row": 2,
+      "cost": 24,
+      "age": "Neogene",
+      "prerequisites": [
+        "social_grooming"
+      ],
+      "unlocksGenes": [],
+      "description": "Helping those who help you (vampire bats sharing blood)."
+    },
+    {
+      "id": "mixed_species_flocks",
+      "displayName": "Mixed-species Flocks",
+      "branch": "social",
+      "tier": 2,
+      "row": 4,
+      "cost": 18,
+      "age": "Neogene",
+      "prerequisites": [
+        "communal_roosts"
+      ],
+      "unlocksGenes": [],
+      "description": "Different species forage together for safety."
+    },
+    {
+      "id": "matriarchs",
+      "displayName": "Matriarchs",
+      "branch": "social",
+      "tier": 6,
+      "row": 1,
+      "cost": 26,
+      "age": "Neogene",
+      "prerequisites": [
+        "fission_fusion"
+      ],
+      "unlocksGenes": [],
+      "description": "Old females lead the group with remembered knowledge."
+    },
+    {
+      "id": "traditions",
+      "displayName": "Traditions",
+      "branch": "social",
+      "tier": 7,
+      "row": 1,
+      "cost": 29,
+      "age": "Quaternary",
+      "prerequisites": [
+        "matriarchs"
+      ],
+      "unlocksGenes": [],
+      "description": "Behaviour passed down the generations (whale songs, chimp tool kits)."
+    },
+    {
+      "id": "large_societies",
+      "displayName": "Large Societies",
+      "branch": "social",
+      "tier": 8,
+      "row": 2,
+      "cost": 31,
+      "age": "Quaternary",
+      "prerequisites": [
+        "traditions",
+        "reciprocal_altruism"
+      ],
+      "unlocksGenes": [],
+      "description": "Cooperation among many unrelated individuals."
+    },
+    {
+      "id": "chemical_signals",
+      "displayName": "Chemical Signals",
+      "branch": "communication",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Leaving chemical traces for others to detect."
+    },
+    {
+      "id": "pheromones",
+      "displayName": "Pheromones",
+      "branch": "communication",
+      "tier": 1,
+      "row": 0,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "chemical_signals"
+      ],
+      "unlocksGenes": [],
+      "description": "Chemical messages to your own species."
+    },
+    {
+      "id": "substrate_vibration",
+      "displayName": "Substrate Vibration",
+      "branch": "communication",
+      "tier": 1,
+      "row": 1,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "chemical_signals"
+      ],
+      "unlocksGenes": [],
+      "description": "Tapping signals through the ground or a web."
+    },
+    {
+      "id": "colour_signals",
+      "displayName": "Colour Signals",
+      "branch": "communication",
+      "tier": 1,
+      "row": 2,
+      "cost": 8,
+      "age": "Silurian",
+      "prerequisites": [
+        "chemical_signals"
+      ],
+      "unlocksGenes": [],
+      "description": "Changing or showing colours to send messages."
+    },
+    {
+      "id": "light_signals",
+      "displayName": "Light Signals",
+      "branch": "communication",
+      "tier": 2,
+      "row": 2,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "colour_signals"
+      ],
+      "unlocksGenes": [],
+      "description": "Flashing light codes (deep-sea fish, later fireflies)."
+    },
+    {
+      "id": "stridulation",
+      "displayName": "Stridulation",
+      "branch": "communication",
+      "tier": 2,
+      "row": 1,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "substrate_vibration"
+      ],
+      "unlocksGenes": [],
+      "description": "Rubbing body parts together to chirp."
+    },
+    {
+      "id": "display_postures",
+      "displayName": "Display Postures",
+      "branch": "communication",
+      "tier": 2,
+      "row": 3,
+      "cost": 13,
+      "age": "Permian",
+      "prerequisites": [
+        "colour_signals"
+      ],
+      "unlocksGenes": [],
+      "description": "Showing size and colour to settle disputes without fighting."
+    },
+    {
+      "id": "scent_marking",
+      "displayName": "Scent Marking",
+      "branch": "communication",
+      "tier": 2,
+      "row": 0,
+      "cost": 14,
+      "age": "Triassic",
+      "prerequisites": [
+        "pheromones"
+      ],
+      "unlocksGenes": [],
+      "description": "Marking territory with scent."
+    },
+    {
+      "id": "vocal_communication",
+      "displayName": "Vocal Communication",
+      "branch": "communication",
+      "tier": 3,
+      "row": 1,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "stridulation"
+      ],
+      "unlocksGenes": [],
+      "description": "Calls made with the voice."
+    },
+    {
+      "id": "alarm_calls",
+      "displayName": "Alarm Calls",
+      "branch": "communication",
+      "tier": 4,
+      "row": 1,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "vocal_communication"
+      ],
+      "unlocksGenes": [],
+      "description": "Warning the group that a predator is near."
+    },
+    {
+      "id": "electric_signals",
+      "displayName": "Electric Signals",
+      "branch": "communication",
+      "tier": 1,
+      "row": 3,
+      "cost": 15,
+      "age": "Paleogene",
+      "prerequisites": [
+        "chemical_signals"
+      ],
+      "unlocksGenes": [],
+      "description": "Talking with electric pulses (weakly electric fish)."
+    },
+    {
+      "id": "waggle_dance",
+      "displayName": "Waggle Dance",
+      "branch": "communication",
+      "tier": 2,
+      "row": 4,
+      "cost": 17,
+      "age": "Paleogene",
+      "prerequisites": [
+        "substrate_vibration"
+      ],
+      "unlocksGenes": [],
+      "description": "Dancing the direction of food to the hive (honeybees)."
+    },
+    {
+      "id": "learned_song",
+      "displayName": "Learned Song",
+      "branch": "communication",
+      "tier": 4,
+      "row": 0,
+      "cost": 21,
+      "age": "Paleogene",
+      "prerequisites": [
+        "vocal_communication"
+      ],
+      "unlocksGenes": [],
+      "description": "Songs copied from adults (songbirds)."
+    },
+    {
+      "id": "facial_expressions",
+      "displayName": "Facial Expressions",
+      "branch": "communication",
+      "tier": 3,
+      "row": 3,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "display_postures"
+      ],
+      "unlocksGenes": [],
+      "description": "Faces that show mood (mammals)."
+    },
+    {
+      "id": "duets",
+      "displayName": "Duets",
+      "branch": "communication",
+      "tier": 5,
+      "row": 0,
+      "cost": 24,
+      "age": "Neogene",
+      "prerequisites": [
+        "learned_song"
+      ],
+      "unlocksGenes": [],
+      "description": "Pairs singing together in time."
+    },
+    {
+      "id": "referential_calls",
+      "displayName": "Referential Calls",
+      "branch": "communication",
+      "tier": 5,
+      "row": 1,
+      "cost": 24,
+      "age": "Neogene",
+      "prerequisites": [
+        "alarm_calls"
+      ],
+      "unlocksGenes": [],
+      "description": "Different alarms for eagle, snake and leopard (vervet monkeys)."
+    },
+    {
+      "id": "infrasound",
+      "displayName": "Infrasound",
+      "branch": "communication",
+      "tier": 4,
+      "row": 2,
+      "cost": 22,
+      "age": "Neogene",
+      "prerequisites": [
+        "vocal_communication"
+      ],
+      "unlocksGenes": [],
+      "description": "Calls too low for us to hear that carry for kilometres (elephants)."
+    },
+    {
+      "id": "whale_song",
+      "displayName": "Whale Song",
+      "branch": "communication",
+      "tier": 5,
+      "row": 2,
+      "cost": 24,
+      "age": "Neogene",
+      "prerequisites": [
+        "learned_song"
+      ],
+      "unlocksGenes": [],
+      "description": "Long songs that change from year to year."
+    },
+    {
+      "id": "gestures",
+      "displayName": "Gestures",
+      "branch": "communication",
+      "tier": 4,
+      "row": 3,
+      "cost": 22,
+      "age": "Neogene",
+      "prerequisites": [
+        "facial_expressions"
+      ],
+      "unlocksGenes": [],
+      "description": "Meaningful hand and body movements (great apes)."
+    },
+    {
+      "id": "language",
+      "displayName": "Language",
+      "branch": "communication",
+      "tier": 6,
+      "row": 2,
+      "cost": 27,
+      "age": "Quaternary",
+      "prerequisites": [
+        "referential_calls",
+        "gestures"
+      ],
+      "unlocksGenes": [],
+      "description": "Open-ended symbolic speech."
+    },
+    {
+      "id": "spawning_aggregations",
+      "displayName": "Spawning Aggregations",
+      "branch": "mating",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Gathering in one place to spawn."
+    },
+    {
+      "id": "hermaphroditism",
+      "displayName": "Hermaphroditism",
+      "branch": "mating",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "spawning_aggregations"
+      ],
+      "unlocksGenes": [],
+      "description": "Both sexes in one body (snails, worms)."
+    },
+    {
+      "id": "synchronised_spawning",
+      "displayName": "Synchronised Spawning",
+      "branch": "mating",
+      "tier": 1,
+      "row": 1,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "spawning_aggregations"
+      ],
+      "unlocksGenes": [],
+      "description": "Spawning together on a cue from the moon or temperature."
+    },
+    {
+      "id": "mate_guarding",
+      "displayName": "Mate Guarding",
+      "branch": "mating",
+      "tier": 1,
+      "row": 2,
+      "cost": 8,
+      "age": "Silurian",
+      "prerequisites": [
+        "spawning_aggregations"
+      ],
+      "unlocksGenes": [],
+      "description": "Staying close to a mate to keep rivals away."
+    },
+    {
+      "id": "sperm_competition",
+      "displayName": "Sperm Competition",
+      "branch": "mating",
+      "tier": 2,
+      "row": 2,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "mate_guarding"
+      ],
+      "unlocksGenes": [],
+      "description": "Rival males compete after mating, inside the female."
+    },
+    {
+      "id": "courtship",
+      "displayName": "Courtship",
+      "branch": "mating",
+      "tier": 2,
+      "row": 1,
+      "cost": 12,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "mate_guarding"
+      ],
+      "unlocksGenes": [],
+      "description": "Rituals that persuade a mate."
+    },
+    {
+      "id": "nuptial_gifts",
+      "displayName": "Nuptial Gifts",
+      "branch": "mating",
+      "tier": 3,
+      "row": 1,
+      "cost": 15,
+      "age": "Permian",
+      "prerequisites": [
+        "courtship"
+      ],
+      "unlocksGenes": [],
+      "description": "Offering food to a mate."
+    },
+    {
+      "id": "male_combat",
+      "displayName": "Male Combat",
+      "branch": "mating",
+      "tier": 2,
+      "row": 3,
+      "cost": 13,
+      "age": "Permian",
+      "prerequisites": [
+        "mate_guarding"
+      ],
+      "unlocksGenes": [],
+      "description": "Shoving, wrestling and butting rivals."
+    },
+    {
+      "id": "female_choice",
+      "displayName": "Female Choice",
+      "branch": "mating",
+      "tier": 3,
+      "row": 0,
+      "cost": 15,
+      "age": "Permian",
+      "prerequisites": [
+        "courtship"
+      ],
+      "unlocksGenes": [],
+      "description": "Females choose the best-looking or best-sounding male."
+    },
+    {
+      "id": "courtship_dance",
+      "displayName": "Courtship Dance",
+      "branch": "mating",
+      "tier": 3,
+      "row": 2,
+      "cost": 16,
+      "age": "Triassic",
+      "prerequisites": [
+        "courtship"
+      ],
+      "unlocksGenes": [],
+      "description": "Elaborate dances performed for a mate."
+    },
+    {
+      "id": "pair_bonds",
+      "displayName": "Pair Bonds",
+      "branch": "mating",
+      "tier": 3,
+      "row": 3,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "courtship"
+      ],
+      "unlocksGenes": [],
+      "description": "Staying with one partner for a season or for life."
+    },
+    {
+      "id": "leks",
+      "displayName": "Leks",
+      "branch": "mating",
+      "tier": 4,
+      "row": 2,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "courtship_dance"
+      ],
+      "unlocksGenes": [],
+      "description": "Males display side by side while females choose."
+    },
+    {
+      "id": "ornamental_plumage",
+      "displayName": "Ornamental Plumage",
+      "branch": "mating",
+      "tier": 4,
+      "row": 0,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "female_choice"
+      ],
+      "unlocksGenes": [],
+      "description": "Showy feathers favoured by females."
+    },
+    {
+      "id": "sexual_cannibalism",
+      "displayName": "Sexual Cannibalism",
+      "branch": "mating",
+      "tier": 4,
+      "row": 1,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "nuptial_gifts"
+      ],
+      "unlocksGenes": [],
+      "description": "The female eats the male (mantises, spiders)."
+    },
+    {
+      "id": "harems",
+      "displayName": "Harems",
+      "branch": "mating",
+      "tier": 3,
+      "row": 4,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "male_combat"
+      ],
+      "unlocksGenes": [],
+      "description": "One male defends a group of females."
+    },
+    {
+      "id": "song_contests",
+      "displayName": "Song Contests",
+      "branch": "mating",
+      "tier": 4,
+      "row": 3,
+      "cost": 21,
+      "age": "Paleogene",
+      "prerequisites": [
+        "female_choice"
+      ],
+      "unlocksGenes": [],
+      "description": "Males out-sing each other."
+    },
+    {
+      "id": "sex_change",
+      "displayName": "Sex Change",
+      "branch": "mating",
+      "tier": 2,
+      "row": 0,
+      "cost": 17,
+      "age": "Paleogene",
+      "prerequisites": [
+        "hermaphroditism"
+      ],
+      "unlocksGenes": [],
+      "description": "Switching sex with age or status (clownfish, wrasse)."
+    },
+    {
+      "id": "bowers",
+      "displayName": "Bowers",
+      "branch": "mating",
+      "tier": 4,
+      "row": 4,
+      "cost": 22,
+      "age": "Neogene",
+      "prerequisites": [
+        "courtship_dance"
+      ],
+      "unlocksGenes": [],
+      "description": "Decorated display structures (bowerbirds)."
+    },
+    {
+      "id": "antler_tournaments",
+      "displayName": "Antler Tournaments",
+      "branch": "mating",
+      "tier": 3,
+      "row": 5,
+      "cost": 20,
+      "age": "Neogene",
+      "prerequisites": [
+        "male_combat"
+      ],
+      "unlocksGenes": [],
+      "description": "Ritual antler fights (deer)."
+    },
+    {
+      "id": "rutting_season",
+      "displayName": "Rutting Season",
+      "branch": "mating",
+      "tier": 3,
+      "row": 6,
+      "cost": 20,
+      "age": "Neogene",
+      "prerequisites": [
+        "male_combat"
+      ],
+      "unlocksGenes": [],
+      "description": "A short, intense mating season."
+    },
+    {
+      "id": "egg_scattering",
+      "displayName": "Egg Scattering",
+      "branch": "parenting",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Eggs are left to chance."
+    },
+    {
+      "id": "egg_sites",
+      "displayName": "Choosing Egg Sites",
+      "branch": "parenting",
+      "tier": 1,
+      "row": 0,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "egg_scattering"
+      ],
+      "unlocksGenes": [],
+      "description": "Laying eggs in safe places."
+    },
+    {
+      "id": "egg_guarding",
+      "displayName": "Egg Guarding",
+      "branch": "parenting",
+      "tier": 2,
+      "row": 0,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "egg_sites"
+      ],
+      "unlocksGenes": [],
+      "description": "Staying with the eggs to drive off egg-eaters."
+    },
+    {
+      "id": "brood_pouches",
+      "displayName": "Brood Pouches",
+      "branch": "parenting",
+      "tier": 3,
+      "row": 0,
+      "cost": 12,
+      "age": "Silurian",
+      "prerequisites": [
+        "egg_guarding"
+      ],
+      "unlocksGenes": [],
+      "description": "Carrying the eggs on or in the body."
+    },
+    {
+      "id": "burrow_nests",
+      "displayName": "Burrow Nests",
+      "branch": "parenting",
+      "tier": 2,
+      "row": 1,
+      "cost": 13,
+      "age": "Permian",
+      "prerequisites": [
+        "egg_sites"
+      ],
+      "unlocksGenes": [],
+      "description": "Raising young underground."
+    },
+    {
+      "id": "nesting",
+      "displayName": "Nesting",
+      "branch": "parenting",
+      "tier": 2,
+      "row": 2,
+      "cost": 14,
+      "age": "Triassic",
+      "prerequisites": [
+        "egg_sites"
+      ],
+      "unlocksGenes": [
+        "parental_care"
+      ],
+      "description": "Building a nest for eggs and young."
+    },
+    {
+      "id": "feeding_young",
+      "displayName": "Feeding the Young",
+      "branch": "parenting",
+      "tier": 3,
+      "row": 2,
+      "cost": 16,
+      "age": "Triassic",
+      "prerequisites": [
+        "nesting"
+      ],
+      "unlocksGenes": [],
+      "description": "Bringing food to the young."
+    },
+    {
+      "id": "nest_defence",
+      "displayName": "Nest Defence",
+      "branch": "parenting",
+      "tier": 3,
+      "row": 1,
+      "cost": 16,
+      "age": "Triassic",
+      "prerequisites": [
+        "nesting"
+      ],
+      "unlocksGenes": [],
+      "description": "Fighting off nest raiders."
+    },
+    {
+      "id": "nursing",
+      "displayName": "Nursing",
+      "branch": "parenting",
+      "tier": 4,
+      "row": 2,
+      "cost": 18,
+      "age": "Triassic",
+      "prerequisites": [
+        "feeding_young"
+      ],
+      "unlocksGenes": [],
+      "description": "Feeding the young on milk."
+    },
+    {
+      "id": "provisioned_cells",
+      "displayName": "Provisioned Cells",
+      "branch": "parenting",
+      "tier": 2,
+      "row": 3,
+      "cost": 15,
+      "age": "Jurassic",
+      "prerequisites": [
+        "egg_sites"
+      ],
+      "unlocksGenes": [],
+      "description": "Sealed cells stocked with food for the larvae (wasps)."
+    },
+    {
+      "id": "biparental_care",
+      "displayName": "Biparental Care",
+      "branch": "parenting",
+      "tier": 4,
+      "row": 1,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "feeding_young"
+      ],
+      "unlocksGenes": [],
+      "description": "Both parents raise the young."
+    },
+    {
+      "id": "incubation",
+      "displayName": "Incubation",
+      "branch": "parenting",
+      "tier": 3,
+      "row": 3,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "nesting"
+      ],
+      "unlocksGenes": [],
+      "description": "Sitting on the eggs to keep them warm."
+    },
+    {
+      "id": "creches",
+      "displayName": "Crèches",
+      "branch": "parenting",
+      "tier": 4,
+      "row": 3,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "feeding_young"
+      ],
+      "unlocksGenes": [],
+      "description": "Young gathered together in nurseries."
+    },
+    {
+      "id": "colonial_nesting",
+      "displayName": "Colonial Nesting",
+      "branch": "parenting",
+      "tier": 4,
+      "row": 0,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "nest_defence"
+      ],
+      "unlocksGenes": [],
+      "description": "Nesting in large, defended colonies."
+    },
+    {
+      "id": "carrying_young",
+      "displayName": "Carrying Young",
+      "branch": "parenting",
+      "tier": 5,
+      "row": 2,
+      "cost": 22,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "nursing"
+      ],
+      "unlocksGenes": [],
+      "description": "Young ride on the parent's back or in a pouch."
+    },
+    {
+      "id": "mouthbrooding",
+      "displayName": "Mouthbrooding",
+      "branch": "parenting",
+      "tier": 4,
+      "row": 4,
+      "cost": 21,
+      "age": "Paleogene",
+      "prerequisites": [
+        "brood_pouches"
+      ],
+      "unlocksGenes": [],
+      "description": "Sheltering eggs and fry in the mouth (cichlids)."
+    },
+    {
+      "id": "alloparenting",
+      "displayName": "Alloparenting",
+      "branch": "parenting",
+      "tier": 5,
+      "row": 1,
+      "cost": 23,
+      "age": "Paleogene",
+      "prerequisites": [
+        "biparental_care"
+      ],
+      "unlocksGenes": [],
+      "description": "Aunts, siblings and others help raise the young."
+    },
+    {
+      "id": "brood_parasitism",
+      "displayName": "Brood Parasitism",
+      "branch": "parenting",
+      "tier": 4,
+      "row": 5,
+      "cost": 22,
+      "age": "Neogene",
+      "prerequisites": [
+        "incubation"
+      ],
+      "unlocksGenes": [],
+      "description": "Tricking others into raising your chicks (cuckoos)."
+    },
+    {
+      "id": "long_dependency",
+      "displayName": "Long Dependency",
+      "branch": "parenting",
+      "tier": 5,
+      "row": 3,
+      "cost": 24,
+      "age": "Neogene",
+      "prerequisites": [
+        "nursing"
+      ],
+      "unlocksGenes": [],
+      "description": "Young stay for years, learning skills."
+    },
+    {
+      "id": "teaching",
+      "displayName": "Teaching",
+      "branch": "parenting",
+      "tier": 6,
+      "row": 2,
+      "cost": 26,
+      "age": "Neogene",
+      "prerequisites": [
+        "alloparenting",
+        "long_dependency"
+      ],
+      "unlocksGenes": [],
+      "description": "Showing the young how to do things on purpose."
+    },
+    {
+      "id": "habituation",
+      "displayName": "Habituation",
+      "branch": "cognition",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Learning to ignore harmless, repeated stimuli."
+    },
+    {
+      "id": "sensitisation",
+      "displayName": "Sensitisation",
+      "branch": "cognition",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "habituation"
+      ],
+      "unlocksGenes": [],
+      "description": "Reacting more strongly after something bad happens."
+    },
+    {
+      "id": "associative_learning",
+      "displayName": "Associative Learning",
+      "branch": "cognition",
+      "tier": 2,
+      "row": 0,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "sensitisation"
+      ],
+      "unlocksGenes": [],
+      "description": "Linking a cue with a reward or punishment."
+    },
+    {
+      "id": "spatial_memory",
+      "displayName": "Spatial Memory",
+      "branch": "cognition",
+      "tier": 3,
+      "row": 0,
+      "cost": 12,
+      "age": "Silurian",
+      "prerequisites": [
+        "associative_learning"
+      ],
+      "unlocksGenes": [],
+      "description": "Remembering where things are."
+    },
+    {
+      "id": "trial_and_error",
+      "displayName": "Trial and Error",
+      "branch": "cognition",
+      "tier": 3,
+      "row": 1,
+      "cost": 13,
+      "age": "Devonian",
+      "prerequisites": [
+        "associative_learning"
+      ],
+      "unlocksGenes": [],
+      "description": "Trying things until something works."
+    },
+    {
+      "id": "imprinting",
+      "displayName": "Imprinting",
+      "branch": "cognition",
+      "tier": 3,
+      "row": 2,
+      "cost": 16,
+      "age": "Triassic",
+      "prerequisites": [
+        "associative_learning"
+      ],
+      "unlocksGenes": [],
+      "description": "Young bond with the first moving thing they see."
+    },
+    {
+      "id": "play",
+      "displayName": "Play",
+      "branch": "cognition",
+      "tier": 4,
+      "row": 1,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "trial_and_error"
+      ],
+      "unlocksGenes": [],
+      "description": "Practising skills through play."
+    },
+    {
+      "id": "observational_learning",
+      "displayName": "Observational Learning",
+      "branch": "cognition",
+      "tier": 4,
+      "row": 0,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "trial_and_error"
+      ],
+      "unlocksGenes": [],
+      "description": "Learning by watching others."
+    },
+    {
+      "id": "object_permanence",
+      "displayName": "Object Permanence",
+      "branch": "cognition",
+      "tier": 4,
+      "row": 2,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "spatial_memory"
+      ],
+      "unlocksGenes": [],
+      "description": "Knowing that hidden things still exist."
+    },
+    {
+      "id": "problem_solving",
+      "displayName": "Problem Solving",
+      "branch": "cognition",
+      "tier": 4,
+      "row": 3,
+      "cost": 21,
+      "age": "Paleogene",
+      "prerequisites": [
+        "trial_and_error"
+      ],
+      "unlocksGenes": [],
+      "description": "Working out a new solution without practice."
+    },
+    {
+      "id": "numerosity",
+      "displayName": "Numerosity",
+      "branch": "cognition",
+      "tier": 5,
+      "row": 2,
+      "cost": 23,
+      "age": "Paleogene",
+      "prerequisites": [
+        "object_permanence"
+      ],
+      "unlocksGenes": [],
+      "description": "Judging quantities: more or fewer."
+    },
+    {
+      "id": "episodic_memory",
+      "displayName": "Episodic-like Memory",
+      "branch": "cognition",
+      "tier": 5,
+      "row": 1,
+      "cost": 23,
+      "age": "Paleogene",
+      "prerequisites": [
+        "object_permanence"
+      ],
+      "unlocksGenes": [],
+      "description": "Remembering what happened, where and when (scrub jays)."
+    },
+    {
+      "id": "tool_use",
+      "displayName": "Tool Use",
+      "branch": "cognition",
+      "tier": 5,
+      "row": 0,
+      "cost": 24,
+      "age": "Neogene",
+      "prerequisites": [
+        "observational_learning"
+      ],
+      "unlocksGenes": [],
+      "description": "Using objects as tools."
+    },
+    {
+      "id": "self_recognition",
+      "displayName": "Self-recognition",
+      "branch": "cognition",
+      "tier": 5,
+      "row": 3,
+      "cost": 24,
+      "age": "Neogene",
+      "prerequisites": [
+        "problem_solving"
+      ],
+      "unlocksGenes": [],
+      "description": "Recognising yourself in a mirror."
+    },
+    {
+      "id": "planning_ahead",
+      "displayName": "Planning Ahead",
+      "branch": "cognition",
+      "tier": 6,
+      "row": 2,
+      "cost": 26,
+      "age": "Neogene",
+      "prerequisites": [
+        "numerosity",
+        "episodic_memory"
+      ],
+      "unlocksGenes": [],
+      "description": "Preparing for future needs."
+    },
+    {
+      "id": "tool_making",
+      "displayName": "Tool Making",
+      "branch": "cognition",
+      "tier": 6,
+      "row": 0,
+      "cost": 26,
+      "age": "Neogene",
+      "prerequisites": [
+        "tool_use"
+      ],
+      "unlocksGenes": [],
+      "description": "Shaping objects into tools."
+    },
+    {
+      "id": "theory_of_mind",
+      "displayName": "Theory of Mind",
+      "branch": "cognition",
+      "tier": 6,
+      "row": 3,
+      "cost": 26,
+      "age": "Neogene",
+      "prerequisites": [
+        "self_recognition"
+      ],
+      "unlocksGenes": [],
+      "description": "Understanding what others know and want."
+    },
+    {
+      "id": "tactical_deception",
+      "displayName": "Tactical Deception",
+      "branch": "cognition",
+      "tier": 7,
+      "row": 3,
+      "cost": 28,
+      "age": "Neogene",
+      "prerequisites": [
+        "theory_of_mind"
+      ],
+      "unlocksGenes": [],
+      "description": "Deliberately misleading others."
+    },
+    {
+      "id": "control_of_fire",
+      "displayName": "Control of Fire",
+      "branch": "cognition",
+      "tier": 7,
+      "row": 1,
+      "cost": 29,
+      "age": "Quaternary",
+      "prerequisites": [
+        "tool_making",
+        "planning_ahead"
+      ],
+      "unlocksGenes": [],
+      "description": "Keeping and using fire."
+    },
+    {
+      "id": "symbolic_thought",
+      "displayName": "Symbolic Thought",
+      "branch": "cognition",
+      "tier": 7,
+      "row": 2,
+      "cost": 29,
+      "age": "Quaternary",
+      "prerequisites": [
+        "theory_of_mind"
+      ],
+      "unlocksGenes": [],
+      "description": "Art, ornaments and symbols."
+    },
+    {
+      "id": "settling",
+      "displayName": "Settling",
+      "branch": "habitat",
+      "tier": 0,
+      "row": 0,
+      "cost": 0,
+      "age": "Cambrian",
+      "prerequisites": [],
+      "unlocksGenes": [],
+      "description": "Choosing a good spot on the sea floor to settle."
+    },
+    {
+      "id": "tube_building",
+      "displayName": "Tube Building",
+      "branch": "habitat",
+      "tier": 1,
+      "row": 0,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "settling"
+      ],
+      "unlocksGenes": [],
+      "description": "Building a protective tube to live in."
+    },
+    {
+      "id": "burrow_systems",
+      "displayName": "Burrow Systems",
+      "branch": "habitat",
+      "tier": 1,
+      "row": 1,
+      "cost": 6,
+      "age": "Cambrian",
+      "prerequisites": [
+        "settling"
+      ],
+      "unlocksGenes": [
+        "burrowing"
+      ],
+      "description": "Digging tunnels in the sediment."
+    },
+    {
+      "id": "reef_building",
+      "displayName": "Reef Building",
+      "branch": "habitat",
+      "tier": 2,
+      "row": 0,
+      "cost": 8,
+      "age": "Cambrian",
+      "prerequisites": [
+        "tube_building"
+      ],
+      "unlocksGenes": [],
+      "description": "Building reefs together (archaeocyathids, later corals)."
+    },
+    {
+      "id": "symbiosis",
+      "displayName": "Symbiosis",
+      "branch": "habitat",
+      "tier": 1,
+      "row": 2,
+      "cost": 7,
+      "age": "Ordovician",
+      "prerequisites": [
+        "settling"
+      ],
+      "unlocksGenes": [],
+      "description": "Partnerships that help both sides (algae living in coral)."
+    },
+    {
+      "id": "commensalism",
+      "displayName": "Commensalism",
+      "branch": "habitat",
+      "tier": 2,
+      "row": 2,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "symbiosis"
+      ],
+      "unlocksGenes": [],
+      "description": "Living alongside a host and taking its scraps."
+    },
+    {
+      "id": "rock_boring",
+      "displayName": "Rock Boring",
+      "branch": "habitat",
+      "tier": 2,
+      "row": 1,
+      "cost": 9,
+      "age": "Ordovician",
+      "prerequisites": [
+        "burrow_systems"
+      ],
+      "unlocksGenes": [],
+      "description": "Drilling homes into rock and wood."
+    },
+    {
+      "id": "land_colonisation",
+      "displayName": "Land Colonisation",
+      "branch": "habitat",
+      "tier": 2,
+      "row": 3,
+      "cost": 10,
+      "age": "Silurian",
+      "prerequisites": [
+        "burrow_systems"
+      ],
+      "unlocksGenes": [],
+      "description": "Moving out of the water onto land."
+    },
+    {
+      "id": "tree_dwelling",
+      "displayName": "Tree Dwelling",
+      "branch": "habitat",
+      "tier": 3,
+      "row": 3,
+      "cost": 14,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "land_colonisation"
+      ],
+      "unlocksGenes": [
+        "climbing"
+      ],
+      "description": "Living in the forest canopy."
+    },
+    {
+      "id": "cave_dwelling",
+      "displayName": "Cave Dwelling",
+      "branch": "habitat",
+      "tier": 3,
+      "row": 2,
+      "cost": 15,
+      "age": "Permian",
+      "prerequisites": [
+        "land_colonisation"
+      ],
+      "unlocksGenes": [],
+      "description": "Living in caves, safe from weather and predators."
+    },
+    {
+      "id": "silk_shelters",
+      "displayName": "Silk Shelters",
+      "branch": "habitat",
+      "tier": 3,
+      "row": 4,
+      "cost": 15,
+      "age": "Permian",
+      "prerequisites": [
+        "land_colonisation"
+      ],
+      "unlocksGenes": [],
+      "description": "Spinning silk retreats and cocoons."
+    },
+    {
+      "id": "desert_life",
+      "displayName": "Desert Life",
+      "branch": "habitat",
+      "tier": 3,
+      "row": 1,
+      "cost": 15,
+      "age": "Permian",
+      "prerequisites": [
+        "land_colonisation"
+      ],
+      "unlocksGenes": [
+        "heat_tolerance"
+      ],
+      "description": "Surviving heat and drought."
+    },
+    {
+      "id": "return_to_sea",
+      "displayName": "Return to the Sea",
+      "branch": "habitat",
+      "tier": 3,
+      "row": 5,
+      "cost": 16,
+      "age": "Triassic",
+      "prerequisites": [
+        "land_colonisation"
+      ],
+      "unlocksGenes": [],
+      "description": "Land animals adapting back to life in water."
+    },
+    {
+      "id": "woven_nests",
+      "displayName": "Woven Nests",
+      "branch": "habitat",
+      "tier": 4,
+      "row": 3,
+      "cost": 20,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "tree_dwelling"
+      ],
+      "unlocksGenes": [],
+      "description": "Weaving nests from plant fibres."
+    },
+    {
+      "id": "cleaning_stations",
+      "displayName": "Cleaning Stations",
+      "branch": "habitat",
+      "tier": 3,
+      "row": 0,
+      "cost": 18,
+      "age": "Cretaceous",
+      "prerequisites": [
+        "commensalism"
+      ],
+      "unlocksGenes": [],
+      "description": "Cleaner fish and shrimp service visiting 'clients'."
+    },
+    {
+      "id": "termite_mounds",
+      "displayName": "Termite Mounds",
+      "branch": "habitat",
+      "tier": 2,
+      "row": 4,
+      "cost": 17,
+      "age": "Paleogene",
+      "prerequisites": [
+        "burrow_systems"
+      ],
+      "unlocksGenes": [],
+      "description": "Climate-controlled mound cities."
+    },
+    {
+      "id": "polar_life",
+      "displayName": "Polar Life",
+      "branch": "habitat",
+      "tier": 3,
+      "row": 6,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "land_colonisation"
+      ],
+      "unlocksGenes": [
+        "cold_tolerance"
+      ],
+      "description": "Living on ice and in polar seas."
+    },
+    {
+      "id": "wax_combs",
+      "displayName": "Wax Combs",
+      "branch": "habitat",
+      "tier": 3,
+      "row": 7,
+      "cost": 19,
+      "age": "Paleogene",
+      "prerequisites": [
+        "termite_mounds"
+      ],
+      "unlocksGenes": [],
+      "description": "Building combs of hexagonal wax cells (bees)."
+    },
+    {
+      "id": "dam_building",
+      "displayName": "Dam Building",
+      "branch": "habitat",
+      "tier": 3,
+      "row": 8,
+      "cost": 20,
+      "age": "Neogene",
+      "prerequisites": [
+        "termite_mounds"
+      ],
+      "unlocksGenes": [],
+      "description": "Engineering ponds with dams (beavers)."
+    },
+    {
+      "id": "landscape_shaping",
+      "displayName": "Landscape Shaping",
+      "branch": "habitat",
+      "tier": 4,
+      "row": 8,
+      "cost": 22,
+      "age": "Neogene",
+      "prerequisites": [
+        "dam_building"
+      ],
+      "unlocksGenes": [],
+      "description": "Changing whole landscapes (elephants toppling trees)."
+    }
   ]
 }

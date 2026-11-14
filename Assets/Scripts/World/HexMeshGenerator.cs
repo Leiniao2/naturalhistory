@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace NaturalHistory.World
@@ -89,6 +90,103 @@ namespace NaturalHistory.World
             mesh.normals   = norms;
             mesh.uv        = uvs;
             mesh.triangles = tris;
+            mesh.RecalculateBounds();
+            return mesh;
+        }
+
+        // Land tile whose rim slopes to meet its neighbours instead of stepping up or down. The
+        // middle (`solid` × the tile radius) is flat at y=height; from there the top slopes out to
+        // the rim, whose corners and edge midpoints sit at the given heights. Neighbours are given
+        // the same rim heights, so adjacent tiles meet without a step. Walls run from the rim down
+        // to y=0 (seen in the groove between tiles and along coasts).
+        //
+        // Corner i points 60i degrees clockwise from +Z; edge e faces 60e + 30 (between corners e
+        // and e+1). joined[e] = the edge reaches the full cell boundary (cellRadius) with no wall
+        // and no rim darkening, so the ground runs straight into that neighbour.
+        public static Mesh CreateSloped(float tileRadius, float cellRadius, float height, float solid,
+                                        float[] cornerHeights, float[] edgeHeights, bool[] joined)
+        {
+            var mesh = new Mesh { name = "HexTileSloped" };
+
+            var dirs = new Vector3[6];
+            for (int i = 0; i < 6; i++)
+            {
+                float a = Mathf.Deg2Rad * (60f * i);
+                dirs[i] = new Vector3(Mathf.Sin(a), 0f, Mathf.Cos(a));
+            }
+
+            // Rim points: corners at even k, edge midpoints at odd k (12 around)
+            var rim     = new Vector3[12];
+            var rimDark = new bool[12]; // false → keep the shader's rim darkening off here
+            for (int i = 0; i < 6; i++)
+            {
+                bool full = joined[(i + 5) % 6] || joined[i];
+                rim[2 * i]     = dirs[i] * (full ? cellRadius : tileRadius) + Vector3.up * cornerHeights[i];
+                rimDark[2 * i] = !(joined[(i + 5) % 6] && joined[i]);
+            }
+            for (int e = 0; e < 6; e++)
+            {
+                var mid = (rim[2 * e] + rim[(2 * e + 2) % 12]) * 0.5f;
+                rim[2 * e + 1]     = new Vector3(mid.x, edgeHeights[e], mid.z);
+                rimDark[2 * e + 1] = !joined[e];
+            }
+
+            var verts = new List<Vector3>();
+            var uvs   = new List<Vector2>();
+            var tris  = new List<int>();
+            // Radial UVs as in Create (corners at distance 0.5); rim points that shouldn't be
+            // darkened get pulled in to the flat middle's UV radius.
+            Vector2 Uv(Vector3 p, float pull) => new(0.5f + 0.5f * p.x / tileRadius * pull, 0.5f + 0.5f * p.z / tileRadius * pull);
+
+            verts.Add(new Vector3(0f, height, 0f));
+            uvs.Add(new Vector2(0.5f, 0.5f));
+            for (int k = 0; k < 12; k++) // flat middle: 1..12
+            {
+                var p = (k % 2 == 0 ? dirs[k / 2] * tileRadius : (dirs[k / 2] + dirs[(k / 2 + 1) % 6]) * 0.5f * tileRadius) * solid;
+                verts.Add(p + Vector3.up * height);
+                uvs.Add(Uv(p, 1f));
+            }
+            for (int k = 0; k < 12; k++) // rim: 13..24
+            {
+                verts.Add(rim[k]);
+                uvs.Add(Uv(rim[k], rimDark[k] ? 1f : solid * tileRadius / new Vector2(rim[k].x, rim[k].z).magnitude));
+            }
+
+            // Same winding as Create: clockwise seen from above / outside
+            for (int k = 0; k < 12; k++)
+            {
+                int next = (k + 1) % 12;
+                tris.Add(0); tris.Add(1 + k); tris.Add(1 + next);
+                int u0 = 1 + k, u1 = 1 + next, l0 = 13 + k, l1 = 13 + next;
+                tris.Add(u0); tris.Add(l0); tris.Add(l1);
+                tris.Add(u0); tris.Add(l1); tris.Add(u1);
+            }
+
+            // Walls get their own vertices so they stay flat-shaded and don't bend the top's normals
+            for (int e = 0; e < 6; e++)
+            {
+                if (joined[e]) continue;
+                int b = verts.Count;
+                for (int s = 0; s < 3; s++)
+                {
+                    var top = rim[(2 * e + s) % 12];
+                    verts.Add(top);
+                    verts.Add(new Vector3(top.x, 0f, top.z));
+                    uvs.Add(Uv(top, 1f));
+                    uvs.Add(Uv(top, 1f));
+                }
+                for (int s = 0; s < 2; s++)
+                {
+                    int u0 = b + 2 * s, l0 = u0 + 1, u1 = u0 + 2, l1 = u0 + 3;
+                    tris.Add(u0); tris.Add(l0); tris.Add(l1);
+                    tris.Add(u0); tris.Add(l1); tris.Add(u1);
+                }
+            }
+
+            mesh.SetVertices(verts);
+            mesh.SetUVs(0, uvs);
+            mesh.SetTriangles(tris, 0);
+            mesh.RecalculateNormals();
             mesh.RecalculateBounds();
             return mesh;
         }

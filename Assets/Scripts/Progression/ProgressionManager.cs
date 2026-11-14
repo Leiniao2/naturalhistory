@@ -105,7 +105,12 @@ namespace NaturalHistory.Progression
         private IEnumerable<string> MissingPrerequisites(ProgressionTree tree, TreeNodeDefinition node)
         {
             foreach (var id in node.prerequisites)
-                if (!tree.IsUnlocked(id)) yield return tree.Get(id)?.displayName ?? id;
+            {
+                if (tree.IsUnlocked(id)) continue;
+                var pre = tree.Get(id);
+                if (pre == null) yield return id;
+                else yield return pre.branch == node.branch ? pre.displayName : $"{pre.displayName} ({tree.BranchName(pre.branch)})";
+            }
         }
 
         // Age gating only applies once an AgeManager is running the geological clock.

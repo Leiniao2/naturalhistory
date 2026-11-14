@@ -189,6 +189,9 @@ svg text { fill: var(--text); font-family: inherit; }
 .graph .node.dragging { cursor: grabbing; opacity: 0.85; }
 .graph .node-name { font-weight: 700; font-size: 14px; pointer-events: none; }
 .graph .node-sub { fill: var(--muted); font-size: 12px; pointer-events: none; }
+.graph .node-external { fill: #e6aa6e; font-size: 11px; pointer-events: none; }
+.branch-tabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 10px 4px 0; position: sticky; left: 0; }
+.branch-tab.active { background: #3f7a44; border-color: #5a9a5e; }
 
 .chart .panel { fill: #141a16; stroke: #2a352d; }
 .chart .band { fill: transparent; }

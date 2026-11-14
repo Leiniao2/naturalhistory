@@ -7,7 +7,7 @@ namespace NaturalHistory.World
     // Low-poly, flat-shaded props that sit on a hex tile's top face: mountain peaks and forest stands.
     // Colors are baked into vertex colors so all props share one material (MapFeature shader).
     // Meshes are centred on the tile (y = 0 is the top face) and stay inside the hex's inner radius.
-    public static class MapFeatureMeshes
+    public static partial class MapFeatureMeshes
     {
         static readonly Color Rock   = new(0.46f, 0.42f, 0.38f);
         static readonly Color Snow   = new(0.94f, 0.96f, 0.99f);
@@ -18,44 +18,134 @@ namespace NaturalHistory.World
         static readonly Color NeedleTip = new(0.22f, 0.45f, 0.26f);
         static readonly Color Shrub     = new(0.24f, 0.40f, 0.17f);
 
+        // A rock ridge from this tile's summit to the middle of one of its edges, where it meets the
+        // matching ridge of the neighbouring mountain. Everything at the edge is shared by both
+        // tiles (heights are relative to this tile's top face), so the two halves join seamlessly.
+        public struct MountainRidge
+        {
+            public int Edge;         // faces 60 * Edge + 30 degrees clockwise from +Z
+            public float Crest;      // crest height where the ridge crosses the edge
+            public float HalfWidth;  // half the ridge's width at its foot there
+            public float SnowY;      // snow line at the edge
+            public Color Tint;       // rock tint at the edge (a blend of both tiles' rock)
+        }
+
         // One large ridged peak plus 0–3 smaller ones, boulders around the foot and, where allowed,
         // a few pines. snowLine = fraction of the main peak's height (from the top) where snow can
         // lie; it only sticks to gentle faces, so cliffs stay bare rock. heightScale stretches the
         // whole massif; rockTint recolours the stone (e.g. red sandstone, blue-grey granite).
-        public static Mesh CreateMountain(System.Random rng, float size, float snowLine, float heightScale, Color rockTint, bool allowTrees)
+        // Ridges run out to neighbouring mountains so a range reads as one body of rock; apothem is
+        // the distance from the tile centre to its edges. groundAt gives the tile surface height at
+        // a point (the tile slopes toward its neighbours), so the foot of the massif follows it.
+        public static Mesh CreateMountain(System.Random rng, float size, float snowLine, float heightScale, Color rockTint, bool allowTrees,
+                                          IReadOnlyList<MountainRidge> ridges = null, float apothem = 0f, System.Func<Vector2, float> groundAt = null)
         {
             var b = new Builder();
+            ridges   ??= System.Array.Empty<MountainRidge>();
+            groundAt ??= _ => 0f;
             bool icy         = snowLine >= 0.65f;
             float mainHeight = size * Range(rng, 0.95f, 1.25f) * heightScale;
+            foreach (var ridge in ridges) mainHeight = Mathf.Max(mainHeight, ridge.Crest * 1.4f); // saddles stay below the summit
             float snowY      = mainHeight * (1f - snowLine);
 
-            var mainCenter = new Vector3(Range(rng, -0.08f, 0.08f), 0f, Range(rng, -0.08f, 0.08f)) * size;
-            AddPeak(b, rng, mainCenter, size * Range(rng, 0.4f, 0.5f), mainHeight, snowY, allowTrees, rockTint);
+            var mainCenter   = new Vector3(Range(rng, -0.08f, 0.08f), 0f, Range(rng, -0.08f, 0.08f)) * size;
+            float mainRadius = size * Range(rng, 0.4f, 0.5f);
+            AddPeak(b, rng, mainCenter, mainRadius, mainHeight, snowY, allowTrees, rockTint, groundAt);
+            foreach (var ridge in ridges)
+                AddRidge(b, rng, mainCenter, mainHeight * 0.6f, mainRadius * 0.55f, ridge, apothem, size, snowY, rockTint, groundAt);
 
             int extra   = rng.Next(0, 4);
             float angle = Range(rng, 0f, 360f);
             for (int i = 0; i < extra; i++, angle += Range(rng, 90f, 160f))
             {
-                float a = angle * Mathf.Deg2Rad;
+                // Along a ridge when there is one, so the range keeps going rather than ending in a cone
+                float dirDeg = ridges.Count > 0 && rng.NextDouble() < 0.6
+                    ? 60f * ridges[rng.Next(ridges.Count)].Edge + 30f + Range(rng, -15f, 15f) : angle;
+                float a = dirDeg * Mathf.Deg2Rad;
                 float d = size * Range(rng, 0.28f, 0.38f);
                 var center = new Vector3(Mathf.Sin(a) * d, 0f, Mathf.Cos(a) * d);
                 // Occasionally a near-twin summit, so some massifs read as a ridge rather than one cone
                 float rel = rng.NextDouble() < 0.2 ? Range(rng, 0.75f, 0.9f) : Range(rng, 0.4f, 0.65f);
-                AddPeak(b, rng, center, size * Range(rng, 0.22f, 0.32f), mainHeight * rel, snowY, allowTrees, rockTint);
+                AddPeak(b, rng, center, size * Range(rng, 0.22f, 0.32f), mainHeight * rel, snowY, allowTrees, rockTint, groundAt);
             }
 
+            Vector3 Ground(Vector2 p) => new(p.x, groundAt(p), p.y);
             foreach (var p in Scatter(rng, rng.Next(2, 7), 0.68f * size, 0.08f * size, new List<Vector2>()))
             {
                 if (p.magnitude < 0.5f * size) continue; // only around the foot, not buried in the slope
-                AddRock(b, rng, new Vector3(p.x, 0f, p.y), size * Range(rng, 0.03f, 0.055f), icy ? Snow * 0.85f : Rock * rockTint);
+                AddRock(b, rng, Ground(p), size * Range(rng, 0.03f, 0.055f), icy ? Snow * 0.85f : Rock * rockTint);
             }
             if (allowTrees && rng.NextDouble() < 0.75)
             {
                 foreach (var p in Scatter(rng, rng.Next(3, 8), 0.66f * size, 0.08f * size, new List<Vector2>()))
                     if (p.magnitude > 0.5f * size)
-                        AddConifer(b, rng, new Vector3(p.x, 0f, p.y), size * Range(rng, 0.3f, 0.42f));
+                        AddConifer(b, rng, Ground(p), size * Range(rng, 0.3f, 0.42f));
             }
             return b.ToMesh("MountainPeaks");
+        }
+
+        // Lofted ridge: a five-point cross-section (foot, shoulder, crest, shoulder, foot) swept from
+        // inside the summit out to the edge midpoint. The crest dips into a saddle and wanders a little
+        // in between; all jitter fades to zero at the edge, where the section is symmetric and built
+        // only from the shared ridge values, so it lines up with the neighbour's half.
+        static void AddRidge(Builder b, System.Random rng, Vector3 start, float startCrest, float startHalfWidth, MountainRidge ridge,
+                             float apothem, float size, float snowY, Color rockTint, System.Func<Vector2, float> groundAt)
+        {
+            const int sections = 7;
+            float a    = (60f * ridge.Edge + 30f) * Mathf.Deg2Rad;
+            var dir    = new Vector3(Mathf.Sin(a), 0f, Mathf.Cos(a));
+            var side   = new Vector3(dir.z, 0f, -dir.x);
+            var end    = dir * apothem;
+            float sway = Range(rng, -1f, 1f) * 0.06f * size;
+            float sink = 0.03f * size; // feet go a little under the ground so no gap shows on slopes
+            startCrest = Mathf.Max(startCrest, ridge.Crest);
+
+            float Ground(Vector3 p) => groundAt(new Vector2(p.x, p.z));
+            var prev = new Vector3[5];
+            var cur  = new Vector3[5];
+            Vector3 prevMid = start;
+            for (int s = 0; s < sections; s++)
+            {
+                float t    = s / (sections - 1f);
+                float bump = Mathf.Sin(t * Mathf.PI); // 0 at both ends
+                var mid    = Vector3.Lerp(start, end, t) + side * sway * bump;
+                float crest = Mathf.Lerp(startCrest, ridge.Crest, Mathf.SmoothStep(0f, 1f, t)) + bump * Range(rng, -0.05f, 0.04f) * size;
+                float w     = Mathf.Lerp(startHalfWidth, ridge.HalfWidth, t) * (1f + bump * Range(rng, -0.15f, 0.15f));
+                float lean  = bump * Range(rng, -0.25f, 0.25f) * w; // crest off-centre → one steeper flank
+                float ground = Ground(mid);
+                crest = Mathf.Max(crest, ground + 0.05f * size);
+
+                var footL = mid - side * w;
+                var footR = mid + side * w;
+                cur[0] = new Vector3(footL.x, Ground(footL) - sink, footL.z);
+                cur[4] = new Vector3(footR.x, Ground(footR) - sink, footR.z);
+                cur[1] = mid - side * (0.5f * w - 0.5f * lean) + Vector3.up * Mathf.Lerp(ground, crest, 0.62f);
+                cur[3] = mid + side * (0.5f * w + 0.5f * lean) + Vector3.up * Mathf.Lerp(ground, crest, 0.62f);
+                cur[2] = mid + side * lean + Vector3.up * crest;
+                cur[1].y = Mathf.Max(cur[1].y, Ground(cur[1]));
+                cur[3].y = Mathf.Max(cur[3].y, Ground(cur[3]));
+
+                if (s > 0)
+                {
+                    // Near the edge, snow line and rock colour fade to the shared values
+                    float blend   = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(0.3f, 0.8f, t - 0.5f / (sections - 1f)));
+                    float snowAt  = Mathf.Lerp(snowY, ridge.SnowY, blend);
+                    var rock      = Rock * Color.Lerp(rockTint, ridge.Tint, blend);
+                    var inside    = (prevMid + mid) * 0.5f + Vector3.down * size;
+                    for (int k = 0; k < 4; k++)
+                    {
+                        var p0 = prev[k]; var p1 = prev[k + 1]; var p2 = cur[k + 1]; var p3 = cur[k];
+                        float y  = (p0.y + p1.y + p2.y + p3.y) * 0.25f;
+                        float up = FaceUp(p0, p1, p2, inside);
+                        var color = y > snowAt && up > 0.45f
+                            ? Shade(rng, Snow, 0.04f)
+                            : Shade(rng, rock, 0.07f) * Mathf.Lerp(0.85f, 1.05f, up);
+                        b.AddQuad(p0, p1, p2, p3, color, inside);
+                    }
+                }
+                (prev, cur) = (cur, prev);
+                prevMid = mid;
+            }
         }
 
         // A stand of detailed trees with shrubs between the trunks. Trees near the middle are
@@ -180,13 +270,17 @@ namespace NaturalHistory.World
 
         // Concave stratovolcano: gullied ash slopes turning to basalt near the top, a crater with a
         // lava lake, lava streams down the deepest gullies, a small side cone and a smoke plume.
-        public static Mesh CreateVolcano(System.Random rng, float size, float heightScale)
+        // groundAt: tile surface height at a point (see CreateMountain); the base follows it.
+        public static Mesh CreateVolcano(System.Random rng, float size, float heightScale, System.Func<Vector2, float> groundAt = null)
         {
             const int sides = 16, rings = 6;
             var b = new Builder();
             float h    = size * Range(rng, 0.8f, 1.0f) * heightScale;
             var below  = Vector3.down * h;
             var g      = ConeGrid(rng, Vector3.zero, 0.58f * size, h, 0.15f * size, sides, rings, 0.22f, 0.05f, 1.7f, out var spokes);
+            if (groundAt != null)
+                for (int i = 0; i < sides; i++)
+                    g[0, i].y = Mathf.Min(g[0, i].y, groundAt(new Vector2(g[0, i].x, g[0, i].z)) - 0.01f);
 
             for (int k = 0; k < rings; k++)
             {
@@ -494,12 +588,16 @@ namespace NaturalHistory.World
         // Ridged peak on a radial grid: spurs and gullies, concave slopes and a craggy summit.
         // Faces are coloured by height and slope: green-brown foot, banded rock strata, and snow
         // above a ragged snow line on faces gentle enough to hold it.
-        static void AddPeak(Builder b, System.Random rng, Vector3 center, float radius, float height, float snowY, bool vegetatedFoot, Color rockTint)
+        static void AddPeak(Builder b, System.Random rng, Vector3 center, float radius, float height, float snowY, bool vegetatedFoot, Color rockTint,
+                            System.Func<Vector2, float> groundAt = null)
         {
             const int rings = 5;
             int sides = rng.Next(9, 14);
             var g = ConeGrid(rng, center, radius, height * 0.93f, radius * 0.1f, sides, rings,
                              Range(rng, 0.2f, 0.5f), Range(rng, 0.05f, 0.11f), Range(rng, 1.1f, 1.6f), out _);
+            if (groundAt != null) // base ring follows the tile's slope down so it never floats
+                for (int i = 0; i < sides; i++)
+                    g[0, i].y = Mathf.Min(g[0, i].y, groundAt(new Vector2(g[0, i].x, g[0, i].z)) - 0.01f);
             var apex   = center + new Vector3(Range(rng, -0.06f, 0.06f) * radius, height, Range(rng, -0.06f, 0.06f) * radius);
             var below  = center + Vector3.down * height; // every face of a radial height field points away from here
             float band = height * Range(rng, 0.1f, 0.14f);
@@ -573,22 +671,23 @@ namespace NaturalHistory.World
 
         // Tapered trunk under 4–6 stacked tiers of drooping boughs, dark at the bottom and lighter
         // toward the tip, finished with a spike.
-        static void AddConifer(Builder b, System.Random rng, Vector3 root, float s)
+        static void AddConifer(Builder b, System.Random rng, Vector3 root, float s, Color? needle = null, Color? needleTip = null)
         {
+            var tipColor = needleTip ?? NeedleTip;
             float h  = s * Range(rng, 0.55f, 0.75f);
             var lean = new Vector3(Range(rng, -0.03f, 0.03f), 0f, Range(rng, -0.03f, 0.03f)) * h;
             AddLimb(b, root - Vector3.up * 0.01f, root + Vector3.up * 0.85f * h + lean, 0.03f * s, 0.01f * s, Shade(rng, Bark));
 
             int tiers = rng.Next(4, 7);
-            var dark  = Shade(rng, Needle, 0.08f);
+            var dark  = Shade(rng, needle ?? Needle, 0.08f);
             for (int i = 0; i < tiers; i++)
             {
                 float t      = i / (float)(tiers - 1);
                 var center   = root + Vector3.up * Mathf.Lerp(0.16f, 0.7f, t) * h + lean * t;
                 float radius = Mathf.Lerp(0.17f, 0.06f, t) * s * Range(rng, 0.9f, 1.1f);
-                AddBoughTier(b, rng, center, radius, Mathf.Lerp(0.28f, 0.2f, t) * h, Color.Lerp(dark, NeedleTip, t * 0.8f));
+                AddBoughTier(b, rng, center, radius, Mathf.Lerp(0.28f, 0.2f, t) * h, Color.Lerp(dark, tipColor, t * 0.8f));
             }
-            AddCone(b, rng, root + Vector3.up * 0.86f * h + lean, 0.025f * s, 0.14f * h, NeedleTip);
+            AddCone(b, rng, root + Vector3.up * 0.86f * h + lean, 0.025f * s, 0.14f * h, tipColor);
         }
 
         // One skirt of boughs: a cone whose rim alternates between drooping tips and tucked-in notches.
@@ -619,11 +718,11 @@ namespace NaturalHistory.World
         }
 
         // Trunk that forks into 2–3 branches, each ending in a leaf clump, with a larger clump on top.
-        static void AddBroadleaf(Builder b, System.Random rng, Vector3 root, float s)
+        static void AddBroadleaf(Builder b, System.Random rng, Vector3 root, float s, Color? leafDark = null, Color? leafLight = null)
         {
             float h  = s * Range(rng, 0.5f, 0.66f);
             var bark = Shade(rng, Bark);
-            var leaf = Color.Lerp(Leaf, LeafLight, Range(rng, 0f, 0.45f));
+            var leaf = Color.Lerp(leafDark ?? Leaf, leafLight ?? LeafLight, Range(rng, 0f, 0.45f));
             var top  = root + new Vector3(Range(rng, -0.04f, 0.04f) * h, 0.5f * h, Range(rng, -0.04f, 0.04f) * h);
             AddLimb(b, root - Vector3.up * 0.01f, top, 0.035f * s, 0.02f * s, bark);
 

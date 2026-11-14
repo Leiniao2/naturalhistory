@@ -327,7 +327,7 @@ function renderList() {
     const text = `${d.label(it)} ${d.sub ? d.sub(it) : ''} ${d.idField ? it[d.idField] : ''}`.toLowerCase();
     if (filter && !text.includes(filter)) return;
     if (d.groupBy && !filter) {
-      const g = d.groupBy(it) || '—';
+      const g = d.groupBy(it, state.data) || '—';
       if (g !== lastGroup) { rows.push(h('div', { class: 'group' }, g)); lastGroup = g; }
     }
     const errs = problems.filter(p => p.index === i);
@@ -486,7 +486,7 @@ function fieldInput(f, owner, item, id) {
 function renderView() {
   const active = state.view[state.current] || def().views[0];
   const host = $('#view');
-  const ctx = { state, items: items(), selected: state.selected, selectItem, mutate, addItemAt, all: state.data };
+  const ctx = { state, dataset: state.current, items: items(), selected: state.selected, selectItem, mutate, addItemAt, all: state.data };
   if (active === 'graph') renderTreeGraph(host, ctx);
   else if (active === 'chart') renderClimateChart(host, ctx);
   else if (active === 'timeline') renderAgeTimeline(host, ctx);

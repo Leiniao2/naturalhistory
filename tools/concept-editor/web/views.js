@@ -27,11 +27,20 @@ function rebuild(host, build) {
 
 // ---------- Tree graph ----------
 
-const COL = 230, ROW = 88, NW = 186, NH = 60, PAD = 36;
+const COL = 230, ROW = 92, NW = 186, NH = 68, PAD = 36;
+const graphBranch = {}; // last branch shown per tree
 
 export function renderTreeGraph(host, ctx) {
-  const nodes = ctx.items;
-  const sel = nodes[ctx.selected];
+  const all = ctx.items;
+  const sel = all[ctx.selected];
+  const branches = (ctx.all[ctx.dataset] && ctx.all[ctx.dataset].branches) || [];
+  // One branch (sub-tree) at a time: the selected node's, else the last one shown
+  if (sel && sel.branch) graphBranch[ctx.dataset] = sel.branch;
+  const branch = graphBranch[ctx.dataset] ?? (branches[0] && branches[0].id);
+  const inBranch = n => !branches.length || n.branch === branch; // nodes without a branch are only in the list
+  const nodes = all.filter(inBranch);
+  const indexOf = new Map(all.map((n, i) => [n, i]));
+  const allById = new Map(all.map(n => [n.id, n]));
   const maxTier = Math.max(0, ...nodes.map(n => n.tier || 0)) + 1;
   const maxRow = Math.max(0, ...nodes.map(n => n.row || 0)) + 1;
   const width = PAD * 2 + maxTier * COL + NW;
@@ -47,7 +56,7 @@ export function renderTreeGraph(host, ctx) {
     for (let r = 0; r <= maxRow; r++) {
       svg.append(s('rect', {
         x: PAD + t * COL, y: PAD + 20 + r * ROW, width: NW, height: NH, rx: 8, class: 'cell',
-        ondblclick: () => ctx.addItemAt({ tier: t, row: r }),
+        ondblclick: () => ctx.addItemAt({ tier: t, row: r, branch }),
       }));
     }
   }
@@ -71,23 +80,44 @@ export function renderTreeGraph(host, ctx) {
   svg.append(edges);
 
   // Nodes
-  nodes.forEach((n, i) => {
+  nodes.forEach(n => {
+    const i = indexOf.get(n);
     const p = pos(n);
+    const external = (n.prerequisites || []).map(id => allById.get(id)).filter(pre => pre && pre.branch !== n.branch);
     const isPrereqOfSel = sel && (sel.prerequisites || []).includes(n.id);
     const g = s('g', { class: `node ${i === ctx.selected ? 'selected' : ''} ${isPrereqOfSel ? 'prereq' : ''} ${n.cost === 0 && !(n.prerequisites || []).length ? 'root' : ''}`,
       transform: `translate(${p.x},${p.y})` },
       s('rect', { width: NW, height: NH, rx: 8 }),
       s('text', { x: 10, y: 24, class: 'node-name' }, truncate(n.displayName || n.id, 22)),
       s('text', { x: 10, y: 44, class: 'node-sub' }, `${n.cost ?? 0} EP · ${n.age || '?'}${(n.unlocksGenes || []).length ? ` · ${(n.unlocksGenes || []).length} gene(s)` : ''}`),
+      external.length ? s('text', { x: 10, y: 61, class: 'node-external' }, truncate('needs ' + external.map(x => x.displayName).join(', '), 28)) : null,
       s('title', {}, `${n.displayName}\n${n.description || ''}`));
     enableNodeDrag(g, n, i, p, ctx, svg);
     svg.append(g);
   });
 
+  // Branch tabs
+  const tabs = div('branch-tabs');
+  for (const b of branches) {
+    const count = all.filter(n => n.branch === b.id).length;
+    const btn = document.createElement('button');
+    btn.className = `small branch-tab ${b.id === branch ? 'active' : ''}`;
+    btn.textContent = `${b.displayName} (${count})`;
+    btn.title = b.description || '';
+    btn.onclick = () => {
+      graphBranch[ctx.dataset] = b.id;
+      const first = all.findIndex(n => n.branch === b.id);
+      if (first >= 0) ctx.selectItem(first);
+      else renderTreeGraph(host, { ...ctx, selected: -1 });
+    };
+    tabs.append(btn);
+  }
+
   rebuild(host, () => [
-    div('view-hint', 'Drag nodes to move them · Double-click an empty slot to add · Shift+click a node to toggle it as a prerequisite of the selected node'),
+    branches.length ? tabs : null,
+    div('view-hint', 'Drag nodes to move them · Double-click an empty slot to add · Shift+click a node to toggle it as a prerequisite of the selected node (works across branches via the form)'),
     svg,
-  ]);
+  ].filter(Boolean));
 }
 
 function enableNodeDrag(g, node, index, start, ctx, svg) {

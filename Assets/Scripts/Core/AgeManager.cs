@@ -73,6 +73,19 @@ namespace NaturalHistory.Core
             Debug.Log($"[AgeManager] {ages.Count} periods, {TotalTurns} turns. Starting in the {CurrentAge} ({MillionYearsAgo:0.#} Ma)");
         }
 
+        public int FirstTurnOf(GeologicalAge age) => (int)age < firstTurnOfAge.Count ? firstTurnOfAge[(int)age] : 1;
+
+        // Admin: jump straight to a turn (e.g. the first turn of a period, or TotalTurns + 1 for the
+        // present day) without playing the turns in between. Goes through TurnManager like loading
+        // a save, so the turn counter stays in step; no period-transition announcement.
+        public void JumpToTurn(int turn)
+        {
+            if (ages.Count == 0) return;
+            turn = Mathf.Clamp(turn, 1, TotalTurns + 1);
+            if (TurnManager.Instance != null) TurnManager.Instance.Restore(turn);
+            else SetTurn(turn);
+        }
+
         public float MillionYearsAgoAt(int turn)
         {
             if (ages.Count == 0) return 0f;

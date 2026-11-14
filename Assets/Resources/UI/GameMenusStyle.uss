@@ -44,6 +44,45 @@
     border-radius: 6px;
 }
 
+/* ---------- Admin ---------- */
+
+.admin-bar {
+    position: absolute;
+    top: 62px;
+    right: 12px;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    background-color: rgba(70, 24, 24, 0.9);
+    border-color: rgb(170, 80, 70);
+    border-width: 1px;
+    border-radius: 6px;
+}
+
+.admin-tag {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: rgb(255, 196, 150);
+    margin-right: 8px;
+}
+
+.admin-age {
+    margin: 0;
+    min-width: 240px;
+}
+
+.admin-age > Label {
+    min-width: 0;
+    margin-right: 8px;
+    font-size: 15px;
+    color: rgb(235, 232, 220);
+}
+
+.admin-age .unity-base-field__input {
+    font-size: 15px;
+    min-height: 26px;
+}
+
 /* ---------- Panels ---------- */
 
 .overlay {
@@ -153,9 +192,71 @@
 /* ---------- Trees ---------- */
 
 .tree-panel {
-    width: 90%;
-    height: 86%;
-    padding: 16px 20px;
+    width: 98%;
+    height: 96%;
+    padding: 12px 18px;
+}
+
+.tree-progress {
+    font-size: 16px;
+    color: rgb(180, 190, 172);
+    margin-right: 12px;
+}
+
+.tree-branches-scroll {
+    flex-shrink: 0;
+    margin-bottom: 8px;
+}
+
+.tree-branches {
+    flex-direction: row;
+}
+
+.branch-tab {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    height: 54px;
+    margin: 0 4px 0 0;
+    padding: 2px 12px;
+    color: rgb(225, 228, 215);
+    background-color: rgb(40, 50, 42);
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-radius: 6px;
+}
+
+.branch-tab:hover {
+    background-color: rgb(56, 70, 58);
+}
+
+.branch-tab.selected {
+    background-color: rgb(63, 92, 62);
+    border-bottom-color: rgb(240, 210, 110);
+}
+
+.branch-tab-name {
+    font-size: 16px;
+    -unity-font-style: bold;
+}
+
+.branch-tab-count {
+    font-size: 13px;
+    color: rgb(180, 190, 172);
+}
+
+.branch-tab.has-available .branch-tab-count {
+    color: rgb(240, 210, 110);
+}
+
+.node-external {
+    font-size: 11px;
+    color: rgb(230, 170, 110);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tree-header {
@@ -202,9 +303,9 @@
 
 .tree-node {
     position: absolute;
-    width: 200px;
-    height: 66px;
-    padding: 6px 10px;
+    width: 206px;
+    height: 74px;
+    padding: 4px 10px;
     border-width: 2px;
     border-radius: 8px;
     justify-content: center;
@@ -236,7 +337,7 @@
 }
 
 .node-name {
-    font-size: 16px;
+    font-size: 15px;
     -unity-font-style: bold;
     color: rgb(240, 238, 228);
     white-space: normal;

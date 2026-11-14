@@ -13,21 +13,31 @@ namespace NaturalHistory.Progression
     {
         public string DisplayName { get; }
         public IReadOnlyList<TreeNodeDefinition> Nodes => nodes;
+        public IReadOnlyList<TreeBranchDefinition> Branches => branches;
         public IEnumerable<string> UnlockedIds => unlocked;
 
         private readonly List<TreeNodeDefinition> nodes;
+        private readonly List<TreeBranchDefinition> branches;
         private readonly Dictionary<string, TreeNodeDefinition> byId = new();
         private readonly HashSet<string> unlocked = new();
 
-        private ProgressionTree(string displayName, List<TreeNodeDefinition> nodes)
+        private ProgressionTree(string displayName, List<TreeNodeDefinition> nodes, List<TreeBranchDefinition> branches)
         {
             DisplayName = displayName;
             this.nodes = nodes;
+            this.branches = branches ?? new List<TreeBranchDefinition>();
             foreach (var n in nodes)
             {
                 n.prerequisites ??= new List<string>();
                 n.unlocksGenes  ??= new List<string>();
                 byId[n.id] = n;
+                // Nodes without a known branch go into a catch-all tab
+                if (string.IsNullOrEmpty(n.branch) || !this.branches.Exists(b => b.id == n.branch))
+                {
+                    n.branch = string.IsNullOrEmpty(n.branch) ? "other" : n.branch;
+                    if (!this.branches.Exists(b => b.id == n.branch))
+                        this.branches.Add(new TreeBranchDefinition { id = n.branch, displayName = n.branch == "other" ? "Other" : n.branch });
+                }
             }
             UnlockStartingNodes();
         }
@@ -38,15 +48,17 @@ namespace NaturalHistory.Progression
             if (asset == null)
             {
                 Debug.LogError($"[ProgressionTree] Missing Resources/{resourcePath}.json");
-                return new ProgressionTree(displayName, new List<TreeNodeDefinition>());
+                return new ProgressionTree(displayName, new List<TreeNodeDefinition>(), null);
             }
             var collection = JsonUtility.FromJson<TreeNodeCollection>(asset.text);
-            return new ProgressionTree(displayName, collection?.nodes ?? new List<TreeNodeDefinition>());
+            return new ProgressionTree(displayName, collection?.nodes ?? new List<TreeNodeDefinition>(), collection?.branches);
         }
 
         public TreeNodeDefinition Get(string id) => byId.TryGetValue(id, out var n) ? n : null;
 
         public bool IsUnlocked(string id) => unlocked.Contains(id);
+
+        public string BranchName(string branchId) => branches.Find(b => b.id == branchId)?.displayName ?? branchId;
 
         public bool PrerequisitesMet(TreeNodeDefinition node) => node.prerequisites.TrueForAll(unlocked.Contains);
 

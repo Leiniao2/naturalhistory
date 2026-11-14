@@ -20,7 +20,14 @@ namespace NaturalHistory.World
         // Added later; appended so existing assets keep their serialized values
         Savanna,
         Rainforest,
-        Steppe
+        Steppe,
+        // Ground cover of earlier periods (see EraFlora): what the climate biomes looked like
+        // before grasses, flowering plants or any land plants at all
+        Barren,       // bare rock and regolith, before land plants
+        MicrobialMat, // damp flats crusted with microbial mats and stromatolites
+        Mossland,     // mosses, liverworts and the first small vascular plants
+        FernPrairie,  // open ground covered in ferns and horsetails, before grasses
+        CoalSwamp     // Carboniferous peat swamp
     }
 
     // Overlay on top of a cell's terrain (Civ-style). Chosen by WorldGenerator from climate.
@@ -50,6 +57,8 @@ namespace NaturalHistory.World
         public bool IsHabitable => kind is TerrainKind.Plain or TerrainKind.Hill or
                                           TerrainKind.Wetland or TerrainKind.Desert or
                                           TerrainKind.Savanna or TerrainKind.Rainforest or TerrainKind.Steppe or
+                                          TerrainKind.Barren or TerrainKind.MicrobialMat or TerrainKind.Mossland or
+                                          TerrainKind.FernPrairie or TerrainKind.CoalSwamp or
                                           TerrainKind.FreshWater or TerrainKind.SaltWater;
     }
 }

@@ -11,6 +11,12 @@ namespace NaturalHistory.World
 
         // Forest or other overlay on the terrain
         public TerrainFeature Feature { get; private set; }
+
+        // What the climate makes this cell, as it would look today (set by WorldGenerator).
+        // Terrain and Feature are the same place in the period currently shown (EraFlora).
+        public TerrainKind Biome { get; private set; }
+        public TerrainFeature BiomeFeature { get; private set; }
+        public float Moisture { get; private set; } // 0..1, share of the map that is drier
         public bool IsForest => Feature is TerrainFeature.BroadleafForest or TerrainFeature.ConiferForest;
 
         // High enough to be drawn as mountain peaks; units can't enter these cells
@@ -82,6 +88,13 @@ namespace NaturalHistory.World
             Feature = feature;
         }
 
+        public void SetClimate(TerrainKind biome, TerrainFeature feature, float moisture)
+        {
+            Biome        = biome;
+            BiomeFeature = feature;
+            Moisture     = moisture;
+        }
+
         public void SetElevation(int elevation)
         {
             Elevation = elevation;
@@ -91,6 +104,12 @@ namespace NaturalHistory.World
         {
             SurfaceHeight = height;
         }
+
+        // Height of the sloped rim above the base, set by HexGrid: corner i at [2i], the midpoint
+        // of edge e at [2e + 1]. Null for flat tiles (water).
+        public float[] RimHeights { get; private set; }
+
+        public void SetRimHeights(float[] rim) => RimHeights = rim;
 
         public Vector3 SurfacePosition => transform.position + Vector3.up * SurfaceHeight;
 

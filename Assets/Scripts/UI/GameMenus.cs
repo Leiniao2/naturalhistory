@@ -21,6 +21,7 @@ namespace NaturalHistory.UI
         private AgePanel agePanel;
         private ClimateHud climateHud;
         private PlayersPanel playersPanel;
+        private AdminPanel adminPanel;
         private bool slotsAreForSaving;
         private float toastHideTime;
         private int toastFrame = -1;
@@ -74,6 +75,7 @@ namespace NaturalHistory.UI
             agePanel     = new AgePanel(root);
             climateHud   = new ClimateHud(root);
             playersPanel = new PlayersPanel(root);
+            adminPanel   = new AdminPanel(root);
             playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast("New game started"); };
             playersPanel.SetupClosed    += () => pauseOverlay.RemoveFromClassList("hidden");
 
@@ -127,6 +129,7 @@ namespace NaturalHistory.UI
         private void OnClimateUpdated()
         {
             climateHud.Refresh();
+            adminPanel.Refresh();
             if (agePanel.IsOpen) agePanel.Refresh();
         }
 
@@ -150,6 +153,7 @@ namespace NaturalHistory.UI
             if (root == null) return;
 
             if (Input.GetKeyDown(KeyCode.Escape)) HandleEscape();
+            if (Input.GetKeyDown(KeyCode.BackQuote)) adminPanel.Toggle();
             if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !AnyModalOpen())
                 ClimateHud.EndTurn();
             climateHud.RefreshTile();
