@@ -12,7 +12,8 @@ export const TERRAINS = ['SaltWater', 'FreshWater', 'Plain', 'Hill', 'Mountain',
 export const GENE_CATEGORIES = ['Locomotion', 'Diet', 'Reproduction', 'Defense', 'Perception', 'Thermoregulation'];
 export const KINGDOMS = ['Animalia', 'Plantae', 'Fungi', 'Protista'];
 // ColonyStyle enum (Assets/Scripts/World/SpeciesColonies.cs)
-export const MAP_STYLES = ['Drift', 'Float', 'Ground', 'Soar', 'Swarm', 'Swim'];
+export const MAP_STYLES = ['Drift', 'Fixed', 'Float', 'Ground', 'Soar', 'Swarm', 'Swim'];
+export const MAP_GAITS = ['Walk', 'Hop', 'Slither'];
 export const DIETS = ['Carnivore', 'Herbivore', 'Omnivore', 'Filter feeder', 'Detritivore', 'Photosynthetic'];
 export const ERAS = ['Paleozoic', 'Mesozoic', 'Cenozoic'];
 export const FACTION_CATEGORIES = ['Modern realm', 'Paleocontinent', 'Ancient ocean'];
@@ -215,6 +216,9 @@ export const DATASETS = {
         help: 'How the group sits and moves on its tile: Drift (microbes), Float (on water), Ground, Soar (circling birds), Swarm (insects), Swim (fish schools)' },
       { key: 'colonySize', label: 'Map group size', type: 'int', min: 0, help: 'Individuals shown on the map; 0 = the map style default' },
       { key: 'mapScale', label: 'Map scale', type: 'number', min: 0, step: 0.05, help: 'Size multiplier on the map, e.g. for a bird modelled on a tall perch; 0 = 1' },
+      { key: 'mapGait', label: 'Map gait', type: 'enum', options: [{ value: '', label: '— default (Walk) —' }, ...MAP_GAITS.map(g => ({ value: g, label: g }))], help: 'How a Ground animal moves around its tile' },
+      { key: 'wingBeat', label: 'Wing beat (Hz)', type: 'number', min: 0, step: 0.1, help: 'Wing/fin beats per second on the map (Soar, Swarm, Swim); 0 = no flapping' },
+      { key: 'wingRoot', label: 'Wing root', type: 'number', min: 0, max: 1, step: 0.01, help: 'Body half-width as a fraction of the half-span; that part stays still. 0 = 0.15' },
       { key: 'genes', label: 'Starting genes', type: 'table', newRow: () => ({ gene: '', expression: 0.5 }), columns: [
         { key: 'gene', label: 'Gene', type: 'enum', options: (all) => [{ value: '', label: '—' }, ...idsOf('genes', 'displayName')(all)] },
         { key: 'expression', label: 'Expression', type: 'number', min: 0, max: 1, step: 0.05 },

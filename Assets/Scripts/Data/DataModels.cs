@@ -146,9 +146,12 @@ namespace NaturalHistory.Data
         public int startingPopulation;
         public bool playable;
         public string model;          // optional Resources path of a map model, e.g. "Models/Species/ActinophrysSol"
-        public string mapStyle;       // ColonyStyle name: Drift, Float, Ground, Soar, Swarm, Swim (default Drift)
+        public string mapStyle;       // ColonyStyle name: Drift, Fixed, Float, Ground, Soar, Swarm, Swim (default Drift)
+        public string mapGait;        // Ground only: Walk (default), Hop or Slither
         public int colonySize;        // individuals shown on the map; 0 = the map style's default
         public float mapScale;        // size multiplier on the map (e.g. a bird modelled on a tall perch); 0 = 1
+        public float wingBeat;        // wing/fin beats per second on the map; 0 = the model doesn't flap
+        public float wingRoot;        // body half-width as a fraction of the model's half-span (what stays still); 0 = 0.15
         public List<GeneValue> genes;
         public string description;
     }

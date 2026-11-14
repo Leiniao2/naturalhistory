@@ -1,10 +1,15 @@
 // Flat-shaded props on top of hex tiles (mountain peaks, trees).
 // Albedo comes from mesh vertex colors, so every prop shares this one material.
+// _Flap bends everything beyond |x| > _FlapRoot (object space) up or down about the body's long
+// axis, so a single static mesh can beat its wings or fins; SpeciesColonies drives it per renderer.
 Shader "NaturalHistory/MapFeature"
 {
     Properties
     {
         _Color ("Tint", Color) = (1, 1, 1, 1)
+        _Flap ("Wing angle (radians)", Float) = 0
+        _FlapRoot ("Wing root (half body width)", Float) = 0
+        _FlapSpan ("Wing tip (half span)", Float) = 1
     }
 
     SubShader
@@ -16,7 +21,12 @@ Shader "NaturalHistory/MapFeature"
 
         CBUFFER_START(UnityPerMaterial)
             half4 _Color;
+            float _Flap;
+            float _FlapRoot;
+            float _FlapSpan;
         CBUFFER_END
+
+        #include "MapFeatureFlap.cginc"
         ENDHLSL
 
         Pass
@@ -52,6 +62,7 @@ Shader "NaturalHistory/MapFeature"
             Varyings vert(Attributes v)
             {
                 Varyings o;
+                ApplyFlap(v.positionOS.xyz, v.normalOS);
                 VertexPositionInputs pos = GetVertexPositionInputs(v.positionOS.xyz);
                 o.positionCS = pos.positionCS;
                 o.positionWS = pos.positionWS;
@@ -96,6 +107,7 @@ Shader "NaturalHistory/MapFeature"
 
             float4 vert(Attributes v) : SV_POSITION
             {
+                ApplyFlap(v.positionOS.xyz, v.normalOS);
                 float3 posWS    = TransformObjectToWorld(v.positionOS.xyz);
                 float3 normalWS = TransformObjectToWorldNormal(v.normalOS);
             #if _CASTING_PUNCTUAL_LIGHT_SHADOW
@@ -124,7 +136,12 @@ Shader "NaturalHistory/MapFeature"
 
             struct Attributes { float4 positionOS : POSITION; };
 
-            float4 vert(Attributes v) : SV_POSITION { return TransformObjectToHClip(v.positionOS.xyz); }
+            float4 vert(Attributes v) : SV_POSITION
+            {
+                float3 normalOS = float3(0, 1, 0);
+                ApplyFlap(v.positionOS.xyz, normalOS);
+                return TransformObjectToHClip(v.positionOS.xyz);
+            }
             half4 frag() : SV_Target { return 0; }
             ENDHLSL
         }
@@ -136,15 +153,24 @@ Shader "NaturalHistory/MapFeature"
         Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
 
         CGPROGRAM
-        #pragma surface surf Lambert fullforwardshadows addshadow
+        #pragma surface surf Lambert fullforwardshadows addshadow vertex:vert
         #pragma target 3.0
 
         fixed4 _Color;
+        float _Flap;
+        float _FlapRoot;
+        float _FlapSpan;
+        #include "MapFeatureFlap.cginc"
 
         struct Input
         {
             float4 color : COLOR;
         };
+
+        void vert(inout appdata_full v)
+        {
+            ApplyFlap(v.vertex.xyz, v.normal);
+        }
 
         void surf(Input IN, inout SurfaceOutput o)
         {

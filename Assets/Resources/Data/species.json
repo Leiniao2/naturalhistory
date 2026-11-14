@@ -291,6 +291,8 @@
       "playable": true,
       "model": "Models/Species/WanderingAlbatross",
       "mapStyle": "Soar",
+      "wingBeat": 1.0,
+      "wingRoot": 0.1,
       "genes": [
         { "gene": "flight_capability", "expression": 0.95 },
         { "gene": "vision_acuity", "expression": 0.6 },
@@ -385,7 +387,7 @@
       "startingPopulation": 3000,
       "playable": true,
       "model": "Models/Species/JoroSpider",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 2,
       "mapScale": 1.1,
       "genes": [
@@ -410,7 +412,7 @@
       "startingPopulation": 300,
       "playable": true,
       "model": "Models/Species/CommonKingfisher",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 2,
       "mapScale": 0.55,
       "genes": [
@@ -485,6 +487,7 @@
       "playable": true,
       "model": "Models/Species/Kangaroo",
       "mapStyle": "Ground",
+      "mapGait": "Hop",
       "colonySize": 2,
       "genes": [
         { "gene": "land_speed", "expression": 0.8 },
@@ -679,6 +682,8 @@
       "playable": true,
       "model": "Models/Species/MantaRay",
       "mapStyle": "Swim",
+      "wingBeat": 0.35,
+      "wingRoot": 0.3,
       "colonySize": 1,
       "genes": [
         { "gene": "filter_feeding", "expression": 0.9 },
@@ -777,6 +782,8 @@
       "playable": true,
       "model": "Models/Species/Quetzalcoatlus",
       "mapStyle": "Soar",
+      "wingBeat": 0.8,
+      "wingRoot": 0.12,
       "colonySize": 1,
       "genes": [
         { "gene": "flight_capability", "expression": 0.9 },
@@ -824,7 +831,7 @@
       "startingPopulation": 100000,
       "playable": true,
       "model": "Models/Species/CathedralTermiteMound",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 2,
       "mapScale": 1.7,
       "genes": [
@@ -849,7 +856,7 @@
       "startingPopulation": 500,
       "playable": false,
       "model": "Models/Species/TableCoral",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 3,
       "mapScale": 0.45,
       "genes": [
@@ -874,7 +881,7 @@
       "startingPopulation": 500,
       "playable": false,
       "model": "Models/Species/BrainCoral",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 3,
       "mapScale": 0.45,
       "genes": [
@@ -899,7 +906,7 @@
       "startingPopulation": 500,
       "playable": false,
       "model": "Models/Species/StaghornCoral",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 3,
       "mapScale": 0.45,
       "genes": [
@@ -925,6 +932,8 @@
       "playable": true,
       "model": "Models/Species/MonarchButterfly",
       "mapStyle": "Swarm",
+      "wingBeat": 3,
+      "wingRoot": 0.12,
       "colonySize": 7,
       "mapScale": 1.3,
       "genes": [
@@ -973,7 +982,7 @@
       "startingPopulation": 20000,
       "playable": true,
       "model": "Models/Species/SevenSpotLadybird",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 3,
       "mapScale": 0.7,
       "genes": [
@@ -998,7 +1007,7 @@
       "startingPopulation": 8000,
       "playable": true,
       "model": "Models/Species/ChrysochusChinensis",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 3,
       "mapScale": 0.9,
       "genes": [
@@ -1023,7 +1032,7 @@
       "startingPopulation": 30000,
       "playable": true,
       "model": "Models/Species/Earthworm",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 3,
       "mapScale": 0.6,
       "genes": [
@@ -1097,6 +1106,7 @@
       "playable": true,
       "model": "Models/Species/SpeckledRattlesnake",
       "mapStyle": "Ground",
+      "mapGait": "Slither",
       "colonySize": 2,
       "mapScale": 0.6,
       "genes": [
@@ -1122,6 +1132,8 @@
       "playable": true,
       "model": "Models/Species/GreenSeaTurtle",
       "mapStyle": "Swim",
+      "wingBeat": 0.5,
+      "wingRoot": 0.45,
       "colonySize": 2,
       "genes": [
         { "gene": "swimming_speed", "expression": 0.6 },
@@ -1145,7 +1157,7 @@
       "startingPopulation": 5000,
       "playable": false,
       "model": "Models/Species/PurpleSeaUrchin",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 5,
       "mapScale": 0.5,
       "genes": [
@@ -1170,7 +1182,7 @@
       "startingPopulation": 600,
       "playable": false,
       "model": "Models/Species/FireSponge",
-      "mapStyle": "Ground",
+      "mapStyle": "Fixed",
       "colonySize": 3,
       "genes": [
         { "gene": "filter_feeding", "expression": 0.95 },
@@ -1242,6 +1254,8 @@
       "playable": true,
       "model": "Models/Species/VampireBat",
       "mapStyle": "Swarm",
+      "wingBeat": 6,
+      "wingRoot": 0.12,
       "colonySize": 6,
       "mapScale": 0.75,
       "genes": [
@@ -1267,6 +1281,8 @@
       "playable": true,
       "model": "Models/Species/Meganeura",
       "mapStyle": "Soar",
+      "wingBeat": 8,
+      "wingRoot": 0.08,
       "colonySize": 3,
       "genes": [
         { "gene": "flight_capability", "expression": 0.85 },
@@ -1291,6 +1307,8 @@
       "playable": true,
       "model": "Models/Species/HoneyBee",
       "mapStyle": "Swarm",
+      "wingBeat": 14,
+      "wingRoot": 0.45,
       "colonySize": 8,
       "mapScale": 1.2,
       "genes": [
@@ -1386,6 +1404,8 @@
       "playable": true,
       "model": "Models/Species/CaliforniaCondor",
       "mapStyle": "Soar",
+      "wingBeat": 1.2,
+      "wingRoot": 0.12,
       "colonySize": 2,
       "genes": [
         { "gene": "flight_capability", "expression": 0.95 },
@@ -1410,6 +1430,7 @@
       "playable": true,
       "model": "Models/Species/CaneToad",
       "mapStyle": "Ground",
+      "mapGait": "Hop",
       "genes": [
         { "gene": "toxin_production", "expression": 0.9 },
         { "gene": "reproduction_rate", "expression": 0.85 },

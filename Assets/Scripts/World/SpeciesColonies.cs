@@ -8,12 +8,16 @@ namespace NaturalHistory.World
     public enum ColonyStyle
     {
         Drift, // micro-organisms: a cluster hovering over the tile, slowly tumbling and bobbing
+        Fixed, // doesn't move: corals, sponges, mounds, and small animals modelled on a perch
         Float, // sits on the water surface (pivot at the waterline), rocking gently
-        Ground,// stands on the tile (pivot at the feet), each facing its own way
+        Ground,// stands on the tile (pivot at the feet) and wanders around its spot
         Soar,  // circles high above the tile, banked into the turn
         Swarm, // a jittery cloud of small fliers
         Swim,  // a school circling just above the water (tiles are opaque, so they can't go under it)
     }
+
+    // How a Ground animal moves between spots (species.json "mapGait").
+    public enum ColonyGait { Walk, Hop, Slither }
 
     // Shows a group of every species that has a map model (species.json "model") on one of its
     // habitat tiles. Groups are children of their cell, so they follow the east–west wrap and are
@@ -25,6 +29,7 @@ namespace NaturalHistory.World
         private static readonly Dictionary<ColonyStyle, (int count, float span, float radius)> Layouts = new()
         {
             [ColonyStyle.Drift]  = (7, 0.32f, 0.36f),
+            [ColonyStyle.Fixed]  = (3, 0.34f, 0.30f),
             [ColonyStyle.Float]  = (4, 0.26f, 0.32f),
             [ColonyStyle.Ground] = (3, 0.34f, 0.30f),
             [ColonyStyle.Soar]   = (3, 0.42f, 0.45f),
@@ -41,11 +46,20 @@ namespace NaturalHistory.World
         private const float SoarHeight  = 0.75f;
         private const float SwarmHeight = 0.35f;
 
+        // Wing/fin beat amplitude (radians) by style; soarers only flap in short bursts between glides
+        private const float SoarFlap  = 0.45f;
+        private const float SwarmFlap = 0.6f;
+        private const float SwimFlap  = 0.35f;
+        private static readonly int FlapId     = Shader.PropertyToID("_Flap");
+        private static readonly int FlapRootId = Shader.PropertyToID("_FlapRoot");
+        private static readonly int FlapSpanId = Shader.PropertyToID("_FlapSpan");
+
         private HexGrid grid;
         private Material material;
         private readonly List<Member> members = new();
+        private readonly System.Random motionRng = new();
 
-        private struct Member
+        private class Member
         {
             public Transform transform;
             public ColonyStyle style;
@@ -54,7 +68,23 @@ namespace NaturalHistory.World
             public Vector3 axis;   // Drift: tumble axis
             public float phase;
             public float speed;    // Soar/Swim: radians per second around the cell (sign = direction)
-            public float radius;   // Soar/Swim: circle radius
+                                   // Ground: cells per second
+            public float radius;   // Soar/Swim: circle radius; Ground: how far it strays from basePosition
+            public float span;     // size on the map, in cells
+
+            // Ground wandering
+            public ColonyGait gait;
+            public List<Member> colony; // to keep out of each other's way
+            public Vector3 position, target;
+            public float heading;       // yaw in degrees
+            public bool moving;
+            public float restUntil;
+
+            // Wing beat
+            public MeshRenderer renderer;
+            public MaterialPropertyBlock block;
+            public float flapRate;      // radians per second; 0 = no flapping
+            public float flapAmplitude;
         }
 
         // Spawns the component in any scene that has a HexGrid, so Game.unity doesn't need editing.
@@ -82,13 +112,17 @@ namespace NaturalHistory.World
 
         private void Update()
         {
-            float t = Time.time;
+            float t = Time.time, dt = Time.deltaTime;
             foreach (var m in members)
             {
                 if (m.transform == null) continue; // cell destroyed by a regenerate that hasn't re-placed yet
                 var tr = m.transform;
+                if (m.flapRate > 0f) Flap(m, t);
                 switch (m.style)
                 {
+                    case ColonyStyle.Ground:
+                        Wander(m, t, dt);
+                        break;
                     case ColonyStyle.Drift:
                         tr.localRotation = Quaternion.AngleAxis(t * 12f + m.phase * 57f, m.axis) * m.baseRotation;
                         tr.localPosition = m.basePosition + Vector3.up * (Mathf.Sin(t * 0.8f + m.phase) * 0.02f);
@@ -127,6 +161,79 @@ namespace NaturalHistory.World
                     }
                 }
             }
+        }
+
+        private static void Flap(Member m, float t)
+        {
+            // soarers glide most of the time and give a few slow beats every several seconds
+            float burst = m.style == ColonyStyle.Soar ? Mathf.SmoothStep(0f, 1f, (Mathf.Sin(t * 0.5f + m.phase) - 0.35f) * 3f) : 1f;
+            m.block.SetFloat(FlapId, Mathf.Sin(t * m.flapRate + m.phase) * m.flapAmplitude * burst);
+            m.renderer.SetPropertyBlock(m.block);
+        }
+
+        // Rests a few seconds, turns towards a nearby spot and walks, hops or slithers there.
+        private void Wander(Member m, float t, float dt)
+        {
+            if (!m.moving)
+            {
+                if (t >= m.restUntil) PickTarget(m);
+                // idle: glance around a little
+                m.transform.localPosition = m.position;
+                m.transform.localRotation = Quaternion.Euler(0f, m.heading + Mathf.Sin(t * 0.4f + m.phase) * 5f, 0f);
+                return;
+            }
+
+            var to = m.target - m.position;
+            to.y = 0f;
+            float dist = to.magnitude;
+            float turn = Mathf.DeltaAngle(m.heading, Mathf.Atan2(to.x, to.z) * Mathf.Rad2Deg);
+            m.heading += Mathf.Clamp(turn, -70f * dt, 70f * dt);
+            // turn mostly on the spot, then set off
+            if (Mathf.Abs(turn) < 30f)
+                m.position += Quaternion.Euler(0f, m.heading, 0f) * Vector3.forward * Mathf.Min(m.speed * dt, dist);
+            if (dist < 0.005f)
+            {
+                m.moving    = false;
+                m.restUntil = t + (float)(2.0 + motionRng.NextDouble() * 6.0);
+            }
+
+            // gait: a small bob and sway while walking, bounds for hoppers, an S-wag for snakes
+            float step = t * 6f / Mathf.Sqrt(Mathf.Max(m.span, 0.3f)) + m.phase; // big animals take slower strides
+            float lift = 0f, roll = 0f, yaw = 0f;
+            switch (m.gait)
+            {
+                case ColonyGait.Walk:    lift = Mathf.Abs(Mathf.Sin(step)) * 0.015f; roll = Mathf.Sin(step) * 2f; break;
+                case ColonyGait.Hop:     lift = Mathf.Abs(Mathf.Sin(step * 0.5f)) * 0.18f; break;
+                case ColonyGait.Slither: yaw = Mathf.Sin(step * 0.6f) * 14f; break;
+            }
+            m.transform.localPosition = m.position + Vector3.up * (lift * m.span);
+            m.transform.localRotation = Quaternion.Euler(0f, m.heading + yaw, roll);
+        }
+
+        // A random spot around the animal's home, not too close to where its colony-mates are or are heading.
+        private void PickTarget(Member m)
+        {
+            for (int attempt = 0; attempt < 6; attempt++)
+            {
+                float a = (float)(motionRng.NextDouble() * Mathf.PI * 2.0);
+                float r = m.radius * Mathf.Sqrt((float)motionRng.NextDouble());
+                var spot = m.basePosition + new Vector3(Mathf.Cos(a) * r, 0f, Mathf.Sin(a) * r);
+                bool clear = true;
+                foreach (var other in m.colony)
+                {
+                    float room = (m.span + other.span) * 0.4f;
+                    if (other != m && (Vector3.Distance(spot, other.position) < room || Vector3.Distance(spot, other.target) < room))
+                    {
+                        clear = false;
+                        break;
+                    }
+                }
+                if (!clear) continue;
+                m.target = spot;
+                m.moving = true;
+                return;
+            }
+            m.restUntil = Time.time + 1f; // boxed in; try again shortly
         }
 
         private void PlaceColonies()
@@ -201,6 +308,16 @@ namespace NaturalHistory.World
             bool anyAxis = style is ColonyStyle.Drift or ColonyStyle.Swarm;
             float meshSpan = anyAxis ? Mathf.Max(size.x, size.y, size.z) : Mathf.Max(size.x, size.z);
             float schoolSpeed = rng.NextDouble() < 0.5 ? 0.18f : -0.18f; // Swim: radians per second
+            if (!System.Enum.TryParse(def.mapGait, true, out ColonyGait gait)) gait = ColonyGait.Walk;
+            var colony = new List<Member>();
+            float halfSpan = Mathf.Max(-mesh.bounds.min.x, mesh.bounds.max.x);
+            float flapAmplitude = style switch
+            {
+                ColonyStyle.Soar  => SoarFlap,
+                ColonyStyle.Swarm => SwarmFlap,
+                ColonyStyle.Swim  => SwimFlap,
+                _                 => 0f,
+            };
 
             for (int i = 0; i < count; i++)
             {
@@ -212,6 +329,7 @@ namespace NaturalHistory.World
                 var member  = new Member
                 {
                     style        = style,
+                    span         = span,
                     phase        = R(0f, Mathf.PI * 2f),
                     baseRotation = Quaternion.Euler(0f, R(0f, 360f), 0f),
                 };
@@ -240,6 +358,17 @@ namespace NaturalHistory.World
                         member.speed  = schoolSpeed * R(0.9f, 1.1f);
                         member.phase  = angle;
                         break;
+                    case ColonyStyle.Ground:
+                        // big animals amble slowly over a wider patch; small ones scurry about their spot
+                        member.gait      = gait;
+                        member.colony    = colony;
+                        member.radius    = Mathf.Clamp(span * 0.3f, 0.06f, 0.25f);
+                        member.speed     = Mathf.Clamp(span * 0.15f, 0.03f, 0.15f) * (gait == ColonyGait.Hop ? 2f : 1f);
+                        member.heading   = member.baseRotation.eulerAngles.y;
+                        member.position  = member.target = pos;
+                        member.restUntil = Time.time + R(0f, 4f);
+                        colony.Add(member);
+                        break;
                 }
                 member.basePosition = pos;
 
@@ -254,9 +383,18 @@ namespace NaturalHistory.World
                 var block = new MaterialPropertyBlock();
                 float v = R(0.92f, 1.06f);
                 block.SetColor("_Color", new Color(v, v * R(0.97f, 1.02f), v * R(0.94f, 1.0f)));
+                if (def.wingBeat > 0f && flapAmplitude > 0f)
+                {
+                    block.SetFloat(FlapRootId, (def.wingRoot > 0f ? def.wingRoot : 0.15f) * halfSpan);
+                    block.SetFloat(FlapSpanId, halfSpan);
+                    member.flapRate      = def.wingBeat * R(0.9f, 1.1f) * Mathf.PI * 2f;
+                    member.flapAmplitude = flapAmplitude;
+                }
                 mr.SetPropertyBlock(block);
 
                 member.transform = go.transform;
+                member.renderer  = mr;
+                member.block     = block;
                 members.Add(member);
             }
             return memberSpan;
