@@ -209,12 +209,14 @@ namespace NaturalHistory.World
             var outward = (dirs[e] + dirs[(e + 1) % 6]).normalized;
             var rng = new System.Random(e * 7919 + Mathf.RoundToInt(a.y * 1e4f) * 31 + Mathf.RoundToInt(c.y * 1e4f) * 17 + Mathf.RoundToInt(m.y * 1e4f));
             float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
+            // sin(πt) clamped: at t = 1 it comes out slightly negative, and Pow/Sqrt of that is NaN
+            static float Arch(float t) => Mathf.Max(0f, Mathf.Sin(t * Mathf.PI));
 
             // Plan: one or two headlands along the edge, nothing at the corners
             float c1 = R(0.2f, 0.45f), c2 = R(0.55f, 0.8f), w1 = R(0.1f, 0.2f), w2 = R(0.1f, 0.2f);
             float h1 = R(0.05f, 0.28f) * tileRadius, h2 = rng.NextDouble() < 0.6 ? R(0.04f, 0.22f) * tileRadius : 0f;
             float Bulge(float t) =>
-                Mathf.Pow(Mathf.Sin(t * Mathf.PI), 0.7f) * (0.02f * tileRadius
+                Mathf.Pow(Arch(t), 0.7f) * (0.02f * tileRadius
                 + h1 * Mathf.Exp(-Mathf.Pow((t - c1) / w1, 2f)) + h2 * Mathf.Exp(-Mathf.Pow((t - c2) / w2, 2f)));
 
             // Profile rows from the clifftop down: (height fraction, extra outward offset)
@@ -238,7 +240,7 @@ namespace NaturalHistory.World
                 float t   = k / (float)cols;
                 var top   = t < 0.5f ? Vector3.Lerp(a, m, t * 2f) : Vector3.Lerp(m, c, t * 2f - 1f);
                 capEdge[k] = top;
-                float taper = Mathf.Sqrt(Mathf.Sin(t * Mathf.PI)); // 0 at the corners
+                float taper = Mathf.Sqrt(Arch(t)); // 0 at the corners
                 float plan  = Bulge(t);
                 for (int r = 0; r < nRows; r++)
                 {
