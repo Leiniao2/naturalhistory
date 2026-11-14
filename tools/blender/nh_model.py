@@ -13,7 +13,10 @@ Conventions (SpeciesColonies relies on them):
   * Micro-organisms, fliers and swimmers: pivot at the body centre.
   * Absolute size doesn't matter (SpeciesColonies rescales from the mesh
     bounds) but keep the longest dimension around 1-2 units.
-  * Keep it light: roughly 1-5k triangles, the map shows many of them.
+  * Keep it light: roughly 1-5k triangles for small animals, the map shows many of them.
+    Large animals (shown bigger, in smaller groups) may use ~15-25k.
+  * Organic bodies: build overlapping parts, then MeshBuilder.fuse() them into one
+    seamless surface; add crisp details (eyes, teeth, claws) afterwards.
 
 Usage from a species script:
   blender --background --python tools/blender/<species>.py -- [--render out.png]
@@ -47,9 +50,11 @@ class MeshBuilder:
         self.bm = bmesh.new()
         self.col = self.bm.loops.layers.color.new("Col")
 
-    def add(self, src, color, smooth=True):
-        """Append (and free) src. color: rgb tuple or fn(co, normal) -> rgb."""
+    def add(self, src, color=None, smooth=True):
+        """Append (and free) src. color: rgb tuple, fn(co, normal) -> rgb, or None to keep
+        src's own "Col" layer (e.g. the result of fuse())."""
         src.normal_update()
+        src_col = src.loops.layers.color.get("Col") if color is None else None
         fn = color if callable(color) else (lambda co, n, c=color: c)
         vmap = {v: self.bm.verts.new(v.co) for v in src.verts}
         for f in src.faces:
@@ -59,9 +64,85 @@ class MeshBuilder:
                 continue
             nf.smooth = smooth
             for loop, sl in zip(nf.loops, f.loops):
-                c = fn(sl.vert.co, sl.vert.normal)
+                c = sl[src_col] if src_col is not None else fn(sl.vert.co, sl.vert.normal)
                 loop[self.col] = (c[0], c[1], c[2], 1.0)
         src.free()
+
+    def fuse(self, voxel=0.015, smooth=6, smooth_factor=0.5, max_tris=None):
+        """Merges every shell added so far into ONE seamless surface and returns it as a bmesh
+        (this builder is emptied). Use it for organic bodies: add the torso, neck, head, legs,
+        tail... as overlapping primitives, fuse() them, then add the fused result plus the
+        crisp details (eyes, teeth, claws, whiskers) to a fresh MeshBuilder.
+
+          voxel:  remesh resolution in model units (smaller = more detail, more triangles)
+          smooth: Laplacian-ish smoothing passes to soften the voxel steps and blend the joins
+          max_tris: decimate down to roughly this many triangles (None = keep everything)
+
+        Colours are copied from the nearest point on the original shells, so paint the parts
+        as usual; boundaries between differently coloured parts stay where the parts met (a
+        little soft). For crisp markings, repaint the result procedurally instead:
+        mb.add(fused, color=lambda co, n: ...)."""
+        from mathutils.bvhtree import BVHTree
+        src = self.bm
+        src.normal_update()
+        bmesh.ops.triangulate(src, faces=src.faces)
+        col = self.col
+        src.faces.ensure_lookup_table()
+        tree = BVHTree.FromBMesh(src)  # hit indices follow src.faces order
+
+        mesh = bpy.data.meshes.new("_fuse_src")
+        src.to_mesh(mesh)
+        obj = bpy.data.objects.new("_fuse_src", mesh)
+        bpy.context.scene.collection.objects.link(obj)
+        rem = obj.modifiers.new("remesh", "REMESH")
+        rem.mode = "VOXEL"
+        rem.voxel_size = voxel
+        rem.adaptivity = 0.0
+        if smooth:
+            sm = obj.modifiers.new("smooth", "SMOOTH")
+            sm.factor = smooth_factor
+            sm.iterations = smooth
+        if max_tris:
+            dec = obj.modifiers.new("decimate", "DECIMATE")
+            dec.decimate_type = "COLLAPSE"
+            # ratio is refined below once we know the remeshed triangle count
+            dec.ratio = 1.0
+        dg = bpy.context.evaluated_depsgraph_get()
+        if max_tris:
+            obj.modifiers["decimate"].show_viewport = False
+            dg.update()
+            n = sum(len(p.vertices) - 2 for p in obj.evaluated_get(dg).data.polygons)
+            obj.modifiers["decimate"].ratio = min(1.0, max_tris / max(n, 1))
+            obj.modifiers["decimate"].show_viewport = True
+            dg.update()
+        out = bmesh.new()
+        out.from_mesh(obj.evaluated_get(dg).to_mesh())
+        obj.evaluated_get(dg).to_mesh_clear()
+        bpy.data.objects.remove(obj)
+        bpy.data.meshes.remove(mesh)
+
+        # colour each new vertex from the nearest original surface point (barycentric blend)
+        vert_col = {}
+        for v in out.verts:
+            hit, _n, idx, _d = tree.find_nearest(v.co)
+            if idx is None:
+                vert_col[v] = (0.5, 0.5, 0.5)
+                continue
+            f = src.faces[idx]
+            ls = f.loops
+            a, b, c = (l.vert.co for l in ls)
+            w = _barycentric(hit, a, b, c)
+            vert_col[v] = tuple(sum(w[k] * ls[k][col][i] for k in range(3)) for i in range(3))
+        out_col = out.loops.layers.color.new("Col")
+        for f in out.faces:
+            f.smooth = True
+            for l in f.loops:
+                c = vert_col[l.vert]
+                l[out_col] = (c[0], c[1], c[2], 1.0)
+        src.free()
+        self.bm = bmesh.new()
+        self.col = self.bm.loops.layers.color.new("Col")
+        return out
 
     def to_object(self, name, roughness=0.6):
         mesh = bpy.data.meshes.new(name)
@@ -81,6 +162,22 @@ class MeshBuilder:
         bsdf.inputs["Roughness"].default_value = roughness
         mesh.materials.append(mat)
         return obj
+
+
+def _barycentric(p, a, b, c):
+    v0, v1, v2 = b - a, c - a, p - a
+    d00, d01, d11 = v0.dot(v0), v0.dot(v1), v1.dot(v1)
+    d20, d21 = v2.dot(v0), v2.dot(v1)
+    den = d00 * d11 - d01 * d01
+    if abs(den) < 1e-12:
+        return (1.0, 0.0, 0.0)
+    v = (d11 * d20 - d01 * d21) / den
+    w = (d00 * d21 - d01 * d20) / den
+    u = 1.0 - v - w
+    # clamp to the triangle and renormalise
+    u, v, w = max(u, 0.0), max(v, 0.0), max(w, 0.0)
+    t = u + v + w or 1.0
+    return (u / t, v / t, w / t)
 
 
 # ---------------------------------------------------------------- primitives

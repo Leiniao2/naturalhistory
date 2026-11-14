@@ -32,6 +32,12 @@ namespace NaturalHistory.World
             [ColonyStyle.Swim]   = (5, 0.26f, 0.32f),
         };
 
+        // Map size grows with real body size (sqrt of length in metres), so a T. rex towers over a
+        // lion; small animals keep their style's minimum size so they stay visible.
+        private const float SizeSpanPerSqrtMetre = 0.8f;
+        private const float MaxSpan              = 3f;   // in cells
+        private const float ReserveSpan          = 0.9f; // bigger than this: keep neighbouring tiles free
+
         private const float SoarHeight  = 0.75f;
         private const float SwarmHeight = 0.35f;
 
@@ -139,7 +145,9 @@ namespace NaturalHistory.World
                 var cell = FindHabitatCell(def, used, rng);
                 if (cell == null) { Debug.Log($"[SpeciesColonies] No habitat tile for {def.id}; skipping."); continue; }
                 used.Add(cell);
-                BuildColony(cell, def, mesh, style, rng);
+                // big animals spill over onto the neighbouring tiles; keep other colonies off them
+                if (BuildColony(cell, def, mesh, style, rng) > ReserveSpan)
+                    foreach (var n in grid.GetNeighbors(cell)) used.Add(n);
                 Debug.Log($"[SpeciesColonies] Placed {def.commonName} ({style}) at {cell}.");
             }
         }
@@ -173,12 +181,16 @@ namespace NaturalHistory.World
             return candidates[rng.Next(Mathf.Min(5, candidates.Count))].cell;
         }
 
-        private void BuildColony(HexCell cell, SpeciesDefinition def, Mesh mesh, ColonyStyle style, System.Random rng)
+        // Returns the size of one member (in cells).
+        private float BuildColony(HexCell cell, SpeciesDefinition def, Mesh mesh, ColonyStyle style, System.Random rng)
         {
             float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
             var (count, memberSpan, colonyRadius) = Layouts[style];
             if (def.colonySize > 0) count = def.colonySize;
-            if (def.mapScale > 0f) memberSpan *= def.mapScale;
+            float sizeSpan = SizeSpanPerSqrtMetre * Mathf.Sqrt(Mathf.Max(def.sizeCm, 0f) / 100f);
+            memberSpan = Mathf.Min(Mathf.Max(memberSpan, sizeSpan), MaxSpan);
+            if (def.mapScale > 0f) memberSpan *= def.mapScale; // per-model framing (tall perch, wide web...)
+            colonyRadius = Mathf.Max(colonyRadius, memberSpan * 0.7f); // big animals need room
             var root = new GameObject($"Colony_{def.id}").transform;
             root.SetParent(cell.transform, false);
             root.localPosition = Vector3.up * cell.SurfaceHeight;
@@ -215,7 +227,7 @@ namespace NaturalHistory.World
                         pos.y  = SwarmHeight + R(-0.12f, 0.12f);
                         break;
                     case ColonyStyle.Soar:
-                        pos.y         = SoarHeight + R(-0.1f, 0.15f);
+                        pos.y         = SoarHeight + span * 0.3f + R(-0.1f, 0.15f); // big wings fly higher
                         member.radius = colonyRadius * R(0.6f, 1.1f);
                         member.speed  = R(0.25f, 0.4f) * (rng.NextDouble() < 0.8 ? 1f : -1f);
                         member.phase  = angle;
@@ -247,6 +259,7 @@ namespace NaturalHistory.World
                 member.transform = go.transform;
                 members.Add(member);
             }
+            return memberSpan;
         }
     }
 }
