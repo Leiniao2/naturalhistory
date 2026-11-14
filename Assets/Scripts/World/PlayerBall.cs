@@ -123,6 +123,7 @@ namespace NaturalHistory.World
         private void OnCellClicked(HexCell target)
         {
             if (moving || Cell == null || target == Cell) return;
+            if (SpeciesColonies.Instance != null && SpeciesColonies.Instance.HandlesClick(target)) return; // ordering an animal group
             if (!moveTargets.Contains(target)) return;
             CameraController.Main?.ResumeFollow();
             StartCoroutine(HopTo(target));

@@ -37,6 +37,9 @@ namespace NaturalHistory.World
         private Color tintVariation = Color.white; // per-cell jitter so identical terrain doesn't look stamped
         private bool highlighted;
         private bool moveTarget;
+        private GroupTarget groupTarget;
+
+        public enum GroupTarget { None, Move, Attack }
 
         private void Awake() => EnsureRenderer();
 
@@ -149,11 +152,21 @@ namespace NaturalHistory.World
             ApplyColor();
         }
 
+        // Marks a hex the selected animal group can move to (green) or attack (red)
+        public void SetGroupTarget(GroupTarget target)
+        {
+            if (groupTarget == target) return;
+            groupTarget = target;
+            ApplyColor();
+        }
+
         private void ApplyColor()
         {
             if (meshRenderer == null) return;
             var color = baseColor * tintVariation;
             if (moveTarget)  color = Color.Lerp(color, new Color(1f, 0.92f, 0.4f), 0.35f);
+            if (groupTarget == GroupTarget.Move)   color = Color.Lerp(color, new Color(0.45f, 1f, 0.5f), 0.4f);
+            if (groupTarget == GroupTarget.Attack) color = Color.Lerp(color, new Color(1f, 0.25f, 0.2f), 0.5f);
             if (highlighted) color = Color.Lerp(color, Color.white, 0.4f);
             meshRenderer.GetPropertyBlock(propBlock);
             propBlock.SetColor("_Color", color);

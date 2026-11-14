@@ -20,7 +20,8 @@ namespace NaturalHistory.World
     public enum ColonyGait { Walk, Hop, Slither }
 
     // Shows a group of every species that has a map model (species.json "model") on one of its
-    // habitat tiles. Groups are children of their cell, so they follow the east–west wrap and are
+    // habitat tiles, as a ColonyGroup that can be ordered to move or attack (click it, then a marked
+    // neighbouring tile). Groups are children of their cell, so they follow the east–west wrap and are
     // destroyed when the map regenerates. Models face +Z with their pivot as described in
     // tools/blender/nh_model.py; they are rescaled from their mesh bounds, so file units don't matter.
     public class SpeciesColonies : MonoBehaviour
@@ -50,42 +51,30 @@ namespace NaturalHistory.World
         private const float SoarFlap  = 0.45f;
         private const float SwarmFlap = 0.6f;
         private const float SwimFlap  = 0.35f;
-        private static readonly int FlapId     = Shader.PropertyToID("_Flap");
         private static readonly int FlapRootId = Shader.PropertyToID("_FlapRoot");
         private static readonly int FlapSpanId = Shader.PropertyToID("_FlapSpan");
 
+        public static SpeciesColonies Instance { get; private set; }
+
         private HexGrid grid;
         private Material material;
-        private readonly List<Member> members = new();
-        private readonly System.Random motionRng = new();
+        private readonly List<ColonyGroup> groups = new();
+        private readonly Dictionary<HexCell, ColonyGroup> occupants = new();
 
-        private class Member
-        {
-            public Transform transform;
-            public ColonyStyle style;
-            public Vector3 basePosition;
-            public Quaternion baseRotation;
-            public Vector3 axis;   // Drift: tumble axis
-            public float phase;
-            public float speed;    // Soar/Swim: radians per second around the cell (sign = direction)
-                                   // Ground: cells per second
-            public float radius;   // Soar/Swim: circle radius; Ground: how far it strays from basePosition
-            public float span;     // size on the map, in cells
+        // Ordering a group around: click it, then click a marked neighbouring tile to move there,
+        // or a marked tile holding another group to attack it.
+        private ColonyGroup selected;
+        private readonly List<HexCell> marked = new();
+        private int clickFrame = -1;
 
-            // Ground wandering
-            public ColonyGait gait;
-            public List<Member> colony; // to keep out of each other's way
-            public Vector3 position, target;
-            public float heading;       // yaw in degrees
-            public bool moving;
-            public float restUntil;
+        public ColonyGroup Selected => selected;
+        public IReadOnlyList<ColonyGroup> Groups => groups;
+        public ColonyGroup GroupAt(HexCell cell) => cell != null && occupants.TryGetValue(cell, out var g) ? g : null;
 
-            // Wing beat
-            public MeshRenderer renderer;
-            public MaterialPropertyBlock block;
-            public float flapRate;      // radians per second; 0 = no flapping
-            public float flapAmplitude;
-        }
+        // True if this click is (or was just) about colonies, so other click handlers (the player
+        // ball) should leave it alone. Safe to call before or after this component handles the click.
+        public bool HandlesClick(HexCell cell) =>
+            clickFrame == Time.frameCount || selected != null || GroupAt(cell) != null;
 
         // Spawns the component in any scene that has a HexGrid, so Game.unity doesn't need editing.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -95,6 +84,8 @@ namespace NaturalHistory.World
             new GameObject("SpeciesColonies").AddComponent<SpeciesColonies>();
         }
 
+        private void Awake() => Instance = this;
+
         private void Start()
         {
             grid = HexGrid.Instance;
@@ -103,142 +94,66 @@ namespace NaturalHistory.World
 
             grid.Generated += PlaceColonies;
             if (grid.IsGenerated) PlaceColonies();
+            CellSelector.CellClicked += OnCellClicked;
         }
 
         private void OnDestroy()
         {
             if (grid != null) grid.Generated -= PlaceColonies;
+            CellSelector.CellClicked -= OnCellClicked;
+            if (Instance == this) Instance = null;
         }
 
-        private void Update()
+        private void OnCellClicked(HexCell cell)
         {
-            float t = Time.time, dt = Time.deltaTime;
-            foreach (var m in members)
+            if (selected != null)
             {
-                if (m.transform == null) continue; // cell destroyed by a regenerate that hasn't re-placed yet
-                var tr = m.transform;
-                if (m.flapRate > 0f) Flap(m, t);
-                switch (m.style)
+                clickFrame = Time.frameCount;
+                var group = selected;
+                if (marked.Contains(cell))
                 {
-                    case ColonyStyle.Ground:
-                        Wander(m, t, dt);
-                        break;
-                    case ColonyStyle.Drift:
-                        tr.localRotation = Quaternion.AngleAxis(t * 12f + m.phase * 57f, m.axis) * m.baseRotation;
-                        tr.localPosition = m.basePosition + Vector3.up * (Mathf.Sin(t * 0.8f + m.phase) * 0.02f);
-                        break;
-                    case ColonyStyle.Float:
-                        tr.localRotation = m.baseRotation * Quaternion.Euler(Mathf.Sin(t * 1.1f + m.phase) * 4f, 0f,
-                                                                             Mathf.Sin(t * 0.9f + m.phase * 2f) * 5f);
-                        tr.localPosition = m.basePosition + Vector3.up * (Mathf.Sin(t * 1.3f + m.phase) * 0.006f);
-                        break;
-                    case ColonyStyle.Soar:
+                    var other = GroupAt(cell);
+                    var from  = group.Cell;
+                    Select(null);
+                    if (other != null) group.Attack(cell);
+                    else if (group.MoveTo(cell))
                     {
-                        float a   = m.phase + t * m.speed;
-                        var pos   = new Vector3(Mathf.Cos(a) * m.radius, m.basePosition.y + Mathf.Sin(t * 0.5f + m.phase) * 0.04f, Mathf.Sin(a) * m.radius);
-                        var ahead = new Vector3(-Mathf.Sin(a), 0f, Mathf.Cos(a)) * Mathf.Sign(m.speed);
-                        tr.localPosition = pos;
-                        tr.localRotation = Quaternion.LookRotation(ahead) * Quaternion.Euler(0f, 0f, 22f * Mathf.Sign(m.speed));
-                        break;
+                        occupants.Remove(from);
+                        occupants[group.Cell] = group;
                     }
-                    case ColonyStyle.Swim:
-                    {
-                        float a   = m.phase + t * m.speed;
-                        var ahead = new Vector3(-Mathf.Sin(a), 0f, Mathf.Cos(a)) * Mathf.Sign(m.speed);
-                        tr.localPosition = new Vector3(Mathf.Cos(a) * m.radius, m.basePosition.y + Mathf.Sin(t * 0.9f + m.phase) * 0.008f, Mathf.Sin(a) * m.radius);
-                        tr.localRotation = Quaternion.LookRotation(ahead) * Quaternion.Euler(0f, Mathf.Sin(t * 3f + m.phase * 3f) * 6f, 0f);
-                        break;
-                    }
-                    case ColonyStyle.Swarm:
-                    {
-                        float p = m.phase;
-                        var jitter = new Vector3(Mathf.Sin(t * 2.3f + p) + 0.5f * Mathf.Sin(t * 5.1f + p * 3f),
-                                                 Mathf.Sin(t * 1.7f + p * 2f),
-                                                 Mathf.Cos(t * 2.9f + p) + 0.5f * Mathf.Cos(t * 4.3f + p * 5f)) * 0.05f;
-                        tr.localPosition = m.basePosition + jitter;
-                        tr.localRotation = m.baseRotation * Quaternion.Euler(0f, Mathf.Sin(t * 1.9f + p) * 40f, 0f);
-                        break;
-                    }
+                    return;
                 }
-            }
-        }
-
-        private static void Flap(Member m, float t)
-        {
-            // soarers glide most of the time and give a few slow beats every several seconds
-            float burst = m.style == ColonyStyle.Soar ? Mathf.SmoothStep(0f, 1f, (Mathf.Sin(t * 0.5f + m.phase) - 0.35f) * 3f) : 1f;
-            m.block.SetFloat(FlapId, Mathf.Sin(t * m.flapRate + m.phase) * m.flapAmplitude * burst);
-            m.renderer.SetPropertyBlock(m.block);
-        }
-
-        // Rests a few seconds, turns towards a nearby spot and walks, hops or slithers there.
-        private void Wander(Member m, float t, float dt)
-        {
-            if (!m.moving)
-            {
-                if (t >= m.restUntil) PickTarget(m);
-                // idle: glance around a little
-                m.transform.localPosition = m.position;
-                m.transform.localRotation = Quaternion.Euler(0f, m.heading + Mathf.Sin(t * 0.4f + m.phase) * 5f, 0f);
+                var clicked = GroupAt(cell);
+                Select(clicked != group && clicked != null && clicked.CanMove && !clicked.IsBusy ? clicked : null);
                 return;
             }
 
-            var to = m.target - m.position;
-            to.y = 0f;
-            float dist = to.magnitude;
-            float turn = Mathf.DeltaAngle(m.heading, Mathf.Atan2(to.x, to.z) * Mathf.Rad2Deg);
-            m.heading += Mathf.Clamp(turn, -70f * dt, 70f * dt);
-            // turn mostly on the spot, then set off
-            if (Mathf.Abs(turn) < 30f)
-                m.position += Quaternion.Euler(0f, m.heading, 0f) * Vector3.forward * Mathf.Min(m.speed * dt, dist);
-            if (dist < 0.005f)
-            {
-                m.moving    = false;
-                m.restUntil = t + (float)(2.0 + motionRng.NextDouble() * 6.0);
-            }
-
-            // gait: a small bob and sway while walking, bounds for hoppers, an S-wag for snakes
-            float step = t * 6f / Mathf.Sqrt(Mathf.Max(m.span, 0.3f)) + m.phase; // big animals take slower strides
-            float lift = 0f, roll = 0f, yaw = 0f;
-            switch (m.gait)
-            {
-                case ColonyGait.Walk:    lift = Mathf.Abs(Mathf.Sin(step)) * 0.015f; roll = Mathf.Sin(step) * 2f; break;
-                case ColonyGait.Hop:     lift = Mathf.Abs(Mathf.Sin(step * 0.5f)) * 0.18f; break;
-                case ColonyGait.Slither: yaw = Mathf.Sin(step * 0.6f) * 14f; break;
-            }
-            m.transform.localPosition = m.position + Vector3.up * (lift * m.span);
-            m.transform.localRotation = Quaternion.Euler(0f, m.heading + yaw, roll);
+            var g = GroupAt(cell);
+            if (g == null) return;
+            clickFrame = Time.frameCount;
+            if (g.CanMove && !g.IsBusy) Select(g);
         }
 
-        // A random spot around the animal's home, not too close to where its colony-mates are or are heading.
-        private void PickTarget(Member m)
+        // Marks the tiles the group can go to: green to move, red to attack another group there.
+        private void Select(ColonyGroup group)
         {
-            for (int attempt = 0; attempt < 6; attempt++)
+            foreach (var c in marked) if (c != null) c.SetGroupTarget(HexCell.GroupTarget.None);
+            marked.Clear();
+            selected = group;
+            if (group == null) return;
+            foreach (var n in grid.GetNeighbors(group.Cell))
             {
-                float a = (float)(motionRng.NextDouble() * Mathf.PI * 2.0);
-                float r = m.radius * Mathf.Sqrt((float)motionRng.NextDouble());
-                var spot = m.basePosition + new Vector3(Mathf.Cos(a) * r, 0f, Mathf.Sin(a) * r);
-                bool clear = true;
-                foreach (var other in m.colony)
-                {
-                    float room = (m.span + other.span) * 0.4f;
-                    if (other != m && (Vector3.Distance(spot, other.position) < room || Vector3.Distance(spot, other.target) < room))
-                    {
-                        clear = false;
-                        break;
-                    }
-                }
-                if (!clear) continue;
-                m.target = spot;
-                m.moving = true;
-                return;
+                if (!group.CanEnter(n)) continue;
+                marked.Add(n);
+                n.SetGroupTarget(GroupAt(n) != null ? HexCell.GroupTarget.Attack : HexCell.GroupTarget.Move);
             }
-            m.restUntil = Time.time + 1f; // boxed in; try again shortly
         }
 
         private void PlaceColonies()
         {
-            members.Clear();
+            Select(null);
+            groups.Clear();
+            occupants.Clear();
             if (material == null) material = Resources.Load<Material>("Materials/MapFeatures");
             var rng  = new System.Random(grid.WorldSeed ^ 0x5eed);
             var used = new HashSet<HexCell>();
@@ -301,6 +216,11 @@ namespace NaturalHistory.World
             var root = new GameObject($"Colony_{def.id}").transform;
             root.SetParent(cell.transform, false);
             root.localPosition = Vector3.up * cell.SurfaceHeight;
+            if (!System.Enum.TryParse(def.mapGait, true, out ColonyGait gait)) gait = ColonyGait.Walk;
+            var group = root.gameObject.AddComponent<ColonyGroup>();
+            group.Init(def, style, gait, cell, memberSpan);
+            groups.Add(group);
+            occupants[cell] = group;
 
             // Microbes and swarms are sized by their longest dimension; everything else by its
             // footprint, so hanging tentacles or tall poses don't shrink the animal.
@@ -308,8 +228,6 @@ namespace NaturalHistory.World
             bool anyAxis = style is ColonyStyle.Drift or ColonyStyle.Swarm;
             float meshSpan = anyAxis ? Mathf.Max(size.x, size.y, size.z) : Mathf.Max(size.x, size.z);
             float schoolSpeed = rng.NextDouble() < 0.5 ? 0.18f : -0.18f; // Swim: radians per second
-            if (!System.Enum.TryParse(def.mapGait, true, out ColonyGait gait)) gait = ColonyGait.Walk;
-            var colony = new List<Member>();
             float halfSpan = Mathf.Max(-mesh.bounds.min.x, mesh.bounds.max.x);
             float flapAmplitude = style switch
             {
@@ -326,9 +244,8 @@ namespace NaturalHistory.World
                 float dist  = i == 0 ? 0f : colonyRadius * R(0.55f, 1f);
                 float span  = memberSpan * R(0.8f, 1.12f);
                 var pos     = new Vector3(Mathf.Cos(angle) * dist, 0f, Mathf.Sin(angle) * dist);
-                var member  = new Member
+                var member  = new ColonyGroup.Member
                 {
-                    style        = style,
                     span         = span,
                     phase        = R(0f, Mathf.PI * 2f),
                     baseRotation = Quaternion.Euler(0f, R(0f, 360f), 0f),
@@ -360,14 +277,11 @@ namespace NaturalHistory.World
                         break;
                     case ColonyStyle.Ground:
                         // big animals amble slowly over a wider patch; small ones scurry about their spot
-                        member.gait      = gait;
-                        member.colony    = colony;
                         member.radius    = Mathf.Clamp(span * 0.3f, 0.06f, 0.25f);
                         member.speed     = Mathf.Clamp(span * 0.15f, 0.03f, 0.15f) * (gait == ColonyGait.Hop ? 2f : 1f);
                         member.heading   = member.baseRotation.eulerAngles.y;
                         member.position  = member.target = pos;
                         member.restUntil = Time.time + R(0f, 4f);
-                        colony.Add(member);
                         break;
                 }
                 member.basePosition = pos;
@@ -395,7 +309,7 @@ namespace NaturalHistory.World
                 member.transform = go.transform;
                 member.renderer  = mr;
                 member.block     = block;
-                members.Add(member);
+                group.AddMember(member);
             }
             return memberSpan;
         }
