@@ -264,11 +264,15 @@ namespace NaturalHistory.World
                 float tt = t - trip.started;
                 w = Mathf.SmoothStep(0f, 1f, tt / GatherTime) *
                     (1f - Mathf.SmoothStep(0f, 1f, (tt - trip.marchEnd) / SettleTime));
-                float before = heading;
-                transform.localPosition = SamplePath(tt, dt, out lunge);
-                turnRate = dt > 0f ? Mathf.DeltaAngle(before, heading) / dt : 0f;
-
-                if (!trip.arrived && tt >= trip.marchEnd) Arrive();
+                // The path is relative to the start tile, so stop following it once the group has
+                // been handed over to its destination tile (Arrive), or it lands one tile too far.
+                if (!trip.arrived)
+                {
+                    float before = heading;
+                    transform.localPosition = SamplePath(tt, dt, out lunge);
+                    turnRate = dt > 0f ? Mathf.DeltaAngle(before, heading) / dt : 0f;
+                    if (tt >= trip.marchEnd) Arrive();
+                }
                 if (tt >= trip.marchEnd + SettleTime)
                 {
                     trip = null;
