@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NaturalHistory.Core;
 using NaturalHistory.Data;
 using UnityEngine;
 
@@ -98,14 +99,15 @@ namespace NaturalHistory.World
             if (grid == null) { Debug.LogWarning("[SpeciesColonies] No HexGrid in scene."); return; }
             if (GameDataLoader.Species == null) GameDataLoader.Initialize();
 
-            grid.Generated += PlaceColonies;
+            grid.Generated      += PlaceColonies;
+            grid.TerrainChanged += PlaceColonies; // another period: different species are alive
             if (grid.IsGenerated) PlaceColonies();
             CellSelector.CellClicked += OnCellClicked;
         }
 
         private void OnDestroy()
         {
-            if (grid != null) grid.Generated -= PlaceColonies;
+            if (grid != null) { grid.Generated -= PlaceColonies; grid.TerrainChanged -= PlaceColonies; }
             CellSelector.CellClicked -= OnCellClicked;
             if (Instance == this) Instance = null;
         }
@@ -155,18 +157,22 @@ namespace NaturalHistory.World
             }
         }
 
+        // Shows the species alive in the period the map currently shows. Runs again whenever the
+        // period changes, replacing the previous period's groups.
         private void PlaceColonies()
         {
             Select(null);
+            foreach (var g in groups) if (g != null) Destroy(g.gameObject); // a regenerated map already destroyed them
             groups.Clear();
             occupants.Clear();
             if (material == null) material = Resources.Load<Material>("Materials/MapFeatures");
-            var rng  = new System.Random(grid.WorldSeed ^ 0x5eed);
+            var age  = grid.DisplayedAge;
+            var rng  = new System.Random(grid.WorldSeed ^ 0x5eed ^ ((int)age * 7919));
             var used = new HashSet<HexCell>();
 
             foreach (var def in GameDataLoader.Species)
             {
-                if (string.IsNullOrEmpty(def.model)) continue;
+                if (string.IsNullOrEmpty(def.model) || !AliveIn(def, age)) continue;
                 var mesh = LoadMesh(def.model);
                 if (mesh == null) { Debug.LogWarning($"[SpeciesColonies] No mesh at Resources/{def.model} for {def.id}."); continue; }
                 if (!System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style)) style = ColonyStyle.Drift;
@@ -180,6 +186,14 @@ namespace NaturalHistory.World
             }
         }
 
+        // firstAge..lastAge inclusive; an empty or unknown firstAge counts as always, an empty lastAge as still alive.
+        private static bool AliveIn(SpeciesDefinition def, GeologicalAge age)
+        {
+            if (System.Enum.TryParse(def.firstAge, true, out GeologicalAge first) && age < first) return false;
+            if (System.Enum.TryParse(def.lastAge,  true, out GeologicalAge last)  && age > last)  return false;
+            return true;
+        }
+
         private static Mesh LoadMesh(string path)
         {
             var model = Resources.Load<GameObject>(path);
@@ -189,6 +203,8 @@ namespace NaturalHistory.World
 
         // A random tile among the habitat tiles closest to the map centre, where the camera starts.
         // Tiles that already carry a reef, forest or oasis prop, or another species, are a last resort.
+        // Habitats name present-day terrain, so a tile also matches by the biome its climate makes
+        // today (a Cretaceous fern prairie is where the plains will be).
         private HexCell FindHabitatCell(SpeciesDefinition def, HashSet<HexCell> used, System.Random rng)
         {
             var candidates = new List<(HexCell cell, float dist)>();
@@ -198,7 +214,8 @@ namespace NaturalHistory.World
             {
                 var cell = grid.GetCell(q, r);
                 if (cell == null || cell.Terrain == null || cell.IsMountain) continue;
-                if (def.habitats == null || !def.habitats.Contains(cell.Terrain.kind.ToString())) continue;
+                if (def.habitats == null) continue;
+                if (!def.habitats.Contains(cell.Terrain.kind.ToString()) && !def.habitats.Contains(cell.Biome.ToString())) continue;
                 float dist = Vector2.Distance(new Vector2(q, r), center);
                 if (cell.Feature != TerrainFeature.None) dist += 1000f;
                 if (used.Contains(cell)) dist += 2000f;
