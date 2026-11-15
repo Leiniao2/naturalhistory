@@ -33,8 +33,12 @@ namespace NaturalHistory.World
         private static readonly int FlapId        = Shader.PropertyToID("_Flap");
         private static readonly int StrideId      = Shader.PropertyToID("_Stride");
         private static readonly int StridePhaseId = Shader.PropertyToID("_StridePhase");
+        private static readonly int UndulateId      = Shader.PropertyToID("_Undulate");
+        private static readonly int UndulatePhaseId = Shader.PropertyToID("_UndulatePhase");
+        private static readonly int CoilId          = Shader.PropertyToID("_Coil");
 
         public SpeciesDefinition Definition { get; private set; }
+        public Players.Player Owner { get; set; }      // null = wild
         public ColonyStyle Style { get; private set; }
         public ColonyGait Gait { get; private set; }
         public HexCell Cell { get; private set; }       // the group's tile (its destination while travelling)
@@ -82,6 +86,19 @@ namespace NaturalHistory.World
             public Vector3 lastPosition;
             public bool hasLastPosition;
 
+            // Body wave (snakes, eels): the shader bends the straight model into a wave running
+            // from head to tail, instead of the whole body wagging
+            public float undulateAmplitude; // fraction of the body length; 0 = rigid body
+            public float undulateWaves;     // wavelengths along the body
+            public float bodyLength;        // in cells
+            public bool  undulateInWater;   // eels: the wave slips through the water and never stops
+            public float undulatePhase;
+            public bool  coils;             // snakes: rest coiled up, uncoil into the wave to travel
+            public Vector4 coilShape;       // _Coil: (coiled 0..1, inner radius, ring spacing, head rise)
+
+            // Standing on sloped ground: smoothed tilt that lines the body up with the slope
+            public Quaternion groundTilt = Quaternion.identity;
+
             // Travelling: place in the formation (x = right, z = forward of the heading)
             public Vector3 slot;
         }
@@ -89,6 +106,7 @@ namespace NaturalHistory.World
         private readonly List<Member> members = new();
         private readonly System.Random motionRng = new();
         private Trip trip;
+        private HexCell rootCell; // the tile the group root is parented to (the start tile while travelling)
         private float heading; // travel direction, degrees (0 = +Z)
 
         private class Leg
@@ -118,6 +136,7 @@ namespace NaturalHistory.World
             Style      = style;
             Gait       = gait;
             Cell       = cell;
+            rootCell   = cell;
             MemberSpan = memberSpan;
         }
 
@@ -295,6 +314,8 @@ namespace NaturalHistory.World
             }
 
             var hq = Quaternion.Euler(0f, heading, 0f);
+            var grid = HexGrid.Instance;
+            bool onGround = (Style is ColonyStyle.Ground or ColonyStyle.Fixed) && grid != null && rootCell != null;
             foreach (var m in members)
             {
                 if (m.transform == null) continue;
@@ -310,35 +331,85 @@ namespace NaturalHistory.World
                     pos = Vector3.Lerp(pos, tpos, w);
                     rot = Quaternion.Slerp(rot, trot, w);
                 }
+                if (onGround) StandOnGround(m, grid, dt, ref pos, ref rot);
                 m.transform.localPosition = pos;
                 m.transform.localRotation = rot;
-                if (m.strideAmplitude > 0f) Stride(m, dt);
+                if (m.strideAmplitude > 0f || m.undulateAmplitude > 0f) Locomote(m, dt, w);
             }
         }
 
-        // Advances the leg cycle by the ground the animal covered since last frame: one full cycle
-        // per stride length (each foot sweeps 2 · legLength · tan(amplitude) while planted).
-        private static void Stride(Member m, float dt)
+        // Poses give a ground animal's height above the ground (0 = feet down); this puts it on the
+        // actual surface under its own position, which slopes between tiles of different height, and
+        // tilts the body to the slope so its front or back doesn't dig into the hillside.
+        private const float MaxGroundTilt = 25f; // degrees
+
+        private void StandOnGround(Member m, HexGrid grid, float dt, ref Vector3 pos, ref Quaternion rot)
+        {
+            var root = transform.localPosition;         // in rootCell's space (the root is not rotated or scaled)
+            var at   = new Vector3(root.x + pos.x, 0f, root.z + pos.z);
+            pos.y += grid.GroundHeight(rootCell, at) - root.y;
+
+            // slope from samples about half a body length around the animal
+            float r  = Mathf.Clamp(m.span * 0.35f, 0.03f, 0.4f);
+            float dx = grid.GroundHeight(rootCell, at + Vector3.right * r)   - grid.GroundHeight(rootCell, at - Vector3.right * r);
+            float dz = grid.GroundHeight(rootCell, at + Vector3.forward * r) - grid.GroundHeight(rootCell, at - Vector3.forward * r);
+            var normal = new Vector3(-dx / (2f * r), 1f, -dz / (2f * r)).normalized;
+            var target = Quaternion.RotateTowards(Quaternion.identity, Quaternion.FromToRotation(Vector3.up, normal), MaxGroundTilt);
+            // the slope changes direction at the tile rims; ease into it instead of snapping
+            m.groundTilt = Quaternion.Slerp(m.groundTilt, target, 1f - Mathf.Exp(-dt * 8f));
+            rot = m.groundTilt * rot;
+        }
+
+        // Drives legs and body waves from the ground the animal actually covered since last frame,
+        // so feet don't slide and a snake's body follows its own track.
+        private static void Locomote(Member m, float dt, float travel)
         {
             var p = m.transform.position;
+            float v = 0f;
             if (m.hasLastPosition && dt > 0f)
             {
                 var d = p - m.lastPosition;
                 d.y = 0f;
-                float v = d.magnitude / dt;
-                if (v < 5f) // larger: the map wrap moved the whole tile, not the animal
-                {
-                    m.gaitSpeed    = Mathf.Lerp(m.gaitSpeed, v, 1f - Mathf.Exp(-dt * 10f));
-                    float strideLength = 2f * m.legLength * Mathf.Tan(m.strideAmplitude);
-                    m.stridePhase += v * dt / Mathf.Max(strideLength, 1e-4f) * Mathf.PI * 2f;
-                }
+                v = d.magnitude / dt;
+                if (v >= 5f) v = 0f; // the map wrap moved the whole tile, not the animal
+                m.gaitSpeed = Mathf.Lerp(m.gaitSpeed, v, 1f - Mathf.Exp(-dt * 10f));
             }
             m.lastPosition    = p;
             m.hasLastPosition = true;
-            // full stride from about one and a half leg lengths per second
-            m.strideFactor = Mathf.Clamp01(m.gaitSpeed / Mathf.Max(m.legLength * 1.5f, 1e-4f));
-            m.block.SetFloat(StrideId, m.strideAmplitude * m.strideFactor);
-            m.block.SetFloat(StridePhaseId, m.stridePhase);
+
+            if (m.strideAmplitude > 0f)
+            {
+                // one leg cycle per stride (each foot sweeps 2 · legLength · tan(amplitude) while
+                // planted); full stride from about one and a half leg lengths per second
+                float strideLength = 2f * m.legLength * Mathf.Tan(m.strideAmplitude);
+                m.stridePhase += v * dt / Mathf.Max(strideLength, 1e-4f) * Mathf.PI * 2f;
+                m.strideFactor = Mathf.Clamp01(m.gaitSpeed / Mathf.Max(m.legLength * 1.5f, 1e-4f));
+                m.block.SetFloat(StrideId, m.strideAmplitude * m.strideFactor);
+                m.block.SetFloat(StridePhaseId, m.stridePhase);
+            }
+
+            if (m.undulateAmplitude > 0f)
+            {
+                // A snake's wave stays put on the ground: it advances one wavelength per wavelength
+                // travelled, so every part of the body passes through the same curves, and a resting
+                // snake keeps a gentle S. An eel's wave slips back through the water faster than it
+                // swims and keeps going while it hangs in place.
+                float wavelength = Mathf.Max(m.bodyLength / m.undulateWaves, 1e-4f);
+                float effort = Mathf.Clamp01(m.gaitSpeed / Mathf.Max(m.bodyLength * 0.5f, 1e-4f));
+                float cycles = m.undulateInWater ? v * 1.4f / wavelength + 0.4f : v / wavelength;
+                m.undulatePhase += cycles * dt * Mathf.PI * 2f;
+                float amp = m.undulateAmplitude * (m.undulateInWater ? 0.6f + 0.4f * effort : 0.4f + 0.6f * effort);
+                m.block.SetFloat(UndulateId, amp);
+                m.block.SetFloat(UndulatePhaseId, m.undulatePhase);
+                if (m.coils)
+                {
+                    // coiled while settled; uncoils as the group falls in to travel and curls back
+                    // up as it settles on arrival (the shader blends the shapes, see ApplyUndulate)
+                    var coil = m.coilShape;
+                    coil.x = 1f - travel;
+                    m.block.SetVector(CoilId, coil);
+                }
+            }
             m.renderer.SetPropertyBlock(m.block);
         }
 
@@ -388,8 +459,9 @@ namespace NaturalHistory.World
             }
 
             var pos = Vector3.Lerp(a, b, s);
-            // stay on each tile's top and step up or down around the border
-            pos.y = Mathf.Lerp(a.y, b.y, Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(0.35f, 0.65f, s)));
+            // ease between the tiles' heights over the whole crossing (ground animals then follow
+            // the actual slope, see StandOnGround; this is what swimmers and fliers go by)
+            pos.y = Mathf.Lerp(a.y, b.y, Mathf.SmoothStep(0f, 1f, s));
             return pos;
         }
 
@@ -413,6 +485,7 @@ namespace NaturalHistory.World
                 transform.SetParent(trip.destination.transform, true);
                 transform.localPosition = Vector3.up * trip.destination.SurfaceHeight;
             }
+            rootCell = trip.destination;
             if (Style != ColonyStyle.Ground) return;
             var hq = Quaternion.Euler(0f, heading, 0f);
             foreach (var m in members)
@@ -458,6 +531,7 @@ namespace NaturalHistory.World
                             break;
                         }
                         case ColonyGait.Slither:
+                            if (m.undulateAmplitude > 0f) break; // the body wave does it (Locomote)
                             yaw = Mathf.Sin(step * 0.6f) * 22f;
                             pos += hq * Vector3.right * (Mathf.Sin(step * 0.6f - 1f) * 0.15f * m.span);
                             break;
@@ -484,6 +558,8 @@ namespace NaturalHistory.World
                         pos += forward * (pulse * 0.02f * m.span);
                         rot = hq * Quaternion.Euler(pulse * 2f, 180f, 0f);
                     }
+                    else if (m.undulateAmplitude > 0f) // eels swim with the body wave (Locomote), not a wag
+                        rot = hq;
                     else // attacks are made head first; a backward swimmer then backs off, still facing the target
                         rot = hq * Quaternion.Euler(0f, Mathf.Sin(t * 7f + p * 3f) * 10f, 0f);
                     break;
@@ -541,7 +617,7 @@ namespace NaturalHistory.World
                     pos = new Vector3(Mathf.Cos(a) * m.radius, m.basePosition.y + Mathf.Sin(t * 0.9f + m.phase) * 0.008f, Mathf.Sin(a) * m.radius);
                     rot = Backward
                         ? Quaternion.LookRotation(-ahead) * Quaternion.Euler(Mathf.Sin(t * 2f + m.phase) * 2f, 0f, 0f)
-                        : Quaternion.LookRotation(ahead) * Quaternion.Euler(0f, Mathf.Sin(t * 3f + m.phase * 3f) * 6f, 0f);
+                        : Quaternion.LookRotation(ahead) * Quaternion.Euler(0f, m.undulateAmplitude > 0f ? 0f : Mathf.Sin(t * 3f + m.phase * 3f) * 6f, 0f);
                     break;
                 }
                 case ColonyStyle.Swarm:
@@ -571,6 +647,13 @@ namespace NaturalHistory.World
         // Rests a few seconds, turns towards a nearby spot and walks, hops or slithers there.
         private void Wander(Member m, float t, float dt, out Vector3 pos, out Quaternion rot)
         {
+            if (m.coils)
+            {
+                // a resting snake lies still in its coil
+                pos = m.position;
+                rot = Quaternion.Euler(0f, m.heading, 0f);
+                return;
+            }
             if (!m.moving)
             {
                 if (t >= m.restUntil) PickTarget(m);
@@ -602,7 +685,7 @@ namespace NaturalHistory.World
             {
                 case ColonyGait.Walk:    lift = Mathf.Abs(Mathf.Cos(step)) * 0.015f * k; roll = Mathf.Sin(step) * 2f * k; break;
                 case ColonyGait.Hop:     lift = Mathf.Abs(Mathf.Sin(step * 0.5f)) * 0.18f * k; break;
-                case ColonyGait.Slither: yaw = Mathf.Sin(step * 0.6f) * 14f; break;
+                case ColonyGait.Slither: if (m.undulateAmplitude <= 0f) yaw = Mathf.Sin(step * 0.6f) * 14f; break;
             }
             pos = m.position + Vector3.up * (lift * m.span);
             rot = Quaternion.Euler(0f, m.heading + yaw, roll);

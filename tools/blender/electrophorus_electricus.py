@@ -9,8 +9,8 @@ front of the body, rows of pale sensory pores on the head.
 
 The body is a lofted shell fused into one seamless surface (nh_model.MeshBuilder.fuse),
 given a fine skin grain and a mouth groove, then repainted procedurally. The rippling
-anal fin, pectorals and eyes are crisp separate shells. The whole animal is bent into
-a gentle swimming S-curve at the end.
+anal fin, pectorals and eyes are crisp separate shells. The body is left straight: on the map the
+shader (MapFeatureFlap.cginc, ApplyUndulate) swims it with a travelling wave.
 
 Usage:
   blender --background --python tools/blender/electrophorus_electricus.py -- [--render out.png]
@@ -266,16 +266,6 @@ def eye_color(sign):
     return fn
 
 
-# ---------------------------------------------------------------- pose
-
-def bend(bm):
-    """Gentle swimming S-curve in plan view; the head stays nearly straight."""
-    for v in bm.verts:
-        y = v.co.y
-        env = nh.smoothstep(-0.95, 0.9, y)
-        v.co.x += 0.21 * env * math.sin((y + 0.75) * 3.6)
-
-
 def build():
     global PORES
     PORES = make_pores()
@@ -290,7 +280,6 @@ def build():
     for s in (-1, 1):
         mb.add(pectoral(s), color=fin_color)
         mb.add(eye(s), color=eye_color(s))
-    bend(mb.bm)
     return mb.to_object("ElectricEel", roughness=0.45)
 
 

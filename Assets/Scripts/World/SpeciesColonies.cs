@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using NaturalHistory.Core;
 using NaturalHistory.Data;
+using NaturalHistory.Players;
 using UnityEngine;
 
 namespace NaturalHistory.World
@@ -56,6 +57,15 @@ namespace NaturalHistory.World
         private static readonly int FlapSpanId = Shader.PropertyToID("_FlapSpan");
         private static readonly int StrideLegsId = Shader.PropertyToID("_StrideLegs");
         private static readonly int StrideModeId = Shader.PropertyToID("_StrideMode");
+        private static readonly int UndulateBodyId = Shader.PropertyToID("_UndulateBody");
+        private static readonly int CoilId         = Shader.PropertyToID("_Coil");
+
+        // Body wave of snakes and eels (heading swing, radians): snakes bend in even S-curves along
+        // the whole body; eels swing mostly the back half
+        private const float SnakeWave = 0.85f;
+        private const float EelWave   = 0.55f;
+        // A resting snake's coil (fractions of its length): inner radius, ring spacing, head held up
+        private static readonly Vector4 SnakeCoil = new(1f, 0.06f, 0.055f, 0.07f);
 
         // Leg swing at full stride (radians); hoppers kick both legs together, further
         private const float WalkStride = 0.42f;
@@ -77,6 +87,10 @@ namespace NaturalHistory.World
         public ColonyGroup Selected => selected;
         public IReadOnlyList<ColonyGroup> Groups => groups;
         public ColonyGroup GroupAt(HexCell cell) => cell != null && occupants.TryGetValue(cell, out var g) ? g : null;
+
+        // Raised after the groups for the displayed period have been (re)placed; all earlier groups,
+        // including player-owned ones, are gone by then.
+        public event System.Action ColoniesPlaced;
 
         // True if this click is (or was just) about colonies, so other click handlers (the player
         // ball) should leave it alone. Safe to call before or after this component handles the click.
@@ -132,13 +146,15 @@ namespace NaturalHistory.World
                     return;
                 }
                 var clicked = GroupAt(cell);
-                Select(clicked != group && clicked != null && clicked.CanMove && !clicked.IsBusy ? clicked : null);
+                bool orderable = clicked != null && (clicked.Owner == null || clicked.Owner.IsHuman);
+                Select(clicked != group && orderable && clicked.CanMove && !clicked.IsBusy ? clicked : null);
                 return;
             }
 
             var g = GroupAt(cell);
             if (g == null) return;
             clickFrame = Time.frameCount;
+            if (g.Owner != null && !g.Owner.IsHuman) return; // other players' colonies aren't yours to order
             if (g.CanMove && !g.IsBusy) Select(g);
         }
 
@@ -184,6 +200,33 @@ namespace NaturalHistory.World
                     foreach (var n in grid.GetNeighbors(cell)) used.Add(n);
                 Debug.Log($"[SpeciesColonies] Placed {def.commonName} ({style}) at {cell}.");
             }
+            ColoniesPlaced?.Invoke();
+        }
+
+        // ---------- Player-owned colonies (see Territory/TerritoryManager) ----------
+
+        public bool IsAliveNow(SpeciesDefinition def) => AliveIn(def, grid.DisplayedAge);
+
+        // Same habitat test as wild placement: the tile's terrain or its present-day biome is listed.
+        public static bool FitsHabitat(SpeciesDefinition def, HexCell cell) =>
+            cell != null && cell.Terrain != null && !cell.IsMountain && def.habitats != null &&
+            (def.habitats.Contains(cell.Terrain.kind.ToString()) || def.habitats.Contains(cell.Biome.ToString()));
+
+        public static bool CanTravel(SpeciesDefinition def) =>
+            !string.IsNullOrEmpty(def.model) &&
+            !(System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style) && style == ColonyStyle.Fixed);
+
+        // Builds a group of `def` on `cell` belonging to `owner`. Null if the model can't be loaded.
+        public ColonyGroup SpawnColony(SpeciesDefinition def, HexCell cell, Player owner, int seed)
+        {
+            if (material == null) material = Resources.Load<Material>("Materials/MapFeatures");
+            var mesh = LoadMesh(def.model);
+            if (mesh == null) return null;
+            if (!System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style)) style = ColonyStyle.Drift;
+            BuildColony(cell, def, mesh, style, new System.Random(seed));
+            var group = occupants[cell];
+            group.Owner = owner;
+            return group;
         }
 
         // firstAge..lastAge inclusive; an empty or unknown firstAge counts as always, an empty lastAge as still alive.
@@ -226,7 +269,7 @@ namespace NaturalHistory.World
             return candidates[rng.Next(Mathf.Min(5, candidates.Count))].cell;
         }
 
-        // Returns the size of one member (in cells).
+        // Returns the size of one member on its tile (in cells).
         private float BuildColony(HexCell cell, SpeciesDefinition def, Mesh mesh, ColonyStyle style, System.Random rng)
         {
             float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
@@ -235,7 +278,10 @@ namespace NaturalHistory.World
             float sizeSpan = SizeSpanPerSqrtMetre * Mathf.Sqrt(Mathf.Max(def.sizeCm, 0f) / 100f);
             memberSpan = Mathf.Min(Mathf.Max(memberSpan, sizeSpan), MaxSpan);
             if (def.mapScale > 0f) memberSpan *= def.mapScale; // per-model framing (tall perch, wide web...)
-            colonyRadius = Mathf.Max(colonyRadius, memberSpan * 0.7f); // big animals need room
+            // a snake rests coiled up (see ColonyGroup), so it takes the room of its coil, not its length
+            bool coiled = style == ColonyStyle.Ground && string.Equals(def.mapGait, "Slither", System.StringComparison.OrdinalIgnoreCase);
+            float footprint = coiled ? memberSpan * 0.3f : memberSpan;
+            colonyRadius = Mathf.Max(colonyRadius, footprint * 0.7f); // big animals need room
             var root = new GameObject($"Colony_{def.id}").transform;
             root.SetParent(cell.transform, false);
             root.localPosition = Vector3.up * cell.SurfaceHeight;
@@ -337,6 +383,20 @@ namespace NaturalHistory.World
                     member.strideAmplitude = gait == ColonyGait.Hop ? HopStride : WalkStride;
                     member.legLength       = (hipY - b.min.y) * (span / meshSpan);
                 }
+                if (style == ColonyStyle.Ground && gait == ColonyGait.Slither || def.mapUndulate)
+                {
+                    // the straight model is bent into a travelling wave (see MapFeatureFlap.cginc)
+                    var b    = mesh.bounds;
+                    bool eel = style != ColonyStyle.Ground;
+                    member.undulateAmplitude = eel ? EelWave : SnakeWave;
+                    member.undulateWaves     = eel ? 1f : 1.5f;
+                    member.undulateInWater   = eel;
+                    member.bodyLength        = b.size.z * (span / meshSpan);
+                    member.coils             = !eel;
+                    member.coilShape         = SnakeCoil;
+                    block.SetVector(UndulateBodyId, new Vector4(b.min.z, b.max.z, member.undulateWaves, eel ? 0.75f : 0.2f));
+                    if (member.coils) block.SetVector(CoilId, SnakeCoil);
+                }
                 mr.SetPropertyBlock(block);
 
                 member.transform = go.transform;
@@ -344,7 +404,7 @@ namespace NaturalHistory.World
                 member.block     = block;
                 group.AddMember(member);
             }
-            return memberSpan;
+            return footprint;
         }
     }
 }

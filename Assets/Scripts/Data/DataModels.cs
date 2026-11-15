@@ -165,6 +165,7 @@ namespace NaturalHistory.Data
         public int mapLegs;           // Ground walkers/hoppers: pairs of legs (1 = biped, 2 = quadruped, 3 = insect); 0 = 2
         public float mapHip;          // Ground walkers/hoppers: hip height as a fraction of the model's height; 0 = 0.45
         public bool mapBackward;      // swims tail first (squid, ammonites jetting backwards)
+        public bool mapUndulate;      // swims with a body wave instead of a tail wag (eels); Slither snakes always do
         public List<GeneValue> genes;
         public string description;
     }

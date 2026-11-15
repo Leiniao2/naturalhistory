@@ -238,6 +238,7 @@ export const DATASETS = {
       { key: 'mapLegs', label: 'Leg pairs', type: 'int', min: 0, max: 6, help: 'Ground walkers/hoppers: 1 = biped, 2 = quadruped, 3 = insect; 0 = 2' },
       { key: 'mapHip', label: 'Hip height', type: 'number', min: 0, max: 1, step: 0.05, help: 'Ground walkers/hoppers: everything below this fraction of the model height swings as legs; 0 = 0.45' },
       { key: 'mapBackward', label: 'Swims backward', type: 'bool', help: 'Moves tail first, like a squid or ammonite jetting' },
+      { key: 'mapUndulate', label: 'Body wave', type: 'bool', help: 'Swims by bending the whole body in a wave, like an eel (Slither snakes always do); the model must be straight' },
       { key: 'genes', label: 'Starting genes', type: 'table', newRow: () => ({ gene: '', expression: 0.5 }), columns: [
         { key: 'gene', label: 'Gene', type: 'enum', options: (all) => [{ value: '', label: '—' }, ...idsOf('genes', 'displayName')(all)] },
         { key: 'expression', label: 'Expression', type: 'number', min: 0, max: 1, step: 0.05 },

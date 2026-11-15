@@ -51,4 +51,63 @@ void ApplyStride(inout float3 p)
     p.y += below * (1 - cos(a)) * ease + leg * 0.12 * max(0, cos(phase)) * foot * foot * (_Stride / 0.5);
 }
 
+// Snakes and eels for MapFeature.shader; needs _Undulate, _UndulatePhase, _UndulateBody and _Coil.
+// The model is a straight body facing +z (snout at _UndulateBody.y, tail tip at .x). Its centre
+// line is re-laid along a curve of the same length, given by the heading of the body at each
+// point, and every vertex keeps its offset from the centre line, so the body bends without
+// stretching. The heading blends between two shapes by _Coil.x:
+//   0: a sideways wave of _UndulateBody.z wavelengths running from the head to the tail as
+//      _UndulatePhase grows; _Undulate = its heading amplitude in radians; the head stays nearly
+//      straight and the swing grows toward the tail by _UndulateBody.w (0 = even, 1 = eel-like);
+//   1: a flat resting coil (spiral, inner radius _Coil.y and ring spacing _Coil.z as fractions of
+//      the length) with the head held up by _Coil.w lengths above the middle of it.
+// In between the coil loosens into the wave, so a snake uncoils and sets off continuously.
+float BodyHeading(float u) // u = 0 at the snout .. 1 at the tail tip
+{
+    float env  = smoothstep(0, 0.15, u) * (1 - _UndulateBody.w + _UndulateBody.w * u);
+    float wave = _Undulate * env * sin(6.2831853 * _UndulateBody.z * u - _UndulatePhase);
+
+    // neck: carries on curling from the inner end of the spiral, held up over the middle (rise)
+    const float neck = 0.15;
+    float ri   = max(_Coil.y, 1e-3), d = max(_Coil.z, 1e-3);
+    float s    = max(u - neck, 0);
+    float coil = 6.2831853 / d * (sqrt(ri * ri + d * s / 3.14159265) - ri)  // Archimedean spiral
+               - max(neck - u, 0) / ri;
+    return lerp(wave, coil, _Coil.x);
+}
+
+void ApplyUndulate(inout float3 p, inout float3 n)
+{
+    if (_Undulate == 0 && _Coil.x == 0) return;
+    float len = max(_UndulateBody.y - _UndulateBody.x, 1e-4);
+    float u   = saturate((_UndulateBody.y - p.z) / len);
+
+    // Reference direction that faces +z: the body's average heading when stretched out, the
+    // head's when coiled, so an uncoiling snake points its head the way it goes and the body
+    // unwinds behind it instead of the whole coil spinning
+    float mean = 0, head = 0;
+    [unroll] for (int i = 0; i < 16; i++) mean += BodyHeading((i + 0.5) / 16);
+    [unroll] for (int k = 0; k < 4; k++)  head += BodyHeading((k + 0.5) / 4 * 0.1);
+    mean = lerp(mean / 16, head / 4, _Coil.x);
+
+    // centre line from the middle of the body (which stays at the pivot) to this point
+    const int steps = 20;
+    float h = (u - 0.5) / steps;
+    float2 c = 0; // (x, z)
+    [unroll] for (int j = 0; j < steps; j++)
+    {
+        float a = BodyHeading(0.5 + (j + 0.5) * h) - mean;
+        c += float2(sin(a), -cos(a)) * h * len;
+    }
+    float a  = BodyHeading(u) - mean;
+    float2 t = float2(sin(a), -cos(a)); // along the body, toward the tail
+    float2 side = float2(cos(a), sin(a));
+    float2 q = c + side * p.x;
+    float rise = _Coil.x * _Coil.w * len * (1 - smoothstep(0.02, 0.15, u));
+    p = float3(q.x, p.y + rise, _UndulateBody.y - 0.5 * len + q.y);
+
+    float3 m = n;
+    n = normalize(float3(m.x * side.x - m.z * t.x, m.y, m.x * side.y - m.z * t.y));
+}
+
 #endif

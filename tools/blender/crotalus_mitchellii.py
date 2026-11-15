@@ -1,9 +1,9 @@
 """
 Procedural speckled rattlesnake (Crotalus mitchellii) for map colonies (large-animal detail).
 
-A heavy body in a loose two-tier coil on the ground, the front third rising in an
-S-curve with the broad triangular head poised over the coil, and the rattle raised
-up from the outside of the coil. The body is one lofted tube (no fusing needed), so
+A heavy body stretched out along the ground, the head raised a little to look ahead
+and the rattle held slightly up; it is straight so the map shader can bend it into
+travelling S-curves when the snake slithers. The body is one lofted tube (no fusing needed), so
 the scale pattern and colours can be laid out along the body: keeled diamond scales
 displaced into the surface, broad belly plates, irregular speckled crossbands on a
 sandy pink-tan to pale-grey ground, and the dark-and-pale banded tail before the
@@ -88,39 +88,31 @@ def resample(pts, n, head_rings=0, head_span=0.0):
 
 
 def centre_line():
-    """Tail (rattle end) -> lower coil -> upper coil -> rising S-curve -> snout."""
-    r1, r2 = 0.215, 0.14            # lower / upper coil radius
-    z1, z2 = BODY_R, BODY_R + 0.074  # upper tier rests in the groove of the lower one
-    turns = 1.85
-    th_end = math.pi / 2 + 2 * math.pi
-    th0 = th_end - turns * 2 * math.pi
+    """Tail (rattle end) -> body stretched out along the ground -> slightly raised head.
 
-    spiral = []
-    steps = 40
-    for i in range(steps + 1):
-        s = i / steps
-        th = th0 + s * turns * 2 * math.pi
-        k = nh.smoothstep(0.42, 0.64, s)
-        r = r1 + (r2 - r1) * k
-        z = z1 + (z2 - z1) * k
-        spiral.append(Vector((math.cos(th) * r, math.sin(th) * r, z)))
+    Straight on purpose: on the map the shader (MapFeatureFlap.cginc, ApplyUndulate) bends it
+    into the travelling S-curves of a slithering snake, which a modelled coil couldn't do."""
+    length = 2.2
+    y_tail = length * 0.5
+    neck_y = y_tail - (length - HEAD_LEN - 0.14)  # where the neck starts to lift
 
-    q0 = spiral[0]
-    radial = Vector((q0.x, q0.y, 0)).normalized()
-    tan0 = Vector((-math.sin(th0), math.cos(th0), 0))
-    t2 = q0 - tan0 * 0.06 + radial * 0.025 + Vector((0, 0, 0.07))
-    t3 = t2 - tan0 * 0.005 + radial * 0.004 + Vector((0, 0, 0.13))   # rattle base, pointing up
+    def rest(s):
+        """Centre height that puts the (flattened) belly on the ground, from the body profile."""
+        r = 0.013 + (BODY_R - 0.013) * nh.smoothstep(0.0, 0.27, s)
+        return r * 0.82
 
-    rise = [Vector(p) for p in (
-        (-0.07, 0.07, 0.16),
-        (-0.03, -0.01, 0.23),
-        (0.035, 0.03, 0.30),     # the S bends back
-        (0.01, -0.035, 0.345),
-        (0.0, -0.10, 0.335),     # head base
-        (0.0, -0.10 - HEAD_LEN, 0.312),  # snout tip
-    )]
-    # mirrored so the raised rattle stands on the right, clear of the rising neck
-    return [Vector((-p.x, p.y, p.z)) for p in [t3, t2] + spiral + rise]
+    pts = [Vector((0.0, y_tail + 0.045, rest(0.0) + 0.05)),   # rattle, held a little up
+           Vector((0.0, y_tail, rest(0.0) + 0.012))]
+    n = 16
+    for i in range(1, n + 1):
+        s = i / n
+        y = y_tail - s * (y_tail - neck_y)
+        pts.append(Vector((0.0, y, rest(s * (y_tail - neck_y) / length))))
+    head_base = neck_y - 0.14
+    pts += [Vector((0.0, neck_y - 0.07, BODY_R * 0.82 + 0.012)),
+            Vector((0.0, head_base, BODY_R * 0.82 + 0.03)),           # head base, raised to look ahead
+            Vector((0.0, head_base - HEAD_LEN, BODY_R * 0.82 + 0.022))]  # snout tip
+    return pts
 
 
 # ---------------------------------------------------------------- body profile
