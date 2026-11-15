@@ -214,7 +214,7 @@ namespace NaturalHistory.World
 
             // Plan: one or two headlands along the edge, nothing at the corners
             float c1 = R(0.2f, 0.45f), c2 = R(0.55f, 0.8f), w1 = R(0.1f, 0.2f), w2 = R(0.1f, 0.2f);
-            float h1 = R(0.05f, 0.28f) * tileRadius, h2 = rng.NextDouble() < 0.6 ? R(0.04f, 0.22f) * tileRadius : 0f;
+            float h1 = R(0.03f, 0.15f) * tileRadius, h2 = rng.NextDouble() < 0.6 ? R(0.02f, 0.11f) * tileRadius : 0f;
             float Bulge(float t) =>
                 Mathf.Pow(Arch(t), 0.7f) * (0.02f * tileRadius
                 + h1 * Mathf.Exp(-Mathf.Pow((t - c1) / w1, 2f)) + h2 * Mathf.Exp(-Mathf.Pow((t - c2) / w2, 2f)));

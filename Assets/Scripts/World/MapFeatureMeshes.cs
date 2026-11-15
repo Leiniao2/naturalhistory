@@ -62,7 +62,11 @@ namespace NaturalHistory.World
                 float m = 1f;
                 for (int e = 0; e < 6; e++)
                     if (!site.Joined[e]) m *= Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(EdgeDistance(e, p) / site.Apothem));
-                return m;
+                if (m >= 1f) return 1f;
+                // The foot ends along an irregular line (map-wide noise, so neighbours agree) rather
+                // than tracing the hex outline
+                float t = 0.35f * site.Detail(p);
+                return Mathf.Clamp01((m - t) / (1f - t));
             }
             // Below the tile surface where the mask is 0, so the massif's edge hides under the ground
             Vector3 Point(Vector2 p)

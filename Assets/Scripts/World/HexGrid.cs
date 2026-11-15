@@ -214,9 +214,33 @@ namespace NaturalHistory.World
                 else kind = cell.Terrain.kind; // asset missing: keep what the cell has
                 cell.SetFeature(EraFlora.FeatureFor(cell, kind, age));
             }
+            DressMountainGround();
             ClearFeatures();
             PlaceFeatures(WorldSeed, age);
             UpdateEdgeBlends();
+        }
+
+        // A mountain tile's ground (seen where the massif tapers off toward a lowland neighbour)
+        // takes the skin of the most common land around it instead of bare mountain rock, so the
+        // range doesn't get a grey margin of mountain texture around its foot.
+        private void DressMountainGround()
+        {
+            var counts = new Dictionary<TerrainType, int>();
+            for (int r = 0; r < height; r++)
+            for (int q = 0; q < width; q++)
+            {
+                var cell = cells[q, r];
+                if (cell.Terrain == null || !cell.IsMountain || cell.Feature == TerrainFeature.Volcano) continue;
+                counts.Clear();
+                TerrainType best = null;
+                foreach (var n in GetNeighbors(cell))
+                {
+                    if (n.Terrain == null || n.IsWater || n.IsMountain || n.Terrain.material == null) continue;
+                    counts[n.Terrain] = counts.TryGetValue(n.Terrain, out int c) ? c + 1 : 1;
+                    if (best == null || counts[n.Terrain] > counts[best]) best = n.Terrain;
+                }
+                if (best != null) cell.SetGroundMaterial(best.material);
+            }
         }
 
         private static Dictionary<TerrainKind, TerrainType> LoadTerrainTypes()
@@ -507,6 +531,11 @@ namespace NaturalHistory.World
         {
             Shader.SetGlobalFloat("_HexApothem", cellSize * TileRadius * 0.8660254f);
             Shader.SetGlobalFloat("_HexBlendWidth", cellSize * TileBlendWidth);
+            // Steep land faces (cliffs) use the Mountain terrain's rock texture
+            terrainTypes ??= LoadTerrainTypes();
+            if (terrainTypes.TryGetValue(TerrainKind.Mountain, out var mountain) && mountain.material != null &&
+                mountain.material.HasProperty("_BaseMap"))
+                Shader.SetGlobalTexture("_CliffTex", mountain.material.GetTexture("_BaseMap"));
 
             var textures = new Texture[6];
             var tints    = new Vector4[6];
@@ -664,6 +693,7 @@ namespace NaturalHistory.World
                     var n = EdgeNeighbors(cell);
                     bool Land(HexCell c)  => c != null && c.Terrain != null && !c.IsWater;
                     bool Water(HexCell c) => c != null && c.Terrain != null && c.IsWater;
+                    bool Sea(HexCell c)   => Water(c) && c.Terrain.kind == TerrainKind.SaltWater;
                     bool Low(HexCell c)   => c.Elevation < CliffElevation;
                     // Coasts: low land slopes down to a beach at the water's edge; highland ends in
                     // a cliff. Rim heights depend only on the cells sharing each edge / corner, so
@@ -671,9 +701,9 @@ namespace NaturalHistory.World
                     for (int e = 0; e < 6; e++)
                     {
                         bool shore = Water(n[e]);
-                        edges[e]  = Land(n[e]) ? (h + n[e].SurfaceHeight) * 0.5f : shore && Low(cell) ? ShoreHeight : h;
+                        cliff[e]  = Sea(n[e]) && !Low(cell); // only the open sea cuts cliffs; lake shores slope down
+                        edges[e]  = Land(n[e]) ? (h + n[e].SurfaceHeight) * 0.5f : shore && !cliff[e] ? ShoreHeight : h;
                         joined[e] = cell.IsMountain && Land(n[e]) && n[e].IsMountain;
-                        cliff[e]  = shore && !Low(cell);
                     }
                     for (int i = 0; i < 6; i++)
                     {
@@ -682,7 +712,10 @@ namespace NaturalHistory.World
                         bool low = Low(cell);
                         if (Land(a)) { sum += a.SurfaceHeight; count++; low &= Low(a); }
                         if (Land(b)) { sum += b.SurfaceHeight; count++; low &= Low(b); }
-                        corners[i] = (Water(a) || Water(b)) && low ? ShoreHeight : sum / count;
+                        // Shore height unless highland next to the sea makes it a clifftop
+                        bool wet   = Water(a) || Water(b);
+                        bool cliffTop = !low && (Sea(a) || Sea(b));
+                        corners[i] = wet && !cliffTop ? ShoreHeight : sum / count;
                     }
 
                     var rim = new float[12];
@@ -730,6 +763,39 @@ namespace NaturalHistory.World
             float outer = cellSize * TileRadius * 0.8660254f;
             float s     = Mathf.Clamp01(Mathf.InverseLerp(outer * TileSolid, outer, d));
             return (edgeY - cell.SurfaceHeight) * s;
+        }
+
+        // Local Y, in `cell`'s space, of the ground under a point given in `cell`'s space (x, z from its
+        // centre). The point may lie over a neighbouring tile; it is measured on whichever tile it is
+        // over, and neighbours share their rim heights, so the result is continuous across borders.
+        // Water and other flat tiles return their top face.
+        public float GroundHeight(HexCell cell, Vector3 local)
+        {
+            var here = cell;
+            var p = new Vector2(local.x, local.z);
+            float y = 0f;
+            float inside = cellSize * TileRadius * 0.8660254f; // within the inscribed circle: on this tile
+            for (int hop = 0; hop < 3 && p.sqrMagnitude > inside * inside; hop++)
+            {
+                // the point is over the tile whose centre is nearest (hex cells are the Voronoi cells of their centres)
+                HexCell best = null;
+                Vector3 bestStep = default;
+                float bestDist = p.sqrMagnitude;
+                for (int i = 0; i < 6; i++)
+                {
+                    var n = GetCell(here.Coordinates.Neighbor(i));
+                    if (n == null) continue;
+                    var step = n.transform.localPosition - here.transform.localPosition;
+                    step.x -= Mathf.Round(step.x / WrapWidth) * WrapWidth; // across the wrap seam
+                    float d = (p - new Vector2(step.x, step.z)).sqrMagnitude;
+                    if (d < bestDist) { bestDist = d; best = n; bestStep = step; }
+                }
+                if (best == null) break;
+                p   -= new Vector2(bestStep.x, bestStep.z);
+                y   += bestStep.y;
+                here = best;
+            }
+            return y + here.SurfaceHeight + LocalGround(here, p);
         }
 
         private void CreateCell(int col, int row)

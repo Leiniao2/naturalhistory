@@ -11,7 +11,7 @@ Shader "NaturalHistory/HexTerrain"
         _Tiling       ("World Tiling (texture repeats per unit)", Float) = 0.35
         _SideDarken   ("Side Darken", Range(0, 1)) = 0.35
         _EdgeDarken   ("Hex Edge Darken", Range(0, 1)) = 0.25
-        _CliffColor   ("Cliff Rock", Color) = (0.56, 0.51, 0.46, 1)
+        _CliffTint    ("Cliff Rock Tint", Color) = (1, 0.97, 0.93, 1)
         _Land         ("Land (rock faces, surf)", Float) = 1
         [HideInInspector] _WrapShift ("Map wrap shift (set per cell)", Float) = 0
         // Neighbour terrain textures, one per edge (set per cell by HexGrid for border blending)
@@ -45,22 +45,21 @@ Shader "NaturalHistory/HexTerrain"
             float  _Tiling;
             half   _SideDarken;
             half   _EdgeDarken;
-            half4  _CliffColor;
+            half4  _CliffTint;
             half   _Land;
             float  _WrapShift;
         CBUFFER_END
 
-        // Steep land faces (coastal cliffs, the walls between terraces) are bare layered rock:
-        // wandering horizontal strata, weathered paler at the top and dark and wet near the
-        // waterline. Faces below y = 0.03 (water tiles' sides) keep the texture.
-        half3 CliffRock(float3 worldPos, float3 p, half3 tex, half4 cliffColor)
+        // Rock texture for steep land faces (the Mountain terrain's), set globally by HexGrid
+        TEXTURE2D(_CliffTex); SAMPLER(sampler_CliffTex);
+
+        // Steep land faces (sea cliffs, steep slopes) are bare rock, projected like the rest of the
+        // terrain and darker, wet rock near the waterline.
+        half3 CliffRock(float3 worldPos, float3 p, float3 n, half4 tint)
         {
-            float wob  = sin(p.x * 3.1 + p.z * 2.3) * 0.15 + sin(p.x * 7.7 - p.z * 5.3) * 0.07;
-            float band = frac(worldPos.y * 9.0 + wob);
-            half3 rock = cliffColor.rgb * lerp(0.8, 1.1, smoothstep(0.15, 0.85, band));
-            rock *= 0.85 + 0.3 * dot(tex, half3(0.3, 0.59, 0.11)); // keep some of the texture's grain
-            rock *= lerp(0.62, 1.0, saturate((worldPos.y - 0.02) / 0.12));
-            return rock;
+            float2 uv = n.y > 0.5 ? p.xz : (abs(n.x) > abs(n.z) ? p.zy : p.xy);
+            half3 rock = SAMPLE_TEXTURE2D(_CliffTex, sampler_CliffTex, uv * 1.5).rgb * tint.rgb;
+            return rock * lerp(0.7, 1.0, saturate((worldPos.y - 0.02) / 0.1));
         }
 
         // On land: bare rock just above the sea (cliff foot, boulder apron) and a white line of surf
@@ -168,7 +167,7 @@ Shader "NaturalHistory/HexTerrain"
                     half3 n2 = SampleEdgeTex(e2, topUV, dx, dy) * _EdgeTint[e2].rgb;
                     top = (top + n1 * w1 + n2 * w2) / (1.0 + w1 + w2);
                 }
-                half3 rockCol = CliffRock(i.positionWS, p, sideTex, _CliffColor);
+                half3 rockCol = CliffRock(i.positionWS, p, n, _CliffTint);
                 half3 side    = lerp(sideTex * (1.0 - _SideDarken), rockCol, _Land) * _Color.rgb;
                 half3 albedo  = lerp(side, top, topW);
                 half2 shore   = Shoreline(i.positionWS.y, _Land);
@@ -262,19 +261,17 @@ Shader "NaturalHistory/HexTerrain"
         float     _Tiling;
         half      _SideDarken;
         half      _EdgeDarken;
-        fixed4    _CliffColor;
+        fixed4    _CliffTint;
+        sampler2D _CliffTex; // rock texture for steep land faces (the Mountain terrain's), set globally by HexGrid
         half      _Land;
         float     _WrapShift;
 
-        // Same as the URP pass: layered bare rock on steep land faces
-        half3 CliffRock(float3 worldPos, float3 p, half3 tex)
+        // Same as the URP pass: bare rock on steep land faces, darker and wet near the waterline
+        half3 CliffRock(float3 worldPos, float3 p, float3 n)
         {
-            float wob  = sin(p.x * 3.1 + p.z * 2.3) * 0.15 + sin(p.x * 7.7 - p.z * 5.3) * 0.07;
-            float band = frac(worldPos.y * 9.0 + wob);
-            half3 rock = _CliffColor.rgb * lerp(0.8, 1.1, smoothstep(0.15, 0.85, band));
-            rock *= 0.85 + 0.3 * dot(tex, half3(0.3, 0.59, 0.11));
-            rock *= lerp(0.62, 1.0, saturate((worldPos.y - 0.02) / 0.12));
-            return rock;
+            float2 uv = n.y > 0.5 ? p.xz : (abs(n.x) > abs(n.z) ? p.zy : p.xy);
+            half3 rock = tex2D(_CliffTex, uv * 1.5).rgb * _CliffTint.rgb;
+            return rock * lerp(0.7, 1.0, saturate((worldPos.y - 0.02) / 0.1));
         }
 
         struct Input
@@ -306,7 +303,7 @@ Shader "NaturalHistory/HexTerrain"
             }
             else
             {
-                albedo = lerp(albedo * (1.0 - _SideDarken), CliffRock(IN.worldPos, p, albedo), _Land);
+                albedo = lerp(albedo * (1.0 - _SideDarken), CliffRock(IN.worldPos, p, n), _Land);
             }
             albedo *= _Color.rgb;
 
@@ -314,7 +311,7 @@ Shader "NaturalHistory/HexTerrain"
             float y   = IN.worldPos.y;
             half rock = (1.0 - smoothstep(0.035, 0.055, y)) * _Land;
             half surf = smoothstep(0.012, 0.024, y) * (1.0 - smoothstep(0.034, 0.065, y)) * _Land;
-            albedo = lerp(albedo, CliffRock(IN.worldPos, p, albedo) * _Color.rgb, rock);
+            albedo = lerp(albedo, CliffRock(IN.worldPos, p, n) * _Color.rgb, rock);
             albedo = lerp(albedo, half3(0.93, 0.95, 0.97), surf * 0.85);
 
             o.Albedo = albedo;

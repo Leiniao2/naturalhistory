@@ -127,8 +127,22 @@ namespace NaturalHistory.World
 
         // Colour and texture this cell shows; neighbours blend toward them across the shared edge.
         public Color BlendTint => baseColor * tintVariation;
-        public Texture BlendTexture =>
-            Terrain != null && Terrain.material != null && Terrain.material.HasProperty(BaseMapId) ? Terrain.material.GetTexture(BaseMapId) : null;
+        public Texture BlendTexture
+        {
+            get
+            {
+                var mat = meshRenderer != null && meshRenderer.sharedMaterial != null ? meshRenderer.sharedMaterial : Terrain?.material;
+                return mat != null && mat.HasProperty(BaseMapId) ? mat.GetTexture(BaseMapId) : null;
+            }
+        }
+
+        // Draw the tile with another terrain's skin without changing what the cell is (Terrain).
+        // Mountain tiles use the land around them, so a massif rises straight out of that ground.
+        // Reset by the next SetTerrain.
+        public void SetGroundMaterial(Material material)
+        {
+            if (meshRenderer != null && material != null) meshRenderer.sharedMaterial = material;
+        }
 
         static readonly int BaseMapId = Shader.PropertyToID("_BaseMap");
         static readonly int EdgeTintsId = Shader.PropertyToID("_EdgeTint");
