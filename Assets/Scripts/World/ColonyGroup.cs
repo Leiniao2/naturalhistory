@@ -94,6 +94,20 @@ namespace NaturalHistory.World
             public bool  undulateInWater;   // eels: the wave slips through the water and never stops
             public float undulatePhase;
             public bool  coils;             // snakes: rest coiled up, uncoil into the wave to travel
+
+            // Jumping (frogs, kangaroos): instead of gliding with its pose, the animal sits still
+            // until the pose has moved on, then leaps in an arc to where the pose will be on landing
+            public bool  jumps;
+            public float jumpLength;        // usual jump, in cells
+            public float jumpTime;          // seconds in the air
+            public float jumpHeight;        // arc height of a full-length jump, in cells
+            public float jumpPause;         // shortest rest between jumps
+            public bool  hopInit;
+            public Vector3 hopAt, hopFrom, hopTo; // world, horizontal: where it sits / the current jump
+            public float hopStart = -1f;    // time the current jump began; < 0 = sitting
+            public float landedAt;
+            public float hopAir;            // 0..1 through the current jump (0 when sitting)
+            public Vector3 poseAt, poseVelocity;
             public Vector4 coilShape;       // _Coil: (coiled 0..1, inner radius, ring spacing, head rise)
 
             // Standing on sloped ground: smoothed tilt that lines the body up with the slope
@@ -157,6 +171,10 @@ namespace NaturalHistory.World
             };
         }
 
+        // Somewhere the group can settle: it can get there and finds food there or next door (see FoodWeb).
+        public bool CanLiveAt(HexCell cell) =>
+            CanEnter(cell) && FoodWeb.HasFood(Definition, cell, SpeciesColonies.Instance, this);
+
         // Moves to a neighbouring tile. Returns false if the group can't go there right now.
         public bool MoveTo(HexCell target) => MoveAlong(new[] { target });
 
@@ -175,6 +193,7 @@ namespace NaturalHistory.World
                 points.Add(new Vector3(offset.x, next.SurfaceHeight, offset.z));
                 prev = next;
             }
+            if (!CanLiveAt(prev)) return false; // passing through is fine, but it has to eat where it stops
 
             var t = new Trip { destination = prev };
             t.legs.Add(MakeLeg(points, TravelSpeed()));
@@ -208,7 +227,7 @@ namespace NaturalHistory.World
         {
             ColonyStyle.Ground => Gait switch
             {
-                ColonyGait.Hop     => 1.1f,
+                ColonyGait.Hop     => Definition != null && Definition.mapLegs == 1 ? 1.1f : 0.7f, // bounding bipeds / frogs, which rest between leaps
                 ColonyGait.Slither => 0.55f,
                 _                  => Mathf.Lerp(0.85f, 0.65f, Mathf.InverseLerp(0.4f, 2.5f, MemberSpan)),
             },
@@ -331,10 +350,72 @@ namespace NaturalHistory.World
                     pos = Vector3.Lerp(pos, tpos, w);
                     rot = Quaternion.Slerp(rot, trot, w);
                 }
+                if (m.jumps) Jump(m, t, dt, ref pos, ref rot);
                 if (onGround) StandOnGround(m, grid, dt, ref pos, ref rot);
                 m.transform.localPosition = pos;
                 m.transform.localRotation = rot;
                 if (m.strideAmplitude > 0f || m.undulateAmplitude > 0f) Locomote(m, dt, w);
+            }
+        }
+
+        // Turns the smooth pose position into jumps: sits until the pose is a jump ahead (or has
+        // stopped somewhere else), then leaps to where the pose will be on landing, nose up on take-off
+        // and down on landing. Works in world space so the group's own motion doesn't drag it along.
+        private void Jump(Member m, float t, float dt, ref Vector3 pos, ref Quaternion rot)
+        {
+            var pose = transform.TransformPoint(new Vector3(pos.x, 0f, pos.z));
+            pose.y = 0f;
+            if (!m.hopInit || (pose - m.hopAt).sqrMagnitude > 4f) // first frame, or the map wrap moved everything
+            {
+                m.hopAt = m.poseAt = pose;
+                m.poseVelocity = Vector3.zero;
+                m.hopStart = -1f;
+                m.hopInit = true;
+            }
+            if (dt > 0f) m.poseVelocity = Vector3.Lerp(m.poseVelocity, (pose - m.poseAt) / dt, 1f - Mathf.Exp(-dt * 6f));
+            m.poseAt = pose;
+
+            var at = m.hopAt;
+            m.hopAir = 0f;
+            if (m.hopStart >= 0f)
+            {
+                float k = (t - m.hopStart) / m.jumpTime;
+                if (k >= 1f)
+                {
+                    m.hopAt = at = m.hopTo;
+                    m.hopStart = -1f;
+                    m.landedAt = t;
+                }
+                else
+                {
+                    m.hopAir = k;
+                    at = Vector3.Lerp(m.hopFrom, m.hopTo, k); // steady speed through the air
+                }
+            }
+            if (m.hopStart < 0f && t - m.landedAt >= m.jumpPause)
+            {
+                var lag   = pose - m.hopAt;
+                float v   = m.poseVelocity.magnitude;
+                bool still = v < 0.02f;
+                // jump once the pose is far enough ahead that the leap (with where it will be by then)
+                // is about one jump long; a pose that has stopped gets one last jump onto it
+                float trigger = Mathf.Max(m.jumpLength - v * m.jumpTime, m.jumpLength * 0.3f);
+                if (lag.magnitude > trigger || still && lag.magnitude > 0.01f)
+                {
+                    m.hopFrom  = m.hopAt;
+                    m.hopTo    = still ? pose : pose + m.poseVelocity * m.jumpTime;
+                    m.hopStart = t;
+                }
+            }
+
+            var local = transform.InverseTransformPoint(at);
+            pos.x = local.x;
+            pos.z = local.z;
+            if (m.hopAir > 0f)
+            {
+                float length = (m.hopTo - m.hopFrom).magnitude;
+                pos.y += m.jumpHeight * Mathf.Min(1f, length / m.jumpLength) * 4f * m.hopAir * (1f - m.hopAir);
+                rot *= Quaternion.Euler(-25f * Mathf.Sin(m.hopAir * Mathf.PI * 2f), 0f, 0f);
             }
         }
 
@@ -377,7 +458,13 @@ namespace NaturalHistory.World
             m.lastPosition    = p;
             m.hasLastPosition = true;
 
-            if (m.strideAmplitude > 0f)
+            if (m.jumps)
+            {
+                // legs kick back and trail through the air, folded under the body while sitting
+                m.block.SetFloat(StrideId, m.strideAmplitude * Mathf.Sin(m.hopAir * Mathf.PI));
+                m.block.SetFloat(StridePhaseId, -Mathf.PI * 0.5f);
+            }
+            else if (m.strideAmplitude > 0f)
             {
                 // one leg cycle per stride (each foot sweeps 2 · legLength · tan(amplitude) while
                 // planted); full stride from about one and a half leg lengths per second
@@ -525,6 +612,7 @@ namespace NaturalHistory.World
                             break;
                         case ColonyGait.Hop:
                         {
+                            if (m.jumps) break; // real jumps instead of a bob (see Jump)
                             float h = Mathf.Sin(step * 0.5f);
                             lift  = Mathf.Abs(h) * 0.22f * k;
                             pitch = -h * 8f * k; // nose up taking off, down on landing
@@ -684,7 +772,7 @@ namespace NaturalHistory.World
             switch (Gait)
             {
                 case ColonyGait.Walk:    lift = Mathf.Abs(Mathf.Cos(step)) * 0.015f * k; roll = Mathf.Sin(step) * 2f * k; break;
-                case ColonyGait.Hop:     lift = Mathf.Abs(Mathf.Sin(step * 0.5f)) * 0.18f * k; break;
+                case ColonyGait.Hop:     if (!m.jumps) lift = Mathf.Abs(Mathf.Sin(step * 0.5f)) * 0.18f * k; break;
                 case ColonyGait.Slither: if (m.undulateAmplitude <= 0f) yaw = Mathf.Sin(step * 0.6f) * 14f; break;
             }
             pos = m.position + Vector3.up * (lift * m.span);

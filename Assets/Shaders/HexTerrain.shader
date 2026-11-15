@@ -146,7 +146,10 @@ Shader "NaturalHistory/HexTerrain"
                 float2 sideUV  = abs(n.x) > abs(n.z) ? p.zy : p.xy;
                 half3  topTex  = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, topUV).rgb;
                 half3  sideTex = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, sideUV * _BaseMap_ST.xy + _BaseMap_ST.zw).rgb;
-                half   topW    = smoothstep(0.3, 0.9, n.y);
+                // On land only true cliffs (steeper than ~65°) turn to rock: the slopes between tiles
+                // of different height (up to ~45°) keep the ground texture, so the land reads as
+                // one continuous surface instead of a band of stones along every big height step.
+                half   topW    = smoothstep(lerp(0.3, 0.25, _Land), lerp(0.9, 0.45, _Land), n.y);
 
                 // Border blending: fade toward the terrain across the nearest edge and, near a corner,
                 // the next edge too. Each neighbour weighs 1 at the border and 0 at _HexBlendWidth in,
@@ -291,7 +294,7 @@ Shader "NaturalHistory/HexTerrain"
         {
             float3 n   = normalize(IN.worldNormal);
             float3 p   = (IN.worldPos - float3(_WrapShift, 0, 0)) * _Tiling;
-            bool   top = n.y > 0.5;
+            bool   top = n.y > (_Land > 0.5 ? 0.35 : 0.5); // land slopes keep the ground texture; only cliffs are rock
 
             float2 uv = top ? p.xz : (abs(n.x) > abs(n.z) ? p.zy : p.xy);
             half3 albedo = tex2D(_BaseMap, uv * _BaseMap_ST.xy + _BaseMap_ST.zw).rgb;

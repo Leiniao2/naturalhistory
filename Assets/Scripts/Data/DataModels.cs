@@ -151,7 +151,9 @@ namespace NaturalHistory.Data
         public string firstAge;       // GeologicalAge name
         public string lastAge;        // GeologicalAge name; empty = extant
         public List<string> habitats; // TerrainKind names
-        public string diet;
+        public string diet;           // Herbivore, Carnivore, Omnivore, Scavenger, Parasite, Filter feeder, Detritivore, Photosynthetic (see World/FoodWeb)
+        public List<string> prey;     // hunters: species ids or groups they eat; "Small animals" = insects, plankton, small fish... found all over their habitat; none = any smaller animal
+        public List<string> hosts;    // parasites: species ids or groups they live on
         public float sizeCm;
         public int startingPopulation;
         public bool playable;

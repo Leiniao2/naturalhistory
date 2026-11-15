@@ -36,7 +36,7 @@ namespace NaturalHistory.World
             [ColonyStyle.Float]  = (4, 0.26f, 0.32f),
             [ColonyStyle.Ground] = (3, 0.34f, 0.30f),
             [ColonyStyle.Soar]   = (3, 0.42f, 0.45f),
-            [ColonyStyle.Swarm]  = (9, 0.11f, 0.22f),
+            [ColonyStyle.Swarm]  = (9, 0.11f, 0.30f),
             [ColonyStyle.Swim]   = (5, 0.26f, 0.32f),
         };
 
@@ -44,6 +44,11 @@ namespace NaturalHistory.World
         // lion; small animals keep their style's minimum size so they stay visible.
         private const float SizeSpanPerSqrtMetre = 0.8f;
         private const float MaxSpan              = 3f;   // in cells
+        // Whatever the real size or framing, nothing is drawn smaller than this, so even a
+        // half-millimetre water bear or a perched kingfisher reads clearly on its tile. Swarms have
+        // many members flying close together, so each can be a little smaller.
+        private const float MinSpan              = 0.32f;
+        private const float MinSwarmSpan         = 0.24f;
         private const float ReserveSpan          = 0.9f; // bigger than this: keep neighbouring tiles free
 
         private const float SoarHeight  = 0.75f;
@@ -158,7 +163,8 @@ namespace NaturalHistory.World
             if (g.CanMove && !g.IsBusy) Select(g);
         }
 
-        // Marks the tiles the group can go to: green to move, red to attack another group there.
+        // Marks the tiles the group can go to: green to move (only where it would find food), red to
+        // attack another group there.
         private void Select(ColonyGroup group)
         {
             foreach (var c in marked) if (c != null) c.SetGroupTarget(HexCell.GroupTarget.None);
@@ -167,7 +173,7 @@ namespace NaturalHistory.World
             if (group == null) return;
             foreach (var n in grid.GetNeighbors(group.Cell))
             {
-                if (!group.CanEnter(n)) continue;
+                if (!group.CanEnter(n) || GroupAt(n) == null && !group.CanLiveAt(n)) continue;
                 marked.Add(n);
                 n.SetGroupTarget(GroupAt(n) != null ? HexCell.GroupTarget.Attack : HexCell.GroupTarget.Move);
             }
@@ -186,14 +192,17 @@ namespace NaturalHistory.World
             var rng  = new System.Random(grid.WorldSeed ^ 0x5eed ^ ((int)age * 7919));
             var used = new HashSet<HexCell>();
 
-            foreach (var def in GameDataLoader.Species)
+            // food first, then what eats it (see FoodWeb), so hunters can be placed next to their prey
+            var order = new List<SpeciesDefinition>(GameDataLoader.Species);
+            order.Sort((a, b) => FoodWeb.Stage(a) != FoodWeb.Stage(b) ? FoodWeb.Stage(a).CompareTo(FoodWeb.Stage(b)) : a.sizeCm.CompareTo(b.sizeCm));
+            foreach (var def in order)
             {
                 if (string.IsNullOrEmpty(def.model) || !AliveIn(def, age)) continue;
                 var mesh = LoadMesh(def.model);
                 if (mesh == null) { Debug.LogWarning($"[SpeciesColonies] No mesh at Resources/{def.model} for {def.id}."); continue; }
                 if (!System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style)) style = ColonyStyle.Drift;
                 var cell = FindHabitatCell(def, used, rng);
-                if (cell == null) { Debug.Log($"[SpeciesColonies] No habitat tile for {def.id}; skipping."); continue; }
+                if (cell == null) { Debug.Log($"[SpeciesColonies] No habitat tile with food for {def.id}; skipping."); continue; }
                 used.Add(cell);
                 // big animals spill over onto the neighbouring tiles; keep other colonies off them
                 if (BuildColony(cell, def, mesh, style, rng) > ReserveSpan)
@@ -229,6 +238,16 @@ namespace NaturalHistory.World
             return group;
         }
 
+        // Removes a group from the map (a copy that evolved, or a player's groups replaced on loading).
+        public void DespawnColony(ColonyGroup group)
+        {
+            if (group == null) return;
+            if (selected == group) Select(null);
+            if (group.Cell != null && occupants.TryGetValue(group.Cell, out var g) && g == group) occupants.Remove(group.Cell);
+            groups.Remove(group);
+            Destroy(group.gameObject);
+        }
+
         // firstAge..lastAge inclusive; an empty or unknown firstAge counts as always, an empty lastAge as still alive.
         private static bool AliveIn(SpeciesDefinition def, GeologicalAge age)
         {
@@ -244,8 +263,9 @@ namespace NaturalHistory.World
             return filter != null ? filter.sharedMesh : null;
         }
 
-        // A random tile among the habitat tiles closest to the map centre, where the camera starts.
-        // Tiles that already carry a reef, forest or oasis prop, or another species, are a last resort.
+        // A random tile among the free habitat tiles with food (see FoodWeb) closest to the map centre,
+        // where the camera starts. Tiles that carry a reef, forest or oasis prop, or that a big
+        // neighbouring animal spills onto, are a last resort.
         // Habitats name present-day terrain, so a tile also matches by the biome its climate makes
         // today (a Cretaceous fern prairie is where the plains will be).
         private HexCell FindHabitatCell(SpeciesDefinition def, HashSet<HexCell> used, System.Random rng)
@@ -259,6 +279,7 @@ namespace NaturalHistory.World
                 if (cell == null || cell.Terrain == null || cell.IsMountain) continue;
                 if (def.habitats == null) continue;
                 if (!def.habitats.Contains(cell.Terrain.kind.ToString()) && !def.habitats.Contains(cell.Biome.ToString())) continue;
+                if (occupants.ContainsKey(cell) || !FoodWeb.HasFood(def, cell, this, null)) continue;
                 float dist = Vector2.Distance(new Vector2(q, r), center);
                 if (cell.Feature != TerrainFeature.None) dist += 1000f;
                 if (used.Contains(cell)) dist += 2000f;
@@ -278,6 +299,7 @@ namespace NaturalHistory.World
             float sizeSpan = SizeSpanPerSqrtMetre * Mathf.Sqrt(Mathf.Max(def.sizeCm, 0f) / 100f);
             memberSpan = Mathf.Min(Mathf.Max(memberSpan, sizeSpan), MaxSpan);
             if (def.mapScale > 0f) memberSpan *= def.mapScale; // per-model framing (tall perch, wide web...)
+            memberSpan = Mathf.Max(memberSpan, style == ColonyStyle.Swarm ? MinSwarmSpan : MinSpan);
             // a snake rests coiled up (see ColonyGroup), so it takes the room of its coil, not its length
             bool coiled = style == ColonyStyle.Ground && string.Equals(def.mapGait, "Slither", System.StringComparison.OrdinalIgnoreCase);
             float footprint = coiled ? memberSpan * 0.3f : memberSpan;
@@ -381,6 +403,17 @@ namespace NaturalHistory.World
                     block.SetVector(StrideLegsId, new Vector4(hipY, hipY - b.min.y, b.min.z, b.max.z));
                     block.SetVector(StrideModeId, new Vector4(def.mapLegs > 0 ? def.mapLegs : 2, gait == ColonyGait.Hop ? 1f : 0f, 0f, 0f));
                     member.strideAmplitude = gait == ColonyGait.Hop ? HopStride : WalkStride;
+                    if (gait == ColonyGait.Hop)
+                    {
+                        // two-legged hoppers (kangaroos) bound along with hardly a pause; frogs and
+                        // toads sit between long, high leaps
+                        bool bounds = def.mapLegs == 1;
+                        member.jumps      = true;
+                        member.jumpLength = Mathf.Max(span * (bounds ? 0.9f : 1.2f), 0.12f);
+                        member.jumpTime   = bounds ? 0.42f : 0.32f;
+                        member.jumpHeight = member.jumpLength * (bounds ? 0.25f : 0.45f);
+                        member.jumpPause  = bounds ? 0f : 0.25f;
+                    }
                     member.legLength       = (hipY - b.min.y) * (span / meshSpan);
                 }
                 if (style == ColonyStyle.Ground && gait == ColonyGait.Slither || def.mapUndulate)

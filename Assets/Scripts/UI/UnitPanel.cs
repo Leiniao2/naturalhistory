@@ -1,0 +1,93 @@
+using System;
+using System.Linq;
+using NaturalHistory.Data;
+using NaturalHistory.Evolution;
+using NaturalHistory.Progression;
+using NaturalHistory.World;
+using UnityEngine.UIElements;
+
+namespace NaturalHistory.UI
+{
+    // Bottom-centre card for the selected animal group of the human player: portrait, species,
+    // and its actions: open the species' Functions / Behaviors trees, reproduce, evolve (opens the
+    // Zoology panel on this copy).
+    public class UnitPanel
+    {
+        private readonly VisualElement panel, portrait;
+        private readonly Label nameLabel, detailLabel;
+        private readonly Button reproduceButton, evolveButton;
+
+        public OwnedCopy Copy { get; private set; }
+
+        public event Action<ProgressionTree> OpenTree;
+        public event Action<OwnedCopy> OpenEvolve;
+        public event Action<string> Message;
+
+        private static EvolutionManager Evolution => EvolutionManager.Instance;
+
+        public UnitPanel(VisualElement root)
+        {
+            panel           = root.Q("unit-panel");
+            portrait        = root.Q("unit-portrait");
+            nameLabel       = root.Q<Label>("unit-name");
+            detailLabel     = root.Q<Label>("unit-detail");
+            reproduceButton = root.Q<Button>("unit-reproduce");
+            evolveButton    = root.Q<Button>("unit-evolve");
+
+            root.Q<Button>("unit-functions").clicked += () => ShowTree(ProgressionManager.Instance?.Morphology);
+            root.Q<Button>("unit-behaviors").clicked += () => ShowTree(ProgressionManager.Instance?.Ethology);
+            reproduceButton.clicked += OnReproduce;
+            evolveButton.clicked    += () => { if (Copy != null) OpenEvolve?.Invoke(Copy); };
+        }
+
+        // Polled every frame: follows the group selected on the map
+        public void Update()
+        {
+            var group = SpeciesColonies.Instance != null ? SpeciesColonies.Instance.Selected : null;
+            var copy  = group != null && group.Owner != null && group.Owner.IsHuman && Evolution != null ? Evolution.CopyOf(group) : null;
+            if (copy != Copy)
+            {
+                Copy = copy;
+                panel.EnableInClassList("hidden", copy == null);
+                if (copy != null) Evolution.Focus(copy.species); // the trees follow the selected animal
+            }
+            if (Copy != null) Refresh();
+        }
+
+        private void Refresh()
+        {
+            var def = GameDataLoader.GetSpecies(Copy.species);
+            if (def == null) return;
+            var tex = SpeciesPortraits.Get(def);
+            portrait.style.backgroundImage = tex is UnityEngine.RenderTexture rt ? Background.FromRenderTexture(rt) : new StyleBackground(StyleKeyword.None);
+            nameLabel.text = def.commonName;
+
+            var mine  = Evolution.CopiesOf(Copy.group.Owner).Where(c => c.species == Copy.species).ToList();
+            int wait  = Evolution.TurnsUntilReproduce(Copy);
+            int ready = EvolutionData.From(Copy.species).Count(l => Evolution.CanEvolve(l, Copy));
+            int total = EvolutionData.From(Copy.species).Count();
+            var breed = wait > 0 ? $"reproduce in {wait} turn{(wait == 1 ? "" : "s")}"
+                      : Evolution.ReproduceCell(Copy) == null ? "no room to reproduce" : "can reproduce";
+            var evolve = total == 0 ? "no known descendants" : ready > 0 ? $"{ready} evolution{(ready == 1 ? "" : "s")} ready" : $"{total} possible evolution{(total == 1 ? "" : "s")}";
+            detailLabel.text = $"{def.scientificName}  ·  {mine.Count} cop{(mine.Count == 1 ? "y" : "ies")}\n{breed}  ·  {evolve}";
+
+            reproduceButton.SetEnabled(wait == 0 && Evolution.ReproduceCell(Copy) != null);
+            evolveButton.EnableInClassList("ready", ready > 0);
+            evolveButton.SetEnabled(total > 0);
+        }
+
+        private void ShowTree(ProgressionTree tree)
+        {
+            if (Copy == null || tree == null) return;
+            Evolution.Focus(Copy.species);
+            OpenTree?.Invoke(tree);
+        }
+
+        private void OnReproduce()
+        {
+            if (Copy == null) return;
+            Evolution.Reproduce(Copy, out var message);
+            if (message != null) Message?.Invoke(message);
+        }
+    }
+}

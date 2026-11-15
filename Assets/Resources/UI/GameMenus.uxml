@@ -6,8 +6,9 @@
         <!-- Top-right HUD -->
         <ui:VisualElement name="top-bar" class="top-bar" picking-mode="Ignore">
             <ui:Label name="ep-label" class="ep-label" text="EP 0" />
-            <ui:Button name="morphology-button" class="hud-button" text="Morphology" />
-            <ui:Button name="ethology-button" class="hud-button" text="Ethology" />
+            <ui:Button name="morphology-button" class="hud-button" text="Functions" />
+            <ui:Button name="ethology-button" class="hud-button" text="Behaviors" />
+            <ui:Button name="zoology-button" class="hud-button" text="Zoology" />
             <ui:Button name="menu-button" class="hud-button" text="Menu" />
         </ui:VisualElement>
 
@@ -41,6 +42,21 @@
             <ui:Label name="tile-title" class="info-title" text="Tile" />
             <ui:Label name="tile-zone" class="info-zone" text="" />
             <ui:Label name="tile-stats" class="info-stats" text="" />
+        </ui:VisualElement>
+
+        <!-- Selected animal of yours: species, and what it can do -->
+        <ui:VisualElement name="unit-panel" class="unit-panel hidden">
+            <ui:VisualElement name="unit-portrait" class="species-portrait unit-portrait" />
+            <ui:VisualElement class="unit-info">
+                <ui:Label name="unit-name" class="unit-name" text="" />
+                <ui:Label name="unit-detail" class="unit-detail" text="" />
+                <ui:VisualElement class="unit-actions">
+                    <ui:Button name="unit-functions" class="unit-button" text="Functions" />
+                    <ui:Button name="unit-behaviors" class="unit-button" text="Behaviors" />
+                    <ui:Button name="unit-reproduce" class="unit-button" text="Reproduce" />
+                    <ui:Button name="unit-evolve" class="unit-button unit-evolve" text="Evolve" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
 
         <!-- Geologic timeline: all periods, details of the selected one -->
@@ -86,11 +102,16 @@
             </ui:VisualElement>
         </ui:VisualElement>
 
-        <!-- Morphology / Ethology tree -->
+        <!-- Functions (morphology) / Behaviors (ethology) tree of the focused species -->
         <ui:VisualElement name="tree-overlay" class="overlay hidden">
             <ui:VisualElement class="panel tree-panel">
                 <ui:VisualElement class="tree-header">
-                    <ui:Label name="tree-title" class="panel-title tree-title" text="Morphology" />
+                    <ui:Label name="tree-title" class="panel-title tree-title" text="Functions" />
+                    <!-- Whose trees these are: centred over the header -->
+                    <ui:VisualElement name="tree-species" class="tree-species" picking-mode="Ignore">
+                        <ui:VisualElement name="tree-species-portrait" class="species-portrait tree-species-portrait" picking-mode="Ignore" />
+                        <ui:Label name="tree-species-name" class="tree-species-name" text="" picking-mode="Ignore" />
+                    </ui:VisualElement>
                     <ui:Label name="tree-progress" class="tree-progress" text="" />
                     <ui:Label name="tree-ep-label" class="ep-label" text="EP 0" />
                     <ui:Button name="tree-close-button" class="close-button" text="✕" />
@@ -108,7 +129,7 @@
                         <ui:Label name="details-description" class="details-description" text="" />
                         <ui:Label name="details-meta" class="details-meta" text="" />
                     </ui:VisualElement>
-                    <ui:Button name="evolve-button" class="evolve-button" text="Evolve" />
+                    <ui:Button name="evolve-button" class="evolve-button" text="Acquire" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
@@ -145,6 +166,29 @@
                 <ui:VisualElement class="setup-actions">
                     <ui:Button name="setup-back-button" class="menu-button setup-action" text="Back" />
                     <ui:Button name="setup-start-button" class="menu-button setup-action start" text="Start" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Zoology: the evolution tree and what each step requires -->
+        <ui:VisualElement name="zoology-overlay" class="overlay hidden">
+            <ui:VisualElement class="panel tree-panel">
+                <ui:VisualElement class="tree-header">
+                    <ui:Label class="panel-title tree-title" text="Zoology" />
+                    <ui:Label name="zoology-subtitle" class="tree-progress" text="" />
+                    <ui:Button name="zoology-close-button" class="close-button" text="✕" />
+                </ui:VisualElement>
+                <ui:VisualElement class="zoology-body">
+                    <ui:ScrollView name="zoology-scroll" class="tree-scroll" mode="VerticalAndHorizontal">
+                        <ui:VisualElement name="zoology-canvas" class="tree-canvas" />
+                    </ui:ScrollView>
+                    <ui:ScrollView class="zoology-details">
+                        <ui:VisualElement name="zoology-portrait" class="species-portrait zoology-portrait" />
+                        <ui:Label name="zoology-name" class="age-name" text="" />
+                        <ui:Label name="zoology-meta" class="age-range" text="" />
+                        <ui:Label name="zoology-description" class="age-description" text="" />
+                        <ui:VisualElement name="zoology-links" class="zoology-links" />
+                    </ui:ScrollView>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NaturalHistory.Data;
+using NaturalHistory.Evolution;
 using NaturalHistory.Players;
 using NaturalHistory.World;
 using UnityEngine;
@@ -133,6 +134,17 @@ namespace NaturalHistory.Territory
             }
             if (colonies == null || GameDataLoader.Species == null) return;
 
+            // Once founded, a player's copies (more after reproducing, other species after evolving)
+            // are kept by EvolutionManager, which puts them back after the map's groups are rebuilt
+            var evolution = EvolutionManager.Instance;
+            if (evolution != null && evolution.HasCopies(player))
+            {
+                foreach (var g in evolution.Respawn(player, core)) g.Arrived += OnColonyArrived;
+                var any = colonies.Groups.FirstOrDefault(g => g != null && g.Owner?.Index == player.Index);
+                if (any != null) playerColonies[player.Index] = any;
+                return;
+            }
+
             // Back where it was if that tile is still there, otherwise on the core around the center
             // (the center itself holds the player's banner or ball).
             var cells = new List<HexCell>();
@@ -150,15 +162,16 @@ namespace NaturalHistory.Territory
             foreach (var cell in cells)
             {
                 if (cell == null || colonies.GroupAt(cell) != null) continue;
-                var fits = alive.Where(d => SpeciesColonies.FitsHabitat(d, cell)).ToList();
+                var fits = alive.Where(d => SpeciesColonies.FitsHabitat(d, cell) && FoodWeb.HasFood(d, cell, colonies, null)).ToList();
                 if (fits.Count == 0) continue;
 
                 // Keep the same species if it still fits; else prefer playable species no other
-                // player has, picking at random among the best.
+                // player has and that can evolve further, picking at random among the best.
                 var def = fits.FirstOrDefault(d => d.id == previous);
                 if (def == null)
                 {
-                    int Rank(SpeciesDefinition d) => (otherSpecies.Contains(d.id) ? 2 : 0) + (d.playable ? 0 : 1);
+                    int Rank(SpeciesDefinition d) => (otherSpecies.Contains(d.id) ? 4 : 0) + (d.playable ? 0 : 2) +
+                                                     (EvolutionData.From(d.id).Any() ? 0 : 1);
                     int best = fits.Min(Rank);
                     var top = fits.Where(d => Rank(d) == best).ToList();
                     def = top[rng.Next(top.Count)];
@@ -170,6 +183,7 @@ namespace NaturalHistory.Territory
                 lastColonyCell[player.Index]    = cell;
                 lastColonySpecies[player.Index] = def.id;
                 group.Arrived += OnColonyArrived;
+                evolution?.RegisterFounder(player, group);
                 return;
             }
             Debug.Log($"[TerritoryManager] No species fits the habitat center of {player.Name}; it starts without a colony.");
@@ -183,6 +197,9 @@ namespace NaturalHistory.Territory
         }
 
         // ---------- Territory ----------
+
+        // Re-claims territory after colonies appeared or changed outside a move (reproducing, evolving)
+        public void Refresh() => RecomputeTerritory();
 
         private void RecomputeTerritory()
         {

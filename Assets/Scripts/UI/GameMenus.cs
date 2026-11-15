@@ -1,6 +1,7 @@
 using NaturalHistory.Climate;
 using NaturalHistory.Core;
 using NaturalHistory.Data;
+using NaturalHistory.Evolution;
 using NaturalHistory.Players;
 using NaturalHistory.Progression;
 using NaturalHistory.Save;
@@ -11,7 +12,7 @@ using UnityEngine.UIElements;
 namespace NaturalHistory.UI
 {
     // In-game UI Toolkit menus: HUD buttons, pause menu (Esc), save/load slots and the
-    // Morphology / Ethology tree panels. Layout: Resources/UI/GameMenus.uxml, styles: GameMenusStyle.uss.
+    // Functions / Behaviors tree panels, the selected animal's card and the Zoology (evolution) panel. Layout: Resources/UI/GameMenus.uxml, styles: GameMenusStyle.uss.
     public class GameMenus : MonoBehaviour
     {
         private UIDocument document;
@@ -22,6 +23,8 @@ namespace NaturalHistory.UI
         private ClimateHud climateHud;
         private PlayersPanel playersPanel;
         private AdminPanel adminPanel;
+        private UnitPanel unitPanel;
+        private ZoologyPanel zoologyPanel;
         private bool slotsAreForSaving;
         private float toastHideTime;
         private int toastFrame = -1;
@@ -76,11 +79,18 @@ namespace NaturalHistory.UI
             climateHud   = new ClimateHud(root);
             playersPanel = new PlayersPanel(root);
             adminPanel   = new AdminPanel(root);
+            unitPanel    = new UnitPanel(root);
+            zoologyPanel = new ZoologyPanel(root);
+            unitPanel.OpenTree   += tree => { CloseSidePanels(); treePanel.Open(tree); };
+            unitPanel.OpenEvolve += copy => { CloseSidePanels(); zoologyPanel.Open(copy); };
+            unitPanel.Message    += ShowToast;
+            zoologyPanel.Message += ShowToast;
             playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast("New game started"); };
             playersPanel.SetupClosed    += () => pauseOverlay.RemoveFromClassList("hidden");
 
             root.Q<Button>("morphology-button").clicked += () => ToggleTree(Progression?.Morphology);
             root.Q<Button>("ethology-button").clicked   += () => ToggleTree(Progression?.Ethology);
+            root.Q<Button>("zoology-button").clicked    += ToggleZoology;
             root.Q<Button>("menu-button").clicked       += () => SetPauseOpen(true);
             root.Q<Button>("resume-button").clicked     += () => SetPauseOpen(false);
             root.Q<Button>("new-game-button").clicked   += OpenNewGame;
@@ -94,6 +104,7 @@ namespace NaturalHistory.UI
             cameraController = FindAnyObjectByType<CameraController>();
 
             if (Progression != null) Progression.Changed += OnProgressionChanged;
+            if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed += OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated += OnClimateUpdated;
             if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition += OnAgeTransition;
             if (PlayerManager.Instance != null)
@@ -109,6 +120,7 @@ namespace NaturalHistory.UI
         private void OnDestroy()
         {
             if (Progression != null) Progression.Changed -= OnProgressionChanged;
+            if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed -= OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated -= OnClimateUpdated;
             if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition -= OnAgeTransition;
             if (PlayerManager.Instance != null)
@@ -136,6 +148,7 @@ namespace NaturalHistory.UI
         private void OnAgeTransition(GeologicalAge from, GeologicalAge to)
         {
             treePanel.Close();
+            zoologyPanel.Close();
             playersPanel.CloseFaction();
             agePanel.Open(newAge: true);
         }
@@ -144,6 +157,7 @@ namespace NaturalHistory.UI
         {
             if (agePanel.IsOpen) { agePanel.Close(); return; }
             treePanel.Close();
+            zoologyPanel.Close();
             playersPanel.CloseFaction();
             agePanel.Open();
         }
@@ -157,6 +171,7 @@ namespace NaturalHistory.UI
             if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !AnyModalOpen())
                 ClimateHud.EndTurn();
             climateHud.RefreshTile();
+            unitPanel.Update();
             if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)
             {
                 toast.AddToClassList("hidden");
@@ -171,6 +186,7 @@ namespace NaturalHistory.UI
             if (IsOpen(slotsOverlay))  CloseSlots();
             else if (playersPanel.SetupOpen) { playersPanel.CloseSetup(); pauseOverlay.RemoveFromClassList("hidden"); }
             else if (playersPanel.FactionOpen) playersPanel.CloseFaction();
+            else if (zoologyPanel.IsOpen) zoologyPanel.Close();
             else if (treePanel.IsOpen) treePanel.Close();
             else if (agePanel.IsOpen)  agePanel.Close();
             else SetPauseOpen(!IsOpen(pauseOverlay));
@@ -188,7 +204,7 @@ namespace NaturalHistory.UI
             if (cameraController != null) cameraController.enabled = !modal; // keep edge/WASD panning near the HUD
         }
 
-        private bool AnyModalOpen() => IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen
+        private bool AnyModalOpen() => IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen
                                        || playersPanel.FactionOpen || playersPanel.SetupOpen;
 
         private bool PointerOverUI()
@@ -204,13 +220,31 @@ namespace NaturalHistory.UI
         {
             if (epLabel != null && Progression != null) epLabel.text = $"EP {Progression.EvolutionPoints}";
             if (treePanel != null && treePanel.IsOpen) treePanel.Refresh();
+            if (zoologyPanel != null && zoologyPanel.IsOpen) zoologyPanel.Refresh();
         }
 
         // ---------- Trees ----------
 
+        // Panels that replace each other in the middle of the screen
+        private void CloseSidePanels()
+        {
+            treePanel.Close();
+            agePanel.Close();
+            zoologyPanel.Close();
+            playersPanel.CloseFaction();
+        }
+
+        private void ToggleZoology()
+        {
+            if (zoologyPanel.IsOpen) { zoologyPanel.Close(); return; }
+            CloseSidePanels();
+            zoologyPanel.Open();
+        }
+
         private void ToggleTree(ProgressionTree tree)
         {
             if (tree == null) return;
+            zoologyPanel.Close();
             agePanel.Close();
             playersPanel.CloseFaction();
             if (treePanel.IsOpen && treePanel.CurrentTree == tree) treePanel.Close();
@@ -221,7 +255,7 @@ namespace NaturalHistory.UI
 
         private void SetPauseOpen(bool open)
         {
-            if (open) { treePanel.Close(); agePanel.Close(); playersPanel.CloseFaction(); }
+            if (open) CloseSidePanels();
             pauseOverlay.EnableInClassList("hidden", !open);
             if (!open) { slotsOverlay.AddToClassList("hidden"); playersPanel.CloseSetup(); }
         }

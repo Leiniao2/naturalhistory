@@ -14,7 +14,7 @@ export const KINGDOMS = ['Animalia', 'Plantae', 'Fungi', 'Protista'];
 // ColonyStyle enum (Assets/Scripts/World/SpeciesColonies.cs)
 export const MAP_STYLES = ['Drift', 'Fixed', 'Float', 'Ground', 'Soar', 'Swarm', 'Swim'];
 export const MAP_GAITS = ['Walk', 'Hop', 'Slither'];
-export const DIETS = ['Carnivore', 'Herbivore', 'Omnivore', 'Filter feeder', 'Detritivore', 'Photosynthetic'];
+export const DIETS = ['Carnivore', 'Herbivore', 'Omnivore', 'Scavenger', 'Parasite', 'Filter feeder', 'Detritivore', 'Photosynthetic'];
 export const ERAS = ['Paleozoic', 'Mesozoic', 'Cenozoic'];
 export const FACTION_CATEGORIES = ['Modern realm', 'Paleocontinent', 'Ancient ocean'];
 
@@ -224,6 +224,8 @@ export const DATASETS = {
       { key: 'lastAge', label: 'Last appears', type: 'enum', options: (all) => [{ value: '', label: '— still alive today —' }, ...ageOptions(all)] },
       { key: 'habitats', label: 'Habitats', type: 'multienum', options: TERRAINS.map(t => ({ value: t, label: t })) },
       { key: 'diet', label: 'Diet', type: 'enum', options: DIETS.map(d => ({ value: d, label: d })) },
+      { key: 'prey', label: 'Prey', type: 'list', help: 'Carnivores/omnivores: species ids or groups it eats, one per line. "Small animals" = insects, plankton, small fish… found all over its habitat. Empty = any smaller animal. It can only live on or next to a tile with its prey.' },
+      { key: 'hosts', label: 'Hosts', type: 'list', help: 'Parasites: species ids or groups it lives on, one per line. It can only live on the same tile as a host.' },
       { key: 'sizeCm', label: 'Body length (cm)', type: 'number', min: 0, step: 0.5 },
       { key: 'startingPopulation', label: 'Starting population', type: 'int', min: 0 },
       { key: 'playable', label: 'Playable', type: 'bool' },

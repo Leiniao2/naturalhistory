@@ -7,7 +7,8 @@ using UnityEngine.UIElements;
 
 namespace NaturalHistory.UI
 {
-    // Draws a ProgressionTree (Morphology or Ethology) in a near full-screen panel: one tab per
+    // Draws a ProgressionTree (Functions or Behaviors) of the focused species, whose name and portrait
+    // sit at the top centre, in a near full-screen panel: one tab per
     // branch (Nervous System, Hunting, …), the branch's nodes in columns joined by prerequisite
     // curves, and a details strip with an Evolve button underneath. Prerequisites in another branch
     // are listed on the node instead of drawn.
@@ -23,7 +24,8 @@ namespace NaturalHistory.UI
         private static readonly Color LineLocked   = new(0.40f, 0.42f, 0.40f);
 
         private readonly VisualElement overlay;
-        private readonly Label title, epLabel, detailsName, detailsDescription, detailsMeta;
+        private readonly Label title, epLabel, detailsName, detailsDescription, detailsMeta, speciesName;
+        private readonly VisualElement speciesPortrait;
         private readonly VisualElement canvas, branchTabs;
         private readonly Label progressLabel;
         private readonly Dictionary<string, Button> tabViews = new();
@@ -53,6 +55,8 @@ namespace NaturalHistory.UI
             detailsDescription = root.Q<Label>("details-description");
             detailsMeta        = root.Q<Label>("details-meta");
             evolveButton       = root.Q<Button>("evolve-button");
+            speciesName        = root.Q<Label>("tree-species-name");
+            speciesPortrait    = root.Q("tree-species-portrait");
 
             root.Q<Button>("tree-close-button").clicked += Close;
             evolveButton.clicked += OnEvolveClicked;
@@ -81,7 +85,12 @@ namespace NaturalHistory.UI
             if (tree == null || Progression == null) return;
             title.text   = tree.DisplayName;
             epLabel.text = $"EP {Progression.EvolutionPoints}";
-            progressLabel.text = $"{tree.UnlockedIds.Count()} / {tree.Nodes.Count} evolved";
+            var species = Progression.Species;
+            speciesName.text = species != null ? species.commonName : "No species";
+            speciesPortrait.style.backgroundImage = SpeciesPortraits.Get(species) is RenderTexture rt
+                ? Background.FromRenderTexture(rt) : new StyleBackground(StyleKeyword.None);
+            int acquirable = tree.Nodes.Count(n => Progression.CanAcquire(tree, n));
+            progressLabel.text = $"{tree.Nodes.Count(n => tree.IsUnlocked(n.id))} / {acquirable} acquired";
             RefreshTabs();
 
             foreach (var node in tree.Nodes)
@@ -91,8 +100,14 @@ namespace NaturalHistory.UI
                 view.EnableInClassList("unlocked",  state == NodeState.Unlocked);
                 view.EnableInClassList("available", state == NodeState.Available);
                 view.EnableInClassList("locked",    state == NodeState.Locked);
+                view.EnableInClassList("unavailable", state == NodeState.Unavailable);
                 view.EnableInClassList("selected",  node == selected);
-                view.Q<Label>(className: "node-cost").text = state == NodeState.Unlocked ? "Evolved" : $"{node.cost} EP · {node.age}";
+                view.Q<Label>(className: "node-cost").text = state switch
+                {
+                    NodeState.Unlocked    => "Acquired",
+                    NodeState.Unavailable => "Not for this species",
+                    _                     => $"{node.cost} EP · {node.age}",
+                };
             }
             lines.MarkDirtyRepaint();
             RefreshDetails();
@@ -132,7 +147,7 @@ namespace NaturalHistory.UI
             foreach (var b in tree.Branches)
             {
                 if (!tabViews.TryGetValue(b.id, out var tab)) continue;
-                var members = tree.Nodes.Where(n => n.branch == b.id).ToList();
+                var members = tree.Nodes.Where(n => n.branch == b.id && Progression.CanAcquire(tree, n)).ToList();
                 tab.Q<Label>(className: "branch-tab-count").text = $"{members.Count(n => tree.IsUnlocked(n.id))}/{members.Count}";
                 tab.EnableInClassList("selected", b.id == branch);
                 tab.EnableInClassList("has-available", members.Any(n => Progression.UnlockBlocker(tree, n) == null));
@@ -218,8 +233,8 @@ namespace NaturalHistory.UI
         {
             if (selected == null)
             {
-                detailsName.text        = "Select a trait";
-                detailsDescription.text = "Click a node to see details. Double-click to evolve it. Tabs above switch between branches.";
+                detailsName.text        = "Select an item";
+                detailsDescription.text = "Click an item to see details. Double-click to acquire it. Tabs above switch between branches. Greyed-out items aren't in this species' trees.";
                 detailsMeta.text        = "";
                 evolveButton.SetEnabled(false);
                 return;

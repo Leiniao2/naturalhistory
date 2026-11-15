@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NaturalHistory.Core;
+using NaturalHistory.Evolution;
 using NaturalHistory.Players;
 using NaturalHistory.Progression;
 using NaturalHistory.World;
@@ -33,8 +34,14 @@ namespace NaturalHistory.Save
         public string age;                 // GeologicalAge name (informational; restored from turn)
 
         public int evolutionPoints;
-        public List<string> morphology = new();
+        public List<string> morphology = new(); // focused species' items (saves before per-species trees: the only ones)
         public List<string> ethology   = new();
+
+        // Evolution (see EvolutionManager); empty in older saves
+        public List<SpeciesTraitsSave> speciesTraits = new();
+        public List<CopySave> copies = new();
+        public List<string> evolved = new();    // "from>to" links the human player has used
+        public string focusSpecies;
 
         public DateTime SavedAt => DateTime.TryParse(savedAtUtc, null, System.Globalization.DateTimeStyles.RoundtripKind, out var t) ? t.ToLocalTime() : DateTime.MinValue;
     }
@@ -136,6 +143,7 @@ namespace NaturalHistory.Save
                 data.morphology = progression.Morphology.UnlockedIds.ToList();
                 data.ethology   = progression.Ethology.UnlockedIds.ToList();
             }
+            EvolutionManager.Instance?.Capture(data);
             return data;
         }
 
@@ -160,6 +168,7 @@ namespace NaturalHistory.Save
                 TurnManager.Instance.Restore(data.turn);
 
             ProgressionManager.Instance?.Restore(data.evolutionPoints, data.morphology, data.ethology);
+            EvolutionManager.Instance?.Restore(data); // after the map: puts the copies back on it
         }
     }
 }

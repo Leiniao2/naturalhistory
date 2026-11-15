@@ -870,3 +870,220 @@
     background-color: rgba(28, 36, 30, 0.92);
     border-radius: 8px;
 }
+
+/* ---------- Species portraits (SpeciesPortraits renders them from the map models) ---------- */
+
+.species-portrait {
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Tree header: whose Functions / Behaviors these are, centred */
+.tree-species {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tree-species-portrait {
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+}
+
+.tree-species-name {
+    font-size: 24px;
+    -unity-font-style: bold;
+    color: rgb(240, 210, 110);
+}
+
+.tree-node.unavailable {
+    opacity: 0.25;
+}
+
+/* ---------- Selected animal ---------- */
+
+.unit-panel {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    translate: -50% 0;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: rgba(28, 36, 30, 0.92);
+    border-color: rgb(110, 130, 100);
+    border-width: 1px;
+    border-radius: 8px;
+}
+
+.unit-portrait {
+    width: 96px;
+    height: 96px;
+    margin-right: 14px;
+}
+
+.unit-name {
+    font-size: 22px;
+    -unity-font-style: bold;
+    color: rgb(240, 236, 220);
+}
+
+.unit-detail {
+    font-size: 14px;
+    color: rgb(190, 198, 182);
+    margin-bottom: 6px;
+}
+
+.unit-actions {
+    flex-direction: row;
+}
+
+.unit-button {
+    height: 36px;
+    min-width: 104px;
+    margin: 0 6px 0 0;
+    font-size: 15px;
+    color: rgb(235, 232, 220);
+    background-color: rgb(52, 66, 54);
+    border-width: 0;
+    border-radius: 6px;
+}
+
+.unit-button:hover {
+    background-color: rgb(76, 98, 78);
+}
+
+.unit-button:disabled {
+    opacity: 0.4;
+}
+
+.unit-evolve.ready {
+    background-color: rgb(150, 112, 30);
+    color: rgb(255, 245, 210);
+}
+
+/* ---------- Zoology ---------- */
+
+.zoology-body {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.zoology-details {
+    width: 420px;
+    margin-left: 12px;
+    padding: 10px 14px;
+    background-color: rgb(40, 50, 42);
+    border-radius: 6px;
+}
+
+.zoology-portrait {
+    width: 160px;
+    height: 160px;
+    align-self: center;
+    margin-bottom: 8px;
+}
+
+.zoology-node {
+    position: absolute;
+    width: 200px;
+    height: 76px;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px 4px 4px;
+    border-width: 2px;
+    border-radius: 8px;
+    background-color: rgb(46, 50, 48);
+    border-color: rgb(80, 86, 82);
+}
+
+.zoology-node:hover {
+    border-color: rgb(230, 230, 230);
+}
+
+.zoology-node.selected {
+    border-color: rgb(255, 255, 255);
+    border-width: 3px;
+}
+
+.zoology-node.owned {
+    background-color: rgb(52, 104, 62);
+    border-color: rgb(110, 180, 110);
+}
+
+.zoology-node.ready {
+    background-color: rgb(78, 70, 36);
+    border-color: rgb(230, 190, 80);
+}
+
+.zoology-node-portrait {
+    width: 64px;
+    height: 64px;
+    margin-right: 8px;
+}
+
+.zoology-node-text {
+    flex-shrink: 1;
+}
+
+.zoology-from {
+    font-size: 15px;
+    color: rgb(200, 205, 190);
+    margin: 6px 0;
+    white-space: normal;
+}
+
+.zoology-link {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(30, 38, 32);
+    border-radius: 6px;
+}
+
+.zoology-link-head {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.zoology-link-portrait {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+}
+
+.zoology-link-name {
+    font-size: 19px;
+    -unity-font-style: bold;
+    color: rgb(240, 236, 220);
+}
+
+.zoology-link-text {
+    font-size: 13px;
+    color: rgb(185, 192, 178);
+    white-space: normal;
+    margin-bottom: 4px;
+}
+
+.zoology-req {
+    font-size: 14px;
+    white-space: normal;
+}
+
+.zoology-req.met {
+    color: rgb(140, 210, 140);
+}
+
+.zoology-req.unmet {
+    color: rgb(230, 150, 120);
+}
+
+.zoology-evolve {
+    margin-top: 8px;
+    align-self: stretch;
+}

@@ -2,12 +2,15 @@ using System;
 using System.Collections.Generic;
 using NaturalHistory.Core;
 using NaturalHistory.Data;
+using NaturalHistory.Evolution;
 using NaturalHistory.World;
 using UnityEngine;
 
 namespace NaturalHistory.Progression
 {
-    // Owns the Morphology (tech) and Ethology (civics) trees and the Evolution Points spent on them.
+    // Owns the Functions (morphology, tech) and Behaviors (ethology, civics) trees and the Evolution
+    // Points spent on them. Each species has its own acquired items; the trees show those of the
+    // species bound with BindSpecies (EvolutionManager binds the focused species). EP are shared.
     public class ProgressionManager : MonoBehaviour
     {
         public static ProgressionManager Instance { get; private set; }
@@ -15,8 +18,9 @@ namespace NaturalHistory.Progression
         [SerializeField] private int startingPoints = 20;
         [SerializeField] private int pointsPerTurn  = 5;
 
-        public ProgressionTree Morphology { get; private set; }
-        public ProgressionTree Ethology   { get; private set; }
+        public ProgressionTree Morphology { get; private set; } // "Functions" in the game
+        public ProgressionTree Ethology   { get; private set; } // "Behaviors" in the game
+        public SpeciesDefinition Species  { get; private set; } // whose items the trees show; null = none bound
         public int EvolutionPoints { get; private set; }
         public int StartingPoints => startingPoints;
 
@@ -36,8 +40,8 @@ namespace NaturalHistory.Progression
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
-            Morphology = ProgressionTree.Load("Morphology", "Data/morphology");
-            Ethology   = ProgressionTree.Load("Ethology",   "Data/ethology");
+            Morphology = ProgressionTree.Load("Functions", "Data/morphology");
+            Ethology   = ProgressionTree.Load("Behaviors", "Data/ethology");
             EvolutionPoints = startingPoints;
         }
 
@@ -59,16 +63,32 @@ namespace NaturalHistory.Progression
             Changed?.Invoke();
         }
 
+        // Show and edit `species`' items: functions / behaviors are its sets (used directly).
+        public void BindSpecies(SpeciesDefinition species, HashSet<string> functions, HashSet<string> behaviors)
+        {
+            Species = species;
+            Morphology.Bind(functions);
+            Ethology.Bind(behaviors);
+            Changed?.Invoke();
+        }
+
+        // Whether the bound species can ever acquire the item (body plan, see EvolutionData)
+        public bool CanAcquire(ProgressionTree tree, TreeNodeDefinition node) =>
+            EvolutionData.CanAcquire(Species, node, tree == Morphology);
+
         public NodeState GetState(ProgressionTree tree, TreeNodeDefinition node)
         {
             if (tree.IsUnlocked(node.id)) return NodeState.Unlocked;
+            if (!CanAcquire(tree, node)) return NodeState.Unavailable;
             return tree.PrerequisitesMet(node) && AgeAllows(node) ? NodeState.Available : NodeState.Locked;
         }
 
         // Null when the node can be unlocked now, otherwise a player-facing reason.
         public string UnlockBlocker(ProgressionTree tree, TreeNodeDefinition node)
         {
-            if (tree.IsUnlocked(node.id))  return "Already evolved";
+            if (Species == null)           return "None of your species is selected";
+            if (tree.IsUnlocked(node.id))  return "Already acquired";
+            if (!CanAcquire(tree, node))   return $"Not in the {Species?.commonName ?? "species"}'s {tree.DisplayName.ToLowerInvariant()}";
             if (!tree.PrerequisitesMet(node)) return "Requires: " + string.Join(", ", MissingPrerequisites(tree, node));
             if (!AgeAllows(node))          return $"Available from the {node.age}";
             if (EvolutionPoints < node.cost) return $"Needs {node.cost} EP (you have {EvolutionPoints})";
@@ -80,7 +100,7 @@ namespace NaturalHistory.Progression
             if (UnlockBlocker(tree, node) != null) return false;
             EvolutionPoints -= node.cost;
             tree.MarkUnlocked(node.id);
-            Debug.Log($"[Progression] {tree.DisplayName}: evolved {node.displayName} (-{node.cost} EP)");
+            Debug.Log($"[Progression] {Species?.commonName}: acquired {node.displayName} ({tree.DisplayName}, -{node.cost} EP)");
             NodeUnlocked?.Invoke(tree, node);
             Changed?.Invoke();
             return true;

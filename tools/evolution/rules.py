@@ -1,0 +1,187 @@
+import json, sys
+import os
+P = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "Assets", "Resources", "Data") + os.sep
+B  = ["Animal","Bilaterian"]
+ART = B+["Ecdysozoan","Arthropod"]
+VERT = B+["Chordate","Vertebrate"]
+FISH = VERT+["Fish"]
+JAW = FISH+["Jawed"]
+TET = VERT+["Jawed","Tetrapod"]
+AMN = TET+["Amniote"]
+REP = AMN+["Reptile"]
+ARCH = REP+["Archosaur"]
+DINO = ARCH+["Dinosaur"]
+BIRD = DINO+["Theropod","Bird"]
+MAM = AMN+["Synapsid","Mammal"]
+PLAC = MAM+["Placental"]
+groups = {
+ "Heliozoan":["Protist"],"Ciliate":["Protist"],"Amoebozoan":["Protist"],
+ "Early vascular plant":["Plant"],
+ "Demosponge":["Animal","Sponge"],
+ "Siphonophore":["Animal","Cnidarian"],"Stony coral":["Animal","Cnidarian"],"Sea anemone":["Animal","Cnidarian"],
+ "Echinoderm":B+["Echinoderm"], "Annelid":B+["Worm"], "Tardigrade":B+["Ecdysozoan"],
+ "Lobopodian":B+["Ecdysozoan","Lobopodian"],
+ "Radiodont":ART+["Marine arthropod"], "Stem arthropod":ART+["Marine arthropod"],
+ "Arthropod":ART+["Marine arthropod"], "Trilobite":ART+["Marine arthropod"],
+ "King crab":ART+["Crustacean"], "Spiny lobster":ART+["Crustacean"],
+ "Eurypterid":ART+["Chelicerate","Marine arthropod"],
+ "Scorpion":ART+["Chelicerate","Terrestrial arthropod"], "Orb-weaver spider":ART+["Chelicerate","Terrestrial arthropod"],
+ "Myriapod":ART+["Myriapod","Terrestrial arthropod"],
+ **{g:ART+["Insect","Terrestrial arthropod"] for g in ["Beetle","Fly","Butterfly","Griffinfly","Roachoid"]},
+ "Termite":ART+["Insect","Terrestrial arthropod","Social insect"], "Bee":ART+["Insect","Terrestrial arthropod","Social insect"],
+ **{g:B+["Mollusc","Cephalopod"] for g in ["Nautiloid cephalopod","Belemnite","Ammonite","Heteromorph ammonite"]},
+ "Land snail":B+["Mollusc","Gastropod"],
+ "Chordate":B+["Chordate"],
+ "Jawless vertebrate":FISH,
+ "Placoderm":JAW, "Mackerel shark":JAW+["Cartilaginous"], "Ray":JAW+["Cartilaginous"],
+ **{g:JAW+["Bony fish"] for g in ["Bony fish","Reef fish","Knifefish","Flying fish"]},
+ "Lobe-finned fish":JAW+["Bony fish","Lobe-finned"],
+ "Early tetrapod":TET+["Amphibian"], "True toad":TET+["Amphibian"], "Tree frog":TET+["Amphibian"],
+ "Early reptile":REP+["Basal amniote"],
+ "Crocodilian":ARCH, "Lizard":REP+["Squamate"], "Pit viper":REP+["Squamate"], "Sea turtle":REP+["Turtle"],
+ "Theropod dinosaur":DINO+["Theropod"], "Sauropod dinosaur":DINO, "Ceratopsian dinosaur":DINO, "Ankylosaur":DINO,
+ "Pterosaur":ARCH+["Pterosaur"],
+ **{g:BIRD for g in ["Seabird","Kingfisher","Shorebird","Songbird","Eurypygiform bird","Waterfowl","New World vulture",
+                    "Sea eagle","Flamingo","Pelican","Hummingbird","Parrot"]},
+ "Monotreme":MAM+["Monotreme"], "Marsupial":MAM+["Marsupial"],
+ "Bear":PLAC+["Carnivoran"], "Big cat":PLAC+["Carnivoran"], "Mustelid":PLAC+["Carnivoran"],
+ "Deer":PLAC+["Ungulate"], "Equid":PLAC+["Ungulate"], "Giraffid":PLAC+["Ungulate"],
+ "Primate":PLAC+["Primate"], "Great ape":PLAC+["Primate"],
+ "Sirenian":PLAC+["Afrothere"], "Proboscidean":PLAC+["Afrothere","Proboscidean"],
+ "Bat":PLAC+["Bat"], "Oceanic dolphin":PLAC+["Ungulate","Cetacean"], "Rodent":PLAC+["Rodent"],
+}
+# Tree items need any one of these tags (unlisted items need "Animal"). Lists are deliberately
+# broad enough to include the ancestors that evolve the item, so an origin species can acquire
+# what its descendants are known for (e.g. a jawless fish can evolve jaws).
+F = {
+ "nerve_cords":["Bilaterian"],"cephalisation":["Bilaterian"],"ganglia":["Bilaterian"],
+ "compound_eyes":["Arthropod","Lobopodian"],"dorsal_nerve_cord":["Chordate"],
+ "camera_eyes":["Vertebrate","Cephalopod","Chordate"],"three_part_brain":["Vertebrate","Chordate"],
+ "giant_axons":["Cephalopod","Arthropod","Worm"],"lateral_line_organ":["Fish","Amphibian"],
+ "myelin":["Vertebrate"],"cerebellum":["Vertebrate"],"electroreceptors":["Fish","Amphibian","Monotreme"],
+ "pallium":["Vertebrate"],"eardrums":["Tetrapod","Lobe-finned"],"large_brain":["Amniote","Cephalopod"],
+ "neocortex":["Synapsid","Basal amniote"],"echolocating_ears":["Mammal"],"prefrontal_cortex":["Mammal"],
+ "pulsing_vessel":["Bilaterian"],"open_circulation":["Arthropod","Mollusc","Ecdysozoan"],
+ "closed_circulation":["Chordate","Worm","Cephalopod"],"haemocyanin":["Arthropod","Mollusc"],
+ "haemoglobin":["Chordate","Worm"],"red_blood_cells":["Vertebrate"],"two_chambered_heart":["Fish","Chordate"],
+ "three_hearts":["Cephalopod"],"capillaries":["Vertebrate","Cephalopod","Worm","Chordate"],
+ "blood_clotting":["Vertebrate","Arthropod"],"hepatic_portal":["Vertebrate"],
+ "three_chambered_heart":["Fish","Amphibian","Reptile"],"coronary_arteries":["Vertebrate"],
+ "accessory_hearts":["Insect","Myriapod"],"four_chambered_heart":["Amniote"],
+ "high_blood_pressure":["Amniote"],"countercurrent_exchange":["Vertebrate"],
+ "diving_reflex":["Amniote"],"myoglobin_stores":["Amniote"],
+ "gills":["Fish","Amphibian","Arthropod","Mollusc","Worm","Chordate","Echinoderm"],
+ "pharyngeal_slits":["Chordate"],"book_gills":["Arthropod"],"gill_arches":["Vertebrate","Chordate"],
+ "tracheae":["Arthropod"],"spiracles":["Arthropod"],"book_lungs":["Chelicerate","Marine arthropod"],
+ "gill_cover":["Fish"],"lungs":["Fish","Tetrapod"],"swim_bladder":["Fish"],
+ "throat_pumping":["Fish","Amphibian"],"larynx":["Tetrapod","Lobe-finned"],"rib_breathing":["Tetrapod"],
+ "diaphragm":["Synapsid","Basal amniote"],"turbinates":["Amniote"],"air_sacs":["Archosaur","Basal amniote"],
+ "plastron_gill":["Insect"],"syrinx":["Theropod","Bird"],"labyrinth_organ":["Bony fish"],
+ "through_gut":["Bilaterian"],"radula":["Mollusc"],"mandibles":["Arthropod","Lobopodian"],
+ "jaws":["Vertebrate"],"gizzard":["Bilaterian"],"acid_stomach":["Vertebrate","Cephalopod"],
+ "teeth":["Vertebrate"],"spiral_valve":["Fish"],"tooth_replacement":["Vertebrate"],
+ "hindgut_fermentation":["Amniote","Insect"],"differentiated_teeth":["Synapsid","Basal amniote"],
+ "venom_glands":["Reptile","Chelicerate","Insect","Monotreme","Cnidarian","Cephalopod"],
+ "secondary_palate":["Amniote"],"gastroliths":["Archosaur","Basal amniote"],
+ "beak":["Bird","Turtle","Dinosaur","Cephalopod","Monotreme","Pterosaur"],
+ "cusped_molars":["Synapsid"],"dental_batteries":["Dinosaur"],"rumen":["Placental"],
+ "nephridia":["Worm","Mollusc","Lobopodian"],"flame_cells":["Bilaterian"],
+ "antennal_glands":["Crustacean","Marine arthropod"],"pronephros":["Vertebrate"],
+ "glomerular_kidney":["Vertebrate"],"malpighian_tubules":["Arthropod"],"gill_salt_cells":["Fish"],
+ "detox_liver":["Vertebrate"],"urinary_bladder":["Tetrapod","Bony fish"],"urea_cycle":["Vertebrate"],
+ "rectal_gland":["Fish"],"water_saving_rectum":["Insect","Myriapod"],"uric_acid":["Amniote","Insect"],
+ "metanephros":["Tetrapod"],"salt_glands":["Reptile","Bird"],"loop_of_henle":["Mammal","Bird"],
+ "desert_kidneys":["Mammal"],
+ "neurosecretory_cells":["Bilaterian"],"moulting_hormone":["Ecdysozoan"],"pituitary":["Vertebrate"],
+ "pineal_clock":["Vertebrate"],"antifreeze_proteins":["Fish","Insect"],"thyroid":["Vertebrate","Chordate"],
+ "stress_hormones":["Vertebrate"],"sex_hormones":["Vertebrate"],"juvenile_hormone":["Insect","Myriapod"],
+ "metamorphosis_hormones":["Insect","Myriapod","Amphibian"],"aestivation":["Bilaterian"],
+ "raised_metabolism":["Amniote"],"prolactin":["Vertebrate"],
+ "endothermy_node":["Synapsid","Archosaur","Basal amniote"],"torpor":["Mammal","Bird"],"brown_fat":["Mammal"],
+ "oxytocin_bonding":["Mammal","Bird"],"hibernation_node":["Mammal"],
+ "budding":["Cnidarian","Sponge","Worm"],"internal_fertilisation":["Bilaterian"],
+ "spermatophores":["Arthropod","Cephalopod","Amphibian"],"parthenogenesis":["Bilaterian"],
+ "claspers":["Fish"],"egg_cases":["Fish","Gastropod","Insect"],"aquatic_larvae":["Amphibian","Insect","Lobe-finned","Myriapod"],
+ "live_birth":["Fish","Reptile","Mammal","Chelicerate"],"amniotic_egg":["Tetrapod"],
+ "complete_metamorphosis":["Insect","Myriapod"],"temperature_sex":["Reptile"],
+ "hard_eggshell":["Archosaur","Turtle","Basal amniote"],"mammary_glands":["Synapsid","Basal amniote"],
+ "placenta":["Mammal"],"pouch":["Mammal"],"long_childhood":["Mammal","Bird"],
+ "bilateral_body":["Bilaterian"],"segmentation":["Worm","Arthropod","Chordate","Lobopodian"],
+ "coelom":["Bilaterian"],"exoskeleton":["Arthropod","Lobopodian"],"jointed_limbs":["Arthropod","Lobopodian"],
+ "notochord":["Chordate"],"myomeres":["Chordate"],"vertebral_column":["Chordate"],"tail_fin":["Chordate"],
+ "paired_fins":["Fish"],"endochondral_bone":["Fish","Tetrapod"],"terrestrial_legs":["Arthropod"],
+ "lobe_fins":["Fish"],"digits":["Lobe-finned","Tetrapod"],"weight_bearing_girdles":["Lobe-finned","Tetrapod"],
+ "insect_wings":["Insect","Myriapod"],"upright_stance":["Amniote"],"hollow_bones":["Archosaur","Basal amniote"],
+ "feathered_wings":["Theropod","Bird"],
+ "encapsulation":["Arthropod","Mollusc"],"complement":["Bilaterian"],"melanisation":["Arthropod"],
+ "inflammation":["Vertebrate"],"variable_receptors":["Vertebrate"],"adaptive_immunity":["Vertebrate"],
+ "antibodies":["Vertebrate"],"thymus":["Vertebrate"],"mhc":["Vertebrate"],"spleen":["Vertebrate"],
+ "lymphatic_system":["Vertebrate"],"immune_memory":["Vertebrate"],"bone_marrow":["Tetrapod","Lobe-finned"],
+ "fever":["Vertebrate"],"maternal_antibodies":["Amniote"],"lymph_nodes":["Mammal"],"germinal_centres":["Mammal","Bird"],
+ "chitin_cuticle":["Ecdysozoan"],"chromatophores":["Cephalopod","Fish","Amphibian","Reptile","Crustacean"],
+ "dermal_armour":["Vertebrate"],"placoid_scales":["Fish"],"waterproof_cuticle":["Arthropod"],
+ "toxic_skin":["Amphibian","Insect"],"keratin_scales":["Tetrapod"],"osteoderms":["Reptile"],
+ "protofeathers":["Archosaur","Basal amniote"],"fur_and_glands":["Synapsid","Basal amniote"],
+ "feathers":["Theropod","Bird"],"structural_colour":["Bird","Insect","Fish","Theropod"],
+ "horns":["Mammal","Dinosaur","Reptile"],"sweat_glands":["Mammal"],"blubber":["Mammal","Bird"],"quills":["Mammal"],
+}
+E = {
+ "silk_traps":["Chelicerate"],"nectar_feeding_node":["Insect","Bird","Bat","Theropod"],
+ "fruit_eating":["Amniote","Insect"],"echolocation_hunting":["Mammal"],"food_caching":["Mammal","Bird","Insect"],
+ "fungus_farming":["Insect"],"grass_grazing":["Mammal","Dinosaur"],"tool_use":["Mammal","Bird","Cephalopod"],
+ "persistence_hunting":["Mammal"],"pack_hunting":["Vertebrate"],"stalking":["Vertebrate","Chelicerate","Cephalopod"],
+ "venom_hunting":["Reptile","Chelicerate","Cnidarian","Insect","Cephalopod","Myriapod"],
+ "rolling_up":["Arthropod","Mammal"],"autotomy":["Reptile","Arthropod","Echinoderm","Amphibian"],
+ "ink_cloud":["Cephalopod"],"chemical_spray":["Insect","Mammal","Myriapod"],
+ "tail_weapons":["Dinosaur","Mammal","Reptile","Chelicerate"],"stotting":["Mammal"],
+ "mobbing":["Bird","Mammal","Theropod"],"distraction_display":["Bird","Theropod"],"eyespot_display":["Insect","Fish","Bird"],
+ "courtship_dance":["Bird","Fish","Arthropod","Reptile"],"feeding_young":["Vertebrate","Insect"],
+ "nursing":["Synapsid"],"mouthbrooding":["Fish","Amphibian"],"brood_parasitism":["Bird","Insect","Fish"],
+ "teaching":["Mammal","Bird"],"leks":["Bird","Mammal","Insect","Theropod"],"pair_bonds":["Vertebrate"],
+ "alloparenting":["Mammal","Bird"],"biparental_care":["Vertebrate"],
+ "eusociality":["Insect","Rodent"],"castes":["Insect"],"superorganism":["Insect"],
+ "social_grooming":["Mammal","Bird"],"coalitions":["Mammal","Bird"],"fission_fusion":["Mammal","Bird"],
+ "reciprocal_altruism":["Mammal","Bird"],"mixed_species_flocks":["Bird","Mammal","Fish"],
+ "matriarchs":["Mammal"],"traditions":["Mammal","Bird"],"large_societies":["Primate","Insect"],
+ "creches":["Bird","Mammal","Dinosaur"],"herding":["Vertebrate"],"schooling":["Fish","Cephalopod","Chordate","Mammal"],
+ "claw_duels":["Crustacean","Chelicerate","Marine arthropod"],"antler_tournaments":["Ungulate"],
+ "rutting_season":["Mammal"],"harems":["Mammal"],"head_butting":["Dinosaur","Mammal","Reptile"],
+ "border_patrols":["Mammal","Insect"],"infanticide":["Mammal"],"siblicide":["Bird","Archosaur"],
+ "overgrowth_fights":["Cnidarian","Sponge"],
+ "stridulation":["Insect","Chelicerate","Crustacean","Myriapod"],"electric_signals":["Fish"],
+ "waggle_dance":["Insect"],"learned_song":["Bird","Mammal","Theropod"],"facial_expressions":["Mammal"],
+ "duets":["Bird","Primate"],"referential_calls":["Mammal","Bird"],"infrasound":["Mammal","Dinosaur"],
+ "whale_song":["Mammal"],"gestures":["Primate"],"language":["Primate"],"vocal_communication":["Tetrapod"],
+ "alarm_calls":["Vertebrate"],
+ "ballooning":["Chelicerate"],"gliding":["Vertebrate","Insect"],"star_navigation":["Bird","Theropod"],
+ "nomadic_herds":["Mammal","Dinosaur"],
+ "silk_shelters":["Chelicerate","Insect"],"provisioned_cells":["Insect"],"woven_nests":["Bird","Theropod"],
+ "mud_nests":["Bird","Insect"],"paper_nests":["Insect"],"termite_mounds":["Insect"],"wax_combs":["Insect"],
+ "bubble_nests":["Fish","Amphibian"],"bowers":["Bird"],"dam_building":["Mammal"],
+ "reef_building":["Cnidarian","Worm","Sponge","Mollusc"],"incubation":["Bird","Dinosaur","Reptile"],
+ "nesting":["Vertebrate","Insect"],"tube_building":["Worm","Arthropod","Lobopodian"],
+ "antenna_grooming":["Arthropod"],"preening":["Bird","Theropod"],"dust_bathing":["Bird","Mammal"],
+ "anting":["Bird"],"mud_wallowing":["Mammal","Reptile"],"wound_licking":["Mammal"],
+ "panting":["Amniote"],"skin_shedding":["Reptile","Amphibian"],"scratching":["Tetrapod"],
+ "latrines":["Mammal"],"self_medication":["Mammal","Bird"],"huddling":["Mammal","Bird","Insect"],
+ "cleaning_stations":["Fish","Crustacean"],
+ "roosting":["Bird","Mammal","Pterosaur","Theropod"],"hanging_roost":["Mammal"],
+ "half_brain_sleep":["Bird","Mammal","Reptile"],"sleeping_on_the_wing":["Bird"],"sleeping_nests":["Primate"],
+ "winter_dens":["Mammal"],"dreaming_sleep":["Mammal","Bird"],"rafting_rest":["Mammal","Bird"],
+ "communal_roosts":["Bird","Mammal","Insect"],
+}
+species = json.load(open(P+"species.json"))["species"]
+missing = sorted({s["group"] for s in species} - set(groups))
+if missing: sys.exit(f"groups without tags: {missing}")
+nodes = {k: {n["id"]: n for n in json.load(open(P+f"{k}.json"))["nodes"]} for k in ["morphology","ethology"]}
+for table, k in [(F,"morphology"),(E,"ethology")]:
+    bad = [i for i in table if i not in nodes[k]]
+    if bad: sys.exit(f"unknown {k} ids: {bad}")
+out = {
+  "notes": "Which Function (morphology) and Behavior (ethology) items each species can acquire. A species' tags come from its species.json group; an item listed under functions/behaviors needs at least one of its tags, every other item needs \"Animal\". Lists include the ancestors that evolve an item, so an origin species can acquire what its descendants are known for. Generated by tools; edit freely.",
+  "groups":    [{"group": g, "tags": t} for g, t in sorted(groups.items())],
+  "functions": [{"item": i, "tags": t} for i, t in F.items()],
+  "behaviors": [{"item": i, "tags": t} for i, t in E.items()],
+}
+json.dump(out, open(P+"trait_rules.json","w"), indent=1)
+print("ok", len(groups), "groups", len(F), "functions", len(E), "behaviors")

@@ -24,6 +24,17 @@ A Specie is an animal/plant/fungus that can reproduce, battle and evolve. Each s
 
 Each player (associated with Biorealm) could have some number of slots of species (5 at the beginning, will increase following the time changes).
 
+Reproduce:	
+By default, each turn each of your animals can reproduce up to 1 copy. You select Reproduce and place the copy on the map; it must go on a tile next to the original animal. Some animals earn one extra copy that turn:
+- Herbivores: if they don't neighbor any carnivore that eats them.
+- Carnivores: if they eliminate some animals that are their food.
+- Scavengers: if some animals die (eliminated or extinct) in their neighboring tiles.
+- Parasites: if their host reproduces.
+
+Animals that cannot move can still reproduce; their copy is placed in one of their neighboring tiles.
+
+A very few producers and zooplankton are also treated as herbivores.
+
 
 Technical Difficulties: 
 3D Model & Animation

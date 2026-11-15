@@ -5,10 +5,12 @@ using UnityEngine;
 
 namespace NaturalHistory.Progression
 {
-    public enum NodeState { Unlocked, Available, Locked }
+    // Unavailable: the shown species can never acquire it (see Evolution.EvolutionData)
+    public enum NodeState { Unlocked, Available, Locked, Unavailable }
 
-    // One unlock tree (Morphology or Ethology), loaded from Resources/Data/{file}.json.
-    // Holds which nodes are unlocked; ProgressionManager decides whether an unlock is affordable.
+    // One unlock tree (Functions = morphology, Behaviors = ethology), loaded from Resources/Data/{file}.json.
+    // Every species has its own set of acquired items; the tree shows whichever set is bound to it
+    // (ProgressionManager.BindSpecies). ProgressionManager decides whether an unlock is affordable.
     public class ProgressionTree
     {
         public string DisplayName { get; }
@@ -19,7 +21,7 @@ namespace NaturalHistory.Progression
         private readonly List<TreeNodeDefinition> nodes;
         private readonly List<TreeBranchDefinition> branches;
         private readonly Dictionary<string, TreeNodeDefinition> byId = new();
-        private readonly HashSet<string> unlocked = new();
+        private HashSet<string> unlocked = new(); // the bound species' set (shared, not copied)
 
         private ProgressionTree(string displayName, List<TreeNodeDefinition> nodes, List<TreeBranchDefinition> branches)
         {
@@ -63,6 +65,13 @@ namespace NaturalHistory.Progression
         public bool PrerequisitesMet(TreeNodeDefinition node) => node.prerequisites.TrueForAll(unlocked.Contains);
 
         internal void MarkUnlocked(string id) => unlocked.Add(id);
+
+        // Show and edit another species' acquired items. The set is used directly, so unlocks go
+        // straight into it.
+        internal void Bind(HashSet<string> set) => unlocked = set ?? new HashSet<string>();
+
+        // Free root items (cost 0, no prerequisites) every species starts with, if it can have them.
+        public IEnumerable<TreeNodeDefinition> StartingNodes => nodes.FindAll(n => n.cost <= 0 && n.prerequisites.Count == 0);
 
         // Replaces the unlocked set (loading a save). Unknown ids from older saves are dropped.
         internal void Restore(IEnumerable<string> ids)
