@@ -387,7 +387,9 @@ namespace NaturalHistory.World
                 go.transform.localRotation = Quaternion.Euler(0f, 60f * rng.Next(6), 0f); // hex-filling: keep edges aligned
                 go.AddComponent<MeshFilter>().sharedMesh = mesh;
                 bool water = cell.Under is UnderKind.Seabed or UnderKind.Lakebed && cell.UnderFeature == UnderFeature.None;
-                go.AddComponent<MeshRenderer>().sharedMaterial = water ? SwayMaterial() : featureMaterial;
+                var rend = go.AddComponent<MeshRenderer>();
+                rend.sharedMaterial = water ? SwayMaterial() : featureMaterial;
+                FitPropsToSeabed(cell, rend); // follow the floor's slope across the tile
                 if (cell.UnderFeature == UnderFeature.Geothermal && Application.isPlaying && MapFeatureMeshes.TryGetSteamVents(mesh, out var seeps))
                     go.AddComponent<GeothermalSteam>().Init(cellSize, WorldSeed ^ cell.Coordinates.GetHashCode(), seeps, -1, underwater: true);
                 go.SetActive(false);

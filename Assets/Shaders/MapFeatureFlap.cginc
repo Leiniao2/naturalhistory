@@ -130,6 +130,21 @@ void ApplySway(inout float3 p, float flex)
     p.z += d * 0.6 * sin(t * 0.77 + ph * 1.3 + 1.7);
 }
 
+// Seabed props following the floor's slope (HexGrid.FitPropsToSeabed, per renderer): the floor's
+// height relative to the tile centre as a quadratic in the world offset (x, z) from the object's
+// origin, y += A.x + A.y x + A.z z + A.w x² + B.x x z + B.y z². B.z = 1 turns it on. The props
+// are only turned about y and unscaled, so the lift goes straight onto object-space y.
+float4 _GroundFitA;
+float4 _GroundFitB;
+void ApplyGroundFit(inout float3 p)
+{
+    if (_GroundFitB.z < 0.5) return;
+    float3 w = mul(unity_ObjectToWorld, float4(p, 1)).xyz;
+    float2 d = w.xz - float2(unity_ObjectToWorld._m03, unity_ObjectToWorld._m23);
+    p.y += _GroundFitA.x + _GroundFitA.y * d.x + _GroundFitA.z * d.y + _GroundFitA.w * d.x * d.x
+         + _GroundFitB.x * d.x * d.y + _GroundFitB.y * d.y * d.y;
+}
+
 // Wind on land plants: uv3.x (TEXCOORD3) is how much a vertex bends (0 = stiff, set by
 // MapFeatureMeshes on slender plants: grasses, reeds, horsetails, Cooksonia, ferns, the tops most).
 // _NHWind is global (Wind.cs): amplitude in world units, speed, gust wavelength in world units.

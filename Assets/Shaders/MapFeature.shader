@@ -90,6 +90,7 @@ Shader "NaturalHistory/MapFeature"
                 ApplyFlap(v.positionOS.xyz, v.normalOS);
                 ApplyUndulate(v.positionOS.xyz, v.normalOS);
                 ApplyStride(v.positionOS.xyz);
+                ApplyGroundFit(v.positionOS.xyz);
                 ApplySway(v.positionOS.xyz, v.flex.x);
                 ApplyWind(v.positionOS.xyz, v.flex.x);
                 VertexPositionInputs pos = GetVertexPositionInputs(v.positionOS.xyz);
@@ -141,6 +142,7 @@ Shader "NaturalHistory/MapFeature"
                 ApplyFlap(v.positionOS.xyz, v.normalOS);
                 ApplyUndulate(v.positionOS.xyz, v.normalOS);
                 ApplyStride(v.positionOS.xyz);
+                ApplyGroundFit(v.positionOS.xyz);
                 ApplySway(v.positionOS.xyz, v.flex.x);
                 ApplyWind(v.positionOS.xyz, v.flex.x);
                 float3 posWS    = TransformObjectToWorld(v.positionOS.xyz);
@@ -177,6 +179,7 @@ Shader "NaturalHistory/MapFeature"
                 ApplyFlap(v.positionOS.xyz, normalOS);
                 ApplyUndulate(v.positionOS.xyz, normalOS);
                 ApplyStride(v.positionOS.xyz);
+                ApplyGroundFit(v.positionOS.xyz);
                 ApplySway(v.positionOS.xyz, v.flex.x);
                 ApplyWind(v.positionOS.xyz, v.flex.x);
                 return TransformObjectToHClip(v.positionOS.xyz);
@@ -223,6 +226,7 @@ Shader "NaturalHistory/MapFeature"
             ApplyFlap(v.vertex.xyz, v.normal);
             ApplyUndulate(v.vertex.xyz, v.normal);
             ApplyStride(v.vertex.xyz);
+            ApplyGroundFit(v.vertex.xyz);
             float flex = v.texcoord2.y > 0.5 ? 0 : v.texcoord3.x; // banded rock never bends
             ApplySway(v.vertex.xyz, flex);
             ApplyWind(v.vertex.xyz, flex);
