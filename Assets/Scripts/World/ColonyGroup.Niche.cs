@@ -12,5 +12,9 @@ namespace NaturalHistory.World
         // Where on its tile the group stands (offset from the tile centre), so groups in different
         // niches of the same tile don't pile up on each other.
         private Vector3 Spot => Niches.Spot(Niche);
+
+        // How far below its tile's surface the group is drawn: in the under view, seafloor dwellers
+        // sit on the seabed and swimmers in the water column (set by HexGrid.Under)
+        public float DepthOffset { get; set; }
     }
 }

@@ -170,7 +170,7 @@ namespace NaturalHistory.World
             if (age >= GeologicalAge.Cretaceous) return CreateOasis(rng, size);
             var b = new Builder { Foliage = true }; // plants: rough, speckled leaf clumps
             var center = new Vector3(Range(rng, -0.06f, 0.06f) * size, 0.004f, Range(rng, -0.06f, 0.06f) * size);
-            AddPond(b, rng, center, 0.24f * size, PondWater);
+            AddOasisShore(b, rng, center, 0.24f * size, size, green: age >= GeologicalAge.Devonian);
 
             int plants  = rng.Next(3, 6);
             float angle = Range(rng, 0f, 360f);

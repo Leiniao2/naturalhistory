@@ -221,6 +221,7 @@ namespace NaturalHistory.World
             PlaceLandforms(age);
             PlaceGeothermal();
             DressMountainGround();
+            DressDesertGround(); // dense, ordinary or sparse sand by region (HexGrid.Desert)
             ClearFeatures();
             PlaceFeatures(WorldSeed, age);
             UpdateEdgeBlends();
@@ -319,7 +320,7 @@ namespace NaturalHistory.World
                 var (main, second) = plants.Choose(cell, null);
                 if (main == null) return rng.NextDouble() < 0.75 ? Detail(cell.Terrain.kind) : null; // no plants yet: rocks, mats
                 cell.SetPlants(main, second);
-                if (cell.Terrain.kind == TerrainKind.Desert && rng.NextDouble() < 0.4) return Detail(TerrainKind.Desert); // dunes
+                if (cell.Terrain.kind == TerrainKind.Desert && rng.NextDouble() < 0.1) return Detail(TerrainKind.Desert); // the odd dune
                 hexStand = true;
                 return plants.Ground(rng, main, second, cell.Terrain.kind);
             }
@@ -363,14 +364,6 @@ namespace NaturalHistory.World
                     case TerrainFeature.PinkSaltLake:
                         mesh = Track(MapFeatureMeshes.CreateSaltLake(rng, cellSize, cell.Feature == TerrainFeature.PinkSaltLake, p => LocalGround(cell, p)));
                         unique = true; others++; break;
-                    case TerrainFeature.Fjord:
-                    {
-                        var nb = EdgeNeighbors(cell);
-                        var landward = new bool[6];
-                        for (int e = 0; e < 6; e++) landward[e] = nb[e]?.Terrain != null && !nb[e].IsWater;
-                        mesh = Track(MapFeatureMeshes.CreateFjord(rng, cellSize, landward, 0f)); unique = true; others++;
-                        break;
-                    }
                     case TerrainFeature.WhiteCliffs:
                     {
                         var nb = EdgeNeighbors(cell);
@@ -665,7 +658,6 @@ namespace NaturalHistory.World
             if (kind == TerrainKind.SaltWater)
             {
                 if (cell.Feature != TerrainFeature.None || land < 2) return TerrainFeature.None;
-                if (lat > 0.55f && high >= 1 && TileRoll(q, r, 1) < 0.6f) return TerrainFeature.Fjord;
                 if (lat < 0.4f && TileRoll(q, r, 9) < 0.06f) return TerrainFeature.Karst; // drowned towers in warm coastal seas (Ha Long Bay)
                 return TerrainFeature.None;
             }
@@ -764,15 +756,15 @@ namespace NaturalHistory.World
                     else if (a < 0.22f)                    { ground = Surface("DuneSand"); recolor = Paint(WhiteSand, 0.85f); } // gypsum and quartz dunes
                     else if (a > 0.7f)                     { ground = Surface("DuneSand"); recolor = Paint(RedSand, 0.7f); }    // red dune seas
                     else if (b > 0.78f)                      ground = Surface("DesertPavement");                                  // stony reg and gibber plains
-                    else if (b < 0.18f)                      ground = Surface("SaltFlat");                                        // salt pans
-                    else if (a > 0.42f && a < 0.55f && b > 0.55f) ground = Surface("CrackedClay");                                // dry lake beds
+                    else if (b < 0.18f)                      ground = Cracked(cell, "SaltFlat");                                        // salt pans
+                    else if (a > 0.42f && a < 0.55f && b > 0.55f) ground = Cracked(cell, "CrackedClay");                                // dry lake beds
                     else if (a > 0.3f && a < 0.42f && b < 0.4f)   ground = Surface("Slickrock");                                  // red-rock canyon country
                     else if (a > 0.55f)                      ground = Surface("DuneSand");                                        // golden ergs
                     break;
                 case TerrainKind.Barren:
                     if (volcanic)       ground = Surface("LavaField");
                     else if (a > 0.68f) ground = Surface("Slickrock");
-                    else if (a < 0.25f) ground = Surface("LimestonePavement");
+                    else if (a < 0.25f) ground = Cracked(cell, "LimestonePavement");
                     else if (b > 0.72f) { ground = Surface("DesertPavement"); recolor = Paint(new Color(0.38f, 0.37f, 0.4f), 0.6f); } // dark basalt gravel
                     break;
                 case TerrainKind.Savanna:
@@ -780,16 +772,16 @@ namespace NaturalHistory.World
                     break;
                 case TerrainKind.Steppe:
                     if (b > 0.8f) ground = Surface("DesertPavement");               // gravel steppe
-                    else if (a < 0.15f && dryLand) ground = Surface("CrackedClay"); // takyr: dried-out clay flats
+                    else if (a < 0.15f && dryLand) ground = Cracked(cell, "CrackedClay"); // takyr: dried-out clay flats
                     break;
                 case TerrainKind.Tundra:
-                    if (a < 0.4f) ground = Surface("PatternedGround");              // frost-sorted stone polygons
+                    if (a < 0.4f) ground = Cracked(cell, "PatternedGround");              // frost-sorted stone polygons
                     break;
                 case TerrainKind.IceSheet:
-                    if (b > 0.5f) ground = Surface("CrevassedIce");
+                    if (b > 0.5f) ground = Cracked(cell, "CrevassedIce");
                     break;
                 case TerrainKind.Hill:
-                    if (a < 0.14f) ground = Surface("LimestonePavement");           // karst uplands
+                    if (a < 0.14f) ground = Cracked(cell, "LimestonePavement");           // karst uplands
                     else if (dryLand && a > 0.78f) ground = Surface("Slickrock");
                     break;
             }
@@ -820,7 +812,11 @@ namespace NaturalHistory.World
             float flood = 0f;
             if (cell.Floodplain && !cell.IsWater)
             {
-                recolor = Paint(lat > 0.65f ? new Color(0.46f, 0.5f, 0.32f) : new Color(0.38f, 0.52f, 0.2f),
+                // before land plants (Devonian) there is nothing green to grow on it: dark, wet silt
+                // with a film of microbial mat
+                recolor = DisplayedAge < GeologicalAge.Devonian
+                        ? Paint(new Color(0.4f, 0.37f, 0.31f), 0.55f)
+                        : Paint(lat > 0.65f ? new Color(0.46f, 0.5f, 0.32f) : new Color(0.38f, 0.52f, 0.2f),
                                 cell.Biome is TerrainKind.Desert ? 0.75f : 0.5f);
                 flood = 0.85f;
             }
@@ -841,6 +837,14 @@ namespace NaturalHistory.World
 
             cell.SetGroundLook(recolor, cliff, shore, flood);
             cell.SetSurface(ground, cliffSurface);
+        }
+
+        // Cracked and crazed ground (salt pans, dried clay, limestone pavement, frost polygons,
+        // crevassed ice) is kept to one in twenty of the tiles that would have it: a little goes a long way
+        private Texture2D Cracked(HexCell cell, string name)
+        {
+            var (q, r) = cell.Coordinates.ToOffsetCoordinates();
+            return TileRoll(q, r, 31) < 0.05f ? Surface(name) : null;
         }
 
         // Ground surfaces from Resources/TerrainSurfaces, loaded once

@@ -311,13 +311,41 @@ namespace NaturalHistory.World
         }
 
         // Small pond ringed by palms and shrubs.
+        static readonly Color WetSand = new(0.42f, 0.33f, 0.22f);
+
+        // The water of an oasis: an irregular pool outlined by a thin band of dark wet sand
+        // (before land plants, a band of olive microbial crust).
+        static void AddOasisShore(Builder b, System.Random rng, Vector3 center, float radius, float size, bool green)
+        {
+            const int sides = 20;
+            float rot = Range(rng, 0f, Mathf.PI * 2f), seed = Range(rng, 0f, 50f);
+            float Shore(int i)
+            {
+                float a = rot + i * Mathf.PI * 2f / sides;
+                return radius * (0.82f + 0.3f * Mathf.PerlinNoise(seed + Mathf.Cos(a) * 1.6f, seed + Mathf.Sin(a) * 1.6f));
+            }
+            Vector3 At(int i, float r, float y)
+            {
+                float a = rot + i * Mathf.PI * 2f / sides;
+                return center + new Vector3(Mathf.Sin(a) * r, y, Mathf.Cos(a) * r);
+            }
+            var below = center - Vector3.up;
+            float rimWidth = 0.025f * size;
+            for (int i = 0; i < sides; i++)
+            {
+                int j = (i + 1) % sides;
+                float ri = Shore(i), rj = Shore(j);
+                b.AddTri(center, At(i, ri, 0f), At(j, rj, 0f), PondWater, below);
+                b.AddQuad(At(i, ri, 0.001f), At(i, ri + rimWidth, 0.001f), At(j, rj + rimWidth, 0.001f), At(j, rj, 0.001f),
+                          green ? WetSand : MatOlive, below);
+            }
+        }
+
         public static Mesh CreateOasis(System.Random rng, float size)
         {
             var b = new Builder { Foliage = true }; // plants: rough, speckled leaf clumps
             var center = new Vector3(Range(rng, -0.06f, 0.06f) * size, 0.004f, Range(rng, -0.06f, 0.06f) * size);
-            var rim = Ring(rng, center, 0.24f * size, 10, 0.2f);
-            for (int i = 0; i < rim.Length; i++)
-                b.AddTri(center, rim[i], rim[(i + 1) % rim.Length], PondWater, center - Vector3.up);
+            AddOasisShore(b, rng, center, 0.24f * size, size, green: true);
 
             int palms   = rng.Next(2, 4);
             float angle = Range(rng, 0f, 360f);
@@ -439,9 +467,11 @@ namespace NaturalHistory.World
                     foreach (var p in Spots(0, 2, 0.12f)) AddRock(b, rng, At(p), size * 0.03f, Lichen);
                     break;
                 case TerrainKind.Desert:
-                    foreach (var p in Spots(1, 3, 0.3f))
-                        AddDune(b, rng, At(p), Range(rng, 0.25f, 0.45f) * size, Range(rng, 0.035f, 0.08f) * size, Shade(rng, Sand, 0.06f));
-                    if (rng.NextDouble() < 0.3)
+                    // dunes only now and then, one at a time and low: the sand texture carries the desert
+                    if (rng.NextDouble() < 0.25)
+                        foreach (var p in Spots(1, 1, 0.3f))
+                            AddDune(b, rng, At(p), Range(rng, 0.22f, 0.36f) * size, Range(rng, 0.02f, 0.045f) * size, Shade(rng, Sand, 0.06f));
+                    if (rng.NextDouble() < 0.15)
                         foreach (var p in Spots(1, 1, 0.3f))
                             AddButte(b, rng, At(p), Range(rng, 0.07f, 0.12f) * size, Range(rng, 0.1f, 0.2f) * size);
                     foreach (var p in Spots(0, 3, 0.12f)) AddRock(b, rng, At(p), size * Range(rng, 0.03f, 0.06f), Sandstone);

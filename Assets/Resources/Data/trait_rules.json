@@ -61,6 +61,13 @@
    ]
   },
   {
+   "group": "Archaeocyath",
+   "tags": [
+    "Animal",
+    "Sponge"
+   ]
+  },
+  {
    "group": "Arthropod",
    "tags": [
     "Animal",
@@ -243,6 +250,20 @@
    "group": "Ciliate",
    "tags": [
     "Protist"
+   ]
+  },
+  {
+   "group": "Coral",
+   "tags": [
+    "Animal",
+    "Cnidarian"
+   ]
+  },
+  {
+   "group": "Coralomorph",
+   "tags": [
+    "Animal",
+    "Cnidarian"
    ]
   },
   {
@@ -672,6 +693,13 @@
     "Chordate",
     "Vertebrate",
     "Fish"
+   ]
+  },
+  {
+   "group": "Jellyfish",
+   "tags": [
+    "Animal",
+    "Cnidarian"
    ]
   },
   {
@@ -1313,6 +1341,13 @@
    ]
   },
   {
+   "group": "Stem anthozoan",
+   "tags": [
+    "Animal",
+    "Cnidarian"
+   ]
+  },
+  {
    "group": "Stem arthropod",
    "tags": [
     "Animal",
@@ -1320,6 +1355,13 @@
     "Ecdysozoan",
     "Arthropod",
     "Marine arthropod"
+   ]
+  },
+  {
+   "group": "Stem ctenophore",
+   "tags": [
+    "Animal",
+    "Ctenophore"
    ]
   },
   {

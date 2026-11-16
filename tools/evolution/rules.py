@@ -34,7 +34,9 @@ groups = {
  # Ediacaran biota: tags of the lineages they may stand at the root of
  "Proarticulate":B+["Ecdysozoan","Lobopodian"], "Stem mollusc":B+["Mollusc"], "Early bilaterian":B+["Chordate","Worm"],
  "Parvancorinomorph":B+["Ecdysozoan"], "Petalonamid":["Animal","Cnidarian"], "Discoidal organism":["Animal","Cnidarian"],
- "Sponge":["Animal","Sponge"],
+ "Sponge":["Animal","Sponge"], "Stem ctenophore":["Animal","Ctenophore"],
+ "Archaeocyath":["Animal","Sponge"], "Coral":["Animal","Cnidarian"], "Coralomorph":["Animal","Cnidarian"],
+ "Jellyfish":["Animal","Cnidarian"], "Stem anthozoan":["Animal","Cnidarian"],
  "Rangeomorph":["Animal","Cnidarian"], "Trilobozoan":["Animal","Cnidarian"], "Tubular animal":B+["Worm"], "Annelid":B+["Worm"], "Tardigrade":B+["Ecdysozoan"],
  "Lobopodian":B+["Ecdysozoan","Lobopodian"],
  "Radiodont":ART+["Marine arthropod"], "Stem arthropod":ART+["Marine arthropod"],

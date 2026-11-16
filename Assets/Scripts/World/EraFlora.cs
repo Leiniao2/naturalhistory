@@ -135,7 +135,6 @@ namespace NaturalHistory.World
         {
             TerrainFeature.Mesa         => Loc.T("Mesa"),
             TerrainFeature.Canyon       => Loc.T("Canyon"),
-            TerrainFeature.Fjord        => Loc.T("Fjord"),
             TerrainFeature.WhiteCliffs  => Loc.T("White cliffs"),
             TerrainFeature.SaltLake     => Loc.T("Salt lake"),
             TerrainFeature.PinkSaltLake => Loc.T("Pink salt lake"),

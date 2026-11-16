@@ -22,6 +22,7 @@ namespace NaturalHistory.World
         private const float VolcanoShare = 0.03f; // of sea tiles
         private const float VentShare    = 0.02f; // of deep sea tiles
         private const float TunnelShare  = 0.3f;  // of land carved into tunnels (the rest that isn't cave is bedrock)
+        private const float UnderWaterGrowth = 0.5f; // the layer below has this much more water than the surface (of the surface's water tiles)
 
         private readonly List<GameObject> underObjects = new();
         private readonly Dictionary<UnderKind, Material> underMaterials = new();
@@ -88,6 +89,7 @@ namespace NaturalHistory.World
                 if (kind == UnderKind.DeepSeabed) deep.Add((cell, Noise(cell, 0.6f, ventOff)));
             }
 
+            DrownUnderLand(sea, Offset());
             CarveTunnels(rng);
 
             sea.Sort((a, b) => b.v.CompareTo(a.v));
@@ -110,6 +112,7 @@ namespace NaturalHistory.World
                 double roll = rng.NextDouble();
                 if (nearSeamount ? roll < 0.3 : roll < 0.006) cell.SetUnder(cell.Under, UnderFeature.Geothermal);
             }
+            ComputeSeabedRelief(worldSeed);
             underDirty = true;
         }
 
@@ -117,6 +120,56 @@ namespace NaturalHistory.World
         // tunnels, keep roughly to a heading and turn now and then, and stop rather than open into a
         // passage beside them (now and then they break through, making loops), so corridors stay one
         // tile wide. Then any pocket still cut off is joined to the rest by the shortest way through.
+        // Below the land near the coast and lakes lie drowned valleys, old sea floors and buried lakes:
+        // land tiles are taken nearest the water first (with noise, so the edge wanders), and lower
+        // ground before high, until the layer below has UnderWaterGrowth more water than the surface.
+        // Near lakes and far from the sea they are lakebeds, otherwise seabed.
+        private void DrownUnderLand(List<(HexCell cell, float v)> sea, Vector3 off)
+        {
+            int water = 0;
+            foreach (var c in cells) if (c?.Terrain != null && c.IsWater) water++;
+            int already = 0;
+            foreach (var c in cells) if (c?.Terrain != null && !c.IsWater && WaterBed(c.Under)) already++;
+            int want = Mathf.RoundToInt(water * UnderWaterGrowth) - already;
+            if (want <= 0) return;
+
+            // steps to the nearest salt and fresh water
+            var toSea = new Dictionary<HexCell, int>(); var toLake = new Dictionary<HexCell, int>();
+            void Steps(Dictionary<HexCell, int> dist, System.Func<HexCell, bool> source)
+            {
+                var queue = new Queue<HexCell>();
+                foreach (var c in cells) if (c?.Terrain != null && source(c)) { dist[c] = 0; queue.Enqueue(c); }
+                while (queue.Count > 0)
+                {
+                    var c = queue.Dequeue();
+                    foreach (var n in GetNeighbors(c))
+                        if (n?.Terrain != null && !dist.ContainsKey(n)) { dist[n] = dist[c] + 1; queue.Enqueue(n); }
+                }
+            }
+            Steps(toSea, c => c.Terrain.kind == TerrainKind.SaltWater);
+            Steps(toLake, c => c.Terrain.kind == TerrainKind.FreshWater || c.Terrain.kind == TerrainKind.Wetland);
+
+            var land = new List<(HexCell cell, float score)>();
+            foreach (var c in cells)
+            {
+                if (c?.Terrain == null || c.IsWater || WaterBed(c.Under)) continue;
+                int s = toSea.TryGetValue(c, out var ds) ? ds : 99, l = toLake.TryGetValue(c, out var dl) ? dl : 99;
+                var pos = c.Coordinates.ToWorldPosition(cellSize);
+                var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.35f / cellSize) + off;
+                float score = Mathf.Min(s, l + 0.5f) + PerlinNoise3D.Sample(p.x, p.y, p.z) * 4f + c.Elevation * 0.25f + (c.IsMountain ? 3f : 0f);
+                land.Add((c, score));
+            }
+            land.Sort((a, b) => a.score.CompareTo(b.score));
+            for (int i = 0; i < Mathf.Min(want, land.Count); i++)
+            {
+                var c = land[i].cell;
+                int s = toSea.TryGetValue(c, out var ds) ? ds : 99, l = toLake.TryGetValue(c, out var dl) ? dl : 99;
+                var kind = l + 1 < s ? UnderKind.Lakebed : UnderKind.Seabed;
+                c.SetUnder(kind, UnderFeature.None);
+                if (kind == UnderKind.Seabed) sea.Add((c, -1f)); // shallow old sea floor: rarely a seamount
+            }
+        }
+
         private void CarveTunnels(System.Random rng)
         {
             bool Open(HexCell c) => c != null && c.Terrain != null && !UnderView.Blocks(c.Under);
@@ -125,8 +178,9 @@ namespace NaturalHistory.World
             foreach (var cell in cells)
             {
                 if (cell.Terrain == null || cell.IsWater) continue;
+                if (WaterBed(cell.Under)) continue;                                                                       // drowned: not part of the maze
                 landCount++;
-                if (!Open(cell)) foreach (var n in GetNeighbors(cell)) { if (n.IsWater) { starts.Add(cell); break; } } // coast: in from the sea
+                if (!Open(cell)) foreach (var n in GetNeighbors(cell)) { if (n.IsWater || WaterBed(n.Under)) { starts.Add(cell); break; } } // in from the water
                 else starts.Add(cell);                                                                                  // cave edges
             }
             if (starts.Count == 0) return;
@@ -329,7 +383,7 @@ namespace NaturalHistory.World
                 var go = new GameObject(mesh.name);
                 if (!Application.isPlaying) go.hideFlags = HideFlags.DontSave;
                 go.transform.SetParent(cell.transform, false);
-                go.transform.localPosition = Vector3.up * cell.SurfaceHeight;
+                go.transform.localPosition = Vector3.up * UnderSurface(cell); // on the seabed, below sea level
                 go.transform.localRotation = Quaternion.Euler(0f, 60f * rng.Next(6), 0f); // hex-filling: keep edges aligned
                 go.AddComponent<MeshFilter>().sharedMesh = mesh;
                 bool water = cell.Under is UnderKind.Seabed or UnderKind.Lakebed && cell.UnderFeature == UnderFeature.None;
@@ -430,6 +484,7 @@ namespace NaturalHistory.World
             foreach (var go in underObjects) if (go != null) go.SetActive(on);
 
             Shader.SetGlobalFloat("_BuiltinEdgeBlend", on ? 1f : 0f); // the built-in shader blends tile edges only down here
+            ShowSeabedRelief(on);
             var textures = new Texture[6];
             var tints    = new Vector4[6];
             var scales   = new float[6];
@@ -452,7 +507,7 @@ namespace NaturalHistory.World
                     tints[e]    = new Vector4(t.r, t.g, t.b, 1f);
                     scales[e]   = m.HasProperty("_Tiling") ? m.GetFloat("_Tiling") : 0f;
                 }
-                cell.ShowUnder(UnderMaterial(cell), UnderTint(cell), textures, tints, scales);
+                cell.ShowUnder(UnderMaterial(cell), UnderTint(cell), textures, tints, scales, waterBed: WaterBed(cell.Under));
             }
             ShowGroupsForView();
         }
@@ -487,12 +542,22 @@ namespace NaturalHistory.World
             return MapFeatureMeshes.IsMeadowCover(cover);
         }
 
+        private bool CoverPatch(HexCell cell)
+        {
+            var pos = cell.Coordinates.ToWorldPosition(cellSize);
+            var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.3f / cellSize) + new Vector3(517f, 91f, 733f) + Vector3.one * (WorldSeed % 997);
+            return PerlinNoise3D.Sample(p.x, p.y, p.z) > 0.12f;
+        }
+
         private Material UnderMaterial(HexCell cell)
         {
             if (cell.UnderFeature == UnderFeature.None && cell.Under is UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed)
             {
                 var plants = cell.UnderPlants;
                 string cover = MapFeatureMeshes.CoverOf(cell.Under, plants.Count > 0 ? plants[0] : null, plants.Count > 1 ? plants[1] : null, IsMeadow(cell));
+                // mats, turf and crusts carpet the floor only in patches (about a third of the tiles
+                // that have them); elsewhere the plain, pale seabed shows between the plants
+                if (cover is "MicrobialMat" or "BacterialMat" or "AlgalTurf" or "Coralline" && !CoverPatch(cell)) cover = null;
                 if (cover != null)
                 {
                     string name = $"Under{cell.Under}{cover}";
@@ -511,18 +576,22 @@ namespace NaturalHistory.World
         private static readonly Color DeepSea    = new(0.62f, 0.82f, 1.5f);
         private static readonly Color LakeWater  = new(0.75f, 1.0f, 1.2f);
 
-        private static Color UnderTint(HexCell cell)
+                // Slight per-tile variation; the seabed darkens and turns bluer with depth (less light gets
+        // down there), so its relief reads at a glance; volcanic ground is darker
+        private Color UnderTint(HexCell cell)
         {
             var (q, r) = cell.Coordinates.ToOffsetCoordinates();
             uint h = unchecked((uint)(q * 73856093) ^ (uint)(r * 19349663));
-            float j = 0.97f + 0.06f * ((h & 0xFFFF) / 65535f); // slight, so neighbouring tiles read as one floor
-            if (cell.Under == UnderKind.DeepSeabed) j *= Mathf.Lerp(1f, 0.8f, Mathf.InverseLerp(0.5f, 1f, cell.Depth));
-            if (cell.UnderFeature != UnderFeature.None) j *= 0.92f;
-            if (cell.Under == UnderKind.Bedrock) j *= 0.6f;
-            var water = Color.white;
-            if (cell.Terrain.kind == TerrainKind.SaltWater) water = Color.Lerp(ShallowSea, DeepSea, cell.Depth);
-            else if (cell.Terrain.kind == TerrainKind.FreshWater) water = LakeWater;
-            return water * j;
+            float j = 0.92f + 0.16f * ((h & 0xFFFF) / 65535f);
+            var c = new Color(j, j, j);
+            if (cell.IsWater && cell.Terrain != null && cell.Terrain.kind == TerrainKind.SaltWater)
+            {
+                float depth = Mathf.Clamp01((cell.SurfaceHeight - UnderSurface(cell)) / 1.6f);
+                c *= Mathf.Lerp(1.05f, 0.42f, Mathf.Sqrt(depth));
+                c = Color.Lerp(c, new Color(c.r * 0.7f, c.g * 0.88f, c.b * 1.25f), depth);
+            }
+            if (cell.UnderFeature != UnderFeature.None) c *= 0.85f;
+            return c;
         }
 
         // Underground-niche animals live in the under layer; everyone else on the surface
@@ -534,6 +603,9 @@ namespace NaturalHistory.World
             {
                 if (g == null) continue;
                 bool visible = UnderView.Shows(g);
+                // down to the seabed in the under view: seafloor dwellers onto it, swimmers half way
+                float depth = UnderView.On && g.Cell != null && g.Cell.IsWater ? g.Cell.SurfaceHeight - UnderSurface(g.Cell) : 0f;
+                g.DepthOffset = g.Niche == Niche.Underground ? depth : depth * 0.5f;
                 foreach (var rend in g.GetComponentsInChildren<Renderer>(true))
                     if (rend.enabled != visible) rend.enabled = visible;
             }

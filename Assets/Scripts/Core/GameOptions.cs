@@ -18,7 +18,7 @@ namespace NaturalHistory.Core
     public static class GameOptions
     {
         public static readonly string[] LandNames   = { "Very small", "Small", "Medium", "Large", "Huge" };
-        public static readonly float[]  LandShares  = { 0.25f, 0.35f, 0.45f, 0.55f, 0.65f }; // share of the map that is land today
+        public static readonly float[]  LandShares  = { 0.2f, 0.3f, 0.4f, 0.5f, 0.6f }; // share of the map that is land today
 
         // Turns per period × this; tier 2 ("Fast") is the base table in ages.json
         public static readonly string[] LengthNames   = { "Very fast", "Fast", "Standard", "Long", "Epic" };

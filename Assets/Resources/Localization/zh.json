@@ -33,6 +33,10 @@
    "v": "来自加拿大北极地区、生活在3.75亿年前的“鱼足动物”，是鱼类与四足动物之间的过渡类型。它有鳞片、鳃和鳍，但也有扁平如鳄鱼的头部、灵活的颈部，以及带有类似腕骨的强健前鳍，能在浅水中撑起身体。它可能在溪流和沼泽中捕猎，或许还能用肺呼吸空气。"
   },
   {
+   "k": "A big, smooth-shelled asaphid trilobite from the Late Ordovician seas that covered what is now Ohio, Indiana and Kentucky, recognised by its broad semicircular head and tail shields and backswept cheek spines. Complete specimens reach at least 53 cm. Isotelus, best known from this species, has been Ohio's official state fossil since 1985.",
+   "v": "一种体型巨大、外壳光滑的栉虫类三叶虫，生活在晚奥陶世覆盖今俄亥俄、印第安纳和肯塔基一带的海洋中，以宽阔的半圆形头甲和尾甲以及向后弯的颊刺为特征。完整标本体长至少可达53厘米。以本种最为知名的等称虫属自1985年起成为俄亥俄州的官方州化石。"
+  },
+  {
    "k": "A branching sponge described in 2021 from the roughly 518-million-year-old Chengjiang Biota of Yunnan, China, about 13 million years older than the Burgess Shale Vauxia. Its name means 'before gracilenta': it has the same two-layered net skeleton without spicules, but grew from a fan-like holdfast and had branches of very different sizes. Its discovery showed that sponges with organic skeletons had already diversified in the early Cambrian. Its full adult size is not well documented.",
    "v": "一种分枝状海绵，于2021年根据中国云南约5.18亿年前的澄江生物群化石命名，比伯吉斯页岩的沃克斯海绵早约1300万年。其种名意为“纤细种之前”：它具有同样无骨针的双层网状骨骼，但从扇形的固着器上长出，分枝大小差异很大。它的发现表明，具有机质骨骼的海绵在寒武纪早期就已经分化。其成体的完整大小尚无充分记录。"
   },
@@ -47,6 +51,10 @@
   {
    "k": "A cup-shaped sponge from late Cambrian reef limestone of the Ellsworth Mountains, Antarctica, described in 1984 as an archaeocyath. For decades it was cited as the last surviving archaeocyath, far younger than all the others. A 2022 restudy of the original specimens found it was instead a lithistid demosponge, which suggests archaeocyaths had already died out by the middle Cambrian. It grew as slender double-walled cups, alone or budding into small clusters.",
    "v": "一种杯状海绵，发现于南极洲埃尔斯沃思山脉的寒武纪晚期礁灰岩中，1984 年被描述为古杯动物。几十年来它一直被视为最后幸存的古杯动物，比其他所有古杯动物都年轻得多。2022 年对原始标本的重新研究发现，它其实是一种石海绵（寻常海绵），这表明古杯动物在寒武纪中期就已灭绝。它生长成细长的双壁杯体，可单独生长，也可出芽形成小簇。"
+  },
+  {
+   "k": "A giant straight-shelled endocerid nautiloid from the Late Ordovician of New York, the longest shelled cephalopod known from fossils. Its largest known shell is about 3 m long as preserved and has been estimated at roughly 5.7 m complete, though a second-hand report of a 9 m shell has never been verified. Its slender, ringed shell had a huge siphuncle along the belly, filled with cone-shaped deposits that probably helped keep it level in the water. It was probably a slow ambush predator of trilobites and other animals near the sea floor.",
+   "v": "一种巨型直壳内角石类鹦鹉螺，生活在晚奥陶世的纽约一带，是化石记录中壳体最长的头足类。已知最大的壳体保存长度约3米，推算完整长度约5.7米；另有一则9米长壳的转述报告，但从未得到证实。它细长且带环纹的壳腹侧有粗大的体管，管内充填锥状沉积，可能起配重作用，使壳体在水中保持水平。它很可能是一种行动缓慢的伏击型捕食者，在海底附近捕食三叶虫等动物。"
   },
   {
    "k": "A larger relative of Carter's Choia, with a disc up to about 6 cm across, coarser spicules and a ring of stout spicules around its edge. It was first described in 1896 from Little Métis in Quebec as Stephanella hindei, and was later found in Cambrian rocks of Utah and the Burgess Shale, where only a single specimen is known. Like other Choia it lay loose on the sea floor and filtered food from the water.",
@@ -493,6 +501,18 @@
    "v": "一种生活在中南美洲的小型蝙蝠，只以血液为食，主要吸食家畜和其他大型哺乳动物的血。它降落在熟睡的猎物附近，用拇指和后肢灵巧地奔跑跳跃，借鼻部的热感受器找到温暖的部位，然后从被抗凝唾液保持开放的小伤口中舔血。没能吸到血的同伴会获得反刍出的血液共享。"
   },
   {
+   "k": "A small blind trilobite, usually 2-4 cm long, from Ordovician mudstones of Wales and the Welsh Borderland, and the type species of its genus. Its swollen head is ringed by a broad fringe pierced by concentric rows of pits, and long spines trail behind it. Nobody is sure what the fringe was for: ideas include sifting food from the sediment, sensing the water, and keeping the animal from sinking into soft mud.",
+   "v": "一种体长通常2-4厘米的小型盲眼三叶虫，见于威尔士及威尔士边区的奥陶纪泥岩，是三瘤虫属的模式种。它膨大的头部周围环绕着一圈宽阔的缘边，上面排列着一圈圈同心的小坑，身后拖着长长的颊刺。这圈缘边的功能至今不明：有人认为它用来从沉积物中筛滤食物，有人认为它能感知水流，也有人认为它能防止身体陷入软泥。"
+  },
+  {
+   "k": "A small chain coral described in 1966 from earliest Silurian rocks of Estonia, known from drill cores. Its small colonies had rounded corallites about 1.5 mm across, a little smaller than those of the common chain coral, enclosing small, rounded windows. The scientist who described it later treated it as the same species as Halysites catenularia, so it may simply be an early form of that coral.",
+   "v": "一种小型链珊瑚，1966年根据爱沙尼亚最早志留世地层的钻孔岩芯描述。它的小群体由直径约1.5毫米的圆形珊瑚个体组成，比普通链珊瑚略小，围出小而圆的空窗。命名者后来把它视为与链珊瑚（Halysites catenularia）同一物种，因此它可能只是该珊瑚的早期类型。"
+  },
+  {
+   "k": "A small fringed trilobite from the Late Ordovician of Scandinavia, especially Norway and Sweden. It is now usually placed in the genus Tretaspis, of which it is the type species. A raised ridge splits its pitted fringe into outer and inner bands; it has small eye bumps but probably could not see, and its very long, thin cheek spines inspired the name 'seticornis', meaning 'bristle-horned'.",
+   "v": "一种来自晚奥陶世斯堪的纳维亚（尤其是挪威和瑞典）的小型缘边三叶虫，现在通常被归入孔盾虫属（Tretaspis），并且是该属的模式种。一道隆起的脊把它布满小坑的缘边分成内外两带；它有小小的眼瘤，但很可能看不见东西。它那极长而纤细的颊刺正是种名“seticornis”（意为“刚毛之角”）的由来。"
+  },
+  {
    "k": "A small hard tick of eastern North American woodlands, also called the deer tick, and the main carrier of the bacteria that cause Lyme disease. Over a two-year life it takes three blood meals: larvae and nymphs mostly on mice, birds and lizards, adults on white-tailed deer. It waits for each host by 'questing' on low plants with its front legs held out.",
    "v": "一种生活在北美东部林地的小型硬蜱，又称鹿蜱，是莱姆病病原菌的主要携带者。在两年的生命中它要吸三次血：幼蜱和若蜱主要吸食鼠类、鸟类和蜥蜴，成蜱则吸食白尾鹿。它伏在低矮植物上伸出前足“寻觅”，等待每一个宿主。"
   },
@@ -543,6 +563,10 @@
   {
    "k": "A social bee living in colonies of tens of thousands of workers around a single queen. Workers gather nectar and pollen from flowers, store honey in wax combs, and use the waggle dance to tell nestmates where food is. As pollinators of crops and wild plants, they are among the most important insects to people.",
    "v": "一种社会性蜜蜂，数万只工蜂围绕一只蜂王组成蜂群。工蜂从花中采集花蜜和花粉，将蜂蜜储存在蜡质巢脾中，并用摇摆舞告诉同伴食物的位置。作为农作物和野生植物的传粉者，它们是对人类最重要的昆虫之一。"
+  },
+  {
+   "k": "A solitary horn coral from Late Ordovician limestones of New York, and one of the early rugose corals. Each polyp lived alone in a curved, cone-shaped skeleton a few centimetres long and about 1.5-2 cm wide at the top, whose deep cup was lined with alternating long and short ridges called septa. It had no holdfast and probably lay on the soft sea floor with its tip in the mud, catching small prey with its tentacles.",
+   "v": "一种单体角珊瑚，产自美国纽约州晚奥陶世石灰岩，是较早的四射珊瑚之一。每个水螅体独自生活在弯曲的圆锥形骨骼中，骨骼长数厘米，顶端宽约1.5–2厘米，深深的萼部内排列着长短交替的放射状隔壁。它没有固着结构，可能以尖端插入泥中斜躺在松软的海底，用触手捕捉小型猎物。"
   },
   {
    "k": "A solitary sea anemone of rocky tide pools along the coast of California and Baja California, named for the pink-lavender rays on its green oral disc. Its stinging tentacles catch small crustaceans, fish and drifting animals, while symbiotic algae in its tissues add food from sunlight and give it its green colour. Long confused with the cloning aggregating anemone, it was only described as a separate species in 2000.",
@@ -1749,6 +1773,10 @@
    "v": "给幼崽带回食物。"
   },
   {
+   "k": "Bristle-horned Trinucleus",
+   "v": "刚毛三瘤虫"
+  },
+  {
    "k": "Broadcast Spawning",
    "v": "撒播产卵"
   },
@@ -1863,6 +1891,10 @@
   {
    "k": "Carter's Choia Sponge",
    "v": "卡特氏乔伊海绵"
+  },
+  {
+   "k": "Chain Coral",
+   "v": "链珊瑚"
   },
   {
    "k": "Chengjiang Vauxia",
@@ -3085,6 +3117,10 @@
    "v": "沙浴"
   },
   {
+   "k": "Endoceras",
+   "v": "内角石"
+  },
+  {
    "k": "EP 0",
    "v": "EP 0"
   },
@@ -3375,6 +3411,10 @@
   {
    "k": "Estemmenosuchus",
    "v": "冠鳄兽"
+  },
+  {
+   "k": "Estonian Chain Coral",
+   "v": "爱沙尼亚链珊瑚"
   },
   {
    "k": "Eucalyptus",
@@ -3915,6 +3955,10 @@
   {
    "k": "Freshwater reptile found in both Brazil and South Africa, key evidence for continental drift.",
    "v": "在巴西和南非均有发现的淡水爬行动物，是大陆漂移的关键证据。"
+  },
+  {
+   "k": "Fringed Trinucleus",
+   "v": "缨边三瘤虫"
   },
   {
    "k": "Fruit Eating",
@@ -4761,6 +4805,10 @@
    "v": "蜜环菌"
   },
   {
+   "k": "Honeycomb Coral",
+   "v": "蜂巢珊瑚"
+  },
+  {
    "k": "Hormone Signalling",
    "v": "激素信号"
   },
@@ -4771,6 +4819,10 @@
   {
    "k": "Hormones, body heat and dormancy.",
    "v": "激素、体温与休眠。"
+  },
+  {
+   "k": "Horn Coral",
+   "v": "角珊瑚"
   },
   {
    "k": "Horned abelisaurid from the Narmada valley, when India was an island drifting north.",
@@ -5079,6 +5131,10 @@
   {
    "k": "Isotelus",
    "v": "等称虫"
+  },
+  {
+   "k": "Isotelus Rex",
+   "v": "王者等称虫"
   },
   {
    "k": "Isthmus of Panama closes (~3 Ma); Northern Hemisphere ice sheets begin to grow",
@@ -6867,6 +6923,10 @@
   {
    "k": "Ogygiocarella",
    "v": "Ogygiocarella"
+  },
+  {
+   "k": "Ohio Isotelus",
+   "v": "俄亥俄等称虫"
   },
   {
    "k": "Okavango Delta",
@@ -9597,8 +9657,16 @@
    "v": "约1.95亿年前早侏罗世海洋中的“星菊石”。它松散盘卷的壳直径可达20厘米，有粗壮笔直的肋和两侧带沟的锐利腹棱。充气的气室使它保持浮力，动物则用腕捕捉小型猎物。它的化石在莱姆里吉斯极为常见，以至于整个岩层带都以它命名。"
   },
   {
+   "k": "The classic chain coral of Silurian seas, first named by Linnaeus and best known from Gotland, Sweden. Its colonies were built of walls one tube thick, made of oval corallites about 2 mm across, which joined and branched to enclose open windows of very variable size, often long and arranged in rough parallel rows. Colonies grew to tens of centimetres across and were common in Silurian reefs and coral beds.",
+   "v": "志留纪海洋中最典型的链珊瑚，最早由林奈命名，以瑞典哥得兰岛的化石最为著名。它的群体由单层管壁构成，每道壁是一排直径约2毫米的椭圆形珊瑚个体，这些壁相互连接、分叉，围出大小差异很大的空窗，窗孔常呈长条形并大致平行排列。群体可宽达数十厘米，在志留纪的礁体和珊瑚层中十分常见。"
+  },
+  {
    "k": "The Indian subcontinent, Indochina, southern China and the Sunda islands (also called Indomalayan).",
    "v": "印度次大陆、中南半岛、华南和巽他群岛（又称印度-马来界）。"
+  },
+  {
+   "k": "The largest complete trilobite ever found: the holotype, from Late Ordovician rocks near Churchill in northern Manitoba, is 72 cm long. Its smooth, elongate oval shield lacks cheek spines. It lived in warm, shallow tropical seas and probably ploughed through the seafloor sediment hunting and scavenging soft-bodied prey.",
+   "v": "迄今发现的最大的完整三叶虫：其正模标本出自加拿大马尼托巴省北部丘吉尔附近的晚奥陶世岩层，体长72厘米。它的背甲光滑、呈长椭圆形，没有颊刺。它生活在温暖的热带浅海中，可能在海底沉积物中犁行，捕食或拾取软体猎物。"
   },
   {
    "k": "The Late Paleozoic Ice Age ends in the early Permian",
@@ -9607,6 +9675,10 @@
   {
    "k": "The North and South China blocks and Indochina, islands in the Paleo-Tethys.",
    "v": "华北、华南地块及印支地块，古特提斯洋中的岛屿。"
+  },
+  {
+   "k": "The original honeycomb coral, first described from Silurian rocks of Gotland, Sweden. Its domed or lumpy colonies were made of thousands of thin-walled, many-sided tubes about 2-3 mm wide, packed together like the cells of a honeycomb and linked by tiny pores in their walls. It was a common reef builder in Silurian seas from Estonia and Scandinavia to Britain.",
+   "v": "蜂巢珊瑚的模式种，最早根据瑞典哥得兰岛志留纪地层的化石描述。它的群体呈圆丘状或块状，由成千上万根宽约2–3毫米的薄壁多边形管紧密排列而成，宛如蜂巢，管壁上的细小壁孔将相邻个体相连。它是志留纪海洋中常见的造礁生物，分布于爱沙尼亚、斯堪的纳维亚至英国。"
   },
   {
    "k": "The Siberian craton, later the heart of Angaraland and the Siberian Traps.",
@@ -9775,6 +9847,10 @@
   {
    "k": "The twin voice box of birds.",
    "v": "鸟类的双重发声器官。"
+  },
+  {
+   "k": "The type species of Isotelus, described in 1824 from the Trenton rocks of New York and found across much of Middle and Late Ordovician North America. It is slimmer and flatter than Isotelus maximus, with more triangular head and tail shields, and adults have no cheek spines. Most specimens are 20-25 cm long, though some grow to nearly twice that.",
+   "v": "等称虫属的模式种，1824年根据纽约特伦顿岩层的标本命名，广泛分布于中、晚奥陶世的北美各地。它比俄亥俄等称虫更修长、更扁平，头甲和尾甲更接近三角形，成体没有颊刺。大多数标本长20至25厘米，少数可长到近两倍。"
   },
   {
    "k": "The type species of Protospongia, named in 1864 from roughly 505-million-year-old Middle Cambrian rocks at St David's in Wales. It was a glass sponge whose thin wall was held up by a single layer of cross-shaped silica spicules in at least three sizes, laid out in a square lattice like a window frame. It is known only from small fragments, so its full shape and size are uncertain.",
@@ -10003,6 +10079,10 @@
   {
    "k": "Trenton Falls",
    "v": "特伦顿瀑布"
+  },
+  {
+   "k": "Trenton Isotelus",
+   "v": "特伦顿等称虫"
   },
   {
    "k": "Triassic",

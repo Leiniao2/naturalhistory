@@ -171,7 +171,7 @@ namespace NaturalHistory.World
         }
 
         // Shares of the map (elevation rank) and of the land (ruggedness rank)
-        // The land share today comes from the New Game screen (GameOptions.LandShare; Large = 55%):
+        // The land share today comes from the New Game screen (GameOptions.LandShare; Large = 50%):
         // below WaterThreshold is water, the 8% just under it shallow/fresh water, the rest open sea
         static float WaterThreshold     => 1f - Core.GameOptions.LandShare;
         static float SaltWaterThreshold => WaterThreshold - 0.08f;

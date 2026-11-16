@@ -44,7 +44,7 @@ namespace NaturalHistory.World
         // Landforms (HexGrid.PlaceLandforms)
         Mesa,         // flat-topped table of layered rock in dry country
         Canyon,       // a gorge cut in terraces through a dry plateau
-        Fjord,        // a narrow arm of the sea between sheer highland walls (cold coasts)
+        Fjord,        // no longer placed (kept so later values keep their numbers)
         WhiteCliffs,  // chalk cliffs on the coast (from the Cretaceous, when chalk was laid down)
         SaltLake,     // white salt pan with milky brine
         PinkSaltLake, // the same, the brine pink with salt-loving microbes

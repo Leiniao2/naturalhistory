@@ -171,7 +171,8 @@ namespace NaturalHistory.World
         {
             var rng   = new System.Random(system * 7919 ^ WorldSeed);
             var mouth = cells[system % width, Mathf.Clamp(system / width, 0, height - 1)];
-            float w   = 0.75f + 0.55f * (float)rng.NextDouble();
+            // how broad this river system runs: mostly moderate, a few very broad (0.5 … 1.75)
+            float w   = 0.5f + 1.25f * Mathf.Pow((float)rng.NextDouble(), 1.4f);
             float pick = (float)rng.NextDouble();
             // dry-country rivers run muddy, cold ones clear, the rest anywhere in between
             if (mouth.Biome is TerrainKind.Desert or TerrainKind.Savanna or TerrainKind.Steppe) pick = 0.6f + pick * 0.4f;
@@ -183,7 +184,11 @@ namespace NaturalHistory.World
             return (w, water, bank);
         }
 
-        private float RiverWidth(int flow, float mul) => cellSize * Mathf.Min(0.035f + 0.02f * Mathf.Sqrt(Mathf.Max(flow, 1)), 0.17f) * mul;
+        // Half-width of a river: wider overall, and growing faster with the water it carries, so a
+        // big trunk river is far broader than a headwater stream
+        // (never more than about a third of a tile each side, so even the broadest leaves its banks)
+        private float RiverWidth(int flow, float mul) =>
+            cellSize * Mathf.Min(Mathf.Min(0.05f + 0.03f * Mathf.Pow(Mathf.Max(flow, 1), 0.6f), 0.26f) * mul, 0.32f);
 
         private void PlaceRivers()
         {
@@ -210,6 +215,10 @@ namespace NaturalHistory.World
         // outflow), in the cell's space: the same curves CreateRiverMesh builds, so a canyon can be
         // cut exactly where its river runs. Empty if the cell has no river.
         private List<List<Vector2>> riverLines;
+        // Half-width of the river where it leaves this cell (0 when no river)
+        public float RiverHalfWidth(HexCell cell) =>
+            cell == null || cell.RiverFlow <= 0 ? 0f : RiverWidth(cell.RiverFlow, RiverStyle(cell.RiverSystem).width);
+
         public List<List<Vector2>> RiverCenterlines(HexCell cell)
         {
             var lines = new List<List<Vector2>>();

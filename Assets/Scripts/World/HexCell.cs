@@ -284,7 +284,8 @@ namespace NaturalHistory.World
         // edge blending, sand/rock recolouring or shore. ShowSurface puts everything back.
         // edgeTextures / edgeTints / edgeScales (6 each, may be null): the neighbouring under tiles to
         // blend into across each edge (tint.a = 0: none), and their textures' world tiling.
-        public void ShowUnder(Material material, Color tint, Texture[] edgeTextures = null, Vector4[] edgeTints = null, float[] edgeScales = null)
+        public void ShowUnder(Material material, Color tint, Texture[] edgeTextures = null, Vector4[] edgeTints = null, float[] edgeScales = null,
+                              bool waterBed = false)
         {
             if (meshRenderer == null || material == null) return;
             if (!ShowingUnder)
@@ -303,11 +304,26 @@ namespace NaturalHistory.World
                 for (int e = 0; e < 6; e++) propBlock.SetTexture(EdgeTexIds[e], edgeTextures[e] != null ? edgeTextures[e] : Texture2D.whiteTexture);
             propBlock.SetFloatArray(EdgeScaleId, edgeScales ?? new float[6]);
             propBlock.SetFloat(EdgeDarkenId, 0.06f); // only a hint of the tile rim, so beds run on into each other
+            if (waterBed) propBlock.SetFloat(LandId, 0f); // below sea level: no beach, surf or cliff rock colouring
+            propBlock.SetFloat(AntiTileId, waterBed ? 1f : 0f); // no rows or stripes in the mats and beds
             meshRenderer.SetPropertyBlock(propBlock);
             ApplyColor();
         }
 
         static readonly int EdgeScaleId  = Shader.PropertyToID("_EdgeScale");
+        static readonly int CellBlendId  = Shader.PropertyToID("_CellBlend");
+
+        // Blend this surface tile into its neighbours across its edges (the built-in terrain shader
+        // only does it where asked: deserts and the land round them, see HexGrid.Desert)
+        public void SetCellBlend(bool on)
+        {
+            if (meshRenderer == null) return;
+            meshRenderer.GetPropertyBlock(propBlock);
+            propBlock.SetFloat(CellBlendId, on ? 1f : 0f);
+            meshRenderer.SetPropertyBlock(propBlock);
+        }
+        static readonly int LandId       = Shader.PropertyToID("_Land");
+        static readonly int AntiTileId   = Shader.PropertyToID("_AntiTile");
         static readonly int EdgeDarkenId = Shader.PropertyToID("_EdgeDarken");
 
         public void ShowSurface()

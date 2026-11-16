@@ -381,7 +381,7 @@ namespace NaturalHistory.World
                 m.coilDefense = DefenseKind == DefenseStyle.Coil ? defenseWeight : 0f;
                 if (m.jumps) Jump(m, t, dt, ref pos, ref rot);
                 if (onGround) StandOnGround(m, grid, dt, ref pos, ref rot);
-                m.transform.localPosition = pos;
+                m.transform.localPosition = pos + Vector3.down * DepthOffset; // under view: down on the seabed
                 m.transform.localRotation = rot;
                 ApplyScale(m, scale);
                 if (m.strideAmplitude > 0f || m.undulateAmplitude > 0f) Locomote(m, dt, w);

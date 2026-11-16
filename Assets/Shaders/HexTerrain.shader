@@ -326,6 +326,8 @@ Shader "NaturalHistory/HexTerrain"
         float     _HexApothem;
         float     _HexBlendWidth;
         float     _BuiltinEdgeBlend;
+        float     _AntiTile; // 1 on under-view seabed/lakebed tiles (HexCell.ShowUnder): hide the texture's repetition
+        float     _CellBlend; // 1: blend this tile into its neighbours on the surface too (deserts, HexGrid.Desert)
 
         half3 EdgeTex(int e, float2 uv)
         {
@@ -372,6 +374,15 @@ Shader "NaturalHistory/HexTerrain"
 
             float2 uv = top ? p.xz : (abs(n.x) > abs(n.z) ? p.zy : p.xy);
             half3 albedo = tex2D(_BaseMap, uv * _BaseMap_ST.xy + _BaseMap_ST.zw).rgb;
+            // Anti-tiling: mix in a copy turned 37° and scaled 0.79, the mix wandering over the
+            // floor, so a small repeating pattern (mats, stromatolites) shows no rows or stripes
+            if (top && _AntiTile > 0.5)
+            {
+                float2 ruv = float2(uv.x * 0.799 - uv.y * 0.602, uv.x * 0.602 + uv.y * 0.799) * 0.79 + 0.37;
+                half3 other = tex2D(_BaseMap, ruv * _BaseMap_ST.xy).rgb;
+                float wander = sin(p.x * 0.9 + sin(p.z * 0.7) * 1.3) * sin(p.z * 0.8 + sin(p.x * 0.6) * 1.1) * 0.5 + 0.5;
+                albedo = lerp(albedo, other, smoothstep(0.2, 0.8, wander));
+            }
 
             // Repaint in this tile's sand/soil colour (land only), keeping the texture's light and
             // shade relative to its average (the smallest mip)
@@ -381,7 +392,7 @@ Shader "NaturalHistory/HexTerrain"
             // Large, soft patches: the same texture ~12x larger, at an angle, as a shade around 1
             float2 macroUV = float2(p.x * 0.083 + p.z * 0.047, p.z * 0.083 - p.x * 0.047);
             half macroDev = top ? Luminance(tex2D(_BaseMap, macroUV).rgb) - avgLum : 0;
-            if (top) albedo *= 1.0 + clamp(macroDev, -0.25, 0.25) * lerp(0.6, 1.1, _Land);
+            if (top) albedo *= 1.0 + clamp(macroDev, -0.25, 0.25) * lerp(0.6, 1.1, _Land) * (_AntiTile > 0.5 ? 0.25 : 1.0); // big diagonal bands of a patterned bed: barely
             // Floodplains: dark, wet hollows and pools of standing water where the large-scale
             // pattern dips, a finer pattern breaking up their outlines
             if (top && _Flood > 0.01)
@@ -396,7 +407,7 @@ Shader "NaturalHistory/HexTerrain"
 
             // Fade toward the neighbours' textures near each edge (nearest edge and, near a corner,
             // the next one), so adjacent tiles meet without a hard line
-            if (top && _BuiltinEdgeBlend > 0.5)
+            if (top && (_BuiltinEdgeBlend > 0.5 || _CellBlend > 0.5))
             {
                 float2 local  = IN.worldPos.xz - float2(unity_ObjectToWorld._m03, unity_ObjectToWorld._m23);
                 float  angle  = atan2(local.x, local.y);

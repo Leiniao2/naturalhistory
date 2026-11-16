@@ -518,7 +518,7 @@ namespace NaturalHistory.World
         private Part[] mist, veil, boulders;
         private Vector3[] boulderAt;
         private Vector3 dir, across, poolMid, impact;
-        private float halfW, top, foot, drop, lipD, recess, poolAlong, poolAcross;
+        private float halfW, riverHalf, top, foot, drop, lipD, recess, poolAlong, poolAcross;
         private bool intoWater;
         private readonly List<Mesh> built = new();
         private static Material waterMaterial;
@@ -555,7 +555,8 @@ namespace NaturalHistory.World
             var down = PhenomenaUtil.EdgeNeighbors(grid, cell)[edge];
             intoWater = down != null && down.IsWater;
 
-            halfW  = Mathf.Clamp(0.2f + 0.018f * cell.RiverFlow, 0.21f, 0.36f) * s;
+            riverHalf = Mathf.Max(grid.RiverHalfWidth(cell), 0.03f * s);
+            halfW  = Mathf.Max(Mathf.Clamp(0.2f + 0.018f * cell.RiverFlow, 0.21f, 0.36f) * s, riverHalf * 1.1f); // the brink spreads wider than the river
             // the banks spread a little over half way along the tile edge on each side
             reachL = R(0.52f, 0.7f) * s / halfW;
             reachR = R(0.52f, 0.7f) * s / halfW;
@@ -618,6 +619,10 @@ namespace NaturalHistory.World
         {
             foreach (var m in built) if (m != null) Destroy(m); // built for this fall only
         }
+
+        // Where the rock's top and the brink begin, as a share of the way out to the tile edge: close
+        // to the edge, so the brink is short along the flow (about a quarter of the tile)
+        private const float BackAlong = 0.85f;
 
         // Distance out along `dir` of the lip at x half-widths across (a horseshoe: the middle further back)
         private float Lip(float x) => lipD + recess * (Mathf.Min(x * x, 1.4f) - 1f);
@@ -725,7 +730,7 @@ namespace NaturalHistory.World
         private Mesh BuildRock()
         {
             const int cols = 56, rows = 12, wall = 16;
-            float back   = s * 0.8660254f * 0.42f;
+            float back   = s * 0.8660254f * BackAlong;
             float bottom = foot - 0.04f * s;
             var fx = new Facets(PaintRock, 0.0005f * s);
             var g = new Vector3[cols + 1, rows + 1];       // top surface, back (0) to lip (rows)
@@ -827,8 +832,7 @@ namespace NaturalHistory.World
         private Mesh BuildBrink()
         {
             const int cols = 12, rows = 10;
-            float back = s * 0.8660254f * 0.42f;
-            float riverHalf = Mathf.Min(0.035f + 0.02f * Mathf.Sqrt(Mathf.Max(cell.RiverFlow, 1)), 0.17f) * s;
+            float back = s * 0.8660254f * BackAlong;
             var m = new WaterMesh();
             for (int r = 0; r <= rows; r++)
             {

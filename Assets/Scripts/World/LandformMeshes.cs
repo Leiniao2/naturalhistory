@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace NaturalHistory.World
 {
-    // Landform tiles: mesas, canyons, fjords, white chalk cliffs, salt lakes and Danxia rainbow
+    // Landform tiles: mesas, canyons, white chalk cliffs, salt lakes and Danxia rainbow
     // hills (karst: KarstMeshes.cs). Most are a height field over the hex (a triangular lattice, flat-shaded and
     // painted by height and slope) raised above the tile's own ground; where it stands above the
     // ground at the hex rim, a wall drops down to the ground (or the sea). Built per tile (unique),
@@ -15,8 +15,6 @@ namespace NaturalHistory.World
         static readonly Color OrangeRock  = Muted(new Color(0.78f, 0.50f, 0.30f));
         static readonly Color CreamRock   = Muted(new Color(0.84f, 0.74f, 0.58f));
         static readonly Color Scree       = Muted(new Color(0.74f, 0.52f, 0.36f));
-        static readonly Color FjordRock   = new(0.42f, 0.43f, 0.45f);
-        static readonly Color Spruce      = new(0.16f, 0.27f, 0.17f);
         static readonly Color ChalkWhite  = new(0.93f, 0.92f, 0.87f);
         static readonly Color Flint       = new(0.62f, 0.62f, 0.60f);
         static readonly Color Downland    = new(0.44f, 0.56f, 0.28f);
@@ -305,38 +303,6 @@ namespace NaturalHistory.World
         }
 
         static readonly Color DryShrub = new(0.42f, 0.44f, 0.26f);
-
-        // ---- Fjord: on a sea tile between highlands, sheer granite walls rising from the water on
-        //      the landward sides, snow on the tops and dark spruce low down, a narrow arm of sea
-        //      between them
-
-        public static Mesh CreateFjord(System.Random rng, float size, bool[] landEdges, float waterY)
-        {
-            var b = new Builder();
-            float seed = Range(rng, 0f, 100f);
-            float a = size * 0.8660254f;
-            float H = size * Range(rng, 0.34f, 0.46f);
-            float Height(Vector2 p)
-            {
-                float m = 0f;
-                for (int e = 0; e < 6; e++)
-                {
-                    if (!landEdges[e]) continue;
-                    float ang = (60f * e + 30f) * Mathf.Deg2Rad;
-                    float de = a - (p.x * Mathf.Sin(ang) + p.y * Mathf.Cos(ang)); // how far in from that edge
-                    m = Mathf.Max(m, 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(0.22f * a, 0.5f * a, de)));
-                }
-                float noise = Mathf.PerlinNoise(seed + p.x / size * 4f, seed + p.y / size * 4f);
-                return H * Mathf.Pow(m, 0.6f) * (0.7f + 0.45f * noise) - 0.01f * size;
-            }
-            AddHeightField(b, size, 22, Height, _ => waterY, (m, h, nrm) =>
-            {
-                if (h > H * 0.72f && nrm.y > 0.45f) return Shade(rng, Snow, 0.03f);
-                if (h < H * 0.45f && nrm.y > 0.55f) return Shade(rng, Spruce, 0.1f);
-                return Shade(rng, FjordRock, 0.07f) * Mathf.Lerp(0.85f, 1.05f, nrm.y);
-            }, _ => waterY);
-            return b.ToMesh("Fjord");
-        }
 
         // ---- White cliffs: chalk downland rising toward the sea and ending in sheer white walls
         //      banded with flint, with fallen chalk blocks in the surf
