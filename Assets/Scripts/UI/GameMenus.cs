@@ -85,6 +85,7 @@ namespace NaturalHistory.UI
             unitPanel.OpenEvolve += copy => { CloseSidePanels(); zoologyPanel.Open(copy); };
             unitPanel.Message    += ShowToast;
             zoologyPanel.Message += ShowToast;
+            NaturalEvents.Announced += OnPhenomenon;
             playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast("New game started"); };
             playersPanel.SetupClosed    += () => pauseOverlay.RemoveFromClassList("hidden");
 
@@ -117,8 +118,11 @@ namespace NaturalHistory.UI
             OnClimateUpdated();
         }
 
+        private void OnPhenomenon(string message, HexCell cell) => ShowToast(message);
+
         private void OnDestroy()
         {
+            NaturalEvents.Announced -= OnPhenomenon;
             if (Progression != null) Progression.Changed -= OnProgressionChanged;
             if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed -= OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated -= OnClimateUpdated;

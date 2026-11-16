@@ -15,7 +15,7 @@ namespace NaturalHistory.World
     // The group root stays a child of the tile it set out from until it arrives, and its path is
     // stored as offsets from that tile, so the east–west wrap (which moves whole cells) carries a
     // travelling group along with it.
-    public class ColonyGroup : MonoBehaviour
+    public partial class ColonyGroup : MonoBehaviour // attack and defence poses: ColonyGroup.Combat.cs
     {
         // Seconds to fall into formation / to break formation after arriving
         private const float GatherTime = 0.6f;
@@ -33,6 +33,7 @@ namespace NaturalHistory.World
         private static readonly int FlapId        = Shader.PropertyToID("_Flap");
         private static readonly int StrideId      = Shader.PropertyToID("_Stride");
         private static readonly int StridePhaseId = Shader.PropertyToID("_StridePhase");
+        private static readonly int StrideModeId  = Shader.PropertyToID("_StrideMode");
         private static readonly int UndulateId      = Shader.PropertyToID("_Undulate");
         private static readonly int UndulatePhaseId = Shader.PropertyToID("_UndulatePhase");
         private static readonly int CoilId          = Shader.PropertyToID("_Coil");
@@ -83,6 +84,9 @@ namespace NaturalHistory.World
             public float stridePhase;
             public float strideFactor;    // 0 standing .. 1 full stride
             public float gaitSpeed;       // smoothed ground speed, cells per second
+            public float runAmplitude;    // Run gait: stride at a full gallop; 0 = never gallops
+            public float runBlend;        // 0 walking .. 1 galloping
+            public int   legPairs;
             public Vector3 lastPosition;
             public bool hasLastPosition;
 
@@ -109,6 +113,13 @@ namespace NaturalHistory.World
             public float hopAir;            // 0..1 through the current jump (0 when sitting)
             public Vector3 poseAt, poseVelocity;
             public Vector4 coilShape;       // _Coil: (coiled 0..1, inner radius, ring spacing, head rise)
+            public float coilDefense;       // 0..1 coiling up tight against an attacker
+
+            // Attack / defence poses that change size or colour
+            public Vector3 baseScale;
+            public bool scaleInit, scaled;
+            public Color baseTint;
+            public bool tintInit;
 
             // Standing on sloped ground: smoothed tilt that lines the body up with the slope
             public Quaternion groundTilt = Quaternion.identity;
@@ -152,6 +163,7 @@ namespace NaturalHistory.World
             Cell       = cell;
             rootCell   = cell;
             MemberSpan = memberSpan;
+            InitCombatStyles();
         }
 
         public void AddMember(Member m) => members.Add(m);
@@ -183,14 +195,14 @@ namespace NaturalHistory.World
         public bool MoveAlong(IReadOnlyList<HexCell> path)
         {
             if (!CanMove || IsBusy || path == null || path.Count == 0) return false;
-            var points = new List<Vector3> { Vector3.up * Cell.SurfaceHeight };
+            var points = new List<Vector3> { Spot + Vector3.up * Cell.SurfaceHeight };
             var prev = Cell;
             var offset = Vector3.zero;
             foreach (var next in path)
             {
                 if (next == null || next == prev || !CanEnter(next) || !AreNeighbors(prev, next)) return false;
                 offset += GridStep(prev, next);
-                points.Add(new Vector3(offset.x, next.SurfaceHeight, offset.z));
+                points.Add(new Vector3(offset.x, next.SurfaceHeight, offset.z) + Spot);
                 prev = next;
             }
             if (!CanLiveAt(prev)) return false; // passing through is fine, but it has to eat where it stops
@@ -202,23 +214,30 @@ namespace NaturalHistory.World
             return true;
         }
 
-        // Charges a neighbouring tile up to its border, strikes and backs off home, still facing it.
-        // Struck fires at the moment of the strike, so combat can resolve there.
+        // Attacks a neighbouring tile in the species' style (AttackKind): closes in toward the border,
+        // strikes, and backs off home still facing it. Fixed colonies strike in place. Struck fires at
+        // the moment of the strike, so combat can resolve there; a group on the target tile plays its
+        // defence (Defend) as the blow lands.
         public bool Attack(HexCell target)
         {
-            if (!CanMove || IsBusy || target == null || target == Cell || !AreNeighbors(Cell, target)) return false;
-            var home   = Vector3.up * Cell.SurfaceHeight;
-            var reach  = GridStep(Cell, target) * StrikeReach;
-            var border = new Vector3(reach.x, Cell.SurfaceHeight, reach.z); // stays on its own tile's height
+            if (!CanAttack || IsBusy || target == null || target == Cell || !AreNeighbors(Cell, target)) return false;
+            var (hold, reachFraction, approach) = StrikeTiming();
+            if (!CanMove) reachFraction = 0f;
+            var home   = Spot + Vector3.up * Cell.SurfaceHeight;
+            var step   = GridStep(Cell, target);
+            var reach  = step * reachFraction;
+            var border = new Vector3(reach.x, Cell.SurfaceHeight, reach.z) + Spot; // stays on its own tile's height
 
             var t = new Trip { destination = Cell, strikeTarget = target };
-            var charge = MakeLeg(new List<Vector3> { home, border }, TravelSpeed() * ChargeSpeed);
-            charge.pauseAfter = StrikeHold;
+            var charge = MakeLeg(new List<Vector3> { home, border }, TravelSpeed() * approach);
+            charge.pauseAfter = hold;
             var back = MakeLeg(new List<Vector3> { border, home }, TravelSpeed() * BackOffSpeed);
             back.faceForward = false;
             t.legs.Add(charge);
             t.legs.Add(back);
             Begin(t);
+            heading = Yaw(step); // also for colonies that strike in place
+            WarnDefender(target, charge.startTime + charge.duration);
             return true;
         }
 
@@ -229,6 +248,7 @@ namespace NaturalHistory.World
             {
                 ColonyGait.Hop     => Definition != null && Definition.mapLegs == 1 ? 1.1f : 0.7f, // bounding bipeds / frogs, which rest between leaps
                 ColonyGait.Slither => 0.55f,
+                ColonyGait.Run     => Mathf.Lerp(1.2f, 1.0f, Mathf.InverseLerp(0.4f, 2.5f, MemberSpan)),
                 _                  => Mathf.Lerp(0.85f, 0.65f, Mathf.InverseLerp(0.4f, 2.5f, MemberSpan)),
             },
             ColonyStyle.Soar  => 1.3f,
@@ -332,6 +352,9 @@ namespace NaturalHistory.World
                 }
             }
 
+            UpdateDefense(t);
+            UpdateInk(t);
+            if (Style == ColonyStyle.Fixed) w = 0f; // colonies that can't move keep their places, even when striking
             var hq = Quaternion.Euler(0f, heading, 0f);
             var grid = HexGrid.Instance;
             bool onGround = (Style is ColonyStyle.Ground or ColonyStyle.Fixed) && grid != null && rootCell != null;
@@ -346,14 +369,19 @@ namespace NaturalHistory.World
                 else { pos = m.transform.localPosition; rot = m.transform.localRotation; }
                 if (w > 0.001f)
                 {
-                    TravelPose(m, t, hq, turnRate, lunge, out var tpos, out var trot);
+                    TravelPose(m, t, hq, turnRate, AttackKind == AttackStyle.Charge ? lunge : 0f, out var tpos, out var trot);
                     pos = Vector3.Lerp(pos, tpos, w);
                     rot = Quaternion.Slerp(rot, trot, w);
                 }
+                var scale = Vector3.one;
+                StrikePose(m, t, hq, Style == ColonyStyle.Fixed ? 1f : w, ref pos, ref rot, ref scale);
+                DefensePose(m, t, ref pos, ref rot, ref scale);
+                m.coilDefense = DefenseKind == DefenseStyle.Coil ? defenseWeight : 0f;
                 if (m.jumps) Jump(m, t, dt, ref pos, ref rot);
                 if (onGround) StandOnGround(m, grid, dt, ref pos, ref rot);
                 m.transform.localPosition = pos;
                 m.transform.localRotation = rot;
+                ApplyScale(m, scale);
                 if (m.strideAmplitude > 0f || m.undulateAmplitude > 0f) Locomote(m, dt, w);
             }
         }
@@ -467,11 +495,22 @@ namespace NaturalHistory.World
             else if (m.strideAmplitude > 0f)
             {
                 // one leg cycle per stride (each foot sweeps 2 · legLength · tan(amplitude) while
-                // planted); full stride from about one and a half leg lengths per second
-                float strideLength = 2f * m.legLength * Mathf.Tan(m.strideAmplitude);
+                // planted); full stride from about one and a half leg lengths per second. Runners
+                // lengthen their stride into a gallop from about two leg lengths per second, so
+                // their legs cycle slower instead of pattering.
+                float amplitude = m.strideAmplitude;
+                if (m.runAmplitude > 0f)
+                {
+                    float legsPerSecond = m.gaitSpeed / Mathf.Max(m.legLength, 1e-4f);
+                    float target = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(1.8f, 3.2f, legsPerSecond));
+                    m.runBlend = Mathf.Lerp(m.runBlend, target, 1f - Mathf.Exp(-dt * 4f));
+                    amplitude  = Mathf.Lerp(m.strideAmplitude, m.runAmplitude, m.runBlend);
+                    m.block.SetVector(StrideModeId, new Vector4(m.legPairs, 0f, m.runBlend, 0f));
+                }
+                float strideLength = 2f * m.legLength * Mathf.Tan(amplitude);
                 m.stridePhase += v * dt / Mathf.Max(strideLength, 1e-4f) * Mathf.PI * 2f;
                 m.strideFactor = Mathf.Clamp01(m.gaitSpeed / Mathf.Max(m.legLength * 1.5f, 1e-4f));
-                m.block.SetFloat(StrideId, m.strideAmplitude * m.strideFactor);
+                m.block.SetFloat(StrideId, amplitude * m.strideFactor);
                 m.block.SetFloat(StridePhaseId, m.stridePhase);
             }
 
@@ -493,7 +532,8 @@ namespace NaturalHistory.World
                     // coiled while settled; uncoils as the group falls in to travel and curls back
                     // up as it settles on arrival (the shader blends the shapes, see ApplyUndulate)
                     var coil = m.coilShape;
-                    coil.x = 1f - travel;
+                    coil.x = Mathf.Max(1f - travel, m.coilDefense);
+                    coil.w *= 1f + 1.5f * m.coilDefense; // raises the head to face the attacker
                     m.block.SetVector(CoilId, coil);
                 }
             }
@@ -505,6 +545,7 @@ namespace NaturalHistory.World
         private Vector3 SamplePath(float tt, float dt, out float lunge)
         {
             lunge = 0f;
+            strikeP = -1f;
             Leg leg = trip.legs[0];
             foreach (var l in trip.legs)
             {
@@ -516,6 +557,7 @@ namespace NaturalHistory.World
             {
                 float p = (into - leg.duration) / leg.pauseAfter;
                 lunge = Mathf.Sin(Mathf.Clamp01(p) * Mathf.PI);
+                strikeP = Mathf.Clamp01(p);
                 if (!trip.struck)
                 {
                     trip.struck = true;
@@ -570,7 +612,7 @@ namespace NaturalHistory.World
             if (trip.destination != null && transform.parent != trip.destination.transform)
             {
                 transform.SetParent(trip.destination.transform, true);
-                transform.localPosition = Vector3.up * trip.destination.SurfaceHeight;
+                transform.localPosition = Spot + Vector3.up * trip.destination.SurfaceHeight;
             }
             rootCell = trip.destination;
             if (Style != ColonyStyle.Ground) return;

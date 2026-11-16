@@ -217,7 +217,7 @@ namespace NaturalHistory.Evolution
         private int Seed(int player, int index) => (HexGrid.Instance != null ? HexGrid.Instance.WorldSeed : 0) ^ (player * 7919) ^ (index * 104729);
 
         private static bool IsFree(SpeciesDefinition def, HexCell cell) =>
-            cell != null && SpeciesColonies.FitsHabitat(def, cell) && SpeciesColonies.Instance.GroupAt(cell) == null;
+            cell != null && SpeciesColonies.FitsHabitat(def, cell) && SpeciesColonies.Instance.GroupAt(cell, Niches.Of(def)) == null; // its niche there is free
 
         // Nearest free habitat tile within `radius` steps of `from` (including `from`)
         private static HexCell FreeCellNear(SpeciesDefinition def, HexCell from, int radius)

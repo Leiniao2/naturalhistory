@@ -95,6 +95,11 @@ namespace NaturalHistory.World
                     cells[q, r].SetTerrain(terrain);
                 var feature = ChooseFeature(kind, m[i], temp, f[i]);
                 cells[q, r].SetElevation(level);
+                // Water depth from the same elevation ranks: 0 where it meets the land, 1 in the
+                // deepest sea or the middle of the deepest lake
+                cells[q, r].SetDepth(kind == TerrainKind.SaltWater  ? Mathf.InverseLerp(SaltWaterThreshold, 0f, e[i])
+                                   : kind == TerrainKind.FreshWater ? Mathf.InverseLerp(WaterThreshold, SaltWaterThreshold, e[i])
+                                   : 0f);
                 cells[q, r].SetFeature(feature);
                 cells[q, r].SetClimate(kind, feature, m[i]);
             }

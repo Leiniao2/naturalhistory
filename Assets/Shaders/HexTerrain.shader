@@ -2,6 +2,9 @@
 // The texture is projected in world space (top: XZ, sides: XY/ZY), so it tiles
 // seamlessly across neighbouring hexes instead of repeating per tile.
 // _Color is a tint driven per-cell by HexCell's MaterialPropertyBlock (highlight, move targets).
+// Also per cell (HexGrid.SetGroundLook): _Recolor repaints the ground texture's shading in another
+// colour (white or red sand, dark gravel…), _CliffTint colours its rock faces, _Shore its beach.
+// A large-scale pattern sampled from the same texture breaks up the repeats across wide areas.
 Shader "NaturalHistory/HexTerrain"
 {
     Properties
@@ -13,6 +16,9 @@ Shader "NaturalHistory/HexTerrain"
         _EdgeDarken   ("Hex Edge Darken", Range(0, 1)) = 0.25
         _CliffTint    ("Cliff Rock Tint", Color) = (1, 0.97, 0.93, 1)
         _Land         ("Land (rock faces, surf)", Float) = 1
+        [HideInInspector] _Recolor ("Ground recolour (rgb colour, a amount)", Vector) = (1, 1, 1, 0)
+        [HideInInspector] _Shore   ("Beach (rgb sand colour, a 1 sand / 0 rock)", Vector) = (0.93, 0.8, 0.55, 0)
+        [HideInInspector] _Flood   ("Floodplain wet hollows", Float) = 0
         [HideInInspector] _WrapShift ("Map wrap shift (set per cell)", Float) = 0
         // Neighbour terrain textures, one per edge (set per cell by HexGrid for border blending)
         [HideInInspector] _EdgeTex0 ("Edge 0", 2D) = "white" {}
@@ -48,7 +54,33 @@ Shader "NaturalHistory/HexTerrain"
             half4  _CliffTint;
             half   _Land;
             float  _WrapShift;
+            float4 _Recolor;
+            float4 _Shore;
+            half   _Flood;
         CBUFFER_END
+
+        // Floodplains: dark, wet hollows and pools of standing water where the large-scale pattern
+        // dips, with a second, finer pattern breaking up their outlines.
+        half3 WetHollows(half3 albedo, half macroDip, half fineDip)
+        {
+            half wet  = smoothstep(0.04, 0.1, macroDip + fineDip * 0.5) * _Flood;
+            half pool = smoothstep(0.11, 0.16, macroDip + fineDip * 0.5) * _Flood;
+            albedo = lerp(albedo, albedo * half3(0.62, 0.7, 0.6), wet * 0.8);
+            return lerp(albedo, half3(0.3, 0.42, 0.45), pool * 0.85);
+        }
+
+        // Ground texture repainted in _Recolor (land only): its light and shade kept, relative to the
+        // texture's average (the smallest mip), so any texture gives the colour asked for on average.
+        half3 Recolor(half3 tex, half avg)
+        {
+            half l = dot(tex, half3(0.299, 0.587, 0.114));
+            return lerp(tex, _Recolor.rgb * (l / max(avg, 0.05)), _Recolor.a * _Land);
+        }
+
+        // Large, soft patches: the same texture sampled ~12x larger and at an angle, as a shade
+        // multiplier around 1, so a wide stretch of one terrain doesn't look stamped.
+        float2 MacroUV(float3 p) { return float2(p.x * 0.083 + p.z * 0.047, p.z * 0.083 - p.x * 0.047); }
+        half MacroShade(half macroLum, half avg) { return 1.0 + clamp(macroLum - avg, -0.25, 0.25) * lerp(0.6, 1.1, _Land); }
 
         // Rock texture for steep land faces (the Mountain terrain's), set globally by HexGrid
         TEXTURE2D(_CliffTex); SAMPLER(sampler_CliffTex);
@@ -146,6 +178,15 @@ Shader "NaturalHistory/HexTerrain"
                 float2 sideUV  = abs(n.x) > abs(n.z) ? p.zy : p.xy;
                 half3  topTex  = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, topUV).rgb;
                 half3  sideTex = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, sideUV * _BaseMap_ST.xy + _BaseMap_ST.zw).rgb;
+                half   avgLum  = dot(SAMPLE_TEXTURE2D_LOD(_BaseMap, sampler_BaseMap, topUV, 12).rgb, half3(0.299, 0.587, 0.114));
+                half   macroDev = dot(SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, MacroUV(p)).rgb, half3(0.299, 0.587, 0.114)) - avgLum;
+                topTex  = Recolor(topTex, avgLum) * MacroShade(macroDev + avgLum, avgLum);
+                if (_Flood > 0.01)
+                {
+                    half fineDev = dot(SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, MacroUV(p.zyx) * 2.7).rgb, half3(0.299, 0.587, 0.114)) - avgLum;
+                    topTex = WetHollows(topTex, -macroDev, -fineDev);
+                }
+                sideTex = Recolor(sideTex, avgLum);
                 // On land only true cliffs (steeper than ~65°) turn to rock: the slopes between tiles
                 // of different height (up to ~45°) keep the ground texture, so the land reads as
                 // one continuous surface instead of a band of stones along every big height step.
@@ -174,7 +215,11 @@ Shader "NaturalHistory/HexTerrain"
                 half3 side    = lerp(sideTex * (1.0 - _SideDarken), rockCol, _Land) * _Color.rgb;
                 half3 albedo  = lerp(side, top, topW);
                 half2 shore   = Shoreline(i.positionWS.y, _Land);
-                albedo = lerp(albedo, rockCol * _Color.rgb, shore.x);
+                // low coasts: a beach of sand (or shingle and rock) on the slope down to the water
+                half3 sand    = _Shore.rgb * lerp(0.9, 1.08, saturate(dot(topTex, half3(0.299, 0.587, 0.114)) / max(avgLum, 0.05) * 0.5));
+                half3 shoreCol = lerp(rockCol, sand, _Shore.a) * _Color.rgb;
+                half  beach   = (1.0 - smoothstep(0.085, 0.115, i.positionWS.y)) * _Land * _Shore.a;
+                albedo = lerp(albedo, shoreCol, max(shore.x, beach));
                 albedo = lerp(albedo, half3(0.93, 0.95, 0.97), shore.y * 0.85);
 
                 // Mesh UVs are radial: 0.5 at the centre, corners at distance 0.5. A wide, gentle
@@ -268,6 +313,9 @@ Shader "NaturalHistory/HexTerrain"
         sampler2D _CliffTex; // rock texture for steep land faces (the Mountain terrain's), set globally by HexGrid
         half      _Land;
         float     _WrapShift;
+        float4    _Recolor;
+        float4    _Shore;
+        half      _Flood;
 
         // Same as the URP pass: bare rock on steep land faces, darker and wet near the waterline
         half3 CliffRock(float3 worldPos, float3 p, float3 n)
@@ -299,6 +347,27 @@ Shader "NaturalHistory/HexTerrain"
             float2 uv = top ? p.xz : (abs(n.x) > abs(n.z) ? p.zy : p.xy);
             half3 albedo = tex2D(_BaseMap, uv * _BaseMap_ST.xy + _BaseMap_ST.zw).rgb;
 
+            // Repaint in this tile's sand/soil colour (land only), keeping the texture's light and
+            // shade relative to its average (the smallest mip)
+            half avgLum = Luminance(tex2Dlod(_BaseMap, float4(uv * _BaseMap_ST.xy, 0, 12)).rgb);
+            half lum    = Luminance(albedo);
+            albedo = lerp(albedo, _Recolor.rgb * (lum / max(avgLum, 0.05)), _Recolor.a * _Land);
+            // Large, soft patches: the same texture ~12x larger, at an angle, as a shade around 1
+            float2 macroUV = float2(p.x * 0.083 + p.z * 0.047, p.z * 0.083 - p.x * 0.047);
+            half macroDev = top ? Luminance(tex2D(_BaseMap, macroUV).rgb) - avgLum : 0;
+            if (top) albedo *= 1.0 + clamp(macroDev, -0.25, 0.25) * lerp(0.6, 1.1, _Land);
+            // Floodplains: dark, wet hollows and pools of standing water where the large-scale
+            // pattern dips, a finer pattern breaking up their outlines
+            if (top && _Flood > 0.01)
+            {
+                half fineDev = Luminance(tex2D(_BaseMap, float2(p.z * 0.083 + p.x * 0.047, p.x * 0.083 - p.z * 0.047) * 2.7).rgb) - avgLum;
+                half dip  = -macroDev - fineDev * 0.5;
+                half wet  = smoothstep(0.04, 0.1, dip) * _Flood;
+                half pool = smoothstep(0.11, 0.16, dip) * _Flood;
+                albedo = lerp(albedo, albedo * half3(0.62, 0.7, 0.6), wet * 0.8);
+                albedo = lerp(albedo, half3(0.3, 0.42, 0.45), pool * 0.85);
+            }
+
             if (top)
             {
                 float r = length(IN.hexUV - 0.5) * 2.0;
@@ -314,7 +383,11 @@ Shader "NaturalHistory/HexTerrain"
             float y   = IN.worldPos.y;
             half rock = (1.0 - smoothstep(0.035, 0.055, y)) * _Land;
             half surf = smoothstep(0.012, 0.024, y) * (1.0 - smoothstep(0.034, 0.065, y)) * _Land;
-            albedo = lerp(albedo, CliffRock(IN.worldPos, p, n) * _Color.rgb, rock);
+            // Low coasts: a beach of sand (or shingle and rock) on the slope down to the water
+            half3 sand     = _Shore.rgb * lerp(0.9, 1.08, saturate(lum / max(avgLum, 0.05) * 0.5));
+            half3 shoreCol = lerp(CliffRock(IN.worldPos, p, n), sand, _Shore.a) * _Color.rgb;
+            half  beach    = (1.0 - smoothstep(0.085, 0.115, y)) * _Land * _Shore.a;
+            albedo = lerp(albedo, shoreCol, max(rock, beach));
             albedo = lerp(albedo, half3(0.93, 0.95, 0.97), surf * 0.85);
 
             o.Albedo = albedo;

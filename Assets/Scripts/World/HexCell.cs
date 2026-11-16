@@ -19,6 +19,29 @@ namespace NaturalHistory.World
         public float Moisture { get; private set; } // 0..1, share of the map that is drier
         public bool IsForest => Feature is TerrainFeature.BroadleafForest or TerrainFeature.ConiferForest;
 
+        // The layer under sea level below this tile (HexGrid.Under) and the water plants growing there
+        public UnderKind Under { get; private set; }
+        public UnderFeature UnderFeature { get; private set; }
+        public void SetUnder(UnderKind kind, UnderFeature feature) { Under = kind; UnderFeature = feature; }
+        public IReadOnlyList<PlantDefinition> UnderPlants => underPlants;
+        private readonly List<PlantDefinition> underPlants = new();
+        public void SetUnderPlants(params PlantDefinition[] list)
+        {
+            underPlants.Clear();
+            if (list == null) return;
+            foreach (var p in list) if (p != null && !underPlants.Contains(p)) underPlants.Add(p);
+        }
+
+        // Plant species drawn on this tile (dominant first), for the tile panel. Visual only.
+        public IReadOnlyList<PlantDefinition> Plants => plants;
+        private readonly List<PlantDefinition> plants = new();
+        public void SetPlants(params PlantDefinition[] list)
+        {
+            plants.Clear();
+            if (list == null) return;
+            foreach (var p in list) if (p != null && !plants.Contains(p)) plants.Add(p);
+        }
+
         // High enough to be drawn as mountain peaks; units can't enter these cells
         public bool IsMountain => Terrain != null &&
             (Terrain.kind == TerrainKind.Mountain ||
@@ -70,6 +93,7 @@ namespace NaturalHistory.World
         public void SetTerrain(TerrainType terrain)
         {
             Terrain = terrain;
+            ShowingUnder = false; // back to the surface skin; HexGrid re-applies the under view if it is on
             if (meshRenderer == null) return;
             if (terrain.material != null)
             {
@@ -100,6 +124,36 @@ namespace NaturalHistory.World
             Elevation = elevation;
         }
 
+        // Water only: 0 for the shallowest water, 1 for the deepest (set by WorldGenerator).
+        public float Depth { get; private set; }
+        public void SetDepth(float depth) => Depth = depth;
+
+        // Rivers (set by HexGrid): the edge the river leaves by (-1 = none), a bit per edge it comes
+        // in by, and how many river tiles drain through here (1 at a source), which sets its width.
+        // Edge e faces 60e + 30 degrees clockwise from +Z.
+        public int RiverOut { get; private set; } = -1;
+        public int RiverIn { get; private set; }
+        public int RiverFlow { get; private set; }
+        public bool HasRiver => RiverOut >= 0 || RiverIn != 0;
+
+        // Tiles left to the river's mouth (1 on the tile where it meets the water), the mouth tile's
+        // index (which river system it belongs to), and whether it lies on the floodplain or delta
+        // near the mouth of a big river.
+        public int RiverToMouth { get; private set; }
+        public int RiverSystem { get; private set; }
+        public bool Floodplain { get; private set; }
+
+        public void SetRiver(int outEdge, int inEdges, int flow, int toMouth = 0, int system = 0)
+        {
+            RiverOut     = outEdge;
+            RiverIn      = inEdges;
+            RiverFlow    = flow;
+            RiverToMouth = toMouth;
+            RiverSystem  = system;
+        }
+
+        public void SetFloodplain(bool on) => Floodplain = on;
+
         public void SetSurfaceHeight(float height)
         {
             SurfaceHeight = height;
@@ -118,6 +172,7 @@ namespace NaturalHistory.World
         public void SetWrapShift(float shift)
         {
             if (meshRenderer == null) return;
+            wrapShift = shift;
             meshRenderer.GetPropertyBlock(propBlock);
             propBlock.SetFloat("_WrapShift", shift);
             meshRenderer.SetPropertyBlock(propBlock);
@@ -170,6 +225,69 @@ namespace NaturalHistory.World
             ApplyColor();
         }
 
+        static readonly int RecolorId   = Shader.PropertyToID("_Recolor");
+        static readonly int CliffTintId = Shader.PropertyToID("_CliffTint");
+        static readonly int ShoreId     = Shader.PropertyToID("_Shore");
+        static readonly int FloodId     = Shader.PropertyToID("_Flood");
+
+        // What kind of sand, soil or rock this tile shows (set by HexGrid, see the terrain shader):
+        // recolor.rgb repaints the ground texture's shading in that colour by recolor.a (white or red
+        // sand, black gravel…), cliff tints its rock faces (granite, sandstone, basalt, chalk) and
+        // shore.rgb is the colour of the beach where it meets the sea, shore.a 1 for sand, 0 for rock.
+        // flood: how much of the ground shows wet hollows and pools (floodplains, deltas).
+        public void SetGroundLook(Vector4 recolor, Color cliff, Vector4 shore, float flood = 0f)
+        {
+            if (meshRenderer == null) return;
+            meshRenderer.GetPropertyBlock(propBlock);
+            propBlock.SetFloat(FloodId, flood);
+            propBlock.SetVector(RecolorId, recolor);
+            propBlock.SetColor(CliffTintId, cliff);
+            propBlock.SetVector(ShoreId, shore);
+            meshRenderer.SetPropertyBlock(propBlock);
+        }
+
+        // ---------- Under view ----------
+
+        // Showing the layer under sea level instead of the surface (see HexGrid.Under)
+        public bool ShowingUnder { get; private set; }
+        private Material surfaceMaterial;
+        private MaterialPropertyBlock surfaceBlock;
+        private Color underTint = Color.white;
+        private float wrapShift;
+
+        // Swaps the tile's skin to the under layer's: its own material and tint, without the surface's
+        // edge blending, sand/rock recolouring or shore. ShowSurface puts everything back.
+        public void ShowUnder(Material material, Color tint)
+        {
+            if (meshRenderer == null || material == null) return;
+            if (!ShowingUnder)
+            {
+                surfaceMaterial = meshRenderer.sharedMaterial;
+                surfaceBlock ??= new MaterialPropertyBlock();
+                meshRenderer.GetPropertyBlock(surfaceBlock);
+            }
+            ShowingUnder = true;
+            underTint = tint;
+            meshRenderer.sharedMaterial = material;
+            propBlock.Clear();
+            propBlock.SetFloat("_WrapShift", wrapShift);
+            propBlock.SetVectorArray(EdgeTintsId, new Vector4[6]); // no blending into the surface neighbours
+            meshRenderer.SetPropertyBlock(propBlock);
+            ApplyColor();
+        }
+
+        public void ShowSurface()
+        {
+            if (!ShowingUnder || meshRenderer == null) return;
+            ShowingUnder = false;
+            meshRenderer.sharedMaterial = surfaceMaterial;
+            meshRenderer.SetPropertyBlock(surfaceBlock);
+            meshRenderer.GetPropertyBlock(propBlock);
+            propBlock.SetFloat("_WrapShift", wrapShift); // it may have moved round the map meanwhile
+            meshRenderer.SetPropertyBlock(propBlock);
+            ApplyColor();
+        }
+
         public void SetHighlight(bool on)
         {
             if (highlighted == on) return;
@@ -196,7 +314,7 @@ namespace NaturalHistory.World
         private void ApplyColor()
         {
             if (meshRenderer == null) return;
-            var color = baseColor * tintVariation;
+            var color = ShowingUnder ? underTint : baseColor * tintVariation;
             if (moveTarget)  color = Color.Lerp(color, new Color(1f, 0.92f, 0.4f), 0.35f);
             if (groupTarget == GroupTarget.Move)   color = Color.Lerp(color, new Color(0.45f, 1f, 0.5f), 0.4f);
             if (groupTarget == GroupTarget.Attack) color = Color.Lerp(color, new Color(1f, 0.25f, 0.2f), 0.5f);

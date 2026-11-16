@@ -161,8 +161,10 @@ namespace NaturalHistory.Territory
 
             foreach (var cell in cells)
             {
-                if (cell == null || colonies.GroupAt(cell) != null) continue;
-                var fits = alive.Where(d => SpeciesColonies.FitsHabitat(d, cell) && FoodWeb.HasFood(d, cell, colonies, null)).ToList();
+                if (cell == null) continue;
+                // a species fits if it can live here and its niche on the tile is free
+                var fits = alive.Where(d => SpeciesColonies.FitsHabitat(d, cell) && colonies.GroupAt(cell, Niches.Of(d)) == null &&
+                                            FoodWeb.HasFood(d, cell, colonies, null)).ToList();
                 if (fits.Count == 0) continue;
 
                 // Keep the same species if it still fits; else prefer playable species no other

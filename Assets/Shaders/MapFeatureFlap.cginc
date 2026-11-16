@@ -29,7 +29,8 @@ void ApplyFlap(inout float3 p, inout float3 n)
 // Legs are grouped into _StrideMode.x pairs along z (1 = biped, 2 = quadruped, 3 = insect...);
 // neighbouring pairs and the left/right legs of a pair step in opposite phase, which gives a
 // diagonal trot for four legs and a tripod gait for six. _StrideMode.y = 1 moves all legs together
-// (hoppers). A leg swinging forward lifts its foot. _Stride = 0 leaves the mesh untouched.
+// (hoppers). _StrideMode.z blends toward a bounding gallop (running big cats): the left and right
+// legs of a pair land together and the hind pair follows the front pair. A leg swinging forward lifts its foot. _Stride = 0 leaves the mesh untouched.
 void ApplyStride(inout float3 p)
 {
     if (_Stride == 0) return;
@@ -42,7 +43,9 @@ void ApplyStride(inout float3 p)
     float zt     = saturate((p.z - _StrideLegs.z) / max(_StrideLegs.w - _StrideLegs.z, 1e-4));
     float bucket = min(floor(zt * pairs), pairs - 1);
     float side   = p.x >= 0 ? 0 : 1;
-    float phase  = _StridePhase + (_StrideMode.y > 0.5 ? 0 : fmod(bucket + side, 2) * 3.14159265);
+    float walk   = fmod(bucket + side, 2) * 3.14159265;
+    float bound  = bucket * 3.14159265 * 0.7;
+    float phase  = _StridePhase + (_StrideMode.y > 0.5 ? 0 : lerp(walk, bound, saturate(_StrideMode.z)));
 
     float a    = _Stride * sin(phase);
     float ease = smoothstep(0, leg * 0.25, below);  // the belly just under the hips barely moves

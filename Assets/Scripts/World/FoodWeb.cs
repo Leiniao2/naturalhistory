@@ -54,7 +54,7 @@ namespace NaturalHistory.World
                 FoodSource.ForageOrPrey => SpeciesColonies.FitsHabitat(def, cell) || AnyNear(cell, colonies, self, other => IsPrey(def, other)),
                 FoodSource.Prey         => AnyNear(cell, colonies, self, other => IsPrey(def, other)),
                 FoodSource.Carrion      => AnyNear(cell, colonies, self, IsAnimal),
-                FoodSource.Host         => IsHost(def, colonies.GroupAt(cell), self),
+                FoodSource.Host         => System.Linq.Enumerable.Any(colonies.GroupsAt(cell), g => IsHost(def, g, self)),
                 _                       => true,
             };
         }
@@ -84,11 +84,12 @@ namespace NaturalHistory.World
 
         private static bool AnyNear(HexCell cell, SpeciesColonies colonies, ColonyGroup self, Func<SpeciesDefinition, bool> wanted)
         {
-            if (Wanted(colonies.GroupAt(cell), self, wanted)) return true;
+            // Any group on the tile or next door, whatever niche it holds
+            foreach (var g in colonies.GroupsAt(cell)) if (Wanted(g, self, wanted)) return true;
             var grid = HexGrid.Instance;
             if (grid == null) return false;
             foreach (var n in grid.GetNeighbors(cell))
-                if (Wanted(colonies.GroupAt(n), self, wanted)) return true;
+                foreach (var g in colonies.GroupsAt(n)) if (Wanted(g, self, wanted)) return true;
             return false;
         }
 

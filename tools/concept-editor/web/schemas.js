@@ -13,7 +13,7 @@ export const GENE_CATEGORIES = ['Locomotion', 'Diet', 'Reproduction', 'Defense',
 export const KINGDOMS = ['Animalia', 'Plantae', 'Fungi', 'Protista'];
 // ColonyStyle enum (Assets/Scripts/World/SpeciesColonies.cs)
 export const MAP_STYLES = ['Drift', 'Fixed', 'Float', 'Ground', 'Soar', 'Swarm', 'Swim'];
-export const MAP_GAITS = ['Walk', 'Hop', 'Slither'];
+export const MAP_GAITS = ['Walk', 'Hop', 'Slither', 'Run'];
 export const DIETS = ['Carnivore', 'Herbivore', 'Omnivore', 'Scavenger', 'Parasite', 'Filter feeder', 'Detritivore', 'Photosynthetic'];
 export const ERAS = ['Paleozoic', 'Mesozoic', 'Cenozoic'];
 export const FACTION_CATEGORIES = ['Modern realm', 'Paleocontinent', 'Ancient ocean'];
@@ -241,6 +241,8 @@ export const DATASETS = {
       { key: 'mapHip', label: 'Hip height', type: 'number', min: 0, max: 1, step: 0.05, help: 'Ground walkers/hoppers: everything below this fraction of the model height swings as legs; 0 = 0.45' },
       { key: 'mapBackward', label: 'Swims backward', type: 'bool', help: 'Moves tail first, like a squid or ammonite jetting' },
       { key: 'mapUndulate', label: 'Body wave', type: 'bool', help: 'Swims by bending the whole body in a wave, like an eel (Slither snakes always do); the model must be straight' },
+      { key: 'mapAttack', label: 'Attack', type: 'enum', options: [{ value: '', label: '— default (from style and diet) —' }, ...['Charge', 'Bite', 'Pounce', 'Strike', 'Dive', 'Sting', 'Ram', 'Shock', 'Snap', 'Engulf', 'Lash'].map(v => ({ value: v, label: v }))], help: 'How the group strikes a neighbouring tile on the map' },
+      { key: 'mapDefense', label: 'Defense', type: 'enum', options: [{ value: '', label: '— default (from style and size) —' }, ...['Brace', 'Rear', 'Scatter', 'Coil', 'Hide', 'Ink', 'Tighten', 'Mob', 'Puff'].map(v => ({ value: v, label: v }))], help: 'How the group reacts while it is attacked' },
       { key: 'genes', label: 'Starting genes', type: 'table', newRow: () => ({ gene: '', expression: 0.5 }), columns: [
         { key: 'gene', label: 'Gene', type: 'enum', options: (all) => [{ value: '', label: '—' }, ...idsOf('genes', 'displayName')(all)] },
         { key: 'expression', label: 'Expression', type: 'number', min: 0, max: 1, step: 0.05 },

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using NaturalHistory.Core;
+using NaturalHistory.World;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,7 +8,8 @@ namespace NaturalHistory.UI
 {
     // Admin tools under the top-right HUD: pick any geological period (or the present day) and the
     // game jumps to its first turn; the map, plants and climate follow. Visible in the Editor and in
-    // development builds; the backquote key (`) shows or hides it.
+    // development builds; the backquote key (`) shows or hides it. It can also set off any natural
+    // phenomenon (meteor, eruption, tornado...) near the middle of the view.
     public class AdminPanel
     {
         private const string PresentDay = "Present day";
@@ -21,6 +23,11 @@ namespace NaturalHistory.UI
             bar      = root.Q("admin-bar");
             ageField = root.Q<DropdownField>("admin-age");
             ageField.RegisterValueChangedCallback(_ => OnAgePicked());
+
+            var phenomenon = new DropdownField(new List<string>(NaturalEvents.Names), 0) { name = "admin-phenomenon" };
+            var trigger    = new Button(() => NaturalEvents.Instance?.Trigger((Phenomenon)phenomenon.index)) { text = "Trigger", name = "admin-trigger" };
+            bar.Add(phenomenon);
+            bar.Add(trigger);
             bar.EnableInClassList("hidden", !Debug.isDebugBuild);
         }
 

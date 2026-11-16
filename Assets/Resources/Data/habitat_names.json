@@ -1,5 +1,5 @@
 {
-  "_comment": "Habitat center names per faction (factions.json id). When a center is founded, the name whose tags best match its 7 hexes is used; each name is used at most once per game. Tags: coast, ocean, reef, lake, wetland, desert, grassland, savanna, forest, rainforest, mountain, hill, tundra, ice, volcano. Modern realms use national parks and natural landmarks; paleocontinents and ancient oceans use famous fossil sites and geology that formed on them.",
+  "_comment": "Habitat center names per faction (factions.json id). When a center is founded, the name whose tags best match its 7 hexes is used; each name is used at most once per game. Tags: coast, ocean, reef, lake, wetland, desert, grassland, savanna, forest, rainforest, mountain, hill, tundra, ice, volcano. Modern realms use national parks, natural landmarks and famous fossil excavation sites within them; paleocontinents and ancient oceans use fossil sites and geology that formed on them, tagged by the environment the rocks formed in.",
   "factions": [
     {
       "faction": "palearctic",
@@ -15,7 +15,14 @@
         { "name": "Tassili n'Ajjer",        "tags": ["desert", "hill"] },
         { "name": "Shiretoko",              "tags": ["coast", "forest", "ice"] },
         { "name": "Lofoten",                "tags": ["coast", "mountain"] },
-        { "name": "Scottish Highlands",     "tags": ["hill", "tundra", "lake"] }
+        { "name": "Scottish Highlands",     "tags": ["hill", "tundra", "lake"] },
+        { "name": "Atapuerca",              "tags": ["hill", "forest"] },
+        { "name": "Zhoukoudian",            "tags": ["hill", "forest"] },
+        { "name": "Denisova Cave",          "tags": ["mountain", "forest"] },
+        { "name": "Dmanisi",                "tags": ["hill", "grassland"] },
+        { "name": "Jebel Irhoud",           "tags": ["desert", "hill"] },
+        { "name": "Pikermi",                "tags": ["hill", "grassland"] },
+        { "name": "Batagaika Crater",       "tags": ["tundra"] }
       ]
     },
     {
@@ -33,7 +40,14 @@
         { "name": "Death Valley",           "tags": ["desert"] },
         { "name": "Glacier Bay",            "tags": ["ice", "coast", "mountain"] },
         { "name": "Isle Royale",            "tags": ["lake", "forest"] },
-        { "name": "Monarch Butterfly Reserve", "tags": ["forest", "mountain"] }
+        { "name": "Monarch Butterfly Reserve", "tags": ["forest", "mountain"] },
+        { "name": "La Brea Tar Pits",       "tags": ["grassland", "coast"] },
+        { "name": "Dinosaur National Monument", "tags": ["desert", "hill"] },
+        { "name": "John Day Fossil Beds",   "tags": ["hill", "desert"] },
+        { "name": "Florissant",             "tags": ["lake", "forest", "mountain"] },
+        { "name": "Agate Fossil Beds",      "tags": ["grassland"] },
+        { "name": "Ashfall Fossil Beds",    "tags": ["grassland", "volcano"] },
+        { "name": "Mammoth Site",           "tags": ["grassland", "hill"] }
       ]
     },
     {
@@ -50,7 +64,11 @@
         { "name": "Mount Kinabalu",         "tags": ["mountain", "rainforest"] },
         { "name": "Thar Desert",            "tags": ["desert"] },
         { "name": "Tubbataha Reef",         "tags": ["reef", "ocean"] },
-        { "name": "Xishuangbanna",          "tags": ["rainforest"] }
+        { "name": "Xishuangbanna",          "tags": ["rainforest"] },
+        { "name": "Siwalik Hills",          "tags": ["hill", "forest"] },
+        { "name": "Trinil",                 "tags": ["forest", "lake"] },
+        { "name": "Sangiran",               "tags": ["hill", "grassland"] },
+        { "name": "Tam Pà Ling",            "tags": ["forest", "hill"] }
       ]
     },
     {
@@ -67,7 +85,13 @@
         { "name": "Lake Malawi",            "tags": ["lake"] },
         { "name": "Tsingy de Bemaraha",     "tags": ["hill", "forest"] },
         { "name": "Simien Mountains",       "tags": ["mountain"] },
-        { "name": "Aldabra",                "tags": ["reef", "coast"] }
+        { "name": "Aldabra",                "tags": ["reef", "coast"] },
+        { "name": "Olduvai Gorge",          "tags": ["savanna", "hill"] },
+        { "name": "Laetoli",                "tags": ["savanna", "volcano"] },
+        { "name": "Lake Turkana",           "tags": ["lake", "desert"] },
+        { "name": "Cradle of Humankind",    "tags": ["grassland", "hill"] },
+        { "name": "Hadar",                  "tags": ["desert", "hill"] },
+        { "name": "Langebaanweg",           "tags": ["coast", "grassland"] }
       ]
     },
     {
@@ -85,7 +109,12 @@
         { "name": "Pampas",                 "tags": ["grassland"] },
         { "name": "Chapada dos Veadeiros",  "tags": ["savanna", "hill"] },
         { "name": "Belize Barrier Reef",    "tags": ["reef", "coast"] },
-        { "name": "Canaima",                "tags": ["rainforest", "hill"] }
+        { "name": "Canaima",                "tags": ["rainforest", "hill"] },
+        { "name": "Cerrejón",               "tags": ["rainforest", "wetland"] },
+        { "name": "Pisco Basin",            "tags": ["desert", "coast"] },
+        { "name": "La Venta",               "tags": ["rainforest", "lake"] },
+        { "name": "Luján",                  "tags": ["grassland"] },
+        { "name": "Lagoa Santa",            "tags": ["hill", "forest"] }
       ]
     },
     {
@@ -102,7 +131,13 @@
         { "name": "Shark Bay",              "tags": ["coast", "reef"] },
         { "name": "Purnululu",              "tags": ["hill", "desert"] },
         { "name": "Flinders Ranges",        "tags": ["mountain", "desert"] },
-        { "name": "Lord Howe Island",       "tags": ["reef", "coast", "volcano"] }
+        { "name": "Lord Howe Island",       "tags": ["reef", "coast", "volcano"] },
+        { "name": "Riversleigh",            "tags": ["hill", "grassland"] },
+        { "name": "Naracoorte Caves",       "tags": ["grassland", "hill"] },
+        { "name": "Lake Mungo",             "tags": ["desert", "lake"] },
+        { "name": "Lightning Ridge",        "tags": ["desert"] },
+        { "name": "Winton",                 "tags": ["desert", "grassland"] },
+        { "name": "Liang Bua",              "tags": ["rainforest", "hill"] }
       ]
     },
     {
@@ -118,7 +153,8 @@
         { "name": "Rapa Nui",               "tags": ["coast", "grassland", "volcano"] },
         { "name": "Alakaʻi Swamp",          "tags": ["wetland", "rainforest"] },
         { "name": "Waimea Canyon",          "tags": ["hill"] },
-        { "name": "Bouma",                  "tags": ["rainforest", "coast"] }
+        { "name": "Bouma",                  "tags": ["rainforest", "coast"] },
+        { "name": "Makauwahi Cave",         "tags": ["coast", "forest"] }
       ]
     },
     {
@@ -133,7 +169,11 @@
         { "name": "Deception Island",       "tags": ["volcano", "coast"] },
         { "name": "Kerguelen",              "tags": ["tundra", "coast"] },
         { "name": "Weddell Sea",            "tags": ["ice", "ocean"] },
-        { "name": "Heard Island",           "tags": ["volcano", "ice"] }
+        { "name": "Heard Island",           "tags": ["volcano", "ice"] },
+        { "name": "Seymour Island",         "tags": ["coast", "ice"] },
+        { "name": "Mount Kirkpatrick",      "tags": ["mountain", "ice"] },
+        { "name": "Graphite Peak",          "tags": ["mountain", "ice"] },
+        { "name": "Coalsack Bluff",         "tags": ["mountain", "ice"] }
       ]
     },
     {
@@ -148,7 +188,16 @@
         { "name": "Adirondacks",            "tags": ["mountain", "forest"] },
         { "name": "Gilboa Fossil Forest",   "tags": ["forest", "wetland"] },
         { "name": "Ozarks",                 "tags": ["hill", "forest"] },
-        { "name": "Walcott Quarry",         "tags": ["mountain", "ocean"] }
+        { "name": "Walcott Quarry",         "tags": ["mountain", "ocean"] },
+        { "name": "Mount Stephen Trilobite Beds", "tags": ["ocean", "mountain"] },
+        { "name": "Spence Shale",           "tags": ["ocean", "coast"] },
+        { "name": "Trenton Falls",          "tags": ["ocean", "coast"] },
+        { "name": "Cincinnati Arch",        "tags": ["ocean", "reef"] },
+        { "name": "Kinzers Formation",      "tags": ["ocean"] },
+        { "name": "Dob's Linn",             "tags": ["hill", "ocean"] },
+        { "name": "Brechin",                "tags": ["ocean"] },
+        { "name": "Eramosa",                "tags": ["reef", "ocean"] },
+        { "name": "Waukesha Biota",         "tags": ["coast", "ocean"] }
       ]
     },
     {
@@ -163,7 +212,13 @@
         { "name": "Lake Ladoga",            "tags": ["lake", "forest"] },
         { "name": "Karelia",                "tags": ["lake", "forest", "tundra"] },
         { "name": "Podolia",                "tags": ["hill", "grassland"] },
-        { "name": "Oslo Rift",              "tags": ["mountain", "volcano"] }
+        { "name": "Oslo Rift",              "tags": ["mountain", "volcano"] },
+        { "name": "Orsten",                 "tags": ["ocean"] },
+        { "name": "Saaremaa",               "tags": ["reef", "coast"] },
+        { "name": "Ringerike",              "tags": ["coast", "lake"] },
+        { "name": "Hunneberg",              "tags": ["hill", "ocean"] },
+        { "name": "Fågelsång",              "tags": ["ocean"] },
+        { "name": "Lake Siljan",            "tags": ["lake", "hill"] }
       ]
     },
     {
@@ -177,7 +232,13 @@
         { "name": "Lake District",          "tags": ["mountain", "lake"] },
         { "name": "Long Mynd",              "tags": ["hill", "grassland"] },
         { "name": "Bell Island",            "tags": ["coast", "ocean"] },
-        { "name": "Brabant Massif",         "tags": ["hill"] }
+        { "name": "Brabant Massif",         "tags": ["hill"] },
+        { "name": "Fortune Head",           "tags": ["coast", "ocean"] },
+        { "name": "Manuels River",          "tags": ["ocean", "coast"] },
+        { "name": "Wren's Nest",            "tags": ["reef", "ocean"] },
+        { "name": "Herefordshire Lagerstätte", "tags": ["ocean"] },
+        { "name": "Builth Wells",           "tags": ["ocean", "volcano"] },
+        { "name": "Llandovery",             "tags": ["ocean", "hill"] }
       ]
     },
     {
@@ -192,7 +253,12 @@
         { "name": "Aldan Shield",           "tags": ["mountain"] },
         { "name": "Vilyuy Basin",           "tags": ["wetland", "forest"] },
         { "name": "Tunguska",               "tags": ["forest", "wetland"] },
-        { "name": "Olenek Uplift",          "tags": ["hill"] }
+        { "name": "Olenek Uplift",          "tags": ["hill"] },
+        { "name": "Kuonamka",               "tags": ["ocean"] },
+        { "name": "Tommot",                 "tags": ["reef", "ocean"] },
+        { "name": "Kotuy River",            "tags": ["hill", "ocean"] },
+        { "name": "Norilsk",                "tags": ["volcano", "tundra"] },
+        { "name": "Kuznetsk Basin",         "tags": ["wetland", "forest"] }
       ]
     },
     {
@@ -207,7 +273,15 @@
         { "name": "Zhangjiajie",            "tags": ["hill", "forest"] },
         { "name": "Shilin Stone Forest",    "tags": ["hill"] },
         { "name": "Mount Emei",             "tags": ["mountain", "forest"] },
-        { "name": "Lufeng",                 "tags": ["forest", "grassland"] }
+        { "name": "Lufeng",                 "tags": ["forest", "grassland"] },
+        { "name": "Haikou",                 "tags": ["ocean", "coast"] },
+        { "name": "Qingjiang",              "tags": ["ocean"] },
+        { "name": "Guanshan",               "tags": ["ocean"] },
+        { "name": "Meishan",                "tags": ["ocean"] },
+        { "name": "Guanling",               "tags": ["ocean"] },
+        { "name": "Luoping",                "tags": ["ocean", "coast"] },
+        { "name": "Xingyi",                 "tags": ["ocean"] },
+        { "name": "Zigong",                 "tags": ["wetland", "forest"] }
       ]
     },
     {
@@ -223,7 +297,16 @@
         { "name": "Soom Shale",             "tags": ["ice", "coast"] },
         { "name": "Emu Bay Shale",          "tags": ["coast", "ocean"] },
         { "name": "Isalo",                  "tags": ["hill", "desert", "grassland"] },
-        { "name": "Deccan Traps",           "tags": ["volcano", "hill"] }
+        { "name": "Deccan Traps",           "tags": ["volcano", "hill"] },
+        { "name": "Fezouata",               "tags": ["ocean"] },
+        { "name": "Gogo Formation",         "tags": ["reef", "ocean"] },
+        { "name": "Canowindra",             "tags": ["lake"] },
+        { "name": "Tendaguru",              "tags": ["coast", "forest"] },
+        { "name": "Fremouw Formation",      "tags": ["forest", "lake"] },
+        { "name": "Kem Kem Beds",           "tags": ["wetland", "lake", "desert"] },
+        { "name": "Bahariya Oasis",         "tags": ["coast", "wetland", "desert"] },
+        { "name": "Mahajanga Basin",        "tags": ["coast", "grassland"] },
+        { "name": "Auca Mahuevo",           "tags": ["grassland", "desert"] }
       ]
     },
     {
@@ -238,7 +321,16 @@
         { "name": "Coalbrookdale",          "tags": ["wetland", "forest"] },
         { "name": "Ruhr Valley",            "tags": ["wetland", "forest"] },
         { "name": "Ellesmere Island",       "tags": ["coast", "wetland"] },
-        { "name": "Hamilton Quarry",        "tags": ["coast", "lake"] }
+        { "name": "Hamilton Quarry",        "tags": ["coast", "lake"] },
+        { "name": "Cleveland Shale",        "tags": ["ocean"] },
+        { "name": "Hunsrück Slate",         "tags": ["ocean"] },
+        { "name": "Willwerath",             "tags": ["coast", "lake"] },
+        { "name": "Red Hill",               "tags": ["lake", "forest"] },
+        { "name": "Bear Gulch",             "tags": ["reef", "coast"] },
+        { "name": "Linton",                 "tags": ["wetland", "forest"] },
+        { "name": "Commentry",              "tags": ["wetland", "forest"] },
+        { "name": "Nýřany",                 "tags": ["wetland", "forest"] },
+        { "name": "Lode",                   "tags": ["coast", "lake"] }
       ]
     },
     {
@@ -253,7 +345,16 @@
         { "name": "Central Pangean Mountains", "tags": ["mountain"] },
         { "name": "Newark Basin",           "tags": ["lake"] },
         { "name": "Chinle",                 "tags": ["wetland", "forest"] },
-        { "name": "Muschelkalk Sea",        "tags": ["ocean", "coast"] }
+        { "name": "Muschelkalk Sea",        "tags": ["ocean", "coast"] },
+        { "name": "Texas Red Beds",         "tags": ["desert", "wetland"] },
+        { "name": "Richards Spur",          "tags": ["hill", "desert"] },
+        { "name": "Bromacker",              "tags": ["desert", "grassland"] },
+        { "name": "Kupferschiefer",         "tags": ["ocean", "coast"] },
+        { "name": "Irati Formation",        "tags": ["ocean", "coast"] },
+        { "name": "Ezhovo",                 "tags": ["grassland", "wetland"] },
+        { "name": "Sokolki",                "tags": ["wetland", "lake"] },
+        { "name": "Madygen",                "tags": ["lake", "forest"] },
+        { "name": "Grès à Voltzia",         "tags": ["coast", "wetland"] }
       ]
     },
     {
@@ -269,7 +370,18 @@
         { "name": "Flaming Cliffs",         "tags": ["desert"] },
         { "name": "Holzmaden",              "tags": ["ocean"] },
         { "name": "Messel Pit",             "tags": ["lake", "forest"] },
-        { "name": "Isle of Wight",          "tags": ["coast"] }
+        { "name": "Isle of Wight",          "tags": ["coast"] },
+        { "name": "Como Bluff",             "tags": ["grassland", "hill"] },
+        { "name": "Cleveland-Lloyd Quarry", "tags": ["grassland", "wetland"] },
+        { "name": "Two Medicine",           "tags": ["grassland", "hill"] },
+        { "name": "Lance Creek",            "tags": ["wetland", "forest"] },
+        { "name": "Niobrara Chalk",         "tags": ["ocean"] },
+        { "name": "Nemegt",                 "tags": ["wetland", "lake"] },
+        { "name": "Ukhaa Tolgod",           "tags": ["desert"] },
+        { "name": "Daohugou",               "tags": ["lake", "forest", "volcano"] },
+        { "name": "Las Hoyas",              "tags": ["wetland", "lake"] },
+        { "name": "Green River",            "tags": ["lake"] },
+        { "name": "Fur Formation",          "tags": ["ocean", "volcano"] }
       ]
     },
     {
@@ -282,7 +394,12 @@
         { "name": "Haqel",                  "tags": ["ocean"] },
         { "name": "Spiti Valley",           "tags": ["mountain", "ocean"] },
         { "name": "Musandam",               "tags": ["coast", "mountain"] },
-        { "name": "Tethyan Shelf",          "tags": ["ocean", "coast"] }
+        { "name": "Tethyan Shelf",          "tags": ["ocean", "coast"] },
+        { "name": "Hjoula",                 "tags": ["ocean", "reef"] },
+        { "name": "Osteno",                 "tags": ["ocean"] },
+        { "name": "Cerin",                  "tags": ["coast", "reef"] },
+        { "name": "Gubbio",                 "tags": ["ocean"] },
+        { "name": "Kutch",                  "tags": ["coast", "desert"] }
       ]
     },
     {
@@ -295,7 +412,10 @@
         { "name": "Wrangellia",             "tags": ["reef", "volcano"] },
         { "name": "Ring of Fire",           "tags": ["volcano", "coast"] },
         { "name": "Kure Atoll",             "tags": ["reef"] },
-        { "name": "Shatsky Rise",           "tags": ["ocean", "volcano"] }
+        { "name": "Shatsky Rise",           "tags": ["ocean", "volcano"] },
+        { "name": "Akiyoshi Reef",          "tags": ["reef", "ocean"] },
+        { "name": "Yezo Group",             "tags": ["ocean"] },
+        { "name": "Chichibu",               "tags": ["mountain", "ocean"] }
       ]
     },
     {
@@ -310,7 +430,11 @@
         { "name": "New Caledonia Lagoon",   "tags": ["reef", "coast"] },
         { "name": "Punakaiki",              "tags": ["coast", "hill"] },
         { "name": "Rotorua",                "tags": ["volcano", "lake", "wetland"] },
-        { "name": "Chatham Islands",        "tags": ["coast", "grassland"] }
+        { "name": "Chatham Islands",        "tags": ["coast", "grassland"] },
+        { "name": "St Bathans",             "tags": ["lake", "grassland"] },
+        { "name": "Foulden Maar",           "tags": ["lake", "forest", "volcano"] },
+        { "name": "Waipara Greensand",      "tags": ["coast", "ocean"] },
+        { "name": "Mangahouanga Stream",    "tags": ["hill", "ocean"] }
       ]
     }
   ]

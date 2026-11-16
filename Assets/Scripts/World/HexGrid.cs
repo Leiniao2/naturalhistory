@@ -9,7 +9,7 @@ namespace NaturalHistory.World
     // Scene/Game views without pressing Play. Edit-mode cells are DontSave, so they
     // never get written into Game.unity.
     [ExecuteAlways]
-    public class HexGrid : MonoBehaviour
+    public partial class HexGrid : MonoBehaviour
     {
         public static HexGrid Instance { get; private set; }
 
@@ -89,11 +89,13 @@ namespace NaturalHistory.World
             else
                 Debug.LogWarning("[HexGrid] Assign cellPrefab and defaultTerrain in the Inspector before entering Play mode.");
             if (AgeManager.Instance != null) AgeManager.Instance.TimeChanged += OnTimeChanged;
+            UnderView.Changed += ApplyUnderView;
         }
 
         private void OnDestroy()
         {
             if (Application.isPlaying && AgeManager.Instance != null) AgeManager.Instance.TimeChanged -= OnTimeChanged;
+            if (Application.isPlaying) UnderView.Changed -= ApplyUnderView;
         }
 
         private void OnTimeChanged() => SetAge(AgeManager.Instance.CurrentAge);
@@ -184,6 +186,8 @@ namespace NaturalHistory.World
             Debug.Log($"[HexGrid] Generated {width}×{height} grid ({width * height} cells)");
 
             WorldGenerator.Generate(cells, width, height, worldSeed);
+            GenerateRivers(worldSeed);
+            GenerateUnder(worldSeed);
             UpdateCellMeshes();
             DressForAge(CurrentAge);
             wrapFocusX = float.NaN; // new cells sit in the base copy; recentre on the next call
@@ -218,6 +222,7 @@ namespace NaturalHistory.World
             ClearFeatures();
             PlaceFeatures(WorldSeed, age);
             UpdateEdgeBlends();
+            DressUnder(age);
         }
 
         // A mountain tile's ground (seen where the massif tapers off toward a lowland neighbour)
@@ -291,6 +296,30 @@ namespace NaturalHistory.World
             var noiseOffset = new Vector3((float)rng.NextDouble(), (float)rng.NextDouble(), (float)rng.NextDouble()) * 1000f;
             float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
             Mesh Pick(Mesh[] pool) => pool?[rng.Next(pool.Length)]; // null pool: nothing grows there in this period
+            Mesh Detail(TerrainKind kind) => details.TryGetValue(kind, out var d) ? Pick(d) : null;
+
+            // Plant species of the period (plants.json): each tile gets its region's dominant species,
+            // named in the tile panel. Forest tiles: a canopy species over an understory species.
+            var plants = new PlantPlanner(age, worldSeed, cellSize, WrapWidth, Track);
+            bool hexStand = false; // the mesh fills the hex: turn it by multiples of 60° so it meets its neighbours
+            Mesh Forest(HexCell cell, string type, Mesh[] fallback)
+            {
+                var (tree, tree2) = plants.Choose(cell, type);
+                if (tree == null) return Pick(fallback);
+                var (under, _) = plants.Choose(cell, null);
+                cell.SetPlants(tree, tree2, under);
+                hexStand = true;
+                return plants.Stand(rng, tree, tree2, under);
+            }
+            Mesh Ground(HexCell cell)
+            {
+                var (main, second) = plants.Choose(cell, null);
+                if (main == null) return rng.NextDouble() < 0.75 ? Detail(cell.Terrain.kind) : null; // no plants yet: rocks, mats
+                cell.SetPlants(main, second);
+                if (cell.Terrain.kind == TerrainKind.Desert && rng.NextDouble() < 0.4) return Detail(TerrainKind.Desert); // dunes
+                hexStand = true;
+                return plants.Ground(rng, main, second, cell.Terrain.kind);
+            }
 
             int mountains = 0, forests = 0, others = 0;
             for (int r = 0; r < height; r++)
@@ -299,17 +328,20 @@ namespace NaturalHistory.World
                 var cell = cells[q, r];
                 if (cell.Terrain == null) continue;
                 cell.SetTintVariation(TileTint(cell, oceanDepth[q, r], rng, noiseOffset));
+                SetGroundLook(cell, noiseOffset);
+                cell.SetPlants();
 
                 Mesh mesh   = null;
                 bool unique = false;
+                hexStand    = false;
                 switch (cell.Feature)
                 {
                     case TerrainFeature.Volcano:
                         mesh = Track(MapFeatureMeshes.CreateVolcano(rng, cellSize, R(0.8f, 1.25f), p => LocalGround(cell, p))); unique = true; others++;
                         break;
-                    case TerrainFeature.ConiferForest:   mesh = Pick(conifers);  forests++; break;
-                    case TerrainFeature.BroadleafForest: mesh = Pick(broadleaf); forests++; break;
-                    case TerrainFeature.Jungle:          mesh = Pick(jungles);   forests++; break;
+                    case TerrainFeature.ConiferForest:   mesh = Forest(cell, "Conifer",   conifers);  forests++; break;
+                    case TerrainFeature.BroadleafForest: mesh = Forest(cell, "Broadleaf", broadleaf); forests++; break;
+                    case TerrainFeature.Jungle:          mesh = Forest(cell, "Jungle",    jungles);   forests++; break;
                     case TerrainFeature.Reef:            mesh = Pick(reefs);     others++;  break;
                     case TerrainFeature.Oasis:           mesh = Pick(oases);     others++;  break;
                     default:
@@ -319,22 +351,26 @@ namespace NaturalHistory.World
                             mesh = Track(MapFeatureMeshes.CreateSeaStacks(rng, cellSize, toCliff, cellSize * 0.8660254f));
                             unique = true; others++;
                         }
-                        else if (details.TryGetValue(cell.Terrain.kind, out var d) && rng.NextDouble() < 0.75) mesh = Pick(d);
+                        else if (!cell.IsWater) mesh = Ground(cell);
+                        else if (rng.NextDouble() < 0.75) mesh = Detail(cell.Terrain.kind);
                         break;
                 }
                 if (mesh == null) continue;
 
                 // Pooled meshes get a random size, height and mirror image so neighbours never match
-                float s   = unique ? 1f : R(0.85f, 1.08f);
+                float s   = unique || hexStand ? 1f : R(0.85f, 1.08f); // hex-filling stands keep their footprint so edges meet
                 var scale = new Vector3(s * (!unique && rng.NextDouble() < 0.5 ? -1f : 1f), s * (unique ? 1f : R(0.85f, 1.2f)), s);
                 float v   = R(0.9f, 1.08f);
                 var tint  = new Color(v * R(0.96f, 1.04f), v, v * R(0.96f, 1.04f));
-                float yaw = R(0f, 360f);
+                float yaw = hexStand ? 60f * rng.Next(6) : R(0f, 360f);
                 // Mountains and volcanoes are built to fit this tile's slopes and its neighbours'
                 // ridges, so they keep their orientation and colour (it varies inside the mesh)
                 if (unique) { yaw = 0f; tint = Color.white; }
-                AddFeatureObject(cell, mesh, yaw, scale, tint);
+                var feature = AddFeatureObject(cell, mesh, yaw, scale, tint);
+                if (cell.Feature == TerrainFeature.Volcano && Application.isPlaying)
+                    feature.AddComponent<VolcanoSmoke>().Init(cellSize, WorldSeed ^ (q * 7919 + r * 104729));
             }
+            PlaceRivers();
             Debug.Log($"[HexGrid] PlaceFeatures — {mountains} mountains, {forests} forests/jungles, {others} volcanoes/reefs/oases");
         }
 
@@ -492,38 +528,142 @@ namespace NaturalHistory.World
             }
         }
 
-        // Colour multiplier for a tile. Ocean goes from turquoise shallows to deep blue with distance
-        // from land; land drifts by region (seamless noise around the wrapped map) plus per-tile
-        // jitter, and deserts drift between pale, golden and red sand.
+        // Colour multiplier for a tile. Water darkens with depth: the sea goes from turquoise shallows
+        // (greener toward the poles) over the shelf to deep navy, lakes from weedy, greenish shallows
+        // to clear dark blue in the middle of deep ones. Land drifts by region (seamless noise around
+        // the wrapped map) plus per-tile jitter; what kind of sand or rock it is comes from SetGroundLook.
         private Color TileTint(HexCell cell, int oceanDepth, System.Random rng, Vector3 noiseOffset)
         {
-            var pos     = cell.Coordinates.ToWorldPosition(cellSize);
-            float angle = pos.x / WrapWidth * Mathf.PI * 2f;
-            float rad   = WrapWidth / (Mathf.PI * 2f);
-            var p       = new Vector3(Mathf.Cos(angle) * rad, Mathf.Sin(angle) * rad, pos.z) + noiseOffset;
-            float regional = Mathf.Clamp01(0.5f + 0.5f * (0.7f * PerlinNoise3D.Sample(p.x * 0.06f, p.y * 0.06f, p.z * 0.06f)
-                                                       + 0.3f * PerlinNoise3D.Sample(p.x * 0.2f,  p.y * 0.2f,  p.z * 0.2f)) * 1.6f);
-            float jitter = 0.94f + 0.12f * (float)rng.NextDouble();
+            float regional = Regional(cell, noiseOffset, 1f);
+            float jitter   = 0.94f + 0.12f * (float)rng.NextDouble();
+            float lat      = Latitude(cell.Coordinates.R);
 
             switch (cell.Terrain.kind)
             {
                 case TerrainKind.SaltWater:
-                    float deep = Mathf.Sqrt(Mathf.InverseLerp(1f, 6f, oceanDepth));
-                    var sea = Color.Lerp(new Color(1.45f, 1.55f, 1.2f), new Color(0.58f, 0.68f, 0.88f), deep);
-                    return sea * Mathf.Lerp(0.94f, 1.06f, regional) * (0.97f + 0.06f * (float)rng.NextDouble());
+                {
+                    // distance from land sets the shelf; the sea floor's own depth adds deeps and banks
+                    float fromLand = Mathf.Sqrt(Mathf.InverseLerp(1f, 6f, oceanDepth));
+                    float deep     = Mathf.Clamp01(fromLand * 0.55f + cell.Depth * 0.6f - (oceanDepth <= 1 ? 0.25f : 0f));
+                    var shallow    = Color.Lerp(new Color(1.45f, 1.6f, 1.25f), new Color(1.15f, 1.3f, 1.1f), Mathf.InverseLerp(0.35f, 0.8f, lat));
+                    var mid        = new Color(0.86f, 0.98f, 1.05f);
+                    var abyss      = new Color(0.4f, 0.48f, 0.76f);
+                    var sea = deep < 0.45f ? Color.Lerp(shallow, mid, deep / 0.45f) : Color.Lerp(mid, abyss, (deep - 0.45f) / 0.55f);
+                    return sea * Mathf.Lerp(0.95f, 1.05f, regional) * (0.97f + 0.06f * (float)rng.NextDouble());
+                }
                 case TerrainKind.FreshWater:
-                    return Color.Lerp(new Color(0.9f, 1.05f, 1.0f), new Color(1.1f, 1.0f, 0.92f), regional) * jitter;
-                case TerrainKind.Barren: // grey rock in some regions, rusty red in others
-                    return Color.Lerp(new Color(0.95f, 0.98f, 1.03f), new Color(1.12f, 0.9f, 0.78f), regional) * jitter;
+                {
+                    float deep = Mathf.Clamp01(cell.Depth * 0.7f + (LakeShore(cell) ? 0f : 0.35f));
+                    var shallow = Color.Lerp(new Color(1.05f, 1.15f, 0.82f), new Color(1.12f, 1.05f, 0.85f), regional); // weedy green or peaty brown
+                    return Color.Lerp(shallow, new Color(0.62f, 0.74f, 0.98f), deep) * jitter;
+                }
                 case TerrainKind.Desert:
-                    var sand = regional < 0.5f
-                        ? Color.Lerp(new Color(1.15f, 1.12f, 1.0f), Color.white, regional * 2f)
-                        : Color.Lerp(Color.white, new Color(1.12f, 0.82f, 0.66f), (regional - 0.5f) * 2f);
-                    return sand * jitter;
+                case TerrainKind.Barren:
+                    return Color.white * jitter; // the sand or rock colour itself comes from SetGroundLook
                 default:
                     return Color.Lerp(new Color(0.88f, 1.0f, 0.95f), new Color(1.1f, 1.0f, 0.86f), regional) * jitter;
             }
         }
+
+        // Seamless noise around the wrapped map, 0..1; a different `seed` gives an independent pattern.
+        private float Regional(HexCell cell, Vector3 noiseOffset, float seed)
+        {
+            var pos     = cell.Coordinates.ToWorldPosition(cellSize);
+            float angle = pos.x / WrapWidth * Mathf.PI * 2f;
+            float rad   = WrapWidth / (Mathf.PI * 2f);
+            var p       = new Vector3(Mathf.Cos(angle) * rad, Mathf.Sin(angle) * rad, pos.z) + noiseOffset * seed;
+            return Mathf.Clamp01(0.5f + 0.5f * (0.7f * PerlinNoise3D.Sample(p.x * 0.06f, p.y * 0.06f, p.z * 0.06f)
+                                             + 0.3f * PerlinNoise3D.Sample(p.x * 0.2f,  p.y * 0.2f,  p.z * 0.2f)) * 1.6f);
+        }
+
+        private bool LakeShore(HexCell cell)
+        {
+            foreach (var n in GetNeighbors(cell)) if (n.Terrain != null && !n.IsWater) return true;
+            return false;
+        }
+
+        private bool NearVolcano(HexCell cell)
+        {
+            foreach (var n in GetCellsInRange(cell, 2)) if (n.Feature == TerrainFeature.Volcano) return true;
+            return false;
+        }
+
+        // Sand colours (shading of the ground texture repainted in this colour) and rock tints
+        private static readonly Vector4 NoRecolor  = Vector4.zero;
+        private static readonly Color   WhiteSand  = new(0.98f, 0.96f, 0.9f);
+        private static readonly Color   GoldenSand = new(0.93f, 0.8f, 0.55f);
+        private static readonly Color   RedSand    = new(0.92f, 0.52f, 0.32f);
+        private static readonly Color   BlackSand  = new(0.3f, 0.29f, 0.3f);
+        private static readonly Color   Gravel     = new(0.58f, 0.55f, 0.52f);
+        private static readonly Color   Granite    = new(1f, 0.97f, 0.93f);   // the rock texture's own grey
+        private static readonly Color   Sandstone  = new(1.2f, 0.82f, 0.62f);
+        private static readonly Color   Basalt     = new(0.55f, 0.55f, 0.6f);
+        private static readonly Color   Chalk      = new(1.45f, 1.42f, 1.34f);
+        private static readonly Color   Limestone  = new(1.22f, 1.16f, 1.02f);
+
+        // Gives each tile its kind of ground: deserts of golden, white (gypsum, quartz), red or
+        // black-gravel sand; bare land of grey, rusty, dark volcanic or pale rock; cliffs of granite,
+        // red sandstone, basalt near volcanoes or white chalk; and beaches of white coral sand in the
+        // tropics, golden sand in mild climates, black sand by volcanoes and shingle and rock in the cold.
+        // Regions share a look, so a white-sand desert or a chalk coast runs on for several tiles.
+        private void SetGroundLook(HexCell cell, Vector3 noiseOffset)
+        {
+            float a   = Regional(cell, noiseOffset, 1.7f); // which sand/rock family
+            float b   = Regional(cell, noiseOffset, 2.9f); // second, independent pattern
+            float lat = Latitude(cell.Coordinates.R);
+            bool volcanic = NearVolcano(cell);
+
+            var recolor = NoRecolor;
+            switch (cell.Terrain.kind)
+            {
+                case TerrainKind.Desert:
+                    if (volcanic)       recolor = Paint(BlackSand, 0.75f);
+                    else if (a < 0.22f) recolor = Paint(WhiteSand, 0.85f);
+                    else if (a > 0.7f)  recolor = Paint(RedSand, 0.7f);
+                    else if (b > 0.78f) recolor = Paint(Gravel, 0.7f);
+                    break;
+                case TerrainKind.Barren:
+                    if (volcanic)       recolor = Paint(BlackSand, 0.7f);
+                    else if (a > 0.68f) recolor = Paint(RedSand, 0.55f);
+                    else if (a < 0.25f) recolor = Paint(new Color(0.85f, 0.83f, 0.78f), 0.6f); // pale limestone pavement
+                    else if (b > 0.72f) recolor = Paint(new Color(0.38f, 0.37f, 0.4f), 0.6f); // dark basalt
+                    break;
+            }
+
+            // Rock faces: red sandstone in dry country, basalt by volcanoes, chalk and limestone on
+            // some mild coasts, granite elsewhere
+            var cliff = Granite;
+            bool dry = cell.Moisture < 0.3f || cell.Biome is TerrainKind.Desert or TerrainKind.Savanna or TerrainKind.Steppe;
+            if (volcanic)                        cliff = Basalt;
+            else if (dry && a > 0.4f)            cliff = Sandstone;
+            else if (lat > 0.3f && lat < 0.65f && b < 0.25f) cliff = Chalk;
+            else if (a < 0.2f)                   cliff = Limestone;
+            else if (b > 0.8f)                   cliff = Basalt;
+
+            // Beaches (only low coasts have them; highland meets the sea in a cliff)
+            var shore = new Vector4(0f, 0f, 0f, 0f);
+            if (!cell.IsWater && cell.Elevation < CliffElevation)
+            {
+                Color sand; float amount;
+                if (volcanic)        { sand = BlackSand;  amount = 1f; }
+                else if (lat < 0.35f){ sand = WhiteSand;  amount = b < 0.85f ? 1f : 0f; }       // coral sand, a few rocky stretches
+                else if (lat < 0.7f) { sand = GoldenSand; amount = b < 0.65f ? 1f : 0.3f; }     // sand, or shingle
+                else                 { sand = Gravel;     amount = 0.35f; }                      // cold shores: pebbles and rock
+                shore = new Vector4(sand.r, sand.g, sand.b, amount);
+            }
+            // Floodplains and deltas near big river mouths: lush, silt-fed ground (green even in the
+            // desert, like the Nile's) dotted with wet hollows and pools
+            float flood = 0f;
+            if (cell.Floodplain && !cell.IsWater)
+            {
+                recolor = Paint(lat > 0.65f ? new Color(0.46f, 0.5f, 0.32f) : new Color(0.38f, 0.52f, 0.2f),
+                                cell.Biome is TerrainKind.Desert ? 0.75f : 0.5f);
+                flood = 0.85f;
+            }
+            cell.SetGroundLook(recolor, cliff, shore, flood);
+        }
+
+        private static Vector4 Paint(Color c, float amount) => new(c.r, c.g, c.b, amount);
 
         // Tells every tile which terrain lies across each of its edges so the terrain shader can fade
         // into it. Land blends only with land and water only with water, so coastlines stay crisp.
@@ -629,7 +769,7 @@ namespace NaturalHistory.World
 
         // No collider: clicks pass through the prop to the hex tile underneath.
         // A negative scale.x mirrors the prop; Unity flips culling for it automatically.
-        private void AddFeatureObject(HexCell cell, Mesh mesh, float yaw, Vector3 scale, Color tint)
+        private GameObject AddFeatureObject(HexCell cell, Mesh mesh, float yaw, Vector3 scale, Color tint)
         {
             var go = new GameObject(mesh.name);
             if (!Application.isPlaying) go.hideFlags = HideFlags.DontSave;
@@ -644,6 +784,7 @@ namespace NaturalHistory.World
             var block = new MaterialPropertyBlock();
             block.SetColor("_Color", tint);
             mr.SetPropertyBlock(block);
+            return go;
         }
 
         // Water sits flat near sea level; land rises one elevationStep per terrace level.

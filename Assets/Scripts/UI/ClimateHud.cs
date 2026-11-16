@@ -15,6 +15,7 @@ namespace NaturalHistory.UI
         private GlobalClimate previous;
         private bool hasPrevious;
         private HexCell shownCell;
+        private string shownNiches;
 
         public ClimateHud(VisualElement root)
         {
@@ -74,21 +75,42 @@ namespace NaturalHistory.UI
                 shownCell = null;
                 return;
             }
-            if (cell == shownCell) return;
-            shownCell = cell;
+            var occupants = NicheLines(cell);
+            if (cell == shownCell && occupants == shownNiches) return; // also redraw when groups come and go
+            shownCell   = cell;
+            shownNiches = occupants;
 
             var t = climate.Get(cell);
             tilePanel.RemoveFromClassList("hidden");
             var (col, row) = cell.Coordinates.ToOffsetCoordinates();
             tileTitle.text = $"{(cell.Terrain != null ? EraFlora.DisplayName(cell.Terrain.kind) : "?")}  ·  ({col}, {row})";
             tileZone.text  = ClimateSystem.ZoneName(t.Zone);
-            var flora = HexGrid.Instance != null ? EraFlora.FloraOf(cell, HexGrid.Instance.DisplayedAge) : null;
+            // Named species on the tile; otherwise a description (bare rock, reefs, oases…)
+            var flora = cell.Plants.Count > 0 ? string.Join(", ", System.Linq.Enumerable.Select(cell.Plants, p => p.Label))
+                      : HexGrid.Instance != null ? EraFlora.FloraOf(cell, HexGrid.Instance.DisplayedAge) : null;
             tileStats.text = (flora != null ? $"Plants: {flora}\n" : "") +
                 $"Temperature: {t.TemperatureC:0.0} °C\n" +
                 $"Humidity: {t.Humidity:0} %\n" +
                 $"Oxygen: {t.O2Percent:0.00} %\n" +
                 $"CO2: {t.Co2Ppm:0} ppm\n" +
-                $"Elevation    level {cell.Elevation}";
+                $"Elevation    level {cell.Elevation}" +
+                NicheLines(cell);
+        }
+
+        // The tile's six niches and the animal group holding each (Niches)
+        private static string NicheLines(HexCell cell)
+        {
+            if (cell.IsMountain) return "";
+            var colonies = SpeciesColonies.Instance;
+            var sb = new System.Text.StringBuilder("\nNiches:");
+            foreach (var niche in Niches.All)
+            {
+                var g = colonies != null ? colonies.GroupAt(cell, niche) : null;
+                var who = g?.Definition == null ? "free"
+                        : g.Definition.commonName + (g.Owner != null ? $" ({(g.Owner.IsHuman ? "yours" : g.Owner.Name)})" : "");
+                sb.Append($"\n  {Niches.Name(niche, cell)}: {who}");
+            }
+            return sb.ToString();
         }
 
         private string Trend(float now, float before, float threshold)

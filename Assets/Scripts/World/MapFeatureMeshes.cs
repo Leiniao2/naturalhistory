@@ -335,7 +335,8 @@ namespace NaturalHistory.World
         }
 
         // Concave stratovolcano: gullied ash slopes turning to basalt near the top, a crater with a
-        // lava lake, lava streams down the deepest gullies, a small side cone and a smoke plume.
+        // lava lake, lava streams down the deepest gullies and a small side cone. The smoke plume is
+        // animated separately (VolcanoSmoke) from the crater at the top of the mesh bounds.
         // groundAt: tile surface height at a point (see CreateMassif); the base follows it.
         public static Mesh CreateVolcano(System.Random rng, float size, float heightScale, System.Func<Vector2, float> groundAt = null)
         {
@@ -405,14 +406,15 @@ namespace NaturalHistory.World
                 if (p.magnitude > 0.55f * size)
                     AddRock(b, rng, new Vector3(p.x, 0f, p.y), size * Range(rng, 0.03f, 0.05f), Basalt);
 
-            // Smoke plume drifting with the wind, puffs growing and paling as they rise
-            var drift = new Vector3(Range(rng, -1f, 1f), 0f, Range(rng, -1f, 1f)).normalized * 0.05f * size;
-            for (int n = 0; n < 4; n++)
-            {
-                var c = Vector3.up * (rimY + (0.1f + 0.11f * n) * size) + drift * n * n * 0.6f;
-                AddBlob(b, rng, c, (0.06f + 0.03f * n) * size, 0.8f, 1, Color.Lerp(Smoke * 0.6f, Smoke * 1.2f, n / 3f));
-            }
             return b.ToMesh("Volcano");
+        }
+
+        // One lumpy smoke puff of radius 1 (VolcanoSmoke scales, tints and moves them).
+        public static Mesh CreateSmokePuff(System.Random rng)
+        {
+            var b = new Builder();
+            AddBlob(b, rng, Vector3.zero, 1f, 0.85f, 1, Smoke * 1.25f);
+            return b.ToMesh("SmokePuff");
         }
 
         // Ribbon of lava lying in the gully along spoke `i`, from the rim down to ring `endRing`.
@@ -451,7 +453,7 @@ namespace NaturalHistory.World
 
             int fronds  = rng.Next(6, 9);
             float start = Range(rng, 0f, 360f);
-            var color   = Shade(rng, PalmLeaf);
+            var color   = Shade(rng, L(PalmLeaf));
             for (int i = 0; i < fronds; i++)
             {
                 float a  = (start + i * 360f / fronds + Range(rng, -12f, 12f)) * Mathf.Deg2Rad;
@@ -628,7 +630,7 @@ namespace NaturalHistory.World
             {
                 var foot = root + new Vector3(Range(rng, -0.03f, 0.03f), 0f, Range(rng, -0.03f, 0.03f)) * size;
                 var tip  = foot + new Vector3(Range(rng, -0.015f, 0.015f), Range(rng, 0.1f, 0.16f), Range(rng, -0.015f, 0.015f)) * size;
-                AddLimb(b, foot, tip, 0.006f * size, 0.002f * size, Shade(rng, Reed));
+                AddLimb(b, foot, tip, 0.006f * size, 0.002f * size, Shade(rng, L(Reed)));
             }
         }
 
@@ -642,7 +644,7 @@ namespace NaturalHistory.World
             float h  = size * Range(rng, 0.22f, 0.3f);
             var top  = root + new Vector3(Range(rng, -0.03f, 0.03f) * size, h, Range(rng, -0.03f, 0.03f) * size);
             AddLimb(b, root - Vector3.up * 0.01f, top, 0.016f * size, 0.01f * size, Shade(rng, Bark));
-            AddBlob(b, rng, top + Vector3.up * 0.02f * size, Range(rng, 0.13f, 0.17f) * size, 0.28f, 1, Shade(rng, new Color(0.36f, 0.48f, 0.20f)));
+            AddBlob(b, rng, top + Vector3.up * 0.02f * size, Range(rng, 0.13f, 0.17f) * size, 0.28f, 1, Shade(rng, L(new Color(0.36f, 0.48f, 0.20f))));
         }
 
         static readonly Color RockDark = new(0.36f, 0.33f, 0.31f);
@@ -694,13 +696,13 @@ namespace NaturalHistory.World
         // toward the tip, finished with a spike.
         static void AddConifer(Builder b, System.Random rng, Vector3 root, float s, Color? needle = null, Color? needleTip = null)
         {
-            var tipColor = needleTip ?? NeedleTip;
+            var tipColor = L(needleTip ?? NeedleTip);
             float h  = s * Range(rng, 0.55f, 0.75f);
             var lean = new Vector3(Range(rng, -0.03f, 0.03f), 0f, Range(rng, -0.03f, 0.03f)) * h;
             AddLimb(b, root - Vector3.up * 0.01f, root + Vector3.up * 0.85f * h + lean, 0.03f * s, 0.01f * s, Shade(rng, Bark));
 
             int tiers = rng.Next(4, 7);
-            var dark  = Shade(rng, needle ?? Needle, 0.08f);
+            var dark  = Shade(rng, L(needle ?? Needle), 0.08f);
             for (int i = 0; i < tiers; i++)
             {
                 float t      = i / (float)(tiers - 1);
@@ -743,7 +745,7 @@ namespace NaturalHistory.World
         {
             float h  = s * Range(rng, 0.5f, 0.66f);
             var bark = Shade(rng, Bark);
-            var leaf = Color.Lerp(leafDark ?? Leaf, leafLight ?? LeafLight, Range(rng, 0f, 0.45f));
+            var leaf = L(Color.Lerp(leafDark ?? Leaf, leafLight ?? LeafLight, Range(rng, 0f, 0.45f)));
             var top  = root + new Vector3(Range(rng, -0.04f, 0.04f) * h, 0.5f * h, Range(rng, -0.04f, 0.04f) * h);
             AddLimb(b, root - Vector3.up * 0.01f, top, 0.035f * s, 0.02f * s, bark);
 
@@ -779,18 +781,32 @@ namespace NaturalHistory.World
 
         // Lumpy ball: an icosphere (detail 0 = 20 faces, 1 = 80) with jittered vertices, squashed
         // vertically. Downward faces are darkened so leaf clumps look self-shadowed.
+        // A lumpy, smooth-shaded ball (leaf clumps, cushions, puffs): the corners are jittered for
+        // an irregular outline, but the normals stay those of the smooth ellipsoid, so it reads as a
+        // soft rounded mass instead of a faceted stone. Darker underneath (cheap self-shadowing),
+        // with the colour varying gently over the surface.
         static void AddBlob(Builder b, System.Random rng, Vector3 center, float radius, float squash, int detail, Color color)
         {
-            var (dirs, faces) = Icosphere(detail);
+            if (radius < smallBlobRadius) detail = 0;
+            var (dirs, faces) = Icosphere(Mathf.Min(detail, maxBlobDetail));
             var pts = new Vector3[dirs.Length];
+            var nrm = new Vector3[dirs.Length];
+            var col = new Color[dirs.Length];
+            float sq = Mathf.Max(squash, 0.15f);
             for (int i = 0; i < dirs.Length; i++)
             {
                 var d = dirs[i] * radius * Range(rng, 0.82f, 1.12f);
                 d.y *= squash;
                 pts[i] = center + d;
+                var n = new Vector3(dirs[i].x, dirs[i].y / sq, dirs[i].z).normalized;
+                nrm[i] = n;
+                col[i] = color * Range(rng, 0.93f, 1.07f) * (1f - 0.45f * (0.5f - 0.5f * n.y));
             }
             for (int f = 0; f < faces.Length; f += 3)
-                b.AddTri(pts[faces[f]], pts[faces[f + 1]], pts[faces[f + 2]], color * Range(rng, 0.93f, 1.07f), center, ao: 0.45f);
+            {
+                int i0 = faces[f], i1 = faces[f + 1], i2 = faces[f + 2];
+                b.AddSmoothTri(pts[i0], pts[i1], pts[i2], nrm[i0], nrm[i1], nrm[i2], col[i0], col[i1], col[i2], center);
+            }
         }
 
         static readonly (Vector3[] dirs, int[] faces)[] icospheres = new (Vector3[], int[])[2];
@@ -891,11 +907,35 @@ namespace NaturalHistory.World
                 tris.Add(i); tris.Add(i + 1); tris.Add(i + 2);
             }
 
+            // Like AddTri, with a normal and colour per corner, so neighbouring triangles that share
+            // corner normals shade as one smooth surface (leaf clumps).
+            public void AddSmoothTri(Vector3 a, Vector3 b, Vector3 c, Vector3 na, Vector3 nb, Vector3 nc,
+                                     Color ca, Color cb, Color cc, Vector3 inside)
+            {
+                var n = Vector3.Cross(b - a, c - a);
+                if (Vector3.Dot(n, (a + b + c) / 3f - inside) < 0f) { (b, c) = (c, b); (nb, nc) = (nc, nb); (cb, cc) = (cc, cb); }
+                int i = verts.Count;
+                verts.Add(a); verts.Add(b); verts.Add(c);
+                normals.Add(na); normals.Add(nb); normals.Add(nc);
+                colors.Add(ca); colors.Add(cb); colors.Add(cc);
+                tris.Add(i); tris.Add(i + 1); tris.Add(i + 2);
+            }
+
             // a, b, c, d in order around the quad's edge
             public void AddQuad(Vector3 a, Vector3 b, Vector3 c, Vector3 d, Color color, Vector3 inside)
             {
                 AddTri(a, b, c, color, inside);
                 AddTri(a, c, d, color, inside);
+            }
+
+            public int VertexCount => verts.Count;
+
+            // Lowers every vertex added since `from` that lies below `below` by `amount`: stretches a
+            // plant's trunk base down so it still meets the ground where a tile's rim slopes away.
+            public void SinkBase(int from, float below, float amount)
+            {
+                for (int i = from; i < verts.Count; i++)
+                    if (verts[i].y < below) verts[i] -= Vector3.up * amount;
             }
 
             public Mesh ToMesh(string name)

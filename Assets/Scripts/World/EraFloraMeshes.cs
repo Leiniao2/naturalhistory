@@ -46,6 +46,10 @@ namespace NaturalHistory.World
         static readonly (Color, Color) Redwood = (new(0.10f, 0.28f, 0.18f), new(0.20f, 0.40f, 0.24f));
         static readonly (Color, Color) Magnolia = (new(0.18f, 0.40f, 0.18f), new(0.32f, 0.54f, 0.22f));
 
+        // Leaf colour multiplier of the plant being built (PlantDefinition.tint); white otherwise
+        static Color leafTint = Color.white;
+        static Color L(Color c) => c * leafTint;
+
         // ---- Forests, reefs and oases ----
 
         // A stand of the period's trees with undergrowth, or null before the first forests (Devonian).
@@ -116,10 +120,10 @@ namespace NaturalHistory.World
             {
                 case GeologicalAge.Devonian:
                     if (rng.NextDouble() < 0.5) AddMossCushion(b, rng, root, size * Range(rng, 0.03f, 0.05f));
-                    else AddHorsetails(b, rng, root, size * 0.07f, Rhynia);
+                    else AddHorsetails(b, rng, root, size * 0.07f, L(Rhynia));
                     break;
                 case GeologicalAge.Carboniferous:
-                    if (rng.NextDouble() < 0.5) AddHorsetails(b, rng, root, size * 0.1f, Horsetail);
+                    if (rng.NextDouble() < 0.5) AddHorsetails(b, rng, root, size * 0.1f, L(Horsetail));
                     else AddGroundFern(b, rng, root, size * 0.09f);
                     break;
                 case GeologicalAge.Jurassic:
@@ -180,7 +184,7 @@ namespace NaturalHistory.World
                         if (i % 2 == 0) AddMatPatch(b, rng, at, size * 0.07f); else AddStromatolites(b, rng, at, size * 0.035f);
                         break;
                     case GeologicalAge.Devonian:
-                        if (i % 2 == 0) AddHorsetails(b, rng, at, size * 0.08f, Rhynia); else AddMossCushion(b, rng, at, size * 0.045f);
+                        if (i % 2 == 0) AddHorsetails(b, rng, at, size * 0.08f, L(Rhynia)); else AddMossCushion(b, rng, at, size * 0.045f);
                         break;
                     case GeologicalAge.Carboniferous:
                         if (i % 2 == 0) AddCalamites(b, rng, at, size * 0.7f); else AddTreeFern(b, rng, at, size * 0.8f);
@@ -226,13 +230,13 @@ namespace NaturalHistory.World
                     if (age >= GeologicalAge.Silurian)
                         foreach (var p in Spots(2, 4, 0.08f)) AddCooksonia(b, rng, At(p), size * 0.06f);
                     if (age == GeologicalAge.Devonian)
-                        foreach (var p in Spots(1, 3, 0.1f)) AddHorsetails(b, rng, At(p), size * 0.07f, Rhynia);
+                        foreach (var p in Spots(1, 3, 0.1f)) AddHorsetails(b, rng, At(p), size * 0.07f, L(Rhynia));
                     break;
                 case TerrainKind.FernPrairie:
                     // Jurassic fern prairies: ferns as tall as a person, the "grassland" of the dinosaurs
                     float fern = age == GeologicalAge.Jurassic ? 0.15f : age is GeologicalAge.Triassic or GeologicalAge.Cretaceous ? 0.1f : 0.085f;
                     foreach (var p in Spots(3, 6, fern * 1.4f)) AddGroundFern(b, rng, At(p), size * fern * Range(rng, 0.8f, 1.2f));
-                    foreach (var p in Spots(0, 2, 0.1f)) AddHorsetails(b, rng, At(p), size * 0.08f, Horsetail);
+                    foreach (var p in Spots(0, 2, 0.1f)) AddHorsetails(b, rng, At(p), size * 0.08f, L(Horsetail));
                     if (age >= GeologicalAge.Permian && rng.NextDouble() < 0.35)
                         foreach (var p in Spots(1, 1, 0.2f)) AddCycad(b, rng, At(p), size * Range(rng, 0.7f, 1f));
                     if (age is GeologicalAge.Carboniferous or GeologicalAge.Jurassic && rng.NextDouble() < 0.25)
@@ -243,13 +247,13 @@ namespace NaturalHistory.World
                     break;
                 case TerrainKind.CoalSwamp:
                     foreach (var p in Spots(1, 2, 0.18f)) AddPond(b, rng, At(p) + Vector3.up * 0.004f, size * Range(rng, 0.06f, 0.1f), SwampWater);
-                    foreach (var p in Spots(2, 4, 0.12f)) AddHorsetails(b, rng, At(p), size * 0.13f, Horsetail);
+                    foreach (var p in Spots(2, 4, 0.12f)) AddHorsetails(b, rng, At(p), size * 0.13f, L(Horsetail));
                     if (rng.NextDouble() < 0.4)
                         foreach (var p in Spots(1, 1, 0.25f)) AddLepidodendron(b, rng, At(p), size * 0.55f);
                     break;
                 // Reeds, sedges and water lilies are flowering plants
                 case TerrainKind.Wetland when age < GeologicalAge.Cretaceous:
-                    foreach (var p in Spots(3, 5, 0.12f)) AddHorsetails(b, rng, At(p), size * 0.1f, Horsetail);
+                    foreach (var p in Spots(3, 5, 0.12f)) AddHorsetails(b, rng, At(p), size * 0.1f, L(Horsetail));
                     foreach (var p in Spots(1, 3, 0.12f)) AddGroundFern(b, rng, At(p), size * 0.08f);
                     break;
                 case TerrainKind.Rainforest when age < GeologicalAge.Paleogene:
@@ -272,6 +276,297 @@ namespace NaturalHistory.World
                     return CreateDetail(rng, size, kind);
             }
             return b.ToMesh($"{age}{kind}Detail");
+        }
+
+        // ---- Plant species (plants.json) ----
+
+        // Highest icosphere detail leaf clumps may use (open ground drops to the 20-face version;
+        // forest stands keep 80 faces so crowns read as round, not boxy)
+        static int maxBlobDetail = 1;
+
+        // Blobs smaller than this use the 20-face version (smooth shading hides it on small clumps);
+        // set in forest stands, where thousands of clumps would otherwise cost millions of triangles
+        static float smallBlobRadius = 0f;
+
+        // A dense stand filling the whole hex out to its edges, so neighbouring forest tiles run into
+        // each other: mostly the dominant canopy species, some of the second (which neighbouring
+        // regions tend to share, softening the change), with understory between the trunks. The
+        // stand is hex-shaped, so HexGrid only turns it by multiples of 60°.
+        public static Mesh CreatePlantStand(System.Random rng, float size, PlantDefinition canopy, PlantDefinition canopy2, PlantDefinition under)
+        {
+            var b = new Builder();
+            bool dense = canopy.form is "Palm" or "TreeFern" or "Calamites" or "Bamboo" or "Cycad" or "Mangrove" or "Lycopsid" or "Sigillaria";
+            float apothem = 0.8660254f * size;
+            smallBlobRadius = 0.075f * size;
+            var trees = HexScatter(rng, dense ? rng.Next(30, 40) : rng.Next(24, 32), apothem * 0.97f, (dense ? 0.11f : 0.13f) * size, new List<Vector2>());
+            foreach (var p in trees)
+            {
+                var plant = canopy2 != null && rng.NextDouble() < 0.3 ? canopy2 : canopy;
+                float s = size * plant.size * Range(rng, 0.55f, 0.8f);
+                int from = b.VertexCount;
+                AddCanopyPlant(b, rng, new Vector3(p.x, 0f, p.y), s, plant);
+                b.SinkBase(from, 0.02f * size, 0.12f * size);
+            }
+            if (under != null)
+                foreach (var p in HexScatter(rng, rng.Next(10, 16), apothem * 0.97f, 0.08f * size, trees))
+                {
+                    int from = b.VertexCount;
+                    AddGroundPlant(b, rng, new Vector3(p.x, 0f, p.y), size, under, 0.8f);
+                    b.SinkBase(from, 0.005f * size, 0.04f * size);
+                }
+            smallBlobRadius = 0f;
+            return b.ToMesh($"Stand_{canopy.id}_{canopy2?.id}_{under?.id}");
+        }
+
+        // Open ground covering the whole hex: many clumps of the main species, fewer of the second,
+        // and the terrain's stones.
+        public static Mesh CreatePlantGround(System.Random rng, float size, PlantDefinition main, PlantDefinition second, TerrainKind kind)
+        {
+            var b = new Builder();
+            var taken = new List<Vector2>();
+            float apothem = 0.8660254f * size;
+            bool big = main.form is "Cactus" or "Cycad" or "Bennettitalean" or "Succulent" or "Shrub";
+            maxBlobDetail = 0;
+            void Plant(PlantDefinition plant, int min, int max, float gap, float scale)
+            {
+                var spots = HexScatter(rng, rng.Next(min, max + 1), apothem * 0.96f, gap * size, taken);
+                taken.AddRange(spots);
+                foreach (var p in spots)
+                {
+                    int from = b.VertexCount;
+                    AddGroundPlant(b, rng, new Vector3(p.x, 0f, p.y), size, plant, scale * Range(rng, 0.85f, 1.1f));
+                    b.SinkBase(from, 0.005f * size, 0.04f * size);
+                }
+            }
+            if (big) Plant(main, 6, 10, 0.16f, 1f);
+            else     Plant(main, 14, 22, 0.09f, 0.95f);
+            if (second != null) Plant(second, 4, 8, 0.1f, 0.9f);
+
+            var stone = kind switch
+            {
+                TerrainKind.Desert => Sandstone,
+                TerrainKind.Barren => Color.Lerp(BarrenGrey, BarrenRed, Range(rng, 0f, 1f)),
+                TerrainKind.Tundra => Lichen,
+                _                  => Rock,
+            };
+            if (kind is TerrainKind.Desert or TerrainKind.Barren or TerrainKind.Hill or TerrainKind.Tundra or TerrainKind.Steppe)
+                foreach (var p in HexScatter(rng, rng.Next(2, 5), apothem * 0.9f, 0.1f * size, taken))
+                    AddRock(b, rng, new Vector3(p.x, 0f, p.y), size * Range(rng, 0.025f, 0.05f), stone);
+            maxBlobDetail = 1;
+            return b.ToMesh($"Ground_{main.id}_{second?.id}");
+        }
+
+        // Up to `count` points inside a pointy-top hexagon with the given apothem (centre to edge),
+        // each at least minGap from the others and from `taken`.
+        static List<Vector2> HexScatter(System.Random rng, int count, float apothem, float minGap, List<Vector2> taken)
+        {
+            var placed = new List<Vector2>();
+            float gapSq = minGap * minGap, radius = apothem / 0.8660254f;
+            for (int tries = 0; tries < count * 15 && placed.Count < count; tries++)
+            {
+                var p = new Vector2(Range(rng, -apothem, apothem), Range(rng, -radius, radius));
+                bool inside = true;
+                for (int e = 0; e < 3 && inside; e++) // edge normals at 30°, 90°, 150° (and their opposites)
+                {
+                    float a = (60f * e + 30f) * Mathf.Deg2Rad;
+                    inside = Mathf.Abs(p.x * Mathf.Sin(a) + p.y * Mathf.Cos(a)) <= apothem;
+                }
+                if (!inside) continue;
+                if (placed.Exists(q => (q - p).sqrMagnitude < gapSq) || taken.Exists(q => (q - p).sqrMagnitude < gapSq)) continue;
+                placed.Add(p);
+            }
+            return placed;
+        }
+
+        // One tree of a canopy species; `s` ≈ cell size × the species' size
+        static void AddCanopyPlant(Builder b, System.Random rng, Vector3 root, float s, PlantDefinition plant)
+        {
+            leafTint = plant.Tint;
+            switch (plant.form)
+            {
+                case "Lycopsid":       AddLepidodendron(b, rng, root, s); break;
+                case "Sigillaria":     AddSigillaria(b, rng, root, s); break;
+                case "Calamites":      AddCalamites(b, rng, root, s); break;
+                case "TreeFern":       AddTreeFern(b, rng, root, s); break;
+                case "Cycad":          AddCycad(b, rng, root, s * 1.4f); break;
+                case "Bennettitalean": AddBennettitalean(b, rng, root, s * 1.4f); break;
+                case "Araucaria":      AddAraucaria(b, rng, root, s); break;
+                case "Ginkgo":         AddGinkgo(b, rng, root, s); break;
+                case "Glossopteris":   AddGlossopteris(b, rng, root, s); break;
+                case "Cordaites":      AddCordaites(b, rng, root, s); break;
+                case "Archaeopteris":  AddArchaeopteris(b, rng, root, s); break;
+                case "Wattieza":       AddWattieza(b, rng, root, s); break;
+                case "Conifer":        AddShapedConifer(b, rng, root, s, plant.shape); break;
+                case "Palm":           AddPalm(b, rng, root, s * 1.15f); break;
+                case "Acacia":         AddAcacia(b, rng, root, s); break;
+                case "Baobab":         AddBaobab(b, rng, root, s); break;
+                case "Mangrove":       AddMangrove(b, rng, root, s); break;
+                case "Bamboo":         AddBamboo(b, rng, root, s); break;
+                default:               AddShapedBroadleaf(b, rng, root, s, plant.shape); break;
+            }
+            leafTint = Color.white;
+        }
+
+        // One clump of a ground species; `size` is the cell size, `scale` an extra factor
+        static void AddGroundPlant(Builder b, System.Random rng, Vector3 root, float size, PlantDefinition plant, float scale)
+        {
+            float m = plant.size * scale * Range(rng, 0.8f, 1.15f);
+            leafTint = plant.form == "Flower" ? Color.white : plant.Tint; // flowers: the tint is the petal colour
+            switch (plant.form)
+            {
+                case "GroundFern":     AddShapedGroundFern(b, rng, root, size * 0.09f * m, plant.shape); break;
+                case "Horsetail":      AddHorsetails(b, rng, root, size * 0.09f * m, L(Horsetail)); break;
+                case "Moss":           AddMossCushion(b, rng, root, size * 0.04f * m); break;
+                case "Cooksonia":      AddCooksonia(b, rng, root, size * 0.06f * m); break;
+                case "Clubmoss":       AddClubmoss(b, rng, root, size * 0.07f * m); break;
+                case "Grass":          AddShapedGrass(b, rng, root, size * m, plant.shape); break;
+                case "Shrub":          AddShapedShrub(b, rng, root, size * 0.045f * m, plant.shape); break;
+                case "Flower":         AddFlowers(b, rng, root, size * m, plant.Tint); break;
+                case "Reed":           AddReeds(b, rng, root, size * m); break;
+                case "WaterLily":      AddWaterLilies(b, rng, root, size * m, plant.Tint); break;
+                case "Succulent":      AddSucculent(b, rng, root, size * 0.08f * m); break;
+                case "Cactus":         AddCactus(b, rng, root, size * 0.2f * m); break;
+                case "Cycad":          AddCycad(b, rng, root, size * 0.8f * m); break;
+                case "Bennettitalean": AddBennettitalean(b, rng, root, size * 0.8f * m); break;
+                default:               AddTuft(b, rng, root, size * m, L(Grass)); break;
+            }
+            leafTint = Color.white;
+        }
+
+        static readonly Color BennettitaleanCone = new(0.85f, 0.55f, 0.35f);
+        static readonly Color CactusGreen        = new(0.32f, 0.50f, 0.30f);
+        static readonly Color SucculentGreen     = new(0.45f, 0.58f, 0.42f);
+        static readonly Color BaobabBark         = new(0.55f, 0.48f, 0.42f);
+        static readonly Color BambooStem         = new(0.52f, 0.62f, 0.26f);
+
+        // Bennettitalean (Williamsonia, Cycadeoidea): a cycad-like rosette around flower-like cones
+        static void AddBennettitalean(Builder b, System.Random rng, Vector3 root, float s)
+        {
+            AddCycad(b, rng, root, s);
+            float h = s * 0.12f;
+            for (int i = rng.Next(2, 4); i > 0; i--)
+            {
+                float a = Range(rng, 0f, Mathf.PI * 2f);
+                var at  = root + new Vector3(Mathf.Sin(a) * 0.03f * s, h, Mathf.Cos(a) * 0.03f * s);
+                AddBlob(b, rng, at, 0.022f * s, 1.2f, 0, Shade(rng, BennettitaleanCone));
+            }
+        }
+
+        // Clubmoss / spikemoss: upright little stems densely clad in tiny leaves
+        static void AddClubmoss(Builder b, System.Random rng, Vector3 root, float h)
+        {
+            for (int i = rng.Next(4, 8); i > 0; i--)
+            {
+                var foot = root + new Vector3(Range(rng, -0.5f, 0.5f), 0f, Range(rng, -0.5f, 0.5f)) * h;
+                var tip  = foot + new Vector3(Range(rng, -0.15f, 0.15f) * h, Range(rng, 0.6f, 1f) * h, Range(rng, -0.15f, 0.15f) * h);
+                AddBlob(b, rng, (foot + tip) * 0.5f, 0.12f * h, 4f, 0, Shade(rng, L(LycopsidLeaf)));
+            }
+        }
+
+        // Herbs in flower: a couple of grass-like tufts and coloured blooms (petal = tint, or random)
+        static void AddFlowers(Builder b, System.Random rng, Vector3 root, float size, Color petal)
+        {
+            AddTuft(b, rng, root, size * 0.8f, Grass);
+            bool random = petal.r > 0.99f && petal.g > 0.99f && petal.b > 0.99f;
+            for (int i = rng.Next(2, 5); i > 0; i--)
+            {
+                var at = root + new Vector3(Range(rng, -0.03f, 0.03f), Range(rng, 0.03f, 0.06f), Range(rng, -0.03f, 0.03f)) * size;
+                var c  = random ? FlowerColors[rng.Next(FlowerColors.Length)] : petal;
+                AddBlob(b, rng, at, 0.014f * size, 0.8f, 0, Shade(rng, c, 0.05f));
+            }
+        }
+
+        static void AddWaterLilies(Builder b, System.Random rng, Vector3 root, float size, Color flower)
+        {
+            for (int i = rng.Next(2, 4); i > 0; i--)
+            {
+                var c   = root + new Vector3(Range(rng, -0.04f, 0.04f), 0.004f, Range(rng, -0.04f, 0.04f)) * size;
+                var rim = Ring(rng, c, 0.03f * size, 7, 0.15f);
+                var pad = Shade(rng, L(LilyPad));
+                for (int k = 0; k < rim.Length; k++) b.AddTri(c, rim[k], rim[(k + 1) % rim.Length], pad, c - Vector3.up);
+                if (rng.NextDouble() < 0.6)
+                    AddBlob(b, rng, c + Vector3.up * 0.01f * size, 0.011f * size, 0.7f, 0, flower.r > 0.99f && flower.g > 0.99f ? new Color(0.98f, 0.85f, 0.9f) : flower);
+            }
+        }
+
+        // Rosette of thick, upturned leaves (aloes, Welwitschia, prickly pear pads)
+        static void AddSucculent(Builder b, System.Random rng, Vector3 root, float s)
+        {
+            AddFrondRosette(b, rng, root + Vector3.up * 0.003f, rng.Next(5, 9), s, s * 0.7f, s * 0.15f, s * 0.22f, Shade(rng, L(SucculentGreen)));
+        }
+
+        // Columnar cactus with a couple of upturned arms; `h` is its height
+        static void AddCactus(Builder b, System.Random rng, Vector3 root, float h)
+        {
+            var green = Shade(rng, L(CactusGreen));
+            float r = 0.08f * h;
+            var top = root + Vector3.up * h;
+            AddLimb(b, root - Vector3.up * 0.01f, top, r, r * 0.9f, green);
+            AddBlob(b, rng, top, r * 0.95f, 0.8f, 0, green);
+            for (int i = rng.Next(0, 3); i > 0; i--)
+            {
+                float a  = Range(rng, 0f, Mathf.PI * 2f);
+                var side = new Vector3(Mathf.Sin(a), 0f, Mathf.Cos(a));
+                var at   = root + Vector3.up * h * Range(rng, 0.35f, 0.6f);
+                var elbow = at + side * h * 0.22f;
+                var tip   = elbow + Vector3.up * h * Range(rng, 0.2f, 0.35f);
+                AddLimb(b, at, elbow, r * 0.7f, r * 0.65f, green);
+                AddLimb(b, elbow, tip, r * 0.65f, r * 0.6f, green);
+                AddBlob(b, rng, tip, r * 0.62f, 0.8f, 0, green);
+            }
+        }
+
+        // Baobab: a huge, swollen trunk under a small, flat crown of stubby branches
+        static void AddBaobab(Builder b, System.Random rng, Vector3 root, float s)
+        {
+            float h  = s * Range(rng, 0.4f, 0.5f);
+            var bark = Shade(rng, BaobabBark);
+            var top  = root + Vector3.up * h;
+            AddLimb(b, root - Vector3.up * 0.01f, root + Vector3.up * h * 0.5f, 0.09f * s, 0.085f * s, bark);
+            AddLimb(b, root + Vector3.up * h * 0.5f, top, 0.085f * s, 0.05f * s, bark);
+            for (int i = rng.Next(4, 7); i > 0; i--)
+            {
+                float a = Range(rng, 0f, Mathf.PI * 2f);
+                var tip = top + new Vector3(Mathf.Sin(a) * 0.12f, Range(rng, 0.03f, 0.08f), Mathf.Cos(a) * 0.12f) * s;
+                AddLimb(b, top, tip, 0.018f * s, 0.01f * s, bark);
+                AddBlob(b, rng, tip, 0.045f * s, 0.6f, 0, Shade(rng, L(Leaf)));
+            }
+        }
+
+        // Mangrove: a leafy crown standing on arching stilt roots
+        static void AddMangrove(Builder b, System.Random rng, Vector3 root, float s)
+        {
+            float lift = 0.1f * s;
+            var hub = root + Vector3.up * lift;
+            var bark = Shade(rng, Bark * 1.2f);
+            for (int i = rng.Next(4, 7); i > 0; i--)
+            {
+                float a  = Range(rng, 0f, Mathf.PI * 2f);
+                var foot = root + new Vector3(Mathf.Sin(a), 0f, Mathf.Cos(a)) * 0.09f * s - Vector3.up * 0.01f;
+                AddLimb(b, foot, hub, 0.008f * s, 0.01f * s, bark);
+            }
+            AddBroadleaf(b, rng, hub, s * 0.8f, new Color(0.18f, 0.40f, 0.20f), new Color(0.28f, 0.50f, 0.24f));
+        }
+
+        // Bamboo: a clump of jointed stalks with leafy tops
+        static void AddBamboo(Builder b, System.Random rng, Vector3 root, float s)
+        {
+            for (int i = rng.Next(4, 7); i > 0; i--)
+            {
+                var foot = root + new Vector3(Range(rng, -0.05f, 0.05f), 0f, Range(rng, -0.05f, 0.05f)) * s;
+                float h  = s * Range(rng, 0.5f, 0.75f);
+                var lean = new Vector3(Range(rng, -0.08f, 0.08f), 0f, Range(rng, -0.08f, 0.08f)) * h;
+                int joints = rng.Next(4, 7);
+                var prev = foot - Vector3.up * 0.01f;
+                for (int k = 1; k <= joints; k++)
+                {
+                    float t = k / (float)joints;
+                    var p = foot + Vector3.up * h * t + lean * t * t;
+                    AddLimb(b, prev, p, 0.009f * s, 0.008f * s, Shade(rng, BambooStem * (k % 2 == 0 ? 1f : 0.9f), 0.04f));
+                    prev = p;
+                }
+                AddLeafSpray(b, rng, prev, 0.08f * s, rng.Next(6, 9), L(Leaf));
+            }
         }
 
         // ---- Plants ----
@@ -322,14 +617,14 @@ namespace NaturalHistory.World
             var trunk = Shade(rng, FernTrunk);
             AddLimb(b, root - Vector3.up * 0.01f, crown, 0.026f * s, 0.02f * s, trunk);
             AddBlob(b, rng, crown - Vector3.up * 0.015f * s, 0.03f * s, 0.8f, 0, trunk * 1.2f); // old frond bases
-            AddFrondRosette(b, rng, crown, rng.Next(9, 13), 0.21f * s, 0.04f * s, 0.08f * s, 0.035f * s, Shade(rng, FernGreen));
-            AddFrondRosette(b, rng, crown, rng.Next(2, 4), 0.07f * s, 0.07f * s, 0f, 0.014f * s, FernLight); // unrolling fiddleheads
+            AddFrondRosette(b, rng, crown, rng.Next(9, 13), 0.21f * s, 0.04f * s, 0.08f * s, 0.035f * s, Shade(rng, L(FernGreen)));
+            AddFrondRosette(b, rng, crown, rng.Next(2, 4), 0.07f * s, 0.07f * s, 0f, 0.014f * s, L(FernLight)); // unrolling fiddleheads
         }
 
         // Clump of ferns growing straight from the ground; `s` is the frond length.
         static void AddGroundFern(Builder b, System.Random rng, Vector3 root, float s)
         {
-            var color = Color.Lerp(FernDark, FernGreen, Range(rng, 0.4f, 1f));
+            var color = Color.Lerp(L(FernDark), L(FernGreen), Range(rng, 0.4f, 1f));
             AddFrondRosette(b, rng, root + Vector3.up * 0.003f, rng.Next(6, 10), s, s * Range(rng, 0.35f, 0.55f), s * 0.25f, s * 0.16f, color);
         }
 
@@ -339,7 +634,7 @@ namespace NaturalHistory.World
             float h = s * Range(rng, 0.06f, 0.16f);
             var top = root + Vector3.up * h;
             AddLimb(b, root - Vector3.up * 0.01f, top, 0.04f * s, 0.034f * s, Shade(rng, CycadTrunk));
-            AddFrondRosette(b, rng, top, rng.Next(9, 14), 0.14f * s, 0.07f * s, 0.03f * s, 0.022f * s, Shade(rng, CycadLeaf));
+            AddFrondRosette(b, rng, top, rng.Next(9, 14), 0.14f * s, 0.07f * s, 0.03f * s, 0.022f * s, Shade(rng, L(CycadLeaf)));
             AddCone(b, rng, top - Vector3.up * 0.005f * s, 0.02f * s, 0.045f * s, Shade(rng, CycadCone));
         }
 
@@ -366,7 +661,7 @@ namespace NaturalHistory.World
                 var to = from + d * length * Range(rng, 0.85f, 1.1f);
                 AddLimb(b, from, to, radius, radius * 0.75f, bark);
                 if (depth > 1) AddForks(b, rng, to, d, length * 0.75f, radius * 0.72f, depth - 1, yaw + Mathf.PI * 0.5f, bark, s);
-                else AddBlob(b, rng, to + d * 0.02f * s, 0.032f * s, 1.3f, 0, Shade(rng, LycopsidLeaf));
+                else AddBlob(b, rng, to + d * 0.02f * s, 0.032f * s, 1.3f, 0, Shade(rng, L(LycopsidLeaf)));
             }
         }
 
@@ -385,10 +680,10 @@ namespace NaturalHistory.World
                 {
                     var tip = top + Vector3.up * 0.12f * s + axis * (k * 0.07f * s);
                     AddLimb(b, top, tip, 0.028f * s, 0.024f * s, bark);
-                    AddLeafSpray(b, rng, tip, 0.1f * s, rng.Next(10, 14), LycopsidLeaf);
+                    AddLeafSpray(b, rng, tip, 0.1f * s, rng.Next(10, 14), L(LycopsidLeaf));
                 }
             }
-            else AddLeafSpray(b, rng, top, 0.12f * s, rng.Next(13, 18), LycopsidLeaf);
+            else AddLeafSpray(b, rng, top, 0.12f * s, rng.Next(13, 18), L(LycopsidLeaf));
         }
 
         // Calamites, the tree-sized horsetail: a jointed stem with whorls of needle leaves at each node.
@@ -413,7 +708,7 @@ namespace NaturalHistory.World
                 {
                     float a = rot + k * Mathf.PI * 2f / whorl;
                     var dir = new Vector3(Mathf.Sin(a) * 0.85f, 0.5f, Mathf.Cos(a) * 0.85f).normalized;
-                    AddLimb(b, p, p + dir * len, 0.005f * s, 0.001f * s, Shade(rng, Horsetail));
+                    AddLimb(b, p, p + dir * len, 0.005f * s, 0.001f * s, Shade(rng, L(Horsetail)));
                 }
             }
             AddCone(b, rng, prev, 0.01f * s, 0.04f * s, stem * 1.1f);
@@ -431,7 +726,7 @@ namespace NaturalHistory.World
                 float t    = i / (float)(tiers - 1);
                 var center = root + Vector3.up * Mathf.Lerp(0.3f, 0.82f, t) * h;
                 AddBoughTier(b, rng, center, Mathf.Lerp(0.17f, 0.07f, t) * s * Range(rng, 0.9f, 1.1f), Mathf.Lerp(0.12f, 0.1f, t) * h,
-                             Color.Lerp(FernDark, FernGreen, t));
+                             Color.Lerp(L(FernDark), L(FernGreen), t));
             }
         }
 
@@ -448,8 +743,8 @@ namespace NaturalHistory.World
                 float a = rot + k * Mathf.PI * 2f / branches, e = Range(rng, 0.7f, 1.2f);
                 var dir = new Vector3(Mathf.Sin(a) * Mathf.Cos(e), Mathf.Sin(e), Mathf.Cos(a) * Mathf.Cos(e));
                 var tip = top + dir * 0.09f * s * Range(rng, 0.8f, 1.15f);
-                AddLimb(b, top, tip, 0.008f * s, 0.005f * s, Shade(rng, FernGreen * 0.8f));
-                AddBlob(b, rng, tip, 0.022f * s, 0.8f, 0, Shade(rng, FernGreen));
+                AddLimb(b, top, tip, 0.008f * s, 0.005f * s, Shade(rng, L(FernGreen) * 0.8f));
+                AddBlob(b, rng, tip, 0.022f * s, 0.8f, 0, Shade(rng, L(FernGreen)));
             }
         }
 
@@ -468,7 +763,7 @@ namespace NaturalHistory.World
                 var from = top - Vector3.up * Range(rng, 0f, 0.15f) * h;
                 var tip  = from + new Vector3(Mathf.Sin(a) * 0.09f, Range(rng, 0.05f, 0.1f), Mathf.Cos(a) * 0.09f) * s;
                 AddLimb(b, from, tip, 0.01f * s, 0.006f * s, bark);
-                AddLeafSpray(b, rng, tip, 0.06f * s, rng.Next(6, 9), CordaitesLeaf);
+                AddLeafSpray(b, rng, tip, 0.06f * s, rng.Next(6, 9), L(CordaitesLeaf));
             }
         }
 
@@ -477,7 +772,7 @@ namespace NaturalHistory.World
         {
             float h = s * Range(rng, 0.5f, 0.62f);
             AddLimb(b, root - Vector3.up * 0.01f, root + Vector3.up * 0.75f * h, 0.03f * s, 0.016f * s, Shade(rng, Bark));
-            var leaf = Shade(rng, Glossopteris);
+            var leaf = Shade(rng, L(Glossopteris));
             AddBlob(b, rng, root + Vector3.up * 0.6f * h, 0.15f * s, 0.75f, 1, leaf);
             AddBlob(b, rng, root + Vector3.up * 0.85f * h, 0.12f * s, 0.8f, 1, leaf * 1.05f);
             AddBlob(b, rng, root + Vector3.up * 1.05f * h, 0.075f * s, 0.9f, 0, leaf * 1.1f);
@@ -499,9 +794,9 @@ namespace NaturalHistory.World
                 var fork = root + Vector3.up * t * h;
                 var tip  = fork + new Vector3(Mathf.Sin(a), 1f, Mathf.Cos(a)).normalized * 0.12f * s * (1f - 0.4f * t);
                 AddLimb(b, fork, tip, 0.012f * s, 0.007f * s, bark);
-                AddBlob(b, rng, tip, 0.07f * s, 0.8f, 0, Shade(rng, GinkgoLeaf));
+                AddBlob(b, rng, tip, 0.07f * s, 0.8f, 0, Shade(rng, L(GinkgoLeaf)));
             }
-            AddBlob(b, rng, top, 0.07f * s, 0.9f, 0, Shade(rng, GinkgoLeaf * 1.05f));
+            AddBlob(b, rng, top, 0.07f * s, 0.9f, 0, Shade(rng, L(GinkgoLeaf) * 1.05f));
         }
 
         // Araucaria (monkey puzzle), the giant Jurassic conifer: a long bare trunk under a domed
@@ -511,7 +806,7 @@ namespace NaturalHistory.World
             float h  = s * Range(rng, 0.85f, 1.05f);
             var bark = Shade(rng, Bark * 1.1f);
             var top  = root + Vector3.up * h;
-            var dark = Shade(rng, AraucariaGreen);
+            var dark = Shade(rng, L(AraucariaGreen));
             AddLimb(b, root - Vector3.up * 0.01f, top, 0.035f * s, 0.014f * s, bark);
             for (int w = 0; w < 3; w++)
             {
@@ -543,12 +838,12 @@ namespace NaturalHistory.World
         }
 
         static void AddMossCushion(Builder b, System.Random rng, Vector3 root, float radius) =>
-            AddBlob(b, rng, root + Vector3.up * radius * 0.1f, radius, 0.35f, 0, Color.Lerp(Moss, MossLight, Range(rng, 0f, 1f)));
+            AddBlob(b, rng, root + Vector3.up * radius * 0.1f, radius, 0.35f, 0, Color.Lerp(L(Moss), L(MossLight), Range(rng, 0f, 1f)));
 
         // Cooksonia (Silurian), the first vascular plant: tiny forked stems tipped with spore capsules.
         static void AddCooksonia(Builder b, System.Random rng, Vector3 root, float h)
         {
-            var green = Shade(rng, Rhynia);
+            var green = Shade(rng, L(Rhynia));
             for (int i = rng.Next(3, 6); i > 0; i--)
             {
                 var foot = root + new Vector3(Range(rng, -0.4f, 0.4f), 0f, Range(rng, -0.4f, 0.4f)) * h;

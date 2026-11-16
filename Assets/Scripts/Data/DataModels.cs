@@ -159,7 +159,7 @@ namespace NaturalHistory.Data
         public bool playable;
         public string model;          // optional Resources path of a map model, e.g. "Models/Species/ActinophrysSol"
         public string mapStyle;       // ColonyStyle name: Drift, Fixed, Float, Ground, Soar, Swarm, Swim (default Drift)
-        public string mapGait;        // Ground only: Walk (default), Hop or Slither
+        public string mapGait;        // Ground only: Walk (default), Hop, Slither or Run (gallops when travelling)
         public int colonySize;        // individuals shown on the map; 0 = the map style's default
         public float mapScale;        // size multiplier on the map (e.g. a bird modelled on a tall perch); 0 = 1
         public float wingBeat;        // wing/fin beats per second on the map; 0 = the model doesn't flap
@@ -168,6 +168,8 @@ namespace NaturalHistory.Data
         public float mapHip;          // Ground walkers/hoppers: hip height as a fraction of the model's height; 0 = 0.45
         public bool mapBackward;      // swims tail first (squid, ammonites jetting backwards)
         public bool mapUndulate;      // swims with a body wave instead of a tail wag (eels); Slither snakes always do
+        public string mapAttack;      // AttackStyle name (Charge, Bite, Pounce, Strike, Dive, Sting, Ram, Shock, Snap, Engulf, Lash); empty = from style and diet
+        public string mapDefense;     // DefenseStyle name (Brace, Rear, Scatter, Coil, Hide, Ink, Tighten, Mob, Puff); empty = from style and size
         public List<GeneValue> genes;
         public string description;
     }
