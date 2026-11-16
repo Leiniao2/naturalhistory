@@ -92,6 +92,10 @@ namespace NaturalHistory.UI
             root.Q<Button>("morphology-button").clicked += () => ToggleTree(Progression?.Morphology);
             root.Q<Button>("ethology-button").clicked   += () => ToggleTree(Progression?.Ethology);
             root.Q<Button>("zoology-button").clicked    += ToggleZoology;
+            underButton = root.Q<Button>("under-button");
+            underButton.clicked += UnderView.Toggle;
+            UnderView.Changed   += OnUnderViewChanged;
+            OnUnderViewChanged();
             root.Q<Button>("menu-button").clicked       += () => SetPauseOpen(true);
             root.Q<Button>("resume-button").clicked     += () => SetPauseOpen(false);
             root.Q<Button>("new-game-button").clicked   += OpenNewGame;
@@ -120,8 +124,12 @@ namespace NaturalHistory.UI
 
         private void OnPhenomenon(string message, HexCell cell) => ShowToast(message);
 
+        private Button underButton;
+        private void OnUnderViewChanged() => underButton.text = UnderView.On ? "Surface" : "Underground";
+
         private void OnDestroy()
         {
+            UnderView.Changed -= OnUnderViewChanged;
             NaturalEvents.Announced -= OnPhenomenon;
             if (Progression != null) Progression.Changed -= OnProgressionChanged;
             if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed -= OnProgressionChanged;
@@ -172,6 +180,7 @@ namespace NaturalHistory.UI
 
             if (Input.GetKeyDown(KeyCode.Escape)) HandleEscape();
             if (Input.GetKeyDown(KeyCode.BackQuote)) adminPanel.Toggle();
+            if (Input.GetKeyDown(KeyCode.U) && !AnyModalOpen()) UnderView.Toggle(); // the layer under sea level
             if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !AnyModalOpen())
                 ClimateHud.EndTurn();
             climateHud.RefreshTile();

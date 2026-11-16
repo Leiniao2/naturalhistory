@@ -9,6 +9,7 @@
             <ui:Button name="morphology-button" class="hud-button" text="Functions" />
             <ui:Button name="ethology-button" class="hud-button" text="Behaviors" />
             <ui:Button name="zoology-button" class="hud-button" text="Zoology" />
+            <ui:Button name="under-button" class="hud-button" text="Underground" />
             <ui:Button name="menu-button" class="hud-button" text="Menu" />
         </ui:VisualElement>
 

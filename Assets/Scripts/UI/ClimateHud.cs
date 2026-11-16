@@ -88,7 +88,12 @@ namespace NaturalHistory.UI
             // Named species on the tile; otherwise a description (bare rock, reefs, oases…)
             var flora = cell.Plants.Count > 0 ? string.Join(", ", System.Linq.Enumerable.Select(cell.Plants, p => p.Label))
                       : HexGrid.Instance != null ? EraFlora.FloraOf(cell, HexGrid.Instance.DisplayedAge) : null;
+            // The layer under sea level below this tile, with any water plants or volcano there
+            var below = UnderView.Name(cell.Under);
+            if (UnderView.Name(cell.UnderFeature) is string feature) below += $", {feature}";
+            if (cell.UnderPlants.Count > 0) below += " · " + string.Join(", ", System.Linq.Enumerable.Select(cell.UnderPlants, p => p.Label));
             tileStats.text = (flora != null ? $"Plants: {flora}\n" : "") +
+                $"Below: {below}\n" +
                 $"Temperature: {t.TemperatureC:0.0} °C\n" +
                 $"Humidity: {t.Humidity:0} %\n" +
                 $"Oxygen: {t.O2Percent:0.00} %\n" +
