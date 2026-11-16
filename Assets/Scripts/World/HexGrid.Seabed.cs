@@ -78,6 +78,55 @@ namespace NaturalHistory.World
                 }
                 seabedY[r * width + q] = y;
             }
+            SmoothSeabed();
+        }
+
+        // Like the land: neighbouring seabed tiles differ by no more than about a terrace step, so the
+        // floor runs in long, gradual slopes instead of jumping from tile to tile. Two passes of
+        // neighbour averaging take off the tile-to-tile noise; then any step steeper than
+        // MaxSeabedStep is eased by pulling both sides toward each other, so ridges and trenches
+        // widen into slopes rather than being cut away.
+        private const float MaxSeabedStep = 0.045f;
+
+        private void SmoothSeabed()
+        {
+            bool Wet(HexCell c) => c?.Terrain != null && c.IsWater;
+            int Index(HexCell c) { var (q, r) = c.Coordinates.ToOffsetCoordinates(); return r * width + ((q % width) + width) % width; }
+            var next = new float[seabedY.Length];
+            for (int pass = 0; pass < 2; pass++)
+            {
+                System.Array.Copy(seabedY, next, seabedY.Length);
+                foreach (var c in cells)
+                {
+                    if (!Wet(c)) continue;
+                    int i = Index(c);
+                    float sum = seabedY[i] * 2f, w = 2f;
+                    foreach (var n in GetNeighbors(c))
+                        if (Wet(n) && n.Terrain.kind == c.Terrain.kind) { sum += seabedY[Index(n)]; w += 1f; }
+                    next[i] = Mathf.Min(sum / w, c.SurfaceHeight - ShelfDepth);
+                }
+                (seabedY, next) = (next, seabedY);
+            }
+            for (int it = 0; it < 24; it++)
+            {
+                bool eased = false;
+                foreach (var c in cells)
+                {
+                    if (!Wet(c)) continue;
+                    int i = Index(c);
+                    foreach (var n in GetNeighbors(c))
+                    {
+                        if (!Wet(n) || n.Terrain.kind != c.Terrain.kind) continue;
+                        int j = Index(n);
+                        float excess = seabedY[i] - seabedY[j] - MaxSeabedStep;
+                        if (excess <= 1e-4f) continue;
+                        seabedY[i] -= excess * 0.5f;
+                        seabedY[j] = Mathf.Min(seabedY[j] + excess * 0.5f, n.SurfaceHeight - ShelfDepth);
+                        eased = true;
+                    }
+                }
+                if (!eased) break;
+            }
         }
 
         // The tile mesh for a water cell in the under view: its seabed, sloped to meet the

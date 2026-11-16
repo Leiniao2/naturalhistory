@@ -70,9 +70,8 @@ namespace NaturalHistory.World
 
         public static string FloorName(HexCell cell)
         {
-            if (cell.Under is UnderKind.Seabed or UnderKind.Lakebed && cell.UnderFeature == UnderFeature.None)
-                foreach (var p in cell.UnderPlants)
-                    if (IsFloor(p)) return Loc.T(cell.Under == UnderKind.Seabed ? "Stromatolite seabed" : "Stromatolite lakebed");
+            if (HexGrid.Instance != null && HexGrid.Instance.ShowsStromatoliteFloor(cell))
+                return Loc.T(cell.Under == UnderKind.Seabed ? "Stromatolite seabed" : "Stromatolite lakebed");
             return Name(cell.Under);
         }
 

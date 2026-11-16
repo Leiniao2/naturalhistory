@@ -22,7 +22,7 @@ namespace NaturalHistory.World
         static readonly Color SpringTeal  = new(0.30f, 0.62f, 0.66f);
         static readonly Color SpringBlue  = new(0.12f, 0.38f, 0.60f);
         static readonly Color WhiteSmoker = new(0.86f, 0.84f, 0.78f);
-        static readonly Color MatWhite    = new(0.92f, 0.92f, 0.88f);
+        static readonly Color MatPale     = new(0.62f, 0.66f, 0.64f); // a sulphur-bacteria film under water
         static readonly Color PillowLava  = new(0.20f, 0.18f, 0.18f);
 
         // The points steam (or bubbles) rise from on each geothermal mesh; on land the first is the geyser
@@ -191,10 +191,11 @@ namespace NaturalHistory.World
             float apothem = 0.8660254f * size;
             var taken = new List<Vector2>();
 
-            // bacterial mats spreading over the floor around the vents
-            foreach (var p in HexScatter(rng, rng.Next(5, 8), apothem * 0.8f, 0.18f * size, new List<Vector2>()))
-                AddGroundPatch(b, rng, new Vector3(p.x, 0.002f * size, p.y), size * Range(rng, 0.1f, 0.2f),
-                               rng.NextDouble() < 0.55 ? MatWhite : Color.Lerp(MatOrange, MatYellow, Range(rng, 0f, 0.6f)), 12, 0.3f);
+            // bacterial mats: small, rounded, dull patches round the vents (kept apart and muted, so
+            // they read as a film on the floor rather than bright white shapes)
+            foreach (var p in HexScatter(rng, rng.Next(3, 6), apothem * 0.75f, 0.2f * size, new List<Vector2>()))
+                AddGroundPatch(b, rng, new Vector3(p.x, 0.002f * size, p.y), size * Range(rng, 0.05f, 0.09f),
+                               rng.NextDouble() < 0.4 ? Shade(rng, MatPale, 0.05f) : Color.Lerp(MatOrange, MatYellow, Range(rng, 0f, 0.6f)) * 0.85f, 14, 0.12f);
 
             // white smokers: short, knobbly pale chimneys
             foreach (var p in HexScatter(rng, rng.Next(3, 6), apothem * 0.6f, 0.15f * size, taken))

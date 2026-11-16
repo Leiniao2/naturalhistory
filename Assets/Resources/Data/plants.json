@@ -3260,9 +3260,9 @@
    "description": "Rockweed of the tidal shore, buoyed by air bladders."
   },
   {
-   "id": "spirogyra",
-   "commonName": "Filamentous algae",
-   "scientificName": "Spirogyra",
+   "id": "freshwater_green_algae",
+   "commonName": "Freshwater green algae",
+   "scientificName": "Chlorophyta",
    "group": "Green alga",
    "firstAge": "Ediacaran",
    "lastAge": "",
@@ -3272,9 +3272,26 @@
    ],
    "forests": [],
    "form": "Algae",
+   "tint": "#98D46A",
+   "size": 1.0,
+   "description": "Films and tufts of simple green algae in lakes and ponds, long before any plant reached land."
+  },
+  {
+   "id": "spirogyra",
+   "commonName": "Filamentous algae",
+   "scientificName": "Spirogyra",
+   "group": "Green alga",
+   "firstAge": "Carboniferous",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Algae",
    "tint": "#A8E078",
    "size": 1.0,
-   "description": "Slimy green threads in still fresh water."
+   "description": "Slimy green threads in still fresh water; zygnematophyte algae like it leave no sure fossils before the late Palaeozoic."
   },
   {
    "id": "chara",

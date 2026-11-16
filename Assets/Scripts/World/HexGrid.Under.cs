@@ -274,7 +274,7 @@ namespace NaturalHistory.World
                 var pos = cell.Coordinates.ToWorldPosition(cellSize);
                 var q = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.3f / cellSize) + offset;
                 float n = PerlinNoise3D.Sample(q.x, q.y, q.z);
-                var floor = n > 0.155f ? stromatolite : n > -0.074f ? mat : null;
+                var floor = n > 0.3f ? stromatolite : n > -0.074f ? mat : null; // stromatolite floors on ~15% of the beds
                 if (floor == null || floor == main) continue;
                 beds[i] = (cell, floor, main != null && main != floor ? main : second);
             }
@@ -526,7 +526,9 @@ namespace NaturalHistory.World
         // plants painted into the floor (seagrass meadow, kelp bed, seaweed or waterweed meadow, by
         // the main species) with only MeadowPropShare of the 3D plants standing on it — much less to draw.
         private const float MeadowPropShare = 0.3f;
-        private const float MeadowThreshold = 0.074f; // noise above this: 40% of tiles (measured on PerlinNoise3D's distribution)
+        // noise above this is meadow: 40% of the beds, 55% from the Cretaceous on, when the seas hold
+        // much more plant bed (measured on PerlinNoise3D's distribution)
+        private float MeadowThreshold => DisplayedAge >= NaturalHistory.Core.GeologicalAge.Cretaceous ? -0.037f : 0.074f;
         private bool IsMeadow(HexCell cell)
         {
             if (cell.Under is not (UnderKind.Seabed or UnderKind.Lakebed) || cell.UnderPlants.Count == 0) return false;
@@ -535,63 +537,74 @@ namespace NaturalHistory.World
             return PerlinNoise3D.Sample(p.x, p.y, p.z) > MeadowThreshold;
         }
 
-        private bool MeadowCovered(HexCell cell)
+        // Whether this tile's floor is shown as a stromatolite floor (named so in the tile panel)
+        public bool ShowsStromatoliteFloor(HexCell cell) => FloorCover(cell) == "Stromatolite";
+
+        private bool MeadowCovered(HexCell cell) => MapFeatureMeshes.IsMeadowCover(FloorCover(cell));
+
+        // The painted floor a water tile shows (now only stromatolites, on the tiles where they are the
+        // floor), or null for the plain, sunlit seabed.
+        private string FloorCover(HexCell cell)
         {
+            if (cell.UnderFeature != UnderFeature.None || cell.Under is not (UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed)) return null;
             var plants = cell.UnderPlants;
             string cover = MapFeatureMeshes.CoverOf(cell.Under, plants.Count > 0 ? plants[0] : null, plants.Count > 1 ? plants[1] : null, IsMeadow(cell));
-            return MapFeatureMeshes.IsMeadowCover(cover);
+            // painted: stromatolite floors; mats, algal turf and meadows as see-through clumps on the
+            // plain floor (tools/terrain/mat_patches.py). Coralline crusts show as their 3D plants.
+            return cover is "Stromatolite" or "MicrobialMat" or "BacterialMat" or "AlgalTurf" || MapFeatureMeshes.IsMeadowCover(cover) ? cover : null;
         }
 
-        private bool CoverPatch(HexCell cell)
+        private int StromatoliteVariant(HexCell cell)
         {
             var pos = cell.Coordinates.ToWorldPosition(cellSize);
-            var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.3f / cellSize) + new Vector3(517f, 91f, 733f) + Vector3.one * (WorldSeed % 997);
-            return PerlinNoise3D.Sample(p.x, p.y, p.z) > 0.12f;
+            var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.3f / cellSize) + Vector3.one * 517f;
+            float n = PerlinNoise3D.Sample(p.x, p.y, p.z);
+            var (q, r) = cell.Coordinates.ToOffsetCoordinates();
+            int jitter = ((q * 7 + r * 13) & 7) == 0 ? 1 : 0; // the odd tile breaks a patch up
+            return ((n < -0.128f ? 0 : n > 0.128f ? 2 : 1) + jitter) % 3;
         }
 
         private Material UnderMaterial(HexCell cell)
         {
-            if (cell.UnderFeature == UnderFeature.None && cell.Under is UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed)
+            string cover = FloorCover(cell);
+            if (cover != null)
             {
-                var plants = cell.UnderPlants;
-                string cover = MapFeatureMeshes.CoverOf(cell.Under, plants.Count > 0 ? plants[0] : null, plants.Count > 1 ? plants[1] : null, IsMeadow(cell));
-                // mats, turf and crusts carpet the floor only in patches (about a third of the tiles
-                // that have them); elsewhere the plain, pale seabed shows between the plants
-                if (cover is "MicrobialMat" or "BacterialMat" or "AlgalTurf" or "Coralline" && !CoverPatch(cell)) cover = null;
-                if (cover != null)
-                {
-                    string name = $"Under{cell.Under}{cover}";
-                    if (!coverMaterials.TryGetValue(name, out var m) || m == null)
-                        coverMaterials[name] = m = Resources.Load<Material>($"Materials/Under/{name}");
-                    if (m != null) return m;
-                }
+                string name = $"Under{cell.Under}{cover}";
+                // stromatolite fields come in three kinds (domes, current-drawn heads, columns), mixed
+                // in patches so neighbouring tiles differ (Materials/Under/...Stromatolite, 2, 3)
+                if (cover == "Stromatolite") name += StromatoliteVariant(cell) switch { 1 => "2", 2 => "3", _ => "" };
+                if (!coverMaterials.TryGetValue(name, out var m) || m == null)
+                    coverMaterials[name] = m = Resources.Load<Material>($"Materials/Under/{name}");
+                if (m != null) return m;
             }
             return UnderMaterial(cell.Under);
         }
 
-        // Seen through the water above: everything under the sea is tinted sea blue, turquoise over
-        // the shallows deepening to blue with depth; lakebeds a lighter green-blue. Plus slight
-        // per-tile variation; deep seabed darkens with depth, volcanic ground is darker.
-        private static readonly Color ShallowSea = new(0.55f, 0.95f, 1.45f);
-        private static readonly Color DeepSea    = new(0.62f, 0.82f, 1.5f);
-        private static readonly Color LakeWater  = new(0.75f, 1.0f, 1.2f);
+        // Floors keep their own colours under a light veil of water: seabed (and old sea floors under
+        // the land) a faint pale blue, lakebeds a fainter green-blue, so they read as under water
+        // without hiding the floor; only the deepest layer, the deep seabed, is tinted deep blue
+        // (darker the deeper it lies). Stromatolite floors take the same veil, and so do the 3D
+        // stromatolites on them (MapFeatureMeshes.SeaVeil), so floor and domes are one tone. Plus slight per-tile variation; volcanic ground and bedrock are darker.
+        private static readonly Color DeepSea   = new(0.62f, 0.82f, 1.5f);
+        private static Color SeaVeil  => MapFeatureMeshes.SeaVeil;
+        private static Color LakeVeil => MapFeatureMeshes.LakeVeil;
 
-                // Slight per-tile variation; the seabed darkens and turns bluer with depth (less light gets
-        // down there), so its relief reads at a glance; volcanic ground is darker
         private Color UnderTint(HexCell cell)
         {
             var (q, r) = cell.Coordinates.ToOffsetCoordinates();
             uint h = unchecked((uint)(q * 73856093) ^ (uint)(r * 19349663));
-            float j = 0.92f + 0.16f * ((h & 0xFFFF) / 65535f);
-            var c = new Color(j, j, j);
-            if (cell.IsWater && cell.Terrain != null && cell.Terrain.kind == TerrainKind.SaltWater)
-            {
-                float depth = Mathf.Clamp01((cell.SurfaceHeight - UnderSurface(cell)) / 1.6f);
-                c *= Mathf.Lerp(1.05f, 0.42f, Mathf.Sqrt(depth));
-                c = Color.Lerp(c, new Color(c.r * 0.7f, c.g * 0.88f, c.b * 1.25f), depth);
-            }
-            if (cell.UnderFeature != UnderFeature.None) c *= 0.85f;
-            return c;
+            float j = 0.97f + 0.06f * ((h & 0xFFFF) / 65535f); // slight, so neighbouring tiles read as one floor
+            if (cell.UnderFeature != UnderFeature.None) j *= 0.92f;
+            if (cell.Under == UnderKind.Bedrock) j *= 0.6f;
+            // a little lighter on the banks and darker in the hollows and the deep, so the seabed's
+            // relief (HexGrid.Seabed) shows in its shading too
+            if (cell.IsWater && cell.Terrain.kind == TerrainKind.SaltWater)
+                j *= Mathf.Lerp(1.06f, 0.72f, Mathf.InverseLerp(0.03f, 0.5f, cell.SurfaceHeight - UnderSurface(cell)));
+            if (cell.Under == UnderKind.Seabed) return SeaVeil * j;
+            if (cell.Under == UnderKind.Lakebed) return LakeVeil * j;
+            if (cell.Under != UnderKind.DeepSeabed || FloorCover(cell) == "Stromatolite") return Color.white * j;
+            j *= Mathf.Lerp(1f, 0.8f, Mathf.InverseLerp(0.5f, 1f, cell.Depth));
+            return DeepSea * j;
         }
 
         // Underground-niche animals live in the under layer; everyone else on the surface

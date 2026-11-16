@@ -70,6 +70,7 @@ namespace NaturalHistory.World
             maxBlobDetail = 0;
             fineDetail = true;
             waterPlantScale = waterBed ? WaterPlantSize : 1f;
+            stromatoliteTint = kind == UnderKind.Seabed ? SeaVeil : kind == UnderKind.Lakebed ? LakeVeil : Color.white;
             fineBlobRadius = 0.012f * size;
             skipPainted = waterBed; // mats, crusts and turf are in the floor texture there (CoverOf)
 
@@ -130,6 +131,7 @@ namespace NaturalHistory.World
             maxBlobDetail = 1;
             fineDetail = false;
             waterPlantScale = 1f;
+            stromatoliteTint = Color.white;
             skipPainted = false;
             return b.ToMesh($"Under_{kind}_{main?.id}_{second?.id}");
         }
@@ -201,11 +203,18 @@ namespace NaturalHistory.World
         const float WaterPlantSize = 1.4f;
         static float waterPlantScale = 1f;
 
+        // The light veil of water over the seabed and lakebed in the under view (HexGrid.UnderTint);
+        // the 3D stromatolites take it too, so they match the stromatolite floor they stand on
+        public static readonly Color SeaVeil  = new(0.8f, 0.94f, 1.14f);
+        public static readonly Color LakeVeil = new(0.88f, 0.98f, 1.06f);
+        static Color stromatoliteTint = Color.white;
+
         // Simple, flat water plants (microbial and bacterial mats, coralline crusts, low algal turf) are
         // painted into the floor texture of seabed, deep seabed and lakebed tiles instead of being built
         // as props: they would only be a thin carpet of geometry. Set by CreateUnderDetail.
         static bool skipPainted;
-        static bool Painted(string form) => form is "Mat" or "Coralline" or "Algae";
+        // (coralline crusts are no longer painted, HexGrid.Under.FloorCover: they stand as props again)
+        static bool Painted(string form) => form is "Mat" or "Algae";
 
         // Fungi, lichens and slime moulds of caves and soil are drawn this much bigger (Prototaxites
         // has its own size)
@@ -265,7 +274,7 @@ namespace NaturalHistory.World
                 case "Kelp":         AddKelp(b, rng, root, size * 0.35f * m); break;
                 case "Coralline":    AddCoralline(b, rng, root, size * 0.04f * m); break;
                 case "Charophyte":   AddCharophyte(b, rng, root, size * 0.08f * m); break;
-                case "Stromatolite": AddStromatolites(b, rng, root, size * 0.04f * m); break;
+                case "Stromatolite": AddStromatolites(b, rng, root, size * 0.04f * m, stromatoliteTint); break;
                 default:
                     if (!AddUnderFlora(b, rng, root, size, plant, m)) AddAlgae(b, rng, root, size * 0.035f * m); // fungi and more water plants: UnderFlora.cs
                     break;

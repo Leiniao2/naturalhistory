@@ -1076,6 +1076,7 @@ namespace NaturalHistory.World
                 if (mc != null) mc.sharedMesh = mesh;
             }
             Debug.Log($"[HexGrid] UpdateCellMeshes — updated {updated} cells, {meshCache.Count} unique tile meshes");
+            if (UnderView.On) ShowSeabedRelief(true); // water tiles were just reset to the sea surface: back to the seabed
         }
 
         // Height of a land tile's top surface above its own top face at a point given relative to

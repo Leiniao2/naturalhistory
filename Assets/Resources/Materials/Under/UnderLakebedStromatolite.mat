@@ -31,7 +31,7 @@ Material:
     m_Floats:
     - _EdgeDarken: 0.25
     - _SideDarken: 0.35
-    - _Tiling: 3.4
+    - _Tiling: 1.7
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

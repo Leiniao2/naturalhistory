@@ -406,8 +406,8 @@ namespace NaturalHistory.World
             <= GeologicalAge.Silurian   => 1f,
             <= GeologicalAge.Permian    => 1.04f,
             <= GeologicalAge.Jurassic   => 1.28f,
-            GeologicalAge.Cretaceous    => 1.22f, // the last periods another 20% sparser (were 1.52 / 1.84)
-            _                           => 1.47f,
+            GeologicalAge.Cretaceous    => 0.98f, // the last periods twice 20% sparser (were 1.52 / 1.84, then 1.22 / 1.47):
+            _                           => 1.18f, // their seas are large and more of their beds are painted meadows
         };
         static (float size, float density) AgeBoost(GeologicalAge age) => age switch
         {
@@ -983,13 +983,14 @@ namespace NaturalHistory.World
         }
 
         // A few domed stromatolites side by side; `radius` is the largest dome.
-        static void AddStromatolites(Builder b, System.Random rng, Vector3 root, float radius)
+        static void AddStromatolites(Builder b, System.Random rng, Vector3 root, float radius, Color? tint = null)
         {
+            var stone = tint is Color t ? new Color(Stromatolite.r * t.r, Stromatolite.g * t.g, Stromatolite.b * t.b) : Stromatolite;
             for (int i = rng.Next(2, 5); i > 0; i--)
             {
                 var at  = root + new Vector3(Range(rng, -1f, 1f), 0f, Range(rng, -1f, 1f)) * radius;
                 float r = radius * Range(rng, 0.5f, 1f);
-                AddBlob(b, rng, at, r, 0.7f, 0, Shade(rng, Stromatolite));
+                AddBlob(b, rng, at, r, 0.7f, 0, Shade(rng, stone));
             }
         }
 

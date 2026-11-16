@@ -1,9 +1,12 @@
 """
-Paints the stromatolite floor covers for the under layer (UnderSeabedStromatolite and
-UnderLakebedStromatolite in Assets/Textures/Terrain): a field of domed, layered microbial mounds
-seen from above, crowded together like cabbage heads, over the plain seabed / lakebed texture.
-Each mound shows its growth laminae as rings, is lit from the north-west and has dark crevices
-around it; tops carry a thin green-brown film of living mat. Wraps seamlessly (distances are
+Paints the stromatolite floor covers for the under layer (UnderSeabedStromatolite, ...2 and ...3,
+and the same for UnderLakebed, in Assets/Textures/Terrain): fields of microbial mounds seen from
+above over the plain seabed / lakebed texture, in clumps with floor showing between them, of
+every size from small knobs to broad heads. Three kinds, one per variant (HexGrid.Under picks a
+variant per tile, so neighbouring tiles differ): round domes like cabbage heads; heads drawn
+out along the current, like Shark Bay's; and clusters of slender columns among a few big domes.
+In the colour of the 3D stromatolites standing on them (MapFeatureMeshes.Stromatolite), lit from
+the north-west in a few flat steps like their facets, with dark crevices around each mound. Wraps seamlessly (distances are
 measured round the tile). 512 x 512.
 
 Run with Blender (for numpy and PNG I/O):
@@ -55,7 +58,21 @@ def wrapped_noise(rng, cells):
     return rows * (1 - f)[:, None] + rows1 * f[:, None]
 
 
-def paint(base, palette, seed, count):
+def mound(xx, yy, cx, cy, r, aspect, angle, flat, wobble):
+    """Height of one mound (0 outside): a dome, stretched by `aspect` along `angle`; `flat` 0..1
+    flattens its top into a table."""
+    dx = (xx - cx + N / 2) % N - N / 2          # round the tile, so it wraps
+    dy = (yy - cy + N / 2) % N - N / 2
+    ca, sa = np.cos(angle), np.sin(angle)
+    u = (dx * ca + dy * sa) / aspect
+    v = -dx * sa + dy * ca
+    d = np.sqrt(u * u + v * v) * (1 + 0.14 * wobble)
+    h = np.sqrt(np.clip(1 - (d / r) ** 2, 0, 1))
+    h = np.minimum(h * (1 + 1.5 * flat), 1)
+    return h * r * 0.55, d / r
+
+
+def paint(base, palette, seed, count, style):
     rng = np.random.default_rng(seed)
     yy, xx = np.mgrid[0:N, 0:N].astype(np.float32)
     height = np.zeros((N, N), np.float32)
@@ -63,51 +80,67 @@ def paint(base, palette, seed, count):
     tone = np.zeros((N, N), np.float32)
     inside = np.zeros((N, N), bool)
     wobble = wrapped_noise(rng, 16) * 2 - 1
+    current = rng.uniform(0, np.pi)            # the way the water runs over this field
 
+    # mounds gather in clumps, with bare floor between: each grows near a clump's centre
+    clumps = rng.uniform(0, N, (max(count // 14, 6), 2))
+    def where():
+        c = clumps[rng.integers(len(clumps))]
+        return (c + rng.normal(0, N * 0.09, 2)) % N
+
+    # every size, small knobs far outnumbering broad heads (log-uniform radius)
+    big, small = dict(dome=(34, 4), ridge=(30, 4), column=(30, 3))[style]
+    mounds = []
+    for _ in range(count):
+        r = float(np.exp(rng.uniform(np.log(small), np.log(big))))
+        cx, cy = where()
+        if style == "ridge" and r > 7:
+            mounds.append((r, cx, cy, rng.uniform(1.5, 2.6), current + rng.normal(0, 0.25), rng.uniform(0, 0.3)))
+        elif style == "column" and r < 14:
+            # a tight bundle of slender columns: small, flat-topped knobs close together
+            for _ in range(rng.integers(3, 8)):
+                o = rng.normal(0, r * 0.9, 2)
+                mounds.append((rng.uniform(2.5, 5.5), cx + o[0], cy + o[1], 1.0, 0.0, rng.uniform(0.5, 1)))
+        else:
+            mounds.append((r, cx, cy, rng.uniform(1, 1.35), rng.uniform(0, np.pi), rng.uniform(0, 0.5) ** 2))
     # big mounds first, then smaller ones filling the gaps between them
-    radii = np.sort(rng.uniform(14, 52, count))[::-1]
-    for r in radii:
-        cx, cy = rng.uniform(0, N, 2)
-        dx = (xx - cx + N / 2) % N - N / 2      # round the tile, so it wraps
-        dy = (yy - cy + N / 2) % N - N / 2
-        d = np.sqrt(dx * dx + dy * dy) * (1 + 0.12 * wobble)
-        h = np.sqrt(np.clip(1 - (d / r) ** 2, 0, 1)) * r * 0.55
+    for r, cx, cy, aspect, angle, flat in sorted(mounds, key=lambda m: -m[0]):
+        h, rr = mound(xx, yy, cx, cy, r, aspect, angle, flat, wobble)
         top = h > height
         height = np.where(top, h, height)
-        ring = np.where(top, d / r, ring)
+        ring = np.where(top, rr, ring)
         tone = np.where(top, rng.uniform(-1, 1), tone)
         inside |= h > 0
 
     grain = wrapped_noise(rng, 64) * 2 - 1
-    # light from the north-west, from the height map's slope
+    # light from the north-west, stepped into a few flat levels like the 3D domes' facets
     gy, gx = np.gradient(height)
-    shade = np.clip(1 + (-gx - gy) * 0.16, 0.45, 1.4)
-    # growth laminae: rings that waver a little
-    fine = wrapped_noise(rng, 128) * 2 - 1
-    lam = 0.5 + 0.5 * np.sin((ring * 4.5 + grain * 0.8 + fine * 0.25) * np.pi * 2)
-    lam *= np.clip(ring * 1.4, 0, 1)                                   # laminae show on the flanks, not the crown
-    stone = palette["stone"][None, None, :] * (1 + 0.1 * tone[..., None]) * (0.95 + 0.12 * lam[..., None] + 0.08 * fine[..., None])
-    film = np.clip(1 - ring * 1.3, 0, 1)[..., None] * 0.6            # living mat on the tops
-    stone = stone * (1 - film) + palette["film"][None, None, :] * film
-    stone *= shade[..., None] * (0.94 + 0.08 * grain[..., None])
-    # crevices: darker the lower the floor between the mounds
+    shade = np.clip(1 + (-gx - gy) * 0.16, 0.55, 1.3)
+    shade = np.round(shade * 6) / 6
+    stone = palette["stone"][None, None, :] * (1 + 0.1 * tone[..., None]) * shade[..., None]
+    stone *= 0.97 + 0.04 * grain[..., None]
+    # crevices: the seabed between the mounds, darker the lower
     edge = np.clip(height / 9.0, 0, 1)[..., None] ** 0.7
-    floor = base * palette["floor_dark"]
-    out = np.where(inside[..., None], stone * (0.55 + 0.45 * edge) + floor * (1 - edge) * 0.45, floor)
+    # the floor between them: the base texture's light and dark, in the stromatolites' own stone
+    # colour (not its greenish tint)
+    lum = (base @ np.array([0.3, 0.59, 0.11], np.float32))[..., None]
+    floor = palette["stone"][None, None, :] * (lum / max(float(lum.mean()), 1e-4)) * palette["floor_dark"]
+    out = np.where(inside[..., None], stone * (0.7 + 0.3 * edge) + floor * (1 - edge) * 0.3, floor)
     return out.astype(np.float32)
 
 
+STYLES = [("", "dome", 0), ("2", "ridge", 1), ("3", "column", 2)]
 COVERS = {
-    "UnderSeabedStromatolite": dict(base="UnderSeabed", seed=11, count=95, palette=dict(
-        stone=np.array([0.58, 0.53, 0.44], np.float32),
-        film=np.array([0.38, 0.42, 0.28], np.float32),
+    "UnderSeabedStromatolite": dict(base="UnderSeabed", seed=11, count=300, palette=dict(
+        stone=np.array([0.55, 0.50, 0.42], np.float32),  # MapFeatureMeshes.Stromatolite
         floor_dark=0.62)),
-    "UnderLakebedStromatolite": dict(base="UnderLakebed", seed=23, count=85, palette=dict(
-        stone=np.array([0.55, 0.52, 0.45], np.float32),
-        film=np.array([0.33, 0.41, 0.27], np.float32),
+    "UnderLakebedStromatolite": dict(base="UnderLakebed", seed=23, count=270, palette=dict(
+        stone=np.array([0.55, 0.50, 0.42], np.float32),
         floor_dark=0.6)),
 }
 
 for name, c in COVERS.items():
-    save(name, paint(load(c["base"]), c["palette"], c["seed"], c["count"]))
-    print("wrote", name)
+    base = load(c["base"])
+    for suffix, style, k in STYLES:
+        save(name + suffix, paint(base, c["palette"], c["seed"] + 101 * k, c["count"], style))
+        print("wrote", name + suffix)
