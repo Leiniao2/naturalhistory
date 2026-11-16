@@ -52,7 +52,7 @@ namespace NaturalHistory.Players
             IsHuman   = setup.human;
         }
 
-        public string FactionName => Faction?.displayName ?? "No faction";
+        public string FactionName => Loc.T(Faction?.displayName ?? "No faction");
 
         // An iconic animal is active once the game has reached its period
         public static bool IsActive(IconicAnimalDefinition animal)

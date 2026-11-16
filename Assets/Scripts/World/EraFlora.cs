@@ -118,7 +118,7 @@ namespace NaturalHistory.World
         }
 
         // Player-facing name, e.g. FernPrairie → "Fern prairie"
-        public static string DisplayName(TerrainKind kind) => kind switch
+        public static string DisplayName(TerrainKind kind) => Loc.T(kind switch
         {
             TerrainKind.SaltWater    => "Ocean",
             TerrainKind.FreshWater   => "Shallow water",
@@ -127,13 +127,13 @@ namespace NaturalHistory.World
             TerrainKind.FernPrairie  => "Fern prairie",
             TerrainKind.CoalSwamp    => "Coal swamp",
             _                        => kind.ToString(),
-        };
+        });
 
         // What grows on a cell in a period, for the tile panel. Null when there is nothing to say.
         public static string FloraOf(HexCell cell, GeologicalAge age)
         {
             if (cell?.Terrain == null) return null;
-            return cell.Feature switch
+            return Loc.T(cell.Feature switch
             {
                 TerrainFeature.BroadleafForest or TerrainFeature.ConiferForest or TerrainFeature.Jungle => ForestFlora(cell.Feature, age),
                 TerrainFeature.Reef  => age switch
@@ -144,7 +144,7 @@ namespace NaturalHistory.World
                 },
                 TerrainFeature.Oasis => age < GeologicalAge.Devonian ? "Spring-fed pool ringed with microbial mats" : "Spring-fed pool with " + OasisPlants(age),
                 _ => GroundFlora(cell.Terrain.kind, age),
-            };
+            });
         }
 
         static string OasisPlants(GeologicalAge age) => age switch

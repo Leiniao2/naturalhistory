@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace NaturalHistory.World
@@ -22,6 +23,10 @@ namespace NaturalHistory.World
         static readonly Color Plume       = new(0.92f, 0.90f, 0.80f);
 
         // ---- Broadleaf trees ----
+
+        // Set while a plant with a coloured crown (plants.json "crown") is built
+        static bool hasCrown;
+        static Color crownColor;
 
         static void AddShapedBroadleaf(Builder b, System.Random rng, Vector3 root, float s, string shape)
         {
@@ -482,6 +487,227 @@ namespace NaturalHistory.World
                 AddBoughTier(b, rng, center, r, depth * h, Color.Lerp(dark, tip, t * 0.8f));
             }
             if (spire) AddCone(b, rng, root + Vector3.up * (to + 0.04f) * h + lean, r1 * 0.5f * s, 0.12f * h, tip);
+        }
+
+        // ---- Blossom and fruit (plants.json "blossom", "fruit", "fruitForm") ----
+
+        static readonly Dictionary<string, Color> parsedColors = new();
+
+        static bool TryColor(string hex, out Color c)
+        {
+            c = Color.white;
+            if (string.IsNullOrEmpty(hex)) return false;
+            if (parsedColors.TryGetValue(hex, out c)) return true;
+            if (!ColorUtility.TryParseHtmlString(hex, out c)) return false;
+            parsedColors[hex] = c;
+            return true;
+        }
+
+        // Dots the plant just built (vertices from `from` on) with its blossom and fruit. They sit on
+        // its own leaf surfaces (green vertices facing out), so this works for every form: round
+        // crowns, conifer tiers, palm and fern fronds, cycad rosettes, shrubs. Upright things (spore
+        // cones, fir cones, flowers) go on top; hanging fruit, pods and catkins on the sides and
+        // underneath, pointing down. `s` is the plant's scale.
+        static void AddFruitAndBlossom(Builder b, System.Random rng, int from, float s, PlantDefinition plant)
+        {
+            bool bloom = TryColor(plant.blossom, out var petal);
+            bool fruit = TryColor(plant.fruit, out var fruitColor);
+            if (!bloom && !fruit) return;
+
+            var top = new List<int>();   // leafy, facing up
+            var side = new List<int>();  // leafy, facing out or down
+            for (int i = from; i < b.VertexCount; i += 3) // one corner per triangle is plenty
+            {
+                var c = b.VertexColor(i);
+                if (!IsLeafColor(c)) continue; // leaves only, not bark or rock
+                var n = b.Normal(i);
+                if (n.y > 0.45f) top.Add(i);
+                else if (n.y > -0.7f) side.Add(i);
+            }
+            if (top.Count + side.Count == 0) return;
+            int Pick(List<int> prefer)
+            {
+                var list = prefer.Count > 0 ? prefer : (top.Count > 0 ? top : side);
+                return list[rng.Next(list.Count)];
+            }
+
+            if (bloom)
+            {
+                // flowers in little clusters over the upper crown, each with a paler or golden heart
+                var heart = petal.grayscale > 0.6f ? new Color(0.98f, 0.82f, 0.25f) : Color.Lerp(petal, Color.white, 0.6f);
+                for (int i = 0, n = rng.Next(14, 22); i < n; i++)
+                {
+                    int v = Pick(rng.NextDouble() < 0.75 ? top : side);
+                    var at = b.Vertex(v) + b.Normal(v) * 0.01f * s;
+                    for (int k = 0, m = rng.Next(1, 3); k < m; k++)
+                    {
+                        var p = at + new Vector3(Range(rng, -1f, 1f), Range(rng, -0.3f, 0.6f), Range(rng, -1f, 1f)) * 0.018f * s;
+                        AddGem(b, p, new Vector3(0.017f, 0.008f, 0.017f) * s, petal * Range(rng, 0.92f, 1.08f), b.Normal(v));
+                        if (k == 0) AddGem(b, p + b.Normal(v) * 0.005f * s, Vector3.one * 0.005f * s, heart, b.Normal(v));
+                    }
+                }
+            }
+            if (!fruit) return;
+
+            var down = Vector3.down;
+            switch (plant.fruitForm)
+            {
+                case "Berry": // clusters of small berries
+                    for (int i = 0, n = rng.Next(8, 13); i < n; i++)
+                    {
+                        int v = Pick(side);
+                        var at = b.Vertex(v) + b.Normal(v) * 0.008f * s;
+                        for (int k = 0, m = rng.Next(3, 6); k < m; k++)
+                            AddGem(b, at + new Vector3(Range(rng, -1f, 1f), Range(rng, -1.5f, 0f), Range(rng, -1f, 1f)) * 0.008f * s,
+                                   Vector3.one * 0.007f * s, fruitColor * Range(rng, 0.85f, 1.1f), b.Normal(v));
+                    }
+                    break;
+                case "Nut": // acorns, beechnuts, gumnuts: small and dull, in twos and threes
+                case "Seed":
+                    for (int i = 0, n = rng.Next(8, 13); i < n; i++)
+                    {
+                        int v = Pick(side);
+                        var at = b.Vertex(v) + b.Normal(v) * 0.008f * s;
+                        for (int k = 0, m = rng.Next(1, 4); k < m; k++)
+                            AddGem(b, at + new Vector3(Range(rng, -1f, 1f), -k, Range(rng, -1f, 1f)) * 0.01f * s,
+                                   new Vector3(0.009f, 0.012f, 0.009f) * s, fruitColor * Range(rng, 0.9f, 1.1f), down);
+                    }
+                    break;
+                case "Samara": // winged seeds (maple keys) hanging in bunches, catching the light
+                    for (int i = 0, n = rng.Next(8, 12); i < n; i++)
+                    {
+                        int v = Pick(side);
+                        var at = b.Vertex(v) + b.Normal(v) * 0.01f * s;
+                        for (int k = 0; k < 2; k++)
+                        {
+                            var wing = Quaternion.Euler(0f, Range(rng, 0f, 360f), 0f) * new Vector3(0.012f, -0.006f, 0f) * s;
+                            AddGem(b, at + wing, new Vector3(0.014f, 0.004f, 0.007f) * s, fruitColor * Range(rng, 0.9f, 1.1f), wing.normalized);
+                        }
+                    }
+                    break;
+                case "Ball": // plane-tree seed balls dangling on stalks
+                    for (int i = 0, n = rng.Next(6, 10); i < n; i++)
+                    {
+                        int v = Pick(side);
+                        var at = b.Vertex(v) + b.Normal(v) * 0.01f * s;
+                        AddLimb(b, at, at + down * 0.03f * s, 0.0015f * s, 0.0015f * s, Bark);
+                        AddGem(b, at + down * 0.035f * s, Vector3.one * 0.012f * s, fruitColor, down);
+                    }
+                    break;
+                case "Catkin": // birch and alder catkins: long, drooping tassels
+                    for (int i = 0, n = rng.Next(10, 16); i < n; i++)
+                    {
+                        int v = Pick(side);
+                        var at = b.Vertex(v) + b.Normal(v) * 0.006f * s;
+                        var tip = at + (down + b.Normal(v) * 0.3f).normalized * 0.035f * s;
+                        AddLimb(b, at, tip, 0.005f * s, 0.003f * s, fruitColor * Range(rng, 0.9f, 1.1f));
+                    }
+                    break;
+                case "Cone": // pendant cones (pine, spruce) hanging from the tiers
+                    for (int i = 0, n = rng.Next(7, 12); i < n; i++)
+                    {
+                        int v = Pick(side);
+                        var at = b.Vertex(v) + b.Normal(v) * 0.006f * s;
+                        AddGem(b, at + down * 0.014f * s, new Vector3(0.01f, 0.022f, 0.01f) * s, fruitColor * Range(rng, 0.9f, 1.1f), down);
+                    }
+                    break;
+                case "UprightCone": // fir and cedar cones standing on the upper branches like candles
+                case "Strobilus":   // spore cones of tree ferns, horsetails, scale trees, cycads
+                    for (int i = 0, n = rng.Next(plant.fruitForm == "Strobilus" ? 8 : 6, plant.fruitForm == "Strobilus" ? 14 : 10); i < n; i++)
+                    {
+                        int v = Pick(top);
+                        var at = b.Vertex(v) + Vector3.up * 0.016f * s;
+                        AddGem(b, at, new Vector3(0.009f, 0.02f, 0.009f) * s, fruitColor * Range(rng, 0.9f, 1.15f), Vector3.up);
+                    }
+                    break;
+                case "Pod": // long hanging pods (kapok, acacia, glossopterids)
+                    for (int i = 0, n = rng.Next(6, 10); i < n; i++)
+                    {
+                        int v = Pick(side);
+                        var at = b.Vertex(v) + b.Normal(v) * 0.008f * s;
+                        AddLimb(b, at, at + (down + b.Normal(v) * 0.4f).normalized * 0.05f * s, 0.008f * s, 0.004f * s, fruitColor * Range(rng, 0.9f, 1.1f));
+                    }
+                    break;
+                case "Hanging": // dates, mangrove propagules: bunches hanging well below the crown
+                    for (int i = 0, n = rng.Next(4, 7); i < n; i++)
+                    {
+                        int v = Pick(side);
+                        var at = b.Vertex(v);
+                        for (int k = 0, m = rng.Next(4, 8); k < m; k++)
+                        {
+                            var off = new Vector3(Range(rng, -1f, 1f), 0f, Range(rng, -1f, 1f)) * 0.012f * s;
+                            AddLimb(b, at + off, at + off + down * Range(rng, 0.03f, 0.06f) * s, 0.004f * s, 0.006f * s, fruitColor * Range(rng, 0.85f, 1.1f));
+                        }
+                    }
+                    break;
+                case "Coconut": // a cluster of big nuts right under the crown
+                {
+                    float topY = float.MinValue; Vector3 crown = default; int count = 0;
+                    foreach (var v in top) { var p = b.Vertex(v); crown += p; count++; topY = Mathf.Max(topY, p.y); }
+                    if (count == 0) break;
+                    crown /= count;
+                    for (int k = 0, m = rng.Next(4, 8); k < m; k++)
+                        AddGem(b, new Vector3(crown.x, crown.y - 0.03f * s, crown.z) + new Vector3(Range(rng, -1f, 1f), Range(rng, -0.6f, 0f), Range(rng, -1f, 1f)) * 0.03f * s,
+                               Vector3.one * 0.022f * s, fruitColor * Range(rng, 0.85f, 1.1f), down);
+                    break;
+                }
+                default: // "Round": apples, figs, oranges, ginkgo nuts: round fruit among the leaves
+                    for (int i = 0, n = rng.Next(8, 14); i < n; i++)
+                    {
+                        int v = Pick(rng.NextDouble() < 0.7 ? side : top);
+                        AddGem(b, b.Vertex(v) + b.Normal(v) * 0.01f * s, Vector3.one * 0.014f * s, fruitColor * Range(rng, 0.85f, 1.1f), b.Normal(v));
+                    }
+                    break;
+            }
+        }
+
+        // Repaints the green leaves of the plant just built (vertices from `from` on) in its crown
+        // colour, keeping their light and shade: works for any form (ginkgo fans, larch tiers, crowns)
+        static void PaintCrown(Builder b, int from)
+        {
+            if (!hasCrown) return;
+            float sum = 0f; int n = 0;
+            for (int i = from; i < b.VertexCount; i++)
+            {
+                var c = b.VertexColor(i);
+                if (c.g > c.r * 1.02f && c.g > c.b * 0.95f) { sum += c.grayscale; n++; }
+            }
+            if (n == 0) return;
+            float mean = sum / n;
+            for (int i = from; i < b.VertexCount; i++)
+            {
+                var c = b.VertexColor(i);
+                if (!(c.g > c.r * 1.02f && c.g > c.b * 0.95f)) continue;
+                b.SetVertexColor(i, crownColor * Mathf.Clamp(c.grayscale / mean, 0.55f, 1.35f));
+            }
+        }
+
+        // Green leaves, or the plant's coloured crown (compared by hue, so shading doesn't matter)
+        static bool IsLeafColor(Color c)
+        {
+            if (c.g > c.r * 1.02f && c.g > c.b * 0.95f) return true;
+            if (!hasCrown) return false;
+            float sum = c.r + c.g + c.b, k = crownColor.r + crownColor.g + crownColor.b;
+            if (sum < 1e-4f || k < 1e-4f) return false;
+            return Mathf.Abs(c.r / sum - crownColor.r / k) + Mathf.Abs(c.g / sum - crownColor.g / k) + Mathf.Abs(c.b / sum - crownColor.b / k) < 0.12f;
+        }
+
+        // Tiny faceted body (8 triangles): cheap enough to scatter hundreds of flowers and fruit.
+        // `radii` along (side, axis, side) with the axis turned to `up`.
+        static void AddGem(Builder b, Vector3 center, Vector3 radii, Color color, Vector3 up)
+        {
+            var rot = Quaternion.FromToRotation(Vector3.up, up.sqrMagnitude > 1e-6f ? up.normalized : Vector3.up);
+            var px = center + rot * new Vector3(radii.x, 0f, 0f);
+            var nx = center - rot * new Vector3(radii.x, 0f, 0f);
+            var pz = center + rot * new Vector3(0f, 0f, radii.z);
+            var nz = center - rot * new Vector3(0f, 0f, radii.z);
+            var py = center + rot * new Vector3(0f, radii.y, 0f);
+            var ny = center - rot * new Vector3(0f, radii.y, 0f);
+            var lit = color * 1.08f; var dark = color * 0.82f; // facets catch the light
+            b.AddTri(px, pz, py, lit, center);  b.AddTri(pz, nx, py, lit, center);
+            b.AddTri(nx, nz, py, lit, center);  b.AddTri(nz, px, py, lit, center);
+            b.AddTri(px, pz, ny, dark, center); b.AddTri(pz, nx, ny, dark, center);
+            b.AddTri(nx, nz, ny, dark, center); b.AddTri(nz, px, ny, dark, center);
         }
     }
 }

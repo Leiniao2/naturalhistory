@@ -113,4 +113,20 @@ void ApplyUndulate(inout float3 p, inout float3 n)
     n = normalize(float3(m.x * side.x - m.z * t.x, m.y, m.x * side.y - m.z * t.y));
 }
 
+// Gentle swaying in the water for MapFeature.shader; needs _Sway (amplitude, height of full sway,
+// speed, wavelength in world units). Each point moves sideways by amplitude × height-of-full-sway
+// × (its height / that height)², capped at the full height, so low algae barely stir while tall
+// fronds lean with the swell. The phase drifts across the map so neighbours don't move in step.
+void ApplySway(inout float3 p)
+{
+    if (_Sway.x == 0) return;
+    float  k  = saturate(p.y / max(_Sway.y, 1e-4));
+    float  d  = _Sway.x * _Sway.y * k * k;
+    float3 w  = mul(unity_ObjectToWorld, float4(p, 1)).xyz;
+    float  ph = (w.x * 0.8 + w.z * 0.6) / max(_Sway.w, 1e-4) * 6.2831853;
+    float  t  = _Time.y * _Sway.z;
+    p.x += d * sin(t + ph);
+    p.z += d * 0.6 * sin(t * 0.77 + ph * 1.3 + 1.7);
+}
+
 #endif

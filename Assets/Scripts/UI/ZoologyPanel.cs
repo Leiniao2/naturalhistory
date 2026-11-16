@@ -129,7 +129,7 @@ namespace NaturalHistory.UI
                 var pic = new VisualElement { pickingMode = PickingMode.Ignore }.WithClass("species-portrait").WithClass("zoology-node-portrait");
                 view.Add(pic);
                 var text = new VisualElement { pickingMode = PickingMode.Ignore }.WithClass("zoology-node-text");
-                text.Add(new Label(def.commonName) { pickingMode = PickingMode.Ignore }.WithClass("node-name"));
+                text.Add(new Label(Loc.T(def.commonName)) { pickingMode = PickingMode.Ignore }.WithClass("node-name"));
                 text.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("node-cost"));
                 view.Add(text);
                 var captured = id;
@@ -177,8 +177,8 @@ namespace NaturalHistory.UI
             var owned = new HashSet<string>(Evolution.HumanSpecies);
             int ready = EvolutionData.Links.Count(l => ReadyFor(l) != null);
             subtitle.text = context != null
-                ? $"Evolving one {GameDataLoader.GetSpecies(context.species)?.commonName}"
-                : $"{owned.Count} of your species  ·  {ready} evolution{(ready == 1 ? "" : "s")} ready";
+                ? Loc.F("Evolving one {0}", Loc.T(GameDataLoader.GetSpecies(context.species)?.commonName))
+                : Loc.F(ready == 1 ? "{0} of your species  ·  {1} evolution ready" : "{0} of your species  ·  {1} evolutions ready", owned.Count, ready);
 
             foreach (var (id, view) in nodeViews)
             {
@@ -187,7 +187,7 @@ namespace NaturalHistory.UI
                 view.EnableInClassList("ready",    canBecome);
                 view.EnableInClassList("selected", id == selected);
                 var def = GameDataLoader.GetSpecies(id);
-                view.Q<Label>(className: "node-cost").text = owned.Contains(id) ? "Yours" : canBecome ? "Can evolve" : def.firstAge;
+                view.Q<Label>(className: "node-cost").text = Loc.T(owned.Contains(id) ? "Yours" : canBecome ? "Can evolve" : def.firstAge);
                 var pic = view.Q(className: "zoology-node-portrait");
                 if (pic.userData == null) // rendered once, the first time the panel opens
                 {
@@ -205,25 +205,25 @@ namespace NaturalHistory.UI
             var def = selected != null ? GameDataLoader.GetSpecies(selected) : null;
             if (def == null)
             {
-                nameLabel.text = "Select a species";
+                nameLabel.text = Loc.T("Select a species");
                 metaLabel.text = descriptionLabel.text = "";
                 detailPortrait.style.backgroundImage = new StyleBackground(StyleKeyword.None);
                 return;
             }
 
-            nameLabel.text = def.commonName;
-            var span = string.IsNullOrEmpty(def.lastAge) ? $"{def.firstAge} – today" : def.firstAge == def.lastAge ? def.firstAge : $"{def.firstAge} – {def.lastAge}";
+            nameLabel.text = Loc.T(def.commonName);
+            var span = string.IsNullOrEmpty(def.lastAge) ? Loc.F("{0} – today", Loc.T(def.firstAge)) : def.firstAge == def.lastAge ? Loc.T(def.firstAge) : $"{Loc.T(def.firstAge)} – {Loc.T(def.lastAge)}";
             var count = Evolution.CopiesOf(Players.PlayerManager.Instance?.Human).Count(c => c.species == def.id);
-            metaLabel.text = $"{def.scientificName}  ·  {def.group}  ·  {span}" + (count > 0 ? $"\nYou have {count} cop{(count == 1 ? "y" : "ies")}" : "");
-            descriptionLabel.text = def.description;
+            metaLabel.text = $"{def.scientificName}  ·  {Loc.T(def.group)}  ·  {span}" + (count > 0 ? "\n" + Loc.F(count == 1 ? "You have {0} copy" : "You have {0} copies", count) : "");
+            descriptionLabel.text = Loc.T(def.description);
             detailPortrait.style.backgroundImage = SpeciesPortraits.Get(def) is RenderTexture rt ? Background.FromRenderTexture(rt) : new StyleBackground(StyleKeyword.None);
 
-            var parents = EvolutionData.To(def.id).Select(l => GameDataLoader.GetSpecies(l.from)?.commonName ?? l.from).ToList();
-            if (parents.Count > 0) linksBox.Add(new Label($"Evolves from: {string.Join(", ", parents)}").WithClass("zoology-from"));
+            var parents = EvolutionData.To(def.id).Select(l => Loc.T(GameDataLoader.GetSpecies(l.from)?.commonName ?? l.from)).ToList();
+            if (parents.Count > 0) linksBox.Add(new Label(Loc.F("Evolves from: {0}", string.Join(", ", parents))).WithClass("zoology-from"));
 
             var outgoing = EvolutionData.From(def.id).ToList();
-            if (outgoing.Count == 0) { linksBox.Add(new Label("No known descendants among the game's species.").WithClass("zoology-from")); return; }
-            linksBox.Add(new Label("Can evolve into").WithClass("age-section"));
+            if (outgoing.Count == 0) { linksBox.Add(new Label(Loc.T("No known descendants among the game's species.")).WithClass("zoology-from")); return; }
+            linksBox.Add(new Label(Loc.T("Can evolve into")).WithClass("age-section"));
             foreach (var link in outgoing) linksBox.Add(LinkCard(link));
         }
 
@@ -235,11 +235,11 @@ namespace NaturalHistory.UI
             var pic  = new VisualElement().WithClass("species-portrait").WithClass("zoology-link-portrait");
             if (SpeciesPortraits.Get(target) is RenderTexture rt) pic.style.backgroundImage = Background.FromRenderTexture(rt);
             head.Add(pic);
-            var title = new Label(target?.commonName ?? link.to).WithClass("zoology-link-name");
+            var title = new Label(Loc.T(target?.commonName ?? link.to)).WithClass("zoology-link-name");
             title.RegisterCallback<ClickEvent>(_ => { selected = link.to; Refresh(); });
             head.Add(title);
             card.Add(head);
-            if (!string.IsNullOrEmpty(link.description)) card.Add(new Label(link.description).WithClass("zoology-link-text"));
+            if (!string.IsNullOrEmpty(link.description)) card.Add(new Label(Loc.T(link.description)).WithClass("zoology-link-text"));
 
             // The copy this card is about: the one being evolved, else one of yours that is ready
             var copy = context != null ? (context.species == link.from ? context : null) : ReadyFor(link);
@@ -248,12 +248,12 @@ namespace NaturalHistory.UI
 
             var grants = link.grantFunctions.Select(id => ProgressionNodeName(true, id))
                 .Concat(link.grantBehaviors.Select(id => ProgressionNodeName(false, id))).ToList();
-            if (grants.Count > 0) card.Add(new Label("Gains on evolving: " + string.Join(", ", grants)).WithClass("zoology-link-text"));
+            if (grants.Count > 0) card.Add(new Label(Loc.F("Gains on evolving: {0}", string.Join(", ", grants))).WithClass("zoology-link-text"));
 
             bool can = copy != null && Evolution.CanEvolve(link, copy);
-            var button = new Button(() => DoEvolve(link, copy)) { text = can ? $"Evolve into {target?.commonName}" : "Evolve" }.WithClass("evolve-button").WithClass("zoology-evolve");
+            var button = new Button(() => DoEvolve(link, copy)) { text = can ? Loc.F("Evolve into {0}", Loc.T(target?.commonName)) : Loc.T("Evolve") }.WithClass("evolve-button").WithClass("zoology-evolve");
             button.SetEnabled(can);
-            if (Evolution.HasEvolved(link)) button.text = "Already evolved by another copy";
+            if (Evolution.HasEvolved(link)) button.text = Loc.T("Already evolved by another copy");
             card.Add(button);
             return card;
         }
@@ -262,7 +262,7 @@ namespace NaturalHistory.UI
         {
             var p = Progression.ProgressionManager.Instance;
             var tree = p == null ? null : function ? p.Morphology : p.Ethology;
-            return tree?.Get(id)?.displayName ?? id;
+            return Loc.T(tree?.Get(id)?.displayName ?? id);
         }
 
         private void DoEvolve(EvolutionLink link, OwnedCopy copy)

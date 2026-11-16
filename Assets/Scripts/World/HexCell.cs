@@ -112,6 +112,11 @@ namespace NaturalHistory.World
             Feature = feature;
         }
 
+        // The generator's inputs for this tile, so it can be reclassified for another date's climate
+        public WorldGenerator.CellInputs Inputs { get; private set; }
+        public bool HasInputs { get; private set; }
+        public void SetInputs(WorldGenerator.CellInputs inputs) { Inputs = inputs; HasInputs = true; }
+
         public void SetClimate(TerrainKind biome, TerrainFeature feature, float moisture)
         {
             Biome        = biome;
@@ -186,6 +191,7 @@ namespace NaturalHistory.World
         {
             get
             {
+                if (surfaceTexture != null) return surfaceTexture; // the ground material of this region (SetSurface)
                 var mat = meshRenderer != null && meshRenderer.sharedMaterial != null ? meshRenderer.sharedMaterial : Terrain?.material;
                 return mat != null && mat.HasProperty(BaseMapId) ? mat.GetTexture(BaseMapId) : null;
             }
@@ -223,6 +229,25 @@ namespace NaturalHistory.World
         {
             tintVariation = tint;
             ApplyColor();
+        }
+
+        static readonly int CliffTexId  = Shader.PropertyToID("_CliffTex");
+        private Texture surfaceTexture;
+
+        // What the ground of this tile is made of when it differs from its terrain's own texture
+        // (dune sand, desert pavement, salt flat, lava field...; null = the terrain texture), and the
+        // rock of its cliff faces (null = the shared mountain rock). Set by HexGrid.SetGroundLook.
+        public void SetSurface(Texture ground, Texture cliff)
+        {
+            surfaceTexture = ground;
+            if (meshRenderer == null) return;
+            meshRenderer.GetPropertyBlock(propBlock);
+            var own = meshRenderer.sharedMaterial != null && meshRenderer.sharedMaterial.HasProperty(BaseMapId) ? meshRenderer.sharedMaterial.GetTexture(BaseMapId) : null;
+            var tex = ground != null ? ground : own;
+            if (tex != null) propBlock.SetTexture(BaseMapId, tex);
+            var rock = cliff != null ? cliff : Shader.GetGlobalTexture(CliffTexId);
+            if (rock != null) propBlock.SetTexture(CliffTexId, rock);
+            meshRenderer.SetPropertyBlock(propBlock);
         }
 
         static readonly int RecolorId   = Shader.PropertyToID("_Recolor");

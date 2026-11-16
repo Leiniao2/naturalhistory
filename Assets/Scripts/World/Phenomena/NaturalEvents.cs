@@ -33,7 +33,11 @@ namespace NaturalHistory.World
 
         // Testing the animations: an event every few seconds, taking each kind in turn (the next
         // one with somewhere to happen near the camera), and one at every turn. Off for real play.
-        public static bool TestMode = true;
+        public static bool TestMode = false;
+
+        // Random events at the start of each turn. Off for now: events come only from the admin
+        // panel's Trigger (or TestMode).
+        public static bool AutoEvents = false;
         private const float TestInterval = 6f;
         private float nextTest;
         private int nextTestKind;
@@ -105,23 +109,37 @@ namespace NaturalHistory.World
         private void OnTurnBegin(int turn)
         {
             if (turn <= 1 || grid == null || !grid.IsGenerated) return;
+            if (!AutoEvents && !TestMode) return;
             if (!TestMode && rng.NextDouble() >= ChancePerTurn) return;
             // the wind veers a little from turn to turn
             wind = Quaternion.Euler(0f, (float)(rng.NextDouble() * 60.0 - 30.0), 0f) * wind;
 
             var sites = SitesNearCamera(1f);
             float total = 0f;
-            for (int k = 0; k < sites.Length; k++) if (sites[k].Count > 0) total += Weights[k];
+            for (int k = 0; k < sites.Length; k++) if (sites[k].Count > 0) total += Weight(k);
             if (total <= 0f) return;
             float pick = (float)rng.NextDouble() * total;
             for (int k = 0; k < sites.Length; k++)
             {
                 if (sites[k].Count == 0) continue;
-                pick -= Weights[k];
+                pick -= Weight(k);
                 if (pick > 0f) continue;
                 Play((Phenomenon)k, sites[k][rng.Next(sites[k].Count)]);
                 return;
             }
+        }
+
+        // How likely each kind is this turn: eruptions and meteors follow the geological record
+        // (more during large igneous provinces and impact showers, see EarthHistory)
+        private float Weight(int k)
+        {
+            float ma = AgeManager.Instance != null ? AgeManager.Instance.MillionYearsAgo : 0f;
+            return (Phenomenon)k switch
+            {
+                Phenomenon.Eruption => Weights[k] * EarthHistory.Volcanism(ma),
+                Phenomenon.Meteor   => Weights[k] * EarthHistory.MeteorRate(ma),
+                _                   => Weights[k],
+            };
         }
 
         // Plays `kind` on the nearest suitable tile to the camera (admin / testing). False if there is none.
@@ -130,10 +148,13 @@ namespace NaturalHistory.World
             if (grid == null || !grid.IsGenerated) return false;
             var sites = SitesNearCamera(1f)[(int)kind];
             if (sites.Count == 0) sites = SitesNearCamera(4f)[(int)kind];
-            if (sites.Count == 0) { Announced?.Invoke($"No place for a {Names[(int)kind].ToLower()} near here", null); return false; }
+            if (sites.Count == 0) { Announced?.Invoke(Loc.F("No place for a {0} near here", InSentence(Loc.T(Names[(int)kind]))), null); return false; }
             Play(kind, sites[rng.Next(Mathf.Min(3, sites.Count))]);
             return true;
         }
+
+        // A (translated) name used mid-sentence: lower case, except in German, which capitalises nouns
+        private static string InSentence(string name) => Loc.Current == "de" ? name : name.ToLower();
 
         // Candidate tiles per kind within the camera's view (scaled by `reach`), nearest first.
         private List<HexCell>[] SitesNearCamera(float reach)
@@ -242,20 +263,20 @@ namespace NaturalHistory.World
             }
             fx.Begin(grid, c, seconds, seed);
 
-            string where = EraFlora.DisplayName(c.Terrain.kind).ToLower();
+            string where = InSentence(EraFlora.DisplayName(c.Terrain.kind));
             string msg = kind switch
             {
-                Phenomenon.Meteor         => c.IsWater ? "A meteor plunges into the water!" : $"A meteor strikes the {where}!",
-                Phenomenon.Eruption       => "A volcano erupts!",
-                Phenomenon.Tornado        => $"A tornado tears across the {where}",
-                Phenomenon.Sandstorm      => "A sandstorm sweeps the desert",
-                Phenomenon.Blizzard       => $"A blizzard rages over the {where}",
-                Phenomenon.Flood          => "A river bursts its banks",
-                Phenomenon.Rockslide      => "A rockslide thunders down the slope",
-                Phenomenon.Earthquake     => "An earthquake shakes the land",
-                Phenomenon.Tsunami        => "A tsunami strikes the coast!",
-                Phenomenon.GlacierCalving => "Ice breaks away from the glacier front",
-                _                         => "An avalanche roars down the mountain",
+                Phenomenon.Meteor         => c.IsWater ? Loc.T("A meteor plunges into the water!") : Loc.F("A meteor strikes the {0}!", where),
+                Phenomenon.Eruption       => Loc.T("A volcano erupts!"),
+                Phenomenon.Tornado        => Loc.F("A tornado tears across the {0}", where),
+                Phenomenon.Sandstorm      => Loc.T("A sandstorm sweeps the desert"),
+                Phenomenon.Blizzard       => Loc.F("A blizzard rages over the {0}", where),
+                Phenomenon.Flood          => Loc.T("A river bursts its banks"),
+                Phenomenon.Rockslide      => Loc.T("A rockslide thunders down the slope"),
+                Phenomenon.Earthquake     => Loc.T("An earthquake shakes the land"),
+                Phenomenon.Tsunami        => Loc.T("A tsunami strikes the coast!"),
+                Phenomenon.GlacierCalving => Loc.T("Ice breaks away from the glacier front"),
+                _                         => Loc.T("An avalanche roars down the mountain"),
             };
             Debug.Log($"[NaturalEvents] {kind} at {c}");
             Announced?.Invoke(msg, c);

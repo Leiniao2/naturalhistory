@@ -235,10 +235,24 @@ namespace NaturalHistory.World
                 go.transform.localPosition = Vector3.up * cell.SurfaceHeight;
                 go.transform.localRotation = Quaternion.Euler(0f, 60f * rng.Next(6), 0f); // hex-filling: keep edges aligned
                 go.AddComponent<MeshFilter>().sharedMesh = mesh;
-                go.AddComponent<MeshRenderer>().sharedMaterial = featureMaterial;
+                bool water = cell.Under is UnderKind.Seabed or UnderKind.Lakebed && cell.UnderFeature == UnderFeature.None;
+                go.AddComponent<MeshRenderer>().sharedMaterial = water ? SwayMaterial() : featureMaterial;
                 go.SetActive(false);
                 underObjects.Add(go);
             }
+        }
+
+        // The prop material with swaying turned on, for seabed and lakebed plants: tall fronds lean
+        // slowly with the swell, low algae barely stir (MapFeature.shader _Sway)
+        private Material swayMaterial;
+        private Material SwayMaterial()
+        {
+            if (swayMaterial == null)
+            {
+                swayMaterial = new Material(featureMaterial) { name = "MapFeaturesSway" };
+                swayMaterial.SetVector("_Sway", new Vector4(0.18f, 0.25f * cellSize, 0.9f, 2.5f * cellSize));
+            }
+            return swayMaterial;
         }
 
         // A block of solid rock filling the hex: a jagged, faceted top standing well above the
@@ -341,9 +355,9 @@ namespace NaturalHistory.World
         {
             var (q, r) = cell.Coordinates.ToOffsetCoordinates();
             uint h = unchecked((uint)(q * 73856093) ^ (uint)(r * 19349663));
-            float j = 0.92f + 0.16f * ((h & 0xFFFF) / 65535f);
+            float j = 0.97f + 0.06f * ((h & 0xFFFF) / 65535f); // slight, so neighbouring tiles read as one floor
             if (cell.Under == UnderKind.DeepSeabed) j *= Mathf.Lerp(1f, 0.8f, Mathf.InverseLerp(0.5f, 1f, cell.Depth));
-            if (cell.UnderFeature != UnderFeature.None) j *= 0.85f;
+            if (cell.UnderFeature != UnderFeature.None) j *= 0.92f;
             if (cell.Under == UnderKind.Bedrock) j *= 0.6f;
             var water = Color.white;
             if (cell.Terrain.kind == TerrainKind.SaltWater) water = Color.Lerp(ShallowSea, DeepSea, cell.Depth);

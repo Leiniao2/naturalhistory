@@ -43,13 +43,13 @@ namespace NaturalHistory.UI
 
         private void RefreshTurnDisplay(int turn)
         {
-            turnText.text = $"Turn {turn}";
-            ageLabelText.text = AgeManager.Instance.CurrentAge.ToString();
+            turnText.text = Loc.F("Turn {0}", turn);
+            ageLabelText.text = Loc.T(AgeManager.Instance.CurrentAge.ToString());
         }
 
         private void ShowAgeTransition(Core.GeologicalAge from, Core.GeologicalAge to)
         {
-            ageTransitionLabel.text = $"{from} → {to}";
+            ageTransitionLabel.text = $"{Loc.T(from.ToString())} → {Loc.T(to.ToString())}";
             ageTransitionPanel.SetActive(true);
         }
 

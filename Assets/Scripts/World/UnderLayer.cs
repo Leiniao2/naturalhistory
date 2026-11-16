@@ -1,4 +1,5 @@
 using System;
+using NaturalHistory.Core;
 
 namespace NaturalHistory.World
 {
@@ -40,7 +41,7 @@ namespace NaturalHistory.World
         // Underground animals can't enter, settle in or pass through solid bedrock
         public static bool Blocks(UnderKind kind) => kind == UnderKind.Bedrock;
 
-        public static string Name(UnderKind kind) => kind switch
+        public static string Name(UnderKind kind) => Loc.T(kind switch
         {
             UnderKind.Rock       => "Underground",
             UnderKind.Cave       => "Caves",
@@ -49,13 +50,13 @@ namespace NaturalHistory.World
             UnderKind.Lakebed    => "Lakebed",
             UnderKind.Bedrock    => "Solid bedrock (impassable)",
             _                    => kind.ToString(),
-        };
+        });
 
-        public static string Name(UnderFeature feature) => feature switch
+        public static string Name(UnderFeature feature) => Loc.T(feature switch
         {
             UnderFeature.Volcano => "underwater volcano",
             UnderFeature.Vents   => "hydrothermal vents",
             _                    => null,
-        };
+        });
     }
 }

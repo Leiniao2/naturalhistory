@@ -98,7 +98,6 @@ namespace NaturalHistory.World
             if (Application.isPlaying) UnderView.Changed -= ApplyUnderView;
         }
 
-        private void OnTimeChanged() => SetAge(AgeManager.Instance.CurrentAge);
 
         // Before AgeManager has started a game its CurrentAge is the first period, which is where
         // a new game begins anyway.
@@ -206,6 +205,7 @@ namespace NaturalHistory.World
 
         private void DressForAge(GeologicalAge age)
         {
+            ApplyClimate(age); // sea level, deserts, tundra, forests, volcanoes of the date (HexGrid.Climate)
             DisplayedAge = age;
             terrainTypes ??= LoadTerrainTypes();
             for (int r = 0; r < height; r++)
@@ -223,6 +223,7 @@ namespace NaturalHistory.World
             PlaceFeatures(WorldSeed, age);
             UpdateEdgeBlends();
             DressUnder(age);
+            CountShares();
         }
 
         // A mountain tile's ground (seen where the massif tapers off toward a lowland neighbour)
@@ -613,20 +614,45 @@ namespace NaturalHistory.World
             float lat = Latitude(cell.Coordinates.R);
             bool volcanic = NearVolcano(cell);
 
+            // What the ground is made of: a surface texture of its own (TerrainSurfaces, see
+            // tools/terrain/surfaces.py) and/or the terrain texture repainted in another colour
             var recolor = NoRecolor;
+            Texture ground = null;
+            bool dryLand = cell.Moisture < 0.3f;
             switch (cell.Terrain.kind)
             {
                 case TerrainKind.Desert:
-                    if (volcanic)       recolor = Paint(BlackSand, 0.75f);
-                    else if (a < 0.22f) recolor = Paint(WhiteSand, 0.85f);
-                    else if (a > 0.7f)  recolor = Paint(RedSand, 0.7f);
-                    else if (b > 0.78f) recolor = Paint(Gravel, 0.7f);
+                    if (volcanic)                          { ground = Surface("DuneSand"); recolor = Paint(BlackSand, 0.75f); } // black volcanic dunes
+                    else if (a < 0.22f)                    { ground = Surface("DuneSand"); recolor = Paint(WhiteSand, 0.85f); } // gypsum and quartz dunes
+                    else if (a > 0.7f)                     { ground = Surface("DuneSand"); recolor = Paint(RedSand, 0.7f); }    // red dune seas
+                    else if (b > 0.78f)                      ground = Surface("DesertPavement");                                  // stony reg and gibber plains
+                    else if (b < 0.18f)                      ground = Surface("SaltFlat");                                        // salt pans
+                    else if (a > 0.42f && a < 0.55f && b > 0.55f) ground = Surface("CrackedClay");                                // dry lake beds
+                    else if (a > 0.3f && a < 0.42f && b < 0.4f)   ground = Surface("Slickrock");                                  // red-rock canyon country
+                    else if (a > 0.55f)                      ground = Surface("DuneSand");                                        // golden ergs
                     break;
                 case TerrainKind.Barren:
-                    if (volcanic)       recolor = Paint(BlackSand, 0.7f);
-                    else if (a > 0.68f) recolor = Paint(RedSand, 0.55f);
-                    else if (a < 0.25f) recolor = Paint(new Color(0.85f, 0.83f, 0.78f), 0.6f); // pale limestone pavement
-                    else if (b > 0.72f) recolor = Paint(new Color(0.38f, 0.37f, 0.4f), 0.6f); // dark basalt
+                    if (volcanic)       ground = Surface("LavaField");
+                    else if (a > 0.68f) ground = Surface("Slickrock");
+                    else if (a < 0.25f) ground = Surface("LimestonePavement");
+                    else if (b > 0.72f) { ground = Surface("DesertPavement"); recolor = Paint(new Color(0.38f, 0.37f, 0.4f), 0.6f); } // dark basalt gravel
+                    break;
+                case TerrainKind.Savanna:
+                    if (a > 0.62f) ground = Surface("RedEarth");                    // laterite: red soil under the grass
+                    break;
+                case TerrainKind.Steppe:
+                    if (b > 0.8f) ground = Surface("DesertPavement");               // gravel steppe
+                    else if (a < 0.15f && dryLand) ground = Surface("CrackedClay"); // takyr: dried-out clay flats
+                    break;
+                case TerrainKind.Tundra:
+                    if (a < 0.4f) ground = Surface("PatternedGround");              // frost-sorted stone polygons
+                    break;
+                case TerrainKind.IceSheet:
+                    if (b > 0.5f) ground = Surface("CrevassedIce");
+                    break;
+                case TerrainKind.Hill:
+                    if (a < 0.14f) ground = Surface("LimestonePavement");           // karst uplands
+                    else if (dryLand && a > 0.78f) ground = Surface("Slickrock");
                     break;
             }
 
@@ -660,7 +686,26 @@ namespace NaturalHistory.World
                                 cell.Biome is TerrainKind.Desert ? 0.75f : 0.5f);
                 flood = 0.85f;
             }
+            if (flood > 0f) ground = null; // silt covers whatever was there
+
+            // Cliff faces get the texture of their rock; it carries its own colour, so the tint
+            // only warms or cools it slightly
+            string cliffTex = cliff == Sandstone ? "CliffSandstone" : cliff == Basalt ? "CliffBasalt" : cliff == Chalk ? "CliffChalk"
+                            : cliff == Limestone ? "CliffLimestone" : "CliffGranite";
+            var cliffSurface = Surface(cliffTex);
+            if (cliffSurface != null) cliff = Color.Lerp(Color.white, cliff, 0.15f);
+
             cell.SetGroundLook(recolor, cliff, shore, flood);
+            cell.SetSurface(ground, cliffSurface);
+        }
+
+        // Ground surfaces from Resources/TerrainSurfaces, loaded once
+        private static readonly Dictionary<string, Texture2D> surfaces = new();
+        private static Texture2D Surface(string name)
+        {
+            if (!surfaces.TryGetValue(name, out var tex))
+                surfaces[name] = tex = Resources.Load<Texture2D>("TerrainSurfaces/" + name);
+            return tex;
         }
 
         private static Vector4 Paint(Color c, float amount) => new(c.r, c.g, c.b, amount);

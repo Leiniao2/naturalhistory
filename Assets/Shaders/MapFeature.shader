@@ -4,7 +4,8 @@
 // axis, so a single static mesh can beat its wings or fins; _Stride swings everything below the hips
 // back and forth as legs; _Undulate / _Coil bend a straight body into a travelling wave or a
 // resting coil (snakes, eels). ColonyGroup
-// drives them per renderer.
+// drives them per renderer. _Sway rocks tall props gently back and forth, more toward the top
+// (water plants on the seabed: HexGrid.Under uses a material with it set).
 Shader "NaturalHistory/MapFeature"
 {
     Properties
@@ -21,6 +22,7 @@ Shader "NaturalHistory/MapFeature"
         [HideInInspector] _UndulatePhase ("Body wave phase", Float) = 0
         [HideInInspector] _UndulateBody ("Tail z, snout z, waves along the body, growth toward the tail", Vector) = (-1, 1, 1, 0.5)
         [HideInInspector] _Coil ("Coiled (0..1), inner radius, ring spacing, head rise", Vector) = (0, 0.06, 0.055, 0.07)
+        _Sway ("Sway: amplitude, full-sway height, speed, wavelength", Vector) = (0, 1, 1, 1)
     }
 
     SubShader
@@ -43,6 +45,7 @@ Shader "NaturalHistory/MapFeature"
             float _UndulatePhase;
             float4 _UndulateBody;
             float4 _Coil;
+            float4 _Sway;
         CBUFFER_END
 
         #include "MapFeatureFlap.cginc"
@@ -84,6 +87,7 @@ Shader "NaturalHistory/MapFeature"
                 ApplyFlap(v.positionOS.xyz, v.normalOS);
                 ApplyUndulate(v.positionOS.xyz, v.normalOS);
                 ApplyStride(v.positionOS.xyz);
+                ApplySway(v.positionOS.xyz);
                 VertexPositionInputs pos = GetVertexPositionInputs(v.positionOS.xyz);
                 o.positionCS = pos.positionCS;
                 o.positionWS = pos.positionWS;
@@ -131,6 +135,7 @@ Shader "NaturalHistory/MapFeature"
                 ApplyFlap(v.positionOS.xyz, v.normalOS);
                 ApplyUndulate(v.positionOS.xyz, v.normalOS);
                 ApplyStride(v.positionOS.xyz);
+                ApplySway(v.positionOS.xyz);
                 float3 posWS    = TransformObjectToWorld(v.positionOS.xyz);
                 float3 normalWS = TransformObjectToWorldNormal(v.normalOS);
             #if _CASTING_PUNCTUAL_LIGHT_SHADOW
@@ -165,6 +170,7 @@ Shader "NaturalHistory/MapFeature"
                 ApplyFlap(v.positionOS.xyz, normalOS);
                 ApplyUndulate(v.positionOS.xyz, normalOS);
                 ApplyStride(v.positionOS.xyz);
+                ApplySway(v.positionOS.xyz);
                 return TransformObjectToHClip(v.positionOS.xyz);
             }
             half4 frag() : SV_Target { return 0; }
@@ -193,6 +199,7 @@ Shader "NaturalHistory/MapFeature"
         float _UndulatePhase;
         float4 _UndulateBody;
         float4 _Coil;
+        float4 _Sway;
         #include "MapFeatureFlap.cginc"
 
         struct Input
@@ -205,6 +212,7 @@ Shader "NaturalHistory/MapFeature"
             ApplyFlap(v.vertex.xyz, v.normal);
             ApplyUndulate(v.vertex.xyz, v.normal);
             ApplyStride(v.vertex.xyz);
+            ApplySway(v.vertex.xyz);
         }
 
         void surf(Input IN, inout SurfaceOutput o)

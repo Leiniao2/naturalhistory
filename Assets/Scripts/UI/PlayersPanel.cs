@@ -58,9 +58,9 @@ namespace NaturalHistory.UI
                 var chip = new VisualElement().WithClass("player-chip");
                 chip.EnableInClassList("human", player.IsHuman);
                 chip.Add(Band(player.Primary, player.Secondary));
-                chip.Add(new Label(player.Name).WithClass("player-chip-name"));
-                if (player.IsHuman) chip.Add(new Label("you").WithClass("player-chip-tag"));
-                chip.tooltip = player.FactionName;
+                chip.Add(new Label(ShownName(player)).WithClass("player-chip-name"));
+                if (player.IsHuman) chip.Add(new Label(Loc.T("you")).WithClass("player-chip-tag"));
+                chip.tooltip = Loc.T(player.FactionName);
                 var captured = player;
                 chip.RegisterCallback<ClickEvent>(_ => OpenFaction(captured));
                 bar.Add(chip);
@@ -75,10 +75,11 @@ namespace NaturalHistory.UI
             factionBand.Clear();
             factionBand.Add(BandHalf(player.Primary));
             factionBand.Add(BandHalf(player.Secondary));
-            factionTitle.text = player.Name;
+            factionTitle.text = ShownName(player);
             factionSubtitle.text = faction == null ? "" :
-                (player.Name != faction.displayName ? $"{faction.displayName} · " : "") + faction.category + (player.IsHuman ? " · You" : " · AI");
-            factionDescription.text = faction?.description ?? "";
+                (player.Name != faction.displayName ? $"{Loc.T(faction.displayName)} · " : "") + Loc.T(faction.category)
+                + " · " + Loc.T(player.IsHuman ? "You" : "AI");
+            factionDescription.text = Loc.T(faction?.description ?? "");
 
             factionAnimals.Clear();
             if (faction != null)
@@ -88,12 +89,13 @@ namespace NaturalHistory.UI
                     bool active = Player.IsActive(animal);
                     var row = new VisualElement().WithClass("animal-row").WithClass(active ? "active" : "inactive");
                     var header = new VisualElement().WithClass("animal-header");
-                    header.Add(new Label(animal.name).WithClass("animal-name"));
+                    header.Add(new Label(Loc.T(animal.name)).WithClass("animal-name"));
                     header.Add(new Label(animal.scientificName).WithClass("animal-scientific"));
-                    var bonus = animal.bonusEvolutionPoints > 0 ? $"  ·  +{animal.bonusEvolutionPoints} EP" : "";
-                    header.Add(new Label((active ? $"Active since the {animal.age}" : $"Arrives in the {animal.age}") + bonus).WithClass("animal-status"));
+                    var bonus = animal.bonusEvolutionPoints > 0 ? "  ·  " + Loc.F("+{0} EP", animal.bonusEvolutionPoints) : "";
+                    var age = Loc.T(GameDataLoader.GetAge(animal.age)?.displayName ?? animal.age);
+                    header.Add(new Label(Loc.F(active ? "Active since the {0}" : "Arrives in the {0}", age) + bonus).WithClass("animal-status"));
                     row.Add(header);
-                    row.Add(new Label(animal.description).WithClass("animal-description"));
+                    row.Add(new Label(Loc.T(animal.description)).WithClass("animal-description"));
                     factionAnimals.Add(row);
                 }
             }
@@ -101,6 +103,10 @@ namespace NaturalHistory.UI
         }
 
         public void CloseFaction() => factionOverlay.AddToClassList("hidden");
+
+        // A player still called after their faction is shown with the faction's translated name
+        private static string ShownName(Player player)
+            => player.Faction != null && player.Name == player.Faction.displayName ? Loc.T(player.Name) : player.Name;
 
         private static int AgeOrder(string age) => Enum.TryParse<GeologicalAge>(age, out var a) ? (int)a : int.MaxValue;
 
@@ -152,7 +158,7 @@ namespace NaturalHistory.UI
         {
             setupCount.text = draft.Count.ToString();
             setupList.Clear();
-            var choices = Factions.Select(f => f.displayName).ToList();
+            var choices = Factions.Select(f => Loc.T(f.displayName)).ToList();
 
             for (int i = 0; i < draft.Count; i++)
             {
@@ -160,23 +166,23 @@ namespace NaturalHistory.UI
                 var faction = GameDataLoader.GetFaction(setup.faction);
                 var row = new VisualElement().WithClass("setup-row");
 
-                row.Add(new Label(setup.human ? "You" : $"AI {i}").WithClass("setup-seat"));
+                row.Add(new Label(setup.human ? Loc.T("You") : Loc.F("AI {0}", i)).WithClass("setup-seat"));
 
                 var band = new Button(() => CycleBand(setup)).WithClass("setup-band");
                 band.Add(BandHalf(Parse(setup.primaryColor)));
                 band.Add(BandHalf(Parse(setup.secondaryColor)));
-                band.tooltip = "Change colours";
+                band.tooltip = Loc.T("Change colours");
                 row.Add(band);
 
                 var dropdown = new DropdownField(choices, Mathf.Max(0, Factions.ToList().FindIndex(f => f.id == setup.faction))).WithClass("setup-faction");
-                dropdown.RegisterValueChangedCallback(e => ChangeFaction(setup, Factions.FirstOrDefault(f => f.displayName == e.newValue)));
+                dropdown.RegisterValueChangedCallback(_ => ChangeFaction(setup, dropdown.index >= 0 && dropdown.index < Factions.Count ? Factions[dropdown.index] : null));
                 row.Add(dropdown);
 
                 var name = new TextField { value = setup.name, maxLength = 24 }.WithClass("setup-name");
                 name.RegisterValueChangedCallback(e => setup.name = e.newValue);
                 row.Add(name);
 
-                row.Add(new Label(faction?.category ?? "").WithClass("setup-category"));
+                row.Add(new Label(Loc.T(faction?.category ?? "")).WithClass("setup-category"));
                 setupList.Add(row);
             }
         }

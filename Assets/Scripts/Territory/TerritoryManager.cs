@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using NaturalHistory.Core;
 using NaturalHistory.Data;
 using NaturalHistory.Evolution;
 using NaturalHistory.Players;
@@ -69,6 +70,7 @@ namespace NaturalHistory.Territory
             grid.Generated += RequestRebuild;
             if (colonies != null) colonies.ColoniesPlaced += RequestRebuild;
             if (playerManager != null) playerManager.PlayersChanged += RequestRebuild;
+            Loc.Changed += RequestRebuild;
             RequestRebuild();
         }
 
@@ -77,6 +79,7 @@ namespace NaturalHistory.Territory
             if (grid != null) grid.Generated -= RequestRebuild;
             if (colonies != null) colonies.ColoniesPlaced -= RequestRebuild;
             if (playerManager != null) playerManager.PlayersChanged -= RequestRebuild;
+            Loc.Changed -= RequestRebuild;
             TerritoryBorders.Clear();
             if (Instance == this) Instance = null;
         }
@@ -114,10 +117,10 @@ namespace NaturalHistory.Territory
                 var core = new List<HexCell> { start };
                 core.AddRange(grid.GetNeighbors(start));
 
-                string name = HabitatNames.Pick(player.Faction?.id, core, taken, $"{player.Name} Range");
+                string name = HabitatNames.Pick(player.Faction?.id, core, taken, Loc.F("{0} Range", player.Name));
                 taken.Add(name);
                 centers.Add(new HabitatCenter(player, start, core, name));
-                labels.Add(CreateLabel(start, name, player.Primary));
+                labels.Add(CreateLabel(start, Loc.T(name), player.Primary));
                 EnsureColony(player, core);
             }
             RecomputeTerritory();
@@ -141,8 +144,8 @@ namespace NaturalHistory.Territory
             {
                 foreach (var g in evolution.Respawn(player, core)) g.Arrived += OnColonyArrived;
                 var any = colonies.Groups.FirstOrDefault(g => g != null && g.Owner?.Index == player.Index);
-                if (any != null) playerColonies[player.Index] = any;
-                return;
+                if (any != null) { playerColonies[player.Index] = any; return; }
+                // none of the player's species lives in this period: found one that does (below)
             }
 
             // Back where it was if that tile is still there, otherwise on the core around the center

@@ -930,6 +930,12 @@ namespace NaturalHistory.World
 
             public int VertexCount => verts.Count;
 
+            // Read back what has been added (plant decorations find the leaf surfaces this way)
+            public Vector3 Vertex(int i) => verts[i];
+            public Vector3 Normal(int i) => normals[i];
+            public Color VertexColor(int i) => colors[i];
+            public void SetVertexColor(int i, Color c) => colors[i] = c;
+
             // Lowers every vertex added since `from` that lies below `below` by `amount`: stretches a
             // plant's trunk base down so it still meets the ground where a tile's rim slopes away.
             public void SinkBase(int from, float below, float amount)

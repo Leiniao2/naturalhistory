@@ -86,12 +86,12 @@ namespace NaturalHistory.Progression
         // Null when the node can be unlocked now, otherwise a player-facing reason.
         public string UnlockBlocker(ProgressionTree tree, TreeNodeDefinition node)
         {
-            if (Species == null)           return "None of your species is selected";
-            if (tree.IsUnlocked(node.id))  return "Already acquired";
-            if (!CanAcquire(tree, node))   return $"Not in the {Species?.commonName ?? "species"}'s {tree.DisplayName.ToLowerInvariant()}";
-            if (!tree.PrerequisitesMet(node)) return "Requires: " + string.Join(", ", MissingPrerequisites(tree, node));
-            if (!AgeAllows(node))          return $"Available from the {node.age}";
-            if (EvolutionPoints < node.cost) return $"Needs {node.cost} EP (you have {EvolutionPoints})";
+            if (Species == null)           return Loc.T("None of your species is selected");
+            if (tree.IsUnlocked(node.id))  return Loc.T("Already acquired");
+            if (!CanAcquire(tree, node))   return Loc.F("Not in the {0}'s {1}", Loc.T(Species?.commonName ?? "species"), Loc.T(tree.DisplayName).ToLowerInvariant());
+            if (!tree.PrerequisitesMet(node)) return Loc.F("Requires: {0}", string.Join(", ", MissingPrerequisites(tree, node)));
+            if (!AgeAllows(node))          return Loc.F("Available from the {0}", Loc.T(node.age));
+            if (EvolutionPoints < node.cost) return Loc.F("Needs {0} EP (you have {1})", node.cost, EvolutionPoints);
             return null;
         }
 
@@ -129,7 +129,7 @@ namespace NaturalHistory.Progression
                 if (tree.IsUnlocked(id)) continue;
                 var pre = tree.Get(id);
                 if (pre == null) yield return id;
-                else yield return pre.branch == node.branch ? pre.displayName : $"{pre.displayName} ({tree.BranchName(pre.branch)})";
+                else yield return pre.branch == node.branch ? Loc.T(pre.displayName) : $"{Loc.T(pre.displayName)} ({Loc.T(tree.BranchName(pre.branch))})";
             }
         }
 

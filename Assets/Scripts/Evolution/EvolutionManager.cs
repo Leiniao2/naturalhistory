@@ -192,6 +192,9 @@ namespace NaturalHistory.Evolution
                 if (copy.group != null) { copy.group.Owner = player; continue; }
                 var def = GameDataLoader.GetSpecies(copy.species);
                 if (def == null) continue;
+                // Not alive in the period the map shows (e.g. the admin bar jumped back in time):
+                // keep the copy, but only put it back on the map once its period comes round again
+                if (!colonies.IsAliveNow(def)) continue;
                 var cell = FreeCellNear(def, copy.cell, 3) ?? fallback?.FirstOrDefault(c => IsFree(def, c));
                 if (cell == null) { Debug.Log($"[Evolution] No room to put back {player.Name}'s {def.commonName}."); continue; }
                 var group = colonies.SpawnColony(def, cell, player, Seed(player.Index, i));
@@ -250,22 +253,22 @@ namespace NaturalHistory.Evolution
         public bool Reproduce(OwnedCopy copy, out string message)
         {
             message = null;
-            if (copy?.group == null) { message = "Nothing selected"; return false; }
+            if (copy?.group == null) { message = Loc.T("Nothing selected"); return false; }
             int wait = TurnsUntilReproduce(copy);
-            if (wait > 0) { message = $"Can reproduce again in {wait} turn{(wait == 1 ? "" : "s")}"; return false; }
+            if (wait > 0) { message = Loc.F(wait == 1 ? "Can reproduce again in {0} turn" : "Can reproduce again in {0} turns", wait); return false; }
             var def  = GameDataLoader.GetSpecies(copy.species);
             var cell = ReproduceCell(copy);
-            if (cell == null) { message = $"No free {HabitatText(def)} next to it"; return false; }
+            if (cell == null) { message = Loc.F("No free {0} next to it", HabitatText(def)); return false; }
 
             var owner = copy.group.Owner;
             var group = SpeciesColonies.Instance.SpawnColony(def, cell, owner, Seed(copy.player, copies.Count + 1) ^ CurrentTurn);
-            if (group == null) { message = "Couldn't place the young"; return false; }
+            if (group == null) { message = Loc.T("Couldn't place the young"); return false; }
             copy.lastBred = CurrentTurn;
             var young = new OwnedCopy { player = copy.player, species = copy.species, group = group, cell = cell, lastBred = CurrentTurn };
             copies.Add(young);
             Track(young);
             TerritoryManager.Instance?.Refresh();
-            message = $"{def.commonName} reproduced";
+            message = Loc.F("{0} reproduced", Loc.T(def.commonName));
             Changed?.Invoke();
             return true;
         }
@@ -285,17 +288,17 @@ namespace NaturalHistory.Evolution
             var t = TraitsOf(link.from);
             var originCopies = copy != null ? new List<OwnedCopy> { copy } : CopiesOf(Human).Where(c => c.species == link.from).ToList();
 
-            list.Add(new Requirement(copy != null ? $"A {origin.commonName}" : $"You have a {origin.commonName}", originCopies.Count > 0 && (copy == null || copy.species == link.from)));
+            list.Add(new Requirement(Loc.F(copy != null ? "A {0}" : "You have a {0}", Loc.T(origin.commonName)), originCopies.Count > 0 && (copy == null || copy.species == link.from)));
             foreach (var id in link.functions)
-                list.Add(new Requirement($"Function: {progression.Morphology.Get(id)?.displayName ?? id}", t.functions.Contains(id)));
+                list.Add(new Requirement(Loc.F("Function: {0}", Loc.T(progression.Morphology.Get(id)?.displayName ?? id)), t.functions.Contains(id)));
             foreach (var id in link.behaviors)
-                list.Add(new Requirement($"Behavior: {progression.Ethology.Get(id)?.displayName ?? id}", t.behaviors.Contains(id)));
+                list.Add(new Requirement(Loc.F("Behavior: {0}", Loc.T(progression.Ethology.Get(id)?.displayName ?? id)), t.behaviors.Contains(id)));
 
             bool periodMet = !Enum.TryParse(target.firstAge, true, out GeologicalAge first) || AgeManager.Instance == null || AgeManager.Instance.CurrentAge >= first;
-            list.Add(new Requirement($"The {target.firstAge} has begun", periodMet));
-            list.Add(new Requirement($"On or next to {HabitatText(target)}", originCopies.Any(c => EvolveCell(c, target) != null)));
+            list.Add(new Requirement(Loc.F("The {0} has begun", Loc.T(target.firstAge)), periodMet));
+            list.Add(new Requirement(Loc.F("On or next to {0}", HabitatText(target)), originCopies.Any(c => EvolveCell(c, target) != null)));
             if (HasEvolved(link))
-                list.Add(new Requirement($"A {origin.commonName} has already become a {target.commonName}; evolve another copy into a different species", false));
+                list.Add(new Requirement(Loc.F("A {0} has already become a {1}; evolve another copy into a different species", Loc.T(origin.commonName), Loc.T(target.commonName)), false));
             return list;
         }
 
@@ -314,7 +317,7 @@ namespace NaturalHistory.Evolution
         public bool Evolve(EvolutionLink link, OwnedCopy copy, out string message)
         {
             message = null;
-            if (!CanEvolve(link, copy)) { message = "Not ready to evolve yet"; return false; }
+            if (!CanEvolve(link, copy)) { message = Loc.T("Not ready to evolve yet"); return false; }
             var origin = GameDataLoader.GetSpecies(link.from);
             var target = GameDataLoader.GetSpecies(link.to);
             var cell   = EvolveCell(copy, target);
@@ -327,7 +330,7 @@ namespace NaturalHistory.Evolution
                 // Shouldn't happen (targets have models), but don't lose the copy
                 copy.group = SpeciesColonies.Instance.SpawnColony(origin, copy.cell, owner, Seed(copy.player, 1));
                 Track(copy);
-                message = $"Couldn't place a {target.commonName}";
+                message = Loc.F("Couldn't place a {0}", Loc.T(target.commonName));
                 return false;
             }
 
@@ -348,16 +351,18 @@ namespace NaturalHistory.Evolution
             Focus(link.to);
             TerritoryManager.Instance?.Refresh();
             Debug.Log($"[Evolution] {owner?.Name}: a {origin.commonName} evolved into a {target.commonName}");
-            message = $"Your {origin.commonName} evolved into a {target.commonName}";
+            message = Loc.F("Your {0} evolved into a {1}", Loc.T(origin.commonName), Loc.T(target.commonName));
             Changed?.Invoke();
             return true;
         }
 
         private static string HabitatText(SpeciesDefinition def)
         {
-            if (def?.habitats == null || def.habitats.Count == 0) return "a suitable tile";
-            var names = def.habitats.Select(h => Enum.TryParse(h, out TerrainKind k) ? EraFlora.DisplayName(k).ToLowerInvariant() : h).ToList();
-            return names.Count == 1 ? names[0] : string.Join(", ", names.Take(names.Count - 1)) + " or " + names[^1];
+            if (def?.habitats == null || def.habitats.Count == 0) return Loc.T("a suitable tile");
+            // German capitalises nouns; the other languages read better in lower case mid-sentence
+            string Lower(string text) => Loc.Current == "de" ? text : text.ToLowerInvariant();
+            var names = def.habitats.Select(h => Lower(Loc.T(Enum.TryParse(h, out TerrainKind k) ? EraFlora.DisplayName(k) : h))).ToList();
+            return names.Count == 1 ? names[0] : Loc.F("{0} or {1}", string.Join(", ", names.Take(names.Count - 1)), names[^1]);
         }
 
         // ---------- Save / load ----------

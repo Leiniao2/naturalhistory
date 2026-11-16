@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using NaturalHistory.Core;
 using NaturalHistory.Data;
 using NaturalHistory.Evolution;
 using NaturalHistory.Progression;
@@ -60,16 +61,19 @@ namespace NaturalHistory.UI
             if (def == null) return;
             var tex = SpeciesPortraits.Get(def);
             portrait.style.backgroundImage = tex is UnityEngine.RenderTexture rt ? Background.FromRenderTexture(rt) : new StyleBackground(StyleKeyword.None);
-            nameLabel.text = def.commonName;
+            nameLabel.text = Loc.T(def.commonName);
 
             var mine  = Evolution.CopiesOf(Copy.group.Owner).Where(c => c.species == Copy.species).ToList();
             int wait  = Evolution.TurnsUntilReproduce(Copy);
             int ready = EvolutionData.From(Copy.species).Count(l => Evolution.CanEvolve(l, Copy));
             int total = EvolutionData.From(Copy.species).Count();
-            var breed = wait > 0 ? $"reproduce in {wait} turn{(wait == 1 ? "" : "s")}"
-                      : Evolution.ReproduceCell(Copy) == null ? "no room to reproduce" : "can reproduce";
-            var evolve = total == 0 ? "no known descendants" : ready > 0 ? $"{ready} evolution{(ready == 1 ? "" : "s")} ready" : $"{total} possible evolution{(total == 1 ? "" : "s")}";
-            detailLabel.text = $"{def.scientificName}  ·  {mine.Count} cop{(mine.Count == 1 ? "y" : "ies")}\n{breed}  ·  {evolve}";
+            var breed = wait > 0 ? Loc.F(wait == 1 ? "reproduce in {0} turn" : "reproduce in {0} turns", wait)
+                      : Loc.T(Evolution.ReproduceCell(Copy) == null ? "no room to reproduce" : "can reproduce");
+            var evolve = total == 0 ? Loc.T("no known descendants")
+                       : ready > 0 ? Loc.F(ready == 1 ? "{0} evolution ready" : "{0} evolutions ready", ready)
+                       : Loc.F(total == 1 ? "{0} possible evolution" : "{0} possible evolutions", total);
+            var copies = Loc.F(mine.Count == 1 ? "{0} copy" : "{0} copies", mine.Count);
+            detailLabel.text = $"{def.scientificName}  ·  {copies}\n{breed}  ·  {evolve}";
 
             reproduceButton.SetEnabled(wait == 0 && Evolution.ReproduceCell(Copy) != null);
             evolveButton.EnableInClassList("ready", ready > 0);

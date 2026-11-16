@@ -84,8 +84,8 @@ namespace NaturalHistory.World
             ballRenderer.material.color = color;
             bandRenderer.material.color = bandColor;
             if (string.IsNullOrEmpty(playerName)) return;
-            if (nameLabel == null) nameLabel = Players.PlayerMarker.CreateLabel(transform, playerName, color, radius + 0.15f);
-            nameLabel.text  = playerName;
+            if (nameLabel == null) nameLabel = Players.PlayerMarker.CreateLabel(transform, Core.Loc.T(playerName), color, radius + 0.15f);
+            nameLabel.text  = Core.Loc.T(playerName); // a faction's default name is translated; a typed one stays
             nameLabel.color = Color.Lerp(color, Color.white, 0.55f);
         }
 

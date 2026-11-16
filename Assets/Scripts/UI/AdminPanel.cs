@@ -17,6 +17,8 @@ namespace NaturalHistory.UI
         private readonly VisualElement bar;
         private readonly DropdownField ageField;
         private readonly List<int> turns = new(); // first turn of each dropdown entry
+        private readonly DropdownField phenomenon;
+        private readonly Button trigger;
 
         public AdminPanel(VisualElement root)
         {
@@ -24,10 +26,11 @@ namespace NaturalHistory.UI
             ageField = root.Q<DropdownField>("admin-age");
             ageField.RegisterValueChangedCallback(_ => OnAgePicked());
 
-            var phenomenon = new DropdownField(new List<string>(NaturalEvents.Names), 0) { name = "admin-phenomenon" };
-            var trigger    = new Button(() => NaturalEvents.Instance?.Trigger((Phenomenon)phenomenon.index)) { text = "Trigger", name = "admin-trigger" };
+            phenomenon = new DropdownField(new List<string>(), 0) { name = "admin-phenomenon" };
+            trigger    = new Button(() => NaturalEvents.Instance?.Trigger((Phenomenon)phenomenon.index)) { name = "admin-trigger" };
             bar.Add(phenomenon);
             bar.Add(trigger);
+            RefreshPhenomena();
             bar.EnableInClassList("hidden", !Debug.isDebugBuild);
         }
 
@@ -44,21 +47,31 @@ namespace NaturalHistory.UI
             var ages = AgeManager.Instance;
             if (ages == null || ages.Ages.Count == 0) { ageField.SetEnabled(false); return; }
             ageField.SetEnabled(true);
-            if (turns.Count == 0)
+            // Names are filled in every time so they follow the language
+            var names = new List<string>();
+            turns.Clear();
+            for (int i = 0; i < ages.Ages.Count; i++)
             {
-                var names = new List<string>();
-                for (int i = 0; i < ages.Ages.Count; i++)
-                {
-                    var def = ages.Ages[i];
-                    names.Add($"{def.displayName}  ({def.startMillionYearsAgo:0.#} Ma)");
-                    turns.Add(ages.FirstTurnOf((GeologicalAge)i));
-                }
-                names.Add(PresentDay);
-                turns.Add(ages.TotalTurns + 1);
-                ageField.choices = names;
+                var def = ages.Ages[i];
+                names.Add(Loc.F("{0}  ({1:0.#} Ma)", Loc.T(def.displayName), def.startMillionYearsAgo));
+                turns.Add(ages.FirstTurnOf((GeologicalAge)i));
             }
+            names.Add(Loc.T(PresentDay));
+            turns.Add(ages.TotalTurns + 1);
+            ageField.choices = names;
+            RefreshPhenomena();
             int index = ages.IsPresentDay ? turns.Count - 1 : (int)ages.CurrentAge;
             ageField.SetValueWithoutNotify(ageField.choices[index]);
+        }
+
+        private void RefreshPhenomena()
+        {
+            int index = Mathf.Max(phenomenon.index, 0);
+            var names = new List<string>();
+            foreach (var n in NaturalEvents.Names) names.Add(Loc.T(n));
+            phenomenon.choices = names;
+            if (index < names.Count) phenomenon.SetValueWithoutNotify(names[index]);
+            trigger.text = Loc.T("Trigger");
         }
 
         private void OnAgePicked()

@@ -5,6 +5,29 @@ namespace NaturalHistory.World
 {
     public static class WorldGenerator
     {
+        // What the generator decided about a tile before any climate is applied, kept on the cell so
+        // the map can be reclassified for another date (Reshape): sea level, temperature, aridity…
+        public struct CellInputs
+        {
+            public float e, rugged, m, f; // ranks 0..1: elevation (whole map), ruggedness (land), moisture, forest patchiness
+            public float lat;              // 0 at the equator, 1 at the poles
+            public int level;              // terrace level as generated (0 = water)
+        }
+
+        // Climate of a date, as shifts of the thresholds (see Climate.EarthHistory). Today = no shift.
+        public struct Conditions
+        {
+            public float sea;        // + floods low land, − exposes shelves (share of the map)
+            public float warmth;     // added to temperature (0..1 scale); the poles warm most
+            public float aridity;    // subtracted from moisture: + more desert, − wetter
+            public float vegetation; // forest cover multiplier (1 = today)
+            public float volcanism;  // share of mountains that are volcanoes multiplier (1 = today)
+
+            public static readonly Conditions Today = new() { vegetation = 1f, volcanism = 1f };
+        }
+
+        private static Dictionary<TerrainKind, TerrainType> terrainCache;
+
         public static void Generate(HexCell[,] cells, int width, int height, int seed)
         {
             var terrains = new Dictionary<TerrainKind, TerrainType>();
@@ -90,10 +113,11 @@ namespace NaturalHistory.World
                 float lat  = Mathf.Abs(r / (float)(height - 1) - 0.5f) * 2f;
                 float temp = Mathf.Clamp01(1f - lat * 0.9f - level / (float)MaxElevation * 0.3f);
 
-                var kind = ClassifyTerrain(e[i], rugged[i], m[i], temp);
+                cells[q, r].SetInputs(new CellInputs { e = e[i], rugged = isLand ? rugged[i] : 0f, m = m[i], f = f[i], lat = lat, level = level });
+                var kind = ClassifyTerrain(e[i], rugged[i], m[i], temp, Conditions.Today);
                 if (terrains.TryGetValue(kind, out var terrain))
                     cells[q, r].SetTerrain(terrain);
-                var feature = ChooseFeature(kind, m[i], temp, f[i]);
+                var feature = ChooseFeature(kind, m[i], temp, f[i], Conditions.Today);
                 cells[q, r].SetElevation(level);
                 // Water depth from the same elevation ranks: 0 where it meets the land, 1 in the
                 // deepest sea or the middle of the deepest lake
@@ -108,6 +132,43 @@ namespace NaturalHistory.World
         }
 
         public const int MaxElevation = 10;
+
+        // Reclassifies every tile for a date's climate from its stored inputs: the shoreline moves
+        // with sea level (low land floods into shallow sea, shelves come up as lowland), the
+        // temperature belts shift (more or less tundra and ice), deserts grow or shrink with aridity,
+        // forests with the vegetation factor, volcanoes with volcanism. Returns true if any tile
+        // changed between land and water (meshes, rivers and the under layer need rebuilding then).
+        public static bool Reshape(HexCell[,] cells, Conditions c)
+        {
+            if (terrainCache == null)
+            {
+                terrainCache = new Dictionary<TerrainKind, TerrainType>();
+                foreach (var t in Resources.LoadAll<TerrainType>("Terrains")) terrainCache[t.kind] = t;
+            }
+            float saltT  = SaltWaterThreshold + c.sea;
+            float waterT = WaterThreshold + c.sea;
+            bool coastChanged = false;
+            foreach (var cell in cells)
+            {
+                if (cell == null || !cell.HasInputs) continue;
+                var g = cell.Inputs;
+                bool land = g.e >= waterT;
+                int level = !land ? 0 : g.level > 0 ? g.level : 1; // an exposed shelf is low coastal plain
+                float temp = Mathf.Clamp01(1f - g.lat * 0.9f - level / (float)MaxElevation * 0.3f
+                                           + c.warmth * (0.5f + g.lat)); // polar amplification
+                var kind = ClassifyTerrain(g.e, land ? g.rugged : 0f, g.m, temp, c);
+                var feature = ChooseFeature(kind, g.m, temp, g.f, c);
+                if (cell.IsWater == land || cell.Elevation != level) coastChanged |= cell.IsWater == land;
+                if (terrainCache.TryGetValue(kind, out var terrain)) cell.SetTerrain(terrain);
+                cell.SetElevation(level);
+                cell.SetDepth(kind == TerrainKind.SaltWater  ? Mathf.InverseLerp(saltT, 0f, g.e)
+                            : kind == TerrainKind.FreshWater ? Mathf.InverseLerp(waterT, saltT, g.e)
+                            : 0f);
+                cell.SetFeature(feature);
+                cell.SetClimate(kind, feature, g.m);
+            }
+            return coastChanged;
+        }
 
         // Shares of the map (elevation rank) and of the land (ruggedness rank)
         const float SaltWaterThreshold = 0.37f; // lowest 37% of cells: open sea
@@ -181,23 +242,26 @@ namespace NaturalHistory.World
 
         // Forests grow on moist, not-too-cold land; f is patchiness noise (both ranks).
         // Conifers take the cold end (tundra edge, high latitudes, altitude).
-        static TerrainFeature ChooseFeature(TerrainKind kind, float m, float temp, float f)
+        static TerrainFeature ChooseFeature(TerrainKind kind, float m, float temp, float f, Conditions c)
         {
+            m -= c.aridity;
+            // Forest thresholds as today's share of the land, scaled by the vegetation factor
+            float Cover(float todayShare) => 1f - Mathf.Clamp01(todayShare * c.vegetation);
             switch (kind)
             {
-                case TerrainKind.Rainforest when f > 0.2f:                           return TerrainFeature.Jungle;
-                case TerrainKind.Wetland    when temp > TropicalTemp && f > 0.55f:    return TerrainFeature.Jungle;
+                case TerrainKind.Rainforest when f > Cover(0.8f):                    return TerrainFeature.Jungle;
+                case TerrainKind.Wetland    when temp > TropicalTemp && f > Cover(0.45f): return TerrainFeature.Jungle;
                 case TerrainKind.FreshWater when temp > 0.6f && f > 0.55f:           return TerrainFeature.Reef;
                 case TerrainKind.Desert     when f > 0.93f:                          return TerrainFeature.Oasis;
-                case TerrainKind.Mountain   when f > 0.94f:                          return TerrainFeature.Volcano;
+                case TerrainKind.Mountain   when f > 1f - 0.06f * c.volcanism:       return TerrainFeature.Volcano;
             }
 
             bool forested = kind switch
             {
-                TerrainKind.Plain   => m > 0.50f && f > 0.45f,
-                TerrainKind.Hill    => m > 0.40f && f > 0.50f,
-                TerrainKind.Wetland => f > 0.55f,
-                TerrainKind.Tundra  => m > 0.50f && f > 0.50f,
+                TerrainKind.Plain   => m > 0.50f && f > Cover(0.55f),
+                TerrainKind.Hill    => m > 0.40f && f > Cover(0.50f),
+                TerrainKind.Wetland => f > Cover(0.45f),
+                TerrainKind.Tundra  => m > 0.50f && f > Cover(0.50f),
                 _                   => false,
             };
             if (!forested) return TerrainFeature.None;
@@ -246,11 +310,12 @@ namespace NaturalHistory.World
 
         // Whittaker biome classification: elevation rank drives water, ruggedness drives
         // mountain/hill, then temperature × moisture drive lowland biomes. All inputs are ranks.
-        static TerrainKind ClassifyTerrain(float e, float rugged, float m, float temp)
+        static TerrainKind ClassifyTerrain(float e, float rugged, float m, float temp, Conditions c)
         {
-            // Water
-            if (e < SaltWaterThreshold) return TerrainKind.SaltWater;
-            if (e < WaterThreshold)     return TerrainKind.FreshWater;
+            // Water: the shoreline moves with sea level
+            if (e < SaltWaterThreshold + c.sea) return TerrainKind.SaltWater;
+            if (e < WaterThreshold + c.sea)     return TerrainKind.FreshWater;
+            m -= c.aridity; // drier worlds: the desert and steppe thresholds take more of the land
 
             // High, rugged terrain overrides climate
             if (rugged > MountainThreshold) return temp < 0.20f ? TerrainKind.IceSheet : TerrainKind.Mountain;

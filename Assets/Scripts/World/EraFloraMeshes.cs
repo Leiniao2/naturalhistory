@@ -297,12 +297,17 @@ namespace NaturalHistory.World
             var b = new Builder();
             bool dense = canopy.form is "Palm" or "TreeFern" or "Calamites" or "Bamboo" or "Cycad" or "Mangrove" or "Lycopsid" or "Sigillaria";
             float apothem = 0.8660254f * size;
-            smallBlobRadius = 0.075f * size;
-            var trees = HexScatter(rng, dense ? rng.Next(30, 40) : rng.Next(24, 32), apothem * 0.97f, (dense ? 0.11f : 0.13f) * size, new List<Vector2>());
-            foreach (var p in trees)
+            smallBlobRadius = 0.09f * size;
+            // fewer, bigger trees, so each one reads as a tree with its own crown, blossom and fruit;
+            // the one nearest the middle is a big old tree of the dominant species
+            var trees = HexScatter(rng, dense ? rng.Next(18, 24) : rng.Next(12, 16), apothem * 0.95f, (dense ? 0.15f : 0.2f) * size, new List<Vector2>());
+            int feature = 0;
+            for (int i = 1; i < trees.Count; i++) if (trees[i].sqrMagnitude < trees[feature].sqrMagnitude) feature = i;
+            for (int i = 0; i < trees.Count; i++)
             {
-                var plant = canopy2 != null && rng.NextDouble() < 0.3 ? canopy2 : canopy;
-                float s = size * plant.size * Range(rng, 0.55f, 0.8f);
+                var p = trees[i];
+                var plant = i != feature && canopy2 != null && rng.NextDouble() < 0.3 ? canopy2 : canopy;
+                float s = size * plant.size * (dense ? Range(rng, 0.75f, 1f) : Range(rng, 0.85f, 1.15f)) * (i == feature ? 1.35f : 1f);
                 int from = b.VertexCount;
                 AddCanopyPlant(b, rng, new Vector3(p.x, 0f, p.y), s, plant);
                 b.SinkBase(from, 0.02f * size, 0.12f * size);
@@ -320,7 +325,8 @@ namespace NaturalHistory.World
 
         // Open ground covering the whole hex: many clumps of the main species, fewer of the second,
         // and the terrain's stones.
-        public static Mesh CreatePlantGround(System.Random rng, float size, PlantDefinition main, PlantDefinition second, TerrainKind kind)
+        public static Mesh CreatePlantGround(System.Random rng, float size, PlantDefinition main, PlantDefinition second, TerrainKind kind,
+                                             IReadOnlyList<PlantDefinition> extras = null)
         {
             var b = new Builder();
             var taken = new List<Vector2>();
@@ -341,6 +347,7 @@ namespace NaturalHistory.World
             if (big) Plant(main, 6, 10, 0.16f, 1f);
             else     Plant(main, 14, 22, 0.09f, 0.95f);
             if (second != null) Plant(second, 4, 8, 0.1f, 0.9f);
+            if (extras != null) foreach (var extra in extras) Plant(extra, 2, 4, 0.1f, Range(rng, 0.75f, 1.05f)); // a few others mixed in
 
             var stone = kind switch
             {
@@ -381,7 +388,9 @@ namespace NaturalHistory.World
         // One tree of a canopy species; `s` ≈ cell size × the species' size
         static void AddCanopyPlant(Builder b, System.Random rng, Vector3 root, float s, PlantDefinition plant)
         {
+            int from = b.VertexCount;
             leafTint = plant.Tint;
+            hasCrown = TryColor(plant.crown, out crownColor); // all-pink, red or purple crowns (PlantShapes.cs)
             switch (plant.form)
             {
                 case "Lycopsid":       AddLepidodendron(b, rng, root, s); break;
@@ -404,6 +413,9 @@ namespace NaturalHistory.World
                 case "Bamboo":         AddBamboo(b, rng, root, s); break;
                 default:               AddShapedBroadleaf(b, rng, root, s, plant.shape); break;
             }
+            PaintCrown(b, from);                        // see PlantShapes.cs
+            AddFruitAndBlossom(b, rng, from, s, plant);
+            hasCrown = false;
             leafTint = Color.white;
         }
 
@@ -411,6 +423,7 @@ namespace NaturalHistory.World
         static void AddGroundPlant(Builder b, System.Random rng, Vector3 root, float size, PlantDefinition plant, float scale)
         {
             float m = plant.size * scale * Range(rng, 0.8f, 1.15f);
+            int from = b.VertexCount;
             leafTint = plant.form == "Flower" ? Color.white : plant.Tint; // flowers: the tint is the petal colour
             switch (plant.form)
             {
@@ -430,6 +443,7 @@ namespace NaturalHistory.World
                 case "Bennettitalean": AddBennettitalean(b, rng, root, size * 0.8f * m); break;
                 default:               AddTuft(b, rng, root, size * m, L(Grass)); break;
             }
+            AddFruitAndBlossom(b, rng, from, size * 0.1f * m, plant);
             leafTint = Color.white;
         }
 

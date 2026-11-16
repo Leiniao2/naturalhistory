@@ -16,6 +16,7 @@ namespace NaturalHistory.UI
         private readonly Label title, ageName, range, description, events, environment;
         private readonly List<VisualElement> rows = new();
         private int selectedIndex;
+        private string listLanguage; // the list is built again after the language changes
 
         private static readonly Dictionary<string, Color> EraColors = new()
         {
@@ -43,8 +44,8 @@ namespace NaturalHistory.UI
         {
             var ages = AgeManager.Instance;
             if (ages == null || ages.Ages.Count == 0) return;
-            if (rows.Count == 0) BuildList();
-            title.text = newAge ? $"A new period begins: the {ages.CurrentAgeData.displayName}" : "Geologic Time";
+            if (rows.Count == 0 || listLanguage != Loc.Current) BuildList();
+            title.text = newAge ? Loc.F("A new period begins: the {0}", Loc.T(ages.CurrentAgeData.displayName)) : Loc.T("Geologic Time");
             selectedIndex = (int)ages.CurrentAge;
             overlay.RemoveFromClassList("hidden");
             Refresh();
@@ -56,6 +57,7 @@ namespace NaturalHistory.UI
         {
             var ages = AgeManager.Instance;
             if (ages == null || rows.Count == 0) return;
+            if (listLanguage != Loc.Current) BuildList();
             int current = (int)ages.CurrentAge;
             for (int i = 0; i < rows.Count; i++)
             {
@@ -70,13 +72,16 @@ namespace NaturalHistory.UI
         private void BuildList()
         {
             var ages = AgeManager.Instance.Ages;
+            list.Clear();
+            rows.Clear();
+            listLanguage = Loc.Current;
             for (int i = 0; i < ages.Count; i++)
             {
                 var def = ages[i];
                 var row = new VisualElement().WithClass("age-row");
                 row.style.borderLeftColor = EraColors.TryGetValue(def.era ?? "", out var c) ? c : Color.gray;
-                row.Add(new Label(def.displayName) { pickingMode = PickingMode.Ignore }.WithClass("age-row-name"));
-                row.Add(new Label($"{def.era} · {def.startMillionYearsAgo:0.#}–{def.endMillionYearsAgo:0.#} Ma") { pickingMode = PickingMode.Ignore }
+                row.Add(new Label(Loc.T(def.displayName)) { pickingMode = PickingMode.Ignore }.WithClass("age-row-name"));
+                row.Add(new Label(Loc.F("{0} · {1:0.#}–{2:0.#} Ma", Loc.T(def.era), def.startMillionYearsAgo, def.endMillionYearsAgo)) { pickingMode = PickingMode.Ignore }
                     .WithClass("age-row-range"));
                 int index = i;
                 row.RegisterCallback<ClickEvent>(_ => { selectedIndex = index; Refresh(); });
@@ -88,13 +93,14 @@ namespace NaturalHistory.UI
         private void ShowDetails(AgeDefinition def, bool isCurrent)
         {
             var ages = AgeManager.Instance;
-            ageName.text = def.displayName;
+            ageName.text = Loc.T(def.displayName);
             var span = def.startMillionYearsAgo - def.endMillionYearsAgo;
-            var r = $"{def.era} Era · {def.startMillionYearsAgo:0.##} – {def.endMillionYearsAgo:0.##} million years ago ({span:0.#} My) · {def.turns} turns";
-            if (isCurrent) r += $"\nNow: {ages.MillionYearsAgo:0.0} Ma, turn {ages.TurnInAge} of {ages.TurnsInAge} in this period";
+            var r = Loc.F("{0} Era · {1:0.##} – {2:0.##} million years ago ({3:0.#} My) · {4} turns",
+                          Loc.T(def.era), def.startMillionYearsAgo, def.endMillionYearsAgo, span, def.turns);
+            if (isCurrent) r += "\n" + Loc.F("Now: {0:0.0} Ma, turn {1} of {2} in this period", ages.MillionYearsAgo, ages.TurnInAge, ages.TurnsInAge);
             range.text = r;
-            description.text = def.description;
-            events.text = def.keyEvents != null ? string.Join("\n", def.keyEvents.Select(e => "• " + e)) : "";
+            description.text = Loc.T(def.description);
+            events.text = def.keyEvents != null ? string.Join("\n", def.keyEvents.Select(e => "• " + Loc.T(e))) : "";
 
             // Reconstructed global averages at the start of the period (climate_history.json)
             var start = ClimateSystem.SampleHistory(def.startMillionYearsAgo);
@@ -102,13 +108,14 @@ namespace NaturalHistory.UI
             var lines = new List<string>();
             if (env != null)
             {
-                lines.Add($"Climate: {env.globalTemp}");
-                lines.Add($"Sea level: {env.seaLevel}");
-                lines.Add($"Oxygen: {env.oxygenLevel}");
-                lines.Add($"Continents: {env.landCoverage}");
+                lines.Add(Loc.F("Climate: {0}", Loc.T(env.globalTemp)));
+                lines.Add(Loc.F("Sea level: {0}", Loc.T(env.seaLevel)));
+                lines.Add(Loc.F("Oxygen: {0}", Loc.T(env.oxygenLevel)));
+                lines.Add(Loc.F("Continents: {0}", Loc.T(env.landCoverage)));
             }
-            if (!string.IsNullOrEmpty(def.vegetation)) lines.Add($"Plants: {def.vegetation}");
-            lines.Add($"At the start: ~{start.TemperatureC:0} °C global mean · CO2 ~{start.Co2Ppm:0} ppm · O2 ~{start.O2Percent:0.#}% · sea level {start.SeaLevelM:+0;-0;0} m");
+            if (!string.IsNullOrEmpty(def.vegetation)) lines.Add(Loc.F("Plants: {0}", Loc.T(def.vegetation)));
+            lines.Add(Loc.F("At the start: ~{0:0} °C global mean · CO2 ~{1:0} ppm · O2 ~{2:0.#}% · sea level {3:+0;-0;0} m",
+                            start.TemperatureC, start.Co2Ppm, start.O2Percent, start.SeaLevelM));
             environment.text = string.Join("\n", lines);
         }
     }

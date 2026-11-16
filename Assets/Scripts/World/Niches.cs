@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NaturalHistory.Core;
 using NaturalHistory.Data;
 using UnityEngine;
 
@@ -63,7 +64,7 @@ namespace NaturalHistory.World
         };
 
         // Player-facing name; the lower layer depends on the tile
-        public static string Name(Niche niche, HexCell cell) => niche switch
+        public static string Name(Niche niche, HexCell cell) => Loc.T(niche switch
         {
             Niche.Aerial      => "Aerial",
             Niche.Micro       => "Micro (<1 mm)",
@@ -72,6 +73,6 @@ namespace NaturalHistory.World
             Niche.Large       => "Large (>1 m)",
             Niche.Underground => cell != null && cell.IsWater ? "Underwater (seabed)" : "Underground",
             _                 => niche.ToString(),
-        };
+        });
     }
 }

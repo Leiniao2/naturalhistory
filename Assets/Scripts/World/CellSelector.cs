@@ -1,4 +1,5 @@
 using System;
+using NaturalHistory.Core;
 using UnityEngine;
 
 namespace NaturalHistory.World
@@ -50,7 +51,7 @@ namespace NaturalHistory.World
             boxStyle.normal.textColor = Color.white;
 
             var terrain = Selected.Terrain;
-            var text = $"Terrain:  {terrain?.kind}\nCategory: {terrain?.category}\nCoords:   {Selected.Coordinates}";
+            var text = Loc.F("Terrain:  {0}\nCategory: {1}\nCoords:   {2}", terrain != null ? EraFlora.DisplayName(terrain.kind) : "", terrain?.category, Selected.Coordinates);
             GUI.Box(new Rect(10, 10, 230, 72), text, boxStyle);
         }
     }

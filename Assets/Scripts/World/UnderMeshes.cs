@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,18 +30,29 @@ namespace NaturalHistory.World
 
         // The tile's ground in the under layer: formations for caves and soil, water plants (main and
         // second species, may be null) with stones and shells for seabed and lakebed. Fills the hex.
-        public static Mesh CreateUnderDetail(System.Random rng, float size, UnderKind kind, PlantDefinition main, PlantDefinition second)
+        public static Mesh CreateUnderDetail(System.Random rng, float size, UnderKind kind, PlantDefinition main, PlantDefinition second,
+                                             IReadOnlyList<PlantDefinition> extras = null)
         {
             var b = new Builder();
             var taken = new List<Vector2>();
             float apothem = 0.8660254f * size;
-            List<Vector2> Spots(int min, int max, float gap)
+            // Plants, algae and fungi (dense = true) come ~1.7× as many and a little closer
+            // together, and reach slightly past the tile's edge so beds run on into the
+            // neighbouring tiles instead of stopping at a bare seam.
+            List<Vector2> Spots(int min, int max, float gap, bool dense = false)
             {
-                var spots = HexScatter(rng, rng.Next(min, max + 1), apothem * 0.95f, gap * size, taken);
+                int count = rng.Next(min, max + 1);
+                if (dense) { count = Mathf.RoundToInt(count * DenseCount); gap *= DenseGap; }
+                var spots = HexScatter(rng, count, apothem * (dense ? 1.06f : 0.95f), gap * size, taken);
                 taken.AddRange(spots);
                 return spots;
             }
             Vector3 At(Vector2 p) => new(p.x, 0f, p.y);
+            void AddUnderSpecies(PlantDefinition first, PlantDefinition other)
+            {
+                if (first != null)  foreach (var p in Spots(6, 11, 0.11f, true)) AddUnderPlant(b, rng, At(p), size, first, 1f);
+                if (other != null) foreach (var p in Spots(2, 5, 0.11f, true)) AddUnderPlant(b, rng, At(p), size, other, 0.85f);
+            }
             maxBlobDetail = 0;
 
             switch (kind)
@@ -51,28 +63,47 @@ namespace NaturalHistory.World
                     foreach (var p in Spots(1, 2, 0.2f))   AddPond(b, rng, At(p) + Vector3.up * 0.004f, size * Range(rng, 0.07f, 0.12f), CavePool);
                     if (rng.NextDouble() < 0.4)
                         foreach (var p in Spots(2, 4, 0.08f)) AddCone(b, rng, At(p), size * 0.02f, size * Range(rng, 0.05f, 0.09f), Shade(rng, Crystal));
+                    AddUnderSpecies(main, second); // cave fungi, glowing mushrooms, moulds
                     break;
                 case UnderKind.Rock:
                     foreach (var p in Spots(3, 6, 0.14f)) AddRock(b, rng, At(p), size * Range(rng, 0.03f, 0.06f), Color.Lerp(Soil, CaveRock, Range(rng, 0f, 1f)));
                     foreach (var p in Spots(2, 4, 0.15f)) AddRoots(b, rng, At(p), size);
                     foreach (var p in Spots(2, 4, 0.1f))  AddPond(b, rng, At(p) + Vector3.up * 0.003f, size * Range(rng, 0.02f, 0.035f), Burrow); // burrow mouths
+                    AddUnderSpecies(main, second); // soil fungi: mushrooms, truffles, mycelium, slime moulds
                     break;
                 case UnderKind.DeepSeabed:
                     foreach (var p in Spots(3, 7, 0.12f)) AddRock(b, rng, At(p), size * Range(rng, 0.015f, 0.03f), Nodule); // manganese nodules
                     foreach (var p in Spots(1, 3, 0.15f)) AddRock(b, rng, At(p), size * Range(rng, 0.03f, 0.05f), SeabedStone);
+                    AddUnderSpecies(main, second); // bacterial mats
                     break;
                 default: // Seabed, Lakebed
+                {
+                    // A few big specimens of the tallest species first, then the rest around them
+                    // at varied sizes, so a water tile reads as a mixed bed rather than one carpet.
+                    var all = new List<PlantDefinition>();
+                    if (main != null) all.Add(main);
+                    if (second != null) all.Add(second);
+                    if (extras != null) all.AddRange(extras);
+                    if (all.Count > 0)
+                    {
+                        var hero = all.OrderByDescending(UnderStature).First();
+                        foreach (var p in Spots(1, 3, 0.22f, true)) AddUnderPlant(b, rng, At(p), size, hero, Range(rng, 1.7f, 2.4f));
+                    }
                     if (main != null)
                     {
-                        bool big = main.form == "Kelp";
-                        foreach (var p in Spots(big ? 7 : 12, big ? 12 : 20, big ? 0.13f : 0.09f)) AddUnderPlant(b, rng, At(p), size, main, 1f);
+                        bool big = UnderStature(main) >= 3f;
+                        foreach (var p in Spots(big ? 6 : 9, big ? 10 : 15, big ? 0.13f : 0.1f, true)) AddUnderPlant(b, rng, At(p), size, main, Range(rng, 0.8f, 1.5f));
                     }
                     if (second != null)
-                        foreach (var p in Spots(3, 7, 0.1f)) AddUnderPlant(b, rng, At(p), size, second, 0.85f);
+                        foreach (var p in Spots(3, 7, 0.1f, true)) AddUnderPlant(b, rng, At(p), size, second, Range(rng, 0.8f, 1.35f));
+                    if (extras != null)
+                        foreach (var extra in extras)
+                            foreach (var p in Spots(2, 5, 0.1f, true)) AddUnderPlant(b, rng, At(p), size, extra, Range(rng, 0.75f, 1.3f));
                     foreach (var p in Spots(1, 4, 0.1f)) AddRock(b, rng, At(p), size * Range(rng, 0.02f, 0.045f), SeabedStone);
                     if (kind == UnderKind.Seabed)
                         foreach (var p in Spots(1, 4, 0.06f)) AddBlob(b, rng, At(p) + Vector3.up * 0.004f, size * 0.012f, 0.45f, 0, Shade(rng, Shell));
                     break;
+                }
             }
             maxBlobDetail = 1;
             return b.ToMesh($"Under_{kind}_{main?.id}_{second?.id}");
@@ -112,9 +143,21 @@ namespace NaturalHistory.World
             return b.ToMesh("Vents");
         }
 
+        // Rough height class of a water plant's form, for picking the big specimens of a tile
+        static float UnderStature(PlantDefinition p) => p.size * p.form switch
+        {
+            "Kelp" => 5f, "Ribbon" => 4f, "Lotus" => 3f, "Whorl" => 2.6f, "Feather" => 2.2f, "Rosette" => 2.2f,
+            "Fingers" => 1.8f, "Tuft" => 1.8f, "Grape" => 1.6f, "SeaLettuce" => 1.6f, "Fan" => 1.5f, "Wineglass" => 1.4f,
+            "Seagrass" => 1.8f, "Charophyte" => 1.6f, _ => 1f,
+        };
+
+        // Under-layer plants and fungi: how much more of them a tile holds, how much closer they
+        // stand, and how much bigger they grow than their base shapes
+        const float DenseCount = 1.7f, DenseGap = 0.8f, UnderPlantScale = 1.35f;
+
         static void AddUnderPlant(Builder b, System.Random rng, Vector3 root, float size, PlantDefinition plant, float scale)
         {
-            float m = plant.size * scale * Range(rng, 0.8f, 1.15f);
+            float m = plant.size * scale * UnderPlantScale * Range(rng, 0.8f, 1.15f);
             leafTint = plant.Tint;
             switch (plant.form)
             {
@@ -123,7 +166,9 @@ namespace NaturalHistory.World
                 case "Coralline":    AddCoralline(b, rng, root, size * 0.04f * m); break;
                 case "Charophyte":   AddCharophyte(b, rng, root, size * 0.08f * m); break;
                 case "Stromatolite": AddStromatolites(b, rng, root, size * 0.04f * m); break;
-                default:             AddAlgae(b, rng, root, size * 0.035f * m); break;
+                default:
+                    if (!AddUnderFlora(b, rng, root, size, plant, m)) AddAlgae(b, rng, root, size * 0.035f * m); // fungi and more water plants: UnderFlora.cs
+                    break;
             }
             leafTint = Color.white;
         }

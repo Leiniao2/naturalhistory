@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using NaturalHistory.Core;
 using NaturalHistory.Data;
 using NaturalHistory.Progression;
 using UnityEngine;
@@ -83,14 +84,14 @@ namespace NaturalHistory.UI
         public void Refresh()
         {
             if (tree == null || Progression == null) return;
-            title.text   = tree.DisplayName;
-            epLabel.text = $"EP {Progression.EvolutionPoints}";
+            title.text   = Loc.T(tree.DisplayName);
+            epLabel.text = Loc.F("EP {0}", Progression.EvolutionPoints);
             var species = Progression.Species;
-            speciesName.text = species != null ? species.commonName : "No species";
+            speciesName.text = species != null ? Loc.T(species.commonName) : Loc.T("No species");
             speciesPortrait.style.backgroundImage = SpeciesPortraits.Get(species) is RenderTexture rt
                 ? Background.FromRenderTexture(rt) : new StyleBackground(StyleKeyword.None);
             int acquirable = tree.Nodes.Count(n => Progression.CanAcquire(tree, n));
-            progressLabel.text = $"{tree.Nodes.Count(n => tree.IsUnlocked(n.id))} / {acquirable} acquired";
+            progressLabel.text = Loc.F("{0} / {1} acquired", tree.Nodes.Count(n => tree.IsUnlocked(n.id)), acquirable);
             RefreshTabs();
 
             foreach (var node in tree.Nodes)
@@ -104,9 +105,9 @@ namespace NaturalHistory.UI
                 view.EnableInClassList("selected",  node == selected);
                 view.Q<Label>(className: "node-cost").text = state switch
                 {
-                    NodeState.Unlocked    => "Acquired",
-                    NodeState.Unavailable => "Not for this species",
-                    _                     => $"{node.cost} EP · {node.age}",
+                    NodeState.Unlocked    => Loc.T("Acquired"),
+                    NodeState.Unavailable => Loc.T("Not for this species"),
+                    _                     => Loc.F("{0} EP · {1}", node.cost, Loc.T(node.age)),
                 };
             }
             lines.MarkDirtyRepaint();
@@ -123,9 +124,9 @@ namespace NaturalHistory.UI
             {
                 var id = b.id;
                 var tab = new Button(() => SelectBranch(id)).WithClass("branch-tab");
-                tab.Add(new Label(b.displayName) { pickingMode = PickingMode.Ignore }.WithClass("branch-tab-name"));
+                tab.Add(new Label(Loc.T(b.displayName)) { pickingMode = PickingMode.Ignore }.WithClass("branch-tab-name"));
                 tab.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("branch-tab-count"));
-                tab.tooltip = b.description;
+                tab.tooltip = Loc.T(b.description);
                 branchTabs.Add(tab);
                 tabViews[id] = tab;
             }
@@ -180,11 +181,11 @@ namespace NaturalHistory.UI
                 view.AddToClassList("tree-node");
                 view.style.left = NodePosition(node).x;
                 view.style.top  = NodePosition(node).y;
-                view.Add(new Label(node.displayName) { pickingMode = PickingMode.Ignore }.WithClass("node-name"));
+                view.Add(new Label(Loc.T(node.displayName)) { pickingMode = PickingMode.Ignore }.WithClass("node-name"));
                 view.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("node-cost"));
                 var external = node.prerequisites.Select(tree.Get).Where(p => p != null && p.branch != node.branch).ToList();
                 if (external.Count > 0)
-                    view.Add(new Label("Needs " + string.Join(", ", external.Select(p => p.displayName))) { pickingMode = PickingMode.Ignore }
+                    view.Add(new Label(Loc.F("Needs {0}", string.Join(", ", external.Select(p => Loc.T(p.displayName))))) { pickingMode = PickingMode.Ignore }
                         .WithClass("node-external"));
 
                 var captured = node;
@@ -233,22 +234,22 @@ namespace NaturalHistory.UI
         {
             if (selected == null)
             {
-                detailsName.text        = "Select an item";
-                detailsDescription.text = "Click an item to see details. Double-click to acquire it. Tabs above switch between branches. Greyed-out items aren't in this species' trees.";
+                detailsName.text        = Loc.T("Select an item");
+                detailsDescription.text = Loc.T("Click an item to see details. Double-click to acquire it. Tabs above switch between branches. Greyed-out items aren't in this species' trees.");
                 detailsMeta.text        = "";
                 evolveButton.SetEnabled(false);
                 return;
             }
 
-            detailsName.text        = selected.displayName;
-            detailsDescription.text = selected.description;
+            detailsName.text        = Loc.T(selected.displayName);
+            detailsDescription.text = Loc.T(selected.description);
 
             var genes = selected.unlocksGenes
-                .Select(id => GameDataLoader.GetGene(id)?.displayName ?? id)
+                .Select(id => Loc.T(GameDataLoader.GetGene(id)?.displayName ?? id))
                 .ToList();
             var blocker = Progression.UnlockBlocker(tree, selected);
-            var meta = $"{tree.BranchName(selected.branch)}  ·  Cost {selected.cost} EP  ·  From the {selected.age}";
-            if (genes.Count > 0) meta += $"  ·  Unlocks genes: {string.Join(", ", genes)}";
+            var meta = Loc.F("{0}  ·  Cost {1} EP  ·  From the {2}", Loc.T(tree.BranchName(selected.branch)), selected.cost, Loc.T(selected.age));
+            if (genes.Count > 0) meta += "  ·  " + Loc.F("Unlocks genes: {0}", string.Join(", ", genes));
             if (blocker != null) meta += $"\n{blocker}";
             detailsMeta.text = meta;
 

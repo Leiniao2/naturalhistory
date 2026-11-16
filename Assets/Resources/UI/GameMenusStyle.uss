@@ -131,6 +131,22 @@
     opacity: 0.4;
 }
 
+.language-dropdown {
+    margin: 14px 0 0 0;
+}
+
+.language-dropdown > Label {
+    min-width: 0;
+    margin-right: 12px;
+    font-size: 17px;
+    color: rgb(235, 232, 220);
+}
+
+.language-dropdown .unity-base-field__input {
+    font-size: 17px;
+    min-height: 32px;
+}
+
 /* ---------- Save slots ---------- */
 
 .slots-panel {
@@ -414,9 +430,9 @@
 }
 
 .age-button {
-    min-width: 260px;
-    height: 56px;
-    padding: 2px 16px;
+    min-width: 280px;
+    height: 66px;
+    padding: 8px 24px;
     background-color: rgba(28, 36, 30, 0.9);
     border-color: rgb(110, 130, 100);
     border-width: 1px;
@@ -436,12 +452,13 @@
 }
 
 .date-label {
+    margin-top: 2px;
     font-size: 14px;
     color: rgb(190, 200, 180);
 }
 
 .end-turn-button {
-    height: 56px;
+    height: 66px;
     min-width: 130px;
     margin-left: 8px;
     font-size: 19px;
@@ -474,7 +491,36 @@
 }
 
 .world-panel {
+    left: 324px; /* beside the minimap */
+}
+
+/* ---------- Minimap ---------- */
+
+.minimap-dock {
+    position: absolute;
     left: 12px;
+    bottom: 12px;
+    align-items: flex-start;
+}
+
+.minimap-under {
+    margin: 0 0 6px 0;
+}
+
+.minimap {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    background-color: rgb(10, 14, 12);
+    border-color: rgb(110, 130, 100);
+    border-width: 2px;
+    border-radius: 4px;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.minimap-view {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
 }
 
 .tile-panel {

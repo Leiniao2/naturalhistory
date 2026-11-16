@@ -34,6 +34,9 @@ namespace NaturalHistory.World
 
         public static CameraController Main { get; private set; }
 
+        // Set by the UI: presses that start over a panel or button don't grab the map
+        public static System.Func<bool> IsPointerOverUI;
+
         private Transform followTarget;
         private bool following;
         private bool snapToTarget;
@@ -62,6 +65,17 @@ namespace NaturalHistory.World
 
         // Re-centre on the followed unit after the player has panned away.
         public void ResumeFollow() => following = followTarget != null;
+
+        // Put a ground point at screen centre (the minimap). Stops following.
+        public void CenterOn(Vector3 point)
+        {
+            if (!TryGroundPoint(ScreenCenter, out var center)) return;
+            var grid = HexGrid.Instance;
+            if (grid != null) // the copy of the point nearest the current view, across the wrap
+                point.x -= Mathf.Round((point.x - center.x) / grid.WrapWidth) * grid.WrapWidth;
+            following = false;
+            transform.position += new Vector3(point.x - center.x, 0f, point.z - center.z);
+        }
 
         private void Start()
         {
@@ -98,6 +112,7 @@ namespace NaturalHistory.World
                 for (int b = 0; b <= 2; b++)
                 {
                     if (!Input.GetMouseButtonDown(b)) continue;
+                    if (IsPointerOverUI != null && IsPointerOverUI()) break;
                     dragButton       = b;
                     DraggedThisPress = false;
                     pressScreenPos   = Input.mousePosition;

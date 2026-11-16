@@ -351,11 +351,12 @@ namespace NaturalHistory.World
             HidePuffs(b, 5);
         }
 
-        // A wave rolls in, slams into the cliff foot and throws a fan of spray up the rock face that
-        // falls back, while a ring of foam spreads out from the foot
+        // A wave rolls in, breaks against the cliff foot in a low burst of spray that falls back, and
+        // a ring of foam spreads out from the foot: only a little livelier than surf on a beach, so
+        // the splash stays near the waterline whatever the height of the cliff.
         private void AnimateCliffWave(Burst b, float u)
         {
-            float rise = Mathf.Max(b.top - b.sea, 0.05f * s);
+            float rise = Mathf.Min(0.07f * s, Mathf.Max(b.top - b.sea, 0.03f * s) * 0.25f);
             const float hit = 0.32f;
 
             // the incoming swell, then the foam spreading back out from the foot
@@ -386,9 +387,9 @@ namespace NaturalHistory.World
                 float j = (i / (PuffsPerBurst - 1f)) * 2f - 1f;          // -1..1 across the fan
                 float up = rise * (0.7f + 0.45f * (1f - Mathf.Abs(j)) + 0.15f * Mathf.Sin(b.seed + i * 1.3f));
                 float height = up * 4f * t * (1f - t);
-                var p = b.at - b.dir * (0.02f + 0.07f * t) * s + b.across * j * (0.06f + 0.1f * t) * s;
-                p.y = b.sea + 0.015f * s + height;
-                float size = (0.03f + 0.05f * t) * s * (1f - Ramp(t, 0.6f, 1f));
+                var p = b.at - b.dir * (0.02f + 0.05f * t) * s + b.across * j * (0.05f + 0.08f * t) * s;
+                p.y = b.sea + 0.008f * s + height;
+                float size = (0.02f + 0.03f * t) * s * (1f - Ramp(t, 0.6f, 1f));
                 Puff(b, i, p, Vector3.one * size, Spray);
             }
         }
@@ -485,119 +486,475 @@ namespace NaturalHistory.World
         }
     }
 
-    // A river spilling over a cliff or steep step: a curved sheet of water arcing off the lip with
-    // streaks pouring down it (River.shader, run fast), a white lip where it tips over, and
-    // churning foam rings and rising mist at the foot. Lives as long as AmbientWater keeps it.
+    // A river pouring off a cliff or a steep step, shown as a grand set piece in the style of a
+    // natural wonder: a horseshoe of layered rock pushed out over the lower ground, with mossy crags
+    // rising on either side; the river spreading into a wide brink of rapids across its top; a
+    // broad curtain arcing over the lip (Waterfall.shader: foam streaks racing down and breaking up
+    // toward the foot); a churning plunge pool ringed with boulders; mist rolling up out of it and a
+    // faint rainbow in the spray. Lives as long as AmbientWater keeps it.
     public class WaterfallFx : PhenomenonFx
     {
         public int edge;                     // the edge the river leaves by
-        private Part curtain, lipFoam;
-        private Part[] mist, churn;
-        private Vector3 dir, across, lip, foot;
-        private float width, drop;
-        private static Material fallMaterial;
+        private Part rock, brink, curtain, pool, rainbow;
+        private Part[] mist, veil, boulders;
+        private Vector3[] boulderAt;
+        private Vector3 dir, across, poolMid, impact;
+        private float halfW, top, foot, drop, lipD, recess, poolAlong, poolAcross;
+        private bool intoWater;
+        private readonly List<Mesh> built = new();
+        private static Material waterMaterial;
+
+        // How far the rock runs out beside the water (in half-widths) and how high its crags rise
+        // (× the usual), separately for each side (−x, +x): real falls are lopsided, a tall crag on
+        // one bank and a low shoulder on the other.
+        private float reachL, reachR, cragL, cragR, cragSeed;
+
+        // How much moss and grass grows on the rock in the displayed period (0 before land plants)
+        private float greenery = 1f;
+
+        private static readonly Color WaterDeep  = new(0.14f, 0.42f, 0.48f, 1f);
+        private static readonly Color WaterBlue  = new(0.27f, 0.56f, 0.64f, 0.92f);
+        private static readonly Color WaterPale  = new(0.55f, 0.76f, 0.82f, 0.9f);
+        private static readonly Color StoneDark  = new(0.40f, 0.31f, 0.25f);
+        private static readonly Color StoneLight = new(0.70f, 0.58f, 0.44f);
+        private static readonly Color StoneGrey  = new(0.52f, 0.50f, 0.48f);
+        private static readonly Color Moss       = new(0.30f, 0.46f, 0.20f);
+        private static readonly Color MistWhite  = new(0.96f, 0.98f, 1f);
 
         protected override void Build()
         {
             dir    = PhenomenaUtil.EdgeDirection(edge);
             across = Vector3.Cross(Vector3.up, dir);
-            float apothem = s * 0.8660254f;
-            lip = OnGround(dir * apothem * 0.97f, 0.006f);
-            var down = PhenomenaUtil.EdgeNeighbors(grid, cell)[edge];
-            if (down != null && down.IsWater) foot = new Vector3(dir.x, 0f, dir.z) * apothem * 1.1f + Vector3.up * down.SurfaceHeight;
-            else                              foot = OnGround(dir * apothem * 1.25f);
-            width = Mathf.Clamp(0.05f + 0.015f * cell.RiverFlow, 0.06f, 0.18f) * s;
-            drop  = Mathf.Max(lip.y - foot.y, 0.03f * s);
-
-            curtain = AddPart(BuildCurtain(), "FallSheet");
-            if (fallMaterial == null)
+            greenery = grid.DisplayedAge switch
             {
-                var river = Resources.Load<Material>("Materials/River");
-                if (river != null)
+                <= NaturalHistory.Core.GeologicalAge.Ordovician => 0f,
+                NaturalHistory.Core.GeologicalAge.Silurian      => 0.25f,
+                NaturalHistory.Core.GeologicalAge.Devonian      => 0.6f,
+                _                                               => 1f,
+            };
+            float a = s * 0.8660254f;
+            var down = PhenomenaUtil.EdgeNeighbors(grid, cell)[edge];
+            intoWater = down != null && down.IsWater;
+
+            halfW  = Mathf.Clamp(0.2f + 0.018f * cell.RiverFlow, 0.21f, 0.36f) * s;
+            // the banks spread most of the way along the tile edge, into the neighbouring tiles
+            reachL = R(0.75f, 1.0f) * s / halfW;
+            reachR = R(0.75f, 1.0f) * s / halfW;
+            cragL  = R(0.25f, 0.7f);
+            cragR  = Mathf.Abs(cragL - 0.45f) < 0.12f ? R(0.25f, 0.35f) : R(0.25f, 0.7f); // keep the sides a little different
+            cragSeed = R(0f, 100f);
+            recess = 0.1f * s;                                   // the middle of the lip lies further back
+            lipD   = intoWater ? a * 0.9f : a * 1.38f;           // off a sea cliff at the coast; inland pushed out over the lower slope
+            top    = Ground(dir * a * 0.3f) + 0.004f * s;        // the upper tile's flat top
+            foot   = intoWater ? Ground(dir * a * 1.4f) : Ground(dir * (lipD + 0.3f * s));
+            drop   = Mathf.Max(top - foot, 0.08f * s);
+            poolAlong  = 0.24f * s;
+            poolAcross = halfW * 1.3f;
+            poolMid = dir * (lipD + 0.02f * s + poolAlong * 0.85f) + Vector3.up * (foot + (intoWater ? 0.004f : 0.01f) * s);
+            impact  = dir * (lipD + Throw) + Vector3.up * poolMid.y;
+
+            waterMaterial ??= Resources.Load<Material>("Materials/Waterfall");
+            rock    = AddPart(Keep(BuildRock()), "FallRock");
+            brink   = AddPart(Keep(BuildBrink()), waterMaterial, "Brink");
+            curtain = AddPart(Keep(BuildCurtain()), waterMaterial, "FallSheet");
+            pool    = AddPart(Keep(BuildPool()), waterMaterial, "PlungePool");
+            rainbow = AddGlowPart(Keep(BuildRainbow()), "Rainbow");
+            mist    = AddSmoke(14, "Mist");
+            veil    = AddSmoke(6, "Spray");
+
+            // boulders around the pool (leaving the outflow clear) and tumbled at the foot of the crags
+            boulders  = new Part[11];
+            boulderAt = new Vector3[11];
+            for (int i = 0; i < boulders.Length; i++)
+            {
+                boulders[i] = AddPart(Rock(i + (int)(R(0f, 8f))), "Boulder");
+                Vector3 p;
+                if (i < 8)
                 {
-                    fallMaterial = new Material(river) { name = "Waterfall" };
-                    fallMaterial.SetFloat("_FlowSpeed", 0.45f);
-                    fallMaterial.SetFloat("_Ripple", 0.55f);
+                    // round the two sides: not under the curtain (upstream) nor in the outflow (downstream)
+                    float th = (i < 4 ? Mathf.Lerp(0.72f, 1.2f, i / 3f) : Mathf.Lerp(1.8f, 2.28f, (i - 4) / 3f)) * Mathf.PI + R(-0.06f, 0.06f);
+                    p = poolMid + across * Mathf.Cos(th) * poolAcross * 1.05f + dir * Mathf.Sin(th) * poolAlong * 1.08f;
                 }
+                else
+                {
+                    float side = i % 2 == 0 ? 1f : -1f;
+                    p = dir * (Lip(side * 1.25f) + R(0.02f, 0.08f) * s) + across * side * halfW * R(1.15f, 1.5f);
+                }
+                p.y = Ground(p) - 0.004f * s;
+                boulderAt[i] = p;
             }
-            if (fallMaterial != null) curtain.renderer.sharedMaterial = fallMaterial;
-            lipFoam = AddPart(WaterMeshes.Crest, "Lip");
-            churn   = AddParts(WaterMeshes.FoamLine, 3, "Churn");
-            mist    = AddParts(Puff, 6, "Mist");
         }
 
-        // The sheet in this tile's space: rows from the lip down to the foot along a falling arc,
-        // widening a little as it falls; both faces, so it shows from any side.
-        private Mesh BuildCurtain()
+        private Mesh Keep(Mesh m) { built.Add(m); return m; }
+
+        private void OnDestroy()
         {
-            const int rows = 14, cols = 4;
-            var verts = new List<Vector3>(); var colors = new List<Color>(); var uvs = new List<Vector2>(); var tris = new List<int>();
-            float throwOut = Mathf.Min(0.05f * s + drop * 0.15f, 0.12f * s);
-            for (int r = 0; r <= rows; r++)
+            foreach (var m in built) if (m != null) Destroy(m); // built for this fall only
+        }
+
+        // Distance out along `dir` of the lip at x half-widths across (a horseshoe: the middle further back)
+        private float Lip(float x) => lipD + recess * (Mathf.Min(x * x, 1.4f) - 1f);
+
+        private float Throw => 0.03f * s + 0.18f * drop; // how far out the falling sheet carries
+
+        // ---- The rock: a faceted mass, flat on top under the brink, rising into crags at the sides
+        //      and dropping as a sheer, layered wall to the foot
+
+        // Rock surface builder: vertices at the same spot are shared (separately for the front and
+        // back faces), so normals and colours are smooth across the rock instead of a facet mosaic
+        private sealed class Facets
+        {
+            private readonly List<Vector3> verts = new();
+            private readonly List<Vector3> normals = new();
+            private readonly List<int> tris = new();
+            private readonly Dictionary<(Vector3Int, bool), int> index = new();
+            private readonly System.Func<Vector3, Vector3, Color> paint;
+            private readonly float weld;
+            public Facets(System.Func<Vector3, Vector3, Color> paint, float weld) { this.paint = paint; this.weld = weld; }
+
+            // both faces
+            public void Tri(Vector3 a, Vector3 b, Vector3 c)
             {
-                float t = r / (float)rows;
-                var centre = lip + dir * throwOut * Mathf.Sqrt(t) + Vector3.Lerp(Vector3.zero, new Vector3(foot.x - lip.x, 0f, foot.z - lip.z) * 0.5f, t * t);
-                centre.y = lip.y - drop * t * t;
-                float w = width * (1f + 0.25f * t);
-                for (int c = 0; c <= cols; c++)
+                Add(a, b, c, false);
+                Add(a, c, b, true);
+            }
+
+            public void Quad(Vector3 a, Vector3 b, Vector3 c, Vector3 d) { Tri(a, b, c); Tri(a, c, d); }
+
+            private void Add(Vector3 a, Vector3 b, Vector3 c, bool back)
+            {
+                var n = Vector3.Cross(b - a, c - a); // area-weighted
+                if (n.sqrMagnitude < 1e-14f) return;
+                tris.Add(Vertex(a, back, n));
+                tris.Add(Vertex(b, back, n));
+                tris.Add(Vertex(c, back, n));
+            }
+
+            private int Vertex(Vector3 p, bool back, Vector3 n)
+            {
+                var key = (Vector3Int.RoundToInt(p / weld), back);
+                if (!index.TryGetValue(key, out int i))
                 {
-                    float x = c / (float)cols * 2f - 1f;
-                    verts.Add(centre + across * x * w + dir * 0.008f * s * Mathf.Sin(x * 3f + t * 5f));
-                    // white where it tips over and where it breaks up near the foot, blue between
-                    float white = Mathf.Max(1f - t * 4f, Mathf.InverseLerp(0.6f, 1f, t)) * 0.7f + 0.25f * Mathf.Abs(x);
-                    var col = Color.Lerp(new Color(0.45f, 0.68f, 0.8f), new Color(0.95f, 0.97f, 1f), Mathf.Clamp01(white));
-                    col.a = 1f;
-                    colors.Add(col);
-                    uvs.Add(new Vector2(c / (float)cols, t * drop * 3f)); // runs down the sheet
+                    i = verts.Count;
+                    index[key] = i;
+                    verts.Add(p);
+                    normals.Add(Vector3.zero);
                 }
-                if (r == 0) continue;
-                int a = (r - 1) * (cols + 1), b = r * (cols + 1);
-                for (int c = 0; c < cols; c++)
+                normals[i] += n;
+                return i;
+            }
+
+            public Mesh ToMesh(string name)
+            {
+                var cols = new Color[verts.Count];
+                for (int i = 0; i < verts.Count; i++)
                 {
-                    tris.Add(a + c); tris.Add(b + c); tris.Add(a + c + 1);
-                    tris.Add(a + c + 1); tris.Add(b + c); tris.Add(b + c + 1);
-                    tris.Add(a + c); tris.Add(a + c + 1); tris.Add(b + c);       // back face
-                    tris.Add(a + c + 1); tris.Add(b + c + 1); tris.Add(b + c);
+                    normals[i] = normals[i].sqrMagnitude > 0f ? normals[i].normalized : Vector3.up;
+                    cols[i] = paint(verts[i], normals[i]);
+                }
+                var mesh = new Mesh { name = name, indexFormat = IndexFormat.UInt32 };
+                mesh.SetVertices(verts);
+                mesh.SetNormals(normals);
+                mesh.SetColors(cols);
+                mesh.SetTriangles(tris, 0);
+                mesh.RecalculateBounds();
+                return mesh;
+            }
+        }
+
+        private float Jitter(Vector3 p, float seed) =>
+            Mathf.PerlinNoise(p.x / s * 7.3f + seed + cell.Coordinates.Q * 1.7f, p.z / s * 7.3f - seed + cell.Coordinates.R * 1.3f) * 2f - 1f;
+
+        private Color PaintRock(Vector3 p, Vector3 n)
+        {
+            float h = (p.y - foot) / drop;
+            // horizontal strata of light and dark sandstone, wavering a little
+            float band = Mathf.Sin(p.y / s * 60f + Jitter(p, 3.1f) * 1.4f) * 0.5f + 0.5f;
+            var c = Color.Lerp(StoneDark, StoneLight, band * 0.8f + 0.2f * Mathf.Clamp01(h));
+            c = Color.Lerp(c, StoneGrey, 0.3f + 0.2f * Jitter(p, 8.7f));
+            c *= 0.9f + 0.14f * Jitter(p, 5.3f);
+            // moss and grass on whatever faces up; wet and dark behind the falling water
+            // (none before land plants: bare rock in the Cambrian and Ordovician, a little in the Silurian)
+            if (n.y > 0.5f) c = Color.Lerp(c, Moss * (0.85f + 0.3f * Jitter(p, 1.9f)), Ramp(n.y, 0.5f, 0.85f) * 0.9f * greenery);
+            float x = Mathf.Abs(Vector3.Dot(p, across)) / halfW;
+            if (x < 1.05f && n.y < 0.5f) c *= 0.62f;
+            c.a = 1f;
+            return c;
+        }
+
+        private float RockTop(float x, float f)
+        {
+            float ax    = Mathf.Abs(x);
+            float reach = x < 0f ? reachL : reachR;
+            float side  = x < 0f ? cragL : cragR;
+            // an irregular skyline (not mirrored), dying away into the ground at the outer end
+            float rough = 0.55f + 0.45f * Mathf.PerlinNoise(x * 2.3f + cragSeed, f * 1.7f + (x < 0f ? 0f : 31f));
+            // rises gently from the water's edge, so the banks read as ground rather than walls
+            float crag  = (0.03f * s + drop * 0.2f) * side * rough * Ramp(ax, 1.05f, 1.8f) * (1f - Ramp(ax, reach * 0.6f, reach));
+            float shelf = ax < 1.02f ? -0.004f * s : 0f;
+            return top + shelf + crag * Mathf.Lerp(0.55f, 1f, f);
+        }
+
+        private Mesh BuildRock()
+        {
+            const int cols = 56, rows = 12, wall = 16;
+            float back   = s * 0.8660254f * 0.42f;
+            float bottom = foot - 0.04f * s;
+            var fx = new Facets(PaintRock, 0.0005f * s);
+            var g = new Vector3[cols + 1, rows + 1];       // top surface, back (0) to lip (rows)
+            var w = new Vector3[cols + 1, wall + 1];       // the face, top (0) to foot (wall)
+            for (int c = 0; c <= cols; c++)
+            {
+                float x = Mathf.Lerp(-reachL, reachR, c / (float)cols);
+                // away from the water the rock settles onto the terrain, ending just below it, so the
+                // banks merge into the ground instead of ending in walls; their front edge follows
+                // the tile's edge rather than jutting out over the lower ground like the brink
+                float merge = Ramp(Mathf.Abs(x), 1.15f, (x < 0f ? reachL : reachR) * 0.85f);
+                float lipX  = Mathf.Lerp(Lip(x), s * 0.8660254f, merge * 0.85f);
+                for (int r = 0; r <= rows; r++)
+                {
+                    float f = r / (float)rows;
+                    float d = Mathf.Lerp(back, lipX, f);
+                    var p = dir * d + across * x * halfW;
+                    if (r > 0 && r < rows) p += (dir * Jitter(p, 2f) + across * Jitter(p, 4f)) * 0.012f * s;
+                    p.y = RockTop(x, f) + (Mathf.Abs(x) > 1.02f ? Jitter(p, 6f) * 0.012f * s : 0f);
+                    p.y = Mathf.Lerp(p.y, Ground(p) - 0.006f * s, merge);
+                    g[c, r] = p;
+                }
+                // the face drops to the foot of the fall beside the water, but only to the ground in
+                // front of it out on the merged banks
+                var front = g[c, rows] + dir * 0.05f * s;
+                float faceBottom = Mathf.Lerp(bottom, Ground(front) - 0.01f * s, merge);
+                for (int k = 0; k <= wall; k++)
+                {
+                    float f = k / (float)wall;
+                    var p = g[c, rows];
+                    p.y = Mathf.Lerp(p.y, faceBottom, f);
+                    // rugged, slightly undercut behind the water, buttressed out at the sides
+                    float out_ = (Mathf.Abs(x) < 1.02f ? -0.03f : 0.025f * (x < 0f ? cragL : cragR)) * s * Mathf.Sin(f * Mathf.PI * 0.9f);
+                    p += dir * (out_ + (k > 0 ? Jitter(p, 9f) * 0.02f * s : 0f));
+                    w[c, k] = p;
                 }
             }
-            var mesh = new Mesh { name = "WaterfallSheet" };
+            for (int c = 0; c < cols; c++)
+            {
+                for (int r = 0; r < rows; r++) fx.Quad(g[c, r], g[c, r + 1], g[c + 1, r + 1], g[c + 1, r]);
+                for (int k = 0; k < wall; k++) fx.Quad(w[c, k], w[c, k + 1], w[c + 1, k + 1], w[c + 1, k]);
+                // the back sinks into the upper ground
+                var b0 = g[c, 0]; var b1 = g[c + 1, 0];
+                fx.Quad(b0, b1, new Vector3(b1.x, top - 0.05f * s, b1.z), new Vector3(b0.x, top - 0.05f * s, b0.z));
+            }
+            // the two ends, down to the foot (they start just below the ground, so stay out of sight)
+            foreach (int c in new[] { 0, cols })
+                for (int r = 0; r < rows; r++)
+                {
+                    Vector3 a0 = g[c, r], a1 = g[c, r + 1];
+                    fx.Quad(a0, a1, new Vector3(a1.x, bottom, a1.z), new Vector3(a0.x, bottom, a0.z));
+                }
+            return fx.ToMesh("WaterfallRock");
+        }
+
+        // ---- Water meshes (Waterfall.shader): colour, uv (across, along the flow) and uv2 (foam, speed)
+
+        private sealed class WaterMesh
+        {
+            public readonly List<Vector3> v = new();
+            public readonly List<Color> c = new();
+            public readonly List<Vector2> uv = new(), uv2 = new();
+            public readonly List<int> tris = new();
+
+            public void Add(Vector3 p, Color col, Vector2 flow, float foam, float speed)
+            {
+                v.Add(p); c.Add(col); uv.Add(flow); uv2.Add(new Vector2(Mathf.Clamp01(foam), speed));
+            }
+
+            // a grid of (cols + 1) x (rows + 1) vertices added row by row from `start`
+            public void Grid(int start, int cols, int rows)
+            {
+                for (int r = 0; r < rows; r++)
+                for (int k = 0; k < cols; k++)
+                {
+                    int a = start + r * (cols + 1) + k, b = a + cols + 1;
+                    tris.Add(a); tris.Add(b); tris.Add(a + 1);
+                    tris.Add(a + 1); tris.Add(b); tris.Add(b + 1);
+                }
+            }
+
+            public Mesh ToMesh(string name)
+            {
+                var mesh = new Mesh { name = name, indexFormat = IndexFormat.UInt32 };
+                mesh.SetVertices(v);
+                mesh.SetColors(c);
+                mesh.SetUVs(0, uv);
+                mesh.SetUVs(1, uv2);
+                mesh.SetTriangles(tris, 0);
+                mesh.RecalculateNormals();
+                mesh.RecalculateBounds();
+                return mesh;
+            }
+        }
+
+        // The river widening over the flat top of the rock into a broad brink, roughening toward the lip
+        private Mesh BuildBrink()
+        {
+            const int cols = 12, rows = 10;
+            float back = s * 0.8660254f * 0.42f;
+            float riverHalf = Mathf.Min(0.035f + 0.02f * Mathf.Sqrt(Mathf.Max(cell.RiverFlow, 1)), 0.17f) * s;
+            var m = new WaterMesh();
+            for (int r = 0; r <= rows; r++)
+            {
+                float f = r / (float)rows;
+                float hw = Mathf.Lerp(riverHalf, halfW * 1.02f, Ramp(f, 0f, 0.7f));
+                for (int k = 0; k <= cols; k++)
+                {
+                    float x = k / (float)cols * 2f - 1f;
+                    float d = Mathf.Lerp(back - 0.02f * s, Lip(x * hw / halfW), f);
+                    var p = dir * d + across * x * hw;
+                    p.y = top + 0.003f * s - 0.006f * s * f * f;
+                    float foam = Ramp(f, 0.45f, 1f) * 0.75f + 0.12f + 0.25f * Mathf.Abs(x) * f;
+                    m.Add(p, Color.Lerp(WaterBlue, WaterPale, f * 0.5f), new Vector2(x * hw, d), foam, 0.45f);
+                }
+            }
+            m.Grid(0, cols, rows);
+            return m.ToMesh("WaterfallBrink");
+        }
+
+        // The sheet pouring over the lip: off the edge nearly level, then falling ever more steeply
+        private Mesh BuildCurtain()
+        {
+            const int cols = 28, rows = 18;
+            float bottom = poolMid.y - 0.004f * s;
+            float fall = top - bottom;
+            var m = new WaterMesh();
+            for (int r = 0; r <= rows; r++)
+            {
+                float f = r / (float)rows;
+                for (int k = 0; k <= cols; k++)
+                {
+                    float x = k / (float)cols * 2f - 1f;
+                    // the lip, falling away along a parabola; a slight spread and a ripple across
+                    float d = Lip(x) + 0.004f * s + Throw * Mathf.Sqrt(f) + 0.006f * s * Mathf.Sin(x * 9f + f * 3f);
+                    var p = dir * d + across * x * halfW * (1f + 0.07f * f);
+                    p.y = top - 0.002f * s - fall * f;
+                    float edgeFoam = Ramp(Mathf.Abs(x), 0.8f, 1f) * 0.35f;
+                    float foam = 0.12f + Ramp(f, 0.5f, 1f) * 0.7f + (1f - Ramp(f, 0f, 0.1f)) * 0.35f + edgeFoam;
+                    var col = Color.Lerp(WaterBlue, WaterPale, f * 0.6f);
+                    col.a = Mathf.Lerp(0.88f, 0.7f, Ramp(Mathf.Abs(x), 0.85f, 1f));
+                    m.Add(p, col, new Vector2(x * halfW, f * (fall + Throw)), foam, 1.7f);
+                }
+            }
+            m.Grid(0, cols, rows);
+            return m.ToMesh("WaterfallSheet");
+        }
+
+        // A round pool below: white and churning where the curtain lands, deep green-blue beyond it,
+        // its foam running outward. Into the sea it is just a field of foam fading into the waves.
+        private Mesh BuildPool()
+        {
+            const int rings = 6, segs = 36;
+            var m = new WaterMesh();
+            var centre = new Vector3(poolMid.x, 0f, poolMid.z);
+            var hit = new Vector3(impact.x, 0f, impact.z);
+            for (int r = 0; r <= rings; r++)
+            {
+                float rho = r / (float)rings;
+                for (int k = 0; k <= segs; k++)
+                {
+                    float th = k / (float)segs * Mathf.PI * 2f;
+                    float wob = 1f + 0.08f * Mathf.Sin(th * 3f + cell.Coordinates.Q) * rho;
+                    var p = centre + (across * Mathf.Cos(th) * poolAcross + dir * Mathf.Sin(th) * poolAlong) * rho * wob;
+                    float near = 1f - Mathf.Clamp01((p - hit).magnitude / (poolAlong * 1.6f));
+                    float foam = 0.1f + near * 0.85f + (intoWater ? 0.15f : 0f);
+                    var col = Color.Lerp(WaterDeep, WaterBlue, Mathf.Max(rho, near));
+                    col.a = intoWater ? (1f - Ramp(rho, 0.55f, 1f)) * 0.85f : Mathf.Lerp(0.96f, 0.85f, rho);
+                    p.y = poolMid.y;
+                    m.Add(p, col, new Vector2(Vector3.Dot(p - hit, across), (p - hit).magnitude), foam, 0.22f);
+                }
+            }
+            m.Grid(0, segs, rings);
+            return m.ToMesh("WaterfallPool");
+        }
+
+        // A faint arc of colours standing in the spray in front of the fall (additive)
+        private Mesh BuildRainbow()
+        {
+            const int segs = 28;
+            var bands = new[]
+            {
+                new Color(1f, 0.25f, 0.2f), new Color(1f, 0.6f, 0.15f), new Color(1f, 0.95f, 0.3f),
+                new Color(0.35f, 1f, 0.35f), new Color(0.3f, 0.6f, 1f), new Color(0.55f, 0.35f, 1f),
+            };
+            float radius = halfW * 1.15f, thick = 0.07f * s;
+            var centre = poolMid + dir * 0.06f * s;
+            var verts = new List<Vector3>(); var cols = new List<Color>(); var normals = new List<Vector3>(); var tris = new List<int>();
+            for (int face = 0; face < 2; face++)
+            {
+                int start = verts.Count;
+                for (int k = 0; k <= segs; k++)
+                {
+                    float f = k / (float)segs;
+                    float th = Mathf.Lerp(0.12f, 0.88f, f) * Mathf.PI;
+                    float fade = Mathf.Sin(f * Mathf.PI);
+                    for (int b = 0; b <= bands.Length; b++)
+                    {
+                        float rr = radius + thick * (b / (float)bands.Length - 0.5f);
+                        verts.Add(centre + across * Mathf.Cos(th) * rr + Vector3.up * Mathf.Sin(th) * rr);
+                        var c = bands[Mathf.Min(b, bands.Length - 1)];
+                        c.a = fade * (b == 0 || b == bands.Length ? 0f : 1f);
+                        cols.Add(c);
+                        normals.Add(Vector3.up);
+                    }
+                }
+                int n = bands.Length + 1;
+                for (int k = 0; k < segs; k++)
+                for (int b = 0; b < bands.Length; b++)
+                {
+                    int a0 = start + k * n + b, a1 = a0 + n;
+                    if (face == 0) { tris.Add(a0); tris.Add(a1); tris.Add(a0 + 1); tris.Add(a0 + 1); tris.Add(a1); tris.Add(a1 + 1); }
+                    else           { tris.Add(a0); tris.Add(a0 + 1); tris.Add(a1); tris.Add(a0 + 1); tris.Add(a1 + 1); tris.Add(a1); }
+                }
+            }
+            var mesh = new Mesh { name = "WaterfallRainbow" };
             mesh.SetVertices(verts);
-            mesh.SetColors(colors);
-            mesh.SetUVs(0, uvs);
+            mesh.SetColors(cols);
+            mesh.SetNormals(normals);
             mesh.SetTriangles(tris, 0);
-            mesh.RecalculateNormals();
             mesh.RecalculateBounds();
             return mesh;
         }
 
-        private void OnDestroy()
-        {
-            if (curtain.transform != null) Destroy(curtain.transform.GetComponent<MeshFilter>().sharedMesh); // built for this fall only
-        }
-
         protected override void Animate(float u, float t)
         {
+            Show(rock,    Vector3.zero, Vector3.one, Color.white, Quaternion.identity);
+            Show(brink,   Vector3.zero, Vector3.one, Color.white, Quaternion.identity);
             Show(curtain, Vector3.zero, Vector3.one, Color.white, Quaternion.identity);
-            // a smooth white lip, shimmering a little
-            float k = 1f + 0.08f * Mathf.Sin(t * 6f);
-            Show(lipFoam, lip, new Vector3(width * 1.05f, 0.012f * s * k, 0.025f * s), new Color(1.02f, 1.04f, 1.06f), Quaternion.LookRotation(dir));
+            Show(pool,    Vector3.zero, Vector3.one, Color.white, Quaternion.identity);
+            for (int i = 0; i < boulders.Length; i++)
+                Show(boulders[i], boulderAt[i], Vector3.one * (i < 8 ? 0.035f : 0.05f) * s * (0.8f + 0.25f * (i % 3)),
+                     new Color(0.58f, 0.53f, 0.47f), Quaternion.Euler(0f, i * 47f, 0f));
 
-            // foam rings spreading out from where it lands, one after another
-            var landing = foot + new Vector3(dir.x, 0f, dir.z) * 0.02f * s;
-            for (int i = 0; i < churn.Length; i++)
+            float breathe = 0.5f + 0.5f * Mathf.Sin(t * 0.6f);
+            Show(rainbow, Vector3.zero, Vector3.one, Color.white, 0.16f + 0.12f * breathe, Quaternion.identity);
+
+            // a low veil of spray hugging the foot of the curtain
+            var rot = Quaternion.LookRotation(dir);
+            for (int i = 0; i < veil.Length; i++)
             {
-                float c = Mathf.Repeat(t / 1.6f + i / (float)churn.Length, 1f);
-                float spread = Mathf.Lerp(0.6f, 1.5f, c);
-                var p = landing + new Vector3(dir.x, 0f, dir.z) * c * 0.06f * s + Vector3.up * 0.004f * s;
-                Show(churn[i], p, new Vector3(width * spread, 0.012f * s * (1f - c), 0.05f * s * spread * (1f - c * 0.6f)),
-                     new Color(1.02f, 1.04f, 1.06f), Quaternion.LookRotation(dir));
+                float c = Mathf.Repeat(t / 1.8f + i / (float)veil.Length, 1f);
+                float x = ((i % 3) - 1) * 0.6f;
+                var p = impact + across * x * halfW + dir * c * 0.08f * s + Vector3.up * (0.015f + c * 0.04f) * s;
+                var size = new Vector3(halfW * 0.9f, 0.05f * s, 0.12f * s) * (0.7f + 0.6f * c);
+                Show(veil[i], p, size, MistWhite, 0.55f * Mathf.Sin(c * Mathf.PI), rot);
             }
-            // mist billowing up from the foot and drifting away from the fall
+            // mist billowing up out of the pool and drifting away downstream, some rising past the lip
             for (int i = 0; i < mist.Length; i++)
             {
-                float c = Mathf.Repeat(t / 2.6f + i / (float)mist.Length, 1f);
-                var p = landing + dir * (0.02f + 0.06f * c) * s + across * ((i % 3) - 1) * width * 0.45f + Vector3.up * c * drop * 0.55f;
-                Show(mist[i], p, (0.035f + 0.06f * c) * s * Mathf.Sin(c * Mathf.PI), new Color(1.2f, 1.25f, 1.3f) * PuffBoost);
+                float c = Mathf.Repeat(t / 4.2f + i / (float)mist.Length, 1f);
+                float x = Mathf.Sin(i * 2.39f) * 0.9f;
+                var p = impact + across * x * halfW + dir * (0.03f + 0.22f * c) * s
+                      + Vector3.up * (c * (drop * 0.9f + 0.12f * s));
+                float size = (0.06f + 0.16f * c) * s;
+                Show(mist[i], p, size, MistWhite, 0.4f * Mathf.Sin(c * Mathf.PI) * (0.7f + 0.3f * breathe));
             }
         }
     }

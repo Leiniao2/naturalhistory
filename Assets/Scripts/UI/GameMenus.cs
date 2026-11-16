@@ -25,6 +25,7 @@ namespace NaturalHistory.UI
         private AdminPanel adminPanel;
         private UnitPanel unitPanel;
         private ZoologyPanel zoologyPanel;
+        private MiniMap miniMap;
         private bool slotsAreForSaving;
         private float toastHideTime;
         private int toastFrame = -1;
@@ -47,6 +48,7 @@ namespace NaturalHistory.UI
             panelSettings.scaleMode           = PanelScaleMode.ScaleWithScreenSize;
             panelSettings.referenceResolution = new Vector2Int(1920, 1080);
             panelSettings.match               = 0.5f;
+            LocalizedUI.ApplyFonts(panelSettings);
 
             var go = new GameObject("GameMenus");
             go.SetActive(false);
@@ -67,6 +69,7 @@ namespace NaturalHistory.UI
             root = document.rootVisualElement;
             root.styleSheets.Add(Resources.Load<StyleSheet>("UI/GameMenusStyle"));
             root.pickingMode = PickingMode.Ignore;
+            LocalizedUI.Register(root); // before the panels fill in their own text
 
             epLabel      = root.Q<Label>("ep-label");
             pauseOverlay = root.Q("pause-overlay");
@@ -81,12 +84,14 @@ namespace NaturalHistory.UI
             adminPanel   = new AdminPanel(root);
             unitPanel    = new UnitPanel(root);
             zoologyPanel = new ZoologyPanel(root);
+            miniMap      = new MiniMap(root);
+            CameraController.IsPointerOverUI = PointerOverUI;
             unitPanel.OpenTree   += tree => { CloseSidePanels(); treePanel.Open(tree); };
             unitPanel.OpenEvolve += copy => { CloseSidePanels(); zoologyPanel.Open(copy); };
             unitPanel.Message    += ShowToast;
             zoologyPanel.Message += ShowToast;
             NaturalEvents.Announced += OnPhenomenon;
-            playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast("New game started"); };
+            playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast(Loc.T("New game started")); };
             playersPanel.SetupClosed    += () => pauseOverlay.RemoveFromClassList("hidden");
 
             root.Q<Button>("morphology-button").clicked += () => ToggleTree(Progression?.Morphology);
@@ -104,6 +109,8 @@ namespace NaturalHistory.UI
             root.Q<Button>("quit-button").clicked       += Quit;
             root.Q<Button>("slots-back-button").clicked += CloseSlots;
             root.Q<Button>("age-button").clicked        += ToggleAges;
+            SetUpLanguageDropdown();
+            Loc.Changed += OnLanguageChanged;
 
             cellSelector     = FindAnyObjectByType<CellSelector>();
             cameraController = FindAnyObjectByType<CameraController>();
@@ -125,11 +132,41 @@ namespace NaturalHistory.UI
         private void OnPhenomenon(string message, HexCell cell) => ShowToast(message);
 
         private Button underButton;
-        private void OnUnderViewChanged() => underButton.text = UnderView.On ? "Surface" : "Underground";
+        private void OnUnderViewChanged() => underButton.text = Loc.T(UnderView.On ? "Surface" : "Underground");
+
+        // ---------- Language ----------
+
+        private void SetUpLanguageDropdown()
+        {
+            var dropdown = root.Q<DropdownField>("language-dropdown");
+            if (dropdown == null) return;
+            dropdown.choices = new System.Collections.Generic.List<string>();
+            foreach (var (_, name) in Loc.Languages) dropdown.choices.Add(name);
+            dropdown.index = System.Array.FindIndex(Loc.Languages, l => l.code == Loc.Current);
+            dropdown.RegisterValueChangedCallback(_ =>
+            {
+                if (dropdown.index >= 0) Loc.SetLanguage(Loc.Languages[dropdown.index].code);
+            });
+        }
+
+        // Everything showing text is filled in again in the new language
+        private void OnLanguageChanged()
+        {
+            LocalizedUI.ApplyFonts(document.panelSettings);
+            LocalizedUI.Apply();
+            OnUnderViewChanged();
+            playersPanel.RefreshBar();
+            OnProgressionChanged();
+            OnClimateUpdated();
+            if (IsOpen(slotsOverlay)) OpenSlots(slotsAreForSaving);
+        }
 
         private void OnDestroy()
         {
             UnderView.Changed -= OnUnderViewChanged;
+            Loc.Changed -= OnLanguageChanged;
+            miniMap?.Dispose();
+            CameraController.IsPointerOverUI = null;
             NaturalEvents.Announced -= OnPhenomenon;
             if (Progression != null) Progression.Changed -= OnProgressionChanged;
             if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed -= OnProgressionChanged;
@@ -145,8 +182,8 @@ namespace NaturalHistory.UI
         private void OnAnimalActivated(Player player, IconicAnimalDefinition animal)
         {
             if (!player.IsHuman) return;
-            var bonus = animal.bonusEvolutionPoints > 0 ? $" (+{animal.bonusEvolutionPoints} EP)" : "";
-            ShowToast($"{player.Name}: {animal.name} appears{bonus}");
+            var bonus = animal.bonusEvolutionPoints > 0 ? Loc.F(" (+{0} EP)", animal.bonusEvolutionPoints) : "";
+            ShowToast(Loc.F("{0}: {1} appears{2}", player.Name, Loc.T(animal.name), bonus));
         }
 
         // Fires after every turn (date → climate) and after loading
@@ -185,6 +222,7 @@ namespace NaturalHistory.UI
                 ClimateHud.EndTurn();
             climateHud.RefreshTile();
             unitPanel.Update();
+            miniMap.Update();
             if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)
             {
                 toast.AddToClassList("hidden");
@@ -231,7 +269,7 @@ namespace NaturalHistory.UI
 
         private void OnProgressionChanged()
         {
-            if (epLabel != null && Progression != null) epLabel.text = $"EP {Progression.EvolutionPoints}";
+            if (epLabel != null && Progression != null) epLabel.text = Loc.F("EP {0}", Progression.EvolutionPoints);
             if (treePanel != null && treePanel.IsOpen) treePanel.Refresh();
             if (zoologyPanel != null && zoologyPanel.IsOpen) zoologyPanel.Refresh();
         }
@@ -293,7 +331,7 @@ namespace NaturalHistory.UI
         private void OpenSlots(bool saving)
         {
             slotsAreForSaving = saving;
-            slotsTitle.text = saving ? "Save Game" : "Load Game";
+            slotsTitle.text = Loc.T(saving ? "Save Game" : "Load Game");
             RebuildSlots();
             pauseOverlay.AddToClassList("hidden");
             slotsOverlay.RemoveFromClassList("hidden");
@@ -315,19 +353,19 @@ namespace NaturalHistory.UI
                 var row  = new VisualElement().WithClass("slot-row");
 
                 var info = new VisualElement().WithClass("slot-info");
-                info.Add(new Label($"Slot {slot}").WithClass("slot-name"));
+                info.Add(new Label(Loc.F("Slot {0}", slot)).WithClass("slot-name"));
                 info.Add(new Label(Describe(data)).WithClass("slot-detail"));
                 row.Add(info);
 
                 int captured = slot;
                 if (slotsAreForSaving)
                 {
-                    row.Add(new Button(() => SaveTo(captured)) { text = data == null ? "Save" : "Overwrite" }.WithClass("slot-button"));
+                    row.Add(new Button(() => SaveTo(captured)) { text = Loc.T(data == null ? "Save" : "Overwrite") }.WithClass("slot-button"));
                 }
                 else if (data != null)
                 {
-                    row.Add(new Button(() => LoadFrom(captured)) { text = "Load" }.WithClass("slot-button"));
-                    row.Add(new Button(() => { SaveSystem.Delete(captured); RebuildSlots(); }) { text = "Delete" }
+                    row.Add(new Button(() => LoadFrom(captured)) { text = Loc.T("Load") }.WithClass("slot-button"));
+                    row.Add(new Button(() => { SaveSystem.Delete(captured); RebuildSlots(); }) { text = Loc.T("Delete") }
                         .WithClass("slot-button").WithClass("danger"));
                 }
                 slotList.Add(row);
@@ -336,19 +374,21 @@ namespace NaturalHistory.UI
 
         private static string Describe(SaveData data)
         {
-            if (data == null) return "Empty";
+            if (data == null) return Loc.T("Empty");
             var when = data.SavedAt.ToString("yyyy-MM-dd HH:mm");
-            var turn = data.turn > 0 ? $"  ·  Turn {data.turn}" : "";
-            var age  = string.IsNullOrEmpty(data.age) ? "" : $"  ·  {data.age}";
+            var turn = data.turn > 0 ? "  ·  " + Loc.F("Turn {0}", data.turn) : "";
+            var age  = string.IsNullOrEmpty(data.age) ? "" : $"  ·  {AgeName(data.age)}";
             var human   = data.players?.Find(p => p.human);
-            var players = data.players is { Count: > 0 } ? $"  ·  {human?.name ?? "?"} + {data.players.Count - 1} AI" : "";
-            return $"{when}{turn}{age}{players}  ·  {data.evolutionPoints} EP";
+            var players = data.players is { Count: > 0 } ? "  ·  " + Loc.F("{0} + {1} AI", human?.name ?? "?", data.players.Count - 1) : "";
+            return $"{when}{turn}{age}{players}  ·  " + Loc.F("{0} EP", data.evolutionPoints);
         }
+
+        private static string AgeName(string id) => Loc.T(GameDataLoader.GetAge(id)?.displayName ?? id);
 
         private void SaveTo(int slot)
         {
             bool ok = SaveSystem.Save(slot);
-            ShowToast(ok ? $"Saved to slot {slot}" : "Save failed (see Console)");
+            ShowToast(ok ? Loc.F("Saved to slot {0}", slot) : Loc.T("Save failed (see Console)"));
             if (ok) SetPauseOpen(false);
             else RebuildSlots();
         }
@@ -356,7 +396,7 @@ namespace NaturalHistory.UI
         private void LoadFrom(int slot)
         {
             bool ok = SaveSystem.Load(slot);
-            ShowToast(ok ? $"Loaded slot {slot}" : "Load failed (see Console)");
+            ShowToast(ok ? Loc.F("Loaded slot {0}", slot) : Loc.T("Load failed (see Console)"));
             if (ok) SetPauseOpen(false);
         }
 

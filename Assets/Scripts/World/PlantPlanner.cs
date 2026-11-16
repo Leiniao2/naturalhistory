@@ -54,8 +54,8 @@ namespace NaturalHistory.World
             return Rank(cell, candidates);
         }
 
-        // Water plants and algae of the layer under sea level (plants.json layer "under"), by the
-        // tile's UnderKind. Dark deep seabed and caves have none.
+        // Water plants, algae, fungi and microbial mats of the layer under sea level (plants.json
+        // layer "under"), by the tile's UnderKind (terrains: Seabed, Lakebed, DeepSeabed, Cave, Rock).
         public (PlantDefinition first, PlantDefinition second) ChooseUnder(HexCell cell)
         {
             if (cell == null) return (null, null);
@@ -71,8 +71,31 @@ namespace NaturalHistory.World
             return (ranked[0], ranked.Count > 1 ? ranked[1] : null);
         }
 
-        public Mesh Under(System.Random rng, UnderKind kind, PlantDefinition main, PlantDefinition second) =>
-            Variant(rng, $"u|{kind}|{main?.id}|{second?.id}", () => MapFeatureMeshes.CreateUnderDetail(rng, cellSize, kind, main, second));
+        public Mesh Under(System.Random rng, UnderKind kind, PlantDefinition main, PlantDefinition second)
+        {
+            string k = kind.ToString();
+            var extras = main == null ? null : Accents(main, second, alive.Where(p => p.layer == "under" && p.terrains.Contains(k)));
+            return Variant(rng, $"u|{kind}|{main?.id}|{second?.id}", () => MapFeatureMeshes.CreateUnderDetail(rng, cellSize, kind, main, second, extras));
+        }
+
+        // A few more species mixed in among a tile's two, so neighbouring tiles of the same region
+        // don't look identical: alive on the same ground, preferring shapes the tile doesn't have
+        // yet. Picked from the pair itself (not at random) so each combination keeps one mesh cache.
+        private List<PlantDefinition> Accents(PlantDefinition main, PlantDefinition second, IEnumerable<PlantDefinition> pool, int count = 2)
+        {
+            var forms = new HashSet<string> { main.form };
+            if (second != null) forms.Add(second.form);
+            int pair = StableHash(main.id + "|" + second?.id);
+            var result = new List<PlantDefinition>();
+            foreach (var p in pool.Where(p => p != main && p != second)
+                                  .OrderBy(p => forms.Contains(p.form) ? 1 : 0)
+                                  .ThenBy(p => StableHash(p.id) ^ pair))
+            {
+                if (result.Count == count) break;
+                if (forms.Add(p.form) || result.Count == 0) result.Add(p);
+            }
+            return result;
+        }
 
         private float Score(PlantDefinition p, Vector3 pos)
         {
@@ -86,8 +109,12 @@ namespace NaturalHistory.World
             float angle = pos.x / wrapWidth * Mathf.PI * 2f;
             float rad   = wrapWidth / (Mathf.PI * 2f);
             var q = new Vector3(Mathf.Cos(angle) * rad, Mathf.Sin(angle) * rad, pos.z) * (Patchiness / cellSize) + off;
-            return PerlinNoise3D.Sample(q.x, q.y, q.z) + 0.15f * PerlinNoise3D.Sample(q.x * 3f, q.y * 3f, q.z * 3f);
+            return PerlinNoise3D.Sample(q.x, q.y, q.z) + 0.15f * PerlinNoise3D.Sample(q.x * 3f, q.y * 3f, q.z * 3f)
+                 - p.rarity * RarityPenalty; // rare species (the colourful trees) only win where their noise peaks
         }
+
+        // How far a rarity of 1 pushes a species down the ranking (noise spans about -1..1)
+        private const float RarityPenalty = 0.45f;
 
         // FNV-1a: unlike string.GetHashCode, the same in every run, so a seed always gives the same map
         private static int StableHash(string s)
@@ -103,8 +130,12 @@ namespace NaturalHistory.World
         public Mesh Stand(System.Random rng, PlantDefinition canopy, PlantDefinition canopy2, PlantDefinition under) =>
             Variant(rng, $"s|{canopy.id}|{canopy2?.id}|{under?.id}", () => MapFeatureMeshes.CreatePlantStand(rng, cellSize, canopy, canopy2, under));
 
-        public Mesh Ground(System.Random rng, PlantDefinition main, PlantDefinition second, TerrainKind kind) =>
-            Variant(rng, $"g|{main.id}|{second?.id}|{kind}", () => MapFeatureMeshes.CreatePlantGround(rng, cellSize, main, second, kind));
+        public Mesh Ground(System.Random rng, PlantDefinition main, PlantDefinition second, TerrainKind kind)
+        {
+            string k = kind.ToString();
+            var extras = Accents(main, second, alive.Where(p => p.layer == "ground" && p.terrains.Contains(k)));
+            return Variant(rng, $"g|{main.id}|{second?.id}|{kind}", () => MapFeatureMeshes.CreatePlantGround(rng, cellSize, main, second, kind, extras));
+        }
 
         private Mesh Variant(System.Random rng, string key, Func<Mesh> create)
         {

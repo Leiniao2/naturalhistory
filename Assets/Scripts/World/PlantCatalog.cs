@@ -21,6 +21,11 @@ namespace NaturalHistory.World
         public List<string> forests;  // canopy: forest types it forms (Broadleaf, Conifer, Jungle)
         public string form;           // mesh shape, see MapFeatureMeshes.AddCanopyPlant / AddGroundPlant
         public string shape;          // silhouette within the form (Broadleaf: Round, Dome, Oval, Tall, Slender, ...; see PlantShapes.cs); empty = the form's default
+        public float rarity;          // 0 = common .. 1 = rare: lowers its chance to be a region's plant (colourful trees)
+        public string crown;          // hex: the whole crown in this colour (cherry pink, Japanese-maple red, jacaranda purple); empty = green leaves
+        public string blossom;        // hex colour of its flowers on the map; empty = none shown
+        public string fruit;          // hex colour of its fruit, cones or spore cones; empty = none shown
+        public string fruitForm;      // Round, Berry, Nut, Samara, Ball, Catkin, Cone, UprightCone, Pod, Hanging, Coconut, Strobilus, Seed (see PlantShapes.cs)
         public string tint;           // hex; multiplies the form's leaf colours (white = as is)
         public float size = 1f;
         public string description;
@@ -33,8 +38,8 @@ namespace NaturalHistory.World
 
         // "Scale tree (Lepidodendron aculeatum)"; just the name when they're the same
         public string Label => string.IsNullOrEmpty(scientificName) || scientificName.StartsWith(commonName, StringComparison.OrdinalIgnoreCase)
-            ? (string.IsNullOrEmpty(scientificName) ? commonName : scientificName)
-            : $"{commonName} ({scientificName})";
+            ? (string.IsNullOrEmpty(scientificName) ? Loc.T(commonName) : scientificName)
+            : $"{Loc.T(commonName)} ({scientificName})";
     }
 
     [Serializable]

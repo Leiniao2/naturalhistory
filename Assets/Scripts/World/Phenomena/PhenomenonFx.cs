@@ -101,7 +101,7 @@ namespace NaturalHistory.World
 
         protected Part AddPart(Mesh mesh, string name = "Part") => AddPart(mesh, material, name);
 
-        private Part AddPart(Mesh mesh, Material mat, string name)
+        protected Part AddPart(Mesh mesh, Material mat, string name)
         {
             var go = new GameObject(name);
             go.transform.SetParent(transform, false);
@@ -129,6 +129,9 @@ namespace NaturalHistory.World
             for (int i = 0; i < count; i++) list[i] = AddPart(Ball, smokeMaterial, name);
             return list;
         }
+
+        // An additive glow part of any shape (its vertex colours are kept)
+        protected Part AddGlowPart(Mesh mesh, string name = "Glow") => AddPart(mesh, glowMaterial, name);
 
         // Additive glow (fire, lava, flashes); the colour's alpha scales the brightness
         protected Part[] AddGlow(int count, string name = "Glow")

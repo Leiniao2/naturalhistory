@@ -23,7 +23,7 @@ namespace NaturalHistory.Players
             // Flag: primary over secondary
             AddPart(PrimitiveType.Cube, new Vector3(0.2f, poleHeight - 0.07f, 0f), new Vector3(0.36f, 0.14f, 0.02f), player.Primary);
             AddPart(PrimitiveType.Cube, new Vector3(0.2f, poleHeight - 0.21f, 0f), new Vector3(0.36f, 0.14f, 0.02f), player.Secondary);
-            CreateLabel(transform, player.Name, player.Primary, poleHeight + 0.2f);
+            CreateLabel(transform, Core.Loc.T(player.Name), player.Primary, poleHeight + 0.2f);
         }
 
         private void AddPart(PrimitiveType type, Vector3 position, Vector3 scale, Color color)
@@ -43,7 +43,7 @@ namespace NaturalHistory.Players
             go.transform.SetParent(parent, false);
             go.transform.localPosition = Vector3.up * height;
             var mesh = go.AddComponent<TextMesh>();
-            mesh.font          = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+            mesh.font          = UI.LocalizedUI.WorldFont; // any language
             mesh.text          = text;
             mesh.fontSize      = 48;
             mesh.characterSize = 0.03f;
