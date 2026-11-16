@@ -200,17 +200,93 @@ namespace NaturalHistory.World
 
         // After the surface is dressed for a period: pick the water plants below (named in the tile
         // panel straight away), and rebuild the under props when they are next shown.
+        // The Ediacaran and Cambrian seafloor was mostly microbial: in broad regions of the shallow
+        // seabed and lakebed stromatolites (about 30% of tiles) or microbial mats (about 30%) are the
+        // main growth there, the tile's other plant coming second; HexGrid.UnderMaterial then paints
+        // them into the floor. Noise thresholds are quantiles of PerlinNoise3D (0.155: top 30%,
+        // -0.074: top 60%).
+        private void MoreMicrobialFloors(GeologicalAge age, List<(HexCell cell, PlantDefinition main, PlantDefinition second)> beds)
+        {
+            if (age > GeologicalAge.Cambrian || beds.Count == 0) return;
+            var alive = PlantCatalog.AliveIn(age);
+            var offset = new Vector3(613f, 151f, 277f) + Vector3.one * (WorldSeed % 997);
+            for (int i = 0; i < beds.Count; i++)
+            {
+                var (cell, main, second) = beds[i];
+                if (cell.UnderFeature != UnderFeature.None) continue;
+                string kind = cell.Under.ToString();
+                var stromatolite = alive.Find(p => p.layer == "under" && p.form == "Stromatolite" && p.terrains.Contains(kind));
+                var mat          = alive.Find(p => p.layer == "under" && p.form == "Mat" && p.terrains.Contains(kind));
+                var pos = cell.Coordinates.ToWorldPosition(cellSize);
+                var q = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.3f / cellSize) + offset;
+                float n = PerlinNoise3D.Sample(q.x, q.y, q.z);
+                var floor = n > 0.155f ? stromatolite : n > -0.074f ? mat : null;
+                if (floor == null || floor == main) continue;
+                beds[i] = (cell, floor, main != null && main != floor ? main : second);
+            }
+        }
+
         private void DressUnder(GeologicalAge age)
         {
             var plants = new PlantPlanner(age, WorldSeed, cellSize, WrapWidth, Track);
+            var seabed = new List<(HexCell cell, PlantDefinition main, PlantDefinition second)>();
+            var lakebed = new List<(HexCell cell, PlantDefinition main, PlantDefinition second)>();
             foreach (var cell in cells)
             {
                 if (cell.Terrain == null) continue;
                 var (main, second) = plants.ChooseUnder(cell);
-                cell.SetUnderPlants(main, second);
+                if (cell.Under == UnderKind.Seabed) seabed.Add((cell, main, second));
+                else if (cell.Under == UnderKind.Lakebed) lakebed.Add((cell, main, second));
+                else cell.SetUnderPlants(main, second);
             }
+            MoreAlgalTurf(plants, seabed);
+            MoreMicrobialFloors(age, seabed);
+            MoreMicrobialFloors(age, lakebed);
+            foreach (var (cell, main, second) in seabed) cell.SetUnderPlants(main, second);
+            foreach (var (cell, main, second) in lakebed) cell.SetUnderPlants(main, second);
             underDirty = true;
             if (UnderView.On) ApplyUnderView();
+        }
+
+        // Algal turf covers far more of the seabed, most of all in warm water: at least twice the
+        // share the species ranking alone gives (up to 85% of seabed tiles), made up by turning the
+        // warmest tiles that aren't turf yet into turf. Warmth is the water's temperature by
+        // latitude, with a broad patchy noise so the turf edge isn't a straight band.
+        private const float AlgalTurfBoost = 2.2f, AlgalTurfMax = 0.85f;
+
+        private void MoreAlgalTurf(PlantPlanner plants, List<(HexCell cell, PlantDefinition main, PlantDefinition second)> seabed)
+        {
+            if (seabed.Count == 0) return;
+            bool Turf(PlantDefinition a, PlantDefinition b) => MapFeatureMeshes.CoverOf(UnderKind.Seabed, a, b) == "AlgalTurf";
+            int turf = 0;
+            foreach (var t in seabed) if (Turf(t.main, t.second)) turf++;
+            int target = Mathf.Min(Mathf.RoundToInt(seabed.Count * AlgalTurfMax),
+                                   Mathf.Max(Mathf.CeilToInt(turf * AlgalTurfBoost), Mathf.CeilToInt(seabed.Count * 0.2f)));
+            if (turf >= target) return;
+
+            var off = new Vector3(17.3f, 41.9f, 5.7f) + Vector3.one * (WorldSeed % 997);
+            float Warmth(HexCell c)
+            {
+                float lat = c.HasInputs ? c.Inputs.lat
+                          : Mathf.Abs(c.Coordinates.ToOffsetCoordinates().row / (float)Mathf.Max(Height - 1, 1) * 2f - 1f);
+                var pos = c.Coordinates.ToWorldPosition(cellSize);
+                var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.22f / cellSize) + off;
+                return 1f - 0.9f * lat + 0.25f * PerlinNoise3D.Sample(p.x, p.y, p.z);
+            }
+            var order = new List<int>();
+            for (int i = 0; i < seabed.Count; i++) if (!Turf(seabed[i].main, seabed[i].second)) order.Add(i);
+            var warmth = new Dictionary<int, float>();
+            foreach (int i in order) warmth[i] = Warmth(seabed[i].cell);
+            order.Sort((a, b) => warmth[b].CompareTo(warmth[a]));
+            foreach (int i in order)
+            {
+                if (turf >= target) break;
+                var (cell, main, second) = seabed[i];
+                var (m, s) = plants.WithAlgalTurf(cell, main, second);
+                if (!Turf(m, s)) continue;
+                seabed[i] = (cell, m, s);
+                turf++;
+            }
         }
 
         private void BuildUnderProps()

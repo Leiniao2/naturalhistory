@@ -174,6 +174,7 @@ P = [
  # ---- Under the water: seabed and lakebed (layer "under", terrains = UnderKind) ----
  ("green_algae","Green algae","Chlorophyta","Green alga","Edi","","under",["Seabed"],[],"Algae","#90D060",1.0,"Turf of green seaweed on sunlit seabed; land plants descend from green algae."),
  ("red_algae","Red algae","Rhodophyta","Red alga","Edi","","under",["Seabed"],[],"Algae","#E07070",1.0,"Red seaweeds, among the oldest complex algae."),
+ ("ediacaran_matground","Microbial matground","Cyanobacterial mats ('elephant skin' texture)","Cyanobacteria","Edi","Ord","under",["Seabed","Lakebed"],[],"Mat","#FFFFFF",1.0,"Tough microbial mats that carpeted the Ediacaran seafloor, wrinkled like elephant skin; the first grazers and burrowers broke them up in the Cambrian."),
  ("stromatolites","Stromatolites","Cyanobacterial mats","Cyanobacteria","Edi","","under",["Seabed","Lakebed"],[],"Stromatolite","#FFFFFF",1.0,"Layered mounds built by cyanobacteria; rare today, as at Shark Bay."),
  ("epiphyton","Epiphyton","Epiphyton","Calcimicrobe","Cam","Dev","under",["Seabed"],[],"Coralline","#C8B090",0.9,"Bushy calcified microbes that built Cambrian reefs with archaeocyathids."),
  ("dasyclads","Dasyclad algae","Dasycladales","Green alga","Cam","","under",["Seabed"],[],"Algae","#A8D880",0.8,"Little umbrella-shaped green algae of warm lagoons."),

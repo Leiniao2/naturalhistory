@@ -167,11 +167,26 @@ float3 BandPick(float k, float palette)
     return palette < 1.5 ? _NHBandsA[i].rgb : _NHBandsB[i].rgb;
 }
 
+float3 BandMean(float palette)
+{
+    float  n = palette < 1.5 ? max(_NHBandCounts.x, 1) : max(_NHBandCounts.y, 1);
+    float3 s = 0;
+    [unroll] for (int i = 0; i < 8; i++) if (i < n) s += palette < 1.5 ? _NHBandsA[i].rgb : _NHBandsB[i].rgb;
+    return s / n;
+}
+
+// Box-filtered over the pixel's footprint: each edge blends across exactly one pixel, centred on
+// the edge, and where the bands get thinner than about a pixel (far away) they fade to the
+// palette's average instead of sparkling and crawling as the camera moves.
 float3 BandColor(float2 band)
 {
     float k = floor(band.x);
     float f = band.x - k;
-    float w = max(fwidth(band.x) * 1.2, 0.02);
-    float t = smoothstep(1 - w, 1, f);
-    return lerp(BandPick(k, band.y), BandPick(k + 1, band.y), t);
+    float w = max(fwidth(band.x), 1e-4);
+    float next = saturate((f + 0.5 * w - 1) / w); // share of the pixel past the upper edge
+    float prev = saturate((0.5 * w - f) / w);     // share below the lower edge
+    float3 c = BandPick(k, band.y) * (1 - next - prev)
+             + BandPick(k + 1, band.y) * next
+             + BandPick(k - 1, band.y) * prev;
+    return lerp(c, BandMean(band.y), saturate((w - 0.35) / 0.5));
 }

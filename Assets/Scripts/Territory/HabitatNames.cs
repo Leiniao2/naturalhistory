@@ -94,8 +94,8 @@ namespace NaturalHistory.Territory
                 case TerrainFeature.Geothermal:    tags.Add("volcano"); break;
                 case TerrainFeature.Mesa:
                 case TerrainFeature.Canyon:
-                case TerrainFeature.Danxia:
-                case TerrainFeature.Karst:         tags.Add("mountain"); break;
+                case TerrainFeature.Danxia:        tags.Add("mountain"); break;
+                case TerrainFeature.Karst:         tags.Add(cell.IsWater ? "coast" : "mountain"); break;
                 case TerrainFeature.Fjord:
                 case TerrainFeature.WhiteCliffs:   tags.Add("coast"); break;
                 case TerrainFeature.Volcano:       tags.Add("volcano"); tags.Add("mountain"); break;

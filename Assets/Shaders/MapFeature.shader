@@ -223,8 +223,9 @@ Shader "NaturalHistory/MapFeature"
             ApplyFlap(v.vertex.xyz, v.normal);
             ApplyUndulate(v.vertex.xyz, v.normal);
             ApplyStride(v.vertex.xyz);
-            ApplySway(v.vertex.xyz, v.texcoord3.x);
-            ApplyWind(v.vertex.xyz, v.texcoord3.x);
+            float flex = v.texcoord2.y > 0.5 ? 0 : v.texcoord3.x; // banded rock never bends
+            ApplySway(v.vertex.xyz, flex);
+            ApplyWind(v.vertex.xyz, flex);
         }
 
         void surf(Input IN, inout SurfaceOutput o)

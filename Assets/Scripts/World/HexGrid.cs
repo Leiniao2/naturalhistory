@@ -350,9 +350,15 @@ namespace NaturalHistory.World
                         mesh = Track(MapFeatureMeshes.CreateGeothermalField(rng, cellSize, p => LocalGround(cell, p))); unique = true; others++;
                         break;
                     case TerrainFeature.Mesa:    mesh = Track(MapFeatureMeshes.CreateMesa(rng, cellSize, p => LocalGround(cell, p)));    unique = true; others++; break;
-                    case TerrainFeature.Canyon:  mesh = Track(MapFeatureMeshes.CreateCanyon(rng, cellSize, p => LocalGround(cell, p)));  unique = true; others++; break;
+                    case TerrainFeature.Canyon:  // cut along the tile's river, so its water joins the neighbours' rivers
+                        mesh = Track(MapFeatureMeshes.CreateCanyon(rng, cellSize, p => LocalGround(cell, p), RiverCenterlines(cell),
+                                                                   cell.HasRiver ? RiverWidth(cell.RiverFlow, RiverStyle(cell.RiverSystem).Item1) : 0f));
+                        unique = true; others++; break;
                     case TerrainFeature.Danxia:  mesh = Track(MapFeatureMeshes.CreateDanxia(rng, cellSize, p => LocalGround(cell, p)));  unique = true; others++; break;
-                    case TerrainFeature.Karst:   mesh = Track(MapFeatureMeshes.CreateKarst(rng, cellSize, p => LocalGround(cell, p)));   unique = true; others++; break;
+                    case TerrainFeature.Karst: // drowned towers rise from a sea floor below the water (surface at 0, as for fjords)
+                        mesh = Track(cell.IsWater ? MapFeatureMeshes.CreateKarst(rng, cellSize, _ => -0.05f * cellSize, true)
+                                                  : MapFeatureMeshes.CreateKarst(rng, cellSize, p => LocalGround(cell, p), false, cell.Moisture));
+                        unique = true; others++; break;
                     case TerrainFeature.SaltLake:
                     case TerrainFeature.PinkSaltLake:
                         mesh = Track(MapFeatureMeshes.CreateSaltLake(rng, cellSize, cell.Feature == TerrainFeature.PinkSaltLake, p => LocalGround(cell, p)));
@@ -619,7 +625,7 @@ namespace NaturalHistory.World
 
         // Landform tiles, each on the ground that makes it, on a few of the tiles that qualify (the
         // same ones in every period while they still qualify): mesas, canyons, Danxia hills and salt
-        // lakes in dry country, karst towers in warm wet country, fjords on cold highland coasts and
+        // lakes in dry country, karst in warm wet country (and drowned karst in warm coastal seas), fjords on cold highland coasts and
         // white chalk cliffs on mild coasts from the Cretaceous on. Not where a river runs.
         private void PlaceLandforms(GeologicalAge age)
         {
@@ -657,8 +663,12 @@ namespace NaturalHistory.World
                 else if (!x.IsWater) { land++; if (x.IsMountain || x.Elevation >= 3) high++; }
             }
             if (kind == TerrainKind.SaltWater)
-                return lat > 0.55f && land >= 2 && high >= 1 && cell.Feature == TerrainFeature.None && TileRoll(q, r, 1) < 0.6f
-                     ? TerrainFeature.Fjord : TerrainFeature.None;
+            {
+                if (cell.Feature != TerrainFeature.None || land < 2) return TerrainFeature.None;
+                if (lat > 0.55f && high >= 1 && TileRoll(q, r, 1) < 0.6f) return TerrainFeature.Fjord;
+                if (lat < 0.4f && TileRoll(q, r, 9) < 0.06f) return TerrainFeature.Karst; // drowned towers in warm coastal seas (Ha Long Bay)
+                return TerrainFeature.None;
+            }
             if (cell.IsWater || cell.IsMountain) return TerrainFeature.None;
 
             bool forest = cell.Feature is TerrainFeature.BroadleafForest or TerrainFeature.ConiferForest or TerrainFeature.Jungle;
@@ -673,9 +683,10 @@ namespace NaturalHistory.World
                 && kind is TerrainKind.Plain or TerrainKind.Hill or TerrainKind.Steppe && TileRoll(q, r, 3) < 0.14f)
                 return TerrainFeature.WhiteCliffs;
             if (!dry || sea > 0) return TerrainFeature.None;
-            if (cell.Elevation >= 2 && TileRoll(q, r, 4) < 0.05f) return TerrainFeature.Canyon;
-            if (TileRoll(q, r, 5) < 0.05f) return TerrainFeature.Mesa;
-            if (kind == TerrainKind.Desert && TileRoll(q, r, 6) < 0.07f) return TerrainFeature.Danxia; // rainbow hills: arid desert only (Zhangye)
+            // canyons are cut by rivers: only where a river crosses dry upland
+            if (cell.Elevation >= 2 && cell.HasRiver && cell.RiverOut >= 0 && TileRoll(q, r, 4) < 0.35f) return TerrainFeature.Canyon;
+            if (TileRoll(q, r, 5) < 0.025f) return TerrainFeature.Mesa;
+            if (kind == TerrainKind.Desert && TileRoll(q, r, 6) < 0.035f) return TerrainFeature.Danxia; // rainbow hills: arid desert only (Zhangye)
             if (cell.Elevation <= 2 && TileRoll(q, r, 7) < 0.05f)
                 return TileRoll(q, r, 8) < 0.5f ? TerrainFeature.PinkSaltLake : TerrainFeature.SaltLake;
             return TerrainFeature.None;

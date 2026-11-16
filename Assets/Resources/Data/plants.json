@@ -2918,6 +2918,24 @@
    "description": "Red seaweeds, among the oldest complex algae."
   },
   {
+   "id": "ediacaran_matground",
+   "commonName": "Microbial matground",
+   "scientificName": "Cyanobacterial mats ('elephant skin' texture)",
+   "group": "Cyanobacteria",
+   "firstAge": "Ediacaran",
+   "lastAge": "Ordovician",
+   "layer": "under",
+   "terrains": [
+    "Seabed",
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Mat",
+   "tint": "#FFFFFF",
+   "size": 1.0,
+   "description": "Tough microbial mats that carpeted the Ediacaran seafloor, wrinkled like elephant skin; the first grazers and burrowers broke them up in the Cambrian."
+  },
+  {
    "id": "stromatolites",
    "commonName": "Stromatolites",
    "scientificName": "Cyanobacterial mats",

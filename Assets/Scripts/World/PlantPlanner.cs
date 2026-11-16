@@ -66,6 +66,21 @@ namespace NaturalHistory.World
             return candidates.Count == 0 ? (null, null) : Rank(cell, candidates);
         }
 
+        // The tile's pair turned into an algal turf (UnderMeshes.CoverOf "AlgalTurf"): its best-scoring
+        // turf alga becomes the main species, and a stromatolite (which would win the floor) gives
+        // way to the old main. Unchanged if no turf alga lives on this ground.
+        public (PlantDefinition first, PlantDefinition second) WithAlgalTurf(HexCell cell, PlantDefinition main, PlantDefinition second)
+        {
+            string kind = cell.Under.ToString();
+            var pos = cell.Coordinates.ToWorldPosition(cellSize);
+            var alga = alive.Where(p => p.layer == "under" && p.form == "Algae" && p.terrains.Contains(kind))
+                            .OrderByDescending(p => Score(p, pos)).FirstOrDefault();
+            if (alga == null || alga == main) return (main, second);
+            var rest = second == alga ? main : UnderView.IsFloor(second) ? main : second;
+            if (UnderView.IsFloor(rest)) rest = null;
+            return (alga, rest);
+        }
+
         private (PlantDefinition, PlantDefinition) Rank(HexCell cell, List<PlantDefinition> candidates)
         {
             var pos = cell.Coordinates.ToWorldPosition(cellSize);

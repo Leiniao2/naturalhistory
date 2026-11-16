@@ -3,18 +3,18 @@ using UnityEngine;
 
 namespace NaturalHistory.World
 {
-    // Landform tiles: mesas, canyons, fjords, white chalk cliffs, salt lakes, Danxia rainbow hills
-    // and karst towers. Most are a height field over the hex (a triangular lattice, flat-shaded and
+    // Landform tiles: mesas, canyons, fjords, white chalk cliffs, salt lakes and Danxia rainbow
+    // hills (karst: KarstMeshes.cs). Most are a height field over the hex (a triangular lattice, flat-shaded and
     // painted by height and slope) raised above the tile's own ground; where it stands above the
     // ground at the hex rim, a wall drops down to the ground (or the sea). Built per tile (unique),
     // so they follow its slopes.
     public static partial class MapFeatureMeshes
     {
-        static readonly Color MesaCap     = new(0.46f, 0.30f, 0.22f);
-        static readonly Color RedRock     = new(0.66f, 0.34f, 0.22f);
-        static readonly Color OrangeRock  = new(0.78f, 0.50f, 0.30f);
-        static readonly Color CreamRock   = new(0.84f, 0.74f, 0.58f);
-        static readonly Color Scree       = new(0.74f, 0.52f, 0.36f);
+        static readonly Color MesaCap     = Muted(new Color(0.46f, 0.30f, 0.22f));
+        static readonly Color RedRock     = Muted(new Color(0.66f, 0.34f, 0.22f));
+        static readonly Color OrangeRock  = Muted(new Color(0.78f, 0.50f, 0.30f));
+        static readonly Color CreamRock   = Muted(new Color(0.84f, 0.74f, 0.58f));
+        static readonly Color Scree       = Muted(new Color(0.74f, 0.52f, 0.36f));
         static readonly Color FjordRock   = new(0.42f, 0.43f, 0.45f);
         static readonly Color Spruce      = new(0.16f, 0.27f, 0.17f);
         static readonly Color ChalkWhite  = new(0.93f, 0.92f, 0.87f);
@@ -23,14 +23,21 @@ namespace NaturalHistory.World
         static readonly Color SaltWhite   = new(0.93f, 0.92f, 0.90f);
         static readonly Color BrinePink   = new(0.90f, 0.52f, 0.62f);
         static readonly Color BrineTeal   = new(0.42f, 0.72f, 0.74f);
-        static readonly Color KarstGrey   = new(0.60f, 0.60f, 0.56f);
-        static readonly Color KarstGreen  = new(0.22f, 0.42f, 0.18f);
         static readonly Color GorgeRiver  = new(0.26f, 0.50f, 0.56f);
-        static readonly Color[] DanxiaBands =
+        static readonly Color[] DanxiaBands = System.Array.ConvertAll(new Color[]
         {
             new(0.74f, 0.30f, 0.22f), new(0.86f, 0.56f, 0.30f), new(0.90f, 0.80f, 0.56f), new(0.82f, 0.46f, 0.40f),
             new(0.92f, 0.70f, 0.36f), new(0.62f, 0.36f, 0.40f), new(0.80f, 0.40f, 0.26f), new(0.88f, 0.86f, 0.70f),
-        };
+        }, c => Muted(c));
+
+        // Red-rock landforms (Danxia, mesas, canyons) were too saturated: their colours are pulled
+        // this far toward grey of the same brightness
+        const float RockMuting = 0.4f;
+        static Color Muted(Color c)
+        {
+            float grey = c.r * 0.3f + c.g * 0.59f + c.b * 0.11f;
+            return Color.Lerp(c, new Color(grey, grey, grey, c.a), RockMuting);
+        }
 
         // Height field over the hex. height(p) is metres above the ground at p; ground(p) the
         // tile's surface height; paint(point, height above ground, normal) the facet's colour.
@@ -199,58 +206,105 @@ namespace NaturalHistory.World
             return 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(a * 0.62f, a * 0.92f, d));
         }
 
-        // ---- Canyon: a layered plateau cut by a winding gorge that steps down in terraces to a
-        //      river at the bottom, running in by one edge and out by another
+        // ---- Canyon: a layered plateau cut by a gorge that steps down in cliff bands to the river
+        //      at the bottom. riverLines: the tile's river channels (HexGrid.RiverCenterlines), so the
+        //      gorge follows the river the map draws and it runs on into the neighbouring tiles'
+        //      rivers; the water itself is the river system's. Without them, a dry gorge crosses
+        //      the tile from one edge to another.
 
-        public static Mesh CreateCanyon(System.Random rng, float size, System.Func<Vector2, float> ground)
+        public static Mesh CreateCanyon(System.Random rng, float size, System.Func<Vector2, float> ground,
+                                        IReadOnlyList<List<Vector2>> riverLines = null, float riverHalfWidth = 0f)
         {
             var b = new Builder();
             float seed = Range(rng, 0f, 100f);
             float a = size * 0.8660254f;
-            int eIn = rng.Next(6), eOut = (eIn + 3 + rng.Next(-1, 2) + 6) % 6;
-            Vector2 Edge(int e) { float ang = (60f * e + 30f) * Mathf.Deg2Rad; return new Vector2(Mathf.Sin(ang), Mathf.Cos(ang)) * a * 1.02f; }
-            var line = new List<Vector2>();
-            var p0 = Edge(eIn); var p1 = Edge(eOut);
-            var side = new Vector2((p1 - p0).y, -(p1 - p0).x).normalized;
-            float wig = Range(rng, 0.12f, 0.2f) * size, phase = Range(rng, 0f, 6f);
-            for (int k = 0; k <= 24; k++)
+            var lines = new List<List<Vector2>>();
+            if (riverLines != null) foreach (var l in riverLines) if (l != null && l.Count >= 2) lines.Add(l);
+            if (lines.Count == 0)
             {
-                float t = k / 24f;
-                line.Add(Vector2.Lerp(p0, p1, t) + side * Mathf.Sin(t * Mathf.PI * 2.2f + phase) * wig * Mathf.Sin(t * Mathf.PI));
+                int eIn = rng.Next(6), eOut = (eIn + 3 + rng.Next(-1, 2) + 6) % 6;
+                Vector2 Edge(int e) { float ang = (60f * e + 30f) * Mathf.Deg2Rad; return new Vector2(Mathf.Sin(ang), Mathf.Cos(ang)) * a * 1.02f; }
+                var p0 = Edge(eIn); var p1 = Edge(eOut);
+                var sd = new Vector2((p1 - p0).y, -(p1 - p0).x).normalized;
+                float wig = Range(rng, 0.12f, 0.2f) * size, phase = Range(rng, 0f, 6f);
+                var line = new List<Vector2>();
+                for (int k = 0; k <= 24; k++)
+                {
+                    float t = k / 24f;
+                    line.Add(Vector2.Lerp(p0, p1, t) + sd * Mathf.Sin(t * Mathf.PI * 2.2f + phase) * wig * Mathf.Sin(t * Mathf.PI));
+                }
+                lines.Add(line);
             }
             float Dist(Vector2 p)
             {
                 float best = float.MaxValue;
+                foreach (var line in lines)
                 for (int k = 0; k + 1 < line.Count; k++)
                 {
                     var ab = line[k + 1] - line[k];
-                    float t = Mathf.Clamp01(Vector2.Dot(p - line[k], ab) / ab.sqrMagnitude);
+                    float t = ab.sqrMagnitude > 1e-10f ? Mathf.Clamp01(Vector2.Dot(p - line[k], ab) / ab.sqrMagnitude) : 0f;
                     best = Mathf.Min(best, (p - (line[k] + ab * t)).magnitude);
                 }
                 return best;
             }
-            float H = size * Range(rng, 0.18f, 0.24f);
+
+            float H     = size * Range(rng, 0.24f, 0.32f);
+            float floor = Mathf.Max(0.045f * size, riverHalfWidth * 1.8f); // the gorge floor holds the river with a little beach
+            float reach = Range(rng, 0.26f, 0.34f) * size;                 // how far the gorge opens out at the top
+            // Jagged rims and side gullies: noise in the distance to the river (a fine ridged part
+            // cuts gullies into the walls)
+            float Rough(Vector2 p)
+            {
+                float n1 = Mathf.PerlinNoise(seed + p.x / size * 4.5f, seed + p.y / size * 4.5f) - 0.5f;
+                float n2 = 1f - Mathf.Abs(Mathf.PerlinNoise(seed * 1.7f + p.x / size * 13f, seed * 0.6f + p.y / size * 13f) * 2f - 1f);
+                return n1 * 0.08f * size - n2 * n2 * 0.035f * size;
+            }
+            // The plateau steps down in cliff bands toward the gorge and, round the tile's edge, to the
+            // land outside, instead of melting into a dome
             float Height(Vector2 p)
             {
-                float d = Dist(p) + (Mathf.PerlinNoise(seed + p.x / size * 5f, seed + p.y / size * 5f) - 0.5f) * 0.05f * size;
-                return H * Terrace((d - 0.05f * size) / (0.3f * size), 3) * RimFade(p, size); // the plateau sinks into the land round the tile
+                float d     = Dist(p) + Rough(p);
+                float gorge = Mathf.Clamp01((d - floor) / reach);
+                float rim   = RimFade(p, size);
+                return H * Terrace(Mathf.Min(gorge, rim), 3);
             }
-            AddHeightField(b, size, 40, Height, ground, (m, h, nrm) =>
+            AddHeightField(b, size, 54, Height, ground, (m, h, nrm) =>
             {
                 if (nrm.y > 0.85f && h > H * 0.9f) return Shade(rng, Scree * 0.95f, 0.05f);   // the rim and plateau top
                 if (nrm.y > 0.8f) return Shade(rng, Scree, 0.06f);                            // terrace treads
-                return Banded(Range(rng, 0.96f, 1.04f));                                      // layered walls, per pixel
+                return Banded(Range(rng, 0.94f, 1.05f));                                      // layered walls, per pixel
             }, band: (p, h) => StrataBand(p, size, 3f), bandPalette: 2f);
-            // the river at the bottom
-            for (int k = 0; k + 1 < line.Count; k++)
+
+            // Fallen rock at the feet of the cliffs, and a few dry shrubs on the plateau and ledges
+            Vector3 On(Vector2 p) => new(p.x, ground(p) + Height(p), p.y);
+            for (int i = 0; i < 40; i++)
             {
-                Vector2 q0 = line[k], q1 = line[k + 1];
-                var sd = new Vector2((q1 - q0).y, -(q1 - q0).x).normalized * 0.028f * size;
-                Vector3 V(Vector2 q) => new(q.x, ground(q) + 0.004f * size, q.y);
-                b.AddQuad(V(q0 + sd), V(q1 + sd), V(q1 - sd), V(q0 - sd), Shade(rng, GorgeRiver, 0.04f), V((q0 + q1) * 0.5f) - Vector3.up);
+                var p = new Vector2(Range(rng, -a, a), Range(rng, -a, a));
+                float d = Dist(p);
+                if (d < floor * 1.05f || d > floor + reach * 1.1f || RimFade(p, size) < 0.5f) continue;
+                AddRock(b, rng, On(p), size * Range(rng, 0.01f, 0.024f), Scree * Range(rng, 0.75f, 0.95f));
             }
+            for (int i = 0; i < 24; i++)
+            {
+                var p = new Vector2(Range(rng, -a, a), Range(rng, -a, a));
+                if (Dist(p) < floor + reach * 0.5f || RimFade(p, size) < 0.6f || rng.NextDouble() < 0.5) continue;
+                AddBlob(b, rng, On(p) + Vector3.up * 0.006f * size, size * Range(rng, 0.012f, 0.022f), 0.7f, 0, Shade(rng, DryShrub, 0.1f));
+            }
+
+            // a dry gorge (no river given) still has its stream at the bottom
+            if (riverLines == null || riverLines.Count == 0)
+                foreach (var line in lines)
+                for (int k = 0; k + 1 < line.Count; k++)
+                {
+                    Vector2 q0 = line[k], q1 = line[k + 1];
+                    var sd = new Vector2((q1 - q0).y, -(q1 - q0).x).normalized * 0.028f * size;
+                    Vector3 V(Vector2 q) => new(q.x, ground(q) + 0.004f * size, q.y);
+                    b.AddQuad(V(q0 + sd), V(q1 + sd), V(q1 - sd), V(q0 - sd), Shade(rng, GorgeRiver, 0.04f), V((q0 + q1) * 0.5f) - Vector3.up);
+                }
             return b.ToMesh("Canyon");
         }
+
+        static readonly Color DryShrub = new(0.42f, 0.44f, 0.26f);
 
         // ---- Fjord: on a sea tile between highlands, sheer granite walls rising from the water on
         //      the landward sides, snow on the tops and dark spruce low down, a narrow arm of sea
@@ -333,29 +387,27 @@ namespace NaturalHistory.World
             var b = new Builder();
             float a = size * 0.8660254f;
             Vector3 On(Vector2 p, float lift) => new(p.x, ground(p) + lift * size, p.y);
-            // the pan, in overlapping crust patches
-            foreach (var p in HexScatter(rng, rng.Next(7, 10), a * 0.55f, 0.18f * size, new List<Vector2>()))
-            {
-                var c = On(p, 0.002f);
-                var rim = Ring(rng, c, size * Range(rng, 0.22f, 0.32f), 14, 0.12f);
-                for (int i = 0; i < rim.Length; i++)
-                {
-                    var q = rim[i]; q.y = On(new Vector2(q.x, q.z), 0.002f).y; rim[i] = q;
-                }
-                for (int i = 0; i < rim.Length; i++)
-                    b.AddTri(c, rim[i], rim[(i + 1) % rim.Length], Shade(rng, SaltWhite, 0.03f), c - Vector3.up);
-            }
-            // the brine pool
+            // (the salt pan round it is the tile's ground: the SaltFlat surface, see HexGrid.SetGroundLook)
+            // the brine pool, its shore shading from salt-white into the brine so it has no hard rim
             var brine = pink ? BrinePink : BrineTeal;
-            var mid = On(new Vector2(Range(rng, -0.08f, 0.08f), Range(rng, -0.08f, 0.08f)) * size, 0.004f);
-            for (int ring = 0; ring < 3; ring++)
+            var mid = On(new Vector2(Range(rng, -0.08f, 0.08f), Range(rng, -0.08f, 0.08f)) * size, 0.003f);
+            float rot = Range(rng, 0f, 360f), seed = Range(rng, 0f, 100f);
+            const int steps = 9, sides = 28;
+            for (int k = 0; k < steps; k++)
             {
-                float r = size * (0.36f - 0.09f * ring);
-                var col = Color.Lerp(brine, brine * (pink ? new Color(0.9f, 0.78f, 0.86f) : new Color(0.8f, 0.92f, 0.95f)), ring / 2f);
-                var c = mid + Vector3.up * 0.0008f * size * ring;
-                var rim = Ring(rng, c, r, 22, 0.1f);
-                for (int i = 0; i < rim.Length; i++)
-                    b.AddTri(c, rim[i], rim[(i + 1) % rim.Length], Shade(rng, col, 0.03f), c - Vector3.up);
+                float t = k / (float)(steps - 1);                       // 0 at the shore, 1 in the middle
+                float r = size * Mathf.Lerp(0.4f, 0.12f, t);
+                var col = t < 0.3f ? Color.Lerp(SaltWhite * 0.97f, brine, t / 0.3f)
+                                   : Color.Lerp(brine, brine * (pink ? new Color(0.92f, 0.8f, 0.88f) : new Color(0.82f, 0.92f, 0.95f)), (t - 0.3f) / 0.7f);
+                var c = mid + Vector3.up * 0.0006f * size * k;
+                for (int i = 0; i < sides; i++)
+                {
+                    float a0 = (rot + i * 360f / sides) * Mathf.Deg2Rad, a1 = (rot + (i + 1) * 360f / sides) * Mathf.Deg2Rad;
+                    float w0 = 1f + 0.18f * (Mathf.PerlinNoise(seed + Mathf.Cos(a0) * 1.5f, seed + Mathf.Sin(a0) * 1.5f) - 0.5f);
+                    float w1 = 1f + 0.18f * (Mathf.PerlinNoise(seed + Mathf.Cos(a1) * 1.5f, seed + Mathf.Sin(a1) * 1.5f) - 0.5f);
+                    b.AddTri(c, c + new Vector3(Mathf.Sin(a0), 0f, Mathf.Cos(a0)) * r * w0, c + new Vector3(Mathf.Sin(a1), 0f, Mathf.Cos(a1)) * r * w1,
+                             col, c - Vector3.up);
+                }
             }
             // salt islets and crust ridges in the pool
             for (int i = rng.Next(3, 6); i > 0; i--)
@@ -404,35 +456,6 @@ namespace NaturalHistory.World
                 band: (p, h) => (h + Vector2.Dot(new Vector2(p.x, p.z), along) * tilt) / size * 34f + Mathf.PerlinNoise(p.x * 3f, p.z * 3f) * 0.8f,
                 bandPalette: 1f);
             return b.ToMesh("Danxia");
-        }
-
-        // ---- Karst: steep towers of grey limestone with jungle on every ledge and top, standing
-        //      out of the plain, with pools between them (Guilin, Ha Long)
-
-        public static Mesh CreateKarst(System.Random rng, float size, System.Func<Vector2, float> ground)
-        {
-            var b = new Builder();
-            float a = size * 0.8660254f;
-            var spots = HexScatter(rng, rng.Next(6, 10), a * 0.82f, 0.2f * size, new List<Vector2>());
-            foreach (var p in spots)
-            {
-                float r = size * Range(rng, 0.07f, 0.12f);
-                AddVolcanoCone(b, rng, size, new Cone
-                {
-                    at = new Vector3(p.x, ground(p), p.y), radius = r, height = size * Range(rng, 0.2f, 0.42f), top = r * 0.45f,
-                    sides = 14, rings = 7, profile = 0.4f, ridge = 0.18f, jitter = 0.08f, rough = 0.6f,
-                    crater = Crater.None, ash = KarstGrey, rock = KarstGrey, cover = KarstGreen, blocks = 0,
-                }, ground);
-                for (int i = rng.Next(1, 3); i > 0; i--) // shrubs at the foot
-                {
-                    float ang = Range(rng, 0f, Mathf.PI * 2f);
-                    var q = p + new Vector2(Mathf.Sin(ang), Mathf.Cos(ang)) * r * Range(rng, 1.1f, 1.4f);
-                    AddBlob(b, rng, new Vector3(q.x, ground(q) + 0.01f * size, q.y), size * Range(rng, 0.02f, 0.035f), 0.8f, 0, Shade(rng, KarstGreen, 0.1f));
-                }
-            }
-            foreach (var p in HexScatter(rng, rng.Next(1, 3), a * 0.7f, 0.15f * size, spots))
-                AddPond(b, rng, new Vector3(p.x, ground(p) + 0.003f * size, p.y), size * Range(rng, 0.06f, 0.1f), GorgeRiver);
-            return b.ToMesh("Karst");
         }
     }
 }

@@ -976,14 +976,14 @@ namespace NaturalHistory.World
                 mesh.SetVertices(verts);
                 mesh.SetNormals(normals);
                 mesh.SetColors(colors);
-                if (flex.Count > 0)
+                // Both channels are written whenever either is used: a mesh missing one can read the
+                // other's data in the shader on some GPUs (Metal), so banded rock would bend in the
+                // wind (band coordinates read as flex) or plants would take on band colours.
+                if (flex.Count > 0 || band.Count > 0)
                 {
                     var uv3 = new Vector2[verts.Count];
                     foreach (var (i, amount) in flex) uv3[i] = new Vector2(amount, 0f);
                     mesh.SetUVs(3, uv3);
-                }
-                if (band.Count > 0)
-                {
                     var uv2 = new Vector2[verts.Count];
                     foreach (var (i, value) in band) uv2[i] = value;
                     mesh.SetUVs(2, uv2);

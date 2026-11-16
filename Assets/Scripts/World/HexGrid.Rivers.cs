@@ -206,6 +206,21 @@ namespace NaturalHistory.World
         // Channels leave and meet each edge square to it, so they join up smoothly with the
         // neighbouring tiles; in between they bend in a random meander, more on flat lowland.
         // Points are in the cell's space, relative to its top face.
+        // Centrelines of the river channels drawn on a cell (inflows to the junction, then the
+        // outflow), in the cell's space: the same curves CreateRiverMesh builds, so a canyon can be
+        // cut exactly where its river runs. Empty if the cell has no river.
+        private List<List<Vector2>> riverLines;
+        public List<List<Vector2>> RiverCenterlines(HexCell cell)
+        {
+            var lines = new List<List<Vector2>>();
+            if (cell == null || !cell.HasRiver || cell.RiverOut < 0) return lines;
+            riverLines = lines;
+            var mesh = CreateRiverMesh(cell);
+            riverLines = null;
+            if (mesh != null) DestroyMesh(mesh);
+            return lines;
+        }
+
         private Mesh CreateRiverMesh(HexCell cell)
         {
             var n     = EdgeNeighbors(cell);
@@ -257,6 +272,8 @@ namespace NaturalHistory.World
                 float len   = (b - a).magnitude;
                 float bendA = R(-1f, 1f), bendB = R(-1f, 1f), wobble = R(-1f, 1f);
                 int start = verts.Count;
+                var line = riverLines != null ? new List<Vector2>() : null;
+                riverLines?.Add(line);
                 for (int i = 0; i <= steps; i++)
                 {
                     float t = i / (float)steps, t2 = t * t, t3 = t2 * t;
@@ -268,6 +285,7 @@ namespace NaturalHistory.World
                     p += side * (meander * env * (bendA + bendB * Mathf.Sin(2f * Mathf.PI * t)) * 0.6f);
                     float w = Mathf.Lerp(wa, wb, t) * (1f + 0.22f * wobble * Mathf.Sin(Mathf.PI * t));
                     float v = Mathf.Lerp(va, vb, t);
+                    line?.Add(p);
 
                     // across: bank, water edge, middle, water edge, bank
                     float[] across = { -1f, -0.6f, 0f, 0.6f, 1f };
