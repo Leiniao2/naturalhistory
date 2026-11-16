@@ -130,6 +130,21 @@ namespace NaturalHistory.World
             _                        => kind.ToString(),
         });
 
+        // A landform's name for the tile title (null when the tile isn't one)
+        public static string LandformName(TerrainFeature f) => f switch
+        {
+            TerrainFeature.Mesa         => Loc.T("Mesa"),
+            TerrainFeature.Canyon       => Loc.T("Canyon"),
+            TerrainFeature.Fjord        => Loc.T("Fjord"),
+            TerrainFeature.WhiteCliffs  => Loc.T("White cliffs"),
+            TerrainFeature.SaltLake     => Loc.T("Salt lake"),
+            TerrainFeature.PinkSaltLake => Loc.T("Pink salt lake"),
+            TerrainFeature.Danxia       => Loc.T("Danxia (rainbow hills)"),
+            TerrainFeature.Karst        => Loc.T("Karst towers"),
+            TerrainFeature.Geothermal   => Loc.T("Geothermal field"),
+            _                           => null,
+        };
+
         // What grows on a cell in a period, for the tile panel. Null when there is nothing to say.
         public static string FloraOf(HexCell cell, GeologicalAge age)
         {
@@ -144,6 +159,7 @@ namespace NaturalHistory.World
                     <= GeologicalAge.Permian  => "Tabulate and rugose corals, sponges and crinoids",
                     _                         => "Coral reef",
                 },
+                TerrainFeature.Geothermal => "Hot springs, geysers and fumaroles, crusted with sinter and bright microbial mats",
                 TerrainFeature.Oasis => age < GeologicalAge.Devonian ? "Spring-fed pool ringed with microbial mats" : "Spring-fed pool with " + OasisPlants(age),
                 _ => GroundFlora(cell.Terrain.kind, age),
             });

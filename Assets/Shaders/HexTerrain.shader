@@ -317,6 +317,32 @@ Shader "NaturalHistory/HexTerrain"
         float4    _Shore;
         half      _Flood;
 
+        // Blending into the neighbouring tiles across each edge (as the URP pass does). Here it runs
+        // only while _BuiltinEdgeBlend is on (the under view, set by HexGrid); _EdgeScale[e] is the
+        // neighbour texture's world tiling (0 = this tile's), so each texture keeps its own size.
+        sampler2D _EdgeTex0, _EdgeTex1, _EdgeTex2, _EdgeTex3, _EdgeTex4, _EdgeTex5;
+        float4    _EdgeTint[6];
+        float     _EdgeScale[6];
+        float     _HexApothem;
+        float     _HexBlendWidth;
+        float     _BuiltinEdgeBlend;
+
+        half3 EdgeTex(int e, float2 uv)
+        {
+            if (e == 0) return tex2D(_EdgeTex0, uv).rgb;
+            if (e == 1) return tex2D(_EdgeTex1, uv).rgb;
+            if (e == 2) return tex2D(_EdgeTex2, uv).rgb;
+            if (e == 3) return tex2D(_EdgeTex3, uv).rgb;
+            if (e == 4) return tex2D(_EdgeTex4, uv).rgb;
+            return tex2D(_EdgeTex5, uv).rgb;
+        }
+
+        float EdgeDist(int e, float2 local)
+        {
+            float a = radians(60.0 * e + 30.0);
+            return _HexApothem - dot(local, float2(sin(a), cos(a)));
+        }
+
         // Same as the URP pass: bare rock on steep land faces, darker and wet near the waterline
         half3 CliffRock(float3 worldPos, float3 p, float3 n)
         {
@@ -366,6 +392,26 @@ Shader "NaturalHistory/HexTerrain"
                 half pool = smoothstep(0.11, 0.16, dip) * _Flood;
                 albedo = lerp(albedo, albedo * half3(0.62, 0.7, 0.6), wet * 0.8);
                 albedo = lerp(albedo, half3(0.3, 0.42, 0.45), pool * 0.85);
+            }
+
+            // Fade toward the neighbours' textures near each edge (nearest edge and, near a corner,
+            // the next one), so adjacent tiles meet without a hard line
+            if (top && _BuiltinEdgeBlend > 0.5)
+            {
+                float2 local  = IN.worldPos.xz - float2(unity_ObjectToWorld._m03, unity_ObjectToWorld._m23);
+                float  angle  = atan2(local.x, local.y);
+                float  sector = (angle < 0 ? angle + 6.2831853 : angle) / 1.0471976;
+                int    e1     = (int)floor(sector) % 6;
+                int    e2     = frac(sector) < 0.5 ? (e1 + 5) % 6 : (e1 + 1) % 6;
+                half   w1     = _EdgeTint[e1].a * (1.0 - smoothstep(0.0, _HexBlendWidth, EdgeDist(e1, local)));
+                half   w2     = _EdgeTint[e2].a * (1.0 - smoothstep(0.0, _HexBlendWidth, EdgeDist(e2, local)));
+                if (w1 + w2 > 0.001)
+                {
+                    float2 wp = (IN.worldPos - float3(_WrapShift, 0, 0)).xz;
+                    half3 n1 = EdgeTex(e1, wp * (_EdgeScale[e1] > 0 ? _EdgeScale[e1] : _Tiling)) * _EdgeTint[e1].rgb / max(_Color.rgb, 0.01);
+                    half3 n2 = EdgeTex(e2, wp * (_EdgeScale[e2] > 0 ? _EdgeScale[e2] : _Tiling)) * _EdgeTint[e2].rgb / max(_Color.rgb, 0.01);
+                    albedo = (albedo + n1 * w1 + n2 * w2) / (1.0 + w1 + w2);
+                }
             }
 
             if (top)

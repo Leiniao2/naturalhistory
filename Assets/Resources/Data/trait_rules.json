@@ -322,6 +322,13 @@
    ]
   },
   {
+   "group": "Discoidal organism",
+   "tags": [
+    "Animal",
+    "Cnidarian"
+   ]
+  },
+  {
    "group": "Early bilaterian",
    "tags": [
     "Animal",
@@ -928,6 +935,14 @@
    ]
   },
   {
+   "group": "Parvancorinomorph",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan"
+   ]
+  },
+  {
    "group": "Pelican",
    "tags": [
     "Animal",
@@ -942,6 +957,13 @@
     "Dinosaur",
     "Theropod",
     "Bird"
+   ]
+  },
+  {
+   "group": "Petalonamid",
+   "tags": [
+    "Animal",
+    "Cnidarian"
    ]
   },
   {
@@ -1281,6 +1303,13 @@
     "Ecdysozoan",
     "Arthropod",
     "Crustacean"
+   ]
+  },
+  {
+   "group": "Sponge",
+   "tags": [
+    "Animal",
+    "Sponge"
    ]
   },
   {

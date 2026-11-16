@@ -209,13 +209,19 @@ namespace NaturalHistory.World
 
         protected override void Build()
         {
-            // the crater is the top of the volcano prop, if there is one
+            // the crater is the volcano prop's active vent (its forms put it in different places:
+            // the taller of twin cones, the island in a caldera lake...), else the top of the prop
             float top = cell.SurfaceHeight + 0.85f * s;
+            vent = new Vector3(0f, top, 0f);
             foreach (var mf in cell.GetComponentsInChildren<MeshFilter>())
                 if (mf.sharedMesh != null && mf.sharedMesh.name == "Volcano")
-                    top = mf.transform.localPosition.y + mf.sharedMesh.bounds.max.y * mf.transform.localScale.y - 0.03f * s;
-            vent = new Vector3(0f, top, 0f);
-            volcanoTop = top;
+                {
+                    if (MapFeatureMeshes.TryGetVent(mf.sharedMesh, out var v))
+                        vent = cell.transform.InverseTransformPoint(mf.transform.TransformPoint(v)) + Vector3.up * 0.01f * s;
+                    else
+                        vent = new Vector3(0f, mf.transform.localPosition.y + mf.sharedMesh.bounds.max.y * mf.transform.localScale.y - 0.03f * s, 0f);
+                }
+            volcanoTop = vent.y; // lava runs down the flanks from here
 
             blast     = AddGlow(2, "Blast");
             ventGlow  = AddGlow(2, "Vent");

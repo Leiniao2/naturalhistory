@@ -83,15 +83,18 @@ namespace NaturalHistory.UI
             var t = climate.Get(cell);
             tilePanel.RemoveFromClassList("hidden");
             var (col, row) = cell.Coordinates.ToOffsetCoordinates();
-            tileTitle.text = $"{(cell.Terrain != null ? Loc.T(EraFlora.DisplayName(cell.Terrain.kind)) : "?")}  ·  ({col}, {row})";
+            var landform = EraFlora.LandformName(cell.Feature);
+            var terrainName = cell.Terrain != null ? Loc.T(EraFlora.DisplayName(cell.Terrain.kind)) : "?";
+            tileTitle.text = $"{(landform != null ? $"{landform} ({terrainName})" : terrainName)}  ·  ({col}, {row})";
             tileZone.text  = Loc.T(ClimateSystem.ZoneName(t.Zone));
             // Named species on the tile; otherwise a description (bare rock, reefs, oases…)
             var flora = cell.Plants.Count > 0 ? string.Join(", ", System.Linq.Enumerable.Select(cell.Plants, p => Loc.T(p.Label)))
                       : HexGrid.Instance != null ? Loc.T(EraFlora.FloraOf(cell, HexGrid.Instance.DisplayedAge)) : null;
             // The layer under sea level below this tile, with any water plants or volcano there
-            var below = Loc.T(UnderView.Name(cell.Under));
+            var below = Loc.T(UnderView.FloorName(cell));
             if (UnderView.Name(cell.UnderFeature) is string feature) below += $", {Loc.T(feature)}";
-            if (cell.UnderPlants.Count > 0) below += " · " + string.Join(", ", System.Linq.Enumerable.Select(cell.UnderPlants, p => Loc.T(p.Label)));
+            var underPlants = System.Linq.Enumerable.ToList(System.Linq.Enumerable.Where(cell.UnderPlants, p => !UnderView.IsFloor(p)));
+            if (underPlants.Count > 0) below += " · " + string.Join(", ", System.Linq.Enumerable.Select(underPlants, p => Loc.T(p.Label)));
             tileStats.text = (flora != null ? Loc.F("Plants: {0}", flora) + "\n" : "") +
                 Loc.F("Below: {0}", below) + "\n" +
                 Loc.F("Temperature: {0:0.0} °C", t.TemperatureC) + "\n" +

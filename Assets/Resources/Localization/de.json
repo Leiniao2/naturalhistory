@@ -10819,6 +10819,58 @@
   {
    "k": "Öland Alvar",
    "v": "Alvar von Öland"
+  },
+  {
+   "k": "Stromatolite seabed",
+   "v": "Stromatolithen-Meeresboden"
+  },
+  {
+   "k": "Stromatolite lakebed",
+   "v": "Stromatolithen-Seegrund"
+  },
+  {
+   "k": "shallow hydrothermal field",
+   "v": "flaches Hydrothermalfeld"
+  },
+  {
+   "k": "Hot springs, geysers and fumaroles, crusted with sinter and bright microbial mats",
+   "v": "Heiße Quellen, Geysire und Fumarolen, überkrustet mit Sinter und leuchtenden Mikrobenmatten"
+  },
+  {
+   "k": "Mesa",
+   "v": "Tafelberg"
+  },
+  {
+   "k": "Canyon",
+   "v": "Canyon"
+  },
+  {
+   "k": "Fjord",
+   "v": "Fjord"
+  },
+  {
+   "k": "White cliffs",
+   "v": "Kreidefelsen"
+  },
+  {
+   "k": "Salt lake",
+   "v": "Salzsee"
+  },
+  {
+   "k": "Pink salt lake",
+   "v": "Rosa Salzsee"
+  },
+  {
+   "k": "Danxia (rainbow hills)",
+   "v": "Danxia (Regenbogenberge)"
+  },
+  {
+   "k": "Karst towers",
+   "v": "Karsttürme"
+  },
+  {
+   "k": "Geothermal field",
+   "v": "Geothermalfeld"
   }
  ]
 }

@@ -218,6 +218,8 @@ namespace NaturalHistory.World
                 else kind = cell.Terrain.kind; // asset missing: keep what the cell has
                 cell.SetFeature(EraFlora.FeatureFor(cell, kind, age));
             }
+            PlaceLandforms(age);
+            PlaceGeothermal();
             DressMountainGround();
             ClearFeatures();
             PlaceFeatures(WorldSeed, age);
@@ -338,11 +340,41 @@ namespace NaturalHistory.World
                 switch (cell.Feature)
                 {
                     case TerrainFeature.Volcano:
-                        mesh = Track(MapFeatureMeshes.CreateVolcano(rng, cellSize, R(0.8f, 1.25f), p => LocalGround(cell, p))); unique = true; others++;
+                        mesh = Track(MapFeatureMeshes.CreateVolcano(rng, cellSize, R(0.8f, 1.25f), p => LocalGround(cell, p),
+                                     MapFeatureMeshes.PickVolcanoForm(rng, ColdPeak(cell, r), false))); unique = true; others++;
                         break;
                     case TerrainFeature.ConiferForest:   mesh = Forest(cell, "Conifer",   conifers);  forests++; break;
                     case TerrainFeature.BroadleafForest: mesh = Forest(cell, "Broadleaf", broadleaf); forests++; break;
                     case TerrainFeature.Jungle:          mesh = Forest(cell, "Jungle",    jungles);   forests++; break;
+                    case TerrainFeature.Geothermal:
+                        mesh = Track(MapFeatureMeshes.CreateGeothermalField(rng, cellSize, p => LocalGround(cell, p))); unique = true; others++;
+                        break;
+                    case TerrainFeature.Mesa:    mesh = Track(MapFeatureMeshes.CreateMesa(rng, cellSize, p => LocalGround(cell, p)));    unique = true; others++; break;
+                    case TerrainFeature.Canyon:  mesh = Track(MapFeatureMeshes.CreateCanyon(rng, cellSize, p => LocalGround(cell, p)));  unique = true; others++; break;
+                    case TerrainFeature.Danxia:  mesh = Track(MapFeatureMeshes.CreateDanxia(rng, cellSize, p => LocalGround(cell, p)));  unique = true; others++; break;
+                    case TerrainFeature.Karst:   mesh = Track(MapFeatureMeshes.CreateKarst(rng, cellSize, p => LocalGround(cell, p)));   unique = true; others++; break;
+                    case TerrainFeature.SaltLake:
+                    case TerrainFeature.PinkSaltLake:
+                        mesh = Track(MapFeatureMeshes.CreateSaltLake(rng, cellSize, cell.Feature == TerrainFeature.PinkSaltLake, p => LocalGround(cell, p)));
+                        unique = true; others++; break;
+                    case TerrainFeature.Fjord:
+                    {
+                        var nb = EdgeNeighbors(cell);
+                        var landward = new bool[6];
+                        for (int e = 0; e < 6; e++) landward[e] = nb[e]?.Terrain != null && !nb[e].IsWater;
+                        mesh = Track(MapFeatureMeshes.CreateFjord(rng, cellSize, landward, 0f)); unique = true; others++;
+                        break;
+                    }
+                    case TerrainFeature.WhiteCliffs:
+                    {
+                        var nb = EdgeNeighbors(cell);
+                        var seaward = new bool[6];
+                        float seaY = 0.02f - cell.SurfaceHeight;
+                        for (int e = 0; e < 6; e++)
+                            if (nb[e]?.Terrain != null && nb[e].Terrain.kind == TerrainKind.SaltWater) { seaward[e] = true; seaY = nb[e].SurfaceHeight - cell.SurfaceHeight; }
+                        mesh = Track(MapFeatureMeshes.CreateWhiteCliffs(rng, cellSize, seaward, seaY, p => LocalGround(cell, p))); unique = true; others++;
+                        break;
+                    }
                     case TerrainFeature.Reef:            mesh = Pick(reefs);     others++;  break;
                     case TerrainFeature.Oasis:           mesh = Pick(oases);     others++;  break;
                     default:
@@ -370,6 +402,8 @@ namespace NaturalHistory.World
                 var feature = AddFeatureObject(cell, mesh, yaw, scale, tint);
                 if (cell.Feature == TerrainFeature.Volcano && Application.isPlaying)
                     feature.AddComponent<VolcanoSmoke>().Init(cellSize, WorldSeed ^ (q * 7919 + r * 104729));
+                if (cell.Feature == TerrainFeature.Geothermal && Application.isPlaying && MapFeatureMeshes.TryGetSteamVents(mesh, out var steam))
+                    feature.AddComponent<GeothermalSteam>().Init(cellSize, WorldSeed ^ (q * 7919 + r * 104729), steam, 0, underwater: false);
             }
             PlaceRivers();
             Debug.Log($"[HexGrid] PlaceFeatures — {mountains} mountains, {forests} forests/jungles, {others} volcanoes/reefs/oases");
@@ -583,6 +617,99 @@ namespace NaturalHistory.World
             return false;
         }
 
+        // Landform tiles, each on the ground that makes it, on a few of the tiles that qualify (the
+        // same ones in every period while they still qualify): mesas, canyons, Danxia hills and salt
+        // lakes in dry country, karst towers in warm wet country, fjords on cold highland coasts and
+        // white chalk cliffs on mild coasts from the Cretaceous on. Not where a river runs.
+        private void PlaceLandforms(GeologicalAge age)
+        {
+            var counts = new Dictionary<TerrainFeature, int>();
+            for (int r = 0; r < height; r++)
+            for (int q = 0; q < width; q++)
+            {
+                var cell = cells[q, r];
+                if (cell.Terrain == null || cell.HasRiver) continue;
+                var form = LandformFor(cell, q, r, age);
+                if (form == TerrainFeature.None) continue;
+                cell.SetFeature(form);
+                counts[form] = counts.TryGetValue(form, out int c) ? c + 1 : 1;
+            }
+            if (counts.Count > 0) Debug.Log("[HexGrid] Landforms — " + string.Join(", ", System.Linq.Enumerable.Select(counts, kv => $"{kv.Value} {kv.Key}")));
+        }
+
+        private float TileRoll(int q, int r, int salt)
+        {
+            uint h = (uint)(WorldSeed * 73856093) ^ (uint)(q * 19349663) ^ (uint)(r * 83492791) ^ (uint)(salt * 2654435761u);
+            h ^= h >> 13; h *= 0x5bd1e995; h ^= h >> 15;
+            return (h & 0xFFFF) / 65535f;
+        }
+
+        private TerrainFeature LandformFor(HexCell cell, int q, int r, GeologicalAge age)
+        {
+            var kind = cell.Terrain.kind;
+            float lat = Latitude(r);
+            var n = EdgeNeighbors(cell);
+            int land = 0, sea = 0, high = 0;
+            foreach (var x in n)
+            {
+                if (x?.Terrain == null) continue;
+                if (x.Terrain.kind == TerrainKind.SaltWater) sea++;
+                else if (!x.IsWater) { land++; if (x.IsMountain || x.Elevation >= 3) high++; }
+            }
+            if (kind == TerrainKind.SaltWater)
+                return lat > 0.55f && land >= 2 && high >= 1 && cell.Feature == TerrainFeature.None && TileRoll(q, r, 1) < 0.6f
+                     ? TerrainFeature.Fjord : TerrainFeature.None;
+            if (cell.IsWater || cell.IsMountain) return TerrainFeature.None;
+
+            bool forest = cell.Feature is TerrainFeature.BroadleafForest or TerrainFeature.ConiferForest or TerrainFeature.Jungle;
+            if (cell.Feature != TerrainFeature.None && !forest) return TerrainFeature.None;
+            bool dry = kind is TerrainKind.Desert or TerrainKind.Steppe or TerrainKind.Barren
+                    || (kind is TerrainKind.Savanna or TerrainKind.Hill or TerrainKind.Plain && cell.Moisture < 0.3f);
+            bool wetWarm = lat < 0.45f && cell.Moisture > 0.5f && kind is TerrainKind.Hill or TerrainKind.Plain or TerrainKind.Rainforest or TerrainKind.Savanna;
+
+            if (wetWarm && TileRoll(q, r, 2) < 0.07f) return TerrainFeature.Karst; // towers rise out of the forest too
+            if (forest) return TerrainFeature.None;
+            if (age >= GeologicalAge.Cretaceous && sea > 0 && cell.Elevation < CliffElevation && lat > 0.25f && lat < 0.7f
+                && kind is TerrainKind.Plain or TerrainKind.Hill or TerrainKind.Steppe && TileRoll(q, r, 3) < 0.14f)
+                return TerrainFeature.WhiteCliffs;
+            if (!dry || sea > 0) return TerrainFeature.None;
+            if (cell.Elevation >= 2 && TileRoll(q, r, 4) < 0.05f) return TerrainFeature.Canyon;
+            if (TileRoll(q, r, 5) < 0.05f) return TerrainFeature.Mesa;
+            if (kind == TerrainKind.Desert && TileRoll(q, r, 6) < 0.07f) return TerrainFeature.Danxia; // rainbow hills: arid desert only (Zhangye)
+            if (cell.Elevation <= 2 && TileRoll(q, r, 7) < 0.05f)
+                return TileRoll(q, r, 8) < 0.5f ? TerrainFeature.PinkSaltLake : TerrainFeature.SaltLake;
+            return TerrainFeature.None;
+        }
+
+        // Geothermal fields on the open lowland around the period's volcanoes (about one in four
+        // tiles within two of one), and very rarely far from any; the same tiles each time.
+        private void PlaceGeothermal()
+        {
+            int placed = 0;
+            for (int r = 0; r < height; r++)
+            for (int q = 0; q < width; q++)
+            {
+                var cell = cells[q, r];
+                if (cell.Terrain == null || cell.IsWater || cell.IsMountain || cell.Feature != TerrainFeature.None) continue;
+                if (cell.Terrain.kind is TerrainKind.IceSheet) continue;
+                uint hash = (uint)(WorldSeed * 73856093) ^ (uint)(q * 19349663) ^ (uint)(r * 83492791);
+                hash ^= hash >> 13; hash *= 0x5bd1e995; hash ^= hash >> 15;
+                float roll = (hash & 0xFFFF) / 65535f;
+                if (NearVolcano(cell) ? roll < 0.25f : roll < 0.004f) { cell.SetFeature(TerrainFeature.Geothermal); placed++; }
+            }
+            if (placed > 0) Debug.Log($"[HexGrid] {placed} geothermal fields");
+        }
+
+        // Cold enough for a volcano to carry snow: near the poles or beside tundra and ice
+        private bool ColdPeak(HexCell cell, int row)
+        {
+            float lat = Mathf.Abs(row / (float)Mathf.Max(1, height - 1) * 2f - 1f);
+            if (lat > 0.6f) return true;
+            foreach (var n in GetNeighbors(cell))
+                if (n.Terrain != null && n.Terrain.kind is TerrainKind.Tundra or TerrainKind.IceSheet) return true;
+            return false;
+        }
+
         private bool NearVolcano(HexCell cell)
         {
             foreach (var n in GetCellsInRange(cell, 2)) if (n.Feature == TerrainFeature.Volcano) return true;
@@ -687,6 +814,12 @@ namespace NaturalHistory.World
                 flood = 0.85f;
             }
             if (flood > 0f) ground = null; // silt covers whatever was there
+            // Landforms (mesas, canyons, Danxia hills, salt lakes) keep the ground of their region, so the
+            // tile's colours run on from its neighbours; the landform brings its own rock. White cliffs
+            // have no beach and chalk faces.
+            if (cell.Feature == TerrainFeature.WhiteCliffs) { shore = Vector4.zero; cliff = Chalk; }
+            // a geothermal field's ground: pale, mineral-crusted and stained a little ochre
+            if (cell.Feature == TerrainFeature.Geothermal) { ground = null; recolor = Paint(new Color(0.7f, 0.65f, 0.52f), 0.45f); }
 
             // Cliff faces get the texture of their rock; it carries its own colour, so the tint
             // only warms or cools it slightly

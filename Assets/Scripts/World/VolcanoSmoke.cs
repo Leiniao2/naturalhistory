@@ -31,7 +31,9 @@ namespace NaturalHistory.World
 
             var filter = GetComponent<MeshFilter>();
             var bounds = filter != null && filter.sharedMesh != null ? filter.sharedMesh.bounds : new Bounds(Vector3.zero, Vector3.one * 0.5f);
-            vent = new Vector3(0f, bounds.max.y - 0.02f * cell, 0f);
+            vent = filter != null && MapFeatureMeshes.TryGetVent(filter.sharedMesh, out var v)
+                 ? v + Vector3.up * 0.01f * cell                          // the active cone's crater
+                 : new Vector3(0f, bounds.max.y - 0.02f * cell, 0f);
 
             float a = R(0f, Mathf.PI * 2f);
             wind = new Vector3(Mathf.Cos(a), 0f, Mathf.Sin(a));

@@ -10819,6 +10819,58 @@
   {
    "k": "Öland Alvar",
    "v": "Alvar d'Öland"
+  },
+  {
+   "k": "Stromatolite seabed",
+   "v": "Fond marin à stromatolithes"
+  },
+  {
+   "k": "Stromatolite lakebed",
+   "v": "Fond lacustre à stromatolithes"
+  },
+  {
+   "k": "shallow hydrothermal field",
+   "v": "champ hydrothermal peu profond"
+  },
+  {
+   "k": "Hot springs, geysers and fumaroles, crusted with sinter and bright microbial mats",
+   "v": "Sources chaudes, geysers et fumerolles, encroûtés de geysérite et de tapis microbiens colorés"
+  },
+  {
+   "k": "Mesa",
+   "v": "Mesa"
+  },
+  {
+   "k": "Canyon",
+   "v": "Canyon"
+  },
+  {
+   "k": "Fjord",
+   "v": "Fjord"
+  },
+  {
+   "k": "White cliffs",
+   "v": "Falaises de craie"
+  },
+  {
+   "k": "Salt lake",
+   "v": "Lac salé"
+  },
+  {
+   "k": "Pink salt lake",
+   "v": "Lac salé rose"
+  },
+  {
+   "k": "Danxia (rainbow hills)",
+   "v": "Danxia (montagnes arc-en-ciel)"
+  },
+  {
+   "k": "Karst towers",
+   "v": "Tours karstiques"
+  },
+  {
+   "k": "Geothermal field",
+   "v": "Champ géothermique"
   }
  ]
 }

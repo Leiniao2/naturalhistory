@@ -101,6 +101,15 @@ namespace NaturalHistory.World
                 cell.SetUnder(cell.Under, UnderFeature.Vents);
                 vents++;
             }
+            // shallow hydrothermal fields: on the shelf around seamounts, and now and then elsewhere
+            foreach (var (cell, v) in sea)
+            {
+                if (cell.Under != UnderKind.Seabed || cell.UnderFeature != UnderFeature.None) continue;
+                bool nearSeamount = false;
+                foreach (var n in GetNeighbors(cell)) if (n.UnderFeature == UnderFeature.Volcano) nearSeamount = true;
+                double roll = rng.NextDouble();
+                if (nearSeamount ? roll < 0.3 : roll < 0.006) cell.SetUnder(cell.Under, UnderFeature.Geothermal);
+            }
             underDirty = true;
         }
 
@@ -232,12 +241,13 @@ namespace NaturalHistory.World
                 if (cell.Terrain == null) continue;
                 Mesh mesh = cell.Under == UnderKind.Bedrock ? Pick(bedrock) : cell.UnderFeature switch
                 {
-                    UnderFeature.Volcano => Track(MapFeatureMeshes.CreateVolcano(rng, cellSize, 0.5f + 0.3f * (float)rng.NextDouble())),
+                    UnderFeature.Volcano => Track(MapFeatureMeshes.CreateVolcano(rng, cellSize, 0.5f + 0.3f * (float)rng.NextDouble(), underwater: true)),
                     UnderFeature.Vents   => Track(MapFeatureMeshes.CreateVents(rng, cellSize)),
+                    UnderFeature.Geothermal => Track(MapFeatureMeshes.CreateShallowVents(rng, cellSize)),
                     _ => plants.Under(rng, cell.Under,
                                       cell.UnderPlants.Count > 0 ? cell.UnderPlants[0] : null,
                                       cell.UnderPlants.Count > 1 ? cell.UnderPlants[1] : null,
-                                      BedDensity(cell)),
+                                      BedDensity(cell) * (MeadowCovered(cell) ? MeadowPropShare : 1f)),
                 };
                 if (mesh == null) continue;
                 var go = new GameObject(mesh.name);
@@ -248,6 +258,8 @@ namespace NaturalHistory.World
                 go.AddComponent<MeshFilter>().sharedMesh = mesh;
                 bool water = cell.Under is UnderKind.Seabed or UnderKind.Lakebed && cell.UnderFeature == UnderFeature.None;
                 go.AddComponent<MeshRenderer>().sharedMaterial = water ? SwayMaterial() : featureMaterial;
+                if (cell.UnderFeature == UnderFeature.Geothermal && Application.isPlaying && MapFeatureMeshes.TryGetSteamVents(mesh, out var seeps))
+                    go.AddComponent<GeothermalSteam>().Init(cellSize, WorldSeed ^ cell.Coordinates.GetHashCode(), seeps, -1, underwater: true);
                 go.SetActive(false);
                 underObjects.Add(go);
             }
@@ -331,6 +343,8 @@ namespace NaturalHistory.World
 
         // ---------- The view ----------
 
+        private static bool WaterBed(UnderKind k) => k is UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed;
+
         private void ApplyUnderView()
         {
             if (cells == null) return;
@@ -339,11 +353,30 @@ namespace NaturalHistory.World
             if (on && underDirty) BuildUnderProps();
             foreach (var go in underObjects) if (go != null) go.SetActive(on);
 
+            Shader.SetGlobalFloat("_BuiltinEdgeBlend", on ? 1f : 0f); // the built-in shader blends tile edges only down here
+            var textures = new Texture[6];
+            var tints    = new Vector4[6];
+            var scales   = new float[6];
             foreach (var cell in cells)
             {
                 if (cell.Terrain == null) continue;
-                if (on) cell.ShowUnder(UnderMaterial(cell), UnderTint(cell));
-                else cell.ShowSurface();
+                if (!on) { cell.ShowSurface(); continue; }
+                // Fade into the neighbouring beds: water beds into water beds, rock and caves into rock
+                System.Array.Clear(textures, 0, 6);
+                System.Array.Clear(tints, 0, 6);
+                System.Array.Clear(scales, 0, 6);
+                var n = EdgeNeighbors(cell);
+                for (int e = 0; e < 6; e++)
+                {
+                    if (n[e]?.Terrain == null || WaterBed(n[e].Under) != WaterBed(cell.Under)) continue;
+                    var m = UnderMaterial(n[e]);
+                    if (m == null || !m.HasProperty("_BaseMap")) continue;
+                    var t = UnderTint(n[e]);
+                    textures[e] = m.GetTexture("_BaseMap");
+                    tints[e]    = new Vector4(t.r, t.g, t.b, 1f);
+                    scales[e]   = m.HasProperty("_Tiling") ? m.GetFloat("_Tiling") : 0f;
+                }
+                cell.ShowUnder(UnderMaterial(cell), UnderTint(cell), textures, tints, scales);
             }
             ShowGroupsForView();
         }
@@ -358,12 +391,32 @@ namespace NaturalHistory.World
         // A water tile whose plants are mats, crusts or turf shows them painted into its floor
         // (UnderMeshes.CoverOf), e.g. Materials/Under/UnderSeabedCoralline; otherwise the plain floor.
         private readonly Dictionary<string, Material> coverMaterials = new();
+        // Meadows: about 40% of the seabed and lakebed with water plants, in broad regions, shows its
+        // plants painted into the floor (seagrass meadow, kelp bed, seaweed or waterweed meadow, by
+        // the main species) with only MeadowPropShare of the 3D plants standing on it — much less to draw.
+        private const float MeadowPropShare = 0.3f;
+        private const float MeadowThreshold = 0.074f; // noise above this: 40% of tiles (measured on PerlinNoise3D's distribution)
+        private bool IsMeadow(HexCell cell)
+        {
+            if (cell.Under is not (UnderKind.Seabed or UnderKind.Lakebed) || cell.UnderPlants.Count == 0) return false;
+            var pos = cell.Coordinates.ToWorldPosition(cellSize);
+            var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.22f / cellSize) + new Vector3(311f, 77f, 913f) + Vector3.one * (WorldSeed % 1000);
+            return PerlinNoise3D.Sample(p.x, p.y, p.z) > MeadowThreshold;
+        }
+
+        private bool MeadowCovered(HexCell cell)
+        {
+            var plants = cell.UnderPlants;
+            string cover = MapFeatureMeshes.CoverOf(cell.Under, plants.Count > 0 ? plants[0] : null, plants.Count > 1 ? plants[1] : null, IsMeadow(cell));
+            return MapFeatureMeshes.IsMeadowCover(cover);
+        }
+
         private Material UnderMaterial(HexCell cell)
         {
             if (cell.UnderFeature == UnderFeature.None && cell.Under is UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed)
             {
                 var plants = cell.UnderPlants;
-                string cover = MapFeatureMeshes.CoverOf(cell.Under, plants.Count > 0 ? plants[0] : null, plants.Count > 1 ? plants[1] : null);
+                string cover = MapFeatureMeshes.CoverOf(cell.Under, plants.Count > 0 ? plants[0] : null, plants.Count > 1 ? plants[1] : null, IsMeadow(cell));
                 if (cover != null)
                 {
                     string name = $"Under{cell.Under}{cover}";

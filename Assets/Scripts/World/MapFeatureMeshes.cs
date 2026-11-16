@@ -218,7 +218,7 @@ namespace NaturalHistory.World
         // taller, so the canopy reads as one domed clump from the strategy camera.
         public static Mesh CreateForest(System.Random rng, float size, bool conifer)
         {
-            var b = new Builder();
+            var b = new Builder { Foliage = true }; // plants: rough, speckled leaf clumps
             float spread = 0.5f * size;
             var trees = Scatter(rng, conifer ? rng.Next(6, 10) : rng.Next(4, 7), spread,
                                 (conifer ? 0.2f : 0.27f) * size, new List<Vector2>());
@@ -272,7 +272,7 @@ namespace NaturalHistory.World
         // Packed canopy of large, dark leaf clumps at mixed heights, with emergent palms above.
         public static Mesh CreateJungle(System.Random rng, float size)
         {
-            var b = new Builder();
+            var b = new Builder { Foliage = true }; // plants: rough, speckled leaf clumps
             foreach (var p in Scatter(rng, rng.Next(9, 13), 0.58f * size, 0.15f * size, new List<Vector2>()))
             {
                 var root  = new Vector3(p.x, 0f, p.y);
@@ -313,7 +313,7 @@ namespace NaturalHistory.World
         // Small pond ringed by palms and shrubs.
         public static Mesh CreateOasis(System.Random rng, float size)
         {
-            var b = new Builder();
+            var b = new Builder { Foliage = true }; // plants: rough, speckled leaf clumps
             var center = new Vector3(Range(rng, -0.06f, 0.06f) * size, 0.004f, Range(rng, -0.06f, 0.06f) * size);
             var rim = Ring(rng, center, 0.24f * size, 10, 0.2f);
             for (int i = 0; i < rim.Length; i++)
@@ -332,98 +332,6 @@ namespace NaturalHistory.World
                 AddBlob(b, rng, new Vector3(Mathf.Sin(a) * d, 0.25f * r, Mathf.Cos(a) * d), r, 0.7f, 0, Shade(rng, Shrub));
             }
             return b.ToMesh("Oasis");
-        }
-
-        // Concave stratovolcano: gullied ash slopes turning to basalt near the top, a crater with a
-        // lava lake, lava streams down the deepest gullies and a small side cone. The smoke plume is
-        // animated separately (VolcanoSmoke) from the crater at the top of the mesh bounds.
-        // groundAt: tile surface height at a point (see CreateMassif); the base follows it.
-        public static Mesh CreateVolcano(System.Random rng, float size, float heightScale, System.Func<Vector2, float> groundAt = null)
-        {
-            const int sides = 48, rings = 18;
-            var b = new Builder();
-            float h    = size * Range(rng, 0.8f, 1.0f) * heightScale;
-            var below  = Vector3.down * h;
-            var g      = ConeGrid(rng, Vector3.zero, 0.58f * size, h, 0.15f * size, sides, rings, 0.22f, 0.05f, 1.7f, out var spokes);
-            if (groundAt != null)
-                for (int i = 0; i < sides; i++)
-                    g[0, i].y = Mathf.Min(g[0, i].y, groundAt(new Vector2(g[0, i].x, g[0, i].z)) - 0.01f);
-
-            // Smooth-shaded slopes: normals from the neighbouring grid points, ash at the foot turning
-            // to basalt up the cone, with a gentle colour variation so it doesn't read as tiles.
-            var normals = new Vector3[rings + 1, sides];
-            var colors  = new Color[rings + 1, sides];
-            for (int k = 0; k <= rings; k++)
-            {
-                float t   = k / (float)rings;
-                var slope = t < 0.25f ? Ash : Color.Lerp(Ash, Basalt, Mathf.InverseLerp(0.25f, 0.7f, t));
-                for (int i = 0; i < sides; i++)
-                {
-                    var around = g[k, (i + 1) % sides] - g[k, (i + sides - 1) % sides];
-                    var up     = g[Mathf.Min(k + 1, rings), i] - g[Mathf.Max(k - 1, 0), i];
-                    var n      = Vector3.Cross(up, around).normalized;
-                    if (Vector3.Dot(n, new Vector3(g[k, i].x, 0f, g[k, i].z)) < 0f) n = -n;
-                    normals[k, i] = n;
-                    colors[k, i]  = Shade(rng, slope, 0.04f);
-                }
-            }
-            for (int k = 0; k < rings; k++)
-            for (int i = 0; i < sides; i++)
-            {
-                int j = (i + 1) % sides;
-                b.AddSmoothTri(g[k, i], g[k, j], g[k + 1, j], normals[k, i], normals[k, j], normals[k + 1, j],
-                               colors[k, i], colors[k, j], colors[k + 1, j], below);
-                b.AddSmoothTri(g[k, i], g[k + 1, j], g[k + 1, i], normals[k, i], normals[k + 1, j], normals[k + 1, i],
-                               colors[k, i], colors[k + 1, j], colors[k + 1, i], below);
-            }
-
-            // Crater: inner wall down to a lava lake. The wall faces inward, so "inside" is beyond the rim.
-            float rimY = 0f;
-            for (int i = 0; i < sides; i++) rimY += g[rings, i].y / sides;
-            float lavaY  = rimY - 0.12f * h;
-            var lavaRing = new Vector3[sides];
-            for (int i = 0; i < sides; i++)
-                lavaRing[i] = new Vector3(g[rings, i].x * 0.6f, lavaY, g[rings, i].z * 0.6f);
-            for (int i = 0; i < sides; i++)
-            {
-                int j = (i + 1) % sides;
-                var outside = (g[rings, i] + g[rings, j]) * 0.5f;
-                outside = new Vector3(outside.x * 3f, lavaY, outside.z * 3f);
-                b.AddQuad(g[rings, i], g[rings, j], lavaRing[j], lavaRing[i], Shade(rng, Basalt * 0.7f, 0.04f), outside);
-                b.AddTri(Vector3.up * lavaY, lavaRing[i], lavaRing[j], Lava * Range(rng, 0.85f, 1.1f), Vector3.up * (lavaY - 1f));
-            }
-
-            // Lava streams follow the two deepest gullies from the rim partway down the slope.
-            var order = new List<int>();
-            for (int i = 0; i < sides; i++) order.Add(i);
-            order.Sort((x, y) => spokes[x].CompareTo(spokes[y]));
-            int streams = rng.Next(1, 3);
-            for (int n = 0; n < streams; n++)
-                AddLavaStream(b, rng, g, order[n * (sides / 2)], rings, rng.Next(1, 3) * rings / 6, size, below);
-
-            // Parasitic cone on a flank away from the lava
-            {
-                int i   = order[sides - 1];
-                var dir = new Vector3(g[0, i].x, 0f, g[0, i].z).normalized;
-                var c   = dir * 0.42f * size + Vector3.up * h * Mathf.Pow(0.25f, 1.7f);
-                var cg  = ConeGrid(rng, c, 0.12f * size, 0.13f * size, 0.04f * size, 8, 2, 0.1f, 0.06f, 1.2f, out _);
-                var cb  = c + Vector3.down * size;
-                for (int k = 0; k < 2; k++)
-                for (int s0 = 0; s0 < 8; s0++)
-                {
-                    int s1 = (s0 + 1) % 8;
-                    b.AddQuad(cg[k, s0], cg[k, s1], cg[k + 1, s1], cg[k + 1, s0], Shade(rng, Basalt, 0.08f), cb);
-                }
-                var top = c + Vector3.up * 0.1f * size;
-                for (int s0 = 0; s0 < 8; s0++)
-                    b.AddTri(cg[2, s0], cg[2, (s0 + 1) % 8], top, Basalt * 0.55f, top + Vector3.up);
-            }
-
-            foreach (var p in Scatter(rng, rng.Next(3, 6), 0.7f * size, 0.08f * size, new List<Vector2>()))
-                if (p.magnitude > 0.55f * size)
-                    AddRock(b, rng, new Vector3(p.x, 0f, p.y), size * Range(rng, 0.03f, 0.05f), Basalt);
-
-            return b.ToMesh("Volcano");
         }
 
         // One lumpy smoke puff of radius 1 (VolcanoSmoke scales, tints and moves them).
@@ -505,7 +413,7 @@ namespace NaturalHistory.World
         // Scattered small props for a terrain tile, or null if the terrain has none.
         public static Mesh CreateDetail(System.Random rng, float size, TerrainKind kind)
         {
-            var b = new Builder();
+            var b = new Builder { Foliage = true }; // plants: rough, speckled leaf clumps
             var taken = new List<Vector2>();
             List<Vector2> Spots(int min, int max, float gap)
             {
@@ -793,6 +701,71 @@ namespace NaturalHistory.World
 
         // Six-sided tapered prism from `from` to `to`, for trunks and branches (ends stay hidden).
         // With fineDetail, a smooth-shaded ten-sided tube instead.
+        // Leaf clump between a smooth ball and a faceted rock: an uneven sphere with a few soft lobes,
+        // shaded half-smooth (each corner's normal is part facet, part sphere), its colour varying
+        // corner to corner (lit tops light, undersides dark, speckle, the odd sun-bleached or deep
+        // blue-green patch) and a few short leafy tips on the upper side.
+        static void FoliageBlob(Builder b, System.Random rng, Vector3 center, float radius, float squash, int detail, Color color)
+        {
+            int det = radius < smallBlobRadius ? 0 : Mathf.Clamp(detail, 1, 1);
+            var (dirs, faces) = Icosphere(det);
+            var lobes = new Vector3[3];
+            for (int k = 0; k < 3; k++) lobes[k] = new Vector3(Range(rng, -1f, 1f), Range(rng, -0.2f, 1f), Range(rng, -1f, 1f)).normalized;
+            var pts = new Vector3[dirs.Length];
+            var nrm = new Vector3[dirs.Length];
+            var col = new Color[dirs.Length];
+            float sq = Mathf.Max(squash, 0.15f);
+            var bleached = new Color(1.1f, 1.06f, 0.82f);
+            var deep     = new Color(0.82f, 0.92f, 0.9f);
+            for (int i = 0; i < dirs.Length; i++)
+            {
+                float bump = 0.93f;
+                foreach (var l in lobes) { float d = Mathf.Max(0f, Vector3.Dot(dirs[i], l)); bump += 0.16f * d * d; }
+                var p = dirs[i] * radius * bump * Range(rng, 0.88f, 1.1f);
+                p.y *= squash;
+                pts[i] = center + p;
+                var sphereN = new Vector3(dirs[i].x, dirs[i].y / sq, dirs[i].z).normalized;
+                nrm[i] = sphereN;
+                double r = rng.NextDouble();
+                var c = color * Mathf.Lerp(0.8f, 1.12f, 0.5f + 0.5f * sphereN.y) * Range(rng, 0.9f, 1.1f);
+                if (r < 0.1) c *= bleached; else if (r < 0.2) c *= deep;
+                col[i] = c * (1f - 0.3f * (0.5f - 0.5f * sphereN.y)); // self-shadowed underside
+            }
+            for (int f = 0; f < faces.Length; f += 3)
+            {
+                int i0 = faces[f], i1 = faces[f + 1], i2 = faces[f + 2];
+                var p0 = pts[i0]; var p1 = pts[i1]; var p2 = pts[i2];
+                var fn = Vector3.Cross(p1 - p0, p2 - p0);
+                var mid = (p0 + p1 + p2) / 3f;
+                if (Vector3.Dot(fn, mid - center) < 0f) fn = -fn;
+                fn.Normalize();
+                // half facet, half sphere: soft edges that still catch the light differently
+                b.AddSmoothTri(p0, p1, p2,
+                               Vector3.Lerp(fn, nrm[i0], 0.55f).normalized, Vector3.Lerp(fn, nrm[i1], 0.55f).normalized, Vector3.Lerp(fn, nrm[i2], 0.55f).normalized,
+                               col[i0], col[i1], col[i2], center);
+                // now and then a short leafy tip on the sunlit side
+                if (fn.y > 0.3f && rng.NextDouble() < 0.08)
+                {
+                    var tip = mid + (fn + new Vector3(Range(rng, -0.25f, 0.25f), 0.15f, Range(rng, -0.25f, 0.25f))) * radius * Range(rng, 0.1f, 0.18f);
+                    var tc  = (col[i0] + col[i1] + col[i2]) / 3f * 1.05f;
+                    var inside = mid - fn * radius;
+                    b.AddTri(p0, p1, tip, tc, inside);
+                    b.AddTri(p1, p2, tip, tc * 0.96f, inside);
+                    b.AddTri(p2, p0, tip, tc * 0.92f, inside);
+                }
+            }
+        }
+
+        // 0..1 from a position, the same every time (bark mottling without an rng)
+        static float Hash01(Vector3 p)
+        {
+            unchecked
+            {
+                int h = Mathf.RoundToInt(p.x * 1000f) * 73856093 ^ Mathf.RoundToInt(p.y * 1000f) * 19349663 ^ Mathf.RoundToInt(p.z * 1000f) * 83492791;
+                return (h & 0xFFFF) / 65535f;
+            }
+        }
+
         static void AddLimb(Builder b, Vector3 from, Vector3 to, float r0, float r1, Color color)
         {
             int sides  = fineDetail ? 10 : 6;
@@ -805,9 +778,11 @@ namespace NaturalHistory.World
                 float a0 = Mathf.PI * 2f * i / sides, a1 = Mathf.PI * 2f * (i + 1) / sides;
                 var d0 = u * Mathf.Cos(a0) + v * Mathf.Sin(a0);
                 var d1 = u * Mathf.Cos(a1) + v * Mathf.Sin(a1);
-                if (!fineDetail) { b.AddQuad(from + d0 * r0, from + d1 * r0, to + d1 * r1, to + d0 * r1, color, inside); continue; }
-                b.AddSmoothTri(from + d0 * r0, from + d1 * r0, to + d1 * r1, d0, d1, d1, color, color, color, inside);
-                b.AddSmoothTri(from + d0 * r0, to + d1 * r1, to + d0 * r1, d0, d1, d0, color, color, color, inside);
+                // plants: each face of the bark its own shade, so trunks look rough rather than painted
+                var c = b.Foliage ? color * (0.82f + 0.3f * Hash01(from + d0 * r0 + to)) : color;
+                if (!fineDetail) { b.AddQuad(from + d0 * r0, from + d1 * r0, to + d1 * r1, to + d0 * r1, c, inside); continue; }
+                b.AddSmoothTri(from + d0 * r0, from + d1 * r0, to + d1 * r1, d0, d1, d1, c, c, c, inside);
+                b.AddSmoothTri(from + d0 * r0, to + d1 * r1, to + d0 * r1, d0, d1, d0, c, c, c, inside);
             }
         }
 
@@ -820,6 +795,7 @@ namespace NaturalHistory.World
         // `angular` (stones) keeps the asked-for detail even with fineDetail.
         static void AddBlob(Builder b, System.Random rng, Vector3 center, float radius, float squash, int detail, Color color, bool angular = false)
         {
+            if (b.Foliage && !angular) { FoliageBlob(b, rng, center, radius, squash, detail, color); return; }
             if (fineDetail && !angular) detail = radius >= fineBlobRadius ? 2 : 1;
             else
             {
@@ -925,6 +901,10 @@ namespace NaturalHistory.World
         // Flat-shaded mesh builder: every triangle gets its own vertices and face normal.
         sealed class Builder
         {
+            // Building plants: leaf clumps come out lumpy, faceted and speckled (FoliageBlob), and
+            // trunks and branches mottled, instead of smooth balls and plain sticks
+            public bool Foliage;
+
             readonly List<Vector3> verts   = new();
             readonly List<Vector3> normals = new();
             readonly List<Color>   colors  = new();
@@ -976,6 +956,9 @@ namespace NaturalHistory.World
             // How much a vertex bends in the wind (MapFeature.shader ApplyWind, mesh uv channel 3)
             readonly Dictionary<int, float> flex = new();
             public void SetFlex(int i, float amount) => flex[i] = amount;
+            // Banded rock (MapFeature.shader BandColor): band coordinate and palette (1 Danxia, 2 strata)
+            readonly Dictionary<int, Vector2> band = new();
+            public void SetBand(int i, float coord, float palette) => band[i] = new Vector2(coord, palette);
             public void SetVertexColor(int i, Color c) => colors[i] = c;
 
             // Lowers every vertex added since `from` that lies below `below` by `amount`: stretches a
@@ -998,6 +981,12 @@ namespace NaturalHistory.World
                     var uv3 = new Vector2[verts.Count];
                     foreach (var (i, amount) in flex) uv3[i] = new Vector2(amount, 0f);
                     mesh.SetUVs(3, uv3);
+                }
+                if (band.Count > 0)
+                {
+                    var uv2 = new Vector2[verts.Count];
+                    foreach (var (i, value) in band) uv2[i] = value;
+                    mesh.SetUVs(2, uv2);
                 }
                 mesh.SetTriangles(tris, 0);
                 mesh.RecalculateBounds();

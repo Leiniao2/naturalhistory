@@ -32,6 +32,7 @@ namespace NaturalHistory.World
         private static readonly HashSet<string> SeafloorDwellers = new(StringComparer.OrdinalIgnoreCase)
         {
             "Trilobite", "Arthropod", "Lobopodian", "Proarticulate", "Stem mollusc", "Rangeomorph", "Trilobozoan", "Tubular animal",
+            "Parvancorinomorph",
         };
 
         // Which niche a species takes: burrowers and seabed-fixed life go below, fliers above, the

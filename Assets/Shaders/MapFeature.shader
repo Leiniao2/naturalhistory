@@ -70,6 +70,7 @@ Shader "NaturalHistory/MapFeature"
                 float4 positionOS : POSITION;
                 float3 normalOS   : NORMAL;
                 half4  color      : COLOR;
+                float2 band       : TEXCOORD2; // banded rock (BandColor)
                 float2 flex       : TEXCOORD3; // bending in the wind (ApplyWind)
             };
 
@@ -80,6 +81,7 @@ Shader "NaturalHistory/MapFeature"
                 float3 normalWS   : TEXCOORD1;
                 half4  color      : COLOR;
                 float  fogFactor  : TEXCOORD2;
+                float2 band       : TEXCOORD3;
             };
 
             Varyings vert(Attributes v)
@@ -96,6 +98,7 @@ Shader "NaturalHistory/MapFeature"
                 o.normalWS   = TransformObjectToWorldNormal(v.normalOS);
                 o.color      = v.color;
                 o.fogFactor  = ComputeFogFactor(pos.positionCS.z);
+                o.band       = v.band;
                 return o;
             }
 
@@ -103,6 +106,7 @@ Shader "NaturalHistory/MapFeature"
             {
                 float3 n      = normalize(i.normalWS);
                 half3  albedo = i.color.rgb * _Color.rgb;
+                if (i.band.y > 0.5) albedo *= BandColor(i.band);
 
                 Light mainLight = GetMainLight(TransformWorldToShadowCoord(i.positionWS));
                 half  ndotl     = saturate(dot(n, mainLight.direction));
@@ -209,10 +213,13 @@ Shader "NaturalHistory/MapFeature"
         struct Input
         {
             float4 color : COLOR;
+            float2 nhBand;  // banded rock (BandColor)
         };
 
-        void vert(inout appdata_full v)
+        void vert(inout appdata_full v, out Input o)
         {
+            UNITY_INITIALIZE_OUTPUT(Input, o);
+            o.nhBand = v.texcoord2.xy;
             ApplyFlap(v.vertex.xyz, v.normal);
             ApplyUndulate(v.vertex.xyz, v.normal);
             ApplyStride(v.vertex.xyz);
@@ -223,6 +230,7 @@ Shader "NaturalHistory/MapFeature"
         void surf(Input IN, inout SurfaceOutput o)
         {
             o.Albedo = IN.color.rgb * _Color.rgb;
+            if (IN.nhBand.y > 0.5) o.Albedo *= BandColor(IN.nhBand);
             o.Alpha  = 1;
         }
         ENDCG

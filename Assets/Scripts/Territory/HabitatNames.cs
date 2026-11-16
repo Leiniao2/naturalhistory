@@ -91,6 +91,13 @@ namespace NaturalHistory.Territory
                 case TerrainFeature.Jungle:        tags.Add("rainforest"); break;
                 case TerrainFeature.Reef:          tags.Add("reef"); break;
                 case TerrainFeature.Oasis:         tags.Add("desert"); tags.Add("lake"); break;
+                case TerrainFeature.Geothermal:    tags.Add("volcano"); break;
+                case TerrainFeature.Mesa:
+                case TerrainFeature.Canyon:
+                case TerrainFeature.Danxia:
+                case TerrainFeature.Karst:         tags.Add("mountain"); break;
+                case TerrainFeature.Fjord:
+                case TerrainFeature.WhiteCliffs:   tags.Add("coast"); break;
                 case TerrainFeature.Volcano:       tags.Add("volcano"); tags.Add("mountain"); break;
             }
             return tags;

@@ -10819,6 +10819,58 @@
   {
    "k": "Öland Alvar",
    "v": "エーランド島のアルヴァル"
+  },
+  {
+   "k": "Stromatolite seabed",
+   "v": "ストロマトライトの海底"
+  },
+  {
+   "k": "Stromatolite lakebed",
+   "v": "ストロマトライトの湖底"
+  },
+  {
+   "k": "shallow hydrothermal field",
+   "v": "浅海の熱水域"
+  },
+  {
+   "k": "Hot springs, geysers and fumaroles, crusted with sinter and bright microbial mats",
+   "v": "温泉・間欠泉・噴気孔。珪華と鮮やかな微生物マットに覆われている"
+  },
+  {
+   "k": "Mesa",
+   "v": "メサ（卓状台地）"
+  },
+  {
+   "k": "Canyon",
+   "v": "峡谷"
+  },
+  {
+   "k": "Fjord",
+   "v": "フィヨルド"
+  },
+  {
+   "k": "White cliffs",
+   "v": "白亜の断崖"
+  },
+  {
+   "k": "Salt lake",
+   "v": "塩湖"
+  },
+  {
+   "k": "Pink salt lake",
+   "v": "ピンクの塩湖"
+  },
+  {
+   "k": "Danxia (rainbow hills)",
+   "v": "丹霞地形（虹色の山）"
+  },
+  {
+   "k": "Karst towers",
+   "v": "カルストの塔状峰"
+  },
+  {
+   "k": "Geothermal field",
+   "v": "地熱地帯"
   }
  ]
 }

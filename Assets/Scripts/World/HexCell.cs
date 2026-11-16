@@ -282,7 +282,9 @@ namespace NaturalHistory.World
 
         // Swaps the tile's skin to the under layer's: its own material and tint, without the surface's
         // edge blending, sand/rock recolouring or shore. ShowSurface puts everything back.
-        public void ShowUnder(Material material, Color tint)
+        // edgeTextures / edgeTints / edgeScales (6 each, may be null): the neighbouring under tiles to
+        // blend into across each edge (tint.a = 0: none), and their textures' world tiling.
+        public void ShowUnder(Material material, Color tint, Texture[] edgeTextures = null, Vector4[] edgeTints = null, float[] edgeScales = null)
         {
             if (meshRenderer == null || material == null) return;
             if (!ShowingUnder)
@@ -296,10 +298,17 @@ namespace NaturalHistory.World
             meshRenderer.sharedMaterial = material;
             propBlock.Clear();
             propBlock.SetFloat("_WrapShift", wrapShift);
-            propBlock.SetVectorArray(EdgeTintsId, new Vector4[6]); // no blending into the surface neighbours
+            propBlock.SetVectorArray(EdgeTintsId, edgeTints ?? new Vector4[6]); // never into the surface neighbours
+            if (edgeTextures != null)
+                for (int e = 0; e < 6; e++) propBlock.SetTexture(EdgeTexIds[e], edgeTextures[e] != null ? edgeTextures[e] : Texture2D.whiteTexture);
+            propBlock.SetFloatArray(EdgeScaleId, edgeScales ?? new float[6]);
+            propBlock.SetFloat(EdgeDarkenId, 0.06f); // only a hint of the tile rim, so beds run on into each other
             meshRenderer.SetPropertyBlock(propBlock);
             ApplyColor();
         }
+
+        static readonly int EdgeScaleId  = Shader.PropertyToID("_EdgeScale");
+        static readonly int EdgeDarkenId = Shader.PropertyToID("_EdgeDarken");
 
         public void ShowSurface()
         {

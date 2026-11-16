@@ -21,6 +21,7 @@ namespace NaturalHistory.World
         None,
         Volcano,    // underwater volcano (seamount)
         Vents,      // hydrothermal vents ("black smokers")
+        Geothermal, // shallow hydrothermal field: white smokers, gas seeps, sulphur and bacterial mats
     }
 
     // Which layer the map shows: the surface, or the layer under sea level
@@ -63,10 +64,23 @@ namespace NaturalHistory.World
             _                    => kind.ToString(),
         });
 
+        // A seabed or lakebed built of stromatolites is its own kind of floor (painted as one, see
+        // MapFeatureMeshes.CoverOf), not a plant on it
+        public static bool IsFloor(PlantDefinition plant) => plant != null && plant.form == "Stromatolite";
+
+        public static string FloorName(HexCell cell)
+        {
+            if (cell.Under is UnderKind.Seabed or UnderKind.Lakebed && cell.UnderFeature == UnderFeature.None)
+                foreach (var p in cell.UnderPlants)
+                    if (IsFloor(p)) return Loc.T(cell.Under == UnderKind.Seabed ? "Stromatolite seabed" : "Stromatolite lakebed");
+            return Name(cell.Under);
+        }
+
         public static string Name(UnderFeature feature) => Loc.T(feature switch
         {
             UnderFeature.Volcano => "underwater volcano",
             UnderFeature.Vents   => "hydrothermal vents",
+            UnderFeature.Geothermal => "shallow hydrothermal field",
             _                    => null,
         });
     }

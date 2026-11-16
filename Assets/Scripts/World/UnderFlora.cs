@@ -37,7 +37,7 @@ namespace NaturalHistory.World
                 case "Stalks":       AddStalks(b, rng, root, s, c); break;
                 case "Lichen":       AddLichen(b, rng, root, s, c); break;
                 case "Truffle":      AddTruffles(b, rng, root, s, c); break;
-                case "Prototaxites": AddPrototaxites(b, rng, root, size * 0.55f * m, c); break;
+                case "Prototaxites": AddPrototaxites(b, rng, root, size * 0.2f * m, c); break; // about half a tile tall (m includes the under-layer size boost)
 
                 // ---- Water plants and algae ----
                 case "Fan":          AddFans(b, rng, root, s * 1.4f, c); break;

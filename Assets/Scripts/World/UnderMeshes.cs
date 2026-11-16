@@ -47,10 +47,9 @@ namespace NaturalHistory.World
                 // Not Denser(): the old periods' density boost is for tiny early land plants; under water
                 // the beds are already thick, and the boost made early seabeds needlessly heavy to draw.
                 // Their plants still get the old periods' bigger size (AgeSize), so they stay visible.
-                if (dense) { count = Mathf.RoundToInt(count * DenseCount * (waterBed ? WaterBedDensity * density : 1f)); gap *= DenseGap; }
-                // fewer water plants, but spread evenly over the whole tile (wider spacing in step
-                // with the smaller count), so the seabed still reads as covered from edge to edge
-                if (dense && waterBed) gap /= Mathf.Sqrt(WaterBedDensity * density);
+                if (dense) { count = Mathf.RoundToInt(count * DenseCount * (waterBed ? WaterBedDensity * AgeWaterDensity * density : 1f)); gap *= DenseGap; }
+                // spacing in step with the count, so the bed stays even from edge to edge
+                if (dense && waterBed) gap /= Mathf.Sqrt(WaterBedDensity * AgeWaterDensity * density);
                 var spots = HexScatter(rng, count, apothem * (dense ? 1.06f : 0.95f), gap * size, taken);
                 taken.AddRange(spots);
                 return spots;
@@ -58,11 +57,19 @@ namespace NaturalHistory.World
             Vector3 At(Vector2 p) => new(p.x, 0f, p.y);
             void AddUnderSpecies(PlantDefinition first, PlantDefinition other)
             {
-                if (first != null)  foreach (var p in Spots(6, 11, 0.11f, true)) AddUnderPlant(b, rng, At(p), size, first, 1f);
-                if (other != null) foreach (var p in Spots(2, 5, 0.11f, true)) AddUnderPlant(b, rng, At(p), size, other, 0.85f);
+                // giant Prototaxites trunks stand alone, one to three to a tile, not in clumps
+                bool Giant(PlantDefinition d) => d.form == "Prototaxites";
+                // fungi in caves and soil: a few clumps scattered over the floor, not a carpet
+                // (the deep seabed's bacterial mats stay thick)
+                List<Vector2> Many(int min, int max) => waterBed ? Spots(min, max, 0.11f, true) : Spots(Mathf.Max(1, min / 3), Mathf.Max(2, max / 3), 0.2f);
+                // late periods: one cave or soil clump in five left out (AgeThin); water beds are thinned by AgeWaterDensity
+                bool Keep(PlantDefinition d) => waterBed || Giant(d) || rng.NextDouble() < AgeThin;
+                if (first != null)  foreach (var p in Giant(first) ? Spots(1, 3, 0.3f) : Many(6, 11)) if (Keep(first)) AddUnderPlant(b, rng, At(p), size, first, 1f);
+                if (other != null) foreach (var p in Giant(other) ? Spots(1, 2, 0.3f) : Many(2, 5)) if (Keep(other)) AddUnderPlant(b, rng, At(p), size, other, 0.85f);
             }
             maxBlobDetail = 0;
             fineDetail = true;
+            waterPlantScale = waterBed ? WaterPlantSize : 1f;
             fineBlobRadius = 0.012f * size;
             skipPainted = waterBed; // mats, crusts and turf are in the floor texture there (CoverOf)
 
@@ -122,6 +129,7 @@ namespace NaturalHistory.World
             }
             maxBlobDetail = 1;
             fineDetail = false;
+            waterPlantScale = 1f;
             skipPainted = false;
             return b.ToMesh($"Under_{kind}_{main?.id}_{second?.id}");
         }
@@ -186,8 +194,12 @@ namespace NaturalHistory.World
             return top;
         }
         // Seabed, deep seabed and lakebed plant beds get this share of the count (caves and soil
-        // keep theirs): a little bare floor between the plants reads fine and is much lighter to draw.
-        const float WaterBedDensity = 0.35f;
+        // keep theirs), times the period's AgeWaterDensity (up to 2.3× from the Paleogene on).
+        const float WaterBedDensity = 0.75f;
+        // Seabed and lakebed plants are grown this much bigger again (same count), so the beds read
+        // as tall meadows and forests; caves' and soil's fungi keep their size. Set by CreateUnderDetail.
+        const float WaterPlantSize = 1.4f;
+        static float waterPlantScale = 1f;
 
         // Simple, flat water plants (microbial and bacterial mats, coralline crusts, low algal turf) are
         // painted into the floor texture of seabed, deep seabed and lakebed tiles instead of being built
@@ -195,11 +207,23 @@ namespace NaturalHistory.World
         static bool skipPainted;
         static bool Painted(string form) => form is "Mat" or "Coralline" or "Algae";
 
+        // Fungi, lichens and slime moulds of caves and soil are drawn this much bigger (Prototaxites
+        // has its own size)
+        const float FungusScale = 2f;
+        static bool Fungal(string form) => form is "Mushroom" or "Toadstool" or "GlowCap" or "Inkcap" or "Funnel" or "Bracket"
+            or "Puffball" or "Earthstar" or "Lattice" or "CoralFungus" or "Cup" or "Morel" or "Mycelium" or "SlimeMold"
+            or "Stalks" or "Lichen" or "Truffle";
+
         // The floor texture a water tile gets for its plants ("BacterialMat", "MicrobialMat",
-        // "Coralline", "AlgalTurf"; null = the plain floor): from its main species if that is a painted
+        // "Coralline", "AlgalTurf", "Stromatolite"; null = the plain floor): from its main species if that is a painted
         // form, else its second. HexGrid.Under loads Materials/Under/Under{kind}{cover}.
-        public static string CoverOf(UnderKind kind, PlantDefinition main, PlantDefinition second)
+        // meadow: the tile lies in a meadow region (HexGrid.Under.IsMeadow) — if nothing above
+        // applies, its water plants are painted into the floor as a meadow ("SeagrassMeadow",
+        // "KelpBed", "SeaweedMeadow"; lakebed "WaterweedMeadow") and only a few stand as 3D plants.
+        public static string CoverOf(UnderKind kind, PlantDefinition main, PlantDefinition second, bool meadow = false)
         {
+            // stromatolites make the whole floor, so they win over a mat or turf
+            if (kind is UnderKind.Seabed or UnderKind.Lakebed && (UnderView.IsFloor(main) || UnderView.IsFloor(second))) return "Stromatolite";
             foreach (var p in new[] { main, second })
             {
                 if (p == null || !Painted(p.form)) continue;
@@ -213,13 +237,26 @@ namespace NaturalHistory.World
                 };
                 if (cover != null) return cover;
             }
-            return null;
+            if (!meadow || main == null) return null;
+            if (kind == UnderKind.Lakebed) return "WaterweedMeadow";
+            if (kind != UnderKind.Seabed) return null;
+            return main.form switch
+            {
+                "Seagrass" => "SeagrassMeadow",
+                "Kelp"     => "KelpBed",
+                _          => "SeaweedMeadow",
+            };
         }
+
+        public static bool IsMeadowCover(string cover) => cover is "SeagrassMeadow" or "KelpBed" or "SeaweedMeadow" or "WaterweedMeadow";
 
         static void AddUnderPlant(Builder b, System.Random rng, Vector3 root, float size, PlantDefinition plant, float scale)
         {
             if (skipPainted && Painted(plant.form)) return; // painted into the floor instead
-            float m = plant.size * scale * UnderPlantScale * Mathf.Lerp(1f, AgeSize, 0.6f) * Range(rng, 0.8f, 1.15f);
+            // stromatolites are mostly painted into the floor (CoverOf): only one in five stands as a 3D dome
+            if (plant.form == "Stromatolite" && rng.NextDouble() < 0.8) return;
+            float m = plant.size * scale * UnderPlantScale * waterPlantScale * Mathf.Lerp(1f, AgeSize, 0.6f) * Range(rng, 0.8f, 1.15f);
+            if (Fungal(plant.form)) m *= FungusScale; // mushrooms, brackets, moulds... were too small to see
             leafTint = plant.Tint;
             int from = b.VertexCount;
             switch (plant.form)

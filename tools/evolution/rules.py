@@ -33,6 +33,8 @@ groups = {
  "Early mammaliaform":MAM, "Eutherian mammal":PLAC,
  # Ediacaran biota: tags of the lineages they may stand at the root of
  "Proarticulate":B+["Ecdysozoan","Lobopodian"], "Stem mollusc":B+["Mollusc"], "Early bilaterian":B+["Chordate","Worm"],
+ "Parvancorinomorph":B+["Ecdysozoan"], "Petalonamid":["Animal","Cnidarian"], "Discoidal organism":["Animal","Cnidarian"],
+ "Sponge":["Animal","Sponge"],
  "Rangeomorph":["Animal","Cnidarian"], "Trilobozoan":["Animal","Cnidarian"], "Tubular animal":B+["Worm"], "Annelid":B+["Worm"], "Tardigrade":B+["Ecdysozoan"],
  "Lobopodian":B+["Ecdysozoan","Lobopodian"],
  "Radiodont":ART+["Marine arthropod"], "Stem arthropod":ART+["Marine arthropod"],

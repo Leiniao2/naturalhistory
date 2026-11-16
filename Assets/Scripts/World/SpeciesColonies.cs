@@ -54,11 +54,11 @@ namespace NaturalHistory.World
         // Each species shows several wild colonies spread over its habitat, so browsing the map shows
         // the age's diversity everywhere, not only once near the start. Ages with few species get more
         // of each, aiming at about this many groups in all (see CopiesOf).
-        private const int TargetWildGroups       = 160;
-        private const int MinCopies              = 2;
-        private const int MaxCopies              = 6;
-        private const int TilesPerCopy           = 30;  // a species with little habitat gets fewer copies
-        private const int MaxBigCopies           = 2;   // animals spilling over their tile (ReserveSpan)
+        private const int TargetWildGroups       = 800; // 5× the original 160
+        private const int MinCopies              = 10;
+        private const int MaxCopies              = 30;
+        private const int TilesPerCopy           = 6;   // a species with little habitat gets fewer copies
+        private const int MaxBigCopies           = 10;  // animals spilling over their tile (ReserveSpan)
         // Sizes are relative to the age: an age whose biggest animal is small is drawn zoomed in, as
         // if that animal were this long, so a Cambrian trilobite reads clearly next to Anomalocaris
         // and gets smaller again once dinosaurs and whales set the scale. Zoomed-in groups show

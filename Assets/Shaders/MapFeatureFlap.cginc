@@ -150,3 +150,28 @@ void ApplyWind(inout float3 p, float flex)
 }
 
 #endif
+
+// Banded rock (Danxia rainbow hills, canyon and mesa strata): uv2.x is a band coordinate laid on
+// each vertex by LandformMeshes (height plus the tilt of the beds), uv2.y which palette (1 = Danxia,
+// 2 = strata; 0 = not banded). The colour is looked up per pixel, so the stripes follow smooth lines
+// instead of the triangles, with a narrow soft edge between bands. Palettes are globals set by
+// MapFeatureMeshes.SetBandPalettes.
+float4 _NHBandsA[8];
+float4 _NHBandsB[8];
+float4 _NHBandCounts; // x = colours in A, y = colours in B
+
+float3 BandPick(float k, float palette)
+{
+    float n = palette < 1.5 ? max(_NHBandCounts.x, 1) : max(_NHBandCounts.y, 1);
+    int   i = (int)(k - n * floor(k / n));
+    return palette < 1.5 ? _NHBandsA[i].rgb : _NHBandsB[i].rgb;
+}
+
+float3 BandColor(float2 band)
+{
+    float k = floor(band.x);
+    float f = band.x - k;
+    float w = max(fwidth(band.x) * 1.2, 0.02);
+    float t = smoothstep(1 - w, 1, f);
+    return lerp(BandPick(k, band.y), BandPick(k + 1, band.y), t);
+}

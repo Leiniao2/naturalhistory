@@ -10819,6 +10819,58 @@
   {
    "k": "Öland Alvar",
    "v": "욀란드 알바르"
+  },
+  {
+   "k": "Stromatolite seabed",
+   "v": "스트로마톨라이트 해저"
+  },
+  {
+   "k": "Stromatolite lakebed",
+   "v": "스트로마톨라이트 호수 바닥"
+  },
+  {
+   "k": "shallow hydrothermal field",
+   "v": "얕은 바다 열수 지대"
+  },
+  {
+   "k": "Hot springs, geysers and fumaroles, crusted with sinter and bright microbial mats",
+   "v": "온천, 간헐천, 분기공과 규화 퇴적물, 선명한 미생물 매트"
+  },
+  {
+   "k": "Mesa",
+   "v": "메사(탁상지)"
+  },
+  {
+   "k": "Canyon",
+   "v": "협곡"
+  },
+  {
+   "k": "Fjord",
+   "v": "피오르"
+  },
+  {
+   "k": "White cliffs",
+   "v": "백악 절벽"
+  },
+  {
+   "k": "Salt lake",
+   "v": "염호"
+  },
+  {
+   "k": "Pink salt lake",
+   "v": "분홍 염호"
+  },
+  {
+   "k": "Danxia (rainbow hills)",
+   "v": "단샤 지형(무지개산)"
+  },
+  {
+   "k": "Karst towers",
+   "v": "카르스트 탑봉"
+  },
+  {
+   "k": "Geothermal field",
+   "v": "지열 지대"
   }
  ]
 }

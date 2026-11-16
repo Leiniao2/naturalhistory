@@ -10819,6 +10819,58 @@
   {
    "k": "Öland Alvar",
    "v": "Алвар Эланда"
+  },
+  {
+   "k": "Stromatolite seabed",
+   "v": "Строматолитовое морское дно"
+  },
+  {
+   "k": "Stromatolite lakebed",
+   "v": "Строматолитовое дно озера"
+  },
+  {
+   "k": "shallow hydrothermal field",
+   "v": "мелководное гидротермальное поле"
+  },
+  {
+   "k": "Hot springs, geysers and fumaroles, crusted with sinter and bright microbial mats",
+   "v": "Горячие источники, гейзеры и фумаролы, покрытые гейзеритом и яркими микробными матами"
+  },
+  {
+   "k": "Mesa",
+   "v": "Столовая гора"
+  },
+  {
+   "k": "Canyon",
+   "v": "Каньон"
+  },
+  {
+   "k": "Fjord",
+   "v": "Фьорд"
+  },
+  {
+   "k": "White cliffs",
+   "v": "Меловые скалы"
+  },
+  {
+   "k": "Salt lake",
+   "v": "Солёное озеро"
+  },
+  {
+   "k": "Pink salt lake",
+   "v": "Розовое солёное озеро"
+  },
+  {
+   "k": "Danxia (rainbow hills)",
+   "v": "Данься (радужные горы)"
+  },
+  {
+   "k": "Karst towers",
+   "v": "Карстовые башни"
+  },
+  {
+   "k": "Geothermal field",
+   "v": "Геотермальное поле"
   }
  ]
 }
