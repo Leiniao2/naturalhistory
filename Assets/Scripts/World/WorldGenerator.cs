@@ -111,7 +111,7 @@ namespace NaturalHistory.World
 
                 // Temperature: hot at equator (center row), cold at poles and altitude
                 float lat  = Mathf.Abs(r / (float)(height - 1) - 0.5f) * 2f;
-                float temp = Mathf.Clamp01(1f - lat * 0.9f - level / (float)MaxElevation * 0.3f);
+                float temp = Temperature(new CellInputs { lat = lat }, level, Conditions.Today);
 
                 cells[q, r].SetInputs(new CellInputs { e = e[i], rugged = isLand ? rugged[i] : 0f, m = m[i], f = f[i], lat = lat, level = level });
                 var kind = ClassifyTerrain(e[i], rugged[i], m[i], temp, Conditions.Today);
@@ -154,8 +154,7 @@ namespace NaturalHistory.World
                 var g = cell.Inputs;
                 bool land = g.e >= waterT;
                 int level = !land ? 0 : g.level > 0 ? g.level : 1; // an exposed shelf is low coastal plain
-                float temp = Mathf.Clamp01(1f - g.lat * 0.9f - level / (float)MaxElevation * 0.3f
-                                           + c.warmth * (0.5f + g.lat)); // polar amplification
+                float temp = Temperature(g, level, c);
                 var kind = ClassifyTerrain(g.e, land ? g.rugged : 0f, g.m, temp, c);
                 var feature = ChooseFeature(kind, g.m, temp, g.f, c);
                 if (cell.IsWater == land || cell.Elevation != level) coastChanged |= cell.IsWater == land;
@@ -310,6 +309,11 @@ namespace NaturalHistory.World
             return val / max;
         }
 
+        // 0..1: hot at the equator, cold toward the poles and with altitude, shifted by the period's
+        // warmth (more at the poles: polar amplification)
+        public static float Temperature(CellInputs g, int level, Conditions c) =>
+            Mathf.Clamp01(1f - g.lat * 0.9f - level / (float)MaxElevation * 0.3f + c.warmth * (0.5f + g.lat));
+
         // Whittaker biome classification: elevation rank drives water, ruggedness drives
         // mountain/hill, then temperature × moisture drive lowland biomes. All inputs are ranks.
         static TerrainKind ClassifyTerrain(float e, float rugged, float m, float temp, Conditions c)
@@ -324,8 +328,9 @@ namespace NaturalHistory.World
             if (rugged > HillThreshold)     return TerrainKind.Hill;
 
             // Lowland: Whittaker biome (temperature × moisture)
-            if (temp < 0.15f) return TerrainKind.IceSheet;
-            if (temp < 0.28f) return TerrainKind.Tundra;
+            // (the top and bottom rows are sea, so the ice and tundra belts start a few rows in)
+            if (temp < 0.24f) return TerrainKind.IceSheet;
+            if (temp < 0.36f) return TerrainKind.Tundra;
             if (temp > TropicalTemp)
             {
                 if (m < 0.18f) return TerrainKind.Desert;

@@ -26,11 +26,12 @@ namespace NaturalHistory.World
         private readonly Dictionary<HexCell, Mesh> surfaceMeshes = new();
         private readonly Dictionary<string, Mesh> seabedMeshCache = new();
 
-        // Where the floor is under a tile in the under view (the tile top for land)
+        // Where the floor is under a tile in the under view (for land, the plateau: HexGrid.Plateau)
         public float UnderSurface(HexCell cell)
         {
             if (cell == null) return 0f;
-            if (seabedY == null || !cell.IsWater) return cell.SurfaceHeight;
+            if (seabedY == null) return cell.SurfaceHeight;
+            if (!cell.IsWater) return PlateauSurface(cell);
             var (q, r) = cell.Coordinates.ToOffsetCoordinates();
             int i = r * width + ((q % width) + width) % width;
             return i >= 0 && i < seabedY.Length ? seabedY[i] : cell.SurfaceHeight;
@@ -200,13 +201,33 @@ namespace NaturalHistory.World
         private static float HexDistance(Vector2 d) =>
             Mathf.Max(Mathf.Abs(d.x), Mathf.Max(Mathf.Abs(d.x * 0.5f + d.y * 0.8660254f), Mathf.Abs(d.x * 0.5f - d.y * 0.8660254f)));
 
-        // The tile mesh for a water cell in the under view: a fine lattice over the whole hex, out to
-        // the cell boundary, smooth-shaded from the surface's own slope; along the coast and the map
-        // edge a skirt drops below it so no gap shows.
-        private Mesh SeabedMesh(HexCell cell)
+        private Mesh SeabedMesh(HexCell cell) => SmoothTileMesh(cell, true);
+
+        // Height of the land's floor (the plateau) at p, relative to a land tile's centre: the same
+        // smooth blend over the land tiles around, so groundwater basins sink into the plateau in
+        // gentle hollows instead of steps. The sea doesn't enter it: at the coast it ends in a wall.
+        public float PlateauAt(HexCell cell, Vector2 p)
+        {
+            float reach = SeabedReach * cellSize, sum = 0f, w = 0f;
+            foreach (var s in SeabedSamples(cell))
+            {
+                if (s.wet) continue;
+                float t = (p - s.at).sqrMagnitude / (reach * reach);
+                if (t >= 1f) continue;
+                float k = (1f - t) * (1f - t) * (1f - t);
+                sum += k * s.y; w += k;
+            }
+            return w > 0f ? sum / w : UnderSurface(cell);
+        }
+
+        // A smooth tile surface (seabed for water, plateau for land): a fine lattice over the whole
+        // hex, out to the cell boundary, smooth-shaded from the surface's own slope. Where the
+        // neighbour is of the other kind (the coast) or missing (the map edge), a wall drops below it.
+        private Mesh SmoothTileMesh(HexCell cell, bool water)
         {
             var (cq, cr) = cell.Coordinates.ToOffsetCoordinates();
-            string k = cq + "," + cr;
+            string k = (water ? "s" : "p") + cq + "," + cr;
+            System.Func<HexCell, Vector2, float> At = water ? SeabedAt : PlateauAt;
             if (seabedMeshCache.TryGetValue(k, out var mesh) && mesh != null) return mesh;
 
             int n = SeabedGrid;
@@ -223,9 +244,9 @@ namespace NaturalHistory.World
             {
                 if (!In(i, j)) continue;
                 var p = e1 * i + e2 * j;
-                float y = SeabedAt(cell, p);
-                float dx = (SeabedAt(cell, p + Vector2.right * eps) - SeabedAt(cell, p - Vector2.right * eps)) / (2f * eps);
-                float dz = (SeabedAt(cell, p + Vector2.up * eps) - SeabedAt(cell, p - Vector2.up * eps)) / (2f * eps);
+                float y = At(cell, p);
+                float dx = (At(cell, p + Vector2.right * eps) - At(cell, p - Vector2.right * eps)) / (2f * eps);
+                float dz = (At(cell, p + Vector2.up * eps) - At(cell, p - Vector2.up * eps)) / (2f * eps);
                 index[(i, j)] = verts.Count;
                 verts.Add(new Vector3(p.x, y, p.y));
                 normals.Add(new Vector3(-dx, 1f, -dz).normalized);
@@ -248,7 +269,7 @@ namespace NaturalHistory.World
             (int, int) Corner(int c) => (c % 6) switch { 0 => (n, 0), 1 => (0, n), 2 => (-n, n), 3 => (-n, 0), 4 => (0, -n), _ => (n, -n) };
             for (int e = 0; e < 6; e++)
             {
-                if (nb[e] != null && nb[e].Terrain != null && nb[e].IsWater) continue;
+                if (nb[e] != null && nb[e].Terrain != null && nb[e].IsWater == water) continue;
                 var (ai, aj) = Corner(e); var (bi, bj) = Corner(e + 1);
                 float ang = (60f * e + 30f) * Mathf.Deg2Rad;
                 var outward = new Vector3(Mathf.Sin(ang), 0f, Mathf.Cos(ang));
@@ -266,7 +287,7 @@ namespace NaturalHistory.World
                     else      { tris.Add(b0); tris.Add(b0 + 1); tris.Add(b0 + 2); tris.Add(b0); tris.Add(b0 + 2); tris.Add(b0 + 3); }
                 }
             }
-            mesh = new Mesh { name = "Seabed", hideFlags = HideFlags.DontSave };
+            mesh = new Mesh { name = water ? "Seabed" : "Plateau", hideFlags = HideFlags.DontSave };
             mesh.SetVertices(verts); mesh.SetNormals(normals); mesh.SetUVs(0, uvs); mesh.SetTriangles(tris, 0);
             mesh.RecalculateBounds();
             seabedMeshCache[k] = mesh;
@@ -281,7 +302,8 @@ namespace NaturalHistory.World
 
         private void FitPropsToSeabed(HexCell cell, Renderer rend)
         {
-            if (seabedY == null || !cell.IsWater || rend == null) return;
+            if (seabedY == null || rend == null) return;
+            System.Func<HexCell, Vector2, float> At = cell.IsWater ? SeabedAt : PlateauAt;
             // least squares over a lattice of the hex: y ≈ a + b x + c z + d x² + e x z + f z²
             var M = new double[6, 6]; var v = new double[6];
             float h0 = UnderSurface(cell);
@@ -292,7 +314,7 @@ namespace NaturalHistory.World
                 if (Mathf.Abs(i + j) > n) continue;
                 var p = new Vector2(0.8660254f * j, i + 0.5f * j) * (cellSize / n);
                 double[] f = { 1, p.x, p.y, p.x * p.x, p.x * p.y, p.y * p.y };
-                double y = SeabedAt(cell, p) - h0;
+                double y = At(cell, p) - h0;
                 for (int r = 0; r < 6; r++) { v[r] += f[r] * y; for (int c = 0; c < 6; c++) M[r, c] += f[r] * f[c]; }
             }
             var x = Solve6(M, v);

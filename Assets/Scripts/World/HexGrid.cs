@@ -427,6 +427,7 @@ namespace NaturalHistory.World
                 Snow     = MountainSnow(cell),
                 EdgeSnow = new float[6],
                 Green    = !icy && green >= 2 && age >= GeologicalAge.Carboniferous, // first conifers
+                Lush     = MountainLush(cell, age),
                 GroundAt = p => LocalGround(cell, p),
             };
             var origin = cell.Coordinates.ToWorldPosition(cellSize);
@@ -464,9 +465,26 @@ namespace NaturalHistory.World
         private static bool InSameMassif(HexCell a, HexCell b) =>
             b != null && a.IsMountain && b.IsMountain && a.Feature != TerrainFeature.Volcano && b.Feature != TerrainFeature.Volcano;
 
-        // Snow line (fraction of the massif height from the top): low on ice sheets, lower toward the poles
-        private float MountainSnow(HexCell cell) =>
-            cell.Terrain.kind == TerrainKind.IceSheet ? 0.8f : Mathf.Lerp(0.12f, 0.6f, Latitude(cell.Coordinates.R));
+        // Snow line (fraction of the massif height from the top): low on ice sheets; elsewhere from how
+        // cold the mountain is in the period shown (latitude, height and the period's warmth), from a
+        // small cap on hot tropical peaks to snow far down the slopes in cold times and near the poles
+        private float MountainSnow(HexCell cell)
+        {
+            if (cell.Terrain.kind == TerrainKind.IceSheet) return 0.8f;
+            return Mathf.Lerp(0.62f, 0.05f, Mathf.InverseLerp(0.1f, 0.7f, MountainTemperature(cell)));
+        }
+
+        private float MountainTemperature(HexCell cell) => cell.HasInputs
+            ? WorldGenerator.Temperature(cell.Inputs, cell.Elevation, DisplayedConditions)
+            : 1f - Latitude(cell.Coordinates.R);
+
+        // 0..1: how far up a mountain is cloaked in green, on warm, wet mountains once there are
+        // forests (Devonian on): tropical ranges green almost to the snow
+        private float MountainLush(HexCell cell, GeologicalAge age)
+        {
+            if (age < GeologicalAge.Devonian || cell.Terrain.kind == TerrainKind.IceSheet) return 0f;
+            return Mathf.InverseLerp(0.4f, 0.62f, MountainTemperature(cell)) * Mathf.InverseLerp(0.3f, 0.6f, cell.Moisture);
+        }
 
         // Ruggedness of mountains at a map position (grid-local XZ), 0..1: ridged noise for crests and
         // valleys, scaled by a broad field so some ranges are higher than others. Sampled around the
@@ -1076,7 +1094,7 @@ namespace NaturalHistory.World
                 if (mc != null) mc.sharedMesh = mesh;
             }
             Debug.Log($"[HexGrid] UpdateCellMeshes — updated {updated} cells, {meshCache.Count} unique tile meshes");
-            if (UnderView.On) ShowSeabedRelief(true); // water tiles were just reset to the sea surface: back to the seabed
+            if (UnderView.On) { ShowSeabedRelief(true); ShowPlateau(true); } // tiles were just reset to the surface: back to the seabed and plateau
         }
 
         // Height of a land tile's top surface above its own top face at a point given relative to

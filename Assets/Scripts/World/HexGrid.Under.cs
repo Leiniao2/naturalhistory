@@ -377,7 +377,8 @@ namespace NaturalHistory.World
                     _ => plants.Under(rng, cell.Under,
                                       cell.UnderPlants.Count > 0 ? cell.UnderPlants[0] : null,
                                       cell.UnderPlants.Count > 1 ? cell.UnderPlants[1] : null,
-                                      BedDensity(cell) * (MeadowCovered(cell) ? MeadowPropShare : 1f)),
+                                      BedDensity(cell) * (MeadowCovered(cell) ? MeadowPropShare : 1f),
+                                      groundwater: !cell.IsWater && cell.Under == UnderKind.Lakebed),
                 };
                 if (mesh == null) continue;
                 var go = new GameObject(mesh.name);
@@ -487,6 +488,7 @@ namespace NaturalHistory.World
 
             Shader.SetGlobalFloat("_BuiltinEdgeBlend", on ? 1f : 0f); // the built-in shader blends tile edges only down here
             ShowSeabedRelief(on);
+            ShowPlateau(on);
             var textures = new Texture[6];
             var tints    = new Vector4[6];
             var scales   = new float[6];
@@ -603,7 +605,7 @@ namespace NaturalHistory.World
             if (cell.IsWater && cell.Terrain.kind == TerrainKind.SaltWater)
                 j *= Mathf.Lerp(1.06f, 0.72f, Mathf.InverseLerp(0.03f, 0.5f, cell.SurfaceHeight - UnderSurface(cell)));
             if (cell.Under == UnderKind.Seabed) return SeaVeil * j;
-            if (cell.Under == UnderKind.Lakebed) return LakeVeil * j;
+            if (cell.Under == UnderKind.Lakebed) return (cell.IsWater ? LakeVeil : Groundwater) * j; // groundwater lakes under the land: lake-blue
             if (cell.Under != UnderKind.DeepSeabed || FloorCover(cell) == "Stromatolite") return Color.white * j;
             j *= Mathf.Lerp(1f, 0.8f, Mathf.InverseLerp(0.5f, 1f, cell.Depth));
             return DeepSea * j;
@@ -618,9 +620,10 @@ namespace NaturalHistory.World
             {
                 if (g == null) continue;
                 bool visible = UnderView.Shows(g);
-                // down to the seabed in the under view: seafloor dwellers onto it, swimmers half way
-                float depth = UnderView.On && g.Cell != null && g.Cell.IsWater ? g.Cell.SurfaceHeight - UnderSurface(g.Cell) : 0f;
-                g.DepthOffset = g.Niche == Niche.Underground ? depth : depth * 0.5f;
+                // down to the seabed in the under view: seafloor dwellers onto it, swimmers half way;
+                // on land the underground animals stand on the plateau (above or below the surface's top)
+                float depth = UnderView.On && g.Cell != null && g.Cell.Terrain != null ? g.Cell.SurfaceHeight - UnderSurface(g.Cell) : 0f;
+                g.DepthOffset = g.Niche == Niche.Underground || (g.Cell != null && !g.Cell.IsWater) ? depth : depth * 0.5f;
                 foreach (var rend in g.GetComponentsInChildren<Renderer>(true))
                     if (rend.enabled != visible) rend.enabled = visible;
             }

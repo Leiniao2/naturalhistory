@@ -32,7 +32,7 @@ namespace NaturalHistory.World
         // second species, may be null) with stones and shells for seabed and lakebed. Fills the hex.
         // density: how thick this tile's water-plant bed is (patchy across the map, see HexGrid.BuildUnderProps)
         public static Mesh CreateUnderDetail(System.Random rng, float size, UnderKind kind, PlantDefinition main, PlantDefinition second,
-                                             IReadOnlyList<PlantDefinition> extras = null, float density = 1f)
+                                             IReadOnlyList<PlantDefinition> extras = null, float density = 1f, bool groundwater = false)
         {
             var b = new Builder();
             var taken = new List<Vector2>();
@@ -70,7 +70,7 @@ namespace NaturalHistory.World
             maxBlobDetail = 0;
             fineDetail = true;
             waterPlantScale = waterBed ? WaterPlantSize : 1f;
-            stromatoliteTint = kind == UnderKind.Seabed ? SeaVeil : kind == UnderKind.Lakebed ? LakeVeil : Color.white;
+            stromatoliteTint = kind == UnderKind.Seabed ? SeaVeil : kind == UnderKind.Lakebed ? (groundwater ? Groundwater : LakeVeil) : Color.white;
             fineBlobRadius = 0.012f * size;
             skipPainted = waterBed; // mats, crusts and turf are in the floor texture there (CoverOf)
 
@@ -207,6 +207,7 @@ namespace NaturalHistory.World
         // the 3D stromatolites take it too, so they match the stromatolite floor they stand on
         public static readonly Color SeaVeil  = new(0.8f, 0.94f, 1.14f);
         public static readonly Color LakeVeil = new(0.88f, 0.98f, 1.06f);
+        public static readonly Color Groundwater = new(0.42f, 0.76f, 0.98f); // lake-blue groundwater lakes under the land (HexGrid.Plateau)
         static Color stromatoliteTint = Color.white;
 
         // Simple, flat water plants (microbial and bacterial mats, coralline crusts, low algal turf) are

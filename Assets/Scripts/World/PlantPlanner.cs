@@ -89,12 +89,12 @@ namespace NaturalHistory.World
         }
 
         // density: how thick the bed is on this tile (water beds; 1 = normal), part of the cache key
-        public Mesh Under(System.Random rng, UnderKind kind, PlantDefinition main, PlantDefinition second, float density = 1f)
+        public Mesh Under(System.Random rng, UnderKind kind, PlantDefinition main, PlantDefinition second, float density = 1f, bool groundwater = false)
         {
             string k = kind.ToString();
             var extras = main == null ? null : Accents(main, second, alive.Where(p => p.layer == "under" && p.terrains.Contains(k)));
-            return Variant(rng, $"u|{kind}|{main?.id}|{second?.id}|{density:0.##}",
-                           () => MapFeatureMeshes.CreateUnderDetail(rng, cellSize, kind, main, second, extras, density));
+            return Variant(rng, $"u|{kind}|{main?.id}|{second?.id}|{density:0.##}{(groundwater ? "|gw" : "")}",
+                           () => MapFeatureMeshes.CreateUnderDetail(rng, cellSize, kind, main, second, extras, density, groundwater));
         }
 
         // A few more species mixed in among a tile's two, so neighbouring tiles of the same region

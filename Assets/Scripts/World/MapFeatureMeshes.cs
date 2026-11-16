@@ -29,6 +29,7 @@ namespace NaturalHistory.World
             public float Snow;          // snow line as a fraction of the massif height from the top
             public float[] EdgeSnow;
             public bool Green;          // grassy foot and conifers on the lower slopes
+            public float Lush;          // 0..1: warm, wet mountains cloaked in forest this far up (broadleaf trees on the slopes)
             public System.Func<Vector2, float> GroundAt; // tile surface at a local point, relative to the tile top
             public System.Func<Vector2, float> Relief;   // 0..1 ruggedness, continuous over the whole map
             public System.Func<Vector2, float> Detail;   // 0..1 smooth small-scale noise for colour variation, also map-wide
@@ -102,6 +103,9 @@ namespace NaturalHistory.World
                 Color color;
                 if (rel > snowY && (up > 0.45f || rel > snowY + 0.4f * (maxH - snowY)))
                     color = Snow * (0.97f + 0.03f * detail);
+                else if (site.Lush > 0f && rel < Mathf.Min((0.15f + 0.6f * site.Lush + 0.12f * (detail - 0.5f)) * maxH, snowY - 0.05f * maxH)
+                         && up > 0.42f - 0.12f * site.Lush)
+                    color = Color.Lerp(Foothill, Color.Lerp(MountainForest, MountainForestLight, detail), Mathf.Clamp01(site.Lush * 1.6f)) * shade;
                 else if (site.Green && rel < (0.1f + 0.08f * detail) * maxH && up > 0.55f)
                     color = Foothill * shade;
                 else
@@ -135,10 +139,12 @@ namespace NaturalHistory.World
             foreach (var p in Scatter(rng, rng.Next(14, 22), site.Apothem * 0.95f, 0.07f * size, new List<Vector2>()))
             {
                 float m = Mask(p);
-                if (m < 0.04f || m > 0.45f) continue;
+                if (m < 0.04f || m > 0.45f + 0.35f * site.Lush) continue;
                 var at = Point(p);
                 var (snow, rockTint) = Local(p);
-                if (site.Green && rng.NextDouble() < 0.7)
+                if (site.Lush > 0.3f && rng.NextDouble() < 0.4 + 0.5 * site.Lush)
+                    AddBroadleaf(b, rng, at - Vector3.up * 0.01f * size, size * Range(rng, 0.2f, 0.3f), MountainForest, MountainForestLight);
+                else if (site.Green && rng.NextDouble() < 0.7)
                     AddConifer(b, rng, at - Vector3.up * 0.01f * size, size * Range(rng, 0.28f, 0.4f));
                 else if (rng.NextDouble() < 0.5)
                     AddRock(b, rng, at, size * Range(rng, 0.03f, 0.055f), snow >= 0.65f ? Snow * 0.85f : Rock * rockTint);
@@ -604,6 +610,8 @@ namespace NaturalHistory.World
 
         static readonly Color RockDark = new(0.36f, 0.33f, 0.31f);
         static readonly Color Foothill = new(0.38f, 0.40f, 0.27f);
+        static readonly Color MountainForest      = new(0.17f, 0.36f, 0.15f); // forest cloaking warm, wet mountains
+        static readonly Color MountainForestLight = new(0.30f, 0.48f, 0.20f);
         static readonly Color Ash      = new(0.43f, 0.39f, 0.35f);
         static readonly Color LavaCool = new(0.75f, 0.16f, 0.05f);
         static readonly Color Smoke    = new(0.62f, 0.60f, 0.58f);

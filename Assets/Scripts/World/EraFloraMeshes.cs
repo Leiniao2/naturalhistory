@@ -316,7 +316,7 @@ namespace NaturalHistory.World
             smallBlobRadius = 0.09f * size;
             // fewer, bigger trees, so each one reads as a tree with its own crown, blossom and fruit;
             // the one nearest the middle is a big old tree of the dominant species
-            var trees = HexScatter(rng, Thinner(dense ? rng.Next(18, 24) : rng.Next(12, 16)), apothem * 0.95f, (dense ? 0.15f : 0.2f) * size, new List<Vector2>());
+            var trees = HexScatter(rng, Thinner(dense ? rng.Next(18, 24) : rng.Next(12, 16)), apothem * 0.95f, (dense ? 0.15f : 0.2f) * size * LandGap, new List<Vector2>());
             int feature = 0;
             for (int i = 1; i < trees.Count; i++) if (trees[i].sqrMagnitude < trees[feature].sqrMagnitude) feature = i;
             for (int i = 0; i < trees.Count; i++)
@@ -329,7 +329,7 @@ namespace NaturalHistory.World
                 b.SinkBase(from, 0.02f * size, 0.12f * size);
             }
             if (under != null)
-                foreach (var p in HexScatter(rng, Denser(rng.Next(10, 16)), apothem * 0.97f, 0.08f * size, trees))
+                foreach (var p in HexScatter(rng, Denser(rng.Next(10, 16)), apothem * 0.97f, 0.08f * size * LandGap, trees))
                 {
                     int from = b.VertexCount;
                     AddGroundPlant(b, rng, new Vector3(p.x, 0f, p.y), size, under, 0.8f);
@@ -351,7 +351,7 @@ namespace NaturalHistory.World
             maxBlobDetail = 0;
             void Plant(PlantDefinition plant, int min, int max, float gap, float scale)
             {
-                var spots = HexScatter(rng, Denser(rng.Next(min, max + 1)), apothem * 0.96f, gap * size * Mathf.Lerp(1f, AgeSize, 0.5f) / Mathf.Max(AgeDensity, 1f), taken);
+                var spots = HexScatter(rng, Denser(rng.Next(min, max + 1)), apothem * 0.96f, gap * size * LandGap * Mathf.Lerp(1f, AgeSize, 0.5f) / Mathf.Max(AgeDensity, 1f), taken);
                 taken.AddRange(spots);
                 foreach (var p in spots)
                 {
@@ -418,9 +418,13 @@ namespace NaturalHistory.World
             GeologicalAge.Triassic         => (1.1f, 1.1f),
             _                              => (1f, 0.5f), // Jurassic on: plants are big enough to see, so half as many
         };
-        static int Denser(int count) => Mathf.RoundToInt(count * AgeDensity);
-        // trees only ever get fewer (later periods), never more
-        static int Thinner(int count) => Mathf.Max(1, Mathf.RoundToInt(count * Mathf.Min(AgeDensity, 1f)));
+        // Land tiles in every period: 1.5x the trees, plants and flowers, packed
+        // a little closer so they all fit in the hex
+        const float LandDensity = 1.5f;
+        static readonly float LandGap = 1f / Mathf.Sqrt(LandDensity);
+        static int Denser(int count) => Mathf.RoundToInt(count * AgeDensity * LandDensity);
+        // trees only ever get fewer than the base count from the age (later periods), never more
+        static int Thinner(int count) => Mathf.Max(1, Mathf.RoundToInt(count * Mathf.Min(AgeDensity, 1f) * LandDensity));
 
         static List<Vector2> HexScatter(System.Random rng, int count, float apothem, float minGap, List<Vector2> taken)
         {
