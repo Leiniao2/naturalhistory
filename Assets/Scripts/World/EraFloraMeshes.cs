@@ -589,7 +589,7 @@ namespace NaturalHistory.World
                 var heart = warm ? new Color(0.32f, 0.2f, 0.1f) : new Color(0.98f, 0.8f, 0.25f);
                 AddLimb(b, root, head, 0.006f * size, 0.004f * size, Shade(rng, Grass, 0.06f));
                 var facing = (Vector3.up + new Vector3(Range(rng, -0.35f, 0.35f), 0f, Range(rng, -0.35f, 0.35f))).normalized;
-                AddFlowerHead(b, rng, head, Range(rng, 0.075f, 0.105f) * size, c, heart, facing); // big: the map is seen from far above
+                AddFlowerHead(b, rng, head, Range(rng, 0.0525f, 0.0735f) * size, c, heart, facing); // big enough to read from the map camera
             }
         }
 

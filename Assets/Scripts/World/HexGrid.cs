@@ -49,7 +49,7 @@ namespace NaturalHistory.World
         [SerializeField] private TerrainType defaultTerrain;
         [SerializeField] private int seed = 0;          // 0 = random each Play
         [SerializeField] private int previewSeed = 12345; // used in Edit mode when seed is 0
-        [SerializeField] private float elevationStep = 0.2f;  // world height of one terrace level (tiles slope into each other, so land still reads as continuous)
+        private const float ElevationStep = 0.2f; // world height of one terrace level (tiles slope into each other, so land still reads as continuous)
         [Tooltip("Period whose plants the Edit-mode preview shows. In Play mode the map follows AgeManager.")]
         [SerializeField] private GeologicalAge previewAge = GeologicalAge.Quaternary;
 
@@ -1048,12 +1048,12 @@ namespace NaturalHistory.World
             return EdgeNeighbors(from)[from.RiverOut] == to;
         }
 
-        // Water sits flat near sea level; land rises one elevationStep per terrace level.
+        // Water sits flat near sea level; land rises one ElevationStep per terrace level.
         private float CellVisualHeight(HexCell cell) => cell.Terrain.kind switch
         {
             TerrainKind.SaltWater  => 0.02f,
             TerrainKind.FreshWater => 0.06f,
-            _                      => 0.12f + cell.Elevation * elevationStep,
+            _                      => 0.12f + cell.Elevation * ElevationStep,
         };
 
         // Water tiles are flat, bevelled prisms. Land tiles slope from a flat middle to a rim that

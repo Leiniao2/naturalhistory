@@ -98,7 +98,7 @@ namespace NaturalHistory.World
         // neighbour averaging takes off the tile-to-tile noise; then any step steeper than
         // MaxSeabedStep is eased by pulling both sides toward each other, so ridges and trenches
         // widen into slopes rather than being cut away.
-        private const float MaxSeabedStep = 0.07f; // a land terrace step (HexGrid.elevationStep)
+        private const float MaxSeabedStep = 0.07f; // a land terrace step (HexGrid.ElevationStep was 0.07)
 
         private void SmoothSeabed()
         {
