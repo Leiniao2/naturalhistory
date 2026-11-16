@@ -12,6 +12,7 @@ namespace NaturalHistory.World
         Seabed,     // sunlit shallow seabed
         DeepSeabed, // dark abyssal plain
         Lakebed,    // lake and river bed
+        Bedrock,    // solid rock with no way through: the walls of the underground maze
     }
 
     public enum UnderFeature
@@ -36,6 +37,9 @@ namespace NaturalHistory.World
 
         public static void Toggle() => Set(!On);
 
+        // Underground animals can't enter, settle in or pass through solid bedrock
+        public static bool Blocks(UnderKind kind) => kind == UnderKind.Bedrock;
+
         public static string Name(UnderKind kind) => kind switch
         {
             UnderKind.Rock       => "Underground",
@@ -43,6 +47,7 @@ namespace NaturalHistory.World
             UnderKind.Seabed     => "Seabed",
             UnderKind.DeepSeabed => "Deep seabed",
             UnderKind.Lakebed    => "Lakebed",
+            UnderKind.Bedrock    => "Solid bedrock (impassable)",
             _                    => kind.ToString(),
         };
 

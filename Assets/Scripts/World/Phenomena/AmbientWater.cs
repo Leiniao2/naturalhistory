@@ -124,6 +124,14 @@ namespace NaturalHistory.World
         private void Update()
         {
             if (grid == null || !grid.IsGenerated || material == null) return;
+            // waves are on the surface: none in the Underground view (waterfalls hide themselves)
+            if (UnderView.On)
+            {
+                foreach (var b in active) Recycle(b);
+                active.Clear();
+                whitecapDue = beachDue = cliffDue = 0f;
+                return;
+            }
             float now = Time.time;
             if (now >= nextScan) { nextScan = now + ScanInterval; Scan(); }
 

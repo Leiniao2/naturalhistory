@@ -173,6 +173,7 @@ namespace NaturalHistory.World
         public bool CanEnter(HexCell cell)
         {
             if (cell == null || cell.Terrain == null) return false;
+            if (Niche == Niche.Underground && UnderView.Blocks(cell.Under)) return false; // the walls of the underground maze
             if (cell.IsMountain) return Style == ColonyStyle.Soar;
             return Style switch
             {

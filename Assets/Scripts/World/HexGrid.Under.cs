@@ -6,7 +6,9 @@ namespace NaturalHistory.World
 {
     // The layer under sea level, shown instead of the surface while UnderView is on.
     //
-    //   - Under land: rock and soil with roots and burrows, or caves (karst regions, ~25% of land).
+    //   - Under land: a maze. Solid bedrock that nothing can get through, with winding tunnels of
+    //     soil and burrows carved through it from the caves (karst regions, ~25% of land) and the
+    //     coast; every open tile can be reached from the others.
     //   - Under the sea: sunlit shallow seabed with its water plants, or the dark deep seabed, with
     //     the odd underwater volcano and field of hydrothermal vents. Under lakes: lakebed.
     //   - Now and then it doesn't follow the surface (a drowned valley under the coast, a buried lake,
@@ -19,6 +21,7 @@ namespace NaturalHistory.World
         private const float CaveShare = 0.25f;   // of land
         private const float VolcanoShare = 0.03f; // of sea tiles
         private const float VentShare    = 0.02f; // of deep sea tiles
+        private const float TunnelShare  = 0.3f;  // of land carved into tunnels (the rest that isn't cave is bedrock)
 
         private readonly List<GameObject> underObjects = new();
         private readonly Dictionary<UnderKind, Material> underMaterials = new();
@@ -76,7 +79,7 @@ namespace NaturalHistory.World
                 }
                 else
                 {
-                    kind = caves.Contains(cell) ? UnderKind.Cave : UnderKind.Rock;
+                    kind = caves.Contains(cell) ? UnderKind.Cave : UnderKind.Bedrock; // tunnels are carved below
                     if (coast && odd > 0.38f)      kind = UnderKind.Seabed;               // a drowned valley under the coast
                     else if (lake && odd < -0.40f) kind = UnderKind.Lakebed;              // an old lake, buried
                 }
@@ -84,6 +87,8 @@ namespace NaturalHistory.World
                 if (kind is UnderKind.Seabed or UnderKind.DeepSeabed) sea.Add((cell, Noise(cell, 0.35f, volcanoOff) + (kind == UnderKind.DeepSeabed ? 0.1f : 0f)));
                 if (kind == UnderKind.DeepSeabed) deep.Add((cell, Noise(cell, 0.6f, ventOff)));
             }
+
+            CarveTunnels(rng);
 
             sea.Sort((a, b) => b.v.CompareTo(a.v));
             for (int i = 0; i < sea.Count * VolcanoShare; i++) sea[i].cell.SetUnder(sea[i].cell.Under, UnderFeature.Volcano);
@@ -97,6 +102,89 @@ namespace NaturalHistory.World
                 vents++;
             }
             underDirty = true;
+        }
+
+        // Winding tunnels through the bedrock: "worms" set out from the caves, the coast and earlier
+        // tunnels, keep roughly to a heading and turn now and then, and stop rather than open into a
+        // passage beside them (now and then they break through, making loops), so corridors stay one
+        // tile wide. Then any pocket still cut off is joined to the rest by the shortest way through.
+        private void CarveTunnels(System.Random rng)
+        {
+            bool Open(HexCell c) => c != null && c.Terrain != null && !UnderView.Blocks(c.Under);
+            var starts = new List<HexCell>();
+            int landCount = 0;
+            foreach (var cell in cells)
+            {
+                if (cell.Terrain == null || cell.IsWater) continue;
+                landCount++;
+                if (!Open(cell)) foreach (var n in GetNeighbors(cell)) { if (n.IsWater) { starts.Add(cell); break; } } // coast: in from the sea
+                else starts.Add(cell);                                                                                  // cave edges
+            }
+            if (starts.Count == 0) return;
+
+            int budget = Mathf.RoundToInt(landCount * TunnelShare), carved = 0;
+            for (int worm = 0; carved < budget && worm < budget * 4; worm++)
+            {
+                var here = starts[rng.Next(starts.Count)];
+                if (!Open(here)) { here.SetUnder(UnderKind.Rock, UnderFeature.None); carved++; }
+                int dir = rng.Next(6), length = rng.Next(5, 16);
+                for (int step = 0; step < length; step++)
+                {
+                    double turn = rng.NextDouble();
+                    if (turn < 0.2) dir = (dir + 1) % 6; else if (turn < 0.4) dir = (dir + 5) % 6;
+                    var next = EdgeNeighbors(here)[dir];
+                    if (next == null || next.Terrain == null || next.IsWater) break;
+                    if (!Open(next))
+                    {
+                        int openAround = 0;
+                        foreach (var n in GetNeighbors(next)) if (n != here && !n.IsWater && Open(n)) openAround++;
+                        if (openAround >= 2 && rng.NextDouble() > 0.12) break; // would widen into a hall: stop here
+                        next.SetUnder(UnderKind.Rock, UnderFeature.None);
+                        carved++;
+                    }
+                    here = next;
+                    if (rng.NextDouble() < 0.15) starts.Add(here); // a branch may set out from here later
+                }
+            }
+
+            // Join up: flood the open layer from the water (the seabed is all one), then dig the
+            // shortest way from each pocket left over to the reached part
+            var reached = new HashSet<HexCell>();
+            int joins = 0;
+            void Flood(HexCell from)
+            {
+                var queue = new Queue<HexCell>();
+                if (reached.Add(from)) queue.Enqueue(from);
+                while (queue.Count > 0)
+                    foreach (var n in GetNeighbors(queue.Dequeue()))
+                        if (Open(n) && reached.Add(n)) queue.Enqueue(n);
+            }
+            foreach (var cell in cells) if (cell.Terrain != null && cell.IsWater && Open(cell) && !reached.Contains(cell)) Flood(cell);
+            foreach (var cell in cells)
+            {
+                if (!Open(cell) || reached.Contains(cell)) continue;
+                var parent = new Dictionary<HexCell, HexCell> { [cell] = null };
+                var queue  = new Queue<HexCell>();
+                queue.Enqueue(cell);
+                HexCell meet = null;
+                while (queue.Count > 0 && meet == null)
+                {
+                    var c = queue.Dequeue();
+                    foreach (var n in GetNeighbors(c))
+                    {
+                        if (n.Terrain == null || parent.ContainsKey(n)) continue;
+                        parent[n] = c;
+                        if (reached.Contains(n)) { meet = n; break; }
+                        queue.Enqueue(n);
+                    }
+                }
+                for (var c = meet != null ? parent[meet] : null; c != null; c = parent[c])
+                    if (!Open(c)) { c.SetUnder(UnderKind.Rock, UnderFeature.None); joins++; }
+                Flood(cell);
+            }
+            int solid = 0;
+            foreach (var cell in cells) if (cell.Terrain != null && !cell.IsWater && !Open(cell)) solid++;
+            Debug.Log($"[HexGrid] Underground maze — {carved} tunnel tiles carved, {joins} dug to join pockets, {solid} of {landCount} land tiles solid bedrock");
         }
 
         // ---------- Dressing ----------
@@ -126,10 +214,13 @@ namespace NaturalHistory.World
 
             var rng = new System.Random(WorldSeed ^ 0x5EABED);
             var plants = new PlantPlanner(DisplayedAge, WorldSeed, cellSize, WrapWidth, Track);
+            var bedrock = new Mesh[8];
+            for (int i = 0; i < bedrock.Length; i++) bedrock[i] = Track(CreateBedrockMesh(rng));
+            Mesh Pick(Mesh[] pool) => pool[rng.Next(pool.Length)];
             foreach (var cell in cells)
             {
                 if (cell.Terrain == null) continue;
-                Mesh mesh = cell.UnderFeature switch
+                Mesh mesh = cell.Under == UnderKind.Bedrock ? Pick(bedrock) : cell.UnderFeature switch
                 {
                     UnderFeature.Volcano => Track(MapFeatureMeshes.CreateVolcano(rng, cellSize, 0.5f + 0.3f * (float)rng.NextDouble())),
                     UnderFeature.Vents   => Track(MapFeatureMeshes.CreateVents(rng, cellSize)),
@@ -148,6 +239,69 @@ namespace NaturalHistory.World
                 go.SetActive(false);
                 underObjects.Add(go);
             }
+        }
+
+        // A block of solid rock filling the hex: a jagged, faceted top standing well above the
+        // tunnels around it, with walls going down into the ground, so the bedrock reads as the
+        // walls of the maze. Faceted (own vertices per face) dark grey with lighter crests.
+        private Mesh CreateBedrockMesh(System.Random rng)
+        {
+            float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
+            float corner = cellSize * TileRadius, apo = corner * 0.8660254f;
+            var top = new Vector3[12];   // outer ring: corner i at 2i, edge midpoint at 2i + 1
+            var inner = new Vector3[6];
+            for (int j = 0; j < 12; j++)
+            {
+                float a = Mathf.Deg2Rad * 30f * j;
+                float rad = (j % 2 == 0 ? corner : apo) * R(0.97f, 1f);
+                top[j] = new Vector3(Mathf.Sin(a) * rad, cellSize * R(0.13f, 0.2f), Mathf.Cos(a) * rad);
+            }
+            for (int i = 0; i < 6; i++)
+            {
+                float a = Mathf.Deg2Rad * (60f * i + R(-12f, 12f));
+                float rad = corner * R(0.4f, 0.6f);
+                inner[i] = new Vector3(Mathf.Sin(a) * rad, cellSize * R(0.2f, 0.3f), Mathf.Cos(a) * rad);
+            }
+            var centre = new Vector3(R(-0.05f, 0.05f) * cellSize, cellSize * R(0.26f, 0.34f), R(-0.05f, 0.05f) * cellSize);
+            float bottom = -cellSize * 0.2f;
+
+            var verts = new List<Vector3>(); var colors = new List<Color>(); var tris = new List<int>();
+            void Face(Vector3 a, Vector3 b, Vector3 c, Color col)
+            {
+                int k = verts.Count;
+                verts.Add(a); verts.Add(b); verts.Add(c);
+                colors.Add(col); colors.Add(col); colors.Add(col);
+                tris.Add(k); tris.Add(k + 1); tris.Add(k + 2);
+            }
+            Color Rock(float y) // higher is lighter: crests catch the light
+            {
+                float v = Mathf.Lerp(0.26f, 0.42f, Mathf.InverseLerp(0.1f, 0.34f, y / cellSize)) * R(0.92f, 1.08f);
+                return new Color(v, v * 0.97f, v * 0.93f);
+            }
+            for (int i = 0; i < 6; i++)
+            {
+                int n = (i + 1) % 6;
+                Vector3 a = inner[i], b = top[2 * i], c = top[2 * i + 1], d = top[(2 * i + 2) % 12];
+                Face(centre, a, inner[n], Rock((centre.y + a.y + inner[n].y) / 3f));
+                Face(a, b, c, Rock((a.y + b.y + c.y) / 3f));
+                Face(a, c, inner[n], Rock((a.y + c.y + inner[n].y) / 3f));
+                Face(inner[n], c, d, Rock((inner[n].y + c.y + d.y) / 3f));
+            }
+            for (int j = 0; j < 12; j++)
+            {
+                Vector3 t0 = top[j], t1 = top[(j + 1) % 12];
+                Vector3 b0 = new(t0.x, bottom, t0.z), b1 = new(t1.x, bottom, t1.z);
+                var wall = Rock(0f) * 0.85f;
+                Face(t0, b0, t1, wall);
+                Face(t1, b0, b1, wall);
+            }
+            var mesh = new Mesh { name = "Bedrock" };
+            mesh.SetVertices(verts);
+            mesh.SetColors(colors);
+            mesh.SetTriangles(tris, 0);
+            mesh.RecalculateNormals();
+            mesh.RecalculateBounds();
+            return mesh;
         }
 
         // ---------- The view ----------
@@ -176,7 +330,13 @@ namespace NaturalHistory.World
             return m;
         }
 
-        // Slight per-tile variation; deep seabed darkens with depth, volcanic ground is darker
+        // Seen through the water above: everything under the sea is tinted sea blue, turquoise over
+        // the shallows deepening to blue with depth; lakebeds a lighter green-blue. Plus slight
+        // per-tile variation; deep seabed darkens with depth, volcanic ground is darker.
+        private static readonly Color ShallowSea = new(0.55f, 0.95f, 1.45f);
+        private static readonly Color DeepSea    = new(0.62f, 0.82f, 1.5f);
+        private static readonly Color LakeWater  = new(0.75f, 1.0f, 1.2f);
+
         private static Color UnderTint(HexCell cell)
         {
             var (q, r) = cell.Coordinates.ToOffsetCoordinates();
@@ -184,7 +344,11 @@ namespace NaturalHistory.World
             float j = 0.92f + 0.16f * ((h & 0xFFFF) / 65535f);
             if (cell.Under == UnderKind.DeepSeabed) j *= Mathf.Lerp(1f, 0.8f, Mathf.InverseLerp(0.5f, 1f, cell.Depth));
             if (cell.UnderFeature != UnderFeature.None) j *= 0.85f;
-            return new Color(j, j, j);
+            if (cell.Under == UnderKind.Bedrock) j *= 0.6f;
+            var water = Color.white;
+            if (cell.Terrain.kind == TerrainKind.SaltWater) water = Color.Lerp(ShallowSea, DeepSea, cell.Depth);
+            else if (cell.Terrain.kind == TerrainKind.FreshWater) water = LakeWater;
+            return water * j;
         }
 
         // Underground-niche animals live in the under layer; everyone else on the surface

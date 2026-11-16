@@ -800,6 +800,8 @@ namespace NaturalHistory.World
             }
         }
 
+        protected override bool ShowsUnderground => true;
+
         protected override void End() => Restore();
         private void OnDestroy() => Restore();
 

@@ -77,6 +77,9 @@ namespace NaturalHistory.World
             if (TurnManager.Instance != null) TurnManager.Instance.OnTurnBegin += OnTurnBegin;
         }
 
+        // Felt in the layer below the surface too; everything else happens on the surface only
+        public static bool ReachesUnderground(Phenomenon kind) => kind == Phenomenon.Earthquake;
+
         private void OnDestroy()
         {
             if (TurnManager.Instance != null) TurnManager.Instance.OnTurnBegin -= OnTurnBegin;
@@ -92,6 +95,7 @@ namespace NaturalHistory.World
             {
                 int k = (nextTestKind + i) % Names.Length;
                 if (sites[k].Count == 0) continue;
+                if (UnderView.On && !ReachesUnderground((Phenomenon)k)) continue; // it wouldn't show
                 nextTestKind = k + 1;
                 Play((Phenomenon)k, sites[k][rng.Next(Mathf.Min(3, sites[k].Count))]);
                 return;

@@ -255,6 +255,7 @@ namespace NaturalHistory.World
         // Same habitat test as wild placement: the tile's terrain or its present-day biome is listed.
         public static bool FitsHabitat(SpeciesDefinition def, HexCell cell) =>
             cell != null && cell.Terrain != null && !cell.IsMountain && def.habitats != null &&
+            !(Niches.Of(def) == Niche.Underground && UnderView.Blocks(cell.Under)) && // no way into solid bedrock
             (def.habitats.Contains(cell.Terrain.kind.ToString()) || def.habitats.Contains(cell.Biome.ToString()));
 
         public static bool CanTravel(SpeciesDefinition def) =>
@@ -316,6 +317,7 @@ namespace NaturalHistory.World
                 if (cell == null || cell.Terrain == null || cell.IsMountain) continue;
                 if (def.habitats == null) continue;
                 if (!def.habitats.Contains(cell.Terrain.kind.ToString()) && !def.habitats.Contains(cell.Biome.ToString())) continue;
+                if (niche == Niche.Underground && UnderView.Blocks(cell.Under)) continue;
                 if (occupants.ContainsKey((cell, niche)) || !FoodWeb.HasFood(def, cell, this, null)) continue;
                 float dist = Vector2.Distance(new Vector2(q, r), center);
                 if (cell.Feature != TerrainFeature.None) dist += 1000f;

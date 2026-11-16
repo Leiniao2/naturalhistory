@@ -62,6 +62,7 @@ namespace NaturalHistory.World
             startTime = Time.time;
             Build();
             Animate(0f, 0f);
+            HideIfUnderground();
         }
 
         protected abstract void Build();
@@ -70,6 +71,17 @@ namespace NaturalHistory.World
         protected abstract void Animate(float u, float t);
 
         protected virtual void End() { }
+
+        // Whether it shows in the Underground view too (earthquakes shake the rock below as well).
+        // Most happen on the surface only, so they keep playing out but are hidden while the view is on.
+        protected virtual bool ShowsUnderground => false;
+        private bool Hidden => UnderView.On && !ShowsUnderground;
+
+        private void HideIfUnderground()
+        {
+            if (!Hidden) return;
+            foreach (var p in parts) if (p.renderer != null) p.renderer.enabled = false;
+        }
 
         private void Update()
         {
@@ -82,6 +94,7 @@ namespace NaturalHistory.World
                 return;
             }
             Animate(t / duration, t);
+            HideIfUnderground();
         }
 
         protected float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
