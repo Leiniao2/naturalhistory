@@ -71,7 +71,7 @@ namespace NaturalHistory.World
         private const float TileBevel  = 0.06f;  // width of each tile's rounded top edge, relative to cellSize
         private const float TileBlendWidth = 0.35f; // how far terrain fades into its neighbour from each edge, relative to cellSize
         private const int   CliffElevation = 5;      // coastal land this high (hills, mountains) meets the water in a cliff
-        private const float ShoreHeight    = 0.075f; // lower coasts slope down to this at the water's edge (just above the lakes)
+        private const float ShoreLip       = 0.008f; // lower coasts slope down to just this far above the water they meet: a beach, no step
         private const float TileSolid  = 0.6f;   // flat middle of a land tile, relative to its radius; the rest slopes to meet the neighbours
 
         private void Awake()
@@ -350,7 +350,8 @@ namespace NaturalHistory.World
                     case TerrainFeature.Geothermal:
                         mesh = Track(MapFeatureMeshes.CreateGeothermalField(rng, cellSize, p => LocalGround(cell, p))); unique = true; others++;
                         break;
-                    case TerrainFeature.Mesa:    mesh = Track(MapFeatureMeshes.CreateMesa(rng, cellSize, p => LocalGround(cell, p)));    unique = true; others++; break;
+                    case TerrainFeature.Mesa:    // a table mountain: a mountain tile built flat-topped (CreateMountainFor)
+                        mesh = Track(CreateMountainFor(cell, r, rng, age)); unique = true; mountains++; break;
                     case TerrainFeature.Canyon:  // cut along the tile's river, so its water joins the neighbours' rivers
                         mesh = Track(MapFeatureMeshes.CreateCanyon(rng, cellSize, p => LocalGround(cell, p), RiverCenterlines(cell),
                                                                    cell.HasRiver ? RiverWidth(cell.RiverFlow, RiverStyle(cell.RiverSystem).Item1) : 0f));
@@ -428,6 +429,8 @@ namespace NaturalHistory.World
                 EdgeSnow = new float[6],
                 Green    = !icy && green >= 2 && age >= GeologicalAge.Carboniferous, // first conifers
                 Lush     = MountainLush(cell, age),
+                Table    = cell.Feature == TerrainFeature.Mesa,
+                TableTop = cell.Feature == TerrainFeature.Mesa ? MesaTop(cell) : 0f,
                 GroundAt = p => LocalGround(cell, p),
             };
             var origin = cell.Coordinates.ToWorldPosition(cellSize);
@@ -461,9 +464,28 @@ namespace NaturalHistory.World
             return false;
         }
 
+        // World height of the flat top of the table a mesa tile belongs to (all the mesa tiles joined
+        // to it): a set height above its highest tile, so every tile of a table meets the next level.
+        private float MesaTop(HexCell cell)
+        {
+            float highest = cell.SurfaceHeight;
+            var seen = new HashSet<HexCell> { cell };
+            var open = new Queue<HexCell>();
+            open.Enqueue(cell);
+            while (open.Count > 0)
+            {
+                var c = open.Dequeue();
+                highest = Mathf.Max(highest, c.SurfaceHeight);
+                foreach (var n in EdgeNeighbors(c))
+                    if (n != null && n.Feature == TerrainFeature.Mesa && InSameMassif(c, n) && seen.Add(n)) open.Enqueue(n);
+            }
+            return highest + MapFeatureMeshes.MassifHeight * cellSize * 0.62f;
+        }
+
         // Volcanoes stand alone; other neighbouring mountains are one massif.
         private static bool InSameMassif(HexCell a, HexCell b) =>
-            b != null && a.IsMountain && b.IsMountain && a.Feature != TerrainFeature.Volcano && b.Feature != TerrainFeature.Volcano;
+            b != null && a.IsMountain && b.IsMountain && a.Feature != TerrainFeature.Volcano && b.Feature != TerrainFeature.Volcano
+            && (a.Feature == TerrainFeature.Mesa) == (b.Feature == TerrainFeature.Mesa); // a mesa's table ends in its own cliff
 
         // Snow line (fraction of the massif height from the top): low on ice sheets; elsewhere from how
         // cold the mountain is in the period shown (latitude, height and the period's warmth), from a
@@ -661,6 +683,20 @@ namespace NaturalHistory.World
             return (h & 0xFFFF) / 65535f;
         }
 
+        // A mountain in a dry region where the ranges are tables (broad map-wide noise, so a range
+        // turns to mesas as a whole rather than tile by tile); not icy
+        private const float MesaThreshold = 0.45f; // higher = rarer mesas
+
+        private bool MesaRange(HexCell cell)
+        {
+            // rare: only the few peaks of a broad noise field, so most dry ranges have none, but where
+            // there is one it usually spans two or three neighbouring tiles
+            if (cell.Terrain.kind != TerrainKind.Mountain || cell.Moisture > 0.32f) return false;
+            var pos = cell.Coordinates.ToWorldPosition(cellSize);
+            var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.22f / cellSize) + reliefOffset * 0.3f + Vector3.one * 211f;
+            return PerlinNoise3D.Sample(p.x, p.y, p.z) > MesaThreshold;
+        }
+
         private TerrainFeature LandformFor(HexCell cell, int q, int r, GeologicalAge age)
         {
             var kind = cell.Terrain.kind;
@@ -679,7 +715,9 @@ namespace NaturalHistory.World
                 if (lat < 0.4f && TileRoll(q, r, 9) < 0.06f) return TerrainFeature.Karst; // drowned towers in warm coastal seas (Ha Long Bay)
                 return TerrainFeature.None;
             }
-            if (cell.IsWater || cell.IsMountain) return TerrainFeature.None;
+            // Mesas are table mountains: whole dry ranges (or parts of them) flat-topped and sheer-sided
+            if (cell.IsMountain) return MesaRange(cell) ? TerrainFeature.Mesa : TerrainFeature.None;
+            if (cell.IsWater) return TerrainFeature.None;
 
             bool forest = cell.Feature is TerrainFeature.BroadleafForest or TerrainFeature.ConiferForest or TerrainFeature.Jungle;
             if (cell.Feature != TerrainFeature.None && !forest) return TerrainFeature.None;
@@ -695,7 +733,6 @@ namespace NaturalHistory.World
             if (!dry || sea > 0) return TerrainFeature.None;
             // canyons are cut by rivers: only where a river crosses dry upland
             if (cell.Elevation >= 2 && cell.HasRiver && cell.RiverOut >= 0 && TileRoll(q, r, 4) < 0.35f) return TerrainFeature.Canyon;
-            if (TileRoll(q, r, 5) < 0.025f) return TerrainFeature.Mesa;
             if (kind == TerrainKind.Desert && TileRoll(q, r, 6) < 0.035f) return TerrainFeature.Danxia; // rainbow hills: arid desert only (Zhangye)
             if (cell.Elevation <= 2 && TileRoll(q, r, 7) < 0.05f)
                 return TileRoll(q, r, 8) < 0.5f ? TerrainFeature.PinkSaltLake : TerrainFeature.SaltLake;
@@ -1054,7 +1091,7 @@ namespace NaturalHistory.World
                     {
                         bool shore = Water(n[e]);
                         cliff[e]  = Sea(n[e]) && !Low(cell); // only the open sea cuts cliffs; lake shores slope down
-                        edges[e]  = Land(n[e]) ? (h + n[e].SurfaceHeight) * 0.5f : shore && !cliff[e] ? ShoreHeight : h;
+                        edges[e]  = Land(n[e]) ? (h + n[e].SurfaceHeight) * 0.5f : shore && !cliff[e] ? n[e].SurfaceHeight + ShoreLip : h;
                         joined[e] = cell.IsMountain && Land(n[e]) && n[e].IsMountain;
                     }
                     for (int i = 0; i < 6; i++)
@@ -1067,7 +1104,10 @@ namespace NaturalHistory.World
                         // Shore height unless highland next to the sea makes it a clifftop
                         bool wet   = Water(a) || Water(b);
                         bool cliffTop = !low && (Sea(a) || Sea(b));
-                        corners[i] = wet && !cliffTop ? ShoreHeight : sum / count;
+                        // (at the lower of the waters meeting there, so a beach runs down to the sea
+                        // even where a lake is next to it; the rule depends only on the cells sharing the corner)
+                        float waterY = Mathf.Min(Water(a) ? a.SurfaceHeight : 9f, Water(b) ? b.SurfaceHeight : 9f);
+                        corners[i] = wet && !cliffTop ? waterY + ShoreLip : sum / count;
                     }
 
                     var rim = new float[12];

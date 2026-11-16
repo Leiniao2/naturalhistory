@@ -146,11 +146,10 @@ namespace NaturalHistory.World
         // rising to just under the water surface at the coast. It's a function of map position only,
         // so neighbouring tiles' meshes meet exactly, in height and in shading.
 
-        private struct SeabedSample { public Vector2 at; public float y, sea; public bool wet; }
+        private struct SeabedSample { public Vector2 at; public float y, sea; public bool wet; public int cliffs; } // cliffs: bit e = edge e is a sea cliff
         private readonly Dictionary<HexCell, List<SeabedSample>> seabedSamples = new();
         private const float SeabedReach = 1.9f;    // × cellSize: how far a tile's depth reaches
-        private const float CoastRise   = 0.9f;    // × cellSize: the floor rises to the shore over this distance
-        private const int   SeabedGrid  = 7;       // lattice steps from the tile centre to a corner
+        private const int   SeabedGrid  = 8;       // lattice steps from the tile centre to a corner
 
         // This tile and two rings round it, positions relative to the tile centre (across the wrap seam too)
         private List<SeabedSample> SeabedSamples(HexCell cell)
@@ -172,62 +171,71 @@ namespace NaturalHistory.World
                 if (c.Terrain == null) continue;
                 var p = c.Coordinates.ToWorldPosition(cellSize);
                 float dx = Mathf.Repeat(p.x - o.x + W * 0.5f, W) - W * 0.5f;
-                list.Add(new SeabedSample { at = new Vector2(dx, p.z - o.z), y = UnderSurface(c), sea = c.SurfaceHeight, wet = c.IsWater });
+                int cliffs = 0;
+                if (!c.IsWater && c.Elevation >= CliffElevation) // highland meets the sea in a cliff, as on the surface
+                {
+                    var nb = EdgeNeighbors(c);
+                    for (int e = 0; e < 6; e++) if (nb[e]?.Terrain != null && nb[e].Terrain.kind == TerrainKind.SaltWater) cliffs |= 1 << e;
+                }
+                list.Add(new SeabedSample { at = new Vector2(dx, p.z - o.z), y = UnderSurface(c), sea = c.SurfaceHeight, wet = c.IsWater, cliffs = cliffs });
             }
             seabedSamples[cell] = list;
             return list;
         }
 
-        // Height of the floor at p (relative to a water tile's centre, in its local frame)
-        public float SeabedAt(HexCell cell, Vector2 p)
+        // Height of the under view's floor at p (relative to a tile's centre, in its local frame):
+        // one smooth surface over land and water alike, a weighted blend of the floor heights of the
+        // tiles around (seabed depths, the land plateau, groundwater basins), so the seabed rises
+        // to the plateau in a long slope. Only along sea cliffs (highland meeting the sea, as on the
+        // surface) does it change to a much tighter blend: a steep rock face, still textured.
+        public float UnderFloorAt(HexCell cell, Vector2 p)
         {
-            float reach = SeabedReach * cellSize, apothem = cellSize * 0.8660254f;
-            float sum = 0f, seaSum = 0f, w = 0f, coast = float.MaxValue;
+            float reach = SeabedReach * cellSize, tight = CliffReach * cellSize;
+            float sum = 0f, w = 0f, sumT = 0f, wT = 0f, cliff = float.MaxValue;
             foreach (var s in SeabedSamples(cell))
             {
                 var d = p - s.at;
-                if (!s.wet) { coast = Mathf.Min(coast, HexDistance(d) - apothem); continue; }
-                float t = d.sqrMagnitude / (reach * reach);
-                if (t >= 1f) continue;
-                float k = (1f - t) * (1f - t) * (1f - t);
-                sum += k * s.y; seaSum += k * s.sea; w += k;
+                float d2 = d.sqrMagnitude;
+                float t = d2 / (reach * reach);
+                if (t < 1f) { float k = (1f - t) * (1f - t) * (1f - t); sum += k * s.y; w += k; }
+                float tt = d2 / (tight * tight);
+                if (tt < 1f) { float k = Mathf.Pow(1f - tt, 8f); sumT += k * s.y; wT += k; }
+                if (s.cliffs != 0)
+                    for (int e = 0; e < 6; e++)
+                        if ((s.cliffs & (1 << e)) != 0)
+                            cliff = Mathf.Min(cliff, SegmentDistance(p, s.at + HexCorner(e), s.at + HexCorner(e + 1)));
             }
             if (w <= 0f) return UnderSurface(cell);
-            float shore = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(coast / (CoastRise * cellSize)));
-            return Mathf.Lerp(seaSum / w - Clearance, sum / w, shore);
+            float smooth = sum / w;
+            if (cliff >= CliffBand * cellSize || wT <= 0f) return smooth;
+            return Mathf.Lerp(sumT / wT, smooth, Mathf.SmoothStep(0f, 1f, cliff / (CliffBand * cellSize)));
         }
 
-        // "Hex distance" from a cell centre: 1 × the apothem on the cell's edges (edges face 30° + 60e)
-        private static float HexDistance(Vector2 d) =>
-            Mathf.Max(Mathf.Abs(d.x), Mathf.Max(Mathf.Abs(d.x * 0.5f + d.y * 0.8660254f), Mathf.Abs(d.x * 0.5f - d.y * 0.8660254f)));
+        public float SeabedAt(HexCell cell, Vector2 p) => UnderFloorAt(cell, p);
+        public float PlateauAt(HexCell cell, Vector2 p) => UnderFloorAt(cell, p);
+
+        private const float CliffReach = 1.15f; // × cellSize: the tight blend at sea cliffs (just reaches the hex corners)
+        private const float CliffBand  = 0.45f; // × cellSize: how far from a sea cliff its steepness reaches
+
+        private Vector2 HexCorner(int i) { float a = 60f * (i % 6) * Mathf.Deg2Rad; return new Vector2(Mathf.Sin(a), Mathf.Cos(a)) * cellSize; }
+
+        private static float SegmentDistance(Vector2 p, Vector2 a, Vector2 b)
+        {
+            var ab = b - a;
+            float t = Mathf.Clamp01(Vector2.Dot(p - a, ab) / ab.sqrMagnitude);
+            return (p - (a + ab * t)).magnitude;
+        }
 
         private Mesh SeabedMesh(HexCell cell) => SmoothTileMesh(cell, true);
 
-        // Height of the land's floor (the plateau) at p, relative to a land tile's centre: the same
-        // smooth blend over the land tiles around, so groundwater basins sink into the plateau in
-        // gentle hollows instead of steps. The sea doesn't enter it: at the coast it ends in a wall.
-        public float PlateauAt(HexCell cell, Vector2 p)
-        {
-            float reach = SeabedReach * cellSize, sum = 0f, w = 0f;
-            foreach (var s in SeabedSamples(cell))
-            {
-                if (s.wet) continue;
-                float t = (p - s.at).sqrMagnitude / (reach * reach);
-                if (t >= 1f) continue;
-                float k = (1f - t) * (1f - t) * (1f - t);
-                sum += k * s.y; w += k;
-            }
-            return w > 0f ? sum / w : UnderSurface(cell);
-        }
-
-        // A smooth tile surface (seabed for water, plateau for land): a fine lattice over the whole
-        // hex, out to the cell boundary, smooth-shaded from the surface's own slope. Where the
-        // neighbour is of the other kind (the coast) or missing (the map edge), a wall drops below it.
+        // A tile of the under view's floor (seabed for water, plateau for land; one surface): a fine
+        // lattice over the whole hex, out to the cell boundary, smooth-shaded from the surface's own
+        // slope. At the map edge a wall drops below it.
         private Mesh SmoothTileMesh(HexCell cell, bool water)
         {
             var (cq, cr) = cell.Coordinates.ToOffsetCoordinates();
             string k = (water ? "s" : "p") + cq + "," + cr;
-            System.Func<HexCell, Vector2, float> At = water ? SeabedAt : PlateauAt;
+            System.Func<HexCell, Vector2, float> At = UnderFloorAt;
             if (seabedMeshCache.TryGetValue(k, out var mesh) && mesh != null) return mesh;
 
             int n = SeabedGrid;
@@ -269,7 +277,7 @@ namespace NaturalHistory.World
             (int, int) Corner(int c) => (c % 6) switch { 0 => (n, 0), 1 => (0, n), 2 => (-n, n), 3 => (-n, 0), 4 => (0, -n), _ => (n, -n) };
             for (int e = 0; e < 6; e++)
             {
-                if (nb[e] != null && nb[e].Terrain != null && nb[e].IsWater == water) continue;
+                if (nb[e] != null && nb[e].Terrain != null) continue; // only at the map edge: everywhere else the floor runs on
                 var (ai, aj) = Corner(e); var (bi, bj) = Corner(e + 1);
                 float ang = (60f * e + 30f) * Mathf.Deg2Rad;
                 var outward = new Vector3(Mathf.Sin(ang), 0f, Mathf.Cos(ang));
@@ -303,7 +311,7 @@ namespace NaturalHistory.World
         private void FitPropsToSeabed(HexCell cell, Renderer rend)
         {
             if (seabedY == null || rend == null) return;
-            System.Func<HexCell, Vector2, float> At = cell.IsWater ? SeabedAt : PlateauAt;
+            System.Func<HexCell, Vector2, float> At = UnderFloorAt;
             // least squares over a lattice of the hex: y ≈ a + b x + c z + d x² + e x z + f z²
             var M = new double[6, 6]; var v = new double[6];
             float h0 = UnderSurface(cell);

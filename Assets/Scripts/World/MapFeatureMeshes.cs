@@ -30,6 +30,8 @@ namespace NaturalHistory.World
             public float[] EdgeSnow;
             public bool Green;          // grassy foot and conifers on the lower slopes
             public float Lush;          // 0..1: warm, wet mountains cloaked in forest this far up (broadleaf trees on the slopes)
+            public bool Table;          // a mesa: a flat top at one height, sheer banded walls down to the ground
+            public float TableTop;      // a mesa's top, world height: the same for every tile of one table, so they meet without a step
             public System.Func<Vector2, float> GroundAt; // tile surface at a local point, relative to the tile top
             public System.Func<Vector2, float> Relief;   // 0..1 ruggedness, continuous over the whole map
             public System.Func<Vector2, float> Detail;   // 0..1 smooth small-scale noise for colour variation, also map-wide
@@ -70,10 +72,19 @@ namespace NaturalHistory.World
                 return Mathf.Clamp01((m - t) / (1f - t));
             }
             // Below the tile surface where the mask is 0, so the massif's edge hides under the ground
+            float tableH = site.TableTop - site.BaseY; // a mesa's top above this tile (one world height for the whole table)
             Vector3 Point(Vector2 p)
             {
                 float m = Mask(p);
-                float y = site.GroundAt(p) + m * maxH * (0.22f + 0.78f * site.Relief(p)) - 0.02f * size * (1f - m);
+                float y;
+                if (site.Table)
+                {
+                    // sheer walls near the foot, then flat: the top at one height across joined tiles,
+                    // only a slight unevenness on it
+                    float k = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01((m - 0.1f) / 0.28f));
+                    y = site.GroundAt(p) * (1f - k) + k * (tableH + 0.04f * maxH * (site.Relief(p) - 0.5f)) - 0.02f * size * (1f - m);
+                }
+                else y = site.GroundAt(p) + m * maxH * (0.22f + 0.78f * site.Relief(p)) - 0.02f * size * (1f - m);
                 return new Vector3(p.x, y, p.y);
             }
             // Snow line and rock tint: this tile's, easing to the shared edge value near each edge
@@ -101,7 +112,18 @@ namespace NaturalHistory.World
                 float snowY  = maxH * (1f - snow) + maxH * 0.12f * (detail - 0.5f);
                 float shade  = 0.94f + 0.12f * detail;
                 Color color;
-                if (rel > snowY && (up > 0.45f || rel > snowY + 0.4f * (maxH - snowY)))
+                if (site.Table)
+                {
+                    // the flat top: weathered caprock (snow on it only when it's cold); the walls:
+                    // red, orange and cream bands of sandstone
+                    bool cap = up > 0.8f && rel > tableH * 0.8f;
+                    // (one caprock colour for every mesa, not the region's rock tint, so a table's tiles match)
+                    if (cap) color = snow >= 0.55f ? Snow * (0.97f + 0.03f * detail)
+                                   : site.Lush > 0.3f ? Color.Lerp(MountainForest, MountainForestLight, detail) * shade
+                                   : Color.Lerp(Rock * 1.25f, CreamRock, 0.35f) * shade;
+                    else color = Strata(c.y + site.BaseY, size, 0f, detail * 0.8f) * shade * Mathf.Lerp(0.82f, 1.02f, up);
+                }
+                else if (rel > snowY && (up > 0.45f || rel > snowY + 0.4f * (maxH - snowY)))
                     color = Snow * (0.97f + 0.03f * detail);
                 else if (site.Lush > 0f && rel < Mathf.Min((0.15f + 0.6f * site.Lush + 0.12f * (detail - 0.5f)) * maxH, snowY - 0.05f * maxH)
                          && up > 0.42f - 0.12f * site.Lush)

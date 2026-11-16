@@ -10875,6 +10875,74 @@
   {
    "k": "Geothermal field",
    "v": "Campo geotermico"
+  },
+  {
+   "k": "Evolution Tree",
+   "v": "Albero evolutivo"
+  },
+  {
+   "k": "{0} species ▸",
+   "v": "{0} specie ▸"
+  },
+  {
+   "k": "Phylum Arthropoda",
+   "v": "Artropodi (phylum)"
+  },
+  {
+   "k": "Subphylum Chelicerata",
+   "v": "Chelicerati (subphylum)"
+  },
+  {
+   "k": "Subphylum Myriapoda",
+   "v": "Miriapodi (subphylum)"
+  },
+  {
+   "k": "Class Insecta",
+   "v": "Insetti (classe)"
+  },
+  {
+   "k": "Phylum Mollusca",
+   "v": "Molluschi (phylum)"
+  },
+  {
+   "k": "Class Cephalopoda",
+   "v": "Cefalopodi (classe)"
+  },
+  {
+   "k": "Phylum Chordata",
+   "v": "Cordati (phylum)"
+  },
+  {
+   "k": "Subphylum Vertebrata",
+   "v": "Vertebrati (subphylum)"
+  },
+  {
+   "k": "Class Chondrichthyes",
+   "v": "Pesci cartilaginei (classe)"
+  },
+  {
+   "k": "Class Osteichthyes",
+   "v": "Pesci ossei (classe)"
+  },
+  {
+   "k": "Class Amphibia",
+   "v": "Anfibi (classe)"
+  },
+  {
+   "k": "Class Reptilia",
+   "v": "Rettili (classe)"
+  },
+  {
+   "k": "Superorder Dinosauria",
+   "v": "Dinosauri (superordine)"
+  },
+  {
+   "k": "Class Aves",
+   "v": "Uccelli (classe)"
+  },
+  {
+   "k": "Class Mammalia",
+   "v": "Mammiferi (classe)"
   }
  ]
 }

@@ -175,6 +175,7 @@ namespace NaturalHistory.World
         {
             if (cell == null || cell.Terrain == null) return false;
             if (Niche == Niche.Underground && UnderView.Blocks(cell.Under)) return false; // the walls of the underground maze
+            if (Definition != null && !UnderView.FitsBelow(Definition, cell)) return false; // seabed animals keep to the seabed
             if (cell.IsMountain) return false;
             return Style switch
             {

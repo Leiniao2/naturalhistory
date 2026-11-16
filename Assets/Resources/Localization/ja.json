@@ -10875,6 +10875,74 @@
   {
    "k": "Geothermal field",
    "v": "地熱地帯"
+  },
+  {
+   "k": "Evolution Tree",
+   "v": "進化系統樹"
+  },
+  {
+   "k": "{0} species ▸",
+   "v": "{0} 種 ▸"
+  },
+  {
+   "k": "Phylum Arthropoda",
+   "v": "節足動物門"
+  },
+  {
+   "k": "Subphylum Chelicerata",
+   "v": "鋏角亜門"
+  },
+  {
+   "k": "Subphylum Myriapoda",
+   "v": "多足亜門"
+  },
+  {
+   "k": "Class Insecta",
+   "v": "昆虫綱"
+  },
+  {
+   "k": "Phylum Mollusca",
+   "v": "軟体動物門"
+  },
+  {
+   "k": "Class Cephalopoda",
+   "v": "頭足綱"
+  },
+  {
+   "k": "Phylum Chordata",
+   "v": "脊索動物門"
+  },
+  {
+   "k": "Subphylum Vertebrata",
+   "v": "脊椎動物亜門"
+  },
+  {
+   "k": "Class Chondrichthyes",
+   "v": "軟骨魚綱"
+  },
+  {
+   "k": "Class Osteichthyes",
+   "v": "硬骨魚綱"
+  },
+  {
+   "k": "Class Amphibia",
+   "v": "両生綱"
+  },
+  {
+   "k": "Class Reptilia",
+   "v": "爬虫綱"
+  },
+  {
+   "k": "Superorder Dinosauria",
+   "v": "恐竜上目"
+  },
+  {
+   "k": "Class Aves",
+   "v": "鳥綱"
+  },
+  {
+   "k": "Class Mammalia",
+   "v": "哺乳綱"
   }
  ]
 }

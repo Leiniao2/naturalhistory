@@ -10875,6 +10875,74 @@
   {
    "k": "Geothermal field",
    "v": "지열 지대"
+  },
+  {
+   "k": "Evolution Tree",
+   "v": "진화 계통수"
+  },
+  {
+   "k": "{0} species ▸",
+   "v": "{0}종 ▸"
+  },
+  {
+   "k": "Phylum Arthropoda",
+   "v": "절지동물문"
+  },
+  {
+   "k": "Subphylum Chelicerata",
+   "v": "협각아문"
+  },
+  {
+   "k": "Subphylum Myriapoda",
+   "v": "다지아문"
+  },
+  {
+   "k": "Class Insecta",
+   "v": "곤충강"
+  },
+  {
+   "k": "Phylum Mollusca",
+   "v": "연체동물문"
+  },
+  {
+   "k": "Class Cephalopoda",
+   "v": "두족강"
+  },
+  {
+   "k": "Phylum Chordata",
+   "v": "척삭동물문"
+  },
+  {
+   "k": "Subphylum Vertebrata",
+   "v": "척추동물아문"
+  },
+  {
+   "k": "Class Chondrichthyes",
+   "v": "연골어강"
+  },
+  {
+   "k": "Class Osteichthyes",
+   "v": "경골어강"
+  },
+  {
+   "k": "Class Amphibia",
+   "v": "양서강"
+  },
+  {
+   "k": "Class Reptilia",
+   "v": "파충강"
+  },
+  {
+   "k": "Superorder Dinosauria",
+   "v": "공룡상목"
+  },
+  {
+   "k": "Class Aves",
+   "v": "조강"
+  },
+  {
+   "k": "Class Mammalia",
+   "v": "포유강"
   }
  ]
 }

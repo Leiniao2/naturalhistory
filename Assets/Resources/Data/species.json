@@ -847,7 +847,7 @@
       "playable": true,
       "model": "Models/Species/AmericanManatee",
       "mapStyle": "Swim",
-      "colonySize": 2,
+      "colonySize": 1,
       "genes": [
         { "gene": "herbivory", "expression": 0.9 },
         { "gene": "swimming_speed", "expression": 0.3 },
@@ -1052,7 +1052,7 @@
       "model": "Models/Species/CathedralTermiteMound",
       "mapStyle": "Fixed",
       "colonySize": 2,
-      "mapScale": 1.7,
+      "mapScale": 2.8,
       "genes": [
         { "gene": "decomposition", "expression": 0.9 },
         { "gene": "group_defense", "expression": 0.8 },
@@ -1741,7 +1741,7 @@
       "model": "Models/Species/AfricanElephant",
       "mapStyle": "Ground",
       "mapDefense": "Rear",
-      "colonySize": 2,
+      "colonySize": 1,
       "genes": [
         { "gene": "herbivory", "expression": 0.95 },
         { "gene": "group_defense", "expression": 0.85 },
@@ -1766,7 +1766,7 @@
       "model": "Models/Species/WoollyMammoth",
       "mapStyle": "Ground",
       "mapDefense": "Rear",
-      "colonySize": 2,
+      "colonySize": 1,
       "genes": [
         { "gene": "cold_tolerance", "expression": 0.95 },
         { "gene": "herbivory", "expression": 0.9 },
@@ -1842,7 +1842,7 @@
       "playable": true,
       "model": "Models/Species/Triceratops",
       "mapStyle": "Ground",
-      "colonySize": 2,
+      "colonySize": 1,
       "genes": [
         { "gene": "herbivory", "expression": 0.9 },
         { "gene": "armor_thickness", "expression": 0.6 },
@@ -2019,7 +2019,7 @@
       "model": "Models/Species/MaasaiGiraffe",
       "mapStyle": "Ground",
       "mapHip": 0.4,
-      "colonySize": 2,
+      "colonySize": 1,
       "genes": [
         { "gene": "herbivory", "expression": 0.9 },
         { "gene": "vision_acuity", "expression": 0.8 },
@@ -2046,6 +2046,7 @@
       "mapLegs": 1,
       "mapHip": 0.55,
       "colonySize": 5,
+      "mapScale": 0.5,
       "genes": [
         { "gene": "filter_feeding", "expression": 0.9 },
         { "gene": "flight_capability", "expression": 0.7 },
@@ -3115,7 +3116,7 @@
       "playable": true,
       "model": "Models/Species/Plesiosaurus",
       "mapStyle": "Swim",
-      "colonySize": 2,
+      "colonySize": 1,
       "wingBeat": 0.4,
       "wingRoot": 0.36,
       "genes": [
@@ -3167,7 +3168,7 @@
       "playable": true,
       "model": "Models/Species/Ophthalmosaurus",
       "mapStyle": "Swim",
-      "colonySize": 2,
+      "colonySize": 1,
       "genes": [
         { "gene": "vision_acuity", "expression": 0.95 },
         { "gene": "swimming_speed", "expression": 0.85 },
@@ -5176,7 +5177,7 @@
       "model": "Models/Species/Endoceras",
       "mapStyle": "Swim",
       "mapBackward": true,
-      "colonySize": 2,
+      "colonySize": 1,
       "mapScale": 0.8,
       "genes": [
         { "gene": "armor_thickness", "expression": 0.65 },

@@ -11,8 +11,8 @@ namespace NaturalHistory.World
     //     coast; every open tile can be reached from the others.
     //   - Under the sea: sunlit shallow seabed with its water plants, or the dark deep seabed, with
     //     the odd underwater volcano and field of hydrothermal vents. Under lakes: lakebed.
-    //   - Now and then it doesn't follow the surface (a drowned valley under the coast, a buried lake,
-    //     a sea cave under shallow water), in a few small clusters.
+    //   - Now and then a sea cave or a buried headland under shallow coastal water, and here and
+    //     there an underground lake under the land (groundwater, nothing growing in it).
     //
     // In the under view each tile wears its under skin, the surface props (forests, mountains,
     // rivers…) are hidden and the under props appear; only underground-niche animals are shown.
@@ -81,15 +81,17 @@ namespace NaturalHistory.World
                 else
                 {
                     kind = caves.Contains(cell) ? UnderKind.Cave : UnderKind.Bedrock; // tunnels are carved below
-                    if (coast && odd > 0.38f)      kind = UnderKind.Seabed;               // a drowned valley under the coast
-                    else if (lake && odd < -0.40f) kind = UnderKind.Lakebed;              // an old lake, buried
+                    // Underground lakes: now and then (more often near surface lakes and wetlands) an
+                    // inland tile holds groundwater, a basin of dark water in the plateau with nothing
+                    // growing in it. Otherwise the land below is plain dry ground: no drowned valleys.
+                    if (!coast && odd < (lake ? -0.3f : -0.4f)) kind = UnderKind.Lakebed;
                 }
                 cell.SetUnder(kind, UnderFeature.None);
                 if (kind is UnderKind.Seabed or UnderKind.DeepSeabed) sea.Add((cell, Noise(cell, 0.35f, volcanoOff) + (kind == UnderKind.DeepSeabed ? 0.1f : 0f)));
                 if (kind == UnderKind.DeepSeabed) deep.Add((cell, Noise(cell, 0.6f, ventOff)));
             }
 
-            DrownUnderLand(sea, Offset());
+            Offset(); // (was the offset for drowning land below; kept so the later noise stays the same)
             CarveTunnels(rng);
 
             sea.Sort((a, b) => b.v.CompareTo(a.v));
@@ -369,7 +371,10 @@ namespace NaturalHistory.World
             foreach (var cell in cells)
             {
                 if (cell.Terrain == null) continue;
-                Mesh mesh = cell.Under == UnderKind.Bedrock ? Pick(bedrock) : cell.UnderFeature switch
+                if (!cell.IsWater && WaterBed(cell.Under)) continue; // underground lakes: open dark water, nothing growing
+                Mesh mesh = cell.Under == UnderKind.Bedrock ? Pick(bedrock)
+                          : cell.IsWater && cell.Under == UnderKind.Cave && cell.UnderFeature == UnderFeature.None ? Track(MapFeatureMeshes.CreateSeaCave(rng, cellSize)) // a sea cave
+                          : cell.UnderFeature switch
                 {
                     UnderFeature.Volcano => Track(MapFeatureMeshes.CreateVolcano(rng, cellSize, 0.5f + 0.3f * (float)rng.NextDouble(), underwater: true)),
                     UnderFeature.Vents   => Track(MapFeatureMeshes.CreateVents(rng, cellSize)),
@@ -511,7 +516,9 @@ namespace NaturalHistory.World
                     tints[e]    = new Vector4(t.r, t.g, t.b, 1f);
                     scales[e]   = m.HasProperty("_Tiling") ? m.GetFloat("_Tiling") : 0f;
                 }
-                cell.ShowUnder(UnderMaterial(cell), UnderTint(cell), textures, tints, scales, waterBed: WaterBed(cell.Under));
+                // (water tiles too, whatever lies below: a flooded cave under a lake sits at the lake's depth,
+                // where the land shading would paint a sandy beach over it)
+                cell.ShowUnder(UnderMaterial(cell), UnderTint(cell), textures, tints, scales, waterBed: WaterBed(cell.Under) || cell.IsWater);
             }
             ShowGroupsForView();
         }
@@ -551,6 +558,7 @@ namespace NaturalHistory.World
         private string FloorCover(HexCell cell)
         {
             if (cell.UnderFeature != UnderFeature.None || cell.Under is not (UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed)) return null;
+            if (!cell.IsWater) return null; // underground lakes: dark water, no mats or stromatolites
             var plants = cell.UnderPlants;
             string cover = MapFeatureMeshes.CoverOf(cell.Under, plants.Count > 0 ? plants[0] : null, plants.Count > 1 ? plants[1] : null, IsMeadow(cell));
             // painted: stromatolite floors; mats, algal turf and meadows as see-through clumps on the
@@ -568,8 +576,17 @@ namespace NaturalHistory.World
             return ((n < -0.128f ? 0 : n > 0.128f ? 2 : 1) + jitter) % 3;
         }
 
+        private Material groundwaterMaterial;
+
         private Material UnderMaterial(HexCell cell)
         {
+            // underground lakes under the land: clear lake-blue water (tools/terrain/groundwater.py),
+            // not the green-brown lakebed
+            if (!cell.IsWater && cell.Under == UnderKind.Lakebed)
+            {
+                groundwaterMaterial ??= Resources.Load<Material>("Materials/Under/UnderGroundwater");
+                if (groundwaterMaterial != null) return groundwaterMaterial;
+            }
             string cover = FloorCover(cell);
             if (cover != null)
             {
@@ -605,7 +622,7 @@ namespace NaturalHistory.World
             if (cell.IsWater && cell.Terrain.kind == TerrainKind.SaltWater)
                 j *= Mathf.Lerp(1.06f, 0.72f, Mathf.InverseLerp(0.03f, 0.5f, cell.SurfaceHeight - UnderSurface(cell)));
             if (cell.Under == UnderKind.Seabed) return SeaVeil * j;
-            if (cell.Under == UnderKind.Lakebed) return (cell.IsWater ? LakeVeil : Groundwater) * j; // groundwater lakes under the land: lake-blue
+            if (cell.Under == UnderKind.Lakebed) return (cell.IsWater ? LakeVeil : Color.white) * j; // groundwater lakes: their floor is lake-blue already (UnderGroundwater)
             if (cell.Under != UnderKind.DeepSeabed || FloorCover(cell) == "Stromatolite") return Color.white * j;
             j *= Mathf.Lerp(1f, 0.8f, Mathf.InverseLerp(0.5f, 1f, cell.Depth));
             return DeepSea * j;

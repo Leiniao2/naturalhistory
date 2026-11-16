@@ -7,7 +7,8 @@ On top stands the raised anchor-shaped ridge that identifies the genus - a curve
 ridge near the front, bowed forward, whose arms sweep back toward the sides, joined at its
 centre by a midline ridge that runs back about two-thirds of the body and fades out. Fine
 striations run obliquely back and out from the midline ridge toward the margin on both sides.
-Muted pinkish ochre with a pale ridge flanked by darker troughs and a darker rim.
+Muted, blotchy pinkish ochre skin; the ridge and striations are soft swellings and creases
+shown by a slight shade change, not pale bars (a living animal, not a fossil cast).
 One lofted shell (see nh_parvancorina.py). Faces -Y, pivot at the body centre (Swim style),
 seen mostly from above.
 
@@ -44,7 +45,7 @@ SHAPE = pv.Shape(
     half_width=half_width,
     anchor=pv.arc_anchor(apex_y=-0.39, half_span=0.30, sweep=0.20, hook=125.0),
     ridge_end=0.36,
-    dome=0.075, ridge_h=0.032, ridge_w=0.034,
+    dome=0.075, ridge_h=0.022, ridge_w=0.045,
     stripes=12, stripe_slant=0.45,
     rows=68, cols=30,
 )

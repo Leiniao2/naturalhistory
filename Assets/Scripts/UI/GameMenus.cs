@@ -12,7 +12,7 @@ using UnityEngine.UIElements;
 namespace NaturalHistory.UI
 {
     // In-game UI Toolkit menus: HUD buttons, pause menu (Esc), save/load slots and the
-    // Functions / Behaviors tree panels, the selected animal's card and the Zoology (evolution) panel. Layout: Resources/UI/GameMenus.uxml, styles: GameMenusStyle.uss.
+    // Functions / Behaviors tree panels, the selected animal's card and the Evolution Tree (ZoologyPanel). Layout: Resources/UI/GameMenus.uxml, styles: GameMenusStyle.uss.
     public class GameMenus : MonoBehaviour
     {
         private UIDocument document;

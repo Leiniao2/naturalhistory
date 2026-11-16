@@ -28,7 +28,7 @@ namespace NaturalHistory.Evolution
         public int lastBred = -999;     // turn it last reproduced
     }
 
-    // One line of the evolution requirements shown in the Zoology panel
+    // One line of the evolution requirements shown in the Evolution Tree panel
     public struct Requirement
     {
         public string text;

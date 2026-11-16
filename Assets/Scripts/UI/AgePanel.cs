@@ -12,7 +12,7 @@ namespace NaturalHistory.UI
     // details of the selected one on the right. Opens automatically when a new period begins.
     public class AgePanel
     {
-        private readonly VisualElement overlay, list;
+        private readonly VisualElement overlay, list, climate;
         private readonly Label title, ageName, range, description, events, environment;
         private readonly List<VisualElement> rows = new();
         private int selectedIndex;
@@ -32,6 +32,7 @@ namespace NaturalHistory.UI
         {
             overlay     = root.Q("age-overlay");
             list        = root.Q("age-list");
+            climate     = root.Q("age-climate"); // world climate now (ClimateHud fills it)
             title       = root.Q<Label>("age-panel-title");
             ageName     = root.Q<Label>("age-name");
             range       = root.Q<Label>("age-range");
@@ -100,6 +101,7 @@ namespace NaturalHistory.UI
                           Loc.T(def.era), def.startMillionYearsAgo, def.endMillionYearsAgo, span, ages.TurnsOf(selectedIndex));
             if (isCurrent) r += "\n" + Loc.F("Now: {0:0.0} Ma, turn {1} of {2} in this period", ages.MillionYearsAgo, ages.TurnInAge, ages.TurnsInAge);
             range.text = r;
+            climate.EnableInClassList("hidden", !isCurrent);
             description.text = Loc.T(def.description);
             events.text = def.keyEvents != null ? string.Join("\n", def.keyEvents.Select(e => "• " + Loc.T(e))) : "";
 

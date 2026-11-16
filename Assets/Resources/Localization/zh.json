@@ -3974,11 +3974,11 @@
   },
   {
    "k": "Function: {0}",
-   "v": "功能：{0}"
+   "v": "形态：{0}"
   },
   {
    "k": "Functions",
-   "v": "功能"
+   "v": "形态"
   },
   {
    "k": "Fungus Farming",
@@ -11267,6 +11267,74 @@
   {
    "k": "Geothermal field",
    "v": "地热区"
+  },
+  {
+   "k": "Evolution Tree",
+   "v": "进化树"
+  },
+  {
+   "k": "{0} species ▸",
+   "v": "{0} 个物种 ▸"
+  },
+  {
+   "k": "Phylum Arthropoda",
+   "v": "节肢动物门"
+  },
+  {
+   "k": "Subphylum Chelicerata",
+   "v": "螯肢亚门"
+  },
+  {
+   "k": "Subphylum Myriapoda",
+   "v": "多足亚门"
+  },
+  {
+   "k": "Class Insecta",
+   "v": "昆虫纲"
+  },
+  {
+   "k": "Phylum Mollusca",
+   "v": "软体动物门"
+  },
+  {
+   "k": "Class Cephalopoda",
+   "v": "头足纲"
+  },
+  {
+   "k": "Phylum Chordata",
+   "v": "脊索动物门"
+  },
+  {
+   "k": "Subphylum Vertebrata",
+   "v": "脊椎动物亚门"
+  },
+  {
+   "k": "Class Chondrichthyes",
+   "v": "软骨鱼纲"
+  },
+  {
+   "k": "Class Osteichthyes",
+   "v": "硬骨鱼纲"
+  },
+  {
+   "k": "Class Amphibia",
+   "v": "两栖纲"
+  },
+  {
+   "k": "Class Reptilia",
+   "v": "爬行纲"
+  },
+  {
+   "k": "Superorder Dinosauria",
+   "v": "恐龙总目"
+  },
+  {
+   "k": "Class Aves",
+   "v": "鸟纲"
+  },
+  {
+   "k": "Class Mammalia",
+   "v": "哺乳纲"
   }
  ]
 }

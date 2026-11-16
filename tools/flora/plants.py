@@ -298,7 +298,7 @@ P = [
  ("chondrus", "Irish moss", "Chondrus crispus", "Red alga", "Pal", "", "under", ["Seabed"], [], "Tuft", "#8A3050", 0.9, "Purple-red fans on cold shores."),
  ("ecklonia", "Ecklonia", "Ecklonia radiata", "Brown alga", "Pal", "", "under", ["Seabed"], [], "Ribbon", "#8A7030", 1.2, "Southern kelp with a crown of blades."),
  ("myriophyllum", "Water milfoil", "Myriophyllum spicatum", "Flowering plant", "Pal", "", "under", ["Lakebed"], [], "Whorl", "#5A8A40", 1.0, "Feathery whorls swaying in ponds."),
- ("echinodorus", "Amazon sword", "Echinodorus grisebachii", "Flowering plant", "Pal", "", "under", ["Lakebed"], [], "Rosette", "#4A9A40", 1.0, "Broad sword-shaped leaves in a rosette."),
+ ("echinodorus", "Amazon sword", "Echinodorus grisebachii", "Flowering plant", "Pal", "", "under", ["Lakebed"], [], "Rosette", "#4A9A40", 0.55, "Broad sword-shaped leaves in a rosette."),
  ("cryptocoryne", "Water trumpet", "Cryptocoryne", "Flowering plant", "Pal", "", "under", ["Lakebed"], [], "Rosette", "#6A6A40", 0.8, "Bronze-green rosettes of Asian streams."),
  ("utricularia", "Bladderwort", "Utricularia vulgaris", "Flowering plant", "Pal", "", "under", ["Lakebed"], [], "Feather", "#6A9A40", 1.0, "Carnivorous: tiny bladders snap up water fleas."),
  ("fontinalis", "Water moss", "Fontinalis antipyretica", "Moss", "Pal", "", "under", ["Lakebed"], [], "Cushion", "#3A6A30", 1.0, "Dark green moss streaming in currents."),

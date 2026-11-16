@@ -210,6 +210,61 @@ namespace NaturalHistory.World
         public static readonly Color Groundwater = new(0.42f, 0.76f, 0.98f); // lake-blue groundwater lakes under the land (HexGrid.Plateau)
         static Color stromatoliteTint = Color.white;
 
+        // A sea cave below a shallow sea or lake: a dark hollow under an overhanging roof of rock, its
+        // walls heaped round three sides, a natural arch spanning the mouth on the open side and a few
+        // fallen blocks in the entrance. Seen from above it reads as a cave, not a rock floor.
+        static readonly Color CaveDark  = new(0.05f, 0.06f, 0.08f);
+        static readonly Color CaveDeep  = new(0.015f, 0.02f, 0.03f);
+
+        public static Mesh CreateSeaCave(System.Random rng, float size)
+        {
+            var b = new Builder();
+            float a = 0.8660254f * size;
+            float mouth = Range(rng, 0f, Mathf.PI * 2f);
+            Vector3 Dir(float ang) => new(Mathf.Sin(ang), 0f, Mathf.Cos(ang));
+            var back = -Dir(mouth) * 0.08f * a;
+            Color Stone() => Color.Lerp(CaveRock, Dripstone, Range(rng, 0f, 0.35f)) * Range(rng, 0.85f, 1.05f);
+
+            // the hollow: dark, darkest deep inside under the roof
+            AddGroundPatch(b, rng, back + Vector3.up * 0.003f * size, 0.5f * a, CaveDark, 20, 0.1f);
+            AddGroundPatch(b, rng, back * 2.5f + Vector3.up * 0.004f * size, 0.3f * a, CaveDeep, 16, 0.12f);
+
+            // walls round the back three quarters, rising and leaning in over the hollow as a roof lip
+            const int steps = 16;
+            for (int i = 0; i <= steps; i++)
+            {
+                float ang = mouth + Mathf.Deg2Rad * Mathf.Lerp(55f, 305f, i / (float)steps) + Range(rng, -0.08f, 0.08f);
+                var d = Dir(ang);
+                float r0 = Range(rng, 0.55f, 0.62f) * a;
+                AddBlob(b, rng, d * r0 + Vector3.up * 0.02f * size, size * Range(rng, 0.09f, 0.13f), 0.75f, 1, Stone());
+                AddBlob(b, rng, d * (r0 - 0.1f * a) + Vector3.up * 0.09f * size, size * Range(rng, 0.07f, 0.1f), 0.7f, 1, Stone());
+                if (i % 2 == 0)
+                    AddBlob(b, rng, d * (r0 - 0.2f * a) + Vector3.up * 0.15f * size, size * Range(rng, 0.06f, 0.085f), 0.5f, 1, Stone() * 0.95f);
+            }
+
+            // a natural arch over the mouth, from one end of the walls to the other
+            var left  = Dir(mouth + 55f * Mathf.Deg2Rad) * 0.56f * a;
+            var right = Dir(mouth - 55f * Mathf.Deg2Rad) * 0.56f * a;
+            float rise = 0.2f * size;
+            const int seg = 8;
+            var prev = left;
+            for (int k = 1; k <= seg; k++)
+            {
+                float t = k / (float)seg;
+                var next = Vector3.Lerp(left, right, t) + Dir(mouth) * 0.06f * a * Mathf.Sin(Mathf.PI * t) + Vector3.up * rise * Mathf.Sin(Mathf.PI * t);
+                AddLimb(b, prev, next, 0.055f * size, 0.055f * size, Stone());
+                prev = next;
+            }
+
+            // fallen blocks in the entrance
+            for (int k = rng.Next(2, 5); k > 0; k--)
+            {
+                var at = Dir(mouth + Range(rng, -0.6f, 0.6f)) * Range(rng, 0.25f, 0.5f) * a;
+                AddRock(b, rng, at, size * Range(rng, 0.025f, 0.045f), Stone());
+            }
+            return b.ToMesh("SeaCave");
+        }
+
         // Simple, flat water plants (microbial and bacterial mats, coralline crusts, low algal turf) are
         // painted into the floor texture of seabed, deep seabed and lakebed tiles instead of being built
         // as props: they would only be a thin carpet of geometry. Set by CreateUnderDetail.

@@ -250,6 +250,10 @@ namespace NaturalHistory.World
             meshRenderer.SetPropertyBlock(propBlock);
         }
 
+        // The sand/soil recolour last set by SetGroundLook (kept while the under view hides it), so
+        // props can match the ground's colour (WaterfallFx)
+        public Vector4 GroundRecolor { get; private set; }
+
         static readonly int RecolorId   = Shader.PropertyToID("_Recolor");
         static readonly int CliffTintId = Shader.PropertyToID("_CliffTint");
         static readonly int ShoreId     = Shader.PropertyToID("_Shore");
@@ -262,6 +266,7 @@ namespace NaturalHistory.World
         // flood: how much of the ground shows wet hollows and pools (floodplains, deltas).
         public void SetGroundLook(Vector4 recolor, Color cliff, Vector4 shore, float flood = 0f)
         {
+            GroundRecolor = recolor;
             if (meshRenderer == null) return;
             meshRenderer.GetPropertyBlock(propBlock);
             propBlock.SetFloat(FloodId, flood);

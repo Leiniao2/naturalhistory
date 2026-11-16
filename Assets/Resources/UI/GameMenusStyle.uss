@@ -490,10 +490,6 @@
     border-radius: 6px;
 }
 
-.world-panel {
-    left: 324px; /* beside the minimap */
-}
-
 /* ---------- Minimap ---------- */
 
 .minimap-dock {
@@ -1065,6 +1061,28 @@
 .zoology-node.ready {
     background-color: rgb(78, 70, 36);
     border-color: rgb(230, 190, 80);
+}
+
+.zoology-node.ancestor {
+    opacity: 0.6;
+}
+
+/* a major group (class, phylum...): click to open its own tree */
+.zoology-clade {
+    background-color: rgb(38, 52, 66);
+    border-color: rgb(110, 150, 190);
+    border-width: 2px;
+    border-radius: 14px;
+}
+
+.zoology-clade:hover {
+    background-color: rgb(50, 70, 90);
+    border-color: rgb(200, 225, 250);
+}
+
+.zoology-back {
+    margin-left: 0;
+    margin-right: 12px;
 }
 
 .zoology-node-portrait {

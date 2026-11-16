@@ -168,7 +168,8 @@ namespace NaturalHistory.World
             // new bursts at a steady rate for what is in view
             float dt = Time.deltaTime;
             whitecapDue += dt * Mathf.Min(seaInView.Count * WhitecapPerTile, 10f);
-            beachDue    += dt * Mathf.Min(beachInView.Count / ShoreWaveEvery, 16f);
+            // no foam lines along beaches: the land runs into the water without a white edge
+            beachDue     = 0f;
             cliffDue    += dt * Mathf.Min(cliffInView.Count / CliffWaveEvery, 10f);
             while (whitecapDue >= 1f) { whitecapDue -= 1f; if (seaInView.Count > 0) SpawnWhitecap(openSea[seaInView[rng.Next(seaInView.Count)]]); }
             while (beachDue >= 1f)    { beachDue -= 1f;    if (beachInView.Count > 0) SpawnWave(shores[beachInView[rng.Next(beachInView.Count)]]); }
@@ -519,6 +520,10 @@ namespace NaturalHistory.World
         private Vector3[] boulderAt;
         private Vector3 dir, across, poolMid, impact;
         private float halfW, riverHalf, top, foot, drop, lipD, recess, poolAlong, poolAcross;
+        private Color ground; // the upper tile's ground colour: the rock either side is cut from it
+        // The ground colours of the land tiles beside it (alpha 0: none, or the tile downstream), which
+        // the rock blends into where it runs over their edge, as the tiles' textures blend there
+        private readonly Color[] sideGround = new Color[6];
         private bool intoWater;
         private readonly List<Mesh> built = new();
         private static Material waterMaterial;
@@ -582,6 +587,12 @@ namespace NaturalHistory.World
             impact  = dir * (lipD + Throw) + Vector3.up * poolMid.y;
 
             waterMaterial ??= Resources.Load<Material>("Materials/Waterfall");
+            ground  = GroundColour(cell);
+            for (int e = 0; e < 6; e++)
+            {
+                var n = beside[e];
+                sideGround[e] = e == edge || n == null || n.Terrain == null || n.IsWater ? Color.clear : GroundColour(n);
+            }
             rock    = AddPart(Keep(BuildRock()), "FallRock");
             brink   = AddPart(Keep(BuildBrink()), waterMaterial, "Brink");
             curtain = AddPart(Keep(BuildCurtain()), waterMaterial, "FallSheet");
@@ -694,6 +705,62 @@ namespace NaturalHistory.World
             }
         }
 
+        // The colour a tile's ground shows, as the terrain shader paints it: the average of the tile's
+        // own ground texture (the region's surface, HexCell.SetSurface — not the shared material's),
+        // repainted in its sand/soil colour (SetGroundLook) and times its terrain tint and per-tile
+        // jitter. Read from the cell rather than its renderer, so a highlight or the under view
+        // (which swaps the tile's material) doesn't colour the rock.
+        private static readonly Dictionary<Texture, Color> textureAverage = new();
+        private static Color GroundColour(HexCell c)
+        {
+            if (c == null) return StoneLight;
+            var tex = c.BlendTexture;
+            var avg = tex != null ? Average(tex) : StoneLight;
+            var recolor = c.GroundRecolor;
+            if (recolor.w > 0f) avg = Color.Lerp(avg, new Color(recolor.x, recolor.y, recolor.z), recolor.w);
+            var col = avg * c.BlendTint;
+            col.a = 1f;
+            return col;
+        }
+
+        // The ground colour under a point of the rock: this tile's, blending into a neighbour's across
+        // the last stretch before their shared edge (half and half on the edge itself), as the
+        // tiles' textures do
+        private Color GroundAt(Vector3 p)
+        {
+            float a = s * 0.8660254f, blend = 0.14f * s;
+            var c = ground;
+            for (int e = 0; e < 6; e++)
+            {
+                if (sideGround[e].a <= 0f) continue;
+                var d = PhenomenaUtil.EdgeDirection(e);
+                float inside = a - (p.x * d.x + p.z * d.z); // distance in from that edge (negative past it)
+                float t = Mathf.Clamp01(0.5f - inside / (2f * blend));
+                if (t > 0f) c = Color.Lerp(c, sideGround[e], t);
+            }
+            return c;
+        }
+
+        private static Color Average(Texture tex)
+        {
+            if (textureAverage.TryGetValue(tex, out var c)) return c;
+            const int n = 32;
+            var rt = RenderTexture.GetTemporary(n, n, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB);
+            var prev = RenderTexture.active;
+            Graphics.Blit(tex, rt);
+            RenderTexture.active = rt;
+            var read = new Texture2D(n, n, TextureFormat.RGBA32, false);
+            read.ReadPixels(new Rect(0, 0, n, n), 0, 0);
+            RenderTexture.active = prev;
+            RenderTexture.ReleaseTemporary(rt);
+            var sum = Vector4.zero;
+            foreach (var p in read.GetPixels()) sum += (Vector4)p;
+            Object.Destroy(read);
+            c = (Color)(sum / (n * n));
+            textureAverage[tex] = c;
+            return c;
+        }
+
         private float Jitter(Vector3 p, float seed) =>
             Mathf.PerlinNoise(p.x / s * 7.3f + seed + cell.Coordinates.Q * 1.7f, p.z / s * 7.3f - seed + cell.Coordinates.R * 1.3f) * 2f - 1f;
 
@@ -701,13 +768,14 @@ namespace NaturalHistory.World
         {
             float h = (p.y - foot) / drop;
             // horizontal strata of light and dark sandstone, wavering a little
+            // in the upper tile's own ground colour (red desert rock in a desert, and so on): its top
+            // as the ground, its faces a little darker, in soft horizontal strata
+            // (the strata and the darkening only on the faces: the flat tops are exactly the ground's colour)
             float band = Mathf.Sin(p.y / s * 60f + Jitter(p, 3.1f) * 1.4f) * 0.5f + 0.5f;
-            var c = Color.Lerp(StoneDark, StoneLight, band * 0.8f + 0.2f * Mathf.Clamp01(h));
-            c = Color.Lerp(c, StoneGrey, 0.3f + 0.2f * Jitter(p, 8.7f));
-            c *= 0.9f + 0.14f * Jitter(p, 5.3f);
-            // moss and grass on whatever faces up; wet and dark behind the falling water
-            // (none before land plants: bare rock in the Cambrian and Ordovician, a little in the Silurian)
-            if (n.y > 0.5f) c = Color.Lerp(c, Moss * (0.85f + 0.3f * Jitter(p, 1.9f)), Ramp(n.y, 0.5f, 0.85f) * 0.9f * greenery);
+            float flat = Ramp(n.y, 0.55f, 0.9f);
+            var c = GroundAt(p);
+            c *= Mathf.Lerp(Mathf.Lerp(0.8f, 1.05f, band * 0.8f + 0.2f * Mathf.Clamp01(h)) * 0.85f, 1f, flat);
+            c *= 1f + 0.06f * Jitter(p, 5.3f) * (1f - flat);
             float x = Mathf.Abs(Vector3.Dot(p, across)) / halfW;
             if (x < 1.05f && n.y < 0.5f) c *= 0.62f;
             c.a = 1f;

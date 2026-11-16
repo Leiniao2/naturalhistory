@@ -39,14 +39,18 @@ class Shape:
     palette: dict = field(default_factory=dict)
 
 
+# A living, soft-bodied animal, not a fossil cast: the anchor ridge and striations are low swellings
+# and creases of the same skin, shown by a slight shade change only (strong pale ridges and dark
+# grooves read as a skeleton).
 DEFAULT_PALETTE = {
-    "body": (0.74, 0.55, 0.42),       # muted pinkish ochre
-    "body_light": (0.86, 0.70, 0.56),
-    "ridge": (0.90, 0.76, 0.60),      # pale, raised anchor ridge
-    "ridge_side": (0.46, 0.30, 0.22), # darker trough flanking the ridges
-    "stripe": (0.54, 0.38, 0.28),     # fine lateral striations
-    "rim": (0.60, 0.43, 0.32),
-    "under": (0.58, 0.45, 0.36),
+    "body": (0.70, 0.50, 0.40),       # muted pinkish ochre
+    "body_light": (0.78, 0.59, 0.47),
+    "ridge": (0.80, 0.62, 0.50),      # the anchor swelling, barely lighter than the body
+    "ridge_side": (0.64, 0.45, 0.36), # faint shading beside it
+    "stripe": (0.65, 0.46, 0.37),     # soft creases
+    "rim": (0.76, 0.58, 0.48),        # thin, slightly translucent margin
+    "under": (0.62, 0.47, 0.38),
+    "mottle": (0.60, 0.42, 0.34),     # blotchy skin pattern
 }
 
 UNDER_Z = -0.02
@@ -114,7 +118,7 @@ class Body:
         u = abs(x) / self.hw(y)
         span = s.y_back - self.apex_y
         q = (y - self.apex_y - s.stripe_slant * abs(x)) / span * s.stripes
-        g = (0.5 + 0.5 * math.cos(q * math.tau)) ** 1.5
+        g = (0.5 + 0.5 * math.cos(q * math.tau)) ** 3.0   # narrow, shallow creases
         d, _ = self.anchor_dist(x, y)
         mask = nh.smoothstep(0.10, 0.22, u) * nh.smoothstep(0.96, 0.82, u)
         mask *= nh.smoothstep(s.ridge_w * 2.2, s.ridge_w * 3.5, d)       # keep clear of the arc
@@ -132,7 +136,7 @@ class Body:
         h += 0.006 * nh.smoothstep(0.86, 0.95, u) * (1.0 - nh.smoothstep(0.95, 1.0, u))  # soft rim
         r, trough = self.ridges(x, y)
         h += s.ridge_h * r * (1.0 - nh.smoothstep(0.85, 1.0, u))
-        h -= 0.005 * trough
+        h -= 0.002 * trough
         return h
 
     def color(self, co, n):
@@ -141,11 +145,13 @@ class Body:
         w = self.hw(y)
         u = min(1.0, abs(x) / w)
         c = nh.lerp(p["body_light"], p["body"], nh.smoothstep(0.1, 0.85, u))
-        c = nh.lerp(c, p["stripe"], self.stripe(x, y) * 0.5)
+        m = noise.noise(Vector((x * 5.0, y * 5.0, 3.1)))
+        c = nh.lerp(c, p["mottle"], nh.smoothstep(0.15, 0.55, m) * 0.45)
+        c = nh.lerp(c, p["stripe"], self.stripe(x, y) * 0.25)
         r, trough = self.ridges(x, y)
-        c = nh.lerp(c, p["ridge_side"], trough * 0.55)
-        c = nh.lerp(c, p["ridge"], min(1.0, r * 1.2))
-        c = nh.lerp(c, p["rim"], nh.smoothstep(0.88, 1.0, u) * 0.8)
+        c = nh.lerp(c, p["ridge_side"], trough * 0.3)
+        c = nh.lerp(c, p["ridge"], r * 0.6)
+        c = nh.lerp(c, p["rim"], nh.smoothstep(0.88, 1.0, u) * 0.6)
         if n.z < -0.3:
             c = p["under"]
         k = 1.0 + 0.06 * noise.noise(co * 20.0)

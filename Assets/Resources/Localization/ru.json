@@ -10875,6 +10875,74 @@
   {
    "k": "Geothermal field",
    "v": "Геотермальное поле"
+  },
+  {
+   "k": "Evolution Tree",
+   "v": "Эволюционное древо"
+  },
+  {
+   "k": "{0} species ▸",
+   "v": "Видов: {0} ▸"
+  },
+  {
+   "k": "Phylum Arthropoda",
+   "v": "Тип Членистоногие"
+  },
+  {
+   "k": "Subphylum Chelicerata",
+   "v": "Подтип Хелицеровые"
+  },
+  {
+   "k": "Subphylum Myriapoda",
+   "v": "Подтип Многоножки"
+  },
+  {
+   "k": "Class Insecta",
+   "v": "Класс Насекомые"
+  },
+  {
+   "k": "Phylum Mollusca",
+   "v": "Тип Моллюски"
+  },
+  {
+   "k": "Class Cephalopoda",
+   "v": "Класс Головоногие"
+  },
+  {
+   "k": "Phylum Chordata",
+   "v": "Тип Хордовые"
+  },
+  {
+   "k": "Subphylum Vertebrata",
+   "v": "Подтип Позвоночные"
+  },
+  {
+   "k": "Class Chondrichthyes",
+   "v": "Класс Хрящевые рыбы"
+  },
+  {
+   "k": "Class Osteichthyes",
+   "v": "Класс Костные рыбы"
+  },
+  {
+   "k": "Class Amphibia",
+   "v": "Класс Земноводные"
+  },
+  {
+   "k": "Class Reptilia",
+   "v": "Класс Пресмыкающиеся"
+  },
+  {
+   "k": "Superorder Dinosauria",
+   "v": "Надотряд Динозавры"
+  },
+  {
+   "k": "Class Aves",
+   "v": "Класс Птицы"
+  },
+  {
+   "k": "Class Mammalia",
+   "v": "Класс Млекопитающие"
   }
  ]
 }

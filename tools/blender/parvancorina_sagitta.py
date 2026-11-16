@@ -7,7 +7,8 @@ narrow rounded rear - an arrowhead in top view. Its anchor-shaped ridge is drawn
 match: the transverse ridge near the front is a tight, forward-pointing arc whose arms sweep
 well back along the flanks like the barbs of an arrowhead, and the midline ridge runs back
 almost to the rear margin. Fine oblique striations flank the midline ridge. A slightly more
-golden ochre-tan than P. minchami, with a pale ridge, darker troughs and a darker rim.
+golden ochre-tan than P. minchami; as there, the ridge and striations are soft, low-contrast
+swellings and creases of the skin.
 One lofted shell (see nh_parvancorina.py). Faces -Y, pivot at the body centre (Swim style),
 seen mostly from above.
 
@@ -45,16 +46,17 @@ SHAPE = pv.Shape(
     half_width=half_width,
     anchor=pv.arc_anchor(apex_y=-0.47, half_span=0.17, sweep=0.30, hook=105.0),
     ridge_end=0.60,
-    dome=0.07, ridge_h=0.032, ridge_w=0.025,
+    dome=0.07, ridge_h=0.022, ridge_w=0.034,
     stripes=16, stripe_slant=0.60,
     rows=76, cols=24,
     palette={
-        "body": (0.76, 0.58, 0.38),
-        "body_light": (0.88, 0.74, 0.54),
-        "ridge": (0.93, 0.82, 0.62),
-        "ridge_side": (0.48, 0.33, 0.20),
-        "stripe": (0.56, 0.40, 0.26),
-        "rim": (0.62, 0.45, 0.30),
+        "body": (0.72, 0.53, 0.37),
+        "body_light": (0.80, 0.62, 0.45),
+        "ridge": (0.83, 0.66, 0.49),
+        "ridge_side": (0.65, 0.47, 0.33),
+        "stripe": (0.66, 0.48, 0.34),
+        "rim": (0.78, 0.60, 0.45),
+        "mottle": (0.61, 0.44, 0.31),
     },
 )
 

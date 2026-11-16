@@ -38,6 +38,8 @@ namespace NaturalHistory.World
                     return biome;
 
                 case TerrainKind.IceSheet:
+                    // a polar cap frozen over the sea is ice whenever it's that cold (it's no land underneath)
+                    if (cell.HasInputs && cell.Inputs.level == 0) return TerrainKind.IceSheet;
                     if (cell.Elevation >= WorldGenerator.MountainElevation)
                         return HasIceSheets(age) ? TerrainKind.IceSheet : TerrainKind.Mountain;
                     if (HasIceSheets(age)) return TerrainKind.IceSheet;

@@ -9,8 +9,8 @@ namespace NaturalHistory.World
     // it: buried lakes lake-blue, old sea floors under the land their seabed colour.
     public partial class HexGrid
     {
-        private const float PlateauHeight  = 0.26f; // above the sea surface (0.02): some four terrace steps over the shore
-        private const float GroundwaterDip = 0.06f; // groundwater basins lie this far below the plateau
+        private const float PlateauHeight  = 0.6f;  // above the sea surface (0.02): a high cliff over the seabed, plain from afar
+        private const float GroundwaterDip = 0.22f; // underground lakes lie this far below the plateau, in basins
 
         private readonly Dictionary<HexCell, Mesh> landSurfaceMeshes = new();
         private readonly Dictionary<int, Mesh> plateauMeshCache = new();

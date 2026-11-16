@@ -10875,6 +10875,74 @@
   {
    "k": "Geothermal field",
    "v": "Geothermalfeld"
+  },
+  {
+   "k": "Evolution Tree",
+   "v": "Stammbaum"
+  },
+  {
+   "k": "{0} species ▸",
+   "v": "{0} Arten ▸"
+  },
+  {
+   "k": "Phylum Arthropoda",
+   "v": "Gliederfüßer (Stamm Arthropoda)"
+  },
+  {
+   "k": "Subphylum Chelicerata",
+   "v": "Kieferklauenträger (Unterstamm)"
+  },
+  {
+   "k": "Subphylum Myriapoda",
+   "v": "Tausendfüßer (Unterstamm)"
+  },
+  {
+   "k": "Class Insecta",
+   "v": "Insekten (Klasse)"
+  },
+  {
+   "k": "Phylum Mollusca",
+   "v": "Weichtiere (Stamm Mollusca)"
+  },
+  {
+   "k": "Class Cephalopoda",
+   "v": "Kopffüßer (Klasse)"
+  },
+  {
+   "k": "Phylum Chordata",
+   "v": "Chordatiere (Stamm Chordata)"
+  },
+  {
+   "k": "Subphylum Vertebrata",
+   "v": "Wirbeltiere (Unterstamm)"
+  },
+  {
+   "k": "Class Chondrichthyes",
+   "v": "Knorpelfische (Klasse)"
+  },
+  {
+   "k": "Class Osteichthyes",
+   "v": "Knochenfische (Klasse)"
+  },
+  {
+   "k": "Class Amphibia",
+   "v": "Amphibien (Klasse)"
+  },
+  {
+   "k": "Class Reptilia",
+   "v": "Reptilien (Klasse)"
+  },
+  {
+   "k": "Superorder Dinosauria",
+   "v": "Dinosaurier (Überordnung)"
+  },
+  {
+   "k": "Class Aves",
+   "v": "Vögel (Klasse)"
+  },
+  {
+   "k": "Class Mammalia",
+   "v": "Säugetiere (Klasse)"
   }
  ]
 }

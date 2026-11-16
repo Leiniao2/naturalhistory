@@ -11,7 +11,7 @@ namespace NaturalHistory.UI
 {
     // Bottom-centre card for the selected animal group of the human player: portrait, species,
     // and its actions: open the species' Functions / Behaviors trees, reproduce, evolve (opens the
-    // Zoology panel on this copy).
+    // Evolution Tree panel on this copy).
     public class UnitPanel
     {
         private readonly VisualElement panel, portrait;

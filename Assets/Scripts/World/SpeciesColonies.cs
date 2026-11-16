@@ -65,6 +65,13 @@ namespace NaturalHistory.World
         // fewer members (see AgeZoom).
         private const float AgeReferenceCm       = 600f;
         private const float MaxAgeZoom           = 3f;
+        // Microbes (protists, and animals under a millimetre such as water bears and mites) keep the
+        // minimum size up to the Cambrian, then shrink as bigger life sets the scale, down to
+        // LateMicrobeScale of it from the Devonian on.
+        private const float LateMicrobeScale     = 0.3f;
+        private static bool IsMicrobe(SpeciesDefinition def) => def.kingdom == "Protista" || def.sizeCm < 0.1f;
+        private static float MicrobeScale(GeologicalAge age) =>
+            Mathf.Lerp(1f, LateMicrobeScale, Mathf.InverseLerp((float)GeologicalAge.Cambrian, (float)GeologicalAge.Devonian, (float)age));
 
         private const float SoarHeight  = 0.75f;
         private const float SwarmHeight = 0.35f;
@@ -282,7 +289,7 @@ namespace NaturalHistory.World
         // Same habitat test as wild placement: the tile's terrain or its present-day biome is listed.
         public static bool FitsHabitat(SpeciesDefinition def, HexCell cell) =>
             cell != null && cell.Terrain != null && !cell.IsMountain && def.habitats != null &&
-            !(Niches.Of(def) == Niche.Underground && UnderView.Blocks(cell.Under)) && // no way into solid bedrock
+            UnderView.FitsBelow(def, cell) && // no way into solid bedrock; seabed animals on a seabed
             (def.habitats.Contains(cell.Terrain.kind.ToString()) || def.habitats.Contains(cell.Biome.ToString()));
 
         public static bool CanTravel(SpeciesDefinition def) =>
@@ -362,7 +369,7 @@ namespace NaturalHistory.World
                 var cell = grid.GetCell(q, r);
                 if (cell == null || cell.Terrain == null || cell.IsMountain) continue;
                 if (!def.habitats.Contains(cell.Terrain.kind.ToString()) && !def.habitats.Contains(cell.Biome.ToString())) continue;
-                if (niche == Niche.Underground && UnderView.Blocks(cell.Under)) continue;
+                if (!UnderView.FitsBelow(def, cell)) continue;
                 if (!FoodWeb.HasFood(def, cell, this, null)) continue;
                 cells.Add((cell, q, r));
             }
@@ -420,9 +427,12 @@ namespace NaturalHistory.World
             float zoom = AgeZoom(grid.DisplayedAge);
             count = Mathf.Max(1, Mathf.RoundToInt(count / Mathf.Sqrt(zoom))); // bigger members, fewer of them
             float sizeSpan = SizeSpanPerSqrtMetre * Mathf.Sqrt(Mathf.Max(def.sizeCm, 0f) / 100f) * zoom;
-            memberSpan = Mathf.Min(Mathf.Max(memberSpan, sizeSpan), MaxSpan);
+            // microbes are held up only by the minimum size, so they would look the same in every age;
+            // instead they shrink after the Cambrian (MicrobeScale)
+            float microbe = IsMicrobe(def) ? MicrobeScale(grid.DisplayedAge) : 1f;
+            memberSpan = Mathf.Min(Mathf.Max(memberSpan * microbe, sizeSpan), MaxSpan);
             if (def.mapScale > 0f) memberSpan *= def.mapScale; // per-model framing (tall perch, wide web...)
-            memberSpan = Mathf.Max(memberSpan, style == ColonyStyle.Swarm ? MinSwarmSpan : MinSpan);
+            memberSpan = Mathf.Max(memberSpan, (style == ColonyStyle.Swarm ? MinSwarmSpan : MinSpan) * microbe);
             // a snake rests coiled up (see ColonyGroup), so it takes the room of its coil, not its length
             bool coiled = style == ColonyStyle.Ground && string.Equals(def.mapGait, "Slither", System.StringComparison.OrdinalIgnoreCase);
             float footprint = coiled ? memberSpan * 0.3f : memberSpan;

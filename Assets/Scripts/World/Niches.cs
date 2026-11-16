@@ -52,6 +52,10 @@ namespace NaturalHistory.World
             return Niche.Large;
         }
 
+        // Seabed dwellers: sessile and bottom-living animals of the water (sponges, archaeocyaths,
+        // corals, urchins…). They live on the seabed or lakebed below, not in caves or rock.
+        public static bool OnSeabed(SpeciesDefinition def) => Of(def) == Niche.Underground && LivesOnlyInWater(def);
+
         private static bool LivesOnlyInWater(SpeciesDefinition def)
         {
             if (def.habitats == null || def.habitats.Count == 0) return false;

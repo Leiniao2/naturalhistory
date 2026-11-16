@@ -10875,6 +10875,74 @@
   {
    "k": "Geothermal field",
    "v": "Champ géothermique"
+  },
+  {
+   "k": "Evolution Tree",
+   "v": "Arbre de l'évolution"
+  },
+  {
+   "k": "{0} species ▸",
+   "v": "{0} espèces ▸"
+  },
+  {
+   "k": "Phylum Arthropoda",
+   "v": "Arthropodes (embranchement)"
+  },
+  {
+   "k": "Subphylum Chelicerata",
+   "v": "Chélicérates (sous-embranchement)"
+  },
+  {
+   "k": "Subphylum Myriapoda",
+   "v": "Myriapodes (sous-embranchement)"
+  },
+  {
+   "k": "Class Insecta",
+   "v": "Insectes (classe)"
+  },
+  {
+   "k": "Phylum Mollusca",
+   "v": "Mollusques (embranchement)"
+  },
+  {
+   "k": "Class Cephalopoda",
+   "v": "Céphalopodes (classe)"
+  },
+  {
+   "k": "Phylum Chordata",
+   "v": "Chordés (embranchement)"
+  },
+  {
+   "k": "Subphylum Vertebrata",
+   "v": "Vertébrés (sous-embranchement)"
+  },
+  {
+   "k": "Class Chondrichthyes",
+   "v": "Poissons cartilagineux (classe)"
+  },
+  {
+   "k": "Class Osteichthyes",
+   "v": "Poissons osseux (classe)"
+  },
+  {
+   "k": "Class Amphibia",
+   "v": "Amphibiens (classe)"
+  },
+  {
+   "k": "Class Reptilia",
+   "v": "Reptiles (classe)"
+  },
+  {
+   "k": "Superorder Dinosauria",
+   "v": "Dinosaures (super-ordre)"
+  },
+  {
+   "k": "Class Aves",
+   "v": "Oiseaux (classe)"
+  },
+  {
+   "k": "Class Mammalia",
+   "v": "Mammifères (classe)"
   }
  ]
 }

@@ -8,7 +8,7 @@
             <ui:Label name="ep-label" class="ep-label" text="EP 0" />
             <ui:Button name="morphology-button" class="hud-button" text="Functions" />
             <ui:Button name="ethology-button" class="hud-button" text="Behaviors" />
-            <ui:Button name="zoology-button" class="hud-button" text="Zoology" />
+            <ui:Button name="zoology-button" class="hud-button" text="Evolution Tree" />
             <ui:Button name="menu-button" class="hud-button" text="Menu" />
         </ui:VisualElement>
 
@@ -34,13 +34,6 @@
         <ui:VisualElement name="minimap-dock" class="minimap-dock" picking-mode="Ignore">
             <ui:Button name="under-button" class="hud-button minimap-under" text="Underground" />
             <ui:VisualElement name="minimap" class="minimap" />
-        </ui:VisualElement>
-
-        <!-- Bottom-left, beside the minimap: world averages -->
-        <ui:VisualElement name="world-panel" class="info-panel world-panel">
-            <ui:Label class="info-title" text="World Climate" />
-            <ui:Label name="world-stats" class="info-stats" text="" />
-            <ui:Label name="world-note" class="info-note" text="" />
         </ui:VisualElement>
 
         <!-- Bottom-right: selected tile -->
@@ -77,6 +70,12 @@
                     <ui:ScrollView class="age-details">
                         <ui:Label name="age-name" class="age-name" text="" />
                         <ui:Label name="age-range" class="age-range" text="" />
+                        <!-- world averages now, shown for the current period only (ClimateHud, AgePanel) -->
+                        <ui:VisualElement name="age-climate">
+                            <ui:Label class="age-section" text="World Climate" />
+                            <ui:Label name="world-stats" class="age-text" text="" />
+                            <ui:Label name="world-note" class="info-note" text="" />
+                        </ui:VisualElement>
                         <ui:Label name="age-description" class="age-description" text="" />
                         <ui:Label class="age-section" text="Key events" />
                         <ui:Label name="age-events" class="age-text" text="" />
@@ -179,11 +178,12 @@
             </ui:VisualElement>
         </ui:VisualElement>
 
-        <!-- Zoology: the evolution tree and what each step requires -->
+        <!-- Evolution tree (ZoologyPanel): from one species to what it can become, and what each step requires -->
         <ui:VisualElement name="zoology-overlay" class="overlay hidden">
             <ui:VisualElement class="panel tree-panel">
                 <ui:VisualElement class="tree-header">
-                    <ui:Label class="panel-title tree-title" text="Zoology" />
+                    <ui:Button name="zoology-back-button" class="hud-button zoology-back" text="Back" />
+                    <ui:Label class="panel-title tree-title" text="Evolution Tree" />
                     <ui:Label name="zoology-subtitle" class="tree-progress" text="" />
                     <ui:Button name="zoology-close-button" class="close-button" text="✕" />
                 </ui:VisualElement>

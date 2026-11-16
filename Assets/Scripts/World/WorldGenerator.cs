@@ -118,6 +118,7 @@ namespace NaturalHistory.World
                 if (terrains.TryGetValue(kind, out var terrain))
                     cells[q, r].SetTerrain(terrain);
                 var feature = ChooseFeature(kind, m[i], temp, f[i], Conditions.Today);
+                if (!isLand && kind == TerrainKind.IceSheet) level = 1; // polar ice cap over the sea
                 cells[q, r].SetElevation(level);
                 // Water depth from the same elevation ranks: 0 where it meets the land, 1 in the
                 // deepest sea or the middle of the deepest lake
@@ -156,6 +157,7 @@ namespace NaturalHistory.World
                 int level = !land ? 0 : g.level > 0 ? g.level : 1; // an exposed shelf is low coastal plain
                 float temp = Temperature(g, level, c);
                 var kind = ClassifyTerrain(g.e, land ? g.rugged : 0f, g.m, temp, c);
+                if (!land && kind == TerrainKind.IceSheet) { land = true; level = 1; } // the sea frozen into a polar ice cap
                 var feature = ChooseFeature(kind, g.m, temp, g.f, c);
                 if (cell.IsWater == land || cell.Elevation != level) coastChanged |= cell.IsWater == land;
                 if (terrainCache.TryGetValue(kind, out var terrain)) cell.SetTerrain(terrain);
@@ -178,6 +180,7 @@ namespace NaturalHistory.World
         const float MountainThreshold  = 0.80f; // …and the top 20% of land is mountains
 
         const float TropicalTemp = 0.68f; // warmer than this is the tropical belt
+        const float PolarCapTemp = 0.2f;  // colder than this the polar sea freezes into an ice cap
         const float CliffCoastShare = 0.15f; // share of the map where highland may meet the sea
 
         // Hex steps from each land cell to the nearest water (1 = on the coast); 0 for water.
@@ -318,6 +321,11 @@ namespace NaturalHistory.World
         // mountain/hill, then temperature × moisture drive lowland biomes. All inputs are ranks.
         static TerrainKind ClassifyTerrain(float e, float rugged, float m, float temp, Conditions c)
         {
+            // The polar caps: at the poles the cold freezes sea and land alike into ice (the map's top
+            // and bottom rows are sea, so without this there'd be no polar ice at all). Two rows or so
+            // at each pole today, more in cold times, none in hothouse periods.
+            if (temp < PolarCapTemp) return TerrainKind.IceSheet;
+
             // Water: the shoreline moves with sea level
             if (e < SaltWaterThreshold + c.sea) return TerrainKind.SaltWater;
             if (e < WaterThreshold + c.sea)     return TerrainKind.FreshWater;

@@ -158,36 +158,11 @@ namespace NaturalHistory.World
             return palette[((k % palette.Length) + palette.Length) % palette.Length];
         }
 
-        // ---- Mesa: a flat-topped table of layered rock with sheer walls, a talus apron and a
-        //      smaller butte beside it
-
-        public static Mesh CreateMesa(System.Random rng, float size, System.Func<Vector2, float> ground)
-        {
-            var b = new Builder();
-            float seed = Range(rng, 0f, 100f);
-            float H = size * Range(rng, 0.2f, 0.28f);
-            float R = size * Range(rng, 0.36f, 0.44f);
-            var c2 = new Vector2(Mathf.Sin(seed), Mathf.Cos(seed)) * size * 0.55f;
-            float R2 = size * 0.11f, H2 = H * Range(rng, 0.75f, 0.95f);
-            float Table(Vector2 p, Vector2 c, float r, float h)
-            {
-                var d = p - c;
-                float a = Mathf.Atan2(d.x, d.y);
-                float edge = r * (1f + 0.16f * (Mathf.PerlinNoise(seed + Mathf.Cos(a) * 1.6f, seed + Mathf.Sin(a) * 1.6f) - 0.5f) * 2f);
-                float dist = d.magnitude;
-                float wall = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(edge - 0.02f * size, edge + 0.035f * size, dist));
-                float talus = 0.3f * Mathf.Clamp01(1f - (dist - edge) / (0.2f * size));
-                return h * Mathf.Max(wall, dist > edge ? talus * talus : 0f);
-            }
-            float Height(Vector2 p) => Mathf.Max(Table(p, Vector2.zero, R, H), Table(p, c2, R2, H2)) * RimFade(p, size);
-            AddHeightField(b, size, 22, Height, ground, (m, h, nrm) =>
-            {
-                if (nrm.y > 0.85f && h > H * 0.8f) return Shade(rng, MesaCap, 0.05f);           // the cap rock
-                if (nrm.y > 0.6f) return Shade(rng, Scree, 0.06f);                               // talus
-                return Banded(Range(rng, 0.96f, 1.04f)); // layered walls, per pixel
-            }, band: (p, h) => StrataBand(p, size, 4f), bandPalette: 2f);
-            return b.ToMesh("Mesa");
-        }
+        // ---- Canyon: a layered plateau cut by a gorge that steps down in cliff bands to the river
+        //      at the bottom. riverLines: the tile's river channels (HexGrid.RiverCenterlines), so the
+        //      gorge follows the river the map draws and it runs on into the neighbouring tiles'
+        //      rivers; the water itself is the river system's. Without them, a dry gorge crosses
+        //      the tile from one edge to another.
 
         // fades a field out toward the hex rim, so it meets the neighbours at ground level
         static float RimFade(Vector2 p, float size)
@@ -203,12 +178,6 @@ namespace NaturalHistory.World
             // to its foot without a seam
             return 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(a * 0.62f, a * 0.92f, d));
         }
-
-        // ---- Canyon: a layered plateau cut by a gorge that steps down in cliff bands to the river
-        //      at the bottom. riverLines: the tile's river channels (HexGrid.RiverCenterlines), so the
-        //      gorge follows the river the map draws and it runs on into the neighbouring tiles'
-        //      rivers; the water itself is the river system's. Without them, a dry gorge crosses
-        //      the tile from one edge to another.
 
         public static Mesh CreateCanyon(System.Random rng, float size, System.Func<Vector2, float> ground,
                                         IReadOnlyList<List<Vector2>> riverLines = null, float riverHalfWidth = 0f)

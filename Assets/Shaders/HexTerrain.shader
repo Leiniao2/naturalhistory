@@ -214,11 +214,11 @@ Shader "NaturalHistory/HexTerrain"
                 half3 rockCol = CliffRock(i.positionWS, p, n, _CliffTint);
                 half3 side    = lerp(sideTex * (1.0 - _SideDarken), rockCol, _Land) * _Color.rgb;
                 half3 albedo  = lerp(side, top, topW);
-                half2 shore   = Shoreline(i.positionWS.y, _Land);
+                half2 shore   = Shoreline(i.positionWS.y, _Land) * (1.0 - topW); // cliffs only: beaches stay sand to the water
                 // low coasts: a beach of sand (or shingle and rock) on the slope down to the water
                 half3 sand    = _Shore.rgb * lerp(0.9, 1.08, saturate(dot(topTex, half3(0.299, 0.587, 0.114)) / max(avgLum, 0.05) * 0.5));
                 half3 shoreCol = lerp(rockCol, sand, _Shore.a) * _Color.rgb;
-                half  beach   = (1.0 - smoothstep(0.085, 0.115, i.positionWS.y)) * _Land * _Shore.a;
+                half  beach   = (1.0 - smoothstep(0.085, 0.115, i.positionWS.y)) * _Land * _Shore.a * (1.0 - topW); // no sand band along low coasts
                 albedo = lerp(albedo, shoreCol, max(shore.x, beach));
                 albedo = lerp(albedo, half3(0.93, 0.95, 0.97), shore.y * 0.85);
 
@@ -438,12 +438,14 @@ Shader "NaturalHistory/HexTerrain"
 
             // On land: bare rock just above the sea (cliff foot, boulder apron), then a line of surf
             float y   = IN.worldPos.y;
-            half rock = (1.0 - smoothstep(0.035, 0.055, y)) * _Land;
-            half surf = smoothstep(0.012, 0.024, y) * (1.0 - smoothstep(0.034, 0.065, y)) * _Land;
+            // (on steep faces only, the cliffs: a low coast's slope keeps its ground right down to the water)
+            half steep = top ? 0.0 : 1.0;
+            half rock = (1.0 - smoothstep(0.035, 0.055, y)) * _Land * steep;
+            half surf = smoothstep(0.012, 0.024, y) * (1.0 - smoothstep(0.034, 0.065, y)) * _Land * steep;
             // Low coasts: a beach of sand (or shingle and rock) on the slope down to the water
             half3 sand     = _Shore.rgb * lerp(0.9, 1.08, saturate(lum / max(avgLum, 0.05) * 0.5));
             half3 shoreCol = lerp(CliffRock(IN.worldPos, p, n), sand, _Shore.a) * _Color.rgb;
-            half  beach    = (1.0 - smoothstep(0.085, 0.115, y)) * _Land * _Shore.a;
+            half  beach    = (1.0 - smoothstep(0.085, 0.115, y)) * _Land * _Shore.a * steep; // no sand band along low coasts: the ground runs into the water
             albedo = lerp(albedo, shoreCol, max(rock, beach));
             albedo = lerp(albedo, half3(0.93, 0.95, 0.97), surf * 0.85);
 

@@ -1,5 +1,6 @@
 using System;
 using NaturalHistory.Core;
+using NaturalHistory.Data;
 
 namespace NaturalHistory.World
 {
@@ -52,6 +53,16 @@ namespace NaturalHistory.World
 
         // Underground animals can't enter, settle in or pass through solid bedrock
         public static bool Blocks(UnderKind kind) => kind == UnderKind.Bedrock;
+
+        // Whether the layer below a tile is a bed of water (seabed, deep seabed, lakebed) rather than rock or caves
+        public static bool IsWaterBed(UnderKind kind) => kind is UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed;
+
+        // Whether an underground-niche species can live below this tile: not in solid bedrock, and
+        // seabed dwellers only under water: on a seabed or lakebed, or in a sea cave (not in the
+        // rock below the land, or a buried headland's rock under the sea)
+        public static bool FitsBelow(SpeciesDefinition def, HexCell cell) =>
+            Niches.Of(def) != Niche.Underground ||
+            (!Blocks(cell.Under) && (!Niches.OnSeabed(def) || IsWaterBed(cell.Under) || (cell.IsWater && cell.Under == UnderKind.Cave)));
 
         public static string Name(UnderKind kind) => Loc.T(kind switch
         {

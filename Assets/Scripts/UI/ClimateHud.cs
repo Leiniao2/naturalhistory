@@ -5,7 +5,8 @@ using UnityEngine.UIElements;
 
 namespace NaturalHistory.UI
 {
-    // Date bar (period, Ma, turn, End Turn), world climate averages, and the selected tile's climate.
+    // Date bar (period, Ma, turn, End Turn), world climate averages (in the Geologic Time panel the
+    // period button opens), and the selected tile's climate.
     public class ClimateHud
     {
         private readonly Label ageLabel, dateLabel, worldStats, worldNote, tileTitle, tileZone, tileStats;
@@ -16,6 +17,7 @@ namespace NaturalHistory.UI
         private bool hasPrevious;
         private HexCell shownCell;
         private string shownNiches;
+        private bool shownUnder;
 
         public ClimateHud(VisualElement root)
         {
@@ -75,14 +77,22 @@ namespace NaturalHistory.UI
                 shownCell = null;
                 return;
             }
-            var occupants = NicheLines(cell);
-            if (cell == shownCell && occupants == shownNiches) return; // also redraw when groups come and go
+            bool under = UnderView.On;
+            var occupants = NicheLines(cell, under);
+            // also redraw when groups come and go, or the view switches between surface and under layer
+            if (cell == shownCell && occupants == shownNiches && under == shownUnder) return;
             shownCell   = cell;
             shownNiches = occupants;
+            shownUnder  = under;
 
             var t = climate.Get(cell);
             tilePanel.RemoveFromClassList("hidden");
             var (col, row) = cell.Coordinates.ToOffsetCoordinates();
+            if (under)
+            {
+                ShowUnderTile(cell, col, row, occupants);
+                return;
+            }
             var landform = EraFlora.LandformName(cell.Feature);
             var terrainName = cell.Terrain != null ? Loc.T(EraFlora.DisplayName(cell.Terrain.kind)) : "?";
             tileTitle.text = $"{(landform != null ? $"{landform} ({terrainName})" : terrainName)}  ·  ({col}, {row})";
@@ -102,17 +112,33 @@ namespace NaturalHistory.UI
                 Loc.F("Oxygen: {0:0.00} %", t.O2Percent) + "\n" +
                 Loc.F("CO2: {0:0} ppm", t.Co2Ppm) + "\n" +
                 Loc.F("Elevation    level {0}", cell.Elevation) +
-                NicheLines(cell);
+                occupants;
         }
 
-        // The tile's six niches and the animal group holding each (Niches)
-        private static string NicheLines(HexCell cell)
+        // In the under view the panel describes only the layer below the tile: its floor (seabed,
+        // lakebed, caves, bedrock…), what grows there and the niches seen in that view, nothing of
+        // the land surface above it.
+        private void ShowUnderTile(HexCell cell, int col, int row, string occupants)
         {
-            if (cell.IsMountain) return "";
+            var title = Loc.T(UnderView.FloorName(cell));
+            if (UnderView.Name(cell.UnderFeature) is string feature) title += $", {Loc.T(feature)}";
+            tileTitle.text = $"{title}  ·  ({col}, {row})";
+            tileZone.text  = "";
+            var underPlants = System.Linq.Enumerable.ToList(System.Linq.Enumerable.Where(cell.UnderPlants, p => !UnderView.IsFloor(p)));
+            var flora = underPlants.Count > 0 ? Loc.F("Plants: {0}", string.Join(", ", System.Linq.Enumerable.Select(underPlants, p => Loc.T(p.Label)))) : "";
+            tileStats.text = (flora + occupants).TrimStart('\n');
+        }
+
+        // The tile's niches and the animal group holding each (Niches). In the under view: only the
+        // underground niche below land, and the water's niches (not the air) below sea or lake.
+        private static string NicheLines(HexCell cell, bool under)
+        {
+            if (cell.IsMountain && !under) return "";
             var colonies = SpeciesColonies.Instance;
             var sb = new System.Text.StringBuilder("\n" + Loc.T("Niches:"));
             foreach (var niche in Niches.All)
             {
+                if (under && (cell.IsWater ? niche == Niche.Aerial : niche != Niche.Underground)) continue;
                 var g = colonies != null ? colonies.GroupAt(cell, niche) : null;
                 var who = g?.Definition == null ? Loc.T("free")
                         : Loc.T(g.Definition.commonName) + (g.Owner != null ? $" ({(g.Owner.IsHuman ? Loc.T("yours") : g.Owner.Name)})" : "");
