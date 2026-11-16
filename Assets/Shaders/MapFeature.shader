@@ -23,11 +23,13 @@ Shader "NaturalHistory/MapFeature"
         [HideInInspector] _UndulateBody ("Tail z, snout z, waves along the body, growth toward the tail", Vector) = (-1, 1, 1, 0.5)
         [HideInInspector] _Coil ("Coiled (0..1), inner radius, ring spacing, head rise", Vector) = (0, 0.06, 0.055, 0.07)
         _Sway ("Sway: amplitude, full-sway height, speed, wavelength", Vector) = (0, 1, 1, 1)
+        [HideInInspector] _StencilRef ("Stencil: 1 for animals, so borders skip them", Int) = 0
     }
 
     SubShader
     {
         Tags { "RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "Queue" = "Geometry" }
+        Stencil { Ref [_StencilRef] Comp Always Pass Replace } // see the built-in SubShader
 
         HLSLINCLUDE
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
@@ -193,6 +195,8 @@ Shader "NaturalHistory/MapFeature"
     SubShader
     {
         Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
+        // animals write 1 (SpeciesColonies), everything else 0: territory borders skip the 1s
+        Stencil { Ref [_StencilRef] Comp Always Pass Replace }
 
         CGPROGRAM
         #pragma surface surf Lambert fullforwardshadows addshadow vertex:vert

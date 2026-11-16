@@ -98,10 +98,15 @@ def plants_only(cover, mute):
 def paint(floor, cover, seed, share, count, size, opacity, rim, fuzz, mask=None):
     rng = np.random.default_rng(seed)
     n, cut = clumps(rng, share, count, size, fuzz)
-    edge = cut * (0.06 + 0.06 * fuzz)
+    edge = cut * (0.06 + 0.16 * fuzz)
+    if fuzz >= 1: edge = cut * 0.5                        # turf: no outline at all, it thins out into the floor
     a = smooth(cut - edge, cut + edge, n)                 # 0 bare floor, 1 inside a clump
     core = smooth(cut, cut * 2.2, n)                      # thicker toward the middle
     alpha = a * (0.5 + 0.5 * core) * opacity
+    if fuzz >= 1:
+        # tufts: broken up by fine noise, so a clump is a scatter of tiny tufts rather than a disc
+        tufts = smooth(0.35, 0.7, wrapped_noise(rng, 170) * 0.7 + wrapped_noise(rng, 340) * 0.3)
+        alpha = alpha * (0.25 + 0.75 * tufts)
     if mask is not None: alpha = alpha * mask
     alpha = alpha[..., None]
     ring = a * (1 - smooth(cut + edge, cut + 4 * edge, n))
@@ -121,8 +126,8 @@ COVERS = {
     "UnderSeabedMicrobialMat":     ("UnderSeabed",     8, 0.4,  26, 48, 0.72, 0.16, 0.3),
     "UnderLakebedMicrobialMat":    ("UnderLakebed",    8, 0.4,  26, 48, 0.72, 0.16, 0.3),
     "UnderDeepSeabedBacterialMat": ("UnderDeepSeabed", 8, 0.33, 24, 44, 0.7,  0.12, 0.3),
-    "UnderSeabedAlgalTurf":        ("UnderSeabed",     8, 0.34, 40, 30, 0.7,  0.1,  1.0),
-    "UnderLakebedAlgalTurf":       ("UnderLakebed",    8, 0.34, 40, 30, 0.7,  0.1,  1.0),
+    "UnderSeabedAlgalTurf":        ("UnderSeabed",    12, 0.3, 110, 13, 0.6,  0.03, 1.0),
+    "UnderLakebedAlgalTurf":       ("UnderLakebed",   12, 0.3, 110, 13, 0.6,  0.03, 1.0),
 }
 
 # meadows: (floor, cover repeats, share, clumps, clump size, opacity, rim, fuzz, mute)

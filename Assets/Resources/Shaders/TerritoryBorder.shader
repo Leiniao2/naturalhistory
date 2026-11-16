@@ -13,6 +13,9 @@ Shader "NaturalHistory/TerritoryBorder"
             ZWrite Off
             Cull Off
             Offset -1, -1
+            // not over the animals (they mark themselves 1, see MapFeature), so they stand on top of
+            // the border even where it lies above them, as over the sea
+            Stencil { Ref 1 Comp NotEqual }
 
             CGPROGRAM
             #pragma vertex vert

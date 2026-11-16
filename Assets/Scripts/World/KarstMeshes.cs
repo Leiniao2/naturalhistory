@@ -4,7 +4,7 @@ using UnityEngine;
 namespace NaturalHistory.World
 {
     // Karst tiles, in six forms picked by the country they stand in:
-    //   tower forest (fenglin, Guilin): tall lone towers out of a flat valley of rice paddies, a river
+    //   tower forest (fenglin, Guilin): tall lone towers out of a flat green valley, a river
     //     winding between them, now and then a natural arch
     //   peak cluster (fengcong): steep cones rising from one shared forested pedestal, with sinkhole
     //     pools in the hollows between them
@@ -27,10 +27,6 @@ namespace NaturalHistory.World
         };
         static readonly Color HillGrass = new(0.46f, 0.58f, 0.26f);
         static readonly Color HillBrown = new(0.54f, 0.41f, 0.24f);
-        static readonly Color[] Paddy   = // flooded, young rice, growing, ripening
-        {
-            new(0.50f, 0.62f, 0.62f), new(0.50f, 0.72f, 0.28f), new(0.62f, 0.78f, 0.34f), new(0.78f, 0.71f, 0.34f),
-        };
         static readonly Color CenoteBlue = new(0.16f, 0.60f, 0.66f);
 
         enum KarstForm { TowerForest, PeakCluster, StoneForest, Haystacks, Sinkhole, Drowned }
@@ -315,7 +311,7 @@ namespace NaturalHistory.World
             return best;
         }
 
-        // ---- Tower forest: lone towers out of a valley floor of paddies, a river winding through
+        // ---- Tower forest: lone towers out of a green valley floor, a river winding through
 
         static void AddTowerForest(Builder b, System.Random rng, float size, System.Func<Vector2, float> ground)
         {
@@ -357,24 +353,6 @@ namespace NaturalHistory.World
                 var sd = new Vector2((q1 - q0).y, -(q1 - q0).x).normalized * 0.03f * size;
                 Vector3 V(Vector2 q) => new(q.x, ground(q) + 0.004f * size, q.y);
                 b.AddQuad(V(q0 + sd), V(q1 + sd), V(q1 - sd), V(q0 - sd), Shade(rng, GorgeRiver, 0.04f), V((q0 + q1) * 0.5f) - Vector3.up);
-            }
-            // paddies: little fields in a turned grid, flooded or green or ripening, with dikes between
-            for (int f = rng.Next(1, 3); f > 0; f--)
-            {
-                var at = new Vector2(Range(rng, -0.4f, 0.4f), Range(rng, -0.4f, 0.4f)) * size;
-                float rot = Range(rng, 0f, Mathf.PI), cell = size * Range(rng, 0.05f, 0.065f);
-                var u = new Vector2(Mathf.Cos(rot), Mathf.Sin(rot)); var v = new Vector2(-u.y, u.x);
-                int stage = rng.Next(Paddy.Length);
-                for (int i = -2; i <= 2; i++)
-                for (int j = -2; j <= 2; j++)
-                {
-                    var c = at + u * (i * cell) + v * (j * cell * 0.8f);
-                    if (!Clear(c, cell * 0.6f) || !InHex(c, a * 0.85f)) continue;
-                    float hw = cell * 0.43f, hh = cell * 0.34f;
-                    Vector3 V(Vector2 q) => new(q.x, ground(q) + 0.003f * size, q.y);
-                    var col = Shade(rng, Paddy[(stage + (rng.NextDouble() < 0.25 ? 1 : 0)) % Paddy.Length], 0.05f);
-                    b.AddQuad(V(c - u * hw - v * hh), V(c + u * hw - v * hh), V(c + u * hw + v * hh), V(c - u * hw + v * hh), col, V(c) - Vector3.up);
-                }
             }
             // trees along the banks and round the tower feet
             for (int i = 0; i < 14; i++)

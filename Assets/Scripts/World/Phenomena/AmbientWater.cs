@@ -118,7 +118,7 @@ namespace NaturalHistory.World
                     // a river that leaves a cliffed coast into the sea or a lake, or drops steeply inland
                     var down = n[c.RiverOut];
                     if (down == null || down.Terrain == null) continue;
-                    if (down.IsWater ? c.Elevation >= PhenomenaUtil.CliffElevation : c.Elevation - down.Elevation >= 3)
+                    if (down.IsWater ? c.Elevation >= PhenomenaUtil.CliffElevation : c.Elevation - down.Elevation >= HexGrid.FallLevels)
                         falls.Add((c, c.RiverOut));
                 }
             }
@@ -576,7 +576,7 @@ namespace NaturalHistory.World
             cragR  = Mathf.Abs(cragL - 0.45f) < 0.12f ? R(0.25f, 0.35f) : R(0.25f, 0.7f); // keep the sides a little different
             cragSeed = R(0f, 100f);
             recess = 0.1f * s;                                   // the middle of the lip lies further back
-            lipD   = intoWater ? a * 0.9f : a * 1.38f;           // off a sea cliff at the coast; inland pushed out over the lower slope
+            lipD   = a * 0.9f;                                  // just inside the tile edge, where it steps down (to the sea, or to lower land: HexGrid.IsFallStep)
             top    = Ground(dir * a * 0.3f) + 0.004f * s;        // the upper tile's flat top
             bool LevelLand(HexCell n) => n != null && n.Terrain != null && !n.IsWater && n.SurfaceHeight >= cell.SurfaceHeight - 0.05f * s;
             foot   = intoWater ? Ground(dir * a * 1.4f) : Ground(dir * (lipD + 0.3f * s));

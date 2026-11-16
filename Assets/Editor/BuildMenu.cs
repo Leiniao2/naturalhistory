@@ -46,6 +46,7 @@ namespace NaturalHistory.Editor
 
         static bool Build(BuildTarget target, string path)
         {
+            PanelSettingsAsset.Ensure(); // the menus' text needs it (see PanelSettingsAsset)
             var scenes = EditorBuildSettings.scenes.Where(s => s.enabled).Select(s => s.path).ToArray();
             if (scenes.Length == 0)
             {

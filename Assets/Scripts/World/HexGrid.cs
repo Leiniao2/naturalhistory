@@ -49,7 +49,7 @@ namespace NaturalHistory.World
         [SerializeField] private TerrainType defaultTerrain;
         [SerializeField] private int seed = 0;          // 0 = random each Play
         [SerializeField] private int previewSeed = 12345; // used in Edit mode when seed is 0
-        [SerializeField] private float elevationStep = 0.07f; // world height of one terrace level (kept small so land reads as continuous)
+        [SerializeField] private float elevationStep = 0.2f;  // world height of one terrace level (tiles slope into each other, so land still reads as continuous)
         [Tooltip("Period whose plants the Edit-mode preview shows. In Play mode the map follows AgeManager.")]
         [SerializeField] private GeologicalAge previewAge = GeologicalAge.Quaternary;
 
@@ -216,7 +216,9 @@ namespace NaturalHistory.World
                 var kind = EraFlora.TerrainFor(cell, age);
                 if (terrainTypes.TryGetValue(kind, out var terrain)) cell.SetTerrain(terrain);
                 else kind = cell.Terrain.kind; // asset missing: keep what the cell has
-                cell.SetFeature(EraFlora.FeatureFor(cell, kind, age));
+                var feature = EraFlora.FeatureFor(cell, kind, age);
+                if (cell.HasRiver && feature == TerrainFeature.Oasis) feature = TerrainFeature.None; // no pond where a river runs through
+                cell.SetFeature(feature);
             }
             PlaceLandforms(age);
             PlaceGeothermal();
@@ -341,7 +343,7 @@ namespace NaturalHistory.World
                 switch (cell.Feature)
                 {
                     case TerrainFeature.Volcano:
-                        mesh = Track(MapFeatureMeshes.CreateVolcano(rng, cellSize, R(0.8f, 1.25f), p => LocalGround(cell, p),
+                        mesh = Track(MapFeatureMeshes.CreateVolcano(rng, cellSize, R(1.1f, 1.75f), p => LocalGround(cell, p),
                                      MapFeatureMeshes.PickVolcanoForm(rng, ColdPeak(cell, r), false))); unique = true; others++;
                         break;
                     case TerrainFeature.ConiferForest:   mesh = Forest(cell, "Conifer",   conifers);  forests++; break;
@@ -749,7 +751,7 @@ namespace NaturalHistory.World
             {
                 var cell = cells[q, r];
                 if (cell.Terrain == null || cell.IsWater || cell.IsMountain || cell.Feature != TerrainFeature.None) continue;
-                if (cell.Terrain.kind is TerrainKind.IceSheet) continue;
+                if (cell.Terrain.kind is TerrainKind.IceSheet || cell.HasRiver) continue; // its pools would sit under the river
                 uint hash = (uint)(WorldSeed * 73856093) ^ (uint)(q * 19349663) ^ (uint)(r * 83492791);
                 hash ^= hash >> 13; hash *= 0x5bd1e995; hash ^= hash >> 15;
                 float roll = (hash & 0xFFFF) / 65535f;
@@ -819,7 +821,6 @@ namespace NaturalHistory.World
                 case TerrainKind.Barren:
                     if (volcanic)       ground = Surface("LavaField");
                     else if (a > 0.68f) ground = Surface("Slickrock");
-                    else if (a < 0.25f) ground = Cracked(cell, "LimestonePavement");
                     else if (b > 0.72f) { ground = Surface("DesertPavement"); recolor = Paint(new Color(0.38f, 0.37f, 0.4f), 0.6f); } // dark basalt gravel
                     break;
                 case TerrainKind.Savanna:
@@ -836,8 +837,7 @@ namespace NaturalHistory.World
                     if (b > 0.5f) ground = Cracked(cell, "CrevassedIce");
                     break;
                 case TerrainKind.Hill:
-                    if (a < 0.14f) ground = Cracked(cell, "LimestonePavement");           // karst uplands
-                    else if (dryLand && a > 0.78f) ground = Surface("Slickrock");
+                    if (dryLand && a > 0.78f) ground = Surface("Slickrock");
                     break;
             }
 
@@ -894,7 +894,7 @@ namespace NaturalHistory.World
             cell.SetSurface(ground, cliffSurface);
         }
 
-        // Cracked and crazed ground (salt pans, dried clay, limestone pavement, frost polygons,
+        // Cracked and crazed ground (salt pans, dried clay, frost polygons,
         // crevassed ice) is kept to one in twenty of the tiles that would have it: a little goes a long way
         private Texture2D Cracked(HexCell cell, string name)
         {
@@ -1035,6 +1035,19 @@ namespace NaturalHistory.World
             return go;
         }
 
+        // Inland waterfalls: a river leaving a land tile for land at least this many levels lower
+        public const int FallLevels = 3;
+
+        // Whether a waterfall drops between these two neighbouring land tiles (either way round).
+        // The tiles then meet in a step instead of sloping into each other (UpdateCellMeshes).
+        public bool IsFallStep(HexCell a, HexCell b) => Falls(a, b) || Falls(b, a);
+
+        private bool Falls(HexCell from, HexCell to)
+        {
+            if (from.RiverOut < 0 || from.Elevation - to.Elevation < FallLevels) return false;
+            return EdgeNeighbors(from)[from.RiverOut] == to;
+        }
+
         // Water sits flat near sea level; land rises one elevationStep per terrace level.
         private float CellVisualHeight(HexCell cell) => cell.Terrain.kind switch
         {
@@ -1084,6 +1097,7 @@ namespace NaturalHistory.World
                     bool Water(HexCell c) => c != null && c.Terrain != null && c.IsWater;
                     bool Sea(HexCell c)   => Water(c) && c.Terrain.kind == TerrainKind.SaltWater;
                     bool Low(HexCell c)   => c.Elevation < CliffElevation;
+                    bool Step(HexCell c)  => Land(c) && IsFallStep(cell, c); // a waterfall drops here: a step, not a slope
                     // Coasts: low land slopes down to a beach at the water's edge; highland ends in
                     // a cliff. Rim heights depend only on the cells sharing each edge / corner, so
                     // neighbouring land tiles still agree on them.
@@ -1091,16 +1105,17 @@ namespace NaturalHistory.World
                     {
                         bool shore = Water(n[e]);
                         cliff[e]  = Sea(n[e]) && !Low(cell); // only the open sea cuts cliffs; lake shores slope down
-                        edges[e]  = Land(n[e]) ? (h + n[e].SurfaceHeight) * 0.5f : shore && !cliff[e] ? n[e].SurfaceHeight + ShoreLip : h;
-                        joined[e] = cell.IsMountain && Land(n[e]) && n[e].IsMountain;
+                        edges[e]  = Step(n[e]) ? h : Land(n[e]) ? (h + n[e].SurfaceHeight) * 0.5f : shore && !cliff[e] ? n[e].SurfaceHeight + ShoreLip : h;
+                        joined[e] = cell.IsMountain && Land(n[e]) && n[e].IsMountain && !Step(n[e]);
                     }
                     for (int i = 0; i < 6; i++)
                     {
                         float sum = h; int count = 1;
                         var a = n[(i + 5) % 6]; var b = n[i]; // the two edges meeting at corner i
                         bool low = Low(cell);
-                        if (Land(a)) { sum += a.SurfaceHeight; count++; low &= Low(a); }
-                        if (Land(b)) { sum += b.SurfaceHeight; count++; low &= Low(b); }
+                        // (each side of a waterfall step leaves the other side out, keeping its own level)
+                        if (Land(a)) { if (!Step(a)) { sum += a.SurfaceHeight; count++; } low &= Low(a); }
+                        if (Land(b)) { if (!Step(b)) { sum += b.SurfaceHeight; count++; } low &= Low(b); }
                         // Shore height unless highland next to the sea makes it a clifftop
                         bool wet   = Water(a) || Water(b);
                         bool cliffTop = !low && (Sea(a) || Sea(b));

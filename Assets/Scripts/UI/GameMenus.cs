@@ -42,9 +42,13 @@ namespace NaturalHistory.UI
         {
             if (FindAnyObjectByType<HexGrid>() == null || FindAnyObjectByType<GameMenus>() != null) return;
 
-            // Panel settings are built at runtime so no scene/asset wiring is needed. The object starts
-            // inactive so the UIDocument is fully configured before it enables.
-            var panelSettings = ScriptableObject.CreateInstance<PanelSettings>();
+            // Panel settings come from an asset made in the editor (Editor/PanelSettingsAsset), copied so
+            // the fonts set below don't change it: only that carries the ICU data text shaping needs,
+            // and without it a build draws no text at all. The object starts inactive so the
+            // UIDocument is fully configured before it enables.
+            var asset = Resources.Load<PanelSettings>("UI/NHPanelSettings");
+            if (asset == null) Debug.LogError("[GameMenus] Missing Resources/UI/NHPanelSettings: menu text won't show in builds");
+            var panelSettings = asset != null ? Instantiate(asset) : ScriptableObject.CreateInstance<PanelSettings>();
             panelSettings.themeStyleSheet     = Resources.Load<ThemeStyleSheet>("UI/NHRuntimeTheme");
             panelSettings.scaleMode           = PanelScaleMode.ScaleWithScreenSize;
             panelSettings.referenceResolution = new Vector2Int(1920, 1080);

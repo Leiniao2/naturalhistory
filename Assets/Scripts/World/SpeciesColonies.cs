@@ -103,6 +103,18 @@ namespace NaturalHistory.World
 
         private HexGrid grid;
         private Material material;
+
+        // The map props' material, marking the animals in the stencil buffer so territory borders
+        // (TerritoryBorder shader) are drawn around them, never over them, even under water
+        private static readonly int StencilRefId = Shader.PropertyToID("_StencilRef");
+        private static Material AnimalMaterial()
+        {
+            var shared = Resources.Load<Material>("Materials/MapFeatures");
+            if (shared == null) return null;
+            var m = new Material(shared) { name = "MapFeatures (animals)" };
+            m.SetInt(StencilRefId, 1);
+            return m;
+        }
         private readonly List<ColonyGroup> groups = new();
         // One group per niche of a tile (see Niches): up to six groups share a tile
         private readonly Dictionary<(HexCell, Niche), ColonyGroup> occupants = new();
@@ -243,7 +255,7 @@ namespace NaturalHistory.World
             foreach (var g in groups) if (g != null) Destroy(g.gameObject); // a regenerated map already destroyed them
             groups.Clear();
             occupants.Clear();
-            if (material == null) material = Resources.Load<Material>("Materials/MapFeatures");
+            if (material == null) material = AnimalMaterial();
             var age  = grid.DisplayedAge;
             var rng  = new System.Random(grid.WorldSeed ^ 0x5eed ^ ((int)age * 7919));
             var used = new HashSet<(HexCell, Niche)>();
@@ -299,7 +311,7 @@ namespace NaturalHistory.World
         // Builds a group of `def` on `cell` belonging to `owner`. Null if the model can't be loaded.
         public ColonyGroup SpawnColony(SpeciesDefinition def, HexCell cell, Player owner, int seed)
         {
-            if (material == null) material = Resources.Load<Material>("Materials/MapFeatures");
+            if (material == null) material = AnimalMaterial();
             var mesh = LoadMesh(def.model);
             if (mesh == null) return null;
             if (!System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style)) style = ColonyStyle.Drift;

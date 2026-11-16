@@ -4,7 +4,7 @@ Generates the extra ground surfaces of the hex map: Assets/Resources/TerrainSurf
 The base terrain textures (Assets/Textures/Terrain, one per TerrainKind) give every biome one look.
 These add the materials the ground is made of in different places, picked per region by
 HexGrid.SetGroundLook: rippled dune sand, desert pavement, salt flats, cracked clay, lava fields,
-limestone pavement, red slickrock, laterite, tundra stone polygons, crevassed ice, and the rock faces
+red slickrock, laterite, tundra stone polygons, crevassed ice, and the rock faces
 of cliffs (granite, layered sandstone, columnar basalt, chalk with flint, bedded limestone).
 
 Every texture is 512 x 512 and tiles seamlessly (all noise is periodic). Each is built as a height
@@ -207,21 +207,6 @@ def lava_field():
     save("LavaField", base * lit[..., None] * grain(rng, 0.15)[..., None])
 
 
-def limestone_pavement():
-    rng = np.random.default_rng(7)
-    f1, f2, nid = cellular(8, rng, 0.45, stretch=(0.7, 1.3), warp=0.8)  # blocky clints
-    grike = smoothstep(0.07, 0.02, f2 - f1)
-    stone = fbm(rng, 6, 5)
-    pits = smoothstep(0.62, 0.7, fbm(rng, 12, 3))                # solution pits
-    h = (1 - grike) * 0.4 + stone * 0.15 - pits * 0.1
-    lit = shade(h, 2.0)
-    base = palette(stone * 0.7 + nid * 0.3, [(0, (0.66, 0.66, 0.62)), (1, (0.84, 0.83, 0.78))])
-    moss = (0.28, 0.36, 0.20)
-    col = mix(base, moss, grike * 0.85)
-    col = mix(col, (0.52, 0.52, 0.48), pits * 0.5)
-    save("LimestonePavement", col * lit[..., None] * grain(rng, 0.06)[..., None])
-
-
 def slickrock():
     rng = np.random.default_rng(8)
     warp = fbm(rng, 2, 4) * 5
@@ -370,7 +355,7 @@ def cliff_limestone():
 
 
 if __name__ == "__main__":
-    for make in (dune_sand, desert_pavement, salt_flat, cracked_clay, lava_field, limestone_pavement,
+    for make in (dune_sand, desert_pavement, salt_flat, cracked_clay, lava_field,
                  slickrock, red_earth, patterned_ground, crevassed_ice,
                  cliff_granite, cliff_sandstone, cliff_basalt, cliff_chalk, cliff_limestone):
         make()

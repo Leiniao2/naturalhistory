@@ -38,7 +38,7 @@ namespace NaturalHistory.World
         }
 
         // Tallest a summit gets above its tile, × cell size
-        public const float MassifHeight = 1.15f;
+        public const float MassifHeight = 1.6f;
 
         // One tile's piece of a continuous mountain surface. Height comes from map-wide relief noise
         // (ridges, valleys, peaks) times a mask that is 1 toward neighbouring mountain tiles and falls
@@ -263,6 +263,7 @@ namespace NaturalHistory.World
                 float r = size * Range(rng, 0.04f, 0.07f);
                 AddBlob(b, rng, new Vector3(p.x, 0.25f * r, p.y), r, 0.7f, 0, Shade(rng, Shrub));
             }
+            b.StretchUp(0, Vector3.zero, 1.2f); // trees drawn taller (as EraFlora stands: WoodyStretch)
             return b.ToMesh(conifer ? "ConiferForest" : "BroadleafForest");
         }
 
@@ -314,6 +315,7 @@ namespace NaturalHistory.World
                 float a = Range(rng, 0f, Mathf.PI * 2f), d = Range(rng, 0f, 0.35f) * size;
                 AddPalm(b, rng, new Vector3(Mathf.Sin(a) * d, 0f, Mathf.Cos(a) * d), size * Range(rng, 1.1f, 1.3f));
             }
+            b.StretchUp(0, Vector3.zero, 1.2f); // trees drawn taller (as EraFlora stands: WoodyStretch)
             return b.ToMesh("Jungle");
         }
 
@@ -1020,6 +1022,17 @@ namespace NaturalHistory.World
             readonly Dictionary<int, Vector2> band = new();
             public void SetBand(int i, float coord, float palette) => band[i] = new Vector2(coord, palette);
             public void SetVertexColor(int i, Color c) => colors[i] = c;
+
+            // Stretches everything added since `from` upward by k about `root` (taller, not wider),
+            // normals adjusted to match
+            public void StretchUp(int from, Vector3 root, float k)
+            {
+                for (int i = from; i < verts.Count; i++)
+                {
+                    var v = verts[i]; v.y = root.y + (v.y - root.y) * k; verts[i] = v;
+                    var n = normals[i]; n.y /= k; normals[i] = n.normalized;
+                }
+            }
 
             // Lowers every vertex added since `from` that lies below `below` by `amount`: stretches a
             // plant's trunk base down so it still meets the ground where a tile's rim slopes away.

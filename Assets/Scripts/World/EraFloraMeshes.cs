@@ -351,7 +351,7 @@ namespace NaturalHistory.World
             maxBlobDetail = 0;
             void Plant(PlantDefinition plant, int min, int max, float gap, float scale)
             {
-                var spots = HexScatter(rng, Denser(rng.Next(min, max + 1)), apothem * 0.96f, gap * size * LandGap * Mathf.Lerp(1f, AgeSize, 0.5f) / Mathf.Max(AgeDensity, 1f), taken);
+                var spots = HexScatter(rng, Denser(rng.Next(min, max + 1)), apothem * 0.96f, gap * size * LandGap * Mathf.Sqrt(HerbScale) * Mathf.Lerp(1f, AgeSize, 0.5f) / Mathf.Max(AgeDensity, 1f), taken);
                 taken.AddRange(spots);
                 foreach (var p in spots)
                 {
@@ -447,6 +447,9 @@ namespace NaturalHistory.World
         }
 
         // One tree of a canopy species; `s` ≈ cell size × the species' size
+        // Trees and other canopy plants are drawn this much taller than their width would make them
+        const float WoodyStretch = 1.2f;
+
         static void AddCanopyPlant(Builder b, System.Random rng, Vector3 root, float s, PlantDefinition plant)
         {
             int from = b.VertexCount;
@@ -474,6 +477,7 @@ namespace NaturalHistory.World
                 case "Bamboo":         AddBamboo(b, rng, root, s); break;
                 default:               AddShapedBroadleaf(b, rng, root, s, plant.shape); break;
             }
+            b.StretchUp(from, root, WoodyStretch);      // trees stand taller over the ground plants
             PaintCrown(b, from);                        // see PlantShapes.cs
             AddFruitAndBlossom(b, rng, from, s, plant);
             hasCrown = false;
@@ -481,9 +485,13 @@ namespace NaturalHistory.World
         }
 
         // One clump of a ground species; `size` is the cell size, `scale` an extra factor
+        // Herbs, flowers, succulents and the rest of the ground layer are drawn this much bigger, so
+        // they (and their flowers and fruit) read from the map camera
+        const float HerbScale = 2f;
+
         static void AddGroundPlant(Builder b, System.Random rng, Vector3 root, float size, PlantDefinition plant, float scale)
         {
-            float m = plant.size * scale * AgeSize * Range(rng, 0.8f, 1.15f);
+            float m = plant.size * scale * AgeSize * HerbScale * Range(rng, 0.8f, 1.15f);
             int from = b.VertexCount;
             leafTint = plant.form == "Flower" ? Color.white : plant.Tint; // flowers: the tint is the petal colour
             switch (plant.form)
@@ -498,13 +506,13 @@ namespace NaturalHistory.World
                 case "Flower":         AddFlowers(b, rng, root, size * m, plant.Tint); break;
                 case "Reed":           AddReeds(b, rng, root, size * m); break;
                 case "WaterLily":      AddWaterLilies(b, rng, root, size * m, plant.Tint); break;
-                case "Succulent":      AddSucculent(b, rng, root, size * 0.08f * m); break;
-                case "Cactus":         AddCactus(b, rng, root, size * 0.2f * m); break;
+                case "Succulent":      AddSucculent(b, rng, root, size * 0.18f * m); break; // desert plants drawn big enough to read from above
+                case "Cactus":         AddCactus(b, rng, root, size * 0.42f * m); break;
                 case "Cycad":          AddCycad(b, rng, root, size * 0.8f * m); break;
                 case "Bennettitalean": AddBennettitalean(b, rng, root, size * 0.8f * m); break;
                 default:               AddTuft(b, rng, root, size * m, L(Grass)); break;
             }
-            AddFruitAndBlossom(b, rng, from, size * 0.1f * m, plant);
+            AddFruitAndBlossom(b, rng, from, size * 0.8f * m, plant); // (big enough to see on the low plants)
             MakeFlexible(b, from, root, Flexibility(plant.form), size);
             leafTint = Color.white;
         }
@@ -566,16 +574,44 @@ namespace NaturalHistory.World
         }
 
         // Herbs in flower: a couple of grass-like tufts and coloured blooms (petal = tint, or random)
+        // Flowering herbs: a tuft of leaves with a few flowers on stems standing above it, each an open
+        // head of petals round a contrasting heart (dark for yellow and orange heads, like a sunflower;
+        // golden for the rest), tipped toward the sky so they read from the map camera
         static void AddFlowers(Builder b, System.Random rng, Vector3 root, float size, Color petal)
         {
             AddTuft(b, rng, root, size * 0.8f, Grass);
             bool random = petal.r > 0.99f && petal.g > 0.99f && petal.b > 0.99f;
-            for (int i = rng.Next(2, 5); i > 0; i--)
+            for (int i = rng.Next(1, 4); i > 0; i--)
             {
-                var at = root + new Vector3(Range(rng, -0.03f, 0.03f), Range(rng, 0.03f, 0.06f), Range(rng, -0.03f, 0.03f)) * size;
-                var c  = random ? FlowerColors[rng.Next(FlowerColors.Length)] : petal;
-                AddBlob(b, rng, at, 0.014f * size, 0.8f, 0, Shade(rng, c, 0.05f));
+                var head = root + new Vector3(Range(rng, -0.06f, 0.06f), Range(rng, 0.14f, 0.22f), Range(rng, -0.06f, 0.06f)) * size;
+                var c  = Shade(rng, random ? FlowerColors[rng.Next(FlowerColors.Length)] : petal, 0.05f);
+                bool warm = c.r > 0.7f && c.g > 0.45f && c.b < 0.45f;
+                var heart = warm ? new Color(0.32f, 0.2f, 0.1f) : new Color(0.98f, 0.8f, 0.25f);
+                AddLimb(b, root, head, 0.006f * size, 0.004f * size, Shade(rng, Grass, 0.06f));
+                var facing = (Vector3.up + new Vector3(Range(rng, -0.35f, 0.35f), 0f, Range(rng, -0.35f, 0.35f))).normalized;
+                AddFlowerHead(b, rng, head, Range(rng, 0.075f, 0.105f) * size, c, heart, facing); // big: the map is seen from far above
             }
+        }
+
+        static void AddFlowerHead(Builder b, System.Random rng, Vector3 centre, float r, Color petal, Color heart, Vector3 facing)
+        {
+            var u = Vector3.Cross(facing, Vector3.forward).sqrMagnitude > 1e-4f ? Vector3.Cross(facing, Vector3.forward).normalized : Vector3.right;
+            var v = Vector3.Cross(facing, u);
+            int n = rng.Next(9, 14);
+            float turn = Range(rng, 0f, Mathf.PI * 2f), half = Mathf.PI / n * 0.8f;
+            var below = centre - facing * r;
+            for (int k = 0; k < n; k++)
+            {
+                float a = turn + k * Mathf.PI * 2f / n;
+                Vector3 Dir(float t) => u * Mathf.Cos(t) + v * Mathf.Sin(t);
+                var tip   = centre + Dir(a) * r + facing * 0.08f * r;
+                var left  = centre + Dir(a - half) * 0.45f * r + facing * 0.04f * r;
+                var right = centre + Dir(a + half) * 0.45f * r + facing * 0.04f * r;
+                var col = petal * Range(rng, 0.92f, 1.06f);
+                b.AddTri(centre, left, tip, col, below);
+                b.AddTri(centre, tip, right, col, below);
+            }
+            AddBlob(b, rng, centre + facing * 0.08f * r, 0.36f * r, 0.45f, 1, heart);
         }
 
         static void AddWaterLilies(Builder b, System.Random rng, Vector3 root, float size, Color flower)
