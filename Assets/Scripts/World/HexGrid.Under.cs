@@ -73,7 +73,7 @@ namespace NaturalHistory.World
                     kind = odd > 0.42f ? UnderKind.Cave : UnderKind.Lakebed;              // a flooded cave system
                 else if (cell.IsWater)
                 {
-                    kind = cell.Depth >= 0.5f ? UnderKind.DeepSeabed : UnderKind.Seabed;
+                    kind = cell.Depth >= 0.7f ? UnderKind.DeepSeabed : UnderKind.Seabed; // only the deepest water: its floor is bare mud and bacterial mats
                     if (kind == UnderKind.Seabed && coast && odd > 0.36f)
                         kind = odd > 0.44f ? UnderKind.Rock : UnderKind.Cave;              // sea caves, a buried headland
                 }
@@ -217,6 +217,16 @@ namespace NaturalHistory.World
             var bedrock = new Mesh[8];
             for (int i = 0; i < bedrock.Length; i++) bedrock[i] = Track(CreateBedrockMesh(rng));
             Mesh Pick(Mesh[] pool) => pool[rng.Next(pool.Length)];
+            // Water-plant beds vary a little across the map, but every seabed and lakebed tile is covered
+            var bedOffset = new Vector3((float)rng.NextDouble(), (float)rng.NextDouble(), (float)rng.NextDouble()) * 1000f;
+            float BedDensity(HexCell c)
+            {
+                if (c.Under is not (UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed)) return 1f;
+                var pos = c.Coordinates.ToWorldPosition(cellSize);
+                var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.18f / cellSize) + bedOffset;
+                float n = PerlinNoise3D.Sample(p.x, p.y, p.z);
+                return n < -0.25f ? 0.85f : n > 0.25f ? 1.15f : 1f; // three steps, so the meshes can still be shared
+            }
             foreach (var cell in cells)
             {
                 if (cell.Terrain == null) continue;
@@ -226,7 +236,8 @@ namespace NaturalHistory.World
                     UnderFeature.Vents   => Track(MapFeatureMeshes.CreateVents(rng, cellSize)),
                     _ => plants.Under(rng, cell.Under,
                                       cell.UnderPlants.Count > 0 ? cell.UnderPlants[0] : null,
-                                      cell.UnderPlants.Count > 1 ? cell.UnderPlants[1] : null),
+                                      cell.UnderPlants.Count > 1 ? cell.UnderPlants[1] : null,
+                                      BedDensity(cell)),
                 };
                 if (mesh == null) continue;
                 var go = new GameObject(mesh.name);
@@ -331,7 +342,7 @@ namespace NaturalHistory.World
             foreach (var cell in cells)
             {
                 if (cell.Terrain == null) continue;
-                if (on) cell.ShowUnder(UnderMaterial(cell.Under), UnderTint(cell));
+                if (on) cell.ShowUnder(UnderMaterial(cell), UnderTint(cell));
                 else cell.ShowSurface();
             }
             ShowGroupsForView();
@@ -342,6 +353,26 @@ namespace NaturalHistory.World
             if (!underMaterials.TryGetValue(kind, out var m) || m == null)
                 underMaterials[kind] = m = Resources.Load<Material>($"Materials/Under/Under{kind}");
             return m;
+        }
+
+        // A water tile whose plants are mats, crusts or turf shows them painted into its floor
+        // (UnderMeshes.CoverOf), e.g. Materials/Under/UnderSeabedCoralline; otherwise the plain floor.
+        private readonly Dictionary<string, Material> coverMaterials = new();
+        private Material UnderMaterial(HexCell cell)
+        {
+            if (cell.UnderFeature == UnderFeature.None && cell.Under is UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed)
+            {
+                var plants = cell.UnderPlants;
+                string cover = MapFeatureMeshes.CoverOf(cell.Under, plants.Count > 0 ? plants[0] : null, plants.Count > 1 ? plants[1] : null);
+                if (cover != null)
+                {
+                    string name = $"Under{cell.Under}{cover}";
+                    if (!coverMaterials.TryGetValue(name, out var m) || m == null)
+                        coverMaterials[name] = m = Resources.Load<Material>($"Materials/Under/{name}");
+                    if (m != null) return m;
+                }
+            }
+            return UnderMaterial(cell.Under);
         }
 
         // Seen through the water above: everything under the sea is tinted sea blue, turquoise over
@@ -373,7 +404,7 @@ namespace NaturalHistory.World
             foreach (var g in colonies.Groups)
             {
                 if (g == null) continue;
-                bool visible = UnderView.On == (g.Niche == Niche.Underground);
+                bool visible = UnderView.Shows(g);
                 foreach (var rend in g.GetComponentsInChildren<Renderer>(true))
                     if (rend.enabled != visible) rend.enabled = visible;
             }

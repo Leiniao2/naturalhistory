@@ -114,19 +114,39 @@ void ApplyUndulate(inout float3 p, inout float3 n)
 }
 
 // Gentle swaying in the water for MapFeature.shader; needs _Sway (amplitude, height of full sway,
-// speed, wavelength in world units). Each point moves sideways by amplitude × height-of-full-sway
-// × (its height / that height)², capped at the full height, so low algae barely stir while tall
-// fronds lean with the swell. The phase drifts across the map so neighbours don't move in step.
-void ApplySway(inout float3 p)
+// speed, wavelength in world units). Only vertices with flex (uv3.x, set by MapFeatureMeshes on tall,
+// slender water plants: kelp, ribbon weeds, seagrass, feathery fronds; 0 at the foot, most at the
+// top) move: sideways by amplitude × full-sway height × flex, so low algae, mats and stones stay
+// still while tall fronds lean with the swell. The phase drifts across the map so neighbours
+// don't move in step.
+void ApplySway(inout float3 p, float flex)
 {
-    if (_Sway.x == 0) return;
-    float  k  = saturate(p.y / max(_Sway.y, 1e-4));
-    float  d  = _Sway.x * _Sway.y * k * k;
+    if (_Sway.x == 0 || flex <= 0.001) return;
+    float  d  = _Sway.x * _Sway.y * flex;
     float3 w  = mul(unity_ObjectToWorld, float4(p, 1)).xyz;
     float  ph = (w.x * 0.8 + w.z * 0.6) / max(_Sway.w, 1e-4) * 6.2831853;
     float  t  = _Time.y * _Sway.z;
     p.x += d * sin(t + ph);
     p.z += d * 0.6 * sin(t * 0.77 + ph * 1.3 + 1.7);
+}
+
+// Wind on land plants: uv3.x (TEXCOORD3) is how much a vertex bends (0 = stiff, set by
+// MapFeatureMeshes on slender plants: grasses, reeds, horsetails, Cooksonia, ferns, the tops most).
+// _NHWind is global (Wind.cs): amplitude in world units, speed, gust wavelength in world units.
+// The wind blows along world +x with gusts rolling across the map, plus a little side-to-side.
+float4 _NHWind;
+void ApplyWind(inout float3 p, float flex)
+{
+    if (flex <= 0.001 || _NHWind.x == 0 || _Sway.x != 0) return; // water plants sway instead
+    float3 w  = mul(unity_ObjectToWorld, float4(p, 1)).xyz;
+    float  ph = (w.x * 0.9 + w.z * 0.4) / max(_NHWind.z, 1e-4) * 6.2831853;
+    float  t  = _Time.y * _NHWind.y;
+    float  gust = 0.55 + 0.45 * sin(t * 0.37 - ph * 0.5);              // slow gusts rolling across
+    float  d  = _NHWind.x * flex;
+    float3 offsetWS = float3(d * gust * (0.6 + 0.4 * sin(t + ph)),       // leaning and bobbing downwind
+                             0,
+                             d * 0.3 * sin(t * 1.31 + ph * 1.7));        // and a little sideways
+    p += mul((float3x3)unity_WorldToObject, offsetWS);
 }
 
 #endif

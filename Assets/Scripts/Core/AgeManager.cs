@@ -5,9 +5,10 @@ using UnityEngine;
 
 namespace NaturalHistory.Core
 {
-    // The 12 periods of the Phanerozoic Eon, oldest first (names/order match ages.json).
+    // The Ediacaran and the 12 periods of the Phanerozoic Eon, oldest first (names/order match ages.json).
     public enum GeologicalAge
     {
+        Ediacaran,      // the last period of the Proterozoic: the first large, complex organisms
         Cambrian,
         Ordovician,
         Silurian,
@@ -41,7 +42,14 @@ namespace NaturalHistory.Core
         public int CurrentTurn { get; private set; }
         public bool IsPresentDay => CurrentTurn > TotalTurns;
         public int TurnInAge { get; private set; }   // 1-based
-        public int TurnsInAge => CurrentAgeData?.turns ?? 0;
+        public int TurnsInAge => TurnsOf((int)CurrentAge);
+
+        // Turns a period lasts in this game: ages.json's count × the game length (GameOptions)
+        public int TurnsOf(int index) => index >= 0 && index < turnsOf.Count ? turnsOf[index] : 0;
+        private readonly List<int> turnsOf = new();
+
+        // Re-reads the periods with the current game length (a new game, or loading a save)
+        public void ReloadAges() => LoadAges();
 
         private readonly List<AgeDefinition> ages = new();
         private readonly List<int> firstTurnOfAge = new();
@@ -92,7 +100,7 @@ namespace NaturalHistory.Core
             int i = AgeIndexAt(turn);
             if (turn > TotalTurns) return 0f;
             var age = ages[i];
-            float t = (turn - firstTurnOfAge[i]) / (float)Mathf.Max(1, age.turns);
+            float t = (turn - firstTurnOfAge[i]) / (float)Mathf.Max(1, turnsOf[i]);
             return Mathf.Lerp(age.startMillionYearsAgo, age.endMillionYearsAgo, t);
         }
 
@@ -107,7 +115,7 @@ namespace NaturalHistory.Core
             CurrentTurn     = Mathf.Max(1, turn);
             int index       = AgeIndexAt(CurrentTurn);
             CurrentAge      = (GeologicalAge)index;
-            TurnInAge       = Mathf.Min(CurrentTurn - firstTurnOfAge[index] + 1, ages[index].turns);
+            TurnInAge       = Mathf.Min(CurrentTurn - firstTurnOfAge[index] + 1, turnsOf[index]);
             MillionYearsAgo = MillionYearsAgoAt(CurrentTurn);
 
             if (stepped && previous != CurrentAge)
@@ -130,6 +138,7 @@ namespace NaturalHistory.Core
             if (GameDataLoader.Ages == null) GameDataLoader.Initialize();
             ages.Clear();
             firstTurnOfAge.Clear();
+            turnsOf.Clear();
             TotalTurns = 0;
             foreach (GeologicalAge age in Enum.GetValues(typeof(GeologicalAge)))
             {
@@ -137,7 +146,9 @@ namespace NaturalHistory.Core
                 if (def == null) { Debug.LogError($"[AgeManager] ages.json has no entry for {age}"); continue; }
                 ages.Add(def);
                 firstTurnOfAge.Add(TotalTurns + 1);
-                TotalTurns += Mathf.Max(1, def.turns);
+                int turns = Mathf.Max(1, Mathf.RoundToInt(def.turns * GameOptions.LengthFactor));
+                turnsOf.Add(turns);
+                TotalTurns += turns;
             }
         }
     }

@@ -65,7 +65,7 @@ namespace NaturalHistory.World
         // Mushroom cap: a dome over a ring of gills; `droop` < 0 turns it into a funnel
         static void AddCap(Builder b, System.Random rng, Vector3 top, float r, float h, Color cap, Color under, float droop = 0.25f)
         {
-            const int n = 10;
+            int n = fineDetail ? 20 : 10;
             var rim  = new Vector3[n];
             var apex = top + Vector3.up * h;
             var hub  = top - Vector3.up * h * 0.15f;
@@ -314,7 +314,7 @@ namespace NaturalHistory.World
                 var side = Vector3.Cross(Vector3.up, fwd);
                 var hub = foot + Vector3.up * s * 0.15f;
                 AddLimb(b, foot, hub, s * 0.03f, s * 0.025f, c * 0.8f);
-                const int n = 7;
+                int n = fineDetail ? 14 : 7;
                 var prev = Vector3.zero;
                 float r = s * Range(rng, 0.45f, 0.7f);
                 var col = Shade(rng, c, 0.08f);
@@ -322,7 +322,7 @@ namespace NaturalHistory.World
                 {
                     float a = Mathf.Lerp(-1.2f, 1.2f, k / (float)n);
                     var p = hub + (Vector3.up * Mathf.Cos(a) + side * Mathf.Sin(a)) * r + fwd * Mathf.Sin(k * 1.7f) * r * 0.08f;
-                    if (k > 0) AddSheet(b, hub, prev, p, k % 2 == 0 ? col : col * 0.92f); // the bands of a Padina fan
+                    if (k > 0) AddSheet(b, hub, prev, p, Mathf.CeilToInt(k * 7f / n) % 2 == 0 ? col : col * 0.92f); // the 7 bands of a Padina fan
                     prev = p;
                 }
             }

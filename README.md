@@ -35,6 +35,9 @@ Animals that cannot move can still reproduce; their copy is placed in one of the
 
 A very few producers and zooplankton are also treated as herbivores.
 
+Model Size:	
+Animal model sizes on the map are relative to the age, not absolute. In older ages, when every animal is small, the 3D models are drawn relatively large (with fewer individuals per tile) so players can see small animals clearly. As ages continue and larger animals appear at their real relative size, earlier animals are drawn smaller by comparison.
+
 
 Technical Difficulties: 
 3D Model & Animation

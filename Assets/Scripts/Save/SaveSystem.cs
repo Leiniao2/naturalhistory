@@ -30,6 +30,9 @@ namespace NaturalHistory.Save
 
         public List<PlayerSetup> players = new(); // empty in saves from before players existed
 
+        public GameSettings settings;      // New Game choices: land area, game length, starting period
+        public bool hasSettings;           // false in saves from before them (defaults then)
+
         public int turn;                   // 0 when no TurnManager is running
         public string age;                 // GeologicalAge name (informational; restored from turn)
 
@@ -128,6 +131,8 @@ namespace NaturalHistory.Save
                 worldSeed  = grid.WorldSeed,
                 turn       = TurnManager.Instance != null ? TurnManager.Instance.CurrentTurn : 0,
                 age        = AgeManager.Instance != null ? AgeManager.Instance.CurrentAge.ToString() : "",
+                settings   = GameOptions.Current,
+                hasSettings = true,
             };
 
             if (PlayerManager.Instance != null) data.players = PlayerManager.Instance.CurrentSetups();
@@ -149,6 +154,11 @@ namespace NaturalHistory.Save
 
         private static void Apply(SaveData data)
         {
+            // The game's settings first: the land area shapes the regenerated map, the game length
+            // how turns map onto dates
+            GameOptions.Current = GameOptions.Next = GameOptions.FromSave(data.settings, data.hasSettings);
+            AgeManager.Instance?.ReloadAges();
+
             // Before the map: PlayerManager places everyone when it is generated
             PlayerManager.Instance?.Restore(data.players);
 

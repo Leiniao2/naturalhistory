@@ -78,13 +78,24 @@ namespace NaturalHistory.Players
         public List<PlayerSetup> CurrentSetups() => players.Select(p => p.ToSetup()).ToList();
 
         // New game: these players on a fresh map, back to turn 1 and the starting Evolution Points.
+        // The new game's settings (GameOptions.Next: land area, game length, starting period) take
+        // effect first; the clock is set to the starting period before the map is generated, so the
+        // map is made for that period's climate and sea level. Ediacaran and Cambrian games begin on
+        // the seabed (start hexes in shallow sea, the under view on), later ones on the surface.
         public void StartNewGame(List<PlayerSetup> newSetups)
         {
+            GameOptions.Current = GameOptions.Next;
+            var ages = AgeManager.Instance;
+            ages?.ReloadAges();
+            int startTurn = ages != null ? ages.FirstTurnOf(GameOptions.StartAge) : 1;
             SetSetups(newSetups.Select(s => { var c = s.Clone(); c.startCol = c.startRow = -1; return c; }));
             ProgressionManager.Instance?.Restore(ProgressionManager.Instance.StartingPoints, Array.Empty<string>(), Array.Empty<string>());
+            TurnManager.Instance?.Restore(startTurn); // the first turn activates the starting period's iconic animals
             if (grid != null) grid.Generate(grid.Width, grid.Height, UnityEngine.Random.Range(1, int.MaxValue)); // places everyone
-            TurnManager.Instance?.Restore(1); // turn 1 activates the first period's iconic animals
+            UnderView.Set(GameOptions.StartsUnderSea(GameOptions.StartAge));
         }
+
+        private static int GameStartTurn => AgeManager.Instance != null ? AgeManager.Instance.FirstTurnOf(GameOptions.StartAge) : 1;
 
         // Loading a save: call before the map is regenerated so the saved start cells are used.
         // Old saves without players keep the current players on new start cells.
@@ -145,13 +156,17 @@ namespace NaturalHistory.Players
                 if (cell != null && !cell.IsMountain) result[i] = cell;
             }
 
+            // Life begins in the sea: in the Ediacaran and Cambrian everyone starts on shallow seabed
+            bool sea = GameOptions.StartsUnderSea(AgeManager.Instance != null ? AgeManager.Instance.CurrentAge : GameOptions.StartAge);
             var candidates = new List<HexCell>();
             int margin = Mathf.RoundToInt(grid.Height * 0.12f); // keep away from the polar edges
             for (int r = margin; r < grid.Height - margin; r++)
             for (int q = 0; q < grid.Width; q++)
             {
                 var cell = grid.GetCell(q, r);
-                if (cell?.Terrain == null || cell.IsWater || cell.IsMountain || cell.Terrain.kind == TerrainKind.IceSheet) continue;
+                if (cell?.Terrain == null || cell.IsMountain) continue;
+                if (sea ? !(cell.IsWater && cell.Under == UnderKind.Seabed)
+                        : cell.IsWater || cell.Terrain.kind == TerrainKind.IceSheet) continue;
                 candidates.Add(cell);
             }
             if (candidates.Count == 0) // all-water map: any non-mountain cell
@@ -193,7 +208,7 @@ namespace NaturalHistory.Players
         private void OnTurnBegin(int turn)
         {
             // Animals of the opening period wake up with the first turn of a game (not when loading)
-            if (turn == 1 && AgeManager.Instance != null) ActivateAnimals(AgeManager.Instance.CurrentAge);
+            if (turn == GameStartTurn && AgeManager.Instance != null) ActivateAnimals(AgeManager.Instance.CurrentAge);
         }
 
         private void OnAgeTransition(GeologicalAge from, GeologicalAge to) => ActivateAnimals(to);

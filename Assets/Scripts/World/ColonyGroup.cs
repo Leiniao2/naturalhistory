@@ -169,12 +169,13 @@ namespace NaturalHistory.World
         public void AddMember(Member m) => members.Add(m);
 
         // Ground animals walk on land, swimmers, floaters and microbes stay in water, fliers go
-        // anywhere. Only soaring birds cross mountains.
+        // anywhere but mountains: no one crosses a mountain tile. Fliers fly lower than the peaks
+        // and would pass through them, so a mountain on the way stops them where they are.
         public bool CanEnter(HexCell cell)
         {
             if (cell == null || cell.Terrain == null) return false;
             if (Niche == Niche.Underground && UnderView.Blocks(cell.Under)) return false; // the walls of the underground maze
-            if (cell.IsMountain) return Style == ColonyStyle.Soar;
+            if (cell.IsMountain) return false;
             return Style switch
             {
                 ColonyStyle.Ground => !cell.Terrain.IsWater,

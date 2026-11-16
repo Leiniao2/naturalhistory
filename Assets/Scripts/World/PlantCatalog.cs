@@ -71,7 +71,7 @@ namespace NaturalHistory.World
                 p.forests  ??= new List<string>();
                 if (p.size <= 0f) p.size = 1f;
                 if (!ColorUtility.TryParseHtmlString(p.tint, out p.Tint)) p.Tint = Color.white;
-                p.First = Enum.TryParse(p.firstAge, true, out GeologicalAge f) ? f : GeologicalAge.Cambrian;
+                p.First = Enum.TryParse(p.firstAge, true, out GeologicalAge f) ? f : GeologicalAge.Ediacaran;
                 p.Last  = Enum.TryParse(p.lastAge,  true, out GeologicalAge l) ? l : GeologicalAge.Quaternary;
                 plants.Add(p);
             }

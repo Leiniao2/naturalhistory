@@ -25,7 +25,14 @@ namespace NaturalHistory.World
         public static readonly Niche[] All = (Niche[])Enum.GetValues(typeof(Niche));
 
         // Species groups that live in the soil
-        private static readonly HashSet<string> Burrowers = new(StringComparer.OrdinalIgnoreCase) { "Annelid" };
+        private static readonly HashSet<string> Burrowers = new(StringComparer.OrdinalIgnoreCase) { "Annelid", "Early bilaterian" };
+
+        // Sea animals that live on the seafloor rather than in open water (trilobites, lobopodians,
+        // the Ediacaran biota): they take the seabed niche
+        private static readonly HashSet<string> SeafloorDwellers = new(StringComparer.OrdinalIgnoreCase)
+        {
+            "Trilobite", "Arthropod", "Lobopodian", "Proarticulate", "Stem mollusc", "Rangeomorph", "Trilobozoan", "Tubular animal",
+        };
 
         // Which niche a species takes: burrowers and seabed-fixed life go below, fliers above, the
         // rest by body length (species.json sizeCm).
@@ -35,6 +42,7 @@ namespace NaturalHistory.World
             if (def.group != null && Burrowers.Contains(def.group)) return Niche.Underground;
             Enum.TryParse(def.mapStyle, true, out ColonyStyle style);
             if (style == ColonyStyle.Fixed && LivesOnlyInWater(def)) return Niche.Underground; // corals, sponges, anemones, urchins
+            if (def.group != null && SeafloorDwellers.Contains(def.group) && LivesOnlyInWater(def)) return Niche.Underground;
             if (style is ColonyStyle.Soar or ColonyStyle.Swarm) return Niche.Aerial;
             float cm = def.sizeCm;
             if (cm < 0.1f) return Niche.Micro;

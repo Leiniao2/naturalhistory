@@ -24,6 +24,7 @@ namespace NaturalHistory.UI
         private PlayersPanel playersPanel;
         private AdminPanel adminPanel;
         private UnitPanel unitPanel;
+        private NewGameOptions newGameOptions;
         private ZoologyPanel zoologyPanel;
         private MiniMap miniMap;
         private bool slotsAreForSaving;
@@ -83,6 +84,7 @@ namespace NaturalHistory.UI
             playersPanel = new PlayersPanel(root);
             adminPanel   = new AdminPanel(root);
             unitPanel    = new UnitPanel(root);
+            newGameOptions = new NewGameOptions(root);
             zoologyPanel = new ZoologyPanel(root);
             miniMap      = new MiniMap(root);
             CameraController.IsPointerOverUI = PointerOverUI;

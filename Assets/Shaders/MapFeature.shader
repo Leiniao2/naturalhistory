@@ -70,6 +70,7 @@ Shader "NaturalHistory/MapFeature"
                 float4 positionOS : POSITION;
                 float3 normalOS   : NORMAL;
                 half4  color      : COLOR;
+                float2 flex       : TEXCOORD3; // bending in the wind (ApplyWind)
             };
 
             struct Varyings
@@ -87,7 +88,8 @@ Shader "NaturalHistory/MapFeature"
                 ApplyFlap(v.positionOS.xyz, v.normalOS);
                 ApplyUndulate(v.positionOS.xyz, v.normalOS);
                 ApplyStride(v.positionOS.xyz);
-                ApplySway(v.positionOS.xyz);
+                ApplySway(v.positionOS.xyz, v.flex.x);
+                ApplyWind(v.positionOS.xyz, v.flex.x);
                 VertexPositionInputs pos = GetVertexPositionInputs(v.positionOS.xyz);
                 o.positionCS = pos.positionCS;
                 o.positionWS = pos.positionWS;
@@ -128,14 +130,15 @@ Shader "NaturalHistory/MapFeature"
             float3 _LightDirection;
             float3 _LightPosition;
 
-            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; };
+            struct Attributes { float4 positionOS : POSITION; float3 normalOS : NORMAL; float2 flex : TEXCOORD3; };
 
             float4 vert(Attributes v) : SV_POSITION
             {
                 ApplyFlap(v.positionOS.xyz, v.normalOS);
                 ApplyUndulate(v.positionOS.xyz, v.normalOS);
                 ApplyStride(v.positionOS.xyz);
-                ApplySway(v.positionOS.xyz);
+                ApplySway(v.positionOS.xyz, v.flex.x);
+                ApplyWind(v.positionOS.xyz, v.flex.x);
                 float3 posWS    = TransformObjectToWorld(v.positionOS.xyz);
                 float3 normalWS = TransformObjectToWorldNormal(v.normalOS);
             #if _CASTING_PUNCTUAL_LIGHT_SHADOW
@@ -162,7 +165,7 @@ Shader "NaturalHistory/MapFeature"
             #pragma vertex vert
             #pragma fragment frag
 
-            struct Attributes { float4 positionOS : POSITION; };
+            struct Attributes { float4 positionOS : POSITION; float2 flex : TEXCOORD3; };
 
             float4 vert(Attributes v) : SV_POSITION
             {
@@ -170,7 +173,8 @@ Shader "NaturalHistory/MapFeature"
                 ApplyFlap(v.positionOS.xyz, normalOS);
                 ApplyUndulate(v.positionOS.xyz, normalOS);
                 ApplyStride(v.positionOS.xyz);
-                ApplySway(v.positionOS.xyz);
+                ApplySway(v.positionOS.xyz, v.flex.x);
+                ApplyWind(v.positionOS.xyz, v.flex.x);
                 return TransformObjectToHClip(v.positionOS.xyz);
             }
             half4 frag() : SV_Target { return 0; }
@@ -212,7 +216,8 @@ Shader "NaturalHistory/MapFeature"
             ApplyFlap(v.vertex.xyz, v.normal);
             ApplyUndulate(v.vertex.xyz, v.normal);
             ApplyStride(v.vertex.xyz);
-            ApplySway(v.vertex.xyz);
+            ApplySway(v.vertex.xyz, v.texcoord3.x);
+            ApplyWind(v.vertex.xyz, v.texcoord3.x);
         }
 
         void surf(Input IN, inout SurfaceOutput o)

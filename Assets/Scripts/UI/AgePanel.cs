@@ -20,6 +20,7 @@ namespace NaturalHistory.UI
 
         private static readonly Dictionary<string, Color> EraColors = new()
         {
+            ["Neoproterozoic"] = new Color(0.62f, 0.45f, 0.60f),
             ["Paleozoic"] = new Color(0.36f, 0.60f, 0.62f),
             ["Mesozoic"]  = new Color(0.40f, 0.66f, 0.36f),
             ["Cenozoic"]  = new Color(0.90f, 0.75f, 0.30f),
@@ -96,7 +97,7 @@ namespace NaturalHistory.UI
             ageName.text = Loc.T(def.displayName);
             var span = def.startMillionYearsAgo - def.endMillionYearsAgo;
             var r = Loc.F("{0} Era · {1:0.##} – {2:0.##} million years ago ({3:0.#} My) · {4} turns",
-                          Loc.T(def.era), def.startMillionYearsAgo, def.endMillionYearsAgo, span, def.turns);
+                          Loc.T(def.era), def.startMillionYearsAgo, def.endMillionYearsAgo, span, ages.TurnsOf(selectedIndex));
             if (isCurrent) r += "\n" + Loc.F("Now: {0:0.0} Ma, turn {1} of {2} in this period", ages.MillionYearsAgo, ages.TurnInAge, ages.TurnsInAge);
             range.text = r;
             description.text = Loc.T(def.description);

@@ -8,6 +8,13 @@
     "Cenozoic & Quaternary: Inglis et al. (2020); Westerhold et al. (2020); Tierney et al. (2020)"
   ],
   "keyframes": [
+    { "ma": 635.0, "temperatureC": 22.0, "co2ppm": 6000, "o2Percent": 4.0, "seaLevelM": -50, "humidityOffset": -2, "note": "End of the Marinoan snowball Earth: hot, CO2-rich aftermath" },
+    { "ma": 620.0, "temperatureC": 17.0, "co2ppm": 3000, "o2Percent": 6.0, "seaLevelM": 0, "humidityOffset": 0, "note": "Early Ediacaran" },
+    { "ma": 582.0, "temperatureC": 12.0, "co2ppm": 1500, "o2Percent": 8.0, "seaLevelM": -40, "humidityOffset": -3, "note": "Before the Gaskiers glaciation" },
+    { "ma": 580.0, "temperatureC": 8.0, "co2ppm": 1200, "o2Percent": 8.0, "seaLevelM": -80, "humidityOffset": -4, "note": "Gaskiers glaciation" },
+    { "ma": 575.0, "temperatureC": 15.0, "co2ppm": 2000, "o2Percent": 9.0, "seaLevelM": -10, "humidityOffset": 0, "note": "Avalon explosion: the first large organisms" },
+    { "ma": 560.0, "temperatureC": 18.0, "co2ppm": 3000, "o2Percent": 11.0, "seaLevelM": 20, "humidityOffset": 0, "note": "White Sea assemblage; Shuram excursion" },
+    { "ma": 545.0, "temperatureC": 19.0, "co2ppm": 4000, "o2Percent": 12.0, "seaLevelM": 30, "humidityOffset": 0, "note": "Late Ediacaran: Cloudina reefs" },
     { "ma": 538.8,  "temperatureC": 20.0, "co2ppm": 4500, "o2Percent": 13.0, "seaLevelM":  40, "humidityOffset":  0, "note": "Start of the Cambrian" },
     { "ma": 515.0,  "temperatureC": 23.0, "co2ppm": 5000, "o2Percent": 13.5, "seaLevelM":  70, "humidityOffset":  0, "note": "Cambrian greenhouse" },
     { "ma": 494.0,  "temperatureC": 25.0, "co2ppm": 4500, "o2Percent": 14.0, "seaLevelM":  90, "humidityOffset":  0, "note": "Late Cambrian (SPICE event)" },

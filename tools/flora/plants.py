@@ -9,7 +9,7 @@ Run: python3 tools/flora/plants.py
 import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "..", "Assets", "Resources", "Data")
-AGES = "Cambrian Ordovician Silurian Devonian Carboniferous Permian Triassic Jurassic Cretaceous Paleogene Neogene Quaternary".split()
+AGES = "Ediacaran Cambrian Ordovician Silurian Devonian Carboniferous Permian Triassic Jurassic Cretaceous Paleogene Neogene Quaternary".split()
 AB = {a[:3]: a for a in AGES}
 CANOPY_FORMS = {"Lycopsid","Sigillaria","Calamites","TreeFern","Cycad","Bennettitalean","Araucaria","Ginkgo","Glossopteris",
                 "Cordaites","Archaeopteris","Wattieza","Conifer","Broadleaf","Palm","Acacia","Baobab","Mangrove","Bamboo"}
@@ -172,9 +172,9 @@ P = [
  ("ilex","Holly","Ilex","Flowering plant","Pal","","ground",["Plain","Hill"],[],"Shrub","#90C090",0.9,"Evergreen shrub of forest edges."),
  ("rhododendron","Rhododendron","Rhododendron","Flowering plant","Pal","","ground",["Hill","Plain"],[],"Shrub","#E8C0E0",1.0,"Flowering shrubs of mountain slopes."),
  # ---- Under the water: seabed and lakebed (layer "under", terrains = UnderKind) ----
- ("green_algae","Green algae","Chlorophyta","Green alga","Cam","","under",["Seabed"],[],"Algae","#90D060",1.0,"Turf of green seaweed on sunlit seabed; land plants descend from green algae."),
- ("red_algae","Red algae","Rhodophyta","Red alga","Cam","","under",["Seabed"],[],"Algae","#E07070",1.0,"Red seaweeds, among the oldest complex algae."),
- ("stromatolites","Stromatolites","Cyanobacterial mats","Cyanobacteria","Cam","","under",["Seabed","Lakebed"],[],"Stromatolite","#FFFFFF",1.0,"Layered mounds built by cyanobacteria; rare today, as at Shark Bay."),
+ ("green_algae","Green algae","Chlorophyta","Green alga","Edi","","under",["Seabed"],[],"Algae","#90D060",1.0,"Turf of green seaweed on sunlit seabed; land plants descend from green algae."),
+ ("red_algae","Red algae","Rhodophyta","Red alga","Edi","","under",["Seabed"],[],"Algae","#E07070",1.0,"Red seaweeds, among the oldest complex algae."),
+ ("stromatolites","Stromatolites","Cyanobacterial mats","Cyanobacteria","Edi","","under",["Seabed","Lakebed"],[],"Stromatolite","#FFFFFF",1.0,"Layered mounds built by cyanobacteria; rare today, as at Shark Bay."),
  ("epiphyton","Epiphyton","Epiphyton","Calcimicrobe","Cam","Dev","under",["Seabed"],[],"Coralline","#C8B090",0.9,"Bushy calcified microbes that built Cambrian reefs with archaeocyathids."),
  ("dasyclads","Dasyclad algae","Dasycladales","Green alga","Cam","","under",["Seabed"],[],"Algae","#A8D880",0.8,"Little umbrella-shaped green algae of warm lagoons."),
  ("receptaculites","Receptaculites","Receptaculites oweni","Calcareous alga","Ord","Per","under",["Seabed"],[],"Coralline","#D8C8A0",1.1,"The 'sunflower coral': a disc-shaped calcareous alga."),
@@ -193,7 +193,7 @@ P = [
  ("giant_kelp","Giant kelp","Macrocystis pyrifera","Brown alga","Neo","","under",["Seabed"],[],"Kelp","#B09040",1.4,"Kelp forests up to 50 m tall along cool coasts."),
  ("laminaria","Oarweed","Laminaria digitata","Brown alga","Neo","","under",["Seabed"],[],"Kelp","#A08838",0.9,"Kelp with broad, strap-like blades."),
  ("bladderwrack","Bladderwrack","Fucus vesiculosus","Brown alga","Neo","","under",["Seabed"],[],"Algae","#A89048",1.0,"Rockweed of the tidal shore, buoyed by air bladders."),
- ("spirogyra","Filamentous algae","Spirogyra","Green alga","Cam","","under",["Lakebed"],[],"Algae","#A8E078",1.0,"Slimy green threads in still fresh water."),
+ ("spirogyra","Filamentous algae","Spirogyra","Green alga","Edi","","under",["Lakebed"],[],"Algae","#A8E078",1.0,"Slimy green threads in still fresh water."),
  ("chara","Stonewort","Chara","Charophyte","Sil","","under",["Lakebed"],[],"Charophyte","#A0C870",1.0,"Whorled charophytes, the closest algal relatives of land plants."),
  ("palaeonitella","Palaeonitella","Palaeonitella cranii","Charophyte","Dev","Dev","under",["Lakebed"],[],"Charophyte","#B0D080",0.8,"A stonewort from the Rhynie chert hot springs."),
  ("nitella","Nitella","Nitella","Charophyte","Car","","under",["Lakebed"],[],"Charophyte","#B8D888",0.9,"Delicate, translucent stonewort."),
@@ -592,7 +592,8 @@ if errs: sys.exit("\n".join(errs))
 
 # Coverage: which terrains each period shows (EraFlora.TerrainFor), and whether plants grow there
 def era_terrains(age):
-    i = AGES.index(age)
+    # what the map shows in each period (EraFlora.TerrainFor); Ediacaran and Cambrian alike
+    i = max(AGES.index(age), AGES.index("Cambrian")) - AGES.index("Cambrian")
     t = {"Desert","Mountain"}
     plain = "Barren" if i <= 2 else "Mossland" if i == 3 else "FernPrairie" if i <= 8 else "Plain"
     t |= {plain}
@@ -612,8 +613,8 @@ for age in AGES:
     for t in sorted(era_terrains(age)):
         g = [p[0] for p in P if p[6] == "ground" and alive(p, age) and t in p[7]]
         c = [p[0] for p in P if p[6] == "canopy" and alive(p, age) and t in p[7]]
-        if not g and AGES.index(age) >= 1 and t not in ("Barren","MicrobialMat","Desert"): gaps.append(f"{age} {t}: no ground plants")
-        if not c and AGES.index(age) >= 3 and t not in ("Barren","MicrobialMat","Desert","Mossland" if age != "Devonian" else "-"):
+        if not g and AGES.index(age) >= AGES.index("Ordovician") and t not in ("Barren","MicrobialMat","Desert"): gaps.append(f"{age} {t}: no ground plants")
+        if not c and AGES.index(age) >= AGES.index("Devonian") and t not in ("Barren","MicrobialMat","Desert","Mossland" if age != "Devonian" else "-"):
             gaps.append(f"{age} {t}: no forest trees")
 for age in AGES:
     for t in ("Seabed","Lakebed"):

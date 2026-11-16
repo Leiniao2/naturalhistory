@@ -2888,7 +2888,7 @@
    "commonName": "Green algae",
    "scientificName": "Chlorophyta",
    "group": "Green alga",
-   "firstAge": "Cambrian",
+   "firstAge": "Ediacaran",
    "lastAge": "",
    "layer": "under",
    "terrains": [
@@ -2905,7 +2905,7 @@
    "commonName": "Red algae",
    "scientificName": "Rhodophyta",
    "group": "Red alga",
-   "firstAge": "Cambrian",
+   "firstAge": "Ediacaran",
    "lastAge": "",
    "layer": "under",
    "terrains": [
@@ -2922,7 +2922,7 @@
    "commonName": "Stromatolites",
    "scientificName": "Cyanobacterial mats",
    "group": "Cyanobacteria",
-   "firstAge": "Cambrian",
+   "firstAge": "Ediacaran",
    "lastAge": "",
    "layer": "under",
    "terrains": [
@@ -3246,7 +3246,7 @@
    "commonName": "Filamentous algae",
    "scientificName": "Spirogyra",
    "group": "Green alga",
-   "firstAge": "Cambrian",
+   "firstAge": "Ediacaran",
    "lastAge": "",
    "layer": "under",
    "terrains": [

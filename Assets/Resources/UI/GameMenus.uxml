@@ -168,6 +168,8 @@
                     <ui:VisualElement class="spacer" />
                     <ui:Button name="setup-randomize" class="slot-button" text="Randomize" />
                 </ui:VisualElement>
+                <!-- Land area, game length and starting period (NewGameOptions) -->
+                <ui:VisualElement name="setup-options" class="setup-options" />
                 <ui:ScrollView name="setup-list" class="setup-list" />
                 <ui:Label class="setup-hint" text="Click a colour band to change it. Names can be anything; the faction decides the iconic animals." />
                 <ui:VisualElement class="setup-actions">

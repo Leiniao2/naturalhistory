@@ -38,6 +38,17 @@ namespace NaturalHistory.World
 
         public static void Toggle() => Set(!On);
 
+        // Whether a group is shown (and clickable) in the current view: the under view shows the
+        // seabed and underground niche and the animals in the sea; the surface view everything but
+        // the underground niche (swimmers are in both).
+        public static bool Shows(ColonyGroup g)
+        {
+            if (g == null) return false;
+            bool below  = g.Niche == Niche.Underground;
+            bool marine = g.Cell != null && g.Cell.IsWater && g.Style is ColonyStyle.Swim or ColonyStyle.Drift;
+            return On ? below || marine : !below;
+        }
+
         // Underground animals can't enter, settle in or pass through solid bedrock
         public static bool Blocks(UnderKind kind) => kind == UnderKind.Bedrock;
 

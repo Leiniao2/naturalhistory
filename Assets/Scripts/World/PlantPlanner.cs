@@ -22,6 +22,7 @@ namespace NaturalHistory.World
         private readonly List<PlantDefinition> alive;
         private readonly float cellSize, wrapWidth;
         private readonly int seed;
+        private readonly GeologicalAge age;
         private readonly Func<Mesh, Mesh> track;
         private readonly Dictionary<string, Mesh[]> cache = new();
         private readonly Dictionary<string, Vector3> offsets = new();
@@ -29,6 +30,7 @@ namespace NaturalHistory.World
         public PlantPlanner(GeologicalAge age, int seed, float cellSize, float wrapWidth, Func<Mesh, Mesh> track)
         {
             alive = PlantCatalog.AliveIn(age);
+            this.age = age;
             this.seed = seed;
             this.cellSize = cellSize;
             this.wrapWidth = wrapWidth;
@@ -71,11 +73,13 @@ namespace NaturalHistory.World
             return (ranked[0], ranked.Count > 1 ? ranked[1] : null);
         }
 
-        public Mesh Under(System.Random rng, UnderKind kind, PlantDefinition main, PlantDefinition second)
+        // density: how thick the bed is on this tile (water beds; 1 = normal), part of the cache key
+        public Mesh Under(System.Random rng, UnderKind kind, PlantDefinition main, PlantDefinition second, float density = 1f)
         {
             string k = kind.ToString();
             var extras = main == null ? null : Accents(main, second, alive.Where(p => p.layer == "under" && p.terrains.Contains(k)));
-            return Variant(rng, $"u|{kind}|{main?.id}|{second?.id}", () => MapFeatureMeshes.CreateUnderDetail(rng, cellSize, kind, main, second, extras));
+            return Variant(rng, $"u|{kind}|{main?.id}|{second?.id}|{density:0.##}",
+                           () => MapFeatureMeshes.CreateUnderDetail(rng, cellSize, kind, main, second, extras, density));
         }
 
         // A few more species mixed in among a tile's two, so neighbouring tiles of the same region
@@ -139,6 +143,13 @@ namespace NaturalHistory.World
 
         private Mesh Variant(System.Random rng, string key, Func<Mesh> create)
         {
+            var inner = create;
+            create = () =>
+            {
+                MapFeatureMeshes.SetAgeBoost(age);
+                try { return inner(); }
+                finally { MapFeatureMeshes.SetAgeBoost(GeologicalAge.Quaternary); }
+            };
             if (!cache.TryGetValue(key, out var meshes)) cache[key] = meshes = new Mesh[Variants];
             int i = rng.Next(Variants);
             return meshes[i] ??= track(create());

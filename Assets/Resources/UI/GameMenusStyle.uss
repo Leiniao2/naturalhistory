@@ -1133,3 +1133,62 @@
     margin-top: 8px;
     align-self: stretch;
 }
+
+/* ---------- New game options (NewGameOptions) ---------- */
+
+.setup-options {
+    margin: 6px 0 10px 0;
+    padding: 8px 10px;
+    background-color: rgb(40, 50, 42);
+    border-radius: 6px;
+}
+
+.setup-option-row {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4px 0;
+}
+
+.setup-option-label {
+    width: 150px;
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: rgb(235, 232, 220);
+}
+
+.setup-option-group {
+    flex-direction: row;
+}
+
+.setup-option {
+    min-width: 96px;
+    height: 32px;
+    margin: 0 4px 0 0;
+    font-size: 14px;
+    color: rgb(225, 228, 215);
+    background-color: rgb(52, 66, 54);
+    border-width: 0;
+    border-radius: 5px;
+}
+
+.setup-option:hover {
+    background-color: rgb(76, 98, 78);
+}
+
+.setup-option.selected {
+    background-color: rgb(150, 112, 30);
+    color: rgb(255, 245, 210);
+}
+
+.setup-option-dropdown {
+    min-width: 300px;
+    margin: 0 8px 0 0;
+}
+
+.setup-option-note {
+    font-size: 13px;
+    color: rgb(185, 192, 178);
+    margin-left: 8px;
+    white-space: normal;
+}

@@ -1,9 +1,13 @@
 import json, sys
 import os
 P = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "Assets", "Resources", "Data") + os.sep
-AGES = "Cambrian Ordovician Silurian Devonian Carboniferous Permian Triassic Jurassic Cretaceous Paleogene Neogene Quaternary".split()
+AGES = "Ediacaran Cambrian Ordovician Silurian Devonian Carboniferous Permian Triassic Jurassic Cretaceous Paleogene Neogene Quaternary".split()
 # from, to, functions required, behaviors required, functions granted, behaviors granted, why
 L = [
+ # --- From the Ediacaran ---
+ ("ikaria_wariootia","myllokunmingia_fengjiaoa",["through_gut","coelom","nerve_cords"],["burrowing_escape"],["notochord"],[],"Ikaria-like burrowers were among the first animals with a front, a back and a gut: the ancestry of chordates and so of the first vertebrates."),
+ ("spriggina_floundersi","hallucigenia",["segmentation","cephalisation"],["hiding"],["compound_eyes"],[],"A segmented Ediacaran animal standing in for the soft-bodied ancestors of lobopodians and arthropods."),
+ ("kimberella_quadrata","cameroceras",["radula","through_gut"],["patch_foraging"],["camera_eyes"],[],"Kimberella scraped mats with a mollusc-like feeding organ; molluscs went on to build shells and swim as cephalopods."),
  # --- Chordates and fish ---
  ("pikaia","myllokunmingia_fengjiaoa",["notochord","pharyngeal_slits"],["light_following"],["myomeres"],[],"One of the oldest known vertebrates, from the Chengjiang fauna: a skull and paired eyes around the chordate nerve cord."),
  ("myllokunmingia_fengjiaoa","dunkleosteus_terrelli",["jaws","dermal_armour","paired_fins"],["active_predation","pursuit_hunting"],["gill_arches"],["territoriality"],"Jaws evolved from gill arches; armoured placoderms were the first giant predators."),

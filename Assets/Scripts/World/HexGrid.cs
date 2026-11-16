@@ -43,7 +43,7 @@ namespace NaturalHistory.World
         public float WrapWidth => Mathf.Sqrt(3f) * cellSize * width;
 
         [SerializeField] private int width = 50;
-        [SerializeField] private int height = 80;
+        [SerializeField] private int height = 30;
         [SerializeField] private float cellSize = 1f;
         [SerializeField] private HexCell cellPrefab;
         [SerializeField] private TerrainType defaultTerrain;

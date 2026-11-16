@@ -58,7 +58,7 @@ namespace NaturalHistory.Players
         public static bool IsActive(IconicAnimalDefinition animal)
         {
             if (!Enum.TryParse<GeologicalAge>(animal.age, out var age)) return false;
-            var current = AgeManager.Instance != null ? AgeManager.Instance.CurrentAge : GeologicalAge.Cambrian;
+            var current = AgeManager.Instance != null ? AgeManager.Instance.CurrentAge : GeologicalAge.Ediacaran;
             return age <= current;
         }
 

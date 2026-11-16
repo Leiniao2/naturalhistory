@@ -146,7 +146,7 @@ namespace NaturalHistory.World
             {
                 var root = new Vector3(p.x, -0.02f, p.y);
                 float r  = size * Range(rng, 0.05f, 0.09f);
-                if (age == GeologicalAge.Cambrian)
+                if (age <= GeologicalAge.Cambrian) // Ediacaran Cloudina reefs look much the same
                 {
                     if (rng.NextDouble() < 0.6) AddBlob(b, rng, root + Vector3.up * r * 0.3f, r, 0.6f, 0, Shade(rng, Stromatolite));
                     else for (int k = rng.Next(2, 5); k > 0; k--) AddCup(b, rng, root, r * 1.6f, Shade(rng, Archaeocyath));
@@ -205,13 +205,22 @@ namespace NaturalHistory.World
         {
             var b = new Builder();
             var taken = new List<Vector2>();
+            // older periods: more and bigger of their small plants and mats, spread wider (AgeBoost)
+            var (grow, dense) = AgeBoost(age);
             List<Vector2> Spots(int min, int max, float gap)
             {
-                var spots = Scatter(rng, rng.Next(min, max + 1), 0.62f * size, gap * size, taken);
+                int count = Mathf.RoundToInt(rng.Next(min, max + 1) * (kind == TerrainKind.Barren ? 1f : dense));
+                var spots = Scatter(rng, count, (dense > 1.2f ? 0.8f : 0.62f) * size, gap * size, taken);
                 taken.AddRange(spots);
                 return spots;
             }
             Vector3 At(Vector2 p) => new(p.x, 0f, p.y);
+            void Flexible(Vector3 root, float flex, System.Action add)
+            {
+                int from = b.VertexCount;
+                add();
+                MakeFlexible(b, from, root, flex, size);
+            }
 
             switch (kind)
             {
@@ -222,21 +231,21 @@ namespace NaturalHistory.World
                         AddRock(b, rng, At(p), size * Range(rng, 0.012f, 0.022f), Color.Lerp(BarrenGrey, BarrenRed, Range(rng, 0f, 1f)));
                     break;
                 case TerrainKind.MicrobialMat:
-                    foreach (var p in Spots(2, 4, 0.15f)) AddMatPatch(b, rng, At(p), size * Range(rng, 0.05f, 0.09f));
-                    foreach (var p in Spots(1, 3, 0.15f)) AddStromatolites(b, rng, At(p), size * Range(rng, 0.03f, 0.05f));
+                    foreach (var p in Spots(2, 4, 0.15f)) AddMatPatch(b, rng, At(p), size * grow * Range(rng, 0.05f, 0.09f));
+                    foreach (var p in Spots(1, 3, 0.15f)) AddStromatolites(b, rng, At(p), size * grow * Range(rng, 0.03f, 0.05f));
                     break;
                 case TerrainKind.Mossland:
-                    foreach (var p in Spots(4, 7, 0.1f)) AddMossCushion(b, rng, At(p), size * Range(rng, 0.03f, 0.055f));
+                    foreach (var p in Spots(4, 7, 0.1f)) AddMossCushion(b, rng, At(p), size * grow * Range(rng, 0.03f, 0.055f));
                     if (age >= GeologicalAge.Silurian)
-                        foreach (var p in Spots(2, 4, 0.08f)) AddCooksonia(b, rng, At(p), size * 0.06f);
+                        foreach (var p in Spots(2, 4, 0.08f)) Flexible(At(p), 1f, () => AddCooksonia(b, rng, At(p), size * grow * 0.06f));
                     if (age == GeologicalAge.Devonian)
-                        foreach (var p in Spots(1, 3, 0.1f)) AddHorsetails(b, rng, At(p), size * 0.07f, L(Rhynia));
+                        foreach (var p in Spots(1, 3, 0.1f)) Flexible(At(p), 0.8f, () => AddHorsetails(b, rng, At(p), size * grow * 0.07f, L(Rhynia)));
                     break;
                 case TerrainKind.FernPrairie:
                     // Jurassic fern prairies: ferns as tall as a person, the "grassland" of the dinosaurs
                     float fern = age == GeologicalAge.Jurassic ? 0.15f : age is GeologicalAge.Triassic or GeologicalAge.Cretaceous ? 0.1f : 0.085f;
-                    foreach (var p in Spots(3, 6, fern * 1.4f)) AddGroundFern(b, rng, At(p), size * fern * Range(rng, 0.8f, 1.2f));
-                    foreach (var p in Spots(0, 2, 0.1f)) AddHorsetails(b, rng, At(p), size * 0.08f, L(Horsetail));
+                    foreach (var p in Spots(3, 6, fern * 1.4f)) Flexible(At(p), 0.6f, () => AddGroundFern(b, rng, At(p), size * fern * Range(rng, 0.8f, 1.2f)));
+                    foreach (var p in Spots(0, 2, 0.1f)) Flexible(At(p), 0.8f, () => AddHorsetails(b, rng, At(p), size * 0.08f, L(Horsetail)));
                     if (age >= GeologicalAge.Permian && rng.NextDouble() < 0.35)
                         foreach (var p in Spots(1, 1, 0.2f)) AddCycad(b, rng, At(p), size * Range(rng, 0.7f, 1f));
                     if (age is GeologicalAge.Carboniferous or GeologicalAge.Jurassic && rng.NextDouble() < 0.25)
@@ -288,6 +297,13 @@ namespace NaturalHistory.World
         // set in forest stands, where thousands of clumps would otherwise cost millions of triangles
         static float smallBlobRadius = 0f;
 
+        // Fine detail for the under layer's water plants and fungi: they are grown large (more so
+        // in early ages, see AgeSize) and seen close up, where the low-poly shapes read as a mosaic.
+        // Balls become 80- or 320-face spheres, stems round 10-sided tubes, fronds and caps smooth
+        // curves. Stones stay angular. Set by CreateUnderDetail while it builds a tile.
+        static bool fineDetail;
+        static float fineBlobRadius; // balls at least this big get the 320-face sphere
+
         // A dense stand filling the whole hex out to its edges, so neighbouring forest tiles run into
         // each other: mostly the dominant canopy species, some of the second (which neighbouring
         // regions tend to share, softening the change), with understory between the trunks. The
@@ -313,7 +329,7 @@ namespace NaturalHistory.World
                 b.SinkBase(from, 0.02f * size, 0.12f * size);
             }
             if (under != null)
-                foreach (var p in HexScatter(rng, rng.Next(10, 16), apothem * 0.97f, 0.08f * size, trees))
+                foreach (var p in HexScatter(rng, Denser(rng.Next(10, 16)), apothem * 0.97f, 0.08f * size, trees))
                 {
                     int from = b.VertexCount;
                     AddGroundPlant(b, rng, new Vector3(p.x, 0f, p.y), size, under, 0.8f);
@@ -335,7 +351,7 @@ namespace NaturalHistory.World
             maxBlobDetail = 0;
             void Plant(PlantDefinition plant, int min, int max, float gap, float scale)
             {
-                var spots = HexScatter(rng, rng.Next(min, max + 1), apothem * 0.96f, gap * size, taken);
+                var spots = HexScatter(rng, Denser(rng.Next(min, max + 1)), apothem * 0.96f, gap * size * Mathf.Lerp(1f, AgeSize, 0.5f) / AgeDensity, taken);
                 taken.AddRange(spots);
                 foreach (var p in spots)
                 {
@@ -365,6 +381,22 @@ namespace NaturalHistory.World
 
         // Up to `count` points inside a pointy-top hexagon with the given apothem (centre to edge),
         // each at least minGap from the others and from `taken`.
+        // Older periods' plants are small (mosses, Cooksonia, Rhynia, early ferns) and would be hard
+        // to see at map scale, so meshes built for them grow their plants bigger (AgeSize) and more
+        // of them (AgeDensity). Set by PlantPlanner while it builds a period's meshes.
+        static float AgeSize = 1f, AgeDensity = 1f;
+        public static void SetAgeBoost(GeologicalAge age) => (AgeSize, AgeDensity) = AgeBoost(age);
+        static (float size, float density) AgeBoost(GeologicalAge age) => age switch
+        {
+            <= GeologicalAge.Silurian      => (2.0f, 1.6f),
+            GeologicalAge.Devonian         => (1.7f, 1.5f),
+            GeologicalAge.Carboniferous    => (1.35f, 1.3f),
+            GeologicalAge.Permian          => (1.25f, 1.2f),
+            GeologicalAge.Triassic         => (1.1f, 1.1f),
+            _                              => (1f, 1f),
+        };
+        static int Denser(int count) => Mathf.RoundToInt(count * AgeDensity);
+
         static List<Vector2> HexScatter(System.Random rng, int count, float apothem, float minGap, List<Vector2> taken)
         {
             var placed = new List<Vector2>();
@@ -422,7 +454,7 @@ namespace NaturalHistory.World
         // One clump of a ground species; `size` is the cell size, `scale` an extra factor
         static void AddGroundPlant(Builder b, System.Random rng, Vector3 root, float size, PlantDefinition plant, float scale)
         {
-            float m = plant.size * scale * Range(rng, 0.8f, 1.15f);
+            float m = plant.size * scale * AgeSize * Range(rng, 0.8f, 1.15f);
             int from = b.VertexCount;
             leafTint = plant.form == "Flower" ? Color.white : plant.Tint; // flowers: the tint is the petal colour
             switch (plant.form)
@@ -444,7 +476,34 @@ namespace NaturalHistory.World
                 default:               AddTuft(b, rng, root, size * m, L(Grass)); break;
             }
             AddFruitAndBlossom(b, rng, from, size * 0.1f * m, plant);
+            MakeFlexible(b, from, root, Flexibility(plant.form), size);
             leafTint = Color.white;
+        }
+
+        // How much a ground plant's form bends in the wind (0 = stiff)
+        static float Flexibility(string form) => form switch
+        {
+            "Grass" => 1f, "Reed" => 1f, "Cooksonia" => 1f, "Horsetail" => 0.8f, "Flower" => 0.9f,
+            "GroundFern" => 0.6f, "Clubmoss" => 0.4f, "Shrub" => 0.25f,
+            "Moss" or "Succulent" or "Cactus" or "Cycad" or "Bennettitalean" or "WaterLily" => 0f,
+            _ => 1f, // tufts
+        };
+
+        // Marks the vertices added since `from` (one plant standing at root) as bending in the wind
+        // (MapFeature.shader ApplyWind): nothing at the foot, most at the
+        // top; taller plants bend further.
+        static void MakeFlexible(Builder b, int from, Vector3 root, float flex, float cellSize)
+        {
+            if (flex <= 0f || b.VertexCount <= from) return;
+            float top = 0f;
+            for (int i = from; i < b.VertexCount; i++) top = Mathf.Max(top, b.Vertex(i).y - root.y);
+            if (top <= 1e-5f) return;
+            float tall = Mathf.Clamp(top / (0.12f * cellSize), 0.35f, 1f);
+            for (int i = from; i < b.VertexCount; i++)
+            {
+                float h = Mathf.Clamp01((b.Vertex(i).y - root.y) / top);
+                b.SetFlex(i, flex * tall * h * h);
+            }
         }
 
         static readonly Color BennettitaleanCone = new(0.85f, 0.55f, 0.35f);
@@ -594,6 +653,30 @@ namespace NaturalHistory.World
             var p2    = root + dir * length * 0.7f + Vector3.up * (rise * 0.7f - droop * 0.3f);
             var tip   = root + dir * length + Vector3.up * (rise * 0.2f - droop);
             var below = root + dir * length * 0.5f - Vector3.up * length;
+            if (fineDetail)
+            {
+                // the same leaf as a smooth curve through those points, widening and tapering gradually
+                const int segs = 10;
+                Vector3 At(float t) => t < 0.5f
+                    ? Vector3.Lerp(Vector3.Lerp(root, p1, t * 2f), Vector3.Lerp(p1, p2, t * 2f), t * 2f)
+                    : Vector3.Lerp(Vector3.Lerp(p1, p2, t * 2f - 1f), Vector3.Lerp(p2, tip, t * 2f - 1f), t * 2f - 1f);
+                float Width(float t) => t < 0.35f ? Mathf.Lerp(0.3f, 1f, Mathf.Sin(t / 0.35f * Mathf.PI * 0.5f))
+                                                  : Mathf.Lerp(1f, 0f, Mathf.Pow((t - 0.35f) / 0.65f, 1.6f));
+                var prevAt = At(0f);
+                float prevW = Width(0f);
+                for (int i = 1; i <= segs; i++)
+                {
+                    float t = i / (float)segs;
+                    var at = At(t);
+                    float w = Width(t);
+                    var col = color * Mathf.Lerp(1f, 0.9f, t);
+                    if (i < segs) b.AddQuad(prevAt + side * prevW, at + side * w, at - side * w, prevAt - side * prevW, col, below);
+                    else          b.AddTri(prevAt + side * prevW, at, prevAt - side * prevW, col, below);
+                    prevAt = at;
+                    prevW  = w;
+                }
+                return;
+            }
             b.AddQuad(root + side * 0.3f, p1 + side, p1 - side, root - side * 0.3f, color, below);
             b.AddQuad(p1 + side, p2 + side * 0.75f, p2 - side * 0.75f, p1 - side, color * 0.95f, below);
             b.AddTri(p2 + side * 0.75f, tip, p2 - side * 0.75f, color * 0.9f, below);

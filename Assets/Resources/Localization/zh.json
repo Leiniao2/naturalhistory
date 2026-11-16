@@ -10819,6 +10819,198 @@
   {
    "k": "Öland Alvar",
    "v": "厄兰岛石灰岩平原"
+  },
+  {
+   "k": "Ediacaran",
+   "v": "埃迪卡拉纪"
+  },
+  {
+   "k": "Neoproterozoic",
+   "v": "新元古代"
+  },
+  {
+   "k": "The world thaws from the last 'snowball Earth' glaciation and the first large, complex organisms appear: the Ediacaran biota, soft-bodied fronds, discs and quilted mats living on microbial carpets on the seafloor. The land is bare rock.",
+   "v": "地球从最后一次“雪球地球”冰期中解冻，最早的大型复杂生物出现：埃迪卡拉生物群——生活在海底微生物席上的软体叶状体、圆盘和绗缝状生物。陆地仍是裸露的岩石。"
+  },
+  {
+   "k": "End of the Marinoan 'snowball Earth' glaciation (~635 Ma); cap carbonates cover the seafloor",
+   "v": "马里诺“雪球地球”冰期结束（约 635 Ma）；盖帽碳酸盐覆盖海底"
+  },
+  {
+   "k": "Gaskiers glaciation (~580 Ma), a short ice age",
+   "v": "加斯基尔斯冰期（约 580 Ma），一次短暂的冰期"
+  },
+  {
+   "k": "Avalon explosion (~575 Ma): fronds like Charnia appear in the deep sea",
+   "v": "阿瓦隆大爆发（约 575 Ma）：查恩盘虫等叶状体出现在深海"
+  },
+  {
+   "k": "Dickinsonia, Kimberella and Spriggina live and graze on microbial mats in the White Sea assemblage (~560–550 Ma)",
+   "v": "白海生物组合（约 560–550 Ma）：狄更逊水母、金伯拉虫和斯普里格蠕虫在微生物席上生活和取食"
+  },
+  {
+   "k": "Cloudina builds the first shelly reefs; the first burrows appear",
+   "v": "克劳德管虫建造了最早的带壳生物礁；最早的潜穴出现"
+  },
+  {
+   "k": "Shuram carbon-isotope excursion; oxygen rises in the oceans",
+   "v": "舒拉姆碳同位素漂移；海洋含氧量上升"
+  },
+  {
+   "k": "End-Ediacaran extinction as the Cambrian begins",
+   "v": "埃迪卡拉纪末灭绝，寒武纪开始"
+  },
+  {
+   "k": "None on land; microbial mats and algae in the sea",
+   "v": "陆地上没有植物；海中有微生物席和藻类"
+  },
+  {
+   "k": "Cool after the snowball glaciations, with the brief Gaskiers ice age",
+   "v": "雪球冰期之后较凉爽，并有短暂的加斯基尔斯冰期"
+  },
+  {
+   "k": "Rising as the ice melted",
+   "v": "随着冰雪融化而上升"
+  },
+  {
+   "k": "Low but rising (est. 5–15%)",
+   "v": "较低但在上升（估计 5–15%）"
+  },
+  {
+   "k": "Rodinia's fragments assembling into Gondwana; Pannotia near the south pole",
+   "v": "罗迪尼亚的碎片正在汇聚成冈瓦纳；潘诺西亚靠近南极"
+  },
+  {
+   "k": "End of the Marinoan snowball Earth: hot, CO2-rich aftermath",
+   "v": "马里诺雪球地球结束：炎热、富含二氧化碳的余波"
+  },
+  {
+   "k": "Early Ediacaran",
+   "v": "埃迪卡拉纪早期"
+  },
+  {
+   "k": "Before the Gaskiers glaciation",
+   "v": "加斯基尔斯冰期之前"
+  },
+  {
+   "k": "Gaskiers glaciation",
+   "v": "加斯基尔斯冰期"
+  },
+  {
+   "k": "Avalon explosion: the first large organisms",
+   "v": "阿瓦隆大爆发：最早的大型生物"
+  },
+  {
+   "k": "White Sea assemblage; Shuram excursion",
+   "v": "白海生物组合；舒拉姆漂移"
+  },
+  {
+   "k": "Late Ediacaran: Cloudina reefs",
+   "v": "埃迪卡拉纪晚期：克劳德管虫礁"
+  },
+  {
+   "k": "Stromatolites and Cloudina, the first shelly reef builders",
+   "v": "叠层石和克劳德管虫——最早的带壳造礁生物"
+  },
+  {
+   "k": "Dickinsonia",
+   "v": "狄更逊水母"
+  },
+  {
+   "k": "Yorgia",
+   "v": "约吉虫"
+  },
+  {
+   "k": "Spriggina",
+   "v": "斯普里格蠕虫"
+  },
+  {
+   "k": "Kimberella",
+   "v": "金伯拉虫"
+  },
+  {
+   "k": "Ikaria",
+   "v": "伊卡利亚虫"
+  },
+  {
+   "k": "Charnia",
+   "v": "查恩盘虫"
+  },
+  {
+   "k": "Tribrachidium",
+   "v": "三臂虫"
+  },
+  {
+   "k": "Cloudina",
+   "v": "克劳德管虫"
+  },
+  {
+   "k": "Land area",
+   "v": "陆地面积"
+  },
+  {
+   "k": "Game length",
+   "v": "游戏长度"
+  },
+  {
+   "k": "Starting period",
+   "v": "起始时代"
+  },
+  {
+   "k": "Very small",
+   "v": "很小"
+  },
+  {
+   "k": "Small",
+   "v": "小"
+  },
+  {
+   "k": "Medium",
+   "v": "中"
+  },
+  {
+   "k": "Large",
+   "v": "大"
+  },
+  {
+   "k": "Huge",
+   "v": "很大"
+  },
+  {
+   "k": "Very fast",
+   "v": "很快"
+  },
+  {
+   "k": "Fast",
+   "v": "快"
+  },
+  {
+   "k": "Standard",
+   "v": "标准"
+  },
+  {
+   "k": "Long",
+   "v": "长"
+  },
+  {
+   "k": "Epic",
+   "v": "史诗"
+  },
+  {
+   "k": "{0:0} % of the world is land today",
+   "v": "如今世界的 {0:0}% 是陆地"
+  },
+  {
+   "k": "{0} turns to the present day ({1} in all)",
+   "v": "到现代共 {0} 回合（全程 {1} 回合）"
+  },
+  {
+   "k": "Life is still all in the sea: you begin on the seabed, in the layer under sea level",
+   "v": "生命还全部在海洋中：你将从海底、即海平面以下的地下层开始"
+  },
+  {
+   "k": "You begin on the surface",
+   "v": "你将从地表开始"
   }
  ]
 }

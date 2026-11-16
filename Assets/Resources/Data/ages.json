@@ -2,6 +2,41 @@
   "source": "Period boundaries: ICS International Chronostratigraphic Chart v2023/09. Climate numbers per turn come from climate_history.json.",
   "ages": [
     {
+      "id": "Ediacaran",
+      "displayName": "Ediacaran",
+      "era": "Neoproterozoic",
+      "startMillionYearsAgo": 635.0,
+      "endMillionYearsAgo": 538.8,
+      "turns": 30,
+      "description": "The world thaws from the last 'snowball Earth' glaciation and the first large, complex organisms appear: the Ediacaran biota, soft-bodied fronds, discs and quilted mats living on microbial carpets on the seafloor. The land is bare rock.",
+      "keyEvents": [
+        "End of the Marinoan 'snowball Earth' glaciation (~635 Ma); cap carbonates cover the seafloor",
+        "Gaskiers glaciation (~580 Ma), a short ice age",
+        "Avalon explosion (~575 Ma): fronds like Charnia appear in the deep sea",
+        "Dickinsonia, Kimberella and Spriggina live and graze on microbial mats in the White Sea assemblage (~560–550 Ma)",
+        "Cloudina builds the first shelly reefs; the first burrows appear",
+        "Shuram carbon-isotope excursion; oxygen rises in the oceans",
+        "End-Ediacaran extinction as the Cambrian begins"
+      ],
+      "vegetation": "None on land; microbial mats and algae in the sea",
+      "environmentalConditions": {
+        "globalTemp": "Cool after the snowball glaciations, with the brief Gaskiers ice age",
+        "seaLevel": "Rising as the ice melted",
+        "oxygenLevel": "Low but rising (est. 5–15%)",
+        "landCoverage": "Rodinia's fragments assembling into Gondwana; Pannotia near the south pole"
+      },
+      "slotExpansionAmount": 0,
+      "availableTerrains": [
+        "SaltWater",
+        "FreshWater",
+        "Plain",
+        "Hill",
+        "Mountain",
+        "Desert",
+        "IceSheet"
+      ]
+    },
+    {
       "id": "Cambrian",
       "displayName": "Cambrian",
       "era": "Paleozoic",

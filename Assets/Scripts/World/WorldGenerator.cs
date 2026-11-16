@@ -171,8 +171,10 @@ namespace NaturalHistory.World
         }
 
         // Shares of the map (elevation rank) and of the land (ruggedness rank)
-        const float SaltWaterThreshold = 0.37f; // lowest 37% of cells: open sea
-        const float WaterThreshold     = 0.45f; // next 8%: shallow/fresh water; the rest is land
+        // The land share today comes from the New Game screen (GameOptions.LandShare; Large = 55%):
+        // below WaterThreshold is water, the 8% just under it shallow/fresh water, the rest open sea
+        static float WaterThreshold     => 1f - Core.GameOptions.LandShare;
+        static float SaltWaterThreshold => WaterThreshold - 0.08f;
         const float HillThreshold      = 0.62f; // most rugged 38% of land is hills or mountains…
         const float MountainThreshold  = 0.80f; // …and the top 20% of land is mountains
 

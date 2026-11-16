@@ -6,7 +6,7 @@
       "category": "Locomotion",
       "defaultExpression": 0.3,
       "description": "Efficiency and speed of aquatic movement. High expression enables deep-sea and open-ocean colonization.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "land_speed",
@@ -30,7 +30,7 @@
       "category": "Locomotion",
       "defaultExpression": 0.1,
       "description": "Ability to excavate and inhabit underground tunnels. Provides shelter and access to subsurface food.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "climbing",
@@ -46,7 +46,7 @@
       "category": "Diet",
       "defaultExpression": 0.3,
       "description": "Preference and adaptation for consuming animal tissue. High expression increases predation efficiency but requires prey population.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "herbivory",
@@ -62,7 +62,7 @@
       "category": "Diet",
       "defaultExpression": 0.5,
       "description": "Dietary flexibility to consume both plant and animal matter. Provides resilience when one food source declines.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "filter_feeding",
@@ -70,7 +70,7 @@
       "category": "Diet",
       "defaultExpression": 0.2,
       "description": "Ability to extract plankton and microorganisms from water. Very efficient in nutrient-rich marine zones.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "decomposition",
@@ -78,7 +78,7 @@
       "category": "Diet",
       "defaultExpression": 0.2,
       "description": "Detritivore ability — consuming dead organic matter. Primarily relevant for Fungi kingdom species.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "nectar_feeding",
@@ -94,7 +94,7 @@
       "category": "Reproduction",
       "defaultExpression": 0.3,
       "description": "Speed of population recovery. High expression enables rapid recovery after population crashes.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "clutch_size",
@@ -102,7 +102,7 @@
       "category": "Reproduction",
       "defaultExpression": 0.4,
       "description": "Number of offspring produced per reproductive cycle. High clutch = high population ceiling but more resource demand.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "parental_care",
@@ -118,7 +118,7 @@
       "category": "Reproduction",
       "defaultExpression": 0.0,
       "description": "Ability to reproduce without a mate. Powerful colonizer trait — allows single individual to found a new population.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "armor_thickness",
@@ -126,7 +126,7 @@
       "category": "Defense",
       "defaultExpression": 0.2,
       "description": "Physical protection via exoskeleton, shell, or dermal armor. Reduces predation loss but increases metabolic cost.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "toxin_production",
@@ -134,7 +134,7 @@
       "category": "Defense",
       "defaultExpression": 0.0,
       "description": "Chemical defense via venom, poison, or noxious secretions. Deters predators and can be used offensively.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "camouflage",
@@ -142,7 +142,7 @@
       "category": "Defense",
       "defaultExpression": 0.2,
       "description": "Visual concealment in the environment. Reduces both predation risk and prey detection — dual-edged trait.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "group_defense",
@@ -158,7 +158,7 @@
       "category": "Defense",
       "defaultExpression": 0.1,
       "description": "Ability to regrow lost tissue or limbs. Reduces mortality from injury.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "vision_acuity",
@@ -166,7 +166,7 @@
       "category": "Perception",
       "defaultExpression": 0.3,
       "description": "Sharpness and range of visual detection. Critical for both predators and prey in open terrain.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "echolocation",
@@ -190,7 +190,7 @@
       "category": "Perception",
       "defaultExpression": 0.4,
       "description": "Sensitivity to chemical signals — smell and taste. Used for prey detection, mate finding, and territory marking.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "lateral_line",
@@ -198,7 +198,7 @@
       "category": "Perception",
       "defaultExpression": 0.3,
       "description": "Pressure wave detection system in aquatic species. Enables schooling behavior and detecting approaching threats.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "cold_tolerance",
@@ -214,7 +214,7 @@
       "category": "Thermoregulation",
       "defaultExpression": 0.3,
       "description": "Resistance to high temperatures and arid conditions. Required to colonize Desert terrain.",
-      "unlockAge": "Cambrian"
+      "unlockAge": "Ediacaran"
     },
     {
       "id": "endothermy",

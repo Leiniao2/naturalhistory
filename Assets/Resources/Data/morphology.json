@@ -59,7 +59,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "A diffuse web of neurons, like a jellyfish's."
@@ -71,7 +71,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "nerve_net"
       ],
@@ -85,7 +85,7 @@
       "tier": 2,
       "row": 0,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "nerve_cords"
       ],
@@ -99,7 +99,7 @@
       "tier": 2,
       "row": 1,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "nerve_cords"
       ],
@@ -113,7 +113,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "nerve_net"
       ],
@@ -129,7 +129,7 @@
       "tier": 3,
       "row": 0,
       "cost": 10,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "cephalisation"
       ],
@@ -145,7 +145,7 @@
       "tier": 3,
       "row": 1,
       "cost": 10,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "cephalisation"
       ],
@@ -347,7 +347,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Body fluid is moved around by body movement and beating cilia."
@@ -359,7 +359,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "fluid_circulation"
       ],
@@ -373,7 +373,7 @@
       "tier": 2,
       "row": 0,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "pulsing_vessel"
       ],
@@ -387,7 +387,7 @@
       "tier": 2,
       "row": 1,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "pulsing_vessel"
       ],
@@ -401,7 +401,7 @@
       "tier": 3,
       "row": 0,
       "cost": 10,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "open_circulation"
       ],
@@ -415,7 +415,7 @@
       "tier": 3,
       "row": 1,
       "cost": 10,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "closed_circulation"
       ],
@@ -625,7 +625,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Oxygen diffuses in through a thin body wall."
@@ -637,7 +637,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "skin_breathing"
       ],
@@ -651,7 +651,7 @@
       "tier": 2,
       "row": 0,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "gills"
       ],
@@ -905,7 +905,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "A sac with one opening, like a sea anemone's."
@@ -917,7 +917,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "blind_gut"
       ],
@@ -931,7 +931,7 @@
       "tier": 2,
       "row": 0,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "through_gut"
       ],
@@ -947,7 +947,7 @@
       "tier": 2,
       "row": 1,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "through_gut"
       ],
@@ -961,7 +961,7 @@
       "tier": 2,
       "row": 2,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "through_gut"
       ],
@@ -1190,7 +1190,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Waste simply leaks out through the thin body wall."
@@ -1202,7 +1202,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "diffusion_waste"
       ],
@@ -1216,7 +1216,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "diffusion_waste"
       ],
@@ -1230,7 +1230,7 @@
       "tier": 1,
       "row": 2,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "diffusion_waste"
       ],
@@ -1244,7 +1244,7 @@
       "tier": 2,
       "row": 1,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "nephridia"
       ],
@@ -1470,7 +1470,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Cells release chemical messages carried in body fluids."
@@ -1482,7 +1482,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "hormone_signalling"
       ],
@@ -1496,7 +1496,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "hormone_signalling"
       ],
@@ -1510,7 +1510,7 @@
       "tier": 2,
       "row": 0,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "neurosecretory_cells"
       ],
@@ -1756,7 +1756,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [
         "reproduction_rate"
@@ -1770,7 +1770,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "broadcast_spawning"
       ],
@@ -1786,7 +1786,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "broadcast_spawning"
       ],
@@ -1800,7 +1800,7 @@
       "tier": 1,
       "row": 2,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "broadcast_spawning"
       ],
@@ -1816,7 +1816,7 @@
       "tier": 2,
       "row": 0,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "budding"
       ],
@@ -2045,7 +2045,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [
         "swimming_speed",
@@ -2060,7 +2060,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "bilateral_body"
       ],
@@ -2074,7 +2074,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "bilateral_body"
       ],
@@ -2088,7 +2088,7 @@
       "tier": 1,
       "row": 2,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "bilateral_body"
       ],
@@ -2102,7 +2102,7 @@
       "tier": 2,
       "row": 1,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "segmentation"
       ],
@@ -2118,7 +2118,7 @@
       "tier": 3,
       "row": 0,
       "cost": 10,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "exoskeleton",
         "muscle_bands"
@@ -2135,7 +2135,7 @@
       "tier": 2,
       "row": 2,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "coelom"
       ],
@@ -2151,7 +2151,7 @@
       "tier": 3,
       "row": 1,
       "cost": 10,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "notochord",
         "muscle_bands"
@@ -2344,7 +2344,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Wandering cells that engulf bacteria and debris."
@@ -2356,7 +2356,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "phagocytes"
       ],
@@ -2370,7 +2370,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "phagocytes"
       ],
@@ -2384,7 +2384,7 @@
       "tier": 1,
       "row": 2,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "phagocytes"
       ],
@@ -2398,7 +2398,7 @@
       "tier": 2,
       "row": 1,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "pattern_receptors"
       ],
@@ -2622,7 +2622,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "A protective outer layer of cells."
@@ -2634,7 +2634,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "epidermis"
       ],
@@ -2648,7 +2648,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "epidermis"
       ],
@@ -2662,7 +2662,7 @@
       "tier": 2,
       "row": 1,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "chitin_cuticle"
       ],

@@ -175,8 +175,11 @@ namespace NaturalHistory.Territory
                 var def = fits.FirstOrDefault(d => d.id == previous);
                 if (def == null)
                 {
-                    int Rank(SpeciesDefinition d) => (otherSpecies.Contains(d.id) ? 4 : 0) + (d.playable ? 0 : 2) +
-                                                     (EvolutionData.From(d.id).Any() ? 0 : 1);
+                    // in a seabed start, a seafloor species, so it is there in the under view the game opens on
+                    bool seabed = Core.GameOptions.StartsUnderSea(grid.DisplayedAge);
+                    int Rank(SpeciesDefinition d) => (otherSpecies.Contains(d.id) ? 8 : 0) + (d.playable ? 0 : 4) +
+                                                     (EvolutionData.From(d.id).Any() ? 0 : 2) +
+                                                     (seabed && Niches.Of(d) != Niche.Underground ? 1 : 0);
                     int best = fits.Min(Rank);
                     var top = fits.Where(d => Rank(d) == best).ToList();
                     def = top[rng.Next(top.Count)];

@@ -2,6 +2,55 @@
  "notes": "Evolution links: a copy of `from` can evolve into `to` once its species has every required function (morphology) and behavior (ethology) item, the target's period has begun and it stands on or next to a tile the target can live on. Requirements are items of the origin species' trees. grantFunctions/grantBehaviors are acquired automatically on evolving. Validated against trait_rules.json by tools.",
  "links": [
   {
+   "from": "ikaria_wariootia",
+   "to": "myllokunmingia_fengjiaoa",
+   "functions": [
+    "through_gut",
+    "coelom",
+    "nerve_cords"
+   ],
+   "behaviors": [
+    "burrowing_escape"
+   ],
+   "grantFunctions": [
+    "notochord"
+   ],
+   "grantBehaviors": [],
+   "description": "Ikaria-like burrowers were among the first animals with a front, a back and a gut: the ancestry of chordates and so of the first vertebrates."
+  },
+  {
+   "from": "spriggina_floundersi",
+   "to": "hallucigenia",
+   "functions": [
+    "segmentation",
+    "cephalisation"
+   ],
+   "behaviors": [
+    "hiding"
+   ],
+   "grantFunctions": [
+    "compound_eyes"
+   ],
+   "grantBehaviors": [],
+   "description": "A segmented Ediacaran animal standing in for the soft-bodied ancestors of lobopodians and arthropods."
+  },
+  {
+   "from": "kimberella_quadrata",
+   "to": "cameroceras",
+   "functions": [
+    "radula",
+    "through_gut"
+   ],
+   "behaviors": [
+    "patch_foraging"
+   ],
+   "grantFunctions": [
+    "camera_eyes"
+   ],
+   "grantBehaviors": [],
+   "description": "Kimberella scraped mats with a mollusc-like feeding organ; molluscs went on to build shells and swim as cephalopods."
+  },
+  {
    "from": "pikaia",
    "to": "myllokunmingia_fengjiaoa",
    "functions": [

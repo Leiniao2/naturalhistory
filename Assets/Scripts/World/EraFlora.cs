@@ -5,6 +5,7 @@ namespace NaturalHistory.World
     // How the land looked in each geological period. WorldGenerator gives every cell a climate
     // biome (HexCell.Biome: what a cell with that climate grows today). This maps it onto the ground
     // cover and plants of a period, following the fossil record:
+    //   Ediacaran       no land plants; the first large organisms on microbial mats in the sea (Gaskiers ice)
     //   Cambrian        no land plants: bare rock, microbial mats on damp flats
     //   Ordovician      liverworts and mosses by the water (ice caps late in the period)
     //   Silurian        Cooksonia and other small vascular plants on wet lowlands
@@ -19,9 +20,9 @@ namespace NaturalHistory.World
     //   Quaternary      modern biomes, ice ages
     public static class EraFlora
     {
-        // Large ice sheets: the end-Ordovician (Hirnantian) glaciation, the Late Paleozoic Ice Age
+        // Large ice sheets: the Ediacaran Gaskiers glaciation, the end-Ordovician (Hirnantian) glaciation, the Late Paleozoic Ice Age
         // and the late Cenozoic. The Paleogene only gets Antarctic ice at its very end.
-        static bool HasIceSheets(GeologicalAge age) => age is GeologicalAge.Ordovician or GeologicalAge.Carboniferous or
+        static bool HasIceSheets(GeologicalAge age) => age is GeologicalAge.Ediacaran or GeologicalAge.Ordovician or GeologicalAge.Carboniferous or
             GeologicalAge.Permian or GeologicalAge.Neogene or GeologicalAge.Quaternary;
 
         public static TerrainKind TerrainFor(HexCell cell, GeologicalAge age)
@@ -58,7 +59,7 @@ namespace NaturalHistory.World
                 case TerrainKind.Wetland:
                     return age switch
                     {
-                        GeologicalAge.Cambrian      => TerrainKind.MicrobialMat,
+                        <= GeologicalAge.Cambrian   => TerrainKind.MicrobialMat,
                         <= GeologicalAge.Silurian   => TerrainKind.Mossland,
                         GeologicalAge.Carboniferous => TerrainKind.CoalSwamp,
                         _                           => TerrainKind.Wetland,
@@ -67,7 +68,7 @@ namespace NaturalHistory.World
                 case TerrainKind.Rainforest:
                     return age switch
                     {
-                        GeologicalAge.Cambrian      => TerrainKind.MicrobialMat,
+                        <= GeologicalAge.Cambrian   => TerrainKind.MicrobialMat,
                         <= GeologicalAge.Devonian   => TerrainKind.Mossland,
                         GeologicalAge.Carboniferous => TerrainKind.CoalSwamp,
                         _                           => TerrainKind.Rainforest,
@@ -76,7 +77,7 @@ namespace NaturalHistory.World
                 case TerrainKind.Plain:
                     return age switch
                     {
-                        GeologicalAge.Cambrian     => m > 0.8f ? TerrainKind.MicrobialMat : TerrainKind.Barren,
+                        <= GeologicalAge.Cambrian  => m > 0.8f ? TerrainKind.MicrobialMat : TerrainKind.Barren,
                         GeologicalAge.Ordovician   => m > 0.75f ? TerrainKind.Mossland : TerrainKind.Barren,
                         GeologicalAge.Silurian     => m > 0.6f ? TerrainKind.Mossland : TerrainKind.Barren,
                         GeologicalAge.Devonian     => TerrainKind.Mossland,
@@ -138,6 +139,7 @@ namespace NaturalHistory.World
                 TerrainFeature.BroadleafForest or TerrainFeature.ConiferForest or TerrainFeature.Jungle => ForestFlora(cell.Feature, age),
                 TerrainFeature.Reef  => age switch
                 {
+                    GeologicalAge.Ediacaran   => "Stromatolites and Cloudina, the first shelly reef builders",
                     GeologicalAge.Cambrian    => "Stromatolites and archaeocyathid sponge reef",
                     <= GeologicalAge.Permian  => "Tabulate and rugose corals, sponges and crinoids",
                     _                         => "Coral reef",

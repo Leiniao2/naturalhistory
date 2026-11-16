@@ -54,6 +54,7 @@ namespace NaturalHistory.Climate
 
         private static readonly (float ma, float amount, float width)[] ImpactPulses =
         {
+            (580f, 1.5f, 3f),   // Acraman, South Australia (Ediacaran)
             (467f, 4.0f, 6f),   // Ordovician meteor event: an asteroid break-up showered the Earth
             (377f, 1.2f, 3f),   // Late Devonian impacts (Siljan, Alamo)
             (214f, 1.5f, 2f),   // Manicouagan

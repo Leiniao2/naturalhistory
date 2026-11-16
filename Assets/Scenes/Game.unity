@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NaturalHistory.World.HexGrid
   width: 50
-  height: 80
+  height: 30
   cellSize: 1
   cellPrefab: {fileID: 5985747473050339883, guid: 40d404cb3fc354a7598ed9c01fe3e42e, type: 3}
   defaultTerrain: {fileID: 11400000, guid: 7b9622877057b4f918edc48880a81927, type: 2}

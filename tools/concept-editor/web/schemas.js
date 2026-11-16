@@ -4,7 +4,7 @@
 // so field names must match exactly).
 
 // Must match the GeologicalAge enum in Assets/Scripts/Core/AgeManager.cs
-export const AGE_IDS = ['Cambrian', 'Ordovician', 'Silurian', 'Devonian', 'Carboniferous', 'Permian',
+export const AGE_IDS = ['Ediacaran', 'Cambrian', 'Ordovician', 'Silurian', 'Devonian', 'Carboniferous', 'Permian',
   'Triassic', 'Jurassic', 'Cretaceous', 'Paleogene', 'Neogene', 'Quaternary'];
 // TerrainKind enum (Assets/Scripts/World/TerrainType.cs)
 export const TERRAINS = ['SaltWater', 'FreshWater', 'Plain', 'Hill', 'Mountain', 'Desert', 'Wetland', 'Tundra', 'IceSheet'];
@@ -173,7 +173,7 @@ export const DATASETS = {
     sub: g => `${g.category} · from ${g.unlockAge}`,
     views: ['form'],
     groupBy: g => g.category,
-    newItem: () => ({ id: 'new_gene', displayName: 'New Gene', category: 'Locomotion', defaultExpression: 0, description: '', unlockAge: 'Cambrian' }),
+    newItem: () => ({ id: 'new_gene', displayName: 'New Gene', category: 'Locomotion', defaultExpression: 0, description: '', unlockAge: 'Ediacaran' }),
     fields: [
       { key: 'id', label: 'ID', type: 'id', help: 'Renaming updates trees and species that reference it.' },
       { key: 'displayName', label: 'Name', type: 'string' },
@@ -190,7 +190,7 @@ export const DATASETS = {
     sub: n => `col ${n.tier} · ${n.cost} EP · ${n.age}`,
     views: ['graph', 'form'],
     groupBy: (n, all) => branchName(all, 'morphology', n.branch),
-    newItem: (list, sel) => ({ id: 'new_trait', displayName: 'New Trait', branch: (sel && sel.branch) || '', tier: 0, row: 0, cost: 10, age: 'Cambrian', prerequisites: [], unlocksGenes: [], description: '' }),
+    newItem: (list, sel) => ({ id: 'new_trait', displayName: 'New Trait', branch: (sel && sel.branch) || '', tier: 0, row: 0, cost: 10, age: 'Ediacaran', prerequisites: [], unlocksGenes: [], description: '' }),
     fields: treeFields('morphology'),
     validate: treeValidate('morphology'),
   },
@@ -201,7 +201,7 @@ export const DATASETS = {
     sub: n => `col ${n.tier} · ${n.cost} EP · ${n.age}`,
     views: ['graph', 'form'],
     groupBy: (n, all) => branchName(all, 'ethology', n.branch),
-    newItem: (list, sel) => ({ id: 'new_behavior', displayName: 'New Behavior', branch: (sel && sel.branch) || '', tier: 0, row: 0, cost: 10, age: 'Cambrian', prerequisites: [], unlocksGenes: [], description: '' }),
+    newItem: (list, sel) => ({ id: 'new_behavior', displayName: 'New Behavior', branch: (sel && sel.branch) || '', tier: 0, row: 0, cost: 10, age: 'Ediacaran', prerequisites: [], unlocksGenes: [], description: '' }),
     fields: treeFields('ethology'),
     validate: treeValidate('ethology'),
   },
@@ -212,7 +212,7 @@ export const DATASETS = {
     sub: s => `${s.group || s.kingdom} · ${s.firstAge}${s.lastAge && s.lastAge !== s.firstAge ? '–' + s.lastAge : ''}${s.lastAge ? '' : '–today'}`,
     views: ['form'],
     groupBy: s => s.firstAge,
-    newItem: () => ({ id: 'new_species', commonName: 'New Species', scientificName: '', kingdom: 'Animalia', group: '', firstAge: 'Cambrian', lastAge: '',
+    newItem: () => ({ id: 'new_species', commonName: 'New Species', scientificName: '', kingdom: 'Animalia', group: '', firstAge: 'Ediacaran', lastAge: '',
       habitats: ['SaltWater'], diet: 'Detritivore', sizeCm: 5, startingPopulation: 100, playable: false, genes: [], description: '' }),
     fields: [
       { key: 'id', label: 'ID', type: 'id' },
@@ -280,7 +280,7 @@ export const DATASETS = {
       { key: 'description', label: 'Description', type: 'text' },
       { key: 'iconicAnimals', label: 'Iconic animals', type: 'records', addLabel: '+ Add animal',
         recordLabel: (a, i) => `${i + 1}. ${a.name || 'Unnamed'} — ${a.age || '?'}`,
-        newRow: () => ({ name: '', scientificName: '', age: 'Cambrian', description: '', bonusEvolutionPoints: 10 }),
+        newRow: () => ({ name: '', scientificName: '', age: 'Ediacaran', description: '', bonusEvolutionPoints: 10 }),
         fields: [
           { key: 'name', label: 'Name', type: 'string' },
           { key: 'scientificName', label: 'Scientific name', type: 'string', italic: true },

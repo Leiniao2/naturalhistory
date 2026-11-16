@@ -58,6 +58,11 @@ namespace NaturalHistory.World
 
         private readonly List<int> seaInView = new(), beachInView = new(), cliffInView = new();
         private readonly Dictionary<int, WaterfallFx> fallsShown = new();
+        // Waterfalls not built yet, nearest the camera first. They are built a couple per frame
+        // after the map changes and then kept (hidden out of view), so none has to be built at the
+        // moment it scrolls into view.
+        private readonly List<int> fallsPending = new();
+        private const int FallsPerFrame = 2;
         private readonly List<Burst> active = new(), pool = new();
         private float nextScan, whitecapDue, beachDue, cliffDue;
 
@@ -117,13 +122,38 @@ namespace NaturalHistory.World
                         falls.Add((c, c.RiverOut));
                 }
             }
+            fallsPending.Clear();
+            for (int i = 0; i < falls.Count; i++) fallsPending.Add(i);
+            if (PhenomenaUtil.CameraFocus(out var focus, out _))
+                fallsPending.Sort((a, b) => FlatDistance(falls[a].cell, focus).CompareTo(FlatDistance(falls[b].cell, focus)));
             nextScan = 0f;
             Debug.Log($"[AmbientWater] {openSea.Count} open-sea tiles, {shores.Count} coast edges, {falls.Count} waterfalls");
+        }
+
+        private static float FlatDistance(HexCell c, Vector3 focus)
+        {
+            var p = c.transform.position;
+            return (p.x - focus.x) * (p.x - focus.x) + (p.z - focus.z) * (p.z - focus.z);
+        }
+
+        private WaterfallFx BuildFall(int i)
+        {
+            fallsPending.Remove(i);
+            var go = new GameObject("Waterfall");
+            go.transform.SetParent(falls[i].cell.transform, false);
+            var w = go.AddComponent<WaterfallFx>();
+            w.edge = falls[i].edge;
+            w.Begin(grid, falls[i].cell, float.PositiveInfinity, i * 7919);
+            fallsShown[i] = w;
+            return w;
         }
 
         private void Update()
         {
             if (grid == null || !grid.IsGenerated || material == null) return;
+            // build the remaining waterfalls in the background, hidden until they come into view
+            for (int k = 0; k < FallsPerFrame && fallsPending.Count > 0; k++)
+                BuildFall(fallsPending[0]).gameObject.SetActive(false);
             // waves are on the surface: none in the Underground view (waterfalls hide themselves)
             if (UnderView.On)
             {
@@ -176,22 +206,11 @@ namespace NaturalHistory.World
 
             for (int i = 0; i < falls.Count; i++)
             {
-                bool near = Near(falls[i].cell);
-                bool shown = fallsShown.TryGetValue(i, out var fx) && fx != null;
-                if (near && !shown)
-                {
-                    var go = new GameObject("Waterfall");
-                    go.transform.SetParent(falls[i].cell.transform, false);
-                    var w = go.AddComponent<WaterfallFx>();
-                    w.edge = falls[i].edge;
-                    w.Begin(grid, falls[i].cell, float.PositiveInfinity, i * 7919);
-                    fallsShown[i] = w;
-                }
-                else if (!near && shown)
-                {
-                    Destroy(fx.gameObject);
-                    fallsShown.Remove(i);
-                }
+                // built ones are kept and just switched on and off (out of view they don't animate)
+                bool near = FlatDistance(falls[i].cell, focus) <= r2 * 2.25f; // a margin past the view, so they're on before they show
+                bool built = fallsShown.TryGetValue(i, out var fx) && fx != null;
+                if (near && !built) fx = BuildFall(i);
+                if (fx != null && fx.gameObject.activeSelf != near) fx.gameObject.SetActive(near);
             }
         }
 
@@ -537,15 +556,23 @@ namespace NaturalHistory.World
             intoWater = down != null && down.IsWater;
 
             halfW  = Mathf.Clamp(0.2f + 0.018f * cell.RiverFlow, 0.21f, 0.36f) * s;
-            // the banks spread most of the way along the tile edge, into the neighbouring tiles
-            reachL = R(0.75f, 1.0f) * s / halfW;
-            reachR = R(0.75f, 1.0f) * s / halfW;
+            // the banks spread a little over half way along the tile edge on each side
+            reachL = R(0.52f, 0.7f) * s / halfW;
+            reachR = R(0.52f, 0.7f) * s / halfW;
+            // ...but only onto land at about the same height: over water or lower ground the bank
+            // would hang off its edge as a slanted sheet, so on that side it stays within this tile.
+            // +across (reachR) is the side of edge + 1, -across (reachL) that of edge + 5.
+            var beside = PhenomenaUtil.EdgeNeighbors(grid, cell);
+            float own = 0.48f * s / halfW;
+            if (!LevelLand(beside[(edge + 1) % 6])) reachR = Mathf.Min(reachR, own);
+            if (!LevelLand(beside[(edge + 5) % 6])) reachL = Mathf.Min(reachL, own);
             cragL  = R(0.25f, 0.7f);
             cragR  = Mathf.Abs(cragL - 0.45f) < 0.12f ? R(0.25f, 0.35f) : R(0.25f, 0.7f); // keep the sides a little different
             cragSeed = R(0f, 100f);
             recess = 0.1f * s;                                   // the middle of the lip lies further back
             lipD   = intoWater ? a * 0.9f : a * 1.38f;           // off a sea cliff at the coast; inland pushed out over the lower slope
             top    = Ground(dir * a * 0.3f) + 0.004f * s;        // the upper tile's flat top
+            bool LevelLand(HexCell n) => n != null && n.Terrain != null && !n.IsWater && n.SurfaceHeight >= cell.SurfaceHeight - 0.05f * s;
             foot   = intoWater ? Ground(dir * a * 1.4f) : Ground(dir * (lipD + 0.3f * s));
             drop   = Mathf.Max(top - foot, 0.08f * s);
             poolAlong  = 0.24f * s;
@@ -690,7 +717,7 @@ namespace NaturalHistory.World
             // an irregular skyline (not mirrored), dying away into the ground at the outer end
             float rough = 0.55f + 0.45f * Mathf.PerlinNoise(x * 2.3f + cragSeed, f * 1.7f + (x < 0f ? 0f : 31f));
             // rises gently from the water's edge, so the banks read as ground rather than walls
-            float crag  = (0.03f * s + drop * 0.2f) * side * rough * Ramp(ax, 1.05f, 1.8f) * (1f - Ramp(ax, reach * 0.6f, reach));
+            float crag  = (0.03f * s + drop * 0.2f) * side * rough * Ramp(ax, 1.05f, Mathf.Lerp(1.05f, reach, 0.45f)) * (1f - Ramp(ax, Mathf.Lerp(1.05f, reach, 0.6f), reach));
             float shelf = ax < 1.02f ? -0.004f * s : 0f;
             return top + shelf + crag * Mathf.Lerp(0.55f, 1f, f);
         }
@@ -709,7 +736,7 @@ namespace NaturalHistory.World
                 // away from the water the rock settles onto the terrain, ending just below it, so the
                 // banks merge into the ground instead of ending in walls; their front edge follows
                 // the tile's edge rather than jutting out over the lower ground like the brink
-                float merge = Ramp(Mathf.Abs(x), 1.15f, (x < 0f ? reachL : reachR) * 0.85f);
+                float merge = Ramp(Mathf.Abs(x), 1.1f, (x < 0f ? reachL : reachR) * 0.9f);
                 float lipX  = Mathf.Lerp(Lip(x), s * 0.8660254f, merge * 0.85f);
                 for (int r = 0; r <= rows; r++)
                 {
@@ -744,12 +771,14 @@ namespace NaturalHistory.World
                 var b0 = g[c, 0]; var b1 = g[c + 1, 0];
                 fx.Quad(b0, b1, new Vector3(b1.x, top - 0.05f * s, b1.z), new Vector3(b0.x, top - 0.05f * s, b0.z));
             }
-            // the two ends, down to the foot (they start just below the ground, so stay out of sight)
+            // the two ends: the banks have settled into the ground there, so just a short skirt below
+            // it (dropping all the way to the foot showed as a wall wherever the ground falls away)
             foreach (int c in new[] { 0, cols })
                 for (int r = 0; r < rows; r++)
                 {
                     Vector3 a0 = g[c, r], a1 = g[c, r + 1];
-                    fx.Quad(a0, a1, new Vector3(a1.x, bottom, a1.z), new Vector3(a0.x, bottom, a0.z));
+                    float y0 = Mathf.Min(a0.y, Ground(a0) - 0.03f * s), y1 = Mathf.Min(a1.y, Ground(a1) - 0.03f * s);
+                    fx.Quad(a0, a1, new Vector3(a1.x, y1, a1.z), new Vector3(a0.x, y0, a0.z));
                 }
             return fx.ToMesh("WaterfallRock");
         }

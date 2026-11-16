@@ -51,6 +51,20 @@ namespace NaturalHistory.World
         private const float MinSpan              = 0.32f;
         private const float MinSwarmSpan         = 0.24f;
         private const float ReserveSpan          = 0.9f; // bigger than this: keep neighbouring tiles free
+        // Each species shows several wild colonies spread over its habitat, so browsing the map shows
+        // the age's diversity everywhere, not only once near the start. Ages with few species get more
+        // of each, aiming at about this many groups in all (see CopiesOf).
+        private const int TargetWildGroups       = 160;
+        private const int MinCopies              = 2;
+        private const int MaxCopies              = 6;
+        private const int TilesPerCopy           = 30;  // a species with little habitat gets fewer copies
+        private const int MaxBigCopies           = 2;   // animals spilling over their tile (ReserveSpan)
+        // Sizes are relative to the age: an age whose biggest animal is small is drawn zoomed in, as
+        // if that animal were this long, so a Cambrian trilobite reads clearly next to Anomalocaris
+        // and gets smaller again once dinosaurs and whales set the scale. Zoomed-in groups show
+        // fewer members (see AgeZoom).
+        private const float AgeReferenceCm       = 600f;
+        private const float MaxAgeZoom           = 3f;
 
         private const float SoarHeight  = 0.75f;
         private const float SwarmHeight = 0.35f;
@@ -117,7 +131,7 @@ namespace NaturalHistory.World
         {
             // only what the current view shows: underground-niche animals in the under view, the rest on the surface
             var list = new List<ColonyGroup>(GroupsAt(cell));
-            list.RemoveAll(g => UnderView.On != (g.Niche == Niche.Underground));
+            list.RemoveAll(g => !UnderView.Shows(g));
             if (list.Count == 0) return null;
             list.Sort((a, b) => Mine(b).CompareTo(Mine(a)));
             int i = current != null ? list.IndexOf(current) : -1;
@@ -230,20 +244,33 @@ namespace NaturalHistory.World
             // food first, then what eats it (see FoodWeb), so hunters can be placed next to their prey
             var order = new List<SpeciesDefinition>(GameDataLoader.Species);
             order.Sort((a, b) => FoodWeb.Stage(a) != FoodWeb.Stage(b) ? FoodWeb.Stage(a).CompareTo(FoodWeb.Stage(b)) : a.sizeCm.CompareTo(b.sizeCm));
+            int alive = order.FindAll(d => !string.IsNullOrEmpty(d.model) && AliveIn(d, age)).Count;
             foreach (var def in order)
             {
                 if (string.IsNullOrEmpty(def.model) || !AliveIn(def, age)) continue;
                 var mesh = LoadMesh(def.model);
                 if (mesh == null) { Debug.LogWarning($"[SpeciesColonies] No mesh at Resources/{def.model} for {def.id}."); continue; }
                 if (!System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style)) style = ColonyStyle.Drift;
-                var cell = FindHabitatCell(def, used, rng);
-                if (cell == null) { Debug.Log($"[SpeciesColonies] No habitat tile with food for {def.id}; skipping."); continue; }
                 var niche = Niches.Of(def);
-                used.Add((cell, niche));
-                // big animals spill over onto the neighbouring tiles; keep other big ones off them
-                if (BuildColony(cell, def, mesh, style, rng) > ReserveSpan)
-                    foreach (var n in grid.GetNeighbors(cell)) used.Add((n, niche));
-                Debug.Log($"[SpeciesColonies] Placed {def.commonName} ({style}) at {cell}.");
+                var candidates = HabitatCells(def);
+                if (candidates.Count == 0) { Debug.Log($"[SpeciesColonies] No habitat tile with food for {def.id}; skipping."); continue; }
+                int copies = CopiesOf(alive, candidates.Count);
+                var placed = new List<(int q, int r)>();
+                for (int i = 0; i < copies; i++)
+                {
+                    var pick = PickHabitatCell(candidates, placed, niche, used, rng);
+                    if (pick == null) break;
+                    var (cell, q, r) = pick.Value;
+                    placed.Add((q, r));
+                    used.Add((cell, niche));
+                    // big animals spill over onto the neighbouring tiles; keep other big ones off them
+                    if (BuildColony(cell, def, mesh, style, rng) > ReserveSpan)
+                    {
+                        foreach (var n in grid.GetNeighbors(cell)) used.Add((n, niche));
+                        copies = Mathf.Min(copies, MaxBigCopies);
+                    }
+                }
+                Debug.Log($"[SpeciesColonies] Placed {placed.Count} {def.commonName} ({style}) colonies.");
             }
             ColoniesPlaced?.Invoke();
         }
@@ -293,6 +320,21 @@ namespace NaturalHistory.World
             return true;
         }
 
+        // How much the age's animals are enlarged: enough that its biggest mapped species is drawn as
+        // if it were AgeReferenceCm long (map size grows with the square root of length), between 1
+        // (ages with big animals keep real relative sizes) and MaxAgeZoom.
+        private static readonly Dictionary<GeologicalAge, float> ageZooms = new();
+        private static float AgeZoom(GeologicalAge age)
+        {
+            if (ageZooms.TryGetValue(age, out float zoom)) return zoom;
+            float largest = 0f;
+            foreach (var def in GameDataLoader.Species)
+                if (!string.IsNullOrEmpty(def.model) && AliveIn(def, age)) largest = Mathf.Max(largest, def.sizeCm);
+            zoom = largest > 0f ? Mathf.Clamp(Mathf.Sqrt(AgeReferenceCm / largest), 1f, MaxAgeZoom) : 1f;
+            ageZooms[age] = zoom;
+            return zoom;
+        }
+
         private static Mesh LoadMesh(string path)
         {
             var model = Resources.Load<GameObject>(path);
@@ -300,33 +342,73 @@ namespace NaturalHistory.World
             return filter != null ? filter.sharedMesh : null;
         }
 
-        // A random tile among the free habitat tiles with food (see FoodWeb) closest to the map centre,
-        // where the camera starts. Tiles that carry a reef, forest or oasis prop, or that a big
-        // neighbouring animal spills onto, are a last resort.
+        // How many wild colonies of a species to show: more per species in ages with few of them,
+        // fewer for species with little habitat.
+        private static int CopiesOf(int aliveSpecies, int habitatTiles) =>
+            Mathf.Min(Mathf.Clamp(TargetWildGroups / Mathf.Max(1, aliveSpecies), MinCopies, MaxCopies),
+                      Mathf.Max(1, habitatTiles / TilesPerCopy));
+
+        // The habitat tiles with food (see FoodWeb) for `def`, with their offset coordinates.
         // Habitats name present-day terrain, so a tile also matches by the biome its climate makes
         // today (a Cretaceous fern prairie is where the plains will be).
-        private HexCell FindHabitatCell(SpeciesDefinition def, HashSet<(HexCell, Niche)> used, System.Random rng)
+        private List<(HexCell cell, int q, int r)> HabitatCells(SpeciesDefinition def)
         {
             var niche = Niches.Of(def);
-            var candidates = new List<(HexCell cell, float dist)>();
-            var center = new Vector2((grid.Width - 1) * 0.5f, (grid.Height - 1) * 0.5f);
+            var cells = new List<(HexCell, int, int)>();
+            if (def.habitats == null) return cells;
             for (int r = 0; r < grid.Height; r++)
             for (int q = 0; q < grid.Width; q++)
             {
                 var cell = grid.GetCell(q, r);
                 if (cell == null || cell.Terrain == null || cell.IsMountain) continue;
-                if (def.habitats == null) continue;
                 if (!def.habitats.Contains(cell.Terrain.kind.ToString()) && !def.habitats.Contains(cell.Biome.ToString())) continue;
                 if (niche == Niche.Underground && UnderView.Blocks(cell.Under)) continue;
-                if (occupants.ContainsKey((cell, niche)) || !FoodWeb.HasFood(def, cell, this, null)) continue;
-                float dist = Vector2.Distance(new Vector2(q, r), center);
-                if (cell.Feature != TerrainFeature.None) dist += 1000f;
-                if (used.Contains((cell, niche))) dist += 2000f;
-                candidates.Add((cell, dist));
+                if (!FoodWeb.HasFood(def, cell, this, null)) continue;
+                cells.Add((cell, q, r));
             }
-            if (candidates.Count == 0) return null;
-            candidates.Sort((a, b) => a.dist.CompareTo(b.dist));
-            return candidates[rng.Next(Mathf.Min(5, candidates.Count))].cell;
+            return cells;
+        }
+
+        // A free tile among `candidates` for the next colony of a species. The first goes near the map
+        // centre, where the camera starts; later ones as far as possible from the species' colonies so
+        // far (best of a random sample, minding the east–west wrap). Tiles that carry a reef, forest or
+        // oasis prop, or that a big neighbouring animal spills onto, are a last resort.
+        private (HexCell cell, int q, int r)? PickHabitatCell(List<(HexCell cell, int q, int r)> candidates,
+            List<(int q, int r)> placed, Niche niche, HashSet<(HexCell, Niche)> used, System.Random rng)
+        {
+            float Penalty(HexCell cell) =>
+                (cell.Feature != TerrainFeature.None ? 1000f : 0f) + (used.Contains((cell, niche)) ? 2000f : 0f);
+            var free = candidates.FindAll(c => !occupants.ContainsKey((c.cell, niche)));
+            if (free.Count == 0) return null;
+
+            if (placed.Count == 0)
+            {
+                var center = new Vector2((grid.Width - 1) * 0.5f, (grid.Height - 1) * 0.5f);
+                free.Sort((a, b) => (Vector2.Distance(new Vector2(a.q, a.r), center) + Penalty(a.cell))
+                         .CompareTo(Vector2.Distance(new Vector2(b.q, b.r), center) + Penalty(b.cell)));
+                return free[rng.Next(Mathf.Min(5, free.Count))];
+            }
+
+            float Spread(int q, int r)
+            {
+                float nearest = float.MaxValue;
+                foreach (var (pq, pr) in placed)
+                {
+                    int dq = Mathf.Abs(q - pq);
+                    dq = Mathf.Min(dq, grid.Width - dq);
+                    nearest = Mathf.Min(nearest, new Vector2(dq, r - pr).magnitude);
+                }
+                return nearest;
+            }
+            (HexCell, int, int)? best = null;
+            float bestScore = float.MinValue;
+            for (int i = 0; i < Mathf.Min(24, free.Count); i++)
+            {
+                var c = free[rng.Next(free.Count)];
+                float score = Spread(c.q, c.r) - Penalty(c.cell);
+                if (score > bestScore) { bestScore = score; best = c; }
+            }
+            return best;
         }
 
         // Returns the size of one member on its tile (in cells).
@@ -335,7 +417,9 @@ namespace NaturalHistory.World
             float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
             var (count, memberSpan, colonyRadius) = Layouts[style];
             if (def.colonySize > 0) count = def.colonySize;
-            float sizeSpan = SizeSpanPerSqrtMetre * Mathf.Sqrt(Mathf.Max(def.sizeCm, 0f) / 100f);
+            float zoom = AgeZoom(grid.DisplayedAge);
+            count = Mathf.Max(1, Mathf.RoundToInt(count / Mathf.Sqrt(zoom))); // bigger members, fewer of them
+            float sizeSpan = SizeSpanPerSqrtMetre * Mathf.Sqrt(Mathf.Max(def.sizeCm, 0f) / 100f) * zoom;
             memberSpan = Mathf.Min(Mathf.Max(memberSpan, sizeSpan), MaxSpan);
             if (def.mapScale > 0f) memberSpan *= def.mapScale; // per-model framing (tall perch, wide web...)
             memberSpan = Mathf.Max(memberSpan, style == ColonyStyle.Swarm ? MinSwarmSpan : MinSpan);

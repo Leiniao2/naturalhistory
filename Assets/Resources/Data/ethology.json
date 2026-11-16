@@ -59,7 +59,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [
         "filter_feeding"
@@ -73,7 +73,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "foraging"
       ],
@@ -89,7 +89,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "foraging"
       ],
@@ -105,7 +105,7 @@
       "tier": 2,
       "row": 1,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "active_predation",
         "hiding"
@@ -354,7 +354,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Pulling back into a tube or shell when touched."
@@ -366,7 +366,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "withdrawal"
       ],
@@ -382,7 +382,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "withdrawal"
       ],
@@ -398,7 +398,7 @@
       "tier": 1,
       "row": 2,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "withdrawal"
       ],
@@ -639,7 +639,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Gathering in one place to spawn."
@@ -651,7 +651,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "spawning_aggregations"
       ],
@@ -918,7 +918,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Gathering where conditions are good."
@@ -930,7 +930,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "aggregation"
       ],
@@ -1200,7 +1200,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Pushing, nipping or chasing a rival away from food or space."
@@ -1212,7 +1212,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "aggression"
       ],
@@ -1479,7 +1479,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Leaving chemical traces for others to detect."
@@ -1758,7 +1758,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Steering toward food and away from danger by following gradients."
@@ -1770,7 +1770,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "taxis"
       ],
@@ -2038,7 +2038,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Choosing a good spot on the sea floor to settle."
@@ -2050,7 +2050,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "settling"
       ],
@@ -2064,7 +2064,7 @@
       "tier": 1,
       "row": 1,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "settling"
       ],
@@ -2080,7 +2080,7 @@
       "tier": 2,
       "row": 0,
       "cost": 8,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "tube_building"
       ],
@@ -2321,7 +2321,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Wiping sediment and fouling off the body with cilia or limbs."
@@ -2333,7 +2333,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "self_cleaning"
       ],
@@ -2599,7 +2599,7 @@
       "tier": 0,
       "row": 0,
       "cost": 0,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Periods of stillness that save energy."
@@ -2611,7 +2611,7 @@
       "tier": 1,
       "row": 0,
       "cost": 6,
-      "age": "Cambrian",
+      "age": "Ediacaran",
       "prerequisites": [
         "quiescence"
       ],
