@@ -7410,10 +7410,10 @@
     "Seabed"
    ],
    "forests": [],
-   "form": "Ribbon",
+   "form": "Tuft",
    "tint": "#7A6A38",
-   "size": 1.1,
-   "description": "Dark ribbon-like seaweed strands common in late Ediacaran shales."
+   "size": 0.9,
+   "description": "Dark ribbon-like strands, a few millimetres wide and a few centimetres long, common in late Ediacaran shales; they lay on the sea floor rather than standing as tall seaweed."
   },
   {
    "id": "doushantuophyton",
@@ -7447,7 +7447,7 @@
    "form": "Feather",
    "tint": "#5A8040",
    "size": 1.0,
-   "description": "Upright branching seaweed of the Miaohe biota, anchored by rhizoids."
+   "description": "Small upright branching seaweed, a few centimetres tall, of the Miaohe biota, anchored by rhizoids."
   },
   {
    "id": "thallophyca",

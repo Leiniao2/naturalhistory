@@ -422,9 +422,9 @@ P = [
  ("tubiphytes","Tubiphytes","Tubiphytes obscurus","Calcimicrobe","Car","Jur","under",["Seabed"],[],"Fingers","#C8B898",1.1,"Encrusting, finger-like growths that built Permian reefs such as El Capitan."),
  ("archaeolithoporella","Archaeolithoporella","Archaeolithoporella","Red alga","Per","Per","under",["Seabed"],[],"Coralline","#C08888",1.1,"Crust-forming alga that bound Permian reefs together."),
  # ---- Second plant pass: more Ediacaran–Devonian algae, early land plants, lichens and first trees ----
- ("vendotaenia","Vendotaenia","Vendotaenia antiqua","Alga","Edi","Cam","under",["Seabed"],[],"Ribbon","#7A6A38",1.1,"Dark ribbon-like seaweed strands common in late Ediacaran shales."),
+ ("vendotaenia","Vendotaenia","Vendotaenia antiqua","Alga","Edi","Cam","under",["Seabed"],[],"Tuft","#7A6A38",0.9,"Dark ribbon-like strands, a few millimetres wide and a few centimetres long, common in late Ediacaran shales; they lay on the sea floor rather than standing as tall seaweed."),
  ("doushantuophyton","Doushantuophyton","Doushantuophyton lineare","Alga","Edi","Edi","under",["Seabed"],[],"Tuft","#4A7A3A",0.9,"Tufts of thin forked threads from the Lantian biota of China."),
- ("konglingiphyton","Konglingiphyton","Konglingiphyton erecta","Alga","Edi","Edi","under",["Seabed"],[],"Feather","#5A8040",1.0,"Upright branching seaweed of the Miaohe biota, anchored by rhizoids."),
+ ("konglingiphyton","Konglingiphyton","Konglingiphyton erecta","Alga","Edi","Edi","under",["Seabed"],[],"Feather","#5A8040",1.0,"Small upright branching seaweed, a few centimetres tall, of the Miaohe biota, anchored by rhizoids."),
  ("thallophyca","Thallophyca","Thallophyca ramosa","Red alga","Edi","Edi","under",["Seabed"],[],"Cushion","#B05A5A",0.8,"Weng'an red alga with growing tips and possible reproductive cells."),
  ("wengania","Wengania","Wengania globosa","Red alga","Edi","Edi","under",["Seabed"],[],"Grape","#A04A50",0.7,"Tiny globular red algae preserved cell by cell in phosphate."),
  ("rock_crust_cyanobacteria","Rock-crust cyanobacteria","Epilithic and endolithic cyanobacteria","Cyanobacterium","Edi","","under",["Rock", "Cave"],[],"Mat","#3A4A38",1.0,"Dark microbial films on bare rock, long before any plant reached land."),

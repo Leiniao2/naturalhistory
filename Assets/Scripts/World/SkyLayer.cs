@@ -25,7 +25,9 @@ namespace NaturalHistory.World
         private HexGrid grid;
         private GameObject deck;
         private Material material;
-        private Texture2D weather;
+        private Texture2D weather, weatherPrev; // this turn's and last turn's, cross-faded
+        private const float WeatherFade = 6f;   // seconds for new weather to drift in
+        private float weatherChanged = -100f;
         private int weatherTurn; // reseeds where the storms are, each climate update
         private WeatherFall fall;
 
@@ -54,6 +56,7 @@ namespace NaturalHistory.World
             UnderView.Changed -= Apply;
             if (climateHooked && Climate.ClimateSystem.Instance != null) Climate.ClimateSystem.Instance.Updated -= OnClimate;
             if (weather != null) Destroy(weather);
+            if (weatherPrev != null) Destroy(weatherPrev);
             fall?.Clear();
         }
 
@@ -155,17 +158,29 @@ namespace NaturalHistory.World
             for (int pass = 0; pass < 8; pass++) landPx = Blur(landPx, tw, th);
             for (int k = 0; k < px.Length; k++) px[k].a = landPx[k].r;
 
-            if (weather == null || weather.width != tw || weather.height != th)
+            // the old weather becomes the one fading out (the first map has nothing to fade from)
+            bool fresh = weather == null || weather.width != tw || weather.height != th;
+            if (fresh)
             {
                 if (weather != null) Destroy(weather);
-                weather = new Texture2D(tw, th, TextureFormat.RGBA32, false, true)
-                    { name = "SkyWeather", wrapModeU = TextureWrapMode.Repeat, wrapModeV = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
+                if (weatherPrev != null) Destroy(weatherPrev);
+                weather = NewWeatherTexture(tw, th);
+                weatherPrev = NewWeatherTexture(tw, th);
             }
+            else (weather, weatherPrev) = (weatherPrev, weather);
             weather.SetPixels(px);
             weather.Apply(false);
+            if (fresh) { weatherPrev.SetPixels(px); weatherPrev.Apply(false); }
             material.SetTexture("_Weather", weather);
+            material.SetTexture("_WeatherPrev", weatherPrev);
+            material.SetFloat("_WeatherBlend", fresh ? 1f : 0f);
+            weatherChanged = fresh ? -100f : Time.time;
             material.SetVector("_WeatherRect", new Vector4(xMin, zMin, grid.WrapWidth, zSpan));
         }
+
+        private static Texture2D NewWeatherTexture(int w, int h) =>
+            new(w, h, TextureFormat.RGBA32, false, true)
+                { name = "SkyWeather", wrapModeU = TextureWrapMode.Repeat, wrapModeV = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
 
         // 3×3 box blur, wrapping east–west
         private static Color[] Blur(Color[] src, int w, int h)
@@ -215,6 +230,8 @@ namespace NaturalHistory.World
         private void LateUpdate()
         {
             if (!climateHooked) HookClimate();
+            if (material != null && Time.time - weatherChanged < WeatherFade + 0.5f)
+                material.SetFloat("_WeatherBlend", Mathf.SmoothStep(0f, 1f, (Time.time - weatherChanged) / WeatherFade));
             if (deck == null || !deck.activeSelf) return;
             var cam = Camera.main;
             if (cam == null) return;

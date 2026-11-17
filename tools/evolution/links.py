@@ -2,8 +2,13 @@ import json, sys
 import os
 P = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "Assets", "Resources", "Data") + os.sep
 AGES = "Ediacaran Cambrian Ordovician Silurian Devonian Carboniferous Permian Triassic Jurassic Cretaceous Paleogene Neogene Quaternary".split()
+# Each species evolves from its closest relative in the real tree of life (phylogeny.py) that
+# appears no later than it. The links below were written by hand: where the tree has the same
+# origin and target, their requirements, grants and description are used; the rest are worked
+# out from the species' traits (trait_rules.json) and described by the clade the target enters.
+#
 # from, to, functions required, behaviors required, functions granted, behaviors granted, why
-L = [
+CURATED = [
  # --- From the Ediacaran ---
  ("ikaria_wariootia","myllokunmingia_fengjiaoa",["through_gut","coelom","nerve_cords"],["burrowing_escape"],["notochord"],[],"Ikaria-like burrowers were among the first animals with a front, a back and a gut: the ancestry of chordates and so of the first vertebrates."),
  ("spriggina_floundersi","hallucigenia",["segmentation","cephalisation"],["hiding"],["compound_eyes"],[],"A segmented Ediacaran animal standing in for the soft-bodied ancestors of lobopodians and arthropods."),
@@ -84,23 +89,131 @@ L = [
  ("asteroceras","nipponites_mirabilis",["three_hearts"],["vertical_migration"],[],[],"A heteromorph ammonite with a bizarrely knotted shell."),
  ("cameroceras","wyoteuthis_linsterorum",["camera_eyes","three_hearts"],["ink_cloud","schooling"],[],[],"Belemnites hid their shell inside the body, like squid."),
 ]
-species = {s["id"]: s for s in json.load(open(P+"species.json"))["species"]}
+import hashlib
+import phylogeny
+
+# Species without a map model can't be shown or played, so they are left out of the tree
+species = {s["id"]: s for s in json.load(open(P+"species.json"))["species"] if s.get("model")}
+order = {sid: i for i, sid in enumerate(species)}
 rules = json.load(open(P+"trait_rules.json"))
 gtags = {g["group"]: set(g["tags"]) for g in rules["groups"]}
 need = {"morphology": {r["item"]: set(r["tags"]) for r in rules["functions"]},
         "ethology":   {r["item"]: set(r["tags"]) for r in rules["behaviors"]}}
 nodes = {k: {n["id"]: n for n in json.load(open(P+f"{k}.json"))["nodes"]} for k in ["morphology","ethology"]}
 errs = []
+
+# ---------- The tree ----------
+def path(sid):
+    s = species[sid]
+    p = phylogeny.SPECIES.get(sid) or phylogeny.GROUPS.get(s["group"])
+    if p is None: errs.append(f"{sid}: group {s['group']} not in phylogeny.GROUPS")
+    return (p or "Eukaryota").split("/")
+
+paths = {sid: path(sid) for sid in species}
+age = {sid: AGES.index(species[sid]["firstAge"]) for sid in species}
+# appears first, basal first; phylogeny.FIRST: stems that come before the rest of their period
+first = {sid: i for i, sid in enumerate(phylogeny.FIRST)}
+rank = {sid: (age[sid], first.get(sid, len(first)), len(paths[sid]), order[sid]) for sid in species}
+
+def common(a, b):
+    n = 0
+    for x, y in zip(paths[a], paths[b]):
+        if x != y: break
+        n += 1
+    return n
+
+MIN_COMMON = 2  # below the root of the eukaryotes there is no ancestor to stand in for
+parent = {}
+for t in sorted(species, key=lambda s: rank[s]):
+    best, key = None, None
+    for s in species:
+        if rank[s] >= rank[t]: continue
+        c = common(s, t)
+        if c < MIN_COMMON: continue
+        side = len(paths[s]) - c   # how far the candidate is out on a side branch of the shared clade
+        # the deepest shared clade, counting each step out on a side branch against it (a stem member
+        # of the target's own line beats a more derived cousin); then the latest
+        k = (c - side, -side, c, age[s], -rank[s][2], -order[s])
+        if key is None or k > key: best, key = s, k
+    if best: parent[t] = best
+
+# ---------- Requirements and grants ----------
+tagfreq = {}
+for tags in gtags.values():
+    for tg in tags: tagfreq[tg] = tagfreq.get(tg, 0) + 1
+
+def jitter(*parts):
+    return int(hashlib.md5("|".join(parts).encode()).hexdigest()[:6], 16) / 0xFFFFFF * 0.01
+
+def genes(sid):
+    return {g["gene"]: g["expression"] for g in species[sid].get("genes") or []}
+
+def pick(kind, frm, to, n, granted):
+    A, B = gtags[species[frm]["group"]], gtags[species[to]["group"]]
+    tage = age[to]
+    go, gt = genes(frm), genes(to)
+    scored = []
+    for item, node in nodes[kind].items():
+        nd = need[kind].get(item, {"Animal"})
+        if AGES.index(node["age"]) > tage or not (nd & B): continue
+        if granted:
+            if nd & A: continue                     # new to the line
+        elif not (nd & A): continue                 # the origin can acquire it
+        novelty = len(nd & (B - A))
+        spec = sum(1.0 / tagfreq.get(tg, 1) for tg in nd & B)
+        # what the item does for the target: the genes it unlocks that the target has, above all
+        # those it has more of than the origin (what changes on the way)
+        gain = sum(max(0.0, gt[g] - go.get(g, 0.0)) + 0.3 * gt[g] for g in node.get("unlocksGenes") or [] if g in gt)
+        # items any vertebrate or any animal has (jaws, a bilateral body) say little about this step:
+        # weight the gain by how particular the item is to the target's line, and by its tier
+        focus = 0.25 + min(1.0, 12.0 * spec)
+        scored.append((4 * gain * focus + 2 * novelty + spec + 0.08 * node["tier"] + jitter(frm, to, item), item))
+    scored.sort(reverse=True)
+    # leave out what nearly every animal of the line has (jaws for a vertebrate, lungs for a
+    # tetrapod) unless nothing more particular is left
+    def generic(item):
+        nd = need[kind].get(item, {"Animal"}) & B
+        return min(tagfreq.get(tg, 999) for tg in nd) > GENERIC
+    particular = [x for x in scored if not generic(x[1])]
+    return [i for _, i in (particular if len(particular) >= n else scored)[:n]]
+
+GENERIC = 100  # tags held by more groups than this are too common to stand for a step
+
+def note_for(frm, to):
+    pf, pt = paths[frm], paths[to]
+    c = common(frm, to)
+    for clade in pt[c:]:                            # the first clade the target enters
+        if clade in phylogeny.CLADE_NOTES: return phylogeny.CLADE_NOTES[clade]
+    for clade in reversed(pt):                      # same clade: its own note
+        if clade in phylogeny.CLADE_NOTES: return phylogeny.CLADE_NOTES[clade]
+    return ""
+
+curated = {(f, t): (fr, br, fg, bg, why) for f, t, fr, br, fg, bg, why in CURATED}
+# requirements and grants chosen by hand for the generated links (requirements.py), keyed "from>to"
+try:
+    from requirements import REVIEWED
+except ImportError:
+    REVIEWED = {}
+L = []
+for t in sorted(parent, key=lambda s: rank[s]):
+    f = parent[t]
+    if (f, t) in curated:
+        L.append((f, t) + curated[(f, t)])
+        continue
+    if f"{f}>{t}" in REVIEWED:
+        fr, br, fg, bg = REVIEWED[f"{f}>{t}"]
+        L.append((f, t, fr, br, fg, bg, note_for(f, t)))
+        continue
+    L.append((f, t, pick("morphology", f, t, 2, False), pick("ethology", f, t, 1, False),
+              pick("morphology", f, t, 1, True), pick("ethology", f, t, 1, True), note_for(f, t)))
+
+# ---------- Checks ----------
 seen = set()
 for frm, to, fr, br, fg, bg, why in L:
-    for sid in (frm, to):
-        if sid not in species: errs.append(f"unknown species {sid}")
-    if frm not in species or to not in species: continue
     if (frm,to) in seen: errs.append(f"duplicate {frm}>{to}")
     seen.add((frm,to))
     o, t = species[frm], species[to]
     if not t.get("model"): errs.append(f"{to}: no model")
-    if t.get("mapStyle") == "Fixed": errs.append(f"{to}: Fixed (can't move)")
     if AGES.index(t["firstAge"]) < AGES.index(o["firstAge"]): errs.append(f"{frm}>{to}: target older than origin")
     tags = gtags[o["group"]]
     for k, items in (("morphology", fr), ("ethology", br)):
@@ -113,8 +226,12 @@ for frm, to, fr, br, fg, bg, why in L:
         for i in items:
             if i not in nodes[k]: errs.append(f"{frm}>{to}: unknown granted {k} {i}")
 if errs: print("\n".join(errs)); sys.exit(1)
-out = {"notes": "Evolution links: a copy of `from` can evolve into `to` once its species has every required function (morphology) and behavior (ethology) item, the target's period has begun and it stands on or next to a tile the target can live on. Requirements are items of the origin species' trees. grantFunctions/grantBehaviors are acquired automatically on evolving. Validated against trait_rules.json by tools.",
+out = {"notes": "Evolution links: a copy of `from` can evolve into `to` once its species has every required function (morphology) and behavior (ethology) item, the target's period has begun and it stands on or next to a tile the target can live on. Requirements are items of the origin species' trees. grantFunctions/grantBehaviors are acquired automatically on evolving. Generated from the tree of life in tools/evolution/phylogeny.py and validated against trait_rules.json by tools/evolution/links.py.",
        "links": [{"from": f, "to": t, "functions": fr, "behaviors": br, "grantFunctions": fg, "grantBehaviors": bg, "description": why}
                  for f, t, fr, br, fg, bg, why in L]}
 json.dump(out, open(P+"evolution.json","w"), indent=1)
-print("ok", len(L), "links,", len({x for l in L for x in l[:2]}), "species")
+kept = sum(1 for l in L if (l[0], l[1]) in curated)
+stale = sorted(k for k in REVIEWED if tuple(k.split(">")) not in {(l[0], l[1]) for l in L})
+if stale: print("requirements.py: no such link any more:", ", ".join(stale))
+roots = sorted(s for s in species if s not in parent)
+print("ok", len(L), "links,", kept, "hand-written kept;", len(roots), "roots:", ", ".join(roots))

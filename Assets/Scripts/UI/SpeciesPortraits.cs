@@ -34,6 +34,10 @@ namespace NaturalHistory.UI
             {
                 r.gameObject.layer = Layer;
                 if (material != null) r.sharedMaterial = material; // vertex-coloured, like on the map
+                var filter = r.GetComponent<MeshFilter>();
+                var block = new MaterialPropertyBlock();
+                block.SetVector(World.AnimalFur.FurId, World.AnimalFur.Of(species, filter != null ? filter.sharedMesh : null));
+                r.SetPropertyBlock(block);
                 bounds.Encapsulate(r.bounds);
             }
 

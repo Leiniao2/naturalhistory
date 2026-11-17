@@ -1,5 +1,5 @@
 // The sky layer's cloud deck (see World/SkyLayer.cs): drifting clouds over the map, unlit. Clear
-// sky lets the land show dimly below; thin cloud veils it; thick cloud cores hide it. The clouds
+// sky lets the land show dimly below; thin cloud veils it; thick cloud and the big cloud banks hide it. The clouds
 // are value noise in world space, so they line up across the deck.
 //
 // - Weather (_Weather, from the tiles' climate): R cloud cover, G thunderstorm, B blizzard.
@@ -13,6 +13,8 @@
 //   they don't line up in rows.
 // - Colour: a few clouds glow gold or pink, more of them pink toward one side of the world and gold
 //   toward the other, the sides turning slowly with no visible line between them.
+// - Aurora: now and then, over part of a polar region, wavering green curtains fringed with pink
+//   and violet shimmer above the clouds, then fade away. Each pole has its own spells.
 // No LightMode tag and plain UnityCG, so it renders in both the built-in pipeline and URP. Lives in
 // Resources so it is included in builds and found by Resources.Load.
 Shader "NaturalHistory/SkyVeil"
@@ -27,6 +29,8 @@ Shader "NaturalHistory/SkyVeil"
         _DayLength ("Seconds per pink/gold turn", Float) = 400
         _SeasonLength ("Seconds per monsoon season cycle", Float) = 300
         _Weather ("Weather (R cover, G storm, B blizzard, A land)", 2D) = "black" {}
+        _WeatherPrev ("Previous weather (fading out)", 2D) = "black" {}
+        _WeatherBlend ("Previous to current weather", Range(0, 1)) = 1
         _WeatherRect ("Weather rect (x, z, width, depth)", Vector) = (0, 0, 1, 1)
     }
     SubShader
@@ -48,7 +52,8 @@ Shader "NaturalHistory/SkyVeil"
             fixed4 _Color, _CloudColor;
             float _Scale, _Speed, _Clear, _DayLength, _SeasonLength;
             float4 _Weather_TexelSize;
-            sampler2D _Weather;
+            sampler2D _Weather, _WeatherPrev;
+            float _WeatherBlend; // 0 = last turn's weather .. 1 = this turn's (SkyLayer fades it in)
             float4 _WeatherRect;
 
             struct appdata { float4 vertex : POSITION; };
@@ -120,11 +125,12 @@ Shader "NaturalHistory/SkyVeil"
                 float2 move = wind * _Speed * period;
                 float2 p0 = (w - move * ph0) * _Scale + warp;
                 float2 p1 = (w - move * ph1) * _Scale + float2(37.2, 11.9) + warp;
+                // k = weight of phase 1: full when phase 0 restarts (ph0 = 0 or 1), none when phase 1 does
                 float k = abs(1.0 - 2.0 * ph0);
-                float n = lerp(fbm(p1), fbm(p0), k);
+                float n = lerp(fbm(p0), fbm(p1), k);
                 // the sun side of each billow is brighter: compare with a sample toward the light
                 float2 toSun = float2(-0.6, 0.8) * 0.08;
-                float m = lerp(fbm(p1 + toSun), fbm(p0 + toSun), k);
+                float m = lerp(fbm(p0 + toSun), fbm(p1 + toSun), k);
                 lit = saturate(0.55 + (n - m) * 5.0);
                 return n;
             }
@@ -133,7 +139,7 @@ Shader "NaturalHistory/SkyVeil"
             {
                 float2 w = i.world;
                 float2 uv = (w - _WeatherRect.xy) / _WeatherRect.zw;
-                float4 wx = tex2D(_Weather, uv);
+                float4 wx = lerp(tex2D(_WeatherPrev, uv), tex2D(_Weather, uv), _WeatherBlend);
                 float cover = wx.r, storm = wx.g, snow = wx.b;
                 float2 wind = Wind(w, uv);
 
@@ -144,11 +150,17 @@ Shader "NaturalHistory/SkyVeil"
                 float lit;
                 float n = Clouds(w, wind, warp, lit);
 
-                // more cover (and any storm) lowers the threshold: clear gaps, thin veils, thick cores
-                float lo = lerp(0.6, 0.36, saturate(cover + storm * 0.6 + snow * 0.6));
-                float veil  = smoothstep(lo, lo + 0.18, n);
-                float thick = smoothstep(lo + 0.12, lo + 0.34, n);
-                float alpha = lerp(_Clear, 0.5, veil) + thick * 0.45;
+                // Cloud banks: big slow masses where the cloud thickens into an opaque sheet that
+                // hides the land below (more of them where the air is humid)
+                float bank = smoothstep(0.42, 0.6, fbm3(w * _Scale * 0.2 + warp * 0.6 + float2(3.7, 1.9)))
+                           * (0.55 + 0.45 * cover);
+
+                // more cover (and any storm, and the banks) lowers the threshold: clear gaps, thin
+                // veils, thick cores
+                float lo = lerp(0.54, 0.32, saturate(cover + storm * 0.6 + snow * 0.6)) - bank * 0.16;
+                float veil  = smoothstep(lo, lo + 0.16, n);
+                float thick = smoothstep(lo + 0.06, lo + 0.22, n);
+                float alpha = lerp(_Clear, 0.5, veil) + thick * 0.48;
 
                 float3 shadow = float3(0.60, 0.66, 0.76);
                 float3 col = lerp(_Color.rgb, lerp(shadow, _CloudColor.rgb, lit), veil);
@@ -202,6 +214,41 @@ Shader "NaturalHistory/SkyVeil"
                 float3 warm = lerp(float3(1.0, 0.84, 0.50), float3(1.0, 0.62, 0.74), pinkness);
                 float patch = smoothstep(0.5, 0.66, fbm3(tq)) * veil * (1.0 - storm) * (1.0 - snow);
                 col = lerp(col, col * warm * 1.12, patch * 0.85);
+
+                // Aurora: curtains of light along a wavering oval near each pole, on now and then
+                {
+                    float mid = _WeatherRect.y + _WeatherRect.w * 0.5, hspan = _WeatherRect.w * 0.5;
+                    float north = w.y > mid ? 1.0 : 0.0;
+                    float lat = saturate(abs(w.y - mid) / hspan);
+                    // spells come and go over minutes, each pole on its own, and over some longitudes
+                    float spell = smoothstep(0.58, 0.72, noise(float2(_Time.y / 70.0, north * 13.7 + 2.1)));
+                    float along = (w.x - _WeatherRect.x) / _WeatherRect.z * 6.28318;
+                    float reach = smoothstep(0.35, 0.6, noise(float2(cos(along) * 2.0 + north * 9.0, sin(along) * 2.0 + _Time.y * 0.01)));
+                    float strength = spell * reach;
+                    if (strength > 0.001)
+                    {
+                        float aurora = 0.0, fringe = 0.0;
+                        for (int c = 0; c < 2; c++)
+                        {
+                            // the curtain's line: a latitude that wavers along the oval and slowly writhes
+                            float ridge = 0.8 - 0.06 * c
+                                + 0.035 * sin(w.x * 0.11 + _Time.y * 0.07 + c * 2.0)
+                                + 0.05 * (fbm3(float2(w.x * 0.035 + _Time.y * 0.02, c * 4.3 + north * 7.0)) - 0.5);
+                            float d = (lat - ridge) * hspan;                 // world units across the curtain
+                            float width = 0.9 + 0.5 * c;
+                            float band = exp(-d * d / (width * width));
+                            float tail = exp(-max(d, 0.0) / (width * 2.5)) * step(0.0, d); // trails poleward
+                            float rays = 0.45 + 0.55 * noise(float2(w.x * 1.4 + _Time.y * 0.35 + c * 11.0, _Time.y * 0.6));
+                            aurora += (band + tail * 0.5) * rays;
+                            fringe += tail * rays;
+                        }
+                        aurora = saturate(aurora) * strength;
+                        float3 green = float3(0.35, 1.0, 0.55), pink = float3(0.95, 0.35, 0.75), violet = float3(0.55, 0.35, 1.0);
+                        float3 glow = lerp(green, lerp(pink, violet, 0.5 + 0.5 * sin(w.x * 0.05 + _Time.y * 0.05)), saturate(fringe * 0.7));
+                        col += glow * aurora * 0.9;
+                        alpha = max(alpha, aurora * 0.75);
+                    }
+                }
 
                 return fixed4(col, saturate(alpha));
             }

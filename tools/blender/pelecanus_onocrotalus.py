@@ -12,10 +12,14 @@ edge.
 Large animal: high-detail fused body, ~15k triangles.
 
 Usage:
-  blender --background --python tools/blender/pelecanus_onocrotalus.py -- [--render out.png]
+  blender --background --python tools/blender/pelecanus_onocrotalus.py -- [--flight] [--render out.png]
 
 Output: Assets/Resources/Models/Species/WhitePelican.fbx
 Faces -Y, pivot at the WATERLINE (z = 0); only the keel sits below it. ~1.75 long incl. bill.
+--flight: WhitePelicanFlight.fbx, in flight (nh_flight): the neck folded back so the head rests on
+the shoulders with the long bill and pouch lying forward on the breast, short feet tucked under the
+tail, huge broad wings spread (~3 across: white with a rosy flush, black primaries and
+secondaries), pivot at the body centre.
 """
 
 import math
@@ -24,6 +28,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import nh_flight  # noqa: E402
 import nh_model as nh  # noqa: E402
 from mathutils import Matrix, Vector, noise  # noqa: E402
 
@@ -226,5 +231,84 @@ def build():
     return mb.to_object("WhitePelican", roughness=0.6)
 
 
+FEET = (0.98, 0.68, 0.45)
+FLIGHT_HEAD = Vector((0.0, -0.50, 0.20))  # the head pulled back onto the shoulders in flight
+
+
+def flight_body_color(co, n):
+    grain = noise.noise(co * 18.0)
+    col = nh.lerp(WHITE, PINK_FLUSH, 0.8 + 0.2 * grain)
+    col = nh.lerp(col, WHITE, nh.smoothstep(0.6, 0.95, n.z) * 0.3)
+    return nh.lerp(col, SHADE, nh.smoothstep(0.1, -0.8, n.z) * 0.45)
+
+
+def flight_wing_color(t, c, top):
+    """Spread wing: white with a rosy flush over the coverts, the flight feathers black
+    (secondaries along the trailing edge, the whole outer hand); paler grey-black below."""
+    hand = nh.smoothstep(0.5, 0.6, t)
+    trailing = nh.smoothstep(0.5, 0.62, c)
+    black = max(hand, trailing)
+    if top:
+        cov = nh.lerp(WHITE, PINK_FLUSH, 0.6 * (1 - t))
+        return nh.lerp(cov, BLACK, black)
+    return nh.lerp(nh.lerp(WHITE, SHADE, 0.3), BLACK_SHEEN, black)
+
+
+def build_flight():
+    # Body, breast and the thick neck folded back in an S, fused smooth as in the swimming model
+    parts = nh.MeshBuilder()
+    parts.add(nh.uv_ellipsoid((0, 0, 0), BODY_R, segments=32, rings=20, deform=body_deform), WHITE)
+    parts.add(nh.ellipsoid((0, -0.40, 0.04), (0.17, 0.19, 0.15), subdivisions=3), WHITE)  # deep breast, over the body's front pole
+    # (its end tucked inside the head, which hides the rim the remesh leaves there)
+    neck = [(0, -0.36, 0.06), (0, -0.43, 0.11), (0, -0.48, 0.17), FLIGHT_HEAD + Vector((0, 0.005, -0.005))]
+    parts.add(nh.tube(neck, [0.14, 0.11, 0.08, 0.05], sides=16), WHITE)
+    body = parts.fuse(voxel=0.012, smooth=6, smooth_factor=0.5, max_tris=9000)
+
+    mb = nh.MeshBuilder()
+    mb.add(body, flight_body_color)
+
+    # Head, bill, pouch, crest and eyes: built and painted where they sit on the swimming bird,
+    # then moved onto the shoulders, the bill tipped up a little to lie forward on the breast
+    hb = nh.MeshBuilder()
+    hb.add(nh.ellipsoid(HEAD, HEAD_R, subdivisions=3), body_color)
+    hb.add(nh.ellipsoid(HEAD + Vector((0, -0.065, 0.0)), (0.035, 0.05, 0.035), subdivisions=2), body_color)
+    # (no crest: it lies flat in flight, and its fanned tuft read as a ring round the head from above)
+    hb.add(*bill())
+    hb.add(*nail())
+    hb.add(*pouch())
+    for sx in (-1, 1):
+        eye = HEAD + Vector((sx * 0.058, -0.02, 0.012))
+        hb.add(nh.ellipsoid(eye + Vector((-sx * 0.004, -0.008, -0.002)), (0.02, 0.036, 0.022), subdivisions=2), FACE)
+        hb.add(nh.ellipsoid(eye, (0.016, 0.02, 0.016), subdivisions=2), FACE_YELLOW)
+        hb.add(nh.ellipsoid(eye + Vector((sx * 0.007, 0, 0)), (0.012, 0.013, 0.012), subdivisions=2), EYE)
+    move = (Matrix.Translation(FLIGHT_HEAD) @ Matrix.Rotation(math.radians(-20), 4, "X")
+            @ Matrix.Translation(-HEAD))
+    nh.transform(hb.bm, move)
+    mb.add(hb.bm, None)
+
+    # Short white tail and the pink feet tucked up beneath it
+    outline = [(-0.09, 0.44, 0.0), (0.09, 0.44, 0.0), (0.11, 0.62, 0.0), (0.0, 0.67, 0.0), (-0.11, 0.62, 0.0)]
+    tail_bm = nh.flat_panel(outline, thickness=0.025)
+    nh.transform(tail_bm, Matrix.Translation((0, 0, 0.05)))
+    mb.add(tail_bm, lambda co, n: nh.lerp(WHITE, SHADE, nh.smoothstep(0.55, 0.67, co.y) * 0.4), smooth=False)
+    for sx in (-1, 1):
+        mb.add(nh.tube([(sx * 0.07, 0.30, -0.13), (sx * 0.075, 0.42, -0.10), (sx * 0.07, 0.52, -0.07)],
+                       [0.03, 0.035, 0.0], sides=6, scale_xy=(1.0, 0.5)), FEET)
+
+    # Huge broad wings, about 3 across (wingspan ~1.7x the length), rounded hand
+    for side in (1, -1):
+        mb.add(*nh_flight.make_wing(side, 1.5, flight_wing_color, root_x=0.12, y0=0.0, z0=0.06,
+                                    leading=((0.0, -0.18), (0.45, -0.22), (0.85, -0.14), (1.0, -0.02)),
+                                    chord=((0.0, 0.46), (0.45, 0.42), (0.85, 0.30), (1.0, 0.10)),
+                                    dihedral=((0.0, 0.0), (0.5, 0.06), (1.0, 0.08)),
+                                    thickness=((0.0, 0.09), (0.45, 0.05), (1.0, 0.01)),
+                                    stations=20, chord_points=tuple(i / 10 for i in range(11))))
+
+    return mb.to_object("WhitePelicanFlight", roughness=0.6)
+
+
 if __name__ == "__main__":
-    nh.run(build, "WhitePelican", ground=(0.22, 0.42, 0.50), views=((40, 22), (-90, 5), (25, 65)))
+    if "--flight" in sys.argv:
+        nh.run(build_flight, "WhitePelicanFlight", views=((35, 25), (20, 70), (180, -35)))
+    else:
+        nh.run(build, "WhitePelican", ground=(0.22, 0.42, 0.50), views=((40, 22), (-90, 5), (25, 65)))

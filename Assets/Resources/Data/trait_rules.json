@@ -440,6 +440,12 @@
    ]
   },
   {
+   "group": "Choanoflagellate",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
    "group": "Chordate",
    "tags": [
     "Animal",
@@ -1268,6 +1274,20 @@
     "Arthropod",
     "Insect",
     "Terrestrial arthropod"
+   ]
+  },
+  {
+   "group": "Lagerpetid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur"
    ]
   },
   {
@@ -2446,6 +2466,20 @@
     "Arthropod",
     "Insect",
     "Terrestrial arthropod"
+   ]
+  },
+  {
+   "group": "Squamate",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Squamate"
    ]
   },
   {

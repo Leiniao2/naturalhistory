@@ -104,7 +104,10 @@
       "sizeCm": 0.5,
       "startingPopulation": 300,
       "playable": true,
+      "model": "Models/Species/Ikaria",
       "mapStyle": "Swim",
+      "colonySize": 4,
+      "mapScale": 0.5,
       "genes": [],
       "description": "A grain-sized burrower, one of the earliest known bilaterian animals, with a front, a back and a gut."
     },
@@ -277,6 +280,11 @@
       "sizeCm": 4,
       "startingPopulation": 250,
       "playable": true,
+      "model": "Models/Species/Pikaia",
+      "mapStyle": "Swim",
+      "mapUndulate": true,
+      "colonySize": 5,
+      "mapScale": 0.5,
       "genes": [
         { "gene": "swimming_speed", "expression": 0.4 },
         { "gene": "filter_feeding", "expression": 0.6 },
@@ -297,6 +305,10 @@
       "sizeCm": 2.5,
       "startingPopulation": 250,
       "playable": true,
+      "model": "Models/Species/Haikouichthys",
+      "mapStyle": "Swim",
+      "colonySize": 5,
+      "mapScale": 0.5,
       "genes": [
         { "gene": "swimming_speed", "expression": 0.5 },
         { "gene": "vision_acuity", "expression": 0.3 },
@@ -401,6 +413,29 @@
         { "gene": "regeneration", "expression": 0.5 }
       ],
       "description": "A shapeless single cell that crawls by flowing into finger-like pseudopods and engulfs bacteria, algae and smaller protists whole. Soft-bodied amoebae leave almost no fossil record, so it stands in for the ancient protists of every age."
+    },
+    {
+      "id": "choanoflagellate",
+      "commonName": "Choanoflagellate",
+      "scientificName": "Salpingoeca rosetta",
+      "kingdom": "Protista",
+      "group": "Choanoflagellate",
+      "firstAge": "Ediacaran",
+      "lastAge": "",
+      "habitats": ["SaltWater", "FreshWater"],
+      "diet": "Filter feeder",
+      "sizeCm": 0.002,
+      "startingPopulation": 9000,
+      "playable": true,
+      "model": "Models/Species/Choanoflagellate",
+      "mapStyle": "Drift",
+      "genes": [
+        { "gene": "filter_feeding", "expression": 0.8 },
+        { "gene": "swimming_speed", "expression": 0.3 },
+        { "gene": "asexual_reproduction", "expression": 0.8 },
+        { "gene": "reproduction_rate", "expression": 0.7 }
+      ],
+      "description": "A rosette of a dozen single cells that divided without letting go, each beating a long flagellum inside a collar of fine microvilli that strains out bacteria. Choanoflagellates are the closest living relatives of animals: their collar cells are almost identical to those that line sponges, and colonies like this one hint at how the first animals came together from single cells."
     },
     {
       "id": "physalia_physalis",
@@ -593,6 +628,7 @@
       "startingPopulation": 300,
       "playable": true,
       "model": "Models/Species/CommonKingfisher",
+      "flightModel": "Models/Species/CommonKingfisherFlight",
       "mapStyle": "Fixed",
       "colonySize": 2,
       "mapScale": 0.55,
@@ -703,6 +739,7 @@
       "startingPopulation": 120,
       "playable": true,
       "model": "Models/Species/Sunbittern",
+      "flightModel": "Models/Species/SunbitternFlight",
       "mapStyle": "Ground",
       "mapLegs": 1,
       "mapHip": 0.4,
@@ -731,6 +768,7 @@
       "startingPopulation": 400,
       "playable": true,
       "model": "Models/Species/MandarinDuck",
+      "flightModel": "Models/Species/MandarinDuckFlight",
       "mapStyle": "Float",
       "colonySize": 3,
       "mapScale": 0.8,
@@ -1189,6 +1227,7 @@
       "startingPopulation": 20000,
       "playable": true,
       "model": "Models/Species/SevenSpotLadybird",
+      "flightModel": "Models/Species/SevenSpotLadybirdFlight",
       "mapStyle": "Fixed",
       "colonySize": 3,
       "mapScale": 0.7,
@@ -2033,6 +2072,7 @@
       "startingPopulation": 600,
       "playable": true,
       "model": "Models/Species/GreaterFlamingo",
+      "flightModel": "Models/Species/GreaterFlamingoFlight",
       "mapStyle": "Ground",
       "mapLegs": 1,
       "mapHip": 0.55,
@@ -2224,6 +2264,7 @@
       "startingPopulation": 300,
       "playable": true,
       "model": "Models/Species/WhitePelican",
+      "flightModel": "Models/Species/WhitePelicanFlight",
       "mapStyle": "Float",
       "colonySize": 4,
       "genes": [
@@ -2988,6 +3029,55 @@
         { "gene": "vision_acuity", "expression": 0.6 }
       ],
       "description": "One of the earliest known dinosaurs, a lightly built biped about 1 metre long from the roughly 231-million-year-old Ischigualasto Formation of north-western Argentina. Its teeth were mixed: leaf-shaped ones at the front of the upper jaw, like those of plant-eaters, and curved blades behind, so it probably ate both plants and small animals. Its hands had five fingers, three of them long and clawed for grasping. First described as an early theropod, it is now often placed near the base of the sauropodomorphs, though its exact position is still debated."
+    },
+    {
+      "id": "lagerpeton_chanarensis",
+      "commonName": "Lagerpeton",
+      "scientificName": "Lagerpeton chanarensis",
+      "kingdom": "Animalia",
+      "group": "Lagerpetid",
+      "firstAge": "Triassic",
+      "lastAge": "Triassic",
+      "habitats": ["Plain", "Savanna", "Steppe"],
+      "diet": "Carnivore",
+      "sizeCm": 70,
+      "startingPopulation": 300,
+      "playable": true,
+      "model": "Models/Species/Lagerpeton",
+      "mapStyle": "Ground",
+      "mapLegs": 1,
+      "mapHip": 0.68,
+      "colonySize": 3,
+      "genes": [
+        { "gene": "carnivory", "expression": 0.6 },
+        { "gene": "land_speed", "expression": 0.8 },
+        { "gene": "vision_acuity", "expression": 0.6 }
+      ],
+      "description": "A small, slender reptile about 70 cm long from the roughly 236-million-year-old Chañares Formation of Argentina, running on long, stilt-like hind legs with a very long foot. Lagerpetids were long thought to be close to the dinosaurs; skulls and inner ears described in 2020 showed that they are the closest known relatives of the pterosaurs, so animals like it stand near the split between the flying reptiles and the dinosaurs. It probably hunted insects and other small animals."
+    },
+    {
+      "id": "megachirella_wachtleri",
+      "commonName": "Megachirella",
+      "scientificName": "Megachirella wachtleri",
+      "kingdom": "Animalia",
+      "group": "Squamate",
+      "firstAge": "Triassic",
+      "lastAge": "Triassic",
+      "habitats": ["Rainforest", "Plain"],
+      "diet": "Carnivore",
+      "sizeCm": 20,
+      "startingPopulation": 400,
+      "playable": true,
+      "model": "Models/Species/Megachirella",
+      "mapStyle": "Ground",
+      "colonySize": 3,
+      "genes": [
+        { "gene": "carnivory", "expression": 0.6 },
+        { "gene": "climbing", "expression": 0.4 },
+        { "gene": "camouflage", "expression": 0.5 },
+        { "gene": "heat_tolerance", "expression": 0.6 }
+      ],
+      "description": "A small lizard about 20 cm long from the 240-million-year-old rocks of the Dolomites in northern Italy, and the oldest known squamate: the group of lizards and snakes. Its name means 'big hand', for its large clawed hands. A study of its skeleton in 2018 showed that it was already a true squamate, so the ancestors of all lizards and snakes lived in the Triassic, long before the oldest known snakes. It probably hunted insects among coastal plants."
     },
     {
       "id": "shonisaurus_popularis",

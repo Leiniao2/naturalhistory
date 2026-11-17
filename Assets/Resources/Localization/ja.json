@@ -14911,6 +14911,1090 @@
   {
    "k": "High mountain",
    "v": "高山"
+  },
+  {
+   "k": "Ciliates, foraminifera and their kin form a branch of the eukaryotes of their own, far from the animals.",
+   "v": "繊毛虫や有孔虫とその仲間は、動物から遠く離れた真核生物の独自の一群をなす。"
+  },
+  {
+   "k": "Ciliates row with thousands of cilia under a skin of flattened sacs.",
+   "v": "繊毛虫は扁平な小胞の膜に覆われ、何千本もの繊毛で水をこいで進む。"
+  },
+  {
+   "k": "Foraminifera reach out with threads of cytoplasm and build chambered shells.",
+   "v": "有孔虫は糸のような細胞質を伸ばし、部屋に分かれた殻をつくる。"
+  },
+  {
+   "k": "Heliozoans belong with the diatoms and brown algae, though they hunt like animals.",
+   "v": "太陽虫は珪藻や褐藻の仲間だが、動物のように獲物を捕らえる。"
+  },
+  {
+   "k": "Parabasalids live without mitochondria, in the guts of termites and other animals.",
+   "v": "副基体類はミトコンドリアをもたず、シロアリなどの腸の中で暮らす。"
+  },
+  {
+   "k": "Amoebae belong to the branch of eukaryotes that also gave rise to fungi and animals.",
+   "v": "アメーバは、菌類と動物も生み出した真核生物の系統に属する。"
+  },
+  {
+   "k": "Amoebae crawl and feed by flowing out arms of cytoplasm.",
+   "v": "アメーバは細胞質の腕を流れ出させて這い、食物をとる。"
+  },
+  {
+   "k": "Choanoflagellates, single cells with a collar of microvilli round a whip, are the closest living relatives of animals.",
+   "v": "襟鞭毛虫は鞭毛のまわりに微絨毛の襟をもつ単細胞生物で、動物に最も近い現生の親戚である。"
+  },
+  {
+   "k": "Animals: many cells working together, the first of them sponge-like collar-cell feeders.",
+   "v": "動物：多くの細胞が協力して生きる。最初の動物は海綿のように襟細胞で餌をこしとった。"
+  },
+  {
+   "k": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed.",
+   "v": "海綿は体に水を通し、襟細胞でこしとる。単細胞の祖先と同じ食べ方だ。"
+  },
+  {
+   "k": "Demosponges build their skeletons of spongin and silica needles.",
+   "v": "普通海綿は海綿質繊維とケイ酸の骨針で骨格をつくる。"
+  },
+  {
+   "k": "Archaeocyaths were reef-building sponges with double cone-shaped walls.",
+   "v": "古杯類は二重の円錐形の壁をもつ、礁をつくる海綿だった。"
+  },
+  {
+   "k": "Comb jellies swim with rows of beating combs of cilia.",
+   "v": "有櫛動物は櫛板の列を打ち振って泳ぐ。"
+  },
+  {
+   "k": "Frond-shaped Ediacaran organisms, among the first large animals.",
+   "v": "葉状のエディアカラ生物で、最初の大型動物のひとつ。"
+  },
+  {
+   "k": "Rangeomorphs grew as fractal fronds on the deep sea floor.",
+   "v": "ランゲオモルフは深海底でフラクタル状の葉状体として育った。"
+  },
+  {
+   "k": "Animals with true tissues, nerves and muscles.",
+   "v": "本物の組織、神経、筋肉をもつ動物。"
+  },
+  {
+   "k": "Cloudina built some of the first mineral skeletons, stacked cones of calcite.",
+   "v": "クラウディナは最初期の鉱物骨格のひとつ、方解石の円錐を積み重ねた管をつくった。"
+  },
+  {
+   "k": "Cnidarians catch prey with stinging cells.",
+   "v": "刺胞動物は刺胞で獲物を捕らえる。"
+  },
+  {
+   "k": "Anthozoans are polyps all their lives: anemones and corals.",
+   "v": "花虫類は一生ポリプのまま過ごす。イソギンチャクやサンゴの仲間。"
+  },
+  {
+   "k": "Corals build limestone skeletons and form reefs.",
+   "v": "サンゴは石灰質の骨格をつくり、礁を築く。"
+  },
+  {
+   "k": "Tabulate corals built honeycomb colonies of tiny tubes.",
+   "v": "床板サンゴは細い管がハチの巣状に集まった群体をつくった。"
+  },
+  {
+   "k": "Rugose corals grew as horn-shaped cups.",
+   "v": "四射サンゴは角のような形の杯状に育った。"
+  },
+  {
+   "k": "Modern stony corals, with algae living in their tissues.",
+   "v": "現代のイシサンゴ。組織の中に藻類が共生する。"
+  },
+  {
+   "k": "Sea anemones are soft corals without a skeleton.",
+   "v": "イソギンチャクは骨格をもたないサンゴの仲間である。"
+  },
+  {
+   "k": "Medusozoans swim as jellyfish for part of their lives.",
+   "v": "ヒドロ虫などのクラゲ類は、生涯の一時期をクラゲとして泳ぐ。"
+  },
+  {
+   "k": "Siphonophores are colonies of specialised polyps that act as one animal.",
+   "v": "クダクラゲは役割の分かれたポリプが集まり、一匹の動物のようにふるまう群体である。"
+  },
+  {
+   "k": "Bilaterians have a front and a back, a left and a right side, and a gut.",
+   "v": "左右相称動物には前と後ろ、左右の側、そして消化管がある。"
+  },
+  {
+   "k": "Deuterostomes form the anus first in the embryo: the line of echinoderms and chordates.",
+   "v": "新口動物は胚の中で肛門が先にできる。棘皮動物と脊索動物の系統。"
+  },
+  {
+   "k": "Echinoderms and hemichordates share a larva with a looping band of cilia.",
+   "v": "棘皮動物と半索動物は、環状の繊毛帯をもつ幼生を共有する。"
+  },
+  {
+   "k": "Graptolites were colonial hemichordates drifting in the plankton.",
+   "v": "筆石はプランクトンとして漂う群体性の半索動物だった。"
+  },
+  {
+   "k": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet.",
+   "v": "棘皮動物は方解石の板で骨格をつくり、水圧で動く管足で移動する。"
+  },
+  {
+   "k": "Sea lilies filter the water with feathery arms on a stalk.",
+   "v": "ウミユリは柄の上の羽のような腕で水をこしとる。"
+  },
+  {
+   "k": "Free-living echinoderms such as sea stars crawl mouth-down on the sea floor.",
+   "v": "ヒトデなど自由生活の棘皮動物は、口を下にして海底を這う。"
+  },
+  {
+   "k": "Chordates have a stiffening rod, the notochord, along the back.",
+   "v": "脊索動物は背中に沿って脊索という支えの棒をもつ。"
+  },
+  {
+   "k": "Vertebrates: a skull, eyes and a backbone around the nerve cord.",
+   "v": "脊椎動物：頭骨、眼、そして神経索を包む背骨。"
+  },
+  {
+   "k": "Conodonts were eel-like vertebrates with comb-like teeth.",
+   "v": "コノドントは櫛のような歯をもつウナギ形の脊椎動物だった。"
+  },
+  {
+   "k": "Galeaspids were jawless fish with a bony head shield.",
+   "v": "ガレアスピス類は骨質の頭甲をもつ無顎類だった。"
+  },
+  {
+   "k": "Armoured jawless fish with bony shields.",
+   "v": "骨の盾で武装した無顎類。"
+  },
+  {
+   "k": "Anaspids were small, streamlined jawless fish.",
+   "v": "欠甲類は小さく流線形の無顎類だった。"
+  },
+  {
+   "k": "Thelodonts were jawless fish covered in tiny scales.",
+   "v": "テロドゥス類は細かな鱗に覆われた無顎類だった。"
+  },
+  {
+   "k": "Osteostracans had a horseshoe-shaped head shield and paired fins.",
+   "v": "骨甲類は馬蹄形の頭甲と対になったひれをもっていた。"
+  },
+  {
+   "k": "Jaws evolved from gill arches, opening up new ways of feeding.",
+   "v": "顎はえらの弓から進化し、新しい食べ方を切り開いた。"
+  },
+  {
+   "k": "Placoderms were armoured jawed fish, the first giant predators.",
+   "v": "板皮類は装甲をまとった顎のある魚で、最初の巨大捕食者だった。"
+  },
+  {
+   "k": "The crown of jawed vertebrates: sharks and bony fish.",
+   "v": "顎口類の冠群：サメと硬骨魚。"
+  },
+  {
+   "k": "Cartilaginous fish keep replacing their teeth all their lives.",
+   "v": "軟骨魚類は一生歯を生え替わらせ続ける。"
+  },
+  {
+   "k": "Chimaeras and their kin have tooth plates that grind shellfish.",
+   "v": "ギンザメとその仲間は貝をすりつぶす歯板をもつ。"
+  },
+  {
+   "k": "Sharks and rays.",
+   "v": "サメとエイ。"
+  },
+  {
+   "k": "Modern sharks and rays.",
+   "v": "現代のサメとエイ。"
+  },
+  {
+   "k": "Galeomorph sharks include the great hunters of the open sea.",
+   "v": "ネズミザメ上目には外洋の大型ハンターが含まれる。"
+  },
+  {
+   "k": "Rays flattened out to live on and above the sea floor.",
+   "v": "エイは平たくなり、海底とその上で暮らすようになった。"
+  },
+  {
+   "k": "Bony fish grew skeletons of bone and lungs, later turned into swim bladders.",
+   "v": "硬骨魚は骨の骨格と肺を得た。肺はのちに浮き袋になった。"
+  },
+  {
+   "k": "Ray-finned fish took over the waters of the world.",
+   "v": "条鰭類は世界の水域を制した。"
+  },
+  {
+   "k": "Neopterygians have a more flexible jaw.",
+   "v": "新鰭類はより柔軟な顎をもつ。"
+  },
+  {
+   "k": "Gars and their kin, covered in shiny, heavy scales.",
+   "v": "ガーとその仲間。光沢のある重い鱗に覆われる。"
+  },
+  {
+   "k": "Pachycormids included giant plankton feeders of the Jurassic.",
+   "v": "パキコルムス類にはジュラ紀の巨大なプランクトン食者がいた。"
+  },
+  {
+   "k": "Teleosts, with their protrusible jaws, are almost all fish living today.",
+   "v": "真骨類は突き出せる顎をもち、今日の魚のほとんどを占める。"
+  },
+  {
+   "k": "Ichthyodectiforms were big predatory teleosts.",
+   "v": "イクチオデクテス類は大型の肉食性真骨魚だった。"
+  },
+  {
+   "k": "Herrings and their kin.",
+   "v": "ニシンとその仲間。"
+  },
+  {
+   "k": "Otophysans hear with a chain of bones linking the swim bladder to the ear.",
+   "v": "骨鰾類は浮き袋と耳をつなぐ小骨の連鎖で音を聞く。"
+  },
+  {
+   "k": "Spiny-finned fish.",
+   "v": "棘鰭類。"
+  },
+  {
+   "k": "Lobe-finned fish have fleshy fins on bones.",
+   "v": "肉鰭類のひれは骨のある肉質のひれである。"
+  },
+  {
+   "k": "Lungfish breathe air with real lungs.",
+   "v": "肺魚は本物の肺で空気を吸う。"
+  },
+  {
+   "k": "Tetrapodomorphs: lobe-finned fish on the way to limbs.",
+   "v": "四肢形類：四肢へ向かう途中の肉鰭類。"
+  },
+  {
+   "k": "Rhizodonts were giant predatory lobe-fins.",
+   "v": "リゾドゥス類は巨大な肉食性の肉鰭類だった。"
+  },
+  {
+   "k": "Lobe-fins with the bones of the tetrapod limb already in their fins.",
+   "v": "ひれの中にすでに四肢動物の肢の骨をもつ肉鰭類。"
+  },
+  {
+   "k": "Fish with flat heads, necks and sturdy fins hauled out in shallow water.",
+   "v": "平たい頭と首、頑丈なひれをもつ魚が浅瀬に這い上がった。"
+  },
+  {
+   "k": "Tetrapods: four limbs with digits.",
+   "v": "四肢動物：指のある四本の肢。"
+  },
+  {
+   "k": "The amphibian line, laying their eggs in water.",
+   "v": "両生類の系統。水中に卵を産む。"
+  },
+  {
+   "k": "Temnospondyls were the most varied early amphibians.",
+   "v": "分椎類は最も多様な初期の両生類だった。"
+  },
+  {
+   "k": "Modern amphibians breathe partly through their skin.",
+   "v": "現生の両生類は一部を皮膚で呼吸する。"
+  },
+  {
+   "k": "Frogs and toads leap on long hind legs.",
+   "v": "カエルは長い後ろ脚で跳ねる。"
+  },
+  {
+   "k": "Lepospondyls were small, often oddly shaped early tetrapods.",
+   "v": "空椎類は小さく、しばしば奇妙な形の初期四肢動物だった。"
+  },
+  {
+   "k": "The line of tetrapods leading to amniotes.",
+   "v": "羊膜類へと続く四肢動物の系統。"
+  },
+  {
+   "k": "The amniotic egg freed vertebrates from the water.",
+   "v": "羊膜卵が脊椎動物を水から解き放った。"
+  },
+  {
+   "k": "Synapsids, with one opening behind the eye, are the line of mammals.",
+   "v": "単弓類は眼の後ろに穴が一つあり、哺乳類へ続く系統である。"
+  },
+  {
+   "k": "Caseids were bulky plant-eating synapsids with tiny heads.",
+   "v": "カセア類は頭が小さく、体の大きな植物食の単弓類だった。"
+  },
+  {
+   "k": "Eupelycosaurs include the sail-backed synapsids.",
+   "v": "真盤竜類には背中に帆をもつ単弓類が含まれる。"
+  },
+  {
+   "k": "Sphenacodonts had teeth of different shapes, an early step toward mammals.",
+   "v": "スフェナコドン類は形の異なる歯をもち、哺乳類への初期の一歩を示す。"
+  },
+  {
+   "k": "Therapsids walked with their legs more under the body.",
+   "v": "獣弓類は脚をより体の下に置いて歩いた。"
+  },
+  {
+   "k": "Dinocephalians were big, thick-skulled therapsids.",
+   "v": "恐頭類は頭骨の厚い大型の獣弓類だった。"
+  },
+  {
+   "k": "Dicynodonts cropped plants with a horny beak and two tusks.",
+   "v": "ディキノドン類は角質のくちばしと2本の牙で植物をかじった。"
+  },
+  {
+   "k": "Theriodonts were the sabre-toothed predators of the Permian.",
+   "v": "獣歯類はペルム紀のサーベル状の牙をもつ捕食者だった。"
+  },
+  {
+   "k": "Cynodonts had a secondary palate and were probably warm-blooded.",
+   "v": "キノドン類は二次口蓋をもち、おそらく温血だった。"
+  },
+  {
+   "k": "Mammaliaforms had the mammalian jaw joint and ear.",
+   "v": "哺乳形類は哺乳類型の顎関節と耳をもっていた。"
+  },
+  {
+   "k": "Mammals nurse their young with milk.",
+   "v": "哺乳類は乳で子を育てる。"
+  },
+  {
+   "k": "Monotremes still lay eggs.",
+   "v": "単孔類は今も卵を産む。"
+  },
+  {
+   "k": "Mammals that went on to give birth to live young.",
+   "v": "のちに胎生へと進んだ哺乳類。"
+  },
+  {
+   "k": "Therian mammals give birth to live young.",
+   "v": "獣類の哺乳類は子を直接産む。"
+  },
+  {
+   "k": "Metatherians, the marsupial line, give birth to tiny young.",
+   "v": "後獣類は有袋類の系統で、ごく小さな子を産む。"
+  },
+  {
+   "k": "Marsupials raise their young in a pouch.",
+   "v": "有袋類は育児嚢で子を育てる。"
+  },
+  {
+   "k": "Eutherians: the line of placental mammals.",
+   "v": "真獣類：有胎盤類へ続く系統。"
+  },
+  {
+   "k": "Placentals that evolved on the southern continents.",
+   "v": "南の大陸で進化した有胎盤類。"
+  },
+  {
+   "k": "Xenarthrans, with extra joints in the backbone: sloths, anteaters and armadillos.",
+   "v": "異節類は背骨に余分な関節をもつ。ナマケモノ、アリクイ、アルマジロ。"
+  },
+  {
+   "k": "Sloths and anteaters.",
+   "v": "ナマケモノとアリクイ。"
+  },
+  {
+   "k": "Armadillos and glyptodonts are covered in bony armour.",
+   "v": "アルマジロとグリプトドンは骨の鎧に覆われる。"
+  },
+  {
+   "k": "Afrotheres evolved in Africa.",
+   "v": "アフリカ獣類はアフリカで進化した。"
+  },
+  {
+   "k": "Elephants, sea cows and their kin evolved along the Tethys Sea.",
+   "v": "ゾウ、海牛とその仲間はテチス海沿いで進化した。"
+  },
+  {
+   "k": "Proboscideans: a trunk and tusks.",
+   "v": "長鼻類：長い鼻と牙。"
+  },
+  {
+   "k": "Mastodons and elephants grew big and spread across the world.",
+   "v": "マストドンとゾウは大型化し、世界中に広がった。"
+  },
+  {
+   "k": "True elephants.",
+   "v": "真のゾウ。"
+  },
+  {
+   "k": "Sea cows went back to the water and graze on seagrass.",
+   "v": "海牛は水に戻り、海草を食べる。"
+  },
+  {
+   "k": "Placentals of the northern continents.",
+   "v": "北の大陸の有胎盤類。"
+  },
+  {
+   "k": "Primates and rodents and their kin.",
+   "v": "霊長類と齧歯類とその仲間。"
+  },
+  {
+   "k": "Early primate relatives with grasping hands.",
+   "v": "物をつかめる手をもつ初期の霊長類の近縁。"
+  },
+  {
+   "k": "Primates: grasping hands, forward-facing eyes and big brains.",
+   "v": "霊長類：物をつかむ手、前を向いた眼、大きな脳。"
+  },
+  {
+   "k": "Old World monkeys and apes.",
+   "v": "旧世界ザルと類人猿。"
+  },
+  {
+   "k": "Old World monkeys.",
+   "v": "旧世界ザル。"
+  },
+  {
+   "k": "Apes have no tail and big brains.",
+   "v": "類人猿には尾がなく、脳が大きい。"
+  },
+  {
+   "k": "Hominins walk upright on two legs.",
+   "v": "ヒト族は二本の脚で直立して歩く。"
+  },
+  {
+   "k": "Our own genus, with big brains and stone tools.",
+   "v": "私たち自身の属。大きな脳と石器をもつ。"
+  },
+  {
+   "k": "Rodents and rabbits have ever-growing incisors.",
+   "v": "齧歯類とウサギ類の門歯は一生伸び続ける。"
+  },
+  {
+   "k": "Rodents gnaw with ever-growing incisors.",
+   "v": "齧歯類は伸び続ける門歯でかじる。"
+  },
+  {
+   "k": "Laurasiatheres evolved on the northern continents.",
+   "v": "ローラシア獣類は北の大陸で進化した。"
+  },
+  {
+   "k": "Shrews, hedgehogs and moles.",
+   "v": "トガリネズミ、ハリネズミ、モグラ。"
+  },
+  {
+   "k": "Bats, carnivores and hoofed mammals.",
+   "v": "コウモリ、食肉類、有蹄類。"
+  },
+  {
+   "k": "Bats are the only mammals that truly fly.",
+   "v": "コウモリは本当に飛べる唯一の哺乳類である。"
+  },
+  {
+   "k": "Ferae: meat-eaters with shearing teeth.",
+   "v": "食肉類と鱗甲類の仲間：肉を裂く歯をもつ肉食者。"
+  },
+  {
+   "k": "Carnivoramorphs slice meat with a pair of blade-like teeth.",
+   "v": "食肉形類は刃のような一対の歯で肉を切る。"
+  },
+  {
+   "k": "Carnivorans.",
+   "v": "食肉目。"
+  },
+  {
+   "k": "Cats and their kin.",
+   "v": "ネコとその仲間。"
+  },
+  {
+   "k": "Cats are the most specialised meat-eaters.",
+   "v": "ネコ科は最も特殊化した肉食者である。"
+  },
+  {
+   "k": "Dogs, bears and their kin.",
+   "v": "イヌ、クマとその仲間。"
+  },
+  {
+   "k": "Bears.",
+   "v": "クマ。"
+  },
+  {
+   "k": "Weasels, otters and their kin.",
+   "v": "イタチ、カワウソとその仲間。"
+  },
+  {
+   "k": "Hoofed mammals.",
+   "v": "有蹄の哺乳類。"
+  },
+  {
+   "k": "South American hoofed mammals, distant relatives of horses.",
+   "v": "南米の有蹄類。ウマの遠い親戚。"
+  },
+  {
+   "k": "Odd-toed ungulates carry their weight on the middle toe.",
+   "v": "奇蹄類は中央の指で体重を支える。"
+  },
+  {
+   "k": "Horses and their relatives.",
+   "v": "ウマとその仲間。"
+  },
+  {
+   "k": "Horses ran on ever fewer toes as grasslands spread.",
+   "v": "草原が広がるにつれ、ウマは指を減らして走った。"
+  },
+  {
+   "k": "Grazing horses with high-crowned teeth.",
+   "v": "歯冠の高い、草を食むウマ。"
+  },
+  {
+   "k": "Chalicotheres were odd-toed ungulates with claws.",
+   "v": "カリコテリウムは爪をもつ奇蹄類だった。"
+  },
+  {
+   "k": "Rhinos and tapirs.",
+   "v": "サイとバク。"
+  },
+  {
+   "k": "Even-toed ungulates walk on two toes.",
+   "v": "偶蹄類は2本の指で歩く。"
+  },
+  {
+   "k": "Hippos and whales are each other's closest relatives.",
+   "v": "カバとクジラは互いに最も近い親戚である。"
+  },
+  {
+   "k": "Camels.",
+   "v": "ラクダ。"
+  },
+  {
+   "k": "Ruminants chew the cud and ferment grass in a stomach of four chambers.",
+   "v": "反芻類は反芻し、四つの部屋に分かれた胃で草を発酵させる。"
+  },
+  {
+   "k": "Whales evolved from hoofed mammals that returned to the sea.",
+   "v": "クジラは海に戻った有蹄の哺乳類から進化した。"
+  },
+  {
+   "k": "Fully aquatic whales, no longer able to walk on land.",
+   "v": "完全に水生となり、もう陸を歩けないクジラ。"
+  },
+  {
+   "k": "Modern whales.",
+   "v": "現代のクジラ。"
+  },
+  {
+   "k": "Toothed whales hunt by echolocation.",
+   "v": "ハクジラは反響定位で狩りをする。"
+  },
+  {
+   "k": "Baleen whales filter the sea through baleen plates.",
+   "v": "ヒゲクジラはくじらひげで海水をこしとる。"
+  },
+  {
+   "k": "Sauropsids: the reptiles and birds.",
+   "v": "竜弓類：爬虫類と鳥類。"
+  },
+  {
+   "k": "True reptiles.",
+   "v": "真爬虫類。"
+  },
+  {
+   "k": "Parareptiles, an early branch of reptiles.",
+   "v": "側爬虫類。爬虫類の初期の一系統。"
+  },
+  {
+   "k": "Diapsids have two openings behind the eye.",
+   "v": "双弓類は眼の後ろに二つの穴をもつ。"
+  },
+  {
+   "k": "Neodiapsids include all living reptiles.",
+   "v": "新双弓類にはすべての現生爬虫類が含まれる。"
+  },
+  {
+   "k": "Lizards, crocodiles, turtles, dinosaurs and birds.",
+   "v": "トカゲ、ワニ、カメ、恐竜、鳥類。"
+  },
+  {
+   "k": "Lizards and snakes and their kin.",
+   "v": "トカゲ、ヘビとその仲間。"
+  },
+  {
+   "k": "Squamates shed their scaly skin.",
+   "v": "有鱗類は鱗の皮を脱ぎ捨てる。"
+  },
+  {
+   "k": "Iguanians.",
+   "v": "イグアナ類。"
+  },
+  {
+   "k": "Squamates with venom glands: snakes, monitors and mosasaurs.",
+   "v": "毒腺をもつ有鱗類：ヘビ、オオトカゲ、モササウルス。"
+  },
+  {
+   "k": "Snakes lost their legs.",
+   "v": "ヘビは脚を失った。"
+  },
+  {
+   "k": "Vipers, with long folding fangs.",
+   "v": "クサリヘビ類。折りたためる長い毒牙をもつ。"
+  },
+  {
+   "k": "Ichthyosaurs became dolphin-shaped reptiles of the open sea.",
+   "v": "魚竜は外洋に暮らすイルカのような姿の爬虫類になった。"
+  },
+  {
+   "k": "Sauropterygians returned to the sea with paddle-like limbs.",
+   "v": "鰭竜類はかいのような四肢をもって海に戻った。"
+  },
+  {
+   "k": "Nothosaurs and plesiosaurs.",
+   "v": "ノトサウルスと首長竜。"
+  },
+  {
+   "k": "Plesiosaurs flew through the water on four flippers.",
+   "v": "首長竜は4枚のひれで水中を飛ぶように泳いだ。"
+  },
+  {
+   "k": "Turtles grew a shell from their ribs.",
+   "v": "カメは肋骨から甲羅をつくった。"
+  },
+  {
+   "k": "True turtles pull their head into the shell.",
+   "v": "真のカメは頭を甲羅に引っ込める。"
+  },
+  {
+   "k": "Cryptodires pull their head straight back into the shell.",
+   "v": "潜頸類は頭をまっすぐ後ろへ甲羅に引っ込める。"
+  },
+  {
+   "k": "Side-necked turtles fold the neck sideways.",
+   "v": "曲頸類は首を横に折り曲げる。"
+  },
+  {
+   "k": "Archosauromorphs: the line of crocodiles, dinosaurs and birds.",
+   "v": "主竜形類：ワニ、恐竜、鳥類へ続く系統。"
+  },
+  {
+   "k": "Rhynchosaurs cropped plants with a hooked beak.",
+   "v": "リンコサウルス類は鉤状のくちばしで植物をかじった。"
+  },
+  {
+   "k": "Archosauriforms have teeth set in sockets.",
+   "v": "主竜形下綱の歯は歯槽に収まっている。"
+  },
+  {
+   "k": "Archosaurs: crocodiles on one side, dinosaurs and birds on the other.",
+   "v": "主竜類：一方にワニ、もう一方に恐竜と鳥類。"
+  },
+  {
+   "k": "Pseudosuchians, the crocodile line of archosaurs.",
+   "v": "偽鰐類、主竜類のワニ側の系統。"
+  },
+  {
+   "k": "Loricatans were the big predators of the Triassic.",
+   "v": "ロリカタ類は三畳紀の大型捕食者だった。"
+  },
+  {
+   "k": "Crocodylomorphs.",
+   "v": "ワニ形類。"
+  },
+  {
+   "k": "Crocodyliforms.",
+   "v": "ワニ形上目。"
+  },
+  {
+   "k": "Crocodilians.",
+   "v": "ワニ目。"
+  },
+  {
+   "k": "The bird line of archosaurs.",
+   "v": "主竜類の鳥側の系統：鳥頸類。"
+  },
+  {
+   "k": "Pterosaurs and dinosaurs.",
+   "v": "翼竜と恐竜。"
+  },
+  {
+   "k": "Pterosaurs flew on wings of skin.",
+   "v": "翼竜は皮膜の翼で飛んだ。"
+  },
+  {
+   "k": "Short-tailed pterosaurs, some as big as giraffes.",
+   "v": "尾の短い翼竜。キリンほど大きなものもいた。"
+  },
+  {
+   "k": "Dinosaurs stood upright on legs held under the body.",
+   "v": "恐竜は体の真下に脚を置いて直立した。"
+  },
+  {
+   "k": "Ornithischians were plant-eaters with a beak.",
+   "v": "鳥盤類はくちばしをもつ植物食者だった。"
+  },
+  {
+   "k": "Thyreophorans were armoured dinosaurs.",
+   "v": "装盾類は装甲をまとった恐竜だった。"
+  },
+  {
+   "k": "Stegosaurs carried plates and spikes.",
+   "v": "剣竜は骨板とスパイクを背負っていた。"
+  },
+  {
+   "k": "Ankylosaurs were armoured like tanks.",
+   "v": "鎧竜は戦車のように装甲されていた。"
+  },
+  {
+   "k": "Neornithischians.",
+   "v": "新鳥盤類。"
+  },
+  {
+   "k": "Ornithopods chewed plants with batteries of teeth.",
+   "v": "鳥脚類は並んだ歯の列で植物をかみ砕いた。"
+  },
+  {
+   "k": "Marginocephalians had a frill or a dome at the back of the skull.",
+   "v": "周飾頭類は頭骨の後ろにフリルやドームをもっていた。"
+  },
+  {
+   "k": "Ceratopsians had horns and frills.",
+   "v": "角竜は角とフリルをもっていた。"
+  },
+  {
+   "k": "Pachycephalosaurs had thick domed skulls.",
+   "v": "堅頭竜は厚いドーム状の頭骨をもっていた。"
+  },
+  {
+   "k": "Saurischians: sauropods and theropods.",
+   "v": "竜盤類：竜脚類と獣脚類。"
+  },
+  {
+   "k": "Sauropodomorphs had long necks.",
+   "v": "竜脚形類は長い首をもっていた。"
+  },
+  {
+   "k": "Sauropods were the largest land animals ever.",
+   "v": "竜脚類は史上最大の陸上動物だった。"
+  },
+  {
+   "k": "Macronarians.",
+   "v": "マクロナリア類。"
+  },
+  {
+   "k": "Diplodocoids had whip-like tails.",
+   "v": "ディプロドクス上科はむちのような尾をもっていた。"
+  },
+  {
+   "k": "Theropods were the hunting dinosaurs.",
+   "v": "獣脚類は狩りをする恐竜だった。"
+  },
+  {
+   "k": "Neotheropods.",
+   "v": "新獣脚類。"
+  },
+  {
+   "k": "Averostrans.",
+   "v": "アヴェロストラ類。"
+  },
+  {
+   "k": "Ceratosaurs.",
+   "v": "ケラトサウルス類。"
+  },
+  {
+   "k": "Tetanurans.",
+   "v": "テタヌラ類。"
+  },
+  {
+   "k": "Allosauroids were great predators.",
+   "v": "アロサウルス上科は強大な捕食者だった。"
+  },
+  {
+   "k": "Megalosauroids include the fish-eating spinosaurs.",
+   "v": "メガロサウルス上科には魚食のスピノサウルス類が含まれる。"
+  },
+  {
+   "k": "Coelurosaurs were feathered.",
+   "v": "コエルロサウルス類は羽毛をもっていた。"
+  },
+  {
+   "k": "Tyrannosaurs.",
+   "v": "ティラノサウルス上科。"
+  },
+  {
+   "k": "Maniraptorans have long arms and wing-like feathers.",
+   "v": "マニラプトル類は長い腕と翼のような羽をもつ。"
+  },
+  {
+   "k": "Paravians: the dromaeosaurs and birds.",
+   "v": "原鳥類：ドロマエオサウルス類と鳥類。"
+  },
+  {
+   "k": "Dromaeosaurs.",
+   "v": "ドロマエオサウルス類。"
+  },
+  {
+   "k": "Avialans: the line of birds.",
+   "v": "鳥群：鳥類へ続く系統。"
+  },
+  {
+   "k": "Ornithurans.",
+   "v": "真鳥類。"
+  },
+  {
+   "k": "Birds are living dinosaurs.",
+   "v": "鳥類は生きている恐竜である。"
+  },
+  {
+   "k": "Palaeognaths: ostriches, emus and moas.",
+   "v": "古顎類：ダチョウ、エミュー、モア。"
+  },
+  {
+   "k": "Neognaths are almost all living birds.",
+   "v": "新顎類はほぼすべての現生鳥類である。"
+  },
+  {
+   "k": "Fowl and waterfowl.",
+   "v": "キジ類とカモ類。"
+  },
+  {
+   "k": "Ducks, geese and swans.",
+   "v": "カモ、ガン、ハクチョウ。"
+  },
+  {
+   "k": "Neoaves, the great radiation of birds after the dinosaurs died out.",
+   "v": "新鳥類。恐竜絶滅後の鳥類の大放散。"
+  },
+  {
+   "k": "Nightjars, swifts and hummingbirds.",
+   "v": "ヨタカ、アマツバメ、ハチドリ。"
+  },
+  {
+   "k": "Flamingos and grebes.",
+   "v": "フラミンゴとカイツブリ。"
+  },
+  {
+   "k": "Shorebirds.",
+   "v": "チドリ目の水辺の鳥。"
+  },
+  {
+   "k": "Waterbirds.",
+   "v": "水鳥。"
+  },
+  {
+   "k": "Waterbirds such as penguins, albatrosses and pelicans.",
+   "v": "ペンギン、アホウドリ、ペリカンなどの水鳥。"
+  },
+  {
+   "k": "Land birds.",
+   "v": "陸の鳥。"
+  },
+  {
+   "k": "Birds of prey and their kin.",
+   "v": "猛禽類とその仲間。"
+  },
+  {
+   "k": "Kingfishers and their kin.",
+   "v": "カワセミとその仲間。"
+  },
+  {
+   "k": "Parrots, songbirds and falcons and their kin.",
+   "v": "オウム、スズメ目、ハヤブサとその仲間。"
+  },
+  {
+   "k": "Parrots and songbirds.",
+   "v": "オウムとスズメ目。"
+  },
+  {
+   "k": "Protostomes form the mouth first in the embryo.",
+   "v": "旧口動物は胚の中で口が先にできる。"
+  },
+  {
+   "k": "Ecdysozoans moult their cuticle as they grow.",
+   "v": "脱皮動物は成長しながらクチクラを脱ぎ替える。"
+  },
+  {
+   "k": "Tardigrades survive drying out, freezing and even space.",
+   "v": "クマムシは乾燥、凍結、さらには宇宙にも耐える。"
+  },
+  {
+   "k": "Panarthropods walk on paired legs.",
+   "v": "汎節足動物は対になった脚で歩く。"
+  },
+  {
+   "k": "Arthropods have jointed legs.",
+   "v": "節足動物は関節のある脚をもつ。"
+  },
+  {
+   "k": "Radiodonts were the first top predators.",
+   "v": "ラディオドンタ類は最初の頂点捕食者だった。"
+  },
+  {
+   "k": "True arthropods, with a hard exoskeleton.",
+   "v": "真節足動物。硬い外骨格をもつ。"
+  },
+  {
+   "k": "Great-appendage arthropods.",
+   "v": "大付属肢をもつ節足動物。"
+  },
+  {
+   "k": "Trilobites and their relatives.",
+   "v": "三葉虫とその仲間。"
+  },
+  {
+   "k": "Chelicerates have pincer-like mouthparts.",
+   "v": "鋏角類ははさみのような口器をもつ。"
+  },
+  {
+   "k": "Sea spiders.",
+   "v": "ウミグモ。"
+  },
+  {
+   "k": "Euchelicerates.",
+   "v": "真鋏角類。"
+  },
+  {
+   "k": "Horseshoe crabs.",
+   "v": "カブトガニ。"
+  },
+  {
+   "k": "Sea scorpions.",
+   "v": "ウミサソリ。"
+  },
+  {
+   "k": "Arachnids came onto land.",
+   "v": "クモ形類は陸に上がった。"
+  },
+  {
+   "k": "Spiders and their kin breathe with book lungs.",
+   "v": "クモとその仲間は書肺で呼吸する。"
+  },
+  {
+   "k": "Spiders spin silk.",
+   "v": "クモは糸を紡ぐ。"
+  },
+  {
+   "k": "Mites and ticks.",
+   "v": "ダニとマダニ。"
+  },
+  {
+   "k": "Ticks feed on blood.",
+   "v": "マダニは血を吸う。"
+  },
+  {
+   "k": "Mandibulates chew with mandibles.",
+   "v": "大顎類は大顎でかむ。"
+  },
+  {
+   "k": "Myriapods were among the first animals on land.",
+   "v": "多足類は最初に陸に上がった動物のひとつだった。"
+  },
+  {
+   "k": "Crustaceans and insects.",
+   "v": "甲殻類と昆虫。"
+  },
+  {
+   "k": "Crabs, lobsters and prawns.",
+   "v": "カニ、ロブスター、エビ。"
+  },
+  {
+   "k": "Hexapods walk on six legs.",
+   "v": "六脚類は6本の脚で歩く。"
+  },
+  {
+   "k": "Insects.",
+   "v": "昆虫。"
+  },
+  {
+   "k": "Winged insects: the first animals to fly.",
+   "v": "有翅昆虫：最初に空を飛んだ動物。"
+  },
+  {
+   "k": "Dragonflies and griffinflies.",
+   "v": "トンボとメガネウラの仲間。"
+  },
+  {
+   "k": "Neopterans can fold their wings.",
+   "v": "新翅類は翅を折りたためる。"
+  },
+  {
+   "k": "Cockroaches, termites and mantises.",
+   "v": "ゴキブリ、シロアリ、カマキリ。"
+  },
+  {
+   "k": "Termites are social cockroaches.",
+   "v": "シロアリは社会性のゴキブリである。"
+  },
+  {
+   "k": "Holometabolans go through complete metamorphosis.",
+   "v": "完全変態類は完全変態をする。"
+  },
+  {
+   "k": "Lacewings.",
+   "v": "クサカゲロウ。"
+  },
+  {
+   "k": "Beetles.",
+   "v": "甲虫。"
+  },
+  {
+   "k": "Wasps, bees and ants.",
+   "v": "ハチとアリ。"
+  },
+  {
+   "k": "Stinging Hymenoptera: wasps, bees and ants.",
+   "v": "針をもつハチ目：カリバチ、ハナバチ、アリ。"
+  },
+  {
+   "k": "Flies and fleas.",
+   "v": "ハエとノミ。"
+  },
+  {
+   "k": "Flies have two wings.",
+   "v": "ハエ目は翅が2枚しかない。"
+  },
+  {
+   "k": "Butterflies and moths.",
+   "v": "チョウとガ。"
+  },
+  {
+   "k": "Spiralians have a spiral cleavage of the egg.",
+   "v": "らせん卵割動物の卵はらせん状に分裂する。"
+  },
+  {
+   "k": "Flatworms.",
+   "v": "扁形動物。"
+  },
+  {
+   "k": "Molluscs, worms and brachiopods.",
+   "v": "軟体動物、環形動物、腕足動物。"
+  },
+  {
+   "k": "Annelids are segmented worms.",
+   "v": "環形動物は体節のある虫である。"
+  },
+  {
+   "k": "Earthworms and leeches.",
+   "v": "ミミズとヒル。"
+  },
+  {
+   "k": "Brachiopods and bryozoans filter with a crown of tentacles.",
+   "v": "腕足動物とコケムシは触手の冠でこしとる。"
+  },
+  {
+   "k": "Brachiopods have two shells.",
+   "v": "腕足動物は2枚の殻をもつ。"
+  },
+  {
+   "k": "Molluscs scrape food with a radula.",
+   "v": "軟体動物は歯舌で食物を削りとる。"
+  },
+  {
+   "k": "Molluscs with a shell.",
+   "v": "殻をもつ軟体動物。"
+  },
+  {
+   "k": "Snails and slugs.",
+   "v": "巻貝とナメクジ。"
+  },
+  {
+   "k": "Bivalves.",
+   "v": "二枚貝。"
+  },
+  {
+   "k": "Cephalopods swim with jet propulsion.",
+   "v": "頭足類はジェット噴射で泳ぐ。"
+  },
+  {
+   "k": "Ammonites coiled their shells.",
+   "v": "アンモナイトは殻を巻いた。"
+  },
+  {
+   "k": "Coleoids hid the shell inside the body.",
+   "v": "鞘形類は殻を体の中に隠した。"
   }
  ]
 }

@@ -46,7 +46,7 @@ namespace NaturalHistory.World
                 int count = rng.Next(min, max + 1);
                 // Not Denser(): the old periods' density boost is for tiny early land plants; under water
                 // the beds are already thick, and the boost made early seabeds needlessly heavy to draw.
-                // Their plants still get the old periods' bigger size (AgeSize), so they stay visible.
+                // Their microbes still get the old periods' bigger size (AgeSize), so they stay visible.
                 if (dense) { count = Mathf.RoundToInt(count * DenseCount * (waterBed ? WaterBedDensity * AgeWaterDensity * density : 1f)); gap *= DenseGap; }
                 // spacing in step with the count, so the bed stays even from edge to edge
                 if (dense && waterBed) gap /= Mathf.Sqrt(WaterBedDensity * AgeWaterDensity * density);
@@ -275,6 +275,10 @@ namespace NaturalHistory.World
         // Fungi, lichens and slime moulds of caves and soil are drawn this much bigger (Prototaxites
         // has its own size)
         const float FungusScale = 2f;
+        // Bacterial life: mats, stromatolites, calcimicrobes
+        static bool Microbial(PlantDefinition p) => p.form is "Mat" or "Stromatolite"
+            || p.group is "Cyanobacteria" or "Cyanobacterium" or "Calcimicrobe" or "Sulphur bacteria";
+
         static bool Fungal(string form) => form is "Mushroom" or "Toadstool" or "GlowCap" or "Inkcap" or "Funnel" or "Bracket"
             or "Puffball" or "Earthstar" or "Lattice" or "CoralFungus" or "Cup" or "Morel" or "Mycelium" or "SlimeMold"
             or "Stalks" or "Lichen" or "Truffle";
@@ -320,7 +324,9 @@ namespace NaturalHistory.World
             if (skipPainted && Painted(plant.form)) return; // painted into the floor instead
             // stromatolites are mostly painted into the floor (CoverOf): only one in five stands as a 3D dome
             if (plant.form == "Stromatolite" && rng.NextDouble() < 0.8) return;
-            float m = plant.size * scale * UnderPlantScale * waterPlantScale * Mathf.Lerp(1f, AgeSize, 0.6f) * Range(rng, 0.8f, 1.15f);
+            // the old periods' bigger size (AgeSize) is for microbes and fungi only: algae and water plants keep their own size
+            float age = Microbial(plant) || Fungal(plant.form) ? Mathf.Lerp(1f, AgeSize, 0.6f) : 1f;
+            float m = plant.size * scale * UnderPlantScale * waterPlantScale * age * Range(rng, 0.8f, 1.15f);
             if (Fungal(plant.form)) m *= FungusScale; // mushrooms, brackets, moulds... were too small to see
             leafTint = plant.Tint;
             int from = b.VertexCount;

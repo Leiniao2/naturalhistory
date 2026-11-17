@@ -14911,6 +14911,1090 @@
   {
    "k": "High mountain",
    "v": "고산"
+  },
+  {
+   "k": "Ciliates, foraminifera and their kin form a branch of the eukaryotes of their own, far from the animals.",
+   "v": "섬모충, 유공충과 그 친척들은 동물과 멀리 떨어진 진핵생물의 독자적인 한 갈래를 이룬다."
+  },
+  {
+   "k": "Ciliates row with thousands of cilia under a skin of flattened sacs.",
+   "v": "섬모충은 납작한 주머니로 된 막에 싸여 수천 개의 섬모로 노를 젓듯 헤엄친다."
+  },
+  {
+   "k": "Foraminifera reach out with threads of cytoplasm and build chambered shells.",
+   "v": "유공충은 실 같은 세포질을 뻗고, 여러 방으로 나뉜 껍데기를 짓는다."
+  },
+  {
+   "k": "Heliozoans belong with the diatoms and brown algae, though they hunt like animals.",
+   "v": "태양충은 규조류, 갈조류와 같은 무리지만 동물처럼 사냥한다."
+  },
+  {
+   "k": "Parabasalids live without mitochondria, in the guts of termites and other animals.",
+   "v": "부기저체류는 미토콘드리아 없이 흰개미 같은 동물의 장 속에서 산다."
+  },
+  {
+   "k": "Amoebae belong to the branch of eukaryotes that also gave rise to fungi and animals.",
+   "v": "아메바는 균류와 동물을 낳은 진핵생물 갈래에 속한다."
+  },
+  {
+   "k": "Amoebae crawl and feed by flowing out arms of cytoplasm.",
+   "v": "아메바는 세포질 팔을 흘려 내보내며 기어 다니고 먹이를 먹는다."
+  },
+  {
+   "k": "Choanoflagellates, single cells with a collar of microvilli round a whip, are the closest living relatives of animals.",
+   "v": "깃편모충은 채찍 둘레에 미세융모 깃을 두른 단세포 생물로, 동물과 가장 가까운 현생 친척이다."
+  },
+  {
+   "k": "Animals: many cells working together, the first of them sponge-like collar-cell feeders.",
+   "v": "동물: 많은 세포가 함께 일한다. 최초의 동물은 해면처럼 깃세포로 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed.",
+   "v": "해면은 몸속으로 물을 흘려 깃세포로 걸러 먹는다. 단세포 조상이 먹던 방식과 같다."
+  },
+  {
+   "k": "Demosponges build their skeletons of spongin and silica needles.",
+   "v": "보통해면은 해면질 섬유와 규산 골편으로 골격을 만든다."
+  },
+  {
+   "k": "Archaeocyaths were reef-building sponges with double cone-shaped walls.",
+   "v": "고배류는 이중 원뿔 모양의 벽을 가진, 초를 짓는 해면이었다."
+  },
+  {
+   "k": "Comb jellies swim with rows of beating combs of cilia.",
+   "v": "빗해파리는 줄지어 늘어선 빗판을 흔들며 헤엄친다."
+  },
+  {
+   "k": "Frond-shaped Ediacaran organisms, among the first large animals.",
+   "v": "잎 모양의 에디아카라 생물로, 최초의 대형 동물 가운데 하나."
+  },
+  {
+   "k": "Rangeomorphs grew as fractal fronds on the deep sea floor.",
+   "v": "랑게오모르프는 깊은 바다 밑에서 프랙털 모양의 잎으로 자랐다."
+  },
+  {
+   "k": "Animals with true tissues, nerves and muscles.",
+   "v": "진정한 조직, 신경, 근육을 가진 동물."
+  },
+  {
+   "k": "Cloudina built some of the first mineral skeletons, stacked cones of calcite.",
+   "v": "클라우디나는 방해석 원뿔을 쌓아 올린, 최초의 광물 골격 가운데 하나를 만들었다."
+  },
+  {
+   "k": "Cnidarians catch prey with stinging cells.",
+   "v": "자포동물은 자세포로 먹이를 잡는다."
+  },
+  {
+   "k": "Anthozoans are polyps all their lives: anemones and corals.",
+   "v": "산호충류는 평생 폴립으로 산다: 말미잘과 산호."
+  },
+  {
+   "k": "Corals build limestone skeletons and form reefs.",
+   "v": "산호는 석회질 골격을 만들어 초를 이룬다."
+  },
+  {
+   "k": "Tabulate corals built honeycomb colonies of tiny tubes.",
+   "v": "판상산호는 가느다란 관이 벌집처럼 모인 군체를 지었다."
+  },
+  {
+   "k": "Rugose corals grew as horn-shaped cups.",
+   "v": "사방산호는 뿔 모양의 컵으로 자랐다."
+  },
+  {
+   "k": "Modern stony corals, with algae living in their tissues.",
+   "v": "현대의 돌산호. 조직 속에 조류가 함께 산다."
+  },
+  {
+   "k": "Sea anemones are soft corals without a skeleton.",
+   "v": "말미잘은 골격이 없는 산호충이다."
+  },
+  {
+   "k": "Medusozoans swim as jellyfish for part of their lives.",
+   "v": "해파리류는 일생의 한때를 해파리로 헤엄친다."
+  },
+  {
+   "k": "Siphonophores are colonies of specialised polyps that act as one animal.",
+   "v": "관해파리는 역할이 나뉜 폴립들이 한 마리 동물처럼 움직이는 군체다."
+  },
+  {
+   "k": "Bilaterians have a front and a back, a left and a right side, and a gut.",
+   "v": "좌우대칭동물은 앞과 뒤, 왼쪽과 오른쪽, 그리고 소화관이 있다."
+  },
+  {
+   "k": "Deuterostomes form the anus first in the embryo: the line of echinoderms and chordates.",
+   "v": "후구동물은 배아에서 항문이 먼저 생긴다: 극피동물과 척삭동물의 계통."
+  },
+  {
+   "k": "Echinoderms and hemichordates share a larva with a looping band of cilia.",
+   "v": "극피동물과 반삭동물은 고리 모양 섬모띠가 있는 유생을 공유한다."
+  },
+  {
+   "k": "Graptolites were colonial hemichordates drifting in the plankton.",
+   "v": "필석은 플랑크톤 속을 떠다니던 군체성 반삭동물이었다."
+  },
+  {
+   "k": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet.",
+   "v": "극피동물은 방해석 판으로 골격을 만들고 수압으로 움직이는 관족으로 다닌다."
+  },
+  {
+   "k": "Sea lilies filter the water with feathery arms on a stalk.",
+   "v": "바다나리는 자루 위의 깃털 같은 팔로 물을 걸러 먹는다."
+  },
+  {
+   "k": "Free-living echinoderms such as sea stars crawl mouth-down on the sea floor.",
+   "v": "불가사리 같은 자유생활 극피동물은 입을 아래로 하고 바닥을 기어 다닌다."
+  },
+  {
+   "k": "Chordates have a stiffening rod, the notochord, along the back.",
+   "v": "척삭동물은 등을 따라 척삭이라는 지지 막대가 있다."
+  },
+  {
+   "k": "Vertebrates: a skull, eyes and a backbone around the nerve cord.",
+   "v": "척추동물: 머리뼈, 눈, 그리고 신경삭을 감싼 등뼈."
+  },
+  {
+   "k": "Conodonts were eel-like vertebrates with comb-like teeth.",
+   "v": "코노돈트는 빗 같은 이빨을 가진 뱀장어 모양의 척추동물이었다."
+  },
+  {
+   "k": "Galeaspids were jawless fish with a bony head shield.",
+   "v": "갈레아스피스류는 뼈로 된 머리 방패를 가진 무악어류였다."
+  },
+  {
+   "k": "Armoured jawless fish with bony shields.",
+   "v": "뼈 방패로 무장한 무악어류."
+  },
+  {
+   "k": "Anaspids were small, streamlined jawless fish.",
+   "v": "결갑류는 작고 유선형인 무악어류였다."
+  },
+  {
+   "k": "Thelodonts were jawless fish covered in tiny scales.",
+   "v": "텔로두스류는 작은 비늘로 덮인 무악어류였다."
+  },
+  {
+   "k": "Osteostracans had a horseshoe-shaped head shield and paired fins.",
+   "v": "골갑류는 말굽 모양의 머리 방패와 짝지느러미를 가졌다."
+  },
+  {
+   "k": "Jaws evolved from gill arches, opening up new ways of feeding.",
+   "v": "턱은 아가미활에서 진화해 새로운 먹이 방식을 열었다."
+  },
+  {
+   "k": "Placoderms were armoured jawed fish, the first giant predators.",
+   "v": "판피류는 갑옷을 두른 턱 있는 물고기로, 최초의 거대 포식자였다."
+  },
+  {
+   "k": "The crown of jawed vertebrates: sharks and bony fish.",
+   "v": "유악류의 크라운 그룹: 상어와 경골어류."
+  },
+  {
+   "k": "Cartilaginous fish keep replacing their teeth all their lives.",
+   "v": "연골어류는 평생 이빨을 갈아 낸다."
+  },
+  {
+   "k": "Chimaeras and their kin have tooth plates that grind shellfish.",
+   "v": "은상어와 그 친척들은 조개를 갈아 부수는 이빨판을 가졌다."
+  },
+  {
+   "k": "Sharks and rays.",
+   "v": "상어와 가오리."
+  },
+  {
+   "k": "Modern sharks and rays.",
+   "v": "현대의 상어와 가오리."
+  },
+  {
+   "k": "Galeomorph sharks include the great hunters of the open sea.",
+   "v": "악상어상목에는 먼바다의 큰 사냥꾼들이 포함된다."
+  },
+  {
+   "k": "Rays flattened out to live on and above the sea floor.",
+   "v": "가오리는 납작해져 바다 밑과 그 위에서 산다."
+  },
+  {
+   "k": "Bony fish grew skeletons of bone and lungs, later turned into swim bladders.",
+   "v": "경골어류는 뼈로 된 골격과 허파를 얻었고, 허파는 나중에 부레가 되었다."
+  },
+  {
+   "k": "Ray-finned fish took over the waters of the world.",
+   "v": "조기어류는 세상의 물을 차지했다."
+  },
+  {
+   "k": "Neopterygians have a more flexible jaw.",
+   "v": "신기어류는 더 유연한 턱을 가졌다."
+  },
+  {
+   "k": "Gars and their kin, covered in shiny, heavy scales.",
+   "v": "가아와 그 친척들. 반짝이고 무거운 비늘로 덮여 있다."
+  },
+  {
+   "k": "Pachycormids included giant plankton feeders of the Jurassic.",
+   "v": "파키코르무스류에는 쥐라기의 거대한 플랑크톤 섭식자가 있었다."
+  },
+  {
+   "k": "Teleosts, with their protrusible jaws, are almost all fish living today.",
+   "v": "진골어류는 내밀 수 있는 턱을 가졌고, 오늘날 물고기의 거의 전부다."
+  },
+  {
+   "k": "Ichthyodectiforms were big predatory teleosts.",
+   "v": "익티오덱테스류는 큰 육식성 진골어류였다."
+  },
+  {
+   "k": "Herrings and their kin.",
+   "v": "청어와 그 친척들."
+  },
+  {
+   "k": "Otophysans hear with a chain of bones linking the swim bladder to the ear.",
+   "v": "골표류는 부레와 귀를 잇는 작은 뼈 사슬로 소리를 듣는다."
+  },
+  {
+   "k": "Spiny-finned fish.",
+   "v": "극기어류."
+  },
+  {
+   "k": "Lobe-finned fish have fleshy fins on bones.",
+   "v": "육기어류는 뼈가 든 살집 있는 지느러미를 가졌다."
+  },
+  {
+   "k": "Lungfish breathe air with real lungs.",
+   "v": "폐어는 진짜 허파로 공기를 마신다."
+  },
+  {
+   "k": "Tetrapodomorphs: lobe-finned fish on the way to limbs.",
+   "v": "사지형류: 팔다리를 향해 가는 육기어류."
+  },
+  {
+   "k": "Rhizodonts were giant predatory lobe-fins.",
+   "v": "리조두스류는 거대한 육식성 육기어류였다."
+  },
+  {
+   "k": "Lobe-fins with the bones of the tetrapod limb already in their fins.",
+   "v": "지느러미 안에 이미 사지동물 팔다리뼈를 가진 육기어류."
+  },
+  {
+   "k": "Fish with flat heads, necks and sturdy fins hauled out in shallow water.",
+   "v": "납작한 머리와 목, 튼튼한 지느러미를 가진 물고기가 얕은 물가로 기어올랐다."
+  },
+  {
+   "k": "Tetrapods: four limbs with digits.",
+   "v": "사지동물: 발가락이 있는 네 다리."
+  },
+  {
+   "k": "The amphibian line, laying their eggs in water.",
+   "v": "양서류 계통. 물속에 알을 낳는다."
+  },
+  {
+   "k": "Temnospondyls were the most varied early amphibians.",
+   "v": "분추류는 가장 다양했던 초기 양서류였다."
+  },
+  {
+   "k": "Modern amphibians breathe partly through their skin.",
+   "v": "현생 양서류는 일부를 피부로 숨 쉰다."
+  },
+  {
+   "k": "Frogs and toads leap on long hind legs.",
+   "v": "개구리와 두꺼비는 긴 뒷다리로 뛴다."
+  },
+  {
+   "k": "Lepospondyls were small, often oddly shaped early tetrapods.",
+   "v": "공추류는 작고 흔히 기묘하게 생긴 초기 사지동물이었다."
+  },
+  {
+   "k": "The line of tetrapods leading to amniotes.",
+   "v": "양막류로 이어지는 사지동물 계통."
+  },
+  {
+   "k": "The amniotic egg freed vertebrates from the water.",
+   "v": "양막란이 척추동물을 물에서 해방시켰다."
+  },
+  {
+   "k": "Synapsids, with one opening behind the eye, are the line of mammals.",
+   "v": "단궁류는 눈 뒤에 구멍이 하나이며, 포유류로 이어지는 계통이다."
+  },
+  {
+   "k": "Caseids were bulky plant-eating synapsids with tiny heads.",
+   "v": "카세아류는 머리가 작고 몸집이 큰 초식성 단궁류였다."
+  },
+  {
+   "k": "Eupelycosaurs include the sail-backed synapsids.",
+   "v": "진반룡류에는 등에 돛이 달린 단궁류가 포함된다."
+  },
+  {
+   "k": "Sphenacodonts had teeth of different shapes, an early step toward mammals.",
+   "v": "스페나코돈류는 모양이 다른 이빨을 가졌는데, 포유류로 가는 이른 걸음이었다."
+  },
+  {
+   "k": "Therapsids walked with their legs more under the body.",
+   "v": "수궁류는 다리를 몸 아래쪽에 더 가깝게 두고 걸었다."
+  },
+  {
+   "k": "Dinocephalians were big, thick-skulled therapsids.",
+   "v": "공두류는 머리뼈가 두꺼운 큰 수궁류였다."
+  },
+  {
+   "k": "Dicynodonts cropped plants with a horny beak and two tusks.",
+   "v": "디키노돈류는 각질 부리와 두 개의 엄니로 식물을 뜯었다."
+  },
+  {
+   "k": "Theriodonts were the sabre-toothed predators of the Permian.",
+   "v": "수치류는 페름기의 검치를 가진 포식자였다."
+  },
+  {
+   "k": "Cynodonts had a secondary palate and were probably warm-blooded.",
+   "v": "견치류는 이차 구개를 가졌고 아마도 온혈이었다."
+  },
+  {
+   "k": "Mammaliaforms had the mammalian jaw joint and ear.",
+   "v": "포유형류는 포유류식 턱관절과 귀를 가졌다."
+  },
+  {
+   "k": "Mammals nurse their young with milk.",
+   "v": "포유류는 젖으로 새끼를 키운다."
+  },
+  {
+   "k": "Monotremes still lay eggs.",
+   "v": "단공류는 아직도 알을 낳는다."
+  },
+  {
+   "k": "Mammals that went on to give birth to live young.",
+   "v": "나중에 새끼를 낳게 된 포유류."
+  },
+  {
+   "k": "Therian mammals give birth to live young.",
+   "v": "수아강 포유류는 새끼를 낳는다."
+  },
+  {
+   "k": "Metatherians, the marsupial line, give birth to tiny young.",
+   "v": "후수류는 유대류 계통으로, 아주 작은 새끼를 낳는다."
+  },
+  {
+   "k": "Marsupials raise their young in a pouch.",
+   "v": "유대류는 육아낭에서 새끼를 키운다."
+  },
+  {
+   "k": "Eutherians: the line of placental mammals.",
+   "v": "진수류: 태반류로 이어지는 계통."
+  },
+  {
+   "k": "Placentals that evolved on the southern continents.",
+   "v": "남쪽 대륙에서 진화한 태반류."
+  },
+  {
+   "k": "Xenarthrans, with extra joints in the backbone: sloths, anteaters and armadillos.",
+   "v": "빈치류는 등뼈에 여분의 관절이 있다: 나무늘보, 개미핥기, 아르마딜로."
+  },
+  {
+   "k": "Sloths and anteaters.",
+   "v": "나무늘보와 개미핥기."
+  },
+  {
+   "k": "Armadillos and glyptodonts are covered in bony armour.",
+   "v": "아르마딜로와 글립토돈은 뼈 갑옷으로 덮여 있다."
+  },
+  {
+   "k": "Afrotheres evolved in Africa.",
+   "v": "아프리카수류는 아프리카에서 진화했다."
+  },
+  {
+   "k": "Elephants, sea cows and their kin evolved along the Tethys Sea.",
+   "v": "코끼리, 바다소와 그 친척들은 테티스해를 따라 진화했다."
+  },
+  {
+   "k": "Proboscideans: a trunk and tusks.",
+   "v": "장비류: 긴 코와 엄니."
+  },
+  {
+   "k": "Mastodons and elephants grew big and spread across the world.",
+   "v": "마스토돈과 코끼리는 몸집이 커지며 전 세계로 퍼졌다."
+  },
+  {
+   "k": "True elephants.",
+   "v": "진정한 코끼리."
+  },
+  {
+   "k": "Sea cows went back to the water and graze on seagrass.",
+   "v": "바다소는 물로 돌아가 해초를 뜯는다."
+  },
+  {
+   "k": "Placentals of the northern continents.",
+   "v": "북쪽 대륙의 태반류."
+  },
+  {
+   "k": "Primates and rodents and their kin.",
+   "v": "영장류와 설치류, 그리고 그 친척들."
+  },
+  {
+   "k": "Early primate relatives with grasping hands.",
+   "v": "물건을 쥘 수 있는 손을 가진 초기 영장류 친척."
+  },
+  {
+   "k": "Primates: grasping hands, forward-facing eyes and big brains.",
+   "v": "영장류: 쥐는 손, 앞을 향한 눈, 큰 뇌."
+  },
+  {
+   "k": "Old World monkeys and apes.",
+   "v": "구세계원숭이와 유인원."
+  },
+  {
+   "k": "Old World monkeys.",
+   "v": "구세계원숭이."
+  },
+  {
+   "k": "Apes have no tail and big brains.",
+   "v": "유인원은 꼬리가 없고 뇌가 크다."
+  },
+  {
+   "k": "Hominins walk upright on two legs.",
+   "v": "사람족은 두 다리로 똑바로 서서 걷는다."
+  },
+  {
+   "k": "Our own genus, with big brains and stone tools.",
+   "v": "우리 자신의 속. 큰 뇌와 석기를 가졌다."
+  },
+  {
+   "k": "Rodents and rabbits have ever-growing incisors.",
+   "v": "설치류와 토끼류는 앞니가 평생 자란다."
+  },
+  {
+   "k": "Rodents gnaw with ever-growing incisors.",
+   "v": "설치류는 평생 자라는 앞니로 갉는다."
+  },
+  {
+   "k": "Laurasiatheres evolved on the northern continents.",
+   "v": "로라시아수류는 북쪽 대륙에서 진화했다."
+  },
+  {
+   "k": "Shrews, hedgehogs and moles.",
+   "v": "땃쥐, 고슴도치, 두더지."
+  },
+  {
+   "k": "Bats, carnivores and hoofed mammals.",
+   "v": "박쥐, 식육류, 유제류."
+  },
+  {
+   "k": "Bats are the only mammals that truly fly.",
+   "v": "박쥐는 진짜로 나는 유일한 포유류다."
+  },
+  {
+   "k": "Ferae: meat-eaters with shearing teeth.",
+   "v": "식육류와 그 친척: 고기를 자르는 이빨을 가진 육식자."
+  },
+  {
+   "k": "Carnivoramorphs slice meat with a pair of blade-like teeth.",
+   "v": "식육형류는 칼날 같은 한 쌍의 이빨로 고기를 자른다."
+  },
+  {
+   "k": "Carnivorans.",
+   "v": "식육목."
+  },
+  {
+   "k": "Cats and their kin.",
+   "v": "고양이와 그 친척들."
+  },
+  {
+   "k": "Cats are the most specialised meat-eaters.",
+   "v": "고양잇과는 가장 특수화된 육식자다."
+  },
+  {
+   "k": "Dogs, bears and their kin.",
+   "v": "개, 곰과 그 친척들."
+  },
+  {
+   "k": "Bears.",
+   "v": "곰."
+  },
+  {
+   "k": "Weasels, otters and their kin.",
+   "v": "족제비, 수달과 그 친척들."
+  },
+  {
+   "k": "Hoofed mammals.",
+   "v": "발굽이 있는 포유류."
+  },
+  {
+   "k": "South American hoofed mammals, distant relatives of horses.",
+   "v": "남아메리카의 유제류. 말의 먼 친척."
+  },
+  {
+   "k": "Odd-toed ungulates carry their weight on the middle toe.",
+   "v": "기제류는 가운데 발가락으로 몸무게를 지탱한다."
+  },
+  {
+   "k": "Horses and their relatives.",
+   "v": "말과 그 친척들."
+  },
+  {
+   "k": "Horses ran on ever fewer toes as grasslands spread.",
+   "v": "초원이 넓어지면서 말은 발가락 수를 줄이며 달렸다."
+  },
+  {
+   "k": "Grazing horses with high-crowned teeth.",
+   "v": "이빨머리가 높은, 풀을 뜯는 말."
+  },
+  {
+   "k": "Chalicotheres were odd-toed ungulates with claws.",
+   "v": "칼리코테리움은 발톱을 가진 기제류였다."
+  },
+  {
+   "k": "Rhinos and tapirs.",
+   "v": "코뿔소와 맥."
+  },
+  {
+   "k": "Even-toed ungulates walk on two toes.",
+   "v": "우제류는 두 개의 발가락으로 걷는다."
+  },
+  {
+   "k": "Hippos and whales are each other's closest relatives.",
+   "v": "하마와 고래는 서로 가장 가까운 친척이다."
+  },
+  {
+   "k": "Camels.",
+   "v": "낙타."
+  },
+  {
+   "k": "Ruminants chew the cud and ferment grass in a stomach of four chambers.",
+   "v": "반추류는 되새김질하며 네 칸으로 나뉜 위에서 풀을 발효시킨다."
+  },
+  {
+   "k": "Whales evolved from hoofed mammals that returned to the sea.",
+   "v": "고래는 바다로 돌아간 유제류 포유류에서 진화했다."
+  },
+  {
+   "k": "Fully aquatic whales, no longer able to walk on land.",
+   "v": "완전히 물에 사는 고래. 더는 땅을 걷지 못한다."
+  },
+  {
+   "k": "Modern whales.",
+   "v": "현대의 고래."
+  },
+  {
+   "k": "Toothed whales hunt by echolocation.",
+   "v": "이빨고래는 반향정위로 사냥한다."
+  },
+  {
+   "k": "Baleen whales filter the sea through baleen plates.",
+   "v": "수염고래는 고래수염으로 바닷물을 걸러 먹는다."
+  },
+  {
+   "k": "Sauropsids: the reptiles and birds.",
+   "v": "석형류: 파충류와 조류."
+  },
+  {
+   "k": "True reptiles.",
+   "v": "진파충류."
+  },
+  {
+   "k": "Parareptiles, an early branch of reptiles.",
+   "v": "측파충류. 파충류의 초기 한 갈래."
+  },
+  {
+   "k": "Diapsids have two openings behind the eye.",
+   "v": "이궁류는 눈 뒤에 구멍이 두 개 있다."
+  },
+  {
+   "k": "Neodiapsids include all living reptiles.",
+   "v": "신이궁류에는 모든 현생 파충류가 포함된다."
+  },
+  {
+   "k": "Lizards, crocodiles, turtles, dinosaurs and birds.",
+   "v": "도마뱀, 악어, 거북, 공룡, 그리고 새."
+  },
+  {
+   "k": "Lizards and snakes and their kin.",
+   "v": "도마뱀, 뱀과 그 친척들."
+  },
+  {
+   "k": "Squamates shed their scaly skin.",
+   "v": "유린류는 비늘 덮인 허물을 벗는다."
+  },
+  {
+   "k": "Iguanians.",
+   "v": "이구아나류."
+  },
+  {
+   "k": "Squamates with venom glands: snakes, monitors and mosasaurs.",
+   "v": "독샘을 가진 유린류: 뱀, 왕도마뱀, 모사사우루스."
+  },
+  {
+   "k": "Snakes lost their legs.",
+   "v": "뱀은 다리를 잃었다."
+  },
+  {
+   "k": "Vipers, with long folding fangs.",
+   "v": "살무사류. 접을 수 있는 긴 독니를 가졌다."
+  },
+  {
+   "k": "Ichthyosaurs became dolphin-shaped reptiles of the open sea.",
+   "v": "어룡은 먼바다에 사는 돌고래 모양의 파충류가 되었다."
+  },
+  {
+   "k": "Sauropterygians returned to the sea with paddle-like limbs.",
+   "v": "기룡류는 노 같은 다리로 바다로 돌아갔다."
+  },
+  {
+   "k": "Nothosaurs and plesiosaurs.",
+   "v": "노토사우루스와 수장룡."
+  },
+  {
+   "k": "Plesiosaurs flew through the water on four flippers.",
+   "v": "수장룡은 네 개의 지느러미발로 물속을 날듯이 헤엄쳤다."
+  },
+  {
+   "k": "Turtles grew a shell from their ribs.",
+   "v": "거북은 갈비뼈에서 등딱지를 키웠다."
+  },
+  {
+   "k": "True turtles pull their head into the shell.",
+   "v": "진정한 거북은 머리를 등딱지 속으로 넣는다."
+  },
+  {
+   "k": "Cryptodires pull their head straight back into the shell.",
+   "v": "잠경류는 머리를 똑바로 뒤로 당겨 등딱지 속에 넣는다."
+  },
+  {
+   "k": "Side-necked turtles fold the neck sideways.",
+   "v": "곡경류는 목을 옆으로 접는다."
+  },
+  {
+   "k": "Archosauromorphs: the line of crocodiles, dinosaurs and birds.",
+   "v": "지배파충형류: 악어, 공룡, 새로 이어지는 계통."
+  },
+  {
+   "k": "Rhynchosaurs cropped plants with a hooked beak.",
+   "v": "린코사우루스류는 갈고리 부리로 식물을 뜯었다."
+  },
+  {
+   "k": "Archosauriforms have teeth set in sockets.",
+   "v": "지배파충형하강은 이빨이 이틀에 박혀 있다."
+  },
+  {
+   "k": "Archosaurs: crocodiles on one side, dinosaurs and birds on the other.",
+   "v": "지배파충류: 한쪽은 악어, 다른 쪽은 공룡과 새."
+  },
+  {
+   "k": "Pseudosuchians, the crocodile line of archosaurs.",
+   "v": "위악류, 지배파충류의 악어 쪽 계통."
+  },
+  {
+   "k": "Loricatans were the big predators of the Triassic.",
+   "v": "로리카타류는 트라이아스기의 큰 포식자였다."
+  },
+  {
+   "k": "Crocodylomorphs.",
+   "v": "악어형류."
+  },
+  {
+   "k": "Crocodyliforms.",
+   "v": "악어형상목."
+  },
+  {
+   "k": "Crocodilians.",
+   "v": "악어목."
+  },
+  {
+   "k": "The bird line of archosaurs.",
+   "v": "지배파충류의 새 쪽 계통: 조경류."
+  },
+  {
+   "k": "Pterosaurs and dinosaurs.",
+   "v": "익룡과 공룡."
+  },
+  {
+   "k": "Pterosaurs flew on wings of skin.",
+   "v": "익룡은 피부막 날개로 날았다."
+  },
+  {
+   "k": "Short-tailed pterosaurs, some as big as giraffes.",
+   "v": "꼬리가 짧은 익룡. 기린만큼 큰 것도 있었다."
+  },
+  {
+   "k": "Dinosaurs stood upright on legs held under the body.",
+   "v": "공룡은 몸 바로 아래에 다리를 두고 똑바로 섰다."
+  },
+  {
+   "k": "Ornithischians were plant-eaters with a beak.",
+   "v": "조반류는 부리를 가진 초식 공룡이었다."
+  },
+  {
+   "k": "Thyreophorans were armoured dinosaurs.",
+   "v": "장순류는 갑옷을 두른 공룡이었다."
+  },
+  {
+   "k": "Stegosaurs carried plates and spikes.",
+   "v": "검룡은 골판과 가시를 지고 다녔다."
+  },
+  {
+   "k": "Ankylosaurs were armoured like tanks.",
+   "v": "곡룡은 탱크처럼 무장했다."
+  },
+  {
+   "k": "Neornithischians.",
+   "v": "신조반류."
+  },
+  {
+   "k": "Ornithopods chewed plants with batteries of teeth.",
+   "v": "조각류는 줄지어 난 이빨로 식물을 씹었다."
+  },
+  {
+   "k": "Marginocephalians had a frill or a dome at the back of the skull.",
+   "v": "주식두류는 머리뼈 뒤쪽에 프릴이나 돔이 있었다."
+  },
+  {
+   "k": "Ceratopsians had horns and frills.",
+   "v": "각룡은 뿔과 프릴을 가졌다."
+  },
+  {
+   "k": "Pachycephalosaurs had thick domed skulls.",
+   "v": "후두류는 두꺼운 돔 모양 머리뼈를 가졌다."
+  },
+  {
+   "k": "Saurischians: sauropods and theropods.",
+   "v": "용반류: 용각류와 수각류."
+  },
+  {
+   "k": "Sauropodomorphs had long necks.",
+   "v": "용각형류는 목이 길었다."
+  },
+  {
+   "k": "Sauropods were the largest land animals ever.",
+   "v": "용각류는 역사상 가장 큰 육상 동물이었다."
+  },
+  {
+   "k": "Macronarians.",
+   "v": "마크로나리아류."
+  },
+  {
+   "k": "Diplodocoids had whip-like tails.",
+   "v": "디플로도쿠스상과는 채찍 같은 꼬리를 가졌다."
+  },
+  {
+   "k": "Theropods were the hunting dinosaurs.",
+   "v": "수각류는 사냥하는 공룡이었다."
+  },
+  {
+   "k": "Neotheropods.",
+   "v": "신수각류."
+  },
+  {
+   "k": "Averostrans.",
+   "v": "아베로스트라류."
+  },
+  {
+   "k": "Ceratosaurs.",
+   "v": "케라토사우루스류."
+  },
+  {
+   "k": "Tetanurans.",
+   "v": "테타누라류."
+  },
+  {
+   "k": "Allosauroids were great predators.",
+   "v": "알로사우루스상과는 강력한 포식자였다."
+  },
+  {
+   "k": "Megalosauroids include the fish-eating spinosaurs.",
+   "v": "메갈로사우루스상과에는 물고기를 먹는 스피노사우루스류가 포함된다."
+  },
+  {
+   "k": "Coelurosaurs were feathered.",
+   "v": "코엘루로사우루스류는 깃털이 있었다."
+  },
+  {
+   "k": "Tyrannosaurs.",
+   "v": "티라노사우루스상과."
+  },
+  {
+   "k": "Maniraptorans have long arms and wing-like feathers.",
+   "v": "마니랍토라류는 긴 팔과 날개 같은 깃털을 가졌다."
+  },
+  {
+   "k": "Paravians: the dromaeosaurs and birds.",
+   "v": "조류형류: 드로마이오사우루스류와 새."
+  },
+  {
+   "k": "Dromaeosaurs.",
+   "v": "드로마이오사우루스류."
+  },
+  {
+   "k": "Avialans: the line of birds.",
+   "v": "조익류: 새로 이어지는 계통."
+  },
+  {
+   "k": "Ornithurans.",
+   "v": "진조류."
+  },
+  {
+   "k": "Birds are living dinosaurs.",
+   "v": "새는 살아 있는 공룡이다."
+  },
+  {
+   "k": "Palaeognaths: ostriches, emus and moas.",
+   "v": "고악류: 타조, 에뮤, 모아."
+  },
+  {
+   "k": "Neognaths are almost all living birds.",
+   "v": "신악류는 거의 모든 현생 조류다."
+  },
+  {
+   "k": "Fowl and waterfowl.",
+   "v": "닭류와 오리류."
+  },
+  {
+   "k": "Ducks, geese and swans.",
+   "v": "오리, 기러기, 백조."
+  },
+  {
+   "k": "Neoaves, the great radiation of birds after the dinosaurs died out.",
+   "v": "신조류. 공룡이 사라진 뒤 일어난 새들의 대방산."
+  },
+  {
+   "k": "Nightjars, swifts and hummingbirds.",
+   "v": "쏙독새, 칼새, 벌새."
+  },
+  {
+   "k": "Flamingos and grebes.",
+   "v": "홍학과 논병아리."
+  },
+  {
+   "k": "Shorebirds.",
+   "v": "도요목 물가의 새."
+  },
+  {
+   "k": "Waterbirds.",
+   "v": "물새."
+  },
+  {
+   "k": "Waterbirds such as penguins, albatrosses and pelicans.",
+   "v": "펭귄, 앨버트로스, 펠리컨 같은 물새."
+  },
+  {
+   "k": "Land birds.",
+   "v": "육지의 새."
+  },
+  {
+   "k": "Birds of prey and their kin.",
+   "v": "맹금류와 그 친척들."
+  },
+  {
+   "k": "Kingfishers and their kin.",
+   "v": "물총새와 그 친척들."
+  },
+  {
+   "k": "Parrots, songbirds and falcons and their kin.",
+   "v": "앵무새, 참새목, 매와 그 친척들."
+  },
+  {
+   "k": "Parrots and songbirds.",
+   "v": "앵무새와 참새목."
+  },
+  {
+   "k": "Protostomes form the mouth first in the embryo.",
+   "v": "선구동물은 배아에서 입이 먼저 생긴다."
+  },
+  {
+   "k": "Ecdysozoans moult their cuticle as they grow.",
+   "v": "탈피동물은 자라면서 큐티클을 벗는다."
+  },
+  {
+   "k": "Tardigrades survive drying out, freezing and even space.",
+   "v": "완보동물은 건조, 동결, 심지어 우주에서도 살아남는다."
+  },
+  {
+   "k": "Panarthropods walk on paired legs.",
+   "v": "범절지동물은 짝을 이룬 다리로 걷는다."
+  },
+  {
+   "k": "Arthropods have jointed legs.",
+   "v": "절지동물은 마디가 있는 다리를 가졌다."
+  },
+  {
+   "k": "Radiodonts were the first top predators.",
+   "v": "방사치류는 최초의 최상위 포식자였다."
+  },
+  {
+   "k": "True arthropods, with a hard exoskeleton.",
+   "v": "진절지동물. 단단한 외골격을 가졌다."
+  },
+  {
+   "k": "Great-appendage arthropods.",
+   "v": "큰 부속지를 가진 절지동물."
+  },
+  {
+   "k": "Trilobites and their relatives.",
+   "v": "삼엽충과 그 친척들."
+  },
+  {
+   "k": "Chelicerates have pincer-like mouthparts.",
+   "v": "협각류는 집게 같은 입틀을 가졌다."
+  },
+  {
+   "k": "Sea spiders.",
+   "v": "바다거미."
+  },
+  {
+   "k": "Euchelicerates.",
+   "v": "진협각류."
+  },
+  {
+   "k": "Horseshoe crabs.",
+   "v": "투구게."
+  },
+  {
+   "k": "Sea scorpions.",
+   "v": "바다전갈."
+  },
+  {
+   "k": "Arachnids came onto land.",
+   "v": "거미강은 육지로 올라왔다."
+  },
+  {
+   "k": "Spiders and their kin breathe with book lungs.",
+   "v": "거미와 그 친척들은 책허파로 숨 쉰다."
+  },
+  {
+   "k": "Spiders spin silk.",
+   "v": "거미는 거미줄을 짓는다."
+  },
+  {
+   "k": "Mites and ticks.",
+   "v": "진드기류."
+  },
+  {
+   "k": "Ticks feed on blood.",
+   "v": "참진드기는 피를 먹는다."
+  },
+  {
+   "k": "Mandibulates chew with mandibles.",
+   "v": "대악류는 큰턱으로 씹는다."
+  },
+  {
+   "k": "Myriapods were among the first animals on land.",
+   "v": "다지류는 최초로 육지에 오른 동물 가운데 하나였다."
+  },
+  {
+   "k": "Crustaceans and insects.",
+   "v": "갑각류와 곤충."
+  },
+  {
+   "k": "Crabs, lobsters and prawns.",
+   "v": "게, 바닷가재, 새우."
+  },
+  {
+   "k": "Hexapods walk on six legs.",
+   "v": "육각류는 여섯 다리로 걷는다."
+  },
+  {
+   "k": "Insects.",
+   "v": "곤충."
+  },
+  {
+   "k": "Winged insects: the first animals to fly.",
+   "v": "날개 달린 곤충: 최초로 하늘을 난 동물."
+  },
+  {
+   "k": "Dragonflies and griffinflies.",
+   "v": "잠자리와 그리핀플라이."
+  },
+  {
+   "k": "Neopterans can fold their wings.",
+   "v": "신시류는 날개를 접을 수 있다."
+  },
+  {
+   "k": "Cockroaches, termites and mantises.",
+   "v": "바퀴벌레, 흰개미, 사마귀."
+  },
+  {
+   "k": "Termites are social cockroaches.",
+   "v": "흰개미는 사회성 바퀴벌레다."
+  },
+  {
+   "k": "Holometabolans go through complete metamorphosis.",
+   "v": "완전변태류는 완전변태를 거친다."
+  },
+  {
+   "k": "Lacewings.",
+   "v": "풀잠자리."
+  },
+  {
+   "k": "Beetles.",
+   "v": "딱정벌레."
+  },
+  {
+   "k": "Wasps, bees and ants.",
+   "v": "말벌, 벌, 개미."
+  },
+  {
+   "k": "Stinging Hymenoptera: wasps, bees and ants.",
+   "v": "침을 가진 벌목: 말벌, 벌, 개미."
+  },
+  {
+   "k": "Flies and fleas.",
+   "v": "파리와 벼룩."
+  },
+  {
+   "k": "Flies have two wings.",
+   "v": "파리목은 날개가 두 장이다."
+  },
+  {
+   "k": "Butterflies and moths.",
+   "v": "나비와 나방."
+  },
+  {
+   "k": "Spiralians have a spiral cleavage of the egg.",
+   "v": "나선난할동물의 알은 나선형으로 분열한다."
+  },
+  {
+   "k": "Flatworms.",
+   "v": "편형동물."
+  },
+  {
+   "k": "Molluscs, worms and brachiopods.",
+   "v": "연체동물, 환형동물, 완족동물."
+  },
+  {
+   "k": "Annelids are segmented worms.",
+   "v": "환형동물은 마디가 있는 벌레다."
+  },
+  {
+   "k": "Earthworms and leeches.",
+   "v": "지렁이와 거머리."
+  },
+  {
+   "k": "Brachiopods and bryozoans filter with a crown of tentacles.",
+   "v": "완족동물과 이끼벌레는 촉수 왕관으로 걸러 먹는다."
+  },
+  {
+   "k": "Brachiopods have two shells.",
+   "v": "완족동물은 껍데기가 두 장이다."
+  },
+  {
+   "k": "Molluscs scrape food with a radula.",
+   "v": "연체동물은 치설로 먹이를 긁어 먹는다."
+  },
+  {
+   "k": "Molluscs with a shell.",
+   "v": "껍데기를 가진 연체동물."
+  },
+  {
+   "k": "Snails and slugs.",
+   "v": "달팽이와 민달팽이."
+  },
+  {
+   "k": "Bivalves.",
+   "v": "이매패류."
+  },
+  {
+   "k": "Cephalopods swim with jet propulsion.",
+   "v": "두족류는 물을 뿜어 추진하며 헤엄친다."
+  },
+  {
+   "k": "Ammonites coiled their shells.",
+   "v": "암모나이트는 껍데기를 감았다."
+  },
+  {
+   "k": "Coleoids hid the shell inside the body.",
+   "v": "초형류는 껍데기를 몸속에 감췄다."
   }
  ]
 }

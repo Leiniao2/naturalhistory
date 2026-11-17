@@ -5,7 +5,8 @@
 // back and forth as legs; _Undulate / _Coil bend a straight body into a travelling wave or a
 // resting coil (snakes, eels). ColonyGroup
 // drives them per renderer. _Sway rocks tall props gently back and forth, more toward the top
-// (water plants on the seabed: HexGrid.Under uses a material with it set).
+// (water plants on the seabed: HexGrid.Under uses a material with it set). _Fur draws a coat of
+// hair on mammals (MapFeatureFur.cginc; World/AnimalFur sets it per renderer).
 Shader "NaturalHistory/MapFeature"
 {
     Properties
@@ -23,6 +24,7 @@ Shader "NaturalHistory/MapFeature"
         [HideInInspector] _UndulateBody ("Tail z, snout z, waves along the body, growth toward the tail", Vector) = (-1, 1, 1, 0.5)
         [HideInInspector] _Coil ("Coiled (0..1), inner radius, ring spacing, head rise", Vector) = (0, 0.06, 0.055, 0.07)
         _Sway ("Sway: amplitude, full-sway height, speed, wavelength", Vector) = (0, 1, 1, 1)
+        [HideInInspector] _Fur ("Fur: amount, strands per unit", Vector) = (0, 0, 0, 0)
         [HideInInspector] _StencilRef ("Stencil: 1 for animals, so borders skip them", Int) = 0
     }
 
@@ -48,9 +50,11 @@ Shader "NaturalHistory/MapFeature"
             float4 _UndulateBody;
             float4 _Coil;
             float4 _Sway;
+            float4 _Fur;
         CBUFFER_END
 
         #include "MapFeatureFlap.cginc"
+        #include "MapFeatureFur.cginc"
         ENDHLSL
 
         Pass
@@ -84,11 +88,15 @@ Shader "NaturalHistory/MapFeature"
                 half4  color      : COLOR;
                 float  fogFactor  : TEXCOORD2;
                 float2 band       : TEXCOORD3;
+                float3 furPos     : TEXCOORD4; // object space before any bending (MapFeatureFur)
+                float3 furNormal  : TEXCOORD5;
             };
 
             Varyings vert(Attributes v)
             {
                 Varyings o;
+                o.furPos    = v.positionOS.xyz;
+                o.furNormal = v.normalOS;
                 ApplyFlap(v.positionOS.xyz, v.normalOS);
                 ApplyUndulate(v.positionOS.xyz, v.normalOS);
                 ApplyStride(v.positionOS.xyz);
@@ -110,12 +118,13 @@ Shader "NaturalHistory/MapFeature"
                 float3 n      = normalize(i.normalWS);
                 half3  albedo = i.color.rgb * _Color.rgb;
                 if (i.band.y > 0.5) albedo *= BandColor(i.band);
+                albedo *= FurShade(i.furPos, i.furNormal);
 
                 Light mainLight = GetMainLight(TransformWorldToShadowCoord(i.positionWS));
-                half  ndotl     = saturate(dot(n, mainLight.direction));
-                half3 lighting  = mainLight.color * ndotl * mainLight.shadowAttenuation + SampleSH(n);
+                half3 viewDir   = GetWorldSpaceNormalizeViewDir(i.positionWS);
+                half3 direct    = FurLight(albedo, n, mainLight.direction, viewDir, _Fur.x) * mainLight.color * mainLight.shadowAttenuation;
 
-                return half4(MixFog(albedo * lighting, i.fogFactor), 1);
+                return half4(MixFog(direct + albedo * SampleSH(n), i.fogFactor), 1);
             }
             ENDHLSL
         }
@@ -199,7 +208,7 @@ Shader "NaturalHistory/MapFeature"
         Stencil { Ref [_StencilRef] Comp Always Pass Replace }
 
         CGPROGRAM
-        #pragma surface surf Lambert fullforwardshadows addshadow vertex:vert
+        #pragma surface surf Fur fullforwardshadows addshadow vertex:vert
         #pragma target 3.0
 
         fixed4 _Color;
@@ -215,18 +224,30 @@ Shader "NaturalHistory/MapFeature"
         float4 _UndulateBody;
         float4 _Coil;
         float4 _Sway;
+        float4 _Fur;
         #include "MapFeatureFlap.cginc"
+        #include "MapFeatureFur.cginc"
 
         struct Input
         {
             float4 color : COLOR;
-            float2 nhBand;  // banded rock (BandColor)
+            // object-space position and normal before any bending (MapFeatureFur), with the banded
+            // rock coordinates (BandColor) in w, packed to stay within shader model 3's interpolators
+            float4 nhFurPosBand;
+            float4 nhFurNormalBand;
         };
+
+        // Lambert, or with _Fur the wrapped light and sheen of a coat (Gloss carries the amount)
+        half4 LightingFur(SurfaceOutput s, half3 lightDir, half3 viewDir, half atten)
+        {
+            return half4(FurLight(s.Albedo, s.Normal, lightDir, viewDir, s.Gloss) * _LightColor0.rgb * atten, s.Alpha);
+        }
 
         void vert(inout appdata_full v, out Input o)
         {
             UNITY_INITIALIZE_OUTPUT(Input, o);
-            o.nhBand = v.texcoord2.xy;
+            o.nhFurPosBand    = float4(v.vertex.xyz, v.texcoord2.x);
+            o.nhFurNormalBand = float4(v.normal, v.texcoord2.y);
             ApplyFlap(v.vertex.xyz, v.normal);
             ApplyUndulate(v.vertex.xyz, v.normal);
             ApplyStride(v.vertex.xyz);
@@ -239,7 +260,10 @@ Shader "NaturalHistory/MapFeature"
         void surf(Input IN, inout SurfaceOutput o)
         {
             o.Albedo = IN.color.rgb * _Color.rgb;
-            if (IN.nhBand.y > 0.5) o.Albedo *= BandColor(IN.nhBand);
+            float2 band = float2(IN.nhFurPosBand.w, IN.nhFurNormalBand.w);
+            if (band.y > 0.5) o.Albedo *= BandColor(band);
+            o.Albedo *= FurShade(IN.nhFurPosBand.xyz, IN.nhFurNormalBand.xyz);
+            o.Gloss  = _Fur.x;
             o.Alpha  = 1;
         }
         ENDCG

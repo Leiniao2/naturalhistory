@@ -215,14 +215,27 @@ namespace NaturalHistory.World
             grid.TerrainChanged += PlaceColonies; // another period: different species are alive
             if (grid.IsGenerated) PlaceColonies();
             CellSelector.CellClicked += OnCellClicked;
+            if (AgeManager.Instance != null) AgeManager.Instance.TimeChanged += OnTimeChanged;
         }
 
         private void OnDestroy()
         {
             if (grid != null) { grid.Generated -= PlaceColonies; grid.TerrainChanged -= PlaceColonies; }
             CellSelector.CellClicked -= OnCellClicked;
+            if (AgeManager.Instance != null) AgeManager.Instance.TimeChanged -= OnTimeChanged;
             if (Instance == this) Instance = null;
         }
+
+        // Reaching the present day (after the last turn of the Quaternary) ends the Ice Age: the
+        // species that died out in the Quaternary (a lastAge) leave the map. Players' groups stay.
+        private void OnTimeChanged()
+        {
+            if (!PresentDay) return;
+            foreach (var g in groups.ToArray())
+                if (g != null && g.Owner == null && !AliveIn(g.Definition, grid.DisplayedAge)) DespawnColony(g);
+        }
+
+        private static bool PresentDay => AgeManager.Instance != null && AgeManager.Instance.IsPresentDay;
 
         private void OnCellClicked(HexCell cell)
         {
@@ -358,11 +371,12 @@ namespace NaturalHistory.World
             Destroy(group.gameObject);
         }
 
-        // firstAge..lastAge inclusive; an empty or unknown firstAge counts as always, an empty lastAge as still alive.
+        // firstAge..lastAge inclusive; an empty or unknown firstAge counts as always, an empty lastAge as
+        // still alive. In the present day only the still-living species are (any lastAge has passed).
         private static bool AliveIn(SpeciesDefinition def, GeologicalAge age)
         {
             if (System.Enum.TryParse(def.firstAge, true, out GeologicalAge first) && age < first) return false;
-            if (System.Enum.TryParse(def.lastAge,  true, out GeologicalAge last)  && age > last)  return false;
+            if (System.Enum.TryParse(def.lastAge,  true, out GeologicalAge last)  && (age > last || PresentDay)) return false;
             return true;
         }
 
@@ -560,6 +574,7 @@ namespace NaturalHistory.World
                 var block = new MaterialPropertyBlock();
                 float v = R(0.92f, 1.06f);
                 block.SetColor("_Color", new Color(v, v * R(0.97f, 1.02f), v * R(0.94f, 1.0f)));
+                block.SetVector(AnimalFur.FurId, AnimalFur.Of(def, mesh));
                 if (def.wingBeat > 0f && flapAmplitude > 0f)
                 {
                     block.SetFloat(FlapRootId, (def.wingRoot > 0f ? def.wingRoot : 0.15f) * halfSpan);

@@ -14911,6 +14911,1090 @@
   {
    "k": "High mountain",
    "v": "Alta montagna"
+  },
+  {
+   "k": "Ciliates, foraminifera and their kin form a branch of the eukaryotes of their own, far from the animals.",
+   "v": "Ciliati, foraminiferi e loro parenti formano un ramo a sé degli eucarioti, lontano dagli animali."
+  },
+  {
+   "k": "Ciliates row with thousands of cilia under a skin of flattened sacs.",
+   "v": "I ciliati remano con migliaia di ciglia sotto una pelle di sacche appiattite."
+  },
+  {
+   "k": "Foraminifera reach out with threads of cytoplasm and build chambered shells.",
+   "v": "I foraminiferi allungano filamenti di citoplasma e costruiscono gusci a camere."
+  },
+  {
+   "k": "Heliozoans belong with the diatoms and brown algae, though they hunt like animals.",
+   "v": "Gli eliozoi stanno con le diatomee e le alghe brune, anche se cacciano come animali."
+  },
+  {
+   "k": "Parabasalids live without mitochondria, in the guts of termites and other animals.",
+   "v": "I parabasalidi vivono senza mitocondri, nell'intestino delle termiti e di altri animali."
+  },
+  {
+   "k": "Amoebae belong to the branch of eukaryotes that also gave rise to fungi and animals.",
+   "v": "Le amebe appartengono al ramo degli eucarioti da cui sono nati anche i funghi e gli animali."
+  },
+  {
+   "k": "Amoebae crawl and feed by flowing out arms of cytoplasm.",
+   "v": "Le amebe strisciano e si nutrono allungando braccia di citoplasma."
+  },
+  {
+   "k": "Choanoflagellates, single cells with a collar of microvilli round a whip, are the closest living relatives of animals.",
+   "v": "I coanoflagellati, cellule singole con un collare di microvilli attorno a un flagello, sono i parenti viventi più stretti degli animali."
+  },
+  {
+   "k": "Animals: many cells working together, the first of them sponge-like collar-cell feeders.",
+   "v": "Gli animali: molte cellule che lavorano insieme, i primi filtratori a cellule con collare come le spugne."
+  },
+  {
+   "k": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed.",
+   "v": "Le spugne pompano acqua attraverso il corpo e la filtrano con cellule a collare, come si nutrivano i loro antenati unicellulari."
+  },
+  {
+   "k": "Demosponges build their skeletons of spongin and silica needles.",
+   "v": "Le demospongie costruiscono lo scheletro con spongina e aghi di silice."
+  },
+  {
+   "k": "Archaeocyaths were reef-building sponges with double cone-shaped walls.",
+   "v": "Gli archeociati erano spugne costruttrici di scogliere con doppie pareti a cono."
+  },
+  {
+   "k": "Comb jellies swim with rows of beating combs of cilia.",
+   "v": "Gli ctenofori nuotano con file di pettini di ciglia che battono."
+  },
+  {
+   "k": "Frond-shaped Ediacaran organisms, among the first large animals.",
+   "v": "Organismi a fronda dell'Ediacarano, tra i primi grandi animali."
+  },
+  {
+   "k": "Rangeomorphs grew as fractal fronds on the deep sea floor.",
+   "v": "I rangeomorfi crescevano come fronde frattali sui fondali profondi."
+  },
+  {
+   "k": "Animals with true tissues, nerves and muscles.",
+   "v": "Animali con veri tessuti, nervi e muscoli."
+  },
+  {
+   "k": "Cloudina built some of the first mineral skeletons, stacked cones of calcite.",
+   "v": "Cloudina costruì alcuni dei primi scheletri minerali, coni di calcite impilati."
+  },
+  {
+   "k": "Cnidarians catch prey with stinging cells.",
+   "v": "Gli cnidari catturano le prede con cellule urticanti."
+  },
+  {
+   "k": "Anthozoans are polyps all their lives: anemones and corals.",
+   "v": "Gli antozoi restano polipi tutta la vita: anemoni e coralli."
+  },
+  {
+   "k": "Corals build limestone skeletons and form reefs.",
+   "v": "I coralli costruiscono scheletri calcarei e formano scogliere."
+  },
+  {
+   "k": "Tabulate corals built honeycomb colonies of tiny tubes.",
+   "v": "I coralli tabulati costruivano colonie a nido d'ape di tubicini."
+  },
+  {
+   "k": "Rugose corals grew as horn-shaped cups.",
+   "v": "I coralli rugosi crescevano come calici a forma di corno."
+  },
+  {
+   "k": "Modern stony corals, with algae living in their tissues.",
+   "v": "I moderni coralli duri, con alghe che vivono nei loro tessuti."
+  },
+  {
+   "k": "Sea anemones are soft corals without a skeleton.",
+   "v": "Gli anemoni di mare sono coralli molli senza scheletro."
+  },
+  {
+   "k": "Medusozoans swim as jellyfish for part of their lives.",
+   "v": "I medusozoi nuotano come meduse per parte della loro vita."
+  },
+  {
+   "k": "Siphonophores are colonies of specialised polyps that act as one animal.",
+   "v": "I sifonofori sono colonie di polipi specializzati che agiscono come un solo animale."
+  },
+  {
+   "k": "Bilaterians have a front and a back, a left and a right side, and a gut.",
+   "v": "I bilateri hanno un davanti e un dietro, un lato sinistro e uno destro, e un intestino."
+  },
+  {
+   "k": "Deuterostomes form the anus first in the embryo: the line of echinoderms and chordates.",
+   "v": "I deuterostomi formano prima l'ano nell'embrione: la linea di echinodermi e cordati."
+  },
+  {
+   "k": "Echinoderms and hemichordates share a larva with a looping band of cilia.",
+   "v": "Echinodermi ed emicordati hanno in comune una larva con una banda di ciglia sinuosa."
+  },
+  {
+   "k": "Graptolites were colonial hemichordates drifting in the plankton.",
+   "v": "I graptoliti erano emicordati coloniali che fluttuavano nel plancton."
+  },
+  {
+   "k": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet.",
+   "v": "Gli echinodermi si fanno uno scheletro di piastre di calcite e si muovono su pedicelli idraulici."
+  },
+  {
+   "k": "Sea lilies filter the water with feathery arms on a stalk.",
+   "v": "I gigli di mare filtrano l'acqua con braccia piumose su uno stelo."
+  },
+  {
+   "k": "Free-living echinoderms such as sea stars crawl mouth-down on the sea floor.",
+   "v": "Gli echinodermi liberi come le stelle marine strisciano a bocca in giù sul fondale."
+  },
+  {
+   "k": "Chordates have a stiffening rod, the notochord, along the back.",
+   "v": "I cordati hanno un'asta rigida lungo il dorso, la notocorda."
+  },
+  {
+   "k": "Vertebrates: a skull, eyes and a backbone around the nerve cord.",
+   "v": "I vertebrati: un cranio, occhi e una colonna vertebrale attorno al midollo spinale."
+  },
+  {
+   "k": "Conodonts were eel-like vertebrates with comb-like teeth.",
+   "v": "I conodonti erano vertebrati simili ad anguille, con denti a pettine."
+  },
+  {
+   "k": "Galeaspids were jawless fish with a bony head shield.",
+   "v": "I galeaspidi erano pesci senza mascelle con uno scudo cefalico osseo."
+  },
+  {
+   "k": "Armoured jawless fish with bony shields.",
+   "v": "Pesci senza mascelle corazzati di scudi ossei."
+  },
+  {
+   "k": "Anaspids were small, streamlined jawless fish.",
+   "v": "Gli anaspidi erano piccoli pesci senza mascelle dal corpo affusolato."
+  },
+  {
+   "k": "Thelodonts were jawless fish covered in tiny scales.",
+   "v": "I telodonti erano pesci senza mascelle coperti di minuscole squame."
+  },
+  {
+   "k": "Osteostracans had a horseshoe-shaped head shield and paired fins.",
+   "v": "Gli osteostraci avevano uno scudo cefalico a ferro di cavallo e pinne pari."
+  },
+  {
+   "k": "Jaws evolved from gill arches, opening up new ways of feeding.",
+   "v": "Le mascelle nacquero dagli archi branchiali, aprendo nuovi modi di nutrirsi."
+  },
+  {
+   "k": "Placoderms were armoured jawed fish, the first giant predators.",
+   "v": "I placodermi erano pesci con mascelle corazzati, i primi predatori giganti."
+  },
+  {
+   "k": "The crown of jawed vertebrates: sharks and bony fish.",
+   "v": "Il gruppo corona dei vertebrati con mascelle: squali e pesci ossei."
+  },
+  {
+   "k": "Cartilaginous fish keep replacing their teeth all their lives.",
+   "v": "I pesci cartilaginei sostituiscono i denti per tutta la vita."
+  },
+  {
+   "k": "Chimaeras and their kin have tooth plates that grind shellfish.",
+   "v": "Le chimere e i loro parenti macinano molluschi con piastre dentarie."
+  },
+  {
+   "k": "Sharks and rays.",
+   "v": "Squali e razze."
+  },
+  {
+   "k": "Modern sharks and rays.",
+   "v": "Squali e razze moderni."
+  },
+  {
+   "k": "Galeomorph sharks include the great hunters of the open sea.",
+   "v": "I galeomorfi comprendono i grandi cacciatori del mare aperto."
+  },
+  {
+   "k": "Rays flattened out to live on and above the sea floor.",
+   "v": "Le razze si appiattirono per vivere sul fondale e appena sopra."
+  },
+  {
+   "k": "Bony fish grew skeletons of bone and lungs, later turned into swim bladders.",
+   "v": "I pesci ossei si fecero scheletri d'osso e polmoni, poi trasformati in vesciche natatorie."
+  },
+  {
+   "k": "Ray-finned fish took over the waters of the world.",
+   "v": "I pesci con pinne raggiate conquistarono le acque del mondo."
+  },
+  {
+   "k": "Neopterygians have a more flexible jaw.",
+   "v": "I neopterigi hanno una mascella più mobile."
+  },
+  {
+   "k": "Gars and their kin, covered in shiny, heavy scales.",
+   "v": "I lepisostei e i loro parenti, coperti di squame pesanti e lucenti."
+  },
+  {
+   "k": "Pachycormids included giant plankton feeders of the Jurassic.",
+   "v": "Tra i pachicormidi c'erano giganteschi mangiatori di plancton del Giurassico."
+  },
+  {
+   "k": "Teleosts, with their protrusible jaws, are almost all fish living today.",
+   "v": "I teleostei, con le mascelle protrattili, sono quasi tutti i pesci viventi."
+  },
+  {
+   "k": "Ichthyodectiforms were big predatory teleosts.",
+   "v": "Gli ittiodectiformi erano grandi teleostei predatori."
+  },
+  {
+   "k": "Herrings and their kin.",
+   "v": "Le aringhe e i loro parenti."
+  },
+  {
+   "k": "Otophysans hear with a chain of bones linking the swim bladder to the ear.",
+   "v": "Gli otofisi sentono con una catena di ossicini che unisce la vescica natatoria all'orecchio."
+  },
+  {
+   "k": "Spiny-finned fish.",
+   "v": "Pesci con pinne spinose."
+  },
+  {
+   "k": "Lobe-finned fish have fleshy fins on bones.",
+   "v": "I sarcopterigi hanno pinne carnose sostenute da ossa."
+  },
+  {
+   "k": "Lungfish breathe air with real lungs.",
+   "v": "I dipnoi respirano aria con veri polmoni."
+  },
+  {
+   "k": "Tetrapodomorphs: lobe-finned fish on the way to limbs.",
+   "v": "I tetrapodomorfi: sarcopterigi in cammino verso gli arti."
+  },
+  {
+   "k": "Rhizodonts were giant predatory lobe-fins.",
+   "v": "I rizodonti erano sarcopterigi predatori giganti."
+  },
+  {
+   "k": "Lobe-fins with the bones of the tetrapod limb already in their fins.",
+   "v": "Sarcopterigi con le ossa dell'arto dei tetrapodi già nelle pinne."
+  },
+  {
+   "k": "Fish with flat heads, necks and sturdy fins hauled out in shallow water.",
+   "v": "Pesci con testa piatta, collo e pinne robuste si trascinavano fuori dall'acqua bassa."
+  },
+  {
+   "k": "Tetrapods: four limbs with digits.",
+   "v": "I tetrapodi: quattro arti con dita."
+  },
+  {
+   "k": "The amphibian line, laying their eggs in water.",
+   "v": "La linea degli anfibi, che depongono le uova in acqua."
+  },
+  {
+   "k": "Temnospondyls were the most varied early amphibians.",
+   "v": "I temnospondili furono i più vari tra i primi anfibi."
+  },
+  {
+   "k": "Modern amphibians breathe partly through their skin.",
+   "v": "Gli anfibi moderni respirano in parte attraverso la pelle."
+  },
+  {
+   "k": "Frogs and toads leap on long hind legs.",
+   "v": "Rane e rospi saltano sulle lunghe zampe posteriori."
+  },
+  {
+   "k": "Lepospondyls were small, often oddly shaped early tetrapods.",
+   "v": "I lepospondili erano piccoli tetrapodi primitivi, spesso dalle forme strane."
+  },
+  {
+   "k": "The line of tetrapods leading to amniotes.",
+   "v": "La linea di tetrapodi che porta agli amnioti."
+  },
+  {
+   "k": "The amniotic egg freed vertebrates from the water.",
+   "v": "L'uovo amniotico rese i vertebrati indipendenti dall'acqua."
+  },
+  {
+   "k": "Synapsids, with one opening behind the eye, are the line of mammals.",
+   "v": "I sinapsidi, con un'apertura dietro l'occhio, sono la linea dei mammiferi."
+  },
+  {
+   "k": "Caseids were bulky plant-eating synapsids with tiny heads.",
+   "v": "I caseidi erano sinapsidi erbivori massicci con una testa minuscola."
+  },
+  {
+   "k": "Eupelycosaurs include the sail-backed synapsids.",
+   "v": "Tra gli eupelicosauri ci sono i sinapsidi con la vela sul dorso."
+  },
+  {
+   "k": "Sphenacodonts had teeth of different shapes, an early step toward mammals.",
+   "v": "Gli sfenacodonti avevano denti di forme diverse, un primo passo verso i mammiferi."
+  },
+  {
+   "k": "Therapsids walked with their legs more under the body.",
+   "v": "I terapsidi camminavano con le zampe più sotto il corpo."
+  },
+  {
+   "k": "Dinocephalians were big, thick-skulled therapsids.",
+   "v": "I dinocefali erano grandi terapsidi dal cranio spesso."
+  },
+  {
+   "k": "Dicynodonts cropped plants with a horny beak and two tusks.",
+   "v": "I dicinodonti brucavano con un becco corneo e due zanne."
+  },
+  {
+   "k": "Theriodonts were the sabre-toothed predators of the Permian.",
+   "v": "I teriodonti erano i predatori dai denti a sciabola del Permiano."
+  },
+  {
+   "k": "Cynodonts had a secondary palate and were probably warm-blooded.",
+   "v": "I cinodonti avevano un palato secondario ed erano probabilmente a sangue caldo."
+  },
+  {
+   "k": "Mammaliaforms had the mammalian jaw joint and ear.",
+   "v": "I mammaliformi avevano l'articolazione della mandibola e l'orecchio dei mammiferi."
+  },
+  {
+   "k": "Mammals nurse their young with milk.",
+   "v": "I mammiferi nutrono i piccoli col latte."
+  },
+  {
+   "k": "Monotremes still lay eggs.",
+   "v": "I monotremi depongono ancora le uova."
+  },
+  {
+   "k": "Mammals that went on to give birth to live young.",
+   "v": "Mammiferi che arrivarono a partorire piccoli vivi."
+  },
+  {
+   "k": "Therian mammals give birth to live young.",
+   "v": "I teri partoriscono piccoli vivi."
+  },
+  {
+   "k": "Metatherians, the marsupial line, give birth to tiny young.",
+   "v": "I metateri, la linea dei marsupiali, partoriscono piccoli minuscoli."
+  },
+  {
+   "k": "Marsupials raise their young in a pouch.",
+   "v": "I marsupiali crescono i piccoli in un marsupio."
+  },
+  {
+   "k": "Eutherians: the line of placental mammals.",
+   "v": "Gli euteri: la linea dei mammiferi placentati."
+  },
+  {
+   "k": "Placentals that evolved on the southern continents.",
+   "v": "Placentati evolutisi nei continenti meridionali."
+  },
+  {
+   "k": "Xenarthrans, with extra joints in the backbone: sloths, anteaters and armadillos.",
+   "v": "Gli xenartri, con articolazioni in più nella colonna: bradipi, formichieri e armadilli."
+  },
+  {
+   "k": "Sloths and anteaters.",
+   "v": "Bradipi e formichieri."
+  },
+  {
+   "k": "Armadillos and glyptodonts are covered in bony armour.",
+   "v": "Armadilli e gliptodonti sono coperti da un'armatura ossea."
+  },
+  {
+   "k": "Afrotheres evolved in Africa.",
+   "v": "Gli afroteri si evolsero in Africa."
+  },
+  {
+   "k": "Elephants, sea cows and their kin evolved along the Tethys Sea.",
+   "v": "Elefanti, sirenii e loro parenti si evolsero lungo la Tetide."
+  },
+  {
+   "k": "Proboscideans: a trunk and tusks.",
+   "v": "I proboscidati: una proboscide e le zanne."
+  },
+  {
+   "k": "Mastodons and elephants grew big and spread across the world.",
+   "v": "Mastodonti ed elefanti diventarono grandi e si diffusero in tutto il mondo."
+  },
+  {
+   "k": "True elephants.",
+   "v": "Gli elefanti veri e propri."
+  },
+  {
+   "k": "Sea cows went back to the water and graze on seagrass.",
+   "v": "I sirenii tornarono in acqua e pascolano le praterie marine."
+  },
+  {
+   "k": "Placentals of the northern continents.",
+   "v": "Placentati dei continenti settentrionali."
+  },
+  {
+   "k": "Primates and rodents and their kin.",
+   "v": "Primati, roditori e loro parenti."
+  },
+  {
+   "k": "Early primate relatives with grasping hands.",
+   "v": "Primi parenti dei primati con mani prensili."
+  },
+  {
+   "k": "Primates: grasping hands, forward-facing eyes and big brains.",
+   "v": "I primati: mani prensili, occhi rivolti in avanti e grande cervello."
+  },
+  {
+   "k": "Old World monkeys and apes.",
+   "v": "Scimmie del Vecchio Mondo e antropomorfe."
+  },
+  {
+   "k": "Old World monkeys.",
+   "v": "Scimmie del Vecchio Mondo."
+  },
+  {
+   "k": "Apes have no tail and big brains.",
+   "v": "Le scimmie antropomorfe non hanno coda e hanno un grande cervello."
+  },
+  {
+   "k": "Hominins walk upright on two legs.",
+   "v": "Gli ominini camminano eretti su due gambe."
+  },
+  {
+   "k": "Our own genus, with big brains and stone tools.",
+   "v": "Il nostro genere, con grande cervello e strumenti di pietra."
+  },
+  {
+   "k": "Rodents and rabbits have ever-growing incisors.",
+   "v": "Roditori e conigli hanno incisivi a crescita continua."
+  },
+  {
+   "k": "Rodents gnaw with ever-growing incisors.",
+   "v": "I roditori rosicchiano con incisivi a crescita continua."
+  },
+  {
+   "k": "Laurasiatheres evolved on the northern continents.",
+   "v": "I laurasiateri si evolsero nei continenti settentrionali."
+  },
+  {
+   "k": "Shrews, hedgehogs and moles.",
+   "v": "Toporagni, ricci e talpe."
+  },
+  {
+   "k": "Bats, carnivores and hoofed mammals.",
+   "v": "Pipistrelli, carnivori e mammiferi con zoccoli."
+  },
+  {
+   "k": "Bats are the only mammals that truly fly.",
+   "v": "I pipistrelli sono gli unici mammiferi che volano davvero."
+  },
+  {
+   "k": "Ferae: meat-eaters with shearing teeth.",
+   "v": "I feri: carnivori con denti taglienti."
+  },
+  {
+   "k": "Carnivoramorphs slice meat with a pair of blade-like teeth.",
+   "v": "I carnivoramorfi tagliano la carne con una coppia di denti a lama."
+  },
+  {
+   "k": "Carnivorans.",
+   "v": "I carnivori."
+  },
+  {
+   "k": "Cats and their kin.",
+   "v": "Gatti e loro parenti."
+  },
+  {
+   "k": "Cats are the most specialised meat-eaters.",
+   "v": "I gatti sono i carnivori più specializzati."
+  },
+  {
+   "k": "Dogs, bears and their kin.",
+   "v": "Cani, orsi e loro parenti."
+  },
+  {
+   "k": "Bears.",
+   "v": "Gli orsi."
+  },
+  {
+   "k": "Weasels, otters and their kin.",
+   "v": "Donnole, lontre e loro parenti."
+  },
+  {
+   "k": "Hoofed mammals.",
+   "v": "I mammiferi con zoccoli."
+  },
+  {
+   "k": "South American hoofed mammals, distant relatives of horses.",
+   "v": "Ungulati sudamericani, lontani parenti dei cavalli."
+  },
+  {
+   "k": "Odd-toed ungulates carry their weight on the middle toe.",
+   "v": "I perissodattili portano il peso sul dito medio."
+  },
+  {
+   "k": "Horses and their relatives.",
+   "v": "I cavalli e i loro parenti."
+  },
+  {
+   "k": "Horses ran on ever fewer toes as grasslands spread.",
+   "v": "I cavalli corsero su sempre meno dita man mano che si estendevano le praterie."
+  },
+  {
+   "k": "Grazing horses with high-crowned teeth.",
+   "v": "Cavalli pascolatori con denti a corona alta."
+  },
+  {
+   "k": "Chalicotheres were odd-toed ungulates with claws.",
+   "v": "I calicoteri erano perissodattili con artigli."
+  },
+  {
+   "k": "Rhinos and tapirs.",
+   "v": "Rinoceronti e tapiri."
+  },
+  {
+   "k": "Even-toed ungulates walk on two toes.",
+   "v": "Gli artiodattili camminano su due dita."
+  },
+  {
+   "k": "Hippos and whales are each other's closest relatives.",
+   "v": "Ippopotami e balene sono i parenti più stretti gli uni degli altri."
+  },
+  {
+   "k": "Camels.",
+   "v": "I cammelli."
+  },
+  {
+   "k": "Ruminants chew the cud and ferment grass in a stomach of four chambers.",
+   "v": "I ruminanti ruminano e fermentano l'erba in uno stomaco a quattro camere."
+  },
+  {
+   "k": "Whales evolved from hoofed mammals that returned to the sea.",
+   "v": "Le balene discendono da mammiferi con zoccoli tornati al mare."
+  },
+  {
+   "k": "Fully aquatic whales, no longer able to walk on land.",
+   "v": "Balene del tutto acquatiche, non più capaci di camminare sulla terra."
+  },
+  {
+   "k": "Modern whales.",
+   "v": "Le balene moderne."
+  },
+  {
+   "k": "Toothed whales hunt by echolocation.",
+   "v": "Gli odontoceti cacciano con l'ecolocalizzazione."
+  },
+  {
+   "k": "Baleen whales filter the sea through baleen plates.",
+   "v": "Le balene con i fanoni filtrano il mare attraverso i fanoni."
+  },
+  {
+   "k": "Sauropsids: the reptiles and birds.",
+   "v": "I sauropsidi: i rettili e gli uccelli."
+  },
+  {
+   "k": "True reptiles.",
+   "v": "I veri rettili."
+  },
+  {
+   "k": "Parareptiles, an early branch of reptiles.",
+   "v": "I pararettili, un ramo antico dei rettili."
+  },
+  {
+   "k": "Diapsids have two openings behind the eye.",
+   "v": "I diapsidi hanno due aperture dietro l'occhio."
+  },
+  {
+   "k": "Neodiapsids include all living reptiles.",
+   "v": "I neodiapsidi comprendono tutti i rettili viventi."
+  },
+  {
+   "k": "Lizards, crocodiles, turtles, dinosaurs and birds.",
+   "v": "Lucertole, coccodrilli, tartarughe, dinosauri e uccelli."
+  },
+  {
+   "k": "Lizards and snakes and their kin.",
+   "v": "Lucertole, serpenti e loro parenti."
+  },
+  {
+   "k": "Squamates shed their scaly skin.",
+   "v": "Gli squamati mutano la pelle squamosa."
+  },
+  {
+   "k": "Iguanians.",
+   "v": "Gli iguani."
+  },
+  {
+   "k": "Squamates with venom glands: snakes, monitors and mosasaurs.",
+   "v": "Squamati con ghiandole del veleno: serpenti, varani e mosasauri."
+  },
+  {
+   "k": "Snakes lost their legs.",
+   "v": "I serpenti hanno perso le zampe."
+  },
+  {
+   "k": "Vipers, with long folding fangs.",
+   "v": "Le vipere, con lunghe zanne ripiegabili."
+  },
+  {
+   "k": "Ichthyosaurs became dolphin-shaped reptiles of the open sea.",
+   "v": "Gli ittiosauri diventarono rettili d'alto mare a forma di delfino."
+  },
+  {
+   "k": "Sauropterygians returned to the sea with paddle-like limbs.",
+   "v": "I sauropterigi tornarono al mare con arti a pagaia."
+  },
+  {
+   "k": "Nothosaurs and plesiosaurs.",
+   "v": "Notosauri e plesiosauri."
+  },
+  {
+   "k": "Plesiosaurs flew through the water on four flippers.",
+   "v": "I plesiosauri volavano nell'acqua su quattro pinne."
+  },
+  {
+   "k": "Turtles grew a shell from their ribs.",
+   "v": "Le tartarughe si fecero un guscio dalle costole."
+  },
+  {
+   "k": "True turtles pull their head into the shell.",
+   "v": "Le vere tartarughe ritirano la testa nel guscio."
+  },
+  {
+   "k": "Cryptodires pull their head straight back into the shell.",
+   "v": "I criptodiri ritirano la testa dritta all'indietro nel guscio."
+  },
+  {
+   "k": "Side-necked turtles fold the neck sideways.",
+   "v": "Le tartarughe dal collo laterale piegano il collo di lato."
+  },
+  {
+   "k": "Archosauromorphs: the line of crocodiles, dinosaurs and birds.",
+   "v": "Gli arcosauromorfi: la linea di coccodrilli, dinosauri e uccelli."
+  },
+  {
+   "k": "Rhynchosaurs cropped plants with a hooked beak.",
+   "v": "I rincosauri brucavano con un becco uncinato."
+  },
+  {
+   "k": "Archosauriforms have teeth set in sockets.",
+   "v": "Gli arcosauriformi hanno denti inseriti negli alveoli."
+  },
+  {
+   "k": "Archosaurs: crocodiles on one side, dinosaurs and birds on the other.",
+   "v": "Gli arcosauri: i coccodrilli da una parte, dinosauri e uccelli dall'altra."
+  },
+  {
+   "k": "Pseudosuchians, the crocodile line of archosaurs.",
+   "v": "Gli pseudosuchi, la linea dei coccodrilli tra gli arcosauri."
+  },
+  {
+   "k": "Loricatans were the big predators of the Triassic.",
+   "v": "I loricati erano i grandi predatori del Triassico."
+  },
+  {
+   "k": "Crocodylomorphs.",
+   "v": "I crocodilomorfi."
+  },
+  {
+   "k": "Crocodyliforms.",
+   "v": "I crocodiliformi."
+  },
+  {
+   "k": "Crocodilians.",
+   "v": "I coccodrilli."
+  },
+  {
+   "k": "The bird line of archosaurs.",
+   "v": "La linea degli uccelli tra gli arcosauri."
+  },
+  {
+   "k": "Pterosaurs and dinosaurs.",
+   "v": "Pterosauri e dinosauri."
+  },
+  {
+   "k": "Pterosaurs flew on wings of skin.",
+   "v": "Gli pterosauri volavano su ali di pelle."
+  },
+  {
+   "k": "Short-tailed pterosaurs, some as big as giraffes.",
+   "v": "Pterosauri a coda corta, alcuni grandi come giraffe."
+  },
+  {
+   "k": "Dinosaurs stood upright on legs held under the body.",
+   "v": "I dinosauri stavano eretti, con le zampe sotto il corpo."
+  },
+  {
+   "k": "Ornithischians were plant-eaters with a beak.",
+   "v": "Gli ornitischi erano erbivori con il becco."
+  },
+  {
+   "k": "Thyreophorans were armoured dinosaurs.",
+   "v": "I tireofori erano dinosauri corazzati."
+  },
+  {
+   "k": "Stegosaurs carried plates and spikes.",
+   "v": "Gli stegosauri portavano placche e spine."
+  },
+  {
+   "k": "Ankylosaurs were armoured like tanks.",
+   "v": "Gli anchilosauri erano corazzati come carri armati."
+  },
+  {
+   "k": "Neornithischians.",
+   "v": "I neornitischi."
+  },
+  {
+   "k": "Ornithopods chewed plants with batteries of teeth.",
+   "v": "Gli ornitopodi masticavano le piante con batterie di denti."
+  },
+  {
+   "k": "Marginocephalians had a frill or a dome at the back of the skull.",
+   "v": "I marginocefali avevano un collare o una cupola sul retro del cranio."
+  },
+  {
+   "k": "Ceratopsians had horns and frills.",
+   "v": "I ceratopsi avevano corna e collari."
+  },
+  {
+   "k": "Pachycephalosaurs had thick domed skulls.",
+   "v": "I pachicefalosauri avevano un cranio spesso a cupola."
+  },
+  {
+   "k": "Saurischians: sauropods and theropods.",
+   "v": "I saurischi: sauropodi e teropodi."
+  },
+  {
+   "k": "Sauropodomorphs had long necks.",
+   "v": "I sauropodomorfi avevano il collo lungo."
+  },
+  {
+   "k": "Sauropods were the largest land animals ever.",
+   "v": "I sauropodi furono i più grandi animali terrestri di sempre."
+  },
+  {
+   "k": "Macronarians.",
+   "v": "I macronari."
+  },
+  {
+   "k": "Diplodocoids had whip-like tails.",
+   "v": "I diplodocoidi avevano code a frusta."
+  },
+  {
+   "k": "Theropods were the hunting dinosaurs.",
+   "v": "I teropodi erano i dinosauri cacciatori."
+  },
+  {
+   "k": "Neotheropods.",
+   "v": "I neoteropodi."
+  },
+  {
+   "k": "Averostrans.",
+   "v": "Gli averostri."
+  },
+  {
+   "k": "Ceratosaurs.",
+   "v": "I ceratosauri."
+  },
+  {
+   "k": "Tetanurans.",
+   "v": "I tetanuri."
+  },
+  {
+   "k": "Allosauroids were great predators.",
+   "v": "Gli allosauroidi erano grandi predatori."
+  },
+  {
+   "k": "Megalosauroids include the fish-eating spinosaurs.",
+   "v": "Tra i megalosauroidi ci sono gli spinosauri mangiatori di pesci."
+  },
+  {
+   "k": "Coelurosaurs were feathered.",
+   "v": "I celurosauri avevano le piume."
+  },
+  {
+   "k": "Tyrannosaurs.",
+   "v": "I tirannosauri."
+  },
+  {
+   "k": "Maniraptorans have long arms and wing-like feathers.",
+   "v": "I maniraptori hanno braccia lunghe e piume simili ad ali."
+  },
+  {
+   "k": "Paravians: the dromaeosaurs and birds.",
+   "v": "I paraviani: i dromeosauri e gli uccelli."
+  },
+  {
+   "k": "Dromaeosaurs.",
+   "v": "I dromeosauri."
+  },
+  {
+   "k": "Avialans: the line of birds.",
+   "v": "Gli avialiani: la linea degli uccelli."
+  },
+  {
+   "k": "Ornithurans.",
+   "v": "Gli ornituri."
+  },
+  {
+   "k": "Birds are living dinosaurs.",
+   "v": "Gli uccelli sono dinosauri viventi."
+  },
+  {
+   "k": "Palaeognaths: ostriches, emus and moas.",
+   "v": "I paleognati: struzzi, emù e moa."
+  },
+  {
+   "k": "Neognaths are almost all living birds.",
+   "v": "I neognati sono quasi tutti gli uccelli viventi."
+  },
+  {
+   "k": "Fowl and waterfowl.",
+   "v": "Galliformi e uccelli acquatici."
+  },
+  {
+   "k": "Ducks, geese and swans.",
+   "v": "Anatre, oche e cigni."
+  },
+  {
+   "k": "Neoaves, the great radiation of birds after the dinosaurs died out.",
+   "v": "I neoavi, la grande radiazione degli uccelli dopo l'estinzione dei dinosauri."
+  },
+  {
+   "k": "Nightjars, swifts and hummingbirds.",
+   "v": "Succiacapre, rondoni e colibrì."
+  },
+  {
+   "k": "Flamingos and grebes.",
+   "v": "Fenicotteri e svassi."
+  },
+  {
+   "k": "Shorebirds.",
+   "v": "I limicoli."
+  },
+  {
+   "k": "Waterbirds.",
+   "v": "Gli uccelli acquatici."
+  },
+  {
+   "k": "Waterbirds such as penguins, albatrosses and pelicans.",
+   "v": "Uccelli acquatici come pinguini, albatri e pellicani."
+  },
+  {
+   "k": "Land birds.",
+   "v": "Gli uccelli terrestri."
+  },
+  {
+   "k": "Birds of prey and their kin.",
+   "v": "I rapaci e i loro parenti."
+  },
+  {
+   "k": "Kingfishers and their kin.",
+   "v": "I martin pescatori e i loro parenti."
+  },
+  {
+   "k": "Parrots, songbirds and falcons and their kin.",
+   "v": "Pappagalli, passeriformi, falchi e loro parenti."
+  },
+  {
+   "k": "Parrots and songbirds.",
+   "v": "Pappagalli e passeriformi."
+  },
+  {
+   "k": "Protostomes form the mouth first in the embryo.",
+   "v": "I protostomi formano prima la bocca nell'embrione."
+  },
+  {
+   "k": "Ecdysozoans moult their cuticle as they grow.",
+   "v": "Gli ecdisozoi mutano la cuticola mentre crescono."
+  },
+  {
+   "k": "Tardigrades survive drying out, freezing and even space.",
+   "v": "I tardigradi sopravvivono alla disidratazione, al gelo e persino allo spazio."
+  },
+  {
+   "k": "Panarthropods walk on paired legs.",
+   "v": "I panartropodi camminano su zampe pari."
+  },
+  {
+   "k": "Arthropods have jointed legs.",
+   "v": "Gli artropodi hanno zampe articolate."
+  },
+  {
+   "k": "Radiodonts were the first top predators.",
+   "v": "I radiodonti furono i primi superpredatori."
+  },
+  {
+   "k": "True arthropods, with a hard exoskeleton.",
+   "v": "I veri artropodi, con un esoscheletro duro."
+  },
+  {
+   "k": "Great-appendage arthropods.",
+   "v": "Artropodi dalle grandi appendici."
+  },
+  {
+   "k": "Trilobites and their relatives.",
+   "v": "I trilobiti e i loro parenti."
+  },
+  {
+   "k": "Chelicerates have pincer-like mouthparts.",
+   "v": "I chelicerati hanno appendici boccali a pinza."
+  },
+  {
+   "k": "Sea spiders.",
+   "v": "I picnogonidi."
+  },
+  {
+   "k": "Euchelicerates.",
+   "v": "Gli euchelicerati."
+  },
+  {
+   "k": "Horseshoe crabs.",
+   "v": "I limuli."
+  },
+  {
+   "k": "Sea scorpions.",
+   "v": "Gli scorpioni di mare."
+  },
+  {
+   "k": "Arachnids came onto land.",
+   "v": "Gli aracnidi arrivarono sulla terraferma."
+  },
+  {
+   "k": "Spiders and their kin breathe with book lungs.",
+   "v": "I ragni e i loro parenti respirano con polmoni a libro."
+  },
+  {
+   "k": "Spiders spin silk.",
+   "v": "I ragni filano la seta."
+  },
+  {
+   "k": "Mites and ticks.",
+   "v": "Acari e zecche."
+  },
+  {
+   "k": "Ticks feed on blood.",
+   "v": "Le zecche si nutrono di sangue."
+  },
+  {
+   "k": "Mandibulates chew with mandibles.",
+   "v": "I mandibolati masticano con le mandibole."
+  },
+  {
+   "k": "Myriapods were among the first animals on land.",
+   "v": "I miriapodi furono tra i primi animali sulla terraferma."
+  },
+  {
+   "k": "Crustaceans and insects.",
+   "v": "Crostacei e insetti."
+  },
+  {
+   "k": "Crabs, lobsters and prawns.",
+   "v": "Granchi, aragoste e gamberi."
+  },
+  {
+   "k": "Hexapods walk on six legs.",
+   "v": "Gli esapodi camminano su sei zampe."
+  },
+  {
+   "k": "Insects.",
+   "v": "Gli insetti."
+  },
+  {
+   "k": "Winged insects: the first animals to fly.",
+   "v": "Gli insetti alati: i primi animali a volare."
+  },
+  {
+   "k": "Dragonflies and griffinflies.",
+   "v": "Libellule e meganeure."
+  },
+  {
+   "k": "Neopterans can fold their wings.",
+   "v": "I neotteri possono ripiegare le ali."
+  },
+  {
+   "k": "Cockroaches, termites and mantises.",
+   "v": "Scarafaggi, termiti e mantidi."
+  },
+  {
+   "k": "Termites are social cockroaches.",
+   "v": "Le termiti sono scarafaggi sociali."
+  },
+  {
+   "k": "Holometabolans go through complete metamorphosis.",
+   "v": "Gli olometaboli passano per una metamorfosi completa."
+  },
+  {
+   "k": "Lacewings.",
+   "v": "I neurotteri."
+  },
+  {
+   "k": "Beetles.",
+   "v": "I coleotteri."
+  },
+  {
+   "k": "Wasps, bees and ants.",
+   "v": "Vespe, api e formiche."
+  },
+  {
+   "k": "Stinging Hymenoptera: wasps, bees and ants.",
+   "v": "Imenotteri con pungiglione: vespe, api e formiche."
+  },
+  {
+   "k": "Flies and fleas.",
+   "v": "Mosche e pulci."
+  },
+  {
+   "k": "Flies have two wings.",
+   "v": "Le mosche hanno due ali."
+  },
+  {
+   "k": "Butterflies and moths.",
+   "v": "Farfalle e falene."
+  },
+  {
+   "k": "Spiralians have a spiral cleavage of the egg.",
+   "v": "Gli spiralia hanno una segmentazione a spirale dell'uovo."
+  },
+  {
+   "k": "Flatworms.",
+   "v": "I vermi piatti."
+  },
+  {
+   "k": "Molluscs, worms and brachiopods.",
+   "v": "Molluschi, vermi e brachiopodi."
+  },
+  {
+   "k": "Annelids are segmented worms.",
+   "v": "Gli anellidi sono vermi segmentati."
+  },
+  {
+   "k": "Earthworms and leeches.",
+   "v": "Lombrichi e sanguisughe."
+  },
+  {
+   "k": "Brachiopods and bryozoans filter with a crown of tentacles.",
+   "v": "Brachiopodi e briozoi filtrano con una corona di tentacoli."
+  },
+  {
+   "k": "Brachiopods have two shells.",
+   "v": "I brachiopodi hanno due valve."
+  },
+  {
+   "k": "Molluscs scrape food with a radula.",
+   "v": "I molluschi raschiano il cibo con una radula."
+  },
+  {
+   "k": "Molluscs with a shell.",
+   "v": "Molluschi con conchiglia."
+  },
+  {
+   "k": "Snails and slugs.",
+   "v": "Chiocciole e lumache."
+  },
+  {
+   "k": "Bivalves.",
+   "v": "I bivalvi."
+  },
+  {
+   "k": "Cephalopods swim with jet propulsion.",
+   "v": "I cefalopodi nuotano a propulsione a getto."
+  },
+  {
+   "k": "Ammonites coiled their shells.",
+   "v": "Le ammoniti avvolsero la conchiglia a spirale."
+  },
+  {
+   "k": "Coleoids hid the shell inside the body.",
+   "v": "I coleoidi nascosero la conchiglia dentro il corpo."
   }
  ]
 }

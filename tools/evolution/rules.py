@@ -15,7 +15,7 @@ BIRD = DINO+["Theropod","Bird"]
 MAM = AMN+["Synapsid","Mammal"]
 PLAC = MAM+["Placental"]
 groups = {
- "Heliozoan":["Protist"],"Ciliate":["Protist"],"Amoebozoan":["Protist"],
+ "Heliozoan":["Protist"],"Ciliate":["Protist"],"Amoebozoan":["Protist"],"Choanoflagellate":["Protist"],
  "Early vascular plant":["Plant"],
  "Demosponge":["Animal","Sponge"],
  "Siphonophore":["Animal","Cnidarian"],"Stony coral":["Animal","Cnidarian"],"Sea anemone":["Animal","Cnidarian"],
@@ -122,6 +122,7 @@ groups = {
  "Carpet shark":JAW+["Cartilaginous"], "Embolomere":TET,
  "Chameleon":REP+["Squamate"], "Ichthyosaur":REP+["Marine reptile"], "Plesiosaur":REP+["Marine reptile"],
  "Rauisuchian pseudosuchian":ARCH, "Early dinosaur":DINO+["Theropod"], "Avialan":BIRD,
+ "Lagerpetid":ARCH, "Squamate":REP+["Squamate"],
  **{g:AMN+["Synapsid"] for g in ["Sphenacodont synapsid","Dinocephalian therapsid","Gorgonopsian therapsid","Dicynodont therapsid","Cynodont therapsid"]},
  "Early mammaliaform":MAM, "Eutherian mammal":PLAC,
  # Ediacaran biota: tags of the lineages they may stand at the root of

@@ -10,9 +10,13 @@ the vertex colours as a soft highlight, since the map shader is diffuse only.
 Faces -Y, pivot on the ground (lowest point of the leaf at z = 0).
 
 Usage:
-  blender --background --python tools/blender/seven_spot_ladybird.py -- [--render out.png]
+  blender --background --python tools/blender/seven_spot_ladybird.py -- [--flight] [--render out.png]
 
 Output: Assets/Resources/Models/Species/SevenSpotLadybird.fbx
+--flight: SevenSpotLadybirdFlight.fbx, the beetle alone in flight (nh_flight): the spotted red
+elytra raised and held out to the sides, the thin translucent-brown hind wings spread far out
+along X beyond them (these are what the map's wing beat swings), legs tucked; pivot at the body
+centre.
 """
 
 import math
@@ -20,9 +24,10 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import nh_flight  # noqa: E402
 import nh_model as nh  # noqa: E402
 import bmesh  # noqa: E402
-from mathutils import Vector, noise  # noqa: E402
+from mathutils import Matrix, Vector, noise  # noqa: E402
 
 RED = (0.86, 0.07, 0.035)
 RED_DARK = (0.45, 0.02, 0.02)
@@ -192,5 +197,77 @@ def build():
     return obj
 
 
+MEMBRANE = (0.62, 0.46, 0.32)
+MEMBRANE_VEIN = (0.36, 0.24, 0.16)
+
+
+def hind_wing_color(t, c, top):
+    """Thin, translucent-looking brown membrane, darker along the leading-edge veins."""
+    vein = 1 - nh.smoothstep(0.08, 0.22, c)
+    return nh.lerp(MEMBRANE, MEMBRANE_VEIN, max(vein * (1 - nh.smoothstep(0.7, 0.95, t)), 0.15 if not top else 0.0))
+
+
+def elytron(mb, side):
+    """One wing case with its spots, raised from the hinge along the back and held out to the side."""
+    part = nh.MeshBuilder()
+    ec = Vector((side * 0.082, 0.03, 0.0))
+    er = (0.085, 0.20, 0.075)
+
+    def flatten(n):
+        return 1.0 if n.z >= 0 else 1.0 - 0.8 * min(1.0, -n.z)
+    part.add(nh.uv_ellipsoid(ec, er, 24, 14, deform=flatten), glossy(RED, RED_DARK))
+    # its three spots and half of the shared one behind the pronotum
+    for x, y, r in ((side * 0.012, -0.135, 0.03), (side * 0.098, -0.075, 0.034), (side * 0.072, 0.045, 0.046),
+                    (side * 0.090, 0.150, 0.034)):
+        part.add(cap(ec, er, x, y, r), BLACK)
+    # raise it about the hinge: the outer edge swings up and out
+    hinge = Vector((side * 0.01, 0.0, 0.04))
+    nh.transform(part.bm, Matrix.Translation(hinge) @ Matrix.Rotation(math.radians(-side * 55), 4, "Y")
+                 @ Matrix.Rotation(math.radians(-12), 4, "X") @ Matrix.Translation(-hinge))
+    mb.add(part.bm)
+
+
+def build_flight():
+    mb = nh.MeshBuilder()
+    # Dark abdomen and thorax under the open wing cases
+    mb.add(nh.uv_ellipsoid((0.0, 0.03, -0.02), (0.12, 0.19, 0.08), 20, 12), glossy(BLACK, BLACK))
+    for side in (-1, 1):
+        elytron(mb, side)
+
+    # Pronotum with white front corners, and the head, as on the resting beetle
+    pc = Vector((0.0, -0.175, -0.015))
+    pr = (0.115, 0.070, 0.085)
+    mb.add(nh.uv_ellipsoid(pc, pr, 20, 12), glossy(BLACK, BLACK))
+    for s in (-1, 1):
+        mb.add(cap(pc, pr, s * 0.080, -0.212, 0.024, lift=0.003), WHITE)
+    hc = Vector((0.0, -0.235, -0.035))
+    mb.add(nh.uv_ellipsoid(hc, (0.060, 0.040, 0.045), 14, 10), BLACK)
+    for s in (-1, 1):
+        mb.add(nh.uv_ellipsoid(hc + Vector((s * 0.040, -0.012, 0.010)), (0.014, 0.012, 0.014), 8, 6), (0.10, 0.09, 0.08))
+        mb.add(nh.uv_ellipsoid(hc + Vector((s * 0.022, -0.030, 0.018)), (0.010, 0.008, 0.006), 6, 4), WHITE)
+        a0 = hc + Vector((s * 0.030, -0.035, 0.008))
+        mb.add(nh.tube([a0, a0 + Vector((s * 0.03, -0.045, 0.012)), a0 + Vector((s * 0.05, -0.075, 0.01))],
+                       [0.004, 0.0035, 0.006], sides=4), BLACK)
+        # legs folded up under the body
+        for y in (-0.15, -0.06, 0.04):
+            hip = Vector((s * 0.07, y, -0.06))
+            knee = Vector((s * 0.12, y + 0.03, -0.075))
+            foot = Vector((s * 0.09, y + 0.08, -0.085))
+            mb.add(nh.tube([hip, knee, foot], [0.010, 0.008, 0.005], sides=5), BLACK)
+
+    # The membranous hind wings, spread far out beyond the wing cases (~1.1 across)
+    for side in (1, -1):
+        mb.add(*nh_flight.make_wing(side, 0.56, hind_wing_color, root_x=0.06, y0=0.02, z0=0.035,
+                                    leading=((0.0, -0.06), (0.45, -0.08), (0.85, -0.03), (1.0, 0.06)),
+                                    chord=((0.0, 0.16), (0.45, 0.2), (0.85, 0.16), (1.0, 0.05)),
+                                    dihedral=((0.0, 0.0), (0.45, 0.04), (1.0, 0.06)),
+                                    thickness=((0.0, 0.012), (1.0, 0.004))))
+
+    return mb.to_object("SevenSpotLadybirdFlight", roughness=0.35)
+
+
 if __name__ == "__main__":
-    nh.run(build, "SevenSpotLadybird", ground=(0.33, 0.28, 0.20), views=((35, 35), (10, 70), (-90, 12)))
+    if "--flight" in sys.argv:
+        nh.run(build_flight, "SevenSpotLadybirdFlight", views=((35, 25), (20, 70), (180, -35)))
+    else:
+        nh.run(build, "SevenSpotLadybird", ground=(0.33, 0.28, 0.20), views=((35, 35), (10, 70), (-90, 12)))
