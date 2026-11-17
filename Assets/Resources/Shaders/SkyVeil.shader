@@ -5,11 +5,14 @@
 // - Weather (_Weather, from the tiles' climate): R cloud cover, G thunderstorm, B blizzard.
 //   Thunderstorms are dark towering cores with lightning flashes; blizzards are dense white cloud
 //   with snow streaming along the wind.
-// - Wind: the planet's belts by latitude (trade winds blowing west near the equator, westerlies in
-//   mid-latitudes, polar easterlies), carrying the clouds (a two-phase flow map, so the bands can
-//   shear without stretching the noise) and drawn as faint streaks over clear sky.
-// - Sunset: a band of gold, orange, pink and violet sweeping slowly round the map, with a dimmer,
-//   bluer night behind it and a sunrise ahead.
+// - Wind: a mix of the latitude belts (trade winds, westerlies, polar easterlies), monsoons that
+//   blow onto the continents and then, half a season later, off them (_Weather A is the land), and
+//   big wandering eddies (curl noise), so directions vary from region to region and over time. It
+//   carries the clouds (a two-phase flow map, so the flow can shear without stretching the noise)
+//   and shows as faint streaks over clear sky. The clouds themselves are domain-warped noise, so
+//   they don't line up in rows.
+// - Colour: a few clouds glow gold or pink, more of them pink toward one side of the world and gold
+//   toward the other, the sides turning slowly with no visible line between them.
 // No LightMode tag and plain UnityCG, so it renders in both the built-in pipeline and URP. Lives in
 // Resources so it is included in builds and found by Resources.Load.
 Shader "NaturalHistory/SkyVeil"
@@ -21,8 +24,9 @@ Shader "NaturalHistory/SkyVeil"
         _Scale ("Cloud scale (per unit)", Float) = 0.18
         _Speed ("Wind (units per second)", Float) = 0.35
         _Clear ("Clear-sky opacity", Range(0, 1)) = 0.12
-        _DayLength ("Seconds per day", Float) = 240
-        _Weather ("Weather (R cover, G storm, B blizzard)", 2D) = "black" {}
+        _DayLength ("Seconds per pink/gold turn", Float) = 400
+        _SeasonLength ("Seconds per monsoon season cycle", Float) = 300
+        _Weather ("Weather (R cover, G storm, B blizzard, A land)", 2D) = "black" {}
         _WeatherRect ("Weather rect (x, z, width, depth)", Vector) = (0, 0, 1, 1)
     }
     SubShader
@@ -38,10 +42,12 @@ Shader "NaturalHistory/SkyVeil"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma target 3.0
             #include "UnityCG.cginc"
 
             fixed4 _Color, _CloudColor;
-            float _Scale, _Speed, _Clear, _DayLength;
+            float _Scale, _Speed, _Clear, _DayLength, _SeasonLength;
+            float4 _Weather_TexelSize;
             sampler2D _Weather;
             float4 _WeatherRect;
 
@@ -66,6 +72,11 @@ Shader "NaturalHistory/SkyVeil"
                             lerp(hash(i + float2(0, 1)), hash(i + float2(1, 1)), u.x), u.y);
             }
 
+            float fbm3(float2 p)
+            {
+                return 0.5 * noise(p) + 0.25 * noise(p * 2.03 + 17.1) + 0.125 * noise(p * 4.1 + 5.3);
+            }
+
             float fbm(float2 p)
             {
                 float v = 0.0, a = 0.5;
@@ -73,28 +84,42 @@ Shader "NaturalHistory/SkyVeil"
                 return v;
             }
 
-            // Prevailing wind at a point: east–west belts by latitude (0 equator .. 1 pole), with a
-            // little drift toward or away from the equator
-            float2 Wind(float2 w)
+            // Wind at a point (world units per unit of _Speed): latitude belts, monsoons and eddies
+            float2 Wind(float2 w, float2 uv)
             {
                 float mid = _WeatherRect.y + _WeatherRect.w * 0.5;
                 float lat = saturate(abs(w.y - mid) / (_WeatherRect.w * 0.5));
                 float l = min(lat, 0.85);
-                float east = -cos(l * 9.42478);                    // -1 trades, +1 westerlies, -1 polar easterlies
-                float north = sin(l * 9.42478) * 0.25 * sign(w.y - mid);
-                return float2(east, north);
+                float2 belt = float2(-cos(l * 9.42478), sin(l * 9.42478) * 0.25 * sign(w.y - mid));
+
+                // monsoon: onto the land in one half of the season cycle, off it in the other
+                float2 e = _Weather_TexelSize.xy * 3.0;
+                float2 grad = float2(tex2D(_Weather, uv + float2(e.x, 0)).a - tex2D(_Weather, uv - float2(e.x, 0)).a,
+                                     tex2D(_Weather, uv + float2(0, e.y)).a - tex2D(_Weather, uv - float2(0, e.y)).a);
+                float season = sin(_Time.y * 6.28318 / _SeasonLength);
+                float2 monsoon = grad * 4.0 * season;
+
+                // eddies: the curl of a slowly changing potential (always swirls, never converges)
+                float2 q = w * 0.035 + float2(_Time.y * 0.004, -_Time.y * 0.003);
+                const float d = 0.35;
+                float pc = fbm3(q), px = fbm3(q + float2(d, 0)), pz = fbm3(q + float2(0, d));
+                float2 eddy = float2(pz - pc, -(px - pc)) / d * 6.0;
+
+                float2 wind = belt * 0.45 + monsoon + eddy;
+                float len = length(wind);
+                return len > 1.6 ? wind * (1.6 / len) : wind;
             }
 
             // Cloud field carried by the wind: two phases of a flow map, blended so the jump when
             // each phase restarts is never seen
-            float Clouds(float2 w, float2 wind, out float lit)
+            float Clouds(float2 w, float2 wind, float2 warp, out float lit)
             {
                 const float period = 30.0;
                 float t = _Time.y / period;
                 float ph0 = frac(t), ph1 = frac(t + 0.5);
                 float2 move = wind * _Speed * period;
-                float2 p0 = (w - move * ph0) * _Scale;
-                float2 p1 = (w - move * ph1) * _Scale + float2(37.2, 11.9);
+                float2 p0 = (w - move * ph0) * _Scale + warp;
+                float2 p1 = (w - move * ph1) * _Scale + float2(37.2, 11.9) + warp;
                 float k = abs(1.0 - 2.0 * ph0);
                 float n = lerp(fbm(p1), fbm(p0), k);
                 // the sun side of each billow is brighter: compare with a sample toward the light
@@ -110,10 +135,14 @@ Shader "NaturalHistory/SkyVeil"
                 float2 uv = (w - _WeatherRect.xy) / _WeatherRect.zw;
                 float4 wx = tex2D(_Weather, uv);
                 float cover = wx.r, storm = wx.g, snow = wx.b;
-                float2 wind = Wind(w);
+                float2 wind = Wind(w, uv);
+
+                // domain warp: billows, streets and holes instead of evenly spread noise
+                float2 wq = w * _Scale * 0.35 + _Time.y * 0.006;
+                float2 warp = float2(fbm3(wq), fbm3(wq + float2(5.2, 1.3))) * 2.2 - 1.1;
 
                 float lit;
-                float n = Clouds(w, wind, lit);
+                float n = Clouds(w, wind, warp, lit);
 
                 // more cover (and any storm) lowers the threshold: clear gaps, thin veils, thick cores
                 float lo = lerp(0.6, 0.36, saturate(cover + storm * 0.6 + snow * 0.6));
@@ -142,29 +171,37 @@ Shader "NaturalHistory/SkyVeil"
                 col = lerp(col, float3(1, 1, 1), flakes);
                 alpha = max(alpha, flakes * 0.95);
 
-                // Wind streaks over clear sky: thin lines stretched along the belt, racing with it
-                float strength = abs(wind.x);
-                float2 dir = normalize(wind + float2(1e-4, 0));
-                float2 perp = float2(-dir.y, dir.x);
-                float along = dot(w, dir), across = dot(w, perp);
-                float streak = noise(float2(across * 3.0, along * 0.18 - _Time.y * _Speed * 1.6));
-                streak = smoothstep(0.78, 0.95, streak) * strength * (1.0 - veil) * (1.0 - storm);
+                // Wind streaks over clear sky: thin lines along the local wind, racing with it. Each
+                // point of a coarse grid draws them in its own frame (its own wind direction), and the
+                // four around a pixel are blended, so the streaks turn with the wind without bending
+                // into rings far from the origin.
+                const float cellW = 14.0;
+                float2 g = w / cellW - 0.5, g0 = floor(g), f = frac(g);
+                float streak = 0.0;
+                for (int k = 0; k < 4; k++)
+                {
+                    float2 o = float2(fmod((float)k, 2.0), floor(k * 0.5));
+                    float2 c = (g0 + o + 0.5) * cellW;
+                    float2 cw = Wind(c, (c - _WeatherRect.xy) / _WeatherRect.zw);
+                    float sp = length(cw);
+                    float2 dir = cw / max(sp, 1e-3), perp = float2(-dir.y, dir.x);
+                    float2 r = w - c;
+                    float s1 = noise(float2(dot(r, perp) * 3.0 + c.x, dot(r, dir) * 0.18 - _Time.y * _Speed * 1.6 * sp + c.y));
+                    float wgt = (o.x > 0 ? f.x : 1 - f.x) * (o.y > 0 ? f.y : 1 - f.y);
+                    streak += smoothstep(0.8, 0.96, s1) * saturate(sp) * wgt;
+                }
+                streak *= (1.0 - veil) * (1.0 - storm);
                 col = lerp(col, float3(1, 1, 1), streak * 0.7);
                 alpha += streak * 0.22;
 
-                // Sunset band sweeping round the map: day, gold-to-violet dusk, bluer night, dawn
-                float phase = frac((w.x - _WeatherRect.x) / _WeatherRect.z + _Time.y / _DayLength);
-                float dusk = phase - 0.5, dawn = phase < 0.5 ? phase : phase - 1.0;
-                float3 sunset = dusk < 0
-                    ? lerp(float3(1.0, 0.62, 0.28), float3(1.0, 0.82, 0.45), saturate(-dusk / 0.08))   // orange to gold, day side
-                    : lerp(float3(0.98, 0.45, 0.55), float3(0.55, 0.40, 0.75), saturate(dusk / 0.08));  // pink to violet, night side
-                float3 sunrise = lerp(float3(1.0, 0.55, 0.45), float3(1.0, 0.85, 0.55), saturate(dawn / 0.06 + 0.5));
-                float gDusk = exp(-dusk * dusk / 0.004), gDawn = exp(-dawn * dawn / 0.002);
-                float night = smoothstep(0.52, 0.6, phase) * (1.0 - smoothstep(0.92, 0.99, phase));
-                col *= lerp(float3(1, 1, 1), float3(0.62, 0.68, 0.88), night * 0.6);
-                float catchLight = 0.45 + 0.55 * veil; // clouds take the colour more than clear haze
-                col = lerp(col, col * sunset * 1.35, gDusk * catchLight);
-                col = lerp(col, col * sunrise * 1.3, gDawn * catchLight * 0.8);
+                // Gold and pink clouds: a few patches of cloud catch a warm colour; toward one side of
+                // the world (turning slowly) they lean pink, toward the other gold, blending smoothly
+                float side = 0.5 + 0.5 * cos(((w.x - _WeatherRect.x) / _WeatherRect.z + _Time.y / _DayLength) * 6.28318);
+                float2 tq = w * 0.045 + float2(-_Time.y * 0.01, _Time.y * 0.007);
+                float pinkness = saturate(side * 0.8 + (fbm3(tq * 1.7 + 9.1) - 0.45) * 1.6);
+                float3 warm = lerp(float3(1.0, 0.84, 0.50), float3(1.0, 0.62, 0.74), pinkness);
+                float patch = smoothstep(0.5, 0.66, fbm3(tq)) * veil * (1.0 - storm) * (1.0 - snow);
+                col = lerp(col, col * warm * 1.12, patch * 0.85);
 
                 return fixed4(col, saturate(alpha));
             }

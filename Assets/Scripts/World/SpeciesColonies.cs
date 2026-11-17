@@ -553,7 +553,8 @@ namespace NaturalHistory.World
                 go.transform.localPosition = pos;
                 go.transform.localRotation = member.baseRotation;
                 go.transform.localScale    = Vector3.one * (span / meshSpan);
-                go.AddComponent<MeshFilter>().sharedMesh = mesh;
+                var filter = go.AddComponent<MeshFilter>();
+                filter.sharedMesh = mesh;
                 var mr = go.AddComponent<MeshRenderer>(); // no collider: clicks reach the hex below
                 mr.sharedMaterial = material;
                 var block = new MaterialPropertyBlock();
@@ -564,7 +565,22 @@ namespace NaturalHistory.World
                     block.SetFloat(FlapRootId, (def.wingRoot > 0f ? def.wingRoot : 0.15f) * halfSpan);
                     block.SetFloat(FlapSpanId, halfSpan);
                     member.flapRate      = def.wingBeat * R(0.9f, 1.1f) * Mathf.PI * 2f;
-                    member.flapAmplitude = flapAmplitude;
+                    member.flapAmplitude = member.airFlapAmplitude = flapAmplitude;
+                }
+                else if (style is ColonyStyle.Ground or ColonyStyle.Float or ColonyStyle.Fixed && Niches.IsFlyer(def))
+                {
+                    // a flier that walks, swims or sits in its colony: still in the colony, beating
+                    // its wings once it takes off in the sky view (ColonyGroup.Flight)
+                    // its flight model, wings spread, is swapped in on take-off and beats them
+                    var flight = string.IsNullOrEmpty(def.flightModel) ? null : LoadMesh(def.flightModel);
+                    float wingHalf = flight != null ? Mathf.Max(-flight.bounds.min.x, flight.bounds.max.x) : halfSpan;
+                    block.SetFloat(FlapRootId, (def.wingRoot > 0f ? def.wingRoot : 0.15f) * wingHalf);
+                    block.SetFloat(FlapSpanId, wingHalf);
+                    member.restMesh         = mesh;
+                    member.flightMesh       = flight;
+                    member.flapRate         = (def.wingBeat > 0f ? def.wingBeat : 2.5f) * R(0.9f, 1.1f) * Mathf.PI * 2f;
+                    member.flapAmplitude    = 0f;
+                    member.airFlapAmplitude = SoarFlap * 0.7f;
                 }
                 if (style == ColonyStyle.Ground && gait != ColonyGait.Slither)
                 {
@@ -610,6 +626,7 @@ namespace NaturalHistory.World
 
                 member.transform = go.transform;
                 member.renderer  = mr;
+                member.filter    = filter;
                 member.block     = block;
                 group.AddMember(member);
             }

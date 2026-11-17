@@ -8,10 +8,13 @@ purple-maroon breast with two bold white-and-black vertical bars, warm buff
 flanks, a dark olive-brown back and a raised tail.
 
 Usage:
-  blender --background --python tools/blender/mandarin_duck.py -- [--render out.png]
+  blender --background --python tools/blender/mandarin_duck.py -- [--flight] [--render out.png]
 
 Output: Assets/Resources/Models/Species/MandarinDuck.fbx
 Faces -Y, pivot at the WATERLINE (z = 0); only the keel sits below it. ~0.55 long.
+--flight: MandarinDuckFlight.fbx, in flight (nh_flight): neck stretched out level, the sails
+laid flat, feet tucked under the tail, fast pointed wings spread (dark olive-brown, a blue-green
+speculum with a white trailing edge), pivot at the body centre.
 """
 
 import math
@@ -19,6 +22,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import nh_flight  # noqa: E402
 import nh_model as nh  # noqa: E402
 from mathutils import Matrix, Vector  # noqa: E402
 
@@ -218,5 +222,114 @@ def build():
     return mb.to_object("MandarinDuck", roughness=0.55)
 
 
+SPECULUM = (0.05, 0.42, 0.40)
+GREY_BROWN = (0.36, 0.32, 0.26)
+UNDERWING = (0.66, 0.64, 0.60)
+FEET = (0.95, 0.55, 0.20)
+
+
+def flight_wing_color(t, c, top):
+    """Spread wing: dark olive-brown above with greyer primaries, a blue-green speculum on the
+    secondaries edged white along the trailing edge; pale grey-brown below."""
+    if not top:
+        return nh.lerp(UNDERWING, GREY_BROWN, nh.smoothstep(0.6, 0.9, t) * 0.6)
+    col = nh.lerp(OLIVE, GREY_BROWN, nh.smoothstep(0.45, 0.6, t))
+    secondaries = (1 - nh.smoothstep(0.38, 0.46, t)) * nh.smoothstep(0.08, 0.14, t)
+    col = nh.lerp(col, SPECULUM, secondaries * nh.smoothstep(0.5, 0.62, c))
+    return nh.lerp(col, WHITE, secondaries * nh.smoothstep(0.78, 0.86, c))
+
+
+def build_head(mb):
+    """Head, crest, white crescent, whisker ruff, eyes and bill, as in build() (at HEAD)."""
+    mb.add(nh.ellipsoid(HEAD, HEAD_R, subdivisions=3), head_color)
+    crest = nh.ellipsoid((0, 0, 0), CREST_R, subdivisions=3, deform=lambda v: 1.0 - 0.3 * max(0.0, v.y))
+    nh.transform(crest, Matrix.Rotation(CREST_TILT, 4, "X"))
+    nh.transform(crest, Matrix.Translation(CREST_C))
+    mb.add(crest, lambda co, n: nh.lerp(GREEN, COPPER, nh.smoothstep(0.0, 0.08, (co - HEAD).y)))
+    for k in range(5):
+        a = (k - 2) * 0.35
+        base = CREST_C + Vector((math.sin(a) * 0.015, 0.05, -0.02 + 0.006 * abs(k - 2)))
+        tip = base + Vector((math.sin(a) * 0.03, 0.05, -0.035))
+        mb.add(nh.tube([base, (base + tip) / 2, tip], [0.012, 0.008, 0.0], sides=4), COPPER)
+    for sx in (-1, 1):
+        path = [(-0.035, 0.024), (-0.012, 0.022), (0.015, 0.012), (0.045, -0.002), (0.075, -0.018), (0.1, -0.032)]
+        widths = [0.006, 0.012, 0.016, 0.018, 0.015, 0.0]
+        pts = []
+        for dy, dz in path:
+            p = surface_point(inside_head, HEAD + Vector((0, dy * 0.6, dz * 0.5)), (sx, 0, 0.15))
+            pts.append(p + Vector((sx * 0.001, 0, 0)))
+        mb.add(nh.tube(pts, widths, sides=6, scale_xy=(0.3, 1.0)), WHITE)
+    for sx in (-1, 1):
+        for k in range(12):
+            t = k / 11
+            base = surface_point(inside_head, HEAD + Vector((0, -0.02 + 0.045 * t, -0.008 - 0.022 * t)), (sx, 0, -0.25))
+            tip = base + Vector((sx * 0.014, 0.022 + 0.01 * t, -0.032 - 0.01 * t))
+            mb.add(nh.tube([base, (base * 0.4 + tip * 0.6), tip], [0.009, 0.007, 0.0], sides=4),
+                   lambda co, n: nh.lerp(ORANGE, ORANGE_PALE, nh.smoothstep(HEAD.z - 0.03, HEAD.z - 0.07, co.z) * 0.6))
+    for sx in (-1, 1):
+        p = surface_point(inside_head, HEAD + Vector((0, -0.02, 0.004)), (sx, -0.25, 0))
+        mb.add(nh.ellipsoid(p, (0.009, 0.009, 0.009), subdivisions=1), EYE)
+    bill = [HEAD + Vector((0, -0.045, -0.006)), HEAD + Vector((0, -0.07, -0.013)), HEAD + Vector((0, -0.088, -0.02))]
+    mb.add(nh.tube(bill, [0.017, 0.012, 0.007], sides=6, scale_xy=(1.0, 0.7)), BILL)
+    mb.add(nh.ellipsoid(HEAD + Vector((0, -0.09, -0.02)), (0.008, 0.006, 0.005), subdivisions=1), NAIL)
+
+
+def build_flight():
+    mb = nh.MeshBuilder()
+
+    # The body, its stern only a little raised in flight
+    body = nh.uv_ellipsoid(BODY_C, BODY_R, segments=28, rings=18, deform=body_deform)
+    for v in body.verts:
+        if v.co.y > 0.1:
+            v.co.z += (v.co.y - 0.1) ** 2 * 0.8
+    mb.add(body, body_color)
+    mb.add(nh.tube([(0, 0.2, 0.05), (0, 0.27, 0.06), (0, 0.33, 0.065)], [0.035, 0.022, 0.0], sides=8,
+                   scale_xy=(1.0, 0.4)), OLIVE_DARK)
+
+    # The white breast bars, as on the swimming bird
+    for sx in (-1, 1):
+        for y0 in (-0.118, -0.092):
+            for col, rad, out in ((BLACK, 0.017, -0.007), (WHITE, 0.0115, 0.002)):
+                pts = [surface_point(inside_body, Vector((0, y0, -0.002 + 0.092 * k / 6)), (sx, 0, 0)) + Vector((sx * out, 0, 0))
+                       for k in range(7)]
+                mb.add(nh.tube(pts, [rad * (0.5 if k in (0, 6) else 1.0) for k in range(7)], sides=6, scale_xy=(0.35, 1.0)), col)
+
+    # The sails laid down flat against the back
+    for sx in (-1, 1):
+        for bm, col in make_sail(sx):
+            nh.transform(bm, Matrix.Translation((0, 0, 0.085)) @ Matrix.Scale(0.3, 4, (0, 0, 1)) @ Matrix.Translation((0, 0, -0.085)))
+            mb.add(bm, col, smooth=False)
+
+    # Neck stretched forward, the head level in front of it
+    shift = Vector((0, -0.12, -0.095))
+    neck = [(0, -0.17, 0.045), (0, -0.23, 0.055), (0, -0.29, 0.065), (0, -0.315, 0.068)]
+    mb.add(nh.tube(neck, [0.05, 0.043, 0.039, 0.038], sides=12, cap_start=False),
+           lambda co, n: nh.lerp(MAROON, ORANGE, nh.smoothstep(-0.2, -0.27, co.y)))
+    head = nh.MeshBuilder()
+    build_head(head)
+    nh.transform(head.bm, Matrix.Translation(shift))
+    mb.add(head.bm)
+
+    # Orange feet tucked under the tail
+    for sx in (-1, 1):
+        mb.add(nh.tube([(sx * 0.025, 0.15, -0.025), (sx * 0.03, 0.22, -0.02), (sx * 0.034, 0.27, -0.015)],
+                       [0.014, 0.016, 0.0], sides=5, scale_xy=(1.0, 0.4)), FEET)
+
+    # Fast, pointed wings spread from the shoulders, ~0.85 across
+    for side in (1, -1):
+        mb.add(*nh_flight.make_wing(side, 0.43, flight_wing_color, root_x=0.05, y0=0.0, z0=0.075,
+                                    leading=((0.0, -0.08), (0.4, -0.09), (0.8, -0.02), (1.0, 0.1)),
+                                    chord=((0.0, 0.17), (0.4, 0.15), (0.8, 0.09), (1.0, 0.015)),
+                                    dihedral=((0.0, 0.0), (0.45, 0.02), (1.0, 0.0)),
+                                    thickness=((0.0, 0.04), (0.45, 0.02), (1.0, 0.004))))
+
+    # pivot at the body centre
+    nh.transform(mb.bm, Matrix.Translation(-BODY_C))
+    return mb.to_object("MandarinDuckFlight", roughness=0.55)
+
+
 if __name__ == "__main__":
-    nh.run(build, "MandarinDuck", ground=(0.22, 0.42, 0.50), views=((40, 25), (-90, 5), (25, 65)))
+    if "--flight" in sys.argv:
+        nh.run(build_flight, "MandarinDuckFlight", views=((35, 25), (20, 70), (180, -35)))
+    else:
+        nh.run(build, "MandarinDuck", ground=(0.22, 0.42, 0.50), views=((40, 25), (-90, 5), (25, 65)))

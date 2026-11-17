@@ -8,9 +8,10 @@ namespace NaturalHistory.World
     //
     // The clouds follow the climate (ClimateSystem): a weather map, one texel row per half tile
     // row, tells the shader (SkyVeil) how cloudy each region is and where thunderstorms (warm,
-    // humid) and blizzards (freezing, moist) are this turn; storms move from turn to turn. The
-    // shader adds the wind belts (trade winds, westerlies, polar easterlies), thin and thick cloud,
-    // and a sunset band slowly sweeping round the map.
+    // humid) and blizzards (freezing, moist) are this turn, and where the land is (for the
+    // monsoons); storms move from turn to turn. The shader adds the winds, thin and thick cloud
+    // and the odd gold or pink cloud. Under the storms and blizzards rain and snow fall on the
+    // surface (WeatherFall).
     public class SkyLayer : MonoBehaviour
     {
         // World height of the cloud deck
@@ -26,6 +27,7 @@ namespace NaturalHistory.World
         private Material material;
         private Texture2D weather;
         private int weatherTurn; // reseeds where the storms are, each climate update
+        private WeatherFall fall;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Bootstrap()
@@ -52,6 +54,7 @@ namespace NaturalHistory.World
             UnderView.Changed -= Apply;
             if (climateHooked && Climate.ClimateSystem.Instance != null) Climate.ClimateSystem.Instance.Updated -= OnClimate;
             if (weather != null) Destroy(weather);
+            fall?.Clear();
         }
 
         // The climate system may start after this component
@@ -97,11 +100,11 @@ namespace NaturalHistory.World
         }
 
         // Fills the weather map from the tiles' climate: R cloud cover, G thunderstorm, B blizzard,
-        // A unused. Texels cover the map's rectangle (wrapping east–west), each taking its nearest
+        // A land (much more blurred: the monsoons blow across coasts, by its gradient). Texels cover the map's rectangle (wrapping east–west), each taking its nearest
         // tile, then blurred so weather fronts are soft.
         private void UpdateWeather()
         {
-            if (grid == null || !grid.IsGenerated || material == null) return;
+            if (grid == null || !grid.IsGenerated) return;
             var climate = Climate.ClimateSystem.Instance;
             int w = grid.Width, h = grid.Height;
             var c00 = grid.GetCell(0, 0);
@@ -111,7 +114,7 @@ namespace NaturalHistory.World
             Vector3 origin = c00.transform.position;
 
             // per tile
-            var cover = new float[w, h]; var storm = new float[w, h]; var snow = new float[w, h];
+            var cover = new float[w, h]; var storm = new float[w, h]; var snow = new float[w, h]; var land = new float[w, h];
             float seed = weatherTurn * 7.31f + grid.WorldSeed % 1000;
             for (int r = 0; r < h; r++)
             for (int q = 0; q < w; q++)
@@ -126,12 +129,18 @@ namespace NaturalHistory.World
                 cover[q, r] = Mathf.InverseLerp(30f, 90f, hum);
                 storm[q, r] = Mathf.Clamp01((t - 18f) / 8f) * Mathf.Clamp01((hum - 62f) / 18f) * patchA;
                 snow[q, r]  = Mathf.Clamp01((1f - t) / 8f) * Mathf.Clamp01((hum - 40f) / 25f) * patchB;
+                land[q, r]  = cell.IsWater ? 0f : 1f;
             }
 
             int tw = w * TexelsPerCell, th = h * TexelsPerCell;
             float zMin = origin.z - size, zSpan = dz * (h - 1) + 2f * size;
             float xMin = origin.x - dx * 0.5f;
+            fall ??= new WeatherFall(transform);
+            fall.Rebuild(grid, storm, snow, size);
+            if (material == null) return; // the deck isn't built until the sky view first opens
+
             var px = new Color[tw * th];
+            var landPx = new Color[tw * th];
             for (int j = 0; j < th; j++)
             for (int i = 0; i < tw; i++)
             {
@@ -140,8 +149,11 @@ namespace NaturalHistory.World
                 int col = Mathf.RoundToInt((x - origin.x) / dx - 0.5f * (row & 1));
                 col = ((col % w) + w) % w;
                 px[j * tw + i] = new Color(cover[col, row], storm[col, row], snow[col, row], 0f);
+                landPx[j * tw + i] = new Color(land[col, row], 0f, 0f, 0f);
             }
             for (int pass = 0; pass < 2; pass++) px = Blur(px, tw, th);
+            for (int pass = 0; pass < 8; pass++) landPx = Blur(landPx, tw, th);
+            for (int k = 0; k < px.Length; k++) px[k].a = landPx[k].r;
 
             if (weather == null || weather.width != tw || weather.height != th)
             {
@@ -178,6 +190,7 @@ namespace NaturalHistory.World
         {
             if (UnderView.Sky && deck == null) { deck = CreateDeck(); UpdateWeather(); }
             if (deck != null) deck.SetActive(UnderView.Sky);
+            fall?.SetVisible(UnderView.Layer == MapLayer.Surface);
         }
 
         private GameObject CreateDeck()

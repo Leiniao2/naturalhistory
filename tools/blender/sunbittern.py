@@ -8,10 +8,13 @@ big "sunburst" eyespots (buff-yellow centre ringed with black and chestnut-orang
 bands) read from the front and from a high map camera; the tail is fanned too.
 
 Usage:
-  blender --background --python tools/blender/sunbittern.py -- [--render out.png]
+  blender --background --python tools/blender/sunbittern.py -- [--flight] [--render out.png]
 
 Output: Assets/Resources/Models/Species/Sunbittern.fbx
 Faces -Y, pivot on the ground (feet at z = 0).
+--flight: SunbitternFlight.fbx, in flight (nh_flight): neck and bill stretched forward, orange
+legs trailing behind the fanned tail, broad rounded wings spread wide with the sunburst eyespot
+(buff centre, black and chestnut-orange rings) on each, pivot at the body centre.
 """
 
 import math
@@ -20,6 +23,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bmesh  # noqa: E402
+import nh_flight  # noqa: E402
 import nh_model as nh  # noqa: E402
 from mathutils import Matrix, Vector  # noqa: E402
 
@@ -188,5 +192,72 @@ def build():
     return obj
 
 
+def flight_wing_color(t, c, top):
+    """Spread wing seen in flight: barred grey-brown, a big sunburst eyespot across the middle of
+    the wing (buff centre, black ring, chestnut-orange band, black outer ring), dark barred tips."""
+    # eyespot centre in (span, chord) space; the chord axis is squashed so it reads round
+    dt, dc = (t - 0.52) / 0.30, (c - 0.5) / 0.62
+    d = math.sqrt(dt * dt + dc * dc)
+    base = barred(nh.lerp(GREY, BROWN, 0.6), t * 6 + c * 2, freq=9.0, depth=0.55)
+    if not top:
+        base = nh.lerp(base, GREY, 0.35)
+    if d < 0.27:
+        return nh.lerp(BUFF, ORANGE, nh.smoothstep(0.1, 0.27, d) * 0.4)
+    if d < 0.42:
+        return BLACK
+    if d < 0.66:
+        return nh.lerp(ORANGE, CHESTNUT, nh.smoothstep(0.42, 0.66, d))
+    if d < 0.80:
+        return BLACK
+    return nh.lerp(base, BROWN_DARK, nh.smoothstep(0.8, 1.0, t) * 0.6)
+
+
+def build_flight():
+    mb = nh.MeshBuilder()
+
+    # The slim body, level, at the pivot
+    body = nh.ellipsoid((0, 0, 0), (0.085, 0.19, 0.08), subdivisions=3)
+    mb.add(body, body_color)
+
+    # Neck stretched forward, head and bill leading
+    head_c = Vector((0.0, -0.36, 0.03))
+    neck_pts = [Vector(p) for p in ((0, -0.13, 0.01), (0, -0.20, 0.02), (0, -0.27, 0.03), (0, -0.32, 0.03))]
+    mb.add(nh.tube(neck_pts, [0.055, 0.034, 0.028, 0.028], sides=8),
+           lambda co, n: barred(nh.lerp(BROWN, GREY, 0.3), co.y, freq=120.0, depth=0.4))
+
+    def flying_head(co, n):
+        return head_color(co - head_c + HEAD_C, n)
+
+    mb.add(nh.ellipsoid(head_c, (0.04, 0.056, 0.04), subdivisions=4), flying_head)
+    for sx in (-1, 1):
+        mb.add(nh.ellipsoid(head_c + Vector((sx * 0.036, -0.014, 0.003)), (0.008, 0.009, 0.009), subdivisions=1), EYE)
+    bill_pts = [head_c + Vector(p) for p in ((0, -0.035, -0.004), (0, -0.09, -0.006), (0, -0.15, -0.008), (0, -0.19, -0.009))]
+    mb.add(nh.tube(bill_pts, [0.013, 0.010, 0.006, 0.0], sides=6, scale_xy=(0.7, 1.0)),
+           lambda co, n: BILL_LOW if n.z < -0.2 else BILL_TOP)
+
+    # Tail fanned flat behind
+    mb.add(*fan(Vector((0, 0.14, 0.01)), Vector((1, 0, 0)), Vector((0, 1, 0)), 0.19, 30, 150, tail_color, n_r=6, n_t=12))
+
+    # Orange legs trailing straight back under the tail
+    for sx in (-1, 1):
+        x = sx * 0.03
+        mb.add(nh.tube([(x, 0.05, -0.05), (x, 0.17, -0.05), (x, 0.32, -0.035), (x, 0.40, -0.03)],
+                       [0.015, 0.011, 0.009, 0.0], sides=5), LEGS)
+
+    # Broad, rounded wings spread wide: about 1.05 across (wingspan ~1.4x the length)
+    for side in (1, -1):
+        mb.add(*nh_flight.make_wing(side, 0.53, flight_wing_color, root_x=0.05, y0=0.0, z0=0.02,
+                                    leading=((0.0, -0.11), (0.45, -0.14), (0.85, -0.10), (1.0, -0.02)),
+                                    chord=((0.0, 0.26), (0.45, 0.27), (0.85, 0.21), (1.0, 0.08)),
+                                    dihedral=((0.0, 0.0), (0.5, 0.03), (1.0, 0.04)),
+                                    thickness=((0.0, 0.05), (0.45, 0.025), (1.0, 0.006)),
+                                    stations=30, chord_points=tuple(i / 16 for i in range(17))))
+
+    return mb.to_object("SunbitternFlight", roughness=0.6)
+
+
 if __name__ == "__main__":
-    nh.run(build, "Sunbittern", ground=(0.30, 0.42, 0.24), views=((30, 20), (-90, 8), (15, 65)))
+    if "--flight" in sys.argv:
+        nh.run(build_flight, "SunbitternFlight", views=((35, 25), (20, 70), (180, -35)))
+    else:
+        nh.run(build, "Sunbittern", ground=(0.30, 0.42, 0.24), views=((30, 20), (-90, 8), (15, 65)))

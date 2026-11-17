@@ -9,10 +9,13 @@ yellow eye, and the thick, sharply bent bill - pale pink at the base with a blac
 tip.
 
 Usage:
-  blender --background --python tools/blender/phoenicopterus_roseus.py -- [--render out.png]
+  blender --background --python tools/blender/phoenicopterus_roseus.py -- [--flight] [--render out.png]
 
 Output: Assets/Resources/Models/Species/GreaterFlamingo.fbx
 Faces -Y, pivot at the feet (ground). About 1.45 tall, 0.75 long (bill to tail).
+--flight: GreaterFlamingoFlight.fbx, in flight (nh_flight): the long neck stretched straight out
+ahead, the long legs trailing straight out behind, wings spread (deep pink-red coverts, black
+flight feathers), pivot at the body centre.
 """
 
 import math
@@ -20,6 +23,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import nh_flight  # noqa: E402
 import nh_model as nh  # noqa: E402
 from mathutils import Vector  # noqa: E402
 
@@ -158,5 +162,72 @@ def build():
     return obj
 
 
+def flight_wing_color(t, c, top):
+    """Spread wing: deep pink-red coverts over the inner wing, all the flight feathers black
+    (secondaries along the trailing edge, the whole outer hand)."""
+    hand = nh.smoothstep(0.52, 0.62, t)
+    trailing = nh.smoothstep(0.42, 0.55, c)
+    black = max(hand, trailing)
+    cov = nh.lerp(COVERT, COVERT_LIGHT, nh.smoothstep(0.3, 0.0, t) * 0.5) if top else nh.lerp(COVERT, PINK_PALE, 0.25)
+    return nh.lerp(cov, BLACK, black)
+
+
+def build_flight():
+    mb = nh.MeshBuilder()
+
+    # The same boat-shaped body, level, its axis through the pivot
+    profile = [(-0.20, 0.0, 0.02), (-0.19, 0.04, 0.018), (-0.165, 0.072, 0.012), (-0.12, 0.092, 0.006),
+               (-0.06, 0.102, 0.0), (0.0, 0.104, 0.0), (0.06, 0.10, 0.004), (0.12, 0.088, 0.012),
+               (0.18, 0.066, 0.024), (0.23, 0.042, 0.034), (0.27, 0.02, 0.042), (0.29, 0.0, 0.046)]
+    mb.add(nh.tube([(0, y, dz - 0.01) for y, _, dz in profile], [r for _, r, _ in profile],
+                   sides=24, scale_xy=(0.82, 1.0)), body_color)
+
+    # Long thin neck stretched straight out ahead, drooping just a little
+    head_c = Vector((0.0, -0.80, -0.02))
+    neck = [(0, -0.15, 0.0), (0, -0.30, -0.01), (0, -0.45, -0.02), (0, -0.60, -0.025), (0, -0.72, -0.022),
+            head_c + Vector((0, 0.03, -0.002))]
+    neck, nr = spline(neck, [0.055, 0.026, 0.022, 0.021, 0.023, 0.027])
+    mb.add(nh.tube(neck, nr, sides=12, cap_start=False), neck_color)
+
+    mb.add(nh.ellipsoid(head_c, (0.031, 0.045, 0.034), subdivisions=3), PINK_PALE)
+    for sx in (-1, 1):
+        e = head_c + Vector((sx * 0.026, -0.012, 0.008))
+        mb.add(nh.ellipsoid(e, (0.008, 0.009, 0.009), subdivisions=1), EYE)
+        mb.add(nh.ellipsoid(e + Vector((sx * 0.004, -0.002, 0)), (0.005, 0.005, 0.005), subdivisions=1), PUPIL)
+
+    # The bent bill, pointing forward and down
+    bill = [head_c + Vector(p) for p in ((0, -0.03, -0.004), (0, -0.07, -0.004), (0, -0.10, -0.008),
+                                         (0, -0.118, -0.025), (0, -0.128, -0.05), (0, -0.13, -0.075),
+                                         (0, -0.125, -0.092))]
+    bill, br = spline(bill, [0.024, 0.022, 0.019, 0.016, 0.012, 0.009, 0.0], per=3)
+
+    def flying_bill(co, n):
+        return bill_color(co - head_c + HEAD_C, n)
+
+    mb.add(nh.tube(bill, br, sides=10, scale_xy=(0.8, 1.0)), flying_bill)
+
+    # Very long pink legs trailing straight out behind the tail, feet together
+    for sx in (-1, 1):
+        x = sx * 0.03
+        leg = [(x, 0.05, -0.06), (x, 0.20, -0.06), (x, 0.42, -0.04), (x, 0.66, -0.02), (x, 0.80, -0.01)]
+        mb.add(nh.tube(leg, [0.017, 0.012, 0.011, 0.0095, 0.006], sides=6), LEG)
+        mb.add(nh.ellipsoid((x, 0.42, -0.04), (0.014, 0.018, 0.014), subdivisions=1), LEG_DARK)  # ankle joint
+        mb.add(nh.tube([(x, 0.80, -0.01), (x * 1.6, 0.87, -0.008), (x * 1.8, 0.89, -0.006)],
+                       [0.009, 0.006, 0.0], sides=4), LEG)  # folded toes
+
+    # Wings spread, about 1.55 across: long, fairly narrow, pointed hand
+    for side in (1, -1):
+        mb.add(*nh_flight.make_wing(side, 0.78, flight_wing_color, root_x=0.05, y0=0.02, z0=0.02,
+                                    leading=((0.0, -0.12), (0.45, -0.16), (0.8, -0.08), (1.0, 0.06)),
+                                    chord=((0.0, 0.28), (0.45, 0.25), (0.8, 0.16), (1.0, 0.03)),
+                                    thickness=((0.0, 0.06), (0.45, 0.03), (1.0, 0.006)),
+                                    stations=18, chord_points=tuple(i / 10 for i in range(11))))
+
+    return mb.to_object("GreaterFlamingoFlight", roughness=0.65)
+
+
 if __name__ == "__main__":
-    nh.run(build, "GreaterFlamingo", ground=(0.45, 0.52, 0.36), views=((40, 18), (-90, 5), (25, 65)))
+    if "--flight" in sys.argv:
+        nh.run(build_flight, "GreaterFlamingoFlight", views=((35, 25), (20, 70), (180, -35)))
+    else:
+        nh.run(build, "GreaterFlamingo", ground=(0.45, 0.52, 0.36), views=((40, 18), (-90, 5), (25, 65)))

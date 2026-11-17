@@ -6,10 +6,13 @@ white back (black scapular stripes, white wing patch, black primaries), a
 cinnamon head and neck, and a long, thin, sharply upcurved black bill.
 
 Usage:
-  blender --background --python tools/blender/american_avocet.py -- [--render out.png]
+  blender --background --python tools/blender/american_avocet.py -- [--flight] [--render out.png]
 
 Output: Assets/Resources/Models/Species/AmericanAvocet.fbx
 Faces -Y, pivot at the feet (ground). About 0.75 long (bill to tail), 0.75 tall.
+--flight: AmericanAvocetFlight.fbx, in flight (nh_flight): neck stretched out, long legs trailing
+behind the tail, wings spread (black primaries and a black bar across the coverts on white),
+pivot at the body centre.
 """
 
 import math
@@ -17,6 +20,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import nh_flight  # noqa: E402
 import nh_model as nh  # noqa: E402
 from mathutils import Vector  # noqa: E402
 
@@ -119,5 +123,57 @@ def build():
     return obj
 
 
+def flight_wing_color(t, c, top):
+    """Spread wing: white, black primaries at the outer hand, and on top a black bar
+    across the coverts from the shoulder toward the wrist."""
+    primaries = nh.smoothstep(0.55, 0.68, t)
+    if not top:
+        return nh.lerp(WHITE_SHADE, BLACK, primaries * nh.smoothstep(0.2, 0.6, c) * 0.9)
+    bar = nh.smoothstep(0.08, 0.18, t) * (1 - nh.smoothstep(0.5, 0.58, t)) * (1 - nh.smoothstep(0.35, 0.5, c))
+    return nh.lerp(WHITE, BLACK, max(primaries, bar))
+
+
+def build_flight():
+    mb = nh.MeshBuilder()
+
+    # The same slim body, level, its axis through the pivot
+    profile = [(-0.185, 0.0, 0.03), (-0.175, 0.03, 0.025), (-0.155, 0.052, 0.018), (-0.12, 0.068, 0.01),
+               (-0.07, 0.078, 0.0), (-0.01, 0.081, -0.004), (0.05, 0.079, -0.004), (0.11, 0.071, 0.0),
+               (0.17, 0.056, 0.01), (0.22, 0.038, 0.022), (0.26, 0.022, 0.032), (0.29, 0.0, 0.04)]
+    mb.add(nh.tube([(0, y, dz - 0.01) for y, _, dz in profile], [r for _, r, _ in profile],
+                   sides=16, scale_xy=(0.85, 1.0)), lambda co, n: body_color(co + Vector((0, 0, BODY_Z)), n))
+
+    # Neck stretched forward and a little up, head and upcurved bill leading
+    neck = [(0, -0.14, 0.01), (0, -0.20, 0.03), (0, -0.26, 0.05), (0, -0.32, 0.065)]
+    mb.add(nh.tube(neck, [0.05, 0.03, 0.022, 0.024], sides=10, cap_start=False), CINNAMON)
+    hc = Vector((0, -0.35, 0.075))
+    mb.add(nh.ellipsoid(hc, (0.032, 0.047, 0.034), subdivisions=3), CINNAMON)
+    for sx in (-1, 1):
+        mb.add(nh.ellipsoid((sx * 0.026, -0.36, 0.085), (0.008, 0.009, 0.008), subdivisions=1), EYE)
+    bill = []
+    for i in range(7):
+        t = i / 6
+        bill.append((0, -0.385 - 0.24 * t, 0.068 + 0.06 * t ** 2.4))
+    mb.add(nh.tube(bill, [0.011, 0.009, 0.007, 0.0055, 0.0045, 0.003, 0.0], sides=5, scale_xy=(0.8, 1.0)), BILL)
+
+    # Long legs trailing straight out behind the tail, toes together
+    for sx in (-1, 1):
+        x = sx * 0.022
+        leg = [(x, 0.06, -0.05), (x, 0.16, -0.045), (x, 0.32, -0.02), (x, 0.47, -0.005), (x, 0.53, 0.0)]
+        mb.add(nh.tube(leg, [0.013, 0.01, 0.008, 0.007, 0.0], sides=5), LEG)
+
+    # Wings spread, about 1.25 across: broad inner wing, pointed hand
+    for side in (1, -1):
+        mb.add(*nh_flight.make_wing(side, 0.62, flight_wing_color, root_x=0.045, y0=0.03, z0=0.02,
+                                    leading=((0.0, -0.10), (0.45, -0.12), (0.8, -0.04), (1.0, 0.08)),
+                                    chord=((0.0, 0.20), (0.45, 0.17), (0.8, 0.11), (1.0, 0.02)),
+                                    thickness=((0.0, 0.05), (0.45, 0.025), (1.0, 0.005))))
+
+    return mb.to_object("AmericanAvocetFlight", roughness=0.65)
+
+
 if __name__ == "__main__":
-    nh.run(build, "AmericanAvocet", ground=(0.45, 0.52, 0.36), views=((40, 22), (-90, 5), (25, 65)))
+    if "--flight" in sys.argv:
+        nh.run(build_flight, "AmericanAvocetFlight", views=((35, 25), (20, 70), (180, -35)))
+    else:
+        nh.run(build, "AmericanAvocet", ground=(0.45, 0.52, 0.36), views=((40, 22), (-90, 5), (25, 65)))

@@ -47,7 +47,7 @@ namespace NaturalHistory.World
         private static readonly HashSet<string> SeafloorDwellers = new(StringComparer.OrdinalIgnoreCase)
         {
             "Trilobite", "Arthropod", "Lobopodian", "Proarticulate", "Stem mollusc", "Rangeomorph", "Trilobozoan", "Tubular animal",
-            "Parvancorinomorph", "King crab", "Spiny lobster",
+            "Parvancorinomorph", "King crab", "Spiny lobster", "Horseshoe crab", "Prawn",
         };
 
         private const float MicrobeCm = 1f;

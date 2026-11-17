@@ -75,6 +75,10 @@ namespace NaturalHistory.World
             public MaterialPropertyBlock block;
             public float flapRate;      // radians per second; 0 = no flapping
             public float flapAmplitude;
+            public float airFlapAmplitude; // fliers on the ground or water: the beat in the sky view (ColonyGroup.Flight)
+            public MeshFilter filter;
+            public Mesh restMesh, flightMesh; // flightMesh: wings spread, swapped in on take-off (null = none)
+            public bool showingFlight;
             public float flapPhase;     // accumulated, so the beat can speed up without a jump
 
             // Legs (Ground walkers and hoppers): the shader swings everything below the hips. The
@@ -358,10 +362,11 @@ namespace NaturalHistory.World
 
             UpdateDefense(t);
             UpdateInk(t);
+            UpdateAir(dt);
             if (Style == ColonyStyle.Fixed) w = 0f; // colonies that can't move keep their places, even when striking
             var hq = Quaternion.Euler(0f, heading, 0f);
             var grid = HexGrid.Instance;
-            bool onGround = (Style is ColonyStyle.Ground or ColonyStyle.Fixed) && grid != null && rootCell != null;
+            bool onGround = (Style is ColonyStyle.Ground or ColonyStyle.Fixed) && grid != null && rootCell != null && Airborne < 0.999f;
             foreach (var m in members)
             {
                 if (m.transform == null) continue;
@@ -383,10 +388,13 @@ namespace NaturalHistory.World
                 m.coilDefense = DefenseKind == DefenseStyle.Coil ? defenseWeight : 0f;
                 if (m.jumps) Jump(m, t, dt, ref pos, ref rot);
                 if (onGround) StandOnGround(m, grid, dt, ref pos, ref rot);
+                FlightPose(m, t, Style == ColonyStyle.Fixed ? 0f : w, hq, turnRate, ref pos, ref rot); // in the sky view fliers are on the wing
+                FlightModel(m, ref scale);
                 m.transform.localPosition = pos + Vector3.down * DepthOffset; // under view: down on the seabed
                 m.transform.localRotation = rot;
                 ApplyScale(m, scale);
-                if (m.strideAmplitude > 0f || m.undulateAmplitude > 0f) Locomote(m, dt, w);
+                if (Airborne > 0.5f && m.strideAmplitude > 0f) { m.block.SetFloat(StrideId, 0f); m.renderer.SetPropertyBlock(m.block); m.hasLastPosition = false; } // legs still in flight
+                else if (m.strideAmplitude > 0f || m.undulateAmplitude > 0f) Locomote(m, dt, w);
             }
         }
 
@@ -774,7 +782,7 @@ namespace NaturalHistory.World
             m.flapPhase += dt * m.flapRate * (1f + 0.4f * w);
             float burst = Style == ColonyStyle.Soar ? Mathf.SmoothStep(0f, 1f, (Mathf.Sin(t * 0.5f + m.phase) - 0.35f) * 3f) : 1f;
             burst = Mathf.Lerp(burst, 1f, w);
-            m.block.SetFloat(FlapId, Mathf.Sin(m.flapPhase + m.phase) * m.flapAmplitude * burst);
+            m.block.SetFloat(FlapId, Mathf.Sin(m.flapPhase + m.phase) * FlapAmplitude(m) * burst);
             m.renderer.SetPropertyBlock(m.block);
         }
 

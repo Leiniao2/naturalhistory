@@ -11,6 +11,20 @@
    ]
   },
   {
+   "group": "Aetosaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur"
+   ]
+  },
+  {
    "group": "Ammonite",
    "tags": [
     "Animal",
@@ -23,6 +37,22 @@
    "group": "Amoebozoan",
    "tags": [
     "Protist"
+   ]
+  },
+  {
+   "group": "Andrewsarchid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
    ]
   },
   {
@@ -61,10 +91,53 @@
    ]
   },
   {
+   "group": "Araeoscelid reptile",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile"
+   ]
+  },
+  {
+   "group": "Archaeocete whale",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate",
+    "Cetacean"
+   ]
+  },
+  {
    "group": "Archaeocyath",
    "tags": [
     "Animal",
     "Sponge"
+   ]
+  },
+  {
+   "group": "Archosauromorph",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile"
    ]
   },
   {
@@ -144,6 +217,22 @@
    ]
   },
   {
+   "group": "Bear dog",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Carnivoran"
+   ]
+  },
+  {
    "group": "Bee",
    "tags": [
     "Animal",
@@ -192,6 +281,20 @@
    ]
   },
   {
+   "group": "Boa",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Squamate"
+   ]
+  },
+  {
    "group": "Bony fish",
    "tags": [
     "Animal",
@@ -201,6 +304,30 @@
     "Fish",
     "Jawed",
     "Bony fish"
+   ]
+  },
+  {
+   "group": "Brontothere",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
+   ]
+  },
+  {
+   "group": "Bryozoan",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Bryozoan"
    ]
   },
   {
@@ -215,6 +342,22 @@
    ]
   },
   {
+   "group": "Camelid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
+   ]
+  },
+  {
    "group": "Carpet shark",
    "tags": [
     "Animal",
@@ -224,6 +367,19 @@
     "Fish",
     "Jawed",
     "Cartilaginous"
+   ]
+  },
+  {
+   "group": "Caseid synapsid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid"
    ]
   },
   {
@@ -242,6 +398,22 @@
    ]
   },
   {
+   "group": "Chalicothere",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
+   ]
+  },
+  {
    "group": "Chameleon",
    "tags": [
     "Animal",
@@ -253,6 +425,18 @@
     "Amniote",
     "Reptile",
     "Squamate"
+   ]
+  },
+  {
+   "group": "Chimaera",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Cartilaginous"
    ]
   },
   {
@@ -270,6 +454,28 @@
    ]
   },
   {
+   "group": "Cladoselachian shark",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Cartilaginous"
+   ]
+  },
+  {
+   "group": "Conodont",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish"
+   ]
+  },
+  {
    "group": "Coral",
    "tags": [
     "Animal",
@@ -284,7 +490,29 @@
    ]
   },
   {
+   "group": "Crinoid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Echinoderm"
+   ]
+  },
+  {
    "group": "Crocodilian",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur"
+   ]
+  },
+  {
+   "group": "Crocodyliform",
    "tags": [
     "Animal",
     "Bilaterian",
@@ -311,6 +539,14 @@
    ]
   },
   {
+   "group": "Cystoid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Echinoderm"
+   ]
+  },
+  {
    "group": "Deer",
    "tags": [
     "Animal",
@@ -331,6 +567,22 @@
    "tags": [
     "Animal",
     "Sponge"
+   ]
+  },
+  {
+   "group": "Desmostylian",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Afrothere"
    ]
   },
   {
@@ -360,10 +612,37 @@
    ]
   },
   {
+   "group": "Dinocerate",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
+   ]
+  },
+  {
    "group": "Discoidal organism",
    "tags": [
     "Animal",
     "Cnidarian"
+   ]
+  },
+  {
+   "group": "Early bee",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Insect",
+    "Terrestrial arthropod"
    ]
   },
   {
@@ -446,6 +725,28 @@
    ]
   },
   {
+   "group": "Edaphosaurid synapsid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid"
+   ]
+  },
+  {
+   "group": "Eldonid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Echinoderm",
+    "Hemichordate"
+   ]
+  },
+  {
    "group": "Embolomere",
    "tags": [
     "Animal",
@@ -454,6 +755,38 @@
     "Vertebrate",
     "Jawed",
     "Tetrapod"
+   ]
+  },
+  {
+   "group": "Embrithopod",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Afrothere"
+   ]
+  },
+  {
+   "group": "Entelodont",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
    ]
   },
   {
@@ -470,6 +803,18 @@
     "Mammal",
     "Placental",
     "Ungulate"
+   ]
+  },
+  {
+   "group": "Eugeneodont",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Cartilaginous"
    ]
   },
   {
@@ -513,6 +858,20 @@
     "Synapsid",
     "Mammal",
     "Placental"
+   ]
+  },
+  {
+   "group": "Eutriconodont mammal",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal"
    ]
   },
   {
@@ -583,6 +942,23 @@
    ]
   },
   {
+   "group": "Gastornithid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur",
+    "Theropod",
+    "Bird"
+   ]
+  },
+  {
    "group": "Giant clam",
    "tags": [
     "Animal",
@@ -605,6 +981,36 @@
     "Mammal",
     "Placental",
     "Ungulate"
+   ]
+  },
+  {
+   "group": "Glyptodont",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Xenarthran"
+   ]
+  },
+  {
+   "group": "Gobiconodont mammal",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal"
    ]
   },
   {
@@ -672,6 +1078,21 @@
    ]
   },
   {
+   "group": "Gymnure",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental"
+   ]
+  },
+  {
    "group": "Hard tick",
    "tags": [
     "Animal",
@@ -698,6 +1119,33 @@
    ]
   },
   {
+   "group": "Hominin",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Primate"
+   ]
+  },
+  {
+   "group": "Horseshoe crab",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Chelicerate",
+    "Marine arthropod"
+   ]
+  },
+  {
    "group": "Hummingbird",
    "tags": [
     "Animal",
@@ -712,6 +1160,33 @@
     "Dinosaur",
     "Theropod",
     "Bird"
+   ]
+  },
+  {
+   "group": "Hyaenodont",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental"
+   ]
+  },
+  {
+   "group": "Hybodont shark",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Cartilaginous"
    ]
   },
   {
@@ -813,11 +1288,54 @@
    ]
   },
   {
+   "group": "Lepospondyl",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amphibian"
+   ]
+  },
+  {
+   "group": "Leptictid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental"
+   ]
+  },
+  {
    "group": "Lingulid brachiopod",
    "tags": [
     "Animal",
     "Bilaterian",
     "Brachiopod"
+   ]
+  },
+  {
+   "group": "Litoptern",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
    ]
   },
   {
@@ -857,6 +1375,19 @@
    ]
   },
   {
+   "group": "Lungfish",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Bony fish",
+    "Lobe-finned"
+   ]
+  },
+  {
    "group": "Mackerel shark",
    "tags": [
     "Animal",
@@ -866,6 +1397,20 @@
     "Fish",
     "Jawed",
     "Cartilaginous"
+   ]
+  },
+  {
+   "group": "Madtsoiid snake",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Squamate"
    ]
   },
   {
@@ -884,6 +1429,20 @@
    ]
   },
   {
+   "group": "Mesosaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Basal amniote"
+   ]
+  },
+  {
    "group": "Mite",
    "tags": [
     "Animal",
@@ -892,6 +1451,23 @@
     "Arthropod",
     "Chelicerate",
     "Terrestrial arthropod"
+   ]
+  },
+  {
+   "group": "Moa",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur",
+    "Theropod",
+    "Bird"
    ]
   },
   {
@@ -907,6 +1483,21 @@
     "Synapsid",
     "Mammal",
     "Monotreme"
+   ]
+  },
+  {
+   "group": "Mosasaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Squamate",
+    "Marine reptile"
    ]
   },
   {
@@ -963,6 +1554,52 @@
    ]
   },
   {
+   "group": "Nimravid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Carnivoran"
+   ]
+  },
+  {
+   "group": "Nothosaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Marine reptile"
+   ]
+  },
+  {
+   "group": "Notoungulate",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
+   ]
+  },
+  {
    "group": "Oceanic dolphin",
    "tags": [
     "Animal",
@@ -980,6 +1617,19 @@
    ]
   },
   {
+   "group": "Ophiacodontid synapsid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid"
+   ]
+  },
+  {
    "group": "Orb-weaver spider",
    "tags": [
     "Animal",
@@ -988,6 +1638,44 @@
     "Arthropod",
     "Chelicerate",
     "Terrestrial arthropod"
+   ]
+  },
+  {
+   "group": "Ornithopod dinosaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur"
+   ]
+  },
+  {
+   "group": "Orthide brachiopod",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Brachiopod"
+   ]
+  },
+  {
+   "group": "Pachycephalosaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur"
    ]
   },
   {
@@ -1003,6 +1691,17 @@
    ]
   },
   {
+   "group": "Palaeodictyopteran",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Insect",
+    "Terrestrial arthropod"
+   ]
+  },
+  {
    "group": "Palaeospondylid",
    "tags": [
     "Animal",
@@ -1013,9 +1712,38 @@
    ]
   },
   {
+   "group": "Pantodont",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental"
+   ]
+  },
+  {
    "group": "Parabasalid",
    "tags": [
     "Protist"
+   ]
+  },
+  {
+   "group": "Pareiasaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Basal amniote"
    ]
   },
   {
@@ -1044,6 +1772,23 @@
    ]
   },
   {
+   "group": "Pelagornithid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur",
+    "Theropod",
+    "Bird"
+   ]
+  },
+  {
    "group": "Pelican",
    "tags": [
     "Animal",
@@ -1058,6 +1803,47 @@
     "Dinosaur",
     "Theropod",
     "Bird"
+   ]
+  },
+  {
+   "group": "Penguin",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur",
+    "Theropod",
+    "Bird"
+   ]
+  },
+  {
+   "group": "Pentamerid brachiopod",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Brachiopod"
+   ]
+  },
+  {
+   "group": "Percrocutid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Carnivoran"
    ]
   },
   {
@@ -1093,6 +1879,36 @@
    ]
   },
   {
+   "group": "Placodont",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Marine reptile"
+   ]
+  },
+  {
+   "group": "Plesiadapiform",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Primate"
+   ]
+  },
+  {
    "group": "Plesiosaur",
    "tags": [
     "Animal",
@@ -1104,6 +1920,25 @@
     "Amniote",
     "Reptile",
     "Marine reptile"
+   ]
+  },
+  {
+   "group": "Prawn",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Crustacean"
+   ]
+  },
+  {
+   "group": "Priapulid worm",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Worm"
    ]
   },
   {
@@ -1129,6 +1964,13 @@
     "Bilaterian",
     "Ecdysozoan",
     "Lobopodian"
+   ]
+  },
+  {
+   "group": "Problematic animal",
+   "tags": [
+    "Animal",
+    "Bilaterian"
    ]
   },
   {
@@ -1219,6 +2061,46 @@
    ]
   },
   {
+   "group": "Reptiliomorph",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod"
+   ]
+  },
+  {
+   "group": "Rhinocerotoid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
+   ]
+  },
+  {
+   "group": "Rhynchosaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile"
+   ]
+  },
+  {
    "group": "Roachoid",
    "tags": [
     "Animal",
@@ -1284,6 +2166,35 @@
    ]
   },
   {
+   "group": "Sauropodomorph dinosaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur"
+   ]
+  },
+  {
+   "group": "Sauropterygian",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Marine reptile"
+   ]
+  },
+  {
    "group": "Scorpion",
    "tags": [
     "Animal",
@@ -1319,6 +2230,34 @@
    ]
   },
   {
+   "group": "Sea snail",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Mollusc",
+    "Gastropod"
+   ]
+  },
+  {
+   "group": "Sea spider",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Chelicerate",
+    "Marine arthropod"
+   ]
+  },
+  {
+   "group": "Sea star",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Echinoderm"
+   ]
+  },
+  {
    "group": "Sea turtle",
    "tags": [
     "Animal",
@@ -1350,6 +2289,17 @@
    ]
   },
   {
+   "group": "Seymouriamorph",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod"
+   ]
+  },
+  {
    "group": "Shorebird",
    "tags": [
     "Animal",
@@ -1364,6 +2314,34 @@
     "Dinosaur",
     "Theropod",
     "Bird"
+   ]
+  },
+  {
+   "group": "Shuvosaurid pseudosuchian",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur"
+   ]
+  },
+  {
+   "group": "Side-necked turtle",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Turtle"
    ]
   },
   {
@@ -1407,6 +2385,21 @@
    ]
   },
   {
+   "group": "Sparassodont",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Metatherian"
+   ]
+  },
+  {
    "group": "Sphenacodont synapsid",
    "tags": [
     "Animal",
@@ -1445,6 +2438,32 @@
    ]
   },
   {
+   "group": "Springtail",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Insect",
+    "Terrestrial arthropod"
+   ]
+  },
+  {
+   "group": "Stegosaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur"
+   ]
+  },
+  {
    "group": "Stem anthozoan",
    "tags": [
     "Animal",
@@ -1477,10 +2496,47 @@
    ]
   },
   {
+   "group": "Stem turtle",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Turtle"
+   ]
+  },
+  {
    "group": "Stony coral",
    "tags": [
     "Animal",
     "Cnidarian"
+   ]
+  },
+  {
+   "group": "Symmoriiform shark",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Cartilaginous"
+   ]
+  },
+  {
+   "group": "Synziphosurine",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Chelicerate",
+    "Marine arthropod"
    ]
   },
   {
@@ -1507,6 +2563,35 @@
    ]
   },
   {
+   "group": "Temnospondyl",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amphibian"
+   ]
+  },
+  {
+   "group": "Teratorn",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur",
+    "Theropod",
+    "Bird"
+   ]
+  },
+  {
    "group": "Termite",
    "tags": [
     "Animal",
@@ -1516,6 +2601,38 @@
     "Insect",
     "Terrestrial arthropod",
     "Social insect"
+   ]
+  },
+  {
+   "group": "Terror bird",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur",
+    "Theropod",
+    "Bird"
+   ]
+  },
+  {
+   "group": "Thalattosuchian",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Marine reptile"
    ]
   },
   {
@@ -1532,6 +2649,38 @@
     "Archosaur",
     "Dinosaur",
     "Theropod"
+   ]
+  },
+  {
+   "group": "Thyreophoran dinosaur",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur"
+   ]
+  },
+  {
+   "group": "Toothed whale",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate",
+    "Cetacean"
    ]
   },
   {
@@ -1560,6 +2709,17 @@
     "Mammal",
     "Placental",
     "Xenarthran"
+   ]
+  },
+  {
+   "group": "Trigonotarbid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Chelicerate",
+    "Terrestrial arthropod"
    ]
   },
   {
@@ -1600,6 +2760,38 @@
    ]
   },
   {
+   "group": "Uraraneid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Chelicerate",
+    "Terrestrial arthropod"
+   ]
+  },
+  {
+   "group": "Varanopid synapsid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid"
+   ]
+  },
+  {
+   "group": "Vetulicolian",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate"
+   ]
+  },
+  {
    "group": "Waterfowl",
    "tags": [
     "Animal",
@@ -1614,6 +2806,31 @@
     "Dinosaur",
     "Theropod",
     "Bird"
+   ]
+  },
+  {
+   "group": "Weigeltisaurid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Basal amniote"
+   ]
+  },
+  {
+   "group": "Whip spider",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Chelicerate",
+    "Terrestrial arthropod"
    ]
   },
   {

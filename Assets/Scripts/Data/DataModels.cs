@@ -160,6 +160,7 @@ namespace NaturalHistory.Data
         public int startingPopulation;
         public bool playable;
         public string model;          // optional Resources path of a map model, e.g. "Models/Species/ActinophrysSol"
+        public string flightModel;    // optional: the same animal in flight, wings spread, for a flier that rests on the ground or water (shown when it takes off in the sky view)
         public string mapStyle;       // ColonyStyle name: Drift, Fixed, Float, Ground, Soar, Swarm, Swim (default Drift)
         public string mapGait;        // Ground only: Walk (default), Hop, Slither or Run (gallops when travelling)
         public int colonySize;        // individuals shown on the map; 0 = the map style's default
