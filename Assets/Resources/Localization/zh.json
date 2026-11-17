@@ -1626,7 +1626,7 @@
   },
   {
    "k": "Afrotropic",
-   "v": "非洲热带界"
+   "v": "非洲热带系"
   },
   {
    "k": "Agate Fossil Beds",
@@ -2058,7 +2058,7 @@
   },
   {
    "k": "Antarctic",
-   "v": "南极界"
+   "v": "南极系"
   },
   {
    "k": "Antarctica and the sub-Antarctic islands. Ice-free and forested for most of its history.",
@@ -2406,7 +2406,7 @@
   },
   {
    "k": "Australasia",
-   "v": "澳新界"
+   "v": "澳新系"
   },
   {
    "k": "Australia, New Guinea, New Zealand and nearby islands east of Wallace's Line.",
@@ -2434,7 +2434,7 @@
   },
   {
    "k": "Avalonia",
-   "v": "阿瓦隆尼亚"
+   "v": "阿瓦隆尼亚系"
   },
   {
    "k": "Avialan",
@@ -2490,7 +2490,7 @@
   },
   {
    "k": "Baltica",
-   "v": "波罗的大陆"
+   "v": "波罗的系"
   },
   {
    "k": "Bamboo",
@@ -3350,7 +3350,7 @@
   },
   {
    "k": "Cathaysia",
-   "v": "华夏古陆"
+   "v": "华夏系"
   },
   {
    "k": "Cathedral Termite",
@@ -5170,7 +5170,7 @@
   },
   {
    "k": "Euramerica",
-   "v": "欧美大陆"
+   "v": "欧美系"
   },
   {
    "k": "Euramerica (Laurussia) forms; Gondwana in the south",
@@ -6158,7 +6158,7 @@
   },
   {
    "k": "Gondwana",
-   "v": "冈瓦纳"
+   "v": "冈瓦纳系"
   },
   {
    "k": "Gondwana Rainforests",
@@ -7774,7 +7774,7 @@
   },
   {
    "k": "Laurasia",
-   "v": "劳亚大陆"
+   "v": "劳亚系"
   },
   {
    "k": "Laurasia in the north, Gondwana in the south",
@@ -7786,7 +7786,7 @@
   },
   {
    "k": "Laurentia",
-   "v": "劳伦大陆"
+   "v": "劳伦系"
   },
   {
    "k": "Laurentia and Baltica collide, raising the Caledonian mountains",
@@ -7794,7 +7794,7 @@
   },
   {
    "k": "Laurussia, the Old Red Sandstone continent formed when Laurentia, Baltica and Avalonia collided.",
-   "v": "劳俄大陆，即劳伦大陆、波罗的大陆和阿瓦隆尼亚碰撞形成的老红砂岩大陆。"
+   "v": "劳俄大陆，即劳伦系、波罗的系和阿瓦隆尼亚碰撞形成的老红砂岩大陆。"
   },
   {
    "k": "Lavender",
@@ -9138,7 +9138,7 @@
   },
   {
    "k": "Nearctic",
-   "v": "新北界"
+   "v": "新北系"
   },
   {
    "k": "Nectar Feeding",
@@ -9190,7 +9190,7 @@
   },
   {
    "k": "Neotropic",
-   "v": "新热带界"
+   "v": "新热带系"
   },
   {
    "k": "Nephridia",
@@ -9490,7 +9490,7 @@
   },
   {
    "k": "Oceanian",
-   "v": "大洋洲界"
+   "v": "大洋洲系"
   },
   {
    "k": "Oceanic dolphin",
@@ -10090,7 +10090,7 @@
   },
   {
    "k": "Palearctic",
-   "v": "古北界"
+   "v": "古北系"
   },
   {
    "k": "Paleocene–Eocene Thermal Maximum",
@@ -10146,7 +10146,7 @@
   },
   {
    "k": "Pangaea",
-   "v": "盘古大陆"
+   "v": "盘古系"
   },
   {
    "k": "Pangaea assembling as Euramerica and Gondwana collide",
@@ -10182,7 +10182,7 @@
   },
   {
    "k": "Panthalassa",
-   "v": "泛大洋"
+   "v": "泛大洋系"
   },
   {
    "k": "Panting",
@@ -12006,7 +12006,7 @@
   },
   {
    "k": "Siberia",
-   "v": "西伯利亚"
+   "v": "西伯利亚系"
   },
   {
    "k": "Siberian Traps",
@@ -13062,7 +13062,7 @@
   },
   {
    "k": "Tethys",
-   "v": "特提斯洋"
+   "v": "特提斯系"
   },
   {
    "k": "Tetrad-spore plant",
@@ -13178,7 +13178,7 @@
   },
   {
    "k": "The North and South China blocks and Indochina, islands in the Paleo-Tethys.",
-   "v": "华北、华南地块及印支地块，古特提斯洋中的岛屿。"
+   "v": "华北、华南地块及印支地块，古特提斯系中的岛屿。"
   },
   {
    "k": "The largest entelodont or \"hell pig\", about 1.8 m tall at the shoulder, from the latest Oligocene and Early Miocene of North America. Its huge head had bony flanges under the cheeks and knobs under the chin, and its teeth could crack bones. Entelodonts were not true pigs but relatives of whales and hippos; Daeodon probably scavenged carcasses and ate roots and fruit.",
@@ -13386,7 +13386,7 @@
   },
   {
    "k": "The northern supercontinent left after Pangaea split: North America and Eurasia.",
-   "v": "盘古大陆分裂后留下的北方超大陆：北美洲和欧亚大陆。"
+   "v": "盘古系分裂后留下的北方超大陆：北美洲和欧亚大陆。"
   },
   {
    "k": "The only truly social cat: prides of related females hunt together while males defend the territory. Lions ranged across Africa, Eurasia and the Americas during the Pleistocene; today they survive in sub-Saharan Africa and India's Gir Forest.",
@@ -13418,7 +13418,7 @@
   },
   {
    "k": "The warm tropical ocean between Laurasia and Gondwana; its remnant is the Mediterranean.",
-   "v": "劳亚大陆与冈瓦纳之间温暖的热带海洋；地中海是它的残余。"
+   "v": "劳亚系与冈瓦纳之间温暖的热带海洋；地中海是它的残余。"
   },
   {
    "k": "The world keeps cooling and drying. Grasslands spread, grazing mammals thrive, and the first hominins appear in Africa.",
@@ -13426,7 +13426,7 @@
   },
   {
    "k": "The world ocean surrounding Pangaea; the ancestor of the Pacific.",
-   "v": "环绕盘古大陆的全球大洋；太平洋的前身。"
+   "v": "环绕盘古系的全球大洋；太平洋的前身。"
   },
   {
    "k": "The {0} has begun",
@@ -14666,7 +14666,7 @@
   },
   {
    "k": "Zealandia",
-   "v": "西兰洲"
+   "v": "西兰系"
   },
   {
    "k": "Zebras migrate in great herds.",
@@ -14866,7 +14866,7 @@
   },
   {
    "k": "Öland Alvar",
-   "v": "厄兰岛石灰岩平原"
+   "v": "厄兰岛草原"
   },
   {
    "k": "Ediacaran",
@@ -16387,6 +16387,686 @@
   {
    "k": "Coleoids hid the shell inside the body.",
    "v": "蛸亚纲把壳藏进了身体里。"
+  },
+  {
+   "k": "Choanoflagellate",
+   "v": "领鞭毛虫"
+  },
+  {
+   "k": "Salpingoeca rosetta",
+   "v": "Salpingoeca rosetta"
+  },
+  {
+   "k": "Lagerpeton",
+   "v": "兔鳄"
+  },
+  {
+   "k": "Megachirella",
+   "v": "巨手蜥"
+  },
+  {
+   "k": "A rosette of a dozen single cells that divided without letting go, each beating a long flagellum inside a collar of fine microvilli that strains out bacteria. Choanoflagellates are the closest living relatives of animals: their collar cells are almost identical to those that line sponges, and colonies like this one hint at how the first animals came together from single cells.",
+   "v": "十几个单细胞分裂后不再分开，聚成一朵玫瑰花形的群体；每个细胞在一圈细密的微绒毛领中摆动一根长鞭毛，滤食细菌。领鞭毛虫是动物现存最近的亲戚：它们的领细胞与海绵内壁的领细胞几乎一模一样，这样的群体也暗示了最早的动物是怎样由单细胞聚合而成的。"
+  },
+  {
+   "k": "A small, slender reptile about 70 cm long from the roughly 236-million-year-old Chañares Formation of Argentina, running on long, stilt-like hind legs with a very long foot. Lagerpetids were long thought to be close to the dinosaurs; skulls and inner ears described in 2020 showed that they are the closest known relatives of the pterosaurs, so animals like it stand near the split between the flying reptiles and the dinosaurs. It probably hunted insects and other small animals.",
+   "v": "一种体长约 70 厘米的小型纤细爬行动物，产自阿根廷约 2.36 亿年前的查纳雷斯组，靠长长的、高跷般的后腿和极长的脚奔跑。兔鳄类长期被认为与恐龙关系很近；2020 年描述的头骨和内耳显示，它们是翼龙已知最近的亲戚，因此它这样的动物正处在飞行爬行动物与恐龙分道扬镳之处。它大概以昆虫和其他小动物为食。"
+  },
+  {
+   "k": "A small lizard about 20 cm long from the 240-million-year-old rocks of the Dolomites in northern Italy, and the oldest known squamate: the group of lizards and snakes. Its name means 'big hand', for its large clawed hands. A study of its skeleton in 2018 showed that it was already a true squamate, so the ancestors of all lizards and snakes lived in the Triassic, long before the oldest known snakes. It probably hunted insects among coastal plants.",
+   "v": "一种体长约 20 厘米的小蜥蜴，产自意大利北部多洛米蒂山脉 2.4 亿年前的岩层，是已知最古老的有鳞类，即蜥蜴和蛇所属的类群。它的名字意为“大手”，得名于那双带爪的大手。2018 年对其骨骼的研究表明，它已是真正的有鳞类，可见所有蜥蜴和蛇的祖先早在三叠纪就已出现，远早于已知最古老的蛇。它大概在海岸植物间捕食昆虫。"
+  },
+  {
+   "k": "Ornithodirans, the line of pterosaurs and dinosaurs, began as small, long-legged runners.",
+   "v": "鸟颈类主龙是翼龙和恐龙的支系，最初是些长腿善跑的小动物。"
+  },
+  {
+   "k": "A grain-sized burrower, one of the earliest known bilaterian animals, with a front, a back and a gut.",
+   "v": "米粒大小的掘穴动物，已知最早的两侧对称动物之一，有前后之分，也有消化道。"
+  },
+  {
+   "k": "Aurora",
+   "v": "极光"
+  },
+  {
+   "k": "Typhoon",
+   "v": "台风"
+  },
+  {
+   "k": "Weather front",
+   "v": "锋面云带"
+  },
+  {
+   "k": "Cumulus clouds",
+   "v": "积云"
+  },
+  {
+   "k": "Cirrus clouds",
+   "v": "卷云"
+  },
+  {
+   "k": "Volcanic ash cloud",
+   "v": "火山灰云"
+  },
+  {
+   "k": "The oldest known cephalopod, from the Late Cambrian of northeast China: a tiny, slightly curved horn-shaped shell only about a centimetre long, divided inside into very closely spaced chambers threaded by a siphuncle along its underside. Filling those chambers with gas let it lift off the sea floor and hover, the first step toward the jet-propelled nautiloids, ammonites and squid that came after it.",
+   "v": "已知最古老的头足类，来自中国东北的晚寒武世：一枚微小、略弯的角状壳，长仅约一厘米，内部被排列极密的隔壁分成许多气室，一根体管沿壳的腹侧穿过。向气室中充气使它能离开海底悬浮起来，这是迈向此后以喷射推进的鹦鹉螺、菊石和乌贼的第一步。"
+  },
+  {
+   "k": "A small, slender, straight-shelled cephalopod of the Devonian seas, about 10 cm long, with its siphuncle running along the edge of the shell rather than through the middle. Bactritids look plain, but they were the root of two great lineages: some coiled their shells and became the ammonites, others drew the shell inside the body and gave rise to the belemnites, squid and octopuses.",
+   "v": "泥盆纪海洋中一种细小、修长的直壳头足类，长约10厘米，体管沿壳缘而不是从中央穿过。杆石类外表朴素，却是两大类群的根：一些卷起了壳，成为菊石；另一些把壳收进体内，演化出箭石、乌贼和章鱼。"
+  },
+  {
+   "k": "One of the oldest known bivalves, from the Early Cambrian of New York, Greenland and beyond: a tiny clam only about 4 mm long, its two smooth, thin, sideways-flattened valves joined by a straight hinge. It probably lay half buried in the sediment, digging with a muscular foot and drawing in water to feed. From little clams like it came the mussels, oysters, scallops and giant clams.",
+   "v": "已知最古老的双壳类之一，来自纽约、格陵兰等地的早寒武世：一种仅约4毫米长的小蛤，两片光滑、薄而侧扁的壳由一条直的铰合线相连。它大概半埋在沉积物中，用肌肉质的足挖掘，并吸入海水取食。贻贝、牡蛎、扇贝和砗磲都源自像它这样的小蛤。"
+  },
+  {
+   "k": "An early relative of the chelicerates, the group of horseshoe crabs, sea scorpions and spiders, from the Burgess Shale of British Columbia. About 9 cm long, it had a broad, almost round head shield and, beneath it, five pairs of stout, spiny limbs that reached forward together like a basket to seize prey, behind them a segmented trunk ending in a broad paddle-shaped tail. Its name means 'holy crab': described in 1988 by Derek Briggs and Desmond Collins, it was nicknamed 'Santa Claws'.",
+   "v": "螯肢动物（鲎、海蝎和蜘蛛所属的类群）的早期亲戚，来自不列颠哥伦比亚的伯吉斯页岩。它长约9厘米，有一个宽阔、近乎圆形的头甲，下方是五对粗壮多刺的附肢，一起向前伸出，像篮子一样抓捕猎物；其后是分节的躯干，末端是宽阔的桨状尾。它的名字意为“神圣的蟹”：1988年由德里克·布里格斯和德斯蒙德·柯林斯描述，绰号“圣诞老人之爪”。"
+  },
+  {
+   "k": "The largest fossil spider known, from the 165-million-year-old lake beds of Daohugou in Inner Mongolia, China. A golden orb-weaver like the living Nephila, with a body 2.5 cm long and a leg span of about 15 cm, it had long legs with tufts of hairs and probably spun large, golden webs between the horsetails and ferns, catching the insects of a world without flowers. It shows that the great orb-weavers have hardly changed in 165 million years.",
+   "v": "已知最大的蜘蛛化石，来自中国内蒙古道虎沟1.65亿年前的湖相地层。它和现生的络新妇一样是金色圆网蛛，体长2.5厘米，足展约15厘米，长腿上有成簇的毛，大概在木贼和蕨类之间织出巨大的金色蛛网，捕捉一个还没有花的世界里的昆虫。它表明大型圆网蛛在1.65亿年间几乎没有变化。"
+  },
+  {
+   "k": "One of the first beetle relatives, from the Early Permian insect beds of Tshekarda in the Urals, about 280 million years old. Its forewings had already hardened into elytra sculptured with rows of window-like cells, but they did not yet close over the back as in true beetles, leaving a narrow gap down the middle, and reached a little past the tip of the abdomen. Flat and long-legged, it probably lived under the bark of dead trees and in the leaf litter, the way of life that later made beetles the most varied animals on Earth.",
+   "v": "最早的甲虫近亲之一，来自乌拉尔山切卡尔达约2.8亿年前的早二叠世昆虫层。它的前翅已硬化为鞘翅，上面刻有成排窗格状的小室，但还不像真正的甲虫那样在背上合拢，中间留着一道窄缝，并略微伸过腹部末端。它身体扁平、腿长，大概生活在枯树的树皮下和落叶层中，正是这种生活方式后来让甲虫成为地球上种类最多的动物。"
+  },
+  {
+   "k": "A small acanthodian or \"spiny shark\" from the Late Silurian and Early Devonian of Britain, about 7.5 cm long. Every fin had a stout bony spine in front of it, with an extra row of paired spines along the belly, and its body was covered in tiny square scales. Acanthodians are early relatives of the sharks, close to the root of the cartilaginous fishes.",
+   "v": "一种小型棘鱼，即“棘鲨”，来自英国的晚志留世和早泥盆世，长约7.5厘米。它的每片鳍前都有一根粗壮的骨刺，腹部还另有一排成对的刺，身上覆盖着微小的方形鳞片。棘鱼是鲨鱼的早期亲戚，接近软骨鱼类的根部。"
+  },
+  {
+   "k": "One of the earliest teleosts, the group that now makes up almost all living fish, from the Early Jurassic seas of Europe. About 15 cm long and herring-like, it had thin, round scales instead of the heavy enamelled scales of older fish, a symmetrical forked tail and a single dorsal fin. It swam in great shoals and was eaten by ichthyosaurs, pterosaurs and larger fish.",
+   "v": "最早的真骨鱼之一，来自欧洲早侏罗世的海洋；真骨鱼如今几乎占了所有现生鱼类。它长约15厘米，形似鲱鱼，鳞片薄而圆，而不是古老鱼类那种厚重的釉质鳞，尾鳍对称分叉，背鳍只有一片。它们结成巨大的鱼群游动，是鱼龙、翼龙和大型鱼类的食物。"
+  },
+  {
+   "k": "The earliest known proto-frog, from the Early Triassic of Madagascar, about 250 million years ago and 10 cm long. It had the broad, flat head and big eyes of a frog, but a longer body, a short stub of a tail and hind legs only a little longer than its forelegs, so it crawled and swam rather than leapt: a step on the way from temnospondyl amphibians to frogs.",
+   "v": "已知最早的原始蛙类，来自马达加斯加的早三叠世，距今约2.5亿年，长10厘米。它有青蛙那样宽而扁的头和大眼睛，但身体较长，有一截短尾，后腿只比前腿稍长，所以它是爬行和游泳，而不是跳跃：这是从离片椎类两栖动物走向青蛙的一步。"
+  },
+  {
+   "k": "One of the earliest known snakes, about 2 m long, from the roughly 95-million-year-old Candeleros Formation of Rio Negro, Argentina. It is a true transitional form: its skull still had a cheek bone that later snakes lost, and it kept a small pair of hind legs with a pelvis joined to the spine, beside the vent. It lived on land in a dry, desert-like setting and probably hunted from burrows, which suggests that snakes lost their legs on land rather than in the sea.",
+   "v": "已知最早的蛇之一，长约2米，来自阿根廷里奥内格罗约9500万年前的坎德莱罗斯组。它是真正的过渡类型：头骨上还保留着后来的蛇失去的颊骨，泄殖孔旁还留着一对小小的后腿，骨盆与脊柱相连。它生活在干燥、类似沙漠的陆地上，大概从洞穴中伏击猎物，这说明蛇是在陆地上而不是在海里失去了腿。"
+  },
+  {
+   "k": "One of the earliest and most primitive ornithischians, the beaked plant-eating dinosaurs that went on to include Stegosaurus, Triceratops and the duckbills. A small, swift biped about 1 m long from the Early Jurassic of Lesotho and South Africa, with long legs, short arms, big eyes, a horny beak at the tip of the snout and small leaf-shaped teeth for slicing plants. Some fossils were found curled up together, perhaps sheltering through a dry season.",
+   "v": "最早、最原始的鸟臀类恐龙之一；鸟臀类是长着喙的植食恐龙，后来包括剑龙、三角龙和鸭嘴龙。它是一种小而敏捷的两足动物，长约1米，来自莱索托和南非的早侏罗世，腿长臂短，眼睛很大，吻端有角质喙，还有切割植物的小叶状牙齿。有些化石被发现蜷缩在一起，也许是在一起度过旱季。"
+  },
+  {
+   "k": "One of the oldest members of the modern bird groups, a relative of ducks and geese from the last few million years of the Cretaceous on Vega Island, Antarctica, when the continent was still forested. It was a foot-propelled diver about 60 cm long with a loon-like body and large webbed feet, and it preserves the oldest known syrinx, the voice box of birds, which suggests it honked. It shows that the lines of modern birds had already split before the dinosaurs died out.",
+   "v": "现代鸟类类群中最古老的成员之一，是鸭和鹅的亲戚，来自白垩纪最后几百万年的南极洲维加岛，那时这片大陆还覆盖着森林。它是一种用脚划水的潜水鸟，长约60厘米，身体像潜鸟，脚掌很大有蹼；它保存了已知最古老的鸣管——鸟类的发声器官，说明它会发出鸣叫。它表明现代鸟类的各支在恐龙灭绝之前就已经分开了。"
+  },
+  {
+   "k": "A mouse-sized climber from the 125-million-year-old Yixian Formation of Liaoning, China, about 15 cm long with its tail, preserved with traces of fur. Its ankle and foot bones are those of a tree-climber, and its teeth mark it as one of the earliest metatherians, the line that leads to opossums, kangaroos and the other marsupials. It probably hunted insects among the branches.",
+   "v": "一种老鼠大小的攀爬者，来自中国辽宁1.25亿年前的义县组，连尾巴长约15厘米，保存有毛发的痕迹。它的踝骨和足骨属于树栖攀爬者，牙齿则表明它是最早的后兽类之一，这一支后来通向负鼠、袋鼠和其他有袋类。它大概在树枝间捕食昆虫。"
+  },
+  {
+   "k": "A rat-sized mammal from rocks in Montana laid down within a few hundred thousand years of the asteroid impact that ended the age of dinosaurs, and one of the earliest undoubted placental mammals. Its low, blunt-cusped teeth could crush fruit and seeds as well as insects, and it was long thought to stand near the ancestry of the hoofed mammals. In the emptied world after the extinction, animals like it gave rise to the great radiation of placentals.",
+   "v": "一种老鼠大小的哺乳动物，来自蒙大拿州的岩层，这些岩层形成于终结恐龙时代的小行星撞击后几十万年之内；它是最早无可争议的有胎盘类之一。它低矮、钝尖的牙齿既能压碎果实和种子，也能吃昆虫，长期以来被认为接近有蹄类的祖先。在大灭绝后空出来的世界里，像它这样的动物发展出了有胎盘类的大辐射。"
+  },
+  {
+   "k": "The earliest known plesiadapiform, the stem group of the primates, from the very beginning of the Paleocene of Montana, about 66 million years ago. Squirrel-sized, with a long tail, it is known from teeth, jaws and ankle bones; the ankles show it could turn its feet to grip and climb down tree trunks. Its teeth suited a diet of fruit and insects in the new flowering forests.",
+   "v": "已知最早的近兔猴类（灵长类的干群），来自蒙大拿州古新世的最开端，约6600万年前。它松鼠大小，有长尾巴，已知的化石有牙齿、颌骨和踝骨；踝骨显示它能转动双脚抓握，并能沿树干向下攀爬。它的牙齿适合在新出现的开花森林中吃果实和昆虫。"
+  },
+  {
+   "k": "A small, tree-climbing meat-eater of the Eocene forests of North America, about 30 cm long plus a long bushy tail, built like a genet. Miacids sit near the root of the carnivorans: they already had the pair of blade-like shearing teeth of the cats, dogs and bears that came after them, and flexible ankles for climbing down trunks head first.",
+   "v": "北美洲始新世森林中一种在树上攀爬的小型食肉动物，长约30厘米，外加一条蓬松的长尾巴，体形像獛。细齿兽类位于食肉目的根部附近：它们已经有了此后猫、狗和熊所具有的那对刀片般的裂齿，以及能头朝下沿树干下爬的灵活踝关节。"
+  },
+  {
+   "k": "A sheep-sized early hoofed mammal of the late Paleocene and early Eocene of North America and Europe, about 1.5 m long. Phenacodus had a long low body, a long heavy tail and five toes on each foot ending in small hooves, the middle one the largest: the plan from which horses, rhinos and the other hoofed mammals grew. It browsed and ate fruit in open woodland.",
+   "v": "北美洲和欧洲晚古新世至早始新世一种绵羊大小的早期有蹄哺乳动物，长约1.5米。原蹄兽身体长而低矮，尾巴又长又粗，每只脚有五趾，末端是小蹄，中趾最大：马、犀牛和其他有蹄类就是从这样的体型演化而来。它在开阔的林地中啃食枝叶、吃果实。"
+  },
+  {
+   "k": "A raccoon-sized even-toed ungulate of the middle Eocene of Kashmir, about 40 cm long, like a small mousedeer on long slender legs. It is the closest known relative of the whales: its ear bones already had the thick, shell-like wall of a whale's, and its heavy limb bones weighed it down in water, where it probably waded and hid from predators, as the African water chevrotain does today.",
+   "v": "克什米尔中始新世一种浣熊大小的偶蹄类，长约40厘米，像一只腿细长的小鼷鹿。它是已知与鲸最近的亲戚：它的耳骨已经有鲸那样厚的贝壳状骨壁，沉重的四肢骨让它在水中下沉；它大概在水中涉行，躲避捕食者，就像今天的非洲水鼷鹿那样。"
+  },
+  {
+   "k": "Bactritids, small straight-shelled cephalopods, gave rise to both the ammonites and the squid line.",
+   "v": "杆石类是一类小型直壳头足类，菊石和乌贼一支都由它们演化而来。"
+  },
+  {
+   "k": "Nephila jurassica",
+   "v": "侏罗纪络新妇"
+  },
+  {
+   "k": "Plectronoceras",
+   "v": "板角石"
+  },
+  {
+   "k": "Bactrites",
+   "v": "杆石"
+  },
+  {
+   "k": "Sinodelphys",
+   "v": "中国袋兽"
+  },
+  {
+   "k": "Oriental Rat Flea",
+   "v": "印鼠客蚤"
+  },
+  {
+   "k": "Cat Flea",
+   "v": "猫栉首蚤"
+  },
+  {
+   "k": "Dog Flea",
+   "v": "犬栉首蚤"
+  },
+  {
+   "k": "Japanese Abalone",
+   "v": "皱纹盘鲍"
+  },
+  {
+   "k": "Perlemoen Abalone",
+   "v": "南非鲍"
+  },
+  {
+   "k": "Giant Clam",
+   "v": "大砗磲"
+  },
+  {
+   "k": "Small Giant Clam",
+   "v": "长砗磲"
+  },
+  {
+   "k": "Devil Clam",
+   "v": "魔鬼砗磲"
+  },
+  {
+   "k": "Crocus Clam",
+   "v": "番红砗磲"
+  },
+  {
+   "k": "Fordilla",
+   "v": "福迪拉蛤"
+  },
+  {
+   "k": "Fusulina",
+   "v": "纺锤蜓"
+  },
+  {
+   "k": "Eogyrinus",
+   "v": "始螈"
+  },
+  {
+   "k": "Coseley Roachoid",
+   "v": "科斯利古蜚蠊"
+  },
+  {
+   "k": "Progonoblattina",
+   "v": "原始蜚蠊"
+  },
+  {
+   "k": "Sysciophlebia",
+   "v": "密脉蜚蠊"
+  },
+  {
+   "k": "Sword-bearing Roachoid",
+   "v": "佩剑古蜚蠊"
+  },
+  {
+   "k": "Tshekardocoleus",
+   "v": "切卡尔达鞘翅虫"
+  },
+  {
+   "k": "Palaeorhincodon",
+   "v": "古鲸鲨"
+  },
+  {
+   "k": "Slender Dickinsonia",
+   "v": "细狄更逊水母"
+  },
+  {
+   "k": "White Sea Dickinsonia",
+   "v": "白海狄更逊水母"
+  },
+  {
+   "k": "Parvancorina",
+   "v": "小春虫"
+  },
+  {
+   "k": "Arrow Parvancorina",
+   "v": "箭形小春虫"
+  },
+  {
+   "k": "Slender Cloudina",
+   "v": "细克劳德管"
+  },
+  {
+   "k": "Ridged Cloudina",
+   "v": "脊纹克劳德管"
+  },
+  {
+   "k": "Namacalathus",
+   "v": "纳玛杯"
+  },
+  {
+   "k": "Rangea",
+   "v": "兰吉虫"
+  },
+  {
+   "k": "Swartpuntia",
+   "v": "黑点叶状体"
+  },
+  {
+   "k": "Cyclomedusa",
+   "v": "环盘水母"
+  },
+  {
+   "k": "Eocyathispongia",
+   "v": "始杯海绵"
+  },
+  {
+   "k": "Palm Hazelia",
+   "v": "掌状哈氏海绵"
+  },
+  {
+   "k": "Crater Hazelia",
+   "v": "杯状哈氏海绵"
+  },
+  {
+   "k": "Cup Diagoniella",
+   "v": "杯状斜针海绵"
+  },
+  {
+   "k": "Wheat-grain Sponge",
+   "v": "麦粒海绵"
+  },
+  {
+   "k": "Takakkawia",
+   "v": "塔卡考海绵"
+  },
+  {
+   "k": "Protopharetra",
+   "v": "原箭囊古杯"
+  },
+  {
+   "k": "Coscinocyathus",
+   "v": "筛古杯"
+  },
+  {
+   "k": "Ethmophyllum",
+   "v": "筛叶古杯"
+  },
+  {
+   "k": "Xianguangia",
+   "v": "先光海葵"
+  },
+  {
+   "k": "Cambroctoconus",
+   "v": "寒武八角锥"
+  },
+  {
+   "k": "Kyrgyz Cambroctoconus",
+   "v": "吉尔吉斯寒武八角锥"
+  },
+  {
+   "k": "Grey Whale",
+   "v": "灰鲸"
+  },
+  {
+   "k": "Smilodon populator",
+   "v": "毁灭刃齿虎"
+  },
+  {
+   "k": "Smilodon gracilis",
+   "v": "纤细刃齿虎"
+  },
+  {
+   "k": "Machairodus",
+   "v": "剑齿虎"
+  },
+  {
+   "k": "Giant Ground Sloth",
+   "v": "大地懒"
+  },
+  {
+   "k": "Tarija Ground Sloth",
+   "v": "塔里哈大地懒"
+  },
+  {
+   "k": "Pale-throated Three-toed Sloth",
+   "v": "浅喉三趾树懒"
+  },
+  {
+   "k": "Linnaeus's Two-toed Sloth",
+   "v": "二趾树懒"
+  },
+  {
+   "k": "Eosteus",
+   "v": "始骨鱼"
+  },
+  {
+   "k": "Yongdongaspis",
+   "v": "永东甲鱼"
+  },
+  {
+   "k": "Psarolepis",
+   "v": "斑鳞鱼"
+  },
+  {
+   "k": "Andreolepis",
+   "v": "安德鳞鱼"
+  },
+  {
+   "k": "Tungsenia",
+   "v": "奇异东生鱼"
+  },
+  {
+   "k": "Rhinconichthys",
+   "v": "喙鱼"
+  },
+  {
+   "k": "Palaeospondylus",
+   "v": "古脊椎鱼"
+  },
+  {
+   "k": "Australian Palaeospondylus",
+   "v": "澳洲古脊椎鱼"
+  },
+  {
+   "k": "Bransonella",
+   "v": "布氏鲨"
+  },
+  {
+   "k": "Sanctacaris",
+   "v": "圣甲虫"
+  },
+  {
+   "k": "Climatius",
+   "v": "栅棘鱼"
+  },
+  {
+   "k": "Triadobatrachus",
+   "v": "三叠蛙"
+  },
+  {
+   "k": "Lesothosaurus",
+   "v": "莱索托龙"
+  },
+  {
+   "k": "Phenacodus",
+   "v": "原蹄兽"
+  },
+  {
+   "k": "Najash",
+   "v": "纳哈什蛇"
+  },
+  {
+   "k": "Vegavis",
+   "v": "维加鸟"
+  },
+  {
+   "k": "Leptolepis",
+   "v": "薄鳞鱼"
+  },
+  {
+   "k": "Protungulatum",
+   "v": "原有蹄兽"
+  },
+  {
+   "k": "Purgatorius",
+   "v": "普尔加托里猴"
+  },
+  {
+   "k": "Miacis",
+   "v": "细齿兽"
+  },
+  {
+   "k": "{0} more species ▸",
+   "v": "还有 {0} 种 ▸"
+  },
+  {
+   "k": "Click a marked tile to place the young",
+   "v": "点击一个标记的格子放置幼体"
+  },
+  {
+   "k": "La Brea",
+   "v": "拉布雷亚"
+  },
+  {
+   "k": "Split Mountain",
+   "v": "斯普利特山"
+  },
+  {
+   "k": "John Day",
+   "v": "约翰戴"
+  },
+  {
+   "k": "Agate",
+   "v": "阿盖特"
+  },
+  {
+   "k": "Antelope County",
+   "v": "羚羊县"
+  },
+  {
+   "k": "Hot Springs",
+   "v": "温泉城"
+  },
+  {
+   "k": "Burgess",
+   "v": "布尔吉斯"
+  },
+  {
+   "k": "Wheeler",
+   "v": "惠勒"
+  },
+  {
+   "k": "Beecher",
+   "v": "比彻"
+  },
+  {
+   "k": "Gilboa",
+   "v": "吉尔博亚"
+  },
+  {
+   "k": "Walcott",
+   "v": "沃尔科特"
+  },
+  {
+   "k": "Mount Stephen",
+   "v": "斯蒂芬山"
+  },
+  {
+   "k": "Spence",
+   "v": "斯宾塞"
+  },
+  {
+   "k": "Kinzers",
+   "v": "金泽斯"
+  },
+  {
+   "k": "Waukesha",
+   "v": "沃基肖"
+  },
+  {
+   "k": "Herefordshire",
+   "v": "赫里福德郡"
+  },
+  {
+   "k": "Putorana",
+   "v": "普托拉纳"
+  },
+  {
+   "k": "Deccan",
+   "v": "德干"
+  },
+  {
+   "k": "Soom",
+   "v": "苏姆"
+  },
+  {
+   "k": "Emu Bay",
+   "v": "鸸鹋湾"
+  },
+  {
+   "k": "Gogo",
+   "v": "戈戈"
+  },
+  {
+   "k": "Fremouw",
+   "v": "弗雷莫"
+  },
+  {
+   "k": "Kem Kem",
+   "v": "凯姆凯姆"
+  },
+  {
+   "k": "Rhynie",
+   "v": "莱尼"
+  },
+  {
+   "k": "Joggins",
+   "v": "乔金斯"
+  },
+  {
+   "k": "Hamilton",
+   "v": "汉密尔顿"
+  },
+  {
+   "k": "Cleveland",
+   "v": "克利夫兰"
+  },
+  {
+   "k": "Price River",
+   "v": "普赖斯河"
+  },
+  {
+   "k": "Hunsrück",
+   "v": "洪斯吕克"
+  },
+  {
+   "k": "Germanic Sea",
+   "v": "日耳曼海"
+  },
+  {
+   "k": "Seymour",
+   "v": "西摩"
+  },
+  {
+   "k": "Mansfeld",
+   "v": "曼斯费尔德"
+  },
+  {
+   "k": "Irati",
+   "v": "伊拉蒂"
+  },
+  {
+   "k": "Vosges",
+   "v": "孚日"
+  },
+  {
+   "k": "Red Deer River",
+   "v": "红鹿河"
+  },
+  {
+   "k": "Messel",
+   "v": "梅塞尔"
+  },
+  {
+   "k": "Fur",
+   "v": "富尔岛"
+  },
+  {
+   "k": "Akiyoshi",
+   "v": "秋吉台"
+  },
+  {
+   "k": "Yezo",
+   "v": "虾夷"
+  },
+  {
+   "k": "Gotland",
+   "v": "哥得兰岛"
+  },
+  {
+   "k": "Whitsundays",
+   "v": "圣灵群岛"
+  },
+  {
+   "k": "Indomalayan",
+   "v": "印度马来系"
+  },
+  {
+   "k": "Palearctic Realm",
+   "v": "古北系"
+  },
+  {
+   "k": "Nearctic Realm",
+   "v": "新北系"
+  },
+  {
+   "k": "Indomalayan Realm",
+   "v": "印度马来系"
+  },
+  {
+   "k": "Afrotropic Realm",
+   "v": "非洲热带系"
+  },
+  {
+   "k": "Neotropic Realm",
+   "v": "新热带系"
+  },
+  {
+   "k": "Australasia Realm",
+   "v": "澳新系"
+  },
+  {
+   "k": "Oceanian Realm",
+   "v": "大洋洲系"
+  },
+  {
+   "k": "Antarctic Realm",
+   "v": "南极系"
+  },
+  {
+   "k": "Laurentia Realm",
+   "v": "劳伦系"
+  },
+  {
+   "k": "Baltica Realm",
+   "v": "波罗的系"
+  },
+  {
+   "k": "Avalonia Realm",
+   "v": "阿瓦隆尼亚系"
+  },
+  {
+   "k": "Siberia Realm",
+   "v": "西伯利亚系"
+  },
+  {
+   "k": "Cathaysia Realm",
+   "v": "华夏系"
+  },
+  {
+   "k": "Gondwana Realm",
+   "v": "冈瓦纳系"
+  },
+  {
+   "k": "Euramerica Realm",
+   "v": "欧美系"
+  },
+  {
+   "k": "Pangaea Realm",
+   "v": "盘古系"
+  },
+  {
+   "k": "Laurasia Realm",
+   "v": "劳亚系"
+  },
+  {
+   "k": "Tethys Realm",
+   "v": "特提斯系"
+  },
+  {
+   "k": "Panthalassa Realm",
+   "v": "泛大洋系"
+  },
+  {
+   "k": "Zealandia Realm",
+   "v": "西兰系"
   }
  ]
 }

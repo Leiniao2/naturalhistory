@@ -282,6 +282,7 @@ namespace NaturalHistory.World
             }
 
             var rng = new System.Random(worldSeed);
+            Shader.SetGlobalFloat("_NHLeafFreq", 1f / (0.011f * cellSize)); // leaf size on tree crowns (MapFeatureLeaves.cginc)
             var reliefRng = new System.Random(worldSeed ^ 0x2C1B3C6D);
             reliefOffset  = new Vector3((float)reliefRng.NextDouble(), (float)reliefRng.NextDouble(), (float)reliefRng.NextDouble()) * 1000f;
             // The period decides the plants: lycopsids and tree ferns, cycads, Araucaria, flowering trees…

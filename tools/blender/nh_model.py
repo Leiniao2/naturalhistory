@@ -187,6 +187,25 @@ def transform(bm, matrix):
     return bm
 
 
+def eye(mb, at, out, r, skin, iris=(0.30, 0.19, 0.09), forward=(0, -1, 0)):
+    """A readable eye on a fused body, for animals seen small on the map: a darker socket of skin
+    round it, a glossy brown iris (iris colour), a black pupil, a white catchlight up and forward,
+    and an upper lid of skin hooding it. at: point on the skin; out: the skin's outward normal
+    there; r: eye radius; skin: the body colour round it; forward: the way the head faces."""
+    from mathutils import Vector
+    at, out, fwd = Vector(at), Vector(out).normalized(), Vector(forward).normalized()
+    up = Vector((0, 0, 1))
+    socket = tuple(c * 0.55 for c in skin)
+    mb.add(ellipsoid(tuple(at - out * r * 0.75), (r * 1.5, r * 1.5, r * 1.2), subdivisions=2), socket)  # mostly under the skin
+    mb.add(ellipsoid(tuple(at - out * r * 0.3), (r, r, r * 0.9), subdivisions=3), iris)
+    look = (out * 0.75 + fwd * 0.45).normalized()
+    mb.add(ellipsoid(tuple(at - out * r * 0.3 + look * r * 0.6), (r * 0.48, r * 0.48, r * 0.48), subdivisions=2), (0.01, 0.01, 0.01))
+    mb.add(ellipsoid(tuple(at - out * r * 0.3 + (look + up * 0.55 + fwd * 0.2).normalized() * r * 0.93),
+                     (r * 0.18, r * 0.18, r * 0.18), subdivisions=1), (0.95, 0.95, 0.92))
+    mb.add(ellipsoid(tuple(at + up * r * 0.78 - out * r * 0.35), (r * 1.2, r * 1.15, r * 0.35), subdivisions=2),
+           tuple(c * 0.85 for c in skin))  # the lid: a thin hood, mostly sunk in
+
+
 def ellipsoid(center=(0, 0, 0), radii=(1, 1, 1), subdivisions=3, rotation=None, deform=None):
     """Icosphere scaled to radii. deform(v_unit) -> radial multiplier, applied before scaling."""
     bm = bmesh.new()

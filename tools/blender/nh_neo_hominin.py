@@ -19,6 +19,11 @@ from mathutils import Vector, noise
 
 import nh_model as nh
 
+# Resolution of the fused body relative to each Spec's voxel / max_tris (see build)
+DETAIL = 0.5
+TRIS = 2.6
+SMOOTH = 18  # more passes at the finer voxel, so the joins between the body parts stay soft
+
 EYE = (0.18, 0.11, 0.06)
 PUPIL = (0.02, 0.015, 0.01)
 
@@ -106,7 +111,9 @@ def build(s):
     if s.wrap:
         b.add(nh.tube([tuple(pelvis + Vector((0, 0, S * 0.04))), tuple(pelvis - Vector((0, 0, S * 0.10)))],
                       [S * s.hip * 1.12, S * s.hip * 1.18], sides=14, scale_xy=(1.0, 0.75)), (0, 0, 1))
-    fused = b.fuse(voxel=s.voxel, smooth=4, smooth_factor=0.5, max_tris=s.max_tris)
+    # finer than the Spec asks: the Neogene megafauna are seen big and close on the map, and at the
+    # old resolution their bodies came out lumpy, with stick legs (DETAIL / TRIS scale every Spec)
+    fused = b.fuse(voxel=s.voxel * DETAIL, smooth=SMOOTH, smooth_factor=0.6, max_tris=int(s.max_tris * TRIS))
     fused.normal_update()
     col = fused.loops.layers.color.get("Col")
     # head-hair region: top/back of the cranium
@@ -133,8 +140,8 @@ def build(s):
     mb.add(fused)
     for sx in (-1, 1):
         e = hc + Vector((sx * hr * 0.30, -hr * 1.04, hr * 0.0))
-        mb.add(nh.ellipsoid(tuple(e), (hr * 0.11,) * 3, subdivisions=2), EYE)
-        mb.add(nh.ellipsoid(tuple(e + Vector((0, -hr * 0.08, 0))), (hr * 0.05,) * 3, subdivisions=1), PUPIL)
+        nh.eye(mb, e, Vector((sx * 0.35, -1, 0)), hr * 0.13, s.skin,
+               forward=(0, -1, 0))  # facing forward, like ours
     obj = mb.to_object(s.name)
     nh.ground_to_zero(obj)
     top = max(v.co.z for v in obj.data.vertices)

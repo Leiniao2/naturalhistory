@@ -6,7 +6,8 @@
 // resting coil (snakes, eels). ColonyGroup
 // drives them per renderer. _Sway rocks tall props gently back and forth, more toward the top
 // (water plants on the seabed: HexGrid.Under uses a material with it set). _Fur draws a coat of
-// hair on mammals (MapFeatureFur.cginc; World/AnimalFur sets it per renderer).
+// hair on mammals (MapFeatureFur.cginc; World/AnimalFur sets it per renderer). Leaf clumps (vertex
+// colour alpha 0) get a procedural leaf texture (MapFeatureLeaves.cginc).
 Shader "NaturalHistory/MapFeature"
 {
     Properties
@@ -24,7 +25,7 @@ Shader "NaturalHistory/MapFeature"
         [HideInInspector] _UndulateBody ("Tail z, snout z, waves along the body, growth toward the tail", Vector) = (-1, 1, 1, 0.5)
         [HideInInspector] _Coil ("Coiled (0..1), inner radius, ring spacing, head rise", Vector) = (0, 0.06, 0.055, 0.07)
         _Sway ("Sway: amplitude, full-sway height, speed, wavelength", Vector) = (0, 1, 1, 1)
-        [HideInInspector] _Fur ("Fur: amount, strands per unit", Vector) = (0, 0, 0, 0)
+        [HideInInspector] _Fur ("Fur: amount, strands per unit, feathers, feather rows per unit", Vector) = (0, 0, 0, 0)
         [HideInInspector] _StencilRef ("Stencil: 1 for animals, so borders skip them", Int) = 0
     }
 
@@ -55,6 +56,7 @@ Shader "NaturalHistory/MapFeature"
 
         #include "MapFeatureFlap.cginc"
         #include "MapFeatureFur.cginc"
+        #include "MapFeatureLeaves.cginc"
         ENDHLSL
 
         Pass
@@ -119,6 +121,7 @@ Shader "NaturalHistory/MapFeature"
                 half3  albedo = i.color.rgb * _Color.rgb;
                 if (i.band.y > 0.5) albedo *= BandColor(i.band);
                 albedo *= FurShade(i.furPos, i.furNormal);
+                albedo *= LeafShade(i.furPos, i.furNormal, i.color.a < 0.02 ? 1.0 : 0.0); // tree crowns (MapFeatureLeaves)
 
                 Light mainLight = GetMainLight(TransformWorldToShadowCoord(i.positionWS));
                 half3 viewDir   = GetWorldSpaceNormalizeViewDir(i.positionWS);
@@ -227,6 +230,7 @@ Shader "NaturalHistory/MapFeature"
         float4 _Fur;
         #include "MapFeatureFlap.cginc"
         #include "MapFeatureFur.cginc"
+        #include "MapFeatureLeaves.cginc"
 
         struct Input
         {
@@ -263,6 +267,7 @@ Shader "NaturalHistory/MapFeature"
             float2 band = float2(IN.nhFurPosBand.w, IN.nhFurNormalBand.w);
             if (band.y > 0.5) o.Albedo *= BandColor(band);
             o.Albedo *= FurShade(IN.nhFurPosBand.xyz, IN.nhFurNormalBand.xyz);
+            o.Albedo *= LeafShade(IN.nhFurPosBand.xyz, IN.nhFurNormalBand.xyz, IN.color.a < 0.02 ? 1.0 : 0.0); // tree crowns (MapFeatureLeaves)
             o.Gloss  = _Fur.x;
             o.Alpha  = 1;
         }

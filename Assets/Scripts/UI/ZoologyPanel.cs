@@ -11,8 +11,11 @@ namespace NaturalHistory.UI
 {
     // The evolution tree (evolution.json), shown a piece at a time since the whole tree has far too
     // many species for one view. It starts from one species (the selected animal) and shows what it
-    // can evolve into and their descendants, left to right, joined by curves; its ancestors sit faded
-    // on the left. A descendant that starts a new major group (a phylum, class... see Clades: insects,
+    // can evolve into and their descendants for a few generations (MaxGenerations), left to right;
+    // a species further on that has descendants of its own says how many, and clicking it carries on
+    // from there. Each species' descendants take a block of rows of their own, with the species
+    // centred on them and a gap between neighbouring lineages, joined to it by a fork, so lineages
+    // never interleave. Its ancestor sits faded on the left. A descendant that starts a new major group (a phylum, class... see Clades: insects,
     // vertebrates, mammals) is not expanded but shown as one group card; clicking that opens the tree
     // again from the group's first species. Clicking a species makes it the starting point; Back
     // returns to the previous view.
@@ -22,11 +25,14 @@ namespace NaturalHistory.UI
     // or from a selected animal's Evolve button: then that copy is the one that evolves.
     public class ZoologyPanel
     {
-        private const float ColumnWidth = 240f;
-        private const float RowHeight   = 92f;
+        private const float ColumnWidth = 330f; // wide enough for long names (Chinese, German...)
+        private const float RowHeight   = 102f;
         private const float Padding     = 24f;
-        private const float NodeWidth   = 200f;
-        private const float NodeHeight  = 76f;
+        private const float NodeWidth   = 290f;
+        private const float NodeHeight  = 86f;
+        private const int   MaxGenerations = 3;  // generations shown after the starting species
+        private const float LineageGap  = 0.4f;  // extra rows between neighbouring lineages
+        private const float ForkRadius  = 10f;   // rounded corners of the fork lines
 
         private static readonly Color LineReady   = new(0.95f, 0.80f, 0.35f);
         private static readonly Color LineUsed    = new(0.45f, 0.75f, 0.45f);
@@ -59,6 +65,8 @@ namespace NaturalHistory.UI
             public string key, species, clade; // clade: index into Clades as text, for group cards
             public List<string> founders;
             public bool ancestor;
+            public int generation;   // after the starting species
+            public int more;         // descendants not shown (the view stops here)
             public VisualElement view;
             public Vector2 position;
         }
@@ -192,11 +200,18 @@ namespace NaturalHistory.UI
                 if (founded >= 0)
                 {
                     if (!EvolutionData.From(id).Any()) continue;
-                    var cardKey = "clade:" + founded;
+                    var cardKey = $"clade:{founded}:{id}";
                     if (!nodes.TryGetValue(cardKey, out var card))
                         nodes[cardKey] = card = new Node { key = cardKey, clade = founded.ToString(), founders = new List<string>() };
                     if (!card.founders.Contains(id)) card.founders.Add(id);
+                    card.generation = nodes[id].generation + 1;
                     edges.Add((id, cardKey, null));
+                    continue;
+                }
+                // far enough: the rest of this lineage is a click away
+                if (nodes[id].generation >= MaxGenerations)
+                {
+                    nodes[id].more = CountFrom(new[] { id }) - 1;
                     continue;
                 }
                 foreach (var link in EvolutionData.From(id))
@@ -207,59 +222,72 @@ namespace NaturalHistory.UI
                     {
                         if (!nodes.ContainsKey(link.to))
                         {
-                            nodes[link.to] = new Node { key = link.to, species = link.to };
+                            nodes[link.to] = new Node { key = link.to, species = link.to, generation = nodes[id].generation + 1 };
                             queue.Enqueue(link.to);
                         }
                         edges.Add((id, link.to, link));
                         continue;
                     }
-                    var key = "clade:" + clade;
+                    var key = $"clade:{clade}:{id}";
                     if (!nodes.TryGetValue(key, out var group))
                         nodes[key] = group = new Node { key = key, clade = clade.ToString(), founders = new List<string>() };
                     if (!group.founders.Contains(link.to)) group.founders.Add(link.to);
                     if (!edges.Contains((id, key, null))) edges.Add((id, key, null));
+                    group.generation = nodes[id].generation + 1;
                 }
-            }
-
-            // column = longest chain from a starting species, so descendants always sit right of their origin
-            var depth = nodes.Keys.ToDictionary(k => k, _ => 0);
-            for (int pass = 0, changed = 1; changed > 0 && pass < nodes.Count; pass++)
-            {
-                changed = 0;
-                foreach (var (from, to, _) in edges)
-                    if (!roots.Contains(to) && depth[to] < depth[from] + 1) { depth[to] = depth[from] + 1; changed++; }
             }
 
             // where the starting species come from, faded in a column on the left
             var parents = roots.SelectMany(id => EvolutionData.To(id)).Select(l => l.from).Distinct()
                                .Where(id => !nodes.ContainsKey(id) && GameDataLoader.GetSpecies(id) != null).ToList();
+
+            // a tidy tree: leaves take the next free row, each species sits centred on its children,
+            // and a lineage with descendants keeps a gap from its neighbours
+            var children = new Dictionary<string, List<string>>();
+            foreach (var (from, to, _) in edges)
+            {
+                if (!children.TryGetValue(from, out var list)) children[from] = list = new List<string>();
+                if (!list.Contains(to)) list.Add(to);
+            }
+            foreach (var list in children.Values)
+                list.Sort((x, y) => SortKey(x).CompareTo(SortKey(y)));
+            var row = new Dictionary<string, float>();
+            float next = 0f;
+            bool lastWasLineage = false;
+            void Place(string key)
+            {
+                if (row.ContainsKey(key)) return;
+                row[key] = -1f; // being placed
+                var kids = children.TryGetValue(key, out var k) ? k.Where(c => !row.ContainsKey(c)).ToList() : new List<string>();
+                if (kids.Count == 0)
+                {
+                    if (lastWasLineage) next += LineageGap;
+                    row[key] = next++;
+                    lastWasLineage = false;
+                    return;
+                }
+                if (next > 0f) next += LineageGap; // a lineage starts: keep it apart from what's above
+                foreach (var c in kids) Place(c);
+                row[key] = (row[kids[0]] + row[kids[kids.Count - 1]]) * 0.5f;
+                lastWasLineage = true;
+            }
+            foreach (var id in roots) if (nodes.ContainsKey(id)) Place(id);
+
+            int shift = parents.Count > 0 ? 1 : 0;
+            int maxGen = nodes.Values.Select(n => n.generation).DefaultIfEmpty(0).Max();
+            float rootRow = roots.Where(row.ContainsKey).Select(r => row[r]).DefaultIfEmpty(0f).Average();
             foreach (var id in parents)
             {
-                nodes[id] = new Node { key = id, species = id, ancestor = true };
-                depth[id] = -1;
+                nodes[id] = new Node { key = id, species = id, ancestor = true, generation = -1 };
+                row[id] = rootRow;
                 foreach (var l in EvolutionData.From(id)) if (roots.Contains(l.to)) edges.Add((id, l.to, l));
             }
-
-            // columns by depth, rows ordered by their parents' rows so a lineage stays together
-            int shift = parents.Count > 0 ? 1 : 0;
-            int maxDepth = depth.Values.DefaultIfEmpty(0).Max();
-            var row = new Dictionary<string, float>();
-            int maxRows = 0;
-            for (int col = -1; col <= maxDepth; col++)
-            {
-                var members = nodes.Keys.Where(k => depth[k] == col)
-                    .OrderBy(k => edges.Where(e => e.to == k && row.ContainsKey(e.from)).Select(e => row[e.from]).DefaultIfEmpty(0f).Average())
-                    .ThenBy(k => nodes[k].species != null ? AgeIndex(nodes[k].species) : 99)
-                    .ToList();
-                for (int i = 0; i < members.Count; i++)
-                {
-                    row[members[i]] = i;
-                    nodes[members[i]].position = new Vector2(Padding + (col + shift) * ColumnWidth, Padding + i * RowHeight);
-                }
-                maxRows = Mathf.Max(maxRows, members.Count);
-            }
-            canvas.style.width  = Padding * 2 + (maxDepth + shift) * ColumnWidth + NodeWidth;
-            canvas.style.height = Padding * 2 + Mathf.Max(0, maxRows - 1) * RowHeight + NodeHeight;
+            foreach (var node in nodes.Values)
+                node.position = new Vector2(Padding + (node.generation + shift) * ColumnWidth,
+                                            Padding + (row.TryGetValue(node.key, out var r) ? Mathf.Max(0f, r) : 0f) * RowHeight);
+            float rows = row.Values.DefaultIfEmpty(0f).Max();
+            canvas.style.width  = Padding * 2 + (maxGen + shift) * ColumnWidth + NodeWidth;
+            canvas.style.height = Padding * 2 + rows * RowHeight + NodeHeight;
 
             lines = new VisualElement { pickingMode = PickingMode.Ignore };
             lines.AddToClassList("tree-lines");
@@ -293,6 +321,11 @@ namespace NaturalHistory.UI
                     if (node.ancestor) view.AddToClassList("ancestor");
                     text.Add(new Label(Loc.T(face.commonName)) { pickingMode = PickingMode.Ignore }.WithClass("node-name"));
                     text.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("node-cost"));
+                    if (node.more > 0) // the view stops here: its lineage goes on
+                    {
+                        view.AddToClassList("zoology-more");
+                        text.Add(new Label(Loc.F("{0} more species ▸", node.more)) { pickingMode = PickingMode.Ignore }.WithClass("node-more"));
+                    }
                     var id = node.species;
                     view.RegisterCallback<ClickEvent>(_ =>
                     {
@@ -304,6 +337,10 @@ namespace NaturalHistory.UI
                 node.view = view;
             }
         }
+
+        // siblings in order of appearance, group cards last
+        private (int, int, string) SortKey(string key) =>
+            nodes.TryGetValue(key, out var n) && n.species != null ? (0, AgeIndex(n.species), key) : (1, 0, key);
 
         private static int AgeIndex(string id) =>
             Enum.TryParse(GameDataLoader.GetSpecies(id)?.firstAge, true, out GeologicalAge a) ? (int)a : 0;
@@ -318,11 +355,24 @@ namespace NaturalHistory.UI
                 if (!nodes.TryGetValue(fromKey, out var a) || !nodes.TryGetValue(toKey, out var b)) continue;
                 var from = a.position + new Vector2(NodeWidth, NodeHeight * 0.5f);
                 var to   = b.position + new Vector2(0f, NodeHeight * 0.5f);
-                float bend = Mathf.Max(40f, (to.x - from.x) * 0.5f);
                 p.strokeColor = link == null ? LineOther : Evolution.HasEvolved(link) ? LineUsed : ReadyFor(link) != null ? LineReady : LineOther;
+                // a fork: out of the origin, along a trunk in the gap between the columns shared by
+                // all its descendants, then across into each of them, with rounded corners
+                float trunk = from.x + (to.x - from.x) * 0.5f;
+                float dy = to.y - from.y;
                 p.BeginPath();
                 p.MoveTo(from);
-                p.BezierCurveTo(from + new Vector2(bend, 0f), to - new Vector2(bend, 0f), to);
+                if (Mathf.Abs(dy) < 1f) p.LineTo(to);
+                else
+                {
+                    float r = Mathf.Min(ForkRadius, Mathf.Abs(dy) * 0.5f, (trunk - from.x) * 0.9f);
+                    float sy = Mathf.Sign(dy);
+                    p.LineTo(new Vector2(trunk - r, from.y));
+                    p.ArcTo(new Vector2(trunk, from.y), new Vector2(trunk, from.y + sy * r), r);
+                    p.LineTo(new Vector2(trunk, to.y - sy * r));
+                    p.ArcTo(new Vector2(trunk, to.y), new Vector2(trunk + r, to.y), r);
+                    p.LineTo(to);
+                }
                 p.Stroke();
             }
         }

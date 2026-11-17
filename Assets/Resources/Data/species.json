@@ -614,6 +614,32 @@
       "description": "A large golden orb-weaver from East Asia, now spreading across the south-eastern United States. Females spin webs up to a metre across from golden silk; young spiders disperse by 'ballooning' on silk threads carried by the wind."
     },
     {
+      "id": "nephila_jurassica",
+      "commonName": "Nephila jurassica",
+      "scientificName": "Nephila jurassica",
+      "kingdom": "Animalia",
+      "group": "Orb-weaver spider",
+      "firstAge": "Jurassic",
+      "lastAge": "Jurassic",
+      "habitats": ["Rainforest", "Wetland", "Plain"],
+      "diet": "Carnivore",
+      "prey": ["Small animals"],
+      "sizeCm": 2.5,
+      "startingPopulation": 3000,
+      "playable": true,
+      "model": "Models/Species/NephilaJurassica",
+      "mapStyle": "Fixed",
+      "colonySize": 2,
+      "mapScale": 1.1,
+      "genes": [
+        { "gene": "toxin_production", "expression": 0.5 },
+        { "gene": "carnivory", "expression": 0.7 },
+        { "gene": "reproduction_rate", "expression": 0.6 },
+        { "gene": "camouflage", "expression": 0.4 }
+      ],
+      "description": "The largest fossil spider known, from the 165-million-year-old lake beds of Daohugou in Inner Mongolia, China. A golden orb-weaver like the living Nephila, with a body 2.5 cm long and a leg span of about 15 cm, it had long legs with tufts of hairs and probably spun large, golden webs between the horsetails and ferns, catching the insects of a world without flowers. It shows that the great orb-weavers have hardly changed in 165 million years."
+    },
+    {
       "id": "common_kingfisher",
       "commonName": "Common Kingfisher",
       "scientificName": "Alcedo atthis",
@@ -2907,6 +2933,58 @@
       "description": "A slender straight-shelled nautiloid of the Middle Ordovician seas of Baltica, its tapering conch up to about 20 cm long, finely ringed with growth lines and divided inside into gas-filled chambers threaded by a narrow siphuncle. It hovered horizontally and hunted small prey with its arms. Its fossils, packed by the thousand into the Orthoceras limestone of Sweden and the Baltic, are among the most familiar of all cephalopod fossils."
     },
     {
+      "id": "plectronoceras_cambrense",
+      "commonName": "Plectronoceras",
+      "scientificName": "Plectronoceras cambrense",
+      "kingdom": "Animalia",
+      "group": "Early cephalopod",
+      "firstAge": "Cambrian",
+      "lastAge": "Cambrian",
+      "habitats": ["SaltWater"],
+      "diet": "Carnivore",
+      "sizeCm": 1,
+      "startingPopulation": 800,
+      "playable": true,
+      "model": "Models/Species/Plectronoceras",
+      "mapStyle": "Swim",
+      "mapBackward": true,
+      "colonySize": 6,
+      "mapScale": 0.55,
+      "genes": [
+        { "gene": "swimming_speed", "expression": 0.3 },
+        { "gene": "armor_thickness", "expression": 0.4 },
+        { "gene": "carnivory", "expression": 0.45 },
+        { "gene": "vision_acuity", "expression": 0.35 }
+      ],
+      "description": "The oldest known cephalopod, from the Late Cambrian of northeast China: a tiny, slightly curved horn-shaped shell only about a centimetre long, divided inside into very closely spaced chambers threaded by a siphuncle along its underside. Filling those chambers with gas let it lift off the sea floor and hover, the first step toward the jet-propelled nautiloids, ammonites and squid that came after it."
+    },
+    {
+      "id": "bactrites_gracilis",
+      "commonName": "Bactrites",
+      "scientificName": "Bactrites gracilis",
+      "kingdom": "Animalia",
+      "group": "Bactritid",
+      "firstAge": "Devonian",
+      "lastAge": "Devonian",
+      "habitats": ["SaltWater"],
+      "diet": "Carnivore",
+      "sizeCm": 10,
+      "startingPopulation": 500,
+      "playable": true,
+      "model": "Models/Species/Bactrites",
+      "mapStyle": "Swim",
+      "mapBackward": true,
+      "colonySize": 5,
+      "mapScale": 0.8,
+      "genes": [
+        { "gene": "swimming_speed", "expression": 0.45 },
+        { "gene": "armor_thickness", "expression": 0.35 },
+        { "gene": "carnivory", "expression": 0.55 },
+        { "gene": "vision_acuity", "expression": 0.5 }
+      ],
+      "description": "A small, slender, straight-shelled cephalopod of the Devonian seas, about 10 cm long, with its siphuncle running along the edge of the shell rather than through the middle. Bactritids look plain, but they were the root of two great lineages: some coiled their shells and became the ammonites, others drew the shell inside the body and gave rise to the belemnites, squid and octopuses."
+    },
+    {
       "id": "dictyonema_flabelliforme",
       "commonName": "Dictyonema",
       "scientificName": "Rhabdinopora flabelliformis",
@@ -3392,6 +3470,51 @@
         { "gene": "reproduction_rate", "expression": 0.6 }
       ],
       "description": "A shrew-sized mammal, weighing perhaps 15 grams, from rocks about 160 million years old in Liaoning, north-eastern China. Described in 2011 from a nearly complete skeleton, it was proposed as the earliest known eutherian, the lineage that leads to placental mammals, which would put their split from the marsupial line in the Jurassic. Its sharp teeth suggest it ate insects, and its hand bones point to an agile climber."
+    },
+    {
+      "id": "sinodelphys_szalayi",
+      "commonName": "Sinodelphys",
+      "scientificName": "Sinodelphys szalayi",
+      "kingdom": "Animalia",
+      "group": "Early metatherian",
+      "firstAge": "Cretaceous",
+      "lastAge": "Cretaceous",
+      "habitats": [
+        "Rainforest",
+        "Plain"
+      ],
+      "diet": "Carnivore",
+      "prey": [
+        "Small animals"
+      ],
+      "sizeCm": 15,
+      "startingPopulation": 2000,
+      "playable": true,
+      "model": "Models/Species/Sinodelphys",
+      "mapStyle": "Ground",
+      "mapDefense": "Scatter",
+      "mapLegs": 2,
+      "mapHip": 0.28,
+      "colonySize": 3,
+      "genes": [
+        {
+          "gene": "climbing",
+          "expression": 0.8
+        },
+        {
+          "gene": "endothermy",
+          "expression": 0.6
+        },
+        {
+          "gene": "carnivory",
+          "expression": 0.6
+        },
+        {
+          "gene": "reproduction_rate",
+          "expression": 0.7
+        }
+      ],
+      "description": "A mouse-sized climber from the 125-million-year-old Yixian Formation of Liaoning, China, about 15 cm long with its tail, preserved with traces of fur. Its ankle and foot bones are those of a tree-climber, and its teeth mark it as one of the earliest metatherians, the line that leads to opossums, kangaroos and the other marsupials. It probably hunted insects among the branches."
     },
     {
       "id": "trichonympha_campanula",
@@ -4300,6 +4423,31 @@
       "description": "The smallest giant clam, rarely more than 15 cm long, which bores into coral heads on shallow Indo-Pacific reefs until only its brilliant blue, purple or orange mantle shows at the surface. Sunk in the rock, it is safe from most predators while the zooxanthellae in its mantle soak up the sunlight and it filters plankton from the water. It can grow in dense patches on reef flats and is popular in the aquarium trade."
     },
     {
+      "id": "fordilla_troyensis",
+      "commonName": "Fordilla",
+      "scientificName": "Fordilla troyensis",
+      "kingdom": "Animalia",
+      "group": "Early bivalve",
+      "firstAge": "Cambrian",
+      "lastAge": "Cambrian",
+      "habitats": ["SaltWater"],
+      "diet": "Filter feeder",
+      "sizeCm": 0.4,
+      "startingPopulation": 3000,
+      "playable": false,
+      "model": "Models/Species/Fordilla",
+      "mapStyle": "Fixed",
+      "colonySize": 4,
+      "mapScale": 0.6,
+      "genes": [
+        { "gene": "filter_feeding", "expression": 0.5 },
+        { "gene": "burrowing", "expression": 0.6 },
+        { "gene": "armor_thickness", "expression": 0.35 },
+        { "gene": "reproduction_rate", "expression": 0.7 }
+      ],
+      "description": "One of the oldest known bivalves, from the Early Cambrian of New York, Greenland and beyond: a tiny clam only about 4 mm long, its two smooth, thin, sideways-flattened valves joined by a straight hinge. It probably lay half buried in the sediment, digging with a muscular foot and drawing in water to feed. From little clams like it came the mussels, oysters, scallops and giant clams."
+    },
+    {
       "id": "lingulella_chengjiangensis",
       "commonName": "Chengjiang Lingulella",
       "scientificName": "Lingulella chengjiangensis",
@@ -4643,6 +4791,35 @@
         { "gene": "clutch_size", "expression": 0.5 }
       ],
       "description": "A Late Carboniferous roachoid from France with long, narrow, densely veined forewings. Its name means 'sword-bearer': when Charles Brongniart described it in 1889 he noted the long external ovipositor of the female. Unlike modern cockroaches, which carry their eggs in a capsule, early roachoids like this one probably used their ovipositors to lay eggs one by one into soil or plant tissue."
+    },
+    {
+      "id": "tshekardocoleus_magnus",
+      "commonName": "Tshekardocoleus",
+      "scientificName": "Tshekardocoleus magnus",
+      "kingdom": "Animalia",
+      "group": "Early beetle",
+      "firstAge": "Permian",
+      "lastAge": "Permian",
+      "habitats": ["Rainforest", "Wetland"],
+      "diet": "Omnivore",
+      "mainDiet": "Scavenger",
+      "sizeCm": 1.5,
+      "startingPopulation": 20000,
+      "playable": true,
+      "model": "Models/Species/Tshekardocoleus",
+      "mapStyle": "Ground",
+      "mapDefense": "Scatter",
+      "mapLegs": 3,
+      "mapHip": 0.39,
+      "colonySize": 3,
+      "mapScale": 0.6,
+      "genes": [
+        { "gene": "decomposition", "expression": 0.7 },
+        { "gene": "armor_thickness", "expression": 0.5 },
+        { "gene": "reproduction_rate", "expression": 0.8 },
+        { "gene": "land_speed", "expression": 0.5 }
+      ],
+      "description": "One of the first beetle relatives, from the Early Permian insect beds of Tshekarda in the Urals, about 280 million years old. Its forewings had already hardened into elytra sculptured with rows of window-like cells, but they did not yet close over the back as in true beetles, leaving a narrow gap down the middle, and reached a little past the tip of the abdomen. Flat and long-legged, it probably lived under the bark of dead trees and in the leaf litter, the way of life that later made beetles the most varied animals on Earth."
     },
     {
       "id": "palaeorhincodon_wardi",
@@ -6436,6 +6613,32 @@
       "description": "The commonest animal of the Burgess Shale of British Columbia, about 508 million years old, known from tens of thousands of specimens and the first fossil Charles Walcott collected there in 1909. Under 2 cm long, it had a small head shield with two pairs of long spines sweeping back over its body, a pair of long antennae and a pair of bristly swimming antennae. Its 26 body segments each bore a leg and a feathery gill branch, and it probably swam just above the mud picking up food particles."
     },
     {
+      "id": "sanctacaris_uniformis",
+      "commonName": "Sanctacaris",
+      "scientificName": "Sanctacaris uniformis",
+      "kingdom": "Animalia",
+      "group": "Stem chelicerate",
+      "firstAge": "Cambrian",
+      "lastAge": "Cambrian",
+      "habitats": ["SaltWater"],
+      "diet": "Carnivore",
+      "prey": ["Small animals"],
+      "sizeCm": 9,
+      "startingPopulation": 200,
+      "playable": true,
+      "model": "Models/Species/Sanctacaris",
+      "mapStyle": "Swim",
+      "colonySize": 3,
+      "mapScale": 0.6,
+      "genes": [
+        { "gene": "carnivory", "expression": 0.7 },
+        { "gene": "swimming_speed", "expression": 0.5 },
+        { "gene": "armor_thickness", "expression": 0.4 },
+        { "gene": "vision_acuity", "expression": 0.4 }
+      ],
+      "description": "An early relative of the chelicerates, the group of horseshoe crabs, sea scorpions and spiders, from the Burgess Shale of British Columbia. About 9 cm long, it had a broad, almost round head shield and, beneath it, five pairs of stout, spiny limbs that reached forward together like a basket to seize prey, behind them a segmented trunk ending in a broad paddle-shaped tail. Its name means 'holy crab': described in 1988 by Derek Briggs and Desmond Collins, it was nicknamed 'Santa Claws'."
+    },
+    {
       "id": "wiwaxia_corrugata",
       "commonName": "Wiwaxia",
       "scientificName": "Wiwaxia corrugata",
@@ -7964,6 +8167,49 @@
       "description": "One of the earliest well-known sharks, from the Late Devonian Cleveland Shale of Ohio, about 370 million years ago, reaching up to about 1.8 metres. It had a streamlined body with a crescent-shaped tail, big triangular pectoral fins, spined dorsal fins and a mouth at the very front of the snout. Its skin was almost free of scales, and fossil stomach contents show it swallowed fishes and shrimp tail-first after chasing them down."
     },
     {
+      "id": "climatius_reticulatus",
+      "commonName": "Climatius",
+      "scientificName": "Climatius reticulatus",
+      "kingdom": "Animalia",
+      "group": "Acanthodian",
+      "firstAge": "Devonian",
+      "lastAge": "Devonian",
+      "habitats": [
+        "SaltWater",
+        "FreshWater"
+      ],
+      "diet": "Carnivore",
+      "prey": [
+        "Small animals"
+      ],
+      "sizeCm": 7.5,
+      "startingPopulation": 3000,
+      "playable": true,
+      "model": "Models/Species/Climatius",
+      "mapStyle": "Swim",
+      "colonySize": 5,
+      "mapScale": 0.5,
+      "genes": [
+        {
+          "gene": "carnivory",
+          "expression": 0.6
+        },
+        {
+          "gene": "swimming_speed",
+          "expression": 0.55
+        },
+        {
+          "gene": "armor_thickness",
+          "expression": 0.5
+        },
+        {
+          "gene": "lateral_line",
+          "expression": 0.6
+        }
+      ],
+      "description": "A small acanthodian or \"spiny shark\" from the Late Silurian and Early Devonian of Britain, about 7.5 cm long. Every fin had a stout bony spine in front of it, with an extra row of paired spines along the belly, and its body was covered in tiny square scales. Acanthodians are early relatives of the sharks, close to the root of the cartilaginous fishes."
+    },
+    {
       "id": "coccosteus_cuspidatus",
       "commonName": "Coccosteus",
       "scientificName": "Coccosteus cuspidatus",
@@ -8553,6 +8799,52 @@
         { "gene": "camouflage", "expression": 0.4 }
       ],
       "description": "A small temnospondyl amphibian about 12 cm long from the Mazon Creek fossil beds of Illinois, about 309 million years old. It had a broad, rounded head with huge eye sockets, a short body and slender legs, and its fossils include larvae with gills, so it grew up in the water like a salamander. Amphibamus is one of the closest known Palaeozoic relatives of modern frogs and salamanders, and probably snapped up insects and other small invertebrates."
+    },
+    {
+      "id": "triadobatrachus_massinoti",
+      "commonName": "Triadobatrachus",
+      "scientificName": "Triadobatrachus massinoti",
+      "kingdom": "Animalia",
+      "group": "Proto-frog",
+      "firstAge": "Triassic",
+      "lastAge": "Triassic",
+      "habitats": [
+        "FreshWater",
+        "Wetland",
+        "Rainforest"
+      ],
+      "diet": "Carnivore",
+      "prey": [
+        "Small animals"
+      ],
+      "sizeCm": 10,
+      "startingPopulation": 600,
+      "playable": true,
+      "model": "Models/Species/Triadobatrachus",
+      "mapStyle": "Ground",
+      "mapLegs": 2,
+      "mapHip": 0.4,
+      "colonySize": 3,
+      "mapScale": 0.6,
+      "genes": [
+        {
+          "gene": "carnivory",
+          "expression": 0.55
+        },
+        {
+          "gene": "swimming_speed",
+          "expression": 0.45
+        },
+        {
+          "gene": "reproduction_rate",
+          "expression": 0.7
+        },
+        {
+          "gene": "cold_tolerance",
+          "expression": 0.3
+        }
+      ],
+      "description": "The earliest known proto-frog, from the Early Triassic of Madagascar, about 250 million years ago and 10 cm long. It had the broad, flat head and big eyes of a frog, but a longer body, a short stub of a tail and hind legs only a little longer than its forelegs, so it crawled and swam rather than leapt: a step on the way from temnospondyl amphibians to frogs."
     },
     {
       "id": "akmonistion_zangerli",
@@ -9153,7 +9445,8 @@
       "playable": true,
       "model": "Models/Species/Mesosaurus",
       "mapStyle": "Swim",
-      "colonySize": 3,
+      "colonySize": 2,
+      "mapScale": 1.6,
       "mapUndulate": true,
       "genes": [
         { "gene": "carnivory", "expression": 0.6 },
@@ -10052,6 +10345,34 @@
         { "gene": "land_speed", "expression": 0.3 }
       ],
       "description": "One of the earliest armoured dinosaurs, about 4 metres long, from Early Jurassic rocks around 190 million years old near Charmouth in Dorset. It walked on all fours, with rows of oval, keeled bony scutes along its neck, back, flanks and tail, an early version of the armour of stegosaurs and ankylosaurs. Its skeleton, described by Richard Owen in the 1860s, was the first near-complete dinosaur ever found. It cropped plants with a small beak and leaf-shaped teeth."
+    },
+    {
+      "id": "lesothosaurus_diagnosticus",
+      "commonName": "Lesothosaurus",
+      "scientificName": "Lesothosaurus diagnosticus",
+      "kingdom": "Animalia",
+      "group": "Early ornithischian",
+      "firstAge": "Jurassic",
+      "lastAge": "Jurassic",
+      "habitats": ["Plain", "Savanna", "Steppe"],
+      "diet": "Herbivore",
+      "sizeCm": 100,
+      "startingPopulation": 300,
+      "playable": true,
+      "model": "Models/Species/Lesothosaurus",
+      "mapStyle": "Ground",
+      "mapGait": "Run",
+      "mapLegs": 1,
+      "mapHip": 0.55,
+      "colonySize": 3,
+      "mapDefense": "Scatter",
+      "genes": [
+        { "gene": "herbivory", "expression": 0.8 },
+        { "gene": "land_speed", "expression": 0.85 },
+        { "gene": "vision_acuity", "expression": 0.6 },
+        { "gene": "reproduction_rate", "expression": 0.5 }
+      ],
+      "description": "One of the earliest and most primitive ornithischians, the beaked plant-eating dinosaurs that went on to include Stegosaurus, Triceratops and the duckbills. A small, swift biped about 1 m long from the Early Jurassic of Lesotho and South Africa, with long legs, short arms, big eyes, a horny beak at the tip of the snout and small leaf-shaped teeth for slicing plants. Some fossils were found curled up together, perhaps sheltering through a dry season."
     },
     {
       "id": "diplodocus_carnegii",
@@ -11421,6 +11742,32 @@
       "description": "A rhino-sized browser of the middle Eocene of North America, about 4 m long and 1.5 m at the shoulder. Its long, flat skull bore three pairs of blunt bony knobs, and males had long, dagger-like upper canines guarded by a flange on the lower jaw, probably used for display and fighting. Its brain was remarkably small for its size."
     },
     {
+      "id": "phenacodus_primaevus",
+      "commonName": "Phenacodus",
+      "scientificName": "Phenacodus primaevus",
+      "kingdom": "Animalia",
+      "group": "Condylarth",
+      "firstAge": "Paleogene",
+      "lastAge": "Paleogene",
+      "habitats": ["Plain", "Rainforest"],
+      "diet": "Herbivore",
+      "sizeCm": 150,
+      "startingPopulation": 300,
+      "playable": true,
+      "model": "Models/Species/PhenacodusPrimaevus",
+      "mapStyle": "Ground",
+      "mapLegs": 2,
+      "mapHip": 0.4,
+      "colonySize": 2,
+      "genes": [
+        { "gene": "herbivory", "expression": 0.8 },
+        { "gene": "land_speed", "expression": 0.5 },
+        { "gene": "cold_tolerance", "expression": 0.3 },
+        { "gene": "vision_acuity", "expression": 0.5 }
+      ],
+      "description": "A sheep-sized early hoofed mammal of the late Paleocene and early Eocene of North America and Europe, about 1.5 m long. Phenacodus had a long low body, a long heavy tail and five toes on each foot ending in small hooves, the middle one the largest: the plan from which horses, rhinos and the other hoofed mammals grew. It browsed and ate fruit in open woodland."
+    },
+    {
       "id": "coryphodon_eocaenus",
       "commonName": "Coryphodon",
       "scientificName": "Coryphodon eocaenus",
@@ -11662,6 +12009,32 @@
       "description": "A brontothere (\"thunder beast\") of the late Eocene of North America, about 2.5 m at the shoulder, a distant relative of horses and rhinos. It had a hump over its shoulders and a blunt, forked bony horn on its nose, larger in males and probably used in shoving contests. It browsed soft leaves, and the brontotheres died out as the climate cooled at the end of the Eocene."
     },
     {
+      "id": "indohyus_indirae",
+      "commonName": "Indohyus",
+      "scientificName": "Indohyus indirae",
+      "kingdom": "Animalia",
+      "group": "Raoellid",
+      "firstAge": "Paleogene",
+      "lastAge": "Paleogene",
+      "habitats": ["FreshWater", "Wetland", "Rainforest"],
+      "diet": "Herbivore",
+      "sizeCm": 40,
+      "startingPopulation": 400,
+      "playable": true,
+      "model": "Models/Species/IndohyusIndirae",
+      "mapStyle": "Ground",
+      "mapLegs": 2,
+      "mapHip": 0.54,
+      "colonySize": 3,
+      "genes": [
+        { "gene": "herbivory", "expression": 0.7 },
+        { "gene": "swimming_speed", "expression": 0.3 },
+        { "gene": "land_speed", "expression": 0.55 },
+        { "gene": "camouflage", "expression": 0.5 }
+      ],
+      "description": "A raccoon-sized even-toed ungulate of the middle Eocene of Kashmir, about 40 cm long, like a small mousedeer on long slender legs. It is the closest known relative of the whales: its ear bones already had the thick, shell-like wall of a whale's, and its heavy limb bones weighed it down in water, where it probably waded and hid from predators, as the African water chevrotain does today."
+    },
+    {
       "id": "pakicetus_attocki",
       "commonName": "Pakicetus",
       "scientificName": "Pakicetus attocki",
@@ -11845,6 +12218,33 @@
       "description": "A giant constricting snake from the late Eocene of Egypt's Fayum, estimated at 7-10 m long and long thought the largest snake until Titanoboa was found. It belonged to the madtsoiids, an ancient family of snakes unrelated to boas and pythons that survived in Australia until the Pleistocene. It probably ambushed large prey such as early relatives of elephants."
     },
     {
+      "id": "najash_rionegrina",
+      "commonName": "Najash",
+      "scientificName": "Najash rionegrina",
+      "kingdom": "Animalia",
+      "group": "Early snake",
+      "firstAge": "Cretaceous",
+      "lastAge": "Cretaceous",
+      "habitats": ["Desert", "Plain", "Steppe"],
+      "diet": "Carnivore",
+      "prey": ["Small animals"],
+      "sizeCm": 200,
+      "startingPopulation": 60,
+      "playable": true,
+      "model": "Models/Species/NajashRionegrina",
+      "mapStyle": "Ground",
+      "mapGait": "Slither",
+      "colonySize": 1,
+      "mapScale": 0.8,
+      "genes": [
+        { "gene": "carnivory", "expression": 0.8 },
+        { "gene": "burrowing", "expression": 0.6 },
+        { "gene": "camouflage", "expression": 0.6 },
+        { "gene": "heat_tolerance", "expression": 0.6 }
+      ],
+      "description": "One of the earliest known snakes, about 2 m long, from the roughly 95-million-year-old Candeleros Formation of Rio Negro, Argentina. It is a true transitional form: its skull still had a cheek bone that later snakes lost, and it kept a small pair of hind legs with a pelvis joined to the spine, beside the vent. It lived on land in a dry, desert-like setting and probably hunted from burrows, which suggests that snakes lost their legs on land rather than in the sea."
+    },
+    {
       "id": "gastornis_giganteus",
       "commonName": "Gastornis",
       "scientificName": "Gastornis giganteus",
@@ -11897,6 +12297,33 @@
         { "gene": "heat_tolerance", "expression": 0.5 }
       ],
       "description": "An early relative of ducks from the late Paleocene and early Eocene of North America that looked like a duck on a flamingo's legs. It nested in huge colonies on the shores of shallow, salty lakes such as the Green River lakes of Wyoming, where thousands of its bones and eggshells are found. It strained plankton and small plants from the water with its broad, flat bill."
+    },
+    {
+      "id": "vegavis_iaai",
+      "commonName": "Vegavis",
+      "scientificName": "Vegavis iaai",
+      "kingdom": "Animalia",
+      "group": "Early crown bird",
+      "firstAge": "Cretaceous",
+      "lastAge": "Cretaceous",
+      "habitats": ["SaltWater", "FreshWater", "Wetland"],
+      "diet": "Carnivore",
+      "prey": ["Small animals"],
+      "sizeCm": 60,
+      "startingPopulation": 400,
+      "playable": true,
+      "model": "Models/Species/Vegavis",
+      "flightModel": "Models/Species/VegavisFlight",
+      "mapStyle": "Float",
+      "colonySize": 3,
+      "mapScale": 0.85,
+      "genes": [
+        { "gene": "swimming_speed", "expression": 0.7 },
+        { "gene": "flight_capability", "expression": 0.6 },
+        { "gene": "cold_tolerance", "expression": 0.6 },
+        { "gene": "carnivory", "expression": 0.6 }
+      ],
+      "description": "One of the oldest members of the modern bird groups, a relative of ducks and geese from the last few million years of the Cretaceous on Vega Island, Antarctica, when the continent was still forested. It was a foot-propelled diver about 60 cm long with a loon-like body and large webbed feet, and it preserves the oldest known syrinx, the voice box of birds, which suggests it honked. It shows that the lines of modern birds had already split before the dinosaurs died out."
     },
     {
       "id": "kumimanu_biceae",
@@ -12006,6 +12433,45 @@
       "description": "A small herring of the early Eocene Green River lakes of Wyoming, usually 10-15 cm long and one of the most common fossil fish in the world; whole schools are preserved together in the lake beds. It fed on plankton and small insects and was eaten by gars, larger fish, birds and turtles."
     },
     {
+      "id": "leptolepis_coryphaenoides",
+      "commonName": "Leptolepis",
+      "scientificName": "Leptolepis coryphaenoides",
+      "kingdom": "Animalia",
+      "group": "Early teleost",
+      "firstAge": "Jurassic",
+      "lastAge": "Jurassic",
+      "habitats": [
+        "SaltWater"
+      ],
+      "diet": "Filter feeder",
+      "sizeCm": 15,
+      "startingPopulation": 5000,
+      "playable": true,
+      "model": "Models/Species/Leptolepis",
+      "mapStyle": "Swim",
+      "colonySize": 6,
+      "mapScale": 0.55,
+      "genes": [
+        {
+          "gene": "filter_feeding",
+          "expression": 0.65
+        },
+        {
+          "gene": "swimming_speed",
+          "expression": 0.55
+        },
+        {
+          "gene": "group_defense",
+          "expression": 0.7
+        },
+        {
+          "gene": "lateral_line",
+          "expression": 0.6
+        }
+      ],
+      "description": "One of the earliest teleosts, the group that now makes up almost all living fish, from the Early Jurassic seas of Europe. About 15 cm long and herring-like, it had thin, round scales instead of the heavy enamelled scales of older fish, a symmetrical forked tail and a single dorsal fin. It swam in great shoals and was eaten by ichthyosaurs, pterosaurs and larger fish."
+    },
+    {
       "id": "leptictidium_nasutum",
       "commonName": "Leptictidium",
       "scientificName": "Leptictidium nasutum",
@@ -12033,6 +12499,49 @@
         { "gene": "reproduction_rate", "expression": 0.5 }
       ],
       "description": "A small insectivore from the middle Eocene of Europe, best known from complete skeletons from the Messel pit, 60-90 cm long including a tail longer than its body. Its long hind legs and short arms suggest it ran or hopped on two legs over the forest floor, and it probed for insects, lizards and small mammals with a long, mobile snout. It belonged to the leptictids, an extinct side branch of early placental mammals."
+    },
+    {
+      "id": "protungulatum_donnae",
+      "commonName": "Protungulatum",
+      "scientificName": "Protungulatum donnae",
+      "kingdom": "Animalia",
+      "group": "Early placental",
+      "firstAge": "Paleogene",
+      "lastAge": "Paleogene",
+      "habitats": [
+        "Rainforest",
+        "Plain"
+      ],
+      "diet": "Omnivore",
+      "mainDiet": "Herbivore",
+      "sizeCm": 28,
+      "startingPopulation": 1500,
+      "playable": true,
+      "model": "Models/Species/Protungulatum",
+      "mapStyle": "Ground",
+      "mapDefense": "Scatter",
+      "mapLegs": 2,
+      "mapHip": 0.24,
+      "colonySize": 3,
+      "genes": [
+        {
+          "gene": "omnivory",
+          "expression": 0.7
+        },
+        {
+          "gene": "endothermy",
+          "expression": 0.7
+        },
+        {
+          "gene": "land_speed",
+          "expression": 0.5
+        },
+        {
+          "gene": "reproduction_rate",
+          "expression": 0.7
+        }
+      ],
+      "description": "A rat-sized mammal from rocks in Montana laid down within a few hundred thousand years of the asteroid impact that ended the age of dinosaurs, and one of the earliest undoubted placental mammals. Its low, blunt-cusped teeth could crush fruit and seeds as well as insects, and it was long thought to stand near the ancestry of the hoofed mammals. In the emptied world after the extinction, animals like it gave rise to the great radiation of placentals."
     },
     {
       "id": "darwinius_masillae",
@@ -12115,6 +12624,48 @@
       "description": "A squirrel-like relative of the primates from the late Paleocene of Europe, about 60 cm long with a long bushy tail. It had claws instead of nails, eyes on the sides of its head and big gnawing front teeth like a rodent's. It climbed trees and fed on leaves, seeds and fruit."
     },
     {
+      "id": "purgatorius_unio",
+      "commonName": "Purgatorius",
+      "scientificName": "Purgatorius unio",
+      "kingdom": "Animalia",
+      "group": "Plesiadapiform",
+      "firstAge": "Paleogene",
+      "lastAge": "Paleogene",
+      "habitats": [
+        "Rainforest"
+      ],
+      "diet": "Omnivore",
+      "mainDiet": "Herbivore",
+      "sizeCm": 15,
+      "startingPopulation": 1500,
+      "playable": true,
+      "model": "Models/Species/Purgatorius",
+      "mapStyle": "Ground",
+      "mapDefense": "Scatter",
+      "mapLegs": 2,
+      "mapHip": 0.22,
+      "colonySize": 3,
+      "genes": [
+        {
+          "gene": "climbing",
+          "expression": 0.85
+        },
+        {
+          "gene": "herbivory",
+          "expression": 0.6
+        },
+        {
+          "gene": "endothermy",
+          "expression": 0.7
+        },
+        {
+          "gene": "reproduction_rate",
+          "expression": 0.7
+        }
+      ],
+      "description": "The earliest known plesiadapiform, the stem group of the primates, from the very beginning of the Paleocene of Montana, about 66 million years ago. Squirrel-sized, with a long tail, it is known from teeth, jaws and ankle bones; the ankles show it could turn its feet to grip and climb down tree trunks. Its teeth suited a diet of fruit and insects in the new flowering forests."
+    },
+    {
       "id": "hoplophoneus_primaevus",
       "commonName": "Hoplophoneus",
       "scientificName": "Hoplophoneus primaevus",
@@ -12142,6 +12693,33 @@
         { "gene": "land_speed", "expression": 0.5 }
       ],
       "description": "A leopard-sized \"false sabre-tooth\" of the early Oligocene of North America. Nimravids were cat-like carnivores that evolved long, flattened upper canines independently of the true sabre-toothed cats, sheathed by a bony flange on the lower jaw. It had a long, low body, short powerful legs and probably ambushed early horses and other mammals."
+    },
+    {
+      "id": "miacis_parvivorus",
+      "commonName": "Miacis",
+      "scientificName": "Miacis parvivorus",
+      "kingdom": "Animalia",
+      "group": "Miacid",
+      "firstAge": "Paleogene",
+      "lastAge": "Paleogene",
+      "habitats": ["Rainforest", "Plain"],
+      "diet": "Carnivore",
+      "prey": ["Small animals"],
+      "sizeCm": 30,
+      "startingPopulation": 500,
+      "playable": true,
+      "model": "Models/Species/MiacisParvivorus",
+      "mapStyle": "Ground",
+      "mapLegs": 2,
+      "mapHip": 0.38,
+      "colonySize": 3,
+      "genes": [
+        { "gene": "carnivory", "expression": 0.8 },
+        { "gene": "climbing", "expression": 0.75 },
+        { "gene": "land_speed", "expression": 0.5 },
+        { "gene": "vision_acuity", "expression": 0.6 }
+      ],
+      "description": "A small, tree-climbing meat-eater of the Eocene forests of North America, about 30 cm long plus a long bushy tail, built like a genet. Miacids sit near the root of the carnivorans: they already had the pair of blade-like shearing teeth of the cats, dogs and bears that came after them, and flexible ankles for climbing down trunks head first."
     },
     {
       "id": "daeodon_shoshonensis",

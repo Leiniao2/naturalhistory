@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace NaturalHistory.World
 {
+    // Left-click selects a hex (the tile panel, ClimateHud, shows what it is)
     public class CellSelector : MonoBehaviour
     {
         public static HexCell Selected { get; private set; }
@@ -12,7 +13,6 @@ namespace NaturalHistory.World
         public static event Action<HexCell> CellClicked;
 
         private Camera cam;
-        private GUIStyle boxStyle;
 
         private void Awake()
         {
@@ -36,23 +36,6 @@ namespace NaturalHistory.World
             if (Selected != null) Selected.SetHighlight(false);
             Selected = cell;
             if (Selected != null) Selected.SetHighlight(true);
-        }
-
-        private void OnGUI()
-        {
-            if (Selected == null) return;
-
-            boxStyle ??= new GUIStyle(GUI.skin.box)
-            {
-                fontSize  = 15,
-                alignment = TextAnchor.UpperLeft,
-                padding   = new RectOffset(10, 10, 8, 8),
-            };
-            boxStyle.normal.textColor = Color.white;
-
-            var terrain = Selected.Terrain;
-            var text = Loc.F("Terrain:  {0}\nCategory: {1}\nCoords:   {2}", terrain != null ? EraFlora.DisplayName(terrain.kind) : "", terrain?.category, Selected.Coordinates);
-            GUI.Box(new Rect(10, 10, 230, 72), text, boxStyle);
         }
     }
 }

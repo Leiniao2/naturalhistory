@@ -87,11 +87,25 @@ namespace NaturalHistory.UI
             OpenTree?.Invoke(tree);
         }
 
+        // The young go where the player says: the free neighbouring tiles are marked, and clicking
+        // one of them places them there (any other click cancels)
         private void OnReproduce()
         {
-            if (Copy == null) return;
-            Evolution.Reproduce(Copy, out var message);
-            if (message != null) Message?.Invoke(message);
+            if (Copy == null || SpeciesColonies.Instance == null) return;
+            var copy  = Copy;
+            var cells = Evolution.ReproduceCells(copy);
+            if (cells.Count == 0 || Evolution.TurnsUntilReproduce(copy) > 0)
+            {
+                Evolution.Reproduce(copy, out var why); // says why not
+                if (why != null) Message?.Invoke(why);
+                return;
+            }
+            SpeciesColonies.Instance.ChooseTile(cells, cell =>
+            {
+                Evolution.Reproduce(copy, out var message, cell);
+                if (message != null) Message?.Invoke(message);
+            });
+            Message?.Invoke(Loc.T("Click a marked tile to place the young"));
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,9 @@ namespace NaturalHistory.World
     // storm or blizzard is strong this turn (SkyLayer's weather map) get a mesh of falling drops or
     // flakes, parented to the tile so it follows the map's east–west wrap. The drops are baked once
     // into a few pooled meshes and animated entirely by the WeatherFall shader. Shown only in the
-    // surface view. Rebuilt by SkyLayer whenever the weather changes.
+    // surface view. SkyLayer sets the turn's storms and blizzards (Rebuild) and, every couple of
+    // seconds, adds the rain under the moving typhoons and fronts (Refresh); only tiles whose rain
+    // changes are touched.
     public class WeatherFall
     {
         private const float Threshold = 0.3f;   // storm / blizzard strength that brings rain or snow down
@@ -16,7 +19,10 @@ namespace NaturalHistory.World
         private const int Levels = 3;           // pooled meshes per kind: light, steady, heavy
 
         private readonly Transform parent;
-        private readonly List<GameObject> tiles = new();
+        private readonly Dictionary<HexCell, (GameObject go, int level, bool snowing)> tiles = new();
+        private float[,] storm, blizzard;
+        private HexGrid grid;
+        private float cellSize;
         private Material rain, snow;
         private readonly Mesh[] rainMeshes = new Mesh[Levels], snowMeshes = new Mesh[Levels];
         private float builtFor = -1f; // cell size the meshes and materials were made for
@@ -25,24 +31,43 @@ namespace NaturalHistory.World
 
         public void Rebuild(HexGrid grid, float[,] storm, float[,] blizzard, float cellSize)
         {
-            Clear();
-            if (grid == null || storm == null) return;
-            if (!Prepare(cellSize)) return;
-            var spots = new List<(HexCell cell, float strength, bool snowing)>();
+            this.grid = grid; this.storm = storm; this.blizzard = blizzard; this.cellSize = cellSize;
+            Refresh(null);
+        }
+
+        // extraRain: rain under the moving weather systems at a world point (0..1), or null
+        public void Refresh(Func<Vector2, float> extraRain)
+        {
+            if (grid == null || storm == null || !Prepare(cellSize)) return;
+            var wanted = new Dictionary<HexCell, (float strength, bool snowing)>();
             for (int r = 0; r < grid.Height; r++)
             for (int q = 0; q < grid.Width; q++)
             {
                 var cell = grid.GetCell(q, r);
                 if (cell == null || cell.Terrain == null) continue;
                 float st = storm[q, r], bl = blizzard[q, r];
+                if (extraRain != null) st = Mathf.Max(st, extraRain(new Vector2(cell.transform.position.x, cell.transform.position.z)));
                 if (Mathf.Max(st, bl) < Threshold) continue;
-                spots.Add((cell, Mathf.Max(st, bl), bl > st));
+                wanted[cell] = (Mathf.Max(st, bl), bl > st);
             }
-            spots.Sort((a, b) => b.strength.CompareTo(a.strength));
-            for (int i = 0; i < spots.Count && i < MaxTiles; i++)
+            // the strongest first, up to the budget
+            var keep = new List<KeyValuePair<HexCell, (float strength, bool snowing)>>(wanted);
+            keep.Sort((a, b) => b.Value.strength.CompareTo(a.Value.strength));
+            if (keep.Count > MaxTiles) keep.RemoveRange(MaxTiles, keep.Count - MaxTiles);
+            var keepSet = new HashSet<HexCell>();
+            bool visible = UnderView.Layer == MapLayer.Surface;
+            foreach (var (cell, (strength, snowing)) in keep)
             {
-                var (cell, strength, snowing) = spots[i];
+                keepSet.Add(cell);
                 int level = Mathf.Clamp(Mathf.FloorToInt(Mathf.InverseLerp(Threshold, 0.9f, strength) * Levels), 0, Levels - 1);
+                if (tiles.TryGetValue(cell, out var old) && old.go != null)
+                {
+                    if (old.level == level && old.snowing == snowing) continue;
+                    old.go.GetComponent<MeshFilter>().sharedMesh = snowing ? snowMeshes[level] : rainMeshes[level];
+                    old.go.GetComponent<MeshRenderer>().sharedMaterial = snowing ? snow : rain;
+                    tiles[cell] = (old.go, level, snowing);
+                    continue;
+                }
                 var go = new GameObject(snowing ? "Snowfall" : "Rainfall");
                 go.transform.SetParent(cell.transform, false);
                 go.transform.localPosition = Vector3.up * (cell.SurfaceHeight + FallHeight * cellSize);
@@ -51,19 +76,22 @@ namespace NaturalHistory.World
                 mr.sharedMaterial = snowing ? snow : rain;
                 mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
                 mr.receiveShadows = false;
-                tiles.Add(go);
+                go.SetActive(visible);
+                tiles[cell] = (go, level, snowing);
             }
-            SetVisible(UnderView.Layer == MapLayer.Surface);
+            var gone = new List<HexCell>();
+            foreach (var kv in tiles) if (!keepSet.Contains(kv.Key)) gone.Add(kv.Key);
+            foreach (var cell in gone) { if (tiles[cell].go != null) UnityEngine.Object.Destroy(tiles[cell].go); tiles.Remove(cell); }
         }
 
         public void SetVisible(bool on)
         {
-            foreach (var go in tiles) if (go != null && go.activeSelf != on) go.SetActive(on);
+            foreach (var t in tiles.Values) if (t.go != null && t.go.activeSelf != on) t.go.SetActive(on);
         }
 
         public void Clear()
         {
-            foreach (var go in tiles) if (go != null) Object.Destroy(go);
+            foreach (var t in tiles.Values) if (t.go != null) UnityEngine.Object.Destroy(t.go);
             tiles.Clear();
         }
 

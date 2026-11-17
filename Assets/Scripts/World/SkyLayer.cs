@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace NaturalHistory.World
@@ -18,6 +19,7 @@ namespace NaturalHistory.World
         public static float DeckHeight { get; private set; }
 
         private const float AboveLand = 0.45f; // clears the trees on the highest tiles
+        private const float HighClearance = 0.15f; // how far the lowest high summit rises above the deck, at least
         private const float DeckSize  = 400f;  // follows the camera, so it always covers the view
 
         private const int TexelsPerCell = 2; // weather map resolution
@@ -26,10 +28,33 @@ namespace NaturalHistory.World
         private GameObject deck;
         private Material material;
         private Texture2D weather, weatherPrev; // this turn's and last turn's, cross-faded
+        private Texture2D peaks;                // high mountains: the clouds part around their summits
         private const float WeatherFade = 6f;   // seconds for new weather to drift in
         private float weatherChanged = -100f;
         private int weatherTurn; // reseeds where the storms are, each climate update
         private WeatherFall fall;
+        private readonly SkyFeatures features = new(); // typhoons, fronts, ash plumes, events seen from above
+        private float nextRainRefresh;
+        private bool eventsHooked;
+
+        public static SkyLayer Instance { get; private set; }
+        private void Awake() => Instance = this;
+
+        // Admin panel: set off one of SkyFeatures.AdminNames near the middle of the view
+        public void TriggerAdmin(int index)
+        {
+            var cam = Camera.main;
+            Vector2 near = default;
+            if (cam != null)
+            {
+                var p = cam.transform.position; var f = cam.transform.forward;
+                float y = grid != null ? grid.transform.position.y : 0f;
+                float t = Mathf.Abs(f.y) > 1e-3f ? (y - p.y) / f.y : 0f;
+                var g = p + f * Mathf.Max(0f, t);
+                near = new Vector2(g.x, g.z);
+            }
+            features.Trigger(index, near);
+        }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Bootstrap()
@@ -46,6 +71,7 @@ namespace NaturalHistory.World
             grid.TerrainChanged += Measure;
             UnderView.Changed   += Apply;
             HookClimate();
+            HookEvents();
             Measure();
             Apply();
         }
@@ -57,7 +83,18 @@ namespace NaturalHistory.World
             if (climateHooked && Climate.ClimateSystem.Instance != null) Climate.ClimateSystem.Instance.Updated -= OnClimate;
             if (weather != null) Destroy(weather);
             if (weatherPrev != null) Destroy(weatherPrev);
+            if (peaks != null) Destroy(peaks);
             fall?.Clear();
+            if (eventsHooked && NaturalEvents.Instance != null) NaturalEvents.Instance.Occurred -= features.OnPhenomenon;
+            if (Instance == this) Instance = null;
+        }
+
+        // Ground events (meteors, eruptions, tornadoes...) also show in the sky, in step with them
+        private void HookEvents()
+        {
+            if (eventsHooked || NaturalEvents.Instance == null) return;
+            NaturalEvents.Instance.Occurred += features.OnPhenomenon;
+            eventsHooked = true;
         }
 
         // The climate system may start after this component
@@ -88,15 +125,23 @@ namespace NaturalHistory.World
                 var cell = grid.GetCell(q, r);
                 if (cell == null || cell.Terrain == null) continue;
                 if (cell.IsHighMountain) lowestHigh = Mathf.Min(lowestHigh, cell.PeakY);
-                else if (cell.IsMountain) ordinary = Mathf.Max(ordinary, cell.PeakY);
+                else if (cell.IsMountain) { if (cell.Feature != TerrainFeature.Mesa) ordinary = Mathf.Max(ordinary, cell.PeakY); } // flat-topped mesas may break through
                 else top = Mathf.Max(top, cell.transform.position.y + cell.SurfaceHeight);
             }
             DeckHeight = (top > float.MinValue ? top : grid.transform.position.y) + AboveLand;
             if (ordinary > float.MinValue)
             {
-                // a third of the way from the tallest ordinary peak to the lowest high one
+                // just over the tallest ordinary peak, so the high ones stand well clear of the clouds
                 float gap = lowestHigh < float.MaxValue ? Mathf.Max(0f, lowestHigh - ordinary) : 0.3f;
-                DeckHeight = Mathf.Max(DeckHeight, ordinary + Mathf.Max(0.04f, gap * 0.35f));
+                DeckHeight = Mathf.Max(DeckHeight, ordinary + Mathf.Clamp(gap * 0.12f, 0.02f, 0.08f));
+            }
+            // never so high that it hides the high mountains: their summits always stand clear (with
+            // tall terraces, the highest plateau's trees would otherwise lift the deck past them)
+            if (lowestHigh < float.MaxValue)
+            {
+                float cap = lowestHigh - HighClearance;
+                if (DeckHeight > cap)
+                    DeckHeight = ordinary > float.MinValue ? Mathf.Max(cap, Mathf.Min(ordinary + 0.02f, lowestHigh - HighClearance * 0.5f)) : cap;
             }
             if (deck != null) deck.transform.position = new Vector3(deck.transform.position.x, DeckHeight, deck.transform.position.z);
             UpdateWeather();
@@ -138,12 +183,37 @@ namespace NaturalHistory.World
             int tw = w * TexelsPerCell, th = h * TexelsPerCell;
             float zMin = origin.z - size, zSpan = dz * (h - 1) + 2f * size;
             float xMin = origin.x - dx * 0.5f;
+            // typhoon nurseries (warm tropical sea), volcanoes and the land, for the moving systems
+            var warmSea = new List<Vector2>();
+            var volcanoes = new List<Vector2>();
+            float midRow = (h - 1) * 0.5f;
+            for (int r = 0; r < h; r++)
+            for (int q = 0; q < w; q++)
+            {
+                var cell = grid.GetCell(q, r);
+                if (cell == null || cell.Terrain == null) continue;
+                var at = new Vector2(cell.transform.position.x, cell.transform.position.z);
+                if (cell.Feature == TerrainFeature.Volcano) volcanoes.Add(at);
+                float lat = Mathf.Abs(r - midRow) / Mathf.Max(1f, midRow);
+                if (cell.Terrain.kind == TerrainKind.SaltWater && lat > 0.1f && lat < 0.4f && climate != null && climate.HasData && climate.Get(cell).TemperatureC >= 25f)
+                    warmSea.Add(at);
+            }
+            bool IsLand(Vector2 p)
+            {
+                int row = Mathf.Clamp(Mathf.RoundToInt((p.y - origin.z) / dz), 0, h - 1);
+                int col = Mathf.RoundToInt((p.x - origin.x) / dx - 0.5f * (row & 1));
+                return land[((col % w) + w) % w, row] > 0.5f;
+            }
+            features.SetMap(origin.x - dx * 0.5f, origin.z - size, grid.WrapWidth, dz * (h - 1) + 2f * size, size,
+                            warmSea, IsLand, volcanoes, Climate.EarthHistory.Volcanism(grid.DisplayedMillionYearsAgo));
+
             fall ??= new WeatherFall(transform);
             fall.Rebuild(grid, storm, snow, size);
             if (material == null) return; // the deck isn't built until the sky view first opens
 
             var px = new Color[tw * th];
             var landPx = new Color[tw * th];
+            var peakPx = new Color[tw * th];
             for (int j = 0; j < th; j++)
             for (int i = 0; i < tw; i++)
             {
@@ -153,10 +223,22 @@ namespace NaturalHistory.World
                 col = ((col % w) + w) % w;
                 px[j * tw + i] = new Color(cover[col, row], storm[col, row], snow[col, row], 0f);
                 landPx[j * tw + i] = new Color(land[col, row], 0f, 0f, 0f);
+                var c = grid.GetCell(col, row);
+                peakPx[j * tw + i] = new Color(c != null && c.IsHighMountain ? 1f : 0f, 0f, 0f, 0f);
             }
             for (int pass = 0; pass < 2; pass++) px = Blur(px, tw, th);
             for (int pass = 0; pass < 8; pass++) landPx = Blur(landPx, tw, th);
             for (int k = 0; k < px.Length; k++) px[k].a = landPx[k].r;
+            peakPx = Blur(peakPx, tw, th);
+            if (peaks == null || peaks.width != tw || peaks.height != th)
+            {
+                if (peaks != null) Destroy(peaks);
+                peaks = NewWeatherTexture(tw, th);
+                peaks.name = "SkyPeaks";
+            }
+            peaks.SetPixels(peakPx);
+            peaks.Apply(false);
+            material.SetTexture("_Peaks", peaks);
 
             // the old weather becomes the one fading out (the first map has nothing to fade from)
             bool fresh = weather == null || weather.width != tw || weather.height != th;
@@ -230,6 +312,13 @@ namespace NaturalHistory.World
         private void LateUpdate()
         {
             if (!climateHooked) HookClimate();
+            if (!eventsHooked) HookEvents();
+            features.Tick(material);
+            if (fall != null && Time.time >= nextRainRefresh)
+            {
+                nextRainRefresh = Time.time + 2f;
+                fall.Refresh(features.RainAt); // rain under the moving typhoons and fronts
+            }
             if (material != null && Time.time - weatherChanged < WeatherFade + 0.5f)
                 material.SetFloat("_WeatherBlend", Mathf.SmoothStep(0f, 1f, (Time.time - weatherChanged) / WeatherFade));
             if (deck == null || !deck.activeSelf) return;

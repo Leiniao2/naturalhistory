@@ -196,22 +196,53 @@ namespace NaturalHistory.World
             transform.position += new Vector3(delta.x, 0f, delta.z) * t;
         }
 
-        // North–south: keep the view on the map. East–west: once the view is more than half a
-        // map width from the map's centre, jump one map width back (the wrapped cells make that
+        // North–south: keep the whole view on the map, past the poles by at most boundsMargin: the
+        // top and bottom edges of the screen are held inside, and if the view is taller than the
+        // map allows it zooms in until it fits. East–west: once the view is more than half a map
+        // width from the map's centre, jump one map width back (the wrapped cells make that
         // invisible), then move the cells to the copy of the world nearest the view.
         private void ClampAndWrap()
         {
             var grid = HexGrid.Instance;
             if (grid == null || !grid.IsGenerated) return;
+            var rect = grid.MapRectXZ;
+            FitViewToMap(rect);
             if (!TryGroundPoint(ScreenCenter, out var center)) return;
 
-            var rect = grid.MapRectXZ;
             float z = Mathf.Clamp(center.z, rect.yMin - boundsMargin, rect.yMax + boundsMargin);
+            // the screen's top and bottom edges (where they meet the ground) stay within the margin
+            if (TryGroundPoint(new Vector3(Screen.width * 0.5f, Screen.height, 0f), out var top) &&
+                TryGroundPoint(new Vector3(Screen.width * 0.5f, 0f, 0f), out var bottom))
+            {
+                float far = Mathf.Max(top.z, bottom.z) - center.z, near = center.z - Mathf.Min(top.z, bottom.z);
+                float lo = rect.yMin - boundsMargin + near, hi = rect.yMax + boundsMargin - far;
+                z = lo <= hi ? Mathf.Clamp(center.z, lo, hi) : (lo + hi) * 0.5f;
+            }
             float wrap = grid.WrapWidth;
             float x = center.x - Mathf.Round((center.x - rect.center.x) / wrap) * wrap;
             transform.position += new Vector3(x - center.x, 0f, z - center.z);
             dragGrabPoint.x += x - center.x; // a drag in progress keeps holding the same spot
             grid.RecenterWrap(x);
+        }
+
+        // Zooms in while the view reaches further north–south than the map plus its margins (or the
+        // top of the screen sees past the horizon)
+        private void FitViewToMap(Rect rect)
+        {
+            float allowed = rect.height + 2f * boundsMargin;
+            for (int i = 0; i < 4; i++)
+            {
+                bool hitTop = TryGroundPoint(new Vector3(Screen.width * 0.5f, Screen.height, 0f), out var top);
+                bool hitBottom = TryGroundPoint(new Vector3(Screen.width * 0.5f, 0f, 0f), out var bottom);
+                float span = hitTop && hitBottom ? Mathf.Abs(top.z - bottom.z) : float.PositiveInfinity;
+                if (span <= allowed || transform.position.y <= minHeight + 0.01f) return;
+                if (!TryGroundPoint(ScreenCenter, out var center)) return;
+                // move toward the centre point so the view shrinks to fit (it scales with distance)
+                float scale = float.IsInfinity(span) ? 0.8f : Mathf.Max(0.5f, allowed / span * 0.98f);
+                var target = center + (transform.position - center) * scale;
+                if (target.y < minHeight) target = center + (transform.position - center) * ((minHeight - center.y) / (transform.position.y - center.y));
+                transform.position = target;
+            }
         }
 
         private void FocusMapCenter()

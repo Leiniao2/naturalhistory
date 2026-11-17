@@ -1115,8 +1115,8 @@
 
 .zoology-node {
     position: absolute;
-    width: 200px;
-    height: 76px;
+    width: 290px;   /* ZoologyPanel.NodeWidth / NodeHeight */
+    height: 86px;
     flex-direction: row;
     align-items: center;
     padding: 4px 8px 4px 4px;
@@ -1150,6 +1150,17 @@
 }
 
 /* a major group (class, phylum...): click to open its own tree */
+/* a species where the view stops: its lineage carries on beyond, a click away */
+.zoology-more {
+    border-right-width: 4px;
+    border-right-color: rgb(110, 150, 190);
+}
+
+.node-more {
+    font-size: 12px;
+    color: rgb(150, 190, 230);
+}
+
 .zoology-clade {
     background-color: rgb(38, 52, 66);
     border-color: rgb(110, 150, 190);
@@ -1175,6 +1186,18 @@
 
 .zoology-node-text {
     flex-shrink: 1;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+/* names and status may take two lines rather than run out of the node */
+.zoology-node .node-name {
+    white-space: normal;
+}
+
+.zoology-node .node-cost {
+    font-size: 12px;
+    white-space: normal;
 }
 
 .zoology-from {

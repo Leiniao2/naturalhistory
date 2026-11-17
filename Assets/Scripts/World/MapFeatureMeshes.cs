@@ -792,6 +792,7 @@ namespace NaturalHistory.World
                 var c = color * Mathf.Lerp(0.8f, 1.12f, 0.5f + 0.5f * sphereN.y) * Range(rng, 0.9f, 1.1f);
                 if (r < 0.1) c *= bleached; else if (r < 0.2) c *= deep;
                 col[i] = c * (1f - 0.3f * (0.5f - 0.5f * sphereN.y)); // self-shadowed underside
+                col[i].a = 0f; // marks leaves for the shader's leaf texture (MapFeatureLeaves.cginc)
             }
             for (int f = 0; f < faces.Length; f += 3)
             {
@@ -809,7 +810,7 @@ namespace NaturalHistory.World
                 if (fn.y > 0.3f && rng.NextDouble() < 0.08)
                 {
                     var tip = mid + (fn + new Vector3(Range(rng, -0.25f, 0.25f), 0.15f, Range(rng, -0.25f, 0.25f))) * radius * Range(rng, 0.1f, 0.18f);
-                    var tc  = (col[i0] + col[i1] + col[i2]) / 3f * 1.05f;
+                    var tc  = (col[i0] + col[i1] + col[i2]) / 3f * 1.05f; // (alpha stays 0: leaves)
                     var inside = mid - fn * radius;
                     b.AddTri(p0, p1, tip, tc, inside);
                     b.AddTri(p1, p2, tip, tc * 0.96f, inside);

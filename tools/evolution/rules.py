@@ -123,6 +123,13 @@ groups = {
  "Chameleon":REP+["Squamate"], "Ichthyosaur":REP+["Marine reptile"], "Plesiosaur":REP+["Marine reptile"],
  "Rauisuchian pseudosuchian":ARCH, "Early dinosaur":DINO+["Theropod"], "Avialan":BIRD,
  "Lagerpetid":ARCH, "Squamate":REP+["Squamate"],
+ # transitional species added to join up the tree of life (tools/evolution/phylogeny.py)
+ "Early cephalopod":B+["Mollusc","Cephalopod"], "Bactritid":B+["Mollusc","Cephalopod"],
+ "Early bivalve":B+["Mollusc","Bivalve"], "Stem chelicerate":ART+["Chelicerate","Marine arthropod"],
+ "Early beetle":ART+["Insect","Terrestrial arthropod"], "Acanthodian":JAW+["Cartilaginous"],
+ "Early teleost":JAW+["Bony fish"], "Proto-frog":TET+["Amphibian"], "Early snake":REP+["Squamate"],
+ "Early ornithischian":DINO, "Early crown bird":BIRD, "Early metatherian":MAM+["Metatherian"],
+ "Early placental":PLAC, "Miacid":PLAC+["Carnivoran"], "Raoellid":PLAC+["Ungulate"], "Condylarth":PLAC+["Ungulate"],
  **{g:AMN+["Synapsid"] for g in ["Sphenacodont synapsid","Dinocephalian therapsid","Gorgonopsian therapsid","Dicynodont therapsid","Cynodont therapsid"]},
  "Early mammaliaform":MAM, "Eutherian mammal":PLAC,
  # Ediacaran biota: tags of the lineages they may stand at the root of

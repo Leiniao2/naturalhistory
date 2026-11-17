@@ -15995,6 +15995,818 @@
   {
    "k": "Coleoids hid the shell inside the body.",
    "v": "鞘形類は殻を体の中に隠した。"
+  },
+  {
+   "k": "Choanoflagellate",
+   "v": "襟鞭毛虫"
+  },
+  {
+   "k": "Salpingoeca rosetta",
+   "v": "Salpingoeca rosetta"
+  },
+  {
+   "k": "Lagerpeton",
+   "v": "ラゲルペトン"
+  },
+  {
+   "k": "Megachirella",
+   "v": "メガキレラ"
+  },
+  {
+   "k": "Ikaria",
+   "v": "イカリア"
+  },
+  {
+   "k": "A rosette of a dozen single cells that divided without letting go, each beating a long flagellum inside a collar of fine microvilli that strains out bacteria. Choanoflagellates are the closest living relatives of animals: their collar cells are almost identical to those that line sponges, and colonies like this one hint at how the first animals came together from single cells.",
+   "v": "十数個の単細胞が分裂後も離れずにできたロゼット状の群体。どの細胞も細い微絨毛の襟の中で長い鞭毛を振り、細菌をこし取る。襟鞭毛虫は動物に最も近い現生の親戚で、その襟細胞は海綿の内側を覆う細胞とほとんど同じ。こうした群体は、最初の動物が単細胞からどのように集まって生まれたかを物語っている。"
+  },
+  {
+   "k": "A small, slender reptile about 70 cm long from the roughly 236-million-year-old Chañares Formation of Argentina, running on long, stilt-like hind legs with a very long foot. Lagerpetids were long thought to be close to the dinosaurs; skulls and inner ears described in 2020 showed that they are the closest known relatives of the pterosaurs, so animals like it stand near the split between the flying reptiles and the dinosaurs. It probably hunted insects and other small animals.",
+   "v": "アルゼンチンの約2億3600万年前のチャニャレス層から見つかった、全長約70 cmの小さくきゃしゃな爬虫類。竹馬のような長い後ろ脚と非常に長い足で走った。ラゲルペトン類は長く恐竜に近いと考えられてきたが、2020年に記載された頭骨と内耳から翼竜に最も近い既知の親戚だとわかった。こうした動物は空飛ぶ爬虫類と恐竜が分かれたあたりに位置する。おそらく昆虫などの小動物を捕らえていた。"
+  },
+  {
+   "k": "A small lizard about 20 cm long from the 240-million-year-old rocks of the Dolomites in northern Italy, and the oldest known squamate: the group of lizards and snakes. Its name means 'big hand', for its large clawed hands. A study of its skeleton in 2018 showed that it was already a true squamate, so the ancestors of all lizards and snakes lived in the Triassic, long before the oldest known snakes. It probably hunted insects among coastal plants.",
+   "v": "北イタリア・ドロミーティ山地の2億4000万年前の地層から見つかった全長約20 cmの小さなトカゲで、トカゲとヘビを含む有鱗類として知られる最古のもの。名前は「大きな手」を意味し、爪のある大きな手にちなむ。2018年の骨格の研究で、すでに真の有鱗類だったことが示され、すべてのトカゲとヘビの祖先が最古のヘビよりずっと前の三畳紀に生きていたとわかった。おそらく海岸の植物の間で昆虫を狩っていた。"
+  },
+  {
+   "k": "Ornithodirans, the line of pterosaurs and dinosaurs, began as small, long-legged runners.",
+   "v": "鳥頸類は翼竜と恐竜の系統で、はじめは脚の長い小さな走者だった。"
+  },
+  {
+   "k": "A grain-sized burrower, one of the earliest known bilaterian animals, with a front, a back and a gut.",
+   "v": "米粒ほどの大きさの穴掘り動物。最初期の左右相称動物の一つで、前と後ろ、そして消化管をもつ。"
+  },
+  {
+   "k": "Aurora",
+   "v": "オーロラ"
+  },
+  {
+   "k": "Typhoon",
+   "v": "台風"
+  },
+  {
+   "k": "Weather front",
+   "v": "前線"
+  },
+  {
+   "k": "Cumulus clouds",
+   "v": "積雲"
+  },
+  {
+   "k": "Cirrus clouds",
+   "v": "巻雲"
+  },
+  {
+   "k": "Volcanic ash cloud",
+   "v": "火山灰の雲"
+  },
+  {
+   "k": "The oldest known cephalopod, from the Late Cambrian of northeast China: a tiny, slightly curved horn-shaped shell only about a centimetre long, divided inside into very closely spaced chambers threaded by a siphuncle along its underside. Filling those chambers with gas let it lift off the sea floor and hover, the first step toward the jet-propelled nautiloids, ammonites and squid that came after it.",
+   "v": "知られている最古の頭足類で、中国東北部の後期カンブリア紀のもの。長さわずか1センチほどの小さく少し曲がった角形の殻で、内部はごく狭い間隔の隔壁で多くの気室に分かれ、腹側に沿って連室細管が通っていた。気室にガスを満たすことで海底から浮き上がって漂うことができ、これが後のジェット推進するオウムガイ、アンモナイト、イカへの第一歩となった。"
+  },
+  {
+   "k": "A small, slender, straight-shelled cephalopod of the Devonian seas, about 10 cm long, with its siphuncle running along the edge of the shell rather than through the middle. Bactritids look plain, but they were the root of two great lineages: some coiled their shells and became the ammonites, others drew the shell inside the body and gave rise to the belemnites, squid and octopuses.",
+   "v": "デボン紀の海にいた、長さ約10センチの小さくほっそりした直角石型の頭足類で、連室細管が殻の中央ではなく縁に沿って通っていた。バクトリテス類は地味に見えるが、二つの大きな系統の根だった。殻を巻いたものはアンモナイトになり、殻を体内に取り込んだものはベレムナイト、イカ、タコを生んだ。"
+  },
+  {
+   "k": "One of the oldest known bivalves, from the Early Cambrian of New York, Greenland and beyond: a tiny clam only about 4 mm long, its two smooth, thin, sideways-flattened valves joined by a straight hinge. It probably lay half buried in the sediment, digging with a muscular foot and drawing in water to feed. From little clams like it came the mussels, oysters, scallops and giant clams.",
+   "v": "知られている最古の二枚貝の一つで、ニューヨークやグリーンランドなどの前期カンブリア紀のもの。長さ約4ミリの小さな貝で、滑らかで薄く左右に平たい2枚の殻がまっすぐな蝶番でつながっていた。おそらく堆積物に半分埋まり、筋肉質の足で掘りながら水を取り込んで食べていた。ムラサキイガイ、カキ、ホタテ、シャコガイはこうした小さな貝から生まれた。"
+  },
+  {
+   "k": "An early relative of the chelicerates, the group of horseshoe crabs, sea scorpions and spiders, from the Burgess Shale of British Columbia. About 9 cm long, it had a broad, almost round head shield and, beneath it, five pairs of stout, spiny limbs that reached forward together like a basket to seize prey, behind them a segmented trunk ending in a broad paddle-shaped tail. Its name means 'holy crab': described in 1988 by Derek Briggs and Desmond Collins, it was nicknamed 'Santa Claws'.",
+   "v": "鋏角類（カブトガニ、ウミサソリ、クモのグループ）の初期の親戚で、ブリティッシュコロンビア州のバージェス頁岩から見つかった。長さ約9センチで、幅広くほぼ円形の頭部の甲羅をもち、その下には5対の頑丈でとげの多い肢があって、そろって前に伸びて籠のように獲物を捕らえた。その後ろには節のある胴と、幅広い櫂形の尾があった。名前は「聖なるカニ」の意味で、1988年にデレク・ブリッグスとデズモンド・コリンズが記載し、「サンタの爪」のあだ名がついた。"
+  },
+  {
+   "k": "The largest fossil spider known, from the 165-million-year-old lake beds of Daohugou in Inner Mongolia, China. A golden orb-weaver like the living Nephila, with a body 2.5 cm long and a leg span of about 15 cm, it had long legs with tufts of hairs and probably spun large, golden webs between the horsetails and ferns, catching the insects of a world without flowers. It shows that the great orb-weavers have hardly changed in 165 million years.",
+   "v": "知られている最大のクモの化石で、中国・内モンゴルの道虎溝にある1億6500万年前の湖成層から見つかった。現生のジョロウグモの仲間と同じ金色の円網を張るクモで、体長2.5センチ、脚を広げると約15センチ。長い脚には毛の房があり、おそらくトクサやシダの間に大きな金色の網を張って、まだ花のない世界の昆虫を捕らえていた。大型の円網グモが1億6500万年の間ほとんど変わっていないことを示している。"
+  },
+  {
+   "k": "One of the first beetle relatives, from the Early Permian insect beds of Tshekarda in the Urals, about 280 million years old. Its forewings had already hardened into elytra sculptured with rows of window-like cells, but they did not yet close over the back as in true beetles, leaving a narrow gap down the middle, and reached a little past the tip of the abdomen. Flat and long-legged, it probably lived under the bark of dead trees and in the leaf litter, the way of life that later made beetles the most varied animals on Earth.",
+   "v": "最初期の甲虫の近縁種の一つで、ウラル山脈のチェカルダにある約2億8000万年前の前期ペルム紀の昆虫化石層から見つかった。前翅はすでに硬い上翅になり、窓のような小室の列が刻まれていたが、本当の甲虫のように背中で閉じず、真ん中に細いすき間が残り、腹部の先より少し長かった。平たく脚が長く、おそらく枯れ木の樹皮の下や落ち葉の中に住んでいた。この暮らし方が後に甲虫を地球上で最も多様な動物にした。"
+  },
+  {
+   "k": "A small acanthodian or \"spiny shark\" from the Late Silurian and Early Devonian of Britain, about 7.5 cm long. Every fin had a stout bony spine in front of it, with an extra row of paired spines along the belly, and its body was covered in tiny square scales. Acanthodians are early relatives of the sharks, close to the root of the cartilaginous fishes.",
+   "v": "英国の後期シルル紀から前期デボン紀にかけての小さな棘魚類、いわゆる「トゲのあるサメ」で、長さ約7.5センチ。すべてのひれの前に太い骨のとげがあり、腹に沿ってさらに対になったとげの列があり、体は小さな四角いうろこに覆われていた。棘魚類はサメの初期の親戚で、軟骨魚類の根元に近い。"
+  },
+  {
+   "k": "One of the earliest teleosts, the group that now makes up almost all living fish, from the Early Jurassic seas of Europe. About 15 cm long and herring-like, it had thin, round scales instead of the heavy enamelled scales of older fish, a symmetrical forked tail and a single dorsal fin. It swam in great shoals and was eaten by ichthyosaurs, pterosaurs and larger fish.",
+   "v": "現生の魚のほぼすべてを占める真骨類の最初期の一種で、ヨーロッパの前期ジュラ紀の海にいた。長さ約15センチのニシンに似た魚で、古い魚の重いエナメル質のうろこではなく薄く丸いうろこをもち、尾びれは左右対称に二又に分かれ、背びれは一つだった。大きな群れで泳ぎ、魚竜や翼竜、大型の魚に食べられた。"
+  },
+  {
+   "k": "The earliest known proto-frog, from the Early Triassic of Madagascar, about 250 million years ago and 10 cm long. It had the broad, flat head and big eyes of a frog, but a longer body, a short stub of a tail and hind legs only a little longer than its forelegs, so it crawled and swam rather than leapt: a step on the way from temnospondyl amphibians to frogs.",
+   "v": "知られている最古の原始的なカエルで、マダガスカルの前期三畳紀、約2億5000万年前のもの。体長10センチ。カエルのような幅広く平たい頭と大きな目をもっていたが、胴は長く、短い尾の名残があり、後ろ脚は前脚より少し長いだけだったので、跳ぶのではなく這ったり泳いだりした。分椎類の両生類からカエルへ向かう一歩である。"
+  },
+  {
+   "k": "One of the earliest known snakes, about 2 m long, from the roughly 95-million-year-old Candeleros Formation of Rio Negro, Argentina. It is a true transitional form: its skull still had a cheek bone that later snakes lost, and it kept a small pair of hind legs with a pelvis joined to the spine, beside the vent. It lived on land in a dry, desert-like setting and probably hunted from burrows, which suggests that snakes lost their legs on land rather than in the sea.",
+   "v": "知られている最古のヘビの一つで、長さ約2メートル。アルゼンチン・リオネグロ州の約9500万年前のカンデレロス層から見つかった。本当の移行形態で、頭骨には後のヘビが失った頬骨がまだあり、総排出口の脇には骨盤が背骨とつながった小さな後ろ脚が一対残っていた。乾燥した砂漠のような陸地に住み、おそらく巣穴から狩りをした。ヘビが脚を失ったのは海ではなく陸上だったことを示唆している。"
+  },
+  {
+   "k": "One of the earliest and most primitive ornithischians, the beaked plant-eating dinosaurs that went on to include Stegosaurus, Triceratops and the duckbills. A small, swift biped about 1 m long from the Early Jurassic of Lesotho and South Africa, with long legs, short arms, big eyes, a horny beak at the tip of the snout and small leaf-shaped teeth for slicing plants. Some fossils were found curled up together, perhaps sheltering through a dry season.",
+   "v": "最も古く原始的な鳥盤類の一つ。鳥盤類はくちばしをもつ植物食の恐竜で、後にステゴサウルス、トリケラトプス、カモノハシ竜を含む。レソトと南アフリカの前期ジュラ紀にいた体長約1メートルの小さくすばやい二足歩行の恐竜で、脚が長く腕が短く、目が大きく、鼻先に角質のくちばし、植物を切る小さな木の葉形の歯があった。丸まって寄り添った化石が見つかっており、乾季をともに乗り切っていたのかもしれない。"
+  },
+  {
+   "k": "One of the oldest members of the modern bird groups, a relative of ducks and geese from the last few million years of the Cretaceous on Vega Island, Antarctica, when the continent was still forested. It was a foot-propelled diver about 60 cm long with a loon-like body and large webbed feet, and it preserves the oldest known syrinx, the voice box of birds, which suggests it honked. It shows that the lines of modern birds had already split before the dinosaurs died out.",
+   "v": "現代の鳥のグループで最も古いメンバーの一つで、カモやガンの親戚。白亜紀最後の数百万年、まだ森に覆われていた南極大陸のベガ島から見つかった。体長約60センチの、足で水をかいて潜る鳥で、アビのような体と大きな水かきのある足をもっていた。鳥の発声器官である鳴管の最古の化石が残っており、鳴き声を上げていたらしい。現代の鳥の系統が恐竜の絶滅前にすでに分かれていたことを示している。"
+  },
+  {
+   "k": "A mouse-sized climber from the 125-million-year-old Yixian Formation of Liaoning, China, about 15 cm long with its tail, preserved with traces of fur. Its ankle and foot bones are those of a tree-climber, and its teeth mark it as one of the earliest metatherians, the line that leads to opossums, kangaroos and the other marsupials. It probably hunted insects among the branches.",
+   "v": "中国・遼寧省の1億2500万年前の義県層から見つかった、ネズミほどの大きさの木登りする動物で、尾を含めて約15センチ、毛の跡も残っている。足首と足の骨は木登りする動物のもので、歯からは最初期の後獣類の一つとわかる。この系統はオポッサム、カンガルー、そのほかの有袋類へ続く。おそらく枝の間で昆虫を狩っていた。"
+  },
+  {
+   "k": "A rat-sized mammal from rocks in Montana laid down within a few hundred thousand years of the asteroid impact that ended the age of dinosaurs, and one of the earliest undoubted placental mammals. Its low, blunt-cusped teeth could crush fruit and seeds as well as insects, and it was long thought to stand near the ancestry of the hoofed mammals. In the emptied world after the extinction, animals like it gave rise to the great radiation of placentals.",
+   "v": "恐竜の時代を終わらせた小惑星衝突から数十万年以内に堆積したモンタナ州の地層から見つかった、ネズミほどの大きさの哺乳類で、疑いなく有胎盤類といえる最初期のものの一つ。低く鈍い咬頭の歯は昆虫だけでなく果実や種子も砕くことができ、長い間、有蹄類の祖先に近いと考えられてきた。大絶滅で空いた世界で、こうした動物から有胎盤類の大放散が始まった。"
+  },
+  {
+   "k": "The earliest known plesiadapiform, the stem group of the primates, from the very beginning of the Paleocene of Montana, about 66 million years ago. Squirrel-sized, with a long tail, it is known from teeth, jaws and ankle bones; the ankles show it could turn its feet to grip and climb down tree trunks. Its teeth suited a diet of fruit and insects in the new flowering forests.",
+   "v": "知られている最古のプレシアダピス類（霊長類の幹グループ）で、モンタナ州の暁新世のはじめ、約6600万年前のもの。リスほどの大きさで長い尾をもち、歯、顎、足首の骨が知られている。足首からは、足を回して木の幹をつかみ、下りることができたとわかる。歯は新しく現れた花の咲く森で果実や昆虫を食べるのに向いていた。"
+  },
+  {
+   "k": "A small, tree-climbing meat-eater of the Eocene forests of North America, about 30 cm long plus a long bushy tail, built like a genet. Miacids sit near the root of the carnivorans: they already had the pair of blade-like shearing teeth of the cats, dogs and bears that came after them, and flexible ankles for climbing down trunks head first.",
+   "v": "北アメリカの始新世の森にいた、木に登る小型の肉食動物で、体長約30センチにふさふさした長い尾がつき、ジェネットのような体つきだった。ミアキス類は食肉類の根元近くに位置し、後のネコ、イヌ、クマがもつ一対の刃のような裂肉歯と、頭から先に幹を下りるための柔軟な足首をすでに備えていた。"
+  },
+  {
+   "k": "A sheep-sized early hoofed mammal of the late Paleocene and early Eocene of North America and Europe, about 1.5 m long. Phenacodus had a long low body, a long heavy tail and five toes on each foot ending in small hooves, the middle one the largest: the plan from which horses, rhinos and the other hoofed mammals grew. It browsed and ate fruit in open woodland.",
+   "v": "北アメリカとヨーロッパの後期暁新世から前期始新世にかけての、ヒツジほどの大きさの初期の有蹄哺乳類で、体長約1.5メートル。フェナコドゥスは長く低い胴、長く重い尾をもち、各足の5本の指先に小さなひづめがあって、中指が最も大きかった。ウマ、サイ、そのほかの有蹄類はこの体のつくりから生まれた。開けた林で葉を食べ、果実を食べていた。"
+  },
+  {
+   "k": "A raccoon-sized even-toed ungulate of the middle Eocene of Kashmir, about 40 cm long, like a small mousedeer on long slender legs. It is the closest known relative of the whales: its ear bones already had the thick, shell-like wall of a whale's, and its heavy limb bones weighed it down in water, where it probably waded and hid from predators, as the African water chevrotain does today.",
+   "v": "カシミールの中期始新世にいたアライグマほどの大きさの偶蹄類で、体長約40センチ、細長い脚の小さなマメジカのようだった。知られている中で最もクジラに近い親戚で、耳の骨にはすでにクジラのような厚い貝殻状の壁があり、重い四肢の骨は水中で体を沈めた。現在のミズマメジカのように、おそらく水の中を歩いて捕食者から隠れていた。"
+  },
+  {
+   "k": "Bactritids, small straight-shelled cephalopods, gave rise to both the ammonites and the squid line.",
+   "v": "小さな直殻の頭足類であるバクトリテス類から、アンモナイトとイカの系統の両方が生まれた。"
+  },
+  {
+   "k": "Nephila jurassica",
+   "v": "ネフィラ・ジュラシカ"
+  },
+  {
+   "k": "Plectronoceras",
+   "v": "プレクトロノセラス"
+  },
+  {
+   "k": "Bactrites",
+   "v": "バクトリテス"
+  },
+  {
+   "k": "Sinodelphys",
+   "v": "シノデルフィス"
+  },
+  {
+   "k": "Oriental Rat Flea",
+   "v": "ケオプスネズミノミ"
+  },
+  {
+   "k": "Cat Flea",
+   "v": "ネコノミ"
+  },
+  {
+   "k": "Dog Flea",
+   "v": "イヌノミ"
+  },
+  {
+   "k": "Japanese Abalone",
+   "v": "クロアワビ"
+  },
+  {
+   "k": "Perlemoen Abalone",
+   "v": "ミダスアワビ"
+  },
+  {
+   "k": "Giant Clam",
+   "v": "オオシャコガイ"
+  },
+  {
+   "k": "Small Giant Clam",
+   "v": "ヒレナシシャコガイ"
+  },
+  {
+   "k": "Devil Clam",
+   "v": "ディアボロシャコガイ"
+  },
+  {
+   "k": "Crocus Clam",
+   "v": "シラナミ"
+  },
+  {
+   "k": "Fordilla",
+   "v": "フォルディラ"
+  },
+  {
+   "k": "Fusulina",
+   "v": "フズリナ"
+  },
+  {
+   "k": "Eogyrinus",
+   "v": "エオギリヌス"
+  },
+  {
+   "k": "Coseley Roachoid",
+   "v": "コズリーの原始ゴキブリ"
+  },
+  {
+   "k": "Progonoblattina",
+   "v": "プロゴノブラッティナ"
+  },
+  {
+   "k": "Sysciophlebia",
+   "v": "シシオフレビア"
+  },
+  {
+   "k": "Sword-bearing Roachoid",
+   "v": "剣持ちの原始ゴキブリ"
+  },
+  {
+   "k": "Tshekardocoleus",
+   "v": "チェカルドコレウス"
+  },
+  {
+   "k": "Palaeorhincodon",
+   "v": "パレオリンコドン"
+  },
+  {
+   "k": "Slender Dickinsonia",
+   "v": "ディッキンソニア・テヌイス"
+  },
+  {
+   "k": "White Sea Dickinsonia",
+   "v": "白海のディッキンソニア"
+  },
+  {
+   "k": "Parvancorina",
+   "v": "パルヴァンコリナ"
+  },
+  {
+   "k": "Arrow Parvancorina",
+   "v": "矢形パルヴァンコリナ"
+  },
+  {
+   "k": "Slender Cloudina",
+   "v": "細いクラウディナ"
+  },
+  {
+   "k": "Ridged Cloudina",
+   "v": "稜のあるクラウディナ"
+  },
+  {
+   "k": "Namacalathus",
+   "v": "ナマカラトゥス"
+  },
+  {
+   "k": "Rangea",
+   "v": "ランゲア"
+  },
+  {
+   "k": "Swartpuntia",
+   "v": "スワルトプンティア"
+  },
+  {
+   "k": "Cyclomedusa",
+   "v": "キクロメドゥーサ"
+  },
+  {
+   "k": "Eocyathispongia",
+   "v": "エオキアティスポンギア"
+  },
+  {
+   "k": "Palm Hazelia",
+   "v": "ヤシ形ハゼリア"
+  },
+  {
+   "k": "Crater Hazelia",
+   "v": "クレーター形ハゼリア"
+  },
+  {
+   "k": "Cup Diagoniella",
+   "v": "杯形ディアゴニエラ"
+  },
+  {
+   "k": "Wheat-grain Sponge",
+   "v": "麦粒カイメン"
+  },
+  {
+   "k": "Takakkawia",
+   "v": "タカッカウィア"
+  },
+  {
+   "k": "Protopharetra",
+   "v": "プロトファレトラ"
+  },
+  {
+   "k": "Coscinocyathus",
+   "v": "コスキノキアトゥス"
+  },
+  {
+   "k": "Ethmophyllum",
+   "v": "エトモフィルム"
+  },
+  {
+   "k": "Xianguangia",
+   "v": "シエングアンギア"
+  },
+  {
+   "k": "Cambroctoconus",
+   "v": "カンブロクトコヌス"
+  },
+  {
+   "k": "Kyrgyz Cambroctoconus",
+   "v": "キルギスのカンブロクトコヌス"
+  },
+  {
+   "k": "Grey Whale",
+   "v": "コククジラ"
+  },
+  {
+   "k": "Smilodon populator",
+   "v": "スミロドン・ポプラトル"
+  },
+  {
+   "k": "Smilodon gracilis",
+   "v": "スミロドン・グラシリス"
+  },
+  {
+   "k": "Machairodus",
+   "v": "マカイロドゥス"
+  },
+  {
+   "k": "Giant Ground Sloth",
+   "v": "メガテリウム"
+  },
+  {
+   "k": "Tarija Ground Sloth",
+   "v": "タリハのメガテリウム"
+  },
+  {
+   "k": "Pale-throated Three-toed Sloth",
+   "v": "ノドジロミユビナマケモノ"
+  },
+  {
+   "k": "Linnaeus's Two-toed Sloth",
+   "v": "フタユビナマケモノ"
+  },
+  {
+   "k": "Eosteus",
+   "v": "エオステウス"
+  },
+  {
+   "k": "Yongdongaspis",
+   "v": "ヨンドンガスピス"
+  },
+  {
+   "k": "Psarolepis",
+   "v": "プサロレピス"
+  },
+  {
+   "k": "Andreolepis",
+   "v": "アンドレオレピス"
+  },
+  {
+   "k": "Tungsenia",
+   "v": "トゥンセニア"
+  },
+  {
+   "k": "Rhinconichthys",
+   "v": "リンコニクティス"
+  },
+  {
+   "k": "Palaeospondylus",
+   "v": "パレオスポンディルス"
+  },
+  {
+   "k": "Australian Palaeospondylus",
+   "v": "オーストラリアのパレオスポンディルス"
+  },
+  {
+   "k": "Bransonella",
+   "v": "ブランソネラ"
+  },
+  {
+   "k": "Sanctacaris",
+   "v": "サンクタカリス"
+  },
+  {
+   "k": "Climatius",
+   "v": "クリマティウス"
+  },
+  {
+   "k": "Triadobatrachus",
+   "v": "トリアドバトラクス"
+  },
+  {
+   "k": "Lesothosaurus",
+   "v": "レソトサウルス"
+  },
+  {
+   "k": "Phenacodus",
+   "v": "フェナコドゥス"
+  },
+  {
+   "k": "Najash",
+   "v": "ナジャシュ"
+  },
+  {
+   "k": "Vegavis",
+   "v": "ヴェガヴィス"
+  },
+  {
+   "k": "Leptolepis",
+   "v": "レプトレピス"
+  },
+  {
+   "k": "Protungulatum",
+   "v": "プロトゥングラトゥム"
+  },
+  {
+   "k": "Purgatorius",
+   "v": "プルガトリウス"
+  },
+  {
+   "k": "Miacis",
+   "v": "ミアキス"
+  },
+  {
+   "k": "Dickinsonia",
+   "v": "ディッキンソニア"
+  },
+  {
+   "k": "Yorgia",
+   "v": "ヨルギア"
+  },
+  {
+   "k": "Spriggina",
+   "v": "スプリッギナ"
+  },
+  {
+   "k": "Kimberella",
+   "v": "キンベレラ"
+  },
+  {
+   "k": "Charnia",
+   "v": "カルニア"
+  },
+  {
+   "k": "Tribrachidium",
+   "v": "トリブラキディウム"
+  },
+  {
+   "k": "Cloudina",
+   "v": "クラウディナ"
+  },
+  {
+   "k": "Metaldetes",
+   "v": "メタルデテス"
+  },
+  {
+   "k": "Antarcticocyathus",
+   "v": "アンタークティコキアトゥス"
+  },
+  {
+   "k": "Cothonion",
+   "v": "コトニオン"
+  },
+  {
+   "k": "Slender Vauxia",
+   "v": "細いヴォクシア"
+  },
+  {
+   "k": "Chengjiang Vauxia",
+   "v": "澄江のヴォクシア"
+  },
+  {
+   "k": "Leptomitus",
+   "v": "レプトミトゥス"
+  },
+  {
+   "k": "Carter's Choia Sponge",
+   "v": "カーターのチョイア"
+  },
+  {
+   "k": "Hinde's Choia Sponge",
+   "v": "ハインドのチョイア"
+  },
+  {
+   "k": "Nailiana",
+   "v": "ナイリアナ"
+  },
+  {
+   "k": "Windowed Protospongia",
+   "v": "窓のあるプロトスポンギア"
+  },
+  {
+   "k": "Burgess Protospongia",
+   "v": "バージェスのプロトスポンギア"
+  },
+  {
+   "k": "Bohemian Protospongia",
+   "v": "ボヘミアのプロトスポンギア"
+  },
+  {
+   "k": "Hunsrück Protospongia",
+   "v": "フンスリュックのプロトスポンギア"
+  },
+  {
+   "k": "Moorowipora",
+   "v": "ムーロウィポラ"
+  },
+  {
+   "k": "Yunnanoascus",
+   "v": "ユンナノアスクス"
+  },
+  {
+   "k": "Endoceras",
+   "v": "エンドセラス"
+  },
+  {
+   "k": "Chain Coral",
+   "v": "クサリサンゴ"
+  },
+  {
+   "k": "Estonian Chain Coral",
+   "v": "エストニアのクサリサンゴ"
+  },
+  {
+   "k": "Honeycomb Coral",
+   "v": "ハチノスサンゴ"
+  },
+  {
+   "k": "Horn Coral",
+   "v": "ツノサンゴ"
+  },
+  {
+   "k": "Ohio Isotelus",
+   "v": "オハイオのイソテルス"
+  },
+  {
+   "k": "Isotelus Rex",
+   "v": "イソテルス・レックス"
+  },
+  {
+   "k": "Trenton Isotelus",
+   "v": "トレントンのイソテルス"
+  },
+  {
+   "k": "Fringed Trinucleus",
+   "v": "縁飾りのトリヌクレウス"
+  },
+  {
+   "k": "Bristle-horned Trinucleus",
+   "v": "剛毛角のトリヌクレウス"
+  },
+  {
+   "k": "{0} more species ▸",
+   "v": "ほか {0} 種 ▸"
+  },
+  {
+   "k": "Click a marked tile to place the young",
+   "v": "マークされたマスをクリックして子を置く"
+  },
+  {
+   "k": "La Brea",
+   "v": "ラ・ブレア"
+  },
+  {
+   "k": "Split Mountain",
+   "v": "スプリット山"
+  },
+  {
+   "k": "John Day",
+   "v": "ジョン・デイ"
+  },
+  {
+   "k": "Agate",
+   "v": "アゲート"
+  },
+  {
+   "k": "Antelope County",
+   "v": "アンテロープ郡"
+  },
+  {
+   "k": "Hot Springs",
+   "v": "ホットスプリングス"
+  },
+  {
+   "k": "Burgess",
+   "v": "バージェス"
+  },
+  {
+   "k": "Wheeler",
+   "v": "ウィーラー"
+  },
+  {
+   "k": "Beecher",
+   "v": "ビーチャー"
+  },
+  {
+   "k": "Gilboa",
+   "v": "ギルボア"
+  },
+  {
+   "k": "Walcott",
+   "v": "ウォルコット"
+  },
+  {
+   "k": "Mount Stephen",
+   "v": "スティーブン山"
+  },
+  {
+   "k": "Spence",
+   "v": "スペンス"
+  },
+  {
+   "k": "Kinzers",
+   "v": "キンザーズ"
+  },
+  {
+   "k": "Waukesha",
+   "v": "ウォーキショー"
+  },
+  {
+   "k": "Herefordshire",
+   "v": "ヘレフォードシャー"
+  },
+  {
+   "k": "Putorana",
+   "v": "プトラナ"
+  },
+  {
+   "k": "Deccan",
+   "v": "デカン"
+  },
+  {
+   "k": "Soom",
+   "v": "スーム"
+  },
+  {
+   "k": "Emu Bay",
+   "v": "エミュー湾"
+  },
+  {
+   "k": "Gogo",
+   "v": "ゴーゴー"
+  },
+  {
+   "k": "Fremouw",
+   "v": "フレモウ"
+  },
+  {
+   "k": "Kem Kem",
+   "v": "ケムケム"
+  },
+  {
+   "k": "Rhynie",
+   "v": "ライニー"
+  },
+  {
+   "k": "Joggins",
+   "v": "ジョギンズ"
+  },
+  {
+   "k": "Hamilton",
+   "v": "ハミルトン"
+  },
+  {
+   "k": "Cleveland",
+   "v": "クリーブランド"
+  },
+  {
+   "k": "Price River",
+   "v": "プライス川"
+  },
+  {
+   "k": "Hunsrück",
+   "v": "フンスリュック"
+  },
+  {
+   "k": "Germanic Sea",
+   "v": "ゲルマン海"
+  },
+  {
+   "k": "Seymour",
+   "v": "シーモア"
+  },
+  {
+   "k": "Mansfeld",
+   "v": "マンスフェルト"
+  },
+  {
+   "k": "Irati",
+   "v": "イラチ"
+  },
+  {
+   "k": "Vosges",
+   "v": "ヴォージュ"
+  },
+  {
+   "k": "Red Deer River",
+   "v": "レッドディア川"
+  },
+  {
+   "k": "Messel",
+   "v": "メッセル"
+  },
+  {
+   "k": "Fur",
+   "v": "フール島"
+  },
+  {
+   "k": "Akiyoshi",
+   "v": "秋吉台"
+  },
+  {
+   "k": "Yezo",
+   "v": "蝦夷"
+  },
+  {
+   "k": "Gotland",
+   "v": "ゴットランド島"
+  },
+  {
+   "k": "Whitsundays",
+   "v": "ウィットサンデー諸島"
+  },
+  {
+   "k": "Indomalayan",
+   "v": "インドマラヤ区"
+  },
+  {
+   "k": "Palearctic Realm",
+   "v": "旧北区"
+  },
+  {
+   "k": "Nearctic Realm",
+   "v": "新北区"
+  },
+  {
+   "k": "Indomalayan Realm",
+   "v": "インドマラヤ区"
+  },
+  {
+   "k": "Afrotropic Realm",
+   "v": "アフリカ熱帯区"
+  },
+  {
+   "k": "Neotropic Realm",
+   "v": "新熱帯区"
+  },
+  {
+   "k": "Australasia Realm",
+   "v": "オーストラリア区"
+  },
+  {
+   "k": "Oceanian Realm",
+   "v": "オセアニア区"
+  },
+  {
+   "k": "Antarctic Realm",
+   "v": "南極区"
+  },
+  {
+   "k": "Laurentia Realm",
+   "v": "ローレンシア区"
+  },
+  {
+   "k": "Baltica Realm",
+   "v": "バルティカ区"
+  },
+  {
+   "k": "Avalonia Realm",
+   "v": "アバロニア区"
+  },
+  {
+   "k": "Siberia Realm",
+   "v": "シベリア区"
+  },
+  {
+   "k": "Cathaysia Realm",
+   "v": "カタイシア区"
+  },
+  {
+   "k": "Gondwana Realm",
+   "v": "ゴンドワナ区"
+  },
+  {
+   "k": "Euramerica Realm",
+   "v": "ユーラメリカ区"
+  },
+  {
+   "k": "Pangaea Realm",
+   "v": "パンゲア区"
+  },
+  {
+   "k": "Laurasia Realm",
+   "v": "ローラシア区"
+  },
+  {
+   "k": "Tethys Realm",
+   "v": "テチス区"
+  },
+  {
+   "k": "Panthalassa Realm",
+   "v": "パンサラサ区"
+  },
+  {
+   "k": "Zealandia Realm",
+   "v": "ジーランディア区"
   }
  ]
 }

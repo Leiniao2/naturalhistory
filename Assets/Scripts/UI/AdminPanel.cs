@@ -27,7 +27,7 @@ namespace NaturalHistory.UI
             ageField.RegisterValueChangedCallback(_ => OnAgePicked());
 
             phenomenon = new DropdownField(new List<string>(), 0) { name = "admin-phenomenon" };
-            trigger    = new Button(() => NaturalEvents.Instance?.Trigger((Phenomenon)phenomenon.index)) { name = "admin-trigger" };
+            trigger    = new Button(OnTrigger) { name = "admin-trigger" };
             bar.Add(phenomenon);
             bar.Add(trigger);
             RefreshPhenomena();
@@ -69,9 +69,19 @@ namespace NaturalHistory.UI
             int index = Mathf.Max(phenomenon.index, 0);
             var names = new List<string>();
             foreach (var n in NaturalEvents.Names) names.Add(Loc.T(n));
+            foreach (var n in SkyFeatures.AdminNames) names.Add(Loc.T(n)); // sky phenomena (SkyLayer)
             phenomenon.choices = names;
             if (index < names.Count) phenomenon.SetValueWithoutNotify(names[index]);
             trigger.text = Loc.T("Trigger");
+        }
+
+        // Ground phenomena come first in the list, then the sky's
+        private void OnTrigger()
+        {
+            int i = phenomenon.index;
+            if (i < 0) return;
+            if (i < NaturalEvents.Names.Length) NaturalEvents.Instance?.Trigger((Phenomenon)i);
+            else SkyLayer.Instance?.TriggerAdmin(i - NaturalEvents.Names.Length);
         }
 
         private void OnAgePicked()

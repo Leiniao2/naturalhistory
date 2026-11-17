@@ -15,9 +15,10 @@ namespace NaturalHistory.Territory
     //   - A center is founded on every player's start hex and is named after a park or landmark of
     //     the player's faction that matches its surroundings (HabitatNames).
     //   - Its 7 hexes (the center and its neighbours) always belong to the player.
-    //   - A colony of the player's that stands on the player's territory claims its 6 neighbours too.
-    //     Territory follows the colonies: hexes no colony (or center) holds any more fall back to
-    //     unclaimed, so a colony leaving its range carries the border with it one step at a time.
+    //   - Every colony of the player's claims the hex it stands on and its 6 neighbours, except hexes
+    //     another player holds and hexes where a wild (unowned) colony lives. Territory follows the
+    //     colonies: hexes no colony (or center) holds any more fall back to unclaimed, so a colony
+    //     moving away carries the border with it.
     //   - Every player starts with one colony of a species that fits their center, placed on the core.
     //
     // Other players' cores are never taken. Where two players' colonies claim the same hex, whoever
@@ -48,6 +49,9 @@ namespace NaturalHistory.Territory
         private int lastWorldSeed;
 
         private bool rebuildPending;
+
+        // Every player colony whose moves re-claim territory (founders, reproduced and evolved copies alike)
+        private readonly HashSet<ColonyGroup> watched = new();
 
         // Spawns the component in any scene that has a HexGrid, so Game.unity doesn't need editing.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -142,7 +146,7 @@ namespace NaturalHistory.Territory
             var evolution = EvolutionManager.Instance;
             if (evolution != null && evolution.HasCopies(player))
             {
-                foreach (var g in evolution.Respawn(player, core)) g.Arrived += OnColonyArrived;
+                foreach (var g in evolution.Respawn(player, core)) Watch(g);
                 var any = colonies.Groups.FirstOrDefault(g => g != null && g.Owner?.Index == player.Index);
                 if (any != null) { playerColonies[player.Index] = any; return; }
                 // none of the player's species lives in this period: found one that does (below)
@@ -190,11 +194,16 @@ namespace NaturalHistory.Territory
                 playerColonies[player.Index]    = group;
                 lastColonyCell[player.Index]    = cell;
                 lastColonySpecies[player.Index] = def.id;
-                group.Arrived += OnColonyArrived;
+                Watch(group);
                 evolution?.RegisterFounder(player, group);
                 return;
             }
             Debug.Log($"[TerritoryManager] No species fits the habitat center of {player.Name}; it starts without a colony.");
+        }
+
+        private void Watch(ColonyGroup group)
+        {
+            if (group != null && watched.Add(group)) group.Arrived += OnColonyArrived;
         }
 
         private void OnColonyArrived(ColonyGroup group)
@@ -211,27 +220,27 @@ namespace NaturalHistory.Territory
 
         private void RecomputeTerritory()
         {
-            // What each player would hold on their own: their core, then the neighbours of every
-            // colony of theirs standing on what they hold, repeated so a chain of colonies reaches out.
+            var all = colonies != null ? colonies.Groups.Where(g => g != null).ToList() : new List<ColonyGroup>();
+            // re-claim whenever any of the players' colonies finishes a move
+            watched.RemoveWhere(g => g == null);
+            foreach (var g in all)
+                if (g.Owner != null) Watch(g);
+
+            // Hexes wild colonies live on: theirs, never claimed by a player
+            var wild = new HashSet<HexCell>(all.Where(g => g.Owner == null && g.Cell != null).Select(g => g.Cell));
+
+            // What each player would hold on their own: their core, then every colony's hex and its
+            // 6 neighbours (not wild hexes)
             var wanted = new Dictionary<Player, HashSet<HexCell>>();
             foreach (var center in centers)
             {
                 var set = new HashSet<HexCell>(center.Core.Where(c => c != null));
-                var groups = colonies != null
-                    ? colonies.Groups.Where(g => g != null && g.Owner != null && g.Owner.Index == center.Owner.Index).ToList()
-                    : new List<ColonyGroup>();
-                var claimed = new HashSet<ColonyGroup>();
-                bool grew = true;
-                while (grew)
+                foreach (var g in all)
                 {
-                    grew = false;
-                    foreach (var g in groups)
-                    {
-                        if (claimed.Contains(g) || g.Cell == null || !set.Contains(g.Cell)) continue;
-                        claimed.Add(g);
-                        set.UnionWith(grid.GetNeighbors(g.Cell));
-                        grew = true;
-                    }
+                    if (g.Owner == null || g.Owner.Index != center.Owner.Index || g.Cell == null) continue;
+                    if (!wild.Contains(g.Cell)) set.Add(g.Cell);
+                    foreach (var n in grid.GetNeighbors(g.Cell))
+                        if (n != null && !wild.Contains(n)) set.Add(n);
                 }
                 wanted[center.Owner] = set;
             }

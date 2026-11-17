@@ -238,26 +238,29 @@ namespace NaturalHistory.Evolution
         public int TurnsUntilReproduce(OwnedCopy copy) =>
             copy == null ? 0 : Mathf.Max(0, copy.lastBred + ReproduceCooldown - CurrentTurn);
 
-        // A free neighbouring tile the species can live on, preferring the player's own territory
-        public HexCell ReproduceCell(OwnedCopy copy)
+        // The free neighbouring tiles the species can live on, the player's own territory first
+        public List<HexCell> ReproduceCells(OwnedCopy copy)
         {
-            if (copy?.group == null || copy.group.Cell == null) return null;
+            if (copy?.group == null || copy.group.Cell == null) return new List<HexCell>();
             var def = GameDataLoader.GetSpecies(copy.species);
             var territory = TerritoryManager.Instance;
             return HexGrid.Instance.GetNeighbors(copy.group.Cell)
                 .Where(c => IsFree(def, c))
                 .OrderByDescending(c => territory != null && territory.OwnerOf(c)?.Index == copy.player)
-                .FirstOrDefault();
+                .ToList();
         }
 
-        public bool Reproduce(OwnedCopy copy, out string message)
+        public HexCell ReproduceCell(OwnedCopy copy) => ReproduceCells(copy).FirstOrDefault();
+
+        // at: the tile the player chose for the young (one of ReproduceCells), or null for the first
+        public bool Reproduce(OwnedCopy copy, out string message, HexCell at = null)
         {
             message = null;
             if (copy?.group == null) { message = Loc.T("Nothing selected"); return false; }
             int wait = TurnsUntilReproduce(copy);
             if (wait > 0) { message = Loc.F(wait == 1 ? "Can reproduce again in {0} turn" : "Can reproduce again in {0} turns", wait); return false; }
             var def  = GameDataLoader.GetSpecies(copy.species);
-            var cell = ReproduceCell(copy);
+            var cell = at != null && ReproduceCells(copy).Contains(at) ? at : ReproduceCell(copy);
             if (cell == null) { message = Loc.F("No free {0} next to it", HabitatText(def)); return false; }
 
             var owner = copy.group.Owner;

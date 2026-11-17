@@ -177,7 +177,7 @@ P = [
  ("ediacaran_matground","Microbial matground","Cyanobacterial mats ('elephant skin' texture)","Cyanobacteria","Edi","Ord","under",["Seabed","Lakebed"],[],"Mat","#FFFFFF",1.0,"Tough microbial mats that carpeted the Ediacaran seafloor, wrinkled like elephant skin; the first grazers and burrowers broke them up in the Cambrian."),
  ("stromatolites","Stromatolites","Cyanobacterial mats","Cyanobacteria","Edi","","under",["Seabed","Lakebed"],[],"Stromatolite","#FFFFFF",1.0,"Layered mounds built by cyanobacteria; rare today, as at Shark Bay."),
  ("epiphyton","Epiphyton","Epiphyton","Calcimicrobe","Cam","Dev","under",["Seabed"],[],"Coralline","#C8B090",0.9,"Bushy calcified microbes that built Cambrian reefs with archaeocyathids."),
- ("dasyclads","Dasyclad algae","Dasycladales","Green alga","Cam","","under",["Seabed"],[],"Algae","#A8D880",0.8,"Little umbrella-shaped green algae of warm lagoons."),
+ ("dasyclads","Dasyclad algae","Dasycladales","Green alga","Cam","","under",["Seabed"],[],"Algae","#A8D880",0.56,"Little umbrella-shaped green algae of warm lagoons."),
  ("receptaculites","Receptaculites","Receptaculites oweni","Calcareous alga","Ord","Per","under",["Seabed"],[],"Coralline","#D8C8A0",1.1,"The 'sunflower coral': a disc-shaped calcareous alga."),
  ("solenopora","Solenopora","Solenopora","Red alga","Ord","Cre","under",["Seabed"],[],"Coralline","#D89898",1.0,"Calcified red alga that helped build Paleozoic reefs."),
  ("codiaceans","Codiacean algae","Codiaceae","Green alga","Ord","","under",["Seabed"],[],"Algae","#88C870",1.0,"Calcified green algae whose fragments make carbonate sand."),

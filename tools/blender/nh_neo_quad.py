@@ -33,6 +33,11 @@ from mathutils.bvhtree import BVHTree
 
 import nh_model as nh
 
+# Resolution of the fused body relative to each Spec's voxel / max_tris (see build)
+DETAIL = 0.5
+TRIS = 2.6
+SMOOTH = 18  # more passes at the finer voxel, so the joins between the body parts stay soft
+
 EYE = (0.10, 0.06, 0.03)
 PUPIL = (0.02, 0.015, 0.01)
 HOOF = (0.16, 0.13, 0.11)
@@ -178,6 +183,14 @@ def leg_front(b, L, x, stride):
     foot = Vector((x, ys + stride, 0.0))
     if s.foot == "pillar":
         knee = Vector((x, ys + stride * 0.5, zt * 0.45))
+    # muscle: the upper arm (triceps and shoulder) as a heavy mass blending into the chest, and the
+    # forearm swelling below the elbow, so the leg reads as a limb instead of a stick
+    top = Vector((x * 0.92, ys + 0.01, zt + s.girth[1] * 0.25))
+    b.add(nh.ellipsoid(tuple(top + (elbow - top) * 0.42 + Vector((0, r * 0.15, 0))),
+                       (r * 1.35, r * 1.6, (top - elbow).length * 0.7)), col)
+    b.add(nh.ellipsoid(tuple(elbow + (knee - elbow) * 0.32),
+                       (r * 1.02, r * 1.08, (knee - elbow).length * 0.5)), col)  # long, so it tapers into the leg
+    if s.foot == "pillar":
         b.add(nh.tube([(x, ys, zt + s.girth[1] * 0.4), tuple(elbow), tuple(knee), tuple(foot + Vector((0, 0, r * 0.6)))],
                       [r * 1.2, r * 1.05, r * 0.85, r * 0.85], sides=12), col)
         b.add(nh.ellipsoid(tuple(foot + Vector((0, -r * 0.1, r * 0.35))), (r * 0.95 * s.foot_r, r * 1.0 * s.foot_r, r * 0.4)),
@@ -203,6 +216,14 @@ def leg_hind(b, L, x, stride):
     foot = Vector((x, yh + stride * 0.7, 0.0))
     if s.foot == "pillar":
         hock = Vector((x, yh + stride * 0.5, zt * 0.42))
+    # muscle: the thigh and buttock as one big mass down to the stifle, the gaskin (second thigh)
+    # below it, a knobbly hock
+    top = Vector((x * 0.88, yh - r * 0.2, zt + s.girth[1] * 0.2))
+    b.add(nh.ellipsoid(tuple(top + (stifle - top) * 0.45 + Vector((0, r * 0.25, 0))),
+                       (r * 1.4, r * 1.85, (top - stifle).length * 0.75)), col)
+    b.add(nh.ellipsoid(tuple(stifle + (hock - stifle) * 0.35 + Vector((0, r * 0.2, 0))),
+                       (r * 0.98, r * 1.15, (hock - stifle).length * 0.52)), col)
+    if s.foot == "pillar":
         b.add(nh.tube([(x, yh, zt + s.girth[1] * 0.3), tuple(stifle), tuple(hock), tuple(foot + Vector((0, 0, r * 0.6)))],
                       [r * 1.3, r * 1.0, r * 0.8, r * 0.8], sides=12), col)
         b.add(nh.ellipsoid(tuple(foot + Vector((0, -r * 0.1, r * 0.35))), (r * 0.9 * s.foot_r, r * 0.95 * s.foot_r, r * 0.4)),
@@ -407,9 +428,8 @@ def details(mb, L, surf):
     for sx in (-1, 1):
         o = Vector(L.h(s.eye_t, 0, s.head_r[1] / HL * s.eye_u))
         p, n = surf.hit(o, (sx, 0, 0.0))  # from inside the skull: skips ears, horns, tusks
-        er = max(0.012, s.head_r[1] * 0.16)
-        mb.add(nh.ellipsoid(tuple(p - n * er * 0.35), (er, er, er * 0.85), subdivisions=2), EYE)
-        mb.add(nh.ellipsoid(tuple(p + n * er * 0.45), (er * 0.4, er * 0.45, er * 0.4), subdivisions=1), PUPIL)
+        er = max(0.016, s.head_r[1] * 0.2)  # (was a tiny dark ball: a single pixel on the map)
+        nh.eye(mb, p, n, er, s.skin or s.coat)
     for t in s.tusks:
         root = Vector(L.h(t["t"], t.get("s", 0), t.get("u", 0)))
         mb.add(bent_tube(root, t["dir"], t["len"], t["r"], t.get("bend", (0, 0, 0)), tip_r=t.get("tip", t["r"] * 0.2),
@@ -527,7 +547,9 @@ def build(s):
     tail(b, L)
     if s.extra:
         s.extra(b, L)
-    fused = b.fuse(voxel=s.voxel, smooth=4, smooth_factor=0.5, max_tris=s.max_tris)
+    # finer than the Spec asks: the Neogene megafauna are seen big and close on the map, and at the
+    # old resolution their bodies came out lumpy, with stick legs (DETAIL / TRIS scale every Spec)
+    fused = b.fuse(voxel=s.voxel * DETAIL, smooth=SMOOTH, smooth_factor=0.6, max_tris=int(s.max_tris * TRIS))
     fused.normal_update()
     if s.shag > 0:
         for v in fused.verts:

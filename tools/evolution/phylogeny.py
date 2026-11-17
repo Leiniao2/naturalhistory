@@ -213,7 +213,7 @@ GROUPS = {
     "Chalicothere":         PERISSO + "/Ancylopoda",
     "Rhinocerotoid":        PERISSO + "/Ceratomorpha",
     "Entelodont":           ARTIO,
-    "Andrewsarchid":        ARTIO + "/Whippomorpha",
+    "Andrewsarchid":        ARTIO + "/Whippomorpha/Andrewsarchidae",  # a side branch: raoellids (Indohyus) are the whales' stem
     "Camelid":              ARTIO + "/Tylopoda",
     "Deer":                 ARTIO + "/Ruminantia",
     "Giraffid":             ARTIO + "/Ruminantia",
@@ -333,9 +333,25 @@ GROUPS = {
     "Land snail":           MOLL + "/Conchifera/Gastropoda",
     "Giant clam":           MOLL + "/Conchifera/Bivalvia",
     "Nautiloid cephalopod": CEPH,
-    "Ammonite":             CEPH + "/Ammonoidea",
-    "Heteromorph ammonite": CEPH + "/Ammonoidea",
-    "Belemnite":            CEPH + "/Coleoidea",
+    "Early cephalopod":     CEPH,
+    "Bactritid":            CEPH + "/Neocephalopoda",
+    "Ammonite":             CEPH + "/Neocephalopoda/Ammonoidea",
+    "Heteromorph ammonite": CEPH + "/Neocephalopoda/Ammonoidea",
+    "Belemnite":            CEPH + "/Neocephalopoda/Coleoidea",
+    "Early bivalve":        MOLL + "/Conchifera/Bivalvia",
+    "Stem chelicerate":     CHELI,
+    "Early beetle":         HOLO + "/Coleoptera",
+    "Acanthodian":          CHONDR,
+    "Early teleost":        TELEO,
+    "Proto-frog":           AMPHIBIA + "/Temnospondyli/Lissamphibia/Anura",
+    "Early snake":          LEPIDO + "/Toxicofera/Serpentes",
+    "Early ornithischian":  ORNITH,
+    "Early crown bird":     AVES + "/Neognathae",
+    "Early metatherian":    THERIA + "/Metatheria",
+    "Early placental":      PLAC,
+    "Miacid":               FERAE + "/Carnivoramorpha",
+    "Raoellid":             ARTIO + "/Whippomorpha",
+    "Condylarth":           UNGUL,
 }
 
 # Species of a group that sit elsewhere in the tree (the group lumps sub-clades together)
@@ -428,6 +444,7 @@ SPECIES = {
     "psittacosaurus_mongoliensis": ORNITH + "/Neornithischia/Marginocephalia/Ceratopsia",
     # cephalopods: belemnites and ammonites both come from orthocone nautiloids
     "orthoceras_regulare":    CEPH,
+    "purgatorius_unio":       EUARCH + "/Euarchonta",
     # proboscideans
     "moeritherium_lyonsi":    AFRO + "/Tethytheria/Proboscidea",
     "deinotherium_giganteum": AFRO + "/Tethytheria/Proboscidea",
@@ -477,7 +494,12 @@ SPECIES = {
 FIRST = ["paramecium", "amoeba", "choanoflagellate", "eocyathispongia_qiania", "coronacollina_acula",
          "tribrachidium_heraldicum", "ikaria_wariootia",  # an early eumetazoan, then the earliest true bilaterian: the stem of protostomes and deuterostomes
          # and the older of two members of a period that the species list has the other way round
-         "panderichthys_rhombolepis", "psittacosaurus_mongoliensis", "ardipithecus_ramidus"]
+         "panderichthys_rhombolepis", "psittacosaurus_mongoliensis", "ardipithecus_ramidus",
+         # transitional species that open their period's radiation: the first placentals, then the
+         # stems of the primates, the ungulates, the carnivorans and the whales; the acanthodian
+         # before the other early sharks
+         "protungulatum_donnae", "purgatorius_unio", "phenacodus_primaevus", "miacis_parvivorus", "indohyus_indirae",
+         "climatius_reticulatus"]
 
 CLADE_NOTES = {
     "SAR": "Ciliates, foraminifera and their kin form a branch of the eukaryotes of their own, far from the animals.",
@@ -753,4 +775,5 @@ CLADE_NOTES = {
     "Cephalopoda": "Cephalopods swim with jet propulsion.",
     "Ammonoidea": "Ammonites coiled their shells.",
     "Coleoidea": "Coleoids hid the shell inside the body.",
+    "Neocephalopoda": "Bactritids, small straight-shelled cephalopods, gave rise to both the ammonites and the squid line.",
 }

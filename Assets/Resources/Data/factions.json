@@ -2,7 +2,7 @@
   "factions": [
     {
       "id": "palearctic",
-      "displayName": "Palearctic",
+      "displayName": "Palearctic Realm",
       "category": "Modern realm",
       "realm": "palearctic",
       "primaryColor": "#6A5ACD",
@@ -41,7 +41,7 @@
     },
     {
       "id": "nearctic",
-      "displayName": "Nearctic",
+      "displayName": "Nearctic Realm",
       "category": "Modern realm",
       "realm": "nearctic",
       "primaryColor": "#2F6DB5",
@@ -80,7 +80,7 @@
     },
     {
       "id": "oriental",
-      "displayName": "Oriental",
+      "displayName": "Indomalayan Realm",
       "category": "Modern realm",
       "realm": "indomalayan",
       "primaryColor": "#E08A1E",
@@ -119,7 +119,7 @@
     },
     {
       "id": "afrotropic",
-      "displayName": "Afrotropic",
+      "displayName": "Afrotropic Realm",
       "category": "Modern realm",
       "realm": "afrotropical",
       "primaryColor": "#C8502A",
@@ -158,7 +158,7 @@
     },
     {
       "id": "neotropic",
-      "displayName": "Neotropic",
+      "displayName": "Neotropic Realm",
       "category": "Modern realm",
       "realm": "neotropical",
       "primaryColor": "#2EA34A",
@@ -204,7 +204,7 @@
     },
     {
       "id": "australasia",
-      "displayName": "Australasia",
+      "displayName": "Australasia Realm",
       "category": "Modern realm",
       "realm": "australasian",
       "primaryColor": "#B3261E",
@@ -243,7 +243,7 @@
     },
     {
       "id": "oceanian",
-      "displayName": "Oceanian",
+      "displayName": "Oceanian Realm",
       "category": "Modern realm",
       "realm": "oceanian",
       "primaryColor": "#14A3A3",
@@ -282,7 +282,7 @@
     },
     {
       "id": "antarctic",
-      "displayName": "Antarctic",
+      "displayName": "Antarctic Realm",
       "category": "Modern realm",
       "realm": "antarctic",
       "primaryColor": "#DCE6EF",
@@ -321,7 +321,7 @@
     },
     {
       "id": "laurentia",
-      "displayName": "Laurentia",
+      "displayName": "Laurentia Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#8E3B46",
@@ -360,7 +360,7 @@
     },
     {
       "id": "baltica",
-      "displayName": "Baltica",
+      "displayName": "Baltica Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#1D3557",
@@ -399,7 +399,7 @@
     },
     {
       "id": "avalonia",
-      "displayName": "Avalonia",
+      "displayName": "Avalonia Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#6E2C8A",
@@ -438,7 +438,7 @@
     },
     {
       "id": "siberia",
-      "displayName": "Siberia",
+      "displayName": "Siberia Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#5C6B73",
@@ -477,7 +477,7 @@
     },
     {
       "id": "cathaysia",
-      "displayName": "Cathaysia",
+      "displayName": "Cathaysia Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#A4161A",
@@ -516,7 +516,7 @@
     },
     {
       "id": "gondwana",
-      "displayName": "Gondwana",
+      "displayName": "Gondwana Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#5B7F1E",
@@ -555,7 +555,7 @@
     },
     {
       "id": "euramerica",
-      "displayName": "Euramerica",
+      "displayName": "Euramerica Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#264653",
@@ -594,7 +594,7 @@
     },
     {
       "id": "pangaea",
-      "displayName": "Pangaea",
+      "displayName": "Pangaea Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#8D6E63",
@@ -633,7 +633,7 @@
     },
     {
       "id": "laurasia",
-      "displayName": "Laurasia",
+      "displayName": "Laurasia Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#3A5A40",
@@ -672,7 +672,7 @@
     },
     {
       "id": "tethys",
-      "displayName": "Tethys",
+      "displayName": "Tethys Realm",
       "category": "Ancient ocean",
       "realm": "",
       "primaryColor": "#0077B6",
@@ -711,7 +711,7 @@
     },
     {
       "id": "panthalassa",
-      "displayName": "Panthalassa",
+      "displayName": "Panthalassa Realm",
       "category": "Ancient ocean",
       "realm": "",
       "primaryColor": "#14213D",
@@ -750,7 +750,7 @@
     },
     {
       "id": "zealandia",
-      "displayName": "Zealandia",
+      "displayName": "Zealandia Realm",
       "category": "Paleocontinent",
       "realm": "",
       "primaryColor": "#1B1B1B",

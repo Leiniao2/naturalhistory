@@ -85,8 +85,11 @@ namespace NaturalHistory.World
                 var colonies = SpeciesColonies.Instance;
                 if (at == null || colonies == null) return list;
                 foreach (var g in colonies.GroupsAt(at)) if (InLayer(g, Layer)) list.Add(g);
-                list.Sort((a, b) => Niches.IsTiny(a.Niche) != Niches.IsTiny(b.Niche) ? Niches.IsTiny(a.Niche).CompareTo(Niches.IsTiny(b.Niche))
-                                                                                     : b.Definition.sizeCm.CompareTo(a.Definition.sizeCm));
+                // the human player's own groups first, so a click on the tile picks yours
+                static bool Mine(ColonyGroup g) => g.Owner != null && g.Owner.IsHuman;
+                list.Sort((a, b) => Mine(a) != Mine(b) ? Mine(b).CompareTo(Mine(a))
+                                  : Niches.IsTiny(a.Niche) != Niches.IsTiny(b.Niche) ? Niches.IsTiny(a.Niche).CompareTo(Niches.IsTiny(b.Niche))
+                                  : b.Definition.sizeCm.CompareTo(a.Definition.sizeCm));
                 return list;
             }
 

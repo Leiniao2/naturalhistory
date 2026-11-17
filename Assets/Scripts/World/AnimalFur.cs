@@ -9,12 +9,20 @@ namespace NaturalHistory.World
     // and back, tufted clumps, a soft sheen at the silhouette and light that wraps round the body
     // instead of the smooth plastic shading. Mammals and the hairy cynodonts get it; the naked or
     // armoured mammals (whales, sirenians, elephants, most rhinos, glyptodonts) little or none.
+    // Birds get feathers instead (_Fur z, w): rows of overlapping feathers on the plain-coloured
+    // ones; the brightly coloured (parrots, kingfishers, hummingbirds, mandarin ducks) are left as
+    // they are, their colours being the point.
     public static class AnimalFur
     {
         public static readonly int FurId = Shader.PropertyToID("_Fur");
 
         // Strands along the body's length; the shader fades them out where they'd be finer than a pixel
         private const float StrandsPerLength = 70f;
+        // Rows of feathers along the body's length
+        private const float FeatherRowsPerLength = 34f;
+
+        private static readonly HashSet<string> vividGroups  = new() { "Parrot", "Kingfisher", "Hummingbird" };
+        private static readonly HashSet<string> vividSpecies = new() { "mandarin_duck" };
 
         // Groups with no or little hair (0 = none)
         private static readonly Dictionary<string, float> groupFur = new()
@@ -36,11 +44,18 @@ namespace NaturalHistory.World
         // (amount 0..1.25, strands per model unit); amount 0 = no fur
         public static Vector4 Of(SpeciesDefinition def, Mesh mesh)
         {
-            float amount = Amount(def);
-            if (amount <= 0f || mesh == null) return Vector4.zero;
+            if (mesh == null) return Vector4.zero;
             float length = Mathf.Max(mesh.bounds.size.x, mesh.bounds.size.y, mesh.bounds.size.z, 1e-4f);
+            if (Feathered(def)) return new Vector4(0f, 0f, 1f, FeatherRowsPerLength / length);
+            float amount = Amount(def);
+            if (amount <= 0f) return Vector4.zero;
             return new Vector4(amount, StrandsPerLength / length, 0f, 0f);
         }
+
+        // Plain-coloured birds: drawn with feathers
+        public static bool Feathered(SpeciesDefinition def) =>
+            def != null && !vividSpecies.Contains(def.id) && (def.group == null || !vividGroups.Contains(def.group)) &&
+            System.Linq.Enumerable.Contains(EvolutionData.TagsOf(def), "Bird");
 
         public static float Amount(SpeciesDefinition def)
         {

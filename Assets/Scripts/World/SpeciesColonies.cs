@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 using NaturalHistory.Core;
 using NaturalHistory.Data;
@@ -45,6 +46,7 @@ namespace NaturalHistory.World
         // lion; small animals keep their style's minimum size so they stay visible.
         private const float SizeSpanPerSqrtMetre = 0.8f;
         private const float MaxSpan              = 3f;   // in cells
+        private const float LargeFlierCm         = 90f;  // fliers this long or longer stand alone on their tile
         // Whatever the real size or framing, nothing is drawn smaller than this, so even a
         // half-millimetre water bear or a perched kingfisher reads clearly on its tile. Swarms have
         // many members flying close together, so each can be a little smaller.
@@ -143,6 +145,35 @@ namespace NaturalHistory.World
         private readonly List<HexCell> marked = new();
         private int clickFrame = -1;
 
+        // Choosing a tile for something (where the young of a reproducing group go): the tiles on
+        // offer are marked, a click on one of them chooses it, any other click cancels
+        private readonly List<HexCell> offered = new();
+        private System.Action<HexCell> onChosen;
+        public bool IsChoosingTile => onChosen != null;
+
+        public void ChooseTile(IEnumerable<HexCell> tiles, System.Action<HexCell> chosen)
+        {
+            var keep = selected;
+            EndChoosing();
+            foreach (var c in marked) if (c != null) c.SetGroupTarget(HexCell.GroupTarget.None); // the move marks give way
+            marked.Clear();
+            selected = keep;
+            foreach (var c in tiles)
+            {
+                if (c == null) continue;
+                offered.Add(c);
+                c.SetGroupTarget(HexCell.GroupTarget.Move);
+            }
+            onChosen = offered.Count > 0 ? chosen : null;
+        }
+
+        private void EndChoosing()
+        {
+            foreach (var c in offered) if (c != null) c.SetGroupTarget(HexCell.GroupTarget.None);
+            offered.Clear();
+            onChosen = null;
+        }
+
         public ColonyGroup Selected => selected;
         public IReadOnlyList<ColonyGroup> Groups => groups;
         public ColonyGroup GroupAt(HexCell cell, Niche niche) => cell != null && occupants.TryGetValue((cell, niche), out var g) ? g : null;
@@ -193,7 +224,7 @@ namespace NaturalHistory.World
         // True if this click is (or was just) about colonies, so other click handlers (the player
         // ball) should leave it alone. Safe to call before or after this component handles the click.
         public bool HandlesClick(HexCell cell) =>
-            clickFrame == Time.frameCount || selected != null || GroupAt(cell) != null;
+            clickFrame == Time.frameCount || selected != null || IsChoosingTile || GroupAt(cell) != null;
 
         // Spawns the component in any scene that has a HexGrid, so Game.unity doesn't need editing.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -241,6 +272,18 @@ namespace NaturalHistory.World
         {
             bool again = cell == lastClicked;
             lastClicked = cell;
+            if (IsChoosingTile)
+            {
+                clickFrame = Time.frameCount;
+                var chosen = onChosen;
+                bool ok = offered.Contains(cell);
+                var group = selected;
+                EndChoosing();
+                if (ok) chosen(cell);
+                Select(group != null && group.CanAttack && !group.IsBusy ? group : null); // back to its orders
+                lastClicked = null;
+                return;
+            }
             if (selected != null)
             {
                 clickFrame = Time.frameCount;
@@ -262,6 +305,18 @@ namespace NaturalHistory.World
             }
 
             var g = PickAt(cell, again);
+            // your own animal on this tile lives in another layer (plankton under the sea surface,
+            // a soil animal under the land): show that layer and pick it
+            if (!again && (g == null || g.Owner == null || !g.Owner.IsHuman))
+            {
+                var mine = GroupsAt(cell).FirstOrDefault(x => x.Owner != null && x.Owner.IsHuman && x.CanAttack && !x.IsBusy);
+                if (mine != null && !UnderView.InLayer(mine, UnderView.Layer))
+                {
+                    UnderView.Set(UnderView.InLayer(mine, MapLayer.Surface) ? MapLayer.Surface : UnderView.InLayer(mine, MapLayer.Under) ? MapLayer.Under : MapLayer.Sky);
+                    UnderView.Focus.Show(mine);
+                    g = mine;
+                }
+            }
             if (g == null) return;
             clickFrame = Time.frameCount;
             if (g.Owner != null && !g.Owner.IsHuman) return; // other players' colonies aren't yours to order
@@ -272,6 +327,7 @@ namespace NaturalHistory.World
         // niche is free), red to attack the group holding its niche there.
         private void Select(ColonyGroup group)
         {
+            if (group != selected) EndChoosing();
             foreach (var c in marked) if (c != null) c.SetGroupTarget(HexCell.GroupTarget.None);
             marked.Clear();
             selected = group;
@@ -476,6 +532,9 @@ namespace NaturalHistory.World
             float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
             var (count, memberSpan, colonyRadius) = Layouts[style];
             if (def.colonySize > 0) count = def.colonySize;
+            // big birds and pterosaurs (pelicans, condors, flamingos, Pteranodon...): one to a tile
+            bool flier = style == ColonyStyle.Soar || !string.IsNullOrEmpty(def.flightModel);
+            if (flier && def.sizeCm >= LargeFlierCm) count = 1;
             float zoom = AgeZoom(grid.DisplayedAge);
             count = Mathf.Max(1, Mathf.RoundToInt(count / Mathf.Sqrt(zoom))); // bigger members, fewer of them
             float sizeSpan = SizeSpanPerSqrtMetre * Mathf.Sqrt(Mathf.Max(def.sizeCm, 0f) / 100f) * zoom;

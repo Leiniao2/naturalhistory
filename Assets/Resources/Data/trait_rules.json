@@ -11,6 +11,18 @@
    ]
   },
   {
+   "group": "Acanthodian",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Cartilaginous"
+   ]
+  },
+  {
    "group": "Aetosaur",
    "tags": [
     "Animal",
@@ -165,6 +177,15 @@
     "Dinosaur",
     "Theropod",
     "Bird"
+   ]
+  },
+  {
+   "group": "Bactritid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Mollusc",
+    "Cephalopod"
    ]
   },
   {
@@ -472,6 +493,22 @@
    ]
   },
   {
+   "group": "Condylarth",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
+   ]
+  },
+  {
    "group": "Conodont",
    "tags": [
     "Animal",
@@ -652,12 +689,58 @@
    ]
   },
   {
+   "group": "Early beetle",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Insect",
+    "Terrestrial arthropod"
+   ]
+  },
+  {
    "group": "Early bilaterian",
    "tags": [
     "Animal",
     "Bilaterian",
     "Chordate",
     "Worm"
+   ]
+  },
+  {
+   "group": "Early bivalve",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Mollusc",
+    "Bivalve"
+   ]
+  },
+  {
+   "group": "Early cephalopod",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Mollusc",
+    "Cephalopod"
+   ]
+  },
+  {
+   "group": "Early crown bird",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur",
+    "Theropod",
+    "Bird"
    ]
   },
   {
@@ -691,6 +774,51 @@
    ]
   },
   {
+   "group": "Early metatherian",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Metatherian"
+   ]
+  },
+  {
+   "group": "Early ornithischian",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Archosaur",
+    "Dinosaur"
+   ]
+  },
+  {
+   "group": "Early placental",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental"
+   ]
+  },
+  {
    "group": "Early reptile",
    "tags": [
     "Animal",
@@ -702,6 +830,32 @@
     "Amniote",
     "Reptile",
     "Basal amniote"
+   ]
+  },
+  {
+   "group": "Early snake",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Reptile",
+    "Squamate"
+   ]
+  },
+  {
+   "group": "Early teleost",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Bony fish"
    ]
   },
   {
@@ -1463,6 +1617,22 @@
    ]
   },
   {
+   "group": "Miacid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Carnivoran"
+   ]
+  },
+  {
    "group": "Mite",
    "tags": [
     "Animal",
@@ -2011,6 +2181,18 @@
    ]
   },
   {
+   "group": "Proto-frog",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amphibian"
+   ]
+  },
+  {
    "group": "Pterosaur",
    "tags": [
     "Animal",
@@ -2040,6 +2222,22 @@
    "tags": [
     "Animal",
     "Cnidarian"
+   ]
+  },
+  {
+   "group": "Raoellid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate"
    ]
   },
   {
@@ -2511,6 +2709,17 @@
     "Bilaterian",
     "Ecdysozoan",
     "Arthropod",
+    "Marine arthropod"
+   ]
+  },
+  {
+   "group": "Stem chelicerate",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Ecdysozoan",
+    "Arthropod",
+    "Chelicerate",
     "Marine arthropod"
    ]
   },
