@@ -71,6 +71,15 @@ namespace NaturalHistory.World
         // minimum size up to the Cambrian, then shrink as bigger life sets the scale, down to
         // LateMicrobeScale of it from the Devonian on.
         private const float LateMicrobeScale     = 0.3f;
+        // Shelled snails and cephalopods with an outer shell rest where they are when settled,
+        // swaying a little, rather than circling or wandering about the tile
+        private static readonly HashSet<string> StillGroups = new()
+        {
+            "Ammonite", "Heteromorph ammonite", "Nautiloid cephalopod", "Bactritid", "Early cephalopod",
+            "Sea snail", "Land snail", "Abalone",
+        };
+        private static bool RestsStill(SpeciesDefinition def) => def != null && StillGroups.Contains(def.group ?? "");
+
         private static bool IsMicrobe(SpeciesDefinition def) => def.kingdom == "Protista" || def.sizeCm < 0.1f;
         private static float MicrobeScale(GeologicalAge age) =>
             Mathf.Lerp(1f, LateMicrobeScale, Mathf.InverseLerp((float)GeologicalAge.Cambrian, (float)GeologicalAge.Devonian, (float)age));
@@ -620,6 +629,7 @@ namespace NaturalHistory.World
                         break;
                 }
                 member.basePosition = pos;
+                member.still = RestsStill(def);
 
                 var go = new GameObject(def.id);
                 go.transform.SetParent(root, false);

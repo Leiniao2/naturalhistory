@@ -11311,6 +11311,7 @@
       "model": "Models/Species/Elasmosaurus",
       "mapStyle": "Swim",
       "colonySize": 1,
+      "mapScale": 1.8,
       "wingBeat": 0.35,
       "wingRoot": 0.3,
       "genes": [

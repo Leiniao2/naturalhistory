@@ -62,6 +62,7 @@ namespace NaturalHistory.World
             public float speed;    // Soar/Swim: radians per second around the cell (sign = direction)
                                    // Ground: cells per second
             public float radius;   // Soar/Swim: circle radius; Ground: how far it strays from basePosition
+            public bool  still;    // rests in place when settled, just swaying (shelled snails and cephalopods)
             public float span;     // size on the map, in cells
 
             // Ground wandering
@@ -752,6 +753,14 @@ namespace NaturalHistory.World
                     rot = Quaternion.LookRotation(ahead) * Quaternion.Euler(0f, 0f, 22f * Mathf.Sign(m.speed));
                     break;
                 }
+                case ColonyStyle.Swim when m.still:
+                {
+                    // hangs in the water where it is, rocking gently, instead of circling
+                    float k = m.phase;
+                    pos = new Vector3(Mathf.Cos(k) * m.radius, m.basePosition.y + Mathf.Sin(t * 0.7f + k) * 0.006f, Mathf.Sin(k) * m.radius);
+                    rot = m.baseRotation * Quaternion.Euler(Mathf.Sin(t * 0.6f + k) * 3f, Mathf.Sin(t * 0.4f + k * 2f) * 5f, Mathf.Sin(t * 0.5f + k * 3f) * 2f);
+                    break;
+                }
                 case ColonyStyle.Swim:
                 {
                     float a   = m.phase + t * m.speed;
@@ -798,7 +807,13 @@ namespace NaturalHistory.World
             }
             if (!m.moving)
             {
-                if (t >= m.restUntil) PickTarget(m);
+                if (t >= m.restUntil && !m.still) PickTarget(m); // snails stay put
+                if (m.still)
+                {
+                    pos = m.position;
+                    rot = Quaternion.Euler(Mathf.Sin(t * 0.5f + m.phase) * 1.5f, m.heading + Mathf.Sin(t * 0.3f + m.phase) * 3f, 0f);
+                    return;
+                }
                 // idle: glance around a little
                 pos = m.position;
                 rot = Quaternion.Euler(0f, m.heading + Mathf.Sin(t * 0.4f + m.phase) * 5f, 0f);

@@ -30,7 +30,8 @@ namespace NaturalHistory.UI
         private const float Padding     = 24f;
         private const float NodeWidth   = 290f;
         private const float NodeHeight  = 86f;
-        private const int   MaxGenerations = 3;  // generations shown after the starting species
+        private const int   MaxGenerations = 3;  // generations shown after the starting species…
+        private const float MaxRows        = 14f; // …fewer where the tree would grow taller than this (hubs like the choanoflagellate)
         private const float LineageGap  = 0.4f;  // extra rows between neighbouring lineages
         private const float ForkRadius  = 10f;   // rounded corners of the fork lines
 
@@ -177,101 +178,110 @@ namespace NaturalHistory.UI
         private void Build()
         {
             canvas.Clear();
-            nodes.Clear();
-            edges.Clear();
             backButton.SetEnabled(history.Count > 0);
 
-            // the starting species, then what they become: species of their own group are expanded,
-            // the first species of a new group collapse into that group's card. What the starting
-            // species become directly is always shown; when that starts a new group, its own
-            // descendants are the group's card after it.
-            var queue = new Queue<string>();
-            foreach (var id in roots.Where(id => GameDataLoader.GetSpecies(id) != null))
+            // Laid out with MaxGenerations, then with one fewer each time while the tree is too tall
+            // to see without dragging (down to 1: what the starting species become directly)
+            List<string> parents = null;
+            Dictionary<string, float> row = null;
+            for (int generations = MaxGenerations; ; generations--)
             {
-                if (nodes.ContainsKey(id)) continue;
-                nodes[id] = new Node { key = id, species = id };
-                queue.Enqueue(id);
-            }
-            while (queue.Count > 0)
-            {
-                var id = queue.Dequeue();
-                bool isRoot = roots.Contains(id);
-                int founded = isRoot ? -1 : EvolutionData.To(id).Where(l => roots.Contains(l.from)).Select(l => NewClade(l.from, id)).DefaultIfEmpty(-1).Max();
-                if (founded >= 0)
+                nodes.Clear();
+                edges.Clear();
+
+                // the starting species, then what they become: species of their own group are expanded,
+                // the first species of a new group collapse into that group's card. What the starting
+                // species become directly is always shown; when that starts a new group, its own
+                // descendants are the group's card after it.
+                var queue = new Queue<string>();
+                foreach (var id in roots.Where(id => GameDataLoader.GetSpecies(id) != null))
                 {
-                    if (!EvolutionData.From(id).Any()) continue;
-                    var cardKey = $"clade:{founded}:{id}";
-                    if (!nodes.TryGetValue(cardKey, out var card))
-                        nodes[cardKey] = card = new Node { key = cardKey, clade = founded.ToString(), founders = new List<string>() };
-                    if (!card.founders.Contains(id)) card.founders.Add(id);
-                    card.generation = nodes[id].generation + 1;
-                    edges.Add((id, cardKey, null));
-                    continue;
+                    if (nodes.ContainsKey(id)) continue;
+                    nodes[id] = new Node { key = id, species = id };
+                    queue.Enqueue(id);
                 }
-                // far enough: the rest of this lineage is a click away
-                if (nodes[id].generation >= MaxGenerations)
+                while (queue.Count > 0)
                 {
-                    nodes[id].more = CountFrom(new[] { id }) - 1;
-                    continue;
-                }
-                foreach (var link in EvolutionData.From(id))
-                {
-                    if (GameDataLoader.GetSpecies(link.to) == null) continue;
-                    int clade = isRoot || nodes.ContainsKey(link.to) ? -1 : NewClade(id, link.to);
-                    if (clade < 0)
+                    var id = queue.Dequeue();
+                    bool isRoot = roots.Contains(id);
+                    int founded = isRoot ? -1 : EvolutionData.To(id).Where(l => roots.Contains(l.from)).Select(l => NewClade(l.from, id)).DefaultIfEmpty(-1).Max();
+                    if (founded >= 0)
                     {
-                        if (!nodes.ContainsKey(link.to))
-                        {
-                            nodes[link.to] = new Node { key = link.to, species = link.to, generation = nodes[id].generation + 1 };
-                            queue.Enqueue(link.to);
-                        }
-                        edges.Add((id, link.to, link));
+                        if (!EvolutionData.From(id).Any()) continue;
+                        var cardKey = $"clade:{founded}:{id}";
+                        if (!nodes.TryGetValue(cardKey, out var card))
+                            nodes[cardKey] = card = new Node { key = cardKey, clade = founded.ToString(), founders = new List<string>() };
+                        if (!card.founders.Contains(id)) card.founders.Add(id);
+                        card.generation = nodes[id].generation + 1;
+                        edges.Add((id, cardKey, null));
                         continue;
                     }
-                    var key = $"clade:{clade}:{id}";
-                    if (!nodes.TryGetValue(key, out var group))
-                        nodes[key] = group = new Node { key = key, clade = clade.ToString(), founders = new List<string>() };
-                    if (!group.founders.Contains(link.to)) group.founders.Add(link.to);
-                    if (!edges.Contains((id, key, null))) edges.Add((id, key, null));
-                    group.generation = nodes[id].generation + 1;
+                    // far enough: the rest of this lineage is a click away
+                    if (nodes[id].generation >= generations)
+                    {
+                        nodes[id].more = CountFrom(new[] { id }) - 1;
+                        continue;
+                    }
+                    foreach (var link in EvolutionData.From(id))
+                    {
+                        if (GameDataLoader.GetSpecies(link.to) == null) continue;
+                        int clade = isRoot || nodes.ContainsKey(link.to) ? -1 : NewClade(id, link.to);
+                        if (clade < 0)
+                        {
+                            if (!nodes.ContainsKey(link.to))
+                            {
+                                nodes[link.to] = new Node { key = link.to, species = link.to, generation = nodes[id].generation + 1 };
+                                queue.Enqueue(link.to);
+                            }
+                            edges.Add((id, link.to, link));
+                            continue;
+                        }
+                        var key = $"clade:{clade}:{id}";
+                        if (!nodes.TryGetValue(key, out var group))
+                            nodes[key] = group = new Node { key = key, clade = clade.ToString(), founders = new List<string>() };
+                        if (!group.founders.Contains(link.to)) group.founders.Add(link.to);
+                        if (!edges.Contains((id, key, null))) edges.Add((id, key, null));
+                        group.generation = nodes[id].generation + 1;
+                    }
                 }
-            }
 
-            // where the starting species come from, faded in a column on the left
-            var parents = roots.SelectMany(id => EvolutionData.To(id)).Select(l => l.from).Distinct()
-                               .Where(id => !nodes.ContainsKey(id) && GameDataLoader.GetSpecies(id) != null).ToList();
+                // where the starting species come from, faded in a column on the left
+                parents = roots.SelectMany(id => EvolutionData.To(id)).Select(l => l.from).Distinct()
+                                   .Where(id => !nodes.ContainsKey(id) && GameDataLoader.GetSpecies(id) != null).ToList();
 
-            // a tidy tree: leaves take the next free row, each species sits centred on its children,
-            // and a lineage with descendants keeps a gap from its neighbours
-            var children = new Dictionary<string, List<string>>();
-            foreach (var (from, to, _) in edges)
-            {
-                if (!children.TryGetValue(from, out var list)) children[from] = list = new List<string>();
-                if (!list.Contains(to)) list.Add(to);
-            }
-            foreach (var list in children.Values)
-                list.Sort((x, y) => SortKey(x).CompareTo(SortKey(y)));
-            var row = new Dictionary<string, float>();
-            float next = 0f;
-            bool lastWasLineage = false;
-            void Place(string key)
-            {
-                if (row.ContainsKey(key)) return;
-                row[key] = -1f; // being placed
-                var kids = children.TryGetValue(key, out var k) ? k.Where(c => !row.ContainsKey(c)).ToList() : new List<string>();
-                if (kids.Count == 0)
+                // a tidy tree: leaves take the next free row, each species sits centred on its children,
+                // and a lineage with descendants keeps a gap from its neighbours
+                var children = new Dictionary<string, List<string>>();
+                foreach (var (from, to, _) in edges)
                 {
-                    if (lastWasLineage) next += LineageGap;
-                    row[key] = next++;
-                    lastWasLineage = false;
-                    return;
+                    if (!children.TryGetValue(from, out var list)) children[from] = list = new List<string>();
+                    if (!list.Contains(to)) list.Add(to);
                 }
-                if (next > 0f) next += LineageGap; // a lineage starts: keep it apart from what's above
-                foreach (var c in kids) Place(c);
-                row[key] = (row[kids[0]] + row[kids[kids.Count - 1]]) * 0.5f;
-                lastWasLineage = true;
+                foreach (var list in children.Values)
+                    list.Sort((x, y) => SortKey(x).CompareTo(SortKey(y)));
+                row = new Dictionary<string, float>();
+                float next = 0f;
+                bool lastWasLineage = false;
+                void Place(string key)
+                {
+                    if (row.ContainsKey(key)) return;
+                    row[key] = -1f; // being placed
+                    var kids = children.TryGetValue(key, out var k) ? k.Where(c => !row.ContainsKey(c)).ToList() : new List<string>();
+                    if (kids.Count == 0)
+                    {
+                        if (lastWasLineage) next += LineageGap;
+                        row[key] = next++;
+                        lastWasLineage = false;
+                        return;
+                    }
+                    if (next > 0f) next += LineageGap; // a lineage starts: keep it apart from what's above
+                    foreach (var c in kids) Place(c);
+                    row[key] = (row[kids[0]] + row[kids[kids.Count - 1]]) * 0.5f;
+                    lastWasLineage = true;
+                }
+                foreach (var id in roots) if (nodes.ContainsKey(id)) Place(id);
+                if (generations <= 1 || row.Values.DefaultIfEmpty(0f).Max() <= MaxRows) break;
             }
-            foreach (var id in roots) if (nodes.ContainsKey(id)) Place(id);
 
             int shift = parents.Count > 0 ? 1 : 0;
             int maxGen = nodes.Values.Select(n => n.generation).DefaultIfEmpty(0).Max();
