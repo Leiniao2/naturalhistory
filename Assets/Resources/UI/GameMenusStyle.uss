@@ -499,8 +499,19 @@
     align-items: flex-start;
 }
 
-.minimap-under {
+.layer-switch {
+    flex-direction: row;
     margin: 0 0 6px 0;
+}
+
+.layer-button {
+    min-width: 96px;
+    margin: 0 6px 0 0;
+}
+
+.layer-button.selected {
+    background-color: rgb(70, 110, 80);
+    border-color: rgb(170, 210, 150);
 }
 
 .minimap {
@@ -519,8 +530,79 @@
     left: 0; top: 0; right: 0; bottom: 0;
 }
 
-.tile-panel {
+/* Right column: animal card over the tile panel, both growing upward from the bottom corner */
+.right-dock {
+    position: absolute;
     right: 12px;
+    bottom: 12px;
+    width: 300px;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.right-dock > .info-panel,
+.animal-box > .info-panel {
+    position: relative;
+    bottom: auto;
+}
+
+.animal-box {
+    margin-bottom: 8px;
+}
+
+/* Tabs sit on the card's top edge, joined to it */
+.animal-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 6px;
+}
+
+.animal-tab {
+    margin: 0 2px -1px 0;
+    padding: 3px 8px;
+    font-size: 13px;
+    color: rgb(190, 200, 180);
+    background-color: rgba(20, 26, 22, 0.9);
+    border-color: rgb(110, 130, 100);
+    border-width: 1px 1px 0 1px;
+    border-radius: 6px 6px 0 0;
+}
+
+.animal-tab:hover {
+    color: rgb(240, 236, 220);
+}
+
+.animal-tab.selected {
+    color: rgb(240, 210, 110);
+    background-color: rgba(28, 36, 30, 0.95);
+    -unity-font-style: bold;
+}
+
+.animal-panel.tabbed {
+    border-top-left-radius: 0;
+}
+
+.animal-head {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.animal-portrait {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
+.animal-names {
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.animal-meta {
+    font-size: 13px;
+    color: rgb(240, 210, 110);
+    white-space: normal;
 }
 
 .info-title {

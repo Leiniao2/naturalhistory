@@ -95,6 +95,23 @@
    ]
   },
   {
+   "group": "Baleen whale",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Ungulate",
+    "Cetacean"
+   ]
+  },
+  {
    "group": "Bat",
    "tags": [
     "Animal",
@@ -556,6 +573,16 @@
    ]
   },
   {
+   "group": "Galeaspid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish"
+   ]
+  },
+  {
    "group": "Giant clam",
    "tags": [
     "Animal",
@@ -626,6 +653,22 @@
     "Arthropod",
     "Insect",
     "Terrestrial arthropod"
+   ]
+  },
+  {
+   "group": "Ground sloth",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Xenarthran"
    ]
   },
   {
@@ -767,6 +810,14 @@
     "Animal",
     "Bilaterian",
     "Worm"
+   ]
+  },
+  {
+   "group": "Lingulid brachiopod",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Brachiopod"
    ]
   },
   {
@@ -937,6 +988,28 @@
     "Arthropod",
     "Chelicerate",
     "Terrestrial arthropod"
+   ]
+  },
+  {
+   "group": "Pachycormid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Bony fish"
+   ]
+  },
+  {
+   "group": "Palaeospondylid",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish"
    ]
   },
   {
@@ -1173,6 +1246,29 @@
    ]
   },
   {
+   "group": "Rugose coral",
+   "tags": [
+    "Animal",
+    "Cnidarian"
+   ]
+  },
+  {
+   "group": "Sabre-toothed cat",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Carnivoran"
+   ]
+  },
+  {
    "group": "Sauropod dinosaur",
    "tags": [
     "Animal",
@@ -1334,6 +1430,14 @@
    ]
   },
   {
+   "group": "Spiriferid brachiopod",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Brachiopod"
+   ]
+  },
+  {
    "group": "Sponge",
    "tags": [
     "Animal",
@@ -1374,6 +1478,13 @@
   },
   {
    "group": "Stony coral",
+   "tags": [
+    "Animal",
+    "Cnidarian"
+   ]
+  },
+  {
+   "group": "Tabulate coral",
    "tags": [
     "Animal",
     "Cnidarian"
@@ -1436,6 +1547,22 @@
    ]
   },
   {
+   "group": "Tree sloth",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Jawed",
+    "Tetrapod",
+    "Amniote",
+    "Synapsid",
+    "Mammal",
+    "Placental",
+    "Xenarthran"
+   ]
+  },
+  {
    "group": "Trilobite",
    "tags": [
     "Animal",
@@ -1487,6 +1614,18 @@
     "Dinosaur",
     "Theropod",
     "Bird"
+   ]
+  },
+  {
+   "group": "Xenacanth shark",
+   "tags": [
+    "Animal",
+    "Bilaterian",
+    "Chordate",
+    "Vertebrate",
+    "Fish",
+    "Jawed",
+    "Cartilaginous"
    ]
   }
  ],

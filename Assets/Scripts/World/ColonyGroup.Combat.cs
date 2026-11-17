@@ -119,7 +119,7 @@ namespace NaturalHistory.World
         // The defender in this group's niche on the tile reacts as the blow lands
         private void WarnDefender(HexCell target, float strikeIn)
         {
-            var defender = SpeciesColonies.Instance != null ? SpeciesColonies.Instance.GroupAt(target, Niche) : null; // it competes for the same niche
+            var defender = SpeciesColonies.Instance != null ? SpeciesColonies.Instance.GroupAt(target, Niches.Of(Definition, target)) : null; // it competes for the niche it would take there
             if (defender != null && defender != this) defender.Defend(Cell, Mathf.Max(0f, strikeIn - 0.35f));
         }
 

@@ -17,7 +17,7 @@ namespace NaturalHistory.UI
         private bool hasPrevious;
         private HexCell shownCell;
         private string shownNiches;
-        private bool shownUnder;
+        private MapLayer shownLayer;
 
         public ClimateHud(VisualElement root)
         {
@@ -77,24 +77,30 @@ namespace NaturalHistory.UI
                 shownCell = null;
                 return;
             }
-            bool under = UnderView.On;
-            var occupants = NicheLines(cell, under);
-            // also redraw when groups come and go, or the view switches between surface and under layer
-            if (cell == shownCell && occupants == shownNiches && under == shownUnder) return;
+            var layer = UnderView.Layer;
+            var occupants = NicheLines(cell, layer);
+            // also redraw when groups come and go, or the view switches layer
+            if (cell == shownCell && occupants == shownNiches && layer == shownLayer) return;
             shownCell   = cell;
             shownNiches = occupants;
-            shownUnder  = under;
+            shownLayer  = layer;
 
             var t = climate.Get(cell);
             tilePanel.RemoveFromClassList("hidden");
             var (col, row) = cell.Coordinates.ToOffsetCoordinates();
-            if (under)
+            if (layer == MapLayer.Under)
             {
                 ShowUnderTile(cell, col, row, occupants);
                 return;
             }
+            if (layer == MapLayer.Sky)
+            {
+                ShowSkyTile(cell, col, row, occupants);
+                return;
+            }
             var landform = EraFlora.LandformName(cell.Feature);
             var terrainName = cell.Terrain != null ? Loc.T(EraFlora.DisplayName(cell.Terrain.kind)) : "?";
+            if (cell.IsHighMountain) terrainName = Loc.T("High mountain"); // above the clouds (HexGrid.HighMountains)
             tileTitle.text = $"{(landform != null ? $"{landform} ({terrainName})" : terrainName)}  ·  ({col}, {row})";
             tileZone.text  = Loc.T(ClimateSystem.ZoneName(t.Zone));
             // Named species on the tile; otherwise a description (bare rock, reefs, oases…)
@@ -129,23 +135,43 @@ namespace NaturalHistory.UI
             tileStats.text = (flora + occupants).TrimStart('\n');
         }
 
-        // The tile's niches and the animal group holding each (Niches). In the under view: only the
-        // underground niche below land, and the water's niches (not the air) below sea or lake.
-        private static string NicheLines(HexCell cell, bool under)
+        // In the sky view: the sky over the tile, its summit niche on a mountain and the fliers
+        private void ShowSkyTile(HexCell cell, int col, int row, string occupants)
         {
-            if (cell.IsMountain && !under) return "";
+            var terrainName = cell.Terrain != null ? Loc.T(EraFlora.DisplayName(cell.Terrain.kind)) : "?";
+            if (cell.IsHighMountain) terrainName = Loc.T("High mountain"); // above the clouds (HexGrid.HighMountains)
+            tileTitle.text = $"{Loc.F("Sky over {0}", terrainName)}  ·  ({col}, {row})";
+            tileZone.text  = "";
+            tileStats.text = occupants.TrimStart('\n');
+        }
+
+        // The tile's niches in the layer shown and the animal group holding each (Niches), then the
+        // animals visiting the layer from a niche of another (fliers in the sky, air-breathers at
+        // the sea surface, burrowers underground).
+        private static string NicheLines(HexCell cell, MapLayer layer)
+        {
             var colonies = SpeciesColonies.Instance;
-            var sb = new System.Text.StringBuilder("\n" + Loc.T("Niches:"));
-            foreach (var niche in Niches.All)
+            var sb = new System.Text.StringBuilder();
+            bool any = false;
+            foreach (var niche in Niches.On(cell, layer))
             {
-                if (under && (cell.IsWater ? niche == Niche.Aerial : niche != Niche.Underground)) continue;
+                if (!any) { sb.Append("\n" + Loc.T("Niches:")); any = true; }
                 var g = colonies != null ? colonies.GroupAt(cell, niche) : null;
-                var who = g?.Definition == null ? Loc.T("free")
-                        : Loc.T(g.Definition.commonName) + (g.Owner != null ? $" ({(g.Owner.IsHuman ? Loc.T("yours") : g.Owner.Name)})" : "");
-                sb.Append($"\n  {Loc.T(Niches.Name(niche, cell))}: {who}");
+                sb.Append($"\n  {Niches.Name(niche)}: {(g?.Definition == null ? Loc.T("free") : Who(g))}");
+            }
+            if (colonies != null)
+            {
+                var visitors = new System.Collections.Generic.List<string>();
+                foreach (var g in colonies.GroupsAt(cell))
+                    if (Niches.LayerOf(g.Niche) != layer && UnderView.InLayer(g, layer)) visitors.Add(Who(g));
+                if (visitors.Count > 0)
+                    sb.Append("\n" + Loc.F(layer == MapLayer.Sky ? "Fliers: {0}" : "Visiting: {0}", string.Join(", ", visitors)));
             }
             return sb.ToString();
         }
+
+        private static string Who(ColonyGroup g) =>
+            Loc.T(g.Definition.commonName) + (g.Owner != null ? $" ({(g.Owner.IsHuman ? Loc.T("yours") : g.Owner.Name)})" : "");
 
         // What the map shows of that climate (HexGrid.Climate): shares of the land, volcanoes, impacts
         private static string LandLines()

@@ -169,14 +169,15 @@ namespace NaturalHistory.World
         public void AddMember(Member m) => members.Add(m);
 
         // Ground animals walk on land, swimmers, floaters and microbes stay in water, fliers go
-        // anywhere but mountains: no one crosses a mountain tile. Fliers fly lower than the peaks
-        // and would pass through them, so a mountain on the way stops them where they are.
+        // anywhere but mountains: only mountain species (habitat "Mountain") go onto a mountain tile.
+        // Fliers fly lower than the peaks and would pass through them, so a mountain on the way
+        // stops them where they are.
         public bool CanEnter(HexCell cell)
         {
             if (cell == null || cell.Terrain == null) return false;
-            if (Niche == Niche.Underground && UnderView.Blocks(cell.Under)) return false; // the walls of the underground maze
+            if (Niches.InSoil(Definition) && UnderView.Blocks(cell.Under)) return false; // the walls of the underground maze
             if (Definition != null && !UnderView.FitsBelow(Definition, cell)) return false; // seabed animals keep to the seabed
-            if (cell.IsMountain) return false;
+            if (cell.IsMountain && !SpeciesColonies.LivesOnMountains(Definition)) return false; // only mountain species go up to the summit
             return Style switch
             {
                 ColonyStyle.Ground => !cell.Terrain.IsWater,

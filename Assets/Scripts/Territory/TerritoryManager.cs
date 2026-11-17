@@ -166,7 +166,7 @@ namespace NaturalHistory.Territory
             {
                 if (cell == null) continue;
                 // a species fits if it can live here and its niche on the tile is free
-                var fits = alive.Where(d => SpeciesColonies.FitsHabitat(d, cell) && colonies.GroupAt(cell, Niches.Of(d)) == null &&
+                var fits = alive.Where(d => SpeciesColonies.FitsHabitat(d, cell) && colonies.GroupAt(cell, Niches.Of(d, cell)) == null &&
                                             FoodWeb.HasFood(d, cell, colonies, null)).ToList();
                 if (fits.Count == 0) continue;
 
@@ -179,7 +179,7 @@ namespace NaturalHistory.Territory
                     bool seabed = Core.GameOptions.StartsUnderSea(grid.DisplayedAge);
                     int Rank(SpeciesDefinition d) => (otherSpecies.Contains(d.id) ? 8 : 0) + (d.playable ? 0 : 4) +
                                                      (EvolutionData.From(d.id).Any() ? 0 : 2) +
-                                                     (seabed && Niches.Of(d) != Niche.Underground ? 1 : 0);
+                                                     (seabed && Niches.LayerOf(Niches.Of(d, cell)) != MapLayer.Under ? 1 : 0);
                     int best = fits.Min(Rank);
                     var top = fits.Where(d => Rank(d) == best).ToList();
                     def = top[rng.Next(top.Count)];

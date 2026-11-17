@@ -576,7 +576,10 @@ namespace NaturalHistory.World
             cragR  = Mathf.Abs(cragL - 0.45f) < 0.12f ? R(0.25f, 0.35f) : R(0.25f, 0.7f); // keep the sides a little different
             cragSeed = R(0f, 100f);
             recess = 0.1f * s;                                   // the middle of the lip lies further back
-            lipD   = a * 0.9f;                                  // just inside the tile edge, where it steps down (to the sea, or to lower land: HexGrid.IsFallStep)
+            // off a sea cliff: just inside the tile edge; inland the tile steps down at its edge (HexGrid.IsFallStep),
+            // so the brink and the rock face stand just out past that step, hiding it, even in the
+            // recessed middle of the horseshoe (Lip(0) = lipD - recess)
+            lipD   = intoWater ? a * 0.9f : a * TileEdge + recess + 0.015f * s;
             top    = Ground(dir * a * 0.3f) + 0.004f * s;        // the upper tile's flat top
             bool LevelLand(HexCell n) => n != null && n.Terrain != null && !n.IsWater && n.SurfaceHeight >= cell.SurfaceHeight - 0.05f * s;
             foot   = intoWater ? Ground(dir * a * 1.4f) : Ground(dir * (lipD + 0.3f * s));
@@ -634,6 +637,17 @@ namespace NaturalHistory.World
         // Where the rock's top and the brink begin, as a share of the way out to the tile edge: close
         // to the edge, so the brink is short along the flow (about a quarter of the tile)
         private const float BackAlong = 0.85f;
+
+        private const float TileEdge = 0.985f; // where a tile's top ends, relative to the cell's inner radius (HexGrid.TileRadius)
+
+        // The upper tile's ground under a point, even past its edge: the banks of the rock settle onto
+        // it (sampling the lower tile beyond the step made them hang down it as slanted sheets)
+        private float UpperGround(Vector3 p)
+        {
+            float inside = s * 0.8660254f * TileEdge - 0.02f * s, d = Vector3.Dot(p, dir);
+            if (d > inside) p -= dir * (d - inside);
+            return Ground(p);
+        }
 
         // Distance out along `dir` of the lip at x half-widths across (a horseshoe: the middle further back)
         private float Lip(float x) => lipD + recess * (Mathf.Min(x * x, 1.4f) - 1f);
@@ -818,7 +832,7 @@ namespace NaturalHistory.World
                     var p = dir * d + across * x * halfW;
                     if (r > 0 && r < rows) p += (dir * Jitter(p, 2f) + across * Jitter(p, 4f)) * 0.012f * s;
                     p.y = RockTop(x, f) + (Mathf.Abs(x) > 1.02f ? Jitter(p, 6f) * 0.012f * s : 0f);
-                    p.y = Mathf.Lerp(p.y, Ground(p) - 0.006f * s, merge);
+                    p.y = Mathf.Lerp(p.y, UpperGround(p) - 0.006f * s, merge);
                     g[c, r] = p;
                 }
                 // the face drops to the foot of the fall beside the water, but only to the ground in
@@ -850,7 +864,7 @@ namespace NaturalHistory.World
                 for (int r = 0; r < rows; r++)
                 {
                     Vector3 a0 = g[c, r], a1 = g[c, r + 1];
-                    float y0 = Mathf.Min(a0.y, Ground(a0) - 0.03f * s), y1 = Mathf.Min(a1.y, Ground(a1) - 0.03f * s);
+                    float y0 = Mathf.Min(a0.y, UpperGround(a0) - 0.03f * s), y1 = Mathf.Min(a1.y, UpperGround(a1) - 0.03f * s);
                     fx.Quad(a0, a1, new Vector3(a1.x, y1, a1.z), new Vector3(a0.x, y0, a0.z));
                 }
             return fx.ToMesh("WaterfallRock");

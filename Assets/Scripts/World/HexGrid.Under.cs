@@ -300,6 +300,7 @@ namespace NaturalHistory.World
             MoreMicrobialFloors(age, lakebed);
             foreach (var (cell, main, second) in seabed) cell.SetUnderPlants(main, second);
             foreach (var (cell, main, second) in lakebed) cell.SetUnderPlants(main, second);
+            ThinSeaDeserts(age); // HexGrid.Barren
             underDirty = true;
             if (UnderView.On) ApplyUnderView();
         }
@@ -363,6 +364,7 @@ namespace NaturalHistory.World
             float BedDensity(HexCell c)
             {
                 if (c.Under is not (UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed)) return 1f;
+                if (sparseBeds.Contains(c)) return SparseBedDensity; // a sea desert: a few plants of one kind
                 var pos = c.Coordinates.ToWorldPosition(cellSize);
                 var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.18f / cellSize) + bedOffset;
                 float n = PerlinNoise3D.Sample(p.x, p.y, p.z);
@@ -537,6 +539,7 @@ namespace NaturalHistory.World
         // plants painted into the floor (seagrass meadow, kelp bed, seaweed or waterweed meadow, by
         // the main species) with only MeadowPropShare of the 3D plants standing on it — much less to draw.
         private const float MeadowPropShare = 0.3f;
+        private const float SparseBedDensity = 0.25f;
         // noise above this is meadow: 40% of the beds, 55% from the Cretaceous on, when the seas hold
         // much more plant bed (measured on PerlinNoise3D's distribution)
         private float MeadowThreshold => DisplayedAge >= NaturalHistory.Core.GeologicalAge.Cretaceous ? -0.037f : 0.074f;
@@ -559,6 +562,7 @@ namespace NaturalHistory.World
         {
             if (cell.UnderFeature != UnderFeature.None || cell.Under is not (UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed)) return null;
             if (!cell.IsWater) return null; // underground lakes: dark water, no mats or stromatolites
+            if (sparseBeds.Contains(cell)) return null; // sea deserts: plain sand floor (HexGrid.Barren)
             var plants = cell.UnderPlants;
             string cover = MapFeatureMeshes.CoverOf(cell.Under, plants.Count > 0 ? plants[0] : null, plants.Count > 1 ? plants[1] : null, IsMeadow(cell));
             // painted: stromatolite floors; mats, algal turf and meadows as see-through clumps on the
@@ -628,7 +632,8 @@ namespace NaturalHistory.World
             return DeepSea * j;
         }
 
-        // Underground-niche animals live in the under layer; everyone else on the surface
+        // Each layer shows its own animals (UnderView.Shows): the under layer its niches and the
+        // burrowers, the surface its niches and the air-breathers coming up, the sky the fliers
         private void ShowGroupsForView()
         {
             var colonies = SpeciesColonies.Instance;
@@ -637,20 +642,36 @@ namespace NaturalHistory.World
             {
                 if (g == null) continue;
                 bool visible = UnderView.Shows(g);
-                // down to the seabed in the under view: seafloor dwellers onto it, swimmers half way;
-                // on land the underground animals stand on the plateau (above or below the surface's top)
-                float depth = UnderView.On && g.Cell != null && g.Cell.Terrain != null ? g.Cell.SurfaceHeight - UnderSurface(g.Cell) : 0f;
-                g.DepthOffset = g.Niche == Niche.Underground || (g.Cell != null && !g.Cell.IsWater) ? depth : depth * 0.5f;
+                var cell = g.Cell;
+                float depth = 0f;
+                if (UnderView.On && cell != null && cell.Terrain != null)
+                {
+                    // down to the seabed in the under view: bottom dwellers onto it, swimmers half way;
+                    // on land the underground animals stand on the plateau (above or below the surface's top)
+                    depth = cell.SurfaceHeight - UnderSurface(cell);
+                    bool bottom = !cell.IsWater || g.Niche == Niche.Benthic || Niches.OnSeabed(g.Definition);
+                    if (!bottom) depth *= 0.5f;
+                }
+                else if (UnderView.Sky && visible && cell != null)
+                    depth = -Mathf.Max(0f, SkyLayer.DeckHeight + 0.05f - (cell.transform.position.y + cell.SurfaceHeight)); // up above the clouds
+                g.DepthOffset = depth;
                 foreach (var rend in g.GetComponentsInChildren<Renderer>(true))
                     if (rend.enabled != visible) rend.enabled = visible;
             }
         }
 
-        // Groups spawn, move, reproduce and evolve at any time: keep their visibility in step
+        // Groups spawn, move, reproduce and evolve at any time: keep their visibility in step, and
+        // follow a new tile selection or Tab at once
+        private int shownFocus = -1;
+        private HexCell shownSelection;
         private void LateUpdate()
         {
-            if (!Application.isPlaying || Time.unscaledTime < nextGroupCheck) return;
+            if (!Application.isPlaying) return;
+            bool focusChanged = UnderView.Focus.Version != shownFocus || CellSelector.Selected != shownSelection;
+            if (!focusChanged && Time.unscaledTime < nextGroupCheck) return;
             nextGroupCheck = Time.unscaledTime + 0.25f;
+            shownFocus = UnderView.Focus.Version;
+            shownSelection = CellSelector.Selected;
             ShowGroupsForView();
         }
     }

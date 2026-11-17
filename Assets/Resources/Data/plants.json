@@ -7397,6 +7397,6519 @@
    "tint": "#C08888",
    "size": 1.1,
    "description": "Crust-forming alga that bound Permian reefs together."
+  },
+  {
+   "id": "vendotaenia",
+   "commonName": "Vendotaenia",
+   "scientificName": "Vendotaenia antiqua",
+   "group": "Alga",
+   "firstAge": "Ediacaran",
+   "lastAge": "Cambrian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Ribbon",
+   "tint": "#7A6A38",
+   "size": 1.1,
+   "description": "Dark ribbon-like seaweed strands common in late Ediacaran shales."
+  },
+  {
+   "id": "doushantuophyton",
+   "commonName": "Doushantuophyton",
+   "scientificName": "Doushantuophyton lineare",
+   "group": "Alga",
+   "firstAge": "Ediacaran",
+   "lastAge": "Ediacaran",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Tuft",
+   "tint": "#4A7A3A",
+   "size": 0.9,
+   "description": "Tufts of thin forked threads from the Lantian biota of China."
+  },
+  {
+   "id": "konglingiphyton",
+   "commonName": "Konglingiphyton",
+   "scientificName": "Konglingiphyton erecta",
+   "group": "Alga",
+   "firstAge": "Ediacaran",
+   "lastAge": "Ediacaran",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Feather",
+   "tint": "#5A8040",
+   "size": 1.0,
+   "description": "Upright branching seaweed of the Miaohe biota, anchored by rhizoids."
+  },
+  {
+   "id": "thallophyca",
+   "commonName": "Thallophyca",
+   "scientificName": "Thallophyca ramosa",
+   "group": "Red alga",
+   "firstAge": "Ediacaran",
+   "lastAge": "Ediacaran",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Cushion",
+   "tint": "#B05A5A",
+   "size": 0.8,
+   "description": "Weng'an red alga with growing tips and possible reproductive cells."
+  },
+  {
+   "id": "wengania",
+   "commonName": "Wengania",
+   "scientificName": "Wengania globosa",
+   "group": "Red alga",
+   "firstAge": "Ediacaran",
+   "lastAge": "Ediacaran",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Grape",
+   "tint": "#A04A50",
+   "size": 0.7,
+   "description": "Tiny globular red algae preserved cell by cell in phosphate."
+  },
+  {
+   "id": "rock_crust_cyanobacteria",
+   "commonName": "Rock-crust cyanobacteria",
+   "scientificName": "Epilithic and endolithic cyanobacteria",
+   "group": "Cyanobacterium",
+   "firstAge": "Ediacaran",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Cave"
+   ],
+   "forests": [],
+   "form": "Mat",
+   "tint": "#3A4A38",
+   "size": 1.0,
+   "description": "Dark microbial films on bare rock, long before any plant reached land."
+  },
+  {
+   "id": "angulocellularia",
+   "commonName": "Angulocellularia",
+   "scientificName": "Angulocellularia",
+   "group": "Calcimicrobe",
+   "firstAge": "Cambrian",
+   "lastAge": "Cambrian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Coralline",
+   "tint": "#C0A888",
+   "size": 0.9,
+   "description": "Bushy calcified microbe building reefs with archaeocyaths."
+  },
+  {
+   "id": "botomaella",
+   "commonName": "Botomaella",
+   "scientificName": "Botomaella",
+   "group": "Calcimicrobe",
+   "firstAge": "Cambrian",
+   "lastAge": "Cambrian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fan",
+   "tint": "#B89C80",
+   "size": 0.9,
+   "description": "Fans of tiny calcified tubes in early Cambrian reefs."
+  },
+  {
+   "id": "tarthinia",
+   "commonName": "Tarthinia",
+   "scientificName": "Tarthinia",
+   "group": "Calcimicrobe",
+   "firstAge": "Cambrian",
+   "lastAge": "Cambrian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Calcareous",
+   "tint": "#C8B494",
+   "size": 0.8,
+   "description": "Clustered chambers of lime, a cousin of Renalcis."
+  },
+  {
+   "id": "proaulopora",
+   "commonName": "Proaulopora",
+   "scientificName": "Proaulopora",
+   "group": "Calcimicrobe",
+   "firstAge": "Cambrian",
+   "lastAge": "Ordovician",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fingers",
+   "tint": "#B8A486",
+   "size": 0.9,
+   "description": "Calcified microbial tubes of Cambrian and Ordovician reefs."
+  },
+  {
+   "id": "nuia",
+   "commonName": "Nuia",
+   "scientificName": "Nuia siberica",
+   "group": "Calcareous alga",
+   "firstAge": "Cambrian",
+   "lastAge": "Ordovician",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Calcareous",
+   "tint": "#D0C4A0",
+   "size": 0.7,
+   "description": "Tiny lime cylinders that piled up in Ordovician shoals."
+  },
+  {
+   "id": "wahpia",
+   "commonName": "Wahpia",
+   "scientificName": "Wahpia insolens",
+   "group": "Alga",
+   "firstAge": "Cambrian",
+   "lastAge": "Cambrian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Feather",
+   "tint": "#7A5A40",
+   "size": 1.1,
+   "description": "Rare branching seaweed of the Burgess Shale."
+  },
+  {
+   "id": "dictyophycus",
+   "commonName": "Dictyophycus",
+   "scientificName": "Dictyophycus gracilis",
+   "group": "Alga",
+   "firstAge": "Cambrian",
+   "lastAge": "Cambrian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fan",
+   "tint": "#6A8A48",
+   "size": 1.0,
+   "description": "Burgess Shale alga with a net-like thallus."
+  },
+  {
+   "id": "marpolia",
+   "commonName": "Marpolia",
+   "scientificName": "Marpolia spissa",
+   "group": "Cyanobacterium",
+   "firstAge": "Cambrian",
+   "lastAge": "Cambrian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Tuft",
+   "tint": "#4A6A40",
+   "size": 0.8,
+   "description": "Dense tufts of cyanobacterial filaments on the Burgess seafloor."
+  },
+  {
+   "id": "morania",
+   "commonName": "Morania",
+   "scientificName": "Morania confluens",
+   "group": "Cyanobacterium",
+   "firstAge": "Cambrian",
+   "lastAge": "Cambrian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Mat",
+   "tint": "#2E3A2A",
+   "size": 1.1,
+   "description": "Dark slimy sheets of cyanobacteria, the commonest Burgess 'alga'."
+  },
+  {
+   "id": "dyad_spore_plant",
+   "commonName": "Dyad-spore plant",
+   "scientificName": "Dyadospora-producing embryophytes",
+   "group": "Early land plant",
+   "firstAge": "Ordovician",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Barren"
+   ],
+   "forests": [],
+   "form": "Moss",
+   "tint": "#B0C878",
+   "size": 0.6,
+   "description": "Known from spores shed in pairs; a low crust on damp ground."
+  },
+  {
+   "id": "trilete_spore_plant",
+   "commonName": "Trilete-spore plant",
+   "scientificName": "Ambitisporites-producing plants",
+   "group": "Early land plant",
+   "firstAge": "Ordovician",
+   "lastAge": "Silurian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Barren"
+   ],
+   "forests": [],
+   "form": "Cooksonia",
+   "tint": "#C0D488",
+   "size": 0.6,
+   "description": "Its three-scarred spores mark the first steps towards vascular plants."
+  },
+  {
+   "id": "gloeocapsomorpha",
+   "commonName": "Gloeocapsomorpha",
+   "scientificName": "Gloeocapsomorpha prisca",
+   "group": "Alga",
+   "firstAge": "Ordovician",
+   "lastAge": "Ordovician",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Grape",
+   "tint": "#9A8A40",
+   "size": 0.8,
+   "description": "Colonial microbe whose remains became the Estonian oil shale kukersite."
+  },
+  {
+   "id": "hedstroemia",
+   "commonName": "Hedstroemia",
+   "scientificName": "Hedstroemia",
+   "group": "Calcimicrobe",
+   "firstAge": "Ordovician",
+   "lastAge": "Silurian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fingers",
+   "tint": "#C4AE90",
+   "size": 0.9,
+   "description": "Calcified cyanobacterium with fan-shaped branching tubes."
+  },
+  {
+   "id": "ischadites",
+   "commonName": "Ischadites",
+   "scientificName": "Ischadites",
+   "group": "Receptaculitid",
+   "firstAge": "Ordovician",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Wineglass",
+   "tint": "#C8B080",
+   "size": 1.0,
+   "description": "Pear-shaped receptaculitid, probably a calcified green alga."
+  },
+  {
+   "id": "fisherites",
+   "commonName": "Fisherites",
+   "scientificName": "Fisherites reticulatus",
+   "group": "Receptaculitid",
+   "firstAge": "Ordovician",
+   "lastAge": "Ordovician",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Bubble",
+   "tint": "#D4C29A",
+   "size": 1.2,
+   "description": "Sunflower-patterned receptaculitid of Ordovician seafloors."
+  },
+  {
+   "id": "rhabdoporella",
+   "commonName": "Rhabdoporella",
+   "scientificName": "Rhabdoporella",
+   "group": "Dasyclad",
+   "firstAge": "Ordovician",
+   "lastAge": "Carboniferous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Whorl",
+   "tint": "#90B068",
+   "size": 0.8,
+   "description": "One of the first truly calcified dasyclad algae."
+  },
+  {
+   "id": "coelosphaeridium",
+   "commonName": "Coelosphaeridium",
+   "scientificName": "Coelosphaeridium",
+   "group": "Dasyclad",
+   "firstAge": "Ordovician",
+   "lastAge": "Ordovician",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Bubble",
+   "tint": "#88A860",
+   "size": 0.9,
+   "description": "Ball-shaped dasyclad of the Baltic Ordovician."
+  },
+  {
+   "id": "apidium",
+   "commonName": "Apidium",
+   "scientificName": "Apidium",
+   "group": "Dasyclad",
+   "firstAge": "Ordovician",
+   "lastAge": "Ordovician",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Rosette",
+   "tint": "#7EA05A",
+   "size": 0.8,
+   "description": "Small club-shaped dasyclad of the Ordovician."
+  },
+  {
+   "id": "palaeoporella",
+   "commonName": "Palaeoporella",
+   "scientificName": "Palaeoporella",
+   "group": "Green alga",
+   "firstAge": "Ordovician",
+   "lastAge": "Silurian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fingers",
+   "tint": "#78A050",
+   "size": 1.0,
+   "description": "Branched calcified green alga related to Halimeda."
+  },
+  {
+   "id": "tasmanites",
+   "commonName": "Tasmanites",
+   "scientificName": "Tasmanites",
+   "group": "Prasinophyte",
+   "firstAge": "Ordovician",
+   "lastAge": "Jurassic",
+   "layer": "under",
+   "terrains": [
+    "Seabed",
+    "DeepSeabed"
+   ],
+   "forests": [],
+   "form": "Bubble",
+   "tint": "#C8A040",
+   "size": 0.6,
+   "description": "Floating green-alga cysts that sank to form oil shales."
+  },
+  {
+   "id": "garwoodia",
+   "commonName": "Garwoodia",
+   "scientificName": "Garwoodia",
+   "group": "Calcimicrobe",
+   "firstAge": "Ordovician",
+   "lastAge": "Carboniferous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Tuft",
+   "tint": "#B8A88A",
+   "size": 0.9,
+   "description": "Bushy calcified filaments of Paleozoic reef flats."
+  },
+  {
+   "id": "eohostimella",
+   "commonName": "Eohostimella",
+   "scientificName": "Eohostimella heathana",
+   "group": "Early land plant",
+   "firstAge": "Silurian",
+   "lastAge": "Silurian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Barren"
+   ],
+   "forests": [],
+   "form": "Horsetail",
+   "fruit": "#B89A50",
+   "fruitForm": "Strobilus",
+   "tint": "#B8C878",
+   "size": 0.8,
+   "description": "Spiny early Silurian stems from Maine, among the oldest land plant fossils."
+  },
+  {
+   "id": "caia",
+   "commonName": "Caia",
+   "scientificName": "Caia langii",
+   "group": "Rhyniophytoid",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Barren"
+   ],
+   "forests": [],
+   "form": "Cooksonia",
+   "tint": "#C8C870",
+   "size": 0.8,
+   "description": "Tiny forked stems ending in spore capsules."
+  },
+  {
+   "id": "aberlemnia",
+   "commonName": "Aberlemnia",
+   "scientificName": "Aberlemnia caledonica",
+   "group": "Rhyniophytoid",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Cooksonia",
+   "tint": "#B4CC70",
+   "size": 0.9,
+   "description": "Cooksonia-like plant with kidney-shaped sporangia."
+  },
+  {
+   "id": "yarravia",
+   "commonName": "Yarravia",
+   "scientificName": "Yarravia oblonga",
+   "group": "Early vascular plant",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland"
+   ],
+   "forests": [],
+   "form": "Cooksonia",
+   "fruit": "#C0A050",
+   "fruitForm": "Strobilus",
+   "tint": "#A8C068",
+   "size": 1.0,
+   "description": "Plant of the Australian Baragwanathia flora with clustered sporangia."
+  },
+  {
+   "id": "hostinella",
+   "commonName": "Hostinella",
+   "scientificName": "Hostinella",
+   "group": "Early vascular plant",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Wetland",
+    "Barren"
+   ],
+   "forests": [],
+   "form": "Horsetail",
+   "tint": "#B0C068",
+   "size": 1.1,
+   "description": "Naked forking stems, common in early land floras."
+  },
+  {
+   "id": "junggaria",
+   "commonName": "Junggaria",
+   "scientificName": "Junggaria spinosa",
+   "group": "Rhyniophytoid",
+   "firstAge": "Silurian",
+   "lastAge": "Silurian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland"
+   ],
+   "forests": [],
+   "form": "Cooksonia",
+   "tint": "#A0BC60",
+   "size": 0.9,
+   "description": "Late Silurian rhyniophyte-like plant from Xinjiang."
+  },
+  {
+   "id": "bathurstia",
+   "commonName": "Bathurstia",
+   "scientificName": "Bathurstia denticulata",
+   "group": "Zosterophyll",
+   "firstAge": "Silurian",
+   "lastAge": "Silurian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Barren"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "fruit": "#B89848",
+   "fruitForm": "Strobilus",
+   "tint": "#88AC58",
+   "size": 1.0,
+   "description": "Toothed zosterophyll from the Late Silurian of Arctic Canada."
+  },
+  {
+   "id": "distichophytum",
+   "commonName": "Distichophytum",
+   "scientificName": "Distichophytum",
+   "group": "Zosterophyll",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "fruit": "#C0A050",
+   "fruitForm": "Strobilus",
+   "tint": "#94B460",
+   "size": 1.1,
+   "description": "Zosterophyll with spore capsules in two neat rows."
+  },
+  {
+   "id": "nematasketum",
+   "commonName": "Nematasketum",
+   "scientificName": "Nematasketum diversiforme",
+   "group": "Nematophyte",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Stalks",
+   "tint": "#C0B090",
+   "size": 0.9,
+   "description": "Tube-bodied nematophyte, possibly a fungus, on early land."
+  },
+  {
+   "id": "cosmochlaina",
+   "commonName": "Cosmochlaina",
+   "scientificName": "Cosmochlaina",
+   "group": "Nematophyte",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Cave"
+   ],
+   "forests": [],
+   "form": "Lichen",
+   "tint": "#A89A70",
+   "size": 0.9,
+   "description": "Cellular crusts of a nematophyte, perhaps lichen-like."
+  },
+  {
+   "id": "rothpletzella",
+   "commonName": "Rothpletzella",
+   "scientificName": "Rothpletzella",
+   "group": "Calcimicrobe",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Mat",
+   "tint": "#B8A080",
+   "size": 1.0,
+   "description": "Calcified microbe encrusting Silurian and Devonian reefs."
+  },
+  {
+   "id": "wetheredella",
+   "commonName": "Wetheredella",
+   "scientificName": "Wetheredella",
+   "group": "Calcimicrobe",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Calcareous",
+   "tint": "#C0A888",
+   "size": 0.8,
+   "description": "Small encrusting tubes in Silurian reef rocks."
+  },
+  {
+   "id": "sphaerocodium",
+   "commonName": "Sphaerocodium",
+   "scientificName": "Sphaerocodium",
+   "group": "Calcimicrobe",
+   "firstAge": "Silurian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Bubble",
+   "tint": "#C8B898",
+   "size": 0.9,
+   "description": "Lime-coated nodules built by microbes on reef flats."
+  },
+  {
+   "id": "leptophloeum",
+   "commonName": "Leptophloeum",
+   "scientificName": "Leptophloeum rhombicum",
+   "group": "Lycopsid",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Mossland"
+   ],
+   "forests": [
+    "Jungle",
+    "Broadleaf"
+   ],
+   "form": "Lycopsid",
+   "fruit": "#A88A48",
+   "fruitForm": "Strobilus",
+   "tint": "#B0D890",
+   "size": 0.7,
+   "description": "Diamond-scarred lycopsid tree spread across Late Devonian Gondwana."
+  },
+  {
+   "id": "lepidosigillaria",
+   "commonName": "Lepidosigillaria",
+   "scientificName": "Lepidosigillaria whitei",
+   "group": "Lycopsid",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Sigillaria",
+   "fruit": "#B09050",
+   "fruitForm": "Strobilus",
+   "tint": "#C0E0A0",
+   "size": 0.6,
+   "description": "Late Devonian scale tree from New York."
+  },
+  {
+   "id": "lepidodendropsis",
+   "commonName": "Lepidodendropsis",
+   "scientificName": "Lepidodendropsis",
+   "group": "Lycopsid",
+   "firstAge": "Devonian",
+   "lastAge": "Carboniferous",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Mossland",
+    "CoalSwamp"
+   ],
+   "forests": [
+    "Jungle",
+    "Broadleaf"
+   ],
+   "form": "Lycopsid",
+   "fruit": "#A08048",
+   "fruitForm": "Strobilus",
+   "tint": "#A8D088",
+   "size": 0.75,
+   "description": "Scale tree of the latest Devonian and early coal swamps."
+  },
+  {
+   "id": "pseudobornia",
+   "commonName": "Pseudobornia",
+   "scientificName": "Pseudobornia ursina",
+   "group": "Horsetail",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Mossland"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Calamites",
+   "fruit": "#A89050",
+   "fruitForm": "Strobilus",
+   "tint": "#C8E8A0",
+   "size": 0.8,
+   "description": "Tree-sized sphenopsid of Bear Island, up to 20 m tall."
+  },
+  {
+   "id": "xinicaulis",
+   "commonName": "Xinicaulis",
+   "scientificName": "Xinicaulis lignescens",
+   "group": "Cladoxylopsid",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "canopy",
+   "terrains": [
+    "Mossland",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf",
+    "Jungle"
+   ],
+   "form": "Wattieza",
+   "fruit": "#B89A58",
+   "fruitForm": "Strobilus",
+   "tint": "#D0E8A8",
+   "size": 0.9,
+   "description": "Early tree whose trunk grew by tearing and repairing hundreds of wood strands."
+  },
+  {
+   "id": "gilboaphyton",
+   "commonName": "Gilboaphyton",
+   "scientificName": "Gilboaphyton",
+   "group": "Lycopsid",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Mossland"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "fruit": "#C0A858",
+   "fruitForm": "Strobilus",
+   "tint": "#7CA858",
+   "size": 0.9,
+   "description": "Scrambling clubmoss that climbed the trunks of the Gilboa forest."
+  },
+  {
+   "id": "eviostachya",
+   "commonName": "Eviostachya",
+   "scientificName": "Eviostachya hoegii",
+   "group": "Horsetail",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Mossland"
+   ],
+   "forests": [],
+   "form": "Horsetail",
+   "fruit": "#A08A50",
+   "fruitForm": "Strobilus",
+   "tint": "#A8CC70",
+   "size": 1.0,
+   "description": "Early sphenopsid with whorled branches and cones."
+  },
+  {
+   "id": "moresnetia",
+   "commonName": "Moresnetia",
+   "scientificName": "Moresnetia zalesskyi",
+   "group": "Seed fern",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "fruit": "#A87040",
+   "fruitForm": "Seed",
+   "tint": "#94B868",
+   "size": 1.1,
+   "description": "Late Devonian seed plant with cupped seeds."
+  },
+  {
+   "id": "aneurophyton",
+   "commonName": "Aneurophyton",
+   "scientificName": "Aneurophyton germanicum",
+   "group": "Progymnosperm",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Barren"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "fruit": "#B08A48",
+   "fruitForm": "Strobilus",
+   "tint": "#8EA860",
+   "size": 1.4,
+   "description": "Woody shrub several metres tall, a forerunner of seed plants."
+  },
+  {
+   "id": "hyenia",
+   "commonName": "Hyenia",
+   "scientificName": "Hyenia elegans",
+   "group": "Cladoxylopsid",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Horsetail",
+   "tint": "#B0C870",
+   "size": 1.0,
+   "description": "Small plant with forked branchlets rising from a creeping stem."
+  },
+  {
+   "id": "taeniocrada",
+   "commonName": "Taeniocrada",
+   "scientificName": "Taeniocrada decheniana",
+   "group": "Early vascular plant",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Reed",
+   "tint": "#A0C068",
+   "size": 1.2,
+   "description": "Ribbon-stemmed plant growing in shallow Early Devonian water."
+  },
+  {
+   "id": "renalia",
+   "commonName": "Renalia",
+   "scientificName": "Renalia hueberi",
+   "group": "Early vascular plant",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Barren"
+   ],
+   "forests": [],
+   "form": "Cooksonia",
+   "fruit": "#C8A050",
+   "fruitForm": "Strobilus",
+   "tint": "#C4D07A",
+   "size": 0.9,
+   "description": "Forked stems with kidney-shaped sporangia, from Gasp\u00e9."
+  },
+  {
+   "id": "lyonophyton",
+   "commonName": "Lyonophyton",
+   "scientificName": "Lyonophyton rhyniensis",
+   "group": "Gametophyte",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Mossland"
+   ],
+   "forests": [],
+   "form": "Cooksonia",
+   "tint": "#D0C878",
+   "size": 0.6,
+   "description": "Cup-topped sexual generation of Aglaophyton, from the Rhynie chert."
+  },
+  {
+   "id": "ventarura",
+   "commonName": "Ventarura",
+   "scientificName": "Ventarura lyonii",
+   "group": "Zosterophyll",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Mossland"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "tint": "#9CBC64",
+   "size": 0.9,
+   "description": "Zosterophyll of the Rhynie hot-spring flora."
+  },
+  {
+   "id": "crenaticaulis",
+   "commonName": "Crenaticaulis",
+   "scientificName": "Crenaticaulis verruculosus",
+   "group": "Zosterophyll",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Barren"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "tint": "#8CB05C",
+   "size": 1.0,
+   "description": "Zosterophyll with toothed stems and coiled tips."
+  },
+  {
+   "id": "trimerophyton",
+   "commonName": "Trimerophyton",
+   "scientificName": "Trimerophyton robustius",
+   "group": "Trimerophyte",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Mossland",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Horsetail",
+   "fruit": "#C8A858",
+   "fruitForm": "Strobilus",
+   "tint": "#B8CC78",
+   "size": 1.3,
+   "description": "Stout three-forked stems topped with clusters of sporangia."
+  },
+  {
+   "id": "metzgeriothallus",
+   "commonName": "Metzgeriothallus",
+   "scientificName": "Metzgeriothallus sharonae",
+   "group": "Liverwort",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Mossland"
+   ],
+   "forests": [],
+   "form": "Moss",
+   "tint": "#90C068",
+   "size": 0.8,
+   "description": "Ribbon-like Middle Devonian liverwort from New York."
+  },
+  {
+   "id": "pallaviciniites",
+   "commonName": "Pallaviciniites",
+   "scientificName": "Pallaviciniites devonicus",
+   "group": "Liverwort",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Moss",
+   "tint": "#A4D07A",
+   "size": 0.7,
+   "description": "Leafy-winged thalloid liverwort of the Late Devonian."
+  },
+  {
+   "id": "archaeocalamites",
+   "commonName": "Archaeocalamites",
+   "scientificName": "Archaeocalamites radiatus",
+   "group": "Horsetail",
+   "firstAge": "Devonian",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "CoalSwamp",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Horsetail",
+   "fruit": "#A08A50",
+   "fruitForm": "Strobilus",
+   "tint": "#98C468",
+   "size": 1.6,
+   "description": "Ribbed horsetail stems with forked leaves, a forerunner of Calamites."
+  },
+  {
+   "id": "eochara",
+   "commonName": "Eochara",
+   "scientificName": "Eochara wickendeni",
+   "group": "Charophyte",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Charophyte",
+   "tint": "#94B868",
+   "size": 0.9,
+   "description": "The oldest known member of the stonewort order Charales."
+  },
+  {
+   "id": "sycidium",
+   "commonName": "Sycidium",
+   "scientificName": "Sycidium",
+   "group": "Charophyte",
+   "firstAge": "Devonian",
+   "lastAge": "Carboniferous",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Whorl",
+   "tint": "#A4C070",
+   "size": 0.8,
+   "description": "Charophyte with ribbed, lime-encased egg capsules."
+  },
+  {
+   "id": "moellerina",
+   "commonName": "Moellerina",
+   "scientificName": "Moellerina greenei",
+   "group": "Charophyte",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Charophyte",
+   "tint": "#88AC60",
+   "size": 0.8,
+   "description": "Devonian stonewort with spiralled gyrogonites."
+  },
+  {
+   "id": "issinella",
+   "commonName": "Issinella",
+   "scientificName": "Issinella",
+   "group": "Calcareous alga",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fingers",
+   "tint": "#B8C090",
+   "size": 0.8,
+   "description": "Lime-walled tubular alga of Late Devonian shallow seas."
+  },
+  {
+   "id": "spongiophyton",
+   "commonName": "Spongiophyton",
+   "scientificName": "Spongiophyton",
+   "group": "Lichen",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Cave"
+   ],
+   "forests": [],
+   "form": "Lichen",
+   "tint": "#9AA068",
+   "size": 1.0,
+   "description": "Pitted, leathery thalli thought to be an early lichen."
+  },
+  {
+   "id": "cyanolichenomycites",
+   "commonName": "Cyanolichenomycites",
+   "scientificName": "Cyanolichenomycites devonicus",
+   "group": "Lichen",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Lichen",
+   "tint": "#6A7A58",
+   "size": 0.8,
+   "description": "Early Devonian lichen with cyanobacterial partners, from the Welsh Borderland."
+  },
+  {
+   "id": "nematoplexus",
+   "commonName": "Nematoplexus",
+   "scientificName": "Nematoplexus rhyniensis",
+   "group": "Nematophyte",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Mycelium",
+   "tint": "#E0D4B8",
+   "size": 0.9,
+   "description": "Tangled tubes of a nematophyte from the Rhynie chert."
+  },
+  {
+   "id": "palaeoblastocladia",
+   "commonName": "Palaeoblastocladia",
+   "scientificName": "Palaeoblastocladia milleri",
+   "group": "Chytrid fungus",
+   "firstAge": "Devonian",
+   "lastAge": "Devonian",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Puffball",
+   "tint": "#D8C8A0",
+   "size": 0.6,
+   "description": "Tiny chytrid fungus living on dead Rhynie chert plants."
+  },
+  {
+   "id": "paralycopodites",
+   "commonName": "Paralycopodites",
+   "scientificName": "Paralycopodites brevifolius",
+   "group": "Lycopsid",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "canopy",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Jungle",
+    "Broadleaf"
+   ],
+   "form": "Lycopsid",
+   "fruit": "#A88A48",
+   "fruitForm": "Strobilus",
+   "tint": "#D0ECA8",
+   "size": 0.8,
+   "description": "Scale tree that branched early into a broad crown; a coal-ball favourite."
+  },
+  {
+   "id": "synchysidendron",
+   "commonName": "Synchysidendron",
+   "scientificName": "Synchysidendron",
+   "group": "Lycopsid",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "canopy",
+   "terrains": [
+    "CoalSwamp"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Lycopsid",
+   "fruit": "#9A7A40",
+   "fruitForm": "Strobilus",
+   "tint": "#C0E4A0",
+   "size": 0.95,
+   "description": "Scale tree of the Pennsylvanian peat swamps, long confused with Lepidodendron."
+  },
+  {
+   "id": "ulodendron",
+   "commonName": "Ulodendron",
+   "scientificName": "Ulodendron majus",
+   "group": "Lycopsid",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "canopy",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Lycopsid",
+   "fruit": "#B09050",
+   "fruitForm": "Strobilus",
+   "tint": "#B8DC98",
+   "size": 0.75,
+   "description": "Lycopsid trunk marked with two rows of big round scars where branches fell away."
+  },
+  {
+   "id": "bothrodendron",
+   "commonName": "Bothrodendron",
+   "scientificName": "Bothrodendron punctatum",
+   "group": "Lycopsid",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "canopy",
+   "terrains": [
+    "CoalSwamp",
+    "Hill"
+   ],
+   "forests": [
+    "Jungle",
+    "Broadleaf"
+   ],
+   "form": "Lycopsid",
+   "fruit": "#A08848",
+   "fruitForm": "Strobilus",
+   "tint": "#C8E0A8",
+   "size": 1.1,
+   "description": "Smooth-barked scale tree with tiny, widely spaced leaf scars."
+  },
+  {
+   "id": "calamodendron",
+   "commonName": "Calamodendron",
+   "scientificName": "Calamodendron",
+   "group": "Horsetail",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie",
+    "Wetland"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Calamites",
+   "fruit": "#A08A50",
+   "fruitForm": "Strobilus",
+   "tint": "#B8D8A0",
+   "size": 1.15,
+   "description": "Calamite with thick, banded wood: the woodiest of the tree horsetails."
+  },
+  {
+   "id": "pitus",
+   "commonName": "Pitus",
+   "scientificName": "Pitus primaeva",
+   "group": "Gymnosperm",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Conifer",
+    "Broadleaf"
+   ],
+   "form": "Cordaites",
+   "fruit": "#9A7040",
+   "fruitForm": "Seed",
+   "tint": "#A8C890",
+   "size": 1.2,
+   "description": "Big Early Carboniferous tree known from logs a metre thick buried in Scottish volcanic ash."
+  },
+  {
+   "id": "mesoxylon",
+   "commonName": "Mesoxylon",
+   "scientificName": "Mesoxylon",
+   "group": "Cordaitale",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "canopy",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Cordaites",
+   "fruit": "#9A6A3A",
+   "fruitForm": "Catkin",
+   "tint": "#D8E8B8",
+   "size": 0.8,
+   "description": "Cordaitean shrub-tree of the coal swamps, perhaps growing in mangrove-like stands."
+  },
+  {
+   "id": "swillingtonia",
+   "commonName": "Swillingtonia",
+   "scientificName": "Swillingtonia denticulata",
+   "group": "Conifer",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Desert"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Whorled",
+   "fruit": "#8A5A38",
+   "fruitForm": "UprightCone",
+   "tint": "#B8D8B0",
+   "size": 0.7,
+   "description": "Among the oldest known conifers, from Pennsylvanian Yorkshire."
+  },
+  {
+   "id": "megaphyton",
+   "commonName": "Megaphyton",
+   "scientificName": "Megaphyton",
+   "group": "Tree fern",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie",
+    "Wetland",
+    "Rainforest"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "TreeFern",
+   "fruit": "#B87A3A",
+   "fruitForm": "Strobilus",
+   "tint": "#C8E8A8",
+   "size": 0.85,
+   "description": "Marattialean tree fern whose fronds grew in two rows down the trunk."
+  },
+  {
+   "id": "sutcliffia",
+   "commonName": "Sutcliffia",
+   "scientificName": "Sutcliffia insignis",
+   "group": "Seed fern",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "canopy",
+   "terrains": [
+    "CoalSwamp"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "TreeFern",
+   "fruit": "#B8A060",
+   "fruitForm": "Round",
+   "tint": "#B0D088",
+   "size": 0.75,
+   "description": "Medullosan seed fern with a strangely tangled stem."
+  },
+  {
+   "id": "noeggerathiopsis",
+   "commonName": "Noeggerathiopsis",
+   "scientificName": "Noeggerathiopsis hislopii",
+   "group": "Cordaitale",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [
+    "Conifer",
+    "Broadleaf"
+   ],
+   "form": "Cordaites",
+   "fruit": "#8A6A3A",
+   "fruitForm": "Catkin",
+   "tint": "#C0D0A0",
+   "size": 0.9,
+   "description": "Strap-leaved cordaite of the cold Gondwana lands as the great ice age waned."
+  },
+  {
+   "id": "cathaysiodendron",
+   "commonName": "Cathaysiodendron",
+   "scientificName": "Cathaysiodendron",
+   "group": "Lycopsid",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "CoalSwamp",
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Lycopsid",
+   "fruit": "#B8954A",
+   "fruitForm": "Strobilus",
+   "tint": "#B8E8A0",
+   "size": 0.9,
+   "description": "Scale tree of the Cathaysian coal swamps of China."
+  },
+  {
+   "id": "odontopteris",
+   "commonName": "Odontopteris",
+   "scientificName": "Odontopteris",
+   "group": "Seed fern",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "CoalSwamp",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#B8D890",
+   "size": 1.1,
+   "description": "Seed fern with broad, blunt leaflets joined at the base."
+  },
+  {
+   "id": "macroneuropteris",
+   "commonName": "Macroneuropteris",
+   "scientificName": "Macroneuropteris scheuchzeri",
+   "group": "Seed fern",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#A0C880",
+   "size": 1.4,
+   "description": "Big-leafleted seed fern covered in fine hairs, common in coal shales."
+  },
+  {
+   "id": "eusphenopteris",
+   "commonName": "Eusphenopteris",
+   "scientificName": "Eusphenopteris",
+   "group": "Seed fern",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#98C080",
+   "size": 1.0,
+   "description": "Lacy foliage of scrambling lyginopterid seed ferns."
+  },
+  {
+   "id": "corynepteris",
+   "commonName": "Corynepteris",
+   "scientificName": "Corynepteris",
+   "group": "Fern",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#90C478",
+   "size": 0.9,
+   "description": "Zygopterid fern with clusters of big spore sacs."
+  },
+  {
+   "id": "ankyropteris",
+   "commonName": "Ankyropteris",
+   "scientificName": "Ankyropteris",
+   "group": "Fern",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#A8D888",
+   "size": 0.8,
+   "description": "Small fern that clambered over the trunks of tree ferns."
+  },
+  {
+   "id": "stauropteris",
+   "commonName": "Stauropteris",
+   "scientificName": "Stauropteris oldhamia",
+   "group": "Fern-like plant",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp"
+   ],
+   "forests": [],
+   "form": "Horsetail",
+   "tint": "#A8C878",
+   "size": 0.8,
+   "description": "Leafless, bushy little fern relative of the coal-swamp floor."
+  },
+  {
+   "id": "polysporia",
+   "commonName": "Polysporia",
+   "scientificName": "Polysporia mirabilis",
+   "group": "Lycopsid",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "fruit": "#C0A050",
+   "fruitForm": "Strobilus",
+   "tint": "#88B860",
+   "size": 1.2,
+   "description": "Shrubby lycopsid with a cone on each branch tip."
+  },
+  {
+   "id": "paurodendron",
+   "commonName": "Paurodendron",
+   "scientificName": "Paurodendron fraipontii",
+   "group": "Lycopsid",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "fruit": "#C8B060",
+   "fruitForm": "Strobilus",
+   "tint": "#90C068",
+   "size": 0.7,
+   "description": "Tiny spikemoss-like lycopsid known from coal balls."
+  },
+  {
+   "id": "oxroadia",
+   "commonName": "Oxroadia",
+   "scientificName": "Oxroadia gracilis",
+   "group": "Lycopsid",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "fruit": "#C0A858",
+   "fruitForm": "Strobilus",
+   "tint": "#98C870",
+   "size": 0.8,
+   "description": "Small herbaceous lycopsid of Early Carboniferous Scotland."
+  },
+  {
+   "id": "senftenbergia",
+   "commonName": "Senftenbergia",
+   "scientificName": "Senftenbergia",
+   "group": "Fern",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#B0D890",
+   "size": 1.0,
+   "description": "Early relative of the climbing ferns (Schizaeales)."
+  },
+  {
+   "id": "dicranophyllum",
+   "commonName": "Dicranophyllum",
+   "scientificName": "Dicranophyllum gallicum",
+   "group": "Gymnosperm",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "Hill",
+    "Desert",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Twiggy",
+   "fruit": "#9A7A40",
+   "fruitForm": "Seed",
+   "tint": "#A8C090",
+   "size": 0.9,
+   "description": "Forked, needle-leaved plant of dry Late Paleozoic uplands."
+  },
+  {
+   "id": "muscites",
+   "commonName": "Muscites",
+   "scientificName": "Muscites bertrandii",
+   "group": "Moss",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Moss",
+   "tint": "#98B860",
+   "size": 0.8,
+   "description": "One of the few Carboniferous mosses known, from French coal measures."
+  },
+  {
+   "id": "hepaticites",
+   "commonName": "Hepaticites",
+   "scientificName": "Hepaticites kidstonii",
+   "group": "Liverwort",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "ground",
+   "terrains": [
+    "CoalSwamp",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Moss",
+   "tint": "#B0D880",
+   "size": 0.7,
+   "description": "Leafy liverwort from the Pennsylvanian coal measures."
+  },
+  {
+   "id": "asterotheca",
+   "commonName": "Asterotheca",
+   "scientificName": "Asterotheca",
+   "group": "Fern",
+   "firstAge": "Carboniferous",
+   "lastAge": "Triassic",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "CoalSwamp",
+    "Wetland",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#A0D088",
+   "size": 1.1,
+   "description": "Marattialean fern with star-shaped clusters of spore sacs."
+  },
+  {
+   "id": "paracalamites",
+   "commonName": "Paracalamites",
+   "scientificName": "Paracalamites",
+   "group": "Horsetail",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "CoalSwamp",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Horsetail",
+   "fruit": "#A08A50",
+   "fruitForm": "Strobilus",
+   "tint": "#A8C878",
+   "size": 1.3,
+   "description": "Horsetail of the cool Angaran and Gondwanan floodplains."
+  },
+  {
+   "id": "beresella",
+   "commonName": "Beresella",
+   "scientificName": "Beresella",
+   "group": "Green alga",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fingers",
+   "tint": "#8AAA60",
+   "size": 0.9,
+   "description": "Tube-shaped dasyclad alga of Carboniferous shelf seas."
+  },
+  {
+   "id": "epimastopora",
+   "commonName": "Epimastopora",
+   "scientificName": "Epimastopora",
+   "group": "Green alga",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Calcareous",
+   "tint": "#90A868",
+   "size": 0.9,
+   "description": "Dasyclad alga with a pitted sleeve of lime."
+  },
+  {
+   "id": "calcifolium",
+   "commonName": "Calcifolium",
+   "scientificName": "Calcifolium okense",
+   "group": "Alga",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fan",
+   "tint": "#B8A068",
+   "size": 1.0,
+   "description": "Leaf-like calcareous alga of Russian Carboniferous seas."
+  },
+  {
+   "id": "aphralysia",
+   "commonName": "Aphralysia",
+   "scientificName": "Aphralysia",
+   "group": "Alga",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Coralline",
+   "tint": "#C8B898",
+   "size": 0.9,
+   "description": "Encrusting alga that coated shells and grains."
+  },
+  {
+   "id": "mycocarpon",
+   "commonName": "Mycocarpon",
+   "scientificName": "Mycocarpon",
+   "group": "Fungus",
+   "firstAge": "Carboniferous",
+   "lastAge": "Carboniferous",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Truffle",
+   "tint": "#7A6A50",
+   "size": 0.7,
+   "description": "Tiny round fungal spore cases found in coal balls."
+  },
+  {
+   "id": "reinschia",
+   "commonName": "Reinschia",
+   "scientificName": "Reinschia australis",
+   "group": "Green alga",
+   "firstAge": "Carboniferous",
+   "lastAge": "Permian",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Grape",
+   "tint": "#B0A040",
+   "size": 0.8,
+   "description": "Oily colonial alga whose remains make torbanite, the boghead coal."
+  },
+  {
+   "id": "otovicia",
+   "commonName": "Otovicia",
+   "scientificName": "Otovicia hypnoides",
+   "group": "Conifer",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Desert",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Whorled",
+   "fruit": "#7A4E34",
+   "fruitForm": "UprightCone",
+   "tint": "#B0D0A8",
+   "size": 0.85,
+   "description": "Walchian conifer of the dry Early Permian of Europe."
+  },
+  {
+   "id": "ernestiodendron",
+   "commonName": "Ernestiodendron",
+   "scientificName": "Ernestiodendron filiciforme",
+   "group": "Conifer",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Whorled",
+   "fruit": "#8A5A3A",
+   "fruitForm": "UprightCone",
+   "tint": "#C0D8B0",
+   "size": 0.9,
+   "description": "Early conifer with flat, fern-like sprays of needles."
+  },
+  {
+   "id": "pseudovoltzia",
+   "commonName": "Pseudovoltzia",
+   "scientificName": "Pseudovoltzia liebeana",
+   "group": "Conifer",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Desert",
+    "Wetland"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#7A5236",
+   "fruitForm": "Cone",
+   "tint": "#A8C8A0",
+   "size": 0.95,
+   "description": "Voltzian conifer of the Zechstein sea shores."
+  },
+  {
+   "id": "majonica",
+   "commonName": "Majonica",
+   "scientificName": "Majonica alpina",
+   "group": "Conifer",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Desert"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Shrubby",
+   "fruit": "#8A6040",
+   "fruitForm": "Cone",
+   "tint": "#B8D0A0",
+   "size": 0.8,
+   "description": "Small conifer from the Late Permian Bletterbach gorge in the Dolomites."
+  },
+  {
+   "id": "quadrocladus",
+   "commonName": "Quadrocladus",
+   "scientificName": "Quadrocladus",
+   "group": "Conifer",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#6E4C30",
+   "fruitForm": "Cone",
+   "tint": "#98C098",
+   "size": 1.0,
+   "description": "Late Permian conifer with dense, short-needled shoots."
+  },
+  {
+   "id": "trichopitys",
+   "commonName": "Trichopitys",
+   "scientificName": "Trichopitys heteromorpha",
+   "group": "Ginkgophyte",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Ginkgo",
+   "fruit": "#C8A048",
+   "fruitForm": "Seed",
+   "tint": "#D0E8A0",
+   "size": 0.7,
+   "description": "The oldest known ginkgophyte, with thread-like forked leaves."
+  },
+  {
+   "id": "sphenobaiera",
+   "commonName": "Sphenobaiera",
+   "scientificName": "Sphenobaiera",
+   "group": "Ginkgophyte",
+   "firstAge": "Permian",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Ginkgo",
+   "fruit": "#D8B048",
+   "fruitForm": "Round",
+   "tint": "#C8E890",
+   "size": 0.95,
+   "description": "Ginkgo relative with wedge-shaped, deeply split leaves."
+  },
+  {
+   "id": "gigantonoclea",
+   "commonName": "Gigantonoclea",
+   "scientificName": "Gigantonoclea",
+   "group": "Gigantopterid",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Glossopteris",
+   "fruit": "#7A6A3A",
+   "fruitForm": "Seed",
+   "tint": "#A0D890",
+   "size": 0.8,
+   "description": "Gigantopterid with huge, net-veined leaves, climbing through Cathaysian forests."
+  },
+  {
+   "id": "crossozamia",
+   "commonName": "Crossozamia",
+   "scientificName": "Crossozamia",
+   "group": "Cycad",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Cycad",
+   "fruit": "#D08A3A",
+   "fruitForm": "Strobilus",
+   "tint": "#C0E0A0",
+   "size": 1.0,
+   "description": "Early cycad from the Permian of China."
+  },
+  {
+   "id": "supaia",
+   "commonName": "Supaia",
+   "scientificName": "Supaia thinnfeldioides",
+   "group": "Seed fern",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "Desert",
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#B8C890",
+   "size": 1.0,
+   "description": "Peltasperm seed fern of the dry red beds of the Grand Canyon."
+  },
+  {
+   "id": "comia",
+   "commonName": "Comia",
+   "scientificName": "Comia",
+   "group": "Seed fern",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#A8C888",
+   "size": 1.1,
+   "description": "Seed fern of the Late Permian Angaran and Russian floras."
+  },
+  {
+   "id": "emplectopteris",
+   "commonName": "Emplectopteris",
+   "scientificName": "Emplectopteris triangularis",
+   "group": "Seed fern",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#98D080",
+   "size": 1.2,
+   "description": "Cathaysian seed fern that bore its seeds right on its leaflets."
+  },
+  {
+   "id": "fascipteris",
+   "commonName": "Fascipteris",
+   "scientificName": "Fascipteris",
+   "group": "Fern",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#A0D890",
+   "size": 1.0,
+   "description": "Marattialean fern of the Permian coal swamps of China."
+  },
+  {
+   "id": "trizygia",
+   "commonName": "Trizygia",
+   "scientificName": "Trizygia speciosa",
+   "group": "Horsetail",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Horsetail",
+   "fruit": "#A08A50",
+   "fruitForm": "Strobilus",
+   "tint": "#B0D880",
+   "size": 0.8,
+   "description": "Gondwanan sphenophyll with leaves in lopsided whorls of three pairs."
+  },
+  {
+   "id": "protosphagnum",
+   "commonName": "Protosphagnum",
+   "scientificName": "Protosphagnum nervatum",
+   "group": "Moss",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Moss",
+   "tint": "#C8E080",
+   "size": 0.8,
+   "description": "Angaran moss with cells like those of peat mosses."
+  },
+  {
+   "id": "tatarina",
+   "commonName": "Tatarina",
+   "scientificName": "Tatarina",
+   "group": "Seed fern",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "Desert",
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Twiggy",
+   "fruit": "#A06A40",
+   "fruitForm": "Seed",
+   "tint": "#A8B880",
+   "size": 0.9,
+   "description": "Peltasperm shrub of the dry Late Permian of Russia."
+  },
+  {
+   "id": "phylladoderma",
+   "commonName": "Phylladoderma",
+   "scientificName": "Phylladoderma",
+   "group": "Seed fern",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "fruit": "#9A6A40",
+   "fruitForm": "Seed",
+   "tint": "#98B878",
+   "size": 1.0,
+   "description": "Thick-leaved peltasperm of the Late Permian Angaran floodplains."
+  },
+  {
+   "id": "lycopodiopsis",
+   "commonName": "Lycopodiopsis",
+   "scientificName": "Lycopodiopsis derbyi",
+   "group": "Lycopsid",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "fruit": "#B89050",
+   "fruitForm": "Strobilus",
+   "tint": "#88B868",
+   "size": 1.2,
+   "description": "Lycopsid of the Permian Paran\u00e1 Basin in Brazil."
+  },
+  {
+   "id": "pseudoctenis",
+   "commonName": "Pseudoctenis",
+   "scientificName": "Pseudoctenis",
+   "group": "Cycad",
+   "firstAge": "Permian",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Cycad",
+   "fruit": "#D8902E",
+   "fruitForm": "Strobilus",
+   "tint": "#B8D890",
+   "size": 1.1,
+   "description": "Cycad with long, comb-like leaves."
+  },
+  {
+   "id": "permocalculus",
+   "commonName": "Permocalculus",
+   "scientificName": "Permocalculus",
+   "group": "Red alga",
+   "firstAge": "Permian",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Calcareous",
+   "tint": "#C88A8A",
+   "size": 1.0,
+   "description": "Lime-crusted red alga of warm shelf seas from the Permian to the Cretaceous."
+  },
+  {
+   "id": "gyroporella",
+   "commonName": "Gyroporella",
+   "scientificName": "Gyroporella",
+   "group": "Green alga",
+   "firstAge": "Permian",
+   "lastAge": "Triassic",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Whorl",
+   "tint": "#8AA858",
+   "size": 0.9,
+   "description": "Dasyclad alga with whorls of fine branches."
+  },
+  {
+   "id": "macroporella",
+   "commonName": "Macroporella",
+   "scientificName": "Macroporella",
+   "group": "Green alga",
+   "firstAge": "Permian",
+   "lastAge": "Triassic",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fingers",
+   "tint": "#9AB068",
+   "size": 0.9,
+   "description": "Dasyclad with a pitted, finger-like sleeve of lime."
+  },
+  {
+   "id": "pseudovermiporella",
+   "commonName": "Pseudovermiporella",
+   "scientificName": "Pseudovermiporella",
+   "group": "Alga",
+   "firstAge": "Permian",
+   "lastAge": "Permian",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Calcareous",
+   "tint": "#B8A890",
+   "size": 0.9,
+   "description": "Encrusting, worm-like alga of Permian reefs."
+  },
+  {
+   "id": "voltziopsis",
+   "commonName": "Voltziopsis",
+   "scientificName": "Voltziopsis africana",
+   "group": "Conifer",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "FernPrairie",
+    "Wetland"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Whorled",
+   "fruit": "#7A5236",
+   "fruitForm": "Cone",
+   "tint": "#B8D8A8",
+   "size": 0.9,
+   "description": "Southern voltzian conifer of the earliest Triassic."
+  },
+  {
+   "id": "heidiphyllum",
+   "commonName": "Heidiphyllum",
+   "scientificName": "Heidiphyllum elongatum",
+   "group": "Conifer",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Conifer",
+    "Broadleaf"
+   ],
+   "form": "Conifer",
+   "shape": "Open",
+   "fruit": "#8A6A40",
+   "fruitForm": "Cone",
+   "tint": "#C8E0A0",
+   "size": 1.0,
+   "description": "Strap-leaved conifer that grew in dense stands along Gondwanan rivers."
+  },
+  {
+   "id": "rissikia",
+   "commonName": "Rissikia",
+   "scientificName": "Rissikia media",
+   "group": "Conifer",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#A04838",
+   "fruitForm": "Berry",
+   "tint": "#A8C8A0",
+   "size": 0.9,
+   "description": "Early podocarp-like conifer of Gondwana."
+  },
+  {
+   "id": "woodworthia",
+   "commonName": "Woodworthia",
+   "scientificName": "Woodworthia arizonica",
+   "group": "Conifer",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Pine",
+   "fruit": "#7A5A36",
+   "fruitForm": "Cone",
+   "tint": "#B0D0A8",
+   "size": 1.1,
+   "description": "Petrified Forest conifer with short shoot traces all along its logs."
+  },
+  {
+   "id": "schilderia",
+   "commonName": "Schilderia",
+   "scientificName": "Schilderia adamanica",
+   "group": "Gymnosperm",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Conifer",
+    "Broadleaf"
+   ],
+   "form": "Conifer",
+   "shape": "Open",
+   "fruit": "#8A6A3A",
+   "fruitForm": "Seed",
+   "tint": "#C0D8B0",
+   "size": 1.0,
+   "description": "Petrified Forest tree with distinctive wood; its relatives are still debated."
+  },
+  {
+   "id": "ginkgoites",
+   "commonName": "Ginkgoites",
+   "scientificName": "Ginkgoites",
+   "group": "Ginkgophyte",
+   "firstAge": "Triassic",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Ginkgo",
+   "fruit": "#E0B848",
+   "fruitForm": "Round",
+   "tint": "#E0F0A8",
+   "size": 1.05,
+   "description": "Fossil ginkgo leaves with broad, lobed fans, found worldwide in the Mesozoic."
+  },
+  {
+   "id": "nilssonia",
+   "commonName": "Nilssonia",
+   "scientificName": "Nilssonia",
+   "group": "Cycad",
+   "firstAge": "Triassic",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "FernPrairie",
+    "Wetland"
+   ],
+   "forests": [
+    "Jungle",
+    "Broadleaf"
+   ],
+   "form": "Cycad",
+   "fruit": "#C87A30",
+   "fruitForm": "Strobilus",
+   "tint": "#C0E0A8",
+   "size": 1.15,
+   "description": "Cycad with long, ribbon-like leaves, common across the Mesozoic."
+  },
+  {
+   "id": "hirmeriella",
+   "commonName": "Hirmeriella",
+   "scientificName": "Hirmeriella muensteri",
+   "group": "Conifer",
+   "firstAge": "Triassic",
+   "lastAge": "Jurassic",
+   "layer": "canopy",
+   "terrains": [
+    "Desert",
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#7A5A36",
+   "fruitForm": "Cone",
+   "tint": "#A8C0A0",
+   "size": 0.85,
+   "description": "Cheirolepid conifer whose pollen dominates the Triassic-Jurassic boundary."
+  },
+  {
+   "id": "pterophyllum",
+   "commonName": "Pterophyllum",
+   "scientificName": "Pterophyllum",
+   "group": "Bennettitale",
+   "firstAge": "Triassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Rainforest",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Bennettitalean",
+   "blossom": "#E8B878",
+   "tint": "#C8E0A0",
+   "size": 1.0,
+   "description": "Bennettitalean with neatly ranked, square-ended leaflets."
+  },
+  {
+   "id": "anomozamites",
+   "commonName": "Anomozamites",
+   "scientificName": "Anomozamites",
+   "group": "Bennettitale",
+   "firstAge": "Triassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Wetland",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Bennettitalean",
+   "blossom": "#E8C890",
+   "tint": "#B8D898",
+   "size": 0.8,
+   "description": "Small bennettitalean shrub with short, uneven leaflets."
+  },
+  {
+   "id": "wielandiella",
+   "commonName": "Wielandiella",
+   "scientificName": "Wielandiella angustifolia",
+   "group": "Bennettitale",
+   "firstAge": "Triassic",
+   "lastAge": "Jurassic",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Bennettitalean",
+   "blossom": "#F0C070",
+   "tint": "#D0E0A8",
+   "size": 0.9,
+   "description": "Slender, forking bennettitalean bush with small flower-like cones."
+  },
+  {
+   "id": "leptocycas",
+   "commonName": "Leptocycas",
+   "scientificName": "Leptocycas gracilis",
+   "group": "Cycad",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Cycad",
+   "fruit": "#D08A3A",
+   "fruitForm": "Strobilus",
+   "tint": "#B8E0A0",
+   "size": 0.9,
+   "description": "Slender-stemmed early cycad from Late Triassic North Carolina."
+  },
+  {
+   "id": "sanmiguelia",
+   "commonName": "Sanmiguelia",
+   "scientificName": "Sanmiguelia lewisii",
+   "group": "Seed plant",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Reed",
+   "tint": "#A8D090",
+   "size": 1.1,
+   "description": "Puzzling plant with pleated, palm-like leaves, once claimed as a flowering plant."
+  },
+  {
+   "id": "xylopteris",
+   "commonName": "Xylopteris",
+   "scientificName": "Xylopteris",
+   "group": "Seed fern",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "ground",
+   "terrains": [
+    "Hill",
+    "Desert",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Twiggy",
+   "fruit": "#A06A40",
+   "fruitForm": "Seed",
+   "tint": "#A0C080",
+   "size": 0.9,
+   "description": "Corystosperm with fine, needle-like leaflets, a dry-ground cousin of Dicroidium."
+  },
+  {
+   "id": "sagenopteris",
+   "commonName": "Sagenopteris",
+   "scientificName": "Sagenopteris (Caytonia)",
+   "group": "Seed fern",
+   "firstAge": "Triassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Berries",
+   "fruit": "#B8402E",
+   "fruitForm": "Berry",
+   "tint": "#A8D090",
+   "size": 1.0,
+   "description": "Caytonialean shrub with net-veined leaflets and berry-like seed cups."
+  },
+  {
+   "id": "dictyophyllum",
+   "commonName": "Dictyophyllum",
+   "scientificName": "Dictyophyllum",
+   "group": "Fern",
+   "firstAge": "Triassic",
+   "lastAge": "Jurassic",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#98D088",
+   "size": 1.2,
+   "description": "Dipterid fern with big, umbrella-like fronds."
+  },
+  {
+   "id": "clathropteris",
+   "commonName": "Clathropteris",
+   "scientificName": "Clathropteris meniscioides",
+   "group": "Fern",
+   "firstAge": "Triassic",
+   "lastAge": "Jurassic",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Wetland",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#A8D890",
+   "size": 1.3,
+   "description": "Dipterid fern with leaves netted like a window lattice."
+  },
+  {
+   "id": "todites",
+   "commonName": "Todites",
+   "scientificName": "Todites",
+   "group": "Fern",
+   "firstAge": "Triassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "shape": "Tall",
+   "tint": "#A0D088",
+   "size": 1.1,
+   "description": "Royal-fern relative common in Mesozoic floras."
+  },
+  {
+   "id": "danaeopsis",
+   "commonName": "Danaeopsis",
+   "scientificName": "Danaeopsis fecunda",
+   "group": "Fern",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#90C878",
+   "size": 1.4,
+   "description": "Marattialean fern with huge fronds, common in the Middle Triassic."
+  },
+  {
+   "id": "marattiopsis",
+   "commonName": "Marattiopsis",
+   "scientificName": "Marattiopsis",
+   "group": "Fern",
+   "firstAge": "Triassic",
+   "lastAge": "Jurassic",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#98D090",
+   "size": 1.2,
+   "description": "Fern close to the living king ferns."
+  },
+  {
+   "id": "gleichenites",
+   "commonName": "Gleichenites",
+   "scientificName": "Gleichenites",
+   "group": "Fern",
+   "firstAge": "Triassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Hill",
+    "Desert"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#B0D890",
+   "size": 0.9,
+   "description": "Forking, thicket-forming fern of open ground."
+  },
+  {
+   "id": "annalepis",
+   "commonName": "Annalepis",
+   "scientificName": "Annalepis zeilleri",
+   "group": "Lycopsid",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Clubmoss",
+   "fruit": "#B09050",
+   "fruitForm": "Strobilus",
+   "tint": "#A8C878",
+   "size": 1.0,
+   "description": "Quillwort-like lycopsid that greened the shores after the end-Permian extinction."
+  },
+  {
+   "id": "aethophyllum",
+   "commonName": "Aethophyllum",
+   "scientificName": "Aethophyllum stipulare",
+   "group": "Conifer",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "fruit": "#8A6A40",
+   "fruitForm": "Cone",
+   "tint": "#A8C880",
+   "size": 0.8,
+   "description": "Herb-sized conifer from the Triassic sandstones of the Vosges."
+  },
+  {
+   "id": "naiadita",
+   "commonName": "Naiadita",
+   "scientificName": "Naiadita lanceolata",
+   "group": "Liverwort",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Moss",
+   "tint": "#B0E088",
+   "size": 0.6,
+   "description": "Small leafy liverwort of Rhaetian ponds."
+  },
+  {
+   "id": "marchantites",
+   "commonName": "Marchantites",
+   "scientificName": "Marchantites",
+   "group": "Liverwort",
+   "firstAge": "Triassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "Moss",
+   "tint": "#A0D070",
+   "size": 0.8,
+   "description": "Fossil liverwort with flat, forking lobes."
+  },
+  {
+   "id": "teutloporella",
+   "commonName": "Teutloporella",
+   "scientificName": "Teutloporella herculea",
+   "group": "Green alga",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Whorl",
+   "tint": "#90A858",
+   "size": 1.1,
+   "description": "Large dasyclad of Triassic reefs."
+  },
+  {
+   "id": "physoporella",
+   "commonName": "Physoporella",
+   "scientificName": "Physoporella",
+   "group": "Green alga",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Bubble",
+   "tint": "#8AB068",
+   "size": 0.8,
+   "description": "Dasyclad with swollen, bladder-tipped branches."
+  },
+  {
+   "id": "thaumatoporella",
+   "commonName": "Thaumatoporella",
+   "scientificName": "Thaumatoporella parvovesiculifera",
+   "group": "Alga",
+   "firstAge": "Triassic",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Coralline",
+   "tint": "#B0B888",
+   "size": 0.9,
+   "description": "Puzzling encrusting alga of Mesozoic lagoons."
+  },
+  {
+   "id": "stellatochara",
+   "commonName": "Stellatochara",
+   "scientificName": "Stellatochara",
+   "group": "Charophyte",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Charophyte",
+   "tint": "#98C070",
+   "size": 0.9,
+   "description": "Triassic stonewort with star-patterned fruiting cases."
+  },
+  {
+   "id": "palaeofibulus",
+   "commonName": "Palaeofibulus",
+   "scientificName": "Palaeofibulus antarctica",
+   "group": "Fungus",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Mycelium",
+   "tint": "#E8DCC8",
+   "size": 1.0,
+   "description": "Mushroom-relative threads with clamp connections, from Antarctica."
+  },
+  {
+   "id": "endochaetophora",
+   "commonName": "Endochaetophora",
+   "scientificName": "Endochaetophora antarctica",
+   "group": "Fungus",
+   "firstAge": "Triassic",
+   "lastAge": "Triassic",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Puffball",
+   "tint": "#8A7A60",
+   "size": 0.7,
+   "description": "Spiny fungal spore cases preserved in Antarctic Triassic peat."
+  },
+  {
+   "id": "pararaucaria",
+   "commonName": "Pararaucaria",
+   "scientificName": "Pararaucaria patagonica",
+   "group": "Conifer",
+   "firstAge": "Jurassic",
+   "lastAge": "Jurassic",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#7A6236",
+   "fruitForm": "Cone",
+   "tint": "#A8C8A0",
+   "size": 0.95,
+   "description": "Cheirolepid conifer with tiny cones petrified in Patagonia."
+  },
+  {
+   "id": "agathis_jurassica",
+   "commonName": "Jurassic kauri",
+   "scientificName": "Agathis jurassica",
+   "group": "Conifer",
+   "firstAge": "Jurassic",
+   "lastAge": "Jurassic",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Wetland",
+    "Hill"
+   ],
+   "forests": [
+    "Conifer",
+    "Broadleaf"
+   ],
+   "form": "Araucaria",
+   "fruit": "#7A6A3A",
+   "fruitForm": "Coconut",
+   "tint": "#C0D8B0",
+   "size": 1.1,
+   "description": "Kauri relative from the Jurassic Talbragar fish beds, Australia."
+  },
+  {
+   "id": "elatides",
+   "commonName": "Elatides",
+   "scientificName": "Elatides",
+   "group": "Conifer",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "FernPrairie",
+    "Wetland"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#8A5A3A",
+   "fruitForm": "Cone",
+   "tint": "#98C0A0",
+   "size": 1.0,
+   "description": "Early cypress-family conifer like a Chinese fir."
+  },
+  {
+   "id": "schizolepis",
+   "commonName": "Schizolepis",
+   "scientificName": "Schizolepis",
+   "group": "Conifer",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Larch",
+   "fruit": "#8A6A40",
+   "fruitForm": "Cone",
+   "tint": "#B0D0A0",
+   "size": 0.9,
+   "description": "Early pine relative with split cone scales."
+  },
+  {
+   "id": "eathiestrobus",
+   "commonName": "Eathiestrobus",
+   "scientificName": "Eathiestrobus mackenziei",
+   "group": "Conifer",
+   "firstAge": "Jurassic",
+   "lastAge": "Jurassic",
+   "layer": "canopy",
+   "terrains": [
+    "Hill"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Pine",
+   "fruit": "#7A5A3A",
+   "fruitForm": "Cone",
+   "tint": "#A8C0A0",
+   "size": 1.0,
+   "description": "The oldest known member of the pine family, from Scotland."
+  },
+  {
+   "id": "ginkgo_yimaensis",
+   "commonName": "Yima ginkgo",
+   "scientificName": "Ginkgo yimaensis",
+   "group": "Ginkgophyte",
+   "firstAge": "Jurassic",
+   "lastAge": "Jurassic",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Ginkgo",
+   "fruit": "#E8B840",
+   "fruitForm": "Round",
+   "tint": "#E8F0A0",
+   "size": 0.95,
+   "description": "Jurassic ginkgo from Henan with clusters of seeds on forked stalks."
+  },
+  {
+   "id": "phoenicopsis",
+   "commonName": "Phoenicopsis",
+   "scientificName": "Phoenicopsis",
+   "group": "Czekanowskiale",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Ginkgo",
+   "fruit": "#C8A040",
+   "fruitForm": "Seed",
+   "tint": "#D0E890",
+   "size": 0.85,
+   "description": "Ginkgo relative with tufts of strap leaves on short shoots."
+  },
+  {
+   "id": "ctenis",
+   "commonName": "Ctenis",
+   "scientificName": "Ctenis",
+   "group": "Cycad",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Cycad",
+   "fruit": "#E08A30",
+   "fruitForm": "Strobilus",
+   "tint": "#B0D898",
+   "size": 1.2,
+   "description": "Large cycad with comb-like fronds."
+  },
+  {
+   "id": "ptilophyllum",
+   "commonName": "Ptilophyllum",
+   "scientificName": "Ptilophyllum",
+   "group": "Bennettitale",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Desert",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Bennettitalean",
+   "blossom": "#E8A868",
+   "tint": "#C8D8A0",
+   "size": 1.0,
+   "description": "Bennettitalean of dry coasts with stiff, closely set leaflets."
+  },
+  {
+   "id": "otozamites",
+   "commonName": "Otozamites",
+   "scientificName": "Otozamites",
+   "group": "Bennettitale",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "Bennettitalean",
+   "blossom": "#F0C080",
+   "tint": "#B8E0A0",
+   "size": 0.9,
+   "description": "Bennettitalean whose leaflets have ear-like lobes at the base."
+  },
+  {
+   "id": "williamsoniella",
+   "commonName": "Williamsoniella",
+   "scientificName": "Williamsoniella coronata",
+   "group": "Bennettitale",
+   "firstAge": "Jurassic",
+   "lastAge": "Jurassic",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Bennettitalean",
+   "blossom": "#F2D088",
+   "tint": "#D8E8A8",
+   "size": 0.8,
+   "description": "Slender bennettitalean bush with small two-sexed 'flowers', from Yorkshire."
+  },
+  {
+   "id": "pachypteris",
+   "commonName": "Pachypteris",
+   "scientificName": "Pachypteris papillosa",
+   "group": "Seed fern",
+   "firstAge": "Jurassic",
+   "lastAge": "Jurassic",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Desert"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Twiggy",
+   "tint": "#90B880",
+   "size": 1.0,
+   "description": "Thick-leaved seed fern of salty coastal flats."
+  },
+  {
+   "id": "klukia",
+   "commonName": "Klukia",
+   "scientificName": "Klukia exilis",
+   "group": "Fern",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#A8D888",
+   "size": 0.9,
+   "description": "Early climbing-fern relative of the Jurassic Yorkshire delta."
+  },
+  {
+   "id": "hausmannia",
+   "commonName": "Hausmannia",
+   "scientificName": "Hausmannia",
+   "group": "Fern",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Rainforest",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "shape": "Nest",
+   "tint": "#90C880",
+   "size": 0.9,
+   "description": "Fern with small fan-shaped leaves, kin of the living Dipteris."
+  },
+  {
+   "id": "eboracia",
+   "commonName": "Eboracia",
+   "scientificName": "Eboracia lobifolia",
+   "group": "Fern",
+   "firstAge": "Jurassic",
+   "lastAge": "Jurassic",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#A0D088",
+   "size": 1.1,
+   "description": "Common fern of the Jurassic Yorkshire flora."
+  },
+  {
+   "id": "onychiopsis",
+   "commonName": "Onychiopsis",
+   "scientificName": "Onychiopsis",
+   "group": "Fern",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#B0E090",
+   "size": 0.9,
+   "description": "Delicately cut fern of the Jurassic and Early Cretaceous."
+  },
+  {
+   "id": "palaeodasycladus",
+   "commonName": "Palaeodasycladus",
+   "scientificName": "Palaeodasycladus mediterraneus",
+   "group": "Green alga",
+   "firstAge": "Jurassic",
+   "lastAge": "Jurassic",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Whorl",
+   "tint": "#8AB060",
+   "size": 1.0,
+   "description": "Dasyclad of Early Jurassic carbonate lagoons."
+  },
+  {
+   "id": "salpingoporella",
+   "commonName": "Salpingoporella",
+   "scientificName": "Salpingoporella",
+   "group": "Green alga",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fingers",
+   "tint": "#9AB070",
+   "size": 0.8,
+   "description": "Small tube-shaped dasyclad of Tethyan lagoons."
+  },
+  {
+   "id": "actinoporella",
+   "commonName": "Actinoporella",
+   "scientificName": "Actinoporella podolica",
+   "group": "Green alga",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Whorl",
+   "tint": "#A0B878",
+   "size": 0.9,
+   "description": "Dasyclad with star-like whorls of rays."
+  },
+  {
+   "id": "lithocodium",
+   "commonName": "Lithocodium",
+   "scientificName": "Lithocodium aggregatum",
+   "group": "Alga",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Coralline",
+   "tint": "#C8B8A0",
+   "size": 1.1,
+   "description": "Crust-building organism of Jurassic and Cretaceous reefs."
+  },
+  {
+   "id": "bacinella",
+   "commonName": "Bacinella",
+   "scientificName": "Bacinella irregularis",
+   "group": "Alga",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Mat",
+   "tint": "#B8A888",
+   "size": 1.0,
+   "description": "Bubbly calcified mats on shallow Mesozoic platforms."
+  },
+  {
+   "id": "aclistochara",
+   "commonName": "Aclistochara",
+   "scientificName": "Aclistochara",
+   "group": "Charophyte",
+   "firstAge": "Jurassic",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Charophyte",
+   "tint": "#90C068",
+   "size": 1.0,
+   "description": "Stonewort of Jurassic and Cretaceous lakes."
+  },
+  {
+   "id": "daohugouthallus",
+   "commonName": "Daohugouthallus",
+   "scientificName": "Daohugouthallus ciliiferus",
+   "group": "Lichen",
+   "firstAge": "Jurassic",
+   "lastAge": "Jurassic",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Cave"
+   ],
+   "forests": [],
+   "form": "Lichen",
+   "tint": "#B8B888",
+   "size": 1.0,
+   "description": "Leafy lichen from Jurassic Daohugou, China."
+  },
+  {
+   "id": "archaeanthus",
+   "commonName": "Archaeanthus",
+   "scientificName": "Archaeanthus linnenbergeri",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Flowering",
+   "blossom": "#F4EEDC",
+   "fruit": "#B0784A",
+   "fruitForm": "Strobilus",
+   "tint": "#C8E8A0",
+   "size": 0.9,
+   "description": "Magnolia-like tree with big, many-parted flowers, from Kansas."
+  },
+  {
+   "id": "sapindopsis",
+   "commonName": "Sapindopsis",
+   "scientificName": "Sapindopsis",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Tall",
+   "fruit": "#9A7A48",
+   "fruitForm": "Ball",
+   "tint": "#B8E098",
+   "size": 0.8,
+   "description": "Early plane-tree relative with lobed leaves, along Cretaceous streams."
+  },
+  {
+   "id": "credneria",
+   "commonName": "Credneria",
+   "scientificName": "Credneria",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Mottled",
+   "fruit": "#8A7048",
+   "fruitForm": "Ball",
+   "tint": "#D0E8A8",
+   "size": 1.0,
+   "description": "Big-leaved plane-tree relative of the Late Cretaceous."
+  },
+  {
+   "id": "mauldinia",
+   "commonName": "Mauldinia",
+   "scientificName": "Mauldinia mirabilis",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "Hill"
+   ],
+   "forests": [
+    "Broadleaf",
+    "Jungle"
+   ],
+   "form": "Broadleaf",
+   "shape": "Bushy",
+   "blossom": "#E8E4A0",
+   "fruit": "#2A2238",
+   "fruitForm": "Berry",
+   "tint": "#A8D098",
+   "size": 0.85,
+   "description": "One of the oldest laurels, its tiny flowers preserved as charcoal."
+  },
+  {
+   "id": "dryophyllum",
+   "commonName": "Dryophyllum",
+   "scientificName": "Dryophyllum",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Paleogene",
+   "layer": "canopy",
+   "terrains": [
+    "FernPrairie",
+    "Hill",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Round",
+   "fruit": "#8A6A30",
+   "fruitForm": "Nut",
+   "tint": "#B0D090",
+   "size": 1.0,
+   "description": "Toothed-leaved early relative of oaks and chestnuts."
+  },
+  {
+   "id": "glyptostrobus",
+   "commonName": "Chinese swamp cypress",
+   "scientificName": "Glyptostrobus",
+   "group": "Conifer",
+   "firstAge": "Cretaceous",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Plain"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Buttressed",
+   "fruit": "#7A6A40",
+   "fruitForm": "UprightCone",
+   "tint": "#D0E8A8",
+   "size": 1.0,
+   "description": "Swamp conifer that once ringed the Arctic, now nearly extinct in the wild."
+  },
+  {
+   "id": "cunninghamia",
+   "commonName": "Chinese fir",
+   "scientificName": "Cunninghamia",
+   "group": "Conifer",
+   "firstAge": "Cretaceous",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Rainforest"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#7A5236",
+   "fruitForm": "Cone",
+   "tint": "#A0C8A0",
+   "size": 1.0,
+   "description": "Stiff-needled cypress-family conifer, known since the Late Cretaceous."
+  },
+  {
+   "id": "wollemia",
+   "commonName": "Wollemi pine",
+   "scientificName": "Wollemia nobilis",
+   "group": "Conifer",
+   "firstAge": "Cretaceous",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "Hill"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Araucaria",
+   "fruit": "#8A7A48",
+   "fruitForm": "UprightCone",
+   "tint": "#B8D0A8",
+   "size": 0.95,
+   "description": "Its pollen is common in Cretaceous rocks; the living trees were found only in 1994."
+  },
+  {
+   "id": "pseudofrenelopsis",
+   "commonName": "Pseudofrenelopsis",
+   "scientificName": "Pseudofrenelopsis parceramosa",
+   "group": "Conifer",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "canopy",
+   "terrains": [
+    "Desert",
+    "Hill"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Shrubby",
+   "fruit": "#8A6A3A",
+   "fruitForm": "Cone",
+   "tint": "#B0C8A0",
+   "size": 0.7,
+   "description": "Succulent-jointed cheirolepid of salty Cretaceous coasts."
+  },
+  {
+   "id": "canrightia",
+   "commonName": "Canrightia",
+   "scientificName": "Canrightia resinifera",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#EEF0C8",
+   "tint": "#EEF0C8",
+   "size": 0.7,
+   "description": "Chloranthoid herb from Early Cretaceous Portugal with tiny, petal-less flowers."
+  },
+  {
+   "id": "leefructus",
+   "commonName": "Leefructus",
+   "scientificName": "Leefructus mirus",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#F2E07A",
+   "tint": "#F2E07A",
+   "size": 0.75,
+   "description": "Buttercup relative from Liaoning, among the oldest eudicots."
+  },
+  {
+   "id": "hyrcantha",
+   "commonName": "Hyrcantha",
+   "scientificName": "Hyrcantha decussata",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#F0E8D0",
+   "tint": "#F0E8D0",
+   "size": 0.7,
+   "description": "Small herb with paired flower stalks, from the Yixian lakes."
+  },
+  {
+   "id": "callianthus",
+   "commonName": "Callianthus",
+   "scientificName": "Callianthus dilae",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#F4EEE0",
+   "tint": "#F4EEE0",
+   "size": 0.65,
+   "description": "Early Cretaceous herb with tiny flowers, from Liaoning."
+  },
+  {
+   "id": "silvianthemum",
+   "commonName": "Silvianthemum",
+   "scientificName": "Silvianthemum suecicum",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#F6F2E8",
+   "tint": "#F6F2E8",
+   "size": 0.7,
+   "description": "Tiny saxifrage-like flower preserved in Swedish charcoal."
+  },
+  {
+   "id": "teixeiraea",
+   "commonName": "Teixeiraea",
+   "scientificName": "Teixeiraea lusitanica",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#F0D8A0",
+   "tint": "#F0D8A0",
+   "size": 0.7,
+   "description": "Buttercup-order flower with a spiral of small tepals, from Portugal."
+  },
+  {
+   "id": "klitzschophyllites",
+   "commonName": "Klitzschophyllites",
+   "scientificName": "Klitzschophyllites flabellatus",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#E8E0B0",
+   "tint": "#E8E0B0",
+   "size": 0.8,
+   "description": "Small eudicot herb from the Crato limestone of Brazil."
+  },
+  {
+   "id": "araripia",
+   "commonName": "Araripia",
+   "scientificName": "Araripia florifera",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Flowering",
+   "blossom": "#F2E6C8",
+   "tint": "#A8D098",
+   "size": 0.9,
+   "description": "Magnoliid shrub with small flowers, from the Crato limestone."
+  },
+  {
+   "id": "endressinia",
+   "commonName": "Endressinia",
+   "scientificName": "Endressinia brasiliana",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "blossom": "#F0E8D8",
+   "fruit": "#7A6A40",
+   "fruitForm": "Berry",
+   "tint": "#98C890",
+   "size": 0.8,
+   "description": "Magnoliid of the Crato lake shores, near the custard-apple family."
+  },
+  {
+   "id": "virginianthus",
+   "commonName": "Virginianthus",
+   "scientificName": "Virginianthus calycanthoides",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Hill",
+    "FernPrairie"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "blossom": "#C87860",
+   "tint": "#A0C888",
+   "size": 0.8,
+   "description": "Spicebush relative with many-tepaled flowers, from Virginia."
+  },
+  {
+   "id": "monetianthus",
+   "commonName": "Monetianthus",
+   "scientificName": "Monetianthus mirus",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "WaterLily",
+   "blossom": "#F4E8E8",
+   "tint": "#A0D088",
+   "size": 0.75,
+   "description": "Early water-lily flower from Portugal."
+  },
+  {
+   "id": "microvictoria",
+   "commonName": "Microvictoria",
+   "scientificName": "Microvictoria svitkoana",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "WaterLily",
+   "blossom": "#F8F0F0",
+   "tint": "#98D080",
+   "size": 0.6,
+   "description": "Tiny relative of the giant water lily, from New Jersey."
+  },
+  {
+   "id": "pluricarpellatia",
+   "commonName": "Pluricarpellatia",
+   "scientificName": "Pluricarpellatia peltata",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "WaterLily",
+   "blossom": "#E8D0E0",
+   "tint": "#A8D890",
+   "size": 0.7,
+   "description": "Fanwort-family water plant with round floating leaves, from Brazil."
+  },
+  {
+   "id": "cobbania",
+   "commonName": "Cobbania",
+   "scientificName": "Cobbania corrugata",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "WaterLily",
+   "tint": "#B0E090",
+   "size": 0.6,
+   "description": "Floating aroid rosettes like water lettuce, from Late Cretaceous Alberta."
+  },
+  {
+   "id": "ephedra",
+   "commonName": "Joint pine",
+   "scientificName": "Ephedra",
+   "group": "Gnetophyte",
+   "firstAge": "Cretaceous",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Desert",
+    "Hill",
+    "Steppe"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Twiggy",
+   "fruit": "#D04030",
+   "fruitForm": "Berry",
+   "tint": "#A8B888",
+   "size": 0.8,
+   "description": "Leafless green-jointed shrub of dry lands, known since the Early Cretaceous."
+  },
+  {
+   "id": "welwitschiophyllum",
+   "commonName": "Welwitschiophyllum",
+   "scientificName": "Welwitschiophyllum brasiliense",
+   "group": "Gnetophyte",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Desert"
+   ],
+   "forests": [],
+   "form": "Succulent",
+   "fruit": "#A04A30",
+   "fruitForm": "Strobilus",
+   "tint": "#A0B080",
+   "size": 1.0,
+   "description": "Welwitschia-like gnetophyte of the dry Crato coast."
+  },
+  {
+   "id": "ruffordia",
+   "commonName": "Ruffordia",
+   "scientificName": "Ruffordia goeppertii",
+   "group": "Fern",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Wetland",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "tint": "#A8D890",
+   "size": 1.0,
+   "description": "Finely divided fern of the Wealden wetlands."
+  },
+  {
+   "id": "pentoxylon",
+   "commonName": "Pentoxylon",
+   "scientificName": "Pentoxylon sahnii",
+   "group": "Pentoxylale",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "FernPrairie",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "fruit": "#8A4A3A",
+   "fruitForm": "Berry",
+   "tint": "#A8C888",
+   "size": 1.0,
+   "description": "Small Indian tree-shrub with mulberry-like seed heads, of its own extinct order."
+  },
+  {
+   "id": "monanthesia",
+   "commonName": "Monanthesia",
+   "scientificName": "Monanthesia",
+   "group": "Bennettitale",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "ground",
+   "terrains": [
+    "Desert",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Bennettitalean",
+   "blossom": "#E8B878",
+   "tint": "#C8D0A0",
+   "size": 1.0,
+   "description": "Late-surviving bennettitalean with a cone at each leaf base."
+  },
+  {
+   "id": "neomeris",
+   "commonName": "Neomeris",
+   "scientificName": "Neomeris",
+   "group": "Green alga",
+   "firstAge": "Cretaceous",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fingers",
+   "tint": "#A0C890",
+   "size": 0.8,
+   "description": "Club-shaped dasyclad, still alive in tropical lagoons."
+  },
+  {
+   "id": "cymopolia",
+   "commonName": "Cymopolia",
+   "scientificName": "Cymopolia",
+   "group": "Green alga",
+   "firstAge": "Cretaceous",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Grape",
+   "tint": "#B0C898",
+   "size": 0.9,
+   "description": "Beaded dasyclad with tufts at its tips."
+  },
+  {
+   "id": "atopochara",
+   "commonName": "Atopochara",
+   "scientificName": "Atopochara trivolvis",
+   "group": "Charophyte",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Charophyte",
+   "tint": "#98B868",
+   "size": 0.9,
+   "description": "Clavatoracean stonewort with three-fold symmetric fruiting cases."
+  },
+  {
+   "id": "nelumbites",
+   "commonName": "Nelumbites",
+   "scientificName": "Nelumbites",
+   "group": "Flowering plant",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Lotus",
+   "tint": "#78A858",
+   "size": 1.0,
+   "description": "Early lotus relative with round, shield-like leaves."
+  },
+  {
+   "id": "azolla",
+   "commonName": "Mosquito fern",
+   "scientificName": "Azolla",
+   "group": "Fern",
+   "firstAge": "Cretaceous",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Mat",
+   "tint": "#A06A48",
+   "size": 0.8,
+   "description": "Tiny floating fern that turns ponds red; in the Eocene it covered the Arctic Ocean."
+  },
+  {
+   "id": "paleoclavaria",
+   "commonName": "Paleoclavaria",
+   "scientificName": "Paleoclavaria burmitis",
+   "group": "Fungus",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "CoralFungus",
+   "tint": "#E8D8B0",
+   "size": 0.7,
+   "description": "Coral fungus preserved in Burmese amber."
+  },
+  {
+   "id": "paleoophiocordyceps",
+   "commonName": "Paleoophiocordyceps",
+   "scientificName": "Paleoophiocordyceps coccophagus",
+   "group": "Fungus",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Cave"
+   ],
+   "forests": [],
+   "form": "Stalks",
+   "tint": "#C89850",
+   "size": 0.7,
+   "description": "The oldest insect-killing fungus, sprouting from a scale insect in amber."
+  },
+  {
+   "id": "honeggeriella",
+   "commonName": "Honeggeriella",
+   "scientificName": "Honeggeriella complexa",
+   "group": "Lichen",
+   "firstAge": "Cretaceous",
+   "lastAge": "Cretaceous",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Cave"
+   ],
+   "forests": [],
+   "form": "Lichen",
+   "tint": "#A8A878",
+   "size": 1.0,
+   "description": "Crusty lichen from the Early Cretaceous of Vancouver Island."
+  },
+  {
+   "id": "juglans",
+   "commonName": "Walnut",
+   "scientificName": "Juglans",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Plain",
+    "Hill",
+    "Steppe"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Round",
+   "fruit": "#6A7A40",
+   "fruitForm": "Round",
+   "tint": "#D8EEA8",
+   "size": 1.1,
+   "description": "Walnuts appear in the Eocene and spread across the northern continents."
+  },
+  {
+   "id": "carya",
+   "commonName": "Hickory",
+   "scientificName": "Carya",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Plain",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Tall",
+   "fruit": "#8A6A40",
+   "fruitForm": "Nut",
+   "tint": "#E8F4B0",
+   "size": 1.1,
+   "description": "Hickories filled Paleocene forests of North America and Europe."
+  },
+  {
+   "id": "castanea",
+   "commonName": "Chestnut",
+   "scientificName": "Castanea",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Spreading",
+   "blossom": "#F0E8B0",
+   "fruit": "#A0A040",
+   "fruitForm": "Round",
+   "tint": "#D0E890",
+   "size": 1.05,
+   "description": "Chestnuts, with spiny husks around glossy nuts."
+  },
+  {
+   "id": "ulmus",
+   "commonName": "Elm",
+   "scientificName": "Ulmus",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Plain",
+    "Hill",
+    "Wetland",
+    "Steppe"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Oval",
+   "fruit": "#C8D090",
+   "fruitForm": "Samara",
+   "tint": "#C8E0A0",
+   "size": 1.15,
+   "description": "Elms, with round papery seeds, date back to the Paleocene."
+  },
+  {
+   "id": "tilia",
+   "commonName": "Linden",
+   "scientificName": "Tilia",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Plain",
+    "Hill"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Dome",
+   "blossom": "#F0E890",
+   "fruit": "#B8B080",
+   "fruitForm": "Seed",
+   "tint": "#E0F4B8",
+   "size": 1.1,
+   "description": "Lindens hum with bees when their sweet flowers open."
+  },
+  {
+   "id": "cercidiphyllum",
+   "commonName": "Katsura",
+   "scientificName": "Cercidiphyllum",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Plain",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Oval",
+   "rarity": 1.0,
+   "crown": "#F0A050",
+   "tint": "#F0E8B0",
+   "size": 0.95,
+   "description": "Katsura relatives were common along Paleocene rivers; its autumn leaves smell of caramel."
+  },
+  {
+   "id": "nordenskioldia",
+   "commonName": "Nordenskioldia",
+   "scientificName": "Nordenskioldia borealis",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "Neogene",
+   "layer": "canopy",
+   "terrains": [
+    "Tundra",
+    "Plain",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Layered",
+   "fruit": "#8A6A40",
+   "fruitForm": "Ball",
+   "tint": "#C8E8A8",
+   "size": 1.0,
+   "description": "Extinct wheel-wood relative of the warm Paleocene Arctic."
+  },
+  {
+   "id": "macginitiea",
+   "commonName": "Macginitiea",
+   "scientificName": "Macginitiea",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "Paleogene",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Plain",
+    "Hill"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Mottled",
+   "fruit": "#9A7A48",
+   "fruitForm": "Ball",
+   "tint": "#B8D890",
+   "size": 1.05,
+   "description": "Extinct Eocene plane tree with big lobed leaves."
+  },
+  {
+   "id": "nyssa",
+   "commonName": "Tupelo",
+   "scientificName": "Nyssa",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Oval",
+   "rarity": 1.0,
+   "crown": "#D82A2A",
+   "fruit": "#2A3060",
+   "fruitForm": "Berry",
+   "tint": "#FFFFFF",
+   "size": 1.0,
+   "description": "Swamp tree whose leaves turn a blazing scarlet in autumn."
+  },
+  {
+   "id": "zelkova",
+   "commonName": "Zelkova",
+   "scientificName": "Zelkova",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Round",
+   "tint": "#D8F0A0",
+   "size": 1.0,
+   "description": "Elm relative found from the Eocene; a few relict species survive."
+  },
+  {
+   "id": "pterocarya",
+   "commonName": "Wingnut",
+   "scientificName": "Pterocarya",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Plain",
+    "Hill"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Spreading",
+   "fruit": "#A8C070",
+   "fruitForm": "Catkin",
+   "tint": "#C0E898",
+   "size": 1.05,
+   "description": "Walnut relative hung with long chains of winged nuts."
+  },
+  {
+   "id": "elaeocarpus",
+   "commonName": "Blue quandong",
+   "scientificName": "Elaeocarpus",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "Hill"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Broadleaf",
+   "shape": "Bushy",
+   "blossom": "#F4F0E0",
+   "fruit": "#2A58C0",
+   "fruitForm": "Berry",
+   "tint": "#A8D088",
+   "size": 1.1,
+   "description": "Rainforest tree with bright blue fruit, known from the Eocene of Australia."
+  },
+  {
+   "id": "castanopsis",
+   "commonName": "Chinquapin",
+   "scientificName": "Castanopsis",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "Hill",
+    "Plain"
+   ],
+   "forests": [
+    "Jungle",
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Dome",
+   "blossom": "#F0E0A0",
+   "fruit": "#7A5A30",
+   "fruitForm": "Nut",
+   "tint": "#9CC880",
+   "size": 1.1,
+   "description": "Evergreen chestnut relative of warm Asian forests since the Eocene."
+  },
+  {
+   "id": "mauritia",
+   "commonName": "Moriche palm",
+   "scientificName": "Mauritia flexuosa",
+   "group": "Palm",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Rainforest",
+    "Savanna"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Palm",
+   "fruit": "#8A3A28",
+   "fruitForm": "Hanging",
+   "tint": "#D8F0A0",
+   "size": 1.15,
+   "description": "Fan palm of tropical swamps; its pollen goes back to the Paleocene."
+  },
+  {
+   "id": "tsuga",
+   "commonName": "Hemlock",
+   "scientificName": "Tsuga",
+   "group": "Conifer",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Tundra",
+    "Plain"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Spruce",
+   "fruit": "#8A6A48",
+   "fruitForm": "Cone",
+   "tint": "#9CC090",
+   "size": 1.05,
+   "description": "Shade-loving conifer with drooping tips and tiny cones."
+  },
+  {
+   "id": "thuja",
+   "commonName": "Arborvitae",
+   "scientificName": "Thuja",
+   "group": "Conifer",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Hill",
+    "Tundra"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#9A7A50",
+   "fruitForm": "UprightCone",
+   "tint": "#B8D890",
+   "size": 0.95,
+   "description": "Scale-leaved conifer known from the Paleocene Arctic."
+  },
+  {
+   "id": "cedrus",
+   "commonName": "Cedar",
+   "scientificName": "Cedrus",
+   "group": "Conifer",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Plain",
+    "Steppe"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Whorled",
+   "fruit": "#8A7A58",
+   "fruitForm": "UprightCone",
+   "tint": "#A8C0C0",
+   "size": 1.15,
+   "description": "True cedars, with flat-topped tiers and upright barrel cones."
+  },
+  {
+   "id": "pseudotsuga",
+   "commonName": "Douglas fir",
+   "scientificName": "Pseudotsuga",
+   "group": "Conifer",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Plain"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Spruce",
+   "fruit": "#9A6A40",
+   "fruitForm": "Cone",
+   "tint": "#90B888",
+   "size": 1.2,
+   "description": "Tall conifer whose cones have three-pointed bracts; known since the Oligocene."
+  },
+  {
+   "id": "juniperus",
+   "commonName": "Juniper",
+   "scientificName": "Juniperus",
+   "group": "Conifer",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Desert",
+    "Steppe",
+    "Tundra"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#4A5A90",
+   "fruitForm": "Berry",
+   "tint": "#A8B898",
+   "size": 0.8,
+   "description": "Hardy conifer with blue, berry-like cones."
+  },
+  {
+   "id": "fraxinus",
+   "commonName": "Ash",
+   "scientificName": "Fraxinus",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Plain",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Oval",
+   "fruit": "#B0A060",
+   "fruitForm": "Samara",
+   "tint": "#D0EEA8",
+   "size": 1.1,
+   "description": "Ash trees, with bunches of winged keys, since the Eocene."
+  },
+  {
+   "id": "aesculus",
+   "commonName": "Horse chestnut",
+   "scientificName": "Aesculus",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Flowering",
+   "blossom": "#F8F4E8",
+   "fruit": "#7A4A28",
+   "fruitForm": "Nut",
+   "tint": "#B8E090",
+   "size": 1.05,
+   "description": "Candles of white flowers and shiny conkers; known from the Paleocene."
+  },
+  {
+   "id": "mangifera",
+   "commonName": "Mango",
+   "scientificName": "Mangifera",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "Savanna",
+    "Plain"
+   ],
+   "forests": [
+    "Jungle",
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Dome",
+   "fruit": "#E89030",
+   "fruitForm": "Hanging",
+   "tint": "#88B870",
+   "size": 1.1,
+   "description": "Mango leaves are found in Paleocene rocks of India."
+  },
+  {
+   "id": "musa",
+   "commonName": "Banana",
+   "scientificName": "Musa",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Palm",
+   "blossom": "#8A2A4A",
+   "fruit": "#E8D040",
+   "fruitForm": "Hanging",
+   "tint": "#C8F0A0",
+   "size": 0.8,
+   "description": "Giant herb with huge leaves; fossil banana seeds come from early Paleogene India."
+  },
+  {
+   "id": "azolla_arctica",
+   "commonName": "Arctic mosquito fern",
+   "scientificName": "Azolla arctica",
+   "group": "Fern",
+   "firstAge": "Paleogene",
+   "lastAge": "Paleogene",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Tundra"
+   ],
+   "forests": [],
+   "form": "WaterLily",
+   "blossom": "#B84A3A",
+   "tint": "#C88060",
+   "size": 0.6,
+   "description": "Floating fern that carpeted the Eocene Arctic Ocean and drew down carbon dioxide."
+  },
+  {
+   "id": "cladium",
+   "commonName": "Sawgrass",
+   "scientificName": "Cladium",
+   "group": "Sedge",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Reed",
+   "fruit": "#8A6A40",
+   "fruitForm": "Seed",
+   "tint": "#C8C890",
+   "size": 1.0,
+   "description": "Sharp-edged sedge; its seeds are common in Paleogene swamp deposits."
+  },
+  {
+   "id": "onoclea",
+   "commonName": "Sensitive fern",
+   "scientificName": "Onoclea",
+   "group": "Fern",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Plain",
+    "Tundra",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "shape": "Tall",
+   "tint": "#C0F0A0",
+   "size": 0.85,
+   "description": "Fern almost unchanged since the Paleocene."
+  },
+  {
+   "id": "woodwardia",
+   "commonName": "Chain fern",
+   "scientificName": "Woodwardia",
+   "group": "Fern",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Rainforest",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "shape": "Tall",
+   "tint": "#A8D880",
+   "size": 1.1,
+   "description": "Large fern of wet ground, known from Paleocene rocks."
+  },
+  {
+   "id": "acrostichum",
+   "commonName": "Mangrove fern",
+   "scientificName": "Acrostichum",
+   "group": "Fern",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "GroundFern",
+   "shape": "Nest",
+   "tint": "#A0C870",
+   "size": 1.2,
+   "description": "Tall, leathery fern that grows among mangroves."
+  },
+  {
+   "id": "rosa",
+   "commonName": "Wild rose",
+   "scientificName": "Rosa",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Plain",
+    "Hill",
+    "Steppe"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Flowering",
+   "blossom": "#F4A0B8",
+   "fruit": "#D02820",
+   "fruitForm": "Berry",
+   "tint": "#C0E098",
+   "size": 0.8,
+   "description": "Roses grew in Eocene North America, with red hips after their flowers."
+  },
+  {
+   "id": "rubus",
+   "commonName": "Bramble",
+   "scientificName": "Rubus",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Plain",
+    "Hill",
+    "Tundra"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Berries",
+   "blossom": "#F4F0F0",
+   "fruit": "#2A1A3A",
+   "fruitForm": "Berry",
+   "tint": "#A8D088",
+   "size": 0.75,
+   "description": "Thorny thickets with blackberries and raspberries."
+  },
+  {
+   "id": "viburnum",
+   "commonName": "Viburnum",
+   "scientificName": "Viburnum",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Plain",
+    "Hill",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Flowering",
+   "blossom": "#F8F6EC",
+   "fruit": "#C02030",
+   "fruitForm": "Berry",
+   "tint": "#B8E0A0",
+   "size": 0.85,
+   "description": "Shrub with flat white flower heads and dark berries."
+  },
+  {
+   "id": "zingiberopsis",
+   "commonName": "Zingiberopsis",
+   "scientificName": "Zingiberopsis",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "Paleogene",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#E86040",
+   "tint": "#E86040",
+   "size": 1.1,
+   "description": "Extinct ginger of Paleocene and Eocene tropical forests."
+  },
+  {
+   "id": "montrichardia",
+   "commonName": "Aninga",
+   "scientificName": "Montrichardia",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#F0E8C8",
+   "fruit": "#C8B040",
+   "fruitForm": "Round",
+   "tint": "#F0E8C8",
+   "size": 1.2,
+   "description": "Giant arum of river banks, found in the Paleocene rainforest of Cerrej\u00f3n."
+  },
+  {
+   "id": "orchids",
+   "commonName": "Orchids",
+   "scientificName": "Orchidaceae",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "Hill",
+    "Plain"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#D060C0",
+   "tint": "#D060C0",
+   "size": 0.6,
+   "description": "The oldest fossil orchids are in Eocene amber."
+  },
+  {
+   "id": "ziziphus",
+   "commonName": "Jujube",
+   "scientificName": "Ziziphus",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Desert",
+    "Hill",
+    "Savanna",
+    "Steppe"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Berries",
+   "blossom": "#E8E080",
+   "fruit": "#A82820",
+   "fruitForm": "Round",
+   "tint": "#B8D088",
+   "size": 0.85,
+   "description": "Thorny shrub of dry ground with sweet red fruit."
+  },
+  {
+   "id": "hydrangea",
+   "commonName": "Hydrangea",
+   "scientificName": "Hydrangea",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Hill",
+    "Plain",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Flowering",
+   "blossom": "#7A90E0",
+   "tint": "#B0D890",
+   "size": 0.9,
+   "description": "Shrub with big round heads of blue or pink flowers."
+  },
+  {
+   "id": "nuphar",
+   "commonName": "Yellow pond lily",
+   "scientificName": "Nuphar",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Tundra"
+   ],
+   "forests": [],
+   "form": "WaterLily",
+   "blossom": "#F0D030",
+   "tint": "#C8E890",
+   "size": 0.9,
+   "description": "Water lily with round yellow flowers held above the water."
+  },
+  {
+   "id": "cymodocea",
+   "commonName": "Cymodocea",
+   "scientificName": "Cymodocea",
+   "group": "Seagrass",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Seagrass",
+   "tint": "#90B860",
+   "size": 1.0,
+   "description": "Seagrass of warm shallow seas since the Eocene."
+  },
+  {
+   "id": "thalassodendron",
+   "commonName": "Thalassodendron",
+   "scientificName": "Thalassodendron",
+   "group": "Seagrass",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Ribbon",
+   "tint": "#80A858",
+   "size": 1.1,
+   "description": "Woody-stemmed seagrass found in Eocene limestones of Florida."
+  },
+  {
+   "id": "amphiroa",
+   "commonName": "Amphiroa",
+   "scientificName": "Amphiroa",
+   "group": "Red alga",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Calcareous",
+   "tint": "#E0A0B0",
+   "size": 0.9,
+   "description": "Jointed coralline alga with forked chalky branches."
+  },
+  {
+   "id": "jania",
+   "commonName": "Jania",
+   "scientificName": "Jania",
+   "group": "Red alga",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Tuft",
+   "tint": "#E8B0C0",
+   "size": 0.8,
+   "description": "Fine pink coralline tufts that grow on other seaweeds."
+  },
+  {
+   "id": "ovulites",
+   "commonName": "Ovulites",
+   "scientificName": "Ovulites",
+   "group": "Green alga",
+   "firstAge": "Paleogene",
+   "lastAge": "Paleogene",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fingers",
+   "tint": "#D8D0A8",
+   "size": 1.0,
+   "description": "Extinct chalky green alga whose egg-shaped segments fill Paleogene sands."
+  },
+  {
+   "id": "discoaster",
+   "commonName": "Discoaster",
+   "scientificName": "Discoaster",
+   "group": "Haptophyte alga",
+   "firstAge": "Paleogene",
+   "lastAge": "Quaternary",
+   "layer": "under",
+   "terrains": [
+    "DeepSeabed"
+   ],
+   "forests": [],
+   "form": "Calcareous",
+   "tint": "#E8E4D8",
+   "size": 0.9,
+   "description": "Star-shaped plankton plates that pile up as ooze on the deep sea floor."
+  },
+  {
+   "id": "stratiotes",
+   "commonName": "Water soldier",
+   "scientificName": "Stratiotes",
+   "group": "Flowering plant",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Rosette",
+   "blossom": "#F8F8F0",
+   "tint": "#88B060",
+   "size": 1.0,
+   "description": "Spiky rosette that rises and sinks in the water; its seeds are common in Paleogene lake beds."
+  },
+  {
+   "id": "suillus",
+   "commonName": "Slippery jack",
+   "scientificName": "Suillus",
+   "group": "Fungus",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Mushroom",
+   "tint": "#C89850",
+   "size": 0.9,
+   "description": "Bolete partnered with pine roots; its fossil root sheaths are Eocene."
+  },
+  {
+   "id": "chaenothecopsis",
+   "commonName": "Resin pin fungus",
+   "scientificName": "Chaenothecopsis",
+   "group": "Fungus",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Cave"
+   ],
+   "forests": [],
+   "form": "Stalks",
+   "tint": "#4A3A30",
+   "size": 0.7,
+   "description": "Tiny pin-shaped fungus that grows on resin; found in Eocene amber."
+  },
+  {
+   "id": "arcyria",
+   "commonName": "Carnival candy slime",
+   "scientificName": "Arcyria",
+   "group": "Slime mould",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Cave"
+   ],
+   "forests": [],
+   "form": "SlimeMold",
+   "tint": "#E898A8",
+   "size": 0.8,
+   "description": "Pink slime mould whose fruiting bodies are preserved in Baltic amber."
+  },
+  {
+   "id": "parmelia",
+   "commonName": "Shield lichen",
+   "scientificName": "Parmelia",
+   "group": "Lichen",
+   "firstAge": "Paleogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Lichen",
+   "tint": "#A8B8A0",
+   "size": 0.9,
+   "description": "Leafy grey-green lichen, known from Eocene amber."
+  },
+  {
+   "id": "hymenaea",
+   "commonName": "Courbaril",
+   "scientificName": "Hymenaea",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "Savanna"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Broadleaf",
+   "shape": "Emergent",
+   "blossom": "#F4F0E0",
+   "fruit": "#6A3A20",
+   "fruitForm": "Pod",
+   "tint": "#98C878",
+   "size": 1.2,
+   "description": "Its resin hardened into the Miocene amber of the Caribbean."
+  },
+  {
+   "id": "avicennia",
+   "commonName": "Grey mangrove",
+   "scientificName": "Avicennia",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [
+    "Jungle",
+    "Broadleaf"
+   ],
+   "form": "Mangrove",
+   "blossom": "#F0C040",
+   "fruit": "#A8B870",
+   "fruitForm": "Seed",
+   "tint": "#C0D0B0",
+   "size": 0.9,
+   "description": "Mangrove that breathes through pencil-like roots poking out of the mud."
+  },
+  {
+   "id": "sequoiadendron",
+   "commonName": "Giant sequoia",
+   "scientificName": "Sequoiadendron giganteum",
+   "group": "Conifer",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Redwood",
+   "fruit": "#7A5A30",
+   "fruitForm": "Cone",
+   "tint": "#A8C890",
+   "size": 1.4,
+   "description": "The most massive trees on Earth, on the slopes of the Sierra Nevada."
+  },
+  {
+   "id": "cupressus",
+   "commonName": "Italian cypress",
+   "scientificName": "Cupressus sempervirens",
+   "group": "Conifer",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Plain",
+    "Steppe"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Columnar",
+   "fruit": "#8A7A58",
+   "fruitForm": "Round",
+   "tint": "#7A9A70",
+   "size": 0.95,
+   "description": "Dark green flame of the Mediterranean hills."
+  },
+  {
+   "id": "pinus_pinea",
+   "commonName": "Stone pine",
+   "scientificName": "Pinus pinea",
+   "group": "Conifer",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Steppe",
+    "Plain"
+   ],
+   "forests": [
+    "Conifer"
+   ],
+   "form": "Conifer",
+   "shape": "Umbrella",
+   "fruit": "#9A6A3A",
+   "fruitForm": "Cone",
+   "tint": "#B0C890",
+   "size": 1.0,
+   "description": "Umbrella-shaped pine with edible pine nuts."
+  },
+  {
+   "id": "sclerocarya",
+   "commonName": "Marula",
+   "scientificName": "Sclerocarya birrea",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Savanna"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Spreading",
+   "fruit": "#E8D050",
+   "fruitForm": "Round",
+   "tint": "#C8E098",
+   "size": 1.05,
+   "description": "Savanna tree whose yellow fruit elephants seek out."
+  },
+  {
+   "id": "brachystegia",
+   "commonName": "Miombo",
+   "scientificName": "Brachystegia",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Savanna",
+    "Hill"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Spreading",
+   "fruit": "#7A5A30",
+   "fruitForm": "Pod",
+   "tint": "#E8C8A0",
+   "size": 1.0,
+   "description": "Woodland tree of central Africa; new leaves flush red and copper."
+  },
+  {
+   "id": "kigelia",
+   "commonName": "Sausage tree",
+   "scientificName": "Kigelia africana",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Savanna",
+    "Wetland"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Spreading",
+   "blossom": "#8A1A28",
+   "fruit": "#8A8A6A",
+   "fruitForm": "Hanging",
+   "tint": "#B8D890",
+   "size": 1.05,
+   "description": "Dark red flowers and huge sausage-shaped fruit hanging on ropes."
+  },
+  {
+   "id": "tamarindus",
+   "commonName": "Tamarind",
+   "scientificName": "Tamarindus indica",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Savanna",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Dome",
+   "blossom": "#F0D080",
+   "fruit": "#7A5A3A",
+   "fruitForm": "Pod",
+   "tint": "#B0D888",
+   "size": 1.05,
+   "description": "Feathery-leaved savanna tree with brown, sticky pods."
+  },
+  {
+   "id": "hyphaene",
+   "commonName": "Doum palm",
+   "scientificName": "Hyphaene thebaica",
+   "group": "Palm",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Savanna",
+    "Desert",
+    "Wetland"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Palm",
+   "fruit": "#B07030",
+   "fruitForm": "Coconut",
+   "tint": "#D0E0A0",
+   "size": 0.95,
+   "description": "Fan palm with forked trunks, along desert rivers like the Nile."
+  },
+  {
+   "id": "theobroma",
+   "commonName": "Cacao",
+   "scientificName": "Theobroma cacao",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Broadleaf",
+   "shape": "Bushy",
+   "blossom": "#F4E8E0",
+   "fruit": "#E0A020",
+   "fruitForm": "Pod",
+   "tint": "#90C070",
+   "size": 0.8,
+   "description": "Small understory tree with pods growing straight from its trunk."
+  },
+  {
+   "id": "bertholletia",
+   "commonName": "Brazil nut",
+   "scientificName": "Bertholletia excelsa",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Broadleaf",
+   "shape": "Emergent",
+   "blossom": "#F0E890",
+   "fruit": "#6A4A2A",
+   "fruitForm": "Coconut",
+   "tint": "#A0C880",
+   "size": 1.35,
+   "description": "Amazon giant whose heavy fruit is opened only by agoutis."
+  },
+  {
+   "id": "durio",
+   "commonName": "Durian",
+   "scientificName": "Durio",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Broadleaf",
+   "shape": "Tall",
+   "blossom": "#F4F0D8",
+   "fruit": "#A0A840",
+   "fruitForm": "Round",
+   "tint": "#A8D080",
+   "size": 1.15,
+   "description": "Bat-pollinated tree with spiny, famously smelly fruit."
+  },
+  {
+   "id": "couroupita",
+   "commonName": "Cannonball tree",
+   "scientificName": "Couroupita guianensis",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Broadleaf",
+   "shape": "Open",
+   "blossom": "#F070A0",
+   "fruit": "#8A5A30",
+   "fruitForm": "Round",
+   "tint": "#B0D890",
+   "size": 1.1,
+   "description": "Pink flowers and round fruit grow straight from its trunk."
+  },
+  {
+   "id": "salix_alba",
+   "commonName": "White willow",
+   "scientificName": "Salix alba",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Wetland",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Slender",
+   "fruit": "#E8E8C0",
+   "fruitForm": "Catkin",
+   "tint": "#D8F0C0",
+   "size": 1.0,
+   "description": "Silvery willow of river banks."
+  },
+  {
+   "id": "olea",
+   "commonName": "Olive",
+   "scientificName": "Olea europaea",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Steppe",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Spreading",
+   "blossom": "#F0F0E0",
+   "fruit": "#3A2A40",
+   "fruitForm": "Berry",
+   "tint": "#B8C8A8",
+   "size": 0.85,
+   "description": "Gnarled, silver-leaved tree of the Mediterranean."
+  },
+  {
+   "id": "arbutus",
+   "commonName": "Strawberry tree",
+   "scientificName": "Arbutus unedo",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Bushy",
+   "blossom": "#F8F0E8",
+   "fruit": "#E03020",
+   "fruitForm": "Round",
+   "tint": "#98C078",
+   "size": 0.85,
+   "description": "Evergreen with red bark and round, bumpy red fruit."
+  },
+  {
+   "id": "metrosideros",
+   "commonName": "Pohutukawa",
+   "scientificName": "Metrosideros excelsa",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Hill",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf"
+   ],
+   "form": "Broadleaf",
+   "shape": "Spreading",
+   "rarity": 1.0,
+   "crown": "#C81E30",
+   "tint": "#FFFFFF",
+   "size": 1.0,
+   "description": "New Zealand's 'Christmas tree' bursts into crimson flowers."
+  },
+  {
+   "id": "brachychiton",
+   "commonName": "Illawarra flame tree",
+   "scientificName": "Brachychiton acerifolius",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Rainforest",
+    "Plain"
+   ],
+   "forests": [
+    "Broadleaf",
+    "Jungle"
+   ],
+   "form": "Broadleaf",
+   "shape": "Oval",
+   "rarity": 1.0,
+   "crown": "#E83A28",
+   "fruit": "#3A2A20",
+   "fruitForm": "Pod",
+   "tint": "#FFFFFF",
+   "size": 1.05,
+   "description": "Drops its leaves and covers itself in scarlet bells."
+  },
+  {
+   "id": "washingtonia",
+   "commonName": "Fan palm",
+   "scientificName": "Washingtonia filifera",
+   "group": "Palm",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "canopy",
+   "terrains": [
+    "Desert",
+    "Savanna"
+   ],
+   "forests": [
+    "Jungle"
+   ],
+   "form": "Palm",
+   "blossom": "#F4F0E0",
+   "fruit": "#2A2020",
+   "fruitForm": "Berry",
+   "tint": "#C8D8A0",
+   "size": 1.1,
+   "description": "Desert palm of oases, wearing a skirt of dead leaves."
+  },
+  {
+   "id": "cenchrus",
+   "commonName": "Elephant grass",
+   "scientificName": "Cenchrus purpureus",
+   "group": "Grass",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Savanna",
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Grass",
+   "shape": "Tall",
+   "tint": "#B8D880",
+   "size": 1.3,
+   "description": "Very tall grass of African savannas and river banks."
+  },
+  {
+   "id": "festuca",
+   "commonName": "Fescue",
+   "scientificName": "Festuca",
+   "group": "Grass",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Steppe",
+    "Hill",
+    "Tundra",
+    "Plain"
+   ],
+   "forests": [],
+   "form": "Grass",
+   "shape": "Hummock",
+   "tint": "#A8C8B0",
+   "size": 0.75,
+   "description": "Fine-leaved tussock grass of cool steppes and mountains."
+  },
+  {
+   "id": "bouteloua",
+   "commonName": "Blue grama",
+   "scientificName": "Bouteloua gracilis",
+   "group": "Grass",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Steppe",
+    "Desert",
+    "Plain"
+   ],
+   "forests": [],
+   "form": "Grass",
+   "shape": "Feather",
+   "tint": "#B0C0A0",
+   "size": 0.7,
+   "description": "Shortgrass of the prairies with eyelash-like seed heads."
+  },
+  {
+   "id": "tulipa",
+   "commonName": "Wild tulip",
+   "scientificName": "Tulipa",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Steppe",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#E02828",
+   "tint": "#E02828",
+   "size": 0.7,
+   "description": "Tulips come from the steppes and mountains of Central Asia."
+  },
+  {
+   "id": "papaver",
+   "commonName": "Corn poppy",
+   "scientificName": "Papaver rhoeas",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Plain",
+    "Steppe"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#E82020",
+   "tint": "#E82020",
+   "size": 0.6,
+   "description": "Scarlet poppies of open, disturbed ground."
+  },
+  {
+   "id": "lupinus",
+   "commonName": "Lupin",
+   "scientificName": "Lupinus",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Plain",
+    "Hill",
+    "Tundra"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#6A60D0",
+   "tint": "#6A60D0",
+   "size": 0.8,
+   "description": "Spires of blue-purple pea flowers."
+  },
+  {
+   "id": "helianthus",
+   "commonName": "Sunflower",
+   "scientificName": "Helianthus",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Plain",
+    "Steppe"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#F4C820",
+   "tint": "#F4C820",
+   "size": 1.0,
+   "description": "Tall daisy of the American prairies whose heads follow the sun."
+  },
+  {
+   "id": "lavandula",
+   "commonName": "Lavender",
+   "scientificName": "Lavandula",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Hill",
+    "Steppe"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Twiggy",
+   "blossom": "#9A78D0",
+   "tint": "#B0C0A8",
+   "size": 0.7,
+   "description": "Fragrant grey shrub of dry Mediterranean hills."
+  },
+  {
+   "id": "gentiana",
+   "commonName": "Gentian",
+   "scientificName": "Gentiana",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Hill",
+    "Tundra"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#2A48C8",
+   "tint": "#2A48C8",
+   "size": 0.55,
+   "description": "Deep blue trumpets of mountain meadows."
+  },
+  {
+   "id": "vaccinium",
+   "commonName": "Bilberry",
+   "scientificName": "Vaccinium",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Tundra",
+    "Hill",
+    "Plain"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Berries",
+   "fruit": "#2A2A58",
+   "fruitForm": "Berry",
+   "tint": "#A8C888",
+   "size": 0.6,
+   "description": "Low shrub with blue-black berries in heaths and forests."
+  },
+  {
+   "id": "betula_nana",
+   "commonName": "Dwarf birch",
+   "scientificName": "Betula nana",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Tundra"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Mat",
+   "fruit": "#8A6A40",
+   "fruitForm": "Catkin",
+   "tint": "#C0D898",
+   "size": 0.55,
+   "description": "Knee-high birch of the tundra; a sign of cold ice-age climates."
+  },
+  {
+   "id": "silene_acaulis",
+   "commonName": "Moss campion",
+   "scientificName": "Silene acaulis",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Tundra",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#E870B0",
+   "tint": "#E870B0",
+   "size": 0.45,
+   "description": "Tight cushion of tundra covered in pink flowers."
+  },
+  {
+   "id": "echinocactus",
+   "commonName": "Golden barrel cactus",
+   "scientificName": "Echinocactus grusonii",
+   "group": "Cactus",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Desert"
+   ],
+   "forests": [],
+   "form": "Cactus",
+   "blossom": "#F4D030",
+   "tint": "#C8D890",
+   "size": 0.6,
+   "description": "Round, golden-spined cactus of Mexican deserts."
+  },
+  {
+   "id": "agave",
+   "commonName": "Agave",
+   "scientificName": "Agave",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Desert",
+    "Steppe",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Succulent",
+   "blossom": "#E8D060",
+   "tint": "#A8C8C0",
+   "size": 0.9,
+   "description": "Spiky rosette that flowers once, on a tall pole, then dies."
+  },
+  {
+   "id": "yucca",
+   "commonName": "Joshua tree",
+   "scientificName": "Yucca brevifolia",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Desert"
+   ],
+   "forests": [],
+   "form": "Succulent",
+   "blossom": "#F0ECD0",
+   "tint": "#B8C890",
+   "size": 1.3,
+   "description": "Branching tree yucca of the Mojave Desert."
+  },
+  {
+   "id": "fouquieria",
+   "commonName": "Ocotillo",
+   "scientificName": "Fouquieria splendens",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Desert"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Twiggy",
+   "blossom": "#E83020",
+   "tint": "#B0C080",
+   "size": 0.9,
+   "description": "Bundle of thorny whips tipped with red flowers after rain."
+  },
+  {
+   "id": "tamarix",
+   "commonName": "Tamarisk",
+   "scientificName": "Tamarix",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Desert",
+    "Wetland",
+    "Steppe"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Twiggy",
+   "blossom": "#F0A0C0",
+   "tint": "#B8D0B0",
+   "size": 0.9,
+   "description": "Salt-tolerant shrub of desert rivers, clouded in pink flowers."
+  },
+  {
+   "id": "haloxylon",
+   "commonName": "Saxaul",
+   "scientificName": "Haloxylon",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Desert",
+    "Steppe"
+   ],
+   "forests": [],
+   "form": "Shrub",
+   "shape": "Twiggy",
+   "tint": "#C0C8A0",
+   "size": 0.85,
+   "description": "Leafless, twisted shrub of the Central Asian deserts."
+  },
+  {
+   "id": "lithops",
+   "commonName": "Living stones",
+   "scientificName": "Lithops",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Desert"
+   ],
+   "forests": [],
+   "form": "Succulent",
+   "blossom": "#F8F0E0",
+   "tint": "#D8C8A8",
+   "size": 0.35,
+   "description": "Pairs of fat leaves that look like pebbles in the Namib sand."
+  },
+  {
+   "id": "iris_pseudacorus",
+   "commonName": "Yellow flag",
+   "scientificName": "Iris pseudacorus",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Reed",
+   "blossom": "#F2D020",
+   "tint": "#B0D890",
+   "size": 0.85,
+   "description": "Iris with sword-like leaves and yellow flowers on pond edges."
+  },
+  {
+   "id": "eichhornia",
+   "commonName": "Water hyacinth",
+   "scientificName": "Pontederia crassipes",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland",
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "WaterLily",
+   "blossom": "#B090E0",
+   "tint": "#A8D890",
+   "size": 0.7,
+   "description": "Floating Amazon plant with lilac flower spikes."
+  },
+  {
+   "id": "sarracenia",
+   "commonName": "Trumpet pitcher",
+   "scientificName": "Sarracenia",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#B02838",
+   "tint": "#B02838",
+   "size": 0.7,
+   "description": "Carnivorous bog plant whose tall pitchers drown insects."
+  },
+  {
+   "id": "nepenthes",
+   "commonName": "Monkey cup",
+   "scientificName": "Nepenthes",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#A83838",
+   "tint": "#A83838",
+   "size": 0.7,
+   "description": "Tropical vine with hanging pitchers that trap insects."
+  },
+  {
+   "id": "bromeliad",
+   "commonName": "Bromeliad",
+   "scientificName": "Bromeliaceae",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#E83050",
+   "tint": "#E83050",
+   "size": 0.6,
+   "description": "Rosettes of the American tropics that hold pools of water in their leaves."
+  },
+  {
+   "id": "rafflesia",
+   "commonName": "Corpse lily",
+   "scientificName": "Rafflesia arnoldii",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Rainforest"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#B83020",
+   "tint": "#B83020",
+   "size": 0.9,
+   "description": "Leafless parasite with the world's largest single flower, smelling of rotting meat."
+  },
+  {
+   "id": "strelitzia",
+   "commonName": "Bird of paradise",
+   "scientificName": "Strelitzia reginae",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Hill",
+    "Savanna"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#F08020",
+   "tint": "#F08020",
+   "size": 0.9,
+   "description": "Orange and blue flowers shaped like a bird's head."
+  },
+  {
+   "id": "digitalis",
+   "commonName": "Foxglove",
+   "scientificName": "Digitalis purpurea",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Plain",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Flower",
+   "blossom": "#B060B0",
+   "tint": "#B060B0",
+   "size": 0.8,
+   "description": "Tall spikes of purple bells at forest edges."
+  },
+  {
+   "id": "enhalus",
+   "commonName": "Tape seagrass",
+   "scientificName": "Enhalus acoroides",
+   "group": "Seagrass",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Seagrass",
+   "tint": "#7AA050",
+   "size": 1.3,
+   "description": "Long-leaved seagrass of tropical shallows, grazed by dugongs."
+  },
+  {
+   "id": "phyllospadix",
+   "commonName": "Surfgrass",
+   "scientificName": "Phyllospadix",
+   "group": "Seagrass",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Ribbon",
+   "tint": "#58A048",
+   "size": 0.9,
+   "description": "Bright green seagrass of wave-beaten Pacific rocks."
+  },
+  {
+   "id": "penicillus",
+   "commonName": "Merman's shaving brush",
+   "scientificName": "Penicillus",
+   "group": "Green alga",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Tuft",
+   "tint": "#98B870",
+   "size": 0.7,
+   "description": "Chalky green alga shaped like a shaving brush."
+  },
+  {
+   "id": "udotea",
+   "commonName": "Mermaid's fan",
+   "scientificName": "Udotea",
+   "group": "Green alga",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Fan",
+   "tint": "#A8C880",
+   "size": 0.7,
+   "description": "Green alga with a stiff, chalky fan on a stalk."
+  },
+  {
+   "id": "nereocystis",
+   "commonName": "Bull-whip kelp",
+   "scientificName": "Nereocystis luetkeana",
+   "group": "Brown alga",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Kelp",
+   "tint": "#9A7A40",
+   "size": 1.4,
+   "description": "Kelp with a float the size of a fist at the end of a long whip-like stalk."
+  },
+  {
+   "id": "alaria",
+   "commonName": "Winged kelp",
+   "scientificName": "Alaria esculenta",
+   "group": "Brown alga",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Ribbon",
+   "tint": "#8A8040",
+   "size": 1.1,
+   "description": "Long, frilly-edged kelp of cold Atlantic coasts."
+  },
+  {
+   "id": "trapa",
+   "commonName": "Water chestnut",
+   "scientificName": "Trapa",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Rosette",
+   "blossom": "#F8F8F0",
+   "tint": "#88A858",
+   "size": 0.9,
+   "description": "Floating rosette with horned nuts."
+  },
+  {
+   "id": "hydrilla",
+   "commonName": "Hydrilla",
+   "scientificName": "Hydrilla verticillata",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Whorl",
+   "tint": "#68A050",
+   "size": 1.0,
+   "description": "Fast-growing waterweed with whorls of small leaves."
+  },
+  {
+   "id": "cabomba",
+   "commonName": "Fanwort",
+   "scientificName": "Cabomba",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Feather",
+   "tint": "#90C060",
+   "size": 0.9,
+   "description": "Water plant with fans of finely cut leaves."
+  },
+  {
+   "id": "ranunculus_aquatilis",
+   "commonName": "Water crowfoot",
+   "scientificName": "Ranunculus aquatilis",
+   "group": "Flowering plant",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Lakebed"
+   ],
+   "forests": [],
+   "form": "Feather",
+   "blossom": "#F8F8F0",
+   "tint": "#78A858",
+   "size": 0.8,
+   "description": "Buttercup of streams with white flowers on the surface."
+  },
+  {
+   "id": "coprinites",
+   "commonName": "Coprinites",
+   "scientificName": "Coprinites dominicana",
+   "group": "Fungus",
+   "firstAge": "Neogene",
+   "lastAge": "Neogene",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Inkcap",
+   "tint": "#D8C8B0",
+   "size": 0.6,
+   "description": "An ink cap preserved in Miocene Dominican amber."
+  },
+  {
+   "id": "russula",
+   "commonName": "Sickener",
+   "scientificName": "Russula emetica",
+   "group": "Fungus",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Mushroom",
+   "tint": "#D83038",
+   "size": 0.8,
+   "description": "Bright red brittlegill of pine woods."
+  },
+  {
+   "id": "lactarius_indigo",
+   "commonName": "Indigo milk cap",
+   "scientificName": "Lactarius indigo",
+   "group": "Fungus",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Mushroom",
+   "tint": "#4A68A8",
+   "size": 0.8,
+   "description": "Blue mushroom that bleeds blue milk when cut."
+  },
+  {
+   "id": "craterellus",
+   "commonName": "Horn of plenty",
+   "scientificName": "Craterellus cornucopioides",
+   "group": "Fungus",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Funnel",
+   "tint": "#3A3030",
+   "size": 0.8,
+   "description": "Black, trumpet-shaped mushroom of leaf litter."
+  },
+  {
+   "id": "mycena_luxcoeli",
+   "commonName": "Heaven's-light bonnet",
+   "scientificName": "Mycena lux-coeli",
+   "group": "Fungus",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Cave",
+    "Rock"
+   ],
+   "forests": [],
+   "form": "GlowCap",
+   "tint": "#B8F0C0",
+   "size": 0.6,
+   "description": "Japanese bonnet that glows green on rainy nights."
+  },
+  {
+   "id": "pseudogymnoascus",
+   "commonName": "White-nose fungus",
+   "scientificName": "Pseudogymnoascus destructans",
+   "group": "Fungus",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Cave"
+   ],
+   "forests": [],
+   "form": "Mycelium",
+   "tint": "#F0EEE8",
+   "size": 0.7,
+   "description": "Cold-loving cave mould that grows on the noses of hibernating bats."
+  },
+  {
+   "id": "usnea",
+   "commonName": "Old man's beard",
+   "scientificName": "Usnea",
+   "group": "Lichen",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock"
+   ],
+   "forests": [],
+   "form": "Lichen",
+   "tint": "#C0D0A0",
+   "size": 0.9,
+   "description": "Lichen that hangs from branches in grey-green tassels."
+  },
+  {
+   "id": "rhizocarpon",
+   "commonName": "Map lichen",
+   "scientificName": "Rhizocarpon geographicum",
+   "group": "Lichen",
+   "firstAge": "Neogene",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "Rock",
+    "Cave"
+   ],
+   "forests": [],
+   "form": "Lichen",
+   "tint": "#C8D040",
+   "size": 0.8,
+   "description": "Yellow-green crusts on bare rock; grows so slowly it is used to date glacier retreat."
+  },
+  {
+   "id": "triticum_dicoccoides",
+   "commonName": "Wild emmer",
+   "scientificName": "Triticum dicoccoides",
+   "group": "Grass",
+   "firstAge": "Quaternary",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Steppe",
+    "Hill"
+   ],
+   "forests": [],
+   "form": "Grass",
+   "shape": "Tall",
+   "tint": "#D8D898",
+   "size": 0.75,
+   "description": "Wild wheat of the Fertile Crescent, ancestor of the first farmed wheats."
+  },
+  {
+   "id": "spartina_anglica",
+   "commonName": "Common cordgrass",
+   "scientificName": "Spartina anglica",
+   "group": "Grass",
+   "firstAge": "Quaternary",
+   "lastAge": "",
+   "layer": "ground",
+   "terrains": [
+    "Wetland"
+   ],
+   "forests": [],
+   "form": "Grass",
+   "shape": "Tall",
+   "tint": "#B8C890",
+   "size": 0.85,
+   "description": "A new species born in an English salt marsh in the 1890s."
+  },
+  {
+   "id": "emiliania",
+   "commonName": "Emiliania",
+   "scientificName": "Emiliania huxleyi",
+   "group": "Haptophyte alga",
+   "firstAge": "Quaternary",
+   "lastAge": "",
+   "layer": "under",
+   "terrains": [
+    "DeepSeabed",
+    "Seabed"
+   ],
+   "forests": [],
+   "form": "Mat",
+   "tint": "#F2F0EA",
+   "size": 0.9,
+   "description": "Chalk-plated plankton whose blooms whiten the sea; it appeared about 270,000 years ago."
   }
  ]
 }

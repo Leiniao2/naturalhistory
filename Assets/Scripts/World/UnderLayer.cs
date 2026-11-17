@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using NaturalHistory.Core;
 using NaturalHistory.Data;
 
@@ -25,30 +26,94 @@ namespace NaturalHistory.World
         Geothermal, // shallow hydrothermal field: white smokers, gas seeps, sulphur and bacterial mats
     }
 
-    // Which layer the map shows: the surface, or the layer under sea level
+    // Which layer the map shows: the sky, the surface, or the layer under sea level
     public static class UnderView
     {
-        public static bool On { get; private set; }
+        public static MapLayer Layer { get; private set; } = MapLayer.Surface;
+        public static bool On  => Layer == MapLayer.Under;
+        public static bool Sky => Layer == MapLayer.Sky;
         public static event Action Changed;
 
-        public static void Set(bool on)
+        public static void Set(MapLayer layer)
         {
-            if (on == On) return;
-            On = on;
+            if (layer == Layer) return;
+            Layer = layer;
+            Focus.Reset();
             Changed?.Invoke();
         }
 
-        public static void Toggle() => Set(!On);
+        public static void Set(bool under) => Set(under ? MapLayer.Under : MapLayer.Surface);
+        public static void Toggle()    => Set(On  ? MapLayer.Surface : MapLayer.Under);
+        public static void ToggleSky() => Set(Sky ? MapLayer.Surface : MapLayer.Sky);
 
-        // Whether a group is shown (and clickable) in the current view: the under view shows the
-        // seabed and underground niche and the animals in the sea; the surface view everything but
-        // the underground niche (swimmers are in both).
+        // Whether a group belongs to a layer: its niche is there, or it visits it (see Niches tags)
+        //  Surface: land tiles show their niches; water tiles the sea surface and the air-breathers coming up
+        //  Under:   land tiles show the underground and the burrowers going down; water tiles their niches
+        //  Sky:     fliers everywhere, and the summits
+        public static bool InLayer(ColonyGroup g, MapLayer layer)
+        {
+            if (g == null || g.Definition == null || g.Cell == null) return false;
+            var def = g.Definition;
+            var home = Niches.LayerOf(g.Niche);
+            return layer switch
+            {
+                MapLayer.Surface => home == MapLayer.Surface || (g.Cell.IsWater && Niches.IsSurfacer(def)),
+                MapLayer.Under   => home == MapLayer.Under || (!g.Cell.IsWater && Niches.IsBurrower(def)),
+                _                => home == MapLayer.Sky || Niches.IsFlyer(def),
+            };
+        }
+
+        // Whether a group is drawn (and clickable) now: every group of the layer, except on the
+        // selected tile, which shows one at a time (see Focus)
         public static bool Shows(ColonyGroup g)
         {
-            if (g == null) return false;
-            bool below  = g.Niche == Niche.Underground;
-            bool marine = g.Cell != null && g.Cell.IsWater && g.Style is ColonyStyle.Swim or ColonyStyle.Drift;
-            return On ? below || marine : !below;
+            if (!InLayer(g, Layer)) return false;
+            return g.Cell != CellSelector.Selected || Focus.Current(g.Cell) == g;
+        }
+
+        // The selected tile shows its groups of the current layer one at a time, biggest first,
+        // microbes and plankton last; Tab (or clicking the tile again) moves to the next.
+        public static class Focus
+        {
+            private static HexCell cell;
+            private static int index;
+            public static int Version { get; private set; }
+
+            public static List<ColonyGroup> Ordered(HexCell at)
+            {
+                var list = new List<ColonyGroup>();
+                var colonies = SpeciesColonies.Instance;
+                if (at == null || colonies == null) return list;
+                foreach (var g in colonies.GroupsAt(at)) if (InLayer(g, Layer)) list.Add(g);
+                list.Sort((a, b) => Niches.IsTiny(a.Niche) != Niches.IsTiny(b.Niche) ? Niches.IsTiny(a.Niche).CompareTo(Niches.IsTiny(b.Niche))
+                                                                                     : b.Definition.sizeCm.CompareTo(a.Definition.sizeCm));
+                return list;
+            }
+
+            public static ColonyGroup Current(HexCell at)
+            {
+                if (at != cell) { cell = at; index = 0; }
+                var list = Ordered(at);
+                return list.Count == 0 ? null : list[index % list.Count];
+            }
+
+            public static void Next(HexCell at)
+            {
+                if (at != cell) { cell = at; index = 0; }
+                else index++;
+                Version++;
+            }
+
+            public static void Show(ColonyGroup g)
+            {
+                if (g == null) return;
+                var list = Ordered(g.Cell);
+                int i = list.IndexOf(g);
+                if (i < 0) return;
+                cell = g.Cell; index = i; Version++;
+            }
+
+            public static void Reset() { cell = null; index = 0; Version++; }
         }
 
         // Underground animals can't enter, settle in or pass through solid bedrock
@@ -57,11 +122,11 @@ namespace NaturalHistory.World
         // Whether the layer below a tile is a bed of water (seabed, deep seabed, lakebed) rather than rock or caves
         public static bool IsWaterBed(UnderKind kind) => kind is UnderKind.Seabed or UnderKind.DeepSeabed or UnderKind.Lakebed;
 
-        // Whether an underground-niche species can live below this tile: not in solid bedrock, and
+        // Whether a soil or seabed species can live below this tile: not in solid bedrock, and
         // seabed dwellers only under water: on a seabed or lakebed, or in a sea cave (not in the
         // rock below the land, or a buried headland's rock under the sea)
         public static bool FitsBelow(SpeciesDefinition def, HexCell cell) =>
-            Niches.Of(def) != Niche.Underground ||
+            (!Niches.InSoil(def) && !Niches.OnSeabed(def)) ||
             (!Blocks(cell.Under) && (!Niches.OnSeabed(def) || IsWaterBed(cell.Under) || (cell.IsWater && cell.Under == UnderKind.Cave)));
 
         public static string Name(UnderKind kind) => Loc.T(kind switch

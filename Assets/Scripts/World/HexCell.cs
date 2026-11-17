@@ -47,6 +47,11 @@ namespace NaturalHistory.World
             (Terrain.kind == TerrainKind.Mountain ||
              Terrain.kind == TerrainKind.IceSheet && Elevation >= WorldGenerator.MountainElevation);
 
+        // One of the map's tallest mountains, peaking above the sky layer's clouds (HexGrid.HighMountains)
+        public bool IsHighMountain { get; set; }
+        // World height of the tile's highest point (its mountain's peak; else its top face)
+        public float PeakY { get; set; }
+
         // Terrace level: 0 = water surface, 1..WorldGenerator.MaxElevation = land
         public int Elevation { get; private set; }
 

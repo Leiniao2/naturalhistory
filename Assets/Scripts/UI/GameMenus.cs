@@ -24,6 +24,7 @@ namespace NaturalHistory.UI
         private PlayersPanel playersPanel;
         private AdminPanel adminPanel;
         private UnitPanel unitPanel;
+        private AnimalPanel animalPanel;
         private NewGameOptions newGameOptions;
         private ZoologyPanel zoologyPanel;
         private MiniMap miniMap;
@@ -88,6 +89,7 @@ namespace NaturalHistory.UI
             playersPanel = new PlayersPanel(root);
             adminPanel   = new AdminPanel(root);
             unitPanel    = new UnitPanel(root);
+            animalPanel  = new AnimalPanel(root);
             newGameOptions = new NewGameOptions(root);
             zoologyPanel = new ZoologyPanel(root);
             miniMap      = new MiniMap(root);
@@ -103,8 +105,13 @@ namespace NaturalHistory.UI
             root.Q<Button>("morphology-button").clicked += () => ToggleTree(Progression?.Morphology);
             root.Q<Button>("ethology-button").clicked   += () => ToggleTree(Progression?.Ethology);
             root.Q<Button>("zoology-button").clicked    += ToggleZoology;
-            underButton = root.Q<Button>("under-button");
-            underButton.clicked += UnderView.Toggle;
+            layerButtons = new[]
+            {
+                (root.Q<Button>("sky-button"),     MapLayer.Sky),
+                (root.Q<Button>("surface-button"), MapLayer.Surface),
+                (root.Q<Button>("under-button"),   MapLayer.Under),
+            };
+            foreach (var (button, layer) in layerButtons) button.clicked += () => UnderView.Set(layer);
             UnderView.Changed   += OnUnderViewChanged;
             OnUnderViewChanged();
             root.Q<Button>("menu-button").clicked       += () => SetPauseOpen(true);
@@ -137,8 +144,16 @@ namespace NaturalHistory.UI
 
         private void OnPhenomenon(string message, HexCell cell) => ShowToast(message);
 
-        private Button underButton;
-        private void OnUnderViewChanged() => underButton.text = Loc.T(UnderView.On ? "Surface" : "Underground");
+        // The layer switch over the minimap: sky, surface, underground; the one shown is lit
+        private (Button button, MapLayer layer)[] layerButtons;
+        private void OnUnderViewChanged()
+        {
+            foreach (var (button, layer) in layerButtons)
+            {
+                button.text = Loc.T(layer switch { MapLayer.Sky => "Sky", MapLayer.Under => "Underground", _ => "Surface" });
+                button.EnableInClassList("selected", layer == UnderView.Layer);
+            }
+        }
 
         // ---------- Language ----------
 
@@ -223,11 +238,14 @@ namespace NaturalHistory.UI
 
             if (Input.GetKeyDown(KeyCode.Escape)) HandleEscape();
             if (Input.GetKeyDown(KeyCode.BackQuote)) adminPanel.Toggle();
-            if (Input.GetKeyDown(KeyCode.U) && !AnyModalOpen()) UnderView.Toggle(); // the layer under sea level
+            if (Input.GetKeyDown(KeyCode.U) && !AnyModalOpen()) UnderView.Toggle();    // the layer under sea level
+            if (Input.GetKeyDown(KeyCode.K) && !AnyModalOpen()) UnderView.ToggleSky(); // the sky layer
+            if (Input.GetKeyDown(KeyCode.Tab) && !AnyModalOpen()) SpeciesColonies.Instance?.CycleFocus(); // the selected tile's next animal
             if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !AnyModalOpen())
                 ClimateHud.EndTurn();
             climateHud.RefreshTile();
             unitPanel.Update();
+            animalPanel.Update();
             miniMap.Update();
             if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)
             {

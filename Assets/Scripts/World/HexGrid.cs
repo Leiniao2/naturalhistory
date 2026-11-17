@@ -49,7 +49,7 @@ namespace NaturalHistory.World
         [SerializeField] private TerrainType defaultTerrain;
         [SerializeField] private int seed = 0;          // 0 = random each Play
         [SerializeField] private int previewSeed = 12345; // used in Edit mode when seed is 0
-        private const float ElevationStep = 0.2f; // world height of one terrace level (tiles slope into each other, so land still reads as continuous)
+        private const float ElevationStep = 0.16f; // world height of one terrace level (tiles slope into each other, so land still reads as continuous)
         [Tooltip("Period whose plants the Edit-mode preview shows. In Play mode the map follows AgeManager.")]
         [SerializeField] private GeologicalAge previewAge = GeologicalAge.Quaternary;
 
@@ -307,6 +307,8 @@ namespace NaturalHistory.World
             // Plant species of the period (plants.json): each tile gets its region's dominant species,
             // named in the tile panel. Forest tiles: a canopy species over an understory species.
             var plants = new PlantPlanner(age, worldSeed, cellSize, WrapWidth, Track);
+            // Fungi on a few land tiles (LandFungi.cs): about one plant-covered tile in fourteen
+            PlantDefinition Fungus(HexCell cell) => TileRoll(cell.Coordinates.Q, cell.Coordinates.R, 31) < 0.07f ? plants.Fungus(cell) : null;
             bool hexStand = false; // the mesh fills the hex: turn it by multiples of 60° so it meets its neighbours
             Mesh Forest(HexCell cell, string type, Mesh[] fallback)
             {
@@ -315,16 +317,18 @@ namespace NaturalHistory.World
                 var (under, _) = plants.Choose(cell, null);
                 cell.SetPlants(tree, tree2, under);
                 hexStand = true;
-                return plants.Stand(rng, tree, tree2, under);
+                return plants.Stand(rng, tree, tree2, under, Fungus(cell));
             }
             Mesh Ground(HexCell cell)
             {
                 var (main, second) = plants.Choose(cell, null);
                 if (main == null) return rng.NextDouble() < 0.75 ? Detail(cell.Terrain.kind) : null; // no plants yet: rocks, mats
-                cell.SetPlants(main, second);
-                if (cell.Terrain.kind == TerrainKind.Desert && rng.NextDouble() < 0.1) return Detail(TerrainKind.Desert); // the odd dune
+                var cover = LandCover(cell, age); // bare and thinly planted regions (HexGrid.Barren)
+                if (cover == PlantCover.Bare) return rng.NextDouble() < 0.6 ? Detail(cell.Terrain.kind) : null; // dunes, rocks
+                bool sparse = cover == PlantCover.Sparse;
+                cell.SetPlants(main, sparse ? null : second);
                 hexStand = true;
-                return plants.Ground(rng, main, second, cell.Terrain.kind);
+                return plants.Ground(rng, main, sparse ? null : second, cell.Terrain.kind, sparse, Fungus(cell));
             }
 
             int mountains = 0, forests = 0, others = 0;
@@ -408,6 +412,7 @@ namespace NaturalHistory.World
                     feature.AddComponent<GeothermalSteam>().Init(cellSize, WorldSeed ^ (q * 7919 + r * 104729), steam, 0, underwater: false);
             }
             PlaceRivers();
+            MarkHighMountains(); // the tallest few rise above the clouds (HexGrid.HighMountains)
             Debug.Log($"[HexGrid] PlaceFeatures — {mountains} mountains, {forests} forests/jungles, {others} volcanoes/reefs/oases");
         }
 
@@ -471,6 +476,7 @@ namespace NaturalHistory.World
         private float MesaTop(HexCell cell)
         {
             float highest = cell.SurfaceHeight;
+            int low = 0;
             var seen = new HashSet<HexCell> { cell };
             var open = new Queue<HexCell>();
             open.Enqueue(cell);
@@ -478,10 +484,12 @@ namespace NaturalHistory.World
             {
                 var c = open.Dequeue();
                 highest = Mathf.Max(highest, c.SurfaceHeight);
+                if (LowMesa(c)) low++;
                 foreach (var n in EdgeNeighbors(c))
                     if (n != null && n.Feature == TerrainFeature.Mesa && InSameMassif(c, n) && seen.Add(n)) open.Enqueue(n);
             }
-            return highest + MapFeatureMeshes.MassifHeight * cellSize * 0.62f;
+            // low, broad tables (Table Mountain) or tall, sheer ones, by the region most of it lies in
+            return highest + MapFeatureMeshes.MassifHeight * cellSize * (low * 2 >= seen.Count ? 0.24f : 0.62f);
         }
 
         // Volcanoes stand alone; other neighbouring mountains are one massif.
@@ -687,7 +695,8 @@ namespace NaturalHistory.World
 
         // A mountain in a dry region where the ranges are tables (broad map-wide noise, so a range
         // turns to mesas as a whole rather than tile by tile); not icy
-        private const float MesaThreshold = 0.45f; // higher = rarer mesas
+        private const float MesaThreshold = 0.45f;    // higher = rarer mesas (tall ones)
+        private const float LowMesaThreshold = 0.32f; // the low, broad tables: a little more of the range, so they join up
 
         private bool MesaRange(HexCell cell)
         {
@@ -696,7 +705,17 @@ namespace NaturalHistory.World
             if (cell.Terrain.kind != TerrainKind.Mountain || cell.Moisture > 0.32f) return false;
             var pos = cell.Coordinates.ToWorldPosition(cellSize);
             var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.22f / cellSize) + reliefOffset * 0.3f + Vector3.one * 211f;
-            return PerlinNoise3D.Sample(p.x, p.y, p.z) > MesaThreshold;
+            // regions of low tables let more of the range turn flat, so they run on over several tiles
+            return PerlinNoise3D.Sample(p.x, p.y, p.z) > (LowMesa(cell) ? LowMesaThreshold : MesaThreshold);
+        }
+
+        // Mesas come in two kinds by region (a broad noise field): low, wide, continuous tables, or
+        // tall, sheer, smaller ones
+        private bool LowMesa(HexCell cell)
+        {
+            var pos = cell.Coordinates.ToWorldPosition(cellSize);
+            var p = OnMapLoop(new Vector2(pos.x, pos.z)) * (0.09f / cellSize) + reliefOffset * 0.2f + Vector3.one * 577f;
+            return PerlinNoise3D.Sample(p.x, p.y, p.z) > 0f;
         }
 
         private TerrainFeature LandformFor(HexCell cell, int q, int r, GeologicalAge age)

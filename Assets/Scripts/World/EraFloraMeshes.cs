@@ -308,7 +308,8 @@ namespace NaturalHistory.World
         // each other: mostly the dominant canopy species, some of the second (which neighbouring
         // regions tend to share, softening the change), with understory between the trunks. The
         // stand is hex-shaped, so HexGrid only turns it by multiples of 60°.
-        public static Mesh CreatePlantStand(System.Random rng, float size, PlantDefinition canopy, PlantDefinition canopy2, PlantDefinition under)
+        public static Mesh CreatePlantStand(System.Random rng, float size, PlantDefinition canopy, PlantDefinition canopy2, PlantDefinition under,
+                                             PlantDefinition fungus = null)
         {
             var b = new Builder { Foliage = true }; // plants: rough, speckled leaf clumps
             bool dense = canopy.form is "Palm" or "TreeFern" or "Calamites" or "Bamboo" or "Cycad" or "Mangrove" or "Lycopsid" or "Sigillaria";
@@ -335,6 +336,7 @@ namespace NaturalHistory.World
                     AddGroundPlant(b, rng, new Vector3(p.x, 0f, p.y), size, under, 0.8f);
                     b.SinkBase(from, 0.005f * size, 0.04f * size);
                 }
+            AddLandFungi(b, rng, size, fungus, trees); // the odd tile (LandFungi.cs)
             smallBlobRadius = 0f;
             return b.ToMesh($"Stand_{canopy.id}_{canopy2?.id}_{under?.id}");
         }
@@ -342,7 +344,7 @@ namespace NaturalHistory.World
         // Open ground covering the whole hex: many clumps of the main species, fewer of the second,
         // and the terrain's stones.
         public static Mesh CreatePlantGround(System.Random rng, float size, PlantDefinition main, PlantDefinition second, TerrainKind kind,
-                                             IReadOnlyList<PlantDefinition> extras = null)
+                                             IReadOnlyList<PlantDefinition> extras = null, bool sparse = false, PlantDefinition fungus = null)
         {
             var b = new Builder { Foliage = true }; // plants: rough, speckled leaf clumps
             var taken = new List<Vector2>();
@@ -360,7 +362,8 @@ namespace NaturalHistory.World
                     b.SinkBase(from, 0.005f * size, 0.04f * size);
                 }
             }
-            if (big) Plant(main, 6, 10, 0.16f, 1f);
+            if (sparse) Plant(main, big ? 2 : 3, big ? 4 : 6, 0.25f, 1f); // a thinly planted region: a few, well apart
+            else if (big) Plant(main, 6, 10, 0.16f, 1f);
             else     Plant(main, 14, 22, 0.09f, 0.95f);
             if (second != null) Plant(second, 4, 8, 0.1f, 0.9f);
             if (extras != null) foreach (var extra in extras) Plant(extra, 2, 4, 0.1f, Range(rng, 0.75f, 1.05f)); // a few others mixed in
@@ -375,6 +378,7 @@ namespace NaturalHistory.World
             if (kind is TerrainKind.Desert or TerrainKind.Barren or TerrainKind.Hill or TerrainKind.Tundra or TerrainKind.Steppe)
                 foreach (var p in HexScatter(rng, rng.Next(2, 5), apothem * 0.9f, 0.1f * size, taken))
                     AddRock(b, rng, new Vector3(p.x, 0f, p.y), size * Range(rng, 0.025f, 0.05f), stone);
+            AddLandFungi(b, rng, size, fungus, taken); // the odd tile (LandFungi.cs)
             maxBlobDetail = 1;
             return b.ToMesh($"Ground_{main.id}_{second?.id}");
         }
@@ -390,6 +394,7 @@ namespace NaturalHistory.World
         {
             (AgeSize, AgeDensity) = AgeBoost(age);
             AgeWaterDensity = WaterBoost(age);
+            AgeWaterSize = age == GeologicalAge.Cretaceous ? 1.5f : 1f;
             AgeThin = age >= GeologicalAge.Cretaceous ? 0.8f : 1f;
         }
 
@@ -399,6 +404,9 @@ namespace NaturalHistory.World
         // Seabed and lakebed beds thicken through time as marine plants diversify: thin early algal
         // turfs, Mesozoic seagrass and kelp beds, dense modern meadows and forests (UnderMeshes).
         static float AgeWaterDensity = 1f;
+        // Cretaceous seagrasses and waterweeds are grown half as big again, so the young flowering-plant
+        // meadows stand out (UnderMeshes)
+        static float AgeWaterSize = 1f;
         static float WaterBoost(GeologicalAge age) => age switch
         {
             // later periods 20% sparser than they were (1.3 / 1.6 / 1.9 / 2.3): the beds stay full

@@ -161,6 +161,10 @@
    "v": "前と後ろ、鏡写しの左右：ほとんどの動物の体制。"
   },
   {
+   "k": "A fusulinid named after the Hess Limestone of the Glass Mountains, West Texas, where its shells crowd Early Permian beds about 285 million years old. Its inflated, spindle-shaped test is under a centimetre long, with more pointed ends than its relatives and a thick, honeycomb-textured wall. Like other schwagerinids it is an index fossil: geologists use it to date and correlate Permian rocks across the American Southwest.",
+   "v": "西テキサスのグラス山地にあるヘス石灰岩にちなんで名づけられたフズリナで、約2億8500万年前のペルム紀前期の地層にその殻がぎっしりと詰まっている。膨らんだ紡錘形の殻は長さ1センチメートル未満で、近縁種よりも両端がとがり、壁は厚くハチの巣状の構造をもつ。ほかのシュワゲリナ類と同様に示準化石であり、地質学者はアメリカ南西部一帯のペルム紀の岩石の年代決定と対比に用いている。"
+  },
+  {
    "k": "A gentle giant of tropical Indo-Pacific reefs, up to 5 m across, that filters plankton by gliding with its mouth wide open and its head fins unrolled. Mantas visit 'cleaning stations' where small fish pick parasites from their skin.",
    "v": "インド太平洋の熱帯のサンゴ礁にすむ、幅最大5 mの穏やかな巨人。口を大きく開け、頭鰭を広げて滑るように泳ぎながらプランクトンをこし取る。マンタは小魚が皮膚の寄生虫をついばむ「クリーニングステーション」に立ち寄る。"
   },
@@ -249,6 +253,10 @@
    "v": "アメリカ南東部の沼や川にすむ大型のワニで、幅広く丸い吻をもつ。メスは巣を守り、孵化した子を口にくわえて運ぶ。この属は3000万年以上前の漸新世にさかのぼる。"
   },
   {
+   "k": "A large fusulinid from the Early Permian, about 285 million years ago, described in 1937 from the Glass Mountains of West Texas. Its chambered calcite test, about a centimetre long, is a long, nearly cylindrical spindle with a straight middle and blunt ends, and its septa are folded into deep, regular flutes. This single-celled foraminifer lived on warm, shallow sea floors, probably with algae in its cell; today it is often placed in the genus Chalaroschwagerina.",
+   "v": "約2億8500万年前、ペルム紀前期の大型のフズリナで、1937年に西テキサスのグラス山地から記載された。房室に分かれた方解石の殻は長さ約1センチメートルで、中央部がまっすぐで両端が丸い、細長くほぼ円筒形の紡錘形をしており、隔壁は深く規則的なひだ状に褶曲している。この単細胞の有孔虫は暖かく浅い海底にすみ、細胞内に藻類を共生させていたと考えられる。現在ではしばしばChalaroschwagerina属に分類される。"
+  },
+  {
    "k": "A large golden orb-weaver from East Asia, now spreading across the south-eastern United States. Females spin webs up to a metre across from golden silk; young spiders disperse by 'ballooning' on silk threads carried by the wind.",
    "v": "東アジア原産の大型のジョロウグモの仲間で、現在はアメリカ南東部に広がりつつある。メスは金色の糸で直径最大1メートルの網を張る。子グモは風に乗せた糸で「バルーニング」して分散する。"
   },
@@ -273,6 +281,10 @@
    "v": "中国とその周辺国の湖や池、水田にすむ、幅広く平たい大型のヒルで、体長10〜12 cmになる。大きいが吸血はせず、顎は弱く、巻貝やミミズ、昆虫の幼虫を丸飲みにする。中国では漢方薬用に養殖されている。"
   },
   {
+   "k": "A larger, more robust species of Inostrancevia from the Late Permian of the Russian platform, about 254 million years ago, known from a big skull found at the same Northern Dvina locality as I. alexandri. Its name means 'broad forehead': its skull was wider across the top, with a lower, broader snout and fewer teeth. Of the many species once named in the genus, it is the only one besides I. alexandri still recognised. It was among the largest gorgonopsians, a sabre-toothed predator of the last Permian herds.",
+   "v": "約2億5400万年前、ペルム紀後期のロシア卓状地にいた、イノストランケビアのより大きく頑丈な種で、I. alexandriと同じ北ドヴィナ川の産地で見つかった大きな頭骨から知られる。名前は「広い額」を意味し、頭骨は上部の幅が広く、吻部は低く幅広で、歯の数が少なかった。かつてこの属に命名された多くの種のうち、I. alexandri以外で現在も有効とされているのはこの種だけである。最大級のゴルゴノプス類で、ペルム紀最後の群れを狙うサーベル状の歯をもつ捕食者だった。"
+  },
+  {
    "k": "A lens focuses an image on the retina (vertebrates, cephalopods).",
    "v": "レンズが網膜に像を結ぶ（脊椎動物、頭足類）。"
   },
@@ -283,6 +295,10 @@
   {
    "k": "A liver that breaks down poisons and worn-out blood for disposal.",
    "v": "毒や古くなった血液を分解して処理する肝臓。"
+  },
+  {
+   "k": "A living lingulid brachiopod of Indo-Pacific tidal flats, with a thin, tongue-shaped greenish shell about 5 centimetres long. It lives upright in a vertical burrow in sand or mud, anchored by a long fleshy pedicle, with only the bristly front edge of the shell at the surface, where three funnels of bristles draw in and expel water. When disturbed it pulls itself down into the burrow. Often called a living fossil because its shell looks much like those of Cambrian lingulids, it tolerates low oxygen and changing salinity, and is eaten in parts of East Asia.",
+   "v": "インド太平洋の干潟にすむ現生のシャミセンガイ類の腕足動物で、長さ約5センチメートルの薄く舌のような形をした緑がかった殻をもつ。砂や泥の中の垂直な巣穴で、長く肉質の肉茎で体を固定して直立して暮らし、地表には剛毛の生えた殻の前縁だけを出している。そこでは剛毛でできた3つの漏斗が水を取り込み、吐き出す。邪魔されると巣穴の奥へ体を引き込む。殻がカンブリア紀のシャミセンガイ類とよく似ているため「生きた化石」と呼ばれることが多い。低酸素や塩分の変化に耐え、東アジアの一部では食用にされる。"
   },
   {
    "k": "A long-legged shorebird of western North American wetlands that sweeps its upturned bill from side to side through shallow water to catch insects and crustaceans. Its head and neck turn cinnamon in the breeding season.",
@@ -445,6 +461,10 @@
    "v": "中米の熱帯雨林にすむほっそりしたアマガエル。昼は葉に体をぴったり押しつけて眠り、青とクリーム色の脇腹やオレンジ色の足をしまい込んで全身緑色に見せる。邪魔されると巨大な真紅の眼と鮮やかな体色をぱっと見せて捕食者を驚かせる。吸着力のある指先で葉の裏にもしがみつける。卵は池の上の葉に産みつけられ、ヘビやハチが卵塊を襲うと、胚は早めに孵化して水に落ちることができる。"
   },
   {
+   "k": "A slender, elongate fusulinid a few millimetres long from the Early Permian of the Glass Mountains of West Texas, about 285 million years ago, named in honour of the German geologist Carl Wilhelm von Gümbel. Its spindle-shaped test is narrower than those of its relatives, with finely fluted septa. Common in early Leonardian beds, it helps date Permian rocks; today it is often placed in the genus Praeskinnerella.",
+   "v": "約2億8500万年前、西テキサスのグラス山地のペルム紀前期の地層から見つかった、長さ数ミリメートルの細長いフズリナで、ドイツの地質学者カール・ヴィルヘルム・フォン・ギュンベルにちなんで名づけられた。紡錘形の殻は近縁種より細く、隔壁には細かなひだがある。レオナルド期前期の地層に多く、ペルム紀の岩石の年代決定に役立つ。現在ではしばしばPraeskinnerella属に分類される。"
+  },
+  {
    "k": "A slimmer relative of the bell Trichonympha, named for the collar-like constriction behind its rostrum, living alongside other gut flagellates in the hindgut of dampwood termites. Like its relatives it swallows wood particles and digests their cellulose for its host. These protists are passed between termites when nestmates feed each other from the hindgut, and must be regained after every moult.",
    "v": "釣鐘形のトリコニンファのほっそりした近縁種で、吻の後ろにある襟のようなくびれが名前の由来。オオシロアリの後腸で他の腸内鞭毛虫とともに暮らす。近縁種と同様に木の粒子を飲み込み、宿主のためにセルロースを消化する。これらの原生生物は、巣の仲間同士が後腸から餌を与え合うときに受け渡され、脱皮のたびに取り戻さなければならない。"
   },
@@ -477,6 +497,10 @@
    "v": "日本の湿った山林にすむ小型の陸生ヒルで、林床や低い植物の上で通りかかる動物を待つ。体温や呼気、動きを感じ取ると、シャクトリムシのように体を曲げ伸ばしして近づき、シカやイノシシ、人の血を吸う。増加するシカに運ばれて、生息域が広がっている。"
   },
   {
+   "k": "A small lingulid brachiopod about a centimetre long from the roughly 518-million-year-old Chengjiang biota of Yunnan, China. Its two thin, oval valves were made of calcium phosphate and protein rather than calcite. Because Chengjiang preserves soft tissue, its fossils still show the fringe of bristles around the shell margin and the long, fleshy stalk, or pedicle, that anchored it to the seabed, sometimes onto other shells. It strained food particles from the water with a ring of tentacles, the lophophore, inside the shell.",
+   "v": "中国雲南省の約5億1800万年前の澄江生物群から見つかった、長さ約1センチメートルの小さなシャミセンガイ類の腕足動物。薄い楕円形の2枚の殻は、方解石ではなくリン酸カルシウムとタンパク質でできていた。澄江では軟組織が保存されるため、化石には殻の縁を縁取る剛毛や、海底に（ときには他の殻の上に）体を固定していた長く肉質の柄、すなわち肉茎がいまも残っている。殻の内側にある触手の輪、触手冠で水中の食物粒子をこし取っていた。"
+  },
+  {
    "k": "A small planktonic graptolite of the Early Ordovician, shaped like a tuning fork: two slender branches hang from the founding zooid's cone, each lined with saw-toothed tubes that housed filter-feeding zooids. Graptolites were colonial hemichordates related to modern pterobranchs, and because their species changed fast and drifted across whole oceans, two-branched didymograptids like this one are key index fossils for dating Ordovician rocks.",
    "v": "オルドビス紀前期の小型の浮遊性筆石で、音叉のような形をしている。最初の個虫の円錐から2本の細い枝が垂れ下がり、それぞれにろ過食をする個虫がすむ鋸歯状の管が並ぶ。筆石は現在の翼鰓類に近い群体性の半索動物で、種の移り変わりが速く海洋全体に漂っていたため、この種のような2本枝のディディモグラプトゥス類はオルドビス紀の地層の年代決定に欠かせない示準化石となっている。"
   },
@@ -501,6 +525,14 @@
    "v": "南米パラナ川流域原産の、地味な茶色の小型のアリで、現在は人が住むすべての大陸の地中海性気候の地域に定着している。侵入先では、本来なら争うはずの巣同士が互いを仲間として扱い、数百キロメートルに及ぶスーパーコロニーを形成する。主に樹液を吸う昆虫の甘露を食べ、多くの在来のアリを駆逐する。"
   },
   {
+   "k": "A smaller Dimetrodon, perhaps under 2 metres long, from the Early Permian of Prince Edward Island, Canada, about 290 million years ago. A farmer dug up its upper jaw in 1845, and it was named Bathygnathus borealis, 'deep jaw of the north', in 1854, one of the first sail-backed synapsid fossils ever described. A 2015 study showed it belonged to Dimetrodon. Only the deep snout with its long fangs is known, so its sail is inferred from its relatives.",
+   "v": "約2億9000万年前、カナダのプリンスエドワード島のペルム紀前期から見つかった小型のディメトロドンで、体長はおそらく2メートル未満。1845年に農夫がその上顎を掘り出し、1854年にBathygnathus borealis（「北の深い顎」の意）と命名された。これは記載された最初期の、背に帆をもつ単弓類の化石の一つである。2015年の研究でディメトロドン属に属することが示された。長い牙をもつ高い吻部しか知られていないため、帆は近縁種から推定されている。"
+  },
+  {
+   "k": "A smaller relative of Estemmenosuchus uralensis from the same Middle Permian beds near Ocher in the Perm region of Russia, about 267 million years ago. 'Mirabilis' means 'wonderful': it had two bony horns on each side of its head, one rising from the top of the skull like a short antler and one jutting sideways from the cheek. These were probably for display or contests between rivals. Like its relative it was a bulky plant-eater or omnivore with smooth, glandular skin.",
+   "v": "ロシア・ペルミ地方のオチョール近郊にある、エステメノスクス・ウラレンシスと同じペルム紀中期の地層から見つかった、約2億6700万年前の小型の近縁種。「ミラビリス」は「驚くべき」を意味し、頭の両側にそれぞれ2本の骨の角があった。1本は頭骨の上部から短い枝角のように伸び、もう1本は頬から横に突き出していた。これらはおそらくディスプレイやライバル同士の争いに使われた。近縁種と同様に、滑らかで腺の多い皮膚をもつ、ずんぐりした植物食または雑食の動物だった。"
+  },
+  {
    "k": "A smaller species of Arthropleura, the giant Carboniferous millipede relatives, reaching perhaps 30 to 50 centimetres. It is known mainly from fragments of its armour, whose tergites carried more prominent crested ridges than those of its giant cousin. Like other arthropleurids it probably browsed plant debris on the floors of the coal swamp forests.",
    "v": "石炭紀の巨大なヤスデの仲間アースロプレウラのうち小型の種で、体長はおそらく30〜50センチメートル。主に甲皮の断片から知られ、その背板には巨大ないとこよりも目立つ隆起があった。他のアースロプレウラ類と同様、おそらく石炭紀の湿地林の林床で植物の残骸を食べていた。"
   },
@@ -521,6 +553,10 @@
    "v": "北米太平洋岸のケルプの森にすむとげだらけの草食動物で、5本の歯をもつ顎で藻類を削り取る。主な天敵であるラッコがいなくなると、ウニの大群がケルプの森を食べ尽くし、何もない「磯焼け」にしてしまう。"
   },
   {
+   "k": "A spiriferid brachiopod from the Middle Devonian, about 385 million years ago, very common in the Hamilton Group shales of New York and Ontario. Its ribbed calcite shell is much wider than long, a few centimetres across, with the straight hinge line drawn out into long pointed wings, a raised fold down one valve and a matching groove in the other. It lay on the muddy sea floor, and inside the shell a pair of coiled calcite spirals supported its feeding tentacles.",
+   "v": "約3億8500万年前、デボン紀中期のスピリファー類の腕足動物で、ニューヨーク州とオンタリオ州のハミルトン層群の頁岩にきわめて多い。肋のある方解石の殻は長さよりも幅がずっと広く、幅は数センチメートルで、まっすぐな蝶番線が長くとがった翼状に伸び、一方の殻には盛り上がった褶が、もう一方にはそれに対応する溝が走る。泥の海底に横たわって暮らし、殻の内部では一対の巻いた方解石の螺旋が摂食用の触手を支えていた。"
+  },
+  {
    "k": "A squid-like belemnite that hunted with ten hooked arms in the shallow Sundance Sea of Wyoming about 160 million years ago. Its internal guard was the chunkiest of any belemnite, about 10 cm long but 6 cm wide, and it belonged to the megateuthidids, a family thought to have mostly died out millions of years earlier.",
    "v": "約1億6000万年前、ワイオミングの浅いサンダンス海で、鉤のある10本の腕を使って狩りをしたイカに似たベレムナイト。体内の鞘はベレムナイトの中で最もずんぐりしており、長さ約10 cmに対し幅は6 cmもあった。数百万年前にほぼ絶滅したと考えられていたメガテウティス科に属する。"
   },
@@ -531,6 +567,10 @@
   {
    "k": "A stocky, pig-sized dicynodont that cropped plants with a horny beak and had only two teeth, a pair of tusks in the upper jaw. Its genus was one of the few large land animals to survive the end-Permian mass extinction 252 million years ago and went on to dominate Early Triassic land faunas, making up most of the vertebrate fossils in some rock layers. Its fossils in South Africa, India and Antarctica helped support the idea of continental drift.",
    "v": "ブタほどの大きさのずんぐりしたディキノドン類で、角質のくちばしで植物を食べ、歯は上顎の1対の牙の2本だけだった。この属は2億5200万年前のペルム紀末の大量絶滅を生き延びた数少ない大型陸上動物の一つで、三畳紀前期の陸上動物相を支配し、一部の地層では脊椎動物化石の大半を占める。南アフリカ、インド、南極で見つかった化石は大陸移動説の裏づけとなった。"
+  },
+  {
+   "k": "A stout fusulinid from Early Permian limestones of the Glass Mountains of West Texas, about 285 million years old, described in 1937. Its name means 'thick roof', for the heavy wall of its chambered calcite test, which is robust and swollen, under a centimetre long. A single cell lived inside, reaching out through the wall with thread-like pseudopods; vast numbers of such tests built up limestone on warm Permian shelves.",
+   "v": "西テキサスのグラス山地にある約2億8500万年前のペルム紀前期の石灰岩から見つかった、ずんぐりしたフズリナで、1937年に記載された。名前は「厚い屋根」を意味し、房室に分かれた方解石の殻の重厚な壁にちなむ。殻はがっしりと膨らみ、長さ1センチメートル未満である。内部には1個の細胞がすみ、糸状の仮足を壁から外へ伸ばしていた。こうした殻が膨大な数積み重なり、暖かいペルム紀の陸棚に石灰岩を築いた。"
   },
   {
    "k": "A striking reef fish of the Indo-Pacific with bold black, white and yellow bands, a long snout for picking sponges from crevices, and a trailing white dorsal filament. It is the only living member of its family.",
@@ -633,6 +673,10 @@
    "v": "AI {0}"
   },
   {
+   "k": "Aberlemnia",
+   "v": "アバーレムニア"
+  },
+  {
    "k": "Acacia",
    "v": "アカシア"
   },
@@ -645,12 +689,20 @@
    "v": "酸性の胃"
   },
   {
+   "k": "Aclistochara",
+   "v": "アクリストカラ"
+  },
+  {
    "k": "Acquire",
    "v": "獲得"
   },
   {
    "k": "Acquired",
    "v": "獲得済み"
+  },
+  {
+   "k": "Actinoporella",
+   "v": "アクティノポレラ"
   },
   {
    "k": "Active Predation",
@@ -689,6 +741,10 @@
    "v": "夏眠"
   },
   {
+   "k": "Aethophyllum",
+   "v": "アエトフィルム"
+  },
+  {
    "k": "Africa south of the Sahara, Madagascar and southern Arabia.",
    "v": "サハラ以南のアフリカ、マダガスカル、アラビア半島南部。"
   },
@@ -711,6 +767,10 @@
   {
    "k": "Agate Fossil Beds",
    "v": "アゲート化石層"
+  },
+  {
+   "k": "Agave",
+   "v": "アガベ"
   },
   {
    "k": "Age",
@@ -901,6 +961,10 @@
    "v": "地球史上最高水準の一つ、その後氷河期に約100 m低下"
   },
   {
+   "k": "Amphiroa",
+   "v": "カニノテ"
+  },
+  {
    "k": "An acidic stomach digests large prey (jawed vertebrates).",
    "v": "酸性の胃が大きな獲物を消化する（有顎脊椎動物）。"
   },
@@ -957,8 +1021,20 @@
    "v": "アンドリューサルクス"
   },
   {
+   "k": "Aneurophyton",
+   "v": "アネウロフィトン"
+  },
+  {
+   "k": "Angulocellularia",
+   "v": "アングロケルラリア"
+  },
+  {
    "k": "Animal life diversifies explosively in the seas: the Cambrian explosion produces nearly all modern animal phyla. The land is bare rock and microbial crust.",
    "v": "海で動物が爆発的に多様化する。カンブリア爆発によって現生動物のほぼすべての門が生まれる。陸はむき出しの岩と微生物の皮膜に覆われている。"
+  },
+  {
+   "k": "Aninga",
+   "v": "モントリカルディア"
   },
   {
    "k": "Ankylosaur",
@@ -967,6 +1043,14 @@
   {
    "k": "Ankylosaurus",
    "v": "アンキロサウルス"
+  },
+  {
+   "k": "Ankyropteris",
+   "v": "アンキロプテリス"
+  },
+  {
+   "k": "Annalepis",
+   "v": "アンナレピス"
   },
   {
    "k": "Annelid",
@@ -979,6 +1063,10 @@
   {
    "k": "Anomalocaris",
    "v": "アノマロカリス"
+  },
+  {
+   "k": "Anomozamites",
+   "v": "アノモザミテス"
   },
   {
    "k": "Ant",
@@ -999,6 +1087,10 @@
   {
    "k": "Antennal Glands",
    "v": "触角腺"
+  },
+  {
+   "k": "Anteosaurus",
+   "v": "アンテオサウルス"
   },
   {
    "k": "Anthracoporella",
@@ -1041,6 +1133,14 @@
    "v": "モリソン層の氾濫原の頂点捕食者。"
   },
   {
+   "k": "Aphralysia",
+   "v": "アフラリシア"
+  },
+  {
+   "k": "Apidium",
+   "v": "アピディウム"
+  },
+  {
    "k": "Apple blossom",
    "v": "リンゴの花"
   },
@@ -1051,6 +1151,10 @@
   {
    "k": "Araripe",
    "v": "アラリペ"
+  },
+  {
+   "k": "Araripia",
+   "v": "アラリピア"
   },
   {
    "k": "Araucaria and redwood forest",
@@ -1065,12 +1169,24 @@
    "v": "アラウカリオキシロン"
   },
   {
+   "k": "Arborvitae",
+   "v": "クロベ"
+  },
+  {
    "k": "Arbuscular mycorrhiza",
    "v": "アーバスキュラー菌根"
   },
   {
+   "k": "Archaeanthus",
+   "v": "アルカエアントゥス"
+  },
+  {
    "k": "Archaefructus",
    "v": "アルカエフルクトゥス"
+  },
+  {
+   "k": "Archaeocalamites",
+   "v": "アルカエオカラミテス"
   },
   {
    "k": "Archaeocyathids",
@@ -1107,6 +1223,10 @@
   {
    "k": "Archimylacris",
    "v": "アルキミラクリス"
+  },
+  {
+   "k": "Arctic mosquito fern",
+   "v": "北極アカウキクサ"
   },
   {
    "k": "Arctic willow",
@@ -1173,6 +1293,10 @@
    "v": "無性生殖"
   },
   {
+   "k": "Ash",
+   "v": "トネリコ"
+  },
+  {
    "k": "Ashfall Fossil Beds",
    "v": "アッシュフォール化石層"
   },
@@ -1197,6 +1321,10 @@
    "v": "アステロフィリテス"
   },
   {
+   "k": "Asterotheca",
+   "v": "アステロテカ"
+  },
+  {
    "k": "Asteroxylon",
    "v": "アステロキシロン"
   },
@@ -1215,6 +1343,10 @@
   {
    "k": "Atmospheric oxygen peaks (est. 30–35%)",
    "v": "大気中の酸素が最高に達する（推定30～35%）"
+  },
+  {
+   "k": "Atopochara",
+   "v": "アトポカラ"
   },
   {
    "k": "Auca Mahuevo",
@@ -1261,6 +1393,10 @@
    "v": "鳥群"
   },
   {
+   "k": "Bacinella",
+   "v": "バキネラ"
+  },
+  {
    "k": "Back",
    "v": "戻る"
   },
@@ -1305,6 +1441,10 @@
    "v": "竹"
   },
   {
+   "k": "Banana",
+   "v": "バナナ"
+  },
+  {
    "k": "Banksia",
    "v": "バンクシア"
   },
@@ -1343,6 +1483,10 @@
   {
    "k": "Bathing",
    "v": "水浴び"
+  },
+  {
+   "k": "Bathurstia",
+   "v": "バサースティア"
   },
   {
    "k": "Bats fly and hunt by echolocation; vampire bats feed on blood.",
@@ -1437,6 +1581,10 @@
    "v": "ハマトビウオの仲間"
   },
   {
+   "k": "Beresella",
+   "v": "ベレセラ"
+  },
+  {
    "k": "Berlin–Ichthyosaur",
    "v": "バーリン・イクチオサウルス"
   },
@@ -1469,6 +1617,10 @@
    "v": "左右相称の体"
   },
   {
+   "k": "Bilberry",
+   "v": "ビルベリー"
+  },
+  {
    "k": "Bioluminescence",
    "v": "生物発光"
   },
@@ -1479,6 +1631,10 @@
   {
    "k": "Birch",
    "v": "カバノキ"
+  },
+  {
+   "k": "Bird of paradise",
+   "v": "ゴクラクチョウカ"
   },
   {
    "k": "Bird's-nest fern",
@@ -1565,6 +1721,14 @@
    "v": "ブルー・マウンテンズ"
   },
   {
+   "k": "Blue grama",
+   "v": "ブルーグラマ"
+  },
+  {
+   "k": "Blue quandong",
+   "v": "ホルトノキ"
+  },
+  {
    "k": "Body Cavity",
    "v": "体腔"
   },
@@ -1641,6 +1805,14 @@
    "v": "一つの体に両方の性を持つ（カタツムリ、ミミズ）。"
   },
   {
+   "k": "Bothrodendron",
+   "v": "ボトロデンドロン"
+  },
+  {
+   "k": "Botomaella",
+   "v": "ボトマエラ"
+  },
+  {
    "k": "Botryococcus",
    "v": "ボトリオコッカス"
   },
@@ -1673,6 +1845,14 @@
    "v": "ノウサンゴ"
   },
   {
+   "k": "Bramble",
+   "v": "キイチゴ"
+  },
+  {
+   "k": "Brazil nut",
+   "v": "ブラジルナッツ"
+  },
+  {
    "k": "Breathing from a film of air held under water (water beetles).",
    "v": "水中で保持した空気の膜から呼吸する（水生甲虫）。"
   },
@@ -1693,12 +1873,20 @@
    "v": "子に餌を運ぶ。"
   },
   {
+   "k": "Broad-headed Inostrancevia",
+   "v": "イノストランケビア・ラティフロンス"
+  },
+  {
    "k": "Broadcast Spawning",
    "v": "放卵放精"
   },
   {
    "k": "Bromacker",
    "v": "ブロマッカー"
+  },
+  {
+   "k": "Bromeliad",
+   "v": "ブロメリア"
   },
   {
    "k": "Brood Parasitism",
@@ -1757,6 +1945,10 @@
    "v": "ブルケルプ"
   },
   {
+   "k": "Bull-whip kelp",
+   "v": "ネレオシスティス"
+  },
+  {
    "k": "Burgess Shale",
    "v": "バージェス頁岩"
   },
@@ -1809,8 +2001,20 @@
    "v": "CO2：{0:0} ppm {1}"
   },
   {
+   "k": "Cacao",
+   "v": "カカオ"
+  },
+  {
+   "k": "Caia",
+   "v": "カイア"
+  },
+  {
    "k": "Calamites",
    "v": "カラミテス"
+  },
+  {
+   "k": "Calamodendron",
+   "v": "カラモデンドロン"
   },
   {
    "k": "Calamophyton",
@@ -1821,12 +2025,20 @@
    "v": "石灰質の卵殻（恐竜、鳥）。"
   },
   {
+   "k": "Calcifolium",
+   "v": "カルキフォリウム"
+  },
+  {
    "k": "California Condor",
    "v": "カリフォルニアコンドル"
   },
   {
    "k": "Callery pear",
    "v": "マメナシ"
+  },
+  {
+   "k": "Callianthus",
+   "v": "カリアントゥス"
   },
   {
    "k": "Callistophyton",
@@ -1905,8 +2117,16 @@
    "v": "オオヒキガエル"
   },
   {
+   "k": "Cannonball tree",
+   "v": "ホウガンノキ"
+  },
+  {
    "k": "Canowindra",
    "v": "カノウィンドラ"
+  },
+  {
+   "k": "Canrightia",
+   "v": "カンライティア"
   },
   {
    "k": "Canterbury Plains",
@@ -1937,6 +2157,10 @@
    "v": "カーニアン多雨事象（約234 Ma）：約100万年続いた湿潤期"
   },
   {
+   "k": "Carnival candy slime",
+   "v": "ウツボホコリ"
+  },
+  {
    "k": "Carnivorans: shearing teeth for meat.",
    "v": "食肉類：肉を切り裂く歯。"
   },
@@ -1955,6 +2179,10 @@
   {
    "k": "Cathaysia",
    "v": "カタイシア"
+  },
+  {
+   "k": "Cathaysiodendron",
+   "v": "カタイシオデンドロン"
   },
   {
    "k": "Cathedral Termite",
@@ -1983,6 +2211,10 @@
   {
    "k": "Cayeuxia",
    "v": "カイエウキシア"
+  },
+  {
+   "k": "Cedar",
+   "v": "ヒマラヤスギ"
   },
   {
    "k": "Cells in the gills pump salt in or out, for life in fresh or salt water.",
@@ -2035,6 +2267,10 @@
   {
    "k": "Chaetocladus",
    "v": "カエトクラドゥス"
+  },
+  {
+   "k": "Chain fern",
+   "v": "コモチシダ"
   },
   {
    "k": "Chaloneria",
@@ -2097,6 +2333,14 @@
    "v": "澄江"
   },
   {
+   "k": "Chengjiang Lingulella",
+   "v": "リングレラ・チェンジャンゲンシス"
+  },
+  {
+   "k": "Chestnut",
+   "v": "クリ"
+  },
+  {
    "k": "Chewed wood pulp shaped into hanging combs (paper wasps).",
    "v": "噛んだ木の繊維で吊り下がった巣を作る（アシナガバチ）。"
   },
@@ -2121,8 +2365,20 @@
    "v": "チンパンジー"
   },
   {
+   "k": "Chinese fir",
+   "v": "コウヨウザン"
+  },
+  {
+   "k": "Chinese swamp cypress",
+   "v": "スイショウ"
+  },
+  {
    "k": "Chinle",
    "v": "チンリ"
+  },
+  {
+   "k": "Chinquapin",
+   "v": "シイ"
   },
   {
    "k": "Chitin Cuticle",
@@ -2175,6 +2431,10 @@
   {
    "k": "Claspers",
    "v": "交尾器（クラスパー）"
+  },
+  {
+   "k": "Clathropteris",
+   "v": "クラトロプテリス"
   },
   {
    "k": "Clavator",
@@ -2301,6 +2561,10 @@
    "v": "皮膚に泥を塗って体を冷やし、虫を寄せ付けない。"
   },
   {
+   "k": "Cobbania",
+   "v": "コッバニア"
+  },
+  {
    "k": "Coconut crab",
    "v": "ヤシガニ"
   },
@@ -2319,6 +2583,10 @@
   {
    "k": "Coelophysis",
    "v": "コエロフィシス"
+  },
+  {
+   "k": "Coelosphaeridium",
+   "v": "コエロスファエリディウム"
   },
   {
    "k": "Cold Tolerance",
@@ -2353,6 +2621,10 @@
    "v": "色の信号"
   },
   {
+   "k": "Comia",
+   "v": "コミア"
+  },
+  {
    "k": "Commentry",
    "v": "コマントリー"
   },
@@ -2367,6 +2639,10 @@
   {
    "k": "Common Vampire Bat",
    "v": "ナミチスイコウモリ"
+  },
+  {
+   "k": "Common cordgrass",
+   "v": "イングリッシュ・コードグラス"
   },
   {
    "k": "Common puffball",
@@ -2477,6 +2753,10 @@
    "v": "酸素を運ぶ、銅を含む青い血液。"
   },
   {
+   "k": "Coprinites",
+   "v": "コプリニテス"
+  },
+  {
    "k": "Coral reef",
    "v": "サンゴ礁"
   },
@@ -2501,8 +2781,24 @@
    "v": "コルダイテスの森"
   },
   {
+   "k": "Corn poppy",
+   "v": "ヒナゲシ"
+  },
+  {
    "k": "Coronary Arteries",
    "v": "冠状動脈"
+  },
+  {
+   "k": "Corpse lily",
+   "v": "ラフレシア"
+  },
+  {
+   "k": "Corynepteris",
+   "v": "コリネプテリス"
+  },
+  {
+   "k": "Cosmochlaina",
+   "v": "コスモクライナ"
   },
   {
    "k": "Cottongrass",
@@ -2533,6 +2829,10 @@
    "v": "歩数と曲がった回数を数えてまっすぐ巣に帰る（アリ）。"
   },
   {
+   "k": "Courbaril",
+   "v": "クールバリル"
+  },
+  {
    "k": "Courtship",
    "v": "求愛"
   },
@@ -2557,8 +2857,16 @@
    "v": "サルスベリ"
   },
   {
+   "k": "Credneria",
+   "v": "クレドネリア"
+  },
+  {
    "k": "Creeping up on prey unseen.",
    "v": "気づかれずに獲物に忍び寄る。"
+  },
+  {
+   "k": "Crenaticaulis",
+   "v": "クレナティカウリス"
   },
   {
    "k": "Creosote bush",
@@ -2589,6 +2897,10 @@
    "v": "浮遊する植物に乗って海を渡る（南米へ渡ったサル）。"
   },
   {
+   "k": "Crossozamia",
+   "v": "クロッソザミア"
+  },
+  {
    "k": "Cryolophosaurus",
    "v": "クリオロフォサウルス"
   },
@@ -2601,12 +2913,20 @@
    "v": "保育集団"
   },
   {
+   "k": "Ctenis",
+   "v": "クテニス"
+  },
+  {
    "k": "Curling into an armoured ball (trilobites, pill bugs).",
    "v": "丸まって装甲の球になる（三葉虫、ダンゴムシ）。"
   },
   {
    "k": "Cusped Molars",
    "v": "咬頭のある臼歯"
+  },
+  {
+   "k": "Cyanolichenomycites",
+   "v": "キアノリケノミケテス"
   },
   {
    "k": "Cycad",
@@ -2623,6 +2943,14 @@
   {
    "k": "Cyclostigma",
    "v": "キクロスティグマ"
+  },
+  {
+   "k": "Cymodocea",
+   "v": "ベニアマモ"
+  },
+  {
+   "k": "Cymopolia",
+   "v": "キモポリア"
   },
   {
    "k": "Cynodont therapsid",
@@ -2661,6 +2989,10 @@
    "v": "ダム作り"
   },
   {
+   "k": "Danaeopsis",
+   "v": "ダナエオプシス"
+  },
+  {
    "k": "Dancing the direction of food to the hive (honeybees).",
    "v": "ダンスで巣の仲間に餌の方向を伝える（ミツバチ）。"
   },
@@ -2671,6 +3003,10 @@
   {
    "k": "Daohugou",
    "v": "道虎溝"
+  },
+  {
+   "k": "Daohugouthallus",
+   "v": "ダオフゴウタルス"
   },
   {
    "k": "Dark above and pale below, so the body looks flat.",
@@ -2821,12 +3157,24 @@
    "v": "横隔膜"
   },
   {
+   "k": "Dicranophyllum",
+   "v": "ディクラノフィルム"
+  },
+  {
    "k": "Dicroidium",
    "v": "ディクロイディウム"
   },
   {
    "k": "Dictyonema",
    "v": "ディクティオネマ"
+  },
+  {
+   "k": "Dictyophycus",
+   "v": "ディクティオフィクス"
+  },
+  {
+   "k": "Dictyophyllum",
+   "v": "ディクチオフィルム"
   },
   {
    "k": "Dicynodont therapsid",
@@ -2905,8 +3253,16 @@
    "v": "フタバガキ"
   },
   {
+   "k": "Discoaster",
+   "v": "ディスコアスター"
+  },
+  {
    "k": "Display Postures",
    "v": "誇示姿勢"
+  },
+  {
+   "k": "Distichophytum",
+   "v": "ディスティコフィトゥム"
   },
   {
    "k": "Distraction Display",
@@ -2957,6 +3313,18 @@
    "v": "前期ジュラ紀のアリゾナにいた、二つのとさかを持つ捕食者。"
   },
   {
+   "k": "Douglas fir",
+   "v": "ベイマツ"
+  },
+  {
+   "k": "Doum palm",
+   "v": "ドームヤシ"
+  },
+  {
+   "k": "Doushantuophyton",
+   "v": "ドウシャントゥオフィトン"
+  },
+  {
    "k": "Dreaming Sleep",
    "v": "夢見の眠り"
   },
@@ -2993,6 +3361,10 @@
    "v": "ドライデニア"
   },
   {
+   "k": "Dryophyllum",
+   "v": "ドリオフィルム"
+  },
+  {
    "k": "Ducks dabble and pair for the season.",
    "v": "カモは水面で採食し、その季節のつがいを作る。"
   },
@@ -3009,8 +3381,20 @@
    "v": "ダンクルオステウス"
   },
   {
+   "k": "Durian",
+   "v": "ドリアン"
+  },
+  {
    "k": "Dust Bathing",
    "v": "砂浴び"
+  },
+  {
+   "k": "Dwarf birch",
+   "v": "ドワーフバーチ"
+  },
+  {
+   "k": "Dyad-spore plant",
+   "v": "二分子胞子植物"
   },
   {
    "k": "EP 0",
@@ -3109,6 +3493,10 @@
    "v": "イースト・カークトン"
   },
   {
+   "k": "Eathiestrobus",
+   "v": "イーシーストロブス"
+  },
+  {
    "k": "Eating bitter plants or clay to fight parasites and toxins (chimpanzees, parrots).",
    "v": "苦い植物や粘土を食べて寄生虫や毒に対抗する（チンパンジー、オウム）。"
   },
@@ -3123,6 +3511,10 @@
   {
    "k": "Eating whatever is available.",
    "v": "手に入るものは何でも食べる。"
+  },
+  {
+   "k": "Eboracia",
+   "v": "エボラキア"
   },
   {
    "k": "Ecdysone decides when an arthropod moults.",
@@ -3173,6 +3565,10 @@
    "v": "相手のために披露する手の込んだダンス。"
   },
   {
+   "k": "Elatides",
+   "v": "エラティデス"
+  },
+  {
    "k": "Electric Eel",
    "v": "デンキウナギ"
   },
@@ -3187,6 +3583,10 @@
   {
    "k": "Electroreceptors",
    "v": "電気受容器"
+  },
+  {
+   "k": "Elephant grass",
+   "v": "ネピアグラス"
   },
   {
    "k": "Elephant-sized sloth of the Pleistocene pampas.",
@@ -3213,12 +3613,24 @@
    "v": "エルズミーア島"
   },
   {
+   "k": "Elm",
+   "v": "ニレ"
+  },
+  {
+   "k": "Emiliania",
+   "v": "エミリアニア・ハクスレイ"
+  },
+  {
    "k": "Emperor Seamounts",
    "v": "天皇海山列"
   },
   {
    "k": "Emperor penguin",
    "v": "コウテイペンギン"
+  },
+  {
+   "k": "Emplectopteris",
+   "v": "エンプレクトプテリス"
   },
   {
    "k": "Empress tree",
@@ -3245,12 +3657,20 @@
    "v": "カンブリア紀末の段階的絶滅（バイオミア事変）が三葉虫を襲う"
   },
   {
+   "k": "Endochaetophora",
+   "v": "エンドカエトフォラ"
+  },
+  {
    "k": "Endocrine System",
    "v": "内分泌系"
   },
   {
    "k": "Endothermy",
    "v": "内温性"
+  },
+  {
+   "k": "Endressinia",
+   "v": "エンドレッシニア"
   },
   {
    "k": "Engineering ponds with dams (beavers).",
@@ -3277,12 +3697,24 @@
    "v": "始新世－漸新世境界。南極氷床"
   },
   {
+   "k": "Eochara",
+   "v": "エオカラ"
+  },
+  {
+   "k": "Eohostimella",
+   "v": "エオホスティメラ"
+  },
+  {
    "k": "Eoraptor",
    "v": "エオラプトル"
   },
   {
    "k": "Epidermis",
    "v": "表皮"
+  },
+  {
+   "k": "Epimastopora",
+   "v": "エピマストポラ"
   },
   {
    "k": "Epiphyton",
@@ -3295,6 +3727,10 @@
   {
    "k": "Eramosa",
    "v": "エラモサ"
+  },
+  {
+   "k": "Ernestiodendron",
+   "v": "エルネスティオデンドロン"
   },
   {
    "k": "Essentially the modern configuration",
@@ -3353,12 +3789,20 @@
    "v": "真社会性"
   },
   {
+   "k": "Eusphenopteris",
+   "v": "エウスフェノプテリス"
+  },
+  {
    "k": "Eutherian mammal",
    "v": "真獣類"
   },
   {
    "k": "Everglades",
    "v": "エバーグレーズ"
+  },
+  {
+   "k": "Eviostachya",
+   "v": "エビオスタキア"
   },
   {
    "k": "Evolve",
@@ -3435,6 +3879,18 @@
   {
    "k": "Family Groups",
    "v": "家族群"
+  },
+  {
+   "k": "Fan palm",
+   "v": "ワシントンヤシ"
+  },
+  {
+   "k": "Fanwort",
+   "v": "カボンバ"
+  },
+  {
+   "k": "Fascipteris",
+   "v": "ファスキプテリス"
   },
   {
    "k": "Faster cells for sustained activity (therapsids).",
@@ -3523,6 +3979,10 @@
   {
    "k": "Ferns, horsetails and seed ferns",
    "v": "シダ、トクサ、シダ種子植物"
+  },
+  {
+   "k": "Fescue",
+   "v": "ウシノケグサ"
   },
   {
    "k": "Fever",
@@ -3655,6 +4115,10 @@
   {
    "k": "Fish with a neck and wrist-like fins, from Ellesmere Island.",
    "v": "エルズミーア島で見つかった、首と手首のようなひれを持つ魚。"
+  },
+  {
+   "k": "Fisherites",
+   "v": "フィシェリテス"
   },
   {
    "k": "Fishes diversify: armored placoderms, early sharks and lobe-finned fishes",
@@ -3821,6 +4285,10 @@
    "v": "ワイオミング州の始新世にいたキツネほどの大きさの初期のウマ。"
   },
   {
+   "k": "Foxglove",
+   "v": "ジギタリス"
+  },
+  {
    "k": "Freezing",
    "v": "すくみ"
   },
@@ -3909,6 +4377,10 @@
    "v": "神経節"
   },
   {
+   "k": "Garwoodia",
+   "v": "ガルウッディア"
+  },
+  {
    "k": "Gastroliths",
    "v": "胃石"
   },
@@ -3919,6 +4391,10 @@
   {
    "k": "Gathering where conditions are good.",
    "v": "条件の良い場所に集まる。"
+  },
+  {
+   "k": "Gentian",
+   "v": "リンドウ"
   },
   {
    "k": "Geologic Time",
@@ -4017,6 +4493,10 @@
    "v": "巨大なウミサソリ（広翼類）と広大なサンゴ礁"
   },
   {
+   "k": "Giant sequoia",
+   "v": "ジャイアントセコイア"
+  },
+  {
    "k": "Giant straight-shelled nautiloid, among the largest Ordovician predators.",
    "v": "まっすぐな殻を持つ巨大なオウムガイ類。オルドビス紀最大級の捕食者。"
   },
@@ -4033,12 +4513,20 @@
    "v": "オオオニバス"
   },
   {
+   "k": "Gigantonoclea",
+   "v": "ギガントノクレア"
+  },
+  {
    "k": "Gigantopteris",
    "v": "ギガントプテリス"
   },
   {
    "k": "Gilboa Fossil Forest",
    "v": "ギルボア化石林"
+  },
+  {
+   "k": "Gilboaphyton",
+   "v": "ギルボアフィトン"
   },
   {
    "k": "Gill Arches",
@@ -4063,6 +4551,10 @@
   {
    "k": "Ginkgo",
    "v": "イチョウ"
+  },
+  {
+   "k": "Ginkgoites",
+   "v": "ギンゴイテス"
   },
   {
    "k": "Giraffes need very high blood pressure to reach their heads.",
@@ -4097,8 +4589,16 @@
    "v": "余分な塩分を排出する腺（海生爬虫類、海鳥）。"
   },
   {
+   "k": "Gleichenites",
+   "v": "グレイケニテス"
+  },
+  {
    "k": "Gliding",
    "v": "滑空"
+  },
+  {
+   "k": "Gloeocapsomorpha",
+   "v": "グロエオカプソモルファ"
   },
   {
    "k": "Glossopteris",
@@ -4127,6 +4627,10 @@
   {
    "k": "Going limp until the predator gives up.",
    "v": "捕食者があきらめるまで力を抜いて動かない。"
+  },
+  {
+   "k": "Golden barrel cactus",
+   "v": "金鯱"
   },
   {
    "k": "Golden chain tree",
@@ -4305,6 +4809,10 @@
    "v": "温室期。極氷なし"
   },
   {
+   "k": "Grey mangrove",
+   "v": "ヒルギダマシ"
+  },
+  {
    "k": "Griffinflies with 70 cm wings, in oxygen-rich air.",
    "v": "酸素の豊富な大気を飛ぶ、翼開長70 cmのオオトンボ。"
   },
@@ -4395,6 +4903,14 @@
   {
    "k": "Gymnosperm forests of conifers, cycads and ginkgoes",
    "v": "針葉樹、ソテツ、イチョウの裸子植物林"
+  },
+  {
+   "k": "Gyroporella",
+   "v": "ギロポレラ"
+  },
+  {
+   "k": "Gümbel's Schwagerina",
+   "v": "シュワゲリナ・ギュンベリ"
   },
   {
    "k": "Haast's eagle",
@@ -4489,12 +5005,20 @@
    "v": "無害な種が危険な種をまねる。"
   },
   {
+   "k": "Hausmannia",
+   "v": "ハウスマンニア"
+  },
+  {
    "k": "Hawaiian goose, descended from Canada geese that reached the islands.",
    "v": "島にたどり着いたカナダガンの子孫であるハワイガン。"
   },
   {
    "k": "Hawaiʻi Volcanoes",
    "v": "ハワイ火山"
+  },
+  {
+   "k": "Hawkins' Schwagerina",
+   "v": "シュワゲリナ・ホーキンシ"
   },
   {
    "k": "Hawthorn",
@@ -4529,6 +5053,18 @@
    "v": "ヘザー"
   },
   {
+   "k": "Heaven's-light bonnet",
+   "v": "シイノトモシビタケ"
+  },
+  {
+   "k": "Hedstroemia",
+   "v": "ヘドストレミア"
+  },
+  {
+   "k": "Heidiphyllum",
+   "v": "ハイディフィルム"
+  },
+  {
    "k": "Heliconia",
    "v": "ヘリコニア"
   },
@@ -4553,8 +5089,16 @@
    "v": "助けてくれた相手を助ける（血を分け合うチスイコウモリ）。"
   },
   {
+   "k": "Hemlock",
+   "v": "ツガ"
+  },
+  {
    "k": "Hepatic Portal Vein",
    "v": "肝門脈"
+  },
+  {
+   "k": "Hepaticites",
+   "v": "ヘパティキテス"
   },
   {
    "k": "Heracles",
@@ -4589,12 +5133,20 @@
    "v": "ヘレラサウルス"
   },
   {
+   "k": "Hess Schwagerina",
+   "v": "シュワゲリナ・ヘッセンシス"
+  },
+  {
    "k": "Heteromorph ammonite",
    "v": "異常巻きアンモナイト"
   },
   {
    "k": "Hibernation",
    "v": "冬眠"
+  },
+  {
+   "k": "Hickory",
+   "v": "ヒッコリー"
   },
   {
    "k": "Hiding",
@@ -4645,6 +5197,10 @@
    "v": "外骨格の内側に関節を持つ脚：節足動物の道具箱。"
   },
   {
+   "k": "Hirmeriella",
+   "v": "ヒルメリエラ"
+  },
+  {
    "k": "Hirnantian glaciation",
    "v": "ヒルナンティアン氷河期"
   },
@@ -4685,6 +5241,10 @@
    "v": "ホモ・エレクトス（約1.9 Ma）がアフリカの外へ拡散。約30万年前にホモ・サピエンスが出現"
   },
   {
+   "k": "Honeggeriella",
+   "v": "ホネッゲリエラ"
+  },
+  {
    "k": "Honey fungus",
    "v": "ナラタケ"
   },
@@ -4699,6 +5259,10 @@
   {
    "k": "Hormones, body heat and dormancy.",
    "v": "ホルモン、体温、休眠。"
+  },
+  {
+   "k": "Horn of plenty",
+   "v": "クロラッパタケ"
   },
   {
    "k": "Horned abelisaurid from the Narmada valley, when India was an island drifting north.",
@@ -4721,12 +5285,20 @@
    "v": "ツノゴケ"
   },
   {
+   "k": "Horse chestnut",
+   "v": "トチノキ"
+  },
+  {
    "k": "Horsetail",
    "v": "トクサ"
   },
   {
    "k": "Horsetails and ferns",
    "v": "トクサとシダ"
+  },
+  {
+   "k": "Hostinella",
+   "v": "ホスティネラ"
   },
   {
    "k": "Hot desert",
@@ -4809,8 +5381,24 @@
    "v": "ホスタイ草原"
   },
   {
+   "k": "Hydrangea",
+   "v": "アジサイ"
+  },
+  {
+   "k": "Hydrilla",
+   "v": "クロモ"
+  },
+  {
+   "k": "Hyenia",
+   "v": "ヒエニア"
+  },
+  {
    "k": "Hylonomus",
    "v": "ヒロノムス"
+  },
+  {
+   "k": "Hyrcantha",
+   "v": "ヒルカンタ"
   },
   {
    "k": "Hạ Long Bay",
@@ -4877,6 +5465,10 @@
    "v": "イグアス"
   },
   {
+   "k": "Illawarra flame tree",
+   "v": "ゴウシュウアオギリ"
+  },
+  {
    "k": "Immune Memory",
    "v": "免疫記憶"
   },
@@ -4895,6 +5487,10 @@
   {
    "k": "India collides with Asia and the Himalayas begin to rise",
    "v": "インドがアジアに衝突し、ヒマラヤが隆起し始める"
+  },
+  {
+   "k": "Indigo milk cap",
+   "v": "ルリハツタケ"
   },
   {
    "k": "Indohyus",
@@ -4989,6 +5585,10 @@
    "v": "イサロ"
   },
   {
+   "k": "Ischadites",
+   "v": "イスカディテス"
+  },
+  {
    "k": "Ischigualasto",
    "v": "イスチグアラスト"
   },
@@ -5005,8 +5605,16 @@
    "v": "イソテルス"
   },
   {
+   "k": "Issinella",
+   "v": "イッシネラ"
+  },
+  {
    "k": "Isthmus of Panama closes (~3 Ma); Northern Hemisphere ice sheets begin to grow",
    "v": "パナマ地峡が閉じる（約3 Ma）。北半球の氷床が成長し始める"
+  },
+  {
+   "k": "Italian cypress",
+   "v": "イタリアイトスギ"
   },
   {
    "k": "Ivanovia",
@@ -5031,6 +5639,10 @@
   {
    "k": "Jaguars ambush prey near water.",
    "v": "ジャガーは水辺で獲物を待ち伏せる。"
+  },
+  {
+   "k": "Jania",
+   "v": "モサズキ"
   },
   {
    "k": "Japanese Mountain Leech",
@@ -5081,6 +5693,10 @@
    "v": "ジョン・デイ化石層"
   },
   {
+   "k": "Joint pine",
+   "v": "マオウ"
+  },
+  {
    "k": "Jointed Limbs",
    "v": "関節肢"
   },
@@ -5089,12 +5705,28 @@
    "v": "ジョロウグモ"
   },
   {
+   "k": "Joshua tree",
+   "v": "ジョシュアツリー"
+  },
+  {
    "k": "Journeys of thousands of kilometres every year (whales, terns).",
    "v": "毎年数千キロメートルに及ぶ旅（クジラ、アジサシ）。"
   },
   {
    "k": "Judging a rival's strength before deciding whether to fight.",
    "v": "戦うかどうか決める前にライバルの強さを見極める。"
+  },
+  {
+   "k": "Jujube",
+   "v": "ナツメ"
+  },
+  {
+   "k": "Junggaria",
+   "v": "ジュンガリア"
+  },
+  {
+   "k": "Juniper",
+   "v": "ネズ"
   },
   {
    "k": "Juramaia",
@@ -5111,6 +5743,10 @@
   {
    "k": "Jurassic ginkgo",
    "v": "ジュラ紀のイチョウ"
+  },
+  {
+   "k": "Jurassic kauri",
+   "v": "ジュラ紀のカウリ"
   },
   {
    "k": "Jurassic–Cretaceous boundary",
@@ -5147,6 +5783,10 @@
   {
    "k": "Karoo",
    "v": "カルー"
+  },
+  {
+   "k": "Katsura",
+   "v": "カツラ"
   },
   {
    "k": "Kaziranga",
@@ -5237,6 +5877,14 @@
    "v": "キンザーズ層"
   },
   {
+   "k": "Klitzschophyllites",
+   "v": "クリッチョフィリテス"
+  },
+  {
+   "k": "Klukia",
+   "v": "クルキア"
+  },
+  {
    "k": "Knifefish",
    "v": "デンキウナギ目"
   },
@@ -5251,6 +5899,10 @@
   {
    "k": "Komodo Dragon",
    "v": "コモドオオトカゲ"
+  },
+  {
+   "k": "Konglingiphyton",
+   "v": "コンリンギフィトン"
   },
   {
    "k": "Koninckopora",
@@ -5497,6 +6149,10 @@
    "v": "ローレンシア、バルティカ、アバロニアの衝突で形成された旧赤色砂岩大陸ローラシア（ラウルッシア）。"
   },
   {
+   "k": "Lavender",
+   "v": "ラベンダー"
+  },
+  {
    "k": "Laying eggs in safe places.",
    "v": "安全な場所に卵を産む。"
   },
@@ -5541,6 +6197,10 @@
    "v": "リードシクティス"
   },
   {
+   "k": "Leefructus",
+   "v": "リーフルクトゥス"
+  },
+  {
    "k": "Legs held under the body for efficient running and breathing.",
    "v": "体の下に位置する脚で、効率よく走り呼吸できる。"
   },
@@ -5557,12 +6217,28 @@
    "v": "レナ石柱自然公園"
   },
   {
+   "k": "Lepidodendropsis",
+   "v": "レピドデンドロプシス"
+  },
+  {
    "k": "Lepidophloios",
    "v": "レピドフロイオス"
   },
   {
    "k": "Lepidopteris",
    "v": "レピドプテリス"
+  },
+  {
+   "k": "Lepidosigillaria",
+   "v": "レピドシギラリア"
+  },
+  {
+   "k": "Leptocycas",
+   "v": "レプトキカス"
+  },
+  {
+   "k": "Leptophloeum",
+   "v": "レプトフロエウム"
   },
   {
    "k": "Leveillites",
@@ -5601,6 +6277,18 @@
    "v": "ライラック"
   },
   {
+   "k": "Linden",
+   "v": "シナノキ"
+  },
+  {
+   "k": "Lingula",
+   "v": "ミドリシャミセンガイ"
+  },
+  {
+   "k": "Lingulid brachiopod",
+   "v": "シャミセンガイ類"
+  },
+  {
    "k": "Linton",
    "v": "リントン"
   },
@@ -5617,6 +6305,10 @@
    "v": "リオプレウロドン"
   },
   {
+   "k": "Lithocodium",
+   "v": "リトコディウム"
+  },
+  {
    "k": "Live Birth",
    "v": "胎生"
   },
@@ -5627,6 +6319,10 @@
   {
    "k": "Liverworts and mosses",
    "v": "苔類と蘚類"
+  },
+  {
+   "k": "Living stones",
+   "v": "リトープス"
   },
   {
    "k": "Lizard",
@@ -5777,8 +6473,16 @@
    "v": "羅平"
   },
   {
+   "k": "Lupin",
+   "v": "ルピナス"
+  },
+  {
    "k": "Lush gymnosperm forests and fern prairies",
    "v": "生い茂る裸子植物林とシダ草原"
+  },
+  {
+   "k": "Lycopodiopsis",
+   "v": "リコポディオプシス"
   },
   {
    "k": "Lycopsid and tree-fern forest",
@@ -5801,6 +6505,10 @@
    "v": "リンパ球が遺伝子を組み換え、ほぼあらゆる侵入者を認識する（有顎脊椎動物）。"
   },
   {
+   "k": "Lyonophyton",
+   "v": "リオノフィトン"
+  },
+  {
    "k": "Lystrosaurus",
    "v": "リストロサウルス"
   },
@@ -5817,8 +6525,20 @@
    "v": "マサイキリン"
   },
   {
+   "k": "Macginitiea",
+   "v": "マクギニティア"
+  },
+  {
    "k": "Mackerel shark",
    "v": "ネズミザメ目"
+  },
+  {
+   "k": "Macroneuropteris",
+   "v": "マクロネウロプテリス"
+  },
+  {
+   "k": "Macroporella",
+   "v": "マクロポレラ"
   },
   {
    "k": "Madygen",
@@ -5843,6 +6563,10 @@
   {
    "k": "Maintenance Behaviour",
    "v": "維持行動"
+  },
+  {
+   "k": "Majonica",
+   "v": "マヨニカ"
   },
   {
    "k": "Makauwahi Cave",
@@ -5905,6 +6629,14 @@
    "v": "マンガホウアンガ川"
   },
   {
+   "k": "Mango",
+   "v": "マンゴー"
+  },
+  {
+   "k": "Mangrove fern",
+   "v": "ミミモチシダ"
+  },
+  {
    "k": "Manuels River",
    "v": "マニュエルズ川"
   },
@@ -5921,8 +6653,20 @@
    "v": "マヌー"
   },
   {
+   "k": "Map lichen",
+   "v": "チズゴケ"
+  },
+  {
    "k": "Maple",
    "v": "カエデ"
+  },
+  {
+   "k": "Marattiopsis",
+   "v": "マラッティオプシス"
+  },
+  {
+   "k": "Marchantites",
+   "v": "マルカンティテス"
   },
   {
    "k": "Margaretia",
@@ -5949,6 +6693,10 @@
    "v": "においでなわばりを示す。"
   },
   {
+   "k": "Marpolia",
+   "v": "マルポリア"
+  },
+  {
    "k": "Marquesas",
    "v": "マルキーズ"
   },
@@ -5959,6 +6707,10 @@
   {
    "k": "Marsupials raise tiny young in a pouch.",
    "v": "有袋類は小さな子を袋の中で育てる。"
+  },
+  {
+   "k": "Marula",
+   "v": "マルラ"
   },
   {
    "k": "Mass Dispersal Flights",
@@ -5987,6 +6739,10 @@
   {
    "k": "Matriarchs",
    "v": "女家長"
+  },
+  {
+   "k": "Mauldinia",
+   "v": "モールディニア"
   },
   {
    "k": "Mazon Creek",
@@ -6037,6 +6793,10 @@
    "v": "メガネウラ"
   },
   {
+   "k": "Megaphyton",
+   "v": "メガフィトン"
+  },
+  {
    "k": "Meishan",
    "v": "煤山"
   },
@@ -6057,12 +6817,24 @@
    "v": "メニュー"
   },
   {
+   "k": "Mermaid's fan",
+   "v": "ウドテア"
+  },
+  {
    "k": "Mermaid's wineglass",
    "v": "カサノリ"
   },
   {
+   "k": "Merman's shaving brush",
+   "v": "ペニシルス"
+  },
+  {
    "k": "Mesosaurus",
    "v": "メソサウルス"
+  },
+  {
+   "k": "Mesoxylon",
+   "v": "メソキシロン"
   },
   {
    "k": "Mesozoic",
@@ -6089,6 +6861,10 @@
    "v": "ブリティッシュコロンビア州バージェス頁岩の、体長1メートルの放射歯類の捕食者。"
   },
   {
+   "k": "Metzgeriothallus",
+   "v": "メツゲリオタルス"
+  },
+  {
    "k": "Micro (<1 mm)",
    "v": "微小（1 mm未満）"
   },
@@ -6107,6 +6883,10 @@
   {
    "k": "MicrobialMat",
    "v": "微生物マット"
+  },
+  {
+   "k": "Microvictoria",
+   "v": "ミクロヴィクトリア"
   },
   {
    "k": "Mid-Ordovician; very high seas",
@@ -6165,6 +6945,10 @@
    "v": "シワリク丘陵の中新世の類人猿。オランウータンの近縁。"
   },
   {
+   "k": "Miombo",
+   "v": "ミオンボ"
+  },
+  {
    "k": "Mistaken Point",
    "v": "ミステイクン・ポイント"
   },
@@ -6205,6 +6989,10 @@
    "v": "現在並み。氷期には陸橋が露出"
   },
   {
+   "k": "Moellerina",
+   "v": "メレリナ"
+  },
+  {
    "k": "Molars that both slice and crush (mammals).",
    "v": "切ることも砕くこともできる臼歯（哺乳類）。"
   },
@@ -6213,12 +7001,24 @@
    "v": "侵入者の断片をT細胞に提示する分子。"
   },
   {
+   "k": "Monanthesia",
+   "v": "モナンテシア"
+  },
+  {
    "k": "Monarch Butterfly",
    "v": "オオカバマダラ"
   },
   {
    "k": "Monarch Butterfly Reserve",
    "v": "オオカバマダラ生物圏保護区"
+  },
+  {
+   "k": "Monetianthus",
+   "v": "モネティアントゥス"
+  },
+  {
+   "k": "Monkey cup",
+   "v": "ウツボカズラ"
   },
   {
    "k": "Monkey-puzzle",
@@ -6249,6 +7049,10 @@
    "v": "ツノダシ"
   },
   {
+   "k": "Morania",
+   "v": "モラニア"
+  },
+  {
    "k": "More brain per kilo of body (early mammals and birds).",
    "v": "体重あたりの脳がより大きい（初期の哺乳類と鳥）。"
   },
@@ -6257,8 +7061,16 @@
    "v": "アミガサタケ"
   },
   {
+   "k": "Moresnetia",
+   "v": "モレスネティア"
+  },
+  {
    "k": "Morganucodon",
    "v": "モルガヌコドン"
+  },
+  {
+   "k": "Moriche palm",
+   "v": "モリチェヤシ"
   },
   {
    "k": "Morrison",
@@ -6271,6 +7083,14 @@
   {
    "k": "Mosquito",
    "v": "カ"
+  },
+  {
+   "k": "Mosquito fern",
+   "v": "アカウキクサ"
+  },
+  {
+   "k": "Moss campion",
+   "v": "コケマンテマ"
   },
   {
    "k": "Mosses and Cooksonia, the first vascular plants",
@@ -6357,6 +7177,10 @@
    "v": "季節とともに移動する。"
   },
   {
+   "k": "Mucrospirifer",
+   "v": "ムクロスピリファー"
+  },
+  {
    "k": "Mucus Coat",
    "v": "粘液の被膜"
   },
@@ -6385,6 +7209,10 @@
    "v": "ムシェルカルク海"
   },
   {
+   "k": "Muscites",
+   "v": "ムスキテス"
+  },
+  {
    "k": "Muscle Bands",
    "v": "筋肉の帯"
   },
@@ -6399,6 +7227,10 @@
   {
    "k": "Muttaburrasaurus",
    "v": "ムッタブラサウルス"
+  },
+  {
+   "k": "Mycocarpon",
+   "v": "ミコカルポン"
   },
   {
    "k": "Myelin",
@@ -6423,6 +7255,10 @@
   {
    "k": "Myriapods were among the first animals on land; Arthropleura was the largest.",
    "v": "多足類は最初の陸上動物の一つだった。最大のものはアースロプレウラ。"
+  },
+  {
+   "k": "Naiadita",
+   "v": "ナイアディタ"
   },
   {
    "k": "Namib",
@@ -6481,6 +7317,18 @@
    "v": "{0} EPが必要です（所持 {1}）"
   },
   {
+   "k": "Nelumbites",
+   "v": "ネルンビテス"
+  },
+  {
+   "k": "Nematasketum",
+   "v": "ネマタスケトゥム"
+  },
+  {
+   "k": "Nematoplexus",
+   "v": "ネマトプレクスス"
+  },
+  {
    "k": "Nematothallus",
    "v": "ネマトタルス"
   },
@@ -6499,6 +7347,10 @@
   {
    "k": "Neogene",
    "v": "新第三紀"
+  },
+  {
+   "k": "Neomeris",
+   "v": "ネオメリス"
   },
   {
    "k": "Neotropic",
@@ -6613,6 +7465,10 @@
    "v": "ニッチ："
   },
   {
+   "k": "Nilssonia",
+   "v": "ニルソニア"
+  },
+  {
    "k": "Niobrara Chalk",
    "v": "ナイオブララ・チョーク"
   },
@@ -6657,6 +7513,10 @@
    "v": "夜の隠れ家"
   },
   {
+   "k": "Noeggerathiopsis",
+   "v": "ネゲラティオプシス"
+  },
+  {
    "k": "Nomadic Herds",
    "v": "遊動する群れ"
   },
@@ -6667,6 +7527,10 @@
   {
    "k": "None on land: bare rock with microbial mats",
    "v": "陸上にはなし：微生物マットに覆われたむき出しの岩"
+  },
+  {
+   "k": "Nordenskioldia",
+   "v": "ノルデンショルディア"
   },
   {
    "k": "Nori",
@@ -6683,6 +7547,10 @@
   {
    "k": "North America, Greenland and the Mexican highlands.",
    "v": "北アメリカ、グリーンランド、メキシコ高原。"
+  },
+  {
+   "k": "Northern Dimetrodon",
+   "v": "ディメトロドン・ボレアリス"
   },
   {
    "k": "Not a true eel but a South American knifefish up to two metres long. Most of its body is electric organ that can discharge over 600 volts to stun prey and deter predators, while weaker pulses let it sense its murky Amazon surroundings. It gulps air at the surface, taking most of its oxygen through its mouth.",
@@ -6723,6 +7591,10 @@
   {
    "k": "Now: {0:0.0} Ma, turn {1} of {2} in this period",
    "v": "現在：{0:0.0} Ma、この紀の {2} ターン中 {1} ターン目"
+  },
+  {
+   "k": "Nuia",
+   "v": "ヌイア"
   },
   {
    "k": "Nuptial Gifts",
@@ -6769,6 +7641,14 @@
    "v": "マイルカ科"
   },
   {
+   "k": "Ocotillo",
+   "v": "オコチョ"
+  },
+  {
+   "k": "Odontopteris",
+   "v": "オドントプテリス"
+  },
+  {
    "k": "Offering food to a mate.",
    "v": "相手に食物を贈る。"
   },
@@ -6789,6 +7669,10 @@
    "v": "年長のメスが記憶した知識で群れを導く。"
   },
   {
+   "k": "Old man's beard",
+   "v": "サルオガセ"
+  },
+  {
    "k": "Oldest articulated bony fish, from the Late Silurian of Yunnan.",
    "v": "雲南省の後期シルル紀から見つかった、最古の関節のつながった硬骨魚。"
   },
@@ -6799,6 +7683,10 @@
   {
    "k": "Olenek Uplift",
    "v": "オレニョク隆起"
+  },
+  {
+   "k": "Olive",
+   "v": "オリーブ"
   },
   {
    "k": "Olive Baboon",
@@ -6921,6 +7809,10 @@
    "v": "オントンジャワ海台"
   },
   {
+   "k": "Onychiopsis",
+   "v": "オニキオプシス"
+  },
+  {
    "k": "Opabinia",
    "v": "オパビニア"
   },
@@ -6955,6 +7847,10 @@
   {
    "k": "Orchid tree",
    "v": "ムラサキソシンカ"
+  },
+  {
+   "k": "Orchids",
+   "v": "ラン"
   },
   {
    "k": "Ordovician",
@@ -7001,6 +7897,14 @@
    "v": "皮骨"
   },
   {
+   "k": "Otovicia",
+   "v": "オトヴィキア"
+  },
+  {
+   "k": "Otozamites",
+   "v": "オトザミテス"
+  },
+  {
    "k": "Otters hunt fish underwater in family groups.",
    "v": "カワウソは家族で水中の魚を狩る。"
   },
@@ -7015,6 +7919,14 @@
   {
    "k": "Overwrite",
    "v": "上書き"
+  },
+  {
+   "k": "Ovulites",
+   "v": "オブリテス"
+  },
+  {
+   "k": "Oxroadia",
+   "v": "オクスロアディア"
   },
   {
    "k": "Oxygen diffuses in through a thin body wall.",
@@ -7043,6 +7955,10 @@
   {
    "k": "Ozarks",
    "v": "オザーク"
+  },
+  {
+   "k": "Pachypteris",
+   "v": "パキプテリス"
   },
   {
    "k": "Pachytheca",
@@ -7093,8 +8009,20 @@
    "v": "パラエオアネルス"
   },
   {
+   "k": "Palaeoblastocladia",
+   "v": "パレオブラストクラディア"
+  },
+  {
    "k": "Palaeochara",
    "v": "パレオカラ"
+  },
+  {
+   "k": "Palaeodasycladus",
+   "v": "パラエオダシクラドゥス"
+  },
+  {
+   "k": "Palaeofibulus",
+   "v": "パラエオフィブルス"
   },
   {
    "k": "Palaeomyces",
@@ -7103,6 +8031,10 @@
   {
    "k": "Palaeonitella",
    "v": "パレオニテラ"
+  },
+  {
+   "k": "Palaeoporella",
+   "v": "パレオポレラ"
   },
   {
    "k": "Palaeosclerotium",
@@ -7121,6 +8053,10 @@
    "v": "暁新世－始新世温暖化極大（約56 Ma）：約5～8 °Cの急激な温暖化"
   },
   {
+   "k": "Paleoclavaria",
+   "v": "パレオクラヴァリア"
+  },
+  {
    "k": "Paleocontinent",
    "v": "古大陸"
   },
@@ -7129,12 +8065,20 @@
    "v": "古第三紀"
   },
   {
+   "k": "Paleoophiocordyceps",
+   "v": "パレオオフィオコルディセプス"
+  },
+  {
    "k": "Paleopyrenomycites",
    "v": "パレオピレノミキテス"
   },
   {
    "k": "Paleozoic",
    "v": "古生代"
+  },
+  {
+   "k": "Pallaviciniites",
+   "v": "パラビキニイテス"
   },
   {
    "k": "Pallium",
@@ -7213,6 +8157,10 @@
    "v": "パラバサリア"
   },
   {
+   "k": "Paracalamites",
+   "v": "パラカラミテス"
+  },
+  {
    "k": "Paraceratherium",
    "v": "パラケラテリウム"
   },
@@ -7225,8 +8173,16 @@
    "v": "パラドキシデス"
   },
   {
+   "k": "Paralycopodites",
+   "v": "パラリコポディテス"
+  },
+  {
    "k": "Paramecium",
    "v": "ゾウリムシ"
+  },
+  {
+   "k": "Pararaucaria",
+   "v": "パラアラウカリア"
   },
   {
    "k": "Parasites too big to swallow are walled off inside a capsule of cells.",
@@ -7281,6 +8237,10 @@
    "v": "パターン認識"
   },
   {
+   "k": "Paurodendron",
+   "v": "パウロデンドロン"
+  },
+  {
    "k": "Peach blossom",
    "v": "モモの花"
   },
@@ -7313,6 +8273,10 @@
    "v": "アオカビ"
   },
   {
+   "k": "Pentoxylon",
+   "v": "ペントキシロン"
+  },
+  {
    "k": "Penultimate glacial maximum (MIS 6)",
    "v": "最終氷期の一つ前の氷期最盛期（MIS 6）"
   },
@@ -7331,6 +8295,10 @@
   {
    "k": "Permian–Triassic extinction; extreme heat",
    "v": "ペルム紀末の大量絶滅。極端な高温"
+  },
+  {
+   "k": "Permocalculus",
+   "v": "ペルモカルクルス"
   },
   {
    "k": "Persian ironwood",
@@ -7373,12 +8341,24 @@
    "v": "フェロモン"
   },
   {
+   "k": "Phoenicopsis",
+   "v": "フォエニコプシス"
+  },
+  {
+   "k": "Phylladoderma",
+   "v": "フィラドデルマ"
+  },
+  {
    "k": "Phylloid algae",
    "v": "葉状藻類"
   },
   {
    "k": "Phyllotheca",
    "v": "フィロテカ"
+  },
+  {
+   "k": "Physoporella",
+   "v": "フィソポレラ"
   },
   {
    "k": "Pigment cells that can change colour.",
@@ -7423,6 +8403,10 @@
   {
    "k": "Pituitary Gland",
    "v": "下垂体"
+  },
+  {
+   "k": "Pitus",
+   "v": "ピトゥス"
   },
   {
    "k": "Placenta",
@@ -7493,6 +8477,10 @@
    "v": "プレウロメイア"
   },
   {
+   "k": "Pluricarpellatia",
+   "v": "プルリカルペラティア"
+  },
+  {
    "k": "Podolia",
    "v": "ポジーリャ"
   },
@@ -7501,12 +8489,20 @@
    "v": "ポドザミテス"
   },
   {
+   "k": "Pohutukawa",
+   "v": "ポフツカワ"
+  },
+  {
    "k": "Polar ocean",
    "v": "極域の海"
   },
   {
    "k": "Polynesia, Micronesia and Fiji: volcanic islands and atolls of the Pacific.",
    "v": "ポリネシア、ミクロネシア、フィジー：太平洋の火山島と環礁。"
+  },
+  {
+   "k": "Polysporia",
+   "v": "ポリスポリア"
   },
   {
    "k": "Pondweed",
@@ -7573,6 +8569,10 @@
    "v": "プリモカラ"
   },
   {
+   "k": "Proaulopora",
+   "v": "プロアウロポラ"
+  },
+  {
    "k": "Proboscidean",
    "v": "長鼻類"
   },
@@ -7597,6 +8597,10 @@
    "v": "プロトサルヴィニア"
   },
   {
+   "k": "Protosphagnum",
+   "v": "プロトスファグヌム"
+  },
+  {
    "k": "Prototaxites",
    "v": "プロトタキシーテス"
   },
@@ -7609,8 +8613,28 @@
    "v": "プサロニウス"
   },
   {
+   "k": "Pseudobornia",
+   "v": "プセウドボルニア"
+  },
+  {
+   "k": "Pseudoctenis",
+   "v": "プセウドクテニス"
+  },
+  {
+   "k": "Pseudofrenelopsis",
+   "v": "プセウドフレネロプシス"
+  },
+  {
    "k": "Pseudosporochnus",
    "v": "プセウドスポロクヌス"
+  },
+  {
+   "k": "Pseudovermiporella",
+   "v": "プセウドヴェルミポレラ"
+  },
+  {
+   "k": "Pseudovoltzia",
+   "v": "プセウドヴォルツィア"
   },
   {
    "k": "Psilophyton",
@@ -7629,12 +8653,20 @@
    "v": "プテロダクティルス"
   },
   {
+   "k": "Pterophyllum",
+   "v": "プテロフィルム"
+  },
+  {
    "k": "Pterosaur",
    "v": "翼竜"
   },
   {
    "k": "Pterosaurs flew on wings of skin; Quetzalcoatlus was as big as a giraffe.",
    "v": "翼竜は皮膜の翼で飛んだ。ケツァルコアトルスはキリンほどの大きさだった。"
+  },
+  {
+   "k": "Ptilophyllum",
+   "v": "プティロフィルム"
   },
   {
    "k": "Pulling back into a tube or shell when touched.",
@@ -7683,6 +8715,10 @@
   {
    "k": "Qingjiang",
    "v": "清江"
+  },
+  {
+   "k": "Quadrocladus",
+   "v": "クアドロクラドゥス"
   },
   {
    "k": "Quaking aspen",
@@ -7921,6 +8957,10 @@
    "v": "ハナゴケ"
   },
   {
+   "k": "Reinschia",
+   "v": "ラインスキア"
+  },
+  {
    "k": "Reishi",
    "v": "霊芝"
   },
@@ -7935,6 +8975,10 @@
   {
    "k": "Renalcis",
    "v": "レナルキス"
+  },
+  {
+   "k": "Renalia",
+   "v": "レナリア"
   },
   {
    "k": "Reproduce",
@@ -7959,6 +9003,10 @@
   {
    "k": "Requires: {0}",
    "v": "必要条件：{0}"
+  },
+  {
+   "k": "Resin pin fungus",
+   "v": "樹脂ピンゴケ"
   },
   {
    "k": "Respiratory System",
@@ -7999,6 +9047,10 @@
   {
    "k": "Returning to the place of birth to breed (salmon, turtles).",
    "v": "生まれた場所に戻って繁殖する（サケ、ウミガメ）。"
+  },
+  {
+   "k": "Rhabdoporella",
+   "v": "ラブドポレラ"
   },
   {
    "k": "Rhacophyton",
@@ -8053,6 +9105,10 @@
    "v": "夜は浮上し、昼は沈む（プランクトン）。"
   },
   {
+   "k": "Rissikia",
+   "v": "リッシキア"
+  },
+  {
    "k": "Ritual antler fights (deer).",
    "v": "儀式的な角の争い（シカ）。"
   },
@@ -8089,6 +9145,10 @@
    "v": "パラオのロックアイランド"
   },
   {
+   "k": "Rock-crust cyanobacteria",
+   "v": "岩肌のシアノバクテリア"
+  },
+  {
    "k": "Rockslide",
    "v": "岩なだれ"
   },
@@ -8117,6 +9177,10 @@
    "v": "ロタラ"
   },
   {
+   "k": "Rothpletzella",
+   "v": "ロートプレッツェラ"
+  },
+  {
    "k": "Rotorua",
    "v": "ロトルア"
   },
@@ -8143,6 +9207,10 @@
   {
    "k": "Rubbing off the old skin, sometimes in one piece (snakes, lizards).",
    "v": "古い皮をこすり落とす。時には一枚まるごと（ヘビ、トカゲ）。"
+  },
+  {
+   "k": "Ruffordia",
+   "v": "ラフォーディア"
   },
   {
    "k": "Rufloria",
@@ -8193,6 +9261,10 @@
    "v": "セージブラシ"
   },
   {
+   "k": "Sagenopteris",
+   "v": "サゲノプテリス"
+  },
+  {
    "k": "Saguaro",
    "v": "サワロ"
   },
@@ -8217,6 +9289,10 @@
    "v": "サロペラ"
   },
   {
+   "k": "Salpingoporella",
+   "v": "サルピンゴポレラ"
+  },
+  {
    "k": "Salt Glands",
    "v": "塩類腺"
   },
@@ -8233,6 +9309,14 @@
    "v": "サンギラン"
   },
   {
+   "k": "Sanmiguelia",
+   "v": "サンミゲリア"
+  },
+  {
+   "k": "Sapindopsis",
+   "v": "サピンドプシス"
+  },
+  {
    "k": "Sargassum",
    "v": "ホンダワラ"
   },
@@ -8247,6 +9331,10 @@
   {
    "k": "Sauropod dinosaur",
    "v": "竜脚類"
+  },
+  {
+   "k": "Sausage tree",
+   "v": "ソーセージノキ"
   },
   {
    "k": "Savanna",
@@ -8271,6 +9359,14 @@
   {
    "k": "Sawdonia",
    "v": "ソードニア"
+  },
+  {
+   "k": "Sawgrass",
+   "v": "ヒトモトススキ"
+  },
+  {
+   "k": "Saxaul",
+   "v": "サクサウール"
   },
   {
    "k": "Scale tree",
@@ -8307,6 +9403,14 @@
   {
    "k": "Scent, colour, sound and language.",
    "v": "におい、色、音、言語。"
+  },
+  {
+   "k": "Schilderia",
+   "v": "シルデリア"
+  },
+  {
+   "k": "Schizolepis",
+   "v": "スキゾレピス"
   },
   {
    "k": "Schizoneura",
@@ -8457,12 +9561,20 @@
    "v": "利己的な群れ"
   },
   {
+   "k": "Senftenbergia",
+   "v": "ゼンフテンベルギア"
+  },
+  {
    "k": "Sense the faint electric fields of hidden prey.",
    "v": "隠れた獲物のかすかな電場を感じ取る。"
   },
   {
    "k": "Senses water movement along the flanks.",
    "v": "体の側面で水の動きを感じ取る。"
+  },
+  {
+   "k": "Sensitive fern",
+   "v": "コウヤワラビ"
   },
   {
    "k": "Sentinels",
@@ -8545,6 +9657,10 @@
    "v": "神農架"
   },
   {
+   "k": "Shield lichen",
+   "v": "ウメノキゴケ"
+  },
+  {
    "k": "Shilin Stone Forest",
    "v": "石林"
   },
@@ -8617,6 +9733,10 @@
    "v": "兄弟殺し"
   },
   {
+   "k": "Sickener",
+   "v": "ドクベニタケ"
+  },
+  {
    "k": "Sigillaria",
    "v": "封印木"
   },
@@ -8643,6 +9763,10 @@
   {
    "k": "Silurian warmth",
    "v": "シルル紀の温暖期"
+  },
+  {
+   "k": "Silvianthemum",
+   "v": "シルウィアンテムム"
   },
   {
    "k": "Simien Mountains",
@@ -8759,6 +9883,10 @@
   {
    "k": "Slender flies whose larvae filter-feed in still water while the adults sip nectar; only females take blood, to fuel their eggs. The oldest known mosquitoes are preserved in Cretaceous amber about 99 million years old.",
    "v": "ほっそりしたハエの仲間で、幼虫は止水中でろ過食をし、成虫は花の蜜を吸う。血を吸うのはメスだけで、卵をつくる栄養にする。知られている最古のカは、約9900万年前の白亜紀の琥珀に保存されている。"
+  },
+  {
+   "k": "Slippery jack",
+   "v": "ヌメリイグチ"
   },
   {
    "k": "Slippery slime that protects the skin and eases movement.",
@@ -8913,8 +10041,16 @@
    "v": "精包"
   },
   {
+   "k": "Sphaerocodium",
+   "v": "スファエロコディウム"
+  },
+  {
    "k": "Sphenacodont synapsid",
    "v": "スフェナコドン類"
+  },
+  {
+   "k": "Sphenobaiera",
+   "v": "スフェノバイエラ"
   },
   {
    "k": "Sphenophyllum",
@@ -8965,6 +10101,10 @@
    "v": "らせん弁"
   },
   {
+   "k": "Spiriferid brachiopod",
+   "v": "スピリファー類"
+  },
+  {
    "k": "Spirometra",
    "v": "マンソン裂頭条虫"
   },
@@ -8983,6 +10123,10 @@
   {
    "k": "Sponge-like animals that built the first animal reefs, along the Lena River.",
    "v": "レナ川沿いで最初の動物礁を築いた海綿のような動物。"
+  },
+  {
+   "k": "Spongiophyton",
+   "v": "スポンギオフィトン"
   },
   {
    "k": "Sporogonites",
@@ -9081,6 +10225,10 @@
    "v": "驚愕逃避"
   },
   {
+   "k": "Stauropteris",
+   "v": "スタウロプテリス"
+  },
+  {
    "k": "Staying close to a mate to keep rivals away.",
    "v": "相手のそばにいてライバルを遠ざける。"
   },
@@ -9121,6 +10269,10 @@
    "v": "ステガノテカ"
   },
   {
+   "k": "Stellatochara",
+   "v": "ステラトカラ"
+  },
+  {
    "k": "Stem arthropod",
    "v": "幹系統節足動物"
   },
@@ -9131,6 +10283,10 @@
   {
    "k": "Sterile workers serve a breeding queen (termites, ants).",
    "v": "不妊の働き手が繁殖する女王に仕える（シロアリ、アリ）。"
+  },
+  {
+   "k": "Stone pine",
+   "v": "イタリアカサマツ"
   },
   {
    "k": "Stonewort",
@@ -9155,6 +10311,10 @@
   {
    "k": "Straightening and oiling feathers with the beak.",
    "v": "くちばしで羽を整え、油を塗る。"
+  },
+  {
+   "k": "Strawberry tree",
+   "v": "イチゴノキ"
   },
   {
    "k": "Stress Hormones",
@@ -9221,6 +10381,14 @@
    "v": "シュンドルボン"
   },
   {
+   "k": "Sunflower",
+   "v": "ヒマワリ"
+  },
+  {
+   "k": "Supaia",
+   "v": "スパイア"
+  },
+  {
    "k": "Superb Lyrebird",
    "v": "コトドリ"
   },
@@ -9231,6 +10399,14 @@
   {
    "k": "Surface",
    "v": "地表"
+  },
+  {
+   "k": "Surfgrass",
+   "v": "スガモ"
+  },
+  {
+   "k": "Sutcliffia",
+   "v": "サトクリフィア"
   },
   {
    "k": "Svalbardia",
@@ -9251,6 +10427,10 @@
   {
    "k": "Sweetgum",
    "v": "モミジバフウ"
+  },
+  {
+   "k": "Swillingtonia",
+   "v": "スウィリングトニア"
   },
   {
    "k": "Swim Bladder",
@@ -9277,6 +10457,10 @@
    "v": "シカモア"
   },
   {
+   "k": "Sycidium",
+   "v": "シキディウム"
+  },
+  {
    "k": "Synapsids dominate: Dimetrodon, then therapsids (mammal ancestors)",
    "v": "単弓類が支配：ディメトロドン、続いて獣弓類（哺乳類の祖先）"
   },
@@ -9287,6 +10471,10 @@
   {
    "k": "Synchronous Firefly",
    "v": "シンクロホタル"
+  },
+  {
+   "k": "Synchysidendron",
+   "v": "シンキシデンドロン"
   },
   {
    "k": "Syrinx",
@@ -9307,6 +10495,10 @@
   {
    "k": "Tadpoles: amphibian young grow up in the water.",
    "v": "オタマジャクシ：両生類の子は水中で育つ。"
+  },
+  {
+   "k": "Taeniocrada",
+   "v": "タエニオクラダ"
   },
   {
    "k": "Taeniopteris",
@@ -9337,12 +10529,24 @@
    "v": "タム・パ・リン"
   },
   {
+   "k": "Tamarind",
+   "v": "タマリンド"
+  },
+  {
+   "k": "Tamarisk",
+   "v": "ギョリュウ"
+  },
+  {
    "k": "Tanystropheus",
    "v": "タニストロフェウス"
   },
   {
    "k": "Tape grass",
    "v": "セキショウモ"
+  },
+  {
+   "k": "Tape seagrass",
+   "v": "ウミショウブ"
   },
   {
    "k": "Tapeworm",
@@ -9357,12 +10561,24 @@
    "v": "クマムシ"
   },
   {
+   "k": "Tarthinia",
+   "v": "タルティニア"
+  },
+  {
    "k": "Tasmanian Wilderness",
    "v": "タスマニア原生地域"
   },
   {
+   "k": "Tasmanites",
+   "v": "タスマニテス"
+  },
+  {
    "k": "Tassili n'Ajjer",
    "v": "タッシリ・ナジェール"
+  },
+  {
+   "k": "Tatarina",
+   "v": "タタリナ"
   },
   {
    "k": "Taxis",
@@ -9375,6 +10591,10 @@
   {
    "k": "Teeth",
    "v": "歯"
+  },
+  {
+   "k": "Teixeiraea",
+   "v": "テイシェイラエア"
   },
   {
    "k": "Telling relatives from strangers by smell or sight.",
@@ -9469,6 +10689,10 @@
    "v": "テトラキシロプテリス"
   },
   {
+   "k": "Teutloporella",
+   "v": "テウトロポレラ"
+  },
+  {
    "k": "Texas Red Beds",
    "v": "テキサス赤色層"
   },
@@ -9477,12 +10701,24 @@
    "v": "タラソキスティス"
   },
   {
+   "k": "Thalassodendron",
+   "v": "タラソデンドロン"
+  },
+  {
    "k": "Thalloid liverwort",
    "v": "葉状苔類"
   },
   {
+   "k": "Thallophyca",
+   "v": "タロフィカ"
+  },
+  {
    "k": "Thar Desert",
    "v": "タール砂漠"
+  },
+  {
+   "k": "Thaumatoporella",
+   "v": "タウマトポレラ"
   },
   {
    "k": "The 'Age of Fishes'. The first forests transform the land and the atmosphere, and the first four-limbed vertebrates crawl ashore. Two extinction pulses end the period.",
@@ -9575,6 +10811,10 @@
   {
    "k": "The largest armoured dinosaur, up to about 8 metres long, its low, broad back covered in a shield of bony osteoderms set into the skin. Its stiffened tail ended in a heavy bony club that could be swung into a predator's legs. It lived at the very end of the Cretaceous in western North America, alongside Tyrannosaurus and Triceratops.",
    "v": "体長最大約8メートルの最大の鎧竜で、低く幅広い背中は皮膚に埋め込まれた皮骨の盾に覆われていた。硬い尾の先には重い骨のこぶがあり、捕食者の脚に打ちつけることができた。白亜紀の最末期に北米西部で、ティラノサウルスやトリケラトプスとともに暮らした。"
+  },
+  {
+   "k": "The largest carnivorous synapsid of the Permian, perhaps 5 to 6 metres long, from the Middle Permian Karoo of South Africa, about 265 million years ago. Its skull, up to 80 centimetres long, was thickened with bony bosses above the eyes and on the cheeks and bristled with big incisors and canines. Long thought to be a sluggish, semi-aquatic hunter, a 2023 study of its inner ear suggested it was agile and quick. It preyed on the big plant-eating dinocephalians around it, and vanished with them in the extinction at the end of the Middle Permian.",
+   "v": "約2億6500万年前、南アフリカのペルム紀中期のカルーにいた、ペルム紀最大の肉食性単弓類で、体長はおそらく5〜6メートル。長さ最大80センチメートルの頭骨は、眼の上と頬の骨のこぶで厚くなり、大きな切歯と犬歯がずらりと並んでいた。長らく動きの鈍い半水生の狩人と考えられてきたが、2023年の内耳の研究から、敏捷で素早かったことが示唆された。周囲にいた大型の植物食の恐頭類を捕食し、ペルム紀中期末の絶滅で彼らとともに姿を消した。"
   },
   {
    "k": "The largest cat of the Americas, a stocky, solitary ambush hunter with the most powerful bite of any big cat for its size. Instead of a throat bite it often kills with a single bite through the skull or a turtle's shell, and it swims readily to hunt caimans, capybaras and fish. Unlike a leopard's, its rosettes usually enclose small black spots.",
@@ -9697,6 +10937,10 @@
    "v": "獣脚類：俊敏な温血の捕食者で、多くは羽毛を持っていた。"
   },
   {
+   "k": "Thick-walled Schwagerina",
+   "v": "シュワゲリナ・クラッシテクトリア"
+  },
+  {
    "k": "Thin outgrowths of the thorax: the first animals to fly.",
    "v": "胸部から伸びた薄い突起。空を飛んだ最初の動物。"
   },
@@ -9791,6 +11035,10 @@
   {
    "k": "Toads defend themselves with poison glands.",
    "v": "ヒキガエルは毒腺で身を守る。"
+  },
+  {
+   "k": "Todites",
+   "v": "トディテス"
   },
   {
    "k": "Together with the bonobo, our closest living relative, sharing about 98-99% of its DNA with humans. It lives in communities of up to 150 in the forests and wooded savannas of equatorial Africa, walking on its knuckles and nesting in trees at night. Chimpanzees make and use tools, fishing termites out of mounds with stripped twigs and cracking nuts with stone hammers, and they also hunt monkeys in groups.",
@@ -9909,12 +11157,20 @@
    "v": "トリケラトプス"
   },
   {
+   "k": "Trichopitys",
+   "v": "トリコピティス"
+  },
+  {
    "k": "Tricking others into raising your chicks (cuckoos).",
    "v": "他者をだまして自分のひなを育てさせる（カッコウ）。"
   },
   {
    "k": "Trigger",
    "v": "発動"
+  },
+  {
+   "k": "Trilete-spore plant",
+   "v": "三条溝胞子植物"
   },
   {
    "k": "Trilobite",
@@ -9941,8 +11197,16 @@
    "v": "三葉虫が優勢な節足動物となる"
   },
   {
+   "k": "Trimerophyton",
+   "v": "トリメロフィトン"
+  },
+  {
    "k": "Trinil",
    "v": "トリニール"
+  },
+  {
+   "k": "Trizygia",
+   "v": "トリジギア"
   },
   {
    "k": "Trochiliscus",
@@ -9979,6 +11243,10 @@
   {
    "k": "True toad",
    "v": "ヒキガエル科"
+  },
+  {
+   "k": "Trumpet pitcher",
+   "v": "サラセニア"
   },
   {
    "k": "Tsingy de Bemaraha",
@@ -10027,6 +11295,10 @@
   {
    "k": "Tuning-fork Graptolite",
    "v": "音叉筆石"
+  },
+  {
+   "k": "Tupelo",
+   "v": "ヌマミズキ"
   },
   {
    "k": "Turbinates",
@@ -10087,6 +11359,10 @@
   {
    "k": "Ullmannia",
    "v": "ウルマニア"
+  },
+  {
+   "k": "Ulodendron",
+   "v": "ウロデンドロン"
   },
   {
    "k": "Uluru",
@@ -10181,12 +11457,20 @@
    "v": "ヴェロキラプトル"
   },
   {
+   "k": "Vendotaenia",
+   "v": "ベンドタエニア"
+  },
+  {
    "k": "Venom Glands",
    "v": "毒腺"
   },
   {
    "k": "Venomous Strike",
    "v": "毒の一撃"
+  },
+  {
+   "k": "Ventarura",
+   "v": "ベンタルラ"
   },
   {
    "k": "Vermiporella",
@@ -10213,6 +11497,10 @@
    "v": "体液を戻し、免疫細胞を運ぶ管。"
   },
   {
+   "k": "Viburnum",
+   "v": "ガマズミ"
+  },
+  {
    "k": "Vilyuy Basin",
    "v": "ヴィリュイ盆地"
   },
@@ -10223,6 +11511,10 @@
   {
    "k": "Violet coral",
    "v": "ムラサキナギナタタケ"
+  },
+  {
+   "k": "Virginianthus",
+   "v": "ヴァージニアントゥス"
   },
   {
    "k": "Virunga",
@@ -10253,6 +11545,10 @@
    "v": "ボルチアの針葉樹林"
   },
   {
+   "k": "Voltziopsis",
+   "v": "ヴォルツィオプシス"
+  },
+  {
    "k": "Vultures soar for hours looking for carcasses.",
    "v": "ハゲワシは死骸を探して何時間も舞い続ける。"
   },
@@ -10263,6 +11559,10 @@
   {
    "k": "Waggle Dance",
    "v": "尻振りダンス"
+  },
+  {
+   "k": "Wahpia",
+   "v": "ワーピア"
   },
   {
    "k": "Waimea Canyon",
@@ -10295,6 +11595,10 @@
   {
    "k": "Walcott Quarry",
    "v": "ウォルコット採石場"
+  },
+  {
+   "k": "Walnut",
+   "v": "クルミ"
   },
   {
    "k": "Wandering Albatross",
@@ -10349,6 +11653,18 @@
    "v": "クマムシ"
   },
   {
+   "k": "Water chestnut",
+   "v": "ヒシ"
+  },
+  {
+   "k": "Water crowfoot",
+   "v": "バイカモ"
+  },
+  {
+   "k": "Water hyacinth",
+   "v": "ホテイアオイ"
+  },
+  {
    "k": "Water lily",
    "v": "スイレン"
   },
@@ -10363,6 +11679,10 @@
   {
    "k": "Water nymph",
    "v": "イバラモ"
+  },
+  {
+   "k": "Water soldier",
+   "v": "ストラティオテス"
   },
   {
    "k": "Water trumpet",
@@ -10433,8 +11753,16 @@
    "v": "ウェルウィッチア"
   },
   {
+   "k": "Welwitschiophyllum",
+   "v": "ウェルウィッチオフィルム"
+  },
+  {
    "k": "Weng'an",
    "v": "甕安"
+  },
+  {
+   "k": "Wengania",
+   "v": "ウェンガニア"
   },
   {
    "k": "Wenlock Edge",
@@ -10451,6 +11779,10 @@
   {
    "k": "Western Rock Lobster",
    "v": "ウエスタンロックロブスター"
+  },
+  {
+   "k": "Wetheredella",
+   "v": "ウェザレデラ"
   },
   {
    "k": "Wetland",
@@ -10473,6 +11805,14 @@
    "v": "白トリュフ"
   },
   {
+   "k": "White willow",
+   "v": "セイヨウシロヤナギ"
+  },
+  {
+   "k": "White-nose fungus",
+   "v": "白鼻症候群菌"
+  },
+  {
    "k": "White-tailed Deer",
    "v": "オジロジカ"
   },
@@ -10481,8 +11821,28 @@
    "v": "ウマビル"
   },
   {
+   "k": "Wielandiella",
+   "v": "ウィーランディエラ"
+  },
+  {
+   "k": "Wild emmer",
+   "v": "野生エンマー小麦"
+  },
+  {
+   "k": "Wild rose",
+   "v": "ノイバラ"
+  },
+  {
+   "k": "Wild tulip",
+   "v": "野生チューリップ"
+  },
+  {
    "k": "Williamsonia",
    "v": "ウィリアムソニア"
+  },
+  {
+   "k": "Williamsoniella",
+   "v": "ウィリアムソニエラ"
   },
   {
    "k": "Willwerath",
@@ -10491,6 +11851,14 @@
   {
    "k": "Winfrenatia",
    "v": "ウィンフレナティア"
+  },
+  {
+   "k": "Winged kelp",
+   "v": "チガイソ"
+  },
+  {
+   "k": "Wingnut",
+   "v": "サワグルミ"
   },
   {
    "k": "Winner and Loser Effects",
@@ -10515,6 +11883,18 @@
   {
    "k": "Withdrawal Reflex",
    "v": "引っ込み反射"
+  },
+  {
+   "k": "Wollemi pine",
+   "v": "ウォレマイパイン"
+  },
+  {
+   "k": "Wonderful Estemmenosuchus",
+   "v": "エステメノスクス・ミラビリス"
+  },
+  {
+   "k": "Woodworthia",
+   "v": "ウッドワーシア"
   },
   {
    "k": "Woolly Mammoth",
@@ -10561,12 +11941,32 @@
    "v": "興義"
   },
   {
+   "k": "Xinicaulis",
+   "v": "キシニカウリス"
+  },
+  {
    "k": "Xishuangbanna",
    "v": "シーサンパンナ"
   },
   {
+   "k": "Xylopteris",
+   "v": "キシロプテリス"
+  },
+  {
    "k": "Y-shaped proteins that lock on to one particular invader.",
    "v": "特定の侵入者に結合するY字型のタンパク質。"
+  },
+  {
+   "k": "Yarravia",
+   "v": "ヤラビア"
+  },
+  {
+   "k": "Yellow flag",
+   "v": "キショウブ"
+  },
+  {
+   "k": "Yellow pond lily",
+   "v": "コウホネ"
   },
   {
    "k": "Yellowstone",
@@ -10575,6 +11975,10 @@
   {
    "k": "Yezo Group",
    "v": "蝦夷層群"
+  },
+  {
+   "k": "Yima ginkgo",
+   "v": "義馬イチョウ"
   },
   {
    "k": "Yixian",
@@ -10637,6 +12041,10 @@
    "v": "シマウマは大きな群れで移動する。"
   },
   {
+   "k": "Zelkova",
+   "v": "ケヤキ"
+  },
+  {
    "k": "Zhangjiajie",
    "v": "張家界"
   },
@@ -10655,6 +12063,10 @@
   {
    "k": "Zimnie Gory",
    "v": "ジムニエ・ゴリ"
+  },
+  {
+   "k": "Zingiberopsis",
+   "v": "ジンギベロプシス"
   },
   {
    "k": "Zombie-ant fungus",
@@ -10943,6 +12355,130 @@
   {
    "k": "Class Mammalia",
    "v": "哺乳綱"
+  },
+  {
+   "k": "Niche: {0}",
+   "v": "ニッチ：{0}"
+  },
+  {
+   "k": "Owner: {0}",
+   "v": "所属：{0}"
+  },
+  {
+   "k": "Diet: {0}",
+   "v": "食性：{0}"
+  },
+  {
+   "k": "Size: {0}",
+   "v": "体長：{0}"
+  },
+  {
+   "k": "Habitats: {0}",
+   "v": "生息地：{0}"
+  },
+  {
+   "k": "Wild",
+   "v": "野生"
+  },
+  {
+   "k": "Herbivore",
+   "v": "草食"
+  },
+  {
+   "k": "Carnivore",
+   "v": "肉食"
+  },
+  {
+   "k": "Omnivore",
+   "v": "雑食"
+  },
+  {
+   "k": "Scavenger",
+   "v": "腐肉食"
+  },
+  {
+   "k": "Parasite",
+   "v": "寄生"
+  },
+  {
+   "k": "Filter feeder",
+   "v": "濾過食"
+  },
+  {
+   "k": "Detritivore",
+   "v": "デトリタス食"
+  },
+  {
+   "k": "Photosynthetic",
+   "v": "光合成"
+  },
+  {
+   "k": "Microbes (<1 cm)",
+   "v": "微生物（1cm未満）"
+  },
+  {
+   "k": "Herbivores",
+   "v": "植食動物"
+  },
+  {
+   "k": "Carnivores",
+   "v": "肉食動物"
+  },
+  {
+   "k": "Scavengers",
+   "v": "腐肉食動物"
+  },
+  {
+   "k": "Pollinators",
+   "v": "送粉者"
+  },
+  {
+   "k": "Sea surface",
+   "v": "海面"
+  },
+  {
+   "k": "Plankton (<1 cm)",
+   "v": "プランクトン（1cm未満）"
+  },
+  {
+   "k": "Filter feeders",
+   "v": "濾過摂食者"
+  },
+  {
+   "k": "Predators",
+   "v": "捕食者"
+  },
+  {
+   "k": "Bottom dwellers",
+   "v": "底生動物"
+  },
+  {
+   "k": "Grazers",
+   "v": "藻食動物"
+  },
+  {
+   "k": "Summit",
+   "v": "山頂"
+  },
+  {
+   "k": "Sky",
+   "v": "空"
+  },
+  {
+   "k": "Sky over {0}",
+   "v": "{0}の上空"
+  },
+  {
+   "k": "Fliers: {0}",
+   "v": "飛翔動物: {0}"
+  },
+  {
+   "k": "Visiting: {0}",
+   "v": "訪れている動物: {0}"
+  },
+  {
+   "k": "High mountain",
+   "v": "高山"
   }
  ]
 }

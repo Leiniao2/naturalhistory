@@ -26,6 +26,7 @@ groups = {
  "Leech":B+["Worm"], "Tapeworm":B+["Worm"], "Graptolite":B+["Hemichordate"], "Parabasalid":["Protist"],
  "Flea":ART+["Insect","Terrestrial arthropod"], "Foraminifer":["Protist"],
  "Abalone":B+["Mollusc","Gastropod"], "Giant clam":B+["Mollusc","Bivalve"],
+ "Lingulid brachiopod":B+["Brachiopod"], "Spiriferid brachiopod":B+["Brachiopod"],
  "Carpet shark":JAW+["Cartilaginous"], "Embolomere":TET,
  "Chameleon":REP+["Squamate"], "Ichthyosaur":REP+["Marine reptile"], "Plesiosaur":REP+["Marine reptile"],
  "Rauisuchian pseudosuchian":ARCH, "Early dinosaur":DINO+["Theropod"], "Avialan":BIRD,
@@ -36,7 +37,7 @@ groups = {
  "Parvancorinomorph":B+["Ecdysozoan"], "Petalonamid":["Animal","Cnidarian"], "Discoidal organism":["Animal","Cnidarian"],
  "Sponge":["Animal","Sponge"], "Stem ctenophore":["Animal","Ctenophore"],
  "Archaeocyath":["Animal","Sponge"], "Coral":["Animal","Cnidarian"], "Coralomorph":["Animal","Cnidarian"],
- "Jellyfish":["Animal","Cnidarian"], "Stem anthozoan":["Animal","Cnidarian"],
+ "Jellyfish":["Animal","Cnidarian"], "Stem anthozoan":["Animal","Cnidarian"], "Rugose coral":["Animal","Cnidarian"], "Tabulate coral":["Animal","Cnidarian"],
  "Rangeomorph":["Animal","Cnidarian"], "Trilobozoan":["Animal","Cnidarian"], "Tubular animal":B+["Worm"], "Annelid":B+["Worm"], "Tardigrade":B+["Ecdysozoan"],
  "Lobopodian":B+["Ecdysozoan","Lobopodian"],
  "Radiodont":ART+["Marine arthropod"], "Stem arthropod":ART+["Marine arthropod"],
@@ -67,6 +68,9 @@ groups = {
  "Primate":PLAC+["Primate"], "Great ape":PLAC+["Primate"],
  "Sirenian":PLAC+["Afrothere"], "Proboscidean":PLAC+["Afrothere","Proboscidean"],
  "Bat":PLAC+["Bat"], "Oceanic dolphin":PLAC+["Ungulate","Cetacean"], "Rodent":PLAC+["Rodent"],
+ "Baleen whale":PLAC+["Ungulate","Cetacean"], "Sabre-toothed cat":PLAC+["Carnivoran"],
+ "Ground sloth":PLAC+["Xenarthran"], "Tree sloth":PLAC+["Xenarthran"],
+ "Galeaspid":FISH, "Palaeospondylid":FISH, "Pachycormid":JAW+["Bony fish"], "Xenacanth shark":JAW+["Cartilaginous"],
 }
 # Tree items need any one of these tags (unlisted items need "Animal"). Lists are deliberately
 # broad enough to include the ancestors that evolve the item, so an origin species can acquire

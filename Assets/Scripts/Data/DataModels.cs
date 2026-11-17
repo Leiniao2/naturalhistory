@@ -154,6 +154,8 @@ namespace NaturalHistory.Data
         public string diet;           // Herbivore, Carnivore, Omnivore, Scavenger, Parasite, Filter feeder, Detritivore, Photosynthetic (see World/FoodWeb)
         public List<string> prey;     // hunters: species ids or groups they eat; "Small animals" = insects, plankton, small fish... found all over their habitat; none = any smaller animal
         public List<string> hosts;    // parasites: species ids or groups they live on
+        public string mainDiet;       // omnivores: what they mostly eat, Herbivore, Carnivore or Scavenger, which picks their niche (see World/Niches)
+        public List<string> tags;     // extra layers it shows in (see World/Niches): Flyer, Surfacer, Burrower, Pollinator
         public float sizeCm;
         public int startingPopulation;
         public bool playable;

@@ -69,7 +69,7 @@ namespace NaturalHistory.World
             }
             maxBlobDetail = 0;
             fineDetail = true;
-            waterPlantScale = waterBed ? WaterPlantSize : 1f;
+            waterPlantScale = waterBed ? WaterPlantSize * AgeWaterSize : 1f;
             stromatoliteTint = kind == UnderKind.Seabed ? SeaVeil : kind == UnderKind.Lakebed ? (groundwater ? Groundwater : LakeVeil) : Color.white;
             fineBlobRadius = 0.012f * size;
             skipPainted = waterBed; // mats, crusts and turf are in the floor texture there (CoverOf)

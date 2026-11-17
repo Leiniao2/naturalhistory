@@ -146,14 +146,26 @@ namespace NaturalHistory.World
             }
         }
 
-        public Mesh Stand(System.Random rng, PlantDefinition canopy, PlantDefinition canopy2, PlantDefinition under) =>
-            Variant(rng, $"s|{canopy.id}|{canopy2?.id}|{under?.id}", () => MapFeatureMeshes.CreatePlantStand(rng, cellSize, canopy, canopy2, under));
+        // The soil fungus a land tile shows if it is one of the few with fungi (HexGrid decides which):
+        // the region's best-scoring under-layer fungus or lichen of the period that grows on soil
+        // ("Rock"), leaving out the ones hidden in the ground (mycelium, truffles). Null if none.
+        public PlantDefinition Fungus(HexCell cell)
+        {
+            if (cell == null) return null;
+            var candidates = alive.Where(p => p.layer == "under" && p.terrains.Contains("Rock") && p.form is not ("Mycelium" or "Truffle")).ToList();
+            return candidates.Count == 0 ? null : Rank(cell, candidates).Item1;
+        }
 
-        public Mesh Ground(System.Random rng, PlantDefinition main, PlantDefinition second, TerrainKind kind)
+        public Mesh Stand(System.Random rng, PlantDefinition canopy, PlantDefinition canopy2, PlantDefinition under, PlantDefinition fungus = null) =>
+            Variant(rng, $"s|{canopy.id}|{canopy2?.id}|{under?.id}|{fungus?.id}", () => MapFeatureMeshes.CreatePlantStand(rng, cellSize, canopy, canopy2, under, fungus));
+
+        // sparse: a few plants of the main species only (a thinly planted region, HexGrid.Barren)
+        public Mesh Ground(System.Random rng, PlantDefinition main, PlantDefinition second, TerrainKind kind, bool sparse = false, PlantDefinition fungus = null)
         {
             string k = kind.ToString();
-            var extras = Accents(main, second, alive.Where(p => p.layer == "ground" && p.terrains.Contains(k)));
-            return Variant(rng, $"g|{main.id}|{second?.id}|{kind}", () => MapFeatureMeshes.CreatePlantGround(rng, cellSize, main, second, kind, extras));
+            var extras = sparse ? null : Accents(main, second, alive.Where(p => p.layer == "ground" && p.terrains.Contains(k)));
+            return Variant(rng, $"g|{main.id}|{second?.id}|{kind}{(sparse ? "|sparse" : "")}|{fungus?.id}",
+                           () => MapFeatureMeshes.CreatePlantGround(rng, cellSize, main, sparse ? null : second, kind, extras, sparse, fungus));
         }
 
         private Mesh Variant(System.Random rng, string key, Func<Mesh> create)

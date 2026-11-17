@@ -30,17 +30,38 @@
             <ui:Button name="end-turn-button" class="end-turn-button" text="End Turn" />
         </ui:VisualElement>
 
-        <!-- Bottom-left corner: overview map (MiniMap.cs) with the Underground view toggle above it -->
+        <!-- Bottom-left corner: overview map (MiniMap.cs) with the layer switch (sky / surface / underground) above it -->
         <ui:VisualElement name="minimap-dock" class="minimap-dock" picking-mode="Ignore">
-            <ui:Button name="under-button" class="hud-button minimap-under" text="Underground" />
+            <ui:VisualElement name="layer-switch" class="layer-switch">
+                <ui:Button name="sky-button" class="hud-button layer-button" text="Sky" />
+                <ui:Button name="surface-button" class="hud-button layer-button" text="Surface" />
+                <ui:Button name="under-button" class="hud-button layer-button" text="Underground" />
+            </ui:VisualElement>
             <ui:VisualElement name="minimap" class="minimap" />
         </ui:VisualElement>
 
-        <!-- Bottom-right: selected tile -->
-        <ui:VisualElement name="tile-panel" class="info-panel tile-panel hidden">
-            <ui:Label name="tile-title" class="info-title" text="Tile" />
-            <ui:Label name="tile-zone" class="info-zone" text="" />
-            <ui:Label name="tile-stats" class="info-stats" text="" />
+        <!-- Bottom-right: the animals on the selected tile (AnimalPanel.cs; a tab per group along
+             its top when there are several), stacked over the selected tile itself -->
+        <ui:VisualElement name="right-dock" class="right-dock" picking-mode="Ignore">
+            <ui:VisualElement name="animal-box" class="animal-box" picking-mode="Ignore">
+                <ui:VisualElement name="animal-tabs" class="animal-tabs hidden" />
+                <ui:VisualElement name="animal-panel" class="info-panel animal-panel hidden">
+                    <ui:VisualElement class="animal-head">
+                        <ui:VisualElement name="animal-portrait" class="species-portrait animal-portrait" />
+                        <ui:VisualElement class="animal-names">
+                            <ui:Label name="animal-name" class="info-title" text="" />
+                            <ui:Label name="animal-meta" class="animal-meta" text="" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:Label name="animal-stats" class="info-stats" text="" />
+                    <ui:Label name="animal-description" class="info-note" text="" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="tile-panel" class="info-panel tile-panel hidden">
+                <ui:Label name="tile-title" class="info-title" text="Tile" />
+                <ui:Label name="tile-zone" class="info-zone" text="" />
+                <ui:Label name="tile-stats" class="info-stats" text="" />
+            </ui:VisualElement>
         </ui:VisualElement>
 
         <!-- Selected animal of yours: species, and what it can do -->

@@ -116,8 +116,26 @@ namespace NaturalHistory.World
             return m;
         }
         private readonly List<ColonyGroup> groups = new();
-        // One group per niche of a tile (see Niches): up to six groups share a tile
+        // One group per niche of a tile (see Niches); slots remembers which one each group holds
         private readonly Dictionary<(HexCell, Niche), ColonyGroup> occupants = new();
+        private readonly Dictionary<ColonyGroup, (HexCell, Niche)> slots = new();
+
+        // A group takes the niche it has on its (new) tile
+        private void Occupy(ColonyGroup group)
+        {
+            Vacate(group);
+            var niche = Niches.Of(group.Definition, group.Cell);
+            group.Niche = niche;
+            occupants[(group.Cell, niche)] = group;
+            slots[group] = (group.Cell, niche);
+        }
+
+        private void Vacate(ColonyGroup group)
+        {
+            if (!slots.TryGetValue(group, out var slot)) return;
+            if (occupants.TryGetValue(slot, out var g) && g == group) occupants.Remove(slot);
+            slots.Remove(group);
+        }
 
         // Ordering a group around: click it, then click a marked neighbouring tile to move there,
         // or a marked tile holding another group to attack it.
@@ -129,7 +147,7 @@ namespace NaturalHistory.World
         public IReadOnlyList<ColonyGroup> Groups => groups;
         public ColonyGroup GroupAt(HexCell cell, Niche niche) => cell != null && occupants.TryGetValue((cell, niche), out var g) ? g : null;
 
-        // Every group on a tile, in niche order (aerial first, underground last)
+        // Every group on a tile, in niche order
         public IEnumerable<ColonyGroup> GroupsAt(HexCell cell)
         {
             if (cell == null) yield break;
@@ -144,19 +162,29 @@ namespace NaturalHistory.World
             return null;
         }
 
-        // Which group a click on the tile picks: clicking the same tile again cycles through its
-        // groups (those the current view shows), yours first.
-        private ColonyGroup PickAt(HexCell cell, ColonyGroup current)
+        // Which group a click on the tile picks: the one the tile shows (UnderView.Focus); clicking
+        // the same tile again moves on to its next group of the current layer.
+        private static ColonyGroup PickAt(HexCell cell, bool again)
         {
-            // only what the current view shows: underground-niche animals in the under view, the rest on the surface
-            var list = new List<ColonyGroup>(GroupsAt(cell));
-            list.RemoveAll(g => !UnderView.Shows(g));
-            if (list.Count == 0) return null;
-            list.Sort((a, b) => Mine(b).CompareTo(Mine(a)));
-            int i = current != null ? list.IndexOf(current) : -1;
-            return list[(i + 1) % list.Count];
+            if (again) UnderView.Focus.Next(cell);
+            return UnderView.Focus.Current(cell);
         }
-        private static bool Mine(ColonyGroup g) => g.Owner != null && g.Owner.IsHuman;
+        private HexCell lastClicked;
+
+        // Tab: the selected tile shows its next group; a group picked for orders there follows
+        public void CycleFocus()
+        {
+            var cell = CellSelector.Selected;
+            if (cell == null) return;
+            UnderView.Focus.Next(cell);
+            if (selected == null || selected.Cell != cell) return;
+            var g = UnderView.Focus.Current(cell);
+            Select(g != null && (g.Owner == null || g.Owner.IsHuman) && g.CanAttack && !g.IsBusy ? g : null);
+        }
+
+        // Mountain tiles are only for species that list "Mountain" among their habitats
+        public static bool LivesOnMountains(SpeciesDefinition def) =>
+            def != null && def.habitats != null && def.habitats.Contains(nameof(TerrainKind.Mountain));
 
         // Raised after the groups for the displayed period have been (re)placed; all earlier groups,
         // including player-owned ones, are gone by then.
@@ -198,31 +226,29 @@ namespace NaturalHistory.World
 
         private void OnCellClicked(HexCell cell)
         {
+            bool again = cell == lastClicked;
+            lastClicked = cell;
             if (selected != null)
             {
                 clickFrame = Time.frameCount;
                 var group = selected;
                 if (marked.Contains(cell))
                 {
-                    // Only a group in the same niche competes; the others on the tile are left alone
-                    var other = GroupAt(cell, group.Niche);
-                    var from  = group.Cell;
+                    // Only the group holding the niche it would take there competes; the others are left alone
+                    var other = GroupAt(cell, Niches.Of(group.Definition, cell));
                     Select(null);
+                    lastClicked = null;
                     if (other != null) group.Attack(cell);
-                    else if (group.MoveTo(cell))
-                    {
-                        occupants.Remove((from, group.Niche));
-                        occupants[(group.Cell, group.Niche)] = group;
-                    }
+                    else if (group.MoveTo(cell)) Occupy(group);
                     return;
                 }
-                var clicked = PickAt(cell, cell == group.Cell ? group : null);
+                var clicked = PickAt(cell, again);
                 bool orderable = clicked != null && (clicked.Owner == null || clicked.Owner.IsHuman);
                 Select(clicked != group && orderable && clicked.CanAttack && !clicked.IsBusy ? clicked : null);
                 return;
             }
 
-            var g = PickAt(cell, null);
+            var g = PickAt(cell, again);
             if (g == null) return;
             clickFrame = Time.frameCount;
             if (g.Owner != null && !g.Owner.IsHuman) return; // other players' colonies aren't yours to order
@@ -239,7 +265,7 @@ namespace NaturalHistory.World
             if (group == null) return;
             foreach (var n in grid.GetNeighbors(group.Cell))
             {
-                var rival = GroupAt(n, group.Niche);
+                var rival = GroupAt(n, Niches.Of(group.Definition, n));
                 bool attackable = rival != null && (group.CanEnter(n) || !group.CanMove); // fixed colonies strike in place
                 if (!attackable && (rival != null || !group.CanMove || !group.CanEnter(n) || !group.CanLiveAt(n))) continue;
                 marked.Add(n);
@@ -255,6 +281,8 @@ namespace NaturalHistory.World
             foreach (var g in groups) if (g != null) Destroy(g.gameObject); // a regenerated map already destroyed them
             groups.Clear();
             occupants.Clear();
+            slots.Clear();
+            UnderView.Focus.Reset();
             if (material == null) material = AnimalMaterial();
             var age  = grid.DisplayedAge;
             var rng  = new System.Random(grid.WorldSeed ^ 0x5eed ^ ((int)age * 7919));
@@ -270,22 +298,21 @@ namespace NaturalHistory.World
                 var mesh = LoadMesh(def.model);
                 if (mesh == null) { Debug.LogWarning($"[SpeciesColonies] No mesh at Resources/{def.model} for {def.id}."); continue; }
                 if (!System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style)) style = ColonyStyle.Drift;
-                var niche = Niches.Of(def);
                 var candidates = HabitatCells(def);
                 if (candidates.Count == 0) { Debug.Log($"[SpeciesColonies] No habitat tile with food for {def.id}; skipping."); continue; }
                 int copies = CopiesOf(alive, candidates.Count);
                 var placed = new List<(int q, int r)>();
                 for (int i = 0; i < copies; i++)
                 {
-                    var pick = PickHabitatCell(candidates, placed, niche, used, rng);
+                    var pick = PickHabitatCell(candidates, placed, def, used, rng);
                     if (pick == null) break;
                     var (cell, q, r) = pick.Value;
                     placed.Add((q, r));
-                    used.Add((cell, niche));
+                    used.Add((cell, Niches.Of(def, cell)));
                     // big animals spill over onto the neighbouring tiles; keep other big ones off them
                     if (BuildColony(cell, def, mesh, style, rng) > ReserveSpan)
                     {
-                        foreach (var n in grid.GetNeighbors(cell)) used.Add((n, niche));
+                        foreach (var n in grid.GetNeighbors(cell)) used.Add((n, Niches.Of(def, n)));
                         copies = Mathf.Min(copies, MaxBigCopies);
                     }
                 }
@@ -300,7 +327,7 @@ namespace NaturalHistory.World
 
         // Same habitat test as wild placement: the tile's terrain or its present-day biome is listed.
         public static bool FitsHabitat(SpeciesDefinition def, HexCell cell) =>
-            cell != null && cell.Terrain != null && !cell.IsMountain && def.habitats != null &&
+            cell != null && cell.Terrain != null && def.habitats != null && (!cell.IsMountain || LivesOnMountains(def)) &&
             UnderView.FitsBelow(def, cell) && // no way into solid bedrock; seabed animals on a seabed
             (def.habitats.Contains(cell.Terrain.kind.ToString()) || def.habitats.Contains(cell.Biome.ToString()));
 
@@ -316,7 +343,7 @@ namespace NaturalHistory.World
             if (mesh == null) return null;
             if (!System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style)) style = ColonyStyle.Drift;
             BuildColony(cell, def, mesh, style, new System.Random(seed));
-            var group = occupants[(cell, Niches.Of(def))];
+            var group = groups[groups.Count - 1];
             group.Owner = owner;
             return group;
         }
@@ -326,7 +353,7 @@ namespace NaturalHistory.World
         {
             if (group == null) return;
             if (selected == group) Select(null);
-            if (group.Cell != null && occupants.TryGetValue((group.Cell, group.Niche), out var g) && g == group) occupants.Remove((group.Cell, group.Niche));
+            Vacate(group);
             groups.Remove(group);
             Destroy(group.gameObject);
         }
@@ -372,14 +399,13 @@ namespace NaturalHistory.World
         // today (a Cretaceous fern prairie is where the plains will be).
         private List<(HexCell cell, int q, int r)> HabitatCells(SpeciesDefinition def)
         {
-            var niche = Niches.Of(def);
             var cells = new List<(HexCell, int, int)>();
             if (def.habitats == null) return cells;
             for (int r = 0; r < grid.Height; r++)
             for (int q = 0; q < grid.Width; q++)
             {
                 var cell = grid.GetCell(q, r);
-                if (cell == null || cell.Terrain == null || cell.IsMountain) continue;
+                if (cell == null || cell.Terrain == null || (cell.IsMountain && !LivesOnMountains(def))) continue;
                 if (!def.habitats.Contains(cell.Terrain.kind.ToString()) && !def.habitats.Contains(cell.Biome.ToString())) continue;
                 if (!UnderView.FitsBelow(def, cell)) continue;
                 if (!FoodWeb.HasFood(def, cell, this, null)) continue;
@@ -393,11 +419,11 @@ namespace NaturalHistory.World
         // far (best of a random sample, minding the east–west wrap). Tiles that carry a reef, forest or
         // oasis prop, or that a big neighbouring animal spills onto, are a last resort.
         private (HexCell cell, int q, int r)? PickHabitatCell(List<(HexCell cell, int q, int r)> candidates,
-            List<(int q, int r)> placed, Niche niche, HashSet<(HexCell, Niche)> used, System.Random rng)
+            List<(int q, int r)> placed, SpeciesDefinition def, HashSet<(HexCell, Niche)> used, System.Random rng)
         {
             float Penalty(HexCell cell) =>
-                (cell.Feature != TerrainFeature.None ? 1000f : 0f) + (used.Contains((cell, niche)) ? 2000f : 0f);
-            var free = candidates.FindAll(c => !occupants.ContainsKey((c.cell, niche)));
+                (cell.Feature != TerrainFeature.None ? 1000f : 0f) + (used.Contains((cell, Niches.Of(def, cell))) ? 2000f : 0f);
+            var free = candidates.FindAll(c => !occupants.ContainsKey((c.cell, Niches.Of(def, c.cell))));
             if (free.Count == 0) return null;
 
             if (placed.Count == 0)
@@ -451,12 +477,12 @@ namespace NaturalHistory.World
             colonyRadius = Mathf.Max(colonyRadius, footprint * 0.7f); // big animals need room
             var root = new GameObject($"Colony_{def.id}").transform;
             root.SetParent(cell.transform, false);
-            root.localPosition = Niches.Spot(Niches.Of(def)) + Vector3.up * cell.SurfaceHeight; // its niche's spot on the tile
+            root.localPosition = Niches.Spot(Niches.Of(def, cell)) + Vector3.up * cell.SurfaceHeight; // its niche's spot on the tile
             if (!System.Enum.TryParse(def.mapGait, true, out ColonyGait gait)) gait = ColonyGait.Walk;
             var group = root.gameObject.AddComponent<ColonyGroup>();
             group.Init(def, style, gait, cell, memberSpan);
             groups.Add(group);
-            occupants[(cell, group.Niche)] = group;
+            Occupy(group);
 
             // Microbes and swarms are sized by their longest dimension; everything else by its
             // footprint, so hanging tentacles or tall poses don't shrink the animal.
