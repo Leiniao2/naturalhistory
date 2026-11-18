@@ -7,8 +7,9 @@ using UnityEngine;
 
 namespace NaturalHistory.World
 {
-    // The wild animals of the map. The game starts with none: each player has only the three founding
-    // protists (TerritoryManager). At the end of each turn, now and then, a wild group of a new species
+    // The wild animals of the map. The game starts with only the three founding protists: a group of
+    // each for every player (TerritoryManager) and a few wild groups of each far from the habitat
+    // centers. At the end of each turn, now and then, a wild group of a new species
     // is born, far from every habitat center: always a sibling of one of the players' species on the
     // evolution tree (another species evolving from the same ancestor), alive in the period the map
     // shows, on a tile it can live and eat on. So the wild world fills up along the branches the
@@ -23,10 +24,12 @@ namespace NaturalHistory.World
 
         private const float BirthChance = 0.45f; // per turn
         private const int   FarFromCenters = 6;  // tiles from every habitat center, at least
+        private const int   WildFounders   = 3;  // wild groups of each founding protist at the start
 
         private SpeciesColonies colonies;
         private HexGrid grid;
         private bool turnsHooked;
+        private bool foundersDue; // a new map: the wild founders go out once the habitat centers are set
         // the wild groups to put back once the map's groups are rebuilt (species id, offset col, row)
         private readonly List<(string species, int col, int row)> pending = new();
 
@@ -71,7 +74,35 @@ namespace NaturalHistory.World
         private void Update() { if (!turnsHooked) HookTurns(); }
 
         // A new map (a new game or a loaded one): no wild groups from the old one
-        private void Forget() => pending.Clear();
+        private void Forget() { pending.Clear(); foundersDue = true; }
+
+        // The habitat centers are set up by TerritoryManager in a later frame than the map
+        private void LateUpdate()
+        {
+            if (!foundersDue || colonies == null || grid == null || !grid.IsGenerated) return;
+            var territory = Territory.TerritoryManager.Instance;
+            // (and not the old map's: their tiles were destroyed with it)
+            if (territory == null || territory.Centers.Count == 0 || territory.Centers.Any(c => c.Cell == null)) return;
+            foundersDue = false;
+            PlaceWildFounders();
+        }
+
+        // A few wild groups of each founding protist, far from every habitat center
+        private void PlaceWildFounders()
+        {
+            var rng = new System.Random(grid.WorldSeed ^ 0x51f7);
+            foreach (var id in Territory.TerritoryManager.Starters)
+            {
+                var def = GameDataLoader.GetSpecies(id);
+                if (def == null || string.IsNullOrEmpty(def.model) || !colonies.IsAliveNow(def)) continue;
+                for (int i = 0; i < WildFounders; i++)
+                {
+                    var cells = FarCells(def);
+                    if (cells.Count == 0) break;
+                    colonies.SpawnColony(def, cells[rng.Next(cells.Count)], null, rng.Next());
+                }
+            }
+        }
 
         // ---------- Births ----------
 
@@ -203,6 +234,7 @@ namespace NaturalHistory.World
         public void Restore(Save.SaveData data)
         {
             if (data?.wild == null || colonies == null) return;
+            foundersDue = false; // the saved game has its own wild groups
             foreach (var g in colonies.Groups.Where(g => g != null && g.Owner == null).ToList()) colonies.DespawnColony(g);
             pending.Clear();
             foreach (var w in data.wild) pending.Add((w.species, w.col, w.row));

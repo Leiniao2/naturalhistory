@@ -48,7 +48,9 @@ namespace NaturalHistory.Evolution
     //    the new species inherits all the origin's items plus the link's granted ones, and what it
     //    acquires later doesn't flow back to the origin.
     //  - Once a player has evolved some copy from A into B, their other A copies can't become B (they
-    //    can still evolve into other species).
+    //    can still evolve into other species). This is each player's own: what one player has evolved
+    //    never stops another from evolving the same species, so no one can cut the others off from a
+    //    branch of the tree by taking its key species first.
     //  - A copy can reproduce onto a free neighbouring tile once every ReproduceCooldown turns.
     //  - The young, and a copy that has just evolved, can't act (move, attack, reproduce, evolve)
     //    until the next turn.
@@ -69,7 +71,7 @@ namespace NaturalHistory.Evolution
 
         private readonly Dictionary<string, SpeciesTraits> traits = new(); // the human player's species
         private readonly List<OwnedCopy> copies = new();                    // every player's
-        private readonly HashSet<string> evolved = new();                   // link keys the human has used
+        private readonly Dictionary<int, HashSet<string>> evolved = new();  // link keys each player (index) has used
         private int mapSeed;
         private SpeciesTraits legacyTraits; // tree items from a save made before species had their own trees
 
@@ -284,7 +286,15 @@ namespace NaturalHistory.Evolution
 
         // ---------- Evolve ----------
 
-        public bool HasEvolved(EvolutionLink link) => link != null && evolved.Contains(link.Key);
+        public bool HasEvolved(EvolutionLink link) => HasEvolved(link, Human != null ? Human.Index : 0);
+        public bool HasEvolved(EvolutionLink link, int player) =>
+            link != null && evolved.TryGetValue(player, out var keys) && keys.Contains(link.Key);
+
+        private HashSet<string> EvolvedBy(int player)
+        {
+            if (!evolved.TryGetValue(player, out var keys)) evolved[player] = keys = new HashSet<string>();
+            return keys;
+        }
 
         // Everything `link` needs, ticked off for `copy` (null: judged for the human's copies in general).
         public List<Requirement> Requirements(EvolutionLink link, OwnedCopy copy)
@@ -308,7 +318,7 @@ namespace NaturalHistory.Evolution
             list.Add(new Requirement(Loc.F("On or next to {0}", HabitatText(target)), originCopies.Any(c => EvolveCell(c, target) != null)));
             if (copy != null && copy.JustBorn)
                 list.Add(new Requirement(Loc.T("New this turn: it can act from the next turn"), false));
-            if (HasEvolved(link))
+            if (copy != null ? HasEvolved(link, copy.player) : HasEvolved(link))
                 list.Add(new Requirement(Loc.F("A {0} has already become a {1}; evolve another copy into a different species", Loc.T(origin.commonName), Loc.T(target.commonName)), false));
             return list;
         }
@@ -353,7 +363,7 @@ namespace NaturalHistory.Evolution
             to.functions.UnionWith(link.grantFunctions);
             to.behaviors.UnionWith(link.grantBehaviors);
 
-            evolved.Add(link.Key);
+            EvolvedBy(copy.player).Add(link.Key);
             copy.species  = link.to;
             copy.group    = group;
             copy.cell     = cell;
@@ -392,7 +402,8 @@ namespace NaturalHistory.Evolution
                 var (col, row) = cell != null ? cell.Coordinates.ToOffsetCoordinates() : (-1, -1);
                 return new CopySave { player = c.player, species = c.species, col = col, row = row, lastBred = c.lastBred, bornTurn = c.group != null ? c.group.BornTurn : c.bornTurn };
             }).ToList();
-            data.evolved = evolved.ToList();
+            // "player:from>to"
+            data.evolved = evolved.SelectMany(kv => kv.Value.Select(key => $"{kv.Key}:{key}")).ToList();
         }
 
         // Called after the map has been regenerated; the copies are put back when TerritoryManager
@@ -414,7 +425,13 @@ namespace NaturalHistory.Evolution
             }
             foreach (var c in data.copies ?? new List<CopySave>())
                 copies.Add(new OwnedCopy { player = c.player, species = c.species, cell = HexGrid.Instance?.GetCell(c.col, c.row), lastBred = c.lastBred, bornTurn = c.bornTurn });
-            evolved.UnionWith(data.evolved ?? new List<string>());
+            // saves from before players had their own: the human's
+            foreach (var e in data.evolved ?? new List<string>())
+            {
+                int colon = e.IndexOf(':');
+                if (colon > 0 && int.TryParse(e.Substring(0, colon), out int player)) EvolvedBy(player).Add(e.Substring(colon + 1));
+                else EvolvedBy(Human != null ? Human.Index : 0).Add(e);
+            }
             legacyTraits = null;
             if (copies.Count == 0 && traits.Count == 0) // older save: its items go to the first species founded
             {

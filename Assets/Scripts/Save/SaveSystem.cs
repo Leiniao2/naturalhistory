@@ -44,7 +44,7 @@ namespace NaturalHistory.Save
         public List<SpeciesTraitsSave> speciesTraits = new();
         public List<CopySave> copies = new();
         public List<WildSave> wild = new();     // wild groups born during the game (WildBirths)
-        public List<string> evolved = new();    // "from>to" links the human player has used
+        public List<string> evolved = new();    // "player:from>to" links each player has used (older saves: "from>to", the human's)
         public string focusSpecies;
 
         public DateTime SavedAt => DateTime.TryParse(savedAtUtc, null, System.Globalization.DateTimeStyles.RoundtripKind, out var t) ? t.ToLocalTime() : DateTime.MinValue;
