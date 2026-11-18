@@ -19397,10 +19397,6 @@
    "v": "極小"
   },
   {
-   "k": "{0} × {1} tiles, up to {2} players",
-   "v": "{0} × {1} マス、最大 {2} 人"
-  },
-  {
    "k": "Difficulty",
    "v": "難易度"
   },
@@ -19423,6 +19419,22 @@
   {
    "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
    "v": "開始時の EP は通常の {0}%、毎ターンの収入は {1}%。ライバルや野生動物があなたの動物に与えるダメージは {2}%"
+  },
+  {
+   "k": "{0} × {1} tiles, best for up to {2} players",
+   "v": "{0} × {1} マス、{2} 人までに最適"
+  },
+  {
+   "k": "Autosave (start of the turn)",
+   "v": "オートセーブ（ターン開始時）"
+  },
+  {
+   "k": "Autosave failed (see Console)",
+   "v": "オートセーブに失敗しました（コンソールを参照）"
+  },
+  {
+   "k": "Loaded the autosave",
+   "v": "オートセーブをロードしました"
   }
  ]
 }

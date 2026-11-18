@@ -19397,10 +19397,6 @@
    "v": "Minúsculo"
   },
   {
-   "k": "{0} × {1} tiles, up to {2} players",
-   "v": "{0} × {1} casas, até {2} jogadores"
-  },
-  {
    "k": "Difficulty",
    "v": "Dificuldade"
   },
@@ -19423,6 +19419,22 @@
   {
    "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
    "v": "Você começa com {0}% dos EP habituais e ganha {1}% por turno; animais rivais e selvagens atingem os seus com {2}% da força"
+  },
+  {
+   "k": "{0} × {1} tiles, best for up to {2} players",
+   "v": "{0} × {1} casas, ideal para até {2} jogadores"
+  },
+  {
+   "k": "Autosave (start of the turn)",
+   "v": "Salvamento automático (início do turno)"
+  },
+  {
+   "k": "Autosave failed (see Console)",
+   "v": "Falha no salvamento automático (veja o console)"
+  },
+  {
+   "k": "Loaded the autosave",
+   "v": "Salvamento automático carregado"
   }
  ]
 }

@@ -223,7 +223,7 @@
                         <ui:VisualElement class="setup-count-row">
                             <ui:Label class="setup-section setup-count-label" text="Competitors" />
                             <ui:Button name="setup-fewer" class="count-button" text="−" />
-                            <ui:Label name="setup-count" class="setup-count" text="3" />
+                            <ui:IntegerField name="setup-count" class="setup-count" value="3" />
                             <ui:Button name="setup-more" class="count-button" text="+" />
                             <ui:VisualElement class="spacer" />
                             <ui:Button name="setup-randomize" class="slot-button" text="Randomize" />

@@ -17,7 +17,8 @@ namespace NaturalHistory.UI
     {
         private readonly VisualElement bar, factionOverlay, factionBand, factionAnimals, setupOverlay, setupList, setupYou;
         private readonly ScrollView setupRealms;
-        private readonly Label factionTitle, factionSubtitle, factionDescription, setupCount, realmDescription, realmAnimals;
+        private readonly Label factionTitle, factionSubtitle, factionDescription, realmDescription, realmAnimals;
+        private readonly IntegerField setupCount; // competitors; typed or stepped with − / +
         private List<PlayerSetup> draft = new();
 
         public event Action NewGameStarting; // just before the new map is made
@@ -41,7 +42,9 @@ namespace NaturalHistory.UI
             factionDescription = root.Q<Label>("faction-description");
             setupOverlay       = root.Q("setup-overlay");
             setupList          = root.Q("setup-list");
-            setupCount         = root.Q<Label>("setup-count");
+            setupCount         = root.Q<IntegerField>("setup-count");
+            setupCount.isDelayed = true; // applied on Enter or leaving the field, not at each digit
+            setupCount.RegisterValueChangedCallback(e => SetCompetitors(e.newValue));
             setupRealms        = root.Q<ScrollView>("setup-realms");
             setupYou           = root.Q("setup-you");
             realmDescription   = root.Q<Label>("setup-realm-description");
@@ -139,26 +142,28 @@ namespace NaturalHistory.UI
             NewGameStarted?.Invoke();
         }
 
-        // Seats the new game can have: the map size sets the most players (GameOptions.MapPlayers)
-        private static int MaxSeats => Mathf.Min(Mathf.Min(PlayerManager.MaxPlayers, Factions.Count), GameOptions.MaxPlayers(GameOptions.Next));
+        // Seats the new game can have: up to PlayerManager.MaxPlayers, each with a realm of their own
+        private static int MaxSeats => Mathf.Min(PlayerManager.MaxPlayers, Factions.Count);
 
-        // The world settings changed: a smaller map may hold fewer competitors
+        // The world settings changed
         public void OnOptionsChanged()
         {
             if (SetupOpen) RebuildSetup();
         }
 
-        private void ChangeCount(int delta)
+        private void ChangeCount(int delta) => SetCompetitors(draft.Count - 1 + delta);
+
+        // New competitors get a random realm nobody has; removing takes the last ones (seat 1, the
+        // human, is never removed)
+        private void SetCompetitors(int count)
         {
-            if (delta > 0 && draft.Count < MaxSeats)
+            int seats = Mathf.Clamp(count + 1, PlayerManager.MinPlayers, MaxSeats);
+            while (draft.Count < seats)
             {
                 var unused = Factions.Where(f => draft.All(s => s.faction != f.id)).ToList();
                 draft.Add(PlayerSetup.For(unused[UnityEngine.Random.Range(0, unused.Count)], human: false));
             }
-            else if (delta < 0 && draft.Count > PlayerManager.MinPlayers)
-            {
-                draft.RemoveAt(draft.Count - 1); // seat 1 (the human) is never removed
-            }
+            while (draft.Count > seats) draft.RemoveAt(draft.Count - 1);
             RebuildSetup();
         }
 
@@ -174,7 +179,7 @@ namespace NaturalHistory.UI
         private void RebuildSetup()
         {
             while (draft.Count > Mathf.Max(PlayerManager.MinPlayers, MaxSeats)) draft.RemoveAt(draft.Count - 1);
-            setupCount.text = (draft.Count - 1).ToString();
+            setupCount.SetValueWithoutNotify(draft.Count - 1);
             BuildRealms();
             BuildYou();
 

@@ -19397,10 +19397,6 @@
    "v": "Winzig"
   },
   {
-   "k": "{0} × {1} tiles, up to {2} players",
-   "v": "{0} × {1} Felder, bis zu {2} Spieler"
-  },
-  {
    "k": "Difficulty",
    "v": "Schwierigkeit"
   },
@@ -19423,6 +19419,22 @@
   {
    "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
    "v": "Start mit {0} % der üblichen EP und {1} % Einkommen pro Runde; rivalisierende und wilde Tiere treffen deine mit {2} % der Wucht"
+  },
+  {
+   "k": "{0} × {1} tiles, best for up to {2} players",
+   "v": "{0} × {1} Felder, ideal für bis zu {2} Spieler"
+  },
+  {
+   "k": "Autosave (start of the turn)",
+   "v": "Autospeichern (Rundenbeginn)"
+  },
+  {
+   "k": "Autosave failed (see Console)",
+   "v": "Autospeichern fehlgeschlagen (siehe Konsole)"
+  },
+  {
+   "k": "Loaded the autosave",
+   "v": "Autospeicherstand geladen"
   }
  ]
 }

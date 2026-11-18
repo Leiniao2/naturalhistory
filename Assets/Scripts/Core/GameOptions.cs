@@ -28,10 +28,10 @@ namespace NaturalHistory.Core
         public static readonly string[] LengthNames   = { "Very fast", "Fast", "Standard", "Long", "Epic" };
         public static readonly float[]  LengthFactors = { 0.6f, 1f, 1.5f, 2f, 3f };
 
-        // Map size: columns × rows of hexes, and how many players fit on it
+        // Map size: columns × rows of hexes, and how many players it suits (a suggestion, not a limit)
         public static readonly string[]     MapSizeNames = { "Tiny", "Small", "Standard", "Large", "Huge" };
         public static readonly Vector2Int[] MapSizes     = { new(30, 18), new(40, 24), new(50, 30), new(62, 38), new(76, 46) };
-        public static readonly int[]        MapPlayers   = { 4, 6, 8, 10, 10 };
+        public static readonly int[]        MapPlayers   = { 4, 6, 8, 12, 16 };
         public const int DefaultMapSize = 2;
 
         // Difficulty: the EP you start with and earn each turn, and how hard rival and wild animals
@@ -51,7 +51,6 @@ namespace NaturalHistory.Core
         }
 
         public static Vector2Int MapSize(GameSettings s) => MapSizes[MapSizeTier(s)];
-        public static int MaxPlayers(GameSettings s)     => MapPlayers[MapSizeTier(s)];
         public static float StartPointShare => StartPointShares[DifficultyTier(Current)];
         public static float IncomeShare     => IncomeShares[DifficultyTier(Current)];
         public static float FoeDamageShare  => FoeDamageShares[DifficultyTier(Current)];

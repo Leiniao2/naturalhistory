@@ -19397,10 +19397,6 @@
    "v": "Крошечная"
   },
   {
-   "k": "{0} × {1} tiles, up to {2} players",
-   "v": "{0} × {1} клеток, до {2} игроков"
-  },
-  {
    "k": "Difficulty",
    "v": "Сложность"
   },
@@ -19423,6 +19419,22 @@
   {
    "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
    "v": "Старт с {0}% обычных EP и {1}% дохода за ход; соперники и дикие животные бьют ваших с силой {2}%"
+  },
+  {
+   "k": "{0} × {1} tiles, best for up to {2} players",
+   "v": "{0} × {1} клеток, лучше всего до {2} игроков"
+  },
+  {
+   "k": "Autosave (start of the turn)",
+   "v": "Автосохранение (начало хода)"
+  },
+  {
+   "k": "Autosave failed (see Console)",
+   "v": "Ошибка автосохранения (см. консоль)"
+  },
+  {
+   "k": "Loaded the autosave",
+   "v": "Автосохранение загружено"
   }
  ]
 }

@@ -94,7 +94,7 @@ namespace NaturalHistory.UI
             for (int i = 0; i < sizeButtons.Count; i++) sizeButtons[i].EnableInClassList("selected", i == size);
             for (int i = 0; i < difficultyButtons.Count; i++) difficultyButtons[i].EnableInClassList("selected", i == difficulty);
             var dims = GameOptions.MapSizes[size];
-            sizeNote.text = Loc.F("{0} × {1} tiles, up to {2} players", dims.x, dims.y, GameOptions.MapPlayers[size]);
+            sizeNote.text = Loc.F("{0} × {1} tiles, best for up to {2} players", dims.x, dims.y, GameOptions.MapPlayers[size]);
             difficultyNote.text = Loc.F("Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
                 Mathf.RoundToInt(GameOptions.StartPointShares[difficulty] * 100f), Mathf.RoundToInt(GameOptions.IncomeShares[difficulty] * 100f),
                 Mathf.RoundToInt(GameOptions.FoeDamageShares[difficulty] * 100f));

@@ -19657,10 +19657,6 @@
    "v": "极小"
   },
   {
-   "k": "{0} × {1} tiles, up to {2} players",
-   "v": "{0} × {1} 格，最多 {2} 名玩家"
-  },
-  {
    "k": "Difficulty",
    "v": "难度"
   },
@@ -19683,6 +19679,22 @@
   {
    "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
    "v": "开局获得常规 EP 的 {0}%，每回合收入为 {1}%；对手与野生动物对你的动物造成 {2}% 的伤害"
+  },
+  {
+   "k": "{0} × {1} tiles, best for up to {2} players",
+   "v": "{0} × {1} 格，最适合 {2} 名以内的玩家"
+  },
+  {
+   "k": "Autosave (start of the turn)",
+   "v": "自动存档（回合开始时）"
+  },
+  {
+   "k": "Autosave failed (see Console)",
+   "v": "自动存档失败（见控制台）"
+  },
+  {
+   "k": "Loaded the autosave",
+   "v": "已读取自动存档"
   }
  ]
 }

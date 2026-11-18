@@ -19397,10 +19397,6 @@
    "v": "아주 작음"
   },
   {
-   "k": "{0} × {1} tiles, up to {2} players",
-   "v": "{0} × {1} 타일, 최대 {2}명"
-  },
-  {
    "k": "Difficulty",
    "v": "난이도"
   },
@@ -19423,6 +19419,22 @@
   {
    "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
    "v": "시작 EP는 평소의 {0}%, 매 턴 수입은 {1}%이며, 경쟁자와 야생 동물이 당신의 동물에게 주는 피해는 {2}%입니다"
+  },
+  {
+   "k": "{0} × {1} tiles, best for up to {2} players",
+   "v": "{0} × {1} 타일, {2}명 이하에 적합"
+  },
+  {
+   "k": "Autosave (start of the turn)",
+   "v": "자동 저장 (턴 시작 시)"
+  },
+  {
+   "k": "Autosave failed (see Console)",
+   "v": "자동 저장 실패 (콘솔 참조)"
+  },
+  {
+   "k": "Loaded the autosave",
+   "v": "자동 저장을 불러왔습니다"
   }
  ]
 }

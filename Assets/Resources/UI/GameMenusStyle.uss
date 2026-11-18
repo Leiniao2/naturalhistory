@@ -2191,3 +2191,15 @@
     color: rgb(185, 192, 178);
     margin: 8px 4px;
 }
+
+/* the competitor count is typed in, as well as stepped with − / + */
+.setup-count {
+    width: 64px;
+    margin: 0 6px;
+}
+
+.setup-count .unity-base-field__input {
+    font-size: 20px;
+    -unity-text-align: middle-center;
+    min-height: 32px;
+}

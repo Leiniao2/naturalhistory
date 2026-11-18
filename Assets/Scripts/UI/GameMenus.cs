@@ -32,6 +32,8 @@ namespace NaturalHistory.UI
         private MiniMap miniMap;
         private MainMenu mainMenu;
         private bool slotsAreForSaving;
+        private bool turnEnded;          // the turn just begun follows End Turn, not a load
+        private int autosaveFrame = -1;  // frame to autosave on, once the new turn has settled
         private float toastHideTime;
         private int toastFrame = -1;
 
@@ -110,7 +112,7 @@ namespace NaturalHistory.UI
             Combat.Reported += OnPhenomenon;
             // the title screen goes first, so the new period's panel can show over the new game
             playersPanel.NewGameStarting += () => { mainMenu.InGame = true; mainMenu.Hide(); };
-            playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast(Loc.T("New game started")); };
+            playersPanel.NewGameStarted += () => { RequestAutosave(); SetPauseOpen(false); ShowToast(Loc.T("New game started")); };
             playersPanel.SetupClosed    += BackToMenu;
             newGameOptions.Changed      += playersPanel.OnOptionsChanged;
 
@@ -136,7 +138,7 @@ namespace NaturalHistory.UI
             root.Q<Button>("main-menu-button").clicked  += () => { SetPauseOpen(false); mainMenu.Show(); };
             // The title screen: the same choices as the pause menu
             // Continue: back to the game being played (left for the title screen from the pause menu), else the latest save
-            mainMenu.Continue.clicked     += () => { if (mainMenu.InGame) mainMenu.Hide(); else if (mainMenu.LatestSlot() > 0) LoadFrom(mainMenu.LatestSlot()); };
+            mainMenu.Continue.clicked     += () => { if (mainMenu.InGame) mainMenu.Hide(); else if (mainMenu.LatestSlot() >= 0) LoadFrom(mainMenu.LatestSlot()); };
             mainMenu.NewGame.clicked      += () => playersPanel.OpenSetup();
             mainMenu.LoadGame.clicked     += () => OpenSlots(saving: false);
             mainMenu.Encyclopedia.clicked += () => encyclopedia.Open();
@@ -154,6 +156,11 @@ namespace NaturalHistory.UI
             if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed += OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated += OnClimateUpdated;
             if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition += OnAgeTransition;
+            if (TurnManager.Instance != null)
+            {
+                TurnManager.Instance.OnTurnEnd   += OnTurnEnd;
+                TurnManager.Instance.OnTurnBegin += OnTurnBegin;
+            }
             if (PlayerManager.Instance != null)
             {
                 PlayerManager.Instance.PlayersChanged  += playersPanel.RefreshBar;
@@ -163,6 +170,30 @@ namespace NaturalHistory.UI
             OnProgressionChanged();
             OnClimateUpdated();
             mainMenu.Show(); // the game opens on the title screen
+        }
+
+        // ---------- Autosave ----------
+
+        // The game is saved to the autosave at the start of every turn and of a new game. Loading a
+        // save restarts its turn too, but isn't saved over the autosave (it may be older).
+        private void OnTurnEnd(int turn) => turnEnded = true;
+
+        private void OnTurnBegin(int turn)
+        {
+            if (turnEnded) RequestAutosave();
+            turnEnded = false;
+        }
+
+        // A couple of frames later, once everything reacting to the new turn (territory, births,
+        // the clock) has run; never for the game set up behind the title screen at launch
+        private void RequestAutosave() => autosaveFrame = Time.frameCount + 2;
+
+        private void UpdateAutosave()
+        {
+            if (autosaveFrame < 0 || Time.frameCount < autosaveFrame) return;
+            autosaveFrame = -1;
+            if (!mainMenu.InGame || mainMenu.IsOpen) return;
+            if (!SaveSystem.Save(SaveSystem.AutoSlot)) ShowToast(Loc.T("Autosave failed (see Console)"));
         }
 
         // Back out of New Game or Load Game: to the title screen if it is up, else the pause menu
@@ -237,6 +268,11 @@ namespace NaturalHistory.UI
             if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed -= OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated -= OnClimateUpdated;
             if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition -= OnAgeTransition;
+            if (TurnManager.Instance != null)
+            {
+                TurnManager.Instance.OnTurnEnd   -= OnTurnEnd;
+                TurnManager.Instance.OnTurnBegin -= OnTurnBegin;
+            }
             if (PlayerManager.Instance != null)
             {
                 PlayerManager.Instance.PlayersChanged  -= playersPanel.RefreshBar;
@@ -296,6 +332,7 @@ namespace NaturalHistory.UI
             animalPanel.Update();
             miniMap.Update();
             mainMenu.Update();
+            UpdateAutosave();
             if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)
             {
                 toast.AddToClassList("hidden");
@@ -424,13 +461,14 @@ namespace NaturalHistory.UI
         private void RebuildSlots()
         {
             slotList.Clear();
-            for (int slot = 1; slot <= SaveSystem.SlotCount; slot++)
+            // Loading lists the autosave first; it can't be saved to by hand
+            for (int slot = slotsAreForSaving ? 1 : SaveSystem.AutoSlot; slot <= SaveSystem.SlotCount; slot++)
             {
                 var data = SaveSystem.Peek(slot);
                 var row  = new VisualElement().WithClass("slot-row");
 
                 var info = new VisualElement().WithClass("slot-info");
-                info.Add(new Label(Loc.F("Slot {0}", slot)).WithClass("slot-name"));
+                info.Add(new Label(slot == SaveSystem.AutoSlot ? Loc.T("Autosave (start of the turn)") : Loc.F("Slot {0}", slot)).WithClass("slot-name"));
                 info.Add(new Label(Describe(data)).WithClass("slot-detail"));
                 row.Add(info);
 
@@ -476,7 +514,7 @@ namespace NaturalHistory.UI
             mainMenu.Hide(); // first, like a new game
             bool ok = SaveSystem.Load(slot);
             if (!ok && fromTitle) mainMenu.Show();
-            ShowToast(ok ? Loc.F("Loaded slot {0}", slot) : Loc.T("Load failed (see Console)"));
+            ShowToast(!ok ? Loc.T("Load failed (see Console)") : slot == SaveSystem.AutoSlot ? Loc.T("Loaded the autosave") : Loc.F("Loaded slot {0}", slot));
             if (ok) { mainMenu.InGame = true; SetPauseOpen(false); }
         }
 

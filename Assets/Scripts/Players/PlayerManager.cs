@@ -15,7 +15,7 @@ namespace NaturalHistory.Players
     public class PlayerManager : MonoBehaviour
     {
         public const int MinPlayers = 1;
-        public const int MaxPlayers = 10;
+        public const int MaxPlayers = 16; // you and up to 15 competitors, each with their own realm
         public const int DefaultPlayerCount = 4;
 
         public static PlayerManager Instance { get; private set; }

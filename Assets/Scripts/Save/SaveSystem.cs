@@ -52,13 +52,15 @@ namespace NaturalHistory.Save
         public DateTime SavedAt => DateTime.TryParse(savedAtUtc, null, System.Globalization.DateTimeStyles.RoundtripKind, out var t) ? t.ToLocalTime() : DateTime.MinValue;
     }
 
-    // JSON save files in {persistentDataPath}/Saves/slot{N}.json
+    // JSON save files in {persistentDataPath}/Saves/slot{N}.json, and the autosave (AutoSlot), written
+    // at the start of every turn, in autosave.json
     public static class SaveSystem
     {
         public const int SlotCount = 3;
+        public const int AutoSlot  = 0;
 
         private static string Folder => Path.Combine(Application.persistentDataPath, "Saves");
-        private static string PathFor(int slot) => Path.Combine(Folder, $"slot{slot}.json");
+        private static string PathFor(int slot) => Path.Combine(Folder, slot == AutoSlot ? "autosave.json" : $"slot{slot}.json");
 
         // Reads a slot without applying it (for the save/load list). Null if empty or unreadable.
         public static SaveData Peek(int slot)

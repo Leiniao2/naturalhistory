@@ -19397,10 +19397,6 @@
    "v": "Diminuto"
   },
   {
-   "k": "{0} × {1} tiles, up to {2} players",
-   "v": "{0} × {1} casillas, hasta {2} jugadores"
-  },
-  {
    "k": "Difficulty",
    "v": "Dificultad"
   },
@@ -19423,6 +19419,22 @@
   {
    "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
    "v": "Empiezas con el {0} % de los EP habituales y ganas el {1} % cada turno; los animales rivales y salvajes golpean a los tuyos al {2} %"
+  },
+  {
+   "k": "{0} × {1} tiles, best for up to {2} players",
+   "v": "{0} × {1} casillas, ideal hasta {2} jugadores"
+  },
+  {
+   "k": "Autosave (start of the turn)",
+   "v": "Autoguardado (inicio del turno)"
+  },
+  {
+   "k": "Autosave failed (see Console)",
+   "v": "Error en el autoguardado (ver consola)"
+  },
+  {
+   "k": "Loaded the autosave",
+   "v": "Autoguardado cargado"
   }
  ]
 }

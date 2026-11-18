@@ -82,12 +82,12 @@ namespace NaturalHistory.UI
             hiddenHud.Clear();
         }
 
-        // Continue: the most recently saved game, if there is one
+        // Continue: the most recently saved game (autosave included), if there is one
         public int LatestSlot()
         {
             int best = -1;
             System.DateTime when = System.DateTime.MinValue;
-            for (int slot = 1; slot <= SaveSystem.SlotCount; slot++)
+            for (int slot = SaveSystem.AutoSlot; slot <= SaveSystem.SlotCount; slot++)
             {
                 var data = SaveSystem.Peek(slot);
                 if (data != null && data.SavedAt > when) { when = data.SavedAt; best = slot; }
@@ -98,7 +98,7 @@ namespace NaturalHistory.UI
         private void RefreshText()
         {
             if (menu == null) return;
-            continueButton.SetEnabled(InGame || LatestSlot() > 0);
+            continueButton.SetEnabled(InGame || LatestSlot() >= 0);
             credit.text = paintingTitle == null ? "" :
                 Loc.F("Painting: Charles R. Knight, {0} (Field Museum, 1926–1930), public domain", Loc.T(paintingTitle));
         }
