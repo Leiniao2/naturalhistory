@@ -59,6 +59,7 @@ namespace NaturalHistory.World
         private const int TargetWildGroups       = 800; // 5× the original 160
         private const int MinCopies              = 10;
         private const int MaxCopies              = 30;
+        private const double RareShare          = 0.5;  // of each period's species, chosen at random, shown as one group only
         private const int TilesPerCopy           = 6;   // a species with little habitat gets fewer copies
         private const int MaxBigCopies           = 10;  // animals spilling over their tile (ReserveSpan)
         // Sizes are relative to the age: an age whose biggest animal is small is drawn zoomed in, as
@@ -365,6 +366,9 @@ namespace NaturalHistory.World
             var age  = grid.DisplayedAge;
             var rng  = new System.Random(grid.WorldSeed ^ 0x5eed ^ ((int)age * 7919));
             var used = new HashSet<(HexCell, Niche)>();
+            // which species are rare this period (a single group each, so the map isn't crowded):
+            // its own generator, so the choice doesn't shift where the others are placed
+            var rare = new System.Random(grid.WorldSeed ^ 0x7a2e ^ ((int)age * 104729));
 
             // food first, then what eats it (see FoodWeb), so hunters can be placed next to their prey
             var order = new List<SpeciesDefinition>(GameDataLoader.Species);
@@ -378,7 +382,7 @@ namespace NaturalHistory.World
                 if (!System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style)) style = ColonyStyle.Drift;
                 var candidates = HabitatCells(def);
                 if (candidates.Count == 0) { Debug.Log($"[SpeciesColonies] No habitat tile with food for {def.id}; skipping."); continue; }
-                int copies = CopiesOf(alive, candidates.Count);
+                int copies = rare.NextDouble() < RareShare ? 1 : CopiesOf(alive, candidates.Count);
                 var placed = new List<(int q, int r)>();
                 for (int i = 0; i < copies; i++)
                 {

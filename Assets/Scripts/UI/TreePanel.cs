@@ -21,8 +21,11 @@ namespace NaturalHistory.UI
         private const float NodeWidth   = 206f;
         private const float NodeHeight  = 74f;
 
+        private const float ForkRadius  = 10f;   // rounded corners of the lines, as in the Evolution Tree
+
         private static readonly Color LineUnlocked = new(0.45f, 0.75f, 0.45f);
-        private static readonly Color LineLocked   = new(0.40f, 0.42f, 0.40f);
+        private static readonly Color LineReady    = new(0.95f, 0.80f, 0.35f);
+        private static readonly Color LineLocked   = new(0.36f, 0.40f, 0.36f);
 
         private readonly VisualElement overlay;
         private readonly Label title, epLabel, detailsName, detailsDescription, detailsMeta, speciesName;
@@ -212,20 +215,38 @@ namespace NaturalHistory.UI
             p.lineWidth = 3f;
             p.lineCap   = LineCap.Round;
 
-            foreach (var node in BranchNodes)
-            foreach (var preId in node.prerequisites)
+            // grey first, green last, so where lines share a trunk the progress shows on top
+            var links = BranchNodes
+                .SelectMany(n => n.prerequisites.Select(id => (pre: tree.Get(id), node: n)))
+                .Where(l => l.pre != null && l.pre.branch == l.node.branch)
+                .OrderBy(l => !tree.IsUnlocked(l.pre.id) ? 0 : tree.IsUnlocked(l.node.id) ? 2 : 1);
+            foreach (var (pre, node) in links)
             {
-                var pre = tree.Get(preId);
-                if (pre == null || pre.branch != node.branch) continue;
-
+                var preId = pre.id;
                 var from = NodePosition(pre)  + new Vector2(NodeWidth, NodeHeight * 0.5f);
                 var to   = NodePosition(node) + new Vector2(0f,        NodeHeight * 0.5f);
-                float bend = (to.x - from.x) * 0.5f;
 
-                p.strokeColor = tree.IsUnlocked(preId) ? LineUnlocked : LineLocked;
+                p.strokeColor = !tree.IsUnlocked(preId) ? LineLocked
+                              : tree.IsUnlocked(node.id) ? LineUnlocked
+                              : Progression.GetState(tree, node) == NodeState.Available ? LineReady : LineLocked;
+                // Like the Evolution Tree: out of the prerequisite, along a trunk in the gap just
+                // before the item's column (shared by everything leading into it, and by the forks
+                // of a prerequisite in the column before), then across into it, with rounded corners
+                float trunk = to.x - (ColumnWidth - NodeWidth) * 0.5f;
+                float dy = to.y - from.y;
                 p.BeginPath();
                 p.MoveTo(from);
-                p.BezierCurveTo(from + new Vector2(bend, 0f), to - new Vector2(bend, 0f), to);
+                if (Mathf.Abs(dy) < 1f) p.LineTo(to);
+                else
+                {
+                    float r = Mathf.Min(ForkRadius, Mathf.Abs(dy) * 0.5f, (trunk - from.x) * 0.9f);
+                    float sy = Mathf.Sign(dy);
+                    p.LineTo(new Vector2(trunk - r, from.y));
+                    p.ArcTo(new Vector2(trunk, from.y), new Vector2(trunk, from.y + sy * r), r);
+                    p.LineTo(new Vector2(trunk, to.y - sy * r));
+                    p.ArcTo(new Vector2(trunk, to.y), new Vector2(trunk + r, to.y), r);
+                    p.LineTo(to);
+                }
                 p.Stroke();
             }
         }

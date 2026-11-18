@@ -1315,3 +1315,279 @@
     margin-left: 8px;
     white-space: normal;
 }
+
+/* ---------- Frames ----------
+   Brass-trimmed frames for the menus, HUD and buttons: 9-sliced textures in Frames/ (made by
+   tools/ui/make_frames.py at 2x, hence the slice scales). Later rules here override the plain
+   colours above; the fill is part of each texture, so background colour and borders go. */
+
+.panel {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+    padding: 28px;
+    background-image: url("Frames/panel.png");
+    -unity-slice-left: 40;
+    -unity-slice-right: 40;
+    -unity-slice-top: 40;
+    -unity-slice-bottom: 40;
+    -unity-slice-scale: 0.75px;
+}
+
+.tree-panel,
+.age-panel,
+.faction-panel {
+    padding: 22px 28px;
+}
+
+.panel-title {
+    color: rgb(242, 226, 178);
+    letter-spacing: 1px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* the centred titles sit on an ornamented brass rule */
+.menu-panel > .panel-title,
+.slots-panel > .panel-title,
+.setup-panel > .panel-title {
+    padding-bottom: 22px;
+    background-image: url("Frames/divider.png");
+    background-size: 320px 20px;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+
+/* the left-aligned headers are ruled off from the content below */
+.tree-header {
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(190, 154, 88, 0.4);
+}
+
+/* HUD cards: info panels, selected animal, period, EP, players, toast */
+.info-panel,
+.unit-panel,
+.age-button,
+.ep-label,
+.player-chip,
+.toast {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+    background-image: url("Frames/hud.png");
+    -unity-slice-left: 20;
+    -unity-slice-right: 20;
+    -unity-slice-top: 20;
+    -unity-slice-bottom: 20;
+    -unity-slice-scale: 0.5px;
+}
+
+.info-panel {
+    padding: 12px 16px;
+}
+
+.age-button:hover,
+.age-button:active,
+.player-chip:hover {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("Frames/hud-hover.png");
+}
+
+.player-chip.human {
+    border-width: 0;
+    background-image: url("Frames/hud-gold.png");
+}
+
+.player-chip {
+    padding: 0 14px 0 8px;
+}
+
+.age-label,
+.info-title,
+.unit-name {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Buttons */
+.hud-button,
+.menu-button,
+.slot-button,
+.unit-button,
+.count-button,
+.setup-option,
+.close-button,
+.end-turn-button,
+.evolve-button {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+    color: rgb(242, 236, 218);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    background-image: url("Frames/button.png");
+    -unity-slice-left: 18;
+    -unity-slice-right: 18;
+    -unity-slice-top: 30;
+    -unity-slice-bottom: 30;
+    -unity-slice-scale: 0.5px;
+}
+
+.hud-button:hover,
+.menu-button:hover,
+.slot-button:hover,
+.unit-button:hover,
+.count-button:hover,
+.setup-option:hover,
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("Frames/button-hover.png");
+}
+
+.hud-button:active,
+.menu-button:active,
+.slot-button:active,
+.unit-button:active,
+.count-button:active,
+.setup-option:active,
+.close-button:active,
+.end-turn-button:active,
+.evolve-button:active {
+    background-color: rgba(0, 0, 0, 0);
+    translate: 0 1px;
+}
+
+.end-turn-button,
+.evolve-button,
+.setup-action.start {
+    color: rgb(255, 255, 255);
+    background-image: url("Frames/button-primary.png");
+}
+
+.end-turn-button:hover,
+.evolve-button:hover,
+.setup-action.start:hover {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("Frames/button-primary-hover.png");
+}
+
+.layer-button.selected,
+.setup-option.selected,
+.unit-evolve.ready {
+    color: rgb(255, 246, 214);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("Frames/button-gold.png");
+}
+
+.layer-button.selected:hover,
+.setup-option.selected:hover,
+.unit-evolve.ready:hover {
+    background-image: url("Frames/button-gold-hover.png");
+}
+
+.slot-button.danger {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("Frames/button-danger.png");
+}
+
+.slot-button.danger:hover {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("Frames/button-danger-hover.png");
+}
+
+.close-button {
+    font-size: 20px;
+}
+
+.menu-button {
+    letter-spacing: 1px;
+}
+
+/* Sunken sections inside the panels */
+.tree-scroll,
+.tree-details,
+.age-details,
+.zoology-details,
+.setup-options,
+.zoology-link {
+    background-color: rgba(6, 10, 8, 0.55);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.25);
+    border-top-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+}
+
+.slot-row,
+.setup-row {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.2);
+    border-radius: 4px;
+}
+
+.age-row,
+.animal-row {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-top-color: rgba(190, 154, 88, 0.2);
+    border-right-color: rgba(190, 154, 88, 0.2);
+    border-bottom-color: rgba(190, 154, 88, 0.2);
+    border-radius: 4px;
+}
+
+.age-row:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.age-row.current {
+    background-color: rgba(120, 160, 100, 0.3);
+}
+
+.animal-row.active {
+    background-color: rgba(120, 180, 100, 0.16);
+}
+
+.branch-tab {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-color: rgba(190, 154, 88, 0.25);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-radius: 6px 6px 2px 2px;
+}
+
+.branch-tab:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.branch-tab.selected {
+    background-color: rgba(120, 160, 100, 0.32);
+    border-color: rgb(210, 176, 104);
+    border-bottom-color: rgb(240, 210, 110);
+}
+
+/* Animal tabs on the card's top edge */
+.animal-tab {
+    margin: 0 2px 0 0;
+    color: rgb(200, 190, 160);
+    background-color: rgba(22, 29, 25, 0.93);
+    border-color: rgba(190, 154, 88, 0.7);
+}
+
+.animal-tab.selected {
+    color: rgb(242, 214, 130);
+    background-color: rgba(44, 58, 46, 0.97);
+    border-color: rgb(222, 192, 124);
+}
+
+/* Minimap in a brass bezel */
+.minimap {
+    border-width: 3px;
+    border-color: rgb(176, 142, 80);
+    border-top-color: rgb(222, 192, 124);
+    border-bottom-color: rgb(110, 86, 46);
+    border-radius: 3px;
+}
