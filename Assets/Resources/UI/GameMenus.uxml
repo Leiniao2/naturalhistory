@@ -246,6 +246,7 @@
                     <ui:Button name="encyclopedia-close-button" class="close-button" text="✕" />
                 </ui:VisualElement>
                 <ui:VisualElement class="encyclopedia-body">
+                    <ui:ScrollView name="encyclopedia-periods" class="encyclopedia-periods" />
                     <ui:ListView name="encyclopedia-list" class="encyclopedia-list" />
                     <ui:ScrollView class="encyclopedia-entry">
                         <ui:VisualElement class="encyclopedia-top">

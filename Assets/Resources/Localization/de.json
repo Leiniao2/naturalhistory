@@ -1,6 +1,26 @@
 {
  "entries": [
   {
+   "k": "Discovered {0} new species (+{1} EP)",
+   "v": "{0} neue Arten entdeckt (+{1} EP)"
+  },
+  {
+   "k": "Discovered the {0} (+{1} EP)",
+   "v": "{0} entdeckt (+{1} EP)"
+  },
+  {
+   "k": "EP {0} (+{1})",
+   "v": "EP {0} (+{1})"
+  },
+  {
+   "k": "Periods",
+   "v": "Perioden"
+  },
+  {
+   "k": "All periods",
+   "v": "Alle Perioden"
+  },
+  {
    "k": " (+{0} EP)",
    "v": " (+{0} EP)"
   },

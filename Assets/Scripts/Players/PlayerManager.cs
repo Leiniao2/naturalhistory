@@ -43,6 +43,9 @@ namespace NaturalHistory.Players
             Instance = this;
             if (GameDataLoader.Factions == null) GameDataLoader.Initialize();
             SetSetups(RandomSetup(DefaultPlayerCount, new System.Random()));
+            // The game opened straight into play: before the Devonian it begins on the seabed, so
+            // the map is built in the under view rather than showing the surface first
+            UnderView.Set(GameOptions.StartsUnderSea(GameOptions.StartAge));
         }
 
         private void Start()

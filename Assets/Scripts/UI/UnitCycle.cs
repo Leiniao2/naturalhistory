@@ -63,7 +63,8 @@ namespace NaturalHistory.UI
             if (!can && EvolutionManager.Instance != null)
             {
                 var copy = EvolutionManager.Instance.CopyOf(g);
-                can = copy != null && EvolutionManager.Instance.TurnsUntilReproduce(copy) == 0 && EvolutionManager.Instance.ReproduceCell(copy) != null;
+                can = copy != null && EvolutionManager.Instance.TurnsUntilReproduce(copy) == 0 && EvolutionManager.Instance.ReproduceCell(copy) != null
+                      && EvolutionManager.Instance.CanAffordReproduce(copy);
             }
             hasOrders[g] = (Turn, g.ActionsLeft, g.Cell, can);
             return can;
@@ -111,7 +112,9 @@ namespace NaturalHistory.UI
             refreshAt = Time.unscaledTime + RefreshEvery;
             pending.Clear();
             if (Colonies == null) return;
-            pending.AddRange(Colonies.Groups.Where(Awaits).OrderByDescending(Diets.Starving)); // the hungry first: they lose HP each turn (Diets)
+            pending.AddRange(Colonies.Groups.Where(Awaits)
+                .OrderByDescending(Diets.Starving)                       // the hungry first: they lose HP each turn (Diets)
+                .ThenByDescending(g => UnderView.InLayer(g, UnderView.Layer))); // then those in the layer shown, so the view doesn't jump (a seabed start stays on the seabed)
             skipped.RemoveWhere(g => g == null);
             foreach (var dead in hasOrders.Keys.Where(g => g == null).ToList()) hasOrders.Remove(dead);
         }

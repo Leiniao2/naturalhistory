@@ -83,7 +83,7 @@ namespace NaturalHistory.UI
             if (Diets.Starving(g)) combat += "\n" + Loc.F("No food on its tile or next to it: loses {0}% HP a turn", Mathf.RoundToInt(Diets.StarveLoss * 100f));
             detailLabel.text = $"{def.scientificName}  ·  {copies}\n{combat}\n{breed}  ·  {evolve}";
 
-            reproduceButton.SetEnabled(wait == 0 && Copy.group.HasActions() && Evolution.ReproduceCell(Copy) != null);
+            reproduceButton.SetEnabled(wait == 0 && Copy.group.HasActions() && Evolution.ReproduceCell(Copy) != null && Evolution.CanAffordReproduce(Copy));
             evolveButton.EnableInClassList("ready", ready > 0);
             evolveButton.SetEnabled(total > 0);
             skipButton.SetEnabled(UnitCycle.Instance != null && UnitCycle.Instance.Awaits(Copy.group));

@@ -82,7 +82,7 @@ namespace NaturalHistory.World
                 float gained = Mathf.Max(0f, defender.Hp);
                 attacker.Hp = Mathf.Min(attacker.MaxHp, attacker.Hp + gained);
                 Destroy(defender);
-                Report(Loc.F("{0} ate the {1} (+{2} HP)", A, D, Hp(gained)), cell);
+                Report(Loc.F("{0} ate the {1} (+{2} HP)", A, D, Hp(gained)) + Reward(attacker, defender), cell);
                 return;
             }
 
@@ -91,7 +91,7 @@ namespace NaturalHistory.World
             if (defender.Hp <= 0f)
             {
                 Destroy(defender);
-                Report(Loc.F("{0} attacked the {1} ({2} damage) and wiped it out", A, D, Hp(dealt)), cell);
+                Report(Loc.F("{0} attacked the {1} ({2} damage) and wiped it out", A, D, Hp(dealt)) + Reward(attacker, defender), cell);
                 return;
             }
             float back = Damage(defender, attacker);
@@ -99,10 +99,20 @@ namespace NaturalHistory.World
             if (attacker.Hp <= 0f)
             {
                 Destroy(attacker);
-                Report(Loc.F("{0} attacked the {1} ({2} damage) but was wiped out by its counterattack", A, D, Hp(dealt)), cell);
+                Report(Loc.F("{0} attacked the {1} ({2} damage) but was wiped out by its counterattack", A, D, Hp(dealt)) + Reward(defender, attacker), cell);
                 return;
             }
             Report(Loc.F("{0} attacked the {1}: {2} damage, {3} back", A, D, Hp(dealt), Hp(back)), cell);
+        }
+
+        // The human player earns KillReward EP when one of their groups wipes out a foreign one
+        // (attacking, eating it, or in a counterattack); the text to add to the report
+        private static string Reward(ColonyGroup winner, ColonyGroup loser)
+        {
+            var progression = Progression.ProgressionManager.Instance;
+            if (progression == null || winner.Owner == null || !winner.Owner.IsHuman || loser.Owner == winner.Owner) return "";
+            progression.AddPoints(Progression.ProgressionManager.KillReward);
+            return Loc.F(" (+{0} EP)", Progression.ProgressionManager.KillReward);
         }
 
         private static string Hp(float v) => v.ToString(v < 10f ? "0.#" : "0");

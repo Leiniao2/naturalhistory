@@ -53,7 +53,8 @@ namespace NaturalHistory.Evolution
     //    never stops another from evolving the same species, so no one can cut the others off from a
     //    branch of the tree by taking its key species first.
     //  - A copy can reproduce onto a free neighbouring tile once every ReproduceCooldown turns; that
-    //    takes one of its actions for the turn (ColonyGroup.Stats).
+    //    takes one of its actions for the turn (ColonyGroup.Stats) and, for the human player,
+    //    ReproduceCost EP.
     //  - The young, and a copy that has just evolved, can't act (move, attack, reproduce, evolve)
     //    until the next turn.
     //
@@ -62,6 +63,7 @@ namespace NaturalHistory.Evolution
     public class EvolutionManager : MonoBehaviour
     {
         public const int ReproduceCooldown = 3; // turns
+        public const int ReproduceCost     = 1; // EP, the human player's copies
 
         public static EvolutionManager Instance { get; private set; }
 
@@ -289,6 +291,9 @@ namespace NaturalHistory.Evolution
 
         public HexCell ReproduceCell(OwnedCopy copy) => ReproduceCells(copy).FirstOrDefault();
 
+        public bool CanAffordReproduce(OwnedCopy copy) =>
+            !PaysEP(copy) || (ProgressionManager.Instance != null && ProgressionManager.Instance.EvolutionPoints >= ReproduceCost);
+
         // at: the tile the player chose for the young (one of ReproduceCells), or null for the first
         public bool Reproduce(OwnedCopy copy, out string message, HexCell at = null)
         {
@@ -297,6 +302,11 @@ namespace NaturalHistory.Evolution
             int wait = TurnsUntilReproduce(copy);
             if (wait > 0) { message = Loc.F(wait == 1 ? "Can reproduce again in {0} turn" : "Can reproduce again in {0} turns", wait); return false; }
             if (!copy.group.HasActions()) { message = Loc.T("No actions left this turn"); return false; }
+            if (!CanAffordReproduce(copy))
+            {
+                message = Loc.F("Needs {0} EP (you have {1})", ReproduceCost, ProgressionManager.Instance != null ? ProgressionManager.Instance.EvolutionPoints : 0);
+                return false;
+            }
             var def  = GameDataLoader.GetSpecies(copy.species);
             var cell = at != null && ReproduceCells(copy).Contains(at) ? at : ReproduceCell(copy);
             if (cell == null) { message = Loc.F("No free {0} next to it", HabitatText(def)); return false; }
@@ -306,6 +316,7 @@ namespace NaturalHistory.Evolution
             if (group == null) { message = Loc.T("Couldn't place the young"); return false; }
             copy.lastBred = CurrentTurn;
             copy.group.SpendActions(1);
+            if (PaysEP(copy)) ProgressionManager.Instance?.SpendPoints(ReproduceCost);
             group.BornTurn = CurrentTurn;
             var young = new OwnedCopy { player = copy.player, species = copy.species, group = group, cell = cell, lastBred = CurrentTurn, bornTurn = CurrentTurn };
             copies.Add(young);

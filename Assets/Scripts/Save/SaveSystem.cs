@@ -37,6 +37,7 @@ namespace NaturalHistory.Save
         public string age;                 // GeologicalAge name (informational; restored from turn)
 
         public int evolutionPoints;
+        public List<string> discovered;         // species the human player has seen (ProgressionManager); null in older saves
         public List<string> morphology = new(); // focused species' items (saves before per-species trees: the only ones)
         public List<string> ethology   = new();
 
@@ -147,6 +148,7 @@ namespace NaturalHistory.Save
             if (progression != null)
             {
                 data.evolutionPoints = progression.EvolutionPoints;
+                data.discovered      = progression.Discovered.ToList();
                 data.morphology = progression.Morphology.UnlockedIds.ToList();
                 data.ethology   = progression.Ethology.UnlockedIds.ToList();
             }
@@ -180,8 +182,10 @@ namespace NaturalHistory.Save
             // The period, date and climate all follow from the turn number
             if (TurnManager.Instance != null && data.turn > 0)
                 TurnManager.Instance.Restore(data.turn);
+            // a game saved before the Devonian goes on on the seabed
+            if (AgeManager.Instance != null) UnderView.Set(GameOptions.StartsUnderSea(AgeManager.Instance.CurrentAge));
 
-            ProgressionManager.Instance?.Restore(data.evolutionPoints, data.morphology, data.ethology);
+            ProgressionManager.Instance?.Restore(data.evolutionPoints, data.morphology, data.ethology, data.discovered);
             EvolutionManager.Instance?.Restore(data); // after the map: puts the copies back on it
             WildBirths.Instance?.Restore(data);       // and the wild groups
             FogOfWar.Instance?.RestoreExplored(data.explored);

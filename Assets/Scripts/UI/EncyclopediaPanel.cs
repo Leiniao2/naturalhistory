@@ -8,14 +8,19 @@ using UnityEngine.UIElements;
 
 namespace NaturalHistory.UI
 {
-    // Every species of the game (species.json), from the pause menu or the Evolution Tree: a list on
-    // the left, oldest period first, with a search box over names; the entry on the right shows the
+    // Every species of the game (species.json), from the pause menu or the Evolution Tree, sorted by
+    // period: the periods down the left (each with the species alive in it, and All), then that
+    // period's species, oldest first, with a search box over names; the entry on the right shows the
     // species' painting (SpeciesPortraits.Painting), names, period, group, diet, size and habitats,
     // its description, and the species it evolves from and into (click one to go there). A button
     // opens the Evolution Tree from the species.
     public class EncyclopediaPanel
     {
         private readonly VisualElement overlay, painting, relatives;
+        private readonly ScrollView periods;
+        private int period = -1; // GeologicalAge shown, -1 = all; the game's current period when first opened
+        private bool openedOnce;
+        private bool periodsCollapsed; // the period column folded to a thin strip, for a wider list
         private readonly ListView list;
         private readonly TextField search;
         private readonly Label count, nameLabel, scientificLabel, statsLabel, descriptionLabel;
@@ -32,6 +37,7 @@ namespace NaturalHistory.UI
             overlay          = root.Q("encyclopedia-overlay");
             painting         = root.Q("encyclopedia-painting");
             relatives        = root.Q("encyclopedia-relatives");
+            periods          = root.Q<ScrollView>("encyclopedia-periods");
             list             = root.Q<ListView>("encyclopedia-list");
             search           = root.Q<TextField>("encyclopedia-search");
             count            = root.Q<Label>("encyclopedia-count");
@@ -63,6 +69,9 @@ namespace NaturalHistory.UI
             search.textEdition.placeholder = Loc.T("Search");
             overlay.RemoveFromClassList("hidden");
             var def = speciesId != null ? GameDataLoader.GetSpecies(speciesId) : current;
+            if (!openedOnce && AgeManager.Instance != null) period = (int)AgeManager.Instance.CurrentAge;
+            openedOnce = true;
+            if (def != null && !InPeriod(def)) period = AgeIndex(def.firstAge);
             if (def != null && !Matches(def)) search.SetValueWithoutNotify("");
             Filter();
             Select(def ?? shown.FirstOrDefault());
@@ -87,20 +96,63 @@ namespace NaturalHistory.UI
                 || Loc.T(def.group ?? "").IndexOf(q, StringComparison.CurrentCultureIgnoreCase) >= 0;
         }
 
+        private static int LastIndex(SpeciesDefinition def) =>
+            string.IsNullOrEmpty(def.lastAge) ? (int)GeologicalAge.Quaternary : AgeIndex(def.lastAge);
+
+        // Alive in the period shown: it appears in it or before, and is not gone before it
+        private static bool AliveIn(SpeciesDefinition def, int age) => AgeIndex(def.firstAge) <= age && age <= LastIndex(def);
+        private bool InPeriod(SpeciesDefinition def) => period < 0 || AliveIn(def, period);
+
         private void Filter()
         {
             shown.Clear();
-            shown.AddRange(All.Where(Matches));
+            shown.AddRange(All.Where(d => InPeriod(d) && Matches(d)));
             count.text = Loc.F("{0} species", shown.Count);
+            BuildPeriods();
             list.RefreshItems();
             int i = current != null ? shown.IndexOf(current) : -1;
             if (i >= 0) list.SetSelectionWithoutNotify(new[] { i });
             else list.ClearSelection();
         }
 
+        // A fold button, then All and one button per period with how many of its species match the
+        // search. Folded, only the button is left (the list keeps the period it shows).
+        private void BuildPeriods()
+        {
+            periods.Clear();
+            periods.EnableInClassList("collapsed", periodsCollapsed);
+            var fold = new Button(() => { periodsCollapsed = !periodsCollapsed; BuildPeriods(); })
+                { text = periodsCollapsed ? "▶" : "◀", tooltip = Loc.T("Periods") }.WithClass("encyclopedia-period-fold");
+            periods.Add(fold);
+            if (periodsCollapsed) return;
+            var matching = All.Where(Matches).ToList();
+            AddPeriod(-1, Loc.T("All periods"), matching.Count);
+            foreach (GeologicalAge age in Enum.GetValues(typeof(GeologicalAge)))
+                AddPeriod((int)age, Loc.T(age.ToString()), matching.Count(d => AliveIn(d, (int)age)));
+        }
+
+        private void AddPeriod(int age, string label, int n)
+        {
+            var button = new Button(() => SetPeriod(age)).WithClass("encyclopedia-period");
+            button.Add(new Label(label) { pickingMode = PickingMode.Ignore });
+            button.Add(new Label(n.ToString()) { pickingMode = PickingMode.Ignore }.WithClass("encyclopedia-period-count"));
+            button.EnableInClassList("selected", age == period);
+            button.EnableInClassList("empty", n == 0);
+            periods.Add(button);
+        }
+
+        private void SetPeriod(int age)
+        {
+            if (age == period) return;
+            period = age;
+            Filter();
+            Select(current != null && shown.Contains(current) ? current : shown.FirstOrDefault());
+        }
+
         private void Select(SpeciesDefinition def)
         {
             if (def == null) { Show(null); return; }
+            if (!InPeriod(def)) { period = AgeIndex(def.firstAge); Filter(); }
             if (!shown.Contains(def)) { search.SetValueWithoutNotify(""); Filter(); }
             int i = shown.IndexOf(def);
             Show(def);

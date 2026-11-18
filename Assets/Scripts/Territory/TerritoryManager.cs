@@ -184,7 +184,7 @@ namespace NaturalHistory.Territory
                     bool seabed = Core.GameOptions.StartsUnderSea(grid.DisplayedAge);
                     int Rank(SpeciesDefinition d) => (otherSpecies.Contains(d.id) ? 8 : 0) + (d.playable ? 0 : 4) +
                                                      (EvolutionData.From(d.id).Any() ? 0 : 2) +
-                                                     (seabed && Niches.LayerOf(Niches.Of(d, cell)) != MapLayer.Under ? 1 : 0);
+                                                     (seabed && Niches.LayerOf(Niches.Of(d, cell)) != MapLayer.Under ? 3 : 0); // over evolving further, so the first pick keeps the seabed view
                     int best = fits.Min(Rank);
                     var top = fits.Where(d => Rank(d) == best).ToList();
                     def = top[rng.Next(top.Count)];

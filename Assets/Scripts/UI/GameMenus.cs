@@ -137,6 +137,7 @@ namespace NaturalHistory.UI
             cameraController = FindAnyObjectByType<CameraController>();
 
             if (Progression != null) Progression.Changed += OnProgressionChanged;
+            if (Progression != null) Progression.Earned += ShowToast;
             if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed += OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated += OnClimateUpdated;
             if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition += OnAgeTransition;
@@ -200,6 +201,7 @@ namespace NaturalHistory.UI
             NaturalEvents.Announced -= OnPhenomenon;
             Combat.Reported -= OnPhenomenon;
             if (Progression != null) Progression.Changed -= OnProgressionChanged;
+            if (Progression != null) Progression.Earned -= ShowToast;
             if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed -= OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated -= OnClimateUpdated;
             if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition -= OnAgeTransition;
@@ -307,7 +309,7 @@ namespace NaturalHistory.UI
 
         private void OnProgressionChanged()
         {
-            if (epLabel != null && Progression != null) epLabel.text = Loc.F("EP {0}", Progression.EvolutionPoints);
+            if (epLabel != null && Progression != null) epLabel.text = Loc.F("EP {0} (+{1})", Progression.EvolutionPoints, Progression.Income);
             if (treePanel != null && treePanel.IsOpen) treePanel.Refresh();
             if (zoologyPanel != null && zoologyPanel.IsOpen) zoologyPanel.Refresh();
         }

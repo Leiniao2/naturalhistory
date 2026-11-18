@@ -1750,6 +1750,65 @@
     flex-direction: row;
 }
 
+/* the periods down the left: each lists the species alive in it */
+.encyclopedia-periods {
+    width: 150px;
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+.encyclopedia-periods.collapsed {
+    width: 34px;
+}
+
+.encyclopedia-period-fold {
+    margin: 0 0 3px 0;
+    padding: 4px 0;
+    font-size: 13px;
+    color: rgb(215, 205, 175);
+    background-color: rgba(6, 10, 8, 0.55);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.25);
+    border-radius: 4px;
+}
+
+.encyclopedia-period-fold:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.encyclopedia-period {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 3px 0;
+    padding: 6px 10px;
+    font-size: 15px;
+    color: rgb(215, 205, 175);
+    background-color: rgba(6, 10, 8, 0.55);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.25);
+    border-radius: 4px;
+}
+
+.encyclopedia-period:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.encyclopedia-period.selected {
+    color: rgb(250, 240, 210);
+    background-color: rgba(190, 154, 88, 0.32);
+    border-color: rgba(190, 154, 88, 0.8);
+}
+
+.encyclopedia-period.empty {
+    color: rgba(215, 205, 175, 0.4);
+}
+
+.encyclopedia-period-count {
+    font-size: 13px;
+    color: rgba(215, 205, 175, 0.65);
+    margin-left: 6px;
+}
+
 .encyclopedia-list {
     width: 380px;
     flex-shrink: 0;
