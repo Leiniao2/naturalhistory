@@ -3,6 +3,7 @@ using System.Linq;
 using NaturalHistory.Core;
 using NaturalHistory.Data;
 using NaturalHistory.World;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace NaturalHistory.UI
@@ -31,6 +32,7 @@ namespace NaturalHistory.UI
             statsLabel       = root.Q<Label>("animal-stats");
             descriptionLabel = root.Q<Label>("animal-description");
             Loc.Changed += () => dirty = true;
+            Combat.Reported += (_, _) => dirty = true; // HP changed
         }
 
         // Polled every frame: follows CellSelector's selection and the groups on that tile
@@ -100,8 +102,11 @@ namespace NaturalHistory.UI
             {
                 Loc.F("Niche: {0}", Niches.Name(g.Niche)),
                 Loc.F("Owner: {0}", owner),
+                Loc.F("HP {0}/{1}  ·  Attack {2}  ·  Defense {3}  ·  Actions {4}", UnityEngine.Mathf.CeilToInt(g.Hp), g.MaxHp, g.Stats.attack, g.Stats.defense, g.Stats.moves),
             };
             if (!string.IsNullOrEmpty(def.diet)) lines.Add(Loc.F("Diet: {0}", Loc.T(def.diet)));
+            lines.Add(Diets.Describe(def));
+            if (Diets.Starving(g)) lines.Add(Loc.F("No food on its tile or next to it: loses {0}% HP a turn", Mathf.RoundToInt(Diets.StarveLoss * 100f)));
             if (def.sizeCm > 0f) lines.Add(Loc.F("Size: {0}", FormatSize(def.sizeCm)));
             if (def.habitats != null && def.habitats.Count > 0)
                 lines.Add(Loc.F("Habitats: {0}", string.Join(", ", def.habitats.Select(h => HabitatName(h)))));

@@ -1,0 +1,817 @@
+[
+ {
+  "id": "torvosaurus_tanneri",
+  "commonName": "Torvosaurus",
+  "scientificName": "Torvosaurus tanneri",
+  "kingdom": "Animalia",
+  "group": "Theropod dinosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Sauropod dinosaur",
+   "Stegosaur",
+   "Ornithopod dinosaur",
+   "Thyreophoran dinosaur",
+   "Small animals"
+  ],
+  "sizeCm": 1000,
+  "startingPopulation": 15,
+  "playable": true,
+  "model": "Models/Species/Torvosaurus",
+  "mapStyle": "Ground",
+  "mapLegs": 1,
+  "mapHip": 0.55,
+  "colonySize": 1,
+  "mapAttack": "Bite",
+  "attack": 9,
+  "defense": 3,
+  "hp": 9,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.95
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.45
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the largest land predators of the Late Jurassic, a heavily built megalosaurid about 9-10 metres long from western North America. Its long, deep skull held long, serrated, blade-like teeth, and its short arms were unusually powerful, with big thumb claws. It could tackle sauropods and stegosaurs, but its bulk made it slower than lighter hunters."
+ },
+ {
+  "id": "pliosaurus_funkei",
+  "commonName": "Pliosaurus",
+  "scientificName": "Pliosaurus funkei",
+  "kingdom": "Animalia",
+  "group": "Plesiosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Plesiosaur",
+   "Ichthyosaur",
+   "Thalattosuchian",
+   "Bony fish",
+   "Ammonite",
+   "Belemnite"
+  ],
+  "sizeCm": 1100,
+  "startingPopulation": 8,
+  "playable": true,
+  "model": "Models/Species/Pliosaurus",
+  "mapStyle": "Swim",
+  "colonySize": 1,
+  "wingBeat": 0.3,
+  "wingRoot": 0.35,
+  "mapAttack": "Bite",
+  "attack": 10,
+  "defense": 4,
+  "hp": 10,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 1.0
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.6
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.55
+   }
+  ],
+  "description": "A giant pliosaur from the Late Jurassic seas around Svalbard, about 150 million years ago, nicknamed 'Predator X'. It reached perhaps 10-12 metres, with a skull around 2 metres long and one of the strongest bites of any known animal. Driven by four huge flippers, it ambushed ichthyosaurs, plesiosaurs and large fish, crushing them in jaws lined with massive ridged teeth."
+ },
+ {
+  "id": "machimosaurus_hugii",
+  "commonName": "Machimosaurus",
+  "scientificName": "Machimosaurus hugii",
+  "kingdom": "Animalia",
+  "group": "Thalattosuchian",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "SaltWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Stem turtle",
+   "Bony fish",
+   "Ammonite",
+   "Thalattosuchian",
+   "Small animals"
+  ],
+  "sizeCm": 700,
+  "startingPopulation": 20,
+  "playable": true,
+  "model": "Models/Species/Machimosaurus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.58,
+  "colonySize": 1,
+  "mapAttack": "Bite",
+  "mapDefense": "Hide",
+  "attack": 8,
+  "defense": 6,
+  "hp": 9,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.7
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.5
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "The largest of the teleosaurids, marine relatives of crocodiles, reaching about 7 metres in the coastal seas and lagoons of Late Jurassic Europe. Its broad, robust snout carried short, blunt teeth built to crack turtle shells and hard-bodied prey. Unlike the smooth-skinned metriorhynchids, it kept thick rows of bony armour on its back and belly, making it both a crushing biter and hard to wound."
+ },
+ {
+  "id": "temnodontosaurus_platyodon",
+  "commonName": "Temnodontosaurus",
+  "scientificName": "Temnodontosaurus platyodon",
+  "kingdom": "Animalia",
+  "group": "Ichthyosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Ichthyosaur",
+   "Plesiosaur",
+   "Bony fish",
+   "Ammonite",
+   "Belemnite",
+   "Small animals"
+  ],
+  "sizeCm": 900,
+  "startingPopulation": 15,
+  "playable": true,
+  "model": "Models/Species/Temnodontosaurus",
+  "mapStyle": "Swim",
+  "colonySize": 1,
+  "mapAttack": "Charge",
+  "attack": 8,
+  "defense": 2,
+  "hp": 8,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.85
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.95
+   },
+   {
+    "gene": "endothermy",
+    "expression": 0.4
+   }
+  ],
+  "description": "One of the largest Early Jurassic ichthyosaurs, up to about 9 metres long, from the seas of England and Germany around 195 million years ago. Its eyes were about 25 cm across, among the largest of any animal ever, letting it hunt in dim, deep water. A fast, dolphin-shaped swimmer with a long toothed snout, it was the top predator of its seas and even fed on other ichthyosaurs, though its slim body had little protection."
+ },
+ {
+  "id": "ischyodus_egertoni",
+  "commonName": "Ischyodus",
+  "scientificName": "Ischyodus egertoni",
+  "kingdom": "Animalia",
+  "group": "Chimaera",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Horseshoe crab",
+   "Ammonite"
+  ],
+  "sizeCm": 150,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Ischyodus",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapAttack": "Sting",
+  "mapDefense": "Rear",
+  "attack": 5,
+  "defense": 4,
+  "hp": 6,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "toxin_production",
+    "expression": 0.7
+   },
+   {
+    "gene": "electroreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.35
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "A large Jurassic relative of today's ratfish, about 1.5 metres long, that lived in the shallow seas of Europe. Beak-like tooth plates let it crush clams, snails and crustaceans on the sea floor. In front of its tall first dorsal fin stood a long, serrated spine; in living chimaeras such spines carry venom, making the fish a painful mouthful for predators."
+ },
+ {
+  "id": "gigantspinosaurus_sichuanensis",
+  "commonName": "Gigantspinosaurus",
+  "scientificName": "Gigantspinosaurus sichuanensis",
+  "kingdom": "Animalia",
+  "group": "Stegosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Plain",
+   "Hill",
+   "Rainforest"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 420,
+  "startingPopulation": 40,
+  "playable": true,
+  "model": "Models/Species/Gigantspinosaurus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.42,
+  "colonySize": 2,
+  "mapDefense": "Brace",
+  "attack": 4,
+  "defense": 9,
+  "hp": 9,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.9
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.4
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.15
+   }
+  ],
+  "description": "A low-slung stegosaur about 4.2 metres long from the Late Jurassic of Sichuan, China. It is named for the enormous spikes that swept back from its shoulders, each almost twice as long as its shoulder blade, which shielded its flanks from biting predators. Small plates ran down its back, and its tail ended in two pairs of spikes."
+ },
+ {
+  "id": "gargoyleosaurus_parkpinorum",
+  "commonName": "Gargoyleosaurus",
+  "scientificName": "Gargoyleosaurus parkpinorum",
+  "kingdom": "Animalia",
+  "group": "Ankylosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Hill"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 350,
+  "startingPopulation": 40,
+  "playable": true,
+  "model": "Models/Species/Gargoyleosaurus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.4,
+  "colonySize": 2,
+  "mapDefense": "Hide",
+  "attack": 2,
+  "defense": 10,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 1.0
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.5
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.1
+   }
+  ],
+  "description": "One of the earliest true ankylosaurs, about 3-4 metres long, from the Late Jurassic Morrison Formation of Wyoming. Its low, broad body was covered from neck to tail in rows of conical bony osteoderms, with longer spikes along its flanks and a heavily armoured skull. It had no tail club, so it relied almost entirely on its armour, crouching low so predators could not reach its soft belly."
+ },
+ {
+  "id": "supersaurus_vivianae",
+  "commonName": "Supersaurus",
+  "scientificName": "Supersaurus vivianae",
+  "kingdom": "Animalia",
+  "group": "Sauropod dinosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Wetland"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 3300,
+  "startingPopulation": 8,
+  "playable": true,
+  "model": "Models/Species/Supersaurus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.5,
+  "colonySize": 1,
+  "mapDefense": "Brace",
+  "attack": 4,
+  "defense": 4,
+  "hp": 15,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 1.0
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.1
+   },
+   {
+    "gene": "clutch_size",
+    "expression": 0.6
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.6
+   }
+  ],
+  "description": "A diplodocid sauropod from the Late Jurassic Morrison Formation of Colorado and Wyoming, and one of the longest dinosaurs known, at roughly 33-35 metres from snout to tail tip. Its immensely long neck let it browse over a huge area without moving, and its whip-like tail could be lashed at attackers. Its sheer size meant that a full-grown adult had almost nothing to fear, though it was slow and needed vast amounts of food."
+ },
+ {
+  "id": "shunosaurus_lii",
+  "commonName": "Shunosaurus",
+  "scientificName": "Shunosaurus lii",
+  "kingdom": "Animalia",
+  "group": "Sauropod dinosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Plain",
+   "Wetland",
+   "Rainforest"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 950,
+  "startingPopulation": 20,
+  "playable": true,
+  "model": "Models/Species/Shunosaurus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.5,
+  "colonySize": 2,
+  "mapAttack": "Lash",
+  "mapDefense": "Brace",
+  "attack": 5,
+  "defense": 6,
+  "hp": 12,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.95
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.5
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.15
+   }
+  ],
+  "description": "A relatively small, short-necked sauropod about 9-10 metres long from the Middle Jurassic of Sichuan, China, known from many complete skeletons. Its tail ended in a bony club armed with short spikes, a weapon it could swing at predators. It browsed on low vegetation and probably lived in herds."
+ },
+ {
+  "id": "kayentachelys_aprix",
+  "commonName": "Kayentachelys",
+  "scientificName": "Kayentachelys aprix",
+  "kingdom": "Animalia",
+  "group": "Stem turtle",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Omnivore",
+  "mainDiet": "Carnivore",
+  "sizeCm": 30,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Kayentachelys",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.42,
+  "colonySize": 2,
+  "mapDefense": "Hide",
+  "attack": 1,
+  "defense": 10,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 1.0
+   },
+   {
+    "gene": "omnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.4
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.1
+   }
+  ],
+  "description": "One of the oldest turtles from North America, a small freshwater turtle from the Early Jurassic of Arizona, about 190 million years ago. Its low, smooth shell had lost the spikes of earlier turtles, and it lived in streams and pools, feeding on small animals and plants. Safe inside its shell from most attackers, it was slow on land and had a weak bite."
+ },
+ {
+  "id": "darwinopterus_modularis",
+  "commonName": "Darwinopterus",
+  "scientificName": "Darwinopterus modularis",
+  "kingdom": "Animalia",
+  "group": "Pterosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Rainforest",
+   "Wetland",
+   "Hill"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Avialan",
+   "Early mammaliaform"
+  ],
+  "sizeCm": 90,
+  "startingPopulation": 150,
+  "playable": true,
+  "model": "Models/Species/Darwinopterus",
+  "mapStyle": "Soar",
+  "colonySize": 3,
+  "wingBeat": 3,
+  "wingRoot": 0.1,
+  "mapAttack": "Dive",
+  "attack": 4,
+  "defense": 1,
+  "hp": 4,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "flight_capability",
+    "expression": 0.9
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "A pterosaur with a wingspan of about 0.9 metres from the Middle to Late Jurassic forests of north-eastern China, about 160 million years ago. It combined the long tail of early pterosaurs with the long skull and neck of later ones, a mix that made it famous as a transitional form. A fast, agile flier, it snatched small animals, perhaps including small feathered dinosaurs, with its toothed jaws. One fossil female was preserved with an egg."
+ },
+ {
+  "id": "anurognathus_ammoni",
+  "commonName": "Anurognathus",
+  "scientificName": "Anurognathus ammoni",
+  "kingdom": "Animalia",
+  "group": "Pterosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Plain",
+   "Wetland",
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Lacewing",
+   "Griffinfly"
+  ],
+  "sizeCm": 35,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Anurognathus",
+  "mapStyle": "Soar",
+  "colonySize": 4,
+  "wingBeat": 4,
+  "wingRoot": 0.1,
+  "mapDefense": "Scatter",
+  "attack": 2,
+  "defense": 1,
+  "hp": 3,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "flight_capability",
+    "expression": 0.95
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.8
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   }
+  ],
+  "description": "A tiny, frog-faced pterosaur from the Late Jurassic Solnhofen lagoons of Bavaria, with a wingspan of about 35-50 cm and only a stub of a tail. Its short, broad head had large eyes and a wide mouth of small peg teeth, and its body was covered in fuzzy fibres. It was a nimble aerial insect-hunter, probably active at dusk, and too quick and small to be easily caught."
+ },
+ {
+  "id": "dryosaurus_altus",
+  "commonName": "Dryosaurus",
+  "scientificName": "Dryosaurus altus",
+  "kingdom": "Animalia",
+  "group": "Ornithopod dinosaur",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Wetland"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 300,
+  "startingPopulation": 200,
+  "playable": true,
+  "model": "Models/Species/Dryosaurus",
+  "mapStyle": "Ground",
+  "mapGait": "Run",
+  "mapLegs": 1,
+  "mapHip": 0.55,
+  "colonySize": 3,
+  "mapDefense": "Scatter",
+  "attack": 2,
+  "defense": 2,
+  "hp": 5,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "land_speed",
+    "expression": 0.95
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.65
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A slender, fast-running ornithopod about 3 metres long from the Late Jurassic Morrison Formation of the western United States. Its long, powerful hind legs, with very long shins, made it one of the fastest dinosaurs of its time, and it relied on speed rather than armour to escape predators such as Allosaurus. It cropped plants with a horny beak and ground them with ridged cheek teeth."
+ },
+ {
+  "id": "heterodontosaurus_tucki",
+  "commonName": "Heterodontosaurus",
+  "scientificName": "Heterodontosaurus tucki",
+  "kingdom": "Animalia",
+  "group": "Early ornithischian",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Savanna",
+   "Steppe",
+   "Plain"
+  ],
+  "diet": "Omnivore",
+  "mainDiet": "Herbivore",
+  "sizeCm": 120,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Heterodontosaurus",
+  "mapStyle": "Ground",
+  "mapGait": "Run",
+  "mapLegs": 1,
+  "mapHip": 0.55,
+  "colonySize": 3,
+  "mapAttack": "Bite",
+  "mapDefense": "Scatter",
+  "attack": 4,
+  "defense": 2,
+  "hp": 4,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "omnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.8
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small, fast ornithischian dinosaur about 1.2 metres long from the Early Jurassic of South Africa, about 200 million years ago. Its name means 'different-toothed lizard': it had a horny beak, chisel-like cheek teeth for chopping plants and a pair of long, fang-like tusks used for display, fighting or eating small animals. Its strong, grasping hands could dig up roots or catch prey, making it quick and surprisingly well armed for its size."
+ },
+ {
+  "id": "docofossor_brachydactylus",
+  "commonName": "Docofossor",
+  "scientificName": "Docofossor brachydactylus",
+  "kingdom": "Animalia",
+  "group": "Early mammaliaform",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Rainforest",
+   "Plain",
+   "Hill"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Annelid",
+   "Beetle"
+  ],
+  "tags": [
+   "Burrower"
+  ],
+  "sizeCm": 9,
+  "startingPopulation": 3000,
+  "playable": true,
+  "model": "Models/Species/Docofossor",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.3,
+  "colonySize": 5,
+  "mapDefense": "Hide",
+  "attack": 2,
+  "defense": 3,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "burrowing",
+    "expression": 0.95
+   },
+   {
+    "gene": "endothermy",
+    "expression": 0.6
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.7
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A tiny, mole-like docodont, a close relative of true mammals, about 9 cm long and weighing under 20 grams, from the Jurassic forests of northern China about 160 million years ago. Its broad, spade-like hands, with shortened fingers and big claws, were built for digging, much like those of today's golden moles. It spent most of its life underground hunting worms and insect grubs, where few predators could reach it."
+ },
+ {
+  "id": "pseudopulex_jurassicus",
+  "commonName": "Pseudopulex",
+  "scientificName": "Pseudopulex jurassicus",
+  "kingdom": "Animalia",
+  "group": "Flea",
+  "firstAge": "Jurassic",
+  "lastAge": "Jurassic",
+  "habitats": [
+   "Rainforest",
+   "Wetland",
+   "Hill"
+  ],
+  "diet": "Parasite",
+  "hosts": [
+   "Theropod dinosaur",
+   "Avialan",
+   "Pterosaur",
+   "Early mammaliaform"
+  ],
+  "sizeCm": 2,
+  "startingPopulation": 20000,
+  "playable": false,
+  "model": "Models/Species/Pseudopulex",
+  "mapStyle": "Ground",
+  "mapLegs": 3,
+  "mapHip": 0.2,
+  "colonySize": 4,
+  "mapDefense": "Scatter",
+  "attack": 3,
+  "defense": 2,
+  "hp": 3,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.8
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "climbing",
+    "expression": 0.6
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.3
+   }
+  ],
+  "description": "A giant early flea from the Middle Jurassic of north-eastern China, about 165 million years ago; females reached about 2 cm, many times the size of modern fleas. It was wingless and flattened, with long legs ending in strong claws for clinging to its host and a long, saw-edged mouthpart for piercing thick skin. It probably fed on the blood of feathered dinosaurs, pterosaurs and early mammals, and could not jump like living fleas."
+ }
+]

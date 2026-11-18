@@ -1,0 +1,427 @@
+[
+  {
+    "id": "auroralumina_attenboroughii",
+    "commonName": "Auroralumina",
+    "scientificName": "Auroralumina attenboroughii",
+    "kingdom": "Animalia",
+    "group": "Early cnidarian",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 20,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/Auroralumina",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.5,
+    "mapAttack": "Sting",
+    "mapDefense": "Tighten",
+    "attack": 9,
+    "defense": 2,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.8
+      },
+      {
+        "gene": "filter_feeding",
+        "expression": 0.2
+      }
+    ],
+    "description": "A stalked, branching polyp about 20 cm tall whose two cups each held a crown of stinging tentacles, its name meaning \"Attenborough's dawn lantern\". Living about 560 million years ago in a deep sea otherwise full of passive fronds, it is one of the oldest known predatory animals, an early relative of jellyfish that snared passing prey. Its stinging cells make it the deadliest attacker of its world, but its thin skeleton and soft polyps break easily."
+  },
+  {
+    "id": "haootia_quadriformis",
+    "commonName": "Haootia",
+    "scientificName": "Haootia quadriformis",
+    "kingdom": "Animalia",
+    "group": "Early cnidarian",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 6,
+    "startingPopulation": 250,
+    "playable": true,
+    "model": "Models/Species/Haootia",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.5,
+    "mapAttack": "Lash",
+    "mapDefense": "Tighten",
+    "attack": 7,
+    "defense": 3,
+    "hp": 7,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.6
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.4
+      }
+    ],
+    "description": "A square-bodied polyp a few centimetres across, held up on a short stalk from a disc in the mud, with four corner arms that split into bunches of tentacles. About 560 million years old, it shows the oldest known muscle tissue, bundles of fibres running through its body, and looks much like a living stalked jellyfish. Those muscles let it fold its arms quickly round prey and pull back from attackers."
+  },
+  {
+    "id": "eoporpita_medusa",
+    "commonName": "Eoporpita",
+    "scientificName": "Eoporpita medusa",
+    "kingdom": "Animalia",
+    "group": "Early cnidarian",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 8,
+    "startingPopulation": 350,
+    "playable": true,
+    "model": "Models/Species/Eoporpita",
+    "mapStyle": "Float",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapAttack": "Sting",
+    "mapDefense": "Scatter",
+    "attack": 6,
+    "defense": 1,
+    "hp": 5,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A round, many-ringed disc up to about 8 cm across, fringed with a crowd of short radiating tentacles, from the Ediacaran of South Australia. It was first taken for a floating colony like the living blue button Porpita, sailing with the currents and stinging small animals beneath it, though some think it was a polyp fixed to the seabed. Riding the water lets it spread quickly, but its soft body has no protection at all."
+  },
+  {
+    "id": "namapoikia_rietoogensis",
+    "commonName": "Namapoikia",
+    "scientificName": "Namapoikia rietoogensis",
+    "kingdom": "Animalia",
+    "group": "Sponge",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 100,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/Namapoikia",
+    "mapStyle": "Fixed",
+    "colonySize": 1,
+    "mapScale": 0.7,
+    "mapDefense": "Brace",
+    "attack": 1,
+    "defense": 6,
+    "hp": 15,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "asexual_reproduction",
+        "expression": 0.5
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.6
+      }
+    ],
+    "description": "One of the first animals to build a hard skeleton: a lumpy crust up to a metre across that filled cracks in the reefs of what is now Namibia about 548 million years ago. Its body was a maze of thin mineral walls and channels, probably a sponge or a coral-like animal straining food from the water. Huge, rooted and almost all skeleton, it can soak up enormous damage, but it cannot move or strike back."
+  },
+  {
+    "id": "corumbella_werneri",
+    "commonName": "Corumbella",
+    "scientificName": "Corumbella werneri",
+    "kingdom": "Animalia",
+    "group": "Early cnidarian",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 8,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Corumbella",
+    "mapStyle": "Fixed",
+    "colonySize": 4,
+    "mapScale": 0.45,
+    "mapDefense": "Hide",
+    "attack": 2,
+    "defense": 9,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.9
+      },
+      {
+        "gene": "filter_feeding",
+        "expression": 0.5
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.2
+      }
+    ],
+    "description": "A slender, four-sided tube a few centimetres long, built of overlapping rings of small hardened plates, from the last Ediacaran seas of Brazil, Paraguay and the western United States. The polyp inside, probably an early relative of jellyfish, reached out of the open top to catch food and drew back in when threatened. Its jointed armour is among the oldest animal skeletons, making it very hard to crack, though it has little to fight back with."
+  },
+  {
+    "id": "ernietta_plateauensis",
+    "commonName": "Ernietta",
+    "scientificName": "Ernietta plateauensis",
+    "kingdom": "Animalia",
+    "group": "Petalonamid",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 8,
+    "startingPopulation": 500,
+    "playable": true,
+    "model": "Models/Species/Ernietta",
+    "mapStyle": "Fixed",
+    "colonySize": 5,
+    "mapScale": 0.45,
+    "mapDefense": "Brace",
+    "attack": 1,
+    "defense": 5,
+    "hp": 12,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.7
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.4
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      }
+    ],
+    "description": "A sack-shaped animal 5 to 10 cm tall from Namibia, about 548 million years old, whose wall was a quilt of tubes sewn together along a zigzag seam. It lived half buried in sand, often in crowded patches, with only its open rim above the seabed, where its shape steered currents and food into the cup. Anchored in sand, with a tough padded body and neighbours sheltering it, it is very hard to dig out, but it has no way to attack."
+  },
+  {
+    "id": "yilingia_spiciformis",
+    "commonName": "Yilingia",
+    "scientificName": "Yilingia spiciformis",
+    "kingdom": "Animalia",
+    "group": "Early bilaterian",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 27,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Yilingia",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "mapUndulate": true,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 2,
+    "hp": 5,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.4
+      }
+    ],
+    "description": "A long, narrow, segmented animal up to 27 cm long, each of its fifty or so body units ending in a pair of backward-pointing lobes, from 550-million-year-old rocks in the Yangtze Gorges of China. Some fossils end at the tip of the trail they left, proving it moved by itself and is one of the oldest mobile animals with a segmented body. One of the most active animals of its day, it roams the seabed quickly, but it is soft and unarmed."
+  },
+  {
+    "id": "andiva_ivantsovi",
+    "commonName": "Andiva",
+    "scientificName": "Andiva ivantsovi",
+    "kingdom": "Animalia",
+    "group": "Proarticulate",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 8,
+    "startingPopulation": 350,
+    "playable": true,
+    "model": "Models/Species/Andiva",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.55,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 2,
+    "hp": 6,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.4
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.5
+      }
+    ],
+    "description": "A flat, oval animal up to about 8 cm long from the White Sea coast of Russia, about 555 million years old, with a smooth shield-like front and rows of offset segments behind it. Like its relatives Dickinsonia and Yorgia it glided over the microbial mats that covered the seabed, digesting them through its underside and moving on. It roams quickly from mat to mat, but its thin body offers little protection."
+  },
+  {
+    "id": "uncus_dzaugisi",
+    "commonName": "Uncus",
+    "scientificName": "Uncus dzaugisi",
+    "kingdom": "Animalia",
+    "group": "Early bilaterian",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 5,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Uncus",
+    "mapStyle": "Swim",
+    "tags": [
+      "Burrower"
+    ],
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapUndulate": true,
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 6,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "burrowing",
+        "expression": 0.9
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A thin, hook-curved worm a few centimetres long from the Ediacaran of South Australia, described in 2024 as the oldest known relative of the roundworms, arthropods and their kin. It burrowed through the sand just under the microbial mat, leaving long winding tunnels that are found alongside its fossils. Hidden in its burrow it is hard to find and hit, though it is frail once caught."
+  },
+  {
+    "id": "obamus_coronatus",
+    "commonName": "Obamus",
+    "scientificName": "Obamus coronatus",
+    "kingdom": "Animalia",
+    "group": "Problematic animal",
+    "firstAge": "Ediacaran",
+    "lastAge": "Ediacaran",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 1.5,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/Obamus",
+    "mapStyle": "Fixed",
+    "colonySize": 6,
+    "mapScale": 0.4,
+    "mapDefense": "Brace",
+    "attack": 1,
+    "defense": 7,
+    "hp": 7,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "asexual_reproduction",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A small ring-shaped animal 0.5 to 2 cm across with raised spiral ridges, named after Barack Obama and found in dense clusters in 550-million-year-old rocks of South Australia. It sat partly sunk into the tough microbial mat on the seabed, and nothing quite like it is known from any other time. Its stiff, embedded ring is hard to dislodge, and its crowded beds quickly fill the space around it, but it cannot attack."
+  }
+]

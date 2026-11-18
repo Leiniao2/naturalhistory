@@ -24,6 +24,7 @@ namespace NaturalHistory.UI
         private PlayersPanel playersPanel;
         private AdminPanel adminPanel;
         private UnitPanel unitPanel;
+        private UnitCycle unitCycle;
         private AnimalPanel animalPanel;
         private NewGameOptions newGameOptions;
         private ZoologyPanel zoologyPanel;
@@ -90,6 +91,7 @@ namespace NaturalHistory.UI
             playersPanel = new PlayersPanel(root);
             adminPanel   = new AdminPanel(root);
             unitPanel    = new UnitPanel(root);
+            unitCycle    = new UnitCycle(root);
             animalPanel  = new AnimalPanel(root);
             newGameOptions = new NewGameOptions(root);
             zoologyPanel = new ZoologyPanel(root);
@@ -103,6 +105,7 @@ namespace NaturalHistory.UI
             zoologyPanel.OpenEncyclopedia += id => { CloseSidePanels(); encyclopedia.Open(id); };
             encyclopedia.OpenTree         += id => { CloseSidePanels(); zoologyPanel.Open(start: id); };
             NaturalEvents.Announced += OnPhenomenon;
+            Combat.Reported += OnPhenomenon;
             playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast(Loc.T("New game started")); };
             playersPanel.SetupClosed    += () => pauseOverlay.RemoveFromClassList("hidden");
 
@@ -194,6 +197,7 @@ namespace NaturalHistory.UI
             miniMap?.Dispose();
             CameraController.IsPointerOverUI = null;
             NaturalEvents.Announced -= OnPhenomenon;
+            Combat.Reported -= OnPhenomenon;
             if (Progression != null) Progression.Changed -= OnProgressionChanged;
             if (EvolutionManager.Instance != null) EvolutionManager.Instance.Changed -= OnProgressionChanged;
             if (ClimateSystem.Instance != null) ClimateSystem.Instance.Updated -= OnClimateUpdated;
@@ -249,9 +253,10 @@ namespace NaturalHistory.UI
             if (Input.GetKeyDown(KeyCode.K) && !AnyModalOpen()) UnderView.ToggleSky(); // the sky layer
             if (Input.GetKeyDown(KeyCode.Tab) && !AnyModalOpen()) SpeciesColonies.Instance?.CycleFocus(); // the selected tile's next animal
             if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) && !AnyModalOpen())
-                ClimateHud.EndTurn();
+                ClimateHud.EndTurn(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
             climateHud.RefreshTile();
             unitPanel.Update();
+            unitCycle.Update(AnyModalOpen());
             animalPanel.Update();
             miniMap.Update();
             if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)

@@ -1,0 +1,311 @@
+[
+  {
+    "id": "doedicurus_clavicaudatus",
+    "commonName": "Doedicurus",
+    "scientificName": "Doedicurus clavicaudatus",
+    "kingdom": "Animalia",
+    "group": "Glyptodont",
+    "firstAge": "Quaternary",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Steppe"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 360,
+    "startingPopulation": 30,
+    "playable": true,
+    "model": "Models/Species/DoedicurusClavicaudatus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.3,
+    "colonySize": 1,
+    "mapDefense": "Hide",
+    "attack": 6,
+    "defense": 10,
+    "hp": 13,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.98
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.3
+      }
+    ],
+    "description": "The largest glyptodont, about 3.6 m long and up to 1.5 tonnes, from Pleistocene South America; it died out about 11,000 years ago. Its tall domed shell of fused bony plates was nearly impossible to bite through, and its long armoured tail ended in a massive club studded with spikes. Cracked shells of other Doedicurus suggest rivals clubbed each other, and a blow could break a predator's bones."
+  },
+  {
+    "id": "chironex_fleckeri",
+    "commonName": "Australian Box Jellyfish",
+    "scientificName": "Chironex fleckeri",
+    "kingdom": "Animalia",
+    "group": "Jellyfish",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Prawn",
+      "Bony fish"
+    ],
+    "sizeCm": 30,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/ChironexFleckeri",
+    "mapStyle": "Drift",
+    "colonySize": 4,
+    "mapScale": 0.6,
+    "mapAttack": "Lash",
+    "attack": 10,
+    "defense": 1,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "toxin_production",
+        "expression": 1.0
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "Often called the most venomous animal in the world, a nearly transparent box jellyfish of the coastal waters of northern Australia and Southeast Asia, with a bell up to 30 cm across and up to 15 tentacles, each up to 3 m long, trailing from each of its four corners. Millions of stinging cells inject a venom that can stop a human heart within minutes. Unlike most jellyfish it swims actively and steers with 24 eyes, some of them with lenses."
+  },
+  {
+    "id": "conus_geographus",
+    "commonName": "Geography Cone",
+    "scientificName": "Conus geographus",
+    "kingdom": "Animalia",
+    "group": "Sea snail",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Reef fish",
+      "Small animals"
+    ],
+    "sizeCm": 13,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/ConusGeographus",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.7,
+    "mapAttack": "Lash",
+    "mapDefense": "Hide",
+    "attack": 9,
+    "defense": 5,
+    "hp": 3,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "toxin_production",
+        "expression": 0.98
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.85
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      }
+    ],
+    "description": "A cone snail of Indo-Pacific coral reefs, up to about 15 cm long, with a thin shell marked with a fine net pattern. At night it spreads its mouth like a net over small fish and stabs them with a hollow, harpoon-like tooth that injects a venom made of hundreds of different toxins, paralysing them almost instantly. It is the most dangerous cone snail to humans and has killed dozens of people who picked one up."
+  },
+  {
+    "id": "mellivora_capensis",
+    "commonName": "Honey Badger",
+    "scientificName": "Mellivora capensis",
+    "kingdom": "Animalia",
+    "group": "Mustelid",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Savanna",
+      "Desert",
+      "Steppe",
+      "Hill"
+    ],
+    "diet": "Omnivore",
+    "tags": [
+      "Burrower"
+    ],
+    "mainDiet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Rodent",
+      "Pit viper",
+      "Lizard",
+      "Bee"
+    ],
+    "sizeCm": 75,
+    "startingPopulation": 120,
+    "playable": true,
+    "model": "Models/Species/MellivoraCapensis",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.34,
+    "colonySize": 1,
+    "attack": 6,
+    "defense": 7,
+    "hp": 8,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.7
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      }
+    ],
+    "description": "A stocky, black-and-silver member of the weasel family from Africa, the Middle East and India, about 75 cm long and famous for its fearlessness. Its thick, rubbery, loose skin resists bee stings, porcupine quills and teeth and lets it twist round to bite an attacker that has grabbed it, and it is partly resistant to snake venom. It digs out rodents, raids beehives, kills cobras and will stand up to lions and leopards."
+  },
+  {
+    "id": "antilocapra_americana",
+    "commonName": "Pronghorn",
+    "scientificName": "Antilocapra americana",
+    "kingdom": "Animalia",
+    "group": "Pronghorn",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Plain",
+      "Steppe",
+      "Desert"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 140,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/AntilocapraAmericana",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.5,
+    "mapGait": "Run",
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 2,
+    "hp": 5,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 1.0
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.9
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      }
+    ],
+    "description": "The fastest land animal of the Americas, a deer-sized runner of the western prairies and deserts that can sprint at about 90 km/h and keep up 50 to 70 km/h for several kilometres. It is the last survivor of a family once rich in species and not a true antelope; its forked horn sheaths are shed every year. Its huge eyes spot danger kilometres away, and its speed may have evolved to escape the cheetah-like cats of Ice Age North America."
+  },
+  {
+    "id": "smutsia_gigantea",
+    "commonName": "Giant Pangolin",
+    "scientificName": "Smutsia gigantea",
+    "kingdom": "Animalia",
+    "group": "Pangolin",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Rainforest",
+      "Savanna"
+    ],
+    "diet": "Carnivore",
+    "tags": [
+      "Burrower"
+    ],
+    "prey": [
+      "Ant",
+      "Termite"
+    ],
+    "sizeCm": 150,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/SmutsiaGigantea",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.33,
+    "colonySize": 1,
+    "mapDefense": "Hide",
+    "attack": 2,
+    "defense": 9,
+    "hp": 7,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.95
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.8
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.8
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      }
+    ],
+    "description": "The largest pangolin, up to about 1.8 m long with its tail and over 30 kg, living in the forests and savannas of equatorial Africa. Its body is covered in large, overlapping scales of keratin, and when attacked it rolls into a tight ball that even lions struggle to open. At night it tears into termite mounds and ant nests with its huge front claws and licks up the insects with a very long, sticky tongue."
+  }
+]

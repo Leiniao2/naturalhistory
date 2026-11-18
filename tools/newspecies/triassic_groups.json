@@ -1,0 +1,18 @@
+{
+  "Phytosaur": {
+    "tags": "ARCH",
+    "path": "ARCHOSAUROMORPHA + '/Archosauriformes/Phytosauria'"
+  },
+  "Kuehneosaurid": {
+    "tags": "REP",
+    "path": "NEODIAPSIDA + '/Sauria/Lepidosauromorpha/Kuehneosauridae'"
+  },
+  "Drepanosaur": {
+    "tags": "REP",
+    "path": "NEODIAPSIDA + '/Drepanosauromorpha'"
+  },
+  "Early crocodylomorph": {
+    "tags": "ARCH",
+    "path": "PSEUDO + '/Loricata/Crocodylomorpha'"
+  }
+}

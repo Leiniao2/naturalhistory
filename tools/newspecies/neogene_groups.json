@@ -1,0 +1,26 @@
+{
+  "Viper": {
+    "tags": "REP+['Squamate']",
+    "path": "LEPIDO + '/Toxicofera/Serpentes/Viperidae'"
+  },
+  "Hyena": {
+    "tags": "PLAC+['Carnivoran']",
+    "path": "FELI + '/Hyaenidae'"
+  },
+  "Tortoise": {
+    "tags": "REP+['Turtle']",
+    "path": "NEODIAPSIDA + '/Sauria/Pantestudines/Testudines/Cryptodira/Testudinidae'"
+  },
+  "Armadillo": {
+    "tags": "PLAC+['Xenarthran']",
+    "path": "XEN + '/Cingulata'"
+  },
+  "Pinniped": {
+    "tags": "PLAC+['Carnivoran']",
+    "path": "CANI + '/Pinnipedia'"
+  },
+  "Salamander": {
+    "tags": "TET+['Amphibian']",
+    "path": "AMPHIBIA + '/Temnospondyli/Lissamphibia/Caudata'"
+  }
+}

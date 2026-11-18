@@ -173,6 +173,10 @@ namespace NaturalHistory.Data
         public bool mapUndulate;      // swims with a body wave instead of a tail wag (eels); Slither snakes always do
         public string mapAttack;      // AttackStyle name (Charge, Bite, Pounce, Strike, Dive, Sting, Ram, Shock, Snap, Engulf, Lash); empty = from style and diet
         public string mapDefense;     // DefenseStyle name (Brace, Rear, Scatter, Coil, Hide, Ink, Tighten, Mob, Puff); empty = from style and size
+        public int attack;            // combat stats (World/CombatStats): 0 = worked out from diet, genes, size and how it moves
+        public int defense;
+        public int hp;
+        public int moves;             // actions per turn (move a tile, attack, reproduce)
         public List<GeneValue> genes;
         public string description;
     }

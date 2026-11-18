@@ -41,6 +41,7 @@ namespace NaturalHistory.World
             DisplayedMillionYearsAgo = DateFor(age);
             DisplayedConditions = EarthHistory.ConditionsAt(DisplayedMillionYearsAgo, age);
             if (!WorldGenerator.Reshape(cells, DisplayedConditions)) return;
+            RefreshSurfaceHeights(); // the flooded and emerged tiles' new heights, before the seabed is shaped
             GenerateRivers(WorldSeed);
             GenerateUnder(WorldSeed);
             UpdateCellMeshes();

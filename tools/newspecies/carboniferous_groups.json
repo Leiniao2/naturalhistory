@@ -1,0 +1,4 @@
+{
+  "Productid brachiopod": {"tags": "B+['Brachiopod']", "path": "LOPHO + '/Lophophorata/Brachiopoda'"},
+  "Megasecopteran": {"tags": "ART+['Insect','Terrestrial arthropod']", "path": "INSECTA + '/Pterygota'"}
+}

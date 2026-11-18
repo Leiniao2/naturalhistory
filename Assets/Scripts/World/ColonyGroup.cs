@@ -174,6 +174,7 @@ namespace NaturalHistory.World
             rootCell   = cell;
             MemberSpan = memberSpan;
             InitCombatStyles();
+            InitStats();
         }
 
         public void AddMember(Member m) => members.Add(m);
@@ -208,7 +209,7 @@ namespace NaturalHistory.World
         // in between. The group belongs to the last tile from the moment it sets out.
         public bool MoveAlong(IReadOnlyList<HexCell> path)
         {
-            if (!CanMove || IsBusy || JustBorn || path == null || path.Count == 0) return false;
+            if (!CanMove || IsBusy || JustBorn || path == null || path.Count == 0 || !HasActions(path.Count)) return false;
             var points = new List<Vector3> { Spot + Vector3.up * Cell.SurfaceHeight };
             var prev = Cell;
             var offset = Vector3.zero;
@@ -220,6 +221,7 @@ namespace NaturalHistory.World
                 prev = next;
             }
             if (!CanLiveAt(prev)) return false; // passing through is fine, but it has to eat where it stops
+            SpendActions(path.Count); // an action per tile
 
             var t = new Trip { destination = prev };
             t.legs.Add(MakeLeg(points, TravelSpeed()));
@@ -234,7 +236,8 @@ namespace NaturalHistory.World
         // defence (Defend) as the blow lands.
         public bool Attack(HexCell target)
         {
-            if (!CanAttack || IsBusy || JustBorn || target == null || target == Cell || !AreNeighbors(Cell, target)) return false;
+            if (!CanAttack || IsBusy || JustBorn || !CanStrike || target == null || target == Cell || !AreNeighbors(Cell, target)) return false;
+            SpendAttack();
             var (hold, reachFraction, approach) = StrikeTiming();
             if (!CanMove) reachFraction = 0f;
             var home   = Spot + Vector3.up * Cell.SurfaceHeight;
@@ -580,6 +583,7 @@ namespace NaturalHistory.World
                 {
                     trip.struck = true;
                     Struck?.Invoke(this, trip.strikeTarget);
+                    Combat.Strike(this, trip.strikeTarget); // the blow lands: damage, or the prey is eaten
                 }
             }
             float u = Mathf.Clamp01(into / leg.duration);

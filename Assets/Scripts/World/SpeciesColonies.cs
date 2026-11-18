@@ -62,6 +62,20 @@ namespace NaturalHistory.World
         // Every species alive in the period placed wild on the map (the old opening); off, the game
         // starts with only the players' founders and wild groups are born along the way (WildBirths)
         public static bool PlaceAllWild = false;
+
+        // Safari Mode (Admin): every species alive in the period is placed wild, and the player can
+        // take control of any group, wild ones too. Switching it off brings back the wild groups that
+        // were born in the game (WildBirths) in place of the safari's.
+        public static bool SafariMode { get; private set; }
+        public static event System.Action<bool> SafariModeChanging; // before the map's groups are rebuilt
+
+        public void SetSafariMode(bool on)
+        {
+            if (on == SafariMode) return;
+            SafariMode = PlaceAllWild = on;
+            SafariModeChanging?.Invoke(on);
+            if (grid != null && grid.IsGenerated) PlaceColonies();
+        }
         private const double RareShare          = 0.5;  // of each period's species, chosen at random, shown as one group only
         private const int TilesPerCopy           = 6;   // a species with little habitat gets fewer copies
         private const int MaxBigCopies           = 10;  // animals spilling over their tile (ReserveSpan)
@@ -152,10 +166,11 @@ namespace NaturalHistory.World
             slots.Remove(group);
         }
 
-        // Ordering a group around: click it, then click a marked neighbouring tile to move there,
-        // or a marked tile holding another group to attack it.
+        // Ordering a group around: click it, then click a tile inside its outlined range to move
+        // there, or a tile ringed in red to attack the group on it.
         private ColonyGroup selected;
         private readonly List<HexCell> marked = new();
+        private MoveRange range; // the selected group's, while it has orders to give
         private int clickFrame = -1;
 
         // Choosing a tile for something (where the young of a reproducing group go): the tiles on
@@ -170,6 +185,8 @@ namespace NaturalHistory.World
             EndChoosing();
             foreach (var c in marked) if (c != null) c.SetGroupTarget(HexCell.GroupTarget.None); // the move marks give way
             marked.Clear();
+            range = null;
+            MovePathView.Hide();
             selected = keep;
             foreach (var c in tiles)
             {
@@ -224,6 +241,19 @@ namespace NaturalHistory.World
             if (selected == null || selected.Cell != cell) return;
             var g = UnderView.Focus.Current(cell);
             Select(g != null && (g.Owner == null || g.Owner.IsHuman) && g.CanAttack && !g.IsBusy ? g : null);
+        }
+
+        // Picks one of the player's groups for orders as clicking it would (UnitCycle): shows its
+        // layer, selects its tile with it in front and marks where it can go
+        public void Order(ColonyGroup g)
+        {
+            if (g == null || g.Cell == null) return;
+            if (!UnderView.InLayer(g, UnderView.Layer))
+                UnderView.Set(UnderView.InLayer(g, MapLayer.Surface) ? MapLayer.Surface : UnderView.InLayer(g, MapLayer.Under) ? MapLayer.Under : MapLayer.Sky);
+            CellSelector.SelectCell(g.Cell);
+            UnderView.Focus.Show(g);
+            lastClicked = g.Cell;
+            Select(g.CanAttack && !g.IsBusy ? g : null);
         }
 
         // Mountain tiles are only for species that list "Mountain" among their habitats
@@ -302,18 +332,31 @@ namespace NaturalHistory.World
             {
                 clickFrame = Time.frameCount;
                 var group = selected;
-                if (marked.Contains(cell))
+                if (marked.Contains(cell) && range != null)
                 {
-                    // Only the group holding the niche it would take there competes; the others are left alone
-                    var other = GroupAt(cell, Niches.Of(group.Definition, cell));
+                    // A tile with a foreign group it can fight is an attack (Combat: the biggest one
+                    // there defends), from the nearest tile it can strike from: it goes there first
+                    // and strikes on arrival. Otherwise it moves in along the shortest path.
+                    var order = range;
                     Select(null);
                     lastClicked = null;
-                    if (other != null) group.Attack(cell);
-                    else if (group.MoveTo(cell)) Occupy(group);
+                    if (order.AttackFrom.TryGetValue(cell, out var from))
+                    {
+                        if (from == group.Cell) { group.Attack(cell); return; }
+                        if (!group.MoveAlong(order.PathTo(from))) return;
+                        Occupy(group);
+                        void StrikeOnArrival(ColonyGroup g)
+                        {
+                            g.Arrived -= StrikeOnArrival;
+                            if (g != null && g.Cell == from) g.Attack(cell);
+                        }
+                        group.Arrived += StrikeOnArrival;
+                    }
+                    else if (group.MoveAlong(order.PathTo(cell))) Occupy(group);
                     return;
                 }
                 var clicked = PickAt(cell, again);
-                bool orderable = clicked != null && (clicked.Owner == null || clicked.Owner.IsHuman);
+                bool orderable = clicked != null && (SafariMode || (clicked.Owner != null && clicked.Owner.IsHuman));
                 Select(clicked != group && orderable && clicked.CanAttack && !clicked.IsBusy ? clicked : null);
                 return;
             }
@@ -333,27 +376,36 @@ namespace NaturalHistory.World
             }
             if (g == null) return;
             clickFrame = Time.frameCount;
-            if (g.Owner != null && !g.Owner.IsHuman) return; // other players' colonies aren't yours to order
+            if (!SafariMode && (g.Owner == null || !g.Owner.IsHuman)) return; // only your own colonies are yours to order (any in Safari Mode)
             if (g.CanAttack && !g.IsBusy) Select(g); // fixed colonies can't move but can still strike a neighbour
         }
 
-        // Marks the tiles the group can go to: green to move (only where it would find food and its
-        // niche is free), red to attack the group holding its niche there.
+        // Marks the tiles the group can go to with the actions it has left this turn: green to move
+        // (only where it would find food and its niche is free), red to attack (a wild or another
+        // player's group in its layer there that is within ten times its size, see Combat).
+        // The group that would defend `cell` against `group`, if they can fight at all
+        internal static ColonyGroup Attackable(ColonyGroup group, HexCell cell)
+        {
+            var foe = Combat.Defender(group, cell);
+            return foe != null && Combat.SizesMatch(group, foe) ? foe : null;
+        }
+
+        // Marks everything the group can reach this turn (MoveRange): the tiles it can move to
+        // (outlined, MovePathView, with the path to the tile under the mouse) and the groups it can
+        // attack, on their tile or after moving next to them.
         private void Select(ColonyGroup group)
         {
             if (group != selected) EndChoosing();
             foreach (var c in marked) if (c != null) c.SetGroupTarget(HexCell.GroupTarget.None);
             marked.Clear();
+            range = null;
+            MovePathView.Hide();
             selected = group;
             if (group == null || group.JustBorn) return; // new this turn: its card shows, but no orders yet
-            foreach (var n in grid.GetNeighbors(group.Cell))
-            {
-                var rival = GroupAt(n, Niches.Of(group.Definition, n));
-                bool attackable = rival != null && (group.CanEnter(n) || !group.CanMove); // fixed colonies strike in place
-                if (!attackable && (rival != null || !group.CanMove || !group.CanEnter(n) || !group.CanLiveAt(n))) continue;
-                marked.Add(n);
-                n.SetGroupTarget(rival != null ? HexCell.GroupTarget.Attack : HexCell.GroupTarget.Move);
-            }
+            range = MoveRange.For(group, this);
+            foreach (var n in range.Destinations) { marked.Add(n); n.SetGroupTarget(HexCell.GroupTarget.Move); }
+            foreach (var n in range.AttackFrom.Keys) { marked.Add(n); n.SetGroupTarget(HexCell.GroupTarget.Attack); }
+            MovePathView.Show(range);
         }
 
         // Clears the map's groups whenever the period changes (the players' are put back by
@@ -434,6 +486,7 @@ namespace NaturalHistory.World
             BuildColony(cell, def, mesh, style, new System.Random(seed));
             var group = groups[groups.Count - 1];
             group.Owner = owner;
+            if (owner == null) group.RestoreCombat(Combat.Carried(def, cell)); // a wild group put back after the map was rebuilt keeps its HP
             return group;
         }
 

@@ -1,0 +1,754 @@
+[
+  {
+    "id": "titanichthys_agassizi",
+    "commonName": "Titanichthys",
+    "scientificName": "Titanichthys agassizi",
+    "kingdom": "Animalia",
+    "group": "Placoderm",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 600,
+    "startingPopulation": 20,
+    "playable": true,
+    "model": "Models/Species/Titanichthys",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapDefense": "Brace",
+    "attack": 3,
+    "defense": 6,
+    "hp": 15,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.85
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.2
+      }
+    ],
+    "description": "One of the largest animals of the Late Devonian seas, about 370 million years ago: an armoured placoderm that may have reached 5 to 7 metres long. Despite its size and heavy head-and-shoulder armour, its long jaws were small-mouthed and toothless, and it probably cruised slowly through open water filtering out small prey, much like a basking shark. Its sheer bulk made it very hard for any predator to bring down."
+  },
+  {
+    "id": "mcnamaraspis_kaprios",
+    "commonName": "Mcnamaraspis",
+    "scientificName": "Mcnamaraspis kaprios",
+    "kingdom": "Animalia",
+    "group": "Placoderm",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Palaeospondylid",
+      "Acanthodian"
+    ],
+    "sizeCm": 25,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/Mcnamaraspis",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.7,
+    "mapAttack": "Snap",
+    "attack": 5,
+    "defense": 4,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.85
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      }
+    ],
+    "description": "A small, quick arthrodire placoderm about 25 centimetres long from a Late Devonian reef in Western Australia, about 380 million years ago. It had a streamlined armoured head and shoulder shield, large eyes and sharp, self-sharpening bony jaw blades, and darted about the reef snapping up small fish and shrimp-like prey. It is the official state fossil of Western Australia."
+  },
+  {
+    "id": "antarctilamna_prisca",
+    "commonName": "Antarctilamna",
+    "scientificName": "Antarctilamna prisca",
+    "kingdom": "Animalia",
+    "group": "Xenacanth shark",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Placoderm",
+      "Acanthodian",
+      "Bony fish",
+      "Lungfish"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/Antarctilamna",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "attack": 8,
+    "defense": 2,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.5
+      }
+    ],
+    "description": "An early shark perhaps about a metre long from the Middle Devonian rivers and lakes of Antarctica and Australia, about 385 million years ago, and one of the first sharks to live in fresh water. It had a slender, rather eel-like body, a long, stout spine standing just behind its head and teeth with two large, diverging points, ideal for gripping slippery prey. It struck hard at other fish, but its thin skin gave it little protection."
+  },
+  {
+    "id": "onychodus_jandemarrai",
+    "commonName": "Onychodus",
+    "scientificName": "Onychodus jandemarrai",
+    "kingdom": "Animalia",
+    "group": "Lobe-finned fish",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Placoderm",
+      "Bony fish",
+      "Lungfish",
+      "Acanthodian"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 50,
+    "playable": true,
+    "model": "Models/Species/Onychodus",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Strike",
+    "attack": 9,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      }
+    ],
+    "description": "A lobe-finned predator about a metre long from a Late Devonian reef in Western Australia, about 380 million years ago. At the front of its lower jaw stood whorls of huge, curved fangs that slotted into pits in the snout when it shut its mouth, giving it one of the most fearsome bites of its time for its size. It probably lurked in reef crevices and lunged out to impale passing fish."
+  },
+  {
+    "id": "mandageria_fairfaxi",
+    "commonName": "Mandageria",
+    "scientificName": "Mandageria fairfaxi",
+    "kingdom": "Animalia",
+    "group": "Lobe-finned fish",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Placoderm",
+      "Bony fish",
+      "Lungfish"
+    ],
+    "sizeCm": 160,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/Mandageria",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Strike",
+    "attack": 7,
+    "defense": 2,
+    "hp": 5,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.95
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.6
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.4
+      }
+    ],
+    "description": "A sleek lobe-finned hunter about 1.6 metres long from the Late Devonian rivers of New South Wales, Australia, about 365 million years ago. Torpedo-shaped, with its dorsal and anal fins set far back and a symmetrical tail, it was built for sudden bursts of speed like a modern pike or barracuda. It waited in ambush and shot forward to seize armoured fish in its long, fanged jaws, but its lightly built body could not take much punishment."
+  },
+  {
+    "id": "griphognathus_whitei",
+    "commonName": "Griphognathus",
+    "scientificName": "Griphognathus whitei",
+    "kingdom": "Animalia",
+    "group": "Lungfish",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Trilobite",
+      "Spiriferid brachiopod"
+    ],
+    "sizeCm": 50,
+    "startingPopulation": 100,
+    "playable": true,
+    "model": "Models/Species/Griphognathus",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapDefense": "Brace",
+    "attack": 5,
+    "defense": 7,
+    "hp": 7,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.8
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      }
+    ],
+    "description": "A lungfish about half a metre long from a Late Devonian reef in Western Australia, about 380 million years ago. Instead of the broad tooth plates of most lungfishes it had a long, flattened, duck-bill-like snout lined with small bony bumps, which it probably used to root about the reef and crush shelled animals. Its body was clad in thick, shiny bony scales that made it very hard to bite through, though it was a slow swimmer."
+  },
+  {
+    "id": "tulerpeton_curtum",
+    "commonName": "Tulerpeton",
+    "scientificName": "Tulerpeton curtum",
+    "kingdom": "Animalia",
+    "group": "Early tetrapod",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "Wetland",
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish",
+      "Acanthodian"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 70,
+    "playable": true,
+    "model": "Models/Species/Tulerpeton",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.45,
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "attack": 5,
+    "defense": 2,
+    "hp": 6,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.55
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.4
+      }
+    ],
+    "description": "A four-limbed animal perhaps about a metre long from the very end of the Devonian in Russia, about 365 million years ago. It had six fingers on each hand and six toes on each foot, and its sturdy limbs and shoulders suggest it moved on land better than Acanthostega or Ichthyostega. It lived around shallow coastal lagoons, hunting fish in the water and small animals along the shore."
+  },
+  {
+    "id": "manticoceras_sinuosum",
+    "commonName": "Manticoceras",
+    "scientificName": "Manticoceras sinuosum",
+    "kingdom": "Animalia",
+    "group": "Ammonite",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 15,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Manticoceras",
+    "mapStyle": "Swim",
+    "mapBackward": true,
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "attack": 3,
+    "defense": 4,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A goniatite ammonoid from the Late Devonian seas, about 375 million years ago, so common around the world that it marks a whole stretch of geological time. Its tightly coiled, flattened shell, up to about 15 centimetres across, carried zig-zag suture lines and was more streamlined than those of earlier, loosely coiled ammonoids. It darted backwards by jet propulsion to snatch small prey or escape danger."
+  },
+  {
+    "id": "terataspis_grandis",
+    "commonName": "Terataspis",
+    "scientificName": "Terataspis grandis",
+    "kingdom": "Animalia",
+    "group": "Trilobite",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 60,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/Terataspis",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapScale": 0.8,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 9,
+    "hp": 11,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.95
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.3
+      }
+    ],
+    "description": "One of the largest trilobites ever, up to about 60 centimetres long, from the Middle Devonian seas of New York and Ontario, about 390 million years ago. It bristled from head to tail with spines and knobs: long spines on its cheeks, along every body segment and around its tail shield. This spiky armour made it a near-impossible mouthful even for the big armoured fish of its time, though it was slow and had little to fight back with."
+  },
+  {
+    "id": "dicranurus_monstrosus",
+    "commonName": "Dicranurus",
+    "scientificName": "Dicranurus monstrosus",
+    "kingdom": "Animalia",
+    "group": "Trilobite",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 6,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Dicranurus",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 10,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 1.0
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.4
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small, spectacularly spiny trilobite about 6 centimetres long from the Early Devonian seas of Morocco, about 400 million years ago. Two great curled horns like a ram's swept back from its head, and long paired spines bristled from its cheeks, every body segment and its tail. It was small and harmless, but its thicket of spines made it almost impossible to swallow."
+  },
+  {
+    "id": "stylonurus_powriensis",
+    "commonName": "Stylonurus",
+    "scientificName": "Stylonurus powriensis",
+    "kingdom": "Animalia",
+    "group": "Eurypterid",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 150,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/Stylonurus",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapDefense": "Brace",
+    "attack": 4,
+    "defense": 6,
+    "hp": 10,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "A large sea scorpion well over a metre long from the Early Devonian rivers and lakes of Scotland, about 410 million years ago. Instead of swimming paddles it stalked along the bottom on long, stilt-like legs, the last pairs reaching far behind its body, and its body ended in a long, spike-like tail. Big and sturdy, it was hard for predators to tackle, though it moved slowly and fed on small animals it found in the mud."
+  },
+  {
+    "id": "waeringoscorpio_hefteri",
+    "commonName": "Waeringoscorpio",
+    "scientificName": "Waeringoscorpio hefteri",
+    "kingdom": "Animalia",
+    "group": "Scorpion",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 4,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Waeringoscorpio",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.5,
+    "mapAttack": "Sting",
+    "attack": 9,
+    "defense": 2,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "toxin_production",
+        "expression": 0.9
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.3
+      }
+    ],
+    "description": "A small scorpion only a few centimetres long from the Early Devonian seas of western Germany, about 400 million years ago. Rows of feathery, gill-like flaps along the sides of its body show that it lived and breathed under water, long after scorpions first appeared. Armed with grasping pincers and a venomous sting, it struck very hard for its size, but its slender body was fragile."
+  },
+  {
+    "id": "rhyniognatha_hirsti",
+    "commonName": "Rhyniognatha",
+    "scientificName": "Rhyniognatha hirsti",
+    "kingdom": "Animalia",
+    "group": "Early insect",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "Wetland",
+      "Plain"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 0.3,
+    "startingPopulation": 40000,
+    "playable": true,
+    "model": "Models/Species/Rhyniognatha",
+    "mapStyle": "Ground",
+    "mapLegs": 3,
+    "mapHip": 0.42,
+    "colonySize": 5,
+    "mapScale": 1.2,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.9
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.4
+      }
+    ],
+    "description": "One of the oldest insects known, from the hot-spring wetlands of Rhynie in Scotland, about 410 million years ago. Only its tiny head has been found, but its strong, triangular, toothed jaws are like those of winged insects, hinting that insects may have taken to the air far earlier than their oldest known wings. Tiny and fragile but breeding in huge numbers, it would have swarmed among the first low land plants."
+  },
+  {
+    "id": "schinderhannes_bartelsi",
+    "commonName": "Schinderhannes",
+    "scientificName": "Schinderhannes bartelsi",
+    "kingdom": "Animalia",
+    "group": "Radiodont",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 10,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/Schinderhannes",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapScale": 0.6,
+    "mapAttack": "Strike",
+    "attack": 8,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.8
+      }
+    ],
+    "description": "A radiodont, a relative of Anomalocaris, about 10 centimetres long from the Early Devonian seas of western Germany, about 400 million years ago, living long after almost all of its kind had died out. It had a big head with large eyes, a pair of spiny grasping arms and a ring-shaped mouth, and a single pair of large wing-like flaps that drove it swiftly through the water. A sharp-eyed ambusher that struck hard, it had only a soft, lightly built body to protect it."
+  },
+  {
+    "id": "eophalangium_sheari",
+    "commonName": "Eophalangium",
+    "scientificName": "Eophalangium sheari",
+    "kingdom": "Animalia",
+    "group": "Harvestman",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "Wetland",
+      "Plain"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Scavenger",
+    "sizeCm": 0.5,
+    "startingPopulation": 15000,
+    "playable": true,
+    "model": "Models/Species/Eophalangium",
+    "mapStyle": "Ground",
+    "mapLegs": 4,
+    "mapHip": 0.33,
+    "colonySize": 3,
+    "mapScale": 1.2,
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 2,
+    "hp": 3,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.9
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "The oldest known harvestman, from the hot-spring wetlands of Rhynie in Scotland, about 410 million years ago. It already looked remarkably like living harvestmen, with a compact oval body only a few millimetres long, a pair of eyes on a central bump and four pairs of very long, thin legs. Those stilt-like legs carried it quickly over the ground as it searched for small prey and decaying scraps."
+  },
+  {
+    "id": "furcaster_palaeozoicus",
+    "commonName": "Furcaster",
+    "scientificName": "Furcaster palaeozoicus",
+    "kingdom": "Animalia",
+    "group": "Brittle star",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 10,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Furcaster",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.5,
+    "attack": 2,
+    "defense": 3,
+    "hp": 12,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "regeneration",
+        "expression": 0.95
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A brittle star about 10 centimetres across from the Early Devonian seas of western Germany, about 400 million years ago, with a small central disc and five long, slender, snake-like arms. It crawled over the muddy seafloor picking up scraps of food with its flexible arms. Like living brittle stars it could probably shed an arm to escape a predator and grow it back, which made it extremely hard to kill off."
+  }
+]

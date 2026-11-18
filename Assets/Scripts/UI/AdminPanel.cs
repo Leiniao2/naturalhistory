@@ -9,7 +9,8 @@ namespace NaturalHistory.UI
     // Admin tools under the top-right HUD: pick any geological period (or the present day) and the
     // game jumps to its first turn; the map, plants and climate follow. Visible in the Editor and in
     // development builds; the backquote key (`) shows or hides it. It can also set off any natural
-    // phenomenon (meteor, eruption, tornado...) near the middle of the view.
+    // phenomenon (meteor, eruption, tornado...) near the middle of the view, and switch Safari Mode
+    // on and off (every species on the map, and any group can be controlled; SpeciesColonies).
     public class AdminPanel
     {
         private const string PresentDay = "Present day";
@@ -19,6 +20,8 @@ namespace NaturalHistory.UI
         private readonly List<int> turns = new(); // first turn of each dropdown entry
         private readonly DropdownField phenomenon;
         private readonly Button trigger;
+        private readonly Button safari;
+        private static readonly Color SafariOn = new(0.30f, 0.55f, 0.30f);
 
         public AdminPanel(VisualElement root)
         {
@@ -28,8 +31,10 @@ namespace NaturalHistory.UI
 
             phenomenon = new DropdownField(new List<string>(), 0) { name = "admin-phenomenon" };
             trigger    = new Button(OnTrigger) { name = "admin-trigger" };
+            safari     = new Button(OnSafari) { name = "admin-safari" };
             bar.Add(phenomenon);
             bar.Add(trigger);
+            bar.Add(safari);
             RefreshPhenomena();
             bar.EnableInClassList("hidden", !Debug.isDebugBuild);
         }
@@ -73,6 +78,24 @@ namespace NaturalHistory.UI
             phenomenon.choices = names;
             if (index < names.Count) phenomenon.SetValueWithoutNotify(names[index]);
             trigger.text = Loc.T("Trigger");
+            RefreshSafari();
+        }
+
+        private void RefreshSafari()
+        {
+            bool on = SpeciesColonies.SafariMode;
+            safari.text = on ? "✓ " + Loc.T("Safari Mode") : Loc.T("Safari Mode");
+            if (on) safari.style.backgroundColor = SafariOn;
+            else safari.style.backgroundColor = StyleKeyword.Null;
+        }
+
+        private void OnSafari()
+        {
+            var colonies = SpeciesColonies.Instance;
+            if (colonies == null) return;
+            colonies.SetSafariMode(!SpeciesColonies.SafariMode);
+            Debug.Log($"[Admin] Safari Mode {(SpeciesColonies.SafariMode ? "on" : "off")}");
+            RefreshSafari();
         }
 
         // Ground phenomena come first in the list, then the sky's

@@ -27,6 +27,7 @@ namespace NaturalHistory.Evolution
         public HexCell cell;            // where it was last
         public int lastBred = -999;     // turn it last reproduced
         public int bornTurn = -1;       // turn it was born or evolved: no actions until the next (ColonyGroup.JustBorn)
+        public CombatState combat;      // its group's HP and the turn's actions left while the group is re-spawned or saved (ColonyGroup.Stats)
         public bool JustBorn => group != null ? group.JustBorn : bornTurn >= 0 && bornTurn == (TurnManager.Instance != null ? TurnManager.Instance.CurrentTurn : 0);
     }
 
@@ -51,7 +52,8 @@ namespace NaturalHistory.Evolution
     //    can still evolve into other species). This is each player's own: what one player has evolved
     //    never stops another from evolving the same species, so no one can cut the others off from a
     //    branch of the tree by taking its key species first.
-    //  - A copy can reproduce onto a free neighbouring tile once every ReproduceCooldown turns.
+    //  - A copy can reproduce onto a free neighbouring tile once every ReproduceCooldown turns; that
+    //    takes one of its actions for the turn (ColonyGroup.Stats).
     //  - The young, and a copy that has just evolved, can't act (move, attack, reproduce, evolve)
     //    until the next turn.
     //
@@ -124,6 +126,13 @@ namespace NaturalHistory.Evolution
         private static Player Human => PlayerManager.Instance != null ? PlayerManager.Instance.Human : null;
         private static int CurrentTurn => TurnManager.Instance != null ? TurnManager.Instance.CurrentTurn : 0;
 
+        // Evolving costs the human player EP (the trees' points, ProgressionManager), so EP set the pace of
+        // evolution: a game starts with 20 and earns 5 a turn from turn 2, so 36 EP first come together
+        // on turn 5 (sooner with bonus EP, later if some go on Functions and Behaviors).
+        public const int EvolveCost = 36;
+        // Only the human player has EP; other players' copies evolve without paying
+        private static bool PaysEP(OwnedCopy copy) => copy == null || (Human != null && copy.player == Human.Index);
+
         // ---------- Species items ----------
 
         // The species' acquired items, starting with the free root items it can have.
@@ -165,6 +174,19 @@ namespace NaturalHistory.Evolution
         public bool HumanOwns(string speciesId) => CopiesOf(Human).Any(c => c.species == speciesId);
         public IEnumerable<string> HumanSpecies => CopiesOf(Human).Select(c => c.species).Distinct();
 
+        // A copy wiped out in combat (World/Combat): it's gone for good; what its species evolved stays
+        public void RemoveCopy(ColonyGroup group)
+        {
+            if (group == null || copies.RemoveAll(c => c.group == group) == 0) return;
+            if (FocusSpecies != null && !CopiesOf(Human).Any(c => c.species == FocusSpecies))
+            {
+                FocusSpecies = null; // the trees move on to another species of yours, if any
+                var next = HumanSpecies.FirstOrDefault();
+                if (next != null) Focus(next);
+            }
+            Changed?.Invoke();
+        }
+
         // A player's first copy, founded by TerritoryManager
         public void RegisterFounder(Player player, ColonyGroup group)
         {
@@ -183,9 +205,11 @@ namespace NaturalHistory.Evolution
             Changed?.Invoke();
         }
 
-        // Puts back every copy of the player whose group is gone (the map's groups were rebuilt):
-        // on its last tile if that is free and fits, else the nearest such tile, else one of
-        // `fallback`. Returns the groups spawned.
+        // Puts back every copy of the player whose group is gone (the map's groups were rebuilt, as
+        // when another period begins): a new period keeps the players' animals and territory, only
+        // the land and the wild animals change. Each copy goes back on its last tile if that is free
+        // and fits, else the nearest such tile (the coast may have moved), else one of `fallback`.
+        // A player's species lives on even past the period it died out in. Returns the groups spawned.
         public List<ColonyGroup> Respawn(Player player, IReadOnlyList<HexCell> fallback)
         {
             var spawned = new List<ColonyGroup>();
@@ -198,16 +222,17 @@ namespace NaturalHistory.Evolution
                 if (copy.group != null) { copy.group.Owner = player; continue; }
                 var def = GameDataLoader.GetSpecies(copy.species);
                 if (def == null) continue;
-                // Not alive in the period the map shows (e.g. the admin bar jumped back in time):
-                // keep the copy, but only put it back on the map once its period comes round again
-                if (!colonies.IsAliveNow(def)) continue;
-                var cell = FreeCellNear(def, copy.cell, 3) ?? fallback?.FirstOrDefault(c => IsFree(def, c));
+                // Not yet evolved in the period the map shows (the admin bar jumped back in time): keep
+                // the copy, but only put it back on the map once its period comes round again
+                if (!HasAppeared(def)) continue;
+                var cell = FreeCellNear(def, copy.cell, RespawnReach) ?? fallback?.FirstOrDefault(c => IsFree(def, c));
                 if (cell == null) { Debug.Log($"[Evolution] No room to put back {player.Name}'s {def.commonName}."); continue; }
                 var group = colonies.SpawnColony(def, cell, player, Seed(player.Index, i));
                 if (group == null) continue;
                 copy.group = group;
                 copy.cell  = cell;
                 group.BornTurn = copy.bornTurn;
+                group.RestoreCombat(copy.combat); // the same HP and actions left as before the map was rebuilt
                 Track(copy);
                 spawned.Add(group);
             }
@@ -230,6 +255,11 @@ namespace NaturalHistory.Evolution
             cell != null && SpeciesColonies.FitsHabitat(def, cell) && SpeciesColonies.Instance.GroupAt(cell, Niches.Of(def, cell)) == null; // its niche there is free
 
         // Nearest free habitat tile within `radius` steps of `from` (including `from`)
+        private const int RespawnReach = 8; // tiles: how far a copy may be moved if its tile no longer suits it
+
+        private static bool HasAppeared(SpeciesDefinition def) =>
+            HexGrid.Instance == null || !Enum.TryParse(def.firstAge, true, out GeologicalAge first) || HexGrid.Instance.DisplayedAge >= first;
+
         private static HexCell FreeCellNear(SpeciesDefinition def, HexCell from, int radius)
         {
             var grid = HexGrid.Instance;
@@ -266,6 +296,7 @@ namespace NaturalHistory.Evolution
             if (copy?.group == null) { message = Loc.T("Nothing selected"); return false; }
             int wait = TurnsUntilReproduce(copy);
             if (wait > 0) { message = Loc.F(wait == 1 ? "Can reproduce again in {0} turn" : "Can reproduce again in {0} turns", wait); return false; }
+            if (!copy.group.HasActions()) { message = Loc.T("No actions left this turn"); return false; }
             var def  = GameDataLoader.GetSpecies(copy.species);
             var cell = at != null && ReproduceCells(copy).Contains(at) ? at : ReproduceCell(copy);
             if (cell == null) { message = Loc.F("No free {0} next to it", HabitatText(def)); return false; }
@@ -274,6 +305,7 @@ namespace NaturalHistory.Evolution
             var group = SpeciesColonies.Instance.SpawnColony(def, cell, owner, Seed(copy.player, copies.Count + 1) ^ CurrentTurn);
             if (group == null) { message = Loc.T("Couldn't place the young"); return false; }
             copy.lastBred = CurrentTurn;
+            copy.group.SpendActions(1);
             group.BornTurn = CurrentTurn;
             var young = new OwnedCopy { player = copy.player, species = copy.species, group = group, cell = cell, lastBred = CurrentTurn, bornTurn = CurrentTurn };
             copies.Add(young);
@@ -316,6 +348,11 @@ namespace NaturalHistory.Evolution
             bool periodMet = !Enum.TryParse(target.firstAge, true, out GeologicalAge first) || AgeManager.Instance == null || AgeManager.Instance.CurrentAge >= first;
             list.Add(new Requirement(Loc.F("The {0} has begun", Loc.T(target.firstAge)), periodMet));
             list.Add(new Requirement(Loc.F("On or next to {0}", HabitatText(target)), originCopies.Any(c => EvolveCell(c, target) != null)));
+            if (PaysEP(copy))
+            {
+                int ep = ProgressionManager.Instance != null ? ProgressionManager.Instance.EvolutionPoints : 0;
+                list.Add(new Requirement(Loc.F("Needs {0} EP (you have {1})", EvolveCost, ep), ep >= EvolveCost));
+            }
             if (copy != null && copy.JustBorn)
                 list.Add(new Requirement(Loc.T("New this turn: it can act from the next turn"), false));
             if (copy != null ? HasEvolved(link, copy.player) : HasEvolved(link))
@@ -363,6 +400,7 @@ namespace NaturalHistory.Evolution
             to.functions.UnionWith(link.grantFunctions);
             to.behaviors.UnionWith(link.grantBehaviors);
 
+            if (PaysEP(copy)) ProgressionManager.Instance?.SpendPoints(EvolveCost);
             EvolvedBy(copy.player).Add(link.Key);
             copy.species  = link.to;
             copy.group    = group;
@@ -400,7 +438,9 @@ namespace NaturalHistory.Evolution
             {
                 var cell = c.group != null && c.group.Cell != null ? c.group.Cell : c.cell;
                 var (col, row) = cell != null ? cell.Coordinates.ToOffsetCoordinates() : (-1, -1);
-                return new CopySave { player = c.player, species = c.species, col = col, row = row, lastBred = c.lastBred, bornTurn = c.group != null ? c.group.BornTurn : c.bornTurn };
+                var combat = c.group != null ? c.group.CombatNow : c.combat;
+                return new CopySave { player = c.player, species = c.species, col = col, row = row, lastBred = c.lastBred, bornTurn = c.group != null ? c.group.BornTurn : c.bornTurn,
+                                      hp = combat?.hp ?? -1f, actionsLeft = combat?.actionsLeft ?? -1, attacksLeft = combat?.attacksLeft ?? -1, combatTurn = combat?.turn ?? -1 };
             }).ToList();
             // "player:from>to"
             data.evolved = evolved.SelectMany(kv => kv.Value.Select(key => $"{kv.Key}:{key}")).ToList();
@@ -424,7 +464,8 @@ namespace NaturalHistory.Evolution
                 traits[s.species] = t;
             }
             foreach (var c in data.copies ?? new List<CopySave>())
-                copies.Add(new OwnedCopy { player = c.player, species = c.species, cell = HexGrid.Instance?.GetCell(c.col, c.row), lastBred = c.lastBred, bornTurn = c.bornTurn });
+                copies.Add(new OwnedCopy { player = c.player, species = c.species, cell = HexGrid.Instance?.GetCell(c.col, c.row), lastBred = c.lastBred, bornTurn = c.bornTurn,
+                                           combat = c.hp >= 0f ? new CombatState { hp = c.hp, actionsLeft = c.actionsLeft, attacksLeft = c.attacksLeft, turn = c.combatTurn } : null });
             // saves from before players had their own: the human's
             foreach (var e in data.evolved ?? new List<string>())
             {
@@ -469,5 +510,9 @@ namespace NaturalHistory.Evolution
         public int row = -1;
         public int lastBred = -999;
         public int bornTurn = -1;
+        public float hp = -1f;          // -1: full (saves from before combat)
+        public int actionsLeft = -1;
+        public int attacksLeft = -1;
+        public int combatTurn = -1;     // the turn actionsLeft / attacksLeft are for
     }
 }

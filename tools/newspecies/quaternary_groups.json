@@ -1,0 +1,10 @@
+{
+  "Pronghorn": {
+    "tags": "PLAC+['Ungulate']",
+    "path": "ARTIO + '/Ruminantia/Antilocapridae'"
+  },
+  "Pangolin": {
+    "tags": "PLAC",
+    "path": "FERAE + '/Pholidota'"
+  }
+}

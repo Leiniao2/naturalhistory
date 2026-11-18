@@ -30,6 +30,9 @@ namespace NaturalHistory.World
         private HexGrid grid;
         private bool turnsHooked;
         private bool foundersDue; // a new map: the wild founders go out once the habitat centers are set
+        // the game's own wild groups, set aside while Safari Mode fills the map with every species
+        private readonly List<(string species, int col, int row)> beforeSafari = new();
+        private bool safariEnding;
         // the wild groups to put back once the map's groups are rebuilt (species id, offset col, row)
         private readonly List<(string species, int col, int row)> pending = new();
 
@@ -51,6 +54,7 @@ namespace NaturalHistory.World
                 colonies.ColoniesClearing += Remember;
                 colonies.ColoniesPlaced   += PutBack;
             }
+            SpeciesColonies.SafariModeChanging += OnSafari;
             if (grid != null) grid.Generated += Forget;
             HookTurns();
         }
@@ -59,6 +63,7 @@ namespace NaturalHistory.World
         {
             if (colonies != null) { colonies.ColoniesClearing -= Remember; colonies.ColoniesPlaced -= PutBack; }
             if (grid != null) grid.Generated -= Forget;
+            SpeciesColonies.SafariModeChanging -= OnSafari;
             if (turnsHooked && TurnManager.Instance != null) TurnManager.Instance.OnTurnEnd -= OnTurnEnd;
             if (Instance == this) Instance = null;
         }
@@ -108,7 +113,7 @@ namespace NaturalHistory.World
 
         private void OnTurnEnd(int turn)
         {
-            if (colonies == null || grid == null || !grid.IsGenerated) return;
+            if (colonies == null || grid == null || !grid.IsGenerated || SpeciesColonies.SafariMode) return;
             var rng = new System.Random(grid.WorldSeed ^ (turn * 7349));
             if (rng.NextDouble() >= BirthChance) return;
             BirthOne(rng);
@@ -183,16 +188,33 @@ namespace NaturalHistory.World
 
         // ---------- Across periods ----------
 
-        // Before the map's groups are cleared: where the wild ones are
+        // Before the map's groups are cleared: where the wild ones are (in Safari Mode the map places
+        // every species itself; leaving it, the groups set aside on entering come back)
         private void Remember()
         {
             pending.Clear();
+            if (safariEnding) { pending.AddRange(beforeSafari); beforeSafari.Clear(); safariEnding = false; return; }
+            if (SpeciesColonies.SafariMode) return;
+            pending.AddRange(WildNow());
+        }
+
+        private List<(string species, int col, int row)> WildNow()
+        {
+            var list = new List<(string, int, int)>();
             foreach (var g in colonies.Groups)
                 if (g != null && g.Owner == null && g.Definition != null && g.Cell != null)
                 {
                     var (col, row) = g.Cell.Coordinates.ToOffsetCoordinates();
-                    pending.Add((g.Definition.id, col, row));
+                    list.Add((g.Definition.id, col, row));
                 }
+            return list;
+        }
+
+        private void OnSafari(bool on)
+        {
+            if (colonies == null) return;
+            if (on) { beforeSafari.Clear(); beforeSafari.AddRange(WildNow()); }
+            else safariEnding = true;
         }
 
         // After: the ones still alive back on their tile if it still suits them, else on another far one
@@ -222,12 +244,9 @@ namespace NaturalHistory.World
         {
             data.wild.Clear();
             if (colonies == null) return;
-            foreach (var g in colonies.Groups)
-                if (g != null && g.Owner == null && g.Definition != null && g.Cell != null)
-                {
-                    var (col, row) = g.Cell.Coordinates.ToOffsetCoordinates();
-                    data.wild.Add(new WildSave { species = g.Definition.id, col = col, row = row });
-                }
+            // in Safari Mode the game's own wild groups are the ones set aside
+            foreach (var (species, col, row) in SpeciesColonies.SafariMode ? beforeSafari : WildNow())
+                data.wild.Add(new WildSave { species = species, col = col, row = row });
         }
 
         // After the map and the players' copies are back

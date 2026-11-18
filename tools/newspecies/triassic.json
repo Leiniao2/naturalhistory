@@ -1,0 +1,807 @@
+[
+  {
+    "id": "smok_wawelski",
+    "commonName": "Smok",
+    "scientificName": "Smok wawelski",
+    "kingdom": "Animalia",
+    "group": "Rauisuchian pseudosuchian",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Plain",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Dicynodont therapsid"
+    ],
+    "sizeCm": 550,
+    "startingPopulation": 25,
+    "playable": true,
+    "model": "Models/Species/Smok",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.5,
+    "colonySize": 1,
+    "mapAttack": "Bite",
+    "attack": 9,
+    "defense": 4,
+    "hp": 9,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.45
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A big crocodile-line predator about 5 to 6 metres long from the Late Triassic of southern Poland, about 205 million years ago, named after the dragon of Kraków legend. It had a huge, deep skull, strong upright legs and two rows of bony scutes down its back. Its fossil droppings are full of crushed bone, so it bit through and swallowed the skeletons of its prey, a habit otherwise known only from tyrannosaurs."
+  },
+  {
+    "id": "erythrosuchus_africanus",
+    "commonName": "Erythrosuchus",
+    "scientificName": "Erythrosuchus africanus",
+    "kingdom": "Animalia",
+    "group": "Archosauromorph",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Plain",
+      "Wetland",
+      "Savanna"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Dicynodont therapsid",
+      "Cynodont therapsid"
+    ],
+    "sizeCm": 480,
+    "startingPopulation": 25,
+    "playable": true,
+    "model": "Models/Species/Erythrosuchus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.45,
+    "colonySize": 1,
+    "mapAttack": "Bite",
+    "attack": 8,
+    "defense": 3,
+    "hp": 11,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.5
+      }
+    ],
+    "description": "One of the largest land predators of the Early and Middle Triassic, about 245 million years ago in southern Africa, reaching about 5 metres long. Its enormous head made up about a fifth of its length, with long jaws full of big curved teeth, on a bulky body with sturdy half-sprawling legs. One of the first giant archosaur relatives after the end-Permian extinction, it could overpower large plant-eating synapsids, but it was slow and heavy."
+  },
+  {
+    "id": "thalattoarchon_saurophagis",
+    "commonName": "Thalattoarchon",
+    "scientificName": "Thalattoarchon saurophagis",
+    "kingdom": "Animalia",
+    "group": "Ichthyosaur",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Ichthyosaur",
+      "Nothosaur",
+      "Sauropterygian",
+      "Placodont"
+    ],
+    "sizeCm": 860,
+    "startingPopulation": 15,
+    "playable": true,
+    "model": "Models/Species/Thalattoarchon",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Charge",
+    "attack": 10,
+    "defense": 3,
+    "hp": 9,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 1.0
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      }
+    ],
+    "description": "A large ichthyosaur about 8.6 metres long from the Middle Triassic seas of Nevada, about 244 million years ago, whose name means 'lizard-eating ruler of the sea'. Its big skull carried large, blade-like teeth with cutting edges front and back, made for slicing up prey rather than just grabbing fish. It was one of the first sea predators able to kill animals as big as itself, including other marine reptiles."
+  },
+  {
+    "id": "smilosuchus_gregorii",
+    "commonName": "Smilosuchus",
+    "scientificName": "Smilosuchus gregorii",
+    "kingdom": "Animalia",
+    "group": "Phytosaur",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish",
+      "Temnospondyl"
+    ],
+    "sizeCm": 700,
+    "startingPopulation": 20,
+    "playable": true,
+    "model": "Models/Species/Smilosuchus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.58,
+    "colonySize": 1,
+    "mapAttack": "Snap",
+    "attack": 8,
+    "defense": 6,
+    "hp": 10,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.6
+      }
+    ],
+    "description": "One of the largest phytosaurs, up to about 7 metres long, from the Late Triassic rivers of Arizona about 225 million years ago. It looked much like a giant crocodile, with a long, deep snout full of teeth and thick bony armour on its back, but its nostrils sat on a mound just in front of the eyes instead of at the tip of the snout. It lay in wait in the water and seized fish and animals that came to drink."
+  },
+  {
+    "id": "liliensternus_liliensterni",
+    "commonName": "Liliensternus",
+    "scientificName": "Liliensternus liliensterni",
+    "kingdom": "Animalia",
+    "group": "Theropod dinosaur",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Plain",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 515,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/Liliensternus",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.68,
+    "colonySize": 2,
+    "mapAttack": "Pounce",
+    "attack": 8,
+    "defense": 2,
+    "hp": 6,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      }
+    ],
+    "description": "One of the largest predatory dinosaurs of the Triassic, about 5 metres long, from Germany about 210 million years ago. It was a lightly built, long-legged relative of Coelophysis, with a long neck, grasping three-fingered hands and possibly a pair of thin crests along its snout. Fast and agile, it could hunt the young of the big plant-eater Plateosaurus, but its slim frame could not take much punishment."
+  },
+  {
+    "id": "typothorax_coccinarum",
+    "commonName": "Typothorax",
+    "scientificName": "Typothorax coccinarum",
+    "kingdom": "Animalia",
+    "group": "Aetosaur",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Plain",
+      "Wetland",
+      "Savanna"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 350,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/Typothorax",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.35,
+    "mapDefense": "Brace",
+    "colonySize": 2,
+    "attack": 2,
+    "defense": 10,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 1.0
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.35
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.15
+      }
+    ],
+    "description": "A plant-eating, armoured crocodile-line archosaur about 3.5 metres long from the Late Triassic of the south-western United States, about 215 million years ago. Its body was extraordinarily wide and flat, almost as broad as it was long, and covered by a shield of many rows of interlocking bony plates edged with small hooked spikes. With a small head and a blunt, upturned snout for rooting, it was slow and harmless but almost impossible to bite through."
+  },
+  {
+    "id": "lisowicia_bojani",
+    "commonName": "Lisowicia",
+    "scientificName": "Lisowicia bojani",
+    "kingdom": "Animalia",
+    "group": "Dicynodont therapsid",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Plain",
+      "Wetland"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 450,
+    "startingPopulation": 30,
+    "playable": true,
+    "model": "Models/Species/Lisowicia",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.55,
+    "mapAttack": "Ram",
+    "mapDefense": "Brace",
+    "colonySize": 2,
+    "attack": 4,
+    "defense": 4,
+    "hp": 15,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.4
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.2
+      }
+    ],
+    "description": "The largest known relative of mammals that was not itself a mammal: an elephant-sized dicynodont about 4.5 metres long and weighing about 9 tonnes, from Poland about 210 million years ago. Unlike earlier dicynodonts it stood on straight, pillar-like legs, and it cropped plants with a toothless horny beak flanked by two short tusks. Its sheer bulk made it very hard for any predator to bring down."
+  },
+  {
+    "id": "cyamodus_hildegardis",
+    "commonName": "Cyamodus",
+    "scientificName": "Cyamodus hildegardis",
+    "kingdom": "Animalia",
+    "group": "Placodont",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 130,
+    "startingPopulation": 120,
+    "playable": true,
+    "model": "Models/Species/Cyamodus",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 9,
+    "hp": 7,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.95
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.25
+      }
+    ],
+    "description": "A turtle-like placodont about 1.3 metres long from the Middle Triassic seas of Switzerland and Italy, about 240 million years ago. Its broad, flat body was covered by a carapace of fused, knobbly bony plates, with a second small shield over the hips, and its mouth held a few huge, flat teeth for crushing shellfish. Slow in the water, it relied on its armour to shrug off attacks."
+  },
+  {
+    "id": "odontochelys_semitestacea",
+    "commonName": "Odontochelys",
+    "scientificName": "Odontochelys semitestacea",
+    "kingdom": "Animalia",
+    "group": "Stem turtle",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "SaltWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 40,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Odontochelys",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapDefense": "Hide",
+    "attack": 2,
+    "defense": 7,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.45
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      }
+    ],
+    "description": "A turtle with only half a shell, about 40 centimetres long, from the shallow coastal seas of southern China about 220 million years ago. Its belly was already protected by a complete bony plastron, but its back had only broad, flattened ribs, and unlike modern turtles it still had teeth in its jaws and a long tail. The armoured underside shielded it from predators attacking from below as it swam."
+  },
+  {
+    "id": "icarosaurus_siefkeri",
+    "commonName": "Icarosaurus",
+    "scientificName": "Icarosaurus siefkeri",
+    "kingdom": "Animalia",
+    "group": "Kuehneosaurid",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Rainforest",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "tags": [
+      "Flyer"
+    ],
+    "sizeCm": 20,
+    "startingPopulation": 2000,
+    "playable": true,
+    "model": "Models/Species/Icarosaurus",
+    "mapStyle": "Soar",
+    "colonySize": 3,
+    "wingBeat": 0.0,
+    "wingRoot": 0.12,
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.6
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small gliding reptile about 20 centimetres long including its tail, from New Jersey about 220 million years ago. Like the living flying lizard Draco, it had very long ribs sticking out sideways from its body that held up skin wings, letting it glide from tree to tree. It ate insects and was far too small and fragile to fight, escaping instead by launching itself into the air."
+  },
+  {
+    "id": "austriadactylus_cristatus",
+    "commonName": "Austriadactylus",
+    "scientificName": "Austriadactylus cristatus",
+    "kingdom": "Animalia",
+    "group": "Pterosaur",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "SaltWater",
+      "Wetland",
+      "Mountain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 120,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/Austriadactylus",
+    "mapStyle": "Soar",
+    "colonySize": 3,
+    "wingBeat": 3,
+    "wingRoot": 0.12,
+    "attack": 4,
+    "defense": 2,
+    "hp": 4,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.85
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.5
+      }
+    ],
+    "description": "One of the oldest pterosaurs, with a wingspan of about 1.2 metres, from the Late Triassic of the Austrian Alps about 210 million years ago. It had a long, stiff tail, jaws with large front fangs and many small multi-cusped teeth behind, and a thin bony crest along the top of its snout. A quick, agile flier, it probably snatched fish and other small prey."
+  },
+  {
+    "id": "terrestrisuchus_gracilis",
+    "commonName": "Terrestrisuchus",
+    "scientificName": "Terrestrisuchus gracilis",
+    "kingdom": "Animalia",
+    "group": "Early crocodylomorph",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Plain",
+      "Hill"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 90,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Terrestrisuchus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.6,
+    "mapGait": "Run",
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 4,
+    "defense": 1,
+    "hp": 3,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.95
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      }
+    ],
+    "description": "A small, slender relative of crocodiles about 1 metre long, most of it tail, from the Late Triassic of south Wales about 205 million years ago. Unlike its descendants it lived on land, with long, thin, upright legs that made it a fast runner, a small pointed head and a double row of small scutes down its back. It chased insects and lizards, relying on speed rather than strength."
+  },
+  {
+    "id": "silesaurus_opolensis",
+    "commonName": "Silesaurus",
+    "scientificName": "Silesaurus opolensis",
+    "kingdom": "Animalia",
+    "group": "Early ornithischian",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Plain",
+      "Wetland"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Herbivore",
+    "sizeCm": 230,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/Silesaurus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.6,
+    "mapGait": "Run",
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 2,
+    "hp": 5,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.85
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.4
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.4
+      }
+    ],
+    "description": "A slender, long-legged plant-eater about 2.3 metres long from the Late Triassic of Poland, about 230 million years ago, a close relative of the first dinosaurs and perhaps an early bird-hipped dinosaur. It walked on four long, thin legs and had a small head on a long neck, with a toothless, beak-like tip to its lower jaw. It probably ate plants and beetles, and escaped danger by running."
+  },
+  {
+    "id": "drepanosaurus_unguicaudatus",
+    "commonName": "Drepanosaurus",
+    "scientificName": "Drepanosaurus unguicaudatus",
+    "kingdom": "Animalia",
+    "group": "Drepanosaur",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 50,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Drepanosaurus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.5,
+    "colonySize": 2,
+    "mapAttack": "Strike",
+    "attack": 5,
+    "defense": 3,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "climbing",
+        "expression": 0.95
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.3
+      }
+    ],
+    "description": "A strange tree-climbing reptile about 50 centimetres long from the Late Triassic of Italy and New Mexico, about 210 million years ago. It had a bird-like head on a long neck, a humped back and an enormous claw on the second finger of each hand, probably used to tear open bark and rotten wood for insects. Its long tail ended in a bony hook that helped it grip branches."
+  },
+  {
+    "id": "hupehsuchus_nanchangensis",
+    "commonName": "Hupehsuchus",
+    "scientificName": "Hupehsuchus nanchangensis",
+    "kingdom": "Animalia",
+    "group": "Ichthyosaur",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 100,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Hupehsuchus",
+    "mapStyle": "Swim",
+    "mapUndulate": true,
+    "colonySize": 3,
+    "attack": 1,
+    "defense": 6,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      }
+    ],
+    "description": "An odd marine reptile about 1 metre long from the Early Triassic seas of Hubei, China, about 248 million years ago, a close relative of the ichthyosaurs. Its long, flat, toothless snout and stretchy throat suggest that it gulped and strained small prey from the water, rather like a baleen whale. A double layer of bony plates along its back gave it unusual protection."
+  },
+  {
+    "id": "gerrothorax_pulcherrimus",
+    "commonName": "Gerrothorax",
+    "scientificName": "Gerrothorax pulcherrimus",
+    "kingdom": "Animalia",
+    "group": "Temnospondyl",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/Gerrothorax",
+    "mapStyle": "Swim",
+    "mapUndulate": true,
+    "colonySize": 2,
+    "mapAttack": "Snap",
+    "mapDefense": "Hide",
+    "attack": 6,
+    "defense": 5,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "camouflage",
+        "expression": 0.9
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      }
+    ],
+    "description": "A flat, armoured amphibian about 1 metre long that lived on the bottom of Late Triassic lakes and rivers in Germany and Greenland, about 210 million years ago. It had a very broad, short head with small eyes on top, and kept three pairs of feathery external gills throughout its life. Well camouflaged on the bottom, it ambushed passing prey, snapping by lifting its skull rather than dropping its lower jaw."
+  },
+  {
+    "id": "trucidocynodon_riograndensis",
+    "commonName": "Trucidocynodon",
+    "scientificName": "Trucidocynodon riograndensis",
+    "kingdom": "Animalia",
+    "group": "Cynodont therapsid",
+    "firstAge": "Triassic",
+    "lastAge": "Triassic",
+    "habitats": [
+      "Plain",
+      "Wetland",
+      "Savanna"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 120,
+    "startingPopulation": 100,
+    "playable": true,
+    "model": "Models/Species/Trucidocynodon",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.55,
+    "mapGait": "Run",
+    "colonySize": 2,
+    "mapAttack": "Pounce",
+    "attack": 6,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.8
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A large meat-eating cynodont about 1.2 metres long from the Late Triassic of southern Brazil, about 230 million years ago; its name means 'butcher cynodont'. It belonged to the group that gave rise to mammals, with a long, dog-like skull, big canine teeth and long, slender legs. A swift hunter of small animals, it was lightly built and could not take much punishment."
+  }
+]

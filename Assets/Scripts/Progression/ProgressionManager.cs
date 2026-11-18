@@ -106,6 +106,14 @@ namespace NaturalHistory.Progression
             return true;
         }
 
+        // Points spent outside the trees (evolving a copy, EvolutionManager.EvolveCost)
+        public void SpendPoints(int amount)
+        {
+            if (amount <= 0) return;
+            EvolutionPoints = Mathf.Max(0, EvolutionPoints - amount);
+            Changed?.Invoke();
+        }
+
         // Bonus points from outside the trees (e.g. a faction's iconic animal activating)
         public void AddPoints(int amount)
         {

@@ -1,0 +1,899 @@
+[
+ {
+  "id": "rubidgea_atrox",
+  "commonName": "Rubidgea",
+  "scientificName": "Rubidgea atrox",
+  "kingdom": "Animalia",
+  "group": "Gorgonopsian therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Steppe"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Dicynodont therapsid",
+   "Pareiasaur",
+   "Dinocephalian therapsid",
+   "Small animals"
+  ],
+  "sizeCm": 300,
+  "startingPopulation": 30,
+  "playable": true,
+  "model": "Models/Species/Rubidgea",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.5,
+  "colonySize": 1,
+  "mapAttack": "Pounce",
+  "attack": 10,
+  "defense": 3,
+  "hp": 8,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.95
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.45
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the largest African gorgonopsians, about 3 metres long, from the Late Permian of South Africa around 255 million years ago. Its skull was extraordinarily broad and heavy, with flaring cheek bones, rough bony bosses and huge sabre-like upper canines driven by powerful jaw muscles. It delivered some of the most devastating bites of its time and could tackle large dicynodonts and pareiasaurs. Its bulk made it strong but not especially quick."
+ },
+ {
+  "id": "lycaenops_ornatus",
+  "commonName": "Lycaenops",
+  "scientificName": "Lycaenops ornatus",
+  "kingdom": "Animalia",
+  "group": "Gorgonopsian therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Steppe"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "diictodon_feliceps",
+   "cistecephalus_microrhinus",
+   "Small animals"
+  ],
+  "sizeCm": 100,
+  "startingPopulation": 150,
+  "playable": true,
+  "model": "Models/Species/Lycaenops",
+  "mapStyle": "Ground",
+  "mapGait": "Run",
+  "mapLegs": 2,
+  "mapHip": 0.55,
+  "colonySize": 2,
+  "mapAttack": "Pounce",
+  "attack": 5,
+  "defense": 2,
+  "hp": 4,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.9
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "A small, lightly built gorgonopsian about 1 metre long from the Late Permian of South Africa, around 255 million years ago; its name means 'wolf face'. It had long, slender, nearly upright legs, a narrow snout and long sabre-like canines. One of the most agile land predators of the Permian, it ran down small dicynodonts and other small animals, but its light build left it fragile in a fight."
+ },
+ {
+  "id": "titanophoneus_potens",
+  "commonName": "Titanophoneus",
+  "scientificName": "Titanophoneus potens",
+  "kingdom": "Animalia",
+  "group": "Dinocephalian therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Wetland",
+   "Plain"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Dinocephalian therapsid",
+   "Dicynodont therapsid",
+   "Pareiasaur",
+   "Small animals"
+  ],
+  "sizeCm": 250,
+  "startingPopulation": 30,
+  "playable": true,
+  "model": "Models/Species/Titanophoneus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.45,
+  "colonySize": 1,
+  "mapAttack": "Bite",
+  "attack": 8,
+  "defense": 4,
+  "hp": 9,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.35
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.45
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.4
+   }
+  ],
+  "description": "A large predatory dinocephalian about 2.5 metres long from the Middle Permian of the Ural region of Russia, around 265 million years ago; its name means 'titanic murderer'. Its long, deep skull carried big interlocking front teeth for gripping and large canines for tearing, and its heavy body rested on strong, sprawling limbs. It was one of the top predators of its time, able to overpower large plant-eaters."
+ },
+ {
+  "id": "euchambersia_mirabilis",
+  "commonName": "Euchambersia",
+  "scientificName": "Euchambersia mirabilis",
+  "kingdom": "Animalia",
+  "group": "Therocephalian therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Savanna"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "diictodon_feliceps",
+   "cistecephalus_microrhinus",
+   "Small animals"
+  ],
+  "sizeCm": 45,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Euchambersia",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.4,
+  "colonySize": 2,
+  "mapAttack": "Bite",
+  "mapDefense": "Hide",
+  "attack": 8,
+  "defense": 2,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "toxin_production",
+    "expression": 0.85
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.4
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.4
+   }
+  ],
+  "description": "A small therocephalian about 45 centimetres long from the Late Permian of South Africa, around 256 million years ago. Its short, broad skull had a deep pit in front of each eye, linked to its long, ridged canines, which many scientists think held a venom gland. If so, it is the oldest known venomous four-legged animal, able to subdue prey far larger than its size would suggest. Its small, lightly built body offered little protection."
+ },
+ {
+  "id": "prionosuchus_plummeri",
+  "commonName": "Prionosuchus",
+  "scientificName": "Prionosuchus plummeri",
+  "kingdom": "Animalia",
+  "group": "Temnospondyl",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Bony fish",
+   "Xenacanth shark",
+   "Lungfish",
+   "Small animals"
+  ],
+  "sizeCm": 600,
+  "startingPopulation": 20,
+  "playable": true,
+  "model": "Models/Species/Prionosuchus",
+  "mapStyle": "Swim",
+  "colonySize": 1,
+  "mapUndulate": true,
+  "mapAttack": "Snap",
+  "attack": 9,
+  "defense": 4,
+  "hp": 12,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.55
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.6
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.5
+   }
+  ],
+  "description": "The largest amphibian known, perhaps 5.5 to 9 metres long, from the Early Permian rivers and lakes of north-eastern Brazil, around 275 million years ago. It looked much like a giant gharial, with an extremely long, narrow snout lined with sharp teeth, a long, low body and a powerful swimming tail. It lay in wait in the water and snapped up fish and other animals with a sideways sweep of its jaws. Its sheer size made it both a deadly ambusher and very hard to kill."
+ },
+ {
+  "id": "sarcoprion_edax",
+  "commonName": "Sarcoprion",
+  "scientificName": "Sarcoprion edax",
+  "kingdom": "Animalia",
+  "group": "Eugeneodont",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Bony fish",
+   "Ammonite",
+   "Nautiloid cephalopod",
+   "Small animals"
+  ],
+  "sizeCm": 300,
+  "startingPopulation": 40,
+  "playable": true,
+  "model": "Models/Species/Sarcoprion",
+  "mapStyle": "Swim",
+  "colonySize": 1,
+  "mapAttack": "Bite",
+  "attack": 8,
+  "defense": 3,
+  "hp": 6,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.8
+   },
+   {
+    "gene": "electroreception",
+    "expression": 0.5
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "A cartilaginous fish from the Late Permian seas of East Greenland, around 258 million years ago, probably about 3 metres long and a relative of Helicoprion. Its name means 'flesh saw': the front of its lower jaw held a tall, curved whorl of big, blade-like triangular teeth that sliced against the upper jaw. Sleek and streamlined, it was a fast open-water hunter of fish and squid-like cephalopods. Like Helicoprion, it was more closely related to ratfishes than to true sharks."
+ },
+ {
+  "id": "secodontosaurus_obtusidens",
+  "commonName": "Secodontosaurus",
+  "scientificName": "Secodontosaurus obtusidens",
+  "kingdom": "Animalia",
+  "group": "Sphenacodont synapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "captorhinus_aguti",
+   "cacops_aspidephorus",
+   "Lepospondyl",
+   "Small animals"
+  ],
+  "sizeCm": 200,
+  "startingPopulation": 40,
+  "playable": true,
+  "model": "Models/Species/Secodontosaurus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.3,
+  "colonySize": 1,
+  "mapAttack": "Snap",
+  "attack": 8,
+  "defense": 3,
+  "hp": 6,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.55
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.35
+   }
+  ],
+  "description": "A sail-backed sphenacodont about 2 metres long from the Early Permian of Texas, around 280 million years ago, and a close relative of Dimetrodon. It carried a tall sail on long spines along its back, but its snout was strikingly long, low and narrow, earning it the nickname 'fox-faced Dimetrodon'. Its slender jaws and blade-like teeth were probably used to snatch small animals out of burrows and crevices with quick, precise bites."
+ },
+ {
+  "id": "elginia_mirabilis",
+  "commonName": "Elginia",
+  "scientificName": "Elginia mirabilis",
+  "kingdom": "Animalia",
+  "group": "Pareiasaur",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Desert",
+   "Steppe"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 60,
+  "startingPopulation": 250,
+  "playable": true,
+  "model": "Models/Species/Elginia",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.45,
+  "colonySize": 2,
+  "mapDefense": "Brace",
+  "attack": 2,
+  "defense": 10,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.95
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.15
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.4
+   }
+  ],
+  "description": "A small pareiasaur, only about 60 centimetres long, from the Late Permian of northern Scotland, around 255 million years ago. Its compact, armoured body was studded with bony knobs, and its head bristled with the most elaborate set of horns and spikes of any pareiasaur, including a pair of long horns at the back of the skull. A slow plant-eater, it relied on this spiky armour rather than speed, which made it a very painful mouthful for any predator."
+ },
+ {
+  "id": "bunostegos_akokanensis",
+  "commonName": "Bunostegos",
+  "scientificName": "Bunostegos akokanensis",
+  "kingdom": "Animalia",
+  "group": "Pareiasaur",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Desert",
+   "Steppe",
+   "Plain"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 200,
+  "startingPopulation": 50,
+  "playable": true,
+  "model": "Models/Species/Bunostegos",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.5,
+  "colonySize": 2,
+  "mapDefense": "Brace",
+  "attack": 3,
+  "defense": 8,
+  "hp": 13,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.85
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.8
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.25
+   }
+  ],
+  "description": "A cow-sized pareiasaur about 2 metres long from the Late Permian of Niger, around 255 million years ago, when the region lay in the dry heart of the supercontinent Pangaea. Its name means 'knobby roof': its skull was covered with big, rounded bony bulges, and its heavy body was clad in bony armour. Unusually for a pareiasaur, it held its legs fairly upright beneath the body. Massive, armoured and hardy in the desert heat, it was very hard to bring down."
+ },
+ {
+  "id": "aulacephalodon_bainii",
+  "commonName": "Aulacephalodon",
+  "scientificName": "Aulacephalodon bainii",
+  "kingdom": "Animalia",
+  "group": "Dicynodont therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Wetland"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 200,
+  "startingPopulation": 60,
+  "playable": true,
+  "model": "Models/Species/Aulacephalodon",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.4,
+  "colonySize": 2,
+  "mapAttack": "Charge",
+  "mapDefense": "Brace",
+  "attack": 4,
+  "defense": 5,
+  "hp": 14,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.45
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.5
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the largest dicynodonts of the Late Permian, about 2 metres long, from South Africa around 256 million years ago. It had a very broad, heavy skull with a toothless horny beak, a pair of tusks and big, rough bosses on the snout, possibly used in shoving contests between rivals. Its massive, barrel-shaped body gave it great staying power, letting it absorb punishment that would kill smaller plant-eaters."
+ },
+ {
+  "id": "tapinocephalus_atherstonei",
+  "commonName": "Tapinocephalus",
+  "scientificName": "Tapinocephalus atherstonei",
+  "kingdom": "Animalia",
+  "group": "Dinocephalian therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Wetland",
+   "Savanna"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 300,
+  "startingPopulation": 40,
+  "playable": true,
+  "model": "Models/Species/Tapinocephalus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.45,
+  "colonySize": 2,
+  "mapAttack": "Ram",
+  "mapDefense": "Brace",
+  "attack": 5,
+  "defense": 8,
+  "hp": 12,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.75
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.5
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.2
+   }
+  ],
+  "description": "A massive plant-eating dinocephalian about 3 metres long and weighing perhaps 1.5 to 2 tonnes, from the Middle Permian of South Africa around 263 million years ago. The roof of its skull was thickened into a broad bony dome up to 10 centimetres thick, which it probably used in head-butting contests. Its heavy, deep-chested body and armoured head made it a formidable opponent, though it was slow-moving."
+ },
+ {
+  "id": "cacops_aspidephorus",
+  "commonName": "Cacops",
+  "scientificName": "Cacops aspidephorus",
+  "kingdom": "Animalia",
+  "group": "Temnospondyl",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 40,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Cacops",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.35,
+  "colonySize": 2,
+  "mapDefense": "Hide",
+  "attack": 3,
+  "defense": 8,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.8
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.65
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.3
+   }
+  ],
+  "description": "A stocky, land-living amphibian about 40 centimetres long from the Early Permian of Texas and Oklahoma, around 280 million years ago. It had a large, broad head with big eyes and a large ear notch, and a double row of interlocking bony plates ran down its back like a shield. Better armoured than almost any other amphibian of its size, it hunted insects and small animals on land and was tough for predators to crack."
+ },
+ {
+  "id": "glaurung_schneideri",
+  "commonName": "Glaurung",
+  "scientificName": "Glaurung schneideri",
+  "kingdom": "Animalia",
+  "group": "Weigeltisaurid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Rainforest",
+   "Plain"
+  ],
+  "diet": "Carnivore",
+  "tags": [
+   "Flyer"
+  ],
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 40,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Glaurung",
+  "mapStyle": "Soar",
+  "colonySize": 3,
+  "wingRoot": 0.12,
+  "mapDefense": "Scatter",
+  "attack": 3,
+  "defense": 1,
+  "hp": 3,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "flight_capability",
+    "expression": 0.7
+   },
+   {
+    "gene": "climbing",
+    "expression": 0.8
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   }
+  ],
+  "description": "A gliding reptile about 40 centimetres long from the Late Permian of Germany, around 256 million years ago, named after Glaurung, the first of the dragons in Tolkien's tales. Long rods of bone growing from its flanks supported skin wings that let it glide swiftly from tree to tree, and the back of its skull bore a broad frill of spikes. It hunted insects in the trees and escaped danger by launching into the air, but its delicate body could not take much punishment."
+ },
+ {
+  "id": "dunbaria_fasciipennis",
+  "commonName": "Dunbaria",
+  "scientificName": "Dunbaria fasciipennis",
+  "kingdom": "Animalia",
+  "group": "Palaeodictyopteran",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Wetland",
+   "Rainforest",
+   "Plain"
+  ],
+  "diet": "Herbivore",
+  "tags": [
+   "Flyer"
+  ],
+  "sizeCm": 2,
+  "startingPopulation": 5000,
+  "playable": true,
+  "model": "Models/Species/Dunbaria",
+  "mapStyle": "Swarm",
+  "colonySize": 4,
+  "mapScale": 1.2,
+  "wingBeat": 6,
+  "wingRoot": 0.06,
+  "mapDefense": "Scatter",
+  "attack": 1,
+  "defense": 1,
+  "hp": 3,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "flight_capability",
+    "expression": 0.85
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.8
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.4
+   }
+  ],
+  "description": "A small palaeodictyopteran insect from the Early Permian of Kansas, around 275 million years ago, with a wingspan of only a few centimetres. Its four broad wings, held straight out like those of a dragonfly, were boldly crossed by dark bands, and it used a sharp, beak-like mouth to pierce plants and suck their sap. Agile in the air and breeding in great numbers, it survived by flying off and swarming rather than by fighting."
+ },
+ {
+  "id": "eudibamus_cursoris",
+  "commonName": "Eudibamus",
+  "scientificName": "Eudibamus cursoris",
+  "kingdom": "Animalia",
+  "group": "Early reptile",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Hill"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 25,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Eudibamus",
+  "mapStyle": "Ground",
+  "mapGait": "Run",
+  "mapLegs": 1,
+  "mapHip": 0.55,
+  "colonySize": 3,
+  "mapDefense": "Scatter",
+  "attack": 1,
+  "defense": 1,
+  "hp": 3,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "land_speed",
+    "expression": 0.95
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small reptile about 25 centimetres long from the Early Permian of central Germany, around 290 million years ago, and the oldest known animal able to run on two legs. Its hind legs were much longer than its arms and it ran on its toes, holding its long tail out behind as a counterbalance. A plant-eater, it escaped predators by sprinting away on its hind legs, but it was too small and frail to fight back."
+ },
+ {
+  "id": "hovasaurus_boulei",
+  "commonName": "Hovasaurus",
+  "scientificName": "Hovasaurus boulei",
+  "kingdom": "Animalia",
+  "group": "Early reptile",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Bony fish",
+   "Small animals"
+  ],
+  "sizeCm": 60,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Hovasaurus",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapScale": 1.4,
+  "mapUndulate": true,
+  "attack": 3,
+  "defense": 2,
+  "hp": 4,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.85
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.4
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.4
+   }
+  ],
+  "description": "An aquatic reptile about 60 centimetres long from the Late Permian lakes of Madagascar, around 255 million years ago. Nearly two thirds of its length was a long, deep, flattened tail that it swung from side to side to swim, and it swallowed small stones that acted as ballast. A quick, agile swimmer, it chased small fish and other small water animals, but its slim body was easily hurt."
+ },
+ {
+  "id": "cistecephalus_microrhinus",
+  "commonName": "Cistecephalus",
+  "scientificName": "Cistecephalus microrhinus",
+  "kingdom": "Animalia",
+  "group": "Dicynodont therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Steppe"
+  ],
+  "diet": "Omnivore",
+  "mainDiet": "Herbivore",
+  "tags": [
+   "Burrower"
+  ],
+  "sizeCm": 30,
+  "startingPopulation": 700,
+  "playable": true,
+  "model": "Models/Species/Cistecephalus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.3,
+  "colonySize": 3,
+  "mapDefense": "Hide",
+  "attack": 2,
+  "defense": 5,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "burrowing",
+    "expression": 0.95
+   },
+   {
+    "gene": "omnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   },
+   {
+    "gene": "cold_tolerance",
+    "expression": 0.4
+   }
+  ],
+  "description": "A small, mole-like dicynodont about 30 centimetres long from the Late Permian of South Africa, Zambia and India, around 256 million years ago. Its flat, wedge-shaped head and short, massively built forelimbs with broad claws were made for digging, and it probably spent much of its life underground like a modern mole, feeding on roots and perhaps insects. Hidden in its burrows it was hard for predators to reach, but in the open it was slow and clumsy."
+ },
+ {
+  "id": "captorhinus_aguti",
+  "commonName": "Captorhinus",
+  "scientificName": "Captorhinus aguti",
+  "kingdom": "Animalia",
+  "group": "Early reptile",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Wetland"
+  ],
+  "diet": "Omnivore",
+  "mainDiet": "Carnivore",
+  "sizeCm": 25,
+  "startingPopulation": 800,
+  "playable": true,
+  "model": "Models/Species/Captorhinus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.3,
+  "colonySize": 3,
+  "mapDefense": "Scatter",
+  "attack": 2,
+  "defense": 2,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "regeneration",
+    "expression": 0.85
+   },
+   {
+    "gene": "omnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.4
+   }
+  ],
+  "description": "A small, lizard-like reptile about 25 centimetres long from the Early Permian of Texas and Oklahoma, around 285 million years ago. Its broad head held several rows of teeth for crushing insects and tough plant food. It is one of the earliest animals known to shed its tail when grabbed by a predator, along weak planes in the tail bones, and then regrow it. This trick let it survive attacks that would kill most small animals."
+ }
+]

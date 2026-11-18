@@ -1,0 +1,696 @@
+[
+ {
+  "id": "actinoceras_bigsbyi",
+  "commonName": "Actinoceras",
+  "scientificName": "Actinoceras bigsbyi",
+  "kingdom": "Animalia",
+  "group": "Nautiloid cephalopod",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Trilobite",
+   "Small animals"
+  ],
+  "sizeCm": 100,
+  "startingPopulation": 50,
+  "playable": true,
+  "model": "Models/Species/ActinocerasBigsbyi",
+  "mapStyle": "Swim",
+  "mapBackward": true,
+  "colonySize": 2,
+  "mapScale": 0.8,
+  "attack": 9,
+  "defense": 5,
+  "hp": 9,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.3
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "A big straight-shelled nautiloid from the Middle and Late Ordovician seas of North America, with a heavy, spindle-shaped shell up to about a metre long. A broad, bead-like tube loaded with mineral deposits ran down the middle of the shell as ballast, so it swam slowly and kept close to the sea floor. Its strong arms and beak made it one of the hardest-hitting predators of its time, able to tear apart trilobites and other armoured prey."
+ },
+ {
+  "id": "proterovaginoceras_incognitum",
+  "commonName": "Proterovaginoceras",
+  "scientificName": "Proterovaginoceras incognitum",
+  "kingdom": "Animalia",
+  "group": "Nautiloid cephalopod",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Trilobite",
+   "Small animals"
+  ],
+  "sizeCm": 120,
+  "startingPopulation": 70,
+  "playable": true,
+  "model": "Models/Species/ProterovaginocerasIncognitum",
+  "mapStyle": "Swim",
+  "mapBackward": true,
+  "colonySize": 2,
+  "mapScale": 0.85,
+  "attack": 7,
+  "defense": 6,
+  "hp": 13,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.7
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.25
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "The commonest cephalopod of the Early and Middle Ordovician seas of Baltica, so abundant that a Scandinavian limestone was once named after it. An endocerid, it had a long, smooth, straight shell probably a metre or more long, with a wide tube along the belly filled with stacked cone-shaped deposits that acted as ballast. Big, heavily built and hard to kill, it cruised slowly over the sea floor hunting trilobites and other prey."
+ },
+ {
+  "id": "gonioceras_anceps",
+  "commonName": "Gonioceras",
+  "scientificName": "Gonioceras anceps",
+  "kingdom": "Animalia",
+  "group": "Nautiloid cephalopod",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Trilobite",
+   "Small animals"
+  ],
+  "sizeCm": 50,
+  "startingPopulation": 80,
+  "playable": true,
+  "model": "Models/Species/GoniocerasAnceps",
+  "mapStyle": "Swim",
+  "mapBackward": true,
+  "colonySize": 2,
+  "mapScale": 0.75,
+  "mapDefense": "Hide",
+  "attack": 6,
+  "defense": 6,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "camouflage",
+    "expression": 0.8
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.15
+   }
+  ],
+  "description": "An odd nautiloid from the Middle Ordovician of North America whose straight shell was squashed flat: several times wider than high, with an arched back, a flat belly and sharp, keel-like edges, like a long, flattened spearhead. It probably lay still on the sea floor, its low, broad shell blending into the bottom, and ambushed trilobites and worms that came too close. Its flat shape made it hard to spot and hard to flip over."
+ },
+ {
+  "id": "echinognathus_clevelandi",
+  "commonName": "Echinognathus",
+  "scientificName": "Echinognathus clevelandi",
+  "kingdom": "Animalia",
+  "group": "Eurypterid",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Trilobite",
+   "Small animals"
+  ],
+  "sizeCm": 45,
+  "startingPopulation": 70,
+  "playable": true,
+  "model": "Models/Species/EchinognathusClevelandi",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapScale": 0.85,
+  "mapAttack": "Strike",
+  "attack": 8,
+  "defense": 4,
+  "hp": 6,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.5
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.4
+   }
+  ],
+  "description": "A sea scorpion about 45 cm long from the Late Ordovician of New York State, a close relative of Megalograptus. Its name means 'spiny jaw': its front limbs bristled with long, sharp, paired spines for seizing prey and holding it to the mouth. Heavily armed and quick to strike, it was one of the most dangerous hunters of its sea floor, though its thin armour left it vulnerable."
+ },
+ {
+  "id": "parabarrandia_crassa",
+  "commonName": "Parabarrandia",
+  "scientificName": "Parabarrandia crassa",
+  "kingdom": "Animalia",
+  "group": "Trilobite",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 9,
+  "startingPopulation": 250,
+  "playable": true,
+  "model": "Models/Species/ParabarrandiaCrassa",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.6,
+  "attack": 3,
+  "defense": 2,
+  "hp": 4,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.9
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.8
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   }
+  ],
+  "description": "A streamlined, torpedo-shaped trilobite up to about 10 cm long from the Middle Ordovician of Bohemia and Iberia. Its long, smooth, highly arched shield had no spines, and very large eyes wrapped round the sides of its head. Unlike most trilobites it lived in open water as a fast-swimming hunter of small animals, but its light shell made it fragile in a fight."
+ },
+ {
+  "id": "iowagnathus_grandis",
+  "commonName": "Iowagnathus",
+  "scientificName": "Iowagnathus grandis",
+  "kingdom": "Animalia",
+  "group": "Conodont",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 50,
+  "startingPopulation": 150,
+  "playable": true,
+  "model": "Models/Species/IowagnathusGrandis",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.75,
+  "mapUndulate": true,
+  "mapAttack": "Bite",
+  "attack": 6,
+  "defense": 2,
+  "hp": 5,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.8
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.7
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   }
+  ],
+  "description": "A giant predatory conodont from the Middle Ordovician of Iowa, about 460 million years ago, known from complete feeding apparatuses of fifteen tooth-like elements up to 1.6 cm long, huge for a conodont. Its soft body is unknown, but it was probably an eel-like swimmer much larger than most of its relatives. A fast, active hunter of open water, it could tackle bigger prey than other conodonts but had no armour to protect it."
+ },
+ {
+  "id": "panderodus_gracilis",
+  "commonName": "Panderodus",
+  "scientificName": "Panderodus gracilis",
+  "kingdom": "Animalia",
+  "group": "Conodont",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 4,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/PanderodusGracilis",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "mapUndulate": true,
+  "mapAttack": "Bite",
+  "attack": 7,
+  "defense": 1,
+  "hp": 3,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "toxin_production",
+    "expression": 0.8
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.7
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   }
+  ],
+  "description": "A small, slender conodont a few centimetres long; Panderodus was one of the longest-lived and most widespread conodonts. Its flattened, eel-like body carried a grasping apparatus of long, slender, fang-like cones, each with a deep groove along its side that may have carried venom, which would make it one of the oldest venomous animals known. Tiny and fragile but quick, it could subdue prey far tougher than itself."
+ },
+ {
+  "id": "eriptychius_americanus",
+  "commonName": "Eriptychius",
+  "scientificName": "Eriptychius americanus",
+  "kingdom": "Animalia",
+  "group": "Jawless vertebrate",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 18,
+  "startingPopulation": 200,
+  "playable": true,
+  "model": "Models/Species/EriptychiusAmericanus",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.7,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 8,
+  "hp": 9,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.9
+   },
+   {
+    "gene": "filter_feeding",
+    "expression": 0.6
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.4
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.2
+   }
+  ],
+  "description": "One of the oldest armoured fish, a jawless vertebrate from the Late Ordovician coastal seas of Colorado, about 455 million years ago. Its head was encased in a shield of many small bony plates carved with fine ridges, and inside lay one of the oldest known cartilage braincases. Slow and toothless, it fed on small particles near the bottom, trusting its heavy armour to protect it."
+ },
+ {
+  "id": "hungioides_bohemicus",
+  "commonName": "Hungioides",
+  "scientificName": "Hungioides bohemicus",
+  "kingdom": "Animalia",
+  "group": "Trilobite",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 50,
+  "startingPopulation": 60,
+  "playable": true,
+  "model": "Models/Species/HungioidesBohemicus",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapScale": 1.0,
+  "attack": 3,
+  "defense": 6,
+  "hp": 14,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.7
+   },
+   {
+    "gene": "cold_tolerance",
+    "expression": 0.5
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.4
+   }
+  ],
+  "description": "One of the largest trilobites that ever lived, from the Middle Ordovician of Portugal, Spain and Bohemia: complete shields over 40 cm long are known, and some may have reached 60 cm or more. Its broad, flat, oval body had short cheek spines and a big, wide tail shield. It lived in cool, muddy seas on the edge of the southern supercontinent Gondwana, and its sheer size made it very hard for predators to kill."
+ },
+ {
+  "id": "boedaspis_ensifer",
+  "commonName": "Boedaspis",
+  "scientificName": "Boedaspis ensifer",
+  "kingdom": "Animalia",
+  "group": "Trilobite",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 6,
+  "startingPopulation": 200,
+  "playable": true,
+  "model": "Models/Species/BoedaspisEnsifer",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.6,
+  "mapDefense": "Brace",
+  "attack": 2,
+  "defense": 9,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.9
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "Perhaps the spiniest of all trilobites, from the Middle Ordovician of the St Petersburg region of Russia. Its small, flat body was ringed with long, slender spines growing from its cheeks, every body segment and its tail, and a pair of very long spines rose from the back of its head and swept back over its body. The spines made it a painful mouthful for any predator, but it was a slow crawler with little bite of its own."
+ },
+ {
+  "id": "bumastoides_milleri",
+  "commonName": "Bumastoides",
+  "scientificName": "Bumastoides milleri",
+  "kingdom": "Animalia",
+  "group": "Trilobite",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 4,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/BumastoidesMilleri",
+  "mapStyle": "Swim",
+  "tags": [
+   "Burrower"
+  ],
+  "colonySize": 3,
+  "mapScale": 0.5,
+  "mapDefense": "Hide",
+  "attack": 2,
+  "defense": 7,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "burrowing",
+    "expression": 0.9
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.5
+   }
+  ],
+  "description": "A smooth, rounded trilobite a few centimetres long from the Late Ordovician of eastern North America. Its head and tail shields were very strongly arched and almost featureless, and its small eyes sat far back on the head. It probably spent most of its life sitting in a burrow with only the front of its head showing, feeding on particles in the water; tucked into the sediment it was very hard for predators to dig out."
+ },
+ {
+  "id": "maclurites_magnus",
+  "commonName": "Maclurites",
+  "scientificName": "Maclurites magnus",
+  "kingdom": "Animalia",
+  "group": "Sea snail",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 8,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/MacluritesMagnus",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.8,
+  "mapDefense": "Hide",
+  "attack": 1,
+  "defense": 10,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.95
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "A large, heavy sea snail from the Middle Ordovician of North America, several centimetres to more than 8 cm across, with a thick shell coiled almost flat. Its foot carried a very thick, horn-shaped lid of shell that sealed the big opening like a trapdoor and may also have anchored the snail to the bottom. Shut inside, it was nearly impossible to crack, though it could do little more than graze and wait."
+ },
+ {
+  "id": "pleurocystites_squamosus",
+  "commonName": "Pleurocystites",
+  "scientificName": "Pleurocystites squamosus",
+  "kingdom": "Animalia",
+  "group": "Cystoid",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 3,
+  "startingPopulation": 800,
+  "playable": true,
+  "model": "Models/Species/PleurocystitesSquamosus",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.6,
+  "attack": 1,
+  "defense": 7,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.4
+   }
+  ],
+  "description": "An unusual 'cystoid' echinoderm a few centimetres long from the Late Ordovician of Britain and North America. Unlike most of its relatives it was not fixed to the sea floor: its flattened, plated body lay on the mud, with two long feeding arms reaching forward and a flexible, muscular stem behind that it probably used to push itself along. Low and armour-plated, it was an awkward target for predators as it crept about picking up food from the mud."
+ },
+ {
+  "id": "conularia_trentonensis",
+  "commonName": "Conularia",
+  "scientificName": "Conularia trentonensis",
+  "kingdom": "Animalia",
+  "group": "Jellyfish",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 8,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/ConulariaTrentonensis",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.6,
+  "attack": 6,
+  "defense": 4,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "toxin_production",
+    "expression": 0.8
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   }
+  ],
+  "description": "A conulariid from the Late Ordovician seas of Ontario, Quebec and New York, a relative of jellyfish that lived in a tall, slender, four-sided pyramid of thin, flexible skeleton several centimetres long, finely ribbed across each face. Its narrow end was attached to a shell or the sea floor, and from the wide end it probably spread a crown of stinging tentacles to catch passing prey. When threatened it could fold four triangular flaps shut over the opening."
+ },
+ {
+  "id": "grewingkia_canadensis",
+  "commonName": "Grewingkia",
+  "scientificName": "Grewingkia canadensis",
+  "kingdom": "Animalia",
+  "group": "Rugose coral",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 10,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/GrewingkiaCanadensis",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.6,
+  "attack": 2,
+  "defense": 8,
+  "hp": 10,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.8
+   },
+   {
+    "gene": "filter_feeding",
+    "expression": 0.6
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.5
+   }
+  ],
+  "description": "The only large Ordovician horn coral, common in the Late Ordovician seas of Kentucky, Indiana, Ohio and Ontario. Each polyp lived alone in a thick, curved, cone-shaped skeleton usually 4-8 cm and up to 13 cm long, lying on the soft sea floor; its deep cup was lined with many crowded ridges whose inner ends twisted together into a raised knot in the middle. Its heavy skeleton made it very hard to damage, and old shells often became homes for encrusting bryozoans."
+ },
+ {
+  "id": "plumulites_bengtsoni",
+  "commonName": "Plumulites",
+  "scientificName": "Plumulites bengtsoni",
+  "kingdom": "Animalia",
+  "group": "Annelid",
+  "firstAge": "Ordovician",
+  "lastAge": "Ordovician",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 3,
+  "startingPopulation": 500,
+  "playable": true,
+  "model": "Models/Species/PlumulitesBengtsoni",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "mapUndulate": true,
+  "mapAttack": "Bite",
+  "attack": 2,
+  "defense": 8,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.85
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.5
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.5
+   }
+  ],
+  "description": "An armoured worm a few centimetres long from the Early Ordovician of Morocco, one of the machaeridians, a long-puzzling group now known to be annelids related to today's scaleworms. Its back was covered from end to end by rows of overlapping, ridged calcite plates like roof tiles, with bristly paddle-like legs and a pair of small jaws beneath. It crawled over and into the sea-floor mud, and most small predators could not bite through its plates."
+ }
+]

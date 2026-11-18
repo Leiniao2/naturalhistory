@@ -68,9 +68,30 @@ FIXES = {
                             "wingless hexapod with a plump elongated body, short four-segmented antennae, three pairs of "
                             "short legs and a forked jumping organ (furcula) folded under its tail; shown huge in close-up "
                             "on a moss-covered Devonian plant stem.",
+    "selenidium_pendula":   "It is ONE single cell, not a worm: smooth, slender and elongated, its surface marked with fine "
+                            "lengthwise folds (no rings or segments, no head, no legs), translucent with a visible nucleus.",
     "longisquama_insignis": "Close-up: the small lizard-like reptile fills most of the frame and is clearly visible, sharp and "
                             "in focus, with its row of long, tall, feather-like plumes standing up along its back; the "
                             "plants are only a soft, blurred background.",
+}
+
+
+# internal parasites: painted inside their host, not in the landscape their hosts live in
+INSIDE = {
+    "selenidium_pendula":       "inside the gut of a marine worm: a glistening tube of pink-red gut wall and folds, lit softly from within",
+    "entamoeba_histolytica":    "inside a primate's large intestine: moist pink-red gut lining with folds and mucus, softly lit",
+    "giardia_duodenalis":       "inside a mammal's small intestine, clinging to a carpet of finger-like pink villi, softly lit",
+    "trichomonas_gallinae":     "inside a bird's throat: moist pink mucous lining, softly lit",
+    "trypanosoma_brucei":       "in a mammal's bloodstream: flowing red plasma among red blood cells inside a vessel",
+    "plasmodium_falciparum":    "in human blood: inside and among red blood cells in a flowing vessel",
+    "trichonympha_campanula":   "inside a termite's hindgut, crowded with wood fragments and other microbes, warm amber-pink gut wall",
+    "trichonympha_collaris":    "inside a termite's hindgut, crowded with wood fragments and other microbes, warm amber-pink gut wall",
+    "taenia_solium":            "inside a human small intestine: the scolex hooked into pink folds and villi of the gut wall, the long ribbon trailing through it",
+    "taenia_saginata":          "inside a human small intestine: the scolex anchored in pink folds and villi of the gut wall, the very long ribbon trailing through it",
+    "echinococcus_granulosus":  "inside a dog's small intestine, among pink finger-like villi",
+    "spirometra_mansoni":       "inside a cat's small intestine, among pink folds and villi of the gut wall",
+    "demodex_folliculorum":     "inside a human hair follicle: head-down in a narrow sheath of skin beside the hair shaft, magnified",
+    "otodectes_cynotis":        "deep in a cat's ear canal among skin flakes, wax and fine hairs, magnified",
 }
 
 
@@ -87,6 +108,8 @@ def size_text(cm):
 
 
 def backdrop(s):
+    if s["id"] in INSIDE:
+        return INSIDE[s["id"]]
     age = s.get("firstAge")
     habitats = s.get("habitats") or ["SaltWater"]
     h = habitats[0]
@@ -105,10 +128,12 @@ def prompt(s):
     name = s["commonName"]
     sci = s.get("scientificName") or ""
     who = f"{name} ({sci})" if sci and sci != name else name
-    bits = [b for b in (POSE.get(s.get("mapStyle") or "", ""), size_text(s.get("sizeCm"))) if b]
+    inside = s["id"] in INSIDE
+    pose = "" if inside else POSE.get(s.get("mapStyle") or "", "")
+    bits = [b for b in (pose, size_text(s.get("sizeCm"))) if b]
     group = (s.get("group") or "animal").lower()
     head = f"{who}, {'an' if group[0] in 'aeiou' else 'a'} {group}" + (f", {', '.join(bits)}" if bits else "")
-    head += f", in {backdrop(s)}."
+    head += f", {backdrop(s)} (stylised and clean, not gory)." if inside else f", in {backdrop(s)}."
     fix = FIXES.get(s["id"])
     return f"{head} Appearance: {short(s.get('description') or '')}" + (f" {fix}" if fix else "")
 

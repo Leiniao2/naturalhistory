@@ -1,0 +1,14 @@
+{
+  "Oxyaenid": {
+    "tags": "PLAC",
+    "path": "FERAE + '/Oxyaenodonta'"
+  },
+  "Palaeanodont": {
+    "tags": "PLAC",
+    "path": "FERAE + '/Pholidotamorpha'"
+  },
+  "Salamander": {
+    "tags": "TET+['Amphibian']",
+    "path": "AMPHIBIA + '/Temnospondyli/Lissamphibia/Caudata'"
+  }
+}

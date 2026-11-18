@@ -1,0 +1,760 @@
+[
+  {
+    "id": "physornis_fortis",
+    "commonName": "Physornis",
+    "scientificName": "Physornis fortis",
+    "kingdom": "Animalia",
+    "group": "Terror bird",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Steppe"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 230,
+    "startingPopulation": 25,
+    "playable": true,
+    "model": "Models/Species/PhysornisFortis",
+    "mapStyle": "Ground",
+    "mapGait": "Run",
+    "mapLegs": 1,
+    "mapHip": 0.48,
+    "colonySize": 1,
+    "mapAttack": "Strike",
+    "attack": 9,
+    "defense": 3,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 1.0
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.5
+      }
+    ],
+    "description": "One of the largest terror birds of the Oligocene of Patagonia, a flightless predator about 2 m tall. It was heavier and slower than its lanky later relatives, but its huge, deep, hooked beak could split open prey with downward hatchet blows. Its beak strike was among the hardest blows of any Paleogene hunter, but it had little to protect itself in a drawn-out fight."
+  },
+  {
+    "id": "sarkastodon_mongoliensis",
+    "commonName": "Sarkastodon",
+    "scientificName": "Sarkastodon mongoliensis",
+    "kingdom": "Animalia",
+    "group": "Oxyaenid",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Hill",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Brontothere",
+      "Entelodont",
+      "Side-necked turtle",
+      "Small animals"
+    ],
+    "sizeCm": 300,
+    "startingPopulation": 15,
+    "playable": true,
+    "model": "Models/Species/SarkastodonMongoliensis",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.29,
+    "colonySize": 1,
+    "mapAttack": "Bite",
+    "attack": 10,
+    "defense": 4,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 1.0
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.2
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.4
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.2
+      }
+    ],
+    "description": "A giant oxyaenid from the late Eocene of Mongolia, a bear-sized and bear-shaped meat-eater about 3 m long that may have weighed 800 kg. Its broad skull held huge canines and blunt, crushing cheek teeth that could crack bones and turtle shells. Its bite was devastating, but it walked flat-footed on short legs and could not chase down fast prey."
+  },
+  {
+    "id": "titanonarke_molini",
+    "commonName": "Titanonarke",
+    "scientificName": "Titanonarke molini",
+    "kingdom": "Animalia",
+    "group": "Ray",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 50,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/TitanonarkeMolini",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapAttack": "Shock",
+    "mapDefense": "Hide",
+    "attack": 8,
+    "defense": 2,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "electroreception",
+        "expression": 0.9
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.2
+      }
+    ],
+    "description": "An early electric ray from the Eocene seas of northern Italy, about half a metre long. Its round, soft disc held two large electric organs that could stun fish with a powerful shock, so it could swallow them whole. It lay half buried in the sand to ambush prey; the shock was its only weapon, as its flabby body had no armour."
+  },
+  {
+    "id": "boverisuchus_magnifrontis",
+    "commonName": "Boverisuchus",
+    "scientificName": "Boverisuchus magnifrontis",
+    "kingdom": "Animalia",
+    "group": "Crocodilian",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Rainforest",
+      "Wetland",
+      "Plain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Equid",
+      "Primate",
+      "Leptictid",
+      "Small animals"
+    ],
+    "sizeCm": 300,
+    "startingPopulation": 30,
+    "playable": true,
+    "model": "Models/Species/BoverisuchusMagnifrontis",
+    "mapStyle": "Ground",
+    "mapGait": "Run",
+    "mapLegs": 2,
+    "mapHip": 0.43,
+    "colonySize": 1,
+    "mapAttack": "Charge",
+    "attack": 7,
+    "defense": 4,
+    "hp": 6,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      }
+    ],
+    "description": "A land-hunting crocodylian about 3 m long from the Eocene forests of Germany, nicknamed the hoofed crocodile. It stood tall on long, upright legs with blunt, hoof-like claws, and its deep, narrow snout bore blade-like serrated teeth for slicing flesh. It could run down early horses and other mammals on land, far from the water."
+  },
+  {
+    "id": "embolotherium_andrewsi",
+    "commonName": "Embolotherium",
+    "scientificName": "Embolotherium andrewsi",
+    "kingdom": "Animalia",
+    "group": "Brontothere",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Wetland",
+      "Steppe"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 450,
+    "startingPopulation": 25,
+    "playable": true,
+    "model": "Models/Species/EmbolotheriumAndrewsi",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.24,
+    "colonySize": 1,
+    "mapAttack": "Ram",
+    "mapDefense": "Brace",
+    "attack": 4,
+    "defense": 8,
+    "hp": 13,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.4
+      }
+    ],
+    "description": "A huge brontothere from the late Eocene of Mongolia, about 2.5 m at the shoulder. Instead of a forked horn, its nasal bones rose into a single tall, broad bony shield above the snout, used like a battering ram. Massive and thick-skinned, it could shrug off most attacks, but it was slow and fed only on soft plants."
+  },
+  {
+    "id": "perucetus_colossus",
+    "commonName": "Perucetus",
+    "scientificName": "Perucetus colossus",
+    "kingdom": "Animalia",
+    "group": "Archaeocete whale",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 1800,
+    "startingPopulation": 8,
+    "playable": true,
+    "model": "Models/Species/PerucetusColossus",
+    "mapStyle": "Swim",
+    "mapUndulate": true,
+    "colonySize": 1,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 7,
+    "hp": 15,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.2
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.6
+      }
+    ],
+    "description": "A colossal early whale from the middle Eocene of Peru, about 17-20 m long and possibly the heaviest animal that ever lived. Its ribs and backbone were enormously thickened and dense, ballast for a slow life in shallow coastal water, where it probably fed on the sea floor. Its sheer bulk made it almost impossible to kill, but it was a slow, gentle giant."
+  },
+  {
+    "id": "carbonemys_cofrinii",
+    "commonName": "Carbonemys",
+    "scientificName": "Carbonemys cofrinii",
+    "kingdom": "Animalia",
+    "group": "Side-necked turtle",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Crocodilian",
+      "Small animals"
+    ],
+    "tags": [
+      "Surfacer"
+    ],
+    "sizeCm": 230,
+    "startingPopulation": 30,
+    "playable": true,
+    "model": "Models/Species/CarbonemysCofrinii",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Snap",
+    "mapDefense": "Hide",
+    "attack": 5,
+    "defense": 10,
+    "hp": 10,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 1.0
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.7
+      }
+    ],
+    "description": "A giant side-necked turtle from the Paleocene swamp forests of Colombia, with a shell about 1.7 m long. It shared its rivers with Titanoboa, and its huge head and powerful jaws were big enough to eat crocodile-sized prey. Its massive shell made it one of the best-armoured animals of its age, though it moved slowly."
+  },
+  {
+    "id": "urtinotherium_incisivum",
+    "commonName": "Urtinotherium",
+    "scientificName": "Urtinotherium incisivum",
+    "kingdom": "Animalia",
+    "group": "Rhinocerotoid",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Steppe",
+      "Savanna"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 700,
+    "startingPopulation": 10,
+    "playable": true,
+    "model": "Models/Species/UrtinotheriumIncisivum",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.35,
+    "colonySize": 1,
+    "mapDefense": "Brace",
+    "attack": 3,
+    "defense": 4,
+    "hp": 14,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 1.0
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.5
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.3
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.6
+      }
+    ],
+    "description": "One of the earliest giant indricotheres, a hornless rhinoceros from the late Eocene and early Oligocene of China and Mongolia, close in size to Paraceratherium. Long, pillar-like legs and a long neck let it browse treetops, and unlike its later relatives it kept a full set of front teeth. Its enormous size gave it huge stamina in a fight, but it had no horns and moved slowly."
+  },
+  {
+    "id": "dasornis_emuinus",
+    "commonName": "Dasornis",
+    "scientificName": "Dasornis emuinus",
+    "kingdom": "Animalia",
+    "group": "Pelagornithid",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "tags": [
+      "Flyer"
+    ],
+    "sizeCm": 120,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/DasornisEmuinus",
+    "mapStyle": "Soar",
+    "colonySize": 2,
+    "wingBeat": 0.5,
+    "wingRoot": 0.07,
+    "mapAttack": "Dive",
+    "attack": 4,
+    "defense": 1,
+    "hp": 4,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 1.0
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.2
+      }
+    ],
+    "description": "A giant bony-toothed bird from the early Eocene coasts of England, with long, narrow wings spanning perhaps 4-5 m. Like a huge albatross it glided for days over the open sea, snatching fish and squid with a long bill lined with sharp bony spikes. It covered vast distances with ease, but its hollow bones made it fragile."
+  },
+  {
+    "id": "anthropornis_nordenskjoeldi",
+    "commonName": "Anthropornis",
+    "scientificName": "Anthropornis nordenskjoeldi",
+    "kingdom": "Animalia",
+    "group": "Penguin",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 170,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/AnthropornisNordenskjoeldi",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapAttack": "Snap",
+    "mapDefense": "Scatter",
+    "attack": 4,
+    "defense": 2,
+    "hp": 5,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.9
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.7
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.8
+      }
+    ],
+    "description": "Nordenskjoeld's giant penguin, from the late Eocene of Antarctica, stood about 1.7 m tall and weighed some 90 kg, one of the largest penguins ever. Its wings were stiff flippers with a slight bend at the elbow, driving it through the water at speed after fish and squid. It was a fast, agile swimmer but no fighter."
+  },
+  {
+    "id": "hyracodon_nebraskensis",
+    "commonName": "Hyracodon",
+    "scientificName": "Hyracodon nebraskensis",
+    "kingdom": "Animalia",
+    "group": "Rhinocerotoid",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Steppe"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 150,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/HyracodonNebraskensis",
+    "mapStyle": "Ground",
+    "mapGait": "Run",
+    "mapLegs": 2,
+    "mapHip": 0.45,
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 2,
+    "hp": 5,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.9
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.4
+      }
+    ],
+    "description": "A running rhinoceros from the late Eocene and Oligocene of North America, hornless and about the size of a pony. Its long, slender legs ended in three-toed hooves, built for speed across open plains. It escaped danger by outrunning it rather than fighting."
+  },
+  {
+    "id": "palaeophis_colossaeus",
+    "commonName": "Palaeophis",
+    "scientificName": "Palaeophis colossaeus",
+    "kingdom": "Animalia",
+    "group": "Early snake",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 800,
+    "startingPopulation": 25,
+    "playable": true,
+    "model": "Models/Species/PalaeophisColossaeus",
+    "mapStyle": "Swim",
+    "mapUndulate": true,
+    "colonySize": 1,
+    "mapAttack": "Strike",
+    "mapDefense": "Coil",
+    "attack": 7,
+    "defense": 3,
+    "hp": 11,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      }
+    ],
+    "description": "A giant sea snake from the Eocene seaway that once crossed the Sahara, perhaps 8 m long, one of the longest snakes known. Its long, muscular body was flattened from side to side toward the tail into a swimming paddle. It lay in wait in warm, shallow coastal water and seized fish and other prey with a sudden lunge."
+  },
+  {
+    "id": "titanomyrma_gigantea",
+    "commonName": "Titanomyrma",
+    "scientificName": "Titanomyrma gigantea",
+    "kingdom": "Animalia",
+    "group": "Ant",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Carnivore",
+    "tags": [
+      "Burrower"
+    ],
+    "sizeCm": 5,
+    "startingPopulation": 100000,
+    "playable": true,
+    "model": "Models/Species/TitanomyrmaGigantea",
+    "mapStyle": "Ground",
+    "mapLegs": 3,
+    "mapHip": 0.3,
+    "colonySize": 8,
+    "mapScale": 1.0,
+    "mapAttack": "Bite",
+    "mapDefense": "Mob",
+    "attack": 3,
+    "defense": 2,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "group_defense",
+        "expression": 0.9
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.8
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.7
+      },
+      {
+        "gene": "flight_capability",
+        "expression": 0.3
+      }
+    ],
+    "description": "The largest ant known, from the warm early Eocene forests of Germany; its winged queens were about 6 cm long with a 15 cm wingspan, as big as a hummingbird. It lived only where the climate was tropical. Each ant was weak, but huge colonies swarmed over prey and rivals together."
+  },
+  {
+    "id": "epoicotherium_unicum",
+    "commonName": "Epoicotherium",
+    "scientificName": "Epoicotherium unicum",
+    "kingdom": "Animalia",
+    "group": "Palaeanodont",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Steppe",
+      "Desert"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Ant",
+      "Termite",
+      "Small animals"
+    ],
+    "tags": [
+      "Burrower"
+    ],
+    "sizeCm": 20,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/EpoicotheriumUnicum",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.14,
+    "colonySize": 3,
+    "mapDefense": "Hide",
+    "attack": 2,
+    "defense": 6,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "burrowing",
+        "expression": 1.0
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.1
+      }
+    ],
+    "description": "A small burrowing palaeanodont from the Oligocene of North America, about 20 cm long and a distant relative of pangolins. Built like a golden mole, it had a shovel-like snout, tiny eyes and huge claws on its short forelimbs for tunnelling through loose sand after ants and termites. Hidden underground, it was very hard for predators to reach."
+  },
+  {
+    "id": "chelotriton_paradoxus",
+    "commonName": "Chelotriton",
+    "scientificName": "Chelotriton paradoxus",
+    "kingdom": "Animalia",
+    "group": "Salamander",
+    "firstAge": "Paleogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "FreshWater",
+      "Wetland",
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 18,
+    "startingPopulation": 5000,
+    "playable": true,
+    "model": "Models/Species/ChelotritonParadoxus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.4,
+    "colonySize": 3,
+    "mapDefense": "Rear",
+    "attack": 1,
+    "defense": 7,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "toxin_production",
+        "expression": 0.9
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.6
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.3
+      }
+    ],
+    "description": "A crocodile newt about 15-20 cm long from the late Oligocene and Miocene lakes of Europe. Its skin was rough and warty, with rows of knobs along the back and the sharp tips of its ribs along each flank, which in living relatives can pierce the skin to inject toxic secretions. Weak in attack, it was a painful, poisonous mouthful for any predator."
+  }
+]

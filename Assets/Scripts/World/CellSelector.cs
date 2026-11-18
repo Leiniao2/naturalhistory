@@ -30,6 +30,9 @@ namespace NaturalHistory.World
             if (cell != null) CellClicked?.Invoke(cell);
         }
 
+        // Selects a tile from code, as a click would (UnitCycle picking your next animal), without the click event
+        public static void SelectCell(HexCell cell) => Select(cell);
+
         private static void Select(HexCell cell)
         {
             if (Selected == cell) return;

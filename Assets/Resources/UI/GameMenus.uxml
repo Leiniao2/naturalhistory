@@ -75,6 +75,8 @@
                     <ui:Button name="unit-behaviors" class="unit-button" text="Behaviors" />
                     <ui:Button name="unit-reproduce" class="unit-button" text="Reproduce" />
                     <ui:Button name="unit-evolve" class="unit-button unit-evolve" text="Evolve" />
+                    <!-- sit this turn out: the next animal awaiting orders comes up (UnitCycle) -->
+                    <ui:Button name="unit-skip" class="unit-button unit-skip" text="Skip turn" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

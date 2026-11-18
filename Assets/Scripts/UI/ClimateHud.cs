@@ -1,6 +1,7 @@
 using NaturalHistory.Climate;
 using NaturalHistory.Core;
 using NaturalHistory.World;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace NaturalHistory.UI
@@ -30,10 +31,15 @@ namespace NaturalHistory.UI
             tileZone      = root.Q<Label>("tile-zone");
             tileStats     = root.Q<Label>("tile-stats");
             endTurnButton = root.Q<Button>("end-turn-button");
-            endTurnButton.clicked += EndTurn;
+            // Next animal awaiting orders, or End Turn when none do (UnitCycle); Shift+click ends it regardless
+            endTurnButton.clicked += () => EndTurn(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
         }
 
-        public static void EndTurn() => TurnManager.Instance?.EndTurn();
+        public static void EndTurn(bool force = false)
+        {
+            if (UnitCycle.Instance != null) UnitCycle.Instance.EndTurnOrNext(force);
+            else TurnManager.Instance?.EndTurn();
+        }
 
         // Called when the turn / climate changes
         public void Refresh()

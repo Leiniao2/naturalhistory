@@ -156,19 +156,24 @@ namespace NaturalHistory.Players
                 if (cell != null && !cell.IsMountain) result[i] = cell;
             }
 
-            // Life begins in the sea: in the Ediacaran and Cambrian everyone starts on shallow seabed
+            // Life begins in the sea: in the Ediacaran and Cambrian everyone starts on shallow seabed.
+            // The whole core (the start and its 6 neighbours) has to be open: all seabed, or all
+            // land, nothing in the way (mountains, solid rock under water, ice). Failing that, the
+            // start alone.
             bool sea = GameOptions.StartsUnderSea(AgeManager.Instance != null ? AgeManager.Instance.CurrentAge : GameOptions.StartAge);
             var candidates = new List<HexCell>();
+            var loose = new List<HexCell>();
             int margin = Mathf.RoundToInt(grid.Height * 0.12f); // keep away from the polar edges
             for (int r = margin; r < grid.Height - margin; r++)
             for (int q = 0; q < grid.Width; q++)
             {
                 var cell = grid.GetCell(q, r);
-                if (cell?.Terrain == null || cell.IsMountain) continue;
-                if (sea ? !(cell.IsWater && cell.Under == UnderKind.Seabed)
-                        : cell.IsWater || cell.Terrain.kind == TerrainKind.IceSheet) continue;
-                candidates.Add(cell);
+                if (!OpenStart(cell, sea, true)) continue;
+                loose.Add(cell);
+                var around = grid.GetNeighbors(cell);
+                if (around.Count == 6 && around.All(n => OpenStart(n, sea, false))) candidates.Add(cell);
             }
+            if (candidates.Count == 0) candidates = loose;
             if (candidates.Count == 0) // all-water map: any non-mountain cell
                 for (int r = 0; r < grid.Height; r++)
                 for (int q = 0; q < grid.Width; q++)
@@ -191,6 +196,15 @@ namespace NaturalHistory.Players
                 if (best != null) chosen.Add(best);
             }
             return result;
+        }
+
+        // A tile a player's core can include: in a sea start shallow (or, around the start, deep) open
+        // seabed; on land, open ground that isn't ice
+        private static bool OpenStart(HexCell cell, bool sea, bool center)
+        {
+            if (cell?.Terrain == null || cell.IsMountain || UnderView.Blocks(cell.Under)) return false;
+            if (sea) return cell.IsWater && (cell.Under == UnderKind.Seabed || (!center && cell.Under == UnderKind.DeepSeabed));
+            return !cell.IsWater && cell.Terrain.kind != TerrainKind.IceSheet;
         }
 
         // Hex distance on the east–west cylinder

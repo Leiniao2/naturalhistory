@@ -1,0 +1,779 @@
+[
+ {
+  "id": "pterygotus_anglicus",
+  "commonName": "Pterygotus",
+  "scientificName": "Pterygotus anglicus",
+  "kingdom": "Animalia",
+  "group": "Eurypterid",
+  "firstAge": "Silurian",
+  "lastAge": "Devonian",
+  "habitats": [
+   "SaltWater",
+   "FreshWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Jawless vertebrate",
+   "Placoderm",
+   "Galeaspid",
+   "Eurypterid",
+   "Trilobite",
+   "Small animals"
+  ],
+  "sizeCm": 160,
+  "startingPopulation": 40,
+  "playable": true,
+  "model": "Models/Species/PterygotusAnglicus",
+  "mapStyle": "Swim",
+  "colonySize": 1,
+  "mapScale": 1.0,
+  "mapAttack": "Snap",
+  "attack": 10,
+  "defense": 3,
+  "hp": 9,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.95
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.8
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   }
+  ],
+  "description": "One of the giant sea scorpions, about 1.6 m long, from the Late Silurian and Early Devonian of Britain. In front of its small head shield it carried a pair of enormous, toothed pincers that could reach far forward, and its big compound eyes gave it sharp vision. Paddle-like hind legs and a broad, flat tail fin made it an active hunter that seized fish and other sea scorpions, the most powerful predator of its seas."
+ },
+ {
+  "id": "carcinosoma_newlini",
+  "commonName": "Carcinosoma",
+  "scientificName": "Carcinosoma newlini",
+  "kingdom": "Animalia",
+  "group": "Eurypterid",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Jawless vertebrate",
+   "Trilobite",
+   "Small animals"
+  ],
+  "sizeCm": 90,
+  "startingPopulation": 60,
+  "playable": true,
+  "model": "Models/Species/CarcinosomaNewlini",
+  "mapStyle": "Swim",
+  "colonySize": 1,
+  "mapScale": 0.9,
+  "mapAttack": "Pounce",
+  "mapDefense": "Brace",
+  "attack": 8,
+  "defense": 4,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.5
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.5
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.4
+   }
+  ],
+  "description": "A sea scorpion about 90 cm long from the Late Silurian of Indiana, with a broad, flattened, almost round body and a narrow, rounded tail ending in a long spike. Its strong front legs pointed forward and bristled with long, curved spines, forming a cage to trap prey. It was probably a slow ambush hunter that waited on the sea floor and snatched animals that came too close."
+ },
+ {
+  "id": "erettopterus_bilobus",
+  "commonName": "Erettopterus",
+  "scientificName": "Erettopterus bilobus",
+  "kingdom": "Animalia",
+  "group": "Eurypterid",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater",
+   "FreshWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Jawless vertebrate",
+   "Small animals"
+  ],
+  "sizeCm": 70,
+  "startingPopulation": 100,
+  "playable": true,
+  "model": "Models/Species/ErettopterusBilobus",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapScale": 0.85,
+  "mapAttack": "Charge",
+  "mapDefense": "Scatter",
+  "attack": 5,
+  "defense": 2,
+  "hp": 5,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.95
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.7
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.3
+   }
+  ],
+  "description": "A slender sea scorpion about 70 cm long from the Silurian of Scotland, a lighter relative of Pterygotus. It had long, thin pincers with small curved teeth, big eyes, broad swimming paddles and a wide, flat tail fin split into two lobes at its tip. Built for speed rather than strength, it chased small fish through open water but had only a thin shell."
+ },
+ {
+  "id": "parioscorpio_venator",
+  "commonName": "Parioscorpio",
+  "scientificName": "Parioscorpio venator",
+  "kingdom": "Animalia",
+  "group": "Scorpion",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 2.5,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/ParioscorpioVenator",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.5,
+  "mapAttack": "Sting",
+  "mapDefense": "Rear",
+  "attack": 9,
+  "defense": 3,
+  "hp": 3,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "toxin_production",
+    "expression": 0.9
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   }
+  ],
+  "description": "One of the oldest known scorpions, about 2.5 cm long, from the Early Silurian of Wisconsin, about 437 million years ago. It already had grasping pincers, large eyes and a curled tail ending in a sting, and its heart and blood vessels were arranged much like those of living scorpions. It probably hunted small animals in shallow water and at the shoreline. Tiny and fragile, it packed a dangerous sting for its size."
+ },
+ {
+  "id": "bunodes_lunula",
+  "commonName": "Bunodes",
+  "scientificName": "Bunodes lunula",
+  "kingdom": "Animalia",
+  "group": "Synziphosurine",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "tags": [
+   "Burrower"
+  ],
+  "sizeCm": 4,
+  "startingPopulation": 800,
+  "playable": true,
+  "model": "Models/Species/BunodesLunula",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.55,
+  "mapDefense": "Hide",
+  "attack": 3,
+  "defense": 6,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "burrowing",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   }
+  ],
+  "description": "An early relative of horseshoe crabs, a few centimetres long, from the Late Silurian. Its broad, crescent-shaped head shield was vaulted and covered with radiating ridges and bumps, and its segmented body tapered into a narrow tail with a spike. It probably ploughed through soft mud like a horseshoe crab, hiding under the sediment and grabbing worms and other small animals."
+ },
+ {
+  "id": "arctinurus_boltoni",
+  "commonName": "Arctinurus",
+  "scientificName": "Arctinurus boltoni",
+  "kingdom": "Animalia",
+  "group": "Trilobite",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 18,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/ArctinurusBoltoni",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.7,
+  "mapDefense": "Brace",
+  "attack": 2,
+  "defense": 9,
+  "hp": 11,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.95
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.3
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.4
+   }
+  ],
+  "description": "One of the largest Silurian trilobites, up to about 18 cm long, from the Rochester Shale of New York. Its very broad, flat shell was covered in tubercles, with a large swollen glabella, thorax segments drawn out into flat spines and a big tail shield fringed with broad spines. Slow-moving and heavily armoured, it fed on organic debris on the sea floor and was a hard, spiny mouthful for any predator."
+ },
+ {
+  "id": "deiphon_forbesi",
+  "commonName": "Deiphon",
+  "scientificName": "Deiphon forbesi",
+  "kingdom": "Animalia",
+  "group": "Trilobite",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 3,
+  "startingPopulation": 1500,
+  "playable": true,
+  "model": "Models/Species/DeiphonForbesi",
+  "mapStyle": "Swim",
+  "colonySize": 5,
+  "mapScale": 0.45,
+  "mapDefense": "Scatter",
+  "attack": 3,
+  "defense": 2,
+  "hp": 4,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.85
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.4
+   }
+  ],
+  "description": "A strange trilobite about 3 cm long from the mid-Silurian of Bohemia and Britain. Its head was little more than a huge, balloon-like glabella with long, outward-curving cheek spines, and its narrow body bore long, free spines along each side and a pair of long tail spines. Its light, spiny build suggests it swam in open water, probably catching tiny animals, darting away quickly rather than relying on armour."
+ },
+ {
+  "id": "tremataspis_mammillata",
+  "commonName": "Tremataspis",
+  "scientificName": "Tremataspis mammillata",
+  "kingdom": "Animalia",
+  "group": "Jawless vertebrate",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 8,
+  "startingPopulation": 500,
+  "playable": true,
+  "model": "Models/Species/TremataspisMammillata",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.55,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 9,
+  "hp": 9,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.95
+   },
+   {
+    "gene": "electroreception",
+    "expression": 0.5
+   },
+   {
+    "gene": "filter_feeding",
+    "expression": 0.4
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.5
+   }
+  ],
+  "description": "A jawless armoured fish, an osteostracan about 8 cm long, from the Late Silurian of Saaremaa, Estonia. The head and front half of its body were enclosed in one solid, spindle-shaped box of bone covered with small nipple-like tubercles, with the eyes close together on top and sensory fields along its sides. It had no paired fins, swam slowly with its short scaly tail and sucked up food from the sea floor, relying on its bony armour for protection."
+ },
+ {
+  "id": "pharyngolepis_oblongus",
+  "commonName": "Pharyngolepis",
+  "scientificName": "Pharyngolepis oblongus",
+  "kingdom": "Animalia",
+  "group": "Jawless vertebrate",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater",
+   "FreshWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 12,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/PharyngolepisOblongus",
+  "mapStyle": "Swim",
+  "colonySize": 5,
+  "mapScale": 0.6,
+  "mapDefense": "Scatter",
+  "attack": 2,
+  "defense": 2,
+  "hp": 5,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.85
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.6
+   },
+   {
+    "gene": "filter_feeding",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A slender, jawless anaspid fish about 12 cm long from the Late Silurian of Ringerike, Norway. Its torpedo-shaped body was covered in narrow scales, with a long row of small gill openings behind each eye, a crest of hooked scales along the back, long fin folds along the belly and a large, down-turned tail. A fast, agile swimmer, it fed on small particles in the water and on the bottom."
+ },
+ {
+  "id": "fanjingshania_renovata",
+  "commonName": "Fanjingshania",
+  "scientificName": "Fanjingshania renovata",
+  "kingdom": "Animalia",
+  "group": "Acanthodian",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 3,
+  "startingPopulation": 1500,
+  "playable": true,
+  "model": "Models/Species/FanjingshaniaRenovata",
+  "mapStyle": "Swim",
+  "colonySize": 5,
+  "mapScale": 0.45,
+  "mapDefense": "Brace",
+  "attack": 4,
+  "defense": 8,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.85
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.5
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small, early jawed fish a few centimetres long from the early Silurian of Guizhou, China, about 439 million years ago, one of the oldest jawed vertebrates known from more than scattered scales. It was a spiny relative of the earliest sharks, with sharp spines in front of its fins, a bony shoulder armour and a long row of extra paired spines along its belly. Its spines made it very hard to swallow, while its jaws let it catch small prey."
+ },
+ {
+  "id": "dawsonoceras_annulatum",
+  "commonName": "Dawsonoceras",
+  "scientificName": "Dawsonoceras annulatum",
+  "kingdom": "Animalia",
+  "group": "Nautiloid cephalopod",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Trilobite",
+   "Arthropod",
+   "Small animals"
+  ],
+  "sizeCm": 40,
+  "startingPopulation": 120,
+  "playable": true,
+  "model": "Models/Species/DawsonocerasAnnulatum",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapScale": 0.8,
+  "mapBackward": true,
+  "mapAttack": "Strike",
+  "mapDefense": "Hide",
+  "attack": 7,
+  "defense": 6,
+  "hp": 7,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.7
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.4
+   }
+  ],
+  "description": "A straight-shelled nautiloid from mid-Silurian seas of Europe and North America, with a long, slowly tapering shell ringed along its whole length by strong, rounded ridges. Gas-filled chambers kept it afloat while it hunted with a ring of grasping arms and a sharp beak. Its strong, ridged shell protected it from most attackers, and it could jet backwards to escape."
+ },
+ {
+  "id": "ceratiocaris_papilio",
+  "commonName": "Ceratiocaris",
+  "scientificName": "Ceratiocaris papilio",
+  "kingdom": "Animalia",
+  "group": "Phyllocarid",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Scavenger",
+  "sizeCm": 20,
+  "startingPopulation": 500,
+  "playable": true,
+  "model": "Models/Species/CeratiocarisPapilio",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.6,
+  "mapDefense": "Scatter",
+  "attack": 4,
+  "defense": 3,
+  "hp": 4,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.9
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "decomposition",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A shrimp-like crustacean up to about 20 cm long including its tail, from the Silurian of Scotland. A smooth, two-sided shell covered its head and front body, and a long, muscular abdomen ended in a dagger-like spine flanked by two shorter ones. By flicking this three-pronged tail it could shoot away from danger very fast; it probably fed on dead and small animals on the sea floor."
+ },
+ {
+  "id": "goniophyllum_pyramidale",
+  "commonName": "Goniophyllum",
+  "scientificName": "Goniophyllum pyramidale",
+  "kingdom": "Animalia",
+  "group": "Rugose coral",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 4,
+  "startingPopulation": 800,
+  "playable": true,
+  "model": "Models/Species/GoniophyllumPyramidale",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.4,
+  "mapDefense": "Hide",
+  "attack": 2,
+  "defense": 10,
+  "hp": 9,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.95
+   },
+   {
+    "gene": "filter_feeding",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "A solitary horn coral a few centimetres tall from mid-Silurian reefs of Gotland and England, shaped like an upside-down, four-sided pyramid. Its polyp could close itself in completely with four triangular lid plates that fitted over the square cup like a trapdoor. Fixed in place and catching small prey with its tentacles, it was almost impossible to harm once shut."
+ },
+ {
+  "id": "scyphocrinites_elegans",
+  "commonName": "Scyphocrinites",
+  "scientificName": "Scyphocrinites elegans",
+  "kingdom": "Animalia",
+  "group": "Crinoid",
+  "firstAge": "Silurian",
+  "lastAge": "Devonian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 200,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/ScyphocrinitesElegans",
+  "mapStyle": "Float",
+  "colonySize": 2,
+  "attack": 1,
+  "defense": 4,
+  "hp": 13,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.9
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A giant sea lily from the very end of the Silurian and the start of the Devonian, found worldwide. Instead of anchoring to the sea floor, its stem, up to a few metres long, ended in a large, chambered bulb that probably worked as a float, so the animal hung upside down from the sea surface with its big, feathery crown of branching arms below. Its huge size and its ability to regrow lost arms made it very hard to kill, though it could barely move."
+ },
+ {
+  "id": "monograptus_priodon",
+  "commonName": "Monograptus",
+  "scientificName": "Monograptus priodon",
+  "kingdom": "Animalia",
+  "group": "Graptolite",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 10,
+  "startingPopulation": 15000,
+  "playable": false,
+  "model": "Models/Species/MonograptusPriodon",
+  "mapStyle": "Drift",
+  "colonySize": 6,
+  "attack": 1,
+  "defense": 1,
+  "hp": 3,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.8
+   },
+   {
+    "gene": "asexual_reproduction",
+    "expression": 0.9
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.9
+   }
+  ],
+  "description": "A planktonic graptolite of the early and mid-Silurian, found worldwide, whose colony was a single long, gently curved branch often 10 cm or more long. Along one side ran a row of small cups, each holding a filter-feeding zooid, with their mouths curled back into hooks. Weak on its own, it drifted in vast numbers and budded new members so fast that it spread across the world's oceans."
+ },
+ {
+  "id": "poleumita_discors",
+  "commonName": "Poleumita",
+  "scientificName": "Poleumita discors",
+  "kingdom": "Animalia",
+  "group": "Sea snail",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 5,
+  "startingPopulation": 1200,
+  "playable": true,
+  "model": "Models/Species/PoleumitaDiscors",
+  "mapStyle": "Ground",
+  "mapGait": "Slither",
+  "colonySize": 3,
+  "mapScale": 0.5,
+  "mapDefense": "Hide",
+  "attack": 1,
+  "defense": 10,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.95
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "A sea snail a few centimetres across from mid-Silurian reefs of Dudley in England and Gotland in Sweden. Its thick, low, almost disc-shaped shell had angular whorls with a strong, knobbly keel around the shoulder and a wide opening underneath. It crept slowly over the reef grazing on microbial films and debris, and could withdraw into its heavy shell, which few predators could crack."
+ },
+ {
+  "id": "pneumodesmus_newmani",
+  "commonName": "Pneumodesmus",
+  "scientificName": "Pneumodesmus newmani",
+  "kingdom": "Animalia",
+  "group": "Myriapod",
+  "firstAge": "Silurian",
+  "lastAge": "Silurian",
+  "habitats": [
+   "Wetland",
+   "Plain"
+  ],
+  "diet": "Detritivore",
+  "tags": [
+   "Burrower"
+  ],
+  "sizeCm": 2,
+  "startingPopulation": 1000,
+  "playable": true,
+  "model": "Models/Species/PneumodesmusNewmani",
+  "mapStyle": "Ground",
+  "mapLegs": 8,
+  "mapHip": 0.3,
+  "colonySize": 3,
+  "mapScale": 0.6,
+  "mapDefense": "Coil",
+  "attack": 2,
+  "defense": 6,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "decomposition",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.5
+   },
+   {
+    "gene": "toxin_production",
+    "expression": 0.4
+   }
+  ],
+  "description": "A small millipede from near Stonehaven in Scotland, dated to about 425 million years ago, one of the oldest land animals known. Its body rings carry spiracles, the openings of breathing tubes, the earliest direct evidence of an animal breathing air. It lived among the first low plants beside lakes and fed on rotting plant matter; like living millipedes it could probably curl up inside its hard rings when attacked."
+ }
+]

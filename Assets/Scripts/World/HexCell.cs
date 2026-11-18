@@ -376,8 +376,9 @@ namespace NaturalHistory.World
             if (meshRenderer == null) return;
             var color = ShowingUnder ? underTint : baseColor * tintVariation;
             if (moveTarget)  color = Color.Lerp(color, new Color(1f, 0.92f, 0.4f), 0.35f);
-            if (groupTarget == GroupTarget.Move)   color = Color.Lerp(color, new Color(0.45f, 1f, 0.5f), 0.4f);
-            if (groupTarget == GroupTarget.Attack) color = Color.Lerp(color, new Color(1f, 0.25f, 0.2f), 0.5f);
+            // where a selected group can go (MoveRange) or strike: a strong wash, so the range reads at a glance
+            if (groupTarget == GroupTarget.Move)   color = Color.Lerp(color, new Color(0.40f, 1f, 0.45f), 0.65f);
+            if (groupTarget == GroupTarget.Attack) color = Color.Lerp(color, new Color(1f, 0.22f, 0.18f), 0.7f);
             if (highlighted) color = Color.Lerp(color, Color.white, 0.4f);
             meshRenderer.GetPropertyBlock(propBlock);
             propBlock.SetColor("_Color", color);

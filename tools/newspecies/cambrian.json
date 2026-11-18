@@ -1,0 +1,614 @@
+[
+  {
+    "id": "pambdelurion_whiteleggei",
+    "commonName": "Pambdelurion",
+    "scientificName": "Pambdelurion whiteleggei",
+    "kingdom": "Animalia",
+    "group": "Stem arthropod",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Trilobite",
+      "Arthropod",
+      "Lobopodian",
+      "Small animals"
+    ],
+    "sizeCm": 50,
+    "startingPopulation": 50,
+    "playable": true,
+    "model": "Models/Species/Pambdelurion",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapScale": 0.65,
+    "mapAttack": "Charge",
+    "mapDefense": "Rear",
+    "attack": 9,
+    "defense": 3,
+    "hp": 9,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.4
+      }
+    ],
+    "description": "A huge, soft-bodied relative of the arthropods up to about half a metre long from Sirius Passet in northern Greenland, about 518 million years old. It had a pair of big spiny grasping limbs at the front, a mouth ringed with hard plates, eleven pairs of swimming flaps along its sides and stubby legs beneath. Large and powerful, it was one of the top predators of its sea, though its unarmoured body is easy to wound."
+  },
+  {
+    "id": "lyrarapax_unguispinus",
+    "commonName": "Lyrarapax",
+    "scientificName": "Lyrarapax unguispinus",
+    "kingdom": "Animalia",
+    "group": "Radiodont",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Arthropod",
+      "Small animals"
+    ],
+    "sizeCm": 6,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/Lyrarapax",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.55,
+    "mapAttack": "Snap",
+    "mapDefense": "Scatter",
+    "attack": 8,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      }
+    ],
+    "description": "A small radiodont about 6 cm long from the Chengjiang biota of Yunnan, China, about 518 million years old, its name meaning \"lyre-tailed predator with claw-like spines\". Its frontal limbs carried long, curved spines that worked like grasping claws, and some fossils even preserve its brain. Quick, sharp-eyed and armed with those claws, it struck hard for its size, but its small body could not take much punishment."
+  },
+  {
+    "id": "tokummia_katalepsis",
+    "commonName": "Tokummia",
+    "scientificName": "Tokummia katalepsis",
+    "kingdom": "Animalia",
+    "group": "Arthropod",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Arthropod",
+      "Small animals"
+    ],
+    "sizeCm": 10,
+    "startingPopulation": 120,
+    "playable": true,
+    "model": "Models/Species/Tokummia",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "mapAttack": "Snap",
+    "mapDefense": "Brace",
+    "attack": 8,
+    "defense": 4,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "A 10 cm arthropod from the Burgess Shale of Canada with a broad two-halved shell over its head, a long body of about fifty segments with many small legs, and a pair of big pincer-like claws at the front. Its name means \"grasping\", and those claws, together with simple jaws, helped it seize and break up soft prey. It is one of the earliest known relatives of crabs, insects and centipedes, and a hard-hitting hunter of the seafloor."
+  },
+  {
+    "id": "capinatator_praetermissus",
+    "commonName": "Capinatator",
+    "scientificName": "Capinatator praetermissus",
+    "kingdom": "Animalia",
+    "group": "Arrow worm",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 10,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/Capinatator",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.55,
+    "mapUndulate": true,
+    "mapAttack": "Snap",
+    "mapDefense": "Scatter",
+    "attack": 9,
+    "defense": 1,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.3
+      }
+    ],
+    "description": "A giant arrow worm about 10 cm long from the Burgess Shale of Canada, far larger than the living arrow worms. Its head bore a crown of about 50 curved grasping spines that snapped shut over prey, and its slim body ended in fins for darting through the water. A deadly ambusher with a terrible bite, it has almost no protection when attacked."
+  },
+  {
+    "id": "titanokorys_gainesi",
+    "commonName": "Titanokorys",
+    "scientificName": "Titanokorys gainesi",
+    "kingdom": "Animalia",
+    "group": "Radiodont",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 50,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/Titanokorys",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapScale": 0.7,
+    "mapAttack": "Ram",
+    "mapDefense": "Brace",
+    "attack": 4,
+    "defense": 6,
+    "hp": 14,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "One of the largest animals of its time, a radiodont about half a metre long from the Burgess Shale of Canada, whose head was covered by an enormous flattened shell. It swam low over the seabed, raking the mud with comb-like front limbs for small animals. Its sheer bulk and huge armoured head make it extremely hard to bring down, but it is a slow, clumsy swimmer and not a strong fighter."
+  },
+  {
+    "id": "collinsium_ciliosum",
+    "commonName": "Collinsium",
+    "scientificName": "Collinsium ciliosum",
+    "kingdom": "Animalia",
+    "group": "Lobopodian",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 8.5,
+    "startingPopulation": 250,
+    "playable": true,
+    "model": "Models/Species/Collinsium",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.55,
+    "mapAttack": "Strike",
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 9,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.9
+      },
+      {
+        "gene": "filter_feeding",
+        "expression": 0.7
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.3
+      }
+    ],
+    "description": "A spiny, soft-legged animal about 8.5 cm long from the Xiaoshiba biota of Yunnan, China, nicknamed \"the hairy Collins' monster\". Its back carried 72 sharp spines, up to five per body segment, while six pairs of feathery front legs combed food from the water and nine pairs of clawed hind legs held it in place. Bristling with spines, it is almost impossible to attack safely, but it is slow and weak in a fight."
+  },
+  {
+    "id": "halkieria_evangelista",
+    "commonName": "Halkieria",
+    "scientificName": "Halkieria evangelista",
+    "kingdom": "Animalia",
+    "group": "Stem mollusc",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 8,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Halkieria",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.55,
+    "mapDefense": "Tighten",
+    "attack": 1,
+    "defense": 9,
+    "hp": 7,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.9
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.2
+      }
+    ],
+    "description": "A slug-like animal up to about 8 cm long from Sirius Passet in northern Greenland, covered in a coat of mail made of some two thousand small overlapping scales, with a rounded shell at each end of its back. It crawled over the seabed grazing microbial films, and it is thought to be an early relative of molluscs or brachiopods. Wrapped in armour from head to tail, it shrugs off most attacks, but it is slow and has no weapons."
+  },
+  {
+    "id": "chancelloria_eros",
+    "commonName": "Chancelloria",
+    "scientificName": "Chancelloria eros",
+    "kingdom": "Animalia",
+    "group": "Problematic animal",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 10,
+    "startingPopulation": 350,
+    "playable": true,
+    "model": "Models/Species/Chancelloria",
+    "mapStyle": "Fixed",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapDefense": "Brace",
+    "attack": 1,
+    "defense": 8,
+    "hp": 10,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.8
+      },
+      {
+        "gene": "filter_feeding",
+        "expression": 0.7
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.3
+      }
+    ],
+    "description": "A vase-shaped animal around 10 cm tall from the Burgess Shale of Canada, fixed to the seabed and covered in star-shaped clusters of sharp, radiating spines. It probably fed like a sponge, drawing water in through its soft body and out through an opening at the top. Its forest of spines makes it a painful mouthful, and it can take a lot of damage before giving way, though it cannot move or strike."
+  },
+  {
+    "id": "nectocaris_pteryx",
+    "commonName": "Nectocaris",
+    "scientificName": "Nectocaris pteryx",
+    "kingdom": "Animalia",
+    "group": "Problematic animal",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 5,
+    "startingPopulation": 250,
+    "playable": true,
+    "model": "Models/Species/Nectocaris",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.55,
+    "mapAttack": "Dive",
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 1,
+    "hp": 4,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.9
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      }
+    ],
+    "description": "A flat, kite-shaped swimmer about 5 cm long from the Burgess Shale of Canada, with a fin running along each side, a pair of stalked eyes and two long, flexible tentacles at the front. Some think it was an early relative of squid and octopuses that pushed water out through a funnel under its body to jet along. One of the fastest swimmers of its time, it hunts on the move and escapes easily, but its soft body breaks at the first blow."
+  },
+  {
+    "id": "zhongjianichthys_rostratus",
+    "commonName": "Zhongjianichthys",
+    "scientificName": "Zhongjianichthys rostratus",
+    "kingdom": "Animalia",
+    "group": "Jawless vertebrate",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 3,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Zhongjianichthys",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapUndulate": true,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.9
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.4
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "A tiny eel-like fish about 3 cm long from the Chengjiang biota of Yunnan, China, about 518 million years old, and one of the earliest known vertebrates. It had a long, slender body, a pair of eyes and a short snout at the front, and no jaws. Built for darting through the water, it is very hard to catch, though it has no armour or weapons at all."
+  },
+  {
+    "id": "isoxys_auritus",
+    "commonName": "Isoxys",
+    "scientificName": "Isoxys auritus",
+    "kingdom": "Animalia",
+    "group": "Arthropod",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 3,
+    "startingPopulation": 350,
+    "playable": true,
+    "model": "Models/Species/Isoxys",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapAttack": "Snap",
+    "mapDefense": "Scatter",
+    "attack": 4,
+    "defense": 3,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.8
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      }
+    ],
+    "description": "A small swimming arthropod about 3 cm long from the Chengjiang biota of Yunnan, China, enclosed in a thin two-halved shell drawn out into long spines at the front and back. It had big round eyes and a pair of spiny grasping limbs to catch small animals as it swam in open water. Fast and keen-sighted, it moves and hunts well, but its light shell gives only modest protection."
+  },
+  {
+    "id": "facivermis_yunnanicus",
+    "commonName": "Facivermis",
+    "scientificName": "Facivermis yunnanicus",
+    "kingdom": "Animalia",
+    "group": "Lobopodian",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 7,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Facivermis",
+    "mapStyle": "Fixed",
+    "tags": [
+      "Burrower"
+    ],
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapAttack": "Lash",
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 6,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "burrowing",
+        "expression": 0.8
+      },
+      {
+        "gene": "filter_feeding",
+        "expression": 0.8
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.3
+      }
+    ],
+    "description": "A worm-like relative of velvet worms about 7 cm long from the Chengjiang biota of Yunnan, China, with five pairs of spiny arms at the front and no legs behind. Its swollen rear end was lodged in a tube in the seabed, while its arms swept food from the water. When danger came it could pull back into its tube, so it is very hard to catch, but it can barely move."
+  },
+  {
+    "id": "siphusauctum_gregarium",
+    "commonName": "Siphusauctum",
+    "scientificName": "Siphusauctum gregarium",
+    "kingdom": "Animalia",
+    "group": "Problematic animal",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 20,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Siphusauctum",
+    "mapStyle": "Fixed",
+    "colonySize": 6,
+    "mapScale": 0.5,
+    "mapDefense": "Mob",
+    "attack": 1,
+    "defense": 3,
+    "hp": 12,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.8
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A tulip-shaped animal up to 20 cm tall from the Burgess Shale of Canada: a cup on a long stalk anchored by a small holdfast, pumping water through six comb-like filters inside the cup. Its name means \"gregarious\", because it grew in dense meadows, sometimes with dozens of individuals together. Its crowded clusters make the colony very hard to wipe out, even though each animal is soft and defenceless."
+  },
+  {
+    "id": "selkirkia_columbia",
+    "commonName": "Selkirkia",
+    "scientificName": "Selkirkia columbia",
+    "kingdom": "Animalia",
+    "group": "Priapulid worm",
+    "firstAge": "Cambrian",
+    "lastAge": "Cambrian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "sizeCm": 7,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Selkirkia",
+    "mapStyle": "Fixed",
+    "tags": [
+      "Burrower"
+    ],
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapAttack": "Strike",
+    "mapDefense": "Hide",
+    "attack": 6,
+    "defense": 6,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.6
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      }
+    ],
+    "description": "A priapulid worm about 7 cm long from the Burgess Shale of Canada that lived inside a tough, slightly tapering tube open at both ends, set upright in the mud. From the top it shot out a spiny, turned-out proboscis to grab small animals passing by and pulled them down into its throat. Sheltered in its tube and quick to strike, it is a dangerous ambusher that is hard to hit back."
+  }
+]

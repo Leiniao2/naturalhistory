@@ -161,9 +161,12 @@ namespace NaturalHistory.UI
 
             var lines = new List<string> { Loc.T(def.group), Span(def) };
             if (!string.IsNullOrEmpty(def.diet)) lines.Add(Loc.F("Diet: {0}", Loc.T(def.diet)));
+            lines.Add(World.Diets.Describe(def));
             if (def.sizeCm > 0f) lines.Add(Loc.F("Size: {0}", AnimalPanel.FormatSize(def.sizeCm)));
             if (def.habitats is { Count: > 0 })
                 lines.Add(Loc.F("Habitats: {0}", string.Join(", ", def.habitats.Select(AnimalPanel.HabitatName))));
+            var stats = World.CombatStats.Of(def);
+            lines.Add(Loc.F("HP {0}  ·  Attack {1}  ·  Defense {2}  ·  Actions {3}", stats.hp, stats.attack, stats.defense, stats.moves));
             var copies = EvolutionManager.Instance?.CopiesOf(Players.PlayerManager.Instance?.Human).Count(c => c.species == def.id) ?? 0;
             if (copies > 0) lines.Add(Loc.F(copies == 1 ? "You have {0} copy" : "You have {0} copies", copies));
             statsLabel.text       = string.Join("\n", lines);

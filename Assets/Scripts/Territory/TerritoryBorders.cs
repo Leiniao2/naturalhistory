@@ -29,6 +29,10 @@ namespace NaturalHistory.Territory
 
         private static readonly List<GameObject> borders = new();
         private static Material material;
+        // the last territory drawn, to draw again at the other layer's height when the view changes
+        private static Dictionary<HexCell, Player> lastOwners;
+        private static HexGrid lastGrid;
+        private static bool viewHooked;
 
         public static void Clear()
         {
@@ -39,6 +43,14 @@ namespace NaturalHistory.Territory
         public static void Rebuild(IReadOnlyDictionary<HexCell, Player> owners, HexGrid grid)
         {
             Clear();
+            lastOwners = new Dictionary<HexCell, Player>();
+            foreach (var kv in owners) lastOwners[kv.Key] = kv.Value;
+            lastGrid = grid;
+            if (!viewHooked)
+            {
+                viewHooked = true;
+                UnderView.Changed += () => { if (lastGrid != null && lastOwners != null) Rebuild(lastOwners, lastGrid); };
+            }
             if (material == null)
             {
                 var shader = Resources.Load<Shader>("Shaders/TerritoryBorder");
@@ -161,9 +173,12 @@ namespace NaturalHistory.Territory
 
         // Point on the tile's top surface (cell-local), following the slope a land tile has toward its
         // rim like HexGrid.LocalGround. f = 0..1 along edge e; dist = distance from the tile centre
-        // toward the edge.
+        // toward the edge. In the under view, on its floor (seabed or plateau) instead, so the border
+        // lies on what is shown rather than floating at sea level.
         private static Vector3 Point(HexCell cell, int e, float f, Vector2 p, float dist, float apothem)
         {
+            if (UnderView.Layer == MapLayer.Under && HexGrid.Instance != null)
+                return new Vector3(p.x, HexGrid.Instance.UnderFloorAt(cell, p) + Lift, p.y);
             float y = cell.SurfaceHeight;
             var rim = cell.RimHeights;
             if (rim != null)

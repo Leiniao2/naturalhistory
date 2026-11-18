@@ -1920,3 +1920,13 @@
 .encyclopedia-chip-name {
     font-size: 15px;
 }
+
+/* End Turn reads "Next animal (n)" while your animals await orders (UnitCycle) */
+.end-turn-button.next-unit {
+    background-image: url("Frames/button-gold.png");
+    color: rgb(255, 246, 214);
+}
+
+.end-turn-button.next-unit:hover {
+    background-image: url("Frames/button-gold-hover.png");
+}

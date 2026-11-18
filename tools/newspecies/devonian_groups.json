@@ -1,0 +1,14 @@
+{
+  "Early insect": {
+    "tags": "ART+['Insect','Terrestrial arthropod']",
+    "path": "INSECTA"
+  },
+  "Harvestman": {
+    "tags": "ART+['Chelicerate','Terrestrial arthropod']",
+    "path": "ARACH + '/Opiliones'"
+  },
+  "Brittle star": {
+    "tags": "B+['Echinoderm']",
+    "path": "AMBUL + '/Echinodermata/Eleutherozoa/Ophiuroidea'"
+  }
+}

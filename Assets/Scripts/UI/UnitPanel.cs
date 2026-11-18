@@ -5,6 +5,7 @@ using NaturalHistory.Data;
 using NaturalHistory.Evolution;
 using NaturalHistory.Progression;
 using NaturalHistory.World;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace NaturalHistory.UI
@@ -16,7 +17,7 @@ namespace NaturalHistory.UI
     {
         private readonly VisualElement panel, portrait;
         private readonly Label nameLabel, detailLabel;
-        private readonly Button reproduceButton, evolveButton;
+        private readonly Button reproduceButton, evolveButton, skipButton;
 
         public OwnedCopy Copy { get; private set; }
 
@@ -34,11 +35,13 @@ namespace NaturalHistory.UI
             detailLabel     = root.Q<Label>("unit-detail");
             reproduceButton = root.Q<Button>("unit-reproduce");
             evolveButton    = root.Q<Button>("unit-evolve");
+            skipButton      = root.Q<Button>("unit-skip");
 
             root.Q<Button>("unit-functions").clicked += () => ShowTree(ProgressionManager.Instance?.Morphology);
             root.Q<Button>("unit-behaviors").clicked += () => ShowTree(ProgressionManager.Instance?.Ethology);
             reproduceButton.clicked += OnReproduce;
             evolveButton.clicked    += () => { if (Copy != null) OpenEvolve?.Invoke(Copy); };
+            skipButton.clicked      += () => { if (Copy?.group != null) UnitCycle.Instance?.Skip(Copy.group); };
         }
 
         // Polled every frame: follows the group selected on the map
@@ -74,11 +77,16 @@ namespace NaturalHistory.UI
                        : ready > 0 ? Loc.F(ready == 1 ? "{0} evolution ready" : "{0} evolutions ready", ready)
                        : Loc.F(total == 1 ? "{0} possible evolution" : "{0} possible evolutions", total);
             var copies = Loc.F(mine.Count == 1 ? "{0} copy" : "{0} copies", mine.Count);
-            detailLabel.text = $"{def.scientificName}  ·  {copies}\n{breed}  ·  {evolve}";
+            var g = Copy.group;
+            var combat = Loc.F("HP {0}/{1}  ·  Attack {2}  ·  Defense {3}  ·  Actions {4}/{5}",
+                Mathf.CeilToInt(g.Hp), g.MaxHp, g.Stats.attack, g.Stats.defense, g.ActionsLeft, g.Stats.moves);
+            if (Diets.Starving(g)) combat += "\n" + Loc.F("No food on its tile or next to it: loses {0}% HP a turn", Mathf.RoundToInt(Diets.StarveLoss * 100f));
+            detailLabel.text = $"{def.scientificName}  ·  {copies}\n{combat}\n{breed}  ·  {evolve}";
 
-            reproduceButton.SetEnabled(wait == 0 && Evolution.ReproduceCell(Copy) != null);
+            reproduceButton.SetEnabled(wait == 0 && Copy.group.HasActions() && Evolution.ReproduceCell(Copy) != null);
             evolveButton.EnableInClassList("ready", ready > 0);
             evolveButton.SetEnabled(total > 0);
+            skipButton.SetEnabled(UnitCycle.Instance != null && UnitCycle.Instance.Awaits(Copy.group));
         }
 
         private void ShowTree(ProgressionTree tree)

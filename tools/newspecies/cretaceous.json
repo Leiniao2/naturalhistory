@@ -1,0 +1,222 @@
+[
+  {
+    "id": "tarbosaurus_bataar", "commonName": "Tarbosaurus", "scientificName": "Tarbosaurus bataar", "kingdom": "Animalia",
+    "group": "Theropod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Wetland"],
+    "diet": "Carnivore", "prey": ["Sauropod dinosaur", "Ornithopod dinosaur", "Ankylosaur", "Theropod dinosaur"],
+    "sizeCm": 1000, "startingPopulation": 20, "playable": true, "model": "Models/Species/Tarbosaurus",
+    "mapStyle": "Ground", "mapLegs": 1, "colonySize": 1, "mapAttack": "Bite",
+    "attack": 9, "defense": 4, "hp": 11, "moves": 2,
+    "genes": [{"gene": "carnivory", "expression": 0.95}, {"gene": "chemoreception", "expression": 0.7}, {"gene": "vision_acuity", "expression": 0.6}, {"gene": "land_speed", "expression": 0.35}],
+    "description": "The Asian cousin of Tyrannosaurus, about 10 metres long and 5 tonnes, that ruled the river plains of Mongolia about 70 million years ago. Its massive skull carried banana-sized teeth for a bone-crushing bite, while its arms were the smallest, relative to its body, of any tyrannosaur. It hunted the giant sauropods and duck-billed dinosaurs that lived alongside it."
+  },
+  {
+    "id": "utahraptor_ostrommaysi", "commonName": "Utahraptor", "scientificName": "Utahraptor ostrommaysi", "kingdom": "Animalia",
+    "group": "Theropod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Hill"],
+    "diet": "Carnivore", "prey": ["Ornithopod dinosaur", "Ankylosaur", "Small animals"],
+    "sizeCm": 600, "startingPopulation": 40, "playable": true, "model": "Models/Species/Utahraptor",
+    "mapStyle": "Ground", "mapLegs": 1, "mapHip": 0.6, "colonySize": 2, "mapAttack": "Pounce", "mapGait": "Run",
+    "attack": 8, "defense": 3, "hp": 7, "moves": 3,
+    "genes": [{"gene": "carnivory", "expression": 0.95}, {"gene": "land_speed", "expression": 0.7}, {"gene": "group_defense", "expression": 0.6}, {"gene": "vision_acuity", "expression": 0.7}],
+    "description": "The largest known raptor, a feathered dromaeosaurid about 6 metres long and up to half a tonne, from Utah about 135 million years ago. Each foot carried a sickle claw some 24 cm long, and it was stockier and more powerful than its smaller relatives. A block of rock holding several Utahraptors of different ages suggests they may have hunted or gathered in groups."
+  },
+  {
+    "id": "baryonyx_walkeri", "commonName": "Baryonyx", "scientificName": "Baryonyx walkeri", "kingdom": "Animalia",
+    "group": "Theropod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Wetland", "FreshWater"],
+    "diet": "Carnivore", "prey": ["Bony fish", "Ornithopod dinosaur", "Small animals"],
+    "sizeCm": 900, "startingPopulation": 25, "playable": true, "model": "Models/Species/Baryonyx",
+    "mapStyle": "Ground", "mapLegs": 1, "colonySize": 1, "mapAttack": "Snap",
+    "attack": 8, "defense": 3, "hp": 8, "moves": 2,
+    "genes": [{"gene": "carnivory", "expression": 0.9}, {"gene": "swimming_speed", "expression": 0.5}, {"gene": "vision_acuity", "expression": 0.6}, {"gene": "land_speed", "expression": 0.4}],
+    "description": "A spinosaurid about 9 metres long that hunted along rivers and lagoons in England and Spain about 125 million years ago. It had a long, narrow, crocodile-like snout with almost 100 teeth and a huge 30 cm thumb claw, used like a gaff to hook fish. Scales of a large fish and the bones of a young Iguanodon were found in its stomach, so it hunted both in the water and on land."
+  },
+  {
+    "id": "majungasaurus_crenatissimus", "commonName": "Majungasaurus", "scientificName": "Majungasaurus crenatissimus", "kingdom": "Animalia",
+    "group": "Theropod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Savanna", "Plain"],
+    "diet": "Carnivore", "prey": ["Sauropod dinosaur", "Theropod dinosaur", "Small animals"],
+    "sizeCm": 700, "startingPopulation": 25, "playable": true, "model": "Models/Species/Majungasaurus",
+    "mapStyle": "Ground", "mapLegs": 1, "mapHip": 0.5, "colonySize": 1, "mapAttack": "Bite",
+    "attack": 8, "defense": 5, "hp": 9, "moves": 2,
+    "genes": [{"gene": "carnivory", "expression": 0.95}, {"gene": "armor_thickness", "expression": 0.4}, {"gene": "chemoreception", "expression": 0.6}, {"gene": "heat_tolerance", "expression": 0.6}],
+    "description": "An abelisaurid about 7 metres long, the top predator of Madagascar about 70 million years ago. It had a short, deep, thick-roofed skull with a single knob-like horn, tiny stubby arms and stocky legs; it probably clamped on to prey in a bulldog-like grip rather than slashing. Tooth marks on its own species' bones show that it was a cannibal, eating others of its kind as well as the sauropod Rapetosaurus."
+  },
+  {
+    "id": "prognathodon_saturator", "commonName": "Prognathodon", "scientificName": "Prognathodon saturator", "kingdom": "Animalia",
+    "group": "Mosasaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["SaltWater"],
+    "diet": "Carnivore", "prey": ["Sea turtle", "Ammonite", "Heteromorph ammonite", "Plesiosaur", "Bony fish", "Mosasaur"],
+    "sizeCm": 1200, "startingPopulation": 15, "playable": true, "model": "Models/Species/Prognathodon",
+    "mapStyle": "Swim", "colonySize": 1, "mapAttack": "Bite",
+    "attack": 10, "defense": 5, "hp": 10, "moves": 2,
+    "genes": [{"gene": "carnivory", "expression": 0.95}, {"gene": "swimming_speed", "expression": 0.5}, {"gene": "armor_thickness", "expression": 0.4}, {"gene": "vision_acuity", "expression": 0.6}],
+    "description": "A giant mosasaur about 12 metres long from the seas of the Netherlands about 67 million years ago. Its short, very deep and heavily built jaws were lined with thick, blunt-tipped teeth and extra teeth on the roof of the mouth, made for gripping and crushing hard prey. It cracked open sea turtles, ammonites and even other marine reptiles, and its skeletons carry healed wounds from fights."
+  },
+  {
+    "id": "hatzegopteryx_thambema", "commonName": "Hatzegopteryx", "scientificName": "Hatzegopteryx thambema", "kingdom": "Animalia",
+    "group": "Pterosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Hill", "Plain"],
+    "diet": "Carnivore", "prey": ["Ornithopod dinosaur", "Ankylosaur", "Small animals"],
+    "sizeCm": 1100, "startingPopulation": 20, "playable": true, "model": "Models/Species/Hatzegopteryx",
+    "mapStyle": "Soar", "colonySize": 1, "wingBeat": 0.7, "wingRoot": 0.12, "mapAttack": "Strike",
+    "attack": 8, "defense": 3, "hp": 8, "moves": 3,
+    "genes": [{"gene": "flight_capability", "expression": 0.9}, {"gene": "carnivory", "expression": 0.85}, {"gene": "vision_acuity", "expression": 0.7}, {"gene": "land_speed", "expression": 0.4}],
+    "description": "A giant azhdarchid pterosaur from Hateg Island in what is now Romania, about 66 million years ago, with a wingspan of 10-12 metres. Unlike its slender relatives it had a short, very wide skull about 3 metres long and a thick, muscular neck. On an island without large predatory dinosaurs, it probably stalked the ground on all fours as the top predator, grabbing dwarf dinosaurs with its huge beak."
+  },
+  {
+    "id": "kaprosuchus_saharicus", "commonName": "Kaprosuchus", "scientificName": "Kaprosuchus saharicus", "kingdom": "Animalia",
+    "group": "Crocodyliform", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Wetland"],
+    "diet": "Carnivore", "prey": ["Theropod dinosaur", "Ornithopod dinosaur", "Small animals"],
+    "sizeCm": 600, "startingPopulation": 30, "playable": true, "model": "Models/Species/Kaprosuchus",
+    "mapStyle": "Ground", "mapLegs": 2, "mapHip": 0.5, "mapGait": "Run", "colonySize": 1, "mapAttack": "Charge",
+    "attack": 8, "defense": 4, "hp": 7, "moves": 2,
+    "genes": [{"gene": "carnivory", "expression": 0.9}, {"gene": "land_speed", "expression": 0.6}, {"gene": "armor_thickness", "expression": 0.5}, {"gene": "vision_acuity", "expression": 0.5}],
+    "description": "Nicknamed 'BoarCroc', a 6-metre crocodyliform from the Sahara of Niger about 95 million years ago. Three pairs of huge tusk-like teeth stuck out above and below its jaws like a boar's, and a bony ridge at the back of its head may have been used for ramming. Its long, upright legs and forward-facing eyes suggest it ran down prey on land, including small dinosaurs, rather than lurking in the water like a modern crocodile."
+  },
+  {
+    "id": "euoplocephalus_tutus", "commonName": "Euoplocephalus", "scientificName": "Euoplocephalus tutus", "kingdom": "Animalia",
+    "group": "Ankylosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Wetland"],
+    "diet": "Herbivore",
+    "sizeCm": 550, "startingPopulation": 35, "playable": true, "model": "Models/Species/Euoplocephalus",
+    "mapStyle": "Ground", "mapLegs": 2, "colonySize": 1, "mapAttack": "Lash", "mapDefense": "Brace",
+    "attack": 5, "defense": 10, "hp": 11, "moves": 1,
+    "genes": [{"gene": "armor_thickness", "expression": 0.95}, {"gene": "herbivory", "expression": 0.85}, {"gene": "chemoreception", "expression": 0.6}, {"gene": "land_speed", "expression": 0.15}],
+    "description": "A tank-like ankylosaurid about 5.5 metres long and 2 tonnes from Alberta about 76 million years ago. Bands of bony plates and keeled spikes covered its neck, back and tail, and even its eyelids were armoured with bony shutters. Its stiff tail ended in a heavy club of fused bone that could smash the shins of an attacking tyrannosaur."
+  },
+  {
+    "id": "borealopelta_markmitchelli", "commonName": "Borealopelta", "scientificName": "Borealopelta markmitchelli", "kingdom": "Animalia",
+    "group": "Ankylosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Wetland"],
+    "diet": "Herbivore",
+    "sizeCm": 550, "startingPopulation": 35, "playable": true, "model": "Models/Species/Borealopelta",
+    "mapStyle": "Ground", "mapLegs": 2, "colonySize": 1, "mapDefense": "Hide",
+    "attack": 3, "defense": 10, "hp": 10, "moves": 1,
+    "genes": [{"gene": "armor_thickness", "expression": 0.95}, {"gene": "camouflage", "expression": 0.8}, {"gene": "herbivory", "expression": 0.85}, {"gene": "land_speed", "expression": 0.1}],
+    "description": "A nodosaur about 5.5 metres long and 1.3 tonnes from Alberta about 110 million years ago, known from a mummy-like fossil so well preserved that it looks like a sleeping statue. Its back was a mosaic of bony plates, and two long spikes jutted from its shoulders. Pigment traces show it was reddish-brown on top and paler below, a camouflage that suggests even this armoured giant needed to hide from predators."
+  },
+  {
+    "id": "styracosaurus_albertensis", "commonName": "Styracosaurus", "scientificName": "Styracosaurus albertensis", "kingdom": "Animalia",
+    "group": "Ceratopsian dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Wetland"],
+    "diet": "Herbivore",
+    "sizeCm": 550, "startingPopulation": 40, "playable": true, "model": "Models/Species/Styracosaurus",
+    "mapStyle": "Ground", "mapLegs": 2, "colonySize": 2, "mapAttack": "Charge", "mapDefense": "Brace",
+    "attack": 7, "defense": 8, "hp": 10, "moves": 2,
+    "genes": [{"gene": "herbivory", "expression": 0.9}, {"gene": "armor_thickness", "expression": 0.7}, {"gene": "group_defense", "expression": 0.75}, {"gene": "land_speed", "expression": 0.3}],
+    "description": "A horned dinosaur about 5.5 metres long and 3 tonnes from Alberta about 75 million years ago. It had a single long nose horn up to 60 cm and a frill crowned with four to six long spikes, giving it one of the most spectacular heads of any dinosaur. Bonebeds of many individuals suggest it lived in herds, facing predators with a wall of horns."
+  },
+  {
+    "id": "patagotitan_mayorum", "commonName": "Patagotitan", "scientificName": "Patagotitan mayorum", "kingdom": "Animalia",
+    "group": "Sauropod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Savanna"],
+    "diet": "Herbivore",
+    "sizeCm": 3700, "startingPopulation": 10, "playable": true, "model": "Models/Species/Patagotitan",
+    "mapStyle": "Ground", "mapLegs": 2, "mapHip": 0.5, "colonySize": 1, "mapAttack": "Ram", "mapDefense": "Brace",
+    "attack": 4, "defense": 5, "hp": 15, "moves": 1,
+    "genes": [{"gene": "herbivory", "expression": 0.95}, {"gene": "heat_tolerance", "expression": 0.6}, {"gene": "clutch_size", "expression": 0.7}, {"gene": "land_speed", "expression": 0.1}],
+    "description": "One of the largest animals ever to walk the Earth, a titanosaur about 37 metres long and some 55-60 tonnes from Patagonia about 100 million years ago. It is known from the bones of at least six individuals, so its size is better established than that of most giant sauropods. Fully grown, it was simply too big for any predator to bring down, and its sheer bulk was its defence."
+  },
+  {
+    "id": "saltasaurus_loricatus", "commonName": "Saltasaurus", "scientificName": "Saltasaurus loricatus", "kingdom": "Animalia",
+    "group": "Sauropod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Steppe"],
+    "diet": "Herbivore",
+    "sizeCm": 1200, "startingPopulation": 25, "playable": true, "model": "Models/Species/Saltasaurus",
+    "mapStyle": "Ground", "mapLegs": 2, "mapHip": 0.5, "colonySize": 1, "mapDefense": "Brace",
+    "attack": 3, "defense": 8, "hp": 12, "moves": 1,
+    "genes": [{"gene": "armor_thickness", "expression": 0.8}, {"gene": "herbivory", "expression": 0.9}, {"gene": "clutch_size", "expression": 0.85}, {"gene": "land_speed", "expression": 0.15}],
+    "description": "A small titanosaur about 12 metres long from Argentina about 70 million years ago, and the first sauropod found to have body armour. Its back was studded with bony plates up to 12 cm across set in a mosaic of small bony nodules. Females may have laid their eggs in huge nesting colonies, like those found nearby at Auca Mahuevo."
+  },
+  {
+    "id": "shantungosaurus_giganteus", "commonName": "Shantungosaurus", "scientificName": "Shantungosaurus giganteus", "kingdom": "Animalia",
+    "group": "Ornithopod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Wetland"],
+    "diet": "Herbivore",
+    "sizeCm": 1500, "startingPopulation": 25, "playable": true, "model": "Models/Species/Shantungosaurus",
+    "mapStyle": "Ground", "mapLegs": 2, "mapHip": 0.55, "colonySize": 2, "mapDefense": "Scatter",
+    "attack": 3, "defense": 4, "hp": 14, "moves": 2,
+    "genes": [{"gene": "herbivory", "expression": 0.95}, {"gene": "group_defense", "expression": 0.75}, {"gene": "chemoreception", "expression": 0.6}, {"gene": "land_speed", "expression": 0.3}],
+    "description": "The largest known hadrosaur and the biggest ornithopod of all, about 15 metres long and some 13-16 tonnes, from the floodplains of Shandong in China about 72 million years ago. It had a long, flat, crestless head with a broad duck-bill and some 1,500 grinding teeth. It lived in large herds, and its great size made adults hard for even tyrannosaurs to bring down."
+  },
+  {
+    "id": "protostega_gigas", "commonName": "Protostega", "scientificName": "Protostega gigas", "kingdom": "Animalia",
+    "group": "Sea turtle", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["SaltWater"],
+    "diet": "Carnivore", "prey": ["Small animals", "Ammonite", "Heteromorph ammonite"],
+    "sizeCm": 300, "startingPopulation": 60, "playable": true, "model": "Models/Species/Protostega",
+    "mapStyle": "Swim", "colonySize": 1, "wingBeat": 0.6, "wingRoot": 0.2, "mapDefense": "Hide",
+    "attack": 3, "defense": 8, "hp": 9, "moves": 2,
+    "genes": [{"gene": "armor_thickness", "expression": 0.7}, {"gene": "swimming_speed", "expression": 0.55}, {"gene": "clutch_size", "expression": 0.85}, {"gene": "carnivory", "expression": 0.5}],
+    "description": "A giant sea turtle about 3 metres long from the inland sea of North America about 85 million years ago, second in size only to its relative Archelon. Its shell was reduced to a light frame of bone covered in leathery skin, like a modern leatherback's, and it swam with long, wing-like front flippers. It crushed jellyfish, squid and shelled molluscs with its broad beak, and buried large clutches of eggs on the beaches."
+  },
+  {
+    "id": "gallimimus_bullatus", "commonName": "Gallimimus", "scientificName": "Gallimimus bullatus", "kingdom": "Animalia",
+    "group": "Theropod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Desert", "Wetland"],
+    "diet": "Omnivore", "mainDiet": "Herbivore", "prey": ["Small animals"],
+    "sizeCm": 600, "startingPopulation": 80, "playable": true, "model": "Models/Species/Gallimimus",
+    "mapStyle": "Ground", "mapLegs": 1, "mapHip": 0.6, "mapGait": "Run", "colonySize": 3, "mapDefense": "Scatter",
+    "attack": 2, "defense": 2, "hp": 5, "moves": 4,
+    "genes": [{"gene": "land_speed", "expression": 0.95}, {"gene": "omnivory", "expression": 0.7}, {"gene": "vision_acuity", "expression": 0.75}, {"gene": "group_defense", "expression": 0.5}],
+    "description": "The largest well-known ostrich dinosaur, about 6 metres long and 400 kg, from Mongolia about 70 million years ago. It had a small toothless beak, large eyes, a long neck and very long legs built for speed, and may have run at 40-60 km/h. Many skeletons of different ages found together suggest it lived in groups, relying on speed rather than weapons to escape predators."
+  },
+  {
+    "id": "dolichorhynchops_osborni", "commonName": "Dolichorhynchops", "scientificName": "Dolichorhynchops osborni", "kingdom": "Animalia",
+    "group": "Plesiosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["SaltWater"],
+    "diet": "Carnivore", "prey": ["Bony fish", "Small animals"],
+    "sizeCm": 450, "startingPopulation": 50, "playable": true, "model": "Models/Species/Dolichorhynchops",
+    "mapStyle": "Swim", "colonySize": 2, "wingBeat": 0.8, "wingRoot": 0.2, "mapAttack": "Snap", "mapDefense": "Scatter",
+    "attack": 5, "defense": 2, "hp": 5, "moves": 4,
+    "genes": [{"gene": "swimming_speed", "expression": 0.9}, {"gene": "carnivory", "expression": 0.85}, {"gene": "parental_care", "expression": 0.6}, {"gene": "vision_acuity", "expression": 0.6}],
+    "description": "A short-necked polycotylid plesiosaur about 4.5 metres long from the inland sea of North America about 80 million years ago. Its long, slender jaws were lined with needle-like teeth for snapping up fast fish and squid, and its streamlined body and four long flippers made it one of the fastest swimmers of its time. Like its close relatives it gave birth to a single large live baby at sea instead of laying eggs."
+  },
+  {
+    "id": "ichthyornis_dispar", "commonName": "Ichthyornis", "scientificName": "Ichthyornis dispar", "kingdom": "Animalia",
+    "group": "Avialan", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["SaltWater"],
+    "diet": "Carnivore", "prey": ["Small animals"],
+    "sizeCm": 30, "startingPopulation": 400, "playable": true, "model": "Models/Species/Ichthyornis",
+    "mapStyle": "Soar", "colonySize": 3, "wingBeat": 3.0, "wingRoot": 0.1, "mapAttack": "Dive", "mapDefense": "Scatter",
+    "attack": 3, "defense": 1, "hp": 3, "moves": 4,
+    "genes": [{"gene": "flight_capability", "expression": 0.95}, {"gene": "carnivory", "expression": 0.7}, {"gene": "vision_acuity", "expression": 0.75}, {"gene": "swimming_speed", "expression": 0.4}],
+    "description": "A gull-sized seabird about 30 cm long with a 60 cm wingspan that flew over the inland sea of North America about 95-83 million years ago. It looked much like a tern but still had sharp, curved teeth in its jaws, a mix of ancient and modern features that made it a key link between dinosaurs and modern birds. A strong, fast flier, it nested in colonies and dived for fish."
+  },
+  {
+    "id": "leaellynasaura_amicagraphica", "commonName": "Leaellynasaura", "scientificName": "Leaellynasaura amicagraphica", "kingdom": "Animalia",
+    "group": "Ornithopod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Tundra", "Plain"],
+    "diet": "Herbivore",
+    "sizeCm": 200, "startingPopulation": 250, "playable": true, "model": "Models/Species/Leaellynasaura",
+    "mapStyle": "Ground", "mapLegs": 1, "mapHip": 0.55, "mapGait": "Run", "colonySize": 3, "mapDefense": "Scatter",
+    "attack": 1, "defense": 2, "hp": 4, "moves": 4,
+    "genes": [{"gene": "land_speed", "expression": 0.9}, {"gene": "cold_tolerance", "expression": 0.85}, {"gene": "vision_acuity", "expression": 0.8}, {"gene": "herbivory", "expression": 0.8}],
+    "description": "A small, fast plant-eating dinosaur from the polar forests of southern Australia about 110 million years ago, when the region lay inside the Antarctic Circle and had weeks of winter darkness. Its tail was about three times as long as its body, perhaps wrapped around it for warmth, and its large eye sockets suggest keen sight in the long polar night. It relied on speed and agility to dodge predators."
+  },
+  {
+    "id": "oryctodromeus_cubicularis", "commonName": "Oryctodromeus", "scientificName": "Oryctodromeus cubicularis", "kingdom": "Animalia",
+    "group": "Ornithopod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Plain", "Hill"],
+    "diet": "Herbivore", "tags": ["Burrower"],
+    "sizeCm": 210, "startingPopulation": 300, "playable": true, "model": "Models/Species/Oryctodromeus",
+    "mapStyle": "Ground", "mapLegs": 1, "mapHip": 0.5, "colonySize": 3, "mapDefense": "Hide",
+    "attack": 2, "defense": 4, "hp": 5, "moves": 2,
+    "genes": [{"gene": "burrowing", "expression": 0.9}, {"gene": "parental_care", "expression": 0.8}, {"gene": "herbivory", "expression": 0.8}, {"gene": "land_speed", "expression": 0.6}],
+    "description": "The first known burrowing dinosaur, a small plant-eater about 2 metres long from Montana and Idaho about 95 million years ago. It was found curled up with two half-grown young at the end of a sloping, S-shaped burrow, the first evidence of a dinosaur digging dens and caring for its offspring. Its strong snout, shoulders and hips helped it dig, and a burrow offered shelter from predators and the weather."
+  },
+  {
+    "id": "beelzebufo_ampinga", "commonName": "Beelzebufo", "scientificName": "Beelzebufo ampinga", "kingdom": "Animalia",
+    "group": "Horned frog", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["Wetland", "Savanna"],
+    "diet": "Carnivore", "prey": ["Small animals"],
+    "sizeCm": 40, "startingPopulation": 300, "playable": true, "model": "Models/Species/Beelzebufo",
+    "mapStyle": "Ground", "mapHip": 0.4, "mapGait": "Hop", "colonySize": 2, "mapAttack": "Engulf", "mapDefense": "Hide",
+    "attack": 7, "defense": 3, "hp": 5, "moves": 1,
+    "genes": [{"gene": "carnivory", "expression": 0.85}, {"gene": "camouflage", "expression": 0.8}, {"gene": "armor_thickness", "expression": 0.4}, {"gene": "reproduction_rate", "expression": 0.7}],
+    "description": "Nicknamed the 'devil frog', one of the largest frogs ever, about 40 cm long and up to 4.5 kg, from Madagascar about 70 million years ago. Related to the modern South American horned frogs, it had a huge, wide mouth, powerful jaws and a bony shield on its skull. It was a sit-and-wait ambusher that could swallow lizards, small crocodiles and probably hatchling dinosaurs whole."
+  },
+  {
+    "id": "halszkaraptor_escuilliei", "commonName": "Halszkaraptor", "scientificName": "Halszkaraptor escuilliei", "kingdom": "Animalia",
+    "group": "Theropod dinosaur", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["FreshWater", "Wetland", "Desert"],
+    "diet": "Carnivore", "prey": ["Bony fish", "Small animals"],
+    "sizeCm": 60, "startingPopulation": 300, "playable": true, "model": "Models/Species/Halszkaraptor",
+    "mapStyle": "Ground", "mapLegs": 1, "mapHip": 0.55, "colonySize": 3, "mapAttack": "Snap", "mapDefense": "Scatter",
+    "attack": 3, "defense": 1, "hp": 4, "moves": 3,
+    "genes": [{"gene": "swimming_speed", "expression": 0.7}, {"gene": "carnivory", "expression": 0.8}, {"gene": "vision_acuity", "expression": 0.6}, {"gene": "land_speed", "expression": 0.5}],
+    "description": "A duck-sized dromaeosaur relative about 60 cm long from Mongolia about 75 million years ago, with a long swan-like neck, a flat, toothy snout and flipper-like forelimbs. It probably lived like a merganser or a cormorant, walking upright on land and swimming after fish and small water animals. It is one of the very few non-bird dinosaurs thought to have hunted in the water."
+  },
+  {
+    "id": "squalicorax_falcatus", "commonName": "Squalicorax", "scientificName": "Squalicorax falcatus", "kingdom": "Animalia",
+    "group": "Mackerel shark", "firstAge": "Cretaceous", "lastAge": "Cretaceous", "habitats": ["SaltWater"],
+    "diet": "Scavenger",
+    "sizeCm": 250, "startingPopulation": 120, "playable": true, "model": "Models/Species/Squalicorax",
+    "mapStyle": "Swim", "colonySize": 2, "mapAttack": "Bite", "mapDefense": "Mob",
+    "attack": 5, "defense": 2, "hp": 6, "moves": 3,
+    "genes": [{"gene": "chemoreception", "expression": 0.9}, {"gene": "electroreception", "expression": 0.7}, {"gene": "swimming_speed", "expression": 0.7}, {"gene": "carnivory", "expression": 0.8}],
+    "description": "The 'crow shark', a mackerel shark about 2-3 metres long that swarmed the seas of the Late Cretaceous about 100-70 million years ago. Its curved, finely serrated teeth, like small saws, were good for cutting chunks out of carcasses. Its tooth marks and embedded teeth have been found on mosasaurs, sea turtles and even a duck-billed dinosaur washed out to sea, showing that it fed on anything it could find, dead or alive."
+  }
+]

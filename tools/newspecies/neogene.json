@@ -1,0 +1,788 @@
+[
+  {
+    "id": "barbourofelis_fricki",
+    "commonName": "Barbourofelis",
+    "scientificName": "Barbourofelis fricki",
+    "kingdom": "Animalia",
+    "group": "Nimravid",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Savanna",
+      "Plain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Equid",
+      "Camelid",
+      "Rhinocerotoid",
+      "Proboscidean",
+      "Giraffid"
+    ],
+    "sizeCm": 190,
+    "startingPopulation": 30,
+    "playable": true,
+    "model": "Models/Species/BarbourofelisFricki",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.29,
+    "colonySize": 1,
+    "mapAttack": "Pounce",
+    "attack": 9,
+    "defense": 4,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.35
+      }
+    ],
+    "description": "A lion-sized 'false sabre-tooth' of Late Miocene North America, about 9 million years ago, with the longest upper canines for its skull size of any cat-like predator, sheathed by a deep bony flange on the lower jaw. Its short, massively muscled legs were made for ambush, not chases: it wrestled big prey such as rhinos and camels to the ground and killed with a slashing bite. Few animals of its time could survive its first strike."
+  },
+  {
+    "id": "simbakubwa_kutokaafrika",
+    "commonName": "Simbakubwa",
+    "scientificName": "Simbakubwa kutokaafrika",
+    "kingdom": "Animalia",
+    "group": "Hyaenodont",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Savanna",
+      "Plain",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Proboscidean",
+      "Rhinocerotoid",
+      "Giraffid",
+      "Great ape",
+      "Small animals"
+    ],
+    "sizeCm": 280,
+    "startingPopulation": 15,
+    "playable": true,
+    "model": "Models/Species/SimbakubwaKutokaafrika",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.35,
+    "colonySize": 1,
+    "attack": 10,
+    "defense": 4,
+    "hp": 10,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.25
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A giant hyaenodont of Early Miocene East Africa, about 22 million years ago, perhaps heavier than a polar bear and one of the largest meat-eating land mammals ever. It came from an old line of predators unrelated to cats, despite its name meaning 'big lion' in Swahili, and had a huge skull with long, scissor-like cheek teeth. Strong enough to tackle early elephants and rhinos, it was slow and heavy on its short legs."
+  },
+  {
+    "id": "laophis_crotaloides",
+    "commonName": "Laophis",
+    "scientificName": "Laophis crotaloides",
+    "kingdom": "Animalia",
+    "group": "Viper",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Plain",
+      "Hill",
+      "Steppe"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Rodent"
+    ],
+    "sizeCm": 300,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/LaophisCrotaloides",
+    "mapStyle": "Ground",
+    "mapGait": "Slither",
+    "mapAttack": "Strike",
+    "colonySize": 1,
+    "mapScale": 1.2,
+    "attack": 9,
+    "defense": 2,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "toxin_production",
+        "expression": 0.95
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.5
+      }
+    ],
+    "description": "A giant viper from the Pliocene of northern Greece, about 4 million years ago, and probably the largest venomous snake that ever lived, perhaps 3 to 4 metres long and over 20 kilograms. Like today's heavy-bodied vipers it most likely lay in wait and struck with long, folding fangs, injecting a large dose of venom. Its bite was deadly, but it was slow and had no armour."
+  },
+  {
+    "id": "pachycrocuta_brevirostris",
+    "commonName": "Giant Short-faced Hyena",
+    "scientificName": "Pachycrocuta brevirostris",
+    "kingdom": "Animalia",
+    "group": "Hyena",
+    "firstAge": "Neogene",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Savanna",
+      "Steppe",
+      "Plain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Deer",
+      "Equid",
+      "Camelid",
+      "Giraffid"
+    ],
+    "sizeCm": 170,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/PachycrocutaBrevirostris",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.4,
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "attack": 8,
+    "defense": 4,
+    "hp": 8,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.65
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.5
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "The largest hyena that ever lived, about lion-sized at up to 110 kg, ranging across Africa and Eurasia from the Late Pliocene to the Middle Pleistocene. Its short, broad muzzle and huge teeth gave it a bone-cracking bite, and it probably stole kills from sabre-toothed cats as well as hunting for itself. It lived and fought in clans."
+  },
+  {
+    "id": "enhydriodon_dikikae",
+    "commonName": "Enhydriodon",
+    "scientificName": "Enhydriodon dikikae",
+    "kingdom": "Animalia",
+    "group": "Mustelid",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Wetland",
+      "FreshWater",
+      "Savanna"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish",
+      "Side-necked turtle"
+    ],
+    "sizeCm": 200,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/EnhydriodonDikikae",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.35,
+    "colonySize": 1,
+    "attack": 8,
+    "defense": 5,
+    "hp": 8,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "A giant otter about the size of a lion, weighing perhaps 200 kg, from the Early Pliocene of Ethiopia some 3.5 million years ago. Its huge, rounded cheek teeth could crush shells, bones and turtle shells, and chemical traces in its teeth suggest it hunted on land as much as in the water. It was one of the largest members of the weasel family ever."
+  },
+  {
+    "id": "megalochelys_atlas",
+    "commonName": "Atlas Tortoise",
+    "scientificName": "Megalochelys atlas",
+    "kingdom": "Animalia",
+    "group": "Tortoise",
+    "firstAge": "Neogene",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Hill"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 250,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/MegalochelysAtlas",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.3,
+    "colonySize": 1,
+    "mapDefense": "Hide",
+    "attack": 2,
+    "defense": 10,
+    "hp": 13,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.98
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.2
+      }
+    ],
+    "description": "The largest land tortoise known, with a shell about 2 metres long, living from Pakistan and India to Southeast Asia from the Late Miocene to the Pleistocene. It plodded on elephant-like legs, browsing low plants, and when threatened it could draw its scaly limbs and head in under a domed shell that almost no predator could break. It was extremely slow."
+  },
+  {
+    "id": "glyptotherium_texanum",
+    "commonName": "Glyptotherium",
+    "scientificName": "Glyptotherium texanum",
+    "kingdom": "Animalia",
+    "group": "Glyptodont",
+    "firstAge": "Neogene",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Wetland",
+      "Savanna",
+      "Plain"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 250,
+    "startingPopulation": 50,
+    "playable": true,
+    "model": "Models/Species/GlyptotheriumTexanum",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.3,
+    "colonySize": 1,
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 9,
+    "hp": 11,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.95
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.3
+      }
+    ],
+    "description": "A glyptodont that walked north across the newly formed land bridge of Panama about 3 million years ago and spread into the southern United States. This car-sized armadillo relative, about 2.5 m long, was covered by a rigid domed shell of hundreds of fused bony plates, with a bony cap on its head and rings of armour on its tail. It grazed in wet grasslands and marshes, and its shell made it nearly immune to the big cats and terror birds of its day."
+  },
+  {
+    "id": "peltephilus_ferox",
+    "commonName": "Horned Armadillo",
+    "scientificName": "Peltephilus ferox",
+    "kingdom": "Animalia",
+    "group": "Armadillo",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Steppe"
+    ],
+    "diet": "Omnivore",
+    "tags": [
+      "Burrower"
+    ],
+    "mainDiet": "Herbivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 110,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/PeltephilusFerox",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.3,
+    "colonySize": 2,
+    "mapDefense": "Hide",
+    "attack": 4,
+    "defense": 8,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.9
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.7
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.6
+      }
+    ],
+    "description": "A Miocene armadillo of Patagonia, about a metre long, with a pair of tall, horn-like armour scales on its snout, the only armadillo known to have had horns. Its body was covered by flexible bands of bony plates and its head by a bony shield. Once thought to be a meat-eater, it probably dug for roots and tubers, relying on its armour and horns against predators."
+  },
+  {
+    "id": "josephoartigasia_monesi",
+    "commonName": "Josephoartigasia",
+    "scientificName": "Josephoartigasia monesi",
+    "kingdom": "Animalia",
+    "group": "Rodent",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Wetland",
+      "Plain",
+      "Savanna"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 300,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/JosephoartigasiaMonesi",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.25,
+    "colonySize": 1,
+    "attack": 4,
+    "defense": 4,
+    "hp": 14,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.3
+      }
+    ],
+    "description": "The largest rodent ever found, a bull-sized relative of the pacarana from the Pliocene of Uruguay, about 3 m long and perhaps half a tonne to a tonne in weight. It lived in the forested deltas of the ancient Rio de la Plata, feeding on soft plants. Its enormous incisors could bite as hard as a tiger's, for digging and for fighting off predators, and its sheer bulk made it very hard to kill."
+  },
+  {
+    "id": "acinonyx_pardinensis",
+    "commonName": "Giant Cheetah",
+    "scientificName": "Acinonyx pardinensis",
+    "kingdom": "Animalia",
+    "group": "Big cat",
+    "firstAge": "Neogene",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Savanna",
+      "Steppe",
+      "Plain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Equid",
+      "Deer",
+      "Giraffid",
+      "Camelid",
+      "Small animals"
+    ],
+    "sizeCm": 180,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/AcinonyxPardinensis",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.49,
+    "mapGait": "Run",
+    "colonySize": 1,
+    "attack": 6,
+    "defense": 2,
+    "hp": 5,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.98
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.8
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      }
+    ],
+    "description": "A cheetah of Pliocene and Early Pleistocene Europe, Asia and Africa, about twice as heavy as the living cheetah and nearly as big as a lion. Long, slender legs, a flexible spine and claws that stayed partly out for grip made it a sprinter that could run down antelopes and horses in open country. Built for speed rather than fighting, it was easily hurt and could lose its kills to hyenas."
+  },
+  {
+    "id": "thoatherium_minusculum",
+    "commonName": "Thoatherium",
+    "scientificName": "Thoatherium minusculum",
+    "kingdom": "Animalia",
+    "group": "Litoptern",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Steppe"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 70,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/ThoatheriumMinusculum",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.51,
+    "mapGait": "Run",
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 2,
+    "hp": 4,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.95
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A small, lightly built hoofed mammal of Miocene Patagonia, about 70 cm long, belonging to the litopterns, a South American group unrelated to horses. It evolved a single-toed foot even more reduced than a modern horse's, with the side toes shrunk to tiny splints. It was fast and nimble on its long, thin legs, but small and defenceless if caught."
+  },
+  {
+    "id": "carcharodon_hastalis",
+    "commonName": "Broad-toothed Mako",
+    "scientificName": "Carcharodon hastalis",
+    "kingdom": "Animalia",
+    "group": "Mackerel shark",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Baleen whale",
+      "Oceanic dolphin",
+      "Pinniped",
+      "Bony fish",
+      "Sea turtle"
+    ],
+    "sizeCm": 600,
+    "startingPopulation": 20,
+    "playable": true,
+    "model": "Models/Species/CarcharodonHastalis",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "attack": 7,
+    "defense": 2,
+    "hp": 6,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.95
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.6
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.6
+      }
+    ],
+    "description": "A large, mako-like shark of Miocene and Pliocene seas, up to about 6 m long, now thought to be the direct ancestor of the great white shark. Its broad, flat, smooth-edged teeth sliced through blubber and flesh, and fossil whale bones with its bite marks show that it hunted small baleen whales. Warm-bodied and streamlined, it was one of the fastest big predators in the sea, though far lighter than Megalodon."
+  },
+  {
+    "id": "allodesmus_kernensis",
+    "commonName": "Allodesmus",
+    "scientificName": "Allodesmus kernensis",
+    "kingdom": "Animalia",
+    "group": "Pinniped",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 250,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/AllodesmusKernensis",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "attack": 5,
+    "defense": 3,
+    "hp": 7,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.9
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.8
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.7
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.5
+      }
+    ],
+    "description": "A large seal-like pinniped of the Middle Miocene North Pacific, about 15 million years ago, with males reaching about 2.5 m. It had huge eyes for hunting fish and squid in dim water, a long neck and big flippers, and was fast and agile in the water. Males were much bigger than females and probably fought over harems on beaches, like modern sea lions."
+  },
+  {
+    "id": "andrias_matthewi",
+    "commonName": "Matthew's Giant Salamander",
+    "scientificName": "Andrias matthewi",
+    "kingdom": "Animalia",
+    "group": "Salamander",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish"
+    ],
+    "sizeCm": 230,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/AndriasMatthewi",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapUndulate": true,
+    "mapAttack": "Bite",
+    "attack": 4,
+    "defense": 3,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "regeneration",
+        "expression": 0.95
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.6
+      }
+    ],
+    "description": "A giant salamander up to about 2.3 m long from the Miocene and Pliocene rivers of North America, a close relative of today's Chinese and Japanese giant salamanders. It lay in wait on stream beds and snapped up fish, crayfish and frogs with a sudden gulp of its broad, flat head. Like its living relatives it breathed partly through its loose, wrinkled skin and could regrow lost toes and parts of limbs, which made it hard to wear down."
+  },
+  {
+    "id": "mourasuchus_arendsi",
+    "commonName": "Mourasuchus",
+    "scientificName": "Mourasuchus arendsi",
+    "kingdom": "Animalia",
+    "group": "Crocodilian",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 900,
+    "startingPopulation": 20,
+    "playable": true,
+    "model": "Models/Species/MourasuchusArendsi",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.18,
+    "colonySize": 1,
+    "attack": 3,
+    "defense": 7,
+    "hp": 12,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.85
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.8
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      }
+    ],
+    "description": "A huge caiman of Late Miocene South American wetlands, perhaps 8 to 10 m long, with a long, flat, broad 'duck-billed' skull lined with many small teeth. Its weak jaws were poorly suited to fighting large prey, so it probably gulped mouthfuls of water and strained out fish and small animals, like a pelican. Its heavy armour of bony scutes and its great bulk still made it a hard target."
+  },
+  {
+    "id": "neivamyrmex_ectopus",
+    "commonName": "Amber Army Ant",
+    "scientificName": "Neivamyrmex ectopus",
+    "kingdom": "Animalia",
+    "group": "Ant",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Ant",
+      "Termite"
+    ],
+    "sizeCm": 0.4,
+    "startingPopulation": 300000,
+    "playable": true,
+    "model": "Models/Species/NeivamyrmexEctopus",
+    "mapStyle": "Ground",
+    "mapAttack": "Sting",
+    "mapDefense": "Mob",
+    "mapLegs": 3,
+    "mapHip": 0.36,
+    "colonySize": 8,
+    "mapScale": 0.9,
+    "attack": 3,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "group_defense",
+        "expression": 0.95
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.9
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.85
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.5
+      }
+    ],
+    "description": "A New World army ant preserved in Miocene amber from the Dominican Republic, about 20 million years old, the first fossil army ant ever described. Like its living relatives it was almost blind and had no permanent nest: colonies of hundreds of thousands moved camp again and again, sending out raiding columns that overwhelmed other ants, insects and small animals by sheer numbers. Each worker was tiny, but a raid could strip the forest floor of prey."
+  }
+]

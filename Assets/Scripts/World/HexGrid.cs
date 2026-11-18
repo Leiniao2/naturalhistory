@@ -185,6 +185,7 @@ namespace NaturalHistory.World
             Debug.Log($"[HexGrid] Generated {width}×{height} grid ({width * height} cells)");
 
             WorldGenerator.Generate(cells, width, height, worldSeed);
+            RefreshSurfaceHeights(); // the seabed below is shaped from them
             GenerateRivers(worldSeed);
             GenerateUnder(worldSeed);
             UpdateCellMeshes();
@@ -1080,11 +1081,19 @@ namespace NaturalHistory.World
         // sits halfway to each land neighbour's height (corners: the average of the land tiles
         // meeting there), so a difference in elevation becomes a slope instead of a step. Coasts
         // keep their edge. Neighbouring mountains are joined with no groove between them.
-        private void UpdateCellMeshes()
+        // Every tile's surface height from its terrain and elevation. Before the under layer is
+        // built: the seabed is shaped from these, and a tile the sea has just flooded would otherwise
+        // keep its old land height and get a seabed standing above the sea.
+        private void RefreshSurfaceHeights()
         {
             for (int r = 0; r < height; r++)
             for (int q = 0; q < width; q++)
                 if (cells[q, r].Terrain != null) cells[q, r].SetSurfaceHeight(CellVisualHeight(cells[q, r]));
+        }
+
+        private void UpdateCellMeshes()
+        {
+            RefreshSurfaceHeights();
 
             int updated = 0;
             var corners = new float[6];
