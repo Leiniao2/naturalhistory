@@ -177,7 +177,7 @@
   "mapScale": 0.5,
   "mapAttack": "Sting",
   "mapDefense": "Rear",
-  "attack": 9,
+  "attack": 4,
   "defense": 3,
   "hp": 3,
   "moves": 2,

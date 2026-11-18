@@ -185,7 +185,7 @@
   "colonySize": 2,
   "mapAttack": "Bite",
   "mapDefense": "Hide",
-  "attack": 8,
+  "attack": 4,
   "defense": 2,
   "hp": 4,
   "moves": 2,

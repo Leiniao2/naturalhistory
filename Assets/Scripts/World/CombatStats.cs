@@ -6,9 +6,10 @@ namespace NaturalHistory.World
 {
     // A species' combat numbers, from its diet, genes (species.json "genes", expression 0..1), how it
     // moves on the map and its size; species.json "attack", "defense", "hp", "moves" override them.
-    //  - attack 1..10 before the era factor: what it eats (hunters hit hardest) plus carnivory, toxins, electric sense
-    //  - defense 1..10 before the era factor: armour, group defence, camouflage, burrowing; sessile
-    //    colonies and herbivores a little more
+    //  - attack 1..10 before the era factor, physical only (venom will be its own mechanic): what it
+    //    eats (hunters hit hardest) plus carnivory, electric sense and a little for big jaws
+    //  - defense 1..10 before the era factor: armour, group defence, camouflage, burrowing, the hide
+    //    and bones of big animals; sessile colonies and herbivores a little more
     //  - hp 3..15 before the era factor: mostly the same for all, more for regenerators and a little
     //    more for big animals
     //  - era factor (Era): attack, defense and hp grow by EraGrowth (20%) for each period after the
@@ -45,17 +46,20 @@ namespace NaturalHistory.World
 
             float diet = def.diet switch
             {
-                "Carnivore" => 3f,
-                "Omnivore"  => 2f,
+                "Carnivore" => 2.5f,
+                "Omnivore"  => 1.5f,
                 "Scavenger" => 1.5f,
-                "Parasite"  => 1.5f,
+                "Parasite"  => 1f,
                 "Herbivore" => 1f,
                 _           => 0f, // filter feeders, detritivores, photosynthesisers
             };
-            float attack  = 1f + diet + 3f * Gene("carnivory") + 2f * Gene("toxin_production") + Gene("electroreception");
+            // physical only: venom and toxins will be a mechanic of their own, not attack
+            float bulk    = Mathf.Log10(Mathf.Max(def.sizeCm, 0.001f) / 10f); // 0 at 10 cm, 1 at 1 m, 2 at 10 m
+            float attack  = 1f + diet + 2.5f * Gene("carnivory") + Gene("electroreception") + Mathf.Clamp(0.5f * bulk, 0f, 1.5f);
             bool sessile  = def.mapStyle == "Fixed";
-            float defense = 1f + 4f * Gene("armor_thickness") + 2f * Gene("group_defense") + 1.5f * Gene("camouflage")
-                          + Gene("burrowing") + (sessile ? 1f : 0f) + (def.diet == "Herbivore" ? 1f : 0f); // grazers: hides, horns, herds
+            float defense = 1.5f + 3.5f * Gene("armor_thickness") + 1.5f * Gene("group_defense") + Gene("camouflage")
+                          + 0.5f * Gene("burrowing") + (sessile ? 1f : 0f) + (def.diet == "Herbivore" ? 1f : 0f) // grazers: hides, horns, herds
+                          + Mathf.Clamp(0.7f * bulk, 0f, 2f); // thick hide and heavy bones of big animals
             float hp      = 4f + 3f * Gene("regeneration") + 1.5f * Mathf.Log10(Mathf.Max(def.sizeCm, 0.001f) + 1f);
             int moves     = def.mapStyle switch
             {

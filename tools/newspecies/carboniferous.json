@@ -1,831 +1,831 @@
 [
-  {
-    "id": "orthacanthus_compressus",
-    "commonName": "Orthacanthus",
-    "scientificName": "Orthacanthus compressus",
-    "kingdom": "Animalia",
-    "group": "Xenacanth shark",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "FreshWater",
-      "Wetland"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals",
-      "Temnospondyl",
-      "Lepospondyl",
-      "Xenacanth shark",
-      "Lobe-finned fish"
-    ],
-    "sizeCm": 300,
-    "startingPopulation": 40,
-    "playable": true,
-    "model": "Models/Species/Orthacanthus",
-    "mapStyle": "Swim",
-    "colonySize": 1,
-    "mapUndulate": true,
-    "mapAttack": "Bite",
-    "attack": 9,
-    "defense": 4,
-    "hp": 9,
-    "moves": 2,
-    "genes": [
-      {
-        "gene": "carnivory",
-        "expression": 0.95
-      },
-      {
-        "gene": "swimming_speed",
-        "expression": 0.6
-      },
-      {
-        "gene": "electroreception",
-        "expression": 0.6
-      },
-      {
-        "gene": "lateral_line",
-        "expression": 0.6
-      },
-      {
-        "gene": "armor_thickness",
-        "expression": 0.3
-      }
-    ],
-    "description": "A freshwater shark up to about 3 metres long that ruled the lakes and rivers of the Late Carboniferous coal swamps of North America, about 305 million years ago. It had an eel-like body with a long ribbon of a dorsal fin, a broad head full of two-pronged teeth and a long, serrated spine sticking back from its skull. The top predator of its waters, it ate fish, amphibians and even smaller sharks, and its strong bite made it one of the most dangerous animals of its time."
-  },
-  {
-    "id": "anthracosaurus_russelli",
-    "commonName": "Anthracosaurus",
-    "scientificName": "Anthracosaurus russelli",
-    "kingdom": "Animalia",
-    "group": "Embolomere",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "FreshWater",
-      "Wetland"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals",
-      "Lobe-finned fish",
-      "Temnospondyl",
-      "Lepospondyl"
-    ],
-    "sizeCm": 300,
-    "startingPopulation": 30,
-    "playable": true,
-    "model": "Models/Species/Anthracosaurus",
-    "mapStyle": "Swim",
-    "colonySize": 1,
-    "mapUndulate": true,
-    "mapAttack": "Bite",
-    "attack": 10,
-    "defense": 3,
-    "hp": 8,
-    "moves": 2,
-    "genes": [
-      {
-        "gene": "carnivory",
-        "expression": 0.95
-      },
-      {
-        "gene": "swimming_speed",
-        "expression": 0.6
-      },
-      {
-        "gene": "lateral_line",
-        "expression": 0.6
-      },
-      {
-        "gene": "vision_acuity",
-        "expression": 0.5
-      }
-    ],
-    "description": "A large, long-bodied embolomere about 3 metres long from Late Carboniferous coal swamps of Scotland and England, about 310 million years ago. Its big, deep skull carried some of the largest fangs of any early tetrapod, on the jaws and the roof of the mouth. It swam with eel-like waves of its long body and tall tail and seized fish and other amphibians with a crushing, piercing bite, though its long, lightly armoured body was vulnerable when attacked itself."
-  },
-  {
-    "id": "megalocephalus_pachycephalus",
-    "commonName": "Megalocephalus",
-    "scientificName": "Megalocephalus pachycephalus",
-    "kingdom": "Animalia",
-    "group": "Early tetrapod",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "Wetland",
-      "FreshWater"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals",
-      "Lobe-finned fish",
-      "Temnospondyl",
-      "Lepospondyl",
-      "Embolomere"
-    ],
-    "sizeCm": 180,
-    "startingPopulation": 50,
-    "playable": true,
-    "model": "Models/Species/Megalocephalus",
-    "mapStyle": "Ground",
-    "mapLegs": 2,
-    "mapHip": 0.4,
-    "colonySize": 1,
-    "mapAttack": "Snap",
-    "attack": 8,
-    "defense": 5,
-    "hp": 11,
-    "moves": 1,
-    "genes": [
-      {
-        "gene": "carnivory",
-        "expression": 0.9
-      },
-      {
-        "gene": "camouflage",
-        "expression": 0.6
-      },
-      {
-        "gene": "armor_thickness",
-        "expression": 0.5
-      },
-      {
-        "gene": "swimming_speed",
-        "expression": 0.4
-      }
-    ],
-    "description": "A heavy, crocodile-like baphetid early tetrapod about 1.5 to 2 metres long from the Late Carboniferous coal swamps of England, about 310 million years ago. Its name means 'big head': the broad, flat, thick-boned skull, about a third of a metre long, was lined with large fangs. It lay in wait at the water's edge on short, sturdy legs and lunged at fish and amphibians, and its massive skull and bulk made it hard to injure."
-  },
-  {
-    "id": "gigantoscorpio_willsi",
-    "commonName": "Gigantoscorpio",
-    "scientificName": "Gigantoscorpio willsi",
-    "kingdom": "Animalia",
-    "group": "Scorpion",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "Wetland",
-      "Rainforest",
-      "FreshWater"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals"
-    ],
-    "sizeCm": 30,
-    "startingPopulation": 300,
-    "playable": true,
-    "model": "Models/Species/Gigantoscorpio",
-    "mapStyle": "Ground",
-    "mapLegs": 4,
-    "mapHip": 0.16,
-    "colonySize": 2,
-    "mapAttack": "Sting",
-    "attack": 9,
-    "defense": 4,
-    "hp": 4,
-    "moves": 2,
-    "genes": [
-      {
-        "gene": "toxin_production",
-        "expression": 0.95
-      },
-      {
-        "gene": "carnivory",
-        "expression": 0.9
-      },
-      {
-        "gene": "armor_thickness",
-        "expression": 0.5
-      },
-      {
-        "gene": "vision_acuity",
-        "expression": 0.4
-      }
-    ],
-    "description": "A large scorpion about 30 centimetres long from the Early Carboniferous of southern Scotland, about 340 million years ago. It had big, strong pincers and a long tail ending in a large venom bulb and sting. It may have hunted along the shores of lagoons and pools, perhaps even in the water, catching fish and other small animals. Its venomous sting made it a dangerous attacker, but its body was easily crushed by larger predators."
-  },
-  {
-    "id": "stethacanthus_altonensis",
-    "commonName": "Stethacanthus",
-    "scientificName": "Stethacanthus altonensis",
-    "kingdom": "Animalia",
-    "group": "Symmoriiform shark",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "SaltWater"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals"
-    ],
-    "sizeCm": 90,
-    "startingPopulation": 200,
-    "playable": true,
-    "model": "Models/Species/Stethacanthus",
-    "mapStyle": "Swim",
-    "colonySize": 2,
-    "mapAttack": "Charge",
-    "attack": 7,
-    "defense": 4,
-    "hp": 6,
-    "moves": 3,
-    "genes": [
-      {
-        "gene": "swimming_speed",
-        "expression": 0.8
-      },
-      {
-        "gene": "carnivory",
-        "expression": 0.8
-      },
-      {
-        "gene": "electroreception",
-        "expression": 0.6
-      },
-      {
-        "gene": "lateral_line",
-        "expression": 0.5
-      }
-    ],
-    "description": "A shark up to about a metre long from the Early Carboniferous seas of North America, about 340 million years ago. Males carried a strange 'ironing board' on the back: a tall spine topped by a broad, flat brush covered, like the top of the head, with enlarged tooth-like denticles. It was a quick, agile hunter of fish and squid-like animals, and the brush may have been used for display or to look too big to swallow."
-  },
-  {
-    "id": "hibbertopterus_scouleri",
-    "commonName": "Hibbertopterus",
-    "scientificName": "Hibbertopterus scouleri",
-    "kingdom": "Animalia",
-    "group": "Eurypterid",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "FreshWater",
-      "Wetland"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals"
-    ],
-    "sizeCm": 170,
-    "startingPopulation": 60,
-    "playable": true,
-    "model": "Models/Species/Hibbertopterus",
-    "mapStyle": "Ground",
-    "mapLegs": 4,
-    "mapHip": 0.25,
-    "colonySize": 1,
-    "mapDefense": "Brace",
-    "attack": 3,
-    "defense": 8,
-    "hp": 14,
-    "moves": 1,
-    "genes": [
-      {
-        "gene": "armor_thickness",
-        "expression": 0.9
-      },
-      {
-        "gene": "chemoreception",
-        "expression": 0.6
-      },
-      {
-        "gene": "carnivory",
-        "expression": 0.5
-      },
-      {
-        "gene": "land_speed",
-        "expression": 0.2
-      }
-    ],
-    "description": "A giant sea scorpion from the Early Carboniferous of Scotland, about 335 million years ago, up to about 1.7 metres long and one of the heaviest arthropods that ever lived. It had a huge, rounded head shield, a very broad body and front legs fringed with long spines that raked small animals out of the mud. A fossil trackway shows that it could drag itself over land. Its thick, ornamented armour and great bulk made it very hard to kill, but it was slow and had a weak attack."
-  },
-  {
-    "id": "gigantoproductus_giganteus",
-    "commonName": "Gigantoproductus",
-    "scientificName": "Gigantoproductus giganteus",
-    "kingdom": "Animalia",
-    "group": "Productid brachiopod",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "SaltWater"
-    ],
-    "diet": "Filter feeder",
-    "sizeCm": 30,
-    "startingPopulation": 1200,
-    "playable": true,
-    "model": "Models/Species/Gigantoproductus",
-    "mapStyle": "Fixed",
-    "colonySize": 3,
-    "mapScale": 1.0,
-    "mapDefense": "Tighten",
-    "attack": 1,
-    "defense": 10,
-    "hp": 10,
-    "moves": 1,
-    "genes": [
-      {
-        "gene": "filter_feeding",
-        "expression": 0.8
-      },
-      {
-        "gene": "armor_thickness",
-        "expression": 0.95
-      },
-      {
-        "gene": "reproduction_rate",
-        "expression": 0.4
-      }
-    ],
-    "description": "The largest brachiopod that ever lived, with a shell up to about 30 centimetres wide, from the warm, shallow Early Carboniferous seas of Europe, Asia and North Africa, about 335 million years ago. It lay on the sea floor in a huge, thick, strongly curved shell, much wider than long, and fed by filtering food particles from the water through the gaping front of its shell. Its massive shell made it almost impossible for predators to break."
-  },
-  {
-    "id": "eophrynus_prestvicii",
-    "commonName": "Eophrynus",
-    "scientificName": "Eophrynus prestvicii",
-    "kingdom": "Animalia",
-    "group": "Trigonotarbid",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "Rainforest",
-      "Wetland"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals"
-    ],
-    "sizeCm": 2,
-    "startingPopulation": 4000,
-    "playable": true,
-    "model": "Models/Species/Eophrynus",
-    "mapStyle": "Ground",
-    "mapLegs": 4,
-    "mapHip": 0.4,
-    "colonySize": 3,
-    "mapScale": 0.6,
-    "mapDefense": "Brace",
-    "attack": 3,
-    "defense": 8,
-    "hp": 5,
-    "moves": 2,
-    "genes": [
-      {
-        "gene": "armor_thickness",
-        "expression": 0.9
-      },
-      {
-        "gene": "carnivory",
-        "expression": 0.7
-      },
-      {
-        "gene": "camouflage",
-        "expression": 0.5
-      },
-      {
-        "gene": "land_speed",
-        "expression": 0.4
-      }
-    ],
-    "description": "A trigonotarbid arachnid about 2 centimetres long from the Late Carboniferous coal forests of England, about 310 million years ago. Like other trigonotarbids it looked like a spider but had no silk or venom. Its broad, flattened body was armoured with plates covered in coarse bumps, and the rear edge of its back carried a row of stout spines. It hunted smaller arthropods in the leaf litter, and its armour and spines made it a tough, prickly mouthful."
-  },
-  {
-    "id": "desmatodon_hesperis",
-    "commonName": "Desmatodon",
-    "scientificName": "Desmatodon hesperis",
-    "kingdom": "Animalia",
-    "group": "Reptiliomorph",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "Rainforest",
-      "Plain",
-      "Hill"
-    ],
-    "diet": "Herbivore",
-    "sizeCm": 150,
-    "startingPopulation": 120,
-    "playable": true,
-    "model": "Models/Species/Desmatodon",
-    "mapStyle": "Ground",
-    "mapLegs": 2,
-    "mapHip": 0.45,
-    "colonySize": 2,
-    "mapDefense": "Brace",
-    "attack": 3,
-    "defense": 5,
-    "hp": 14,
-    "moves": 1,
-    "genes": [
-      {
-        "gene": "herbivory",
-        "expression": 0.9
-      },
-      {
-        "gene": "heat_tolerance",
-        "expression": 0.5
-      },
-      {
-        "gene": "land_speed",
-        "expression": 0.3
-      },
-      {
-        "gene": "reproduction_rate",
-        "expression": 0.3
-      }
-    ],
-    "description": "A heavily built diadectid about 1.5 metres long from the Late Carboniferous of Colorado, about 305 million years ago, and one of the earliest land vertebrates to eat plants. It had a short, deep head with broad, blunt cheek teeth for grinding tough leaves, a massive barrel-shaped body to digest them and short, stout legs. Its great bulk gave it plenty of staying power in a fight, but it was slow and had little to attack with."
-  },
-  {
-    "id": "namurotypus_sippeli",
-    "commonName": "Namurotypus",
-    "scientificName": "Namurotypus sippeli",
-    "kingdom": "Animalia",
-    "group": "Griffinfly",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "Wetland",
-      "Rainforest"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals",
-      "Palaeodictyopteran",
-      "Megasecopteran",
-      "Roachoid"
-    ],
-    "sizeCm": 32,
-    "startingPopulation": 600,
-    "playable": true,
-    "model": "Models/Species/Namurotypus",
-    "mapStyle": "Soar",
-    "wingBeat": 9,
-    "wingRoot": 0.08,
-    "colonySize": 3,
-    "mapAttack": "Dive",
-    "attack": 7,
-    "defense": 2,
-    "hp": 3,
-    "moves": 4,
-    "genes": [
-      {
-        "gene": "flight_capability",
-        "expression": 0.95
-      },
-      {
-        "gene": "vision_acuity",
-        "expression": 0.85
-      },
-      {
-        "gene": "carnivory",
-        "expression": 0.85
-      },
-      {
-        "gene": "reproduction_rate",
-        "expression": 0.4
-      }
-    ],
-    "description": "One of the oldest known griffinflies, with a wingspan of about 32 centimetres, from the Late Carboniferous of Hagen-Vorhalle in Germany, about 320 million years ago. Like its giant relative Meganeura it had huge eyes, a strong thorax, four long veined wings and spiny legs that formed a basket for snatching prey in mid-air. A fast, agile aerial hunter of other flying insects, it struck hard but had a fragile body."
-  },
-  {
-    "id": "anthracodromeus_longipes",
-    "commonName": "Anthracodromeus",
-    "scientificName": "Anthracodromeus longipes",
-    "kingdom": "Animalia",
-    "group": "Early reptile",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "Rainforest"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals",
-      "Roachoid"
-    ],
-    "sizeCm": 20,
-    "startingPopulation": 900,
-    "playable": true,
-    "model": "Models/Species/Anthracodromeus",
-    "mapStyle": "Ground",
-    "mapGait": "Run",
-    "mapLegs": 2,
-    "mapHip": 0.5,
-    "colonySize": 3,
-    "mapScale": 0.6,
-    "mapDefense": "Scatter",
-    "attack": 3,
-    "defense": 2,
-    "hp": 4,
-    "moves": 4,
-    "genes": [
-      {
-        "gene": "climbing",
-        "expression": 0.85
-      },
-      {
-        "gene": "land_speed",
-        "expression": 0.85
-      },
-      {
-        "gene": "carnivory",
-        "expression": 0.6
-      },
-      {
-        "gene": "vision_acuity",
-        "expression": 0.6
-      }
-    ],
-    "description": "A small, lizard-like early reptile about 20 centimetres long from the Late Carboniferous of Ohio, about 307 million years ago. Its name means 'coal runner': it had long, slender legs and long toes ending in sharp, curved claws, and it is the oldest known reptile adapted for climbing. It darted over the ground and up tree trunks of the coal forest after insects, escaping danger with speed rather than strength."
-  },
-  {
-    "id": "iniopteryx_rushlaui",
-    "commonName": "Iniopteryx",
-    "scientificName": "Iniopteryx rushlaui",
-    "kingdom": "Animalia",
-    "group": "Chimaera",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "SaltWater"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals"
-    ],
-    "sizeCm": 40,
-    "startingPopulation": 500,
-    "playable": true,
-    "model": "Models/Species/Iniopteryx",
-    "mapStyle": "Swim",
-    "colonySize": 3,
-    "mapDefense": "Scatter",
-    "attack": 4,
-    "defense": 2,
-    "hp": 4,
-    "moves": 4,
-    "genes": [
-      {
-        "gene": "swimming_speed",
-        "expression": 0.85
-      },
-      {
-        "gene": "vision_acuity",
-        "expression": 0.8
-      },
-      {
-        "gene": "flight_capability",
-        "expression": 0.3
-      },
-      {
-        "gene": "electroreception",
-        "expression": 0.4
-      }
-    ],
-    "description": "A small relative of the ratfishes, about 40 centimetres long, from the Late Carboniferous seas of North America, about 305 million years ago. It had a short body, huge eyes and enormous wing-like pectoral fins set high on the shoulders, their leading edges armed with hooked denticles. It may have used these fins to burst out of the water and glide like a flying fish. Fast and hard to catch, it was easily hurt once caught."
-  },
-  {
-    "id": "mischoptera_nigra",
-    "commonName": "Mischoptera",
-    "scientificName": "Mischoptera nigra",
-    "kingdom": "Animalia",
-    "group": "Megasecopteran",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "Rainforest",
-      "Wetland"
-    ],
-    "diet": "Herbivore",
-    "tags": [
-      "Flyer"
-    ],
-    "sizeCm": 18,
-    "startingPopulation": 2500,
-    "playable": true,
-    "model": "Models/Species/Mischoptera",
-    "mapStyle": "Swarm",
-    "colonySize": 4,
-    "mapScale": 1.2,
-    "wingBeat": 6,
-    "wingRoot": 0.06,
-    "attack": 2,
-    "defense": 2,
-    "hp": 3,
-    "moves": 4,
-    "genes": [
-      {
-        "gene": "flight_capability",
-        "expression": 0.85
-      },
-      {
-        "gene": "herbivory",
-        "expression": 0.8
-      },
-      {
-        "gene": "reproduction_rate",
-        "expression": 0.6
-      },
-      {
-        "gene": "camouflage",
-        "expression": 0.5
-      }
-    ],
-    "description": "A megasecopteran insect from the Late Carboniferous of Commentry in France, about 300 million years ago, with a wingspan of up to about 20 centimetres. Megasecopterans were relatives of the palaeodictyopterans: they had a piercing beak for sucking plant juices and two pairs of slender wings that could not be folded back. As its name suggests, Mischoptera had dark, almost black wings. It was a quick flier that relied on speed and numbers rather than defences."
-  },
-  {
-    "id": "phlegethontia_longissima",
-    "commonName": "Phlegethontia",
-    "scientificName": "Phlegethontia longissima",
-    "kingdom": "Animalia",
-    "group": "Lepospondyl",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "Wetland",
-      "FreshWater",
-      "Rainforest"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals",
-      "Roachoid"
-    ],
-    "sizeCm": 70,
-    "startingPopulation": 300,
-    "playable": true,
-    "model": "Models/Species/Phlegethontia",
-    "mapStyle": "Ground",
-    "mapGait": "Slither",
-    "colonySize": 2,
-    "mapAttack": "Strike",
-    "mapDefense": "Hide",
-    "attack": 6,
-    "defense": 2,
-    "hp": 5,
-    "moves": 2,
-    "genes": [
-      {
-        "gene": "camouflage",
-        "expression": 0.8
-      },
-      {
-        "gene": "carnivory",
-        "expression": 0.75
-      },
-      {
-        "gene": "land_speed",
-        "expression": 0.5
-      },
-      {
-        "gene": "swimming_speed",
-        "expression": 0.4
-      }
-    ],
-    "description": "A legless, snake-like amphibian about 70 centimetres long from the Late Carboniferous of Illinois and Ohio, about 307 million years ago. This aistopod had a tiny, lightly built skull and an extremely long, thin body made of a great many vertebrae, with no trace of limbs. It slid through the leaf litter and shallow water of the coal swamps, ambushing insects and other small animals with a quick strike."
-  },
-  {
-    "id": "brachydectes_newberryi",
-    "commonName": "Brachydectes",
-    "scientificName": "Brachydectes newberryi",
-    "kingdom": "Animalia",
-    "group": "Lepospondyl",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "Wetland",
-      "FreshWater",
-      "Plain"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals"
-    ],
-    "tags": [
-      "Burrower"
-    ],
-    "sizeCm": 30,
-    "startingPopulation": 1200,
-    "playable": true,
-    "model": "Models/Species/Brachydectes",
-    "mapStyle": "Ground",
-    "mapGait": "Slither",
-    "colonySize": 3,
-    "mapDefense": "Hide",
-    "attack": 2,
-    "defense": 6,
-    "hp": 8,
-    "moves": 1,
-    "genes": [
-      {
-        "gene": "burrowing",
-        "expression": 0.9
-      },
-      {
-        "gene": "hibernation",
-        "expression": 0.8
-      },
-      {
-        "gene": "heat_tolerance",
-        "expression": 0.6
-      },
-      {
-        "gene": "carnivory",
-        "expression": 0.5
-      }
-    ],
-    "description": "A small, eel-like lysorophian amphibian about 30 centimetres long from the Late Carboniferous coal swamps of North America, about 307 million years ago. It had a long body, a small, sturdy head and tiny limbs. When its pools dried out it dug a burrow in the mud and lay curled up inside, waiting for the rains, and fossils of Brachydectes have been found still coiled in their burrows. Hidden underground it survived droughts and attacks that killed other animals."
-  },
-  {
-    "id": "platycrinites_laevis",
-    "commonName": "Platycrinites",
-    "scientificName": "Platycrinites laevis",
-    "kingdom": "Animalia",
-    "group": "Crinoid",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "SaltWater"
-    ],
-    "diet": "Filter feeder",
-    "sizeCm": 60,
-    "startingPopulation": 1500,
-    "playable": true,
-    "model": "Models/Species/Platycrinites",
-    "mapStyle": "Fixed",
-    "colonySize": 4,
-    "mapScale": 0.9,
-    "attack": 1,
-    "defense": 3,
-    "hp": 9,
-    "moves": 1,
-    "genes": [
-      {
-        "gene": "filter_feeding",
-        "expression": 0.85
-      },
-      {
-        "gene": "regeneration",
-        "expression": 0.85
-      },
-      {
-        "gene": "reproduction_rate",
-        "expression": 0.5
-      }
-    ],
-    "description": "A sea lily from the Early Carboniferous, about 340 million years ago, one of the crinoids that grew in great meadows on shallow sea floors, their skeletons later piling up into the Carboniferous Limestone of England. It held a smooth, bowl-shaped cup high on a long, slightly twisted stem and spread five branching, feathery arms to catch food particles from the current. Like other crinoids it could regrow lost arms, so it recovered quickly from damage."
-  },
-  {
-    "id": "essexella_asherae",
-    "commonName": "Essexella",
-    "scientificName": "Essexella asherae",
-    "kingdom": "Animalia",
-    "group": "Jellyfish",
-    "firstAge": "Carboniferous",
-    "lastAge": "Carboniferous",
-    "habitats": [
-      "SaltWater"
-    ],
-    "diet": "Carnivore",
-    "prey": [
-      "Small animals"
-    ],
-    "sizeCm": 12,
-    "startingPopulation": 3000,
-    "playable": true,
-    "model": "Models/Species/Essexella",
-    "mapStyle": "Drift",
-    "colonySize": 5,
-    "mapScale": 0.8,
-    "mapAttack": "Sting",
-    "attack": 5,
-    "defense": 1,
-    "hp": 4,
-    "moves": 1,
-    "genes": [
-      {
-        "gene": "toxin_production",
-        "expression": 0.7
-      },
-      {
-        "gene": "reproduction_rate",
-        "expression": 0.85
-      },
-      {
-        "gene": "carnivory",
-        "expression": 0.6
-      },
-      {
-        "gene": "swimming_speed",
-        "expression": 0.2
-      }
-    ],
-    "description": "A jellyfish about 10 to 15 centimetres across from the Late Carboniferous of Mazon Creek in Illinois, about 307 million years ago, where it is by far the most common fossil of the shallow coastal waters. Its domed bell had a long, curtain-like skirt of tissue hanging from its rim. It drifted in large swarms and probably caught small animals with stinging cells, making a soft but painful target for predators."
-  }
+ {
+  "id": "orthacanthus_compressus",
+  "commonName": "Orthacanthus",
+  "scientificName": "Orthacanthus compressus",
+  "kingdom": "Animalia",
+  "group": "Xenacanth shark",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Temnospondyl",
+   "Lepospondyl",
+   "Xenacanth shark",
+   "Lobe-finned fish"
+  ],
+  "sizeCm": 300,
+  "startingPopulation": 40,
+  "playable": true,
+  "model": "Models/Species/Orthacanthus",
+  "mapStyle": "Swim",
+  "colonySize": 1,
+  "mapUndulate": true,
+  "mapAttack": "Bite",
+  "attack": 9,
+  "defense": 4,
+  "hp": 9,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.95
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.6
+   },
+   {
+    "gene": "electroreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.3
+   }
+  ],
+  "description": "A freshwater shark up to about 3 metres long that ruled the lakes and rivers of the Late Carboniferous coal swamps of North America, about 305 million years ago. It had an eel-like body with a long ribbon of a dorsal fin, a broad head full of two-pronged teeth and a long, serrated spine sticking back from its skull. The top predator of its waters, it ate fish, amphibians and even smaller sharks, and its strong bite made it one of the most dangerous animals of its time."
+ },
+ {
+  "id": "anthracosaurus_russelli",
+  "commonName": "Anthracosaurus",
+  "scientificName": "Anthracosaurus russelli",
+  "kingdom": "Animalia",
+  "group": "Embolomere",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Lobe-finned fish",
+   "Temnospondyl",
+   "Lepospondyl"
+  ],
+  "sizeCm": 300,
+  "startingPopulation": 30,
+  "playable": true,
+  "model": "Models/Species/Anthracosaurus",
+  "mapStyle": "Swim",
+  "colonySize": 1,
+  "mapUndulate": true,
+  "mapAttack": "Bite",
+  "attack": 10,
+  "defense": 3,
+  "hp": 8,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.95
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.6
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "A large, long-bodied embolomere about 3 metres long from Late Carboniferous coal swamps of Scotland and England, about 310 million years ago. Its big, deep skull carried some of the largest fangs of any early tetrapod, on the jaws and the roof of the mouth. It swam with eel-like waves of its long body and tall tail and seized fish and other amphibians with a crushing, piercing bite, though its long, lightly armoured body was vulnerable when attacked itself."
+ },
+ {
+  "id": "megalocephalus_pachycephalus",
+  "commonName": "Megalocephalus",
+  "scientificName": "Megalocephalus pachycephalus",
+  "kingdom": "Animalia",
+  "group": "Early tetrapod",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "Wetland",
+   "FreshWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Lobe-finned fish",
+   "Temnospondyl",
+   "Lepospondyl",
+   "Embolomere"
+  ],
+  "sizeCm": 180,
+  "startingPopulation": 50,
+  "playable": true,
+  "model": "Models/Species/Megalocephalus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.4,
+  "colonySize": 1,
+  "mapAttack": "Snap",
+  "attack": 8,
+  "defense": 5,
+  "hp": 11,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.5
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.4
+   }
+  ],
+  "description": "A heavy, crocodile-like baphetid early tetrapod about 1.5 to 2 metres long from the Late Carboniferous coal swamps of England, about 310 million years ago. Its name means 'big head': the broad, flat, thick-boned skull, about a third of a metre long, was lined with large fangs. It lay in wait at the water's edge on short, sturdy legs and lunged at fish and amphibians, and its massive skull and bulk made it hard to injure."
+ },
+ {
+  "id": "gigantoscorpio_willsi",
+  "commonName": "Gigantoscorpio",
+  "scientificName": "Gigantoscorpio willsi",
+  "kingdom": "Animalia",
+  "group": "Scorpion",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "Wetland",
+   "Rainforest",
+   "FreshWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 30,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Gigantoscorpio",
+  "mapStyle": "Ground",
+  "mapLegs": 4,
+  "mapHip": 0.16,
+  "colonySize": 2,
+  "mapAttack": "Sting",
+  "attack": 6,
+  "defense": 4,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "toxin_production",
+    "expression": 0.95
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.5
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.4
+   }
+  ],
+  "description": "A large scorpion about 30 centimetres long from the Early Carboniferous of southern Scotland, about 340 million years ago. It had big, strong pincers and a long tail ending in a large venom bulb and sting. It may have hunted along the shores of lagoons and pools, perhaps even in the water, catching fish and other small animals. Its venomous sting made it a dangerous attacker, but its body was easily crushed by larger predators."
+ },
+ {
+  "id": "stethacanthus_altonensis",
+  "commonName": "Stethacanthus",
+  "scientificName": "Stethacanthus altonensis",
+  "kingdom": "Animalia",
+  "group": "Symmoriiform shark",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 90,
+  "startingPopulation": 200,
+  "playable": true,
+  "model": "Models/Species/Stethacanthus",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapAttack": "Charge",
+  "attack": 7,
+  "defense": 4,
+  "hp": 6,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.8
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "electroreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.5
+   }
+  ],
+  "description": "A shark up to about a metre long from the Early Carboniferous seas of North America, about 340 million years ago. Males carried a strange 'ironing board' on the back: a tall spine topped by a broad, flat brush covered, like the top of the head, with enlarged tooth-like denticles. It was a quick, agile hunter of fish and squid-like animals, and the brush may have been used for display or to look too big to swallow."
+ },
+ {
+  "id": "hibbertopterus_scouleri",
+  "commonName": "Hibbertopterus",
+  "scientificName": "Hibbertopterus scouleri",
+  "kingdom": "Animalia",
+  "group": "Eurypterid",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 170,
+  "startingPopulation": 60,
+  "playable": true,
+  "model": "Models/Species/Hibbertopterus",
+  "mapStyle": "Ground",
+  "mapLegs": 4,
+  "mapHip": 0.25,
+  "colonySize": 1,
+  "mapDefense": "Brace",
+  "attack": 3,
+  "defense": 8,
+  "hp": 14,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.9
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.2
+   }
+  ],
+  "description": "A giant sea scorpion from the Early Carboniferous of Scotland, about 335 million years ago, up to about 1.7 metres long and one of the heaviest arthropods that ever lived. It had a huge, rounded head shield, a very broad body and front legs fringed with long spines that raked small animals out of the mud. A fossil trackway shows that it could drag itself over land. Its thick, ornamented armour and great bulk made it very hard to kill, but it was slow and had a weak attack."
+ },
+ {
+  "id": "gigantoproductus_giganteus",
+  "commonName": "Gigantoproductus",
+  "scientificName": "Gigantoproductus giganteus",
+  "kingdom": "Animalia",
+  "group": "Productid brachiopod",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 30,
+  "startingPopulation": 1200,
+  "playable": true,
+  "model": "Models/Species/Gigantoproductus",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 1.0,
+  "mapDefense": "Tighten",
+  "attack": 1,
+  "defense": 10,
+  "hp": 10,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.95
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "The largest brachiopod that ever lived, with a shell up to about 30 centimetres wide, from the warm, shallow Early Carboniferous seas of Europe, Asia and North Africa, about 335 million years ago. It lay on the sea floor in a huge, thick, strongly curved shell, much wider than long, and fed by filtering food particles from the water through the gaping front of its shell. Its massive shell made it almost impossible for predators to break."
+ },
+ {
+  "id": "eophrynus_prestvicii",
+  "commonName": "Eophrynus",
+  "scientificName": "Eophrynus prestvicii",
+  "kingdom": "Animalia",
+  "group": "Trigonotarbid",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "Rainforest",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 2,
+  "startingPopulation": 4000,
+  "playable": true,
+  "model": "Models/Species/Eophrynus",
+  "mapStyle": "Ground",
+  "mapLegs": 4,
+  "mapHip": 0.4,
+  "colonySize": 3,
+  "mapScale": 0.6,
+  "mapDefense": "Brace",
+  "attack": 3,
+  "defense": 8,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.9
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.5
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.4
+   }
+  ],
+  "description": "A trigonotarbid arachnid about 2 centimetres long from the Late Carboniferous coal forests of England, about 310 million years ago. Like other trigonotarbids it looked like a spider but had no silk or venom. Its broad, flattened body was armoured with plates covered in coarse bumps, and the rear edge of its back carried a row of stout spines. It hunted smaller arthropods in the leaf litter, and its armour and spines made it a tough, prickly mouthful."
+ },
+ {
+  "id": "desmatodon_hesperis",
+  "commonName": "Desmatodon",
+  "scientificName": "Desmatodon hesperis",
+  "kingdom": "Animalia",
+  "group": "Reptiliomorph",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "Rainforest",
+   "Plain",
+   "Hill"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 150,
+  "startingPopulation": 120,
+  "playable": true,
+  "model": "Models/Species/Desmatodon",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.45,
+  "colonySize": 2,
+  "mapDefense": "Brace",
+  "attack": 3,
+  "defense": 5,
+  "hp": 14,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.3
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.3
+   }
+  ],
+  "description": "A heavily built diadectid about 1.5 metres long from the Late Carboniferous of Colorado, about 305 million years ago, and one of the earliest land vertebrates to eat plants. It had a short, deep head with broad, blunt cheek teeth for grinding tough leaves, a massive barrel-shaped body to digest them and short, stout legs. Its great bulk gave it plenty of staying power in a fight, but it was slow and had little to attack with."
+ },
+ {
+  "id": "namurotypus_sippeli",
+  "commonName": "Namurotypus",
+  "scientificName": "Namurotypus sippeli",
+  "kingdom": "Animalia",
+  "group": "Griffinfly",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "Wetland",
+   "Rainforest"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Palaeodictyopteran",
+   "Megasecopteran",
+   "Roachoid"
+  ],
+  "sizeCm": 32,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Namurotypus",
+  "mapStyle": "Soar",
+  "wingBeat": 9,
+  "wingRoot": 0.08,
+  "colonySize": 3,
+  "mapAttack": "Dive",
+  "attack": 7,
+  "defense": 2,
+  "hp": 3,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "flight_capability",
+    "expression": 0.95
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.85
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "One of the oldest known griffinflies, with a wingspan of about 32 centimetres, from the Late Carboniferous of Hagen-Vorhalle in Germany, about 320 million years ago. Like its giant relative Meganeura it had huge eyes, a strong thorax, four long veined wings and spiny legs that formed a basket for snatching prey in mid-air. A fast, agile aerial hunter of other flying insects, it struck hard but had a fragile body."
+ },
+ {
+  "id": "anthracodromeus_longipes",
+  "commonName": "Anthracodromeus",
+  "scientificName": "Anthracodromeus longipes",
+  "kingdom": "Animalia",
+  "group": "Early reptile",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "Rainforest"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Roachoid"
+  ],
+  "sizeCm": 20,
+  "startingPopulation": 900,
+  "playable": true,
+  "model": "Models/Species/Anthracodromeus",
+  "mapStyle": "Ground",
+  "mapGait": "Run",
+  "mapLegs": 2,
+  "mapHip": 0.5,
+  "colonySize": 3,
+  "mapScale": 0.6,
+  "mapDefense": "Scatter",
+  "attack": 3,
+  "defense": 2,
+  "hp": 4,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "climbing",
+    "expression": 0.85
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.85
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   }
+  ],
+  "description": "A small, lizard-like early reptile about 20 centimetres long from the Late Carboniferous of Ohio, about 307 million years ago. Its name means 'coal runner': it had long, slender legs and long toes ending in sharp, curved claws, and it is the oldest known reptile adapted for climbing. It darted over the ground and up tree trunks of the coal forest after insects, escaping danger with speed rather than strength."
+ },
+ {
+  "id": "iniopteryx_rushlaui",
+  "commonName": "Iniopteryx",
+  "scientificName": "Iniopteryx rushlaui",
+  "kingdom": "Animalia",
+  "group": "Chimaera",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 40,
+  "startingPopulation": 500,
+  "playable": true,
+  "model": "Models/Species/Iniopteryx",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapDefense": "Scatter",
+  "attack": 4,
+  "defense": 2,
+  "hp": 4,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.85
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.8
+   },
+   {
+    "gene": "flight_capability",
+    "expression": 0.3
+   },
+   {
+    "gene": "electroreception",
+    "expression": 0.4
+   }
+  ],
+  "description": "A small relative of the ratfishes, about 40 centimetres long, from the Late Carboniferous seas of North America, about 305 million years ago. It had a short body, huge eyes and enormous wing-like pectoral fins set high on the shoulders, their leading edges armed with hooked denticles. It may have used these fins to burst out of the water and glide like a flying fish. Fast and hard to catch, it was easily hurt once caught."
+ },
+ {
+  "id": "mischoptera_nigra",
+  "commonName": "Mischoptera",
+  "scientificName": "Mischoptera nigra",
+  "kingdom": "Animalia",
+  "group": "Megasecopteran",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "Rainforest",
+   "Wetland"
+  ],
+  "diet": "Herbivore",
+  "tags": [
+   "Flyer"
+  ],
+  "sizeCm": 18,
+  "startingPopulation": 2500,
+  "playable": true,
+  "model": "Models/Species/Mischoptera",
+  "mapStyle": "Swarm",
+  "colonySize": 4,
+  "mapScale": 1.2,
+  "wingBeat": 6,
+  "wingRoot": 0.06,
+  "attack": 2,
+  "defense": 2,
+  "hp": 3,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "flight_capability",
+    "expression": 0.85
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.5
+   }
+  ],
+  "description": "A megasecopteran insect from the Late Carboniferous of Commentry in France, about 300 million years ago, with a wingspan of up to about 20 centimetres. Megasecopterans were relatives of the palaeodictyopterans: they had a piercing beak for sucking plant juices and two pairs of slender wings that could not be folded back. As its name suggests, Mischoptera had dark, almost black wings. It was a quick flier that relied on speed and numbers rather than defences."
+ },
+ {
+  "id": "phlegethontia_longissima",
+  "commonName": "Phlegethontia",
+  "scientificName": "Phlegethontia longissima",
+  "kingdom": "Animalia",
+  "group": "Lepospondyl",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "Wetland",
+   "FreshWater",
+   "Rainforest"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Roachoid"
+  ],
+  "sizeCm": 70,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Phlegethontia",
+  "mapStyle": "Ground",
+  "mapGait": "Slither",
+  "colonySize": 2,
+  "mapAttack": "Strike",
+  "mapDefense": "Hide",
+  "attack": 6,
+  "defense": 2,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "camouflage",
+    "expression": 0.8
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.75
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.5
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.4
+   }
+  ],
+  "description": "A legless, snake-like amphibian about 70 centimetres long from the Late Carboniferous of Illinois and Ohio, about 307 million years ago. This aistopod had a tiny, lightly built skull and an extremely long, thin body made of a great many vertebrae, with no trace of limbs. It slid through the leaf litter and shallow water of the coal swamps, ambushing insects and other small animals with a quick strike."
+ },
+ {
+  "id": "brachydectes_newberryi",
+  "commonName": "Brachydectes",
+  "scientificName": "Brachydectes newberryi",
+  "kingdom": "Animalia",
+  "group": "Lepospondyl",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "Wetland",
+   "FreshWater",
+   "Plain"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "tags": [
+   "Burrower"
+  ],
+  "sizeCm": 30,
+  "startingPopulation": 1200,
+  "playable": true,
+  "model": "Models/Species/Brachydectes",
+  "mapStyle": "Ground",
+  "mapGait": "Slither",
+  "colonySize": 3,
+  "mapDefense": "Hide",
+  "attack": 2,
+  "defense": 6,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "burrowing",
+    "expression": 0.9
+   },
+   {
+    "gene": "hibernation",
+    "expression": 0.8
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.6
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small, eel-like lysorophian amphibian about 30 centimetres long from the Late Carboniferous coal swamps of North America, about 307 million years ago. It had a long body, a small, sturdy head and tiny limbs. When its pools dried out it dug a burrow in the mud and lay curled up inside, waiting for the rains, and fossils of Brachydectes have been found still coiled in their burrows. Hidden underground it survived droughts and attacks that killed other animals."
+ },
+ {
+  "id": "platycrinites_laevis",
+  "commonName": "Platycrinites",
+  "scientificName": "Platycrinites laevis",
+  "kingdom": "Animalia",
+  "group": "Crinoid",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 60,
+  "startingPopulation": 1500,
+  "playable": true,
+  "model": "Models/Species/Platycrinites",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.9,
+  "attack": 1,
+  "defense": 3,
+  "hp": 9,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.85
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.85
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A sea lily from the Early Carboniferous, about 340 million years ago, one of the crinoids that grew in great meadows on shallow sea floors, their skeletons later piling up into the Carboniferous Limestone of England. It held a smooth, bowl-shaped cup high on a long, slightly twisted stem and spread five branching, feathery arms to catch food particles from the current. Like other crinoids it could regrow lost arms, so it recovered quickly from damage."
+ },
+ {
+  "id": "essexella_asherae",
+  "commonName": "Essexella",
+  "scientificName": "Essexella asherae",
+  "kingdom": "Animalia",
+  "group": "Jellyfish",
+  "firstAge": "Carboniferous",
+  "lastAge": "Carboniferous",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 12,
+  "startingPopulation": 3000,
+  "playable": true,
+  "model": "Models/Species/Essexella",
+  "mapStyle": "Drift",
+  "colonySize": 5,
+  "mapScale": 0.8,
+  "mapAttack": "Sting",
+  "attack": 2,
+  "defense": 1,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "toxin_production",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.85
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.2
+   }
+  ],
+  "description": "A jellyfish about 10 to 15 centimetres across from the Late Carboniferous of Mazon Creek in Illinois, about 307 million years ago, where it is by far the most common fossil of the shallow coastal waters. Its domed bell had a long, curtain-like skirt of tissue hanging from its rim. It drifted in large swarms and probably caught small animals with stinging cells, making a soft but painful target for predators."
+ }
 ]
