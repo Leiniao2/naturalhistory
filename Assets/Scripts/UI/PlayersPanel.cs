@@ -10,13 +10,17 @@ using UnityEngine.UIElements;
 namespace NaturalHistory.UI
 {
     // Players in the top-left HUD (colour band + name), the faction panel with each faction's
-    // iconic animals, and the new-game screen where players pick count, faction, name and colours.
+    // iconic animals, and the new-game screen: your realm (faction) picked from cards grouped by
+    // category, your name and colours, and the competitors: how many (up to what the map size
+    // holds) and each one's realm, name and colours.
     public class PlayersPanel
     {
-        private readonly VisualElement bar, factionOverlay, factionBand, factionAnimals, setupOverlay, setupList;
-        private readonly Label factionTitle, factionSubtitle, factionDescription, setupCount;
+        private readonly VisualElement bar, factionOverlay, factionBand, factionAnimals, setupOverlay, setupList, setupYou;
+        private readonly ScrollView setupRealms;
+        private readonly Label factionTitle, factionSubtitle, factionDescription, setupCount, realmDescription, realmAnimals;
         private List<PlayerSetup> draft = new();
 
+        public event Action NewGameStarting; // just before the new map is made
         public event Action NewGameStarted;
         public event Action SetupClosed;
 
@@ -38,6 +42,10 @@ namespace NaturalHistory.UI
             setupOverlay       = root.Q("setup-overlay");
             setupList          = root.Q("setup-list");
             setupCount         = root.Q<Label>("setup-count");
+            setupRealms        = root.Q<ScrollView>("setup-realms");
+            setupYou           = root.Q("setup-you");
+            realmDescription   = root.Q<Label>("setup-realm-description");
+            realmAnimals       = root.Q<Label>("setup-realm-animals");
 
             root.Q<Button>("faction-close-button").clicked += CloseFaction;
             root.Q<Button>("setup-fewer").clicked          += () => ChangeCount(-1);
@@ -126,14 +134,23 @@ namespace NaturalHistory.UI
         private void StartGame()
         {
             CloseSetup();
+            NewGameStarting?.Invoke();
             Manager?.StartNewGame(draft);
             NewGameStarted?.Invoke();
         }
 
+        // Seats the new game can have: the map size sets the most players (GameOptions.MapPlayers)
+        private static int MaxSeats => Mathf.Min(Mathf.Min(PlayerManager.MaxPlayers, Factions.Count), GameOptions.MaxPlayers(GameOptions.Next));
+
+        // The world settings changed: a smaller map may hold fewer competitors
+        public void OnOptionsChanged()
+        {
+            if (SetupOpen) RebuildSetup();
+        }
+
         private void ChangeCount(int delta)
         {
-            int max = Mathf.Min(PlayerManager.MaxPlayers, Factions.Count);
-            if (delta > 0 && draft.Count < max)
+            if (delta > 0 && draft.Count < MaxSeats)
             {
                 var unused = Factions.Where(f => draft.All(s => s.faction != f.id)).ToList();
                 draft.Add(PlayerSetup.For(unused[UnityEngine.Random.Range(0, unused.Count)], human: false));
@@ -156,35 +173,95 @@ namespace NaturalHistory.UI
 
         private void RebuildSetup()
         {
-            setupCount.text = draft.Count.ToString();
+            while (draft.Count > Mathf.Max(PlayerManager.MinPlayers, MaxSeats)) draft.RemoveAt(draft.Count - 1);
+            setupCount.text = (draft.Count - 1).ToString();
+            BuildRealms();
+            BuildYou();
+
             setupList.Clear();
             var choices = Factions.Select(f => Loc.T(f.displayName)).ToList();
-
-            for (int i = 0; i < draft.Count; i++)
+            for (int i = 1; i < draft.Count; i++)
             {
                 var setup = draft[i];
                 var faction = GameDataLoader.GetFaction(setup.faction);
                 var row = new VisualElement().WithClass("setup-row");
 
-                row.Add(new Label(setup.human ? Loc.T("You") : Loc.F("AI {0}", i)).WithClass("setup-seat"));
-
-                var band = new Button(() => CycleBand(setup)).WithClass("setup-band");
-                band.Add(BandHalf(Parse(setup.primaryColor)));
-                band.Add(BandHalf(Parse(setup.secondaryColor)));
-                band.tooltip = Loc.T("Change colours");
-                row.Add(band);
+                row.Add(new Label(Loc.F("AI {0}", i)).WithClass("setup-seat"));
+                row.Add(BandButton(setup));
 
                 var dropdown = new DropdownField(choices, Mathf.Max(0, Factions.ToList().FindIndex(f => f.id == setup.faction))).WithClass("setup-faction");
                 dropdown.RegisterValueChangedCallback(_ => ChangeFaction(setup, dropdown.index >= 0 && dropdown.index < Factions.Count ? Factions[dropdown.index] : null));
                 row.Add(dropdown);
 
-                var name = new TextField { value = setup.name, maxLength = 24 }.WithClass("setup-name");
-                name.RegisterValueChangedCallback(e => setup.name = e.newValue);
-                row.Add(name);
-
+                row.Add(NameField(setup));
                 row.Add(new Label(Loc.T(faction?.category ?? "")).WithClass("setup-category"));
                 setupList.Add(row);
             }
+            if (draft.Count == 1) setupList.Add(new Label(Loc.T("No competitors: the world is yours alone.")).WithClass("setup-empty"));
+        }
+
+        // Every realm as a card, grouped by category (modern realms, paleocontinents, ancient oceans);
+        // yours lit, the ones a competitor has marked with their seat. Picking one a competitor has
+        // swaps the two.
+        private void BuildRealms()
+        {
+            var offset = setupRealms.scrollOffset;
+            setupRealms.Clear();
+            var you = draft[0];
+            foreach (var group in Factions.GroupBy(f => f.category))
+            {
+                setupRealms.Add(new Label(Loc.T(group.Key)).WithClass("setup-realm-group"));
+                var cards = new VisualElement().WithClass("setup-realm-cards");
+                foreach (var f in group)
+                {
+                    var faction = f;
+                    var card = new Button(() => ChangeFaction(you, faction)).WithClass("setup-realm");
+                    card.EnableInClassList("selected", f.id == you.faction);
+                    card.tooltip = Loc.T(f.description);
+                    var band = new VisualElement { pickingMode = PickingMode.Ignore }.WithClass("band");
+                    band.Add(BandHalf(Parse(f.primaryColor)));
+                    band.Add(BandHalf(Parse(f.secondaryColor)));
+                    card.Add(band);
+                    card.Add(new Label(Loc.T(f.displayName)) { pickingMode = PickingMode.Ignore }.WithClass("setup-realm-name"));
+                    int seat = draft.FindIndex(x => x.faction == f.id);
+                    if (seat > 0) card.Add(new Label(Loc.F("AI {0}", seat)) { pickingMode = PickingMode.Ignore }.WithClass("setup-realm-taken"));
+                    cards.Add(card);
+                }
+                setupRealms.Add(cards);
+            }
+            setupRealms.schedule.Execute(() => setupRealms.scrollOffset = offset); // once laid out again
+
+            var mine = GameDataLoader.GetFaction(you.faction);
+            realmDescription.text = mine == null ? "" : $"{Loc.T(mine.displayName)} · {Loc.T(mine.category)}\n{Loc.T(mine.description)}";
+            realmAnimals.text = mine == null || mine.iconicAnimals.Count == 0 ? "" :
+                Loc.F("Iconic animals: {0}", string.Join(", ", mine.iconicAnimals.OrderBy(x => AgeOrder(x.age))
+                    .Select(x => $"{Loc.T(x.name)} ({Loc.T(GameDataLoader.GetAge(x.age)?.displayName ?? x.age)})")));
+        }
+
+        // Your colours and name, under the realm cards
+        private void BuildYou()
+        {
+            setupYou.Clear();
+            var you = draft[0];
+            setupYou.Add(new Label(Loc.T("You")).WithClass("setup-seat"));
+            setupYou.Add(BandButton(you));
+            setupYou.Add(NameField(you));
+        }
+
+        private Button BandButton(PlayerSetup setup)
+        {
+            var band = new Button(() => CycleBand(setup)).WithClass("setup-band");
+            band.Add(BandHalf(Parse(setup.primaryColor)));
+            band.Add(BandHalf(Parse(setup.secondaryColor)));
+            band.tooltip = Loc.T("Change colours");
+            return band;
+        }
+
+        private static TextField NameField(PlayerSetup setup)
+        {
+            var name = new TextField { value = setup.name, maxLength = 24 }.WithClass("setup-name");
+            name.RegisterValueChangedCallback(e => setup.name = e.newValue);
+            return name;
         }
 
         // Picking a faction another seat has swaps the two. The name and colours follow the faction

@@ -1089,15 +1089,15 @@
       "id": "venom_glands",
       "displayName": "Venom Glands",
       "branch": "digestive",
-      "tier": 5,
+      "tier": 2,
       "row": 4,
-      "cost": 20,
-      "age": "Triassic",
+      "cost": 12,
+      "age": "Silurian",
       "prerequisites": [
-        "teeth"
+        "through_gut"
       ],
       "unlocksGenes": [],
-      "description": "Saliva turned into venom, delivered through grooved teeth."
+      "description": "Glands that make venom, delivered by fangs, stings or grooved teeth (scorpions, centipedes, snakes)."
     },
     {
       "id": "secondary_palate",
@@ -2903,6 +2903,162 @@
       ],
       "unlocksGenes": [],
       "description": "Hairs hardened into spines (porcupines, hedgehogs)."
+    },
+    {
+      "id": "warning_colours",
+      "displayName": "Warning Colours",
+      "branch": "integument",
+      "tier": 1,
+      "row": 5,
+      "cost": 14,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "epidermis"
+      ],
+      "unlocksGenes": [
+        "toxin_production"
+      ],
+      "description": "Bright colours that advertise poison."
+    },
+    {
+      "id": "countershading",
+      "displayName": "Countershading",
+      "branch": "integument",
+      "tier": 1,
+      "row": 6,
+      "cost": 11,
+      "age": "Devonian",
+      "prerequisites": [
+        "epidermis"
+      ],
+      "unlocksGenes": [],
+      "description": "Dark above and pale below, so the body looks flat."
+    },
+    {
+      "id": "ink_cloud",
+      "displayName": "Ink Cloud",
+      "branch": "integument",
+      "tier": 2,
+      "row": 9,
+      "cost": 10,
+      "age": "Carboniferous",
+      "prerequisites": [
+        "chromatophores"
+      ],
+      "unlocksGenes": [],
+      "description": "A cloud of ink covers the escape (cephalopods)."
+    },
+    {
+      "id": "chemical_spray",
+      "displayName": "Chemical Spray",
+      "branch": "integument",
+      "tier": 1,
+      "row": 7,
+      "cost": 13,
+      "age": "Permian",
+      "prerequisites": [
+        "epidermis"
+      ],
+      "unlocksGenes": [],
+      "description": "Spraying irritants (bombardier beetles, later skunks)."
+    },
+    {
+      "id": "mimicry",
+      "displayName": "Mimicry",
+      "branch": "integument",
+      "tier": 2,
+      "row": 10,
+      "cost": 19,
+      "age": "Jurassic",
+      "prerequisites": [
+        "warning_colours"
+      ],
+      "unlocksGenes": [],
+      "description": "Harmless species copying dangerous ones."
+    },
+    {
+      "id": "tail_weapons",
+      "displayName": "Tail Weapons",
+      "branch": "locomotor",
+      "tier": 1,
+      "row": 3,
+      "cost": 13,
+      "age": "Jurassic",
+      "prerequisites": [
+        "bilateral_body"
+      ],
+      "unlocksGenes": [],
+      "description": "Clubs and spikes swung at attackers (stegosaurs, ankylosaurs)."
+    },
+    {
+      "id": "hermaphroditism",
+      "displayName": "Hermaphroditism",
+      "branch": "reproductive",
+      "tier": 1,
+      "row": 3,
+      "cost": 6,
+      "age": "Ediacaran",
+      "prerequisites": [
+        "broadcast_spawning"
+      ],
+      "unlocksGenes": [],
+      "description": "Both sexes in one body (snails, worms)."
+    },
+    {
+      "id": "colonial_living",
+      "displayName": "Colonial Living",
+      "branch": "reproductive",
+      "tier": 2,
+      "row": 7,
+      "cost": 6,
+      "age": "Ediacaran",
+      "prerequisites": [
+        "budding"
+      ],
+      "unlocksGenes": [],
+      "description": "Clones joined into one colony (corals, graptolites)."
+    },
+    {
+      "id": "gliding",
+      "displayName": "Gliding",
+      "branch": "locomotor",
+      "tier": 1,
+      "row": 4,
+      "cost": 15,
+      "age": "Permian",
+      "prerequisites": [
+        "bilateral_body"
+      ],
+      "unlocksGenes": [],
+      "description": "Leaping and gliding between trees."
+    },
+    {
+      "id": "diapause",
+      "displayName": "Diapause",
+      "branch": "endocrine",
+      "tier": 1,
+      "row": 2,
+      "cost": 8,
+      "age": "Silurian",
+      "prerequisites": [
+        "hormone_signalling"
+      ],
+      "unlocksGenes": [],
+      "description": "Development pauses until conditions improve."
+    },
+    {
+      "id": "electric_organs",
+      "displayName": "Electric Organs",
+      "branch": "nervous",
+      "age": "Cretaceous",
+      "prerequisites": [
+        "electroreceptors"
+      ],
+      "unlocksGenes": [],
+      "description": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
+      "cost": 21,
+      "tier": 6,
+      "row": 0
     }
   ]
 }

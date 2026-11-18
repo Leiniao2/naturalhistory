@@ -1,6 +1,410 @@
 {
  "entries": [
   {
+   "k": "Electric Organs",
+   "v": "Elektrische Organe"
+  },
+  {
+   "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
+   "v": "Muskeln, zu lebenden Batterien umgebaut, betäuben Beute mit Stromstößen (Zitteraale, Zitterrochen)."
+  },
+  {
+   "k": "Finds its way by echoes: it sees one tile further, and camouflage doesn't hide anything from it.",
+   "v": "Orientiert sich per Echo: sieht ein Feld weiter, und Tarnung verbirgt nichts vor ihm."
+  },
+  {
+   "k": "Senses the electric fields of other animals: it sees one tile further, and neither camouflage nor a burrow hides prey from it.",
+   "v": "Spürt die elektrischen Felder anderer Tiere: sieht ein Feld weiter, und weder Tarnung noch ein Bau verbergen Beute vor ihm."
+  },
+  {
+   "k": "Keen eyes",
+   "v": "Scharfe Augen"
+  },
+  {
+   "k": "Spots prey from far off: it sees one tile further.",
+   "v": "Erspäht Beute schon von weitem: sieht ein Feld weiter."
+  },
+  {
+   "k": "Blends into its surroundings: attacks on it deal 30% less damage, unless the attacker hunts by echolocation or electric sense.",
+   "v": "Verschmilzt mit der Umgebung: Angriffe auf es verursachen 30 % weniger Schaden, außer der Angreifer jagt per Echoortung oder Elektrosinn."
+  },
+  {
+   "k": "Burrow",
+   "v": "Bau"
+  },
+  {
+   "k": "Dives into its burrow when attacked: it takes half damage, unless the attacker senses it through the ground with electric sense.",
+   "v": "Taucht bei Angriffen in seinen Bau ab: erleidet halben Schaden, außer der Angreifer spürt es per Elektrosinn durch den Boden auf."
+  },
+  {
+   "k": "Shell retreat",
+   "v": "Panzerrückzug"
+  },
+  {
+   "k": "Pulls into its shell: it takes half damage when attacked and can't be swallowed whole, unless the attacker has a crushing bite.",
+   "v": "Zieht sich in den Panzer zurück: erleidet bei Angriffen halben Schaden und kann nicht im Ganzen verschluckt werden, außer der Angreifer hat einen Knackbiss."
+  },
+  {
+   "k": "Herd",
+   "v": "Herde"
+  },
+  {
+   "k": "Lives in herds: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "Lebt in Herden: erleidet 30 % weniger Schaden, wenn eine andere Gruppe der eigenen Seite (bei Wildtieren: der eigenen Art) angrenzt."
+  },
+  {
+   "k": "School",
+   "v": "Schwarm"
+  },
+  {
+   "k": "Swims in schools: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "Schwimmt im Schwarm: erleidet 30 % weniger Schaden, wenn eine andere Gruppe der eigenen Seite (bei Wildtieren: der eigenen Art) angrenzt."
+  },
+  {
+   "k": "Vigilance",
+   "v": "Wachsamkeit"
+  },
+  {
+   "k": "Keeps a lookout and calls alarms: it can't be ambushed.",
+   "v": "Hält Ausschau und schlägt Alarm: kann nicht aus dem Hinterhalt angegriffen werden."
+  },
+  {
+   "k": "Charge",
+   "v": "Ansturm"
+  },
+  {
+   "k": "Charges with horns, tusks or head: an attack made after moving that turn deals half again as much damage.",
+   "v": "Stürmt mit Hörnern, Stoßzähnen oder Kopf: Ein Angriff nach einer Bewegung in diesem Zug verursacht 50 % mehr Schaden."
+  },
+  {
+   "k": "Crushing bite",
+   "v": "Knackbiss"
+  },
+  {
+   "k": "Bites through bone and shell: rolling up and pulling into a shell don't protect against it, and spiny or shelled prey can still be swallowed.",
+   "v": "Beißt durch Knochen und Panzer: Einrollen und Panzerrückzug schützen nicht davor, und stachelige oder gepanzerte Beute kann trotzdem verschluckt werden."
+  },
+  {
+   "k": "Trample",
+   "v": "Trampeln"
+  },
+  {
+   "k": "So heavy it crushes what is underfoot: its attacks also deal half damage to one more foreign group on the target tile.",
+   "v": "So schwer, dass es zermalmt, was unter ihm liegt: Seine Angriffe verursachen auch einer weiteren fremden Gruppe auf dem Zielfeld halben Schaden."
+  },
+  {
+   "k": "Sprint",
+   "v": "Sprint"
+  },
+  {
+   "k": "Runs down prey or outruns danger in bursts: one more action every turn.",
+   "v": "Hetzt Beute oder entkommt Gefahr in Schüben: eine weitere Aktion pro Zug."
+  },
+  {
+   "k": "Swarm",
+   "v": "Schwarmangriff"
+  },
+  {
+   "k": "Overwhelms with sheer numbers: it can attack animals of any size bigger than itself.",
+   "v": "Überwältigt durch schiere Masse: kann Tiere jeder Größe angreifen, die größer sind als es selbst."
+  },
+  {
+   "k": "Blood feeding",
+   "v": "Blutsaugen"
+  },
+  {
+   "k": "Drinks blood: it can feed on animals of any size bigger than itself, and heals half the damage it deals.",
+   "v": "Trinkt Blut: kann Tiere jeder Größe fressen, die größer sind als es selbst, und heilt die Hälfte des verursachten Schadens."
+  },
+  {
+   "k": "Spreads disease",
+   "v": "Überträgt Krankheit"
+  },
+  {
+   "k": "Carries germs in its bite: a group it hits is infected, losing a tenth of its HP each turn for 3 turns.",
+   "v": "Trägt Keime im Biss: Eine getroffene Gruppe wird infiziert und verliert 3 Züge lang jeden Zug ein Zehntel ihrer LP."
+  },
+  {
+   "k": "Dormancy",
+   "v": "Ruhestarre"
+  },
+  {
+   "k": "Sleeps through hard times: it doesn't lose HP when it has no food (but doesn't heal either).",
+   "v": "Verschläft schwere Zeiten: verliert keine LP, wenn es kein Futter hat (heilt aber auch nicht)."
+  },
+  {
+   "k": "Lives off a thick layer of fat: it loses only half as much HP when it has no food.",
+   "v": "Lebt von einer dicken Fettschicht: verliert nur halb so viele LP, wenn es kein Futter hat."
+  },
+  {
+   "k": "Prolific breeder",
+   "v": "Fleißiger Züchter"
+  },
+  {
+   "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
+   "v": "Vermehrt sich schnell: kann sich alle 2 statt alle 3 Züge fortpflanzen."
+  },
+  {
+   "k": "the {0} charged",
+   "v": "{0} stürmte an"
+  },
+  {
+   "k": "the {0} was hard to see",
+   "v": "{0} war schwer zu erkennen"
+  },
+  {
+   "k": "the {0} dived into its burrow",
+   "v": "{0} tauchte in seinen Bau ab"
+  },
+  {
+   "k": "the {0} pulled into its shell",
+   "v": "{0} zog sich in den Panzer zurück"
+  },
+  {
+   "k": "the {0} had safety in numbers",
+   "v": "{0} hatte Schutz in der Gruppe"
+  },
+  {
+   "k": "the {0} bit straight through",
+   "v": "{0} wurde glatt durchbissen"
+  },
+  {
+   "k": "the {0} fed on its blood",
+   "v": "{0} wurde das Blut ausgesaugt"
+  },
+  {
+   "k": "the {0} is infected",
+   "v": "{0} ist infiziert"
+  },
+  {
+   "k": "the {0} saw the ambush coming",
+   "v": "{0} sah den Hinterhalt kommen"
+  },
+  {
+   "k": "the {0} was trampled ({1} damage)",
+   "v": "{0} wurde zertrampelt ({1} Schaden)"
+  },
+  {
+   "k": "the {0} was trampled to death",
+   "v": "{0} wurde zu Tode getrampelt"
+  },
+  {
+   "k": "Venom",
+   "v": "Gift"
+  },
+  {
+   "k": "Its bite or sting injects venom: a group it hits and doesn't kill is poisoned, losing a fifth of its HP each turn for 2 turns.",
+   "v": "Biss oder Stich spritzt Gift: eine getroffene, nicht getötete Gruppe wird vergiftet und verliert 2 Runden lang je ein Fünftel ihrer LP."
+  },
+  {
+   "k": "Stinging cells",
+   "v": "Nesselzellen"
+  },
+  {
+   "k": "Covered in stinging cells: its attacks poison the target for a turn, and whatever attacks it is stung back for a quarter of the damage it deals.",
+   "v": "Mit Nesselzellen bedeckt: Seine Angriffe vergiften das Ziel für eine Runde, und wer es angreift, wird mit einem Viertel des angerichteten Schadens zurückgestochen."
+  },
+  {
+   "k": "Poisonous",
+   "v": "Giftig"
+  },
+  {
+   "k": "Its body is poisonous: whatever attacks it is poisoned, losing a fifth of its HP each turn for 2 turns. Its predators, used to it, eat it unharmed.",
+   "v": "Sein Körper ist giftig: Wer es angreift, wird vergiftet und verliert 2 Runden lang jede Runde ein Fünftel seiner HP. Seine Fressfeinde sind daran gewöhnt und fressen es unbeschadet."
+  },
+  {
+   "k": "Electric shock",
+   "v": "Elektroschock"
+  },
+  {
+   "k": "Stuns with an electric discharge: its attacks get through half the target's defense, and the target loses its actions next turn.",
+   "v": "Betäubt mit einer elektrischen Entladung: Seine Angriffe durchdringen die Hälfte der Verteidigung des Ziels, und das Ziel verliert in der nächsten Runde seine Aktionen."
+  },
+  {
+   "k": "Sticky web",
+   "v": "Klebriges Netz"
+  },
+  {
+   "k": "Catches prey in sticky silk: a group it attacks and doesn't kill is caught and loses its actions next turn.",
+   "v": "Fängt Beute in klebriger Seide: Eine angegriffene, nicht getötete Gruppe wird gefangen und verliert in der nächsten Runde ihre Aktionen."
+  },
+  {
+   "k": "Ink cloud",
+   "v": "Tintenwolke"
+  },
+  {
+   "k": "Squirts ink and slips away: it takes half damage when attacked and can't be swallowed whole.",
+   "v": "Spritzt Tinte und entwischt: Es erleidet bei Angriffen halben Schaden und kann nicht im Ganzen verschluckt werden."
+  },
+  {
+   "k": "Chemical spray",
+   "v": "Chemiespray"
+  },
+  {
+   "k": "Sprays a noxious chemical at attackers: whatever attacks it loses a tenth of its HP and its actions next turn.",
+   "v": "Sprüht Angreifern eine ätzende Chemikalie entgegen: Wer es angreift, verliert ein Zehntel seiner LP und in der nächsten Runde seine Aktionen."
+  },
+  {
+   "k": "Bristles with spines: it can't be swallowed whole, and whatever attacks it takes back a third of the damage it deals.",
+   "v": "Starrt vor Stacheln: Es kann nicht im Ganzen verschluckt werden, und wer es angreift, erleidet ein Drittel des angerichteten Schadens zurück."
+  },
+  {
+   "k": "Roll up",
+   "v": "Einrollen"
+  },
+  {
+   "k": "Rolls into an armoured ball: it takes 40% less damage when attacked and can't be swallowed whole.",
+   "v": "Rollt sich zu einer gepanzerten Kugel ein: Es erleidet bei Angriffen 40 % weniger Schaden und kann nicht im Ganzen verschluckt werden."
+  },
+  {
+   "k": "Tail weapon",
+   "v": "Schwanzwaffe"
+  },
+  {
+   "k": "Swings a clubbed or spiked tail: its counterattacks hit twice as hard.",
+   "v": "Schwingt einen Keulen- oder Stachelschwanz: Seine Gegenangriffe treffen doppelt so hart."
+  },
+  {
+   "k": "Pack hunting",
+   "v": "Rudeljagd"
+  },
+  {
+   "k": "Hunts in packs: it deals half again as much damage when another group of its side, or of its species if wild, is on or next to the target's tile.",
+   "v": "Jagt im Rudel: Es richtet anderthalbmal so viel Schaden an, wenn eine andere Gruppe seiner Seite (bei Wildtieren seiner Art) auf oder neben dem Feld des Ziels steht."
+  },
+  {
+   "k": "Ambush",
+   "v": "Hinterhalt"
+  },
+  {
+   "k": "Lies in wait: an attack made before it moves in a turn gets no counterattack.",
+   "v": "Lauert im Verborgenen: Ein Angriff, der in einer Runde vor seiner Bewegung erfolgt, wird nicht gekontert."
+  },
+  {
+   "k": "Constriction",
+   "v": "Würgen"
+  },
+  {
+   "k": "Coils around its prey and squeezes: a group it attacks and doesn't kill is held and loses its actions next turn.",
+   "v": "Umschlingt die Beute und drückt zu: Eine angegriffene, nicht getötete Gruppe wird festgehalten und verliert in der nächsten Runde ihre Aktionen."
+  },
+  {
+   "k": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
+   "v": "Lässt verlorene Körperteile nachwachsen: Es heilt pro Runde zwei Fünftel seiner LP statt eines Fünftels."
+  },
+  {
+   "k": "Shed a limb",
+   "v": "Glied abwerfen"
+  },
+  {
+   "k": "Leaves a tail, arm or leg behind: once, a blow that would wipe it out leaves it at 1 HP instead.",
+   "v": "Lässt Schwanz, Arm oder Bein zurück: Einmalig bleibt es nach einem tödlichen Schlag mit 1 LP am Leben."
+  },
+  {
+   "k": "or",
+   "v": "oder"
+  },
+  {
+   "k": "Locked: needs {0}",
+   "v": "Gesperrt: benötigt {0}"
+  },
+  {
+   "k": "Players need {0}",
+   "v": "Spieler benötigen {0}"
+  },
+  {
+   "k": "Abilities",
+   "v": "Fähigkeiten"
+  },
+  {
+   "k": "Held or stunned: no actions next turn",
+   "v": "Festgehalten oder betäubt: keine Aktionen in der nächsten Runde"
+  },
+  {
+   "k": "the {0} couldn't swallow it whole",
+   "v": "{0} konnte es nicht im Ganzen verschlucken"
+  },
+  {
+   "k": "a pack attack",
+   "v": "ein Rudelangriff"
+  },
+  {
+   "k": "the {0} hid in a cloud of ink",
+   "v": "{0} versteckte sich in einer Tintenwolke"
+  },
+  {
+   "k": "the {0} rolled up",
+   "v": "{0} rollte sich ein"
+  },
+  {
+   "k": "the {0} shed a limb and got away",
+   "v": "{0} warf ein Glied ab und entkam"
+  },
+  {
+   "k": "the {0} was stung",
+   "v": "{0} wurde gestochen"
+  },
+  {
+   "k": "the {0} was pricked by the spines",
+   "v": "{0} wurde von den Stacheln gepiekst"
+  },
+  {
+   "k": "the {0} was sprayed and loses its next turn",
+   "v": "{0} wurde besprüht und verliert die nächste Runde"
+  },
+  {
+   "k": "the {0} died of its wounds",
+   "v": "{0} erlag den Verletzungen"
+  },
+  {
+   "k": "the {0} is poisoned",
+   "v": "{0} ist vergiftet"
+  },
+  {
+   "k": "the {0} is stunned and loses its next turn",
+   "v": "{0} ist betäubt und verliert die nächste Runde"
+  },
+  {
+   "k": "the {0} is caught in the web and loses its next turn",
+   "v": "{0} hängt im Netz fest und verliert die nächste Runde"
+  },
+  {
+   "k": "the {0} is held in its coils and loses its next turn",
+   "v": "{0} wird von den Windungen festgehalten und verliert die nächste Runde"
+  },
+  {
+   "k": "an ambush: no counterattack",
+   "v": "ein Hinterhalt: kein Gegenangriff"
+  },
+  {
+   "k": "the {0} swung its tail",
+   "v": "{0} schwang den Schwanz"
+  },
+  {
+   "k": "Your {0} died of poison",
+   "v": "Dein(e) {0} ist an Gift gestorben"
+  },
+  {
+   "k": "(locked)",
+   "v": "(gesperrt)"
+  },
+  {
+   "k": "Abilities: {0}",
+   "v": "Fähigkeiten: {0}"
+  },
+  {
+   "k": "Unlocks ability: {0}",
+   "v": "Schaltet Fähigkeit frei: {0}"
+  },
+  {
+   "k": "Poisoned: loses {0} HP next turn",
+   "v": "Vergiftet: verliert in der nächsten Runde {0} LP"
+  },
+  {
+   "k": "Poisoned: loses {0} HP a turn for {1} turns",
+   "v": "Vergiftet: verliert {1} Runden lang {0} LP pro Runde"
+  },
+  {
    "k": "Discovered {0} new species (+{1} EP)",
    "v": "{0} neue Arten entdeckt (+{1} EP)"
   },
@@ -13017,8 +13421,8 @@
    "v": "Schwanzlurch"
   },
   {
-   "k": "Saliva turned into venom, delivered through grooved teeth.",
-   "v": "Zu Gift gewordener Speichel, abgegeben über gefurchte Zähne."
+   "k": "Glands that make venom, delivered by fangs, stings or grooved teeth (scorpions, centipedes, snakes).",
+   "v": "Drüsen, die Gift bilden und es über Klauen, Stachel oder gefurchte Zähne abgeben (Skorpione, Hundertfüßer, Schlangen)."
   },
   {
    "k": "Salonga",
@@ -18927,6 +19331,98 @@
   {
    "k": "Next Turn",
    "v": "Nächste Runde"
+  },
+  {
+   "k": "Continue",
+   "v": "Fortsetzen"
+  },
+  {
+   "k": "Main Menu",
+   "v": "Hauptmenü"
+  },
+  {
+   "k": "Guide life from the first animals to the present day",
+   "v": "Führe das Leben von den ersten Tieren bis heute"
+  },
+  {
+   "k": "Painting: Charles R. Knight, {0} (Field Museum, 1926–1930), public domain",
+   "v": "Gemälde: Charles R. Knight, {0} (Field Museum, 1926–1930), gemeinfrei"
+  },
+  {
+   "k": "Early Land Plants",
+   "v": "Frühe Landpflanzen"
+  },
+  {
+   "k": "Permian Reptiles and Amphibians",
+   "v": "Reptilien und Amphibien des Perm"
+  },
+  {
+   "k": "Late Cretaceous Seas",
+   "v": "Meere der Oberkreide"
+  },
+  {
+   "k": "Triceratops and Tyrannosaurus",
+   "v": "Triceratops und Tyrannosaurus"
+  },
+  {
+   "k": "Your realm",
+   "v": "Dein Reich"
+  },
+  {
+   "k": "World",
+   "v": "Welt"
+  },
+  {
+   "k": "Competitors",
+   "v": "Gegner"
+  },
+  {
+   "k": "No competitors: the world is yours alone.",
+   "v": "Keine Gegner: Die Welt gehört dir allein."
+  },
+  {
+   "k": "Click a colour band to change it. Names can be anything; the realm decides the iconic animals.",
+   "v": "Klicke auf ein Farbband, um es zu ändern. Namen sind frei wählbar; das Reich bestimmt die typischen Tiere."
+  },
+  {
+   "k": "Iconic animals: {0}",
+   "v": "Typische Tiere: {0}"
+  },
+  {
+   "k": "Map size",
+   "v": "Kartengröße"
+  },
+  {
+   "k": "Tiny",
+   "v": "Winzig"
+  },
+  {
+   "k": "{0} × {1} tiles, up to {2} players",
+   "v": "{0} × {1} Felder, bis zu {2} Spieler"
+  },
+  {
+   "k": "Difficulty",
+   "v": "Schwierigkeit"
+  },
+  {
+   "k": "Easy",
+   "v": "Leicht"
+  },
+  {
+   "k": "Normal",
+   "v": "Normal"
+  },
+  {
+   "k": "Hard",
+   "v": "Schwer"
+  },
+  {
+   "k": "Brutal",
+   "v": "Gnadenlos"
+  },
+  {
+   "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
+   "v": "Start mit {0} % der üblichen EP und {1} % Einkommen pro Runde; rivalisierende und wilde Tiere treffen deine mit {2} % der Wucht"
   }
  ]
 }

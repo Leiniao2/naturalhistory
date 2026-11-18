@@ -275,7 +275,7 @@ namespace NaturalHistory.Evolution
         // ---------- Reproduce ----------
 
         public int TurnsUntilReproduce(OwnedCopy copy) =>
-            copy == null ? 0 : Mathf.Max(copy.JustBorn ? 1 : 0, copy.lastBred + ReproduceCooldown - CurrentTurn);
+            copy == null ? 0 : Mathf.Max(copy.JustBorn ? 1 : 0, copy.lastBred + Abilities.ReproduceCooldown(copy.group, ReproduceCooldown) - CurrentTurn);
 
         // The free neighbouring tiles the species can live on, the player's own territory first
         public List<HexCell> ReproduceCells(OwnedCopy copy)
@@ -460,6 +460,27 @@ namespace NaturalHistory.Evolution
         // Called after the map has been regenerated; the copies are put back when TerritoryManager
         // next rebuilds (end of this frame). Saves from before evolution existed have no copies: the
         // first copy is founded as in a new game and its species gets the saved tree items.
+        // Behaviors that are now Functions (body-based items live only in the Functions tree): the
+        // same id moved, or folded into the Function that covers it. Applied to older saves.
+        private static readonly Dictionary<string, string> BehaviorsNowFunctions = new()
+        {
+            { "echolocation_hunting", "echolocating_ears" }, { "venom_hunting", "venom_glands" },
+            { "seasonal_dormancy", "hibernation_node" }, { "nursing", "mammary_glands" },
+            { "ink_cloud", "ink_cloud" }, { "chemical_spray", "chemical_spray" }, { "tail_weapons", "tail_weapons" },
+            { "countershading", "countershading" }, { "warning_colours", "warning_colours" }, { "mimicry", "mimicry" },
+            { "gliding", "gliding" }, { "hermaphroditism", "hermaphroditism" }, { "diapause", "diapause" },
+            { "colonial_living", "colonial_living" },
+        };
+
+        private static void MigrateItems(SpeciesTraits t)
+        {
+            foreach (var b in t.behaviors.Where(BehaviorsNowFunctions.ContainsKey).ToList())
+            {
+                t.behaviors.Remove(b);
+                t.functions.Add(BehaviorsNowFunctions[b]);
+            }
+        }
+
         public void Restore(Save.SaveData data)
         {
             traits.Clear();
@@ -472,6 +493,7 @@ namespace NaturalHistory.Evolution
                 var t = new SpeciesTraits();
                 t.functions.UnionWith(s.functions ?? new List<string>());
                 t.behaviors.UnionWith(s.behaviors ?? new List<string>());
+                MigrateItems(t);
                 traits[s.species] = t;
             }
             foreach (var c in data.copies ?? new List<CopySave>())

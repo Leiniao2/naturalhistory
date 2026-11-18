@@ -3,6 +3,24 @@
          containers so clicks pass through to the map except where there is actual UI. -->
     <ui:VisualElement name="root" class="root" picking-mode="Ignore">
 
+        <!-- Title screen at launch (MainMenu.cs): a painting slowly panning behind the title and the
+             menu. While it shows, the HUD is hidden; New Game, Load Game and the Encyclopedia open over it. -->
+        <ui:VisualElement name="main-menu" class="main-menu hidden">
+            <ui:VisualElement name="main-menu-art" class="main-menu-art" picking-mode="Ignore" />
+            <ui:VisualElement name="main-menu-shade" class="main-menu-shade" picking-mode="Ignore" />
+            <ui:VisualElement class="main-menu-column">
+                <ui:Label class="main-menu-title" text="Natural History" />
+                <ui:Label class="main-menu-subtitle" text="Guide life from the first animals to the present day" />
+                <ui:Button name="main-continue-button" class="menu-button main-menu-button" text="Continue" />
+                <ui:Button name="main-new-game-button" class="menu-button main-menu-button" text="New Game" />
+                <ui:Button name="main-load-button" class="menu-button main-menu-button" text="Load Game" />
+                <ui:Button name="main-encyclopedia-button" class="menu-button main-menu-button" text="Encyclopedia" />
+                <ui:DropdownField name="main-language-dropdown" class="language-dropdown main-language" label="Language" />
+                <ui:Button name="main-quit-button" class="menu-button main-menu-button" text="Quit to Desktop" />
+            </ui:VisualElement>
+            <ui:Label name="main-menu-credit" class="main-menu-credit" text="" />
+        </ui:VisualElement>
+
         <!-- Top-right HUD -->
         <ui:VisualElement name="top-bar" class="top-bar" picking-mode="Ignore">
             <ui:Label name="ep-label" class="ep-label" text="EP 0" />
@@ -122,6 +140,7 @@
                 <ui:Button name="new-game-button" class="menu-button" text="New Game" />
                 <ui:Button name="save-button" class="menu-button" text="Save Game" />
                 <ui:Button name="load-button" class="menu-button" text="Load Game" />
+                <ui:Button name="main-menu-button" class="menu-button" text="Main Menu" />
                 <ui:Button name="quit-button" class="menu-button" text="Quit to Desktop" />
                 <ui:DropdownField name="language-dropdown" class="language-dropdown" label="Language" />
             </ui:VisualElement>
@@ -182,22 +201,37 @@
             </ui:VisualElement>
         </ui:VisualElement>
 
-        <!-- New game: number of players, faction, name and colour band of each (rows are created in code) -->
+        <!-- New game (PlayersPanel): your realm on the left, picked from cards by category, with what
+             it brings; the world (NewGameOptions), difficulty and your competitors on the right -->
         <ui:VisualElement name="setup-overlay" class="overlay hidden">
             <ui:VisualElement class="panel setup-panel">
                 <ui:Label class="panel-title" text="New Game" />
-                <ui:VisualElement class="setup-count-row">
-                    <ui:Label class="setup-count-label" text="Players" />
-                    <ui:Button name="setup-fewer" class="count-button" text="−" />
-                    <ui:Label name="setup-count" class="setup-count" text="4" />
-                    <ui:Button name="setup-more" class="count-button" text="+" />
-                    <ui:VisualElement class="spacer" />
-                    <ui:Button name="setup-randomize" class="slot-button" text="Randomize" />
+                <ui:VisualElement class="setup-columns">
+                    <ui:VisualElement class="setup-column setup-realm-column">
+                        <ui:Label class="setup-section" text="Your realm" />
+                        <ui:ScrollView name="setup-realms" class="setup-realms" />
+                        <ui:VisualElement name="setup-you" class="setup-you" />
+                        <ui:ScrollView class="setup-realm-details">
+                            <ui:Label name="setup-realm-description" class="setup-realm-description" text="" />
+                            <ui:Label name="setup-realm-animals" class="setup-realm-animals" text="" />
+                        </ui:ScrollView>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="setup-column setup-world-column">
+                        <ui:Label class="setup-section" text="World" />
+                        <!-- Map size, land area, starting period, game length, difficulty (NewGameOptions) -->
+                        <ui:VisualElement name="setup-options" class="setup-options" />
+                        <ui:VisualElement class="setup-count-row">
+                            <ui:Label class="setup-section setup-count-label" text="Competitors" />
+                            <ui:Button name="setup-fewer" class="count-button" text="−" />
+                            <ui:Label name="setup-count" class="setup-count" text="3" />
+                            <ui:Button name="setup-more" class="count-button" text="+" />
+                            <ui:VisualElement class="spacer" />
+                            <ui:Button name="setup-randomize" class="slot-button" text="Randomize" />
+                        </ui:VisualElement>
+                        <ui:ScrollView name="setup-list" class="setup-list" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
-                <!-- Land area, game length and starting period (NewGameOptions) -->
-                <ui:VisualElement name="setup-options" class="setup-options" />
-                <ui:ScrollView name="setup-list" class="setup-list" />
-                <ui:Label class="setup-hint" text="Click a colour band to change it. Names can be anything; the faction decides the iconic animals." />
+                <ui:Label class="setup-hint" text="Click a colour band to change it. Names can be anything; the realm decides the iconic animals." />
                 <ui:VisualElement class="setup-actions">
                     <ui:Button name="setup-back-button" class="menu-button setup-action" text="Back" />
                     <ui:Button name="setup-start-button" class="menu-button setup-action start" text="Start" />

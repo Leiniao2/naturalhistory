@@ -37,14 +37,15 @@ namespace NaturalHistory.Progression
         public int StartingPoints => startingPoints;
         public int PointsPerCenter => pointsPerCenter;
 
-        // EP the next turn brings: PointsPerCenter for each of the human player's habitat centers
+        // EP the next turn brings: PointsPerCenter for each of the human player's habitat centers,
+        // scaled by the difficulty (GameOptions.IncomeShare)
         public int Income
         {
             get
             {
                 var territory = TerritoryManager.Instance;
-                if (territory == null) return pointsPerCenter;
-                return pointsPerCenter * territory.Centers.Count(c => c.Owner != null && c.Owner.IsHuman);
+                int centers = territory == null ? 1 : territory.Centers.Count(c => c.Owner != null && c.Owner.IsHuman);
+                return Mathf.RoundToInt(pointsPerCenter * centers * GameOptions.IncomeShare); // fewer on harder difficulties
             }
         }
 

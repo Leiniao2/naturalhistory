@@ -1,6 +1,410 @@
 {
  "entries": [
   {
+   "k": "Electric Organs",
+   "v": "発電器官"
+  },
+  {
+   "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
+   "v": "筋肉が生きた電池に変わり、放電して獲物を気絶させる（デンキウナギ、シビレエイ）。"
+  },
+  {
+   "k": "Finds its way by echoes: it sees one tile further, and camouflage doesn't hide anything from it.",
+   "v": "反響で進路を知る：視界が1タイル広がり、カモフラージュは通用しない。"
+  },
+  {
+   "k": "Senses the electric fields of other animals: it sees one tile further, and neither camouflage nor a burrow hides prey from it.",
+   "v": "他の動物の電場を感知する：視界が1タイル広がり、カモフラージュも巣穴も獲物を隠せない。"
+  },
+  {
+   "k": "Keen eyes",
+   "v": "鋭い眼"
+  },
+  {
+   "k": "Spots prey from far off: it sees one tile further.",
+   "v": "遠くから獲物を見つける：視界が1タイル広がる。"
+  },
+  {
+   "k": "Blends into its surroundings: attacks on it deal 30% less damage, unless the attacker hunts by echolocation or electric sense.",
+   "v": "周囲に溶け込む：受けるダメージが30%減少。ただし攻撃側が反響定位か電気感覚で狩る場合を除く。"
+  },
+  {
+   "k": "Burrow",
+   "v": "巣穴"
+  },
+  {
+   "k": "Dives into its burrow when attacked: it takes half damage, unless the attacker senses it through the ground with electric sense.",
+   "v": "攻撃されると巣穴に潜る：受けるダメージが半分になる。ただし攻撃側が電気感覚で地面越しに感知する場合を除く。"
+  },
+  {
+   "k": "Shell retreat",
+   "v": "殻に籠る"
+  },
+  {
+   "k": "Pulls into its shell: it takes half damage when attacked and can't be swallowed whole, unless the attacker has a crushing bite.",
+   "v": "殻に引っ込む：攻撃を受けるダメージが半分になり、丸呑みもされない。ただし攻撃側が噛み砕く力を持つ場合を除く。"
+  },
+  {
+   "k": "Herd",
+   "v": "群れ"
+  },
+  {
+   "k": "Lives in herds: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "群れで暮らす：味方（野生なら同種）の別のグループが隣にいると、受けるダメージが30%減少。"
+  },
+  {
+   "k": "School",
+   "v": "魚群"
+  },
+  {
+   "k": "Swims in schools: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "群れで泳ぐ：味方（野生なら同種）の別のグループが隣にいると、受けるダメージが30%減少。"
+  },
+  {
+   "k": "Vigilance",
+   "v": "警戒"
+  },
+  {
+   "k": "Keeps a lookout and calls alarms: it can't be ambushed.",
+   "v": "見張りをして警報を発する：待ち伏せされない。"
+  },
+  {
+   "k": "Charge",
+   "v": "突進"
+  },
+  {
+   "k": "Charges with horns, tusks or head: an attack made after moving that turn deals half again as much damage.",
+   "v": "角・牙・頭で突進する：そのターンに移動した後の攻撃は、ダメージが1.5倍になる。"
+  },
+  {
+   "k": "Crushing bite",
+   "v": "噛み砕き"
+  },
+  {
+   "k": "Bites through bone and shell: rolling up and pulling into a shell don't protect against it, and spiny or shelled prey can still be swallowed.",
+   "v": "骨や殻をも噛み砕く：丸まっても殻に籠っても防げず、トゲや殻のある獲物も丸呑みできる。"
+  },
+  {
+   "k": "Trample",
+   "v": "踏みつぶし"
+  },
+  {
+   "k": "So heavy it crushes what is underfoot: its attacks also deal half damage to one more foreign group on the target tile.",
+   "v": "あまりに重く足元を踏みつぶす：攻撃時、対象タイルにいる別の他勢力グループ1つにも半分のダメージを与える。"
+  },
+  {
+   "k": "Sprint",
+   "v": "ダッシュ"
+  },
+  {
+   "k": "Runs down prey or outruns danger in bursts: one more action every turn.",
+   "v": "瞬発力で獲物を追い、危険から逃れる：毎ターン行動が1回増える。"
+  },
+  {
+   "k": "Swarm",
+   "v": "大群"
+  },
+  {
+   "k": "Overwhelms with sheer numbers: it can attack animals of any size bigger than itself.",
+   "v": "圧倒的な数で攻める：自分より大きいあらゆるサイズの動物を攻撃できる。"
+  },
+  {
+   "k": "Blood feeding",
+   "v": "吸血"
+  },
+  {
+   "k": "Drinks blood: it can feed on animals of any size bigger than itself, and heals half the damage it deals.",
+   "v": "血を吸う：自分より大きいあらゆるサイズの動物を捕食でき、与えたダメージの半分を回復する。"
+  },
+  {
+   "k": "Spreads disease",
+   "v": "病気を広める"
+  },
+  {
+   "k": "Carries germs in its bite: a group it hits is infected, losing a tenth of its HP each turn for 3 turns.",
+   "v": "噛み傷に病原菌を宿す：命中したグループは感染し、3ターンの間、毎ターンHPの10分の1を失う。"
+  },
+  {
+   "k": "Dormancy",
+   "v": "休眠"
+  },
+  {
+   "k": "Sleeps through hard times: it doesn't lose HP when it has no food (but doesn't heal either).",
+   "v": "厳しい時期を眠って過ごす：食料がなくてもHPが減らない（回復もしない）。"
+  },
+  {
+   "k": "Lives off a thick layer of fat: it loses only half as much HP when it has no food.",
+   "v": "厚い脂肪層で生き延びる：食料がないときのHP減少が半分で済む。"
+  },
+  {
+   "k": "Prolific breeder",
+   "v": "多産"
+  },
+  {
+   "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
+   "v": "繁殖が早い：3ターンごとではなく2ターンごとに繁殖できる。"
+  },
+  {
+   "k": "the {0} charged",
+   "v": "{0}が突進した"
+  },
+  {
+   "k": "the {0} was hard to see",
+   "v": "{0}は見つけにくかった"
+  },
+  {
+   "k": "the {0} dived into its burrow",
+   "v": "{0}が巣穴に潜った"
+  },
+  {
+   "k": "the {0} pulled into its shell",
+   "v": "{0}が殻に引っ込んだ"
+  },
+  {
+   "k": "the {0} had safety in numbers",
+   "v": "{0}は数の力で守られていた"
+  },
+  {
+   "k": "the {0} bit straight through",
+   "v": "{0}に噛み砕かれた"
+  },
+  {
+   "k": "the {0} fed on its blood",
+   "v": "{0}の血を吸った"
+  },
+  {
+   "k": "the {0} is infected",
+   "v": "{0}は感染している"
+  },
+  {
+   "k": "the {0} saw the ambush coming",
+   "v": "{0}は待ち伏せに気づいた"
+  },
+  {
+   "k": "the {0} was trampled ({1} damage)",
+   "v": "{0}は踏みつぶされた（{1}ダメージ）"
+  },
+  {
+   "k": "the {0} was trampled to death",
+   "v": "{0}は踏みつぶされて倒れた"
+  },
+  {
+   "k": "Venom",
+   "v": "毒"
+  },
+  {
+   "k": "Its bite or sting injects venom: a group it hits and doesn't kill is poisoned, losing a fifth of its HP each turn for 2 turns.",
+   "v": "噛みつきや針で毒を注入する：命中して倒せなかったグループは毒状態になり、2ターンの間、毎ターンHPの5分の1を失う。"
+  },
+  {
+   "k": "Stinging cells",
+   "v": "刺胞"
+  },
+  {
+   "k": "Covered in stinging cells: its attacks poison the target for a turn, and whatever attacks it is stung back for a quarter of the damage it deals.",
+   "v": "刺胞に覆われている：攻撃は対象を1ターン毒状態にし、攻撃してきた相手は与えたダメージの4分の1を刺し返される。"
+  },
+  {
+   "k": "Poisonous",
+   "v": "有毒"
+  },
+  {
+   "k": "Its body is poisonous: whatever attacks it is poisoned, losing a fifth of its HP each turn for 2 turns. Its predators, used to it, eat it unharmed.",
+   "v": "体に毒がある：攻撃してきた相手は毒を受け、2ターンの間、毎ターンHPの5分の1を失う。毒に慣れた捕食者は平気で食べる。"
+  },
+  {
+   "k": "Electric shock",
+   "v": "電気ショック"
+  },
+  {
+   "k": "Stuns with an electric discharge: its attacks get through half the target's defense, and the target loses its actions next turn.",
+   "v": "放電で気絶させる：攻撃は対象の防御の半分を貫通し、対象は次のターン行動できない。"
+  },
+  {
+   "k": "Sticky web",
+   "v": "粘着の巣"
+  },
+  {
+   "k": "Catches prey in sticky silk: a group it attacks and doesn't kill is caught and loses its actions next turn.",
+   "v": "粘つく糸で獲物を捕らえる：攻撃して倒せなかったグループは捕らわれ、次のターン行動できない。"
+  },
+  {
+   "k": "Ink cloud",
+   "v": "墨の雲"
+  },
+  {
+   "k": "Squirts ink and slips away: it takes half damage when attacked and can't be swallowed whole.",
+   "v": "墨を吐いて逃げる：攻撃されたときのダメージが半分になり、丸呑みされない。"
+  },
+  {
+   "k": "Chemical spray",
+   "v": "化学噴射"
+  },
+  {
+   "k": "Sprays a noxious chemical at attackers: whatever attacks it loses a tenth of its HP and its actions next turn.",
+   "v": "攻撃者に有害な化学物質を噴射する：攻撃した相手はHPの10分の1を失い、次のターン行動できない。"
+  },
+  {
+   "k": "Bristles with spines: it can't be swallowed whole, and whatever attacks it takes back a third of the damage it deals.",
+   "v": "針が逆立っている：丸呑みされず、攻撃した相手は与えたダメージの3分の1を受ける。"
+  },
+  {
+   "k": "Roll up",
+   "v": "丸まる"
+  },
+  {
+   "k": "Rolls into an armoured ball: it takes 40% less damage when attacked and can't be swallowed whole.",
+   "v": "装甲の球に丸まる：攻撃されたときのダメージが40%減り、丸呑みされない。"
+  },
+  {
+   "k": "Tail weapon",
+   "v": "尾の武器"
+  },
+  {
+   "k": "Swings a clubbed or spiked tail: its counterattacks hit twice as hard.",
+   "v": "棍棒状やトゲ付きの尾を振るう：反撃のダメージが2倍になる。"
+  },
+  {
+   "k": "Pack hunting",
+   "v": "群れ狩り"
+  },
+  {
+   "k": "Hunts in packs: it deals half again as much damage when another group of its side, or of its species if wild, is on or next to the target's tile.",
+   "v": "群れで狩る：味方（野生なら同種）の別のグループが対象のマスまたは隣にいると、与えるダメージが1.5倍になる。"
+  },
+  {
+   "k": "Ambush",
+   "v": "待ち伏せ"
+  },
+  {
+   "k": "Lies in wait: an attack made before it moves in a turn gets no counterattack.",
+   "v": "潜んで待つ：ターン中に移動する前に行った攻撃は反撃を受けない。"
+  },
+  {
+   "k": "Constriction",
+   "v": "締めつけ"
+  },
+  {
+   "k": "Coils around its prey and squeezes: a group it attacks and doesn't kill is held and loses its actions next turn.",
+   "v": "獲物に巻きついて締め上げる：攻撃して倒せなかったグループは拘束され、次のターン行動できない。"
+  },
+  {
+   "k": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
+   "v": "失った部位が再生する：毎ターン、HPの5分の1ではなく5分の2を回復する。"
+  },
+  {
+   "k": "Shed a limb",
+   "v": "自切"
+  },
+  {
+   "k": "Leaves a tail, arm or leg behind: once, a blow that would wipe it out leaves it at 1 HP instead.",
+   "v": "尾や腕、脚を切り離す：一度だけ、倒されるはずの一撃を受けてもHP1で踏みとどまる。"
+  },
+  {
+   "k": "or",
+   "v": "または"
+  },
+  {
+   "k": "Locked: needs {0}",
+   "v": "ロック中：{0}が必要"
+  },
+  {
+   "k": "Players need {0}",
+   "v": "プレイヤーには{0}が必要"
+  },
+  {
+   "k": "Abilities",
+   "v": "能力"
+  },
+  {
+   "k": "Held or stunned: no actions next turn",
+   "v": "拘束または気絶：次のターン行動不可"
+  },
+  {
+   "k": "the {0} couldn't swallow it whole",
+   "v": "{0}は丸呑みできなかった"
+  },
+  {
+   "k": "a pack attack",
+   "v": "群れの攻撃"
+  },
+  {
+   "k": "the {0} hid in a cloud of ink",
+   "v": "{0}は墨の雲に隠れた"
+  },
+  {
+   "k": "the {0} rolled up",
+   "v": "{0}は丸まった"
+  },
+  {
+   "k": "the {0} shed a limb and got away",
+   "v": "{0}は体の一部を切り離して逃げた"
+  },
+  {
+   "k": "the {0} was stung",
+   "v": "{0}は刺された"
+  },
+  {
+   "k": "the {0} was pricked by the spines",
+   "v": "{0}は棘に刺された"
+  },
+  {
+   "k": "the {0} was sprayed and loses its next turn",
+   "v": "{0}は噴射を浴び、次のターンを失う"
+  },
+  {
+   "k": "the {0} died of its wounds",
+   "v": "{0}は傷がもとで死んだ"
+  },
+  {
+   "k": "the {0} is poisoned",
+   "v": "{0}は毒状態になった"
+  },
+  {
+   "k": "the {0} is stunned and loses its next turn",
+   "v": "{0}は気絶し、次のターンを失う"
+  },
+  {
+   "k": "the {0} is caught in the web and loses its next turn",
+   "v": "{0}は巣に捕まり、次のターンを失う"
+  },
+  {
+   "k": "the {0} is held in its coils and loses its next turn",
+   "v": "{0}は巻きつかれ、次のターンを失う"
+  },
+  {
+   "k": "an ambush: no counterattack",
+   "v": "待ち伏せ：反撃なし"
+  },
+  {
+   "k": "the {0} swung its tail",
+   "v": "{0}は尾を振るった"
+  },
+  {
+   "k": "Your {0} died of poison",
+   "v": "あなたの{0}は毒で死んだ"
+  },
+  {
+   "k": "(locked)",
+   "v": "（ロック中）"
+  },
+  {
+   "k": "Abilities: {0}",
+   "v": "能力：{0}"
+  },
+  {
+   "k": "Unlocks ability: {0}",
+   "v": "能力を解放：{0}"
+  },
+  {
+   "k": "Poisoned: loses {0} HP next turn",
+   "v": "毒：次のターンにHPを{0}失う"
+  },
+  {
+   "k": "Poisoned: loses {0} HP a turn for {1} turns",
+   "v": "毒：{1}ターンの間、毎ターンHPを{0}失う"
+  },
+  {
    "k": "Discovered {0} new species (+{1} EP)",
    "v": "新種を{0}種発見（+{1} EP）"
   },
@@ -13017,8 +13421,8 @@
    "v": "サンショウウオ類"
   },
   {
-   "k": "Saliva turned into venom, delivered through grooved teeth.",
-   "v": "唾液が毒に変わり、溝のある歯から注入される。"
+   "k": "Glands that make venom, delivered by fangs, stings or grooved teeth (scorpions, centipedes, snakes).",
+   "v": "毒を作る腺。牙や毒針、溝のある歯から注入する（サソリ、ムカデ、ヘビ）。"
   },
   {
    "k": "Salonga",
@@ -18927,6 +19331,98 @@
   {
    "k": "Next Turn",
    "v": "次のターン"
+  },
+  {
+   "k": "Continue",
+   "v": "続きから"
+  },
+  {
+   "k": "Main Menu",
+   "v": "メインメニュー"
+  },
+  {
+   "k": "Guide life from the first animals to the present day",
+   "v": "最初の動物から現代まで、生命を導こう"
+  },
+  {
+   "k": "Painting: Charles R. Knight, {0} (Field Museum, 1926–1930), public domain",
+   "v": "絵画：チャールズ・R・ナイト『{0}』（フィールド自然史博物館、1926–1930年）、パブリックドメイン"
+  },
+  {
+   "k": "Early Land Plants",
+   "v": "初期の陸上植物"
+  },
+  {
+   "k": "Permian Reptiles and Amphibians",
+   "v": "ペルム紀の爬虫類と両生類"
+  },
+  {
+   "k": "Late Cretaceous Seas",
+   "v": "後期白亜紀の海"
+  },
+  {
+   "k": "Triceratops and Tyrannosaurus",
+   "v": "トリケラトプスとティラノサウルス"
+  },
+  {
+   "k": "Your realm",
+   "v": "あなたの区系"
+  },
+  {
+   "k": "World",
+   "v": "世界"
+  },
+  {
+   "k": "Competitors",
+   "v": "ライバル"
+  },
+  {
+   "k": "No competitors: the world is yours alone.",
+   "v": "ライバルなし：世界はあなただけのもの。"
+  },
+  {
+   "k": "Click a colour band to change it. Names can be anything; the realm decides the iconic animals.",
+   "v": "色帯をクリックすると色を変えられます。名前は自由です。象徴的な動物は区系で決まります。"
+  },
+  {
+   "k": "Iconic animals: {0}",
+   "v": "象徴的な動物：{0}"
+  },
+  {
+   "k": "Map size",
+   "v": "マップサイズ"
+  },
+  {
+   "k": "Tiny",
+   "v": "極小"
+  },
+  {
+   "k": "{0} × {1} tiles, up to {2} players",
+   "v": "{0} × {1} マス、最大 {2} 人"
+  },
+  {
+   "k": "Difficulty",
+   "v": "難易度"
+  },
+  {
+   "k": "Easy",
+   "v": "やさしい"
+  },
+  {
+   "k": "Normal",
+   "v": "ふつう"
+  },
+  {
+   "k": "Hard",
+   "v": "むずかしい"
+  },
+  {
+   "k": "Brutal",
+   "v": "過酷"
+  },
+  {
+   "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
+   "v": "開始時の EP は通常の {0}%、毎ターンの収入は {1}%。ライバルや野生動物があなたの動物に与えるダメージは {2}%"
   }
  ]
 }

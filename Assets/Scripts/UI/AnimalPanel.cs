@@ -102,7 +102,7 @@ namespace NaturalHistory.UI
             {
                 Loc.F("Niche: {0}", Niches.Name(g.Niche)),
                 Loc.F("Owner: {0}", owner),
-                Loc.F("HP {0}/{1}  ·  Attack {2}  ·  Defense {3}  ·  Actions {4}", UnityEngine.Mathf.CeilToInt(g.Hp), g.MaxHp, g.Stats.attack, g.Stats.defense, g.Stats.moves),
+                Loc.F("HP {0}/{1}  ·  Attack {2}  ·  Defense {3}  ·  Actions {4}", UnityEngine.Mathf.CeilToInt(g.Hp), g.MaxHp, g.Stats.attack, g.Stats.defense, g.MaxActions),
             };
             if (!string.IsNullOrEmpty(def.diet)) lines.Add(Loc.F("Diet: {0}", Loc.T(def.diet)));
             lines.Add(Diets.Describe(def));
@@ -110,6 +110,10 @@ namespace NaturalHistory.UI
             if (def.sizeCm > 0f) lines.Add(Loc.F("Size: {0}", FormatSize(def.sizeCm)));
             if (def.habitats != null && def.habitats.Count > 0)
                 lines.Add(Loc.F("Habitats: {0}", string.Join(", ", def.habitats.Select(h => HabitatName(h)))));
+            var status = Abilities.Status(g);
+            if (status.Length > 0) lines.Add(status);
+            var abilities = Abilities.Describe(def, g.Owner != null);
+            if (abilities.Length > 0) lines.Add(abilities);
             statsLabel.text = string.Join("\n", lines);
             descriptionLabel.text = Loc.T(def.description);
         }

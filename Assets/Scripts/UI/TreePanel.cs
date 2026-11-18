@@ -280,6 +280,12 @@ namespace NaturalHistory.UI
             var blocker = Progression.UnlockBlocker(tree, selected);
             var meta = Loc.F("{0}  ·  Cost {1} EP  ·  From the {2}", Loc.T(tree.BranchName(selected.branch)), selected.cost, Loc.T(selected.age));
             if (genes.Count > 0) meta += "  ·  " + Loc.F("Unlocks genes: {0}", string.Join(", ", genes));
+            // abilities of the bound species this item switches on (World.Abilities)
+            bool function = tree == Progression.Morphology;
+            var abilities = World.Abilities.Of(Progression.Species)
+                .Where(ab => (function ? ab.unlockFunctions : ab.unlockBehaviors).Contains(selected.id))
+                .Select(ab => Loc.T(ab.name)).ToList();
+            if (abilities.Count > 0) meta += "  ·  " + Loc.F("Unlocks ability: {0}", string.Join(", ", abilities));
             if (blocker != null) meta += $"\n{blocker}";
             detailsMeta.text = meta;
 

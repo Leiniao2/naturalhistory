@@ -861,8 +861,9 @@
 /* ---------- New game ---------- */
 
 .setup-panel {
-    width: 1100px;
-    max-height: 90%;
+    width: 1560px;
+    max-width: 96%;
+    height: 90%;
 }
 
 .setup-count-row {
@@ -1995,4 +1996,198 @@
 
 .end-turn-button.next-unit:hover {
     background-image: url("Frames/button-gold-hover.png");
+}
+
+/* ---------- Title screen (MainMenu.cs) ---------- */
+
+.main-menu {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    background-color: rgb(10, 12, 10);
+}
+
+/* sized and panned in code to cover the screen at the painting's proportions */
+.main-menu-art {
+    position: absolute;
+    background-size: 100% 100%;
+}
+
+.main-menu-shade {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-size: 100% 100%;
+}
+
+.main-menu-column {
+    position: absolute;
+    left: 7%;
+    top: 0;
+    bottom: 0;
+    width: 470px;
+    justify-content: center;
+}
+
+.main-menu-title {
+    font-size: 78px;
+    -unity-font-style: bold;
+    color: rgb(244, 226, 170);
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.85);
+    white-space: normal;
+}
+
+.main-menu-subtitle {
+    font-size: 20px;
+    -unity-font-style: italic;
+    color: rgb(222, 216, 196);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    white-space: normal;
+    margin: 0 0 34px 4px;
+}
+
+.main-menu-button {
+    height: 56px;
+    font-size: 22px;
+    -unity-text-align: middle-left;
+    padding-left: 24px;
+}
+
+.main-language {
+    margin: 10px 0 6px 0;
+}
+
+.main-menu-credit {
+    position: absolute;
+    right: 18px;
+    bottom: 12px;
+    font-size: 13px;
+    color: rgba(235, 230, 214, 0.75);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* ---------- New Game: realm cards, world and competitors ---------- */
+
+.setup-columns {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 0;
+}
+
+.setup-column {
+    min-height: 0;
+}
+
+.setup-realm-column {
+    width: 46%;
+    margin-right: 20px;
+}
+
+.setup-world-column {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.setup-section {
+    font-size: 19px;
+    -unity-font-style: bold;
+    color: rgb(240, 210, 110);
+    margin: 4px 0 6px 0;
+}
+
+.setup-realms {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 160px;
+}
+
+.setup-realm-group {
+    font-size: 14px;
+    -unity-font-style: bold;
+    color: rgb(185, 192, 178);
+    margin: 8px 0 4px 2px;
+}
+
+.setup-realm-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.setup-realm {
+    width: 32%;
+    height: 54px;
+    margin: 0 6px 6px 0;
+    padding: 4px 8px;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-width: 2px;
+    border-color: rgba(190, 154, 88, 0.25);
+    border-radius: 5px;
+}
+
+.setup-realm:hover {
+    border-color: rgb(230, 230, 230);
+}
+
+.setup-realm.selected {
+    background-color: rgb(78, 70, 36);
+    border-color: rgb(230, 190, 80);
+}
+
+.setup-realm .band {
+    width: 24px;
+    height: 34px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.setup-realm-name {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 14px;
+    color: rgb(240, 238, 228);
+    white-space: normal;
+    -unity-text-align: middle-left;
+}
+
+.setup-realm-taken {
+    font-size: 11px;
+    color: rgb(150, 190, 230);
+    margin-left: 4px;
+}
+
+.setup-you {
+    flex-direction: row;
+    align-items: center;
+    margin: 8px 0 6px 0;
+}
+
+.setup-realm-details {
+    max-height: 200px;
+    flex-shrink: 0;
+}
+
+.setup-realm-description {
+    font-size: 14px;
+    color: rgb(222, 224, 212);
+    white-space: normal;
+}
+
+.setup-realm-animals {
+    font-size: 13px;
+    color: rgb(185, 192, 178);
+    white-space: normal;
+    margin-top: 6px;
+}
+
+.setup-world-column .setup-list {
+    flex-grow: 1;
+    max-height: none;
+}
+
+.setup-empty {
+    font-size: 14px;
+    color: rgb(185, 192, 178);
+    margin: 8px 4px;
 }

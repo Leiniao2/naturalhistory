@@ -54,6 +54,13 @@ namespace NaturalHistory.World
                 .FirstOrDefault();
         }
 
+        // Sizes close enough to fight, or a swarm or blood feeder going for something bigger (Abilities)
+        public static bool CanFight(ColonyGroup attacker, ColonyGroup defender) =>
+            SizesMatch(attacker, defender) || Overwhelms(attacker, defender);
+
+        private static bool Overwhelms(ColonyGroup attacker, ColonyGroup defender) =>
+            SizeRatio(attacker, defender) < 1f && (Abilities.Has(attacker, Abilities.Swarm) || Abilities.Has(attacker, Abilities.BloodFeeding));
+
         public static bool IsPredation(ColonyGroup attacker, ColonyGroup defender) =>
             attacker.Definition != null && defender.Definition != null
             && FoodWeb.SourceOf(attacker.Definition) is FoodWeb.FoodSource.Prey or FoodWeb.FoodSource.ForageOrPrey
@@ -62,48 +69,174 @@ namespace NaturalHistory.World
         // attack / defense × size ratio, times the attacker's era factor: HP grows with the era too,
         // so equals still need as many blows in every period, and a later species hits an earlier one
         // all the harder (CombatStats.Era); the counterattack goes the same way
+        // and rival or wild animals hit the human player's harder on harder difficulties
         public static float Damage(ColonyGroup from, ColonyGroup to) =>
-            (float)from.Stats.attack / Mathf.Max(1, to.Stats.defense) * SizeRatio(from, to) * CombatStats.Era(from.Definition);
+            (float)from.Stats.attack / Mathf.Max(1, to.Stats.defense) * SizeRatio(from, to) * CombatStats.Era(from.Definition)
+            * (to.Owner != null && to.Owner.IsHuman && from.Owner != to.Owner ? GameOptions.FoeDamageShare : 1f);
 
-        // Called when the attacker's blow lands on `cell`
+        // Called when the attacker's blow lands on `cell`. Abilities (see Abilities) change the fight:
+        //  - swallowing whole: spines, rolling up, a shell or ink stop it (a crushing bite gets through
+        //    all but ink); poison only hurts attackers that don't eat the defender
+        //  - damage: a pack, a charge or a shock add to it; ink, camouflage, a burrow, a shell, rolling
+        //    up or a herd or school take from it (to no less than a quarter)
+        //  - the hit poisons, infects, stuns or holds the survivor, blood feeding heals the attacker,
+        //    trampling hurts a second group; touching a poisonous, stinging, spiny or spraying defender
+        //    hurts the attacker back
+        //  - an ambush (not on the vigilant) gets no counterattack; a tail weapon doubles it
+        // Swarms and blood feeders can take on animals of any bigger size.
         public static void Strike(ColonyGroup attacker, HexCell cell)
         {
             var defender = Defender(attacker, cell);
             if (attacker == null || defender == null) return;
             string A = Loc.T(attacker.Definition.commonName), D = Loc.T(defender.Definition.commonName);
-            if (!SizesMatch(attacker, defender))
+            bool overwhelm = !SizesMatch(attacker, defender) && Overwhelms(attacker, defender);
+            if (!SizesMatch(attacker, defender) && !overwhelm)
             {
                 Report(Loc.F("{0} and {1} are too different in size to fight", A, D), cell);
                 return;
             }
+            var notes = new List<string>();
+            bool crush = Abilities.Has(attacker, Abilities.CrushingBite);
 
-            if (IsPredation(attacker, defender))
+            bool predation = IsPredation(attacker, defender);
+            if (predation)
             {
-                float gained = Mathf.Max(0f, defender.Hp);
-                attacker.Hp = Mathf.Min(attacker.MaxHp, attacker.Hp + gained);
-                Destroy(defender);
-                Report(Loc.F("{0} ate the {1} (+{2} HP)", A, D, Hp(gained)) + Reward(attacker, defender), cell);
-                return;
+                if (!Unswallowable(defender, crush))
+                {
+                    float gained = Mathf.Max(0f, defender.Hp);
+                    attacker.Hp = Mathf.Min(attacker.MaxHp, attacker.Hp + gained);
+                    Destroy(defender);
+                    Report(Loc.F("{0} ate the {1} (+{2} HP)", A, D, Hp(gained)) + Notes(notes) + Reward(attacker, defender), cell);
+                    return;
+                }
+                notes.Add(Loc.F("the {0} couldn't swallow it whole", A));
             }
 
             float dealt = Damage(attacker, defender);
+            if (overwhelm) dealt = Mathf.Max(dealt, 0.1f * defender.MaxHp); // many small bites still add up
+            if (Abilities.Has(attacker, Abilities.ElectricShock)) dealt *= 1.5f; // through half the defense, about
+            if (Abilities.Has(attacker, Abilities.PackHunting) && FriendNear(attacker, defender.Cell, defender)) { dealt *= 1.5f; notes.Add(Loc.T("a pack attack")); }
+            if (Abilities.Has(attacker, Abilities.Charge) && attacker.ActedThisTurn) { dealt *= 1.5f; notes.Add(Loc.F("the {0} charged", A)); }
+
+            bool senses = Abilities.Has(attacker, Abilities.Echolocation) || Abilities.Has(attacker, Abilities.Electroreception);
+            float guard = 1f;
+            if (Abilities.Has(defender, Abilities.InkCloud)) { guard *= 0.5f; notes.Add(Loc.F("the {0} hid in a cloud of ink", D)); }
+            if (Abilities.Has(defender, Abilities.Camouflage) && !senses) { guard *= 0.7f; notes.Add(Loc.F("the {0} was hard to see", D)); }
+            if (Abilities.Has(defender, Abilities.Burrow) && !Abilities.Has(attacker, Abilities.Electroreception)) { guard *= 0.5f; notes.Add(Loc.F("the {0} dived into its burrow", D)); }
+            if (Abilities.Has(defender, Abilities.ShellRetreat) && !crush) { guard *= 0.5f; notes.Add(Loc.F("the {0} pulled into its shell", D)); }
+            else if (Abilities.Has(defender, Abilities.RollUp) && !crush) { guard *= 0.6f; notes.Add(Loc.F("the {0} rolled up", D)); }
+            if ((Abilities.Has(defender, Abilities.Herding) || Abilities.Has(defender, Abilities.Schooling)) && FriendNear(defender, defender.Cell, attacker))
+            {
+                guard *= 0.7f;
+                notes.Add(Loc.F("the {0} had safety in numbers", D));
+            }
+            if (crush && (Abilities.Has(defender, Abilities.ShellRetreat) || Abilities.Has(defender, Abilities.RollUp)))
+                notes.Add(Loc.F("the {0} bit straight through", A));
+            dealt *= Mathf.Max(0.25f, guard);
+
             defender.Hp -= dealt;
+            if (defender.Hp <= 0f && !defender.LimbShed && Abilities.Has(defender, Abilities.Autotomy))
+            {
+                defender.Hp = 1f;
+                defender.LimbShed = true;
+                notes.Add(Loc.F("the {0} shed a limb and got away", D));
+            }
+            if (Abilities.Has(attacker, Abilities.BloodFeeding))
+            {
+                attacker.Hp = Mathf.Min(attacker.MaxHp, attacker.Hp + 0.5f * dealt);
+                notes.Add(Loc.F("the {0} fed on its blood", A));
+            }
+            if (Abilities.Has(attacker, Abilities.Trample)) Trample(attacker, defender, 0.5f * dealt, notes);
+
+            // touching the defender: what that costs the attacker, whether or not the defender survives
+            float hurt = 0f;
+            if (!predation && Abilities.Has(defender, Abilities.Poisonous)) Poison(attacker, A, notes);
+            if (Abilities.Has(defender, Abilities.StingingCells)) { hurt += 0.25f * dealt; notes.Add(Loc.F("the {0} was stung", A)); }
+            if (Abilities.Has(defender, Abilities.Spines)) { hurt += 0.33f * dealt; notes.Add(Loc.F("the {0} was pricked by the spines", A)); }
+            if (Abilities.Has(defender, Abilities.ChemicalSpray))
+            {
+                hurt += 0.1f * attacker.MaxHp;
+                attacker.Hold();
+                notes.Add(Loc.F("the {0} was sprayed and loses its next turn", A));
+            }
+
             if (defender.Hp <= 0f)
             {
                 Destroy(defender);
-                Report(Loc.F("{0} attacked the {1} ({2} damage) and wiped it out", A, D, Hp(dealt)) + Reward(attacker, defender), cell);
+                attacker.Hp -= hurt;
+                string won = Loc.F("{0} attacked the {1} ({2} damage) and wiped it out", A, D, Hp(dealt)) + Reward(attacker, defender);
+                if (attacker.Hp <= 0f) { Destroy(attacker); notes.Add(Loc.F("the {0} died of its wounds", A)); }
+                Report(won + Notes(notes), cell);
                 return;
             }
-            float back = Damage(defender, attacker);
-            attacker.Hp -= back;
+
+            // what the hit does to the survivor
+            if (Abilities.Has(attacker, Abilities.Venom)) Poison(defender, D, notes);
+            else if (Abilities.Has(attacker, Abilities.StingingCells)) { defender.Poison(0.25f * defender.MaxHp, 1); notes.Add(Loc.F("the {0} is poisoned", D)); }
+            if (Abilities.Has(attacker, Abilities.Disease)) { defender.Poison(0.1f * defender.MaxHp, 3); notes.Add(Loc.F("the {0} is infected", D)); }
+            if (Abilities.Has(attacker, Abilities.ElectricShock)) { defender.Hold(); notes.Add(Loc.F("the {0} is stunned and loses its next turn", D)); }
+            else if (Abilities.Has(attacker, Abilities.StickyWeb)) { defender.Hold(); notes.Add(Loc.F("the {0} is caught in the web and loses its next turn", D)); }
+            else if (Abilities.Has(attacker, Abilities.Constriction)) { defender.Hold(); notes.Add(Loc.F("the {0} is held in its coils and loses its next turn", D)); }
+
+            bool ambush = Abilities.Has(attacker, Abilities.Ambush) && !attacker.ActedThisTurn;
+            if (ambush && Abilities.Has(defender, Abilities.Vigilance)) { ambush = false; notes.Add(Loc.F("the {0} saw the ambush coming", D)); }
+            float back = ambush ? 0f : Damage(defender, attacker) * (Abilities.Has(defender, Abilities.TailWeapon) ? 2f : 1f);
+            if (ambush) notes.Add(Loc.T("an ambush: no counterattack"));
+            else if (Abilities.Has(defender, Abilities.TailWeapon)) notes.Add(Loc.F("the {0} swung its tail", D));
+            attacker.Hp -= back + hurt;
             if (attacker.Hp <= 0f)
             {
                 Destroy(attacker);
-                Report(Loc.F("{0} attacked the {1} ({2} damage) but was wiped out by its counterattack", A, D, Hp(dealt)) + Reward(defender, attacker), cell);
+                Report(Loc.F("{0} attacked the {1} ({2} damage) but was wiped out by its counterattack", A, D, Hp(dealt)) + Notes(notes) + Reward(defender, attacker), cell);
                 return;
             }
-            Report(Loc.F("{0} attacked the {1}: {2} damage, {3} back", A, D, Hp(dealt), Hp(back)), cell);
+            Report(Loc.F("{0} attacked the {1}: {2} damage, {3} back", A, D, Hp(dealt), Hp(back + hurt)) + Notes(notes), cell);
         }
+
+        // Spiny, rolled-up, shelled or ink-hidden prey can't be eaten in one go: it is fought instead.
+        // A crushing bite gets through all but ink.
+        private static bool Unswallowable(ColonyGroup g, bool crush) =>
+            Abilities.Has(g, Abilities.InkCloud) ||
+            (!crush && (Abilities.Has(g, Abilities.Spines) || Abilities.Has(g, Abilities.RollUp) || Abilities.Has(g, Abilities.ShellRetreat)));
+
+        // Venom or a poisonous bite: a fifth of the victim's HP a turn for 2 turns
+        private static void Poison(ColonyGroup g, string name, List<string> notes)
+        {
+            g.Poison(0.2f * g.MaxHp, 2);
+            notes.Add(Loc.F("the {0} is poisoned", name));
+        }
+
+        // Another group of g's side (of its species, for wild ones) on or next to `at`, other than `except`
+        private static bool FriendNear(ColonyGroup g, HexCell at, ColonyGroup except)
+        {
+            var colonies = SpeciesColonies.Instance;
+            var grid = HexGrid.Instance;
+            if (colonies == null || grid == null || at == null) return false;
+            var tiles = new List<HexCell>(grid.GetNeighbors(at)) { at };
+            foreach (var t in tiles)
+                foreach (var other in colonies.GroupsAt(t))
+                    if (other != g && other != except &&
+                        (g.Owner != null ? other.Owner == g.Owner : other.Owner == null && other.Definition == g.Definition))
+                        return true;
+            return false;
+        }
+
+        // Another foreign group in the defender's layer on its tile takes `damage` too
+        private static void Trample(ColonyGroup attacker, ColonyGroup defender, float damage, List<string> notes)
+        {
+            var colonies = SpeciesColonies.Instance;
+            if (colonies == null || defender.Cell == null) return;
+            var other = colonies.GroupsAt(defender.Cell)
+                .FirstOrDefault(g => g != null && g != defender && g.Definition != null && Foes(attacker, g) && SameLayer(attacker, g));
+            if (other == null) return;
+            string O = Loc.T(other.Definition.commonName);
+            other.Hp -= damage;
+            if (other.Hp > 0f) { notes.Add(Loc.F("the {0} was trampled ({1} damage)", O, Hp(damage))); return; }
+            Destroy(other);
+            notes.Add(Loc.F("the {0} was trampled to death", O) + Reward(attacker, other));
+        }
+
+        private static string Notes(List<string> notes) => notes.Count == 0 ? "" : " — " + string.Join("; ", notes);
 
         // The human player earns KillReward EP when one of their groups wipes out a foreign one
         // (attacking, eating it, or in a counterattack); the text to add to the report
@@ -183,13 +316,15 @@ namespace NaturalHistory.World
             foreach (var g in colonies.Groups.ToList())
             {
                 if (g == null) continue;
-                g.BeginTurn(fed: !Diets.Starving(g));
+                bool fed = !Diets.Starving(g), poisoned = g.PoisonTurns > 0;
+                g.BeginTurn(fed);
                 if (g.Hp > 0f) continue;
                 var name = Loc.T(g.Definition.commonName);
                 var cell = g.Cell;
                 bool yours = g.Owner != null && g.Owner.IsHuman;
                 Destroy(g);
-                if (yours) Report(Loc.F("Your {0} starved: no food on its tile or next to it", name), cell);
+                if (yours) Report(fed && poisoned ? Loc.F("Your {0} died of poison", name)
+                                                  : Loc.F("Your {0} starved: no food on its tile or next to it", name), cell);
                 else Debug.Log($"[Combat] A {g.Definition.commonName} starved");
             }
         }

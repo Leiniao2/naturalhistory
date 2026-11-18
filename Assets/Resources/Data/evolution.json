@@ -612,11 +612,10 @@
    "to": "vauxia_gracilenta",
    "functions": [
     "filter_apparatus",
-    "spines"
-   ],
-   "behaviors": [
+    "spines",
     "colonial_living"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed."
@@ -777,11 +776,10 @@
    "to": "hazelia_palmata",
    "functions": [
     "filter_apparatus",
-    "budding"
-   ],
-   "behaviors": [
+    "budding",
     "colonial_living"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Demosponges build their skeletons of spongin and silica needles."
@@ -831,11 +829,10 @@
    "from": "metaldetes_taylori",
    "to": "ethmophyllum_whitneyi",
    "functions": [
-    "budding"
-   ],
-   "behaviors": [
+    "budding",
     "colonial_living"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Archaeocyaths were reef-building sponges with double cone-shaped walls."
@@ -931,11 +928,10 @@
    "to": "cambroctoconus_orientalis",
    "functions": [
     "budding",
-    "filter_apparatus"
-   ],
-   "behaviors": [
+    "filter_apparatus",
     "colonial_living"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Anthozoans are polyps all their lives: anemones and corals."
@@ -990,15 +986,14 @@
    "to": "physalia_physalis",
    "functions": [
     "budding",
-    "nerve_net"
-   ],
-   "behaviors": [
+    "nerve_net",
     "colonial_living"
    ],
-   "grantFunctions": [],
-   "grantBehaviors": [
-    "venom_hunting"
+   "behaviors": [],
+   "grantFunctions": [
+    "venom_glands"
    ],
+   "grantBehaviors": [],
    "description": "Siphonophores are colonies of specialised polyps that act as one animal."
   },
   {
@@ -1534,7 +1529,7 @@
    "to": "conularia_trentonensis",
    "functions": [
     "ammonia_excretion",
-    "filter_apparatus"
+    "colonial_living"
    ],
    "behaviors": [
     "reef_building"
@@ -1547,11 +1542,10 @@
    "from": "eldonia_ludwigi",
    "to": "dictyonema_flabelliforme",
    "functions": [
-    "filter_apparatus"
-   ],
-   "behaviors": [
+    "filter_apparatus",
     "colonial_living"
    ],
+   "behaviors": [],
    "grantFunctions": [
     "budding"
    ],
@@ -1603,11 +1597,10 @@
    "from": "dictyonema_flabelliforme",
    "to": "tetragraptus_approximatus",
    "functions": [
-    "filter_apparatus"
-   ],
-   "behaviors": [
+    "filter_apparatus",
     "colonial_living"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Graptolites were colonial hemichordates drifting in the plankton."
@@ -1744,11 +1737,10 @@
    "from": "lingulella_chengjiangensis",
    "to": "prasopora_simulatrix",
    "functions": [
-    "filter_apparatus"
-   ],
-   "behaviors": [
+    "filter_apparatus",
     "colonial_living"
    ],
+   "behaviors": [],
    "grantFunctions": [
     "budding"
    ],
@@ -2225,11 +2217,10 @@
    "from": "halysites_catenularia",
    "to": "halysites_priscus",
    "functions": [
-    "budding"
-   ],
-   "behaviors": [
+    "budding",
     "colonial_living"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Tabulate corals built honeycomb colonies of tiny tubes."
@@ -2294,11 +2285,11 @@
    "from": "streptelasma_corniculum",
    "to": "goniophyllum_pyramidale",
    "functions": [
-    "filter_apparatus",
-    "bioluminescence"
+    "venom_glands",
+    "budding"
    ],
    "behaviors": [
-    "venom_hunting"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -2467,7 +2458,7 @@
     "acid_stomach"
    ],
    "behaviors": [
-    "venom_hunting"
+    "schooling"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -2679,11 +2670,11 @@
    "from": "kampecaris_obanensis",
    "to": "pneumodesmus_newmani",
    "functions": [
-    "exoskeleton",
-    "blood_clotting"
+    "venom_glands",
+    "exoskeleton"
    ],
    "behaviors": [
-    "venom_hunting"
+    "rolling_up"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -2811,7 +2802,7 @@
     "exoskeleton"
    ],
    "behaviors": [
-    "venom_hunting"
+    "claw_duels"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3105,7 +3096,7 @@
     "camera_eyes"
    ],
    "behaviors": [
-    "venom_hunting"
+    "schooling"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3158,11 +3149,10 @@
    "to": "devonobius_delta",
    "functions": [
     "tracheae",
-    "terrestrial_legs"
+    "terrestrial_legs",
+    "venom_glands"
    ],
-   "behaviors": [
-    "venom_hunting"
-   ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Myriapods were among the first animals on land."
@@ -3376,7 +3366,7 @@
     "camera_eyes"
    ],
    "behaviors": [
-    "venom_hunting"
+    "schooling"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3404,7 +3394,7 @@
     "exoskeleton"
    ],
    "behaviors": [
-    "venom_hunting"
+    "claw_duels"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3476,7 +3466,7 @@
     "blood_clotting"
    ],
    "behaviors": [
-    "venom_hunting"
+    "tube_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3490,7 +3480,7 @@
     "blood_clotting"
    ],
    "behaviors": [
-    "venom_hunting"
+    "claw_duels"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3594,11 +3584,11 @@
    "from": "conularia_trentonensis",
    "to": "essexella_asherae",
    "functions": [
-    "broadcast_spawning",
-    "spines"
+    "venom_glands",
+    "budding"
    ],
    "behaviors": [
-    "venom_hunting"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3825,7 +3815,7 @@
     "exoskeleton"
    ],
    "behaviors": [
-    "venom_hunting"
+    "silk_traps"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3895,7 +3885,7 @@
     "compound_eyes"
    ],
    "behaviors": [
-    "venom_hunting"
+    "stridulation"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3923,7 +3913,7 @@
     "uric_acid"
    ],
    "behaviors": [
-    "venom_hunting"
+    "stridulation"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3997,7 +3987,7 @@
     "compound_eyes"
    ],
    "behaviors": [
-    "venom_hunting"
+    "stridulation"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -4229,7 +4219,7 @@
     "live_birth"
    ],
    "behaviors": [
-    "venom_hunting"
+    "autotomy"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -4537,7 +4527,7 @@
     "differentiated_teeth"
    ],
    "behaviors": [
-    "venom_hunting"
+    "skin_shedding"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -4551,7 +4541,7 @@
     "differentiated_teeth"
    ],
    "behaviors": [
-    "venom_hunting"
+    "skin_shedding"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -4565,7 +4555,7 @@
     "differentiated_teeth"
    ],
    "behaviors": [
-    "venom_hunting"
+    "skin_shedding"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -4579,7 +4569,7 @@
     "differentiated_teeth"
    ],
    "behaviors": [
-    "venom_hunting"
+    "skin_shedding"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -4593,7 +4583,7 @@
     "differentiated_teeth"
    ],
    "behaviors": [
-    "venom_hunting"
+    "skin_shedding"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -4648,11 +4638,10 @@
    "to": "coelurosauravus_jaekeli",
    "functions": [
     "keratin_scales",
-    "rib_breathing"
-   ],
-   "behaviors": [
+    "rib_breathing",
     "gliding"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Neodiapsids include all living reptiles."
@@ -4665,7 +4654,7 @@
     "differentiated_teeth"
    ],
    "behaviors": [
-    "venom_hunting"
+    "skin_shedding"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -4899,7 +4888,7 @@
     "differentiated_teeth"
    ],
    "behaviors": [
-    "warning_colours"
+    "active_predation"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5090,11 +5079,11 @@
    "from": "shonisaurus_popularis",
    "to": "thalattoarchon_saurophagis",
    "functions": [
-    "venom_glands",
-    "temperature_sex"
+    "temperature_sex",
+    "three_chambered_heart"
    ],
    "behaviors": [
-    "venom_hunting"
+    "mud_wallowing"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5108,7 +5097,7 @@
     "endothermy_node"
    ],
    "behaviors": [
-    "nursing"
+    "plant_feeding"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5119,10 +5108,10 @@
    "to": "drepanosaurus_unguicaudatus",
    "functions": [
     "chromatophores",
-    "venom_glands"
+    "temperature_sex"
    ],
    "behaviors": [
-    "venom_hunting"
+    "courtship_dance"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5132,11 +5121,11 @@
    "from": "shonisaurus_popularis",
    "to": "hupehsuchus_nanchangensis",
    "functions": [
-    "venom_glands",
-    "temperature_sex"
+    "temperature_sex",
+    "three_chambered_heart"
    ],
    "behaviors": [
-    "venom_hunting"
+    "courtship_dance"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5150,7 +5139,7 @@
     "diaphragm"
    ],
    "behaviors": [
-    "nursing"
+    "active_predation"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5163,9 +5152,7 @@
     "mammary_glands",
     "fur_and_glands"
    ],
-   "behaviors": [
-    "nursing"
-   ],
+   "behaviors": [],
    "grantFunctions": [
     "eardrums"
    ],
@@ -5200,10 +5187,10 @@
    "behaviors": [
     "display_postures"
    ],
-   "grantFunctions": [],
-   "grantBehaviors": [
+   "grantFunctions": [
     "gliding"
    ],
+   "grantBehaviors": [],
    "description": "Lizards, crocodiles, turtles, dinosaurs and birds."
   },
   {
@@ -5211,11 +5198,10 @@
    "to": "sharovipteryx_mirabilis",
    "functions": [
     "keratin_scales",
-    "rib_breathing"
-   ],
-   "behaviors": [
+    "rib_breathing",
     "gliding"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Archosauromorphs: the line of crocodiles, dinosaurs and birds."
@@ -5282,11 +5268,11 @@
    "from": "longisquama_insignis",
    "to": "erythrosuchus_africanus",
    "functions": [
-    "venom_glands",
-    "temperature_sex"
+    "temperature_sex",
+    "salt_glands"
    ],
    "behaviors": [
-    "venom_hunting"
+    "courtship_dance"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5296,8 +5282,8 @@
    "from": "placodus_gigas",
    "to": "cyamodus_hildegardis",
    "functions": [
-    "venom_glands",
-    "salt_glands"
+    "salt_glands",
+    "temperature_sex"
    ],
    "behaviors": [
     "courtship_dance"
@@ -5310,11 +5296,11 @@
    "from": "proganochelys_quenstedti",
    "to": "odontochelys_semitestacea",
    "functions": [
-    "venom_glands",
-    "salt_glands"
+    "salt_glands",
+    "temperature_sex"
    ],
    "behaviors": [
-    "venom_hunting"
+    "mud_wallowing"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5370,11 +5356,11 @@
    "from": "megachirella_wachtleri",
    "to": "icarosaurus_siefkeri",
    "functions": [
-    "venom_glands",
-    "salt_glands"
+    "salt_glands",
+    "three_chambered_heart"
    ],
    "behaviors": [
-    "venom_hunting"
+    "courtship_dance"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5385,7 +5371,7 @@
    "to": "smilosuchus_gregorii",
    "functions": [
     "chromatophores",
-    "venom_glands"
+    "salt_glands"
    ],
    "behaviors": [
     "courtship_dance"
@@ -5422,10 +5408,10 @@
    "behaviors": [
     "plant_feeding"
    ],
-   "grantFunctions": [],
-   "grantBehaviors": [
+   "grantFunctions": [
     "tail_weapons"
    ],
+   "grantBehaviors": [],
    "description": "Pseudosuchians, the crocodile line of archosaurs."
   },
   {
@@ -5519,11 +5505,10 @@
    "to": "eudimorphodon_ranzii",
    "functions": [
     "hollow_bones",
-    "protofeathers"
-   ],
-   "behaviors": [
+    "protofeathers",
     "gliding"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "roosting"
@@ -5566,7 +5551,7 @@
     "endothermy_node"
    ],
    "behaviors": [
-    "venom_hunting"
+    "courtship_dance"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5626,7 +5611,7 @@
     "hollow_bones"
    ],
    "behaviors": [
-    "venom_hunting"
+    "mud_wallowing"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5687,11 +5672,10 @@
     "schooling"
    ],
    "grantFunctions": [
-    "large_brain"
-   ],
-   "grantBehaviors": [
+    "large_brain",
     "ink_cloud"
    ],
+   "grantBehaviors": [],
    "description": "Coleoids hid the shell inside the body."
   },
   {
@@ -5862,8 +5846,8 @@
    "from": "ophthalmosaurus_icenicus",
    "to": "temnodontosaurus_platyodon",
    "functions": [
-    "venom_glands",
-    "temperature_sex"
+    "temperature_sex",
+    "salt_glands"
    ],
    "behaviors": [
     "courtship_dance"
@@ -5894,7 +5878,7 @@
     "hard_eggshell"
    ],
    "behaviors": [
-    "venom_hunting"
+    "courtship_dance"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5947,11 +5931,10 @@
    "to": "volaticotherium_antiquum",
    "functions": [
     "fur_and_glands",
-    "cusped_molars"
-   ],
-   "behaviors": [
+    "cusped_molars",
     "gliding"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "roosting"
@@ -5976,11 +5959,11 @@
    "from": "plesiosaurus_dolichodeirus",
    "to": "pliosaurus_funkei",
    "functions": [
-    "venom_glands",
-    "three_chambered_heart"
+    "three_chambered_heart",
+    "temperature_sex"
    ],
    "behaviors": [
-    "venom_hunting"
+    "courtship_dance"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5993,9 +5976,7 @@
     "mammary_glands",
     "cusped_molars"
    ],
-   "behaviors": [
-    "nursing"
-   ],
+   "behaviors": [],
    "grantFunctions": [
     "placenta"
    ],
@@ -6038,7 +6019,7 @@
     "endothermy_node"
    ],
    "behaviors": [
-    "venom_hunting"
+    "mud_wallowing"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -6122,7 +6103,7 @@
     "beak"
    ],
    "behaviors": [
-    "venom_hunting"
+    "mud_wallowing"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -6136,7 +6117,7 @@
     "beak"
    ],
    "behaviors": [
-    "venom_hunting"
+    "courtship_dance"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -6152,10 +6133,10 @@
    "behaviors": [
     "plant_feeding"
    ],
-   "grantFunctions": [],
-   "grantBehaviors": [
+   "grantFunctions": [
     "tail_weapons"
    ],
+   "grantBehaviors": [],
    "description": "Thyreophorans were armoured dinosaurs."
   },
   {
@@ -6191,11 +6172,10 @@
    "to": "stegosaurus_stenops",
    "functions": [
     "osteoderms",
-    "gastroliths"
-   ],
-   "behaviors": [
+    "gastroliths",
     "tail_weapons"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "herding"
@@ -6207,11 +6187,10 @@
    "to": "kentrosaurus_aethiopicus",
    "functions": [
     "osteoderms",
-    "beak"
-   ],
-   "behaviors": [
+    "beak",
     "tail_weapons"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Stegosaurs carried plates and spikes."
@@ -6252,7 +6231,7 @@
     "beak"
    ],
    "behaviors": [
-    "venom_hunting"
+    "courtship_dance"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -6321,11 +6300,10 @@
    "to": "diplodocus_carnegii",
    "functions": [
     "air_sacs",
-    "gastroliths"
-   ],
-   "behaviors": [
+    "gastroliths",
     "tail_weapons"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Diplodocoids had whip-like tails."
@@ -6391,11 +6369,10 @@
    "to": "yi_qi",
    "functions": [
     "protofeathers",
-    "hollow_bones"
-   ],
-   "behaviors": [
+    "hollow_bones",
     "gliding"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "roosting"
@@ -6423,11 +6400,10 @@
    "to": "archaeopteryx_lithographica",
    "functions": [
     "feathers",
-    "feathered_wings"
-   ],
-   "behaviors": [
+    "feathered_wings",
     "gliding"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Avialans: the line of birds."
@@ -6455,11 +6431,10 @@
    "to": "water_bear",
    "functions": [
     "chitin_cuticle",
-    "moulting_hormone"
-   ],
-   "behaviors": [
+    "moulting_hormone",
     "diapause"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "mucus_cocoon"
@@ -6685,8 +6660,8 @@
    "from": "mosasaurus_hoffmannii",
    "to": "prognathodon_saturator",
    "functions": [
-    "venom_glands",
-    "salt_glands"
+    "salt_glands",
+    "temperature_sex"
    ],
    "behaviors": [
     "head_butting"
@@ -6713,8 +6688,8 @@
    "from": "elasmosaurus_platyurus",
    "to": "dolichorhynchops_osborni",
    "functions": [
-    "venom_glands",
-    "temperature_sex"
+    "temperature_sex",
+    "salt_glands"
    ],
    "behaviors": [
     "head_butting"
@@ -6746,9 +6721,7 @@
     "mammary_glands",
     "pouch"
    ],
-   "behaviors": [
-    "nursing"
-   ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "nocturnal_refuge"
@@ -7217,10 +7190,10 @@
    "behaviors": [
     "pursuit_hunting"
    ],
-   "grantFunctions": [],
-   "grantBehaviors": [
+   "grantFunctions": [
     "countershading"
    ],
+   "grantBehaviors": [],
    "description": "Coelurosaurs were feathered."
   },
   {
@@ -7306,11 +7279,10 @@
    "to": "microraptor_gui",
    "functions": [
     "feathered_wings",
-    "feathers"
-   ],
-   "behaviors": [
+    "feathers",
     "gliding"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "roosting"
@@ -7513,7 +7485,7 @@
    "to": "titanomyrma_gigantea",
    "functions": [
     "insect_wings",
-    "venom_glands"
+    "uric_acid"
    ],
    "behaviors": [
     "paper_nests"
@@ -7584,8 +7556,8 @@
    "from": "titanoboa_cerrejonensis",
    "to": "palaeophis_colossaeus",
    "functions": [
-    "venom_glands",
-    "chromatophores"
+    "chromatophores",
+    "salt_glands"
    ],
    "behaviors": [
     "incubation"
@@ -7722,10 +7694,10 @@
    "behaviors": [
     "nocturnal_refuge"
    ],
-   "grantFunctions": [],
-   "grantBehaviors": [
-    "echolocation_hunting"
+   "grantFunctions": [
+    "echolocating_ears"
    ],
+   "grantBehaviors": [],
    "description": "Bats are the only mammals that truly fly."
   },
   {
@@ -7735,9 +7707,7 @@
     "echolocating_ears",
     "torpor"
    ],
-   "behaviors": [
-    "echolocation_hunting"
-   ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "hanging_roost"
@@ -8228,7 +8198,7 @@
    "to": "neivamyrmex_ectopus",
    "functions": [
     "toxic_skin",
-    "venom_glands"
+    "hindgut_fermentation"
    ],
    "behaviors": [
     "superorganism"
@@ -8300,7 +8270,7 @@
    "to": "laophis_crotaloides",
    "functions": [
     "chromatophores",
-    "venom_glands"
+    "temperature_sex"
    ],
    "behaviors": [
     "head_butting"
@@ -8777,10 +8747,10 @@
    "behaviors": [
     "pack_hunting"
    ],
-   "grantFunctions": [],
-   "grantBehaviors": [
-    "echolocation_hunting"
+   "grantFunctions": [
+    "echolocating_ears"
    ],
+   "grantBehaviors": [],
    "description": "Modern whales."
   },
   {
@@ -8802,11 +8772,10 @@
    "to": "pelagornis_chilensis",
    "functions": [
     "salt_glands",
-    "hollow_bones"
-   ],
-   "behaviors": [
+    "hollow_bones",
     "gliding"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "ocean_migration"
@@ -8846,11 +8815,10 @@
    "to": "argentavis_magnificens",
    "functions": [
     "hollow_bones",
-    "feathered_wings"
-   ],
-   "behaviors": [
+    "feathered_wings",
     "gliding"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "scavenging"
@@ -8942,7 +8910,7 @@
     "budding"
    ],
    "behaviors": [
-    "venom_hunting"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -9011,9 +8979,7 @@
     "venom_glands",
     "regeneration_node"
    ],
-   "behaviors": [
-    "venom_hunting"
-   ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Sea anemones are soft corals without a skeleton."
@@ -9023,11 +8989,10 @@
    "to": "taenia_solium",
    "functions": [
     "flame_cells",
-    "internal_fertilisation"
-   ],
-   "behaviors": [
+    "internal_fertilisation",
     "hermaphroditism"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Protostomes form the mouth first in the embryo."
@@ -9037,11 +9002,10 @@
    "to": "taenia_saginata",
    "functions": [
     "flame_cells",
-    "budding"
-   ],
-   "behaviors": [
+    "budding",
     "hermaphroditism"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Flatworms."
@@ -9051,11 +9015,10 @@
    "to": "echinococcus_granulosus",
    "functions": [
     "budding",
-    "regeneration_node"
-   ],
-   "behaviors": [
+    "regeneration_node",
     "hermaphroditism"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Flatworms."
@@ -9065,11 +9028,10 @@
    "to": "spirometra_mansoni",
    "functions": [
     "flame_cells",
-    "planktonic_larvae"
-   ],
-   "behaviors": [
+    "planktonic_larvae",
     "hermaphroditism"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Flatworms."
@@ -9093,11 +9055,10 @@
    "to": "hirudo_nipponia",
    "functions": [
     "chemoreceptors",
-    "skin_breathing"
-   ],
-   "behaviors": [
+    "skin_breathing",
     "hermaphroditism"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Earthworms and leeches."
@@ -9502,10 +9463,10 @@
    "behaviors": [
     "startle_escape"
    ],
-   "grantFunctions": [],
-   "grantBehaviors": [
+   "grantFunctions": [
     "gliding"
    ],
+   "grantBehaviors": [],
    "description": "Flying fish escape predators by gliding on enlarged fins."
   },
   {
@@ -9555,11 +9516,10 @@
    "to": "cathedral_termite",
    "functions": [
     "hindgut_fermentation",
-    "juvenile_hormone"
-   ],
-   "behaviors": [
+    "juvenile_hormone",
     "colonial_living"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "termite_mounds"
@@ -9587,11 +9547,10 @@
    "to": "seven_spot_ladybird",
    "functions": [
     "complete_metamorphosis",
-    "toxic_skin"
-   ],
-   "behaviors": [
+    "toxic_skin",
     "warning_colours"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "playing_dead"
@@ -9757,11 +9716,10 @@
    "to": "tapinoma_melanocephalum",
    "functions": [
     "complete_metamorphosis",
-    "chemoreceptors"
-   ],
-   "behaviors": [
+    "chemoreceptors",
     "chemical_spray"
    ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Stinging Hymenoptera: wasps, bees and ants."
@@ -9790,10 +9748,10 @@
    "behaviors": [
     "synchronised_spawning"
    ],
-   "grantFunctions": [],
-   "grantBehaviors": [
+   "grantFunctions": [
     "warning_colours"
    ],
+   "grantBehaviors": [],
    "description": "Frogs and toads leap on long hind legs."
   },
   {
@@ -9891,7 +9849,7 @@
    "to": "crotalus_mitchellii",
    "functions": [
     "chromatophores",
-    "venom_glands"
+    "temperature_sex"
    ],
    "behaviors": [
     "incubation"
@@ -10061,9 +10019,7 @@
     "echolocating_ears",
     "torpor"
    ],
-   "behaviors": [
-    "echolocation_hunting"
-   ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "reciprocal_altruism"
@@ -10409,9 +10365,7 @@
     "echolocating_ears",
     "myoglobin_stores"
    ],
-   "behaviors": [
-    "echolocation_hunting"
-   ],
+   "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [
     "fission_fusion"

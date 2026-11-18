@@ -1,6 +1,410 @@
 {
  "entries": [
   {
+   "k": "Electric Organs",
+   "v": "发电器官"
+  },
+  {
+   "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
+   "v": "肌肉变成活电池，放电击晕猎物（电鳗、电鳐）。"
+  },
+  {
+   "k": "Finds its way by echoes: it sees one tile further, and camouflage doesn't hide anything from it.",
+   "v": "靠回声辨路：视野多一格，伪装对它无效。"
+  },
+  {
+   "k": "Senses the electric fields of other animals: it sees one tile further, and neither camouflage nor a burrow hides prey from it.",
+   "v": "感知其他动物的电场：视野多一格，伪装和洞穴都无法向它隐藏猎物。"
+  },
+  {
+   "k": "Keen eyes",
+   "v": "锐眼"
+  },
+  {
+   "k": "Spots prey from far off: it sees one tile further.",
+   "v": "能远远发现猎物：视野多一格。"
+  },
+  {
+   "k": "Blends into its surroundings: attacks on it deal 30% less damage, unless the attacker hunts by echolocation or electric sense.",
+   "v": "与环境融为一体：受到的攻击伤害减少30%，除非攻击者靠回声定位或电感应捕猎。"
+  },
+  {
+   "k": "Burrow",
+   "v": "穴居"
+  },
+  {
+   "k": "Dives into its burrow when attacked: it takes half damage, unless the attacker senses it through the ground with electric sense.",
+   "v": "受攻击时钻进洞穴：只受一半伤害，除非攻击者能通过电感应透过地面感知它。"
+  },
+  {
+   "k": "Shell retreat",
+   "v": "缩壳"
+  },
+  {
+   "k": "Pulls into its shell: it takes half damage when attacked and can't be swallowed whole, unless the attacker has a crushing bite.",
+   "v": "缩进壳中：受攻击时只受一半伤害，且不会被整个吞下，除非攻击者拥有碾碎咬合。"
+  },
+  {
+   "k": "Herd",
+   "v": "兽群"
+  },
+  {
+   "k": "Lives in herds: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "群居生活：己方（野生则为同物种）的另一个群体与其相邻时，受到的伤害减少30%。"
+  },
+  {
+   "k": "School",
+   "v": "鱼群"
+  },
+  {
+   "k": "Swims in schools: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "成群游动：己方（野生则为同物种）的另一个群体与其相邻时，受到的伤害减少30%。"
+  },
+  {
+   "k": "Vigilance",
+   "v": "警戒"
+  },
+  {
+   "k": "Keeps a lookout and calls alarms: it can't be ambushed.",
+   "v": "负责放哨并发出警报：不会被伏击。"
+  },
+  {
+   "k": "Charge",
+   "v": "冲撞"
+  },
+  {
+   "k": "Charges with horns, tusks or head: an attack made after moving that turn deals half again as much damage.",
+   "v": "用角、獠牙或头部冲撞：当回合移动后发动的攻击，伤害提高50%。"
+  },
+  {
+   "k": "Crushing bite",
+   "v": "碾碎咬合"
+  },
+  {
+   "k": "Bites through bone and shell: rolling up and pulling into a shell don't protect against it, and spiny or shelled prey can still be swallowed.",
+   "v": "能咬穿骨头和甲壳：卷起身体和缩进壳中都无法抵御，带刺或有壳的猎物仍可被吞下。"
+  },
+  {
+   "k": "Trample",
+   "v": "践踏"
+  },
+  {
+   "k": "So heavy it crushes what is underfoot: its attacks also deal half damage to one more foreign group on the target tile.",
+   "v": "体型庞大，足下之物尽被碾碎：攻击时还会对目标格上另一个外来群体造成一半伤害。"
+  },
+  {
+   "k": "Sprint",
+   "v": "冲刺"
+  },
+  {
+   "k": "Runs down prey or outruns danger in bursts: one more action every turn.",
+   "v": "爆发式追击猎物或逃离危险：每回合多一次行动。"
+  },
+  {
+   "k": "Swarm",
+   "v": "虫群"
+  },
+  {
+   "k": "Overwhelms with sheer numbers: it can attack animals of any size bigger than itself.",
+   "v": "以数量压倒对手：可以攻击任何比自己体型大的动物。"
+  },
+  {
+   "k": "Blood feeding",
+   "v": "吸血"
+  },
+  {
+   "k": "Drinks blood: it can feed on animals of any size bigger than itself, and heals half the damage it deals.",
+   "v": "以血为食：可以捕食任何比自己体型大的动物，并回复所造成伤害一半的生命值。"
+  },
+  {
+   "k": "Spreads disease",
+   "v": "传播疾病"
+  },
+  {
+   "k": "Carries germs in its bite: a group it hits is infected, losing a tenth of its HP each turn for 3 turns.",
+   "v": "咬伤带菌：被击中的群体会受到感染，连续3回合每回合损失十分之一的生命值。"
+  },
+  {
+   "k": "Dormancy",
+   "v": "休眠"
+  },
+  {
+   "k": "Sleeps through hard times: it doesn't lose HP when it has no food (but doesn't heal either).",
+   "v": "靠睡眠熬过艰难时期：没有食物时不会损失生命值（但也不会恢复）。"
+  },
+  {
+   "k": "Lives off a thick layer of fat: it loses only half as much HP when it has no food.",
+   "v": "依靠厚厚的脂肪层生存：没有食物时只损失一半的生命值。"
+  },
+  {
+   "k": "Prolific breeder",
+   "v": "多产"
+  },
+  {
+   "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
+   "v": "繁殖迅速：每2回合即可繁殖一次，而非每3回合。"
+  },
+  {
+   "k": "the {0} charged",
+   "v": "{0}发动了冲锋"
+  },
+  {
+   "k": "the {0} was hard to see",
+   "v": "{0}难以被发现"
+  },
+  {
+   "k": "the {0} dived into its burrow",
+   "v": "{0}钻进了洞穴"
+  },
+  {
+   "k": "the {0} pulled into its shell",
+   "v": "{0}缩进了壳中"
+  },
+  {
+   "k": "the {0} had safety in numbers",
+   "v": "{0}有同伴在旁，伤害减轻"
+  },
+  {
+   "k": "the {0} bit straight through",
+   "v": "{0}一口咬穿了防御"
+  },
+  {
+   "k": "the {0} fed on its blood",
+   "v": "{0}的血被吸食"
+  },
+  {
+   "k": "the {0} is infected",
+   "v": "{0}被感染了"
+  },
+  {
+   "k": "the {0} saw the ambush coming",
+   "v": "{0}察觉到了伏击"
+  },
+  {
+   "k": "the {0} was trampled ({1} damage)",
+   "v": "{0}被践踏（{1}点伤害）"
+  },
+  {
+   "k": "the {0} was trampled to death",
+   "v": "{0}被践踏致死"
+  },
+  {
+   "k": "Venom",
+   "v": "毒液"
+  },
+  {
+   "k": "Its bite or sting injects venom: a group it hits and doesn't kill is poisoned, losing a fifth of its HP each turn for 2 turns.",
+   "v": "咬或蜇会注入毒液：被命中但未被击杀的群体会中毒，连续2回合每回合损失五分之一生命值。"
+  },
+  {
+   "k": "Stinging cells",
+   "v": "刺细胞"
+  },
+  {
+   "k": "Covered in stinging cells: its attacks poison the target for a turn, and whatever attacks it is stung back for a quarter of the damage it deals.",
+   "v": "身披刺细胞：攻击会使目标中毒1回合，攻击它的一方会被反蜇，承受其造成伤害的四分之一。"
+  },
+  {
+   "k": "Poisonous",
+   "v": "有毒"
+  },
+  {
+   "k": "Its body is poisonous: whatever attacks it is poisoned, losing a fifth of its HP each turn for 2 turns. Its predators, used to it, eat it unharmed.",
+   "v": "身体有毒：攻击它的单位会中毒，接下来 2 回合每回合损失五分之一的 HP。已经适应它的捕食者吃它不受影响。"
+  },
+  {
+   "k": "Electric shock",
+   "v": "电击"
+  },
+  {
+   "k": "Stuns with an electric discharge: its attacks get through half the target's defense, and the target loses its actions next turn.",
+   "v": "以放电使目标昏迷：攻击无视目标一半防御，目标下回合无法行动。"
+  },
+  {
+   "k": "Sticky web",
+   "v": "粘网"
+  },
+  {
+   "k": "Catches prey in sticky silk: a group it attacks and doesn't kill is caught and loses its actions next turn.",
+   "v": "用黏性蛛丝捕获猎物：被攻击但未被击杀的群体会被困住，下回合无法行动。"
+  },
+  {
+   "k": "Ink cloud",
+   "v": "墨云"
+  },
+  {
+   "k": "Squirts ink and slips away: it takes half damage when attacked and can't be swallowed whole.",
+   "v": "喷出墨汁并溜走：受到攻击时只受一半伤害，且无法被整个吞下。"
+  },
+  {
+   "k": "Chemical spray",
+   "v": "化学喷雾"
+  },
+  {
+   "k": "Sprays a noxious chemical at attackers: whatever attacks it loses a tenth of its HP and its actions next turn.",
+   "v": "向攻击者喷射刺激性化学物质：攻击它的一方损失十分之一生命值，且下回合无法行动。"
+  },
+  {
+   "k": "Bristles with spines: it can't be swallowed whole, and whatever attacks it takes back a third of the damage it deals.",
+   "v": "浑身是刺：无法被整个吞下，攻击它的一方会反受其造成伤害的三分之一。"
+  },
+  {
+   "k": "Roll up",
+   "v": "卷成球"
+  },
+  {
+   "k": "Rolls into an armoured ball: it takes 40% less damage when attacked and can't be swallowed whole.",
+   "v": "卷成一个带甲的球：受到攻击时伤害减少40%，且无法被整个吞下。"
+  },
+  {
+   "k": "Tail weapon",
+   "v": "尾部武器"
+  },
+  {
+   "k": "Swings a clubbed or spiked tail: its counterattacks hit twice as hard.",
+   "v": "挥动棍状或带刺的尾巴：反击伤害翻倍。"
+  },
+  {
+   "k": "Pack hunting",
+   "v": "群体狩猎"
+  },
+  {
+   "k": "Hunts in packs: it deals half again as much damage when another group of its side, or of its species if wild, is on or next to the target's tile.",
+   "v": "成群狩猎：当己方（野生则为同物种）的另一个群体位于目标所在格或相邻格时，造成的伤害增加一半。"
+  },
+  {
+   "k": "Ambush",
+   "v": "伏击"
+  },
+  {
+   "k": "Lies in wait: an attack made before it moves in a turn gets no counterattack.",
+   "v": "潜伏等待：在一回合中移动前发动的攻击不会遭到反击。"
+  },
+  {
+   "k": "Constriction",
+   "v": "缠绕"
+  },
+  {
+   "k": "Coils around its prey and squeezes: a group it attacks and doesn't kill is held and loses its actions next turn.",
+   "v": "盘绕并勒紧猎物：被攻击但未被击杀的群体会被缠住，下回合无法行动。"
+  },
+  {
+   "k": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
+   "v": "再生断肢：每回合恢复五分之二生命值，而不是五分之一。"
+  },
+  {
+   "k": "Shed a limb",
+   "v": "断肢逃生"
+  },
+  {
+   "k": "Leaves a tail, arm or leg behind: once, a blow that would wipe it out leaves it at 1 HP instead.",
+   "v": "留下尾巴、手臂或腿：一次致命打击会改为让它保留1点生命值。"
+  },
+  {
+   "k": "or",
+   "v": "或"
+  },
+  {
+   "k": "Locked: needs {0}",
+   "v": "未解锁：需要{0}"
+  },
+  {
+   "k": "Players need {0}",
+   "v": "玩家需要{0}"
+  },
+  {
+   "k": "Abilities",
+   "v": "能力"
+  },
+  {
+   "k": "Held or stunned: no actions next turn",
+   "v": "被缠住或昏迷：下回合无法行动"
+  },
+  {
+   "k": "the {0} couldn't swallow it whole",
+   "v": "{0}无法将其整个吞下"
+  },
+  {
+   "k": "a pack attack",
+   "v": "群体攻击"
+  },
+  {
+   "k": "the {0} hid in a cloud of ink",
+   "v": "{0}躲进了墨云"
+  },
+  {
+   "k": "the {0} rolled up",
+   "v": "{0}卷成了球"
+  },
+  {
+   "k": "the {0} shed a limb and got away",
+   "v": "{0}断肢逃脱了"
+  },
+  {
+   "k": "the {0} was stung",
+   "v": "{0}被蜇了"
+  },
+  {
+   "k": "the {0} was pricked by the spines",
+   "v": "{0}被尖刺扎伤"
+  },
+  {
+   "k": "the {0} was sprayed and loses its next turn",
+   "v": "{0}被喷中，失去下回合行动"
+  },
+  {
+   "k": "the {0} died of its wounds",
+   "v": "{0}伤重而死"
+  },
+  {
+   "k": "the {0} is poisoned",
+   "v": "{0}中毒了"
+  },
+  {
+   "k": "the {0} is stunned and loses its next turn",
+   "v": "{0}被击晕，失去下回合行动"
+  },
+  {
+   "k": "the {0} is caught in the web and loses its next turn",
+   "v": "{0}被困在网中，失去下回合行动"
+  },
+  {
+   "k": "the {0} is held in its coils and loses its next turn",
+   "v": "{0}被缠住，失去下回合行动"
+  },
+  {
+   "k": "an ambush: no counterattack",
+   "v": "伏击：无法反击"
+  },
+  {
+   "k": "the {0} swung its tail",
+   "v": "{0}甩动了尾巴"
+  },
+  {
+   "k": "Your {0} died of poison",
+   "v": "你的{0}死于中毒"
+  },
+  {
+   "k": "(locked)",
+   "v": "（未解锁）"
+  },
+  {
+   "k": "Abilities: {0}",
+   "v": "能力：{0}"
+  },
+  {
+   "k": "Unlocks ability: {0}",
+   "v": "解锁能力：{0}"
+  },
+  {
+   "k": "Poisoned: loses {0} HP next turn",
+   "v": "中毒：下回合损失{0}点生命值"
+  },
+  {
+   "k": "Poisoned: loses {0} HP a turn for {1} turns",
+   "v": "中毒：每回合损失{0}点生命值，持续{1}回合"
+  },
+  {
    "k": "Discovered {0} new species (+{1} EP)",
    "v": "发现了 {0} 个新物种（+{1} EP）"
   },
@@ -13181,8 +13585,8 @@
    "v": "蝾螈"
   },
   {
-   "k": "Saliva turned into venom, delivered through grooved teeth.",
-   "v": "唾液演变为毒液，通过带沟的牙齿注入。"
+   "k": "Glands that make venom, delivered by fangs, stings or grooved teeth (scorpions, centipedes, snakes).",
+   "v": "腺体分泌毒液，通过螯牙、螫针或带槽的牙齿注入（蝎子、蜈蚣、蛇）。"
   },
   {
    "k": "Salonga",
@@ -19187,6 +19591,98 @@
   {
    "k": "Next Turn",
    "v": "下一回合"
+  },
+  {
+   "k": "Continue",
+   "v": "继续游戏"
+  },
+  {
+   "k": "Main Menu",
+   "v": "主菜单"
+  },
+  {
+   "k": "Guide life from the first animals to the present day",
+   "v": "引领生命，从最早的动物走到今天"
+  },
+  {
+   "k": "Painting: Charles R. Knight, {0} (Field Museum, 1926–1930), public domain",
+   "v": "画作：查尔斯·R·奈特，《{0}》（菲尔德自然史博物馆，1926–1930），公有领域"
+  },
+  {
+   "k": "Early Land Plants",
+   "v": "早期陆生植物"
+  },
+  {
+   "k": "Permian Reptiles and Amphibians",
+   "v": "二叠纪的爬行类与两栖类"
+  },
+  {
+   "k": "Late Cretaceous Seas",
+   "v": "晚白垩世的海洋"
+  },
+  {
+   "k": "Triceratops and Tyrannosaurus",
+   "v": "三角龙与霸王龙"
+  },
+  {
+   "k": "Your realm",
+   "v": "你的生物区"
+  },
+  {
+   "k": "World",
+   "v": "世界"
+  },
+  {
+   "k": "Competitors",
+   "v": "对手"
+  },
+  {
+   "k": "No competitors: the world is yours alone.",
+   "v": "没有对手：整个世界只属于你。"
+  },
+  {
+   "k": "Click a colour band to change it. Names can be anything; the realm decides the iconic animals.",
+   "v": "点击色带可以更换颜色。名字可以随意取；标志性动物由生物区决定。"
+  },
+  {
+   "k": "Iconic animals: {0}",
+   "v": "标志性动物：{0}"
+  },
+  {
+   "k": "Map size",
+   "v": "地图大小"
+  },
+  {
+   "k": "Tiny",
+   "v": "极小"
+  },
+  {
+   "k": "{0} × {1} tiles, up to {2} players",
+   "v": "{0} × {1} 格，最多 {2} 名玩家"
+  },
+  {
+   "k": "Difficulty",
+   "v": "难度"
+  },
+  {
+   "k": "Easy",
+   "v": "简单"
+  },
+  {
+   "k": "Normal",
+   "v": "普通"
+  },
+  {
+   "k": "Hard",
+   "v": "困难"
+  },
+  {
+   "k": "Brutal",
+   "v": "残酷"
+  },
+  {
+   "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
+   "v": "开局获得常规 EP 的 {0}%，每回合收入为 {1}%；对手与野生动物对你的动物造成 {2}% 的伤害"
   }
  ]
 }

@@ -3936,7 +3936,8 @@
     "Insect",
     "Monotreme",
     "Cnidarian",
-    "Cephalopod"
+    "Cephalopod",
+    "Myriapod"
    ]
   },
   {
@@ -4660,6 +4661,42 @@
    "tags": [
     "Mammal"
    ]
+  },
+  {
+   "item": "ink_cloud",
+   "tags": [
+    "Cephalopod"
+   ]
+  },
+  {
+   "item": "chemical_spray",
+   "tags": [
+    "Insect",
+    "Mammal",
+    "Myriapod"
+   ]
+  },
+  {
+   "item": "tail_weapons",
+   "tags": [
+    "Dinosaur",
+    "Mammal",
+    "Reptile",
+    "Chelicerate"
+   ]
+  },
+  {
+   "item": "gliding",
+   "tags": [
+    "Vertebrate",
+    "Insect"
+   ]
+  },
+  {
+   "item": "electric_organs",
+   "tags": [
+    "Fish"
+   ]
   }
  ],
  "behaviors": [
@@ -4683,12 +4720,6 @@
    "tags": [
     "Amniote",
     "Insect"
-   ]
-  },
-  {
-   "item": "echolocation_hunting",
-   "tags": [
-    "Mammal"
    ]
   },
   {
@@ -4741,17 +4772,6 @@
    ]
   },
   {
-   "item": "venom_hunting",
-   "tags": [
-    "Reptile",
-    "Chelicerate",
-    "Cnidarian",
-    "Insect",
-    "Cephalopod",
-    "Myriapod"
-   ]
-  },
-  {
    "item": "rolling_up",
    "tags": [
     "Arthropod",
@@ -4765,29 +4785,6 @@
     "Arthropod",
     "Echinoderm",
     "Amphibian"
-   ]
-  },
-  {
-   "item": "ink_cloud",
-   "tags": [
-    "Cephalopod"
-   ]
-  },
-  {
-   "item": "chemical_spray",
-   "tags": [
-    "Insect",
-    "Mammal",
-    "Myriapod"
-   ]
-  },
-  {
-   "item": "tail_weapons",
-   "tags": [
-    "Dinosaur",
-    "Mammal",
-    "Reptile",
-    "Chelicerate"
    ]
   },
   {
@@ -4833,12 +4830,6 @@
    "tags": [
     "Vertebrate",
     "Insect"
-   ]
-  },
-  {
-   "item": "nursing",
-   "tags": [
-    "Synapsid"
    ]
   },
   {
@@ -5140,13 +5131,6 @@
    "item": "ballooning",
    "tags": [
     "Chelicerate"
-   ]
-  },
-  {
-   "item": "gliding",
-   "tags": [
-    "Vertebrate",
-    "Insect"
    ]
   },
   {

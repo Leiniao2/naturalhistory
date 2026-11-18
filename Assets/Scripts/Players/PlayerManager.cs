@@ -94,9 +94,11 @@ namespace NaturalHistory.Players
             ages?.ReloadAges();
             int startTurn = ages != null ? ages.FirstTurnOf(GameOptions.StartAge) : 1;
             SetSetups(newSetups.Select(s => { var c = s.Clone(); c.startCol = c.startRow = -1; return c; }));
-            ProgressionManager.Instance?.Restore(ProgressionManager.Instance.StartingPoints, Array.Empty<string>(), Array.Empty<string>());
+            ProgressionManager.Instance?.Restore(Mathf.RoundToInt(ProgressionManager.Instance.StartingPoints * GameOptions.StartPointShare), // by difficulty
+                                                 Array.Empty<string>(), Array.Empty<string>());
             TurnManager.Instance?.Restore(startTurn); // the first turn activates the starting period's iconic animals
-            if (grid != null) grid.Generate(grid.Width, grid.Height, UnityEngine.Random.Range(1, int.MaxValue)); // places everyone
+            var size = GameOptions.MapSize(GameOptions.Current);
+            if (grid != null) grid.Generate(size.x, size.y, UnityEngine.Random.Range(1, int.MaxValue)); // places everyone
             UnderView.Set(GameOptions.StartsUnderSea(GameOptions.StartAge));
             UnderView.Refresh(); // the layer buttons follow the Ediacaran lock
         }

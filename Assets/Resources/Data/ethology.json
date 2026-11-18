@@ -158,20 +158,6 @@
       "description": "Eating land plants."
     },
     {
-      "id": "venom_hunting",
-      "displayName": "Venomous Strike",
-      "branch": "foraging",
-      "tier": 3,
-      "row": 1,
-      "cost": 12,
-      "age": "Silurian",
-      "prerequisites": [
-        "ambush_hunting"
-      ],
-      "unlocksGenes": [],
-      "description": "Subduing prey with venom (scorpions, later snakes)."
-    },
-    {
       "id": "silk_traps",
       "displayName": "Silk Traps",
       "branch": "foraging",
@@ -260,22 +246,6 @@
       ],
       "unlocksGenes": [],
       "description": "Eating fruit and spreading the seeds."
-    },
-    {
-      "id": "echolocation_hunting",
-      "displayName": "Echolocation Hunting",
-      "branch": "foraging",
-      "tier": 3,
-      "row": 6,
-      "cost": 19,
-      "age": "Paleogene",
-      "prerequisites": [
-        "pursuit_hunting"
-      ],
-      "unlocksGenes": [
-        "echolocation"
-      ],
-      "description": "Finding prey by sound in the dark (bats)."
     },
     {
       "id": "food_caching",
@@ -448,64 +418,6 @@
       "description": "A lightning-fast flick of the body away from danger (fish)."
     },
     {
-      "id": "countershading",
-      "displayName": "Countershading",
-      "branch": "antipredator",
-      "tier": 2,
-      "row": 1,
-      "cost": 11,
-      "age": "Devonian",
-      "prerequisites": [
-        "hiding"
-      ],
-      "unlocksGenes": [],
-      "description": "Dark above and pale below, so the body looks flat."
-    },
-    {
-      "id": "ink_cloud",
-      "displayName": "Ink Cloud",
-      "branch": "antipredator",
-      "tier": 1,
-      "row": 5,
-      "cost": 10,
-      "age": "Carboniferous",
-      "prerequisites": [
-        "withdrawal"
-      ],
-      "unlocksGenes": [],
-      "description": "A cloud of ink covers the escape (cephalopods)."
-    },
-    {
-      "id": "warning_colours",
-      "displayName": "Warning Colours",
-      "branch": "antipredator",
-      "tier": 3,
-      "row": 0,
-      "cost": 14,
-      "age": "Carboniferous",
-      "prerequisites": [
-        "freezing"
-      ],
-      "unlocksGenes": [
-        "toxin_production"
-      ],
-      "description": "Bright colours that advertise poison."
-    },
-    {
-      "id": "chemical_spray",
-      "displayName": "Chemical Spray",
-      "branch": "antipredator",
-      "tier": 2,
-      "row": 5,
-      "cost": 13,
-      "age": "Permian",
-      "prerequisites": [
-        "ink_cloud"
-      ],
-      "unlocksGenes": [],
-      "description": "Spraying irritants (bombardier beetles, later skunks)."
-    },
-    {
       "id": "playing_dead",
       "displayName": "Playing Dead",
       "branch": "antipredator",
@@ -528,7 +440,7 @@
       "cost": 17,
       "age": "Permian",
       "prerequisites": [
-        "warning_colours"
+        "freezing"
       ],
       "unlocksGenes": [],
       "description": "Flashing fake eyes to startle attackers."
@@ -546,34 +458,6 @@
       ],
       "unlocksGenes": [],
       "description": "Many eyes: some watch while others feed."
-    },
-    {
-      "id": "mimicry",
-      "displayName": "Mimicry",
-      "branch": "antipredator",
-      "tier": 4,
-      "row": 1,
-      "cost": 19,
-      "age": "Jurassic",
-      "prerequisites": [
-        "warning_colours"
-      ],
-      "unlocksGenes": [],
-      "description": "Harmless species copying dangerous ones."
-    },
-    {
-      "id": "tail_weapons",
-      "displayName": "Tail Weapons",
-      "branch": "antipredator",
-      "tier": 1,
-      "row": 6,
-      "cost": 13,
-      "age": "Jurassic",
-      "prerequisites": [
-        "withdrawal"
-      ],
-      "unlocksGenes": [],
-      "description": "Clubs and spikes swung at attackers (stegosaurs, ankylosaurs)."
     },
     {
       "id": "mobbing",
@@ -643,20 +527,6 @@
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Gathering in one place to spawn."
-    },
-    {
-      "id": "hermaphroditism",
-      "displayName": "Hermaphroditism",
-      "branch": "reproductive",
-      "tier": 1,
-      "row": 0,
-      "cost": 6,
-      "age": "Ediacaran",
-      "prerequisites": [
-        "spawning_aggregations"
-      ],
-      "unlocksGenes": [],
-      "description": "Both sexes in one body (snails, worms)."
     },
     {
       "id": "synchronised_spawning",
@@ -799,20 +669,6 @@
       "description": "Bringing food to the young."
     },
     {
-      "id": "nursing",
-      "displayName": "Nursing",
-      "branch": "reproductive",
-      "tier": 4,
-      "row": 2,
-      "cost": 18,
-      "age": "Triassic",
-      "prerequisites": [
-        "feeding_young"
-      ],
-      "unlocksGenes": [],
-      "description": "Feeding the young on milk."
-    },
-    {
       "id": "pair_bonds",
       "displayName": "Pair Bonds",
       "branch": "reproductive",
@@ -922,20 +778,6 @@
       "prerequisites": [],
       "unlocksGenes": [],
       "description": "Gathering where conditions are good."
-    },
-    {
-      "id": "colonial_living",
-      "displayName": "Colonial Living",
-      "branch": "social",
-      "tier": 1,
-      "row": 0,
-      "cost": 6,
-      "age": "Ediacaran",
-      "prerequisites": [
-        "aggregation"
-      ],
-      "unlocksGenes": [],
-      "description": "Clones joined into one colony (corals, graptolites)."
     },
     {
       "id": "schooling",
@@ -1878,20 +1720,6 @@
       "description": "Swarms take off together to settle new ground."
     },
     {
-      "id": "gliding",
-      "displayName": "Gliding",
-      "branch": "migration",
-      "tier": 3,
-      "row": 0,
-      "cost": 15,
-      "age": "Permian",
-      "prerequisites": [
-        "land_excursions"
-      ],
-      "unlocksGenes": [],
-      "description": "Leaping and gliding between trees."
-    },
-    {
       "id": "ballooning",
       "displayName": "Ballooning",
       "branch": "migration",
@@ -2647,20 +2475,6 @@
       "description": "Deep, reversible rest with the senses turned down."
     },
     {
-      "id": "diapause",
-      "displayName": "Diapause",
-      "branch": "resting",
-      "tier": 1,
-      "row": 2,
-      "cost": 8,
-      "age": "Silurian",
-      "prerequisites": [
-        "quiescence"
-      ],
-      "unlocksGenes": [],
-      "description": "Development pauses until conditions improve."
-    },
-    {
       "id": "mucus_cocoon",
       "displayName": "Mucus Cocoon",
       "branch": "resting",
@@ -2673,20 +2487,6 @@
       ],
       "unlocksGenes": [],
       "description": "Sleeping inside a bubble of mucus (parrotfish, lungfish)."
-    },
-    {
-      "id": "seasonal_dormancy",
-      "displayName": "Seasonal Dormancy",
-      "branch": "resting",
-      "tier": 2,
-      "row": 2,
-      "cost": 12,
-      "age": "Carboniferous",
-      "prerequisites": [
-        "diapause"
-      ],
-      "unlocksGenes": [],
-      "description": "Sitting out the cold or dry season in a resting state."
     },
     {
       "id": "deep_sleep",

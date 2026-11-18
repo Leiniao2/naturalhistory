@@ -221,6 +221,8 @@ namespace NaturalHistory.UI
             lines.Add(Loc.F("HP {0}  ·  Attack {1}  ·  Defense {2}  ·  Actions {3}", stats.hp, stats.attack, stats.defense, stats.moves));
             var copies = EvolutionManager.Instance?.CopiesOf(Players.PlayerManager.Instance?.Human).Count(c => c.species == def.id) ?? 0;
             if (copies > 0) lines.Add(Loc.F(copies == 1 ? "You have {0} copy" : "You have {0} copies", copies));
+            var abilities = World.Abilities.Describe(def, EvolutionManager.Instance != null && EvolutionManager.Instance.HumanOwns(def.id));
+            if (abilities.Length > 0) lines.Add(abilities);
             statsLabel.text       = string.Join("\n", lines);
             descriptionLabel.text = Loc.T(def.description);
 

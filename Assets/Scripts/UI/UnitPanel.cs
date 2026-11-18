@@ -79,9 +79,14 @@ namespace NaturalHistory.UI
             var copies = Loc.F(mine.Count == 1 ? "{0} copy" : "{0} copies", mine.Count);
             var g = Copy.group;
             var combat = Loc.F("HP {0}/{1}  ·  Attack {2}  ·  Defense {3}  ·  Actions {4}/{5}",
-                Mathf.CeilToInt(g.Hp), g.MaxHp, g.Stats.attack, g.Stats.defense, g.ActionsLeft, g.Stats.moves);
+                Mathf.CeilToInt(g.Hp), g.MaxHp, g.Stats.attack, g.Stats.defense, g.ActionsLeft, g.MaxActions);
             if (Diets.Starving(g)) combat += "\n" + Loc.F("No food on its tile or next to it: loses {0}% HP a turn", Mathf.RoundToInt(Diets.StarveLoss * 100f));
-            detailLabel.text = $"{def.scientificName}  ·  {copies}\n{combat}\n{breed}  ·  {evolve}";
+            var status = Abilities.Status(g);
+            if (status.Length > 0) combat += "\n" + status;
+            var abilities = string.Join(", ", Abilities.Of(def).Select(a =>
+                Loc.T(a.name) + (Abilities.Unlocked(def, a) ? "" : " " + Loc.T("(locked)"))));
+            detailLabel.text = $"{def.scientificName}  ·  {copies}\n{combat}\n{breed}  ·  {evolve}"
+                             + (abilities.Length > 0 ? "\n" + Loc.F("Abilities: {0}", abilities) : "");
 
             reproduceButton.SetEnabled(wait == 0 && Copy.group.HasActions() && Evolution.ReproduceCell(Copy) != null && Evolution.CanAffordReproduce(Copy));
             evolveButton.EnableInClassList("ready", ready > 0);

@@ -10,12 +10,18 @@ namespace NaturalHistory.World
         public float hp;
         public int actionsLeft, attacksLeft;
         public int turn; // TurnManager.CurrentTurn they were taken in
+        // Abilities (see Abilities): poison still to come, turns held or stunned, a limb already shed
+        public int poisonTurns, heldTurns;
+        public float poisonPerTurn;
+        public bool limbShed;
     }
 
     // A group's combat state for the turn (see CombatStats, Combat): its hit points, and how many
     // actions (CombatStats.moves: a tile moved, an attack, reproducing) and attacks (one) it has
     // left. Each turn (Combat.BeginTurn) the actions come back and it heals a fifth of its HP, or,
-    // with no food on its tile or next to it, loses a quarter (Diets) and may starve.
+    // with no food on its tile or next to it, loses a quarter (Diets) and may starve. Abilities
+    // (Abilities, Combat) add: poison, which takes HP each turn instead of healing; being held or
+    // stunned, which costs the next turn's actions; regeneration, which heals twice as fast.
     // Only groups the player orders are held to their actions: their own, or any in Safari Mode;
     // wild groups moved by the game (WildBirths, migrations) aren't.
     public partial class ColonyGroup
@@ -28,19 +34,42 @@ namespace NaturalHistory.World
         public int ActionsLeft { get; private set; }
         public int AttacksLeft { get; private set; }
 
+        public int PoisonTurns { get; private set; }
+        public float PoisonPerTurn { get; private set; }
+        public int HeldTurns { get; private set; }
+        public bool LimbShed { get; set; }       // Abilities.Autotomy used up
+        public bool ActedThisTurn { get; private set; } // moved or reproduced (Abilities.Ambush)
+
+        // Poisoned: loses perTurn HP at the start of each of the next `turns` turns (the stronger dose wins)
+        public void Poison(float perTurn, int turns)
+        {
+            PoisonPerTurn = Mathf.Max(PoisonPerTurn, perTurn);
+            PoisonTurns   = Mathf.Max(PoisonTurns, turns);
+        }
+
+        // Held (a web, coils) or stunned: no actions next turn
+        public void Hold() => HeldTurns = Mathf.Max(HeldTurns, 1);
+
         private bool Ordered => Owner != null || SpeciesColonies.SafariMode;
+
+        // Actions a turn: the species' moves, one more with Abilities.Sprint
+        public int MaxActions => Stats.moves + (Abilities.Has(this, Abilities.Sprint) ? 1 : 0);
 
         private void InitStats()
         {
             Stats = CombatStats.Of(Definition);
             Hp = Stats.hp;
-            ActionsLeft = Stats.moves;
+            ActionsLeft = MaxActions;
             AttacksLeft = 1;
         }
 
         private static int CurrentTurn => Core.TurnManager.Instance != null ? Core.TurnManager.Instance.CurrentTurn : 0;
 
-        public CombatState CombatNow => new() { hp = Hp, actionsLeft = ActionsLeft, attacksLeft = AttacksLeft, turn = CurrentTurn };
+        public CombatState CombatNow => new()
+        {
+            hp = Hp, actionsLeft = ActionsLeft, attacksLeft = AttacksLeft, turn = CurrentTurn,
+            poisonTurns = PoisonTurns, poisonPerTurn = PoisonPerTurn, heldTurns = HeldTurns, limbShed = LimbShed,
+        };
 
         // Back to a state taken earlier (null: as new). Taken in an earlier turn: the turns since
         // have given it its actions back and healed it once.
@@ -48,9 +77,11 @@ namespace NaturalHistory.World
         {
             if (state == null) return;
             Hp = Mathf.Clamp(state.hp, 0.1f, MaxHp);
+            PoisonTurns = state.poisonTurns; PoisonPerTurn = state.poisonPerTurn;
+            HeldTurns = state.heldTurns; LimbShed = state.limbShed;
             if (state.turn == CurrentTurn)
             {
-                ActionsLeft = Mathf.Clamp(state.actionsLeft, 0, Stats.moves);
+                ActionsLeft = Mathf.Clamp(state.actionsLeft, 0, MaxActions);
                 AttacksLeft = Mathf.Clamp(state.attacksLeft, 0, 1);
             }
             else BeginTurn();
@@ -59,9 +90,20 @@ namespace NaturalHistory.World
         // fed: it found food on its tile or next to it (Diets.Starving): it heals, else it goes hungry
         public void BeginTurn(bool fed = true)
         {
-            ActionsLeft = Stats.moves;
+            ActionsLeft = MaxActions;
             AttacksLeft = 1;
-            Hp = fed ? Mathf.Min(MaxHp, Hp + MaxHp * HealPerTurn) : Hp - MaxHp * Diets.StarveLoss;
+            ActedThisTurn = false;
+            if (HeldTurns > 0) { HeldTurns--; ActionsLeft = 0; AttacksLeft = 0; }
+            float heal = HealPerTurn * (Abilities.Has(this, Abilities.Regeneration) ? 2f : 1f);
+            // hungry: dormancy sleeps it off, blubber halves the loss
+            if (!fed && !Abilities.Has(this, Abilities.Dormancy))
+                Hp -= MaxHp * Diets.StarveLoss * (Abilities.Has(this, Abilities.Blubber) ? 0.5f : 1f);
+            else if (PoisonTurns == 0) Hp = Mathf.Min(MaxHp, Hp + MaxHp * heal);
+            if (PoisonTurns > 0)
+            {
+                Hp -= PoisonPerTurn;
+                if (--PoisonTurns == 0) PoisonPerTurn = 0f;
+            }
         }
 
         // Whether it can still move `tiles` tiles / attack this turn
@@ -70,6 +112,7 @@ namespace NaturalHistory.World
 
         public void SpendActions(int n)
         {
+            ActedThisTurn = true;
             if (Ordered) ActionsLeft = Mathf.Max(0, ActionsLeft - n);
         }
 

@@ -1,0 +1,676 @@
+{
+ "notes": "Special abilities of animals (Abilities.cs). A species has every ability that lists its species.json group (groups), its id (species), one of its tags (tags), or whose gene (gene) it expresses at minGene or more. Abilities with unlockFunctions / unlockBehaviors (any one of them) work for a player's groups only once their species has acquired that Function or Behavior, unless the species can't acquire any of them; wild groups always have them.",
+ "abilities": [
+  {
+   "id": "venom",
+   "name": "Venom",
+   "description": "Its bite or sting injects venom: a group it hits and doesn't kill is poisoned, losing a fifth of its HP each turn for 2 turns.",
+   "unlockFunctions": [
+    "venom_glands"
+   ],
+   "groups": [
+    "Scorpion",
+    "Pit viper",
+    "Viper",
+    "Orb-weaver spider"
+   ],
+   "species": [
+    "devonobius_delta",
+    "conus_geographus",
+    "platypus",
+    "euchambersia_mirabilis",
+    "varanus_komodoensis",
+    "solenopsis_invicta",
+    "neivamyrmex_ectopus",
+    "apis_mellifera"
+   ],
+   "unlockBehaviors": []
+  },
+  {
+   "id": "stinging_cells",
+   "name": "Stinging cells",
+   "description": "Covered in stinging cells: its attacks poison the target for a turn, and whatever attacks it is stung back for a quarter of the damage it deals.",
+   "groups": [
+    "Jellyfish",
+    "Sea anemone",
+    "Siphonophore",
+    "Coral",
+    "Stony coral",
+    "Rugose coral",
+    "Tabulate coral",
+    "Early cnidarian",
+    "Stem anthozoan"
+   ],
+   "species": [],
+   "unlockBehaviors": [],
+   "unlockFunctions": []
+  },
+  {
+   "id": "poisonous",
+   "name": "Poisonous",
+   "description": "Its body is poisonous: whatever attacks it is poisoned, losing a fifth of its HP each turn for 2 turns. Its predators, used to it, eat it unharmed.",
+   "unlockFunctions": [
+    "toxic_skin"
+   ],
+   "groups": [
+    "Demosponge",
+    "Dinoflagellate"
+   ],
+   "species": [
+    "monarch_butterfly",
+    "cane_toad",
+    "seven_spot_ladybird",
+    "chrysochus_chinensis",
+    "photinus_carolinus",
+    "chelotriton_paradoxus"
+   ],
+   "unlockBehaviors": []
+  },
+  {
+   "id": "electric_shock",
+   "name": "Electric shock",
+   "description": "Stuns with an electric discharge: its attacks get through half the target's defense, and the target loses its actions next turn.",
+   "unlockBehaviors": [],
+   "groups": [
+    "Knifefish"
+   ],
+   "species": [
+    "titanonarke_molini"
+   ],
+   "unlockFunctions": [
+    "electric_organs"
+   ]
+  },
+  {
+   "id": "sticky_web",
+   "name": "Sticky web",
+   "description": "Catches prey in sticky silk: a group it attacks and doesn't kill is caught and loses its actions next turn.",
+   "unlockBehaviors": [
+    "silk_traps"
+   ],
+   "groups": [
+    "Orb-weaver spider"
+   ],
+   "species": [
+    "attercopus_fimbriunguis",
+    "arachnocampa_luminosa"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "ink_cloud",
+   "name": "Ink cloud",
+   "description": "Squirts ink and slips away: it takes half damage when attacked and can't be swallowed whole.",
+   "unlockBehaviors": [],
+   "groups": [
+    "Belemnite"
+   ],
+   "species": [],
+   "unlockFunctions": [
+    "ink_cloud"
+   ]
+  },
+  {
+   "id": "chemical_spray",
+   "name": "Chemical spray",
+   "description": "Sprays a noxious chemical at attackers: whatever attacks it loses a tenth of its HP and its actions next turn.",
+   "unlockBehaviors": [],
+   "groups": [],
+   "species": [
+    "pneumodesmus_newmani",
+    "mellivora_capensis",
+    "cathedral_termite"
+   ],
+   "unlockFunctions": [
+    "chemical_spray"
+   ]
+  },
+  {
+   "id": "spines",
+   "name": "Spines",
+   "description": "Bristles with spines: it can't be swallowed whole, and whatever attacks it takes back a third of the damage it deals.",
+   "unlockFunctions": [
+    "spines",
+    "quills"
+   ],
+   "groups": [
+    "Acanthodian"
+   ],
+   "species": [
+    "purple_sea_urchin",
+    "hallucigenia",
+    "collinsium_ciliosum",
+    "wiwaxia_corrugata",
+    "chancelloria_eros",
+    "selenopeltis_buchii",
+    "dicranurus_monstrosus",
+    "walliserops_trifurcatus",
+    "boedaspis_ensifer"
+   ],
+   "unlockBehaviors": []
+  },
+  {
+   "id": "roll_up",
+   "name": "Roll up",
+   "description": "Rolls into an armoured ball: it takes 40% less damage when attacked and can't be swallowed whole.",
+   "unlockBehaviors": [
+    "rolling_up"
+   ],
+   "groups": [
+    "Trilobite",
+    "Pangolin",
+    "Armadillo",
+    "Tardigrade"
+   ],
+   "species": [],
+   "unlockFunctions": []
+  },
+  {
+   "id": "tail_weapon",
+   "name": "Tail weapon",
+   "description": "Swings a clubbed or spiked tail: its counterattacks hit twice as hard.",
+   "unlockBehaviors": [],
+   "groups": [
+    "Ankylosaur",
+    "Stegosaur",
+    "Glyptodont"
+   ],
+   "species": [
+    "shunosaurus_lii",
+    "diplodocus_carnegii"
+   ],
+   "unlockFunctions": [
+    "tail_weapons"
+   ]
+  },
+  {
+   "id": "pack_hunting",
+   "name": "Pack hunting",
+   "description": "Hunts in packs: it deals half again as much damage when another group of its side, or of its species if wild, is on or next to the target's tile.",
+   "unlockBehaviors": [
+    "pack_hunting"
+   ],
+   "groups": [],
+   "species": [
+    "lion",
+    "deinonychus_antirrhopus",
+    "velociraptor_mongoliensis",
+    "utahraptor_ostrommaysi",
+    "coelophysis_bauri",
+    "pachycrocuta_brevirostris",
+    "delphinus_delphis",
+    "neivamyrmex_ectopus"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "ambush",
+   "name": "Ambush",
+   "description": "Lies in wait: an attack made before it moves in a turn gets no counterattack.",
+   "unlockBehaviors": [
+    "ambush_hunting"
+   ],
+   "groups": [
+    "Crocodilian",
+    "Crocodyliform",
+    "Phytosaur",
+    "Pit viper",
+    "Viper",
+    "Boa",
+    "Chameleon",
+    "Horned frog"
+   ],
+   "species": [
+    "jaguar",
+    "smilodon_populator",
+    "smilodon_gracilis",
+    "ottoia_prolifica",
+    "gigantophis_garstini"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "constriction",
+   "name": "Constriction",
+   "description": "Coils around its prey and squeezes: a group it attacks and doesn't kill is held and loses its actions next turn.",
+   "groups": [
+    "Boa",
+    "Madtsoiid snake"
+   ],
+   "species": [],
+   "unlockBehaviors": [],
+   "unlockFunctions": []
+  },
+  {
+   "id": "regeneration",
+   "name": "Regeneration",
+   "description": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
+   "unlockFunctions": [
+    "regeneration_node"
+   ],
+   "groups": [
+    "Sea star",
+    "Brittle star",
+    "Demosponge",
+    "Sponge",
+    "Salamander"
+   ],
+   "species": [
+    "lumbricus_terrestris"
+   ],
+   "unlockBehaviors": []
+  },
+  {
+   "id": "autotomy",
+   "name": "Shed a limb",
+   "description": "Leaves a tail, arm or leg behind: once, a blow that would wipe it out leaves it at 1 HP instead.",
+   "unlockBehaviors": [
+    "autotomy"
+   ],
+   "groups": [
+    "Lizard",
+    "Squamate",
+    "Brittle star",
+    "Harvestman"
+   ],
+   "species": [
+    "western_rock_lobster",
+    "chelotriton_paradoxus"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "echolocation",
+   "name": "Echolocation",
+   "description": "Finds its way by echoes: it sees one tile further, and camouflage doesn't hide anything from it.",
+   "unlockBehaviors": [],
+   "unlockFunctions": [
+    "echolocating_ears"
+   ],
+   "groups": [
+    "Bat",
+    "Toothed whale",
+    "Oceanic dolphin"
+   ],
+   "species": []
+  },
+  {
+   "id": "electroreception",
+   "name": "Electroreception",
+   "description": "Senses the electric fields of other animals: it sees one tile further, and neither camouflage nor a burrow hides prey from it.",
+   "unlockFunctions": [
+    "electroreceptors"
+   ],
+   "groups": [
+    "Mackerel shark",
+    "Carpet shark",
+    "Hybodont shark",
+    "Cladoselachian shark",
+    "Symmoriiform shark",
+    "Xenacanth shark",
+    "Ray",
+    "Chimaera",
+    "Lungfish"
+   ],
+   "species": [
+    "platypus",
+    "electrophorus_electricus"
+   ],
+   "unlockBehaviors": []
+  },
+  {
+   "id": "keen_eyes",
+   "name": "Keen eyes",
+   "description": "Spots prey from far off: it sees one tile further.",
+   "groups": [
+    "Sea eagle",
+    "Kingfisher",
+    "Teratorn",
+    "Seabird",
+    "Pelagornithid",
+    "Radiodont"
+   ],
+   "species": [
+    "antilocapra_americana",
+    "chamaeleo_calyptratus",
+    "ophthalmosaurus_icenicus",
+    "temnodontosaurus_platyodon",
+    "meganeuropsis_permiana",
+    "namurotypus_sippeli"
+   ],
+   "unlockBehaviors": [],
+   "unlockFunctions": []
+  },
+  {
+   "id": "camouflage",
+   "name": "Camouflage",
+   "description": "Blends into its surroundings: attacks on it deal 30% less damage, unless the attacker hunts by echolocation or electric sense.",
+   "unlockFunctions": [
+    "chromatophores"
+   ],
+   "groups": [
+    "Chameleon"
+   ],
+   "gene": "camouflage",
+   "minGene": 0.7,
+   "species": [
+    "bradypus_tridactylus",
+    "choloepus_didactylus",
+    "gerrothorax_pulcherrimus",
+    "beelzebufo_ampinga"
+   ],
+   "unlockBehaviors": []
+  },
+  {
+   "id": "burrow",
+   "name": "Burrow",
+   "description": "Dives into its burrow when attacked: it takes half damage, unless the attacker senses it through the ground with electric sense.",
+   "unlockBehaviors": [
+    "burrowing_escape"
+   ],
+   "tags": [
+    "Burrower"
+   ],
+   "gene": "burrowing",
+   "minGene": 0.7,
+   "species": [],
+   "unlockFunctions": []
+  },
+  {
+   "id": "shell_retreat",
+   "name": "Shell retreat",
+   "description": "Pulls into its shell: it takes half damage when attacked and can't be swallowed whole, unless the attacker has a crushing bite.",
+   "unlockBehaviors": [
+    "withdrawal"
+   ],
+   "groups": [
+    "Sea turtle",
+    "Tortoise",
+    "Side-necked turtle",
+    "Land snail",
+    "Sea snail",
+    "Nautiloid cephalopod",
+    "Ammonite",
+    "Abalone",
+    "Giant clam"
+   ],
+   "species": [
+    "proganochelys_quenstedti",
+    "kayentachelys_aprix"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "herding",
+   "name": "Herd",
+   "description": "Lives in herds: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "unlockBehaviors": [
+    "herding",
+    "selfish_herd"
+   ],
+   "groups": [
+    "Equid",
+    "Giraffid",
+    "Deer",
+    "Pronghorn",
+    "Camelid",
+    "Ceratopsian dinosaur",
+    "Proboscidean",
+    "Brontothere"
+   ],
+   "species": [
+    "edmontosaurus_regalis",
+    "shantungosaurus_giganteus",
+    "parasaurolophus_walkeri",
+    "iguanodon_bernissartensis",
+    "lystrosaurus_murrayi",
+    "equus_quagga"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "schooling",
+   "name": "School",
+   "description": "Swims in schools: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "unlockBehaviors": [
+    "schooling"
+   ],
+   "groups": [
+    "Reef fish"
+   ],
+   "species": [
+    "knightia_eocaena",
+    "leptolepis_coryphaenoides",
+    "delphinus_delphis",
+    "haikouichthys",
+    "myllokunmingia_fengjiaoa"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "vigilance",
+   "name": "Vigilance",
+   "description": "Keeps a lookout and calls alarms: it can't be ambushed.",
+   "unlockBehaviors": [
+    "group_vigilance",
+    "alarm_calls",
+    "sentinels"
+   ],
+   "groups": [
+    "Great ape",
+    "Hominin",
+    "Equid",
+    "Pronghorn",
+    "Deer"
+   ],
+   "species": [
+    "olive_baboon",
+    "phoenicopterus_roseus",
+    "red_kangaroo"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "charge",
+   "name": "Charge",
+   "description": "Charges with horns, tusks or head: an attack made after moving that turn deals half again as much damage.",
+   "unlockFunctions": [
+    "horns"
+   ],
+   "unlockBehaviors": [
+    "head_butting"
+   ],
+   "groups": [
+    "Rhinocerotoid",
+    "Ceratopsian dinosaur",
+    "Pachycephalosaur",
+    "Brontothere",
+    "Deer",
+    "Giraffid",
+    "Proboscidean"
+   ],
+   "species": [
+    "sivatherium_giganteum"
+   ]
+  },
+  {
+   "id": "crushing_bite",
+   "name": "Crushing bite",
+   "description": "Bites through bone and shell: rolling up and pulling into a shell don't protect against it, and spiny or shelled prey can still be swallowed.",
+   "groups": [
+    "Hyena",
+    "Percrocutid",
+    "Mosasaur"
+   ],
+   "species": [
+    "tyrannosaurus_rex",
+    "tarbosaurus_bataar",
+    "dunkleosteus_terrelli",
+    "deinosuchus_riograndensis",
+    "purussaurus_brasiliensis",
+    "otodus_megalodon",
+    "prognathodon_saturator",
+    "daeodon_shoshonensis",
+    "mellivora_capensis",
+    "placodus_gigas"
+   ],
+   "unlockBehaviors": [],
+   "unlockFunctions": []
+  },
+  {
+   "id": "trample",
+   "name": "Trample",
+   "description": "So heavy it crushes what is underfoot: its attacks also deal half damage to one more foreign group on the target tile.",
+   "groups": [
+    "Sauropod dinosaur",
+    "Proboscidean"
+   ],
+   "species": [
+    "paraceratherium_transouralicum",
+    "elasmotherium_sibiricum",
+    "megacerops_coloradensis",
+    "diprotodon_optatum",
+    "megatherium_americanum",
+    "lisowicia_bojani"
+   ],
+   "unlockBehaviors": [],
+   "unlockFunctions": []
+  },
+  {
+   "id": "sprint",
+   "name": "Sprint",
+   "description": "Runs down prey or outruns danger in bursts: one more action every turn.",
+   "unlockBehaviors": [
+    "pursuit_hunting"
+   ],
+   "gene": "land_speed",
+   "minGene": 0.85,
+   "species": [
+    "acinonyx_pardinensis",
+    "antilocapra_americana",
+    "gallimimus_bullatus",
+    "red_kangaroo",
+    "phorusrhacos_longissimus"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "swarm",
+   "name": "Swarm",
+   "description": "Overwhelms with sheer numbers: it can attack animals of any size bigger than itself.",
+   "unlockBehaviors": [
+    "eusociality",
+    "schooling"
+   ],
+   "groups": [
+    "Ant"
+   ],
+   "species": [
+    "apis_mellifera",
+    "megapiranha_paranensis",
+    "cathedral_termite"
+   ],
+   "unlockFunctions": []
+  },
+  {
+   "id": "blood_feeding",
+   "name": "Blood feeding",
+   "description": "Drinks blood: it can feed on animals of any size bigger than itself, and heals half the damage it deals.",
+   "groups": [
+    "Leech",
+    "Hard tick",
+    "Flea"
+   ],
+   "species": [
+    "desmodus_rotundus",
+    "mosquito",
+    "ornithonyssus_bacoti",
+    "leptotrombidium_deliense"
+   ],
+   "unlockBehaviors": [],
+   "unlockFunctions": []
+  },
+  {
+   "id": "disease",
+   "name": "Spreads disease",
+   "description": "Carries germs in its bite: a group it hits is infected, losing a tenth of its HP each turn for 3 turns.",
+   "species": [
+    "mosquito",
+    "xenopsylla_cheopis",
+    "ixodes_scapularis",
+    "amblyomma_americanum",
+    "haemaphysalis_longicornis",
+    "leptotrombidium_deliense",
+    "desmodus_rotundus",
+    "brown_rat",
+    "plasmodium_falciparum"
+   ],
+   "unlockBehaviors": [],
+   "unlockFunctions": []
+  },
+  {
+   "id": "dormancy",
+   "name": "Dormancy",
+   "description": "Sleeps through hard times: it doesn't lose HP when it has no food (but doesn't heal either).",
+   "unlockFunctions": [
+    "hibernation_node",
+    "torpor",
+    "aestivation",
+    "diapause"
+   ],
+   "unlockBehaviors": [],
+   "gene": "hibernation",
+   "minGene": 0.5,
+   "groups": [
+    "Lungfish",
+    "Bear",
+    "Tardigrade"
+   ],
+   "species": [
+    "water_bear",
+    "lissachatina_fulica",
+    "brachydectes_newberryi"
+   ]
+  },
+  {
+   "id": "blubber",
+   "name": "Blubber",
+   "description": "Lives off a thick layer of fat: it loses only half as much HP when it has no food.",
+   "unlockFunctions": [
+    "blubber"
+   ],
+   "groups": [
+    "Baleen whale",
+    "Toothed whale",
+    "Archaeocete whale",
+    "Pinniped",
+    "Penguin",
+    "Sirenian"
+   ],
+   "species": [
+    "delphinus_delphis",
+    "woolly_mammoth"
+   ],
+   "unlockBehaviors": []
+  },
+  {
+   "id": "prolific",
+   "name": "Prolific breeder",
+   "description": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
+   "unlockFunctions": [
+    "parthenogenesis"
+   ],
+   "gene": "reproduction_rate",
+   "minGene": 0.9,
+   "groups": [
+    "Mite",
+    "Flea"
+   ],
+   "species": [
+    "brown_rat",
+    "lissachatina_fulica"
+   ],
+   "unlockBehaviors": []
+  }
+ ]
+}

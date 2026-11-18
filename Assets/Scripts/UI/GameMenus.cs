@@ -30,6 +30,7 @@ namespace NaturalHistory.UI
         private ZoologyPanel zoologyPanel;
         private EncyclopediaPanel encyclopedia;
         private MiniMap miniMap;
+        private MainMenu mainMenu;
         private bool slotsAreForSaving;
         private float toastHideTime;
         private int toastFrame = -1;
@@ -97,6 +98,7 @@ namespace NaturalHistory.UI
             zoologyPanel = new ZoologyPanel(root);
             encyclopedia = new EncyclopediaPanel(root);
             miniMap      = new MiniMap(root);
+            mainMenu     = new MainMenu(root);
             CameraController.IsPointerOverUI = PointerOverUI;
             unitPanel.OpenTree   += tree => { CloseSidePanels(); treePanel.Open(tree); };
             unitPanel.OpenEvolve += copy => { CloseSidePanels(); zoologyPanel.Open(copy); };
@@ -106,8 +108,11 @@ namespace NaturalHistory.UI
             encyclopedia.OpenTree         += id => { CloseSidePanels(); zoologyPanel.Open(start: id); };
             NaturalEvents.Announced += OnPhenomenon;
             Combat.Reported += OnPhenomenon;
+            // the title screen goes first, so the new period's panel can show over the new game
+            playersPanel.NewGameStarting += () => { mainMenu.InGame = true; mainMenu.Hide(); };
             playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast(Loc.T("New game started")); };
-            playersPanel.SetupClosed    += () => pauseOverlay.RemoveFromClassList("hidden");
+            playersPanel.SetupClosed    += BackToMenu;
+            newGameOptions.Changed      += playersPanel.OnOptionsChanged;
 
             root.Q<Button>("morphology-button").clicked += () => ToggleTree(Progression?.Morphology);
             root.Q<Button>("ethology-button").clicked   += () => ToggleTree(Progression?.Ethology);
@@ -128,6 +133,14 @@ namespace NaturalHistory.UI
             root.Q<Button>("save-button").clicked       += () => OpenSlots(saving: true);
             root.Q<Button>("load-button").clicked       += () => OpenSlots(saving: false);
             root.Q<Button>("quit-button").clicked       += Quit;
+            root.Q<Button>("main-menu-button").clicked  += () => { SetPauseOpen(false); mainMenu.Show(); };
+            // The title screen: the same choices as the pause menu
+            // Continue: back to the game being played (left for the title screen from the pause menu), else the latest save
+            mainMenu.Continue.clicked     += () => { if (mainMenu.InGame) mainMenu.Hide(); else if (mainMenu.LatestSlot() > 0) LoadFrom(mainMenu.LatestSlot()); };
+            mainMenu.NewGame.clicked      += () => playersPanel.OpenSetup();
+            mainMenu.LoadGame.clicked     += () => OpenSlots(saving: false);
+            mainMenu.Encyclopedia.clicked += () => encyclopedia.Open();
+            mainMenu.Quit.clicked         += Quit;
             root.Q<Button>("slots-back-button").clicked += CloseSlots;
             root.Q<Button>("age-button").clicked        += ToggleAges;
             SetUpLanguageDropdown();
@@ -149,6 +162,13 @@ namespace NaturalHistory.UI
             playersPanel.RefreshBar();
             OnProgressionChanged();
             OnClimateUpdated();
+            mainMenu.Show(); // the game opens on the title screen
+        }
+
+        // Back out of New Game or Load Game: to the title screen if it is up, else the pause menu
+        private void BackToMenu()
+        {
+            if (!mainMenu.IsOpen) pauseOverlay.RemoveFromClassList("hidden");
         }
 
         private void OnPhenomenon(string message, HexCell cell) => ShowToast(message);
@@ -167,17 +187,20 @@ namespace NaturalHistory.UI
 
         // ---------- Language ----------
 
+        // The pause menu's and the title screen's
         private void SetUpLanguageDropdown()
         {
-            var dropdown = root.Q<DropdownField>("language-dropdown");
-            if (dropdown == null) return;
-            dropdown.choices = new System.Collections.Generic.List<string>();
-            foreach (var (_, name) in Loc.Languages) dropdown.choices.Add(name);
-            dropdown.index = System.Array.FindIndex(Loc.Languages, l => l.code == Loc.Current);
-            dropdown.RegisterValueChangedCallback(_ =>
+            foreach (var dropdown in new[] { root.Q<DropdownField>("language-dropdown"), root.Q<DropdownField>("main-language-dropdown") })
             {
-                if (dropdown.index >= 0) Loc.SetLanguage(Loc.Languages[dropdown.index].code);
-            });
+                if (dropdown == null) continue;
+                dropdown.choices = new System.Collections.Generic.List<string>();
+                foreach (var (_, name) in Loc.Languages) dropdown.choices.Add(name);
+                dropdown.index = System.Array.FindIndex(Loc.Languages, l => l.code == Loc.Current);
+                dropdown.RegisterValueChangedCallback(_ =>
+                {
+                    if (dropdown.index >= 0) Loc.SetLanguage(Loc.Languages[dropdown.index].code);
+                });
+            }
         }
 
         // Everything showing text is filled in again in the new language
@@ -185,6 +208,14 @@ namespace NaturalHistory.UI
         {
             LocalizedUI.ApplyFonts(document.panelSettings);
             LocalizedUI.Apply();
+            int language = System.Array.FindIndex(Loc.Languages, l => l.code == Loc.Current);
+            foreach (var name in new[] { "language-dropdown", "main-language-dropdown" })
+            {
+                var dropdown = root.Q<DropdownField>(name);
+                if (dropdown != null && language >= 0) dropdown.SetValueWithoutNotify(dropdown.choices[language]);
+            }
+            playersPanel.OnOptionsChanged(); // the New Game screen, if open
+            newGameOptions.Refresh();
             OnUnderViewChanged();
             playersPanel.RefreshBar();
             OnProgressionChanged();
@@ -197,6 +228,7 @@ namespace NaturalHistory.UI
             UnderView.Changed -= OnUnderViewChanged;
             Loc.Changed -= OnLanguageChanged;
             miniMap?.Dispose();
+            mainMenu?.Dispose();
             CameraController.IsPointerOverUI = null;
             NaturalEvents.Announced -= OnPhenomenon;
             Combat.Reported -= OnPhenomenon;
@@ -229,6 +261,7 @@ namespace NaturalHistory.UI
 
         private void OnAgeTransition(GeologicalAge from, GeologicalAge to)
         {
+            if (mainMenu.IsOpen) return; // the game behind the title screen setting itself up
             treePanel.Close();
             zoologyPanel.Close();
             encyclopedia.Close();
@@ -262,6 +295,7 @@ namespace NaturalHistory.UI
             unitCycle.Update(AnyModalOpen());
             animalPanel.Update();
             miniMap.Update();
+            mainMenu.Update();
             if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)
             {
                 toast.AddToClassList("hidden");
@@ -274,12 +308,13 @@ namespace NaturalHistory.UI
         private void HandleEscape()
         {
             if (IsOpen(slotsOverlay))  CloseSlots();
-            else if (playersPanel.SetupOpen) { playersPanel.CloseSetup(); pauseOverlay.RemoveFromClassList("hidden"); }
+            else if (playersPanel.SetupOpen) { playersPanel.CloseSetup(); BackToMenu(); }
             else if (playersPanel.FactionOpen) playersPanel.CloseFaction();
             else if (encyclopedia.IsOpen) encyclopedia.Close();
             else if (zoologyPanel.IsOpen) zoologyPanel.Close();
             else if (treePanel.IsOpen) treePanel.Close();
             else if (agePanel.IsOpen)  agePanel.Close();
+            else if (mainMenu.IsOpen) { } // the title screen stays until a game is started or loaded
             else SetPauseOpen(!IsOpen(pauseOverlay));
         }
 
@@ -295,7 +330,7 @@ namespace NaturalHistory.UI
             if (cameraController != null) cameraController.enabled = !modal; // keep edge/WASD panning near the HUD
         }
 
-        private bool AnyModalOpen() => IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen || encyclopedia.IsOpen
+        private bool AnyModalOpen() => mainMenu.IsOpen || IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen || encyclopedia.IsOpen
                                        || playersPanel.FactionOpen || playersPanel.SetupOpen;
 
         private bool PointerOverUI()
@@ -383,7 +418,7 @@ namespace NaturalHistory.UI
         {
             if (!IsOpen(slotsOverlay)) return;
             slotsOverlay.AddToClassList("hidden");
-            pauseOverlay.RemoveFromClassList("hidden");
+            BackToMenu();
         }
 
         private void RebuildSlots()
@@ -437,9 +472,12 @@ namespace NaturalHistory.UI
 
         private void LoadFrom(int slot)
         {
+            bool fromTitle = mainMenu.IsOpen;
+            mainMenu.Hide(); // first, like a new game
             bool ok = SaveSystem.Load(slot);
+            if (!ok && fromTitle) mainMenu.Show();
             ShowToast(ok ? Loc.F("Loaded slot {0}", slot) : Loc.T("Load failed (see Console)"));
-            if (ok) SetPauseOpen(false);
+            if (ok) { mainMenu.InGame = true; SetPauseOpen(false); }
         }
 
         // Messages shown in the same frame (e.g. two animals arriving together) are combined

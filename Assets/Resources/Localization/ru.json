@@ -1,6 +1,410 @@
 {
  "entries": [
   {
+   "k": "Electric Organs",
+   "v": "Электрические органы"
+  },
+  {
+   "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
+   "v": "Мышцы, превращённые в живые батареи, оглушают добычу разрядом (электрический угорь, электрический скат)."
+  },
+  {
+   "k": "Finds its way by echoes: it sees one tile further, and camouflage doesn't hide anything from it.",
+   "v": "Ориентируется по эху: видит на одну клетку дальше, и маскировка ничего от него не скрывает."
+  },
+  {
+   "k": "Senses the electric fields of other animals: it sees one tile further, and neither camouflage nor a burrow hides prey from it.",
+   "v": "Чувствует электрические поля других животных: видит на одну клетку дальше, и ни маскировка, ни нора не скрывают от него добычу."
+  },
+  {
+   "k": "Keen eyes",
+   "v": "Зоркие глаза"
+  },
+  {
+   "k": "Spots prey from far off: it sees one tile further.",
+   "v": "Замечает добычу издалека: видит на одну клетку дальше."
+  },
+  {
+   "k": "Blends into its surroundings: attacks on it deal 30% less damage, unless the attacker hunts by echolocation or electric sense.",
+   "v": "Сливается с местностью: атаки по нему наносят на 30% меньше урона, если только нападающий не охотится с помощью эхолокации или электрочувства."
+  },
+  {
+   "k": "Burrow",
+   "v": "Нора"
+  },
+  {
+   "k": "Dives into its burrow when attacked: it takes half damage, unless the attacker senses it through the ground with electric sense.",
+   "v": "Ныряет в нору при нападении: получает вдвое меньше урона, если только нападающий не чувствует его сквозь землю электрочувством."
+  },
+  {
+   "k": "Shell retreat",
+   "v": "Укрытие в панцире"
+  },
+  {
+   "k": "Pulls into its shell: it takes half damage when attacked and can't be swallowed whole, unless the attacker has a crushing bite.",
+   "v": "Прячется в панцирь: получает вдвое меньше урона при атаке и не может быть проглочен целиком, если только у нападающего нет дробящего укуса."
+  },
+  {
+   "k": "Herd",
+   "v": "Стадо"
+  },
+  {
+   "k": "Lives in herds: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "Живёт стадами: получает на 30% меньше урона, если рядом находится другая группа его стороны (или его вида, если он дикий)."
+  },
+  {
+   "k": "School",
+   "v": "Косяк"
+  },
+  {
+   "k": "Swims in schools: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "Плавает косяками: получает на 30% меньше урона, если рядом находится другая группа его стороны (или его вида, если он дикий)."
+  },
+  {
+   "k": "Vigilance",
+   "v": "Бдительность"
+  },
+  {
+   "k": "Keeps a lookout and calls alarms: it can't be ambushed.",
+   "v": "Несёт дозор и подаёт сигнал тревоги: его нельзя застать врасплох."
+  },
+  {
+   "k": "Charge",
+   "v": "Таран"
+  },
+  {
+   "k": "Charges with horns, tusks or head: an attack made after moving that turn deals half again as much damage.",
+   "v": "Бросается вперёд рогами, бивнями или головой: атака после перемещения в этот ход наносит в полтора раза больше урона."
+  },
+  {
+   "k": "Crushing bite",
+   "v": "Дробящий укус"
+  },
+  {
+   "k": "Bites through bone and shell: rolling up and pulling into a shell don't protect against it, and spiny or shelled prey can still be swallowed.",
+   "v": "Прокусывает кости и панцири: сворачивание в клубок и укрытие в панцире не защищают, а колючую или панцирную добычу всё равно можно проглотить."
+  },
+  {
+   "k": "Trample",
+   "v": "Растаптывание"
+  },
+  {
+   "k": "So heavy it crushes what is underfoot: its attacks also deal half damage to one more foreign group on the target tile.",
+   "v": "Настолько тяжёл, что давит всё под ногами: его атаки наносят половину урона ещё одной чужой группе на клетке цели."
+  },
+  {
+   "k": "Sprint",
+   "v": "Спринт"
+  },
+  {
+   "k": "Runs down prey or outruns danger in bursts: one more action every turn.",
+   "v": "Рывками догоняет добычу или уходит от опасности: на одно действие больше каждый ход."
+  },
+  {
+   "k": "Swarm",
+   "v": "Рой"
+  },
+  {
+   "k": "Overwhelms with sheer numbers: it can attack animals of any size bigger than itself.",
+   "v": "Берёт числом: может атаковать животных любого размера, крупнее себя."
+  },
+  {
+   "k": "Blood feeding",
+   "v": "Кровопийство"
+  },
+  {
+   "k": "Drinks blood: it can feed on animals of any size bigger than itself, and heals half the damage it deals.",
+   "v": "Пьёт кровь: может питаться животными любого размера, крупнее себя, и восстанавливает половину нанесённого урона."
+  },
+  {
+   "k": "Spreads disease",
+   "v": "Распространяет болезни"
+  },
+  {
+   "k": "Carries germs in its bite: a group it hits is infected, losing a tenth of its HP each turn for 3 turns.",
+   "v": "Несёт заразу в укусе: пораженная группа заражается и теряет десятую часть ОЗ каждый ход в течение 3 ходов."
+  },
+  {
+   "k": "Dormancy",
+   "v": "Спячка"
+  },
+  {
+   "k": "Sleeps through hard times: it doesn't lose HP when it has no food (but doesn't heal either).",
+   "v": "Пережидает трудные времена во сне: не теряет ОЗ, когда нет еды (но и не лечится)."
+  },
+  {
+   "k": "Lives off a thick layer of fat: it loses only half as much HP when it has no food.",
+   "v": "Живёт за счёт толстого слоя жира: теряет вдвое меньше ОЗ, когда нет еды."
+  },
+  {
+   "k": "Prolific breeder",
+   "v": "Плодовитость"
+  },
+  {
+   "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
+   "v": "Быстро размножается: может размножаться каждые 2 хода вместо каждых 3."
+  },
+  {
+   "k": "the {0} charged",
+   "v": "{0} совершил таран"
+  },
+  {
+   "k": "the {0} was hard to see",
+   "v": "{0} было трудно заметить"
+  },
+  {
+   "k": "the {0} dived into its burrow",
+   "v": "{0} нырнул в нору"
+  },
+  {
+   "k": "the {0} pulled into its shell",
+   "v": "{0} спрятался в панцирь"
+  },
+  {
+   "k": "the {0} had safety in numbers",
+   "v": "{0} был защищён численностью"
+  },
+  {
+   "k": "the {0} bit straight through",
+   "v": "{0} был прокушен насквозь"
+  },
+  {
+   "k": "the {0} fed on its blood",
+   "v": "{0} лишился крови"
+  },
+  {
+   "k": "the {0} is infected",
+   "v": "{0} заражён"
+  },
+  {
+   "k": "the {0} saw the ambush coming",
+   "v": "{0} заметил засаду"
+  },
+  {
+   "k": "the {0} was trampled ({1} damage)",
+   "v": "{0} был растоптан (урон: {1})"
+  },
+  {
+   "k": "the {0} was trampled to death",
+   "v": "{0} был растоптан насмерть"
+  },
+  {
+   "k": "Venom",
+   "v": "Яд"
+  },
+  {
+   "k": "Its bite or sting injects venom: a group it hits and doesn't kill is poisoned, losing a fifth of its HP each turn for 2 turns.",
+   "v": "Укус или жало впрыскивает яд: пораженная, но не убитая группа отравляется и 2 хода подряд теряет по одной пятой своих ОЗ."
+  },
+  {
+   "k": "Stinging cells",
+   "v": "Стрекательные клетки"
+  },
+  {
+   "k": "Covered in stinging cells: its attacks poison the target for a turn, and whatever attacks it is stung back for a quarter of the damage it deals.",
+   "v": "Покрыт стрекательными клетками: его атаки отравляют цель на один ход, а тот, кто атакует его, получает ответный ожог в четверть нанесённого урона."
+  },
+  {
+   "k": "Poisonous",
+   "v": "Ядовитость"
+  },
+  {
+   "k": "Its body is poisonous: whatever attacks it is poisoned, losing a fifth of its HP each turn for 2 turns. Its predators, used to it, eat it unharmed.",
+   "v": "Его тело ядовито: напавший отравляется и 2 хода теряет пятую часть HP за ход. Привыкшие к нему хищники съедают его без вреда."
+  },
+  {
+   "k": "Electric shock",
+   "v": "Электрошок"
+  },
+  {
+   "k": "Stuns with an electric discharge: its attacks get through half the target's defense, and the target loses its actions next turn.",
+   "v": "Оглушает электрическим разрядом: его атаки пробивают половину защиты цели, а цель теряет свои действия на следующем ходу."
+  },
+  {
+   "k": "Sticky web",
+   "v": "Липкая паутина"
+  },
+  {
+   "k": "Catches prey in sticky silk: a group it attacks and doesn't kill is caught and loses its actions next turn.",
+   "v": "Ловит добычу в липкий шёлк: атакованная, но не убитая группа запутывается и теряет свои действия на следующем ходу."
+  },
+  {
+   "k": "Ink cloud",
+   "v": "Чернильное облако"
+  },
+  {
+   "k": "Squirts ink and slips away: it takes half damage when attacked and can't be swallowed whole.",
+   "v": "Выпускает чернила и ускользает: при атаке получает вдвое меньше урона, и его нельзя проглотить целиком."
+  },
+  {
+   "k": "Chemical spray",
+   "v": "Химический спрей"
+  },
+  {
+   "k": "Sprays a noxious chemical at attackers: whatever attacks it loses a tenth of its HP and its actions next turn.",
+   "v": "Обрызгивает нападающих едким веществом: тот, кто его атакует, теряет одну десятую своих ОЗ и свои действия на следующем ходу."
+  },
+  {
+   "k": "Bristles with spines: it can't be swallowed whole, and whatever attacks it takes back a third of the damage it deals.",
+   "v": "Ощетинился шипами: его нельзя проглотить целиком, а тот, кто его атакует, получает обратно треть нанесённого урона."
+  },
+  {
+   "k": "Roll up",
+   "v": "Свернуться"
+  },
+  {
+   "k": "Rolls into an armoured ball: it takes 40% less damage when attacked and can't be swallowed whole.",
+   "v": "Сворачивается в бронированный шар: при атаке получает на 40% меньше урона, и его нельзя проглотить целиком."
+  },
+  {
+   "k": "Tail weapon",
+   "v": "Хвост-оружие"
+  },
+  {
+   "k": "Swings a clubbed or spiked tail: its counterattacks hit twice as hard.",
+   "v": "Бьёт булавовидным или шипастым хвостом: его контратаки наносят вдвое больше урона."
+  },
+  {
+   "k": "Pack hunting",
+   "v": "Охота стаей"
+  },
+  {
+   "k": "Hunts in packs: it deals half again as much damage when another group of its side, or of its species if wild, is on or next to the target's tile.",
+   "v": "Охотится стаей: наносит в полтора раза больше урона, если другая группа его стороны (или его вида, если он дикий) находится на клетке цели или рядом с ней."
+  },
+  {
+   "k": "Ambush",
+   "v": "Засада"
+  },
+  {
+   "k": "Lies in wait: an attack made before it moves in a turn gets no counterattack.",
+   "v": "Затаивается: атака, совершённая до его перемещения в ходе, не вызывает контратаки."
+  },
+  {
+   "k": "Constriction",
+   "v": "Удушение"
+  },
+  {
+   "k": "Coils around its prey and squeezes: a group it attacks and doesn't kill is held and loses its actions next turn.",
+   "v": "Обвивает добычу и сжимает: атакованная, но не убитая группа удерживается и теряет свои действия на следующем ходу."
+  },
+  {
+   "k": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
+   "v": "Отращивает утраченные части: каждый ход восстанавливает две пятых ОЗ вместо одной пятой."
+  },
+  {
+   "k": "Shed a limb",
+   "v": "Отбросить конечность"
+  },
+  {
+   "k": "Leaves a tail, arm or leg behind: once, a blow that would wipe it out leaves it at 1 HP instead.",
+   "v": "Оставляет хвост, лапу или руку: один раз смертельный удар оставит ему 1 ОЗ."
+  },
+  {
+   "k": "or",
+   "v": "или"
+  },
+  {
+   "k": "Locked: needs {0}",
+   "v": "Закрыто: нужно {0}"
+  },
+  {
+   "k": "Players need {0}",
+   "v": "Игрокам нужно {0}"
+  },
+  {
+   "k": "Abilities",
+   "v": "Способности"
+  },
+  {
+   "k": "Held or stunned: no actions next turn",
+   "v": "Удержан или оглушён: нет действий на следующем ходу"
+  },
+  {
+   "k": "the {0} couldn't swallow it whole",
+   "v": "{0} не смог проглотить его целиком"
+  },
+  {
+   "k": "a pack attack",
+   "v": "атака стаей"
+  },
+  {
+   "k": "the {0} hid in a cloud of ink",
+   "v": "{0} скрылся в облаке чернил"
+  },
+  {
+   "k": "the {0} rolled up",
+   "v": "{0} свернулся"
+  },
+  {
+   "k": "the {0} shed a limb and got away",
+   "v": "{0} отбросил конечность и скрылся"
+  },
+  {
+   "k": "the {0} was stung",
+   "v": "{0} ужален"
+  },
+  {
+   "k": "the {0} was pricked by the spines",
+   "v": "{0} уколот шипами"
+  },
+  {
+   "k": "the {0} was sprayed and loses its next turn",
+   "v": "{0} обрызган и пропускает следующий ход"
+  },
+  {
+   "k": "the {0} died of its wounds",
+   "v": "{0} умер от ран"
+  },
+  {
+   "k": "the {0} is poisoned",
+   "v": "{0} отравлен"
+  },
+  {
+   "k": "the {0} is stunned and loses its next turn",
+   "v": "{0} оглушён и пропускает следующий ход"
+  },
+  {
+   "k": "the {0} is caught in the web and loses its next turn",
+   "v": "{0} запутался в паутине и пропускает следующий ход"
+  },
+  {
+   "k": "the {0} is held in its coils and loses its next turn",
+   "v": "{0} зажат в кольцах и пропускает следующий ход"
+  },
+  {
+   "k": "an ambush: no counterattack",
+   "v": "засада: контратаки нет"
+  },
+  {
+   "k": "the {0} swung its tail",
+   "v": "{0} взмахнул хвостом"
+  },
+  {
+   "k": "Your {0} died of poison",
+   "v": "Ваш {0} умер от яда"
+  },
+  {
+   "k": "(locked)",
+   "v": "(закрыто)"
+  },
+  {
+   "k": "Abilities: {0}",
+   "v": "Способности: {0}"
+  },
+  {
+   "k": "Unlocks ability: {0}",
+   "v": "Открывает способность: {0}"
+  },
+  {
+   "k": "Poisoned: loses {0} HP next turn",
+   "v": "Отравлен: потеряет {0} ОЗ на следующем ходу"
+  },
+  {
+   "k": "Poisoned: loses {0} HP a turn for {1} turns",
+   "v": "Отравлен: теряет {0} ОЗ за ход в течение {1} ходов"
+  },
+  {
    "k": "Discovered {0} new species (+{1} EP)",
    "v": "Открыто новых видов: {0} (+{1} EP)"
   },
@@ -13017,8 +13421,8 @@
    "v": "Саламандра"
   },
   {
-   "k": "Saliva turned into venom, delivered through grooved teeth.",
-   "v": "Слюна, ставшая ядом и вводимая через бороздчатые зубы."
+   "k": "Glands that make venom, delivered by fangs, stings or grooved teeth (scorpions, centipedes, snakes).",
+   "v": "Железы, вырабатывающие яд, который вводится клыками, жалом или бороздчатыми зубами (скорпионы, многоножки, змеи)."
   },
   {
    "k": "Salonga",
@@ -18927,6 +19331,98 @@
   {
    "k": "Next Turn",
    "v": "Следующий ход"
+  },
+  {
+   "k": "Continue",
+   "v": "Продолжить"
+  },
+  {
+   "k": "Main Menu",
+   "v": "Главное меню"
+  },
+  {
+   "k": "Guide life from the first animals to the present day",
+   "v": "Проведите жизнь от первых животных до наших дней"
+  },
+  {
+   "k": "Painting: Charles R. Knight, {0} (Field Museum, 1926–1930), public domain",
+   "v": "Картина: Чарльз Р. Найт, «{0}» (Филдовский музей, 1926–1930), общественное достояние"
+  },
+  {
+   "k": "Early Land Plants",
+   "v": "Первые наземные растения"
+  },
+  {
+   "k": "Permian Reptiles and Amphibians",
+   "v": "Рептилии и амфибии пермского периода"
+  },
+  {
+   "k": "Late Cretaceous Seas",
+   "v": "Моря позднего мела"
+  },
+  {
+   "k": "Triceratops and Tyrannosaurus",
+   "v": "Трицератопс и тираннозавр"
+  },
+  {
+   "k": "Your realm",
+   "v": "Ваша область"
+  },
+  {
+   "k": "World",
+   "v": "Мир"
+  },
+  {
+   "k": "Competitors",
+   "v": "Соперники"
+  },
+  {
+   "k": "No competitors: the world is yours alone.",
+   "v": "Без соперников: весь мир принадлежит вам."
+  },
+  {
+   "k": "Click a colour band to change it. Names can be anything; the realm decides the iconic animals.",
+   "v": "Нажмите на цветную полосу, чтобы сменить её. Имена могут быть любыми; знаковых животных определяет область."
+  },
+  {
+   "k": "Iconic animals: {0}",
+   "v": "Знаковые животные: {0}"
+  },
+  {
+   "k": "Map size",
+   "v": "Размер карты"
+  },
+  {
+   "k": "Tiny",
+   "v": "Крошечная"
+  },
+  {
+   "k": "{0} × {1} tiles, up to {2} players",
+   "v": "{0} × {1} клеток, до {2} игроков"
+  },
+  {
+   "k": "Difficulty",
+   "v": "Сложность"
+  },
+  {
+   "k": "Easy",
+   "v": "Лёгкая"
+  },
+  {
+   "k": "Normal",
+   "v": "Обычная"
+  },
+  {
+   "k": "Hard",
+   "v": "Трудная"
+  },
+  {
+   "k": "Brutal",
+   "v": "Беспощадная"
+  },
+  {
+   "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
+   "v": "Старт с {0}% обычных EP и {1}% дохода за ход; соперники и дикие животные бьют ваших с силой {2}%"
   }
  ]
 }

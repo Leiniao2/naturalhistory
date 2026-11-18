@@ -387,7 +387,7 @@ namespace NaturalHistory.World
         internal static ColonyGroup Attackable(ColonyGroup group, HexCell cell)
         {
             var foe = Combat.Defender(group, cell);
-            return foe != null && Combat.SizesMatch(group, foe) ? foe : null;
+            return foe != null && Combat.CanFight(group, foe) ? foe : null;
         }
 
         // Marks everything the group can reach this turn (MoveRange): the tiles it can move to

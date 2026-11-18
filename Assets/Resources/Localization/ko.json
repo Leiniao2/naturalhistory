@@ -1,6 +1,410 @@
 {
  "entries": [
   {
+   "k": "Electric Organs",
+   "v": "발전 기관"
+  },
+  {
+   "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
+   "v": "근육이 살아 있는 전지로 바뀌어 방전으로 먹이를 기절시킨다(전기뱀장어, 전기가오리)."
+  },
+  {
+   "k": "Finds its way by echoes: it sees one tile further, and camouflage doesn't hide anything from it.",
+   "v": "메아리로 길을 찾음: 시야가 1칸 늘어나며, 위장이 통하지 않는다."
+  },
+  {
+   "k": "Senses the electric fields of other animals: it sees one tile further, and neither camouflage nor a burrow hides prey from it.",
+   "v": "다른 동물의 전기장을 감지함: 시야가 1칸 늘어나며, 위장도 굴도 먹이를 숨겨 주지 못한다."
+  },
+  {
+   "k": "Keen eyes",
+   "v": "예리한 눈"
+  },
+  {
+   "k": "Spots prey from far off: it sees one tile further.",
+   "v": "멀리서 먹이를 발견함: 시야가 1칸 늘어난다."
+  },
+  {
+   "k": "Blends into its surroundings: attacks on it deal 30% less damage, unless the attacker hunts by echolocation or electric sense.",
+   "v": "주변에 녹아듦: 받는 피해가 30% 줄어든다. 단, 공격자가 반향정위나 전기 감각으로 사냥하면 제외."
+  },
+  {
+   "k": "Burrow",
+   "v": "굴파기"
+  },
+  {
+   "k": "Dives into its burrow when attacked: it takes half damage, unless the attacker senses it through the ground with electric sense.",
+   "v": "공격받으면 굴로 숨음: 받는 피해가 절반이 된다. 단, 공격자가 전기 감각으로 땅속에서 감지하면 제외."
+  },
+  {
+   "k": "Shell retreat",
+   "v": "껍질 속으로"
+  },
+  {
+   "k": "Pulls into its shell: it takes half damage when attacked and can't be swallowed whole, unless the attacker has a crushing bite.",
+   "v": "껍질 속으로 움츠림: 공격받을 때 피해가 절반이 되고 통째로 삼켜지지 않는다. 단, 공격자에게 부수는 이빨이 있으면 제외."
+  },
+  {
+   "k": "Herd",
+   "v": "무리"
+  },
+  {
+   "k": "Lives in herds: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "무리 생활: 아군(야생이면 같은 종)의 다른 그룹이 인접해 있으면 받는 피해가 30% 줄어든다."
+  },
+  {
+   "k": "School",
+   "v": "떼"
+  },
+  {
+   "k": "Swims in schools: it takes 30% less damage when another group of its side, or of its species if wild, is next to it.",
+   "v": "떼 지어 헤엄침: 아군(야생이면 같은 종)의 다른 그룹이 인접해 있으면 받는 피해가 30% 줄어든다."
+  },
+  {
+   "k": "Vigilance",
+   "v": "경계"
+  },
+  {
+   "k": "Keeps a lookout and calls alarms: it can't be ambushed.",
+   "v": "망을 보며 경보를 울림: 매복당하지 않는다."
+  },
+  {
+   "k": "Charge",
+   "v": "돌진"
+  },
+  {
+   "k": "Charges with horns, tusks or head: an attack made after moving that turn deals half again as much damage.",
+   "v": "뿔, 엄니, 머리로 돌진함: 그 턴에 이동한 뒤 공격하면 피해가 1.5배가 된다."
+  },
+  {
+   "k": "Crushing bite",
+   "v": "부수는 이빨"
+  },
+  {
+   "k": "Bites through bone and shell: rolling up and pulling into a shell don't protect against it, and spiny or shelled prey can still be swallowed.",
+   "v": "뼈와 껍질을 물어 부숨: 몸을 말거나 껍질 속에 숨어도 막지 못하며, 가시나 껍질이 있는 먹이도 삼킬 수 있다."
+  },
+  {
+   "k": "Trample",
+   "v": "짓밟기"
+  },
+  {
+   "k": "So heavy it crushes what is underfoot: its attacks also deal half damage to one more foreign group on the target tile.",
+   "v": "너무 무거워 발밑의 것을 짓이김: 공격 시 대상 타일의 다른 적대 그룹 하나에게도 절반의 피해를 준다."
+  },
+  {
+   "k": "Sprint",
+   "v": "전력 질주"
+  },
+  {
+   "k": "Runs down prey or outruns danger in bursts: one more action every turn.",
+   "v": "순간적으로 먹이를 쫓거나 위험에서 벗어남: 매 턴 행동이 1회 늘어난다."
+  },
+  {
+   "k": "Swarm",
+   "v": "떼 공격"
+  },
+  {
+   "k": "Overwhelms with sheer numbers: it can attack animals of any size bigger than itself.",
+   "v": "압도적인 수로 몰아붙임: 자신보다 큰 모든 크기의 동물을 공격할 수 있다."
+  },
+  {
+   "k": "Blood feeding",
+   "v": "흡혈"
+  },
+  {
+   "k": "Drinks blood: it can feed on animals of any size bigger than itself, and heals half the damage it deals.",
+   "v": "피를 빨아 먹음: 자신보다 큰 모든 크기의 동물을 먹이로 삼을 수 있으며, 입힌 피해의 절반을 회복한다."
+  },
+  {
+   "k": "Spreads disease",
+   "v": "질병 전파"
+  },
+  {
+   "k": "Carries germs in its bite: a group it hits is infected, losing a tenth of its HP each turn for 3 turns.",
+   "v": "물린 곳에 세균을 옮김: 적중한 그룹은 감염되어 3턴 동안 매 턴 HP의 10분의 1을 잃는다."
+  },
+  {
+   "k": "Dormancy",
+   "v": "휴면"
+  },
+  {
+   "k": "Sleeps through hard times: it doesn't lose HP when it has no food (but doesn't heal either).",
+   "v": "어려운 시기를 잠으로 넘김: 먹이가 없어도 HP를 잃지 않는다(회복도 하지 않는다)."
+  },
+  {
+   "k": "Lives off a thick layer of fat: it loses only half as much HP when it has no food.",
+   "v": "두꺼운 지방층으로 버팀: 먹이가 없을 때 HP를 절반만 잃는다."
+  },
+  {
+   "k": "Prolific breeder",
+   "v": "다산"
+  },
+  {
+   "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
+   "v": "번식이 빠름: 3턴마다가 아니라 2턴마다 번식할 수 있다."
+  },
+  {
+   "k": "the {0} charged",
+   "v": "{0}이(가) 돌진했다"
+  },
+  {
+   "k": "the {0} was hard to see",
+   "v": "{0}은(는) 눈에 띄기 어려웠다"
+  },
+  {
+   "k": "the {0} dived into its burrow",
+   "v": "{0}이(가) 굴로 숨었다"
+  },
+  {
+   "k": "the {0} pulled into its shell",
+   "v": "{0}이(가) 껍질 속으로 움츠렸다"
+  },
+  {
+   "k": "the {0} had safety in numbers",
+   "v": "{0}은(는) 무리의 보호를 받았다"
+  },
+  {
+   "k": "the {0} bit straight through",
+   "v": "{0}이(가) 그대로 물어 뚫렸다"
+  },
+  {
+   "k": "the {0} fed on its blood",
+   "v": "{0}이(가) 피를 빨렸다"
+  },
+  {
+   "k": "the {0} is infected",
+   "v": "{0}은(는) 감염되었다"
+  },
+  {
+   "k": "the {0} saw the ambush coming",
+   "v": "{0}은(는) 매복을 알아챘다"
+  },
+  {
+   "k": "the {0} was trampled ({1} damage)",
+   "v": "{0}이(가) 짓밟혔다(피해 {1})"
+  },
+  {
+   "k": "the {0} was trampled to death",
+   "v": "{0}이(가) 짓밟혀 죽었다"
+  },
+  {
+   "k": "Venom",
+   "v": "독"
+  },
+  {
+   "k": "Its bite or sting injects venom: a group it hits and doesn't kill is poisoned, losing a fifth of its HP each turn for 2 turns.",
+   "v": "물거나 쏘면 독을 주입한다: 명중했으나 쓰러뜨리지 못한 그룹은 중독되어 2턴 동안 매 턴 HP의 5분의 1을 잃는다."
+  },
+  {
+   "k": "Stinging cells",
+   "v": "자포"
+  },
+  {
+   "k": "Covered in stinging cells: its attacks poison the target for a turn, and whatever attacks it is stung back for a quarter of the damage it deals.",
+   "v": "자포로 뒤덮여 있다: 공격은 대상을 1턴 동안 중독시키고, 공격해 온 상대는 입힌 피해의 4분의 1만큼 되쏘인다."
+  },
+  {
+   "k": "Poisonous",
+   "v": "독성"
+  },
+  {
+   "k": "Its body is poisonous: whatever attacks it is poisoned, losing a fifth of its HP each turn for 2 turns. Its predators, used to it, eat it unharmed.",
+   "v": "몸에 독이 있다: 공격한 상대는 중독되어 2턴 동안 매 턴 HP의 5분의 1을 잃는다. 독에 익숙한 포식자는 해 없이 잡아먹는다."
+  },
+  {
+   "k": "Electric shock",
+   "v": "전기 충격"
+  },
+  {
+   "k": "Stuns with an electric discharge: its attacks get through half the target's defense, and the target loses its actions next turn.",
+   "v": "방전으로 기절시킨다: 공격이 대상 방어력의 절반을 무시하며, 대상은 다음 턴에 행동하지 못한다."
+  },
+  {
+   "k": "Sticky web",
+   "v": "끈끈이 거미줄"
+  },
+  {
+   "k": "Catches prey in sticky silk: a group it attacks and doesn't kill is caught and loses its actions next turn.",
+   "v": "끈적한 실로 먹이를 붙잡는다: 공격했으나 쓰러뜨리지 못한 그룹은 붙잡혀 다음 턴에 행동하지 못한다."
+  },
+  {
+   "k": "Ink cloud",
+   "v": "먹물 구름"
+  },
+  {
+   "k": "Squirts ink and slips away: it takes half damage when attacked and can't be swallowed whole.",
+   "v": "먹물을 뿜고 달아난다: 공격받을 때 피해를 절반만 받으며 통째로 삼킬 수 없다."
+  },
+  {
+   "k": "Chemical spray",
+   "v": "화학 분사"
+  },
+  {
+   "k": "Sprays a noxious chemical at attackers: whatever attacks it loses a tenth of its HP and its actions next turn.",
+   "v": "공격자에게 독한 화학물질을 뿌린다: 공격한 상대는 HP의 10분의 1을 잃고 다음 턴에 행동하지 못한다."
+  },
+  {
+   "k": "Bristles with spines: it can't be swallowed whole, and whatever attacks it takes back a third of the damage it deals.",
+   "v": "가시가 곤두서 있다: 통째로 삼킬 수 없으며, 공격한 상대는 입힌 피해의 3분의 1을 되받는다."
+  },
+  {
+   "k": "Roll up",
+   "v": "몸 말기"
+  },
+  {
+   "k": "Rolls into an armoured ball: it takes 40% less damage when attacked and can't be swallowed whole.",
+   "v": "장갑 같은 공 모양으로 말린다: 공격받을 때 피해가 40% 줄고 통째로 삼킬 수 없다."
+  },
+  {
+   "k": "Tail weapon",
+   "v": "꼬리 무기"
+  },
+  {
+   "k": "Swings a clubbed or spiked tail: its counterattacks hit twice as hard.",
+   "v": "곤봉이나 가시 달린 꼬리를 휘두른다: 반격 피해가 2배가 된다."
+  },
+  {
+   "k": "Pack hunting",
+   "v": "무리 사냥"
+  },
+  {
+   "k": "Hunts in packs: it deals half again as much damage when another group of its side, or of its species if wild, is on or next to the target's tile.",
+   "v": "무리 지어 사냥한다: 아군(야생이면 같은 종)의 다른 그룹이 대상 타일 위나 옆에 있으면 1.5배의 피해를 입힌다."
+  },
+  {
+   "k": "Ambush",
+   "v": "매복"
+  },
+  {
+   "k": "Lies in wait: an attack made before it moves in a turn gets no counterattack.",
+   "v": "숨어서 기다린다: 한 턴에서 이동하기 전에 한 공격은 반격을 받지 않는다."
+  },
+  {
+   "k": "Constriction",
+   "v": "조르기"
+  },
+  {
+   "k": "Coils around its prey and squeezes: a group it attacks and doesn't kill is held and loses its actions next turn.",
+   "v": "먹이를 휘감아 조른다: 공격했으나 쓰러뜨리지 못한 그룹은 붙들려 다음 턴에 행동하지 못한다."
+  },
+  {
+   "k": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
+   "v": "잃은 부위가 재생한다: 매 턴 HP의 5분의 1 대신 5분의 2를 회복한다."
+  },
+  {
+   "k": "Shed a limb",
+   "v": "자절"
+  },
+  {
+   "k": "Leaves a tail, arm or leg behind: once, a blow that would wipe it out leaves it at 1 HP instead.",
+   "v": "꼬리, 팔, 다리를 떼어 놓는다: 한 번, 쓰러질 만한 일격을 받아도 HP 1로 버틴다."
+  },
+  {
+   "k": "or",
+   "v": "또는"
+  },
+  {
+   "k": "Locked: needs {0}",
+   "v": "잠김: {0} 필요"
+  },
+  {
+   "k": "Players need {0}",
+   "v": "플레이어에게 {0} 필요"
+  },
+  {
+   "k": "Abilities",
+   "v": "능력"
+  },
+  {
+   "k": "Held or stunned: no actions next turn",
+   "v": "붙잡힘 또는 기절: 다음 턴 행동 불가"
+  },
+  {
+   "k": "the {0} couldn't swallow it whole",
+   "v": "{0}은(는) 통째로 삼키지 못했다"
+  },
+  {
+   "k": "a pack attack",
+   "v": "무리 공격"
+  },
+  {
+   "k": "the {0} hid in a cloud of ink",
+   "v": "{0}은(는) 먹물 구름 속에 숨었다"
+  },
+  {
+   "k": "the {0} rolled up",
+   "v": "{0}은(는) 몸을 말았다"
+  },
+  {
+   "k": "the {0} shed a limb and got away",
+   "v": "{0}은(는) 몸 일부를 떼어 놓고 달아났다"
+  },
+  {
+   "k": "the {0} was stung",
+   "v": "{0}은(는) 쏘였다"
+  },
+  {
+   "k": "the {0} was pricked by the spines",
+   "v": "{0}은(는) 가시에 찔렸다"
+  },
+  {
+   "k": "the {0} was sprayed and loses its next turn",
+   "v": "{0}은(는) 분사를 맞아 다음 턴을 잃는다"
+  },
+  {
+   "k": "the {0} died of its wounds",
+   "v": "{0}은(는) 상처로 죽었다"
+  },
+  {
+   "k": "the {0} is poisoned",
+   "v": "{0}은(는) 중독되었다"
+  },
+  {
+   "k": "the {0} is stunned and loses its next turn",
+   "v": "{0}은(는) 기절하여 다음 턴을 잃는다"
+  },
+  {
+   "k": "the {0} is caught in the web and loses its next turn",
+   "v": "{0}은(는) 거미줄에 걸려 다음 턴을 잃는다"
+  },
+  {
+   "k": "the {0} is held in its coils and loses its next turn",
+   "v": "{0}은(는) 똬리에 붙들려 다음 턴을 잃는다"
+  },
+  {
+   "k": "an ambush: no counterattack",
+   "v": "매복: 반격 없음"
+  },
+  {
+   "k": "the {0} swung its tail",
+   "v": "{0}은(는) 꼬리를 휘둘렀다"
+  },
+  {
+   "k": "Your {0} died of poison",
+   "v": "당신의 {0}이(가) 독으로 죽었다"
+  },
+  {
+   "k": "(locked)",
+   "v": "(잠김)"
+  },
+  {
+   "k": "Abilities: {0}",
+   "v": "능력: {0}"
+  },
+  {
+   "k": "Unlocks ability: {0}",
+   "v": "능력 해금: {0}"
+  },
+  {
+   "k": "Poisoned: loses {0} HP next turn",
+   "v": "중독: 다음 턴에 HP {0} 잃음"
+  },
+  {
+   "k": "Poisoned: loses {0} HP a turn for {1} turns",
+   "v": "중독: {1}턴 동안 매 턴 HP {0} 잃음"
+  },
+  {
    "k": "Discovered {0} new species (+{1} EP)",
    "v": "새로운 종 {0}개 발견 (+{1} EP)"
   },
@@ -13017,8 +13421,8 @@
    "v": "도롱뇽"
   },
   {
-   "k": "Saliva turned into venom, delivered through grooved teeth.",
-   "v": "침이 독으로 바뀌어 홈이 파인 이빨로 주입됩니다."
+   "k": "Glands that make venom, delivered by fangs, stings or grooved teeth (scorpions, centipedes, snakes).",
+   "v": "독을 만드는 샘. 송곳니, 침, 홈이 있는 이빨로 주입한다(전갈, 지네, 뱀)."
   },
   {
    "k": "Salonga",
@@ -18927,6 +19331,98 @@
   {
    "k": "Next Turn",
    "v": "다음 턴"
+  },
+  {
+   "k": "Continue",
+   "v": "이어하기"
+  },
+  {
+   "k": "Main Menu",
+   "v": "메인 메뉴"
+  },
+  {
+   "k": "Guide life from the first animals to the present day",
+   "v": "최초의 동물부터 오늘날까지 생명을 이끌어 보세요"
+  },
+  {
+   "k": "Painting: Charles R. Knight, {0} (Field Museum, 1926–1930), public domain",
+   "v": "그림: 찰스 R. 나이트, 〈{0}〉 (필드 자연사 박물관, 1926–1930), 퍼블릭 도메인"
+  },
+  {
+   "k": "Early Land Plants",
+   "v": "초기 육상 식물"
+  },
+  {
+   "k": "Permian Reptiles and Amphibians",
+   "v": "페름기의 파충류와 양서류"
+  },
+  {
+   "k": "Late Cretaceous Seas",
+   "v": "후기 백악기의 바다"
+  },
+  {
+   "k": "Triceratops and Tyrannosaurus",
+   "v": "트리케라톱스와 티라노사우루스"
+  },
+  {
+   "k": "Your realm",
+   "v": "당신의 생물구"
+  },
+  {
+   "k": "World",
+   "v": "세계"
+  },
+  {
+   "k": "Competitors",
+   "v": "경쟁자"
+  },
+  {
+   "k": "No competitors: the world is yours alone.",
+   "v": "경쟁자 없음: 세상은 오롯이 당신의 것입니다."
+  },
+  {
+   "k": "Click a colour band to change it. Names can be anything; the realm decides the iconic animals.",
+   "v": "색 띠를 클릭하면 색을 바꿀 수 있습니다. 이름은 자유롭게 정하세요. 대표 동물은 생물구에 따라 정해집니다."
+  },
+  {
+   "k": "Iconic animals: {0}",
+   "v": "대표 동물: {0}"
+  },
+  {
+   "k": "Map size",
+   "v": "지도 크기"
+  },
+  {
+   "k": "Tiny",
+   "v": "아주 작음"
+  },
+  {
+   "k": "{0} × {1} tiles, up to {2} players",
+   "v": "{0} × {1} 타일, 최대 {2}명"
+  },
+  {
+   "k": "Difficulty",
+   "v": "난이도"
+  },
+  {
+   "k": "Easy",
+   "v": "쉬움"
+  },
+  {
+   "k": "Normal",
+   "v": "보통"
+  },
+  {
+   "k": "Hard",
+   "v": "어려움"
+  },
+  {
+   "k": "Brutal",
+   "v": "혹독함"
+  },
+  {
+   "k": "Start with {0}% of the usual EP and earn {1}% each turn; rival and wild animals hit yours {2}% as hard",
+   "v": "시작 EP는 평소의 {0}%, 매 턴 수입은 {1}%이며, 경쟁자와 야생 동물이 당신의 동물에게 주는 피해는 {2}%입니다"
   }
  ]
 }
