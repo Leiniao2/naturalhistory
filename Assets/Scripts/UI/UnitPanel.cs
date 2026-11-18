@@ -67,7 +67,8 @@ namespace NaturalHistory.UI
             int wait  = Evolution.TurnsUntilReproduce(Copy);
             int ready = EvolutionData.From(Copy.species).Count(l => Evolution.CanEvolve(l, Copy));
             int total = EvolutionData.From(Copy.species).Count();
-            var breed = wait > 0 ? Loc.F(wait == 1 ? "reproduce in {0} turn" : "reproduce in {0} turns", wait)
+            var breed = Copy.JustBorn ? Loc.T("New this turn: it can act from the next turn")
+                      : wait > 0 ? Loc.F(wait == 1 ? "reproduce in {0} turn" : "reproduce in {0} turns", wait)
                       : Loc.T(Evolution.ReproduceCell(Copy) == null ? "no room to reproduce" : "can reproduce");
             var evolve = total == 0 ? Loc.T("no known descendants")
                        : ready > 0 ? Loc.F(ready == 1 ? "{0} evolution ready" : "{0} evolutions ready", ready)

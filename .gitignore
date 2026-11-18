@@ -31,3 +31,7 @@ steam_appid.txt
 # Concept editor save backups
 tools/concept-editor/backups/
 __pycache__/
+
+# Species portraits: full-size Google Flow originals (the game uses the 512 px copies in Assets/Resources/Portraits)
+tools/portraits/raw/
+tools/portraits/rejected/

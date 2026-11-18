@@ -2,14 +2,16 @@ using System.Collections.Generic;
 using System.Linq;
 using NaturalHistory.Core;
 using NaturalHistory.Data;
+using NaturalHistory.Evolution;
 using NaturalHistory.Progression;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace NaturalHistory.UI
 {
-    // Draws a ProgressionTree (Functions or Behaviors) of the focused species, whose name and portrait
-    // sit at the top centre, in a near full-screen panel: one tab per
+    // Draws a ProgressionTree (Functions or Behaviors) of the focused species in a near full-screen
+    // panel: a tab per species of yours along the top (SpeciesTabs) to switch whose trees these are,
+    // then one tab per
     // branch (Nervous System, Hunting, …), the branch's nodes in columns joined by prerequisite
     // curves, and a details strip with an Evolve button underneath. Prerequisites in another branch
     // are listed on the node instead of drawn.
@@ -28,8 +30,9 @@ namespace NaturalHistory.UI
         private static readonly Color LineLocked   = new(0.36f, 0.40f, 0.36f);
 
         private readonly VisualElement overlay;
-        private readonly Label title, epLabel, detailsName, detailsDescription, detailsMeta, speciesName;
-        private readonly VisualElement speciesPortrait;
+        private readonly Label title, epLabel, detailsName, detailsDescription, detailsMeta;
+        private readonly SpeciesTabs speciesTabs;
+        private SpeciesDefinition builtFor; // the species the nodes were laid out for
         private readonly VisualElement canvas, branchTabs;
         private readonly Label progressLabel;
         private readonly Dictionary<string, Button> tabViews = new();
@@ -59,8 +62,8 @@ namespace NaturalHistory.UI
             detailsDescription = root.Q<Label>("details-description");
             detailsMeta        = root.Q<Label>("details-meta");
             evolveButton       = root.Q<Button>("evolve-button");
-            speciesName        = root.Q<Label>("tree-species-name");
-            speciesPortrait    = root.Q("tree-species-portrait");
+            speciesTabs        = new SpeciesTabs(root.Q("tree-species-tabs"));
+            speciesTabs.Picked += id => EvolutionManager.Instance?.Focus(id); // its trees rebind and Refresh follows
 
             root.Q<Button>("tree-close-button").clicked += Close;
             evolveButton.clicked += OnEvolveClicked;
@@ -74,6 +77,7 @@ namespace NaturalHistory.UI
                 tree = newTree;
                 selected = null;
                 BuildTabs();
+                builtFor = Progression?.Species;
                 branch = branchByTree.TryGetValue(tree, out var last) ? last : tree.Branches.FirstOrDefault()?.id;
                 Build();
             }
@@ -90,9 +94,14 @@ namespace NaturalHistory.UI
             title.text   = Loc.T(tree.DisplayName);
             epLabel.text = Loc.F("EP {0}", Progression.EvolutionPoints);
             var species = Progression.Species;
-            speciesName.text = species != null ? Loc.T(species.commonName) : Loc.T("No species");
-            speciesPortrait.style.backgroundImage = SpeciesPortraits.Get(species) is RenderTexture rt
-                ? Background.FromRenderTexture(rt) : new StyleBackground(StyleKeyword.None);
+            speciesTabs.Refresh(species?.id);
+            if (species != builtFor)
+            {
+                // another species: its own items are available, the rest greyed out
+                builtFor = species;
+                if (selected != null && !Progression.CanAcquire(tree, selected)) selected = null;
+                Build();
+            }
             int acquirable = tree.Nodes.Count(n => Progression.CanAcquire(tree, n));
             progressLabel.text = Loc.F("{0} / {1} acquired", tree.Nodes.Count(n => tree.IsUnlocked(n.id)), acquirable);
             RefreshTabs();

@@ -62,6 +62,18 @@ POSE = {
 }
 
 
+# extra direction for species the first pass got wrong (shape, or the animal lost in the scene)
+FIXES = {
+    "rhyniella_praecursor": "It is a springtail (Collembola), NOT a beetle, cockroach or crayfish: a tiny soft-bodied, "
+                            "wingless hexapod with a plump elongated body, short four-segmented antennae, three pairs of "
+                            "short legs and a forked jumping organ (furcula) folded under its tail; shown huge in close-up "
+                            "on a moss-covered Devonian plant stem.",
+    "longisquama_insignis": "Close-up: the small lizard-like reptile fills most of the frame and is clearly visible, sharp and "
+                            "in focus, with its row of long, tall, feather-like plumes standing up along its back; the "
+                            "plants are only a soft, blurred background.",
+}
+
+
 def size_text(cm):
     if cm is None:
         return ""
@@ -97,7 +109,8 @@ def prompt(s):
     group = (s.get("group") or "animal").lower()
     head = f"{who}, {'an' if group[0] in 'aeiou' else 'a'} {group}" + (f", {', '.join(bits)}" if bits else "")
     head += f", in {backdrop(s)}."
-    return f"{head} Appearance: {short(s.get('description') or '')}"
+    fix = FIXES.get(s["id"])
+    return f"{head} Appearance: {short(s.get('description') or '')}" + (f" {fix}" if fix else "")
 
 
 def short(desc, limit=260):

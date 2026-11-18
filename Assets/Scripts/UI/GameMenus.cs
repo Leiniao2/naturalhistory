@@ -12,7 +12,7 @@ using UnityEngine.UIElements;
 namespace NaturalHistory.UI
 {
     // In-game UI Toolkit menus: HUD buttons, pause menu (Esc), save/load slots and the
-    // Functions / Behaviors tree panels, the selected animal's card and the Evolution Tree (ZoologyPanel). Layout: Resources/UI/GameMenus.uxml, styles: GameMenusStyle.uss.
+    // Functions / Behaviors tree panels, the selected animal's card, the Evolution Tree (ZoologyPanel) and the Encyclopedia. Layout: Resources/UI/GameMenus.uxml, styles: GameMenusStyle.uss.
     public class GameMenus : MonoBehaviour
     {
         private UIDocument document;
@@ -27,6 +27,7 @@ namespace NaturalHistory.UI
         private AnimalPanel animalPanel;
         private NewGameOptions newGameOptions;
         private ZoologyPanel zoologyPanel;
+        private EncyclopediaPanel encyclopedia;
         private MiniMap miniMap;
         private bool slotsAreForSaving;
         private float toastHideTime;
@@ -92,12 +93,15 @@ namespace NaturalHistory.UI
             animalPanel  = new AnimalPanel(root);
             newGameOptions = new NewGameOptions(root);
             zoologyPanel = new ZoologyPanel(root);
+            encyclopedia = new EncyclopediaPanel(root);
             miniMap      = new MiniMap(root);
             CameraController.IsPointerOverUI = PointerOverUI;
             unitPanel.OpenTree   += tree => { CloseSidePanels(); treePanel.Open(tree); };
             unitPanel.OpenEvolve += copy => { CloseSidePanels(); zoologyPanel.Open(copy); };
             unitPanel.Message    += ShowToast;
             zoologyPanel.Message += ShowToast;
+            zoologyPanel.OpenEncyclopedia += id => { CloseSidePanels(); encyclopedia.Open(id); };
+            encyclopedia.OpenTree         += id => { CloseSidePanels(); zoologyPanel.Open(start: id); };
             NaturalEvents.Announced += OnPhenomenon;
             playersPanel.NewGameStarted += () => { SetPauseOpen(false); ShowToast(Loc.T("New game started")); };
             playersPanel.SetupClosed    += () => pauseOverlay.RemoveFromClassList("hidden");
@@ -116,6 +120,7 @@ namespace NaturalHistory.UI
             OnUnderViewChanged();
             root.Q<Button>("menu-button").clicked       += () => SetPauseOpen(true);
             root.Q<Button>("resume-button").clicked     += () => SetPauseOpen(false);
+            root.Q<Button>("encyclopedia-button").clicked += () => { SetPauseOpen(false); encyclopedia.Open(); };
             root.Q<Button>("new-game-button").clicked   += OpenNewGame;
             root.Q<Button>("save-button").clicked       += () => OpenSlots(saving: true);
             root.Q<Button>("load-button").clicked       += () => OpenSlots(saving: false);
@@ -219,6 +224,7 @@ namespace NaturalHistory.UI
         {
             treePanel.Close();
             zoologyPanel.Close();
+            encyclopedia.Close();
             playersPanel.CloseFaction();
             agePanel.Open(newAge: true);
         }
@@ -228,6 +234,7 @@ namespace NaturalHistory.UI
             if (agePanel.IsOpen) { agePanel.Close(); return; }
             treePanel.Close();
             zoologyPanel.Close();
+            encyclopedia.Close();
             playersPanel.CloseFaction();
             agePanel.Open();
         }
@@ -261,6 +268,7 @@ namespace NaturalHistory.UI
             if (IsOpen(slotsOverlay))  CloseSlots();
             else if (playersPanel.SetupOpen) { playersPanel.CloseSetup(); pauseOverlay.RemoveFromClassList("hidden"); }
             else if (playersPanel.FactionOpen) playersPanel.CloseFaction();
+            else if (encyclopedia.IsOpen) encyclopedia.Close();
             else if (zoologyPanel.IsOpen) zoologyPanel.Close();
             else if (treePanel.IsOpen) treePanel.Close();
             else if (agePanel.IsOpen)  agePanel.Close();
@@ -279,7 +287,7 @@ namespace NaturalHistory.UI
             if (cameraController != null) cameraController.enabled = !modal; // keep edge/WASD panning near the HUD
         }
 
-        private bool AnyModalOpen() => IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen
+        private bool AnyModalOpen() => IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen || encyclopedia.IsOpen
                                        || playersPanel.FactionOpen || playersPanel.SetupOpen;
 
         private bool PointerOverUI()
@@ -306,6 +314,7 @@ namespace NaturalHistory.UI
             treePanel.Close();
             agePanel.Close();
             zoologyPanel.Close();
+            encyclopedia.Close();
             playersPanel.CloseFaction();
         }
 
@@ -320,6 +329,7 @@ namespace NaturalHistory.UI
         {
             if (tree == null) return;
             zoologyPanel.Close();
+            encyclopedia.Close();
             agePanel.Close();
             playersPanel.CloseFaction();
             if (treePanel.IsOpen && treePanel.CurrentTree == tree) treePanel.Close();

@@ -2,15 +2,31 @@
  "notes": "Evolution links: a copy of `from` can evolve into `to` once its species has every required function (morphology) and behavior (ethology) item, the target's period has begun and it stands on or next to a tile the target can live on. Requirements are items of the origin species' trees. grantFunctions/grantBehaviors are acquired automatically on evolving. Generated from the tree of life in tools/evolution/phylogeny.py and validated against trait_rules.json by tools/evolution/links.py.",
  "links": [
   {
-   "from": "amoeba",
+   "from": "telonema_subtile",
+   "to": "paramecium",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals."
+  },
+  {
+   "from": "thecamonas_trahens",
+   "to": "amoeba",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Amoebae crawl and feed by flowing out arms of cytoplasm."
+  },
+  {
+   "from": "thecamonas_trahens",
    "to": "choanoflagellate",
    "functions": [],
    "behaviors": [],
-   "grantFunctions": [
-    "filter_apparatus"
-   ],
+   "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Choanoflagellates, single cells with a collar of microvilli round a whip, are the closest living relatives of animals."
+   "description": "Opisthokonts swim with a single flagellum at the back: the branch of the fungi, choanoflagellates and animals."
   },
   {
    "from": "choanoflagellate",
@@ -69,13 +85,49 @@
    "description": "Bilaterians have a front and a back, a left and a right side, and a gut."
   },
   {
-   "from": "paramecium",
+   "from": "telonema_subtile",
    "to": "actinophrys_sol",
    "functions": [],
    "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Heliozoans belong with the diatoms and brown algae, though they hunt like animals."
+   "description": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals."
+  },
+  {
+   "from": "malawimonas_jakobiformis",
+   "to": "naegleria_gruberi",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Excavates: flagellates with a feeding groove, far from the animals and from the true amoebae."
+  },
+  {
+   "from": "telonema_subtile",
+   "to": "selenidium_pendula",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals."
+  },
+  {
+   "from": "amoeba",
+   "to": "arcella_vulgaris",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Testate amoebae build shells around themselves, with an opening for their pseudopods."
+  },
+  {
+   "from": "malawimonas_jakobiformis",
+   "to": "euglena_gracilis",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Excavates: flagellates with a feeding groove, far from the animals and from the true amoebae."
   },
   {
    "from": "tribrachidium_heraldicum",
@@ -370,6 +422,24 @@
    ],
    "grantBehaviors": [],
    "description": "Protostomes form the mouth first in the embryo."
+  },
+  {
+   "from": "telonema_subtile",
+   "to": "ammodiscus_incertus",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals."
+  },
+  {
+   "from": "telonema_subtile",
+   "to": "echidnina_runnegari",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals."
   },
   {
    "from": "eocyathispongia_qiania",
@@ -1994,6 +2064,15 @@
    "description": "Cartilaginous fish keep replacing their teeth all their lives."
   },
   {
+   "from": "thecamonas_trahens",
+   "to": "dictyostelium_discoideum",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Amoebae crawl and feed by flowing out arms of cytoplasm."
+  },
+  {
    "from": "protospongia_novaki",
    "to": "protospongia_rhenana",
    "functions": [
@@ -2450,13 +2529,22 @@
    "description": "Tetrapods: four limbs with digits."
   },
   {
-   "from": "actinophrys_sol",
+   "from": "thecamonas_trahens",
+   "to": "physarum_polycephalum",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Amoebae crawl and feed by flowing out arms of cytoplasm."
+  },
+  {
+   "from": "ammodiscus_incertus",
    "to": "fusulina_cylindrica",
    "functions": [],
    "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Foraminifera reach out with threads of cytoplasm and build chambered shells."
+   "description": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat."
   },
   {
    "from": "spriggina_floundersi",
@@ -2904,7 +2992,7 @@
    "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Foraminifera reach out with threads of cytoplasm and build chambered shells."
+   "description": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat."
   },
   {
    "from": "schwagerina_hawkinsi",
@@ -2913,7 +3001,7 @@
    "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Foraminifera reach out with threads of cytoplasm and build chambered shells."
+   "description": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat."
   },
   {
    "from": "schwagerina_hawkinsi",
@@ -2922,7 +3010,7 @@
    "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Foraminifera reach out with threads of cytoplasm and build chambered shells."
+   "description": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat."
   },
   {
    "from": "schwagerina_hawkinsi",
@@ -2931,7 +3019,7 @@
    "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Foraminifera reach out with threads of cytoplasm and build chambered shells."
+   "description": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat."
   },
   {
    "from": "edestus_heinrichi",
@@ -3302,6 +3390,15 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Theriodonts were the sabre-toothed predators of the Permian."
+  },
+  {
+   "from": "telonema_subtile",
+   "to": "noctiluca_scintillans",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals."
   },
   {
    "from": "perrinites_hilli",
@@ -5081,6 +5178,15 @@
    "description": "Even-toed ungulates walk on two toes."
   },
   {
+   "from": "ammodiscus_incertus",
+   "to": "nummulites_gizehensis",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rotaliids build chalky shells of many chambers coiled in a spiral, some with algae inside."
+  },
+  {
    "from": "cretoxyrhina_mantelli",
    "to": "palaeorhincodon_wardi",
    "functions": [
@@ -5579,6 +5685,15 @@
    "description": "Apes have no tail and big brains."
   },
   {
+   "from": "nummulites_gizehensis",
+   "to": "globigerina_bulloides",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Planktonic foraminifera drift in the open sea with spiny, balloon-chambered shells."
+  },
+  {
    "from": "palaeorhincodon_wardi",
    "to": "otodus_megalodon",
    "functions": [
@@ -6033,13 +6148,67 @@
    "description": "Birds of prey and their kin."
   },
   {
+   "from": "thecamonas_trahens",
+   "to": "entamoeba_histolytica",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Amoebae crawl and feed by flowing out arms of cytoplasm."
+  },
+  {
+   "from": "malawimonas_jakobiformis",
+   "to": "trypanosoma_brucei",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Excavates: flagellates with a feeding groove, far from the animals and from the true amoebae."
+  },
+  {
+   "from": "malawimonas_jakobiformis",
+   "to": "giardia_duodenalis",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Metamonads live without proper mitochondria, many of them in the guts of animals."
+  },
+  {
+   "from": "malawimonas_jakobiformis",
+   "to": "trichomonas_gallinae",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Metamonads live without proper mitochondria, many of them in the guts of animals."
+  },
+  {
+   "from": "malawimonas_jakobiformis",
+   "to": "trichonympha_campanula",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Metamonads live without proper mitochondria, many of them in the guts of animals."
+  },
+  {
    "from": "trichonympha_campanula",
    "to": "trichonympha_collaris",
    "functions": [],
    "behaviors": [],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Parabasalids live without mitochondria, in the guts of termites and other animals."
+   "description": "Trichonymphids digest wood in the guts of termites, with thousands of flagella."
+  },
+  {
+   "from": "selenidium_pendula",
+   "to": "plasmodium_falciparum",
+   "functions": [],
+   "behaviors": [],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Blood parasites, carried from host to host by biting insects."
   },
   {
    "from": "choia_carteri",

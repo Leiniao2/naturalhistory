@@ -2,6 +2,21 @@
  "style": "Heroic painterly concept-art portrait in the style of the culture illustrations of the strategy game Humankind; visible confident brush strokes, semi-realistic stylised forms, saturated and vibrant colours. Clean natural daylight, cool/warm lighting balance with rim light. NO sepia, NO golden-brown tint, NO yellow haze. The animal (or organism) is the clear hero subject in the foreground, whole body, filling most of the frame, slightly low camera angle, in a proud characteristic pose. Soft, loosely painted atmospheric backdrop of its habitat. Anatomy scientifically accurate, natural realistic colouring. Square image. No text, no UI, no frame, no logo.",
  "prompts": [
   {
+   "id": "thecamonas_trahens",
+   "name": "Thecamonas",
+   "prompt": "Thecamonas (Thecamonas trahens), an apusomonad, drifting in the water, microscopic, about 10 micrometres, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: A tiny gliding flagellate of mud and soil that slides along on its long trailing flagellum, feeling the way with a short one sheathed in a stiff snout, and eats bacteria."
+  },
+  {
+   "id": "telonema_subtile",
+   "name": "Telonema",
+   "prompt": "Telonema (Telonema subtile), a telonemid, drifting in the water, microscopic, about 10 micrometres, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: A small predatory flagellate of seas and lakes that swims with two unequal flagella and swallows bacteria and smaller flagellates whole."
+  },
+  {
+   "id": "malawimonas_jakobiformis",
+   "name": "Malawimonas",
+   "prompt": "Malawimonas (Malawimonas jakobiformis), a malawimonad, drifting in the water, microscopic, about 10 micrometres, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: A tiny freshwater flagellate that beats a long flagellum inside a deep groove along its underside, sweeping bacteria into it to eat."
+  },
+  {
    "id": "dickinsonia_costata",
    "name": "Dickinsonia",
    "prompt": "Dickinsonia (Dickinsonia costata), a proarticulate, about 30 cm long, in a bright shallow sea floor with vivid turquoise and cobalt blue water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A flat, ribbed oval, usually a few centimetres to about 20 cm long (the giant 1.4 m specimens are usually placed in Dickinsonia rex), that grazed microbial mats; fat molecules in its fossils show it was an animal."
@@ -95,6 +110,86 @@
    "id": "choanoflagellate",
    "name": "Choanoflagellate",
    "prompt": "Choanoflagellate (Salpingoeca rosetta), a choanoflagellate, drifting in the water, microscopic, about 20 micrometres, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: A rosette of a dozen single cells that divided without letting go, each beating a long flagellum inside a collar of fine microvilli that strains out bacteria."
+  },
+  {
+   "id": "selenidium_pendula",
+   "name": "Selenidium",
+   "prompt": "Selenidium (Selenidium pendula), a gregarine, drifting in the water, microscopic, about 200 micrometres, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: A long, worm-like single cell about a fifth of a millimetre long that lives in the gut of marine worms, holding on to the gut wall by a small pointed tip and swaying and coiling in the gut contents, whose nutrients it soaks up through its pleated surface."
+  },
+  {
+   "id": "arcella_vulgaris",
+   "name": "Arcella",
+   "prompt": "Arcella (Arcella vulgaris), a testate amoeba, drifting in the water, microscopic, about 100 micrometres, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: An amoeba that lives inside a shell it builds itself: a brown, hat-shaped test of protein plates, open underneath by a round hole through which it puts out a few blunt pseudopods to crawl over pond mud and moss and to engulf algae and bacteria."
+  },
+  {
+   "id": "naegleria_gruberi",
+   "name": "Naegleria",
+   "prompt": "Naegleria (Naegleria gruberi), a heterolobosean, drifting in the water, microscopic, about 20 micrometres, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: A soil and pond amoeba that is not an amoebozoan at all but belongs to the excavates, far from the true amoebae: it crawls by bursting out one broad rounded pseudopod after another and eats bacteria."
+  },
+  {
+   "id": "euglena_gracilis",
+   "name": "Euglena",
+   "prompt": "Euglena (Euglena gracilis), an euglenid, drifting in the water, microscopic, about 50 micrometres, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: A spindle-shaped green flagellate of ponds and puddles that swims with one long whip and steers toward light with a red eyespot."
+  },
+  {
+   "id": "ammodiscus_incertus",
+   "name": "Ammodiscus",
+   "prompt": "Ammodiscus (Ammodiscus incertus), a foraminifer, drifting in the water, about 1 mm long, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: A foraminifer whose shell is a single undivided tube of cemented sand grains, coiled flat like a rope. From the open end it spreads a web of fine sticky threads of cytoplasm over the seafloor to catch bacteria, algae and organic particles."
+  },
+  {
+   "id": "echidnina_runnegari",
+   "name": "Echidnina",
+   "prompt": "Echidnina (Echidnina runnegari), a radiolarian, drifting in the water, microscopic, about 200 micrometres, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: One of the oldest known radiolarians, from the middle Cambrian of Australia: a drifting single cell with a spherical lattice shell of glass (silica) bristling with long radial spines. Along the spines it spread threads of cytoplasm to catch smaller plankton."
+  },
+  {
+   "id": "dictyostelium_discoideum",
+   "name": "Dictyostelium",
+   "prompt": "Dictyostelium (Dictyostelium discoideum), a social amoeba, growing in place, about 2 mm long, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: A social amoeba of forest soil and leaf litter. Its cells live alone, eating bacteria, until food runs out; then tens of thousands stream together, called by pulses of a chemical signal, into a slug that crawls toward light and heat."
+  },
+  {
+   "id": "physarum_polycephalum",
+   "name": "Physarum",
+   "prompt": "Physarum (Physarum polycephalum), a plasmodial slime mould, growing in place, about 15 cm long, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: A many-headed slime mould: a single giant cell with millions of nuclei that spreads as a bright yellow network of veins over rotting logs and leaves of damp forests, eating bacteria, fungi and decaying matter."
+  },
+  {
+   "id": "noctiluca_scintillans",
+   "name": "Sea Sparkle",
+   "prompt": "Sea Sparkle (Noctiluca scintillans), a dinoflagellate, floating at the surface, microscopic, about 800 micrometres, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: A giant among dinoflagellates, up to two millimetres across: a buoyant, balloon-like cell that floats at the sea surface and catches plankton and diatoms with a single sticky tentacle."
+  },
+  {
+   "id": "nummulites_gizehensis",
+   "name": "Nummulites",
+   "prompt": "Nummulites (Nummulites gizehensis), a foraminifer, growing in place, about 3 cm long, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: A giant foraminifer of the warm Eocene seas, a single cell building a coin-shaped limestone shell several centimetres across with hundreds of chambers in a tight spiral. It lived on sunlit sea floors with algae in its shell that fed it by photosynthesis."
+  },
+  {
+   "id": "globigerina_bulloides",
+   "name": "Globigerina",
+   "prompt": "Globigerina (Globigerina bulloides), a foraminifer, drifting in the water, microscopic, about 500 micrometres, in a magnified view inside a drop of clear blue-green sea water, with soft out-of-focus particles. Appearance: A planktonic foraminifer drifting in cool surface waters, its small chalky shell of four swollen chambers bristling with long fine spines that hold out a web of cytoplasm for catching food."
+  },
+  {
+   "id": "entamoeba_histolytica",
+   "name": "Entamoeba",
+   "prompt": "Entamoeba (Entamoeba histolytica), an archamoeba, drifting in the water, microscopic, about 30 micrometres, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: A parasitic amoeba of the gut of humans and other primates, spread as hardy cysts in water and food tainted with faeces."
+  },
+  {
+   "id": "trypanosoma_brucei",
+   "name": "Trypanosome",
+   "prompt": "Trypanosome (Trypanosoma brucei), a kinetoplastid, drifting in the water, microscopic, about 30 micrometres, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: A slender, corkscrewing flagellate that lives in the blood of African mammals and is carried from one to the next by the bite of tsetse flies."
+  },
+  {
+   "id": "giardia_duodenalis",
+   "name": "Giardia",
+   "prompt": "Giardia (Giardia duodenalis), a diplomonad, drifting in the water, microscopic, about 15 micrometres, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: A pear-shaped flagellate of the small intestine of mammals that clings to the gut lining with a sucking disc on its underside. Its two nuclei and the bodies below them make it look like a face peering down a microscope."
+  },
+  {
+   "id": "trichomonas_gallinae",
+   "name": "Pigeon Trichomonad",
+   "prompt": "Pigeon Trichomonad (Trichomonas gallinae), a parabasalid, drifting in the water, microscopic, about 10 micrometres, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: A pear-shaped flagellate of the mouth and throat of birds, spread by pigeons and doves through the milk they feed their chicks and through shared drinking water, and caught by the hawks and falcons that eat them."
+  },
+  {
+   "id": "plasmodium_falciparum",
+   "name": "Malaria Parasite",
+   "prompt": "Malaria Parasite (Plasmodium falciparum), a haemosporidian, drifting in the water, microscopic, about 10 micrometres, in a magnified view inside a drop of clear blue-green fresh water, with soft out-of-focus particles. Appearance: The deadliest malaria parasite, a sporozoan that lives inside the red blood cells of people and multiplies there, bursting them in waves of fever."
   },
   {
    "id": "physalia_physalis",
@@ -1689,7 +1784,7 @@
   {
    "id": "rhyniella_praecursor",
    "name": "Rhyniella",
-   "prompt": "Rhyniella (Rhyniella praecursor), a springtail, about 2 mm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Devonian. Appearance: A springtail from the Early Devonian Rhynie chert of Scotland, about 410 million years ago, and one of the oldest six-legged animals known."
+   "prompt": "Rhyniella (Rhyniella praecursor), a springtail, about 2 mm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Devonian. Appearance: A springtail from the Early Devonian Rhynie chert of Scotland, about 410 million years ago, and one of the oldest six-legged animals known. It is a springtail (Collembola), NOT a beetle, cockroach or crayfish: a tiny soft-bodied, wingless hexapod with a plump elongated body, short four-segmented antennae, three pairs of short legs and a forked jumping organ (furcula) folded under its tail; shown huge in close-up on a moss-covered Devonian plant stem."
   },
   {
    "id": "petrolacosaurus_kansensis",
@@ -1919,7 +2014,7 @@
   {
    "id": "longisquama_insignis",
    "name": "Longisquama",
-   "prompt": "Longisquama (Longisquama insignis), an archosauromorph, about 25 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A small lizard-like reptile, its body only about 15 cm long, known from a single partial skeleton from the Triassic Madygen Formation of Kyrgyzstan, about 230 million years ago."
+   "prompt": "Longisquama (Longisquama insignis), an archosauromorph, about 25 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A small lizard-like reptile, its body only about 15 cm long, known from a single partial skeleton from the Triassic Madygen Formation of Kyrgyzstan, about 230 million years ago. Close-up: the small lizard-like reptile fills most of the frame and is clearly visible, sharp and in focus, with its row of long, tall, feather-like plumes standing up along its back; the plants are only a soft, blurred background."
   },
   {
    "id": "sharovipteryx_mirabilis",

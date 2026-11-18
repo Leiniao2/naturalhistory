@@ -123,6 +123,7 @@ def common(a, b):
     return n
 
 MIN_COMMON = 2  # below the root of the eukaryotes there is no ancestor to stand in for
+METAZOA = phylogeny.METAZOA.split("/")  # cousins may stand in for a shared ancestor only among the animals
 parent = {}
 for t in sorted(species, key=lambda s: rank[s]):
     best, key = None, None
@@ -131,6 +132,10 @@ for t in sorted(species, key=lambda s: rank[s]):
         c = common(s, t)
         if c < MIN_COMMON: continue
         side = len(paths[s]) - c   # how far the candidate is out on a side branch of the shared clade
+        # a cousin stands in for the ancestor they share only among the animals: an amoeba is no
+        # stand-in for the ancestor of choanoflagellates, nor a social amoeba for that of the
+        # plasmodial slime moulds; such a protist starts its own line instead
+        if side and (c < len(METAZOA) or paths[s][:len(METAZOA)] != METAZOA): continue
         # the deepest shared clade, counting each step out on a side branch against it (a stem member
         # of the target's own line beats a more derived cousin); then the latest
         k = (c - side, -side, c, age[s], -rank[s][2], -order[s])

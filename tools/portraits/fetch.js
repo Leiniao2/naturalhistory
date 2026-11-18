@@ -11,7 +11,7 @@ async function nhFetch(IDS) {
   for (const [id, prefix] of IDS) {
     const im = imgs.find(i => norm(i.alt).startsWith(norm(prefix)));
     if (!im) { missing.push(id); continue; }
-    const url = im.src.replace(/=s\d+(-rw)?$/, '=s0');
+    const url = im.src.replace(/=s\d+(-rw)?/, '=s0');
     const blob = await (await fetch(url)).blob();
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);

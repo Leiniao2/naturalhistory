@@ -165,6 +165,7 @@ namespace NaturalHistory.Territory
             lastColonySpecies.TryGetValue(player.Index, out var previous);
             var alive = GameDataLoader.Species.Where(d => SpeciesColonies.CanTravel(d) && colonies.IsAliveNow(d)).ToList();
             var rng = new System.Random(grid.WorldSeed ^ ((player.Index + 1) * 7919) ^ ((int)grid.DisplayedAge * 31));
+            if (FoundStarters(player, cells, rng)) return;
 
             foreach (var cell in cells)
             {
@@ -199,6 +200,35 @@ namespace NaturalHistory.Territory
                 return;
             }
             Debug.Log($"[TerritoryManager] No species fits the habitat center of {player.Name}; it starts without a colony.");
+        }
+
+        // Every player begins with the three founding protists, one from each deep branch of the
+        // eukaryotes, a group of each on the core around its habitat center (one group per niche of
+        // a tile, so on different tiles where they share a niche). False if none of them could be placed.
+        public static readonly string[] Starters = { "thecamonas_trahens", "telonema_subtile", "malawimonas_jakobiformis" };
+
+        private bool FoundStarters(Player player, List<HexCell> cells, System.Random rng)
+        {
+            var evolution = EvolutionManager.Instance;
+            ColonyGroup first = null;
+            foreach (var id in Starters)
+            {
+                var def = GameDataLoader.GetSpecies(id);
+                if (def == null || !colonies.IsAliveNow(def)) continue;
+                var cell = cells.FirstOrDefault(c => c != null && SpeciesColonies.FitsHabitat(def, c) &&
+                                                     colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, colonies, null));
+                if (cell == null) continue;
+                var group = colonies.SpawnColony(def, cell, player, rng.Next());
+                if (group == null) continue;
+                Watch(group);
+                evolution?.RegisterFounder(player, group);
+                if (first != null) continue;
+                first = group;
+                playerColonies[player.Index]    = group;
+                lastColonyCell[player.Index]    = cell;
+                lastColonySpecies[player.Index] = def.id;
+            }
+            return first != null;
         }
 
         private void Watch(ColonyGroup group)

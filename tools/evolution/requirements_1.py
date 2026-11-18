@@ -2,12 +2,10 @@
 # keyed "from>to": (functions required, behaviors required, functions granted, behaviors granted).
 # Read by links.py; protists can acquire none of the animal items, so their links need nothing.
 REVIEWED = {
-    "amoeba>choanoflagellate": ([], [], ["filter_apparatus"], []),
     "choanoflagellate>eocyathispongia_qiania": ([], [], ["filter_apparatus"], ["settling"]),
     "eocyathispongia_qiania>coronacollina_acula": (["filter_apparatus", "spines"], ["settling"], [], []),
     "choanoflagellate>tribrachidium_heraldicum": ([], [], ["nerve_net"], ["settling"]),
     "tribrachidium_heraldicum>ikaria_wariootia": (["muscle_bands", "chemoreceptors"], ["burrowing_escape"], ["bilateral_body"], []),
-    "paramecium>actinophrys_sol": ([], [], [], []),
     "tribrachidium_heraldicum>dickinsonia_costata": (["muscle_bands", "epidermis"], ["foraging"], [], []),
     "dickinsonia_costata>yorgia_waggoneri": (["segmentation", "chemoreceptors"], ["foraging"], [], []),
     "dickinsonia_costata>dickinsonia_tenuis": (["segmentation", "regeneration_node"], ["aggregation"], [], []),
@@ -168,7 +166,6 @@ REVIEWED = {
     "panderichthys_rhombolepis>tiktaalik_roseae": (["lobe_fins", "lungs"], ["land_excursions"], ["weight_bearing_girdles"], []),
     "ichthyostega>acanthostega_gunnari": (["digits", "gills"], ["ambush_hunting"], [], []),
     # Carboniferous
-    "actinophrys_sol>fusulina_cylindrica": ([], [], [], []),
     "spriggina_floundersi>tullimonstrum_gregarium": (["cephalisation", "through_gut"], ["active_predation"], [], []),
     "cladoselache_fyleri>akmonistion_zangerli": (["teeth", "tooth_replacement"], ["courtship"], [], []),
     "akmonistion_zangerli>falcatus_falcatus": (["claspers", "teeth"], ["courtship"], [], []),

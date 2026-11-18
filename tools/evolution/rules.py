@@ -15,7 +15,10 @@ BIRD = DINO+["Theropod","Bird"]
 MAM = AMN+["Synapsid","Mammal"]
 PLAC = MAM+["Placental"]
 groups = {
- "Heliozoan":["Protist"],"Ciliate":["Protist"],"Amoebozoan":["Protist"],"Choanoflagellate":["Protist"],
+ "Heliozoan":["Protist"],"Ciliate":["Protist"],"Amoebozoan":["Protist"],"Choanoflagellate":["Protist"],"Gregarine":["Protist"],"Apusomonad":["Protist"],"Telonemid":["Protist"],"Malawimonad":["Protist"],
+ "Testate amoeba":["Protist"],"Archamoeba":["Protist"],"Social amoeba":["Protist"],"Plasmodial slime mould":["Protist"],
+ "Radiolarian":["Protist"],"Dinoflagellate":["Protist"],"Haemosporidian":["Protist"],"Euglenid":["Protist"],
+ "Kinetoplastid":["Protist"],"Heterolobosean":["Protist"],"Diplomonad":["Protist"],
  "Early vascular plant":["Plant"],
  "Demosponge":["Animal","Sponge"],
  "Siphonophore":["Animal","Cnidarian"],"Stony coral":["Animal","Cnidarian"],"Sea anemone":["Animal","Cnidarian"],

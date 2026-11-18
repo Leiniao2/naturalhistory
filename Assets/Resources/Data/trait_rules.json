@@ -103,6 +103,12 @@
    ]
   },
   {
+   "group": "Apusomonad",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
    "group": "Araeoscelid reptile",
    "tags": [
     "Animal",
@@ -137,6 +143,12 @@
    "tags": [
     "Animal",
     "Sponge"
+   ]
+  },
+  {
+   "group": "Archamoeba",
+   "tags": [
+    "Protist"
    ]
   },
   {
@@ -671,6 +683,18 @@
    ]
   },
   {
+   "group": "Dinoflagellate",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
+   "group": "Diplomonad",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
    "group": "Discoidal organism",
    "tags": [
     "Animal",
@@ -978,6 +1002,12 @@
    ]
   },
   {
+   "group": "Euglenid",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
    "group": "Eurypterid",
    "tags": [
     "Animal",
@@ -1211,6 +1241,12 @@
    ]
   },
   {
+   "group": "Gregarine",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
    "group": "Griffinfly",
    "tags": [
     "Animal",
@@ -1253,6 +1289,12 @@
    ]
   },
   {
+   "group": "Haemosporidian",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
    "group": "Hard tick",
    "tags": [
     "Animal",
@@ -1265,6 +1307,12 @@
   },
   {
    "group": "Heliozoan",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
+   "group": "Heterolobosean",
    "tags": [
     "Protist"
    ]
@@ -1378,6 +1426,12 @@
    "tags": [
     "Animal",
     "Cnidarian"
+   ]
+  },
+  {
+   "group": "Kinetoplastid",
+   "tags": [
+    "Protist"
    ]
   },
   {
@@ -1585,6 +1639,12 @@
     "Amniote",
     "Reptile",
     "Squamate"
+   ]
+  },
+  {
+   "group": "Malawimonad",
+   "tags": [
+    "Protist"
    ]
   },
   {
@@ -2083,6 +2143,12 @@
    ]
   },
   {
+   "group": "Plasmodial slime mould",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
    "group": "Plesiadapiform",
    "tags": [
     "Animal",
@@ -2215,6 +2281,12 @@
     "Ecdysozoan",
     "Arthropod",
     "Marine arthropod"
+   ]
+  },
+  {
+   "group": "Radiolarian",
+   "tags": [
+    "Protist"
    ]
   },
   {
@@ -2586,6 +2658,12 @@
    ]
   },
   {
+   "group": "Social amoeba",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
    "group": "Songbird",
    "tags": [
     "Animal",
@@ -2806,6 +2884,12 @@
    ]
   },
   {
+   "group": "Telonemid",
+   "tags": [
+    "Protist"
+   ]
+  },
+  {
    "group": "Temnospondyl",
    "tags": [
     "Animal",
@@ -2861,6 +2945,12 @@
     "Dinosaur",
     "Theropod",
     "Bird"
+   ]
+  },
+  {
+   "group": "Testate amoeba",
+   "tags": [
+    "Protist"
    ]
   },
   {

@@ -21,8 +21,10 @@ namespace NaturalHistory.UI
     // returns to the previous view.
     //
     // Selecting a species shows where it comes from and, for each species it can become, the
-    // requirements ticked off for your copies, with an Evolve button. Opened from the HUD (browse)
-    // or from a selected animal's Evolve button: then that copy is the one that evolves.
+    // requirements ticked off for your copies, with an Evolve button; its painting and description
+    // are in the Encyclopedia (the button by its name, or double-click the species). Opened from the
+    // HUD (browse) or from a selected animal's Evolve button: then that copy is the one that evolves.
+    // A tab per species of yours along the top starts the tree from that one.
     public class ZoologyPanel
     {
         private const float ColumnWidth = 330f; // wide enough for long names (Chinese, German...)
@@ -72,8 +74,9 @@ namespace NaturalHistory.UI
             public Vector2 position;
         }
 
-        private readonly VisualElement overlay, canvas, linksBox, detailPortrait;
-        private readonly Label subtitle, nameLabel, metaLabel, descriptionLabel;
+        private readonly VisualElement overlay, canvas, linksBox;
+        private readonly Label subtitle, nameLabel, metaLabel;
+        private readonly SpeciesTabs speciesTabs;
         private readonly Button backButton;
         private readonly Dictionary<string, Node> nodes = new();
         private readonly List<(string from, string to, EvolutionLink link)> edges = new();
@@ -85,6 +88,7 @@ namespace NaturalHistory.UI
         private OwnedCopy context; // the copy that evolves (from a selected animal), or null
 
         public event Action<string> Message;
+        public event Action<string> OpenEncyclopedia; // a species' entry
 
         public bool IsOpen => !overlay.ClassListContains("hidden");
         private static EvolutionManager Evolution => EvolutionManager.Instance;
@@ -94,26 +98,38 @@ namespace NaturalHistory.UI
             overlay          = root.Q("zoology-overlay");
             canvas           = root.Q("zoology-canvas");
             linksBox         = root.Q("zoology-links");
-            detailPortrait   = root.Q("zoology-portrait");
             subtitle         = root.Q<Label>("zoology-subtitle");
             nameLabel        = root.Q<Label>("zoology-name");
             metaLabel        = root.Q<Label>("zoology-meta");
-            descriptionLabel = root.Q<Label>("zoology-description");
             backButton       = root.Q<Button>("zoology-back-button");
             backButton.clicked += Back;
             root.Q<Button>("zoology-close-button").clicked += Close;
+            root.Q<Button>("zoology-encyclopedia-button").clicked += () => { if (selected != null) OpenEncyclopedia?.Invoke(selected); };
+            speciesTabs = new SpeciesTabs(root.Q("zoology-species-tabs"));
+            speciesTabs.Picked += id =>
+            {
+                Evolution?.Focus(id); // the Functions / Behaviors trees follow
+                context = null;
+                StartFrom(id);
+            };
         }
 
-        public void Open(OwnedCopy copy = null)
+        // start: the species to start from (e.g. from the Encyclopedia), else the copy's or yours
+        public void Open(OwnedCopy copy = null, string start = null)
         {
             if (Evolution == null) return;
             context = copy;
-            selected = copy?.species ?? Evolution.FocusSpecies ?? Evolution.HumanSpecies.FirstOrDefault() ?? selected
-                    ?? EvolutionData.Links.Select(l => l.from).FirstOrDefault(id => !EvolutionData.To(id).Any());
+            overlay.RemoveFromClassList("hidden");
+            StartFrom(start ?? copy?.species ?? Evolution.FocusSpecies ?? Evolution.HumanSpecies.FirstOrDefault() ?? selected
+                    ?? EvolutionData.Links.Select(l => l.from).FirstOrDefault(id => !EvolutionData.To(id).Any()));
+        }
+
+        private void StartFrom(string id)
+        {
+            selected = id;
             history.Clear();
             roots = selected != null ? new List<string> { selected } : new List<string>();
             rootClade = null;
-            overlay.RemoveFromClassList("hidden");
             Build();
             Refresh();
         }
@@ -337,9 +353,14 @@ namespace NaturalHistory.UI
                         text.Add(new Label(Loc.F("{0} more species ▸", node.more)) { pickingMode = PickingMode.Ignore }.WithClass("node-more"));
                     }
                     var id = node.species;
-                    view.RegisterCallback<ClickEvent>(_ =>
+                    view.RegisterCallback<ClickEvent>(e =>
                     {
-                        if (roots.Count == 1 && roots[0] == id) { selected = id; Refresh(); }
+                        if (roots.Count == 1 && roots[0] == id)
+                        {
+                            selected = id;
+                            if (e.clickCount == 2) OpenEncyclopedia?.Invoke(id); // its entry
+                            else Refresh();
+                        }
                         else Show(new List<string> { id }, null);
                     });
                 }
@@ -406,6 +427,7 @@ namespace NaturalHistory.UI
                 ? Loc.F("Evolving one {0}", Loc.T(GameDataLoader.GetSpecies(context.species)?.commonName))
                 : Loc.F(ready == 1 ? "{0} of your species  ·  {1} evolution ready" : "{0} of your species  ·  {1} evolutions ready", owned.Count, ready);
             subtitle.text = rootClade != null ? $"{Loc.T(Clades[int.Parse(rootClade)].name)}  ·  {status}" : status;
+            speciesTabs.Refresh(roots.Count == 1 ? roots[0] : null);
 
             foreach (var node in nodes.Values)
             {
@@ -432,8 +454,7 @@ namespace NaturalHistory.UI
             if (def == null)
             {
                 nameLabel.text = Loc.T("Select a species");
-                metaLabel.text = descriptionLabel.text = "";
-                detailPortrait.style.backgroundImage = new StyleBackground(StyleKeyword.None);
+                metaLabel.text = "";
                 return;
             }
 
@@ -441,8 +462,6 @@ namespace NaturalHistory.UI
             var span = string.IsNullOrEmpty(def.lastAge) ? Loc.F("{0} – today", Loc.T(def.firstAge)) : def.firstAge == def.lastAge ? Loc.T(def.firstAge) : $"{Loc.T(def.firstAge)} – {Loc.T(def.lastAge)}";
             var count = Evolution.CopiesOf(Players.PlayerManager.Instance?.Human).Count(c => c.species == def.id);
             metaLabel.text = $"{def.scientificName}  ·  {Loc.T(def.group)}  ·  {span}" + (count > 0 ? "\n" + Loc.F(count == 1 ? "You have {0} copy" : "You have {0} copies", count) : "");
-            descriptionLabel.text = Loc.T(def.description);
-            detailPortrait.style.backgroundImage = SpeciesPortraits.Get(def) is RenderTexture rt ? Background.FromRenderTexture(rt) : new StyleBackground(StyleKeyword.None);
 
             var parents = EvolutionData.To(def.id).Select(l => Loc.T(GameDataLoader.GetSpecies(l.from)?.commonName ?? l.from)).ToList();
             if (parents.Count > 0) linksBox.Add(new Label(Loc.F("Evolves from: {0}", string.Join(", ", parents))).WithClass("zoology-from"));

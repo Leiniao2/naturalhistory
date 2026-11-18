@@ -43,6 +43,7 @@ namespace NaturalHistory.Save
         // Evolution (see EvolutionManager); empty in older saves
         public List<SpeciesTraitsSave> speciesTraits = new();
         public List<CopySave> copies = new();
+        public List<WildSave> wild = new();     // wild groups born during the game (WildBirths)
         public List<string> evolved = new();    // "from>to" links the human player has used
         public string focusSpecies;
 
@@ -149,6 +150,7 @@ namespace NaturalHistory.Save
                 data.ethology   = progression.Ethology.UnlockedIds.ToList();
             }
             EvolutionManager.Instance?.Capture(data);
+            WildBirths.Instance?.Capture(data);
             return data;
         }
 
@@ -179,6 +181,7 @@ namespace NaturalHistory.Save
 
             ProgressionManager.Instance?.Restore(data.evolutionPoints, data.morphology, data.ethology);
             EvolutionManager.Instance?.Restore(data); // after the map: puts the copies back on it
+            WildBirths.Instance?.Restore(data);       // and the wild groups
         }
     }
 }

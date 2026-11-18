@@ -285,6 +285,10 @@
    "v": "空気呼吸のための鰓の上のひだ状の部屋（グラミー）。"
   },
   {
+   "k": "A foraminifer whose shell is a single undivided tube of cemented sand grains, coiled flat like a rope. From the open end it spreads a web of fine sticky threads of cytoplasm over the seafloor to catch bacteria, algae and organic particles. Simple tubular, sand-built shells like this are the oldest foraminifera in the fossil record, from the early Cambrian, and Ammodiscus-like forms have lived on ever since.",
+   "v": "仕切りのない1本の管を殻とする有孔虫で、管は砂粒を膠着させて作られ、ロープのように平たく巻いている。開いた端から細く粘着性のある細胞質の糸を網のように海底に広げ、細菌や藻類、有機物の粒子を捕らえる。このような単純な管状の砂の殻は化石記録の中で最も古い有孔虫で、カンブリア紀前期にさかのぼり、アンモディスクスに似た形のものはそれ以来ずっと生き続けている。"
+  },
+  {
    "k": "A forebrain roof that combines the senses: the ancestor of the cortex.",
    "v": "感覚を統合する前脳の天井：大脳皮質の祖先。"
   },
@@ -317,6 +321,10 @@
    "v": "インド太平洋の熱帯のサンゴ礁にすむ、幅最大5 mの穏やかな巨人。口を大きく開け、頭鰭を広げて滑るように泳ぎながらプランクトンをこし取る。マンタは小魚が皮膚の寄生虫をついばむ「クリーニングステーション」に立ち寄る。"
   },
   {
+   "k": "A giant among dinoflagellates, up to two millimetres across: a buoyant, balloon-like cell that floats at the sea surface and catches plankton and diatoms with a single sticky tentacle. When the water is disturbed it flashes blue, so its blooms make breaking waves and boat wakes glow at night; by day the same blooms can turn the sea pink or red. Dinoflagellate cysts are common fossils from the Triassic on.",
+   "v": "渦鞭毛藻の中の巨人で、直径は最大2ミリメートルにもなる。風船のように浮力のある細胞で海面を漂い、1本の粘着性の触手でプランクトンや珪藻を捕らえる。水がかき乱されると青く光るため、大発生すると夜には砕ける波や船の航跡が光る。昼間には同じ大発生が海をピンク色や赤色に染めることもある。渦鞭毛藻のシストは三畳紀以降のありふれた化石である。"
+  },
+  {
    "k": "A giant caiman of the Late Miocene wetlands of the western Amazon, about 8 million years ago, probably 10-12 m long and weighing several tonnes, among the largest crocodylians ever. Its broad skull was about 1.4 m long and its bite was one of the strongest known. It could have taken almost any animal in its swamps, including giant turtles and large mammals.",
    "v": "約800万年前の後期中新世のアマゾン西部の湿地に生息した巨大なカイマンで、全長はおそらく10-12m、体重は数トンに達し、史上最大級のワニ類である。幅広い頭骨は長さ約1.4mあり、そのかむ力は知られている中で最強クラスだった。巨大なカメや大型哺乳類を含め、湿地のほとんどどんな動物でも捕らえることができた。"
   },
@@ -339,6 +347,10 @@
   {
    "k": "A giant flightless bird of the late Paleocene and early Eocene of North America (once called Diatryma), about 2 m tall and up to 175 kg. Its huge, deep beak was long pictured killing early horses, but its bite mechanics, the lack of a hooked tip and the chemistry of its bones suggest it cracked nuts, seeds and tough plants. It was a relative of ducks and geese.",
    "v": "北アメリカの暁新世後期から始新世前期に生息した巨大な飛べない鳥（かつてディアトリマと呼ばれた）で、身長約2 m、体重は最大175 kg。巨大で高さのあるくちばしは長く初期のウマを殺す姿で描かれてきたが、かむ力学、先端にかぎがないこと、骨の化学組成から、木の実や種子、硬い植物を割っていたと考えられている。カモやガチョウの親戚だった。"
+  },
+  {
+   "k": "A giant foraminifer of the warm Eocene seas, a single cell building a coin-shaped limestone shell several centimetres across with hundreds of chambers in a tight spiral. It lived on sunlit sea floors with algae in its shell that fed it by photosynthesis. Its shells make up whole beds of limestone: the stone of the pyramids of Giza is full of them, and the Greek historian Herodotus took them for the petrified lentils of the builders' rations.",
+   "v": "始新世の暖かい海にすんでいた巨大な有孔虫。単細胞でありながら、直径数センチメートルにもなる硬貨形の石灰質の殻をつくり、その中には数百もの部屋がきつい渦巻き状に並んでいた。日の差す海底で暮らし、殻の中に藻類をすまわせて光合成で養分をもらっていた。その殻は石灰岩の地層をまるごと形づくっており、ギザのピラミッドの石材にもぎっしり詰まっている。古代ギリシャの歴史家ヘロドトスは、これを建設労働者の食料だったレンズ豆が石になったものだと考えた。"
   },
   {
    "k": "A giant four-legged crocodile-line predator, 6 to 7 metres long, from the roughly 231-million-year-old Ischigualasto Formation of Argentina. Its legs were held erect under its body rather than sprawling, and its huge, deep skull was armed with long serrated teeth; two rows of bony scutes ran down its back. It was the top predator of its ecosystem, larger than the early dinosaurs it lived with, such as Herrerasaurus and Eoraptor.",
@@ -701,6 +713,10 @@
    "v": "後期ジュラ紀モリソン層の長くほっそりした竜脚類で、約1億5400万-1億5200万年前に生息し、吻端から尾の先まで約25mに達した。非常に長い首をほぼ水平に伸ばし、シダやトクサの広い範囲を掃くように食べることができ、さらに長い尾は細いむちのように先細りになっていた。小さな頭には顎の前部にだけ杭状の歯があり、枝から葉をしごき取るのに使われた。「ディッピー」の愛称で呼ばれる骨格のレプリカが世界中の博物館に立っている。"
   },
   {
+   "k": "A long, worm-like single cell about a fifth of a millimetre long that lives in the gut of marine worms, holding on to the gut wall by a small pointed tip and swaying and coiling in the gut contents, whose nutrients it soaks up through its pleated surface. It is an archigregarine, the simplest of the sporozoans: the class of single-celled parasites that also includes the malaria parasite, which lost the ability to live on their own and spread from host to host as tough-walled spores. Sporozoans are among the oldest parasites of animals, and were probably living in worms on the Ediacaran seafloor.",
+   "v": "長さ約5分の1ミリの、虫のように細長い単細胞生物で、海の環形動物の腸の中にすむ。前端の小さな尖った突起で腸壁にとりつき、腸の内容物の中で揺れたり巻いたりしながら、縦ひだのある体表から栄養を吸収する。原始グレガリナ類で、胞子虫類のなかで最も単純なものである。胞子虫類はマラリア原虫も含む単細胞の寄生虫のなかまで、自力で生きる能力を失い、丈夫な殻をもつ胞子となって宿主から宿主へ広がる。胞子虫は動物の最も古い寄生虫のひとつで、エディアカラ紀の海底の虫の体内にもすでにいたと考えられる。"
+  },
+  {
    "k": "A long-legged shorebird of western North American wetlands that sweeps its upturned bill from side to side through shallow water to catch insects and crustaceans. Its head and neck turn cinnamon in the breeding season.",
    "v": "北米西部の湿地にすむ脚の長いシギ・チドリ類で、反り上がったくちばしを浅い水の中で左右に振って昆虫や甲殻類を捕らえる。繁殖期には頭と首が肉桂色になる。"
   },
@@ -727,6 +743,10 @@
   {
    "k": "A many-chambered stomach for chewing the cud (ruminants).",
    "v": "反芻のための複数の部屋を持つ胃（反芻類）。"
+  },
+  {
+   "k": "A many-headed slime mould: a single giant cell with millions of nuclei that spreads as a bright yellow network of veins over rotting logs and leaves of damp forests, eating bacteria, fungi and decaying matter. Its cytoplasm sloshes back and forth through the veins every minute or two, and the network thickens the paths that lead to food, so well that it can find the shortest route through a maze. When it dries out it hardens into a resting crust.",
+   "v": "「多頭」の名を持つ変形菌。数百万個の核を持つ1個の巨大な細胞で、湿った森の朽ち木や落ち葉の上に鮮やかな黄色の網目状の管となって広がり、細菌や菌類、腐敗した有機物を食べる。細胞質は1〜2分ごとに管の中を行ったり来たりし、網目は餌につながる経路を太くしていく。その能力は非常に高く、迷路の最短経路を見つけ出せるほどである。乾燥すると固まって休眠状態の殻になる。"
   },
   {
    "k": "A marine reptile of the Early Jurassic, about 3-3.5 metres long, with a small head on a very long neck, a broad, flat body and a short tail. It 'flew' through the water with four large, wing-like flippers, and snapped up fish and squid-like animals with its slender, pointed teeth. Its first complete skeleton was found by Mary Anning at Lyme Regis, England, and it gave its name to the whole plesiosaur group.",
@@ -785,6 +805,18 @@
    "v": "フランス、コマントリーの後期石炭紀の頁岩から見つかった約3億年前のパレオディクティオプテラ類の昆虫で、この絶滅した目の中でも最もよく知られたものの一つである。仲間と同様に胸部の3つの節すべてに翅があり、平らに広げた模様のある長い翅2対と、第1節にある小さな葉状の小翅1対をもっていた。この小翅が種小名の由来である。吸汁用の口吻で、石炭紀の森の高い木の上で植物の汁や胞子、種子を食べていたと考えられる。"
   },
   {
+   "k": "A parasitic amoeba of the gut of humans and other primates, spread as hardy cysts in water and food tainted with faeces. Most infections cause no harm, but sometimes it invades the gut wall, kills the host's cells and swallows red blood cells, causing amoebic dysentery. Like its free-living relatives among the archamoebae, it has lost its mitochondria, keeping only tiny remnants of them, and lives without oxygen.",
+   "v": "ヒトやその他の霊長類の腸に寄生するアメーバで、糞便に汚染された水や食べ物を介して丈夫なシストの形で広がる。ほとんどの感染は害を及ぼさないが、時に腸壁に侵入して宿主の細胞を殺し、赤血球を飲み込んで、アメーバ赤痢を引き起こす。アーキアメーバ類の自由生活をする仲間と同じくミトコンドリアを失っており、そのごく小さな名残だけを残して、酸素なしで生きている。"
+  },
+  {
+   "k": "A pear-shaped flagellate of the mouth and throat of birds, spread by pigeons and doves through the milk they feed their chicks and through shared drinking water, and caught by the hawks and falcons that eat them. It swims with four flagella at the front and a fifth along an undulating membrane, and has a stiff rod, the axostyle, sticking out behind. In finches and other songbirds it can cause deadly throat sores.",
+   "v": "鳥の口や喉にすむ洋ナシ形の鞭毛虫。ハト類はひなに与えるピジョンミルクや共用の水飲み場を通じてこれを広げ、ハトを食べるタカやハヤブサも感染する。前方の4本の鞭毛と、波動膜に沿った5本目の鞭毛で泳ぎ、後ろには軸桿と呼ばれる硬い棒が突き出している。フィンチ類などの鳴禽類では、命に関わる喉の潰瘍を引き起こすことがある。"
+  },
+  {
+   "k": "A pear-shaped flagellate of the small intestine of mammals that clings to the gut lining with a sucking disc on its underside. Its two nuclei and the bodies below them make it look like a face peering down a microscope. It swims with four pairs of flagella and spreads as cysts in drinking water, causing diarrhoea, beaver fever, in people and animals. It has no proper mitochondria and was once thought to be a living relic of the first eukaryotes.",
+   "v": "哺乳類の小腸にすむ洋ナシ形の鞭毛虫で、腹側にある吸着円盤で腸の内壁にしがみつく。2つの核とその下にある構造のために、顕微鏡をのぞき込んでいる顔のように見える。4対の鞭毛で泳ぎ、飲み水の中でシストとして広がって、ヒトや動物に下痢（「ビーバー熱」）を引き起こす。本来のミトコンドリアを持たず、かつては最初の真核生物の生きた名残だと考えられていた。"
+  },
+  {
    "k": "A pecking order settles who gets what.",
    "v": "つつきの順位で誰が何を得るかが決まる。"
   },
@@ -803,6 +835,10 @@
   {
    "k": "A planktonic dendroid graptolite of the earliest Ordovician (long known as Dictyonema flabelliforme): a cone-shaped colony of tiny filter-feeding zooids living in tubes along many forking branches, joined by cross-links into a net and hung from a thin thread. Graptolites were hemichordates, relatives of today's tiny pterobranchs, and because it appears just above the base of the Ordovician it long served as a rough marker for the start of the period; graptolites in general are key index fossils for dating Ordovician and Silurian rocks.",
    "v": "オルドビス紀最初期の浮遊性の樹状筆石（長らくDictyonema flabelliformeとして知られた）。円錐形の群体で、枝分かれした多数の枝に沿った管の中に、ろ過食をする小さな個虫がすむ。枝は横枝で結ばれて網になり、細い糸で吊り下がっていた。筆石は半索動物で、現在の小さな翼鰓類の仲間である。オルドビス紀の基底のすぐ上に現れるため、長くこの時代の始まりのおおよその目印とされてきた。筆石は全般に、オルドビス紀とシルル紀の地層の年代決定に欠かせない示準化石である。"
+  },
+  {
+   "k": "A planktonic foraminifer drifting in cool surface waters, its small chalky shell of four swollen chambers bristling with long fine spines that hold out a web of cytoplasm for catching food. When they die, the shells of Globigerina and its kin rain down and cover vast areas of the deep ocean floor as globigerina ooze; the oxygen in them records the temperature of the seas they lived in, which makes them a key to past climates.",
+   "v": "冷たい表層水を漂う浮遊性有孔虫。4つの膨らんだ部屋からなる小さな石灰質の殻には細長い棘が密生し、餌を捕らえるための細胞質の網を広げている。死ぬと、グロビゲリナとその仲間の殻は雨のように降り積もり、グロビゲリナ軟泥として深海底の広大な範囲を覆う。殻に含まれる酸素は、生きていた海の水温を記録しており、過去の気候を解き明かす鍵となっている。"
   },
   {
    "k": "A planktonic graptolite of the Early Ordovician, about 477 million years ago, whose colony of four slender, horizontal branches spread out from a tiny founding tube in two close pairs. Each branch carried a row of small cups, each holding a filter-feeding zooid. It spread across the world's oceans so quickly that its first appearance is used to define the start of the Floian Stage of the Ordovician.",
@@ -981,6 +1017,10 @@
    "v": "中米の熱帯雨林にすむほっそりしたアマガエル。昼は葉に体をぴったり押しつけて眠り、青とクリーム色の脇腹やオレンジ色の足をしまい込んで全身緑色に見せる。邪魔されると巨大な真紅の眼と鮮やかな体色をぱっと見せて捕食者を驚かせる。吸着力のある指先で葉の裏にもしがみつける。卵は池の上の葉に産みつけられ、ヘビやハチが卵塊を襲うと、胚は早めに孵化して水に落ちることができる。"
   },
   {
+   "k": "A slender, corkscrewing flagellate that lives in the blood of African mammals and is carried from one to the next by the bite of tsetse flies. It swims with a flagellum running along a frilly undulating membrane, and escapes the host's immune defences by changing its coat of surface proteins again and again. In people and cattle it causes sleeping sickness and nagana; wild antelopes and other game mostly carry it unharmed.",
+   "v": "細長い体をコルク抜きのようにくねらせて泳ぐ鞭毛虫で、アフリカの哺乳類の血液中にすみ、ツェツェバエに刺されることで次の宿主へ運ばれる。ひだ状の波動膜に沿って走る鞭毛で泳ぎ、表面タンパク質の外被を何度も何度も取り替えることで宿主の免疫防御をかわす。ヒトやウシでは睡眠病（眠り病）やナガナ病を引き起こすが、野生のレイヨウなどの野生動物はたいてい害を受けずに保有している。"
+  },
+  {
    "k": "A slender, eel-like jawless fish about 17 cm long from the early Silurian of Lesmahagow, Scotland, about 430 million years ago. Its body was soft and only lightly scaled, with a long fin fold along each side, a round mouth, large eyes and a row of gill openings. It may be a relative of the anaspids or of the lampreys, and it probably sucked up small food from the water or the sea floor.",
    "v": "スコットランド、レスマハゴーの前期シルル紀に生息した、約4億3000万年前の体長約17cmの細長いウナギのような無顎類の魚である。体は柔らかく鱗はわずかで、両側に長いひれのひだがあり、口は丸く、眼は大きく、一列の鰓孔があった。欠甲類あるいはヤツメウナギ類の仲間かもしれず、おそらく水中や海底から小さな餌を吸い込んでいた。"
   },
@@ -1081,6 +1121,10 @@
    "v": "オルドビス紀前期の小型の浮遊性筆石で、音叉のような形をしている。最初の個虫の円錐から2本の細い枝が垂れ下がり、それぞれにろ過食をする個虫がすむ鋸歯状の管が並ぶ。筆石は現在の翼鰓類に近い群体性の半索動物で、種の移り変わりが速く海洋全体に漂っていたため、この種のような2本枝のディディモグラプトゥス類はオルドビス紀の地層の年代決定に欠かせない示準化石となっている。"
   },
   {
+   "k": "A small predatory flagellate of seas and lakes that swims with two unequal flagella and swallows bacteria and smaller flagellates whole. Telonemids are a deep branch of their own, next to the great group of the ciliates, foraminifera, diatoms and brown algae, the SAR, within the Diaphoretickes, which also holds the red and green algae and the plants. It stands here for the ancestor of that whole branch, over a billion years old.",
+   "v": "海や湖にすむ小さな捕食性の鞭毛虫で、長さの異なる2本の鞭毛で泳ぎ、細菌や自分より小さな鞭毛虫を丸ごと飲み込む。テロネマ類はそれ自体で独立した深い系統をなし、繊毛虫、有孔虫、珪藻、褐藻を含む大きなグループであるSARのすぐ隣に位置する。どちらも、紅藻や緑藻、植物も含むディアフォレティケス（Diaphoretickes）の一員である。ここでは10億年以上前に生きた、この系統全体の祖先を代表している。"
+  },
+  {
    "k": "A small ptyctodont placoderm from the Late Devonian Gogo reef of Western Australia, about 380 million years ago, named in honour of David Attenborough. Its fossil, the 'mother fish', contains an embryo still joined to it by an umbilical cord, the oldest known evidence of live birth in any vertebrate. About 25 centimetres long, it had big eyes, beak-like crushing tooth plates for shellfish and a long, whip-like tail.",
    "v": "西オーストラリア州の後期デボン紀ゴーゴー礁から見つかった小型のプティクトドゥス類の板皮類で、約3億8000万年前のもの、デイヴィッド・アッテンボローにちなんで命名された。「母なる魚」と呼ばれるその化石には、へその緒でまだつながった胚が含まれており、脊椎動物における胎生の既知最古の証拠となっている。全長約25cmで、大きな眼、貝を砕くくちばし状の歯板、そして長い鞭のような尾をもっていた。"
   },
@@ -1169,8 +1213,16 @@
    "v": "石炭紀の巨大なヤスデの仲間アースロプレウラのうち小型の種で、体長はおそらく30〜50センチメートル。主に甲皮の断片から知られ、その背板には巨大ないとこよりも目立つ隆起があった。他のアースロプレウラ類と同様、おそらく石炭紀の湿地林の林床で植物の残骸を食べていた。"
   },
   {
+   "k": "A social amoeba of forest soil and leaf litter. Its cells live alone, eating bacteria, until food runs out; then tens of thousands stream together, called by pulses of a chemical signal, into a slug that crawls toward light and heat. The slug rises into a fruiting body: a fifth of the cells die to build a stalk, lifting the rest as a ball of spores to be carried away. Its cooperation, and its cheaters, make it a model of how multicellular life could arise.",
+   "v": "森の土壌や落ち葉の中にすむ社会性アメーバ（細胞性粘菌）。細胞はふだん単独で細菌を食べて暮らしているが、餌がなくなると、化学信号のパルスに呼び寄せられて何万もの細胞が流れるように集まり、光や熱の方へ這っていくナメクジ状の集合体になる。このナメクジはやがて立ち上がって子実体となる。細胞の5分の1は死んで柄をつくり、残りの細胞を胞子の球として持ち上げ、遠くへ運ばれるようにする。その協力関係と、その中に現れる「ずる者」のために、多細胞生物がどのように生まれ得たかを探るモデル生物となっている。"
+  },
+  {
    "k": "A social bee living in colonies of tens of thousands of workers around a single queen. Workers gather nectar and pollen from flowers, store honey in wax combs, and use the waggle dance to tell nestmates where food is. As pollinators of crops and wild plants, they are among the most important insects to people.",
    "v": "1匹の女王を中心に数万匹の働きバチがコロニーをつくって暮らす社会性のハチ。働きバチは花から蜜と花粉を集め、蜜ろうの巣房に蜂蜜を蓄え、8の字ダンスで仲間に餌のありかを伝える。作物や野生植物の送粉者として、人にとって最も重要な昆虫の一つである。"
+  },
+  {
+   "k": "A soil and pond amoeba that is not an amoebozoan at all but belongs to the excavates, far from the true amoebae: it crawls by bursting out one broad rounded pseudopod after another and eats bacteria. When its water changes it can grow two flagella and swim off within minutes, then turn back into an amoeba, or wall itself up in a cyst to wait out drying. It shows how often the amoeboid way of life evolved in different branches of the eukaryotes.",
+   "v": "土壌や池にすむアメーバだが、アメーボゾアにはまったく属さず、真のアメーバとは遠く離れたエクスカバータの一員である。幅広く丸い仮足を次々と勢いよく押し出して這い進み、細菌を食べる。周りの水が変わると数分のうちに2本の鞭毛を生やして泳ぎ去り、やがてまたアメーバに戻る。あるいはシストに閉じこもって乾燥をやり過ごす。アメーバ型の生き方が真核生物のさまざまな系統で何度も進化したことを示す生物である。"
   },
   {
    "k": "A solitary sea anemone of rocky tide pools along the coast of California and Baja California, named for the pink-lavender rays on its green oral disc. Its stinging tentacles catch small crustaceans, fish and drifting animals, while symbiotic algae in its tissues add food from sunlight and give it its green colour. Long confused with the cloning aggregating anemone, it was only described as a separate species in 2000.",
@@ -1179,6 +1231,10 @@
   {
    "k": "A sparrow-sized bird of Eurasian rivers and lakes that watches from a low perch, then plunges headfirst into the water after small fish. Its brilliant blue is structural colour, made by light scattering in the feathers rather than by pigment.",
    "v": "ユーラシアの川や湖にすむスズメほどの大きさの鳥で、低い止まり木から見張り、小魚を狙って頭から水に飛び込む。鮮やかな青は色素ではなく、羽毛で光が散乱して生じる構造色である。"
+  },
+  {
+   "k": "A spindle-shaped green flagellate of ponds and puddles that swims with one long whip and steers toward light with a red eyespot. It has chloroplasts, captured long ago from a green alga, and makes its food by photosynthesis, but in the dark it lives on dissolved food like an animal, which is why it was claimed both by botanists and zoologists. Its flexible skin of spiral protein strips lets it squirm and change shape.",
+   "v": "池や水たまりにすむ紡錘形の緑色の鞭毛虫で、1本の長い鞭毛で泳ぎ、赤い眼点を頼りに光の方へ進む。はるか昔に緑藻から取り込んだ葉緑体を持ち、光合成で栄養をつくるが、暗いところでは動物のように溶けた栄養分を取り込んで生きる。そのため植物学者と動物学者の双方が自分たちの研究対象だと主張してきた。らせん状に並んだタンパク質の帯でできた柔軟な外皮のおかげで、身をくねらせて形を変えることができる。"
   },
   {
    "k": "A spindle-shaped rangeomorph that lay flat on the deep seafloor at Mistaken Point, Newfoundland, about 565 million years ago. Its two rows of frondlets branched again and again into smaller copies of themselves. Maps of whole bedding surfaces show that it spread in clusters, probably both by runner-like stolons and by drifting propagules, making it one of the earliest records of how a population of large organisms grew. It is named after S. B. Misra, who found the Mistaken Point fossils in 1967.",
@@ -1299,6 +1355,14 @@
   {
    "k": "A tiny chelicerate about 5 mm long from the Herefordshire Lagerstaette of England, about 430 million years ago, preserved in three dimensions in volcanic ash. Its broad, horseshoe-shaped head shield covered a ring of legs, some carrying fringed outer branches, and its short body ended in a spine-like tail. It is an early relative of horseshoe crabs and sea scorpions.",
    "v": "イングランドのヘレフォードシャー化石鉱脈（約4億3000万年前）から見つかった体長約5mmの小さな鋏角類で、火山灰の中に立体的に保存されている。幅広い馬蹄形の頭胸甲が環状に並ぶ脚を覆い、その一部には房状の縁取りのある外肢があった。短い胴体はとげのような尾で終わる。カブトガニやウミサソリの初期の近縁種である。"
+  },
+  {
+   "k": "A tiny freshwater flagellate that beats a long flagellum inside a deep groove along its underside, sweeping bacteria into it to eat. This feeding groove gave the excavates their name, a scattered set of flagellates that includes the euglenids and trypanosomes and the gut parasites without mitochondria. Malawimonads may sit near the very root of the eukaryote tree, and stand here for the ancestor of the excavates, well over a billion years old.",
+   "v": "淡水にすむ小さな鞭毛虫で、体の腹側に沿った深い溝の中で長い鞭毛を打ち振り、細菌を溝に掃き込んで食べる。エクスカバータ（Excavata、「くり抜かれたもの」の意）という名はこの摂食溝に由来する。エクスカバータはばらばらに散らばった鞭毛虫の集まりで、ユーグレナ類やトリパノソーマ、ミトコンドリアをもたない腸内寄生虫を含む。マラウイモナス類は真核生物の系統樹の根元のすぐ近くに位置するかもしれず、ここでは10億年よりはるか以前に生きたエクスカバータの祖先を代表している。"
+  },
+  {
+   "k": "A tiny gliding flagellate of mud and soil that slides along on its long trailing flagellum, feeling the way with a short one sheathed in a stiff snout, and eats bacteria. Apusomonads are the closest single-celled relatives of the branch that holds the amoebae, the fungi and the animals, the Amorphea, and stand here for its ancestor, over a billion years old: a small, bacteria-eating cell with two flagella that could also put out pseudopods.",
+   "v": "泥や土の中にすむ小さな滑走性の鞭毛虫で、後ろに長く伸びた鞭毛で滑るように進み、硬い鼻先のさやに包まれた短い鞭毛で行く手を探りながら、細菌を食べる。アプソモナス類は、アメーバ、菌類、動物を含む系統であるアモルフェア（Amorphea）に最も近い単細胞の親戚で、ここでは10億年以上前に生きたその祖先を代表している。それは細菌を食べ、2本の鞭毛をもち、仮足を伸ばすこともできる小さな細胞だった。"
   },
   {
    "k": "A tiny gliding reptile, about 25 cm long including its long tail, from the Triassic Madygen Formation of Kyrgyzstan, about 230 million years ago. Unlike any other known glider, its main wing was a skin membrane stretched between its very long hind legs and the base of its tail, forming a delta wing, with perhaps a smaller membrane in front. It probably glided between trees around a lake, catching insects.",
@@ -1741,6 +1805,10 @@
    "v": "ウラムラサキ"
   },
   {
+   "k": "Ammodiscus",
+   "v": "アンモディスクス"
+  },
+  {
    "k": "Ammonia Excretion",
    "v": "アンモニア排出"
   },
@@ -1807,6 +1875,10 @@
   {
    "k": "An ammonoid from the Early Permian seas of west Texas and Mexico, around 280 million years ago. Its smooth, disc-shaped shell, about 10 cm across, was tightly coiled so that each whorl almost hid the one before. The walls between its gas-filled chambers met the shell in very complex, finely frilled suture lines, early examples of the pattern later typical of ammonites. It is a common index fossil of Permian rocks in the Glass Mountains of Texas.",
    "v": "約2億8000万年前、テキサス州西部とメキシコの前期ペルム紀の海に生きたアンモノイド類。直径約10 cmのなめらかな円盤状の殻はきつく巻いており、各巻きが前の巻きをほとんど覆い隠していた。ガスで満たされた気室の隔壁が殻と接する部分には、非常に複雑で細かくフリル状に入り組んだ縫合線があり、のちにアンモナイトに典型的となる模様の初期の例である。テキサス州グラス山地のペルム紀の地層によく見られる示準化石である。"
+  },
+  {
+   "k": "An amoeba that lives inside a shell it builds itself: a brown, hat-shaped test of protein plates, open underneath by a round hole through which it puts out a few blunt pseudopods to crawl over pond mud and moss and to engulf algae and bacteria. Small vase-shaped shells of testate amoebae in rocks some 750 million years old are among the oldest fossils of any eukaryote that can be named, so shelled amoebae were already living before the Ediacaran began.",
+   "v": "自ら作った殻の中に住むアメーバ。殻はタンパク質の小板でできた茶色の帽子形で、底に丸い穴が開いており、そこから数本の太く先の丸い仮足を出して池の泥やコケの上を這い回り、藻類や細菌を取り込んで食べる。約7億5000万年前の岩石から見つかる有殻アメーバの小さな壺形の殻は、分類群を特定できる真核生物の化石としては最古級のものであり、殻を持つアメーバはエディアカラ紀が始まる前からすでに生きていたことになる。"
   },
   {
    "k": "An antiarch placoderm from the Late Devonian Miguasha estuary of Quebec, about 380 million years ago; its genus is the most widespread placoderm, found on every continent. About 30 to 40 centimetres long, its front half was a box of bony plates with the eyes together on top, and jointed, armour-plated arm-like pectoral fins. It probably grubbed through the mud for food, perhaps using its arms to prop itself up or push along the bottom.",
@@ -2057,6 +2129,10 @@
    "v": "リンゴの花"
   },
   {
+   "k": "Apusomonad",
+   "v": "アプソモナス類"
+  },
+  {
    "k": "Aquatic Larvae",
    "v": "水生幼生"
   },
@@ -2103,6 +2179,10 @@
   {
    "k": "Arbuscular mycorrhiza",
    "v": "アーバスキュラー菌根"
+  },
+  {
+   "k": "Arcella",
+   "v": "ナベカムリ"
   },
   {
    "k": "Archaeanthus",
@@ -2159,6 +2239,10 @@
   {
    "k": "Archaeothyris",
    "v": "アーケオシリス"
+  },
+  {
+   "k": "Archamoeba",
+   "v": "アーキアメーバ類"
   },
   {
    "k": "Archelon",
@@ -2691,6 +2775,10 @@
   {
    "k": "Blood from the gut passes through the liver before reaching the body.",
    "v": "腸からの血液は全身に届く前に肝臓を通る。"
+  },
+  {
+   "k": "Blood parasites, carried from host to host by biting insects.",
+   "v": "血液に寄生する原虫で、吸血昆虫によって宿主から宿主へ運ばれる。"
   },
   {
    "k": "Blood proteins that tag invaders and burst them open.",
@@ -3475,6 +3563,14 @@
   {
    "k": "Ciliate",
    "v": "繊毛虫"
+  },
+  {
+   "k": "Ciliates and sporozoans share a skin of flattened sacs under the cell membrane.",
+   "v": "繊毛虫と胞子虫は、細胞膜の下に扁平な小胞が並んだ外皮をもつ点で共通している。"
+  },
+  {
+   "k": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals.",
+   "v": "繊毛虫、有孔虫、珪藻とその仲間は、動物から遠く離れた真核生物の大きな系統をなしている。"
   },
   {
    "k": "Cincinnati Arch",
@@ -4365,6 +4461,10 @@
    "v": "ディクチオフィルム"
   },
   {
+   "k": "Dictyostelium",
+   "v": "キイロタマホコリカビ"
+  },
+  {
    "k": "Dicynodont therapsid",
    "v": "ディキノドン類"
   },
@@ -4433,6 +4533,10 @@
    "v": "ディノクロクタ"
   },
   {
+   "k": "Dinoflagellate",
+   "v": "渦鞭毛藻"
+  },
+  {
    "k": "Dinosaur National Monument",
    "v": "ダイナソー国定公園"
   },
@@ -4451,6 +4555,10 @@
   {
    "k": "Diplodocus",
    "v": "ディプロドクス"
+  },
+  {
+   "k": "Diplomonad",
+   "v": "ディプロモナス類"
   },
   {
    "k": "Diplopora",
@@ -4753,6 +4861,10 @@
    "v": "エクジソンが節足動物の脱皮の時期を決める。"
   },
   {
+   "k": "Echidnina",
+   "v": "エキドニナ"
+  },
+  {
    "k": "Echinochimaera",
    "v": "エキノキマエラ"
   },
@@ -4965,6 +5077,10 @@
    "v": "竜脚類の長い首の上まで血液を押し上げるのに十分な圧力。"
   },
   {
+   "k": "Entamoeba",
+   "v": "赤痢アメーバ"
+  },
+  {
    "k": "Entelodont",
    "v": "エンテロドン類"
   },
@@ -5047,6 +5163,14 @@
   {
    "k": "Eugeneodont",
    "v": "エウゲネオドゥス類"
+  },
+  {
+   "k": "Euglena",
+   "v": "ミドリムシ"
+  },
+  {
+   "k": "Euglenid",
+   "v": "ユーグレナ類"
   },
   {
    "k": "Eugonophyllum",
@@ -5135,6 +5259,14 @@
   {
    "k": "Evolving one {0}",
    "v": "{0}を1体進化中"
+  },
+  {
+   "k": "Excavates: flagellates with a feeding groove along the underside.",
+   "v": "エクスカバータ：腹側に沿って摂食溝をもつ鞭毛虫。"
+  },
+  {
+   "k": "Excavates: flagellates with a feeding groove, far from the animals and from the true amoebae.",
+   "v": "エクスカバータ：摂食溝をもつ鞭毛虫。動物からも真のアメーバからも遠く離れている。"
   },
   {
    "k": "Excretory System",
@@ -5589,6 +5721,10 @@
    "v": "採餌行動"
   },
   {
+   "k": "Foraminifer",
+   "v": "有孔虫"
+  },
+  {
    "k": "Forebrain, midbrain and hindbrain, each with its own jobs.",
    "v": "前脳、中脳、後脳。それぞれに役割がある。"
   },
@@ -5675,6 +5811,10 @@
   {
    "k": "Fur and Glands",
    "v": "毛と皮膚腺"
+  },
+  {
+   "k": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat.",
+   "v": "フズリナ類は多くの部屋からなる紡錘形の殻をつくり、その大きさは麦粒ほどだった。"
   },
   {
    "k": "Fuxianospira",
@@ -5873,6 +6013,10 @@
    "v": "オオオニバス"
   },
   {
+   "k": "Giardia",
+   "v": "ランブル鞭毛虫"
+  },
+  {
    "k": "Giganotosaurus",
    "v": "ギガノトサウルス"
   },
@@ -5963,6 +6107,10 @@
   {
    "k": "Gliding",
    "v": "滑空"
+  },
+  {
+   "k": "Globigerina",
+   "v": "グロビゲリナ"
   },
   {
    "k": "Gloeocapsomorpha",
@@ -6193,6 +6341,10 @@
    "v": "温室期。極氷なし"
   },
   {
+   "k": "Gregarine",
+   "v": "グレガリナ"
+  },
+  {
    "k": "Grey mangrove",
    "v": "ヒルギダマシ"
   },
@@ -6327,6 +6479,10 @@
   {
    "k": "Haemoglobin packed into cells carries far more oxygen.",
    "v": "細胞に詰め込まれたヘモグロビンははるかに多くの酸素を運ぶ。"
+  },
+  {
+   "k": "Haemosporidian",
+   "v": "住血胞子虫類"
   },
   {
    "k": "Haikou",
@@ -6543,6 +6699,10 @@
   {
    "k": "Hess Schwagerina",
    "v": "シュワゲリナ・ヘッセンシス"
+  },
+  {
+   "k": "Heterolobosean",
+   "v": "ヘテロロボサ類"
   },
   {
    "k": "Heteromorph ammonite",
@@ -7357,6 +7517,10 @@
    "v": "血縁認識"
   },
   {
+   "k": "Kinetoplastid",
+   "v": "キネトプラスチド類"
+  },
+  {
    "k": "King crab",
    "v": "タラバガニ類"
   },
@@ -8149,6 +8313,18 @@
    "v": "化学反応で光を作る。"
   },
   {
+   "k": "Malaria Parasite",
+   "v": "熱帯熱マラリア原虫"
+  },
+  {
+   "k": "Malawimonad",
+   "v": "マラウイモナス類"
+  },
+  {
+   "k": "Malawimonas",
+   "v": "マラウイモナス"
+  },
+  {
    "k": "Male Combat",
    "v": "オス同士の闘争"
   },
@@ -8487,6 +8663,10 @@
   {
    "k": "Messinian salinity crisis (~6 Ma): the Mediterranean partly dries up",
    "v": "メッシニアン塩分危機（約6 Ma）：地中海が部分的に干上がる"
+  },
+  {
+   "k": "Metamonads live without proper mitochondria, many of them in the guts of animals.",
+   "v": "メタモナス類はまともなミトコンドリアをもたずに暮らし、その多くは動物の腸内にすむ。"
   },
   {
    "k": "Metamorphosis Trigger",
@@ -8937,6 +9117,10 @@
    "v": "多足類は最初の陸上動物の一つだった。最大のものはアースロプレウラ。"
   },
   {
+   "k": "Naegleria",
+   "v": "ネグレリア"
+  },
+  {
    "k": "Naiadita",
    "v": "ナイアディタ"
   },
@@ -9301,6 +9485,10 @@
    "v": "ヌイア"
   },
   {
+   "k": "Nummulites",
+   "v": "ヌンムリテス"
+  },
+  {
    "k": "Nuptial Gifts",
    "v": "婚姻贈呈"
   },
@@ -9605,6 +9793,10 @@
    "v": "約2億1000万年前、三畳紀後期のイタリア北部から見つかった最古級の翼竜で、翼開長は約1メートル。短い顎には100本以上の小さな歯が並び、その多くは3〜5つの咬頭をもっていた。化石の腹部から見つかった魚の鱗から、魚を捕らえていたことがわかる。他の初期の翼竜と同様、硬く長い尾をもっていた。"
   },
   {
+   "k": "One of the oldest known radiolarians, from the middle Cambrian of Australia: a drifting single cell with a spherical lattice shell of glass (silica) bristling with long radial spines. Along the spines it spread threads of cytoplasm to catch smaller plankton. Radiolarian skeletons, sinking for half a billion years, have built up thick layers of siliceous ooze and chert on the ocean floor.",
+   "v": "知られている中で最も古い放散虫のひとつで、オーストラリアのカンブリア紀中期の地層から見つかる。水中を漂う単細胞で、ガラス質（シリカ）の球形の格子状の殻を持ち、そこから長い放射状の棘が無数に突き出している。棘に沿って細胞質の糸を伸ばし、より小さなプランクトンを捕らえていた。放散虫の骨格は5億年にわたって沈み続け、海底に厚い珪質軟泥やチャートの層を築いてきた。"
+  },
+  {
    "k": "One of the oldest known synapsids, the group that much later produced mammals, found in fossilised tree stumps at Florence, Nova Scotia, about 306 million years old. It looked like a lizard about half a metre long, but its skull already had the single opening behind each eye typical of synapsids. Its sharp teeth, including enlarged ones near the front of the upper jaw, suggest it hunted insects and small tetrapods in the coal forests.",
    "v": "既知最古級の単弓類の一つで、単弓類はずっと後に哺乳類を生み出したグループである。ノバスコシア州フローレンスの化石化した切り株の中から見つかり、約3億600万年前のもの。体長約50cmのトカゲのような姿だったが、頭骨にはすでに単弓類特有の、目の後ろに一つずつある開口部があった。上顎の前方にある大きな歯を含む鋭い歯から、石炭林で昆虫や小さな四肢動物を狩っていたと考えられる。"
   },
@@ -9671,6 +9863,10 @@
   {
    "k": "Ophthalmosaurus",
    "v": "オフタルモサウルス"
+  },
+  {
+   "k": "Opisthokonts swim with a single flagellum at the back: the branch of the fungi, choanoflagellates and animals.",
+   "v": "オピストコンタは体の後ろにある1本の鞭毛で泳ぐ。菌類、襟鞭毛虫、動物を含む系統である。"
   },
   {
    "k": "Orange peel fungus",
@@ -10305,8 +10501,16 @@
    "v": "フィロテカ"
   },
   {
+   "k": "Physarum",
+   "v": "モジホコリ"
+  },
+  {
    "k": "Physoporella",
    "v": "フィソポレラ"
+  },
+  {
+   "k": "Pigeon Trichomonad",
+   "v": "ハトトリコモナス"
   },
   {
    "k": "Pigment cells that can change colour.",
@@ -10397,6 +10601,10 @@
    "v": "浮遊幼生"
   },
   {
+   "k": "Planktonic foraminifera drift in the open sea with spiny, balloon-chambered shells.",
+   "v": "浮遊性有孔虫は、棘のある風船のような部屋の殻を持ち、外洋を漂う。"
+  },
+  {
    "k": "Planning and self-control (great apes).",
    "v": "計画と自制（大型類人猿）。"
   },
@@ -10407,6 +10615,10 @@
   {
    "k": "Plants: {0}",
    "v": "植物：{0}"
+  },
+  {
+   "k": "Plasmodial slime mould",
+   "v": "変形菌"
   },
   {
    "k": "Plateosaurus",
@@ -10795,6 +11007,10 @@
   {
    "k": "Radiodont",
    "v": "放射歯類"
+  },
+  {
+   "k": "Radiolarian",
+   "v": "放散虫"
   },
   {
    "k": "Radula",
@@ -11249,6 +11465,10 @@
    "v": "ロタラ"
   },
   {
+   "k": "Rotaliids build chalky shells of many chambers coiled in a spiral, some with algae inside.",
+   "v": "ロタリア類は多くの部屋がらせん状に巻いた石灰質の殻をつくり、中には藻類を宿すものもいる。"
+  },
+  {
    "k": "Rothpletzella",
    "v": "ロートプレッツェラ"
   },
@@ -11549,6 +11769,10 @@
    "v": "スクトサウルス"
   },
   {
+   "k": "Sea Sparkle",
+   "v": "ヤコウチュウ"
+  },
+  {
    "k": "Sea Turtle Leech",
    "v": "ウミガメビル"
   },
@@ -11655,6 +11879,10 @@
   {
    "k": "Select an item",
    "v": "項目を選択"
+  },
+  {
+   "k": "Selenidium",
+   "v": "セレニディウム"
   },
   {
    "k": "Selenopeltis",
@@ -12105,6 +12333,10 @@
    "v": "社会的順位"
   },
   {
+   "k": "Social amoeba",
+   "v": "細胞性粘菌"
+  },
+  {
    "k": "Sokolki",
    "v": "ソコルキ"
   },
@@ -12291,6 +12523,10 @@
   {
    "k": "Sporogonites",
    "v": "スポロゴニテス"
+  },
+  {
+   "k": "Sporozoans are parasites that enter their hosts' cells with a complex at their tip.",
+   "v": "胞子虫は、先端の複合体を使って宿主の細胞に入り込む寄生虫である。"
   },
   {
    "k": "Spraying irritants (bombardier beetles, later skunks).",
@@ -12813,6 +13049,14 @@
    "v": "においや見た目で血縁者とよそ者を区別する。"
   },
   {
+   "k": "Telonema",
+   "v": "テロネマ"
+  },
+  {
+   "k": "Telonemid",
+   "v": "テロネマ類"
+  },
+  {
    "k": "Temnospondyl",
    "v": "分椎類"
   },
@@ -12883,6 +13127,14 @@
   {
    "k": "Terror bird",
    "v": "恐鳥"
+  },
+  {
+   "k": "Testate amoeba",
+   "v": "有殻アメーバ"
+  },
+  {
+   "k": "Testate amoebae build shells around themselves, with an opening for their pseudopods.",
+   "v": "有殻アメーバは自分の周りに殻をつくり、仮足を出すための開口部を持つ。"
   },
   {
    "k": "Testosterone and oestrogen shape adult bodies.",
@@ -13019,6 +13271,10 @@
   {
    "k": "The commonest radiodont of the Chengjiang biota of Yunnan, China, about 518 million years old, and a close relative of Anomalocaris. Each frontal appendage carried one enormous forward spine that closed against the rest of the limb like the jaw of a pair of pincers. It swam with eleven pairs of body flaps and had a long tail fan with streamers; a 2023 study of its growth suggests the biggest individuals were well over half a metre long.",
    "v": "約5億1800万年前の中国雲南省澄江生物群で最もありふれた放射歯類で、アノマロカリスの近縁種。前部付属肢にはそれぞれ前方へ突き出た巨大なとげが1本あり、付属肢の残りの部分に向かってペンチの顎のように閉じた。11対の体側のひれで泳ぎ、吹き流しのついた長い尾扇をもっていた。2023年の成長に関する研究によると、最大の個体は体長50cmをはるかに超えていたらしい。"
+  },
+  {
+   "k": "The deadliest malaria parasite, a sporozoan that lives inside the red blood cells of people and multiplies there, bursting them in waves of fever. Its life alternates between humans and Anopheles mosquitoes, which pick up its crescent-shaped sexual stages with a meal of blood and pass it on with their next bite. It descends from a parasite of gorillas, which crossed over to humans in Africa, and has shaped human history and even the human genome.",
+   "v": "最も致死性の高いマラリア原虫で、ヒトの赤血球の中にすんで増殖する胞子虫。赤血球を破裂させ、そのたびに発熱の波を引き起こす。生活環はヒトとハマダラカの間を行き来し、蚊は吸血の際に三日月形の有性生殖段階を取り込み、次に刺したときに原虫をうつす。アフリカでゴリラからヒトに乗り移った寄生虫に由来し、人類の歴史、さらにはヒトのゲノムさえも形づくってきた。"
   },
   {
    "k": "The earliest known diapsid reptile, the lineage that later gave rise to lizards, crocodiles and dinosaurs, from Late Carboniferous rocks near Garnett, Kansas, about 302 million years old. It was a slender animal some 40 cm long, with a small head, a long neck, long legs and a tail longer than the rest of its body. It probably darted through the undergrowth of the coal forests hunting insects and other small invertebrates.",
@@ -13243,6 +13499,10 @@
   {
    "k": "The {0} has begun",
    "v": "{0}が始まった"
+  },
+  {
+   "k": "Thecamonas",
+   "v": "テカモナス"
   },
   {
    "k": "Therizinosaurus",
@@ -13497,6 +13757,10 @@
    "v": "トリケラトプス"
   },
   {
+   "k": "Trichonymphids digest wood in the guts of termites, with thousands of flagella.",
+   "v": "トリコニンファ類はシロアリの腸内で木材を消化し、何千本もの鞭毛を持つ。"
+  },
+  {
    "k": "Trichopitys",
    "v": "トリコピティス"
   },
@@ -13595,6 +13859,10 @@
   {
    "k": "Trumpet pitcher",
    "v": "サラセニア"
+  },
+  {
+   "k": "Trypanosome",
+   "v": "トリパノソーマ"
   },
   {
    "k": "Tsingy de Bemaraha",
@@ -16561,6 +16829,10 @@
    "v": "マークされたマスをクリックして子を置く"
   },
   {
+   "k": "New this turn: it can act from the next turn",
+   "v": "このターンに登場：次のターンから行動できます"
+  },
+  {
    "k": "La Brea",
    "v": "ラ・ブレア"
   },
@@ -16807,6 +17079,22 @@
   {
    "k": "Zealandia Realm",
    "v": "ジーランディア区"
+  },
+  {
+   "k": "Encyclopedia",
+   "v": "図鑑"
+  },
+  {
+   "k": "Search",
+   "v": "検索"
+  },
+  {
+   "k": "{0} species",
+   "v": "{0} 種"
+  },
+  {
+   "k": "Evolves from",
+   "v": "祖先"
   }
  ]
 }

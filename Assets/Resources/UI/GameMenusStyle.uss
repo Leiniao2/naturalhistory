@@ -1004,25 +1004,55 @@
     flex-shrink: 0;
 }
 
-/* Tree header: whose Functions / Behaviors these are, centred */
-.tree-species {
-    position: absolute;
-    left: 50%;
-    translate: -50% 0;
+/* Under the header of the Functions, Behaviors and Evolution Tree panels: a tab per species of
+   yours (SpeciesTabs), the one whose trees are open lit in gold */
+.species-tabs-scroll {
+    flex-shrink: 0;
+    margin-bottom: 8px;
+}
+
+.species-tabs {
+    flex-direction: row;
+}
+
+.species-tab {
     flex-direction: row;
     align-items: center;
+    height: 52px;
+    margin: 0 6px 0 0;
+    padding: 3px 14px 3px 3px;
+    color: rgb(220, 214, 190);
+    background-color: rgba(22, 29, 25, 0.93);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.45);
+    border-radius: 4px;
 }
 
-.tree-species-portrait {
-    width: 56px;
-    height: 56px;
+.species-tab:hover {
+    background-color: rgba(44, 58, 46, 0.97);
+    border-color: rgba(222, 192, 124, 0.8);
+}
+
+.species-tab.selected {
+    color: rgb(242, 214, 130);
+    background-color: rgba(52, 70, 50, 0.98);
+    border-width: 2px;
+    border-color: rgb(222, 192, 124);
+}
+
+.species-tab-portrait {
+    width: 44px;
+    height: 44px;
     margin-right: 10px;
+    -unity-background-scale-mode: scale-and-crop;
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.6);
+    border-radius: 3px;
 }
 
-.tree-species-name {
-    font-size: 24px;
+.species-tab-name {
+    font-size: 17px;
     -unity-font-style: bold;
-    color: rgb(240, 210, 110);
 }
 
 .tree-node.unavailable {
@@ -1106,11 +1136,20 @@
     border-radius: 6px;
 }
 
-.zoology-portrait {
-    width: 160px;
-    height: 160px;
-    align-self: center;
-    margin-bottom: 8px;
+.zoology-detail-head {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+.zoology-detail-names {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.zoology-encyclopedia {
+    flex-shrink: 0;
+    margin: 4px 0 0 8px;
 }
 
 .zoology-node {
@@ -1590,4 +1629,294 @@
     border-top-color: rgb(222, 192, 124);
     border-bottom-color: rgb(110, 86, 46);
     border-radius: 3px;
+}
+
+/* Scroll bars in the frames' brass and dark green: a slim sunken track edged in gold, a gold
+   thumb that brightens under the mouse, no arrow buttons (Evolution Tree, Functions, Behaviors
+   and the other scrolling lists) */
+.root .unity-scroller {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+}
+
+.root .unity-scroller--vertical {
+    width: 14px;
+    min-width: 14px;
+    margin-left: 4px;
+}
+
+.root .unity-scroller--horizontal {
+    height: 14px;
+    min-height: 14px;
+    margin-top: 4px;
+}
+
+.root .unity-scroller__low-button,
+.root .unity-scroller__high-button {
+    display: none;
+}
+
+.root .unity-scroller > .unity-scroller__slider {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.root .unity-scroller .unity-base-slider__drag-container {
+    margin: 0;
+}
+
+.root .unity-scroller .unity-base-slider__tracker {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    background-color: rgba(6, 10, 8, 0.75);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.45);
+    border-top-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+}
+
+.root .unity-scroller .unity-base-slider__dragger {
+    position: absolute;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+    background-image: url("Frames/button-gold.png");
+    -unity-slice-left: 12;
+    -unity-slice-right: 12;
+    -unity-slice-top: 12;
+    -unity-slice-bottom: 12;
+    -unity-slice-scale: 0.4px;
+}
+
+.root .unity-scroller--vertical .unity-base-slider__dragger {
+    left: 2px;
+    width: 10px;
+    min-height: 28px;
+}
+
+.root .unity-scroller--horizontal .unity-base-slider__dragger {
+    top: 2px;
+    height: 10px;
+    min-width: 28px;
+}
+
+.root .unity-scroller .unity-base-slider__dragger:hover,
+.root .unity-scroller .unity-base-slider__dragger:active {
+    background-image: url("Frames/button-gold-hover.png");
+}
+
+.root .unity-scroller .unity-base-slider__dragger-border {
+    display: none;
+}
+
+/* the square where a vertical and a horizontal bar meet */
+.root .unity-scroll-view__horizontal-scroller {
+    margin-right: 0;
+}
+
+/* ---------- Encyclopedia ---------- */
+
+.encyclopedia-search {
+    width: 320px;
+    margin-right: 12px;
+    font-size: 17px;
+}
+
+.encyclopedia-search .unity-text-field__input {
+    padding: 6px 10px;
+    color: rgb(235, 228, 205);
+    background-color: rgba(6, 10, 8, 0.75);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.55);
+    border-radius: 4px;
+}
+
+.encyclopedia-body {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.encyclopedia-list {
+    width: 380px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    background-color: rgba(6, 10, 8, 0.55);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.25);
+    border-top-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+}
+
+.encyclopedia-list .unity-list-view__item {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.encyclopedia-list .unity-list-view__item:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.encyclopedia-list .unity-collection-view__item--selected,
+.encyclopedia-list .unity-collection-view__item--selected:hover {
+    background-color: rgba(190, 154, 88, 0.28);
+}
+
+.encyclopedia-row {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px 4px 6px;
+}
+
+.encyclopedia-thumb {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    -unity-background-scale-mode: scale-and-crop;
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.5);
+    border-radius: 3px;
+}
+
+.encyclopedia-row-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.encyclopedia-row-name {
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: rgb(232, 226, 205);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.encyclopedia-row-age {
+    font-size: 13px;
+    color: rgb(170, 178, 160);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.encyclopedia-row.owned .encyclopedia-row-name {
+    color: rgb(150, 210, 140);
+}
+
+.encyclopedia-entry {
+    flex-grow: 1;
+    padding: 14px 18px;
+    background-color: rgba(6, 10, 8, 0.55);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.25);
+    border-top-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+}
+
+.encyclopedia-top {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+/* the painting, in a brass frame like the minimap's */
+.encyclopedia-painting {
+    width: 440px;
+    height: 440px;
+    flex-shrink: 0;
+    margin-right: 22px;
+    -unity-background-scale-mode: scale-and-crop;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-width: 3px;
+    border-color: rgb(176, 142, 80);
+    border-top-color: rgb(222, 192, 124);
+    border-bottom-color: rgb(110, 86, 46);
+    border-radius: 3px;
+}
+
+.encyclopedia-painting.model-only {
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.encyclopedia-facts {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.encyclopedia-name {
+    font-size: 34px;
+    -unity-font-style: bold;
+    color: rgb(242, 214, 130);
+    white-space: normal;
+}
+
+.encyclopedia-scientific {
+    font-size: 19px;
+    -unity-font-style: italic;
+    color: rgb(200, 196, 176);
+    margin-bottom: 14px;
+}
+
+.encyclopedia-stats {
+    font-size: 17px;
+    color: rgb(222, 218, 200);
+    white-space: normal;
+    margin-bottom: 16px;
+}
+
+.encyclopedia-tree-button {
+    align-self: flex-start;
+    margin-left: 0;
+}
+
+.encyclopedia-description {
+    font-size: 18px;
+    color: rgb(228, 224, 208);
+    white-space: normal;
+    margin-bottom: 12px;
+}
+
+.encyclopedia-chips {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.encyclopedia-chip {
+    flex-direction: row;
+    align-items: center;
+    height: 44px;
+    margin: 0 8px 8px 0;
+    padding: 2px 12px 2px 2px;
+    color: rgb(225, 220, 198);
+    background-color: rgba(22, 29, 25, 0.93);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.45);
+    border-radius: 4px;
+}
+
+.encyclopedia-chip:hover {
+    color: rgb(242, 214, 130);
+    border-color: rgb(222, 192, 124);
+}
+
+.encyclopedia-chip-thumb {
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+    -unity-background-scale-mode: scale-and-crop;
+    border-radius: 3px;
+}
+
+.encyclopedia-chip-name {
+    font-size: 15px;
 }

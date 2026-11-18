@@ -26,6 +26,8 @@ namespace NaturalHistory.Evolution
         public ColonyGroup group;       // null (or destroyed) while the map's groups are being re-placed
         public HexCell cell;            // where it was last
         public int lastBred = -999;     // turn it last reproduced
+        public int bornTurn = -1;       // turn it was born or evolved: no actions until the next (ColonyGroup.JustBorn)
+        public bool JustBorn => group != null ? group.JustBorn : bornTurn >= 0 && bornTurn == (TurnManager.Instance != null ? TurnManager.Instance.CurrentTurn : 0);
     }
 
     // One line of the evolution requirements shown in the Evolution Tree panel
@@ -48,6 +50,8 @@ namespace NaturalHistory.Evolution
     //  - Once a player has evolved some copy from A into B, their other A copies can't become B (they
     //    can still evolve into other species).
     //  - A copy can reproduce onto a free neighbouring tile once every ReproduceCooldown turns.
+    //  - The young, and a copy that has just evolved, can't act (move, attack, reproduce, evolve)
+    //    until the next turn.
     //
     // TerritoryManager founds each player's first copy and asks this to re-place the copies whenever
     // SpeciesColonies rebuilds the map's groups (another period is shown).
@@ -201,6 +205,7 @@ namespace NaturalHistory.Evolution
                 if (group == null) continue;
                 copy.group = group;
                 copy.cell  = cell;
+                group.BornTurn = copy.bornTurn;
                 Track(copy);
                 spawned.Add(group);
             }
@@ -236,7 +241,7 @@ namespace NaturalHistory.Evolution
         // ---------- Reproduce ----------
 
         public int TurnsUntilReproduce(OwnedCopy copy) =>
-            copy == null ? 0 : Mathf.Max(0, copy.lastBred + ReproduceCooldown - CurrentTurn);
+            copy == null ? 0 : Mathf.Max(copy.JustBorn ? 1 : 0, copy.lastBred + ReproduceCooldown - CurrentTurn);
 
         // The free neighbouring tiles the species can live on, the player's own territory first
         public List<HexCell> ReproduceCells(OwnedCopy copy)
@@ -267,7 +272,8 @@ namespace NaturalHistory.Evolution
             var group = SpeciesColonies.Instance.SpawnColony(def, cell, owner, Seed(copy.player, copies.Count + 1) ^ CurrentTurn);
             if (group == null) { message = Loc.T("Couldn't place the young"); return false; }
             copy.lastBred = CurrentTurn;
-            var young = new OwnedCopy { player = copy.player, species = copy.species, group = group, cell = cell, lastBred = CurrentTurn };
+            group.BornTurn = CurrentTurn;
+            var young = new OwnedCopy { player = copy.player, species = copy.species, group = group, cell = cell, lastBred = CurrentTurn, bornTurn = CurrentTurn };
             copies.Add(young);
             Track(young);
             TerritoryManager.Instance?.Refresh();
@@ -300,6 +306,8 @@ namespace NaturalHistory.Evolution
             bool periodMet = !Enum.TryParse(target.firstAge, true, out GeologicalAge first) || AgeManager.Instance == null || AgeManager.Instance.CurrentAge >= first;
             list.Add(new Requirement(Loc.F("The {0} has begun", Loc.T(target.firstAge)), periodMet));
             list.Add(new Requirement(Loc.F("On or next to {0}", HabitatText(target)), originCopies.Any(c => EvolveCell(c, target) != null)));
+            if (copy != null && copy.JustBorn)
+                list.Add(new Requirement(Loc.T("New this turn: it can act from the next turn"), false));
             if (HasEvolved(link))
                 list.Add(new Requirement(Loc.F("A {0} has already become a {1}; evolve another copy into a different species", Loc.T(origin.commonName), Loc.T(target.commonName)), false));
             return list;
@@ -346,9 +354,10 @@ namespace NaturalHistory.Evolution
             to.behaviors.UnionWith(link.grantBehaviors);
 
             evolved.Add(link.Key);
-            copy.species = link.to;
-            copy.group   = group;
-            copy.cell    = cell;
+            copy.species  = link.to;
+            copy.group    = group;
+            copy.cell     = cell;
+            copy.bornTurn = group.BornTurn = CurrentTurn;
             Track(copy);
             FocusSpecies = null; // force a rebind: the target's set may have just been created
             Focus(link.to);
@@ -381,7 +390,7 @@ namespace NaturalHistory.Evolution
             {
                 var cell = c.group != null && c.group.Cell != null ? c.group.Cell : c.cell;
                 var (col, row) = cell != null ? cell.Coordinates.ToOffsetCoordinates() : (-1, -1);
-                return new CopySave { player = c.player, species = c.species, col = col, row = row, lastBred = c.lastBred };
+                return new CopySave { player = c.player, species = c.species, col = col, row = row, lastBred = c.lastBred, bornTurn = c.group != null ? c.group.BornTurn : c.bornTurn };
             }).ToList();
             data.evolved = evolved.ToList();
         }
@@ -404,7 +413,7 @@ namespace NaturalHistory.Evolution
                 traits[s.species] = t;
             }
             foreach (var c in data.copies ?? new List<CopySave>())
-                copies.Add(new OwnedCopy { player = c.player, species = c.species, cell = HexGrid.Instance?.GetCell(c.col, c.row), lastBred = c.lastBred });
+                copies.Add(new OwnedCopy { player = c.player, species = c.species, cell = HexGrid.Instance?.GetCell(c.col, c.row), lastBred = c.lastBred, bornTurn = c.bornTurn });
             evolved.UnionWith(data.evolved ?? new List<string>());
             legacyTraits = null;
             if (copies.Count == 0 && traits.Count == 0) // older save: its items go to the first species founded
@@ -442,5 +451,6 @@ namespace NaturalHistory.Evolution
         public int col = -1;
         public int row = -1;
         public int lastBred = -999;
+        public int bornTurn = -1;
     }
 }

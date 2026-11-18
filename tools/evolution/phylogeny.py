@@ -14,6 +14,8 @@ new clade on the way from the origin to the target), unless links.py has a writt
 
 E = "Eukaryota"
 AMORPHEA = E + "/Amorphea"
+DIAPH = E + "/Diaphoretickes"  # the SAR, the plants and algae and their kin
+EXCAV = E + "/Excavata"        # Discoba and Metamonada (Malawimonas stands for their ancestor)
 METAZOA = AMORPHEA + "/Opisthokonta/Choanozoa/Metazoa"
 CNIDARIA = METAZOA + "/Eumetazoa/Cnidaria"
 BILATERIA = METAZOA + "/Eumetazoa/Bilateria"
@@ -91,11 +93,27 @@ SAUROPTERYGIA = NEODIAPSIDA + "/Sauria/Sauropterygia"
 
 GROUPS = {
     # --- Protists (none of them is an ancestor of animals; see the note on Choanozoa) ---
-    "Ciliate":              E + "/SAR/Alveolata",
-    "Heliozoan":            E + "/SAR/Stramenopila",
-    "Foraminifer":          E + "/SAR/Rhizaria",
-    "Parabasalid":          E + "/Metamonada",
-    "Amoebozoan":           AMORPHEA + "/Amoebozoa",
+    # the three founding species, one at the root of each deep branch of the eukaryotes
+    "Apusomonad":           AMORPHEA,
+    "Telonemid":            DIAPH,
+    "Malawimonad":          EXCAV,
+    "Ciliate":              DIAPH + "/SAR/Alveolata/Ciliophora",
+    "Gregarine":            DIAPH + "/SAR/Alveolata/Apicomplexa",
+    "Haemosporidian":       DIAPH + "/SAR/Alveolata/Apicomplexa/Haemosporida",
+    "Dinoflagellate":       DIAPH + "/SAR/Alveolata/Dinoflagellata",
+    "Heliozoan":            DIAPH + "/SAR/Stramenopila",
+    "Foraminifer":          DIAPH + "/SAR/Rhizaria/Retaria/Foraminifera",
+    "Radiolarian":          DIAPH + "/SAR/Rhizaria/Retaria/Radiolaria",
+    "Euglenid":             EXCAV + "/Discoba/Euglenozoa/Euglenida",
+    "Kinetoplastid":        EXCAV + "/Discoba/Euglenozoa/Kinetoplastea",
+    "Heterolobosean":       EXCAV + "/Discoba/Heterolobosea",
+    "Parabasalid":          EXCAV + "/Metamonada/Parabasalia",
+    "Diplomonad":           EXCAV + "/Metamonada/Fornicata/Diplomonadida",
+    "Amoebozoan":           AMORPHEA + "/Amoebozoa/Tubulinea",
+    "Testate amoeba":       AMORPHEA + "/Amoebozoa/Tubulinea/Arcellinida",
+    "Archamoeba":           AMORPHEA + "/Amoebozoa/Evosea/Archamoebae",
+    "Social amoeba":        AMORPHEA + "/Amoebozoa/Evosea/Eumycetozoa/Dictyostelia",
+    "Plasmodial slime mould": AMORPHEA + "/Amoebozoa/Evosea/Eumycetozoa/Myxogastria",
     "Choanoflagellate":     AMORPHEA + "/Opisthokonta/Choanozoa",
     # --- Early animals ---
     "Sponge":               METAZOA + "/Porifera",
@@ -356,6 +374,19 @@ GROUPS = {
 
 # Species of a group that sit elsewhere in the tree (the group lumps sub-clades together)
 SPECIES = {
+    # parabasalids: the termites' wood-digesters and the trichomonads are different orders
+    "trichonympha_campanula": EXCAV + "/Metamonada/Parabasalia/Trichonymphida",
+    "trichonympha_collaris":  EXCAV + "/Metamonada/Parabasalia/Trichonymphida",
+    "trichomonas_gallinae":   EXCAV + "/Metamonada/Parabasalia/Trichomonadida",
+    # foraminifera: Ammodiscus stands for the simple tubular stem; the fusulinids died out with the
+    # Permian, and the rotaliids (and the planktonic globigerinids from them) arose separately
+    "fusulina_cylindrica":        DIAPH + "/SAR/Rhizaria/Retaria/Foraminifera/Fusulinida",
+    "schwagerina_hawkinsi":       DIAPH + "/SAR/Rhizaria/Retaria/Foraminifera/Fusulinida",
+    "schwagerina_hessensis":      DIAPH + "/SAR/Rhizaria/Retaria/Foraminifera/Fusulinida",
+    "schwagerina_crassitectoria": DIAPH + "/SAR/Rhizaria/Retaria/Foraminifera/Fusulinida",
+    "schwagerina_guembeli":       DIAPH + "/SAR/Rhizaria/Retaria/Foraminifera/Fusulinida",
+    "nummulites_gizehensis":      DIAPH + "/SAR/Rhizaria/Retaria/Foraminifera/Rotaliida",
+    "globigerina_bulloides":      DIAPH + "/SAR/Rhizaria/Retaria/Foraminifera/Rotaliida/Globigerinida",
     # Dickinsonia and Yorgia moved and fed like animals but may lie below the bilaterians
     "dickinsonia_costata":    METAZOA + "/Eumetazoa",
     "dickinsonia_tenuis":     METAZOA + "/Eumetazoa",
@@ -491,7 +522,7 @@ SPECIES = {
 
 # Stems that come before the other species of their period: the ciliate at the root of its branch
 # of protists; amoebae, then the collar-cell protists closest to animals, then sponges
-FIRST = ["paramecium", "amoeba", "choanoflagellate", "eocyathispongia_qiania", "coronacollina_acula",
+FIRST = ["thecamonas_trahens", "telonema_subtile", "malawimonas_jakobiformis", "paramecium", "amoeba", "choanoflagellate", "eocyathispongia_qiania", "coronacollina_acula",
          "tribrachidium_heraldicum", "ikaria_wariootia",  # an early eumetazoan, then the earliest true bilaterian: the stem of protostomes and deuterostomes
          # and the older of two members of a period that the species list has the other way round
          "panderichthys_rhombolepis", "psittacosaurus_mongoliensis", "ardipithecus_ramidus",
@@ -502,11 +533,40 @@ FIRST = ["paramecium", "amoeba", "choanoflagellate", "eocyathispongia_qiania", "
          "climatius_reticulatus"]
 
 CLADE_NOTES = {
-    "SAR": "Ciliates, foraminifera and their kin form a branch of the eukaryotes of their own, far from the animals.",
-    "Alveolata": "Ciliates row with thousands of cilia under a skin of flattened sacs.",
-    "Rhizaria": "Foraminifera reach out with threads of cytoplasm and build chambered shells.",
+    "SAR": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals.",
+    "Opisthokonta": "Opisthokonts swim with a single flagellum at the back: the branch of the fungi, choanoflagellates and animals.",
+    "Excavata": "Excavates: flagellates with a feeding groove along the underside.",
+    "Alveolata": "Ciliates and sporozoans share a skin of flattened sacs under the cell membrane.",
+    "Ciliophora": "Ciliates row with thousands of cilia under a skin of flattened sacs.",
+    "Apicomplexa": "Sporozoans are parasites that enter their hosts' cells with a complex at their tip.",
+    "Rhizaria": "Foraminifera and radiolarians reach out with fine threads of cytoplasm.",
+    "Retaria": "Foraminifera and radiolarians catch food in webs of fine threads of cytoplasm and build shells.",
+    "Foraminifera": "Foraminifera reach out with threads of cytoplasm and build chambered shells.",
+    "Fusulinida": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat.",
+    "Rotaliida": "Rotaliids build chalky shells of many chambers coiled in a spiral, some with algae inside.",
+    "Globigerinida": "Planktonic foraminifera drift in the open sea with spiny, balloon-chambered shells.",
+    "Radiolaria": "Radiolarians drift in the plankton inside spiny shells of glass.",
+    "Dinoflagellata": "Dinoflagellates spin through the water with two flagella, one wrapped round the cell in a groove.",
+    "Haemosporida": "Blood parasites, carried from host to host by biting insects.",
+    "Discoba": "Excavates: flagellates with a feeding groove, far from the animals and from the true amoebae.",
+    "Euglenozoa": "Euglenozoans have a skin of protein strips and a flagellum stiffened by a rod.",
+    "Euglenida": "Euglenids swim with a long whip; many have taken in green algae as chloroplasts.",
+    "Kinetoplastea": "Kinetoplastids keep their mitochondrial DNA in one dense knot by the base of the flagellum.",
+    "Heterolobosea": "Heteroloboseans crawl as amoebae and can turn into flagellates.",
+    "Parabasalia": "Parabasalids live without mitochondria, in the guts of termites and other animals.",
+    "Fornicata": "Diplomonads and their kin live without proper mitochondria, many as parasites.",
+    "Diplomonadida": "Diplomonads have two nuclei and two sets of flagella.",
+    "Tubulinea": "Lobose amoebae crawl on broad, tube-shaped pseudopods.",
+    "Arcellinida": "Testate amoebae build shells around themselves, with an opening for their pseudopods.",
+    "Evosea": "A branch of the amoebae that includes the slime moulds and the gut amoebae.",
+    "Archamoebae": "Archamoebae live in places poor in oxygen and have lost their mitochondria.",
+    "Eumycetozoa": "Slime moulds: amoebae that come together or grow into one big mass to make fruiting bodies of spores.",
+    "Dictyostelia": "Social amoebae live alone, then gather in thousands to build a stalk of spores.",
+    "Myxogastria": "Plasmodial slime moulds grow into one giant cell with millions of nuclei.",
     "Stramenopila": "Heliozoans belong with the diatoms and brown algae, though they hunt like animals.",
-    "Metamonada": "Parabasalids live without mitochondria, in the guts of termites and other animals.",
+    "Metamonada": "Metamonads live without proper mitochondria, many of them in the guts of animals.",
+    "Trichonymphida": "Trichonymphids digest wood in the guts of termites, with thousands of flagella.",
+    "Trichomonadida": "Trichomonads have four to six flagella and a stiff rod through the cell.",
     "Amorphea": "Amoebae belong to the branch of eukaryotes that also gave rise to fungi and animals.",
     "Amoebozoa": "Amoebae crawl and feed by flowing out arms of cytoplasm.",
     "Choanozoa": "Choanoflagellates, single cells with a collar of microvilli round a whip, are the closest living relatives of animals.",

@@ -285,6 +285,10 @@
    "v": "Складчатая камера над жабрами для дыхания воздухом (гурами)."
   },
   {
+   "k": "A foraminifer whose shell is a single undivided tube of cemented sand grains, coiled flat like a rope. From the open end it spreads a web of fine sticky threads of cytoplasm over the seafloor to catch bacteria, algae and organic particles. Simple tubular, sand-built shells like this are the oldest foraminifera in the fossil record, from the early Cambrian, and Ammodiscus-like forms have lived on ever since.",
+   "v": "Фораминифера, раковина которой — единая неразделённая трубка из сцементированных песчинок, плоско свёрнутая, как канат. Из открытого конца она раскидывает по морскому дну сеть тонких липких нитей цитоплазмы, чтобы ловить бактерии, водоросли и органические частицы. Такие простые трубчатые раковины из песка — древнейшие фораминиферы в палеонтологической летописи, известные с раннего кембрия, а формы, подобные аммодискусу, живут с тех пор до наших дней."
+  },
+  {
    "k": "A forebrain roof that combines the senses: the ancestor of the cortex.",
    "v": "Крыша переднего мозга, объединяющая чувства: предшественница коры."
   },
@@ -317,6 +321,10 @@
    "v": "Мирный гигант тропических рифов Индо-Тихоокеанского региона размахом до 5 м, который фильтрует планктон, скользя с широко раскрытым ртом и развёрнутыми головными плавниками. Манты посещают «станции чистки», где мелкие рыбы выбирают паразитов с их кожи."
   },
   {
+   "k": "A giant among dinoflagellates, up to two millimetres across: a buoyant, balloon-like cell that floats at the sea surface and catches plankton and diatoms with a single sticky tentacle. When the water is disturbed it flashes blue, so its blooms make breaking waves and boat wakes glow at night; by day the same blooms can turn the sea pink or red. Dinoflagellate cysts are common fossils from the Triassic on.",
+   "v": "Великан среди динофлагеллят — до двух миллиметров в поперечнике: плавучая, похожая на воздушный шар клетка, которая держится у поверхности моря и ловит планктон и диатомовые водоросли единственным липким щупальцем. Когда воду тревожат, она вспыхивает голубым светом, поэтому при её цветении ночью светятся разбивающиеся волны и кильватерный след лодок; днём то же цветение может окрашивать море в розовый или красный цвет. Цисты динофлагеллят — обычные окаменелости начиная с триаса."
+  },
+  {
    "k": "A giant caiman of the Late Miocene wetlands of the western Amazon, about 8 million years ago, probably 10-12 m long and weighing several tonnes, among the largest crocodylians ever. Its broad skull was about 1.4 m long and its bite was one of the strongest known. It could have taken almost any animal in its swamps, including giant turtles and large mammals.",
    "v": "Гигантский кайман из позднемиоценовых водно-болотных угодий западной Амазонии, живший около 8 миллионов лет назад, вероятно длиной 10-12 м и весом в несколько тонн, — один из крупнейших крокодилов в истории. Его широкий череп достигал около 1,4 м в длину, а укус был одним из самых сильных известных. Он мог одолеть почти любое животное своих болот, включая гигантских черепах и крупных млекопитающих."
   },
@@ -339,6 +347,10 @@
   {
    "k": "A giant flightless bird of the late Paleocene and early Eocene of North America (once called Diatryma), about 2 m tall and up to 175 kg. Its huge, deep beak was long pictured killing early horses, but its bite mechanics, the lack of a hooked tip and the chemistry of its bones suggest it cracked nuts, seeds and tough plants. It was a relative of ducks and geese.",
    "v": "Гигантская нелетающая птица позднего палеоцена и раннего эоцена Северной Америки (ранее называвшаяся диатримой) ростом около 2 м и массой до 175 кг. Её огромный высокий клюв долго изображали убивающим ранних лошадей, но механика укуса, отсутствие крючковатого кончика и химический состав костей говорят о том, что она раскалывала орехи, семена и жёсткие растения. Она была родственницей уток и гусей."
+  },
+  {
+   "k": "A giant foraminifer of the warm Eocene seas, a single cell building a coin-shaped limestone shell several centimetres across with hundreds of chambers in a tight spiral. It lived on sunlit sea floors with algae in its shell that fed it by photosynthesis. Its shells make up whole beds of limestone: the stone of the pyramids of Giza is full of them, and the Greek historian Herodotus took them for the petrified lentils of the builders' rations.",
+   "v": "Гигантская фораминифера тёплых эоценовых морей: одна клетка, строившая монетовидную известковую раковину в несколько сантиметров в поперечнике с сотнями камер, плотно закрученных в спираль. Она жила на освещённом солнцем морском дне, а в её раковине обитали водоросли, кормившие её за счёт фотосинтеза. Её раковины слагают целые пласты известняка: камень пирамид Гизы полон ими, а греческий историк Геродот принял их за окаменевшую чечевицу из пайков строителей."
   },
   {
    "k": "A giant four-legged crocodile-line predator, 6 to 7 metres long, from the roughly 231-million-year-old Ischigualasto Formation of Argentina. Its legs were held erect under its body rather than sprawling, and its huge, deep skull was armed with long serrated teeth; two rows of bony scutes ran down its back. It was the top predator of its ecosystem, larger than the early dinosaurs it lived with, such as Herrerasaurus and Eoraptor.",
@@ -701,6 +713,10 @@
    "v": "Длинный стройный зауропод из позднеюрской формации Моррисон возрастом около 154-152 миллионов лет, достигавший около 25 метров от кончика морды до кончика хвоста. Свою очень длинную шею он держал почти горизонтально, что позволяло ему обирать обширные заросли папоротников и хвощей, а ещё более длинный хвост сужался в тонкий бич. На его маленькой голове колышковидные зубы были только в передней части челюстей и служили для обдирания листьев с веток. Слепки скелета по прозвищу «Диппи» стоят в музеях по всему миру."
   },
   {
+   "k": "A long, worm-like single cell about a fifth of a millimetre long that lives in the gut of marine worms, holding on to the gut wall by a small pointed tip and swaying and coiling in the gut contents, whose nutrients it soaks up through its pleated surface. It is an archigregarine, the simplest of the sporozoans: the class of single-celled parasites that also includes the malaria parasite, which lost the ability to live on their own and spread from host to host as tough-walled spores. Sporozoans are among the oldest parasites of animals, and were probably living in worms on the Ediacaran seafloor.",
+   "v": "Длинная червеобразная одиночная клетка около пятой доли миллиметра, живущая в кишечнике морских червей. Она держится за стенку кишки маленьким острым выступом на переднем конце, раскачивается и изгибается в содержимом кишечника и всасывает питательные вещества складчатой поверхностью. Это архигрегарина, самая простая из споровиков — класса одноклеточных паразитов, к которому относится и малярийный плазмодий; они утратили способность к самостоятельной жизни и переходят от хозяина к хозяину в виде спор с прочной оболочкой. Споровики — одни из древнейших паразитов животных и, вероятно, жили уже в червях на дне эдиакарского моря."
+  },
+  {
    "k": "A long-legged shorebird of western North American wetlands that sweeps its upturned bill from side to side through shallow water to catch insects and crustaceans. Its head and neck turn cinnamon in the breeding season.",
    "v": "Длинноногий кулик водно-болотных угодий запада Северной Америки, который водит загнутым вверх клювом из стороны в сторону по мелководью, ловя насекомых и рачков. В брачный период его голова и шея становятся коричнево-рыжими."
   },
@@ -727,6 +743,10 @@
   {
    "k": "A many-chambered stomach for chewing the cud (ruminants).",
    "v": "Многокамерный желудок для пережёвывания жвачки (жвачные)."
+  },
+  {
+   "k": "A many-headed slime mould: a single giant cell with millions of nuclei that spreads as a bright yellow network of veins over rotting logs and leaves of damp forests, eating bacteria, fungi and decaying matter. Its cytoplasm sloshes back and forth through the veins every minute or two, and the network thickens the paths that lead to food, so well that it can find the shortest route through a maze. When it dries out it hardens into a resting crust.",
+   "v": "«Многоголовый» слизевик: одна гигантская клетка с миллионами ядер, которая расползается ярко-жёлтой сетью тяжей по гниющим брёвнам и листьям сырых лесов, поедая бактерии, грибы и разлагающиеся остатки. Её цитоплазма каждые минуту-две переливается по тяжам туда и обратно, а сеть утолщает пути, ведущие к пище, — так успешно, что может найти кратчайший путь через лабиринт. Высыхая, она затвердевает в покоящуюся корку."
   },
   {
    "k": "A marine reptile of the Early Jurassic, about 3-3.5 metres long, with a small head on a very long neck, a broad, flat body and a short tail. It 'flew' through the water with four large, wing-like flippers, and snapped up fish and squid-like animals with its slender, pointed teeth. Its first complete skeleton was found by Mary Anning at Lyme Regis, England, and it gave its name to the whole plesiosaur group.",
@@ -785,6 +805,18 @@
    "v": "Палеодиктиоптера из позднекаменноугольных сланцев Коментри во Франции возрастом около 300 миллионов лет, один из самых известных представителей этого вымершего отряда. Как и у родичей, у неё были крылья на всех трёх грудных сегментах: две пары длинных узорчатых крыльев, распластанных в стороны, и пара маленьких лопастевидных крылышек на первом сегменте, давших название виду. Сосущим хоботком она, вероятно, питалась соком растений, спорами и семенами высоко в кронах деревьев каменноугольных лесов."
   },
   {
+   "k": "A parasitic amoeba of the gut of humans and other primates, spread as hardy cysts in water and food tainted with faeces. Most infections cause no harm, but sometimes it invades the gut wall, kills the host's cells and swallows red blood cells, causing amoebic dysentery. Like its free-living relatives among the archamoebae, it has lost its mitochondria, keeping only tiny remnants of them, and lives without oxygen.",
+   "v": "Паразитическая амёба кишечника человека и других приматов, распространяющаяся в виде стойких цист с водой и пищей, загрязнёнными фекалиями. Большинство заражений проходит без вреда, но иногда она проникает в стенку кишки, убивает клетки хозяина и заглатывает эритроциты, вызывая амёбную дизентерию. Как и её свободноживущие родственники среди архамёб, она утратила митохондрии, сохранив лишь их крошечные остатки, и живёт без кислорода."
+  },
+  {
+   "k": "A pear-shaped flagellate of the mouth and throat of birds, spread by pigeons and doves through the milk they feed their chicks and through shared drinking water, and caught by the hawks and falcons that eat them. It swims with four flagella at the front and a fifth along an undulating membrane, and has a stiff rod, the axostyle, sticking out behind. In finches and other songbirds it can cause deadly throat sores.",
+   "v": "Грушевидный жгутиконосец ротовой полости и глотки птиц. Его распространяют голуби и горлицы через зобное молоко, которым они кормят птенцов, и через общую воду для питья, а заражаются им ястребы и соколы, поедающие голубей. Он плавает с помощью четырёх передних жгутиков и пятого, идущего вдоль ундулирующей мембраны, а сзади у него торчит жёсткий стержень — аксостиль. У вьюрковых и других певчих птиц он может вызывать смертельные язвы в глотке."
+  },
+  {
+   "k": "A pear-shaped flagellate of the small intestine of mammals that clings to the gut lining with a sucking disc on its underside. Its two nuclei and the bodies below them make it look like a face peering down a microscope. It swims with four pairs of flagella and spreads as cysts in drinking water, causing diarrhoea, beaver fever, in people and animals. It has no proper mitochondria and was once thought to be a living relic of the first eukaryotes.",
+   "v": "Грушевидный жгутиконосец тонкого кишечника млекопитающих, цепляющийся за слизистую кишки присасывательным диском на брюшной стороне. Два ядра и структуры под ними делают его похожим на лицо, заглядывающее в микроскоп. Плавает с помощью четырёх пар жгутиков и распространяется цистами в питьевой воде, вызывая у людей и животных диарею — «бобровую лихорадку». У него нет настоящих митохондрий, и когда-то его считали живым реликтом первых эукариот."
+  },
+  {
    "k": "A pecking order settles who gets what.",
    "v": "Иерархия решает, кому что достаётся."
   },
@@ -803,6 +835,10 @@
   {
    "k": "A planktonic dendroid graptolite of the earliest Ordovician (long known as Dictyonema flabelliforme): a cone-shaped colony of tiny filter-feeding zooids living in tubes along many forking branches, joined by cross-links into a net and hung from a thin thread. Graptolites were hemichordates, relatives of today's tiny pterobranchs, and because it appears just above the base of the Ordovician it long served as a rough marker for the start of the period; graptolites in general are key index fossils for dating Ordovician and Silurian rocks.",
    "v": "Планктонный дендроидный граптолит самого начала ордовика (долго известный как Dictyonema flabelliforme): коническая колония крошечных зооидов-фильтраторов, живущих в трубочках вдоль множества ветвящихся веточек, соединённых перемычками в сеть и подвешенных на тонкой нити. Граптолиты были полухордовыми, родственниками современных крошечных крыложаберных; поскольку этот вид появляется сразу над основанием ордовика, он долго служил приблизительным маркером начала периода, а граптолиты в целом — ключевые руководящие ископаемые для датировки ордовикских и силурийских пород."
+  },
+  {
+   "k": "A planktonic foraminifer drifting in cool surface waters, its small chalky shell of four swollen chambers bristling with long fine spines that hold out a web of cytoplasm for catching food. When they die, the shells of Globigerina and its kin rain down and cover vast areas of the deep ocean floor as globigerina ooze; the oxygen in them records the temperature of the seas they lived in, which makes them a key to past climates.",
+   "v": "Планктонная фораминифера, дрейфующая в прохладных поверхностных водах; её маленькая известковая раковина из четырёх вздутых камер ощетинилась длинными тонкими иглами, на которых растянута сеть цитоплазмы для ловли пищи. После смерти раковины глобигерин и их родичей дождём опускаются вниз и покрывают огромные площади глубоководного дна глобигериновым илом; кислород в них хранит запись о температуре морей, где они жили, что делает их ключом к климатам прошлого."
   },
   {
    "k": "A planktonic graptolite of the Early Ordovician, about 477 million years ago, whose colony of four slender, horizontal branches spread out from a tiny founding tube in two close pairs. Each branch carried a row of small cups, each holding a filter-feeding zooid. It spread across the world's oceans so quickly that its first appearance is used to define the start of the Floian Stage of the Ordovician.",
@@ -981,6 +1017,10 @@
    "v": "Стройная квакша тропических лесов Центральной Америки, которая днём спит, прижавшись к листу и спрятав сине-кремовые бока и оранжевые лапки, так что выглядит полностью зелёной. Потревоженная, она внезапно показывает огромные алые глаза и яркие цвета, пугая хищника, а липкие подушечки пальцев позволяют ей держаться на нижней стороне листьев. Икра откладывается на листья над прудами, и зародыши могут вылупиться раньше срока и упасть в воду, если на кладку нападает змея или оса."
   },
   {
+   "k": "A slender, corkscrewing flagellate that lives in the blood of African mammals and is carried from one to the next by the bite of tsetse flies. It swims with a flagellum running along a frilly undulating membrane, and escapes the host's immune defences by changing its coat of surface proteins again and again. In people and cattle it causes sleeping sickness and nagana; wild antelopes and other game mostly carry it unharmed.",
+   "v": "Стройный жгутиконосец, извивающийся штопором; живёт в крови африканских млекопитающих и переносится от одного к другому при укусе мух цеце. Плавает с помощью жгутика, идущего вдоль складчатой ундулирующей мембраны, и ускользает от иммунной защиты хозяина, раз за разом меняя свою оболочку из поверхностных белков. У людей и скота вызывает сонную болезнь и нагану; дикие антилопы и другие дикие животные обычно носят её без вреда для себя."
+  },
+  {
    "k": "A slender, eel-like jawless fish about 17 cm long from the early Silurian of Lesmahagow, Scotland, about 430 million years ago. Its body was soft and only lightly scaled, with a long fin fold along each side, a round mouth, large eyes and a row of gill openings. It may be a relative of the anaspids or of the lampreys, and it probably sucked up small food from the water or the sea floor.",
    "v": "Стройная угреобразная бесчелюстная рыба длиной около 17 см из раннего силура Лесмахагоу в Шотландии, жившая около 430 миллионов лет назад. Тело её было мягким и лишь слегка покрытым чешуёй, с длинной плавниковой складкой на каждом боку, круглым ртом, большими глазами и рядом жаберных отверстий. Возможно, она родственна анаспидам или миногам и, вероятно, всасывала мелкую пищу из воды или со дна."
   },
@@ -1081,6 +1121,10 @@
    "v": "Небольшой планктонный граптолит раннего ордовика в форме камертона: от конуса первого зооида свисают две тонкие ветви, каждая с рядом пилообразных трубочек, в которых жили зооиды-фильтраторы. Граптолиты были колониальными полухордовыми, родственными современным крыложаберным; поскольку их виды быстро сменялись и разносились по целым океанам, двуветвистые дидимограптиды вроде этого — ключевые руководящие ископаемые для датировки ордовикских пород."
   },
   {
+   "k": "A small predatory flagellate of seas and lakes that swims with two unequal flagella and swallows bacteria and smaller flagellates whole. Telonemids are a deep branch of their own, next to the great group of the ciliates, foraminifera, diatoms and brown algae, the SAR, within the Diaphoretickes, which also holds the red and green algae and the plants. It stands here for the ancestor of that whole branch, over a billion years old.",
+   "v": "Небольшой хищный жгутиконосец морей и озёр: он плавает с помощью двух неравных жгутиков и целиком заглатывает бактерий и более мелких жгутиконосцев. Телонемиды — самостоятельная глубокая ветвь рядом с огромной группой инфузорий, фораминифер, диатомовых и бурых водорослей — SAR — внутри диафоретик (Diaphoretickes), куда входят также красные и зелёные водоросли и растения. Здесь он представляет предка всей этой ветви, жившего более миллиарда лет назад."
+  },
+  {
    "k": "A small ptyctodont placoderm from the Late Devonian Gogo reef of Western Australia, about 380 million years ago, named in honour of David Attenborough. Its fossil, the 'mother fish', contains an embryo still joined to it by an umbilical cord, the oldest known evidence of live birth in any vertebrate. About 25 centimetres long, it had big eyes, beak-like crushing tooth plates for shellfish and a long, whip-like tail.",
    "v": "Небольшая птиктодонтная плакодерма с рифа Гоу-Гоу позднего девона Западной Австралии, жившая около 380 миллионов лет назад и названная в честь Дэвида Аттенборо. Её окаменелость, «мать-рыба», содержит эмбрион, всё ещё соединённый с ней пуповиной, — древнейшее известное свидетельство живорождения у позвоночных. Длиной около 25 сантиметров, она имела большие глаза, клювовидные дробящие зубные пластины для моллюсков и длинный хлыстовидный хвост."
   },
@@ -1169,8 +1213,16 @@
    "v": "Меньший вид артроплевры — гигантских каменноугольных родственников многоножек, достигавший, возможно, 30–50 сантиметров. Он известен в основном по фрагментам панциря, тергиты которого несли более выраженные гребни, чем у его гигантского сородича. Как и другие артроплевриды, он, вероятно, питался растительными остатками на дне болотных лесов каменноугольного периода."
   },
   {
+   "k": "A social amoeba of forest soil and leaf litter. Its cells live alone, eating bacteria, until food runs out; then tens of thousands stream together, called by pulses of a chemical signal, into a slug that crawls toward light and heat. The slug rises into a fruiting body: a fifth of the cells die to build a stalk, lifting the rest as a ball of spores to be carried away. Its cooperation, and its cheaters, make it a model of how multicellular life could arise.",
+   "v": "Общественная амёба лесной почвы и подстилки. Её клетки живут поодиночке, поедая бактерии, пока не кончится пища; тогда десятки тысяч клеток, созванные импульсами химического сигнала, стекаются вместе и образуют «слизня», который ползёт к свету и теплу. Затем слизень поднимается и превращается в плодовое тело: пятая часть клеток гибнет, строя ножку, которая поднимает остальные в виде шарика спор, чтобы их унесло прочь. Сотрудничество клеток — и обманщики среди них — делают её моделью того, как могла возникнуть многоклеточная жизнь."
+  },
+  {
    "k": "A social bee living in colonies of tens of thousands of workers around a single queen. Workers gather nectar and pollen from flowers, store honey in wax combs, and use the waggle dance to tell nestmates where food is. As pollinators of crops and wild plants, they are among the most important insects to people.",
    "v": "Общественная пчела, живущая колониями из десятков тысяч рабочих вокруг единственной матки. Рабочие собирают нектар и пыльцу с цветков, хранят мёд в восковых сотах и с помощью виляющего танца сообщают соседям, где находится пища. Как опылители культурных и диких растений, они — одни из самых важных для человека насекомых."
+  },
+  {
+   "k": "A soil and pond amoeba that is not an amoebozoan at all but belongs to the excavates, far from the true amoebae: it crawls by bursting out one broad rounded pseudopod after another and eats bacteria. When its water changes it can grow two flagella and swim off within minutes, then turn back into an amoeba, or wall itself up in a cyst to wait out drying. It shows how often the amoeboid way of life evolved in different branches of the eukaryotes.",
+   "v": "Почвенная и прудовая амёба, которая вовсе не относится к амёбозоям, а принадлежит к экскаватам, далёким от настоящих амёб: она ползает, выбрасывая одну за другой широкие округлые ложноножки, и питается бактериями. Когда вода вокруг меняется, она за несколько минут может отрастить два жгутика и уплыть, а затем снова превратиться в амёбу — или замуровать себя в цисте, чтобы переждать засуху. Она показывает, как часто амёбоидный образ жизни возникал в разных ветвях эукариот."
   },
   {
    "k": "A solitary sea anemone of rocky tide pools along the coast of California and Baja California, named for the pink-lavender rays on its green oral disc. Its stinging tentacles catch small crustaceans, fish and drifting animals, while symbiotic algae in its tissues add food from sunlight and give it its green colour. Long confused with the cloning aggregating anemone, it was only described as a separate species in 2000.",
@@ -1179,6 +1231,10 @@
   {
    "k": "A sparrow-sized bird of Eurasian rivers and lakes that watches from a low perch, then plunges headfirst into the water after small fish. Its brilliant blue is structural colour, made by light scattering in the feathers rather than by pigment.",
    "v": "Птица размером с воробья с рек и озёр Евразии, которая высматривает добычу с низкой присады, а затем ныряет головой вперёд за мелкой рыбой. Её яркий синий цвет — структурный: он создаётся рассеянием света в перьях, а не пигментом."
+  },
+  {
+   "k": "A spindle-shaped green flagellate of ponds and puddles that swims with one long whip and steers toward light with a red eyespot. It has chloroplasts, captured long ago from a green alga, and makes its food by photosynthesis, but in the dark it lives on dissolved food like an animal, which is why it was claimed both by botanists and zoologists. Its flexible skin of spiral protein strips lets it squirm and change shape.",
+   "v": "Веретеновидный зелёный жгутиконосец прудов и луж, плавающий с помощью одного длинного жгутика и направляющийся к свету благодаря красному глазку. У него есть хлоропласты, давным-давно позаимствованные у зелёной водоросли, и он сам производит пищу путём фотосинтеза, но в темноте, как животное, живёт за счёт растворённых питательных веществ, — поэтому на него претендовали и ботаники, и зоологи. Гибкая оболочка из спиральных белковых полосок позволяет ему извиваться и менять форму."
   },
   {
    "k": "A spindle-shaped rangeomorph that lay flat on the deep seafloor at Mistaken Point, Newfoundland, about 565 million years ago. Its two rows of frondlets branched again and again into smaller copies of themselves. Maps of whole bedding surfaces show that it spread in clusters, probably both by runner-like stolons and by drifting propagules, making it one of the earliest records of how a population of large organisms grew. It is named after S. B. Misra, who found the Mistaken Point fossils in 1967.",
@@ -1299,6 +1355,14 @@
   {
    "k": "A tiny chelicerate about 5 mm long from the Herefordshire Lagerstaette of England, about 430 million years ago, preserved in three dimensions in volcanic ash. Its broad, horseshoe-shaped head shield covered a ring of legs, some carrying fringed outer branches, and its short body ended in a spine-like tail. It is an early relative of horseshoe crabs and sea scorpions.",
    "v": "Крошечное хелицеровое длиной около 5 мм из Херефордширского местонахождения в Англии возрастом около 430 миллионов лет, объёмно сохранившееся в вулканическом пепле. Его широкий подковообразный головной щит прикрывал кольцо ног, некоторые из которых несли бахромчатые наружные ветви, а короткое тело заканчивалось шиповидным хвостом. Это ранний родственник мечехвостов и ракоскорпионов."
+  },
+  {
+   "k": "A tiny freshwater flagellate that beats a long flagellum inside a deep groove along its underside, sweeping bacteria into it to eat. This feeding groove gave the excavates their name, a scattered set of flagellates that includes the euglenids and trypanosomes and the gut parasites without mitochondria. Malawimonads may sit near the very root of the eukaryote tree, and stand here for the ancestor of the excavates, well over a billion years old.",
+   "v": "Крошечный пресноводный жгутиконосец, который бьёт длинным жгутиком внутри глубокой бороздки на нижней стороне тела, сметая туда бактерий, чтобы их съесть. Именно эта питающая бороздка дала имя экскаватам — разрозненной группе жгутиконосцев, к которой относятся эвглены, трипаносомы и кишечные паразиты без митохондрий. Малавимонады, возможно, находятся у самого корня древа эукариот и представляют здесь предка экскават, жившего намного более миллиарда лет назад."
+  },
+  {
+   "k": "A tiny gliding flagellate of mud and soil that slides along on its long trailing flagellum, feeling the way with a short one sheathed in a stiff snout, and eats bacteria. Apusomonads are the closest single-celled relatives of the branch that holds the amoebae, the fungi and the animals, the Amorphea, and stand here for its ancestor, over a billion years old: a small, bacteria-eating cell with two flagella that could also put out pseudopods.",
+   "v": "Крошечный скользящий жгутиконосец из ила и почвы: он скользит на длинном волочащемся сзади жгутике, нащупывая путь коротким жгутиком, спрятанным в жёсткий «носик», и питается бактериями. Апузомонады — ближайшие одноклеточные родственники ветви, к которой относятся амёбы, грибы и животные, — аморфей (Amorphea) — и представляют здесь её предка, жившего более миллиарда лет назад: маленькую клетку с двумя жгутиками, питавшуюся бактериями и способную также выпускать ложноножки."
   },
   {
    "k": "A tiny gliding reptile, about 25 cm long including its long tail, from the Triassic Madygen Formation of Kyrgyzstan, about 230 million years ago. Unlike any other known glider, its main wing was a skin membrane stretched between its very long hind legs and the base of its tail, forming a delta wing, with perhaps a smaller membrane in front. It probably glided between trees around a lake, catching insects.",
@@ -1741,6 +1805,10 @@
    "v": "Лаковица аметистовая"
   },
   {
+   "k": "Ammodiscus",
+   "v": "Аммодискус"
+  },
+  {
    "k": "Ammonia Excretion",
    "v": "Выделение аммиака"
   },
@@ -1807,6 +1875,10 @@
   {
    "k": "An ammonoid from the Early Permian seas of west Texas and Mexico, around 280 million years ago. Its smooth, disc-shaped shell, about 10 cm across, was tightly coiled so that each whorl almost hid the one before. The walls between its gas-filled chambers met the shell in very complex, finely frilled suture lines, early examples of the pattern later typical of ammonites. It is a common index fossil of Permian rocks in the Glass Mountains of Texas.",
    "v": "Аммоноидея из раннепермских морей западного Техаса и Мексики, около 280 миллионов лет назад. Её гладкая дисковидная раковина около 10 см в поперечнике была плотно свёрнута, так что каждый оборот почти скрывал предыдущий. Перегородки между её газовыми камерами соединялись с раковиной по очень сложным, тонко рассечённым лопастным линиям — ранним примерам узора, позднее типичного для аммонитов. Это распространённое руководящее ископаемое пермских пород гор Гласс в Техасе."
+  },
+  {
+   "k": "An amoeba that lives inside a shell it builds itself: a brown, hat-shaped test of protein plates, open underneath by a round hole through which it puts out a few blunt pseudopods to crawl over pond mud and moss and to engulf algae and bacteria. Small vase-shaped shells of testate amoebae in rocks some 750 million years old are among the oldest fossils of any eukaryote that can be named, so shelled amoebae were already living before the Ediacaran began.",
+   "v": "Амёба, живущая внутри раковины, которую строит сама: коричневой, похожей на шляпку раковинки из белковых пластинок, открытой снизу круглым отверстием. Через него она высовывает несколько тупых ложноножек, чтобы ползать по прудовому илу и мху и захватывать водоросли и бактерии. Маленькие вазовидные раковинки раковинных амёб в породах возрастом около 750 миллионов лет — одни из древнейших окаменелостей эукариот, которые вообще удаётся определить, так что раковинные амёбы жили ещё до начала эдиакария."
   },
   {
    "k": "An antiarch placoderm from the Late Devonian Miguasha estuary of Quebec, about 380 million years ago; its genus is the most widespread placoderm, found on every continent. About 30 to 40 centimetres long, its front half was a box of bony plates with the eyes together on top, and jointed, armour-plated arm-like pectoral fins. It probably grubbed through the mud for food, perhaps using its arms to prop itself up or push along the bottom.",
@@ -2057,6 +2129,10 @@
    "v": "Цветущая яблоня"
   },
   {
+   "k": "Apusomonad",
+   "v": "Апузомонады"
+  },
+  {
    "k": "Aquatic Larvae",
    "v": "Водные личинки"
   },
@@ -2103,6 +2179,10 @@
   {
    "k": "Arbuscular mycorrhiza",
    "v": "Арбускулярная микориза"
+  },
+  {
+   "k": "Arcella",
+   "v": "Арцелла"
   },
   {
    "k": "Archaeanthus",
@@ -2159,6 +2239,10 @@
   {
    "k": "Archaeothyris",
    "v": "Археотирис"
+  },
+  {
+   "k": "Archamoeba",
+   "v": "Архамёбы"
   },
   {
    "k": "Archelon",
@@ -2691,6 +2775,10 @@
   {
    "k": "Blood from the gut passes through the liver before reaching the body.",
    "v": "Кровь от кишечника проходит через печень, прежде чем попасть в тело."
+  },
+  {
+   "k": "Blood parasites, carried from host to host by biting insects.",
+   "v": "Кровяные паразиты, переносимые от хозяина к хозяину кусающими насекомыми."
   },
   {
    "k": "Blood proteins that tag invaders and burst them open.",
@@ -3475,6 +3563,14 @@
   {
    "k": "Ciliate",
    "v": "Инфузория"
+  },
+  {
+   "k": "Ciliates and sporozoans share a skin of flattened sacs under the cell membrane.",
+   "v": "У инфузорий и споровиков под клеточной мембраной есть общий покров из уплощённых пузырьков."
+  },
+  {
+   "k": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals.",
+   "v": "Инфузории, фораминиферы, диатомовые водоросли и их родня образуют огромную ветвь эукариот, далёкую от животных."
   },
   {
    "k": "Cincinnati Arch",
@@ -4365,6 +4461,10 @@
    "v": "Диктиофиллум"
   },
   {
+   "k": "Dictyostelium",
+   "v": "Диктиостелиум"
+  },
+  {
    "k": "Dicynodont therapsid",
    "v": "Дицинодонт"
   },
@@ -4433,6 +4533,10 @@
    "v": "Динокрокута"
   },
   {
+   "k": "Dinoflagellate",
+   "v": "Динофлагелляты"
+  },
+  {
    "k": "Dinosaur National Monument",
    "v": "Национальный монумент Динозавров"
   },
@@ -4451,6 +4555,10 @@
   {
    "k": "Diplodocus",
    "v": "Диплодок"
+  },
+  {
+   "k": "Diplomonad",
+   "v": "Дипломонады"
   },
   {
    "k": "Diplopora",
@@ -4753,6 +4861,10 @@
    "v": "Экдизон определяет, когда членистоногое линяет."
   },
   {
+   "k": "Echidnina",
+   "v": "Эхиднина"
+  },
+  {
    "k": "Echinochimaera",
    "v": "Эхинохимера"
   },
@@ -4965,6 +5077,10 @@
    "v": "Давление, достаточное, чтобы поднять кровь по длинной шее зауропода."
   },
   {
+   "k": "Entamoeba",
+   "v": "Дизентерийная амёба"
+  },
+  {
    "k": "Entelodont",
    "v": "Энтелодонт"
   },
@@ -5047,6 +5163,14 @@
   {
    "k": "Eugeneodont",
    "v": "Эвгенеодонт"
+  },
+  {
+   "k": "Euglena",
+   "v": "Эвглена"
+  },
+  {
+   "k": "Euglenid",
+   "v": "Эвгленовые"
   },
   {
    "k": "Eugonophyllum",
@@ -5135,6 +5259,14 @@
   {
    "k": "Evolving one {0}",
    "v": "Эволюционирует одна особь: {0}"
+  },
+  {
+   "k": "Excavates: flagellates with a feeding groove along the underside.",
+   "v": "Экскаваты: жгутиконосцы с питающей бороздкой на нижней стороне тела."
+  },
+  {
+   "k": "Excavates: flagellates with a feeding groove, far from the animals and from the true amoebae.",
+   "v": "Экскаваты: жгутиконосцы с питающей бороздкой, далёкие и от животных, и от настоящих амёб."
   },
   {
    "k": "Excretory System",
@@ -5589,6 +5721,10 @@
    "v": "Пищевое поведение"
   },
   {
+   "k": "Foraminifer",
+   "v": "Фораминиферы"
+  },
+  {
    "k": "Forebrain, midbrain and hindbrain, each with its own jobs.",
    "v": "Передний, средний и задний мозг, у каждого свои задачи."
   },
@@ -5675,6 +5811,10 @@
   {
    "k": "Fur and Glands",
    "v": "Шерсть и железы"
+  },
+  {
+   "k": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat.",
+   "v": "Фузулиниды строили веретеновидные многокамерные раковины размером с пшеничное зерно."
   },
   {
    "k": "Fuxianospira",
@@ -5873,6 +6013,10 @@
    "v": "Виктория амазонская"
   },
   {
+   "k": "Giardia",
+   "v": "Лямблия"
+  },
+  {
    "k": "Giganotosaurus",
    "v": "Гиганотозавр"
   },
@@ -5963,6 +6107,10 @@
   {
    "k": "Gliding",
    "v": "Планирование"
+  },
+  {
+   "k": "Globigerina",
+   "v": "Глобигерина"
   },
   {
    "k": "Gloeocapsomorpha",
@@ -6193,6 +6341,10 @@
    "v": "Парниковый климат; полярных льдов нет"
   },
   {
+   "k": "Gregarine",
+   "v": "Грегарина"
+  },
+  {
    "k": "Grey mangrove",
    "v": "Авиценния"
   },
@@ -6327,6 +6479,10 @@
   {
    "k": "Haemoglobin packed into cells carries far more oxygen.",
    "v": "Гемоглобин, упакованный в клетки, переносит гораздо больше кислорода."
+  },
+  {
+   "k": "Haemosporidian",
+   "v": "Кровяные споровики"
   },
   {
    "k": "Haikou",
@@ -6543,6 +6699,10 @@
   {
    "k": "Hess Schwagerina",
    "v": "Швагерина Хесса"
+  },
+  {
+   "k": "Heterolobosean",
+   "v": "Гетеролобозеи"
   },
   {
    "k": "Heteromorph ammonite",
@@ -7357,6 +7517,10 @@
    "v": "Распознавание родичей"
   },
   {
+   "k": "Kinetoplastid",
+   "v": "Кинетопластиды"
+  },
+  {
    "k": "King crab",
    "v": "Мечехвост"
   },
@@ -8149,6 +8313,18 @@
    "v": "Создание света химической реакцией."
   },
   {
+   "k": "Malaria Parasite",
+   "v": "Малярийный плазмодий"
+  },
+  {
+   "k": "Malawimonad",
+   "v": "Малавимонады"
+  },
+  {
+   "k": "Malawimonas",
+   "v": "Malawimonas"
+  },
+  {
    "k": "Male Combat",
    "v": "Бои самцов"
   },
@@ -8487,6 +8663,10 @@
   {
    "k": "Messinian salinity crisis (~6 Ma): the Mediterranean partly dries up",
    "v": "Мессинский кризис солёности (~6 Ma): Средиземное море частично пересыхает"
+  },
+  {
+   "k": "Metamonads live without proper mitochondria, many of them in the guts of animals.",
+   "v": "Метамонады живут без полноценных митохондрий, многие из них — в кишечнике животных."
   },
   {
    "k": "Metamorphosis Trigger",
@@ -8937,6 +9117,10 @@
    "v": "Многоножки были среди первых животных на суше; крупнейшей была артроплевра."
   },
   {
+   "k": "Naegleria",
+   "v": "Неглерия"
+  },
+  {
    "k": "Naiadita",
    "v": "Наядита"
   },
@@ -9301,6 +9485,10 @@
    "v": "Нуия"
   },
   {
+   "k": "Nummulites",
+   "v": "Нуммулит"
+  },
+  {
    "k": "Nuptial Gifts",
    "v": "Брачные подарки"
   },
@@ -9605,6 +9793,10 @@
    "v": "Один из древнейших известных птерозавров из позднего триаса северной Италии, около 210 миллионов лет назад, с размахом крыльев около метра. В его коротких челюстях было более сотни крошечных зубов, многие с тремя–пятью вершинками, а рыбья чешуя в желудке одной окаменелости показывает, что он ловил рыбу. Как и у других ранних птерозавров, у него был длинный жёсткий хвост."
   },
   {
+   "k": "One of the oldest known radiolarians, from the middle Cambrian of Australia: a drifting single cell with a spherical lattice shell of glass (silica) bristling with long radial spines. Along the spines it spread threads of cytoplasm to catch smaller plankton. Radiolarian skeletons, sinking for half a billion years, have built up thick layers of siliceous ooze and chert on the ocean floor.",
+   "v": "Одна из древнейших известных радиолярий, из среднего кембрия Австралии: дрейфующая одиночная клетка со сферическим решётчатым скелетом из стекла (кремнезёма), ощетинившимся длинными радиальными иглами. Вдоль игл она раскидывала нити цитоплазмы, чтобы ловить более мелкий планктон. Скелеты радиолярий, оседающие на дно уже полмиллиарда лет, образовали на дне океана мощные слои кремнистого ила и кремнистых пород."
+  },
+  {
    "k": "One of the oldest known synapsids, the group that much later produced mammals, found in fossilised tree stumps at Florence, Nova Scotia, about 306 million years old. It looked like a lizard about half a metre long, but its skull already had the single opening behind each eye typical of synapsids. Its sharp teeth, including enlarged ones near the front of the upper jaw, suggest it hunted insects and small tetrapods in the coal forests.",
    "v": "Один из древнейших известных синапсидов — группы, которая гораздо позже дала начало млекопитающим, — найденный в окаменевших пнях во Флоренсе (Новая Шотландия), возрастом около 306 миллионов лет. Он походил на ящерицу длиной около полуметра, но в его черепе уже было характерное для синапсидов единственное отверстие позади каждого глаза. Его острые зубы, в том числе увеличенные в передней части верхней челюсти, говорят о том, что он охотился на насекомых и мелких тетрапод в каменноугольных лесах."
   },
@@ -9671,6 +9863,10 @@
   {
    "k": "Ophthalmosaurus",
    "v": "Офтальмозавр"
+  },
+  {
+   "k": "Opisthokonts swim with a single flagellum at the back: the branch of the fungi, choanoflagellates and animals.",
+   "v": "Опистоконты плавают с помощью одного жгутика сзади: это ветвь грибов, хоанофлагеллят и животных."
   },
   {
    "k": "Orange peel fungus",
@@ -10305,8 +10501,16 @@
    "v": "Филлотека"
   },
   {
+   "k": "Physarum",
+   "v": "Физарум"
+  },
+  {
    "k": "Physoporella",
    "v": "Физопорелла"
+  },
+  {
+   "k": "Pigeon Trichomonad",
+   "v": "Голубиная трихомонада"
   },
   {
    "k": "Pigment cells that can change colour.",
@@ -10397,6 +10601,10 @@
    "v": "Планктонные личинки"
   },
   {
+   "k": "Planktonic foraminifera drift in the open sea with spiny, balloon-chambered shells.",
+   "v": "Планктонные фораминиферы дрейфуют в открытом море; их колючие раковины состоят из шаровидных камер."
+  },
+  {
    "k": "Planning and self-control (great apes).",
    "v": "Планирование и самоконтроль (человекообразные обезьяны)."
   },
@@ -10407,6 +10615,10 @@
   {
    "k": "Plants: {0}",
    "v": "Растения: {0}"
+  },
+  {
+   "k": "Plasmodial slime mould",
+   "v": "Миксомицеты"
   },
   {
    "k": "Plateosaurus",
@@ -10795,6 +11007,10 @@
   {
    "k": "Radiodont",
    "v": "Радиодонт"
+  },
+  {
+   "k": "Radiolarian",
+   "v": "Радиолярии"
   },
   {
    "k": "Radula",
@@ -11249,6 +11465,10 @@
    "v": "Ротала"
   },
   {
+   "k": "Rotaliids build chalky shells of many chambers coiled in a spiral, some with algae inside.",
+   "v": "Роталииды строят известковые раковины из множества камер, закрученных спиралью; у некоторых внутри живут водоросли."
+  },
+  {
    "k": "Rothpletzella",
    "v": "Ротплецелла"
   },
@@ -11549,6 +11769,10 @@
    "v": "Скутозавр"
   },
   {
+   "k": "Sea Sparkle",
+   "v": "Ночесветка"
+  },
+  {
    "k": "Sea Turtle Leech",
    "v": "Пиявка морских черепах"
   },
@@ -11655,6 +11879,10 @@
   {
    "k": "Select an item",
    "v": "Выберите элемент"
+  },
+  {
+   "k": "Selenidium",
+   "v": "Селенидиум"
   },
   {
    "k": "Selenopeltis",
@@ -12105,6 +12333,10 @@
    "v": "Социальная иерархия"
   },
   {
+   "k": "Social amoeba",
+   "v": "Общественные амёбы"
+  },
+  {
    "k": "Sokolki",
    "v": "Соколки"
   },
@@ -12291,6 +12523,10 @@
   {
    "k": "Sporogonites",
    "v": "Спорогонитес"
+  },
+  {
+   "k": "Sporozoans are parasites that enter their hosts' cells with a complex at their tip.",
+   "v": "Споровики — паразиты, проникающие в клетки хозяина с помощью комплекса на переднем конце."
   },
   {
    "k": "Spraying irritants (bombardier beetles, later skunks).",
@@ -12813,6 +13049,14 @@
    "v": "Отличение родичей от чужаков по запаху или виду."
   },
   {
+   "k": "Telonema",
+   "v": "Telonema"
+  },
+  {
+   "k": "Telonemid",
+   "v": "Телонемиды"
+  },
+  {
    "k": "Temnospondyl",
    "v": "Темноспондил"
   },
@@ -12883,6 +13127,14 @@
   {
    "k": "Terror bird",
    "v": "Фороракос"
+  },
+  {
+   "k": "Testate amoeba",
+   "v": "Раковинные амёбы"
+  },
+  {
+   "k": "Testate amoebae build shells around themselves, with an opening for their pseudopods.",
+   "v": "Раковинные амёбы строят вокруг себя раковину с отверстием для ложноножек."
   },
   {
    "k": "Testosterone and oestrogen shape adult bodies.",
@@ -13019,6 +13271,10 @@
   {
    "k": "The commonest radiodont of the Chengjiang biota of Yunnan, China, about 518 million years old, and a close relative of Anomalocaris. Each frontal appendage carried one enormous forward spine that closed against the rest of the limb like the jaw of a pair of pincers. It swam with eleven pairs of body flaps and had a long tail fan with streamers; a 2023 study of its growth suggests the biggest individuals were well over half a metre long.",
    "v": "Самый обычный радиодонт чэнцзянской биоты в Юньнани (Китай), возрастом около 518 миллионов лет, близкий родственник аномалокариса. На каждом лобном придатке был один огромный шип, направленный вперёд, который смыкался с остальной частью конечности, как челюсть клещей. Он плавал с помощью одиннадцати пар туловищных лопастей и имел длинный хвостовой веер с лентами; исследование его роста 2023 года показывает, что самые крупные особи были намного длиннее полуметра."
+  },
+  {
+   "k": "The deadliest malaria parasite, a sporozoan that lives inside the red blood cells of people and multiplies there, bursting them in waves of fever. Its life alternates between humans and Anopheles mosquitoes, which pick up its crescent-shaped sexual stages with a meal of blood and pass it on with their next bite. It descends from a parasite of gorillas, which crossed over to humans in Africa, and has shaped human history and even the human genome.",
+   "v": "Самый смертоносный малярийный паразит — споровик, который живёт внутри эритроцитов человека, размножается в них и разрывает их, вызывая волны лихорадки. Его жизненный цикл чередуется между людьми и малярийными комарами Anopheles, которые поглощают его серповидные половые стадии вместе с кровью и передают паразита при следующем укусе. Он происходит от паразита горилл, перешедшего к людям в Африке, и повлиял на историю человечества и даже на геном человека."
   },
   {
    "k": "The earliest known diapsid reptile, the lineage that later gave rise to lizards, crocodiles and dinosaurs, from Late Carboniferous rocks near Garnett, Kansas, about 302 million years old. It was a slender animal some 40 cm long, with a small head, a long neck, long legs and a tail longer than the rest of its body. It probably darted through the undergrowth of the coal forests hunting insects and other small invertebrates.",
@@ -13243,6 +13499,10 @@
   {
    "k": "The {0} has begun",
    "v": "Начался период: {0}"
+  },
+  {
+   "k": "Thecamonas",
+   "v": "Thecamonas"
   },
   {
    "k": "Therizinosaurus",
@@ -13497,6 +13757,10 @@
    "v": "Трицератопс"
   },
   {
+   "k": "Trichonymphids digest wood in the guts of termites, with thousands of flagella.",
+   "v": "Трихонимфы переваривают древесину в кишечнике термитов и несут тысячи жгутиков."
+  },
+  {
    "k": "Trichopitys",
    "v": "Трихопитис"
   },
@@ -13595,6 +13859,10 @@
   {
    "k": "Trumpet pitcher",
    "v": "Саррацения"
+  },
+  {
+   "k": "Trypanosome",
+   "v": "Трипаносома"
   },
   {
    "k": "Tsingy de Bemaraha",
@@ -16561,6 +16829,10 @@
    "v": "Щёлкните по отмеченной клетке, чтобы поместить потомство"
   },
   {
+   "k": "New this turn: it can act from the next turn",
+   "v": "Появился в этом ходу: сможет действовать со следующего хода"
+  },
+  {
    "k": "La Brea",
    "v": "Ла-Брея"
   },
@@ -16807,6 +17079,22 @@
   {
    "k": "Zealandia Realm",
    "v": "Царство Зеландия"
+  },
+  {
+   "k": "Encyclopedia",
+   "v": "Энциклопедия"
+  },
+  {
+   "k": "Search",
+   "v": "Поиск"
+  },
+  {
+   "k": "{0} species",
+   "v": "Видов: {0}"
+  },
+  {
+   "k": "Evolves from",
+   "v": "Происходит от"
   }
  ]
 }

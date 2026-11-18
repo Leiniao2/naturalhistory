@@ -49,6 +49,11 @@ namespace NaturalHistory.World
         public bool Backward => Definition != null && Definition.mapBackward; // swims tail first
         public bool IsBusy  => trip != null;
 
+        // The turn it appeared in by reproducing or evolving (EvolutionManager): it can't move,
+        // attack, reproduce or evolve until the next turn
+        public int BornTurn { get; set; } = -1;
+        public bool JustBorn => BornTurn >= 0 && Core.TurnManager.Instance != null && Core.TurnManager.Instance.CurrentTurn == BornTurn;
+
         public event Action<ColonyGroup> Arrived;            // finished a move or an attack and settled in
         public event Action<ColonyGroup, HexCell> Struck;    // reached the border of the tile it attacks
 
@@ -203,7 +208,7 @@ namespace NaturalHistory.World
         // in between. The group belongs to the last tile from the moment it sets out.
         public bool MoveAlong(IReadOnlyList<HexCell> path)
         {
-            if (!CanMove || IsBusy || path == null || path.Count == 0) return false;
+            if (!CanMove || IsBusy || JustBorn || path == null || path.Count == 0) return false;
             var points = new List<Vector3> { Spot + Vector3.up * Cell.SurfaceHeight };
             var prev = Cell;
             var offset = Vector3.zero;
@@ -229,7 +234,7 @@ namespace NaturalHistory.World
         // defence (Defend) as the blow lands.
         public bool Attack(HexCell target)
         {
-            if (!CanAttack || IsBusy || target == null || target == Cell || !AreNeighbors(Cell, target)) return false;
+            if (!CanAttack || IsBusy || JustBorn || target == null || target == Cell || !AreNeighbors(Cell, target)) return false;
             var (hold, reachFraction, approach) = StrikeTiming();
             if (!CanMove) reachFraction = 0f;
             var home   = Spot + Vector3.up * Cell.SurfaceHeight;

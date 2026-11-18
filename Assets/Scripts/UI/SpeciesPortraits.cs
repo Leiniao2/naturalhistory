@@ -7,14 +7,26 @@ namespace NaturalHistory.UI
     // Portrait images of species for the UI, rendered once from their map model (species.json
     // "model") into a small texture: front three-quarter view, lit by the scene's sun, transparent
     // background. Species without a model get null.
+    // Painting: the species' painted portrait (Resources/Portraits/<id>, made with tools/portraits),
+    // a whole scene with its habitat behind it, for the larger places such as the Evolution Tree's
+    // description; null when a species has none.
     public static class SpeciesPortraits
     {
         private const int Size  = 256;
         private const int Layer = 31; // only the portrait camera draws this layer, far below the map
 
         private static readonly Dictionary<string, RenderTexture> cache = new();
+        private static readonly Dictionary<string, Texture2D> paintings = new();
         private static Camera camera;
         private static Material material;
+
+        public static Texture2D Painting(SpeciesDefinition species)
+        {
+            if (species == null) return null;
+            if (!paintings.TryGetValue(species.id, out var painting))
+                paintings[species.id] = painting = Resources.Load<Texture2D>($"Portraits/{species.id}");
+            return painting;
+        }
 
         public static Texture Get(SpeciesDefinition species)
         {

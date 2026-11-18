@@ -285,6 +285,10 @@
    "v": "아가미 위에 있는 공기 호흡용 주름진 방 (구라미)."
   },
   {
+   "k": "A foraminifer whose shell is a single undivided tube of cemented sand grains, coiled flat like a rope. From the open end it spreads a web of fine sticky threads of cytoplasm over the seafloor to catch bacteria, algae and organic particles. Simple tubular, sand-built shells like this are the oldest foraminifera in the fossil record, from the early Cambrian, and Ammodiscus-like forms have lived on ever since.",
+   "v": "껍데기가 칸막이 없는 하나의 관으로 된 유공충으로, 이 관은 모래알을 붙여 만든 것이며 밧줄처럼 납작하게 감겨 있다. 열린 끝에서 가늘고 끈끈한 세포질 실을 그물처럼 해저에 펼쳐 세균, 조류, 유기물 입자를 잡는다. 이처럼 단순한 관 모양의 모래 껍데기는 화석 기록에서 가장 오래된 유공충으로 캄브리아기 초기부터 나타나며, 암모디스쿠스와 비슷한 형태들은 그 이후로 지금까지 계속 살아왔다."
+  },
+  {
    "k": "A forebrain roof that combines the senses: the ancestor of the cortex.",
    "v": "감각을 통합하는 전뇌의 지붕: 피질의 조상."
   },
@@ -317,6 +321,10 @@
    "v": "폭이 최대 5 m에 이르는 열대 인도-태평양 산호초의 온순한 거인으로, 입을 크게 벌리고 머리지느러미를 펼친 채 미끄러지듯 헤엄치며 플랑크톤을 걸러 먹습니다. 만타가오리는 작은 물고기가 피부의 기생충을 쪼아 주는 '청소 정거장'을 찾아갑니다."
   },
   {
+   "k": "A giant among dinoflagellates, up to two millimetres across: a buoyant, balloon-like cell that floats at the sea surface and catches plankton and diatoms with a single sticky tentacle. When the water is disturbed it flashes blue, so its blooms make breaking waves and boat wakes glow at night; by day the same blooms can turn the sea pink or red. Dinoflagellate cysts are common fossils from the Triassic on.",
+   "v": "와편모충류 가운데 거인으로, 지름이 최대 2밀리미터에 이른다. 풍선처럼 잘 뜨는 세포로 바다 표면을 떠다니며, 끈끈한 촉수 하나로 플랑크톤과 규조류를 잡는다. 물이 흔들리면 파랗게 빛을 내기 때문에, 대량으로 번식하면 밤에 부서지는 파도와 배가 지나간 물결이 빛난다. 낮에는 같은 무리가 바다를 분홍색이나 붉은색으로 물들이기도 한다. 와편모충류의 포낭은 트라이아스기 이후 흔한 화석이다."
+  },
+  {
    "k": "A giant caiman of the Late Miocene wetlands of the western Amazon, about 8 million years ago, probably 10-12 m long and weighing several tonnes, among the largest crocodylians ever. Its broad skull was about 1.4 m long and its bite was one of the strongest known. It could have taken almost any animal in its swamps, including giant turtles and large mammals.",
    "v": "약 800만 년 전 후기 마이오세 아마존 서부 습지의 거대한 카이만으로, 몸길이는 아마 10-12m, 몸무게는 몇 톤에 달해 역사상 가장 큰 악어류 중 하나입니다. 넓은 두개골은 길이 약 1.4m였고, 무는 힘은 알려진 것 중 가장 강한 축에 들었습니다. 거대한 거북과 대형 포유류를 포함해 늪의 거의 모든 동물을 잡을 수 있었습니다."
   },
@@ -339,6 +347,10 @@
   {
    "k": "A giant flightless bird of the late Paleocene and early Eocene of North America (once called Diatryma), about 2 m tall and up to 175 kg. Its huge, deep beak was long pictured killing early horses, but its bite mechanics, the lack of a hooked tip and the chemistry of its bones suggest it cracked nuts, seeds and tough plants. It was a relative of ducks and geese.",
    "v": "북아메리카의 후기 팔레오세와 전기 에오세에 살던 거대한 날지 못하는 새(한때 디아트리마로 불림)로, 키 약 2 m, 몸무게 최대 175 kg이었습니다. 거대하고 높은 부리는 오랫동안 초기 말을 사냥하는 모습으로 그려졌지만, 무는 역학, 갈고리 없는 부리 끝, 뼈의 화학 조성으로 보아 견과, 씨앗, 질긴 식물을 깨 먹었던 것으로 보입니다. 오리와 거위의 친척이었습니다."
+  },
+  {
+   "k": "A giant foraminifer of the warm Eocene seas, a single cell building a coin-shaped limestone shell several centimetres across with hundreds of chambers in a tight spiral. It lived on sunlit sea floors with algae in its shell that fed it by photosynthesis. Its shells make up whole beds of limestone: the stone of the pyramids of Giza is full of them, and the Greek historian Herodotus took them for the petrified lentils of the builders' rations.",
+   "v": "따뜻한 에오세 바다에 살았던 거대한 유공충이다. 단세포이면서도 지름이 몇 센티미터나 되는 동전 모양 석회질 껍데기를 만들었고, 그 안에는 수백 개의 방이 촘촘한 나선으로 배열되어 있었다. 햇빛이 드는 해저에서 살았으며, 껍데기 속의 조류가 광합성으로 양분을 공급해 주었다. 그 껍데기는 석회암 지층 전체를 이루기도 한다. 기자의 피라미드 석재에도 가득 들어 있으며, 그리스의 역사가 헤로도토스는 이것을 건설 노동자들이 배급받은 렌즈콩이 돌로 변한 것이라고 여겼다."
   },
   {
    "k": "A giant four-legged crocodile-line predator, 6 to 7 metres long, from the roughly 231-million-year-old Ischigualasto Formation of Argentina. Its legs were held erect under its body rather than sprawling, and its huge, deep skull was armed with long serrated teeth; two rows of bony scutes ran down its back. It was the top predator of its ecosystem, larger than the early dinosaurs it lived with, such as Herrerasaurus and Eoraptor.",
@@ -701,6 +713,10 @@
    "v": "후기 쥐라기 모리슨층의 길고 날씬한 용각류로, 약 1억 5,400만-1억 5,200만 년 전에 살았으며 주둥이에서 꼬리 끝까지 약 25m에 달했습니다. 아주 긴 목을 거의 수평으로 뻗어 넓은 범위의 양치식물과 속새를 훑어 먹을 수 있었고, 그보다 더 긴 꼬리는 가는 채찍 끝처럼 가늘어졌습니다. 작은 머리에는 턱 앞쪽에만 말뚝 모양의 이빨이 있어 가지에서 잎을 훑어 냈습니다. '디피'라는 별명의 골격 복제품이 세계 곳곳의 박물관에 서 있습니다."
   },
   {
+   "k": "A long, worm-like single cell about a fifth of a millimetre long that lives in the gut of marine worms, holding on to the gut wall by a small pointed tip and swaying and coiling in the gut contents, whose nutrients it soaks up through its pleated surface. It is an archigregarine, the simplest of the sporozoans: the class of single-celled parasites that also includes the malaria parasite, which lost the ability to live on their own and spread from host to host as tough-walled spores. Sporozoans are among the oldest parasites of animals, and were probably living in worms on the Ediacaran seafloor.",
+   "v": "길이 약 5분의 1밀리미터의 벌레처럼 가늘고 긴 단세포 생물로, 바다 환형동물의 장 속에 산다. 앞끝의 작고 뾰족한 돌기로 장벽에 붙어, 장 내용물 속에서 흔들리고 몸을 말며 세로 주름이 진 몸 표면으로 양분을 흡수한다. 원시 그레가린류로, 포자충류 가운데 가장 단순한 무리이다. 포자충류는 말라리아 원충도 포함하는 단세포 기생충 무리로, 스스로 살아가는 능력을 잃고 단단한 벽을 가진 포자가 되어 숙주에서 숙주로 퍼진다. 포자충은 동물의 가장 오래된 기생충 가운데 하나로, 에디아카라기 해저의 벌레 몸속에도 이미 살았을 것으로 보인다."
+  },
+  {
    "k": "A long-legged shorebird of western North American wetlands that sweeps its upturned bill from side to side through shallow water to catch insects and crustaceans. Its head and neck turn cinnamon in the breeding season.",
    "v": "북아메리카 서부 습지에 사는 다리가 긴 물새로, 위로 휜 부리를 얕은 물속에서 좌우로 휘저어 곤충과 갑각류를 잡습니다. 번식기에는 머리와 목이 계피색으로 변합니다."
   },
@@ -727,6 +743,10 @@
   {
    "k": "A many-chambered stomach for chewing the cud (ruminants).",
    "v": "되새김질을 위한 여러 칸의 위 (반추동물)."
+  },
+  {
+   "k": "A many-headed slime mould: a single giant cell with millions of nuclei that spreads as a bright yellow network of veins over rotting logs and leaves of damp forests, eating bacteria, fungi and decaying matter. Its cytoplasm sloshes back and forth through the veins every minute or two, and the network thickens the paths that lead to food, so well that it can find the shortest route through a maze. When it dries out it hardens into a resting crust.",
+   "v": "'머리가 많은' 변형균(점균)이다. 수백만 개의 핵을 가진 하나의 거대한 세포로, 습한 숲의 썩은 통나무와 낙엽 위에 밝은 노란색 그물 모양의 관을 펼치며 퍼져 나가고 세균, 균류, 썩은 물질을 먹는다. 세포질은 1~2분마다 관 속을 앞뒤로 출렁이며 흐르고, 그물은 먹이로 이어지는 길을 두껍게 만든다. 그 솜씨가 뛰어나 미로를 통과하는 가장 짧은 길을 찾아낼 수 있을 정도다. 마르면 단단하게 굳어 휴면 상태의 껍질이 된다."
   },
   {
    "k": "A marine reptile of the Early Jurassic, about 3-3.5 metres long, with a small head on a very long neck, a broad, flat body and a short tail. It 'flew' through the water with four large, wing-like flippers, and snapped up fish and squid-like animals with its slender, pointed teeth. Its first complete skeleton was found by Mary Anning at Lyme Regis, England, and it gave its name to the whole plesiosaur group.",
@@ -785,6 +805,18 @@
    "v": "프랑스 코망트리의 후기 석탄기 셰일에서 나온 약 3억 년 전의 고망시류 곤충으로, 이 멸종한 목에서 가장 잘 알려진 구성원 중 하나입니다. 친척들처럼 세 가슴마디 모두에 날개가 있었는데, 무늬가 있는 긴 날개 두 쌍을 평평하게 펼쳤고, 첫째 마디에는 종명의 유래가 된 작은 엽상의 소형 날개 한 쌍이 있었습니다. 빨아들이는 주둥이로 석탄기 숲의 높은 나무 위에서 식물의 즙, 포자, 씨앗을 먹었을 것입니다."
   },
   {
+   "k": "A parasitic amoeba of the gut of humans and other primates, spread as hardy cysts in water and food tainted with faeces. Most infections cause no harm, but sometimes it invades the gut wall, kills the host's cells and swallows red blood cells, causing amoebic dysentery. Like its free-living relatives among the archamoebae, it has lost its mitochondria, keeping only tiny remnants of them, and lives without oxygen.",
+   "v": "사람과 다른 영장류의 장에 기생하는 아메바로, 대변에 오염된 물과 음식을 통해 튼튼한 포낭 형태로 퍼진다. 대부분의 감염은 해를 끼치지 않지만, 때로는 장벽을 파고들어 숙주의 세포를 죽이고 적혈구를 삼켜 아메바성 이질을 일으킨다. 고아메바류에 속하는 자유생활 친척들처럼 미토콘드리아를 잃고 아주 작은 흔적만 남긴 채 산소 없이 살아간다."
+  },
+  {
+   "k": "A pear-shaped flagellate of the mouth and throat of birds, spread by pigeons and doves through the milk they feed their chicks and through shared drinking water, and caught by the hawks and falcons that eat them. It swims with four flagella at the front and a fifth along an undulating membrane, and has a stiff rod, the axostyle, sticking out behind. In finches and other songbirds it can cause deadly throat sores.",
+   "v": "새의 입과 목구멍에 사는 서양배 모양의 편모충이다. 비둘기는 새끼에게 먹이는 비둘기젖과 함께 쓰는 물을 통해 이것을 퍼뜨리고, 비둘기를 잡아먹는 새매와 송골매 같은 맹금류도 감염된다. 앞쪽의 편모 네 개와 파동막을 따라 뻗은 다섯 번째 편모로 헤엄치며, 뒤쪽으로는 축간이라는 단단한 막대가 튀어나와 있다. 핀치를 비롯한 명금류에게는 치명적인 목구멍 궤양을 일으킬 수 있다."
+  },
+  {
+   "k": "A pear-shaped flagellate of the small intestine of mammals that clings to the gut lining with a sucking disc on its underside. Its two nuclei and the bodies below them make it look like a face peering down a microscope. It swims with four pairs of flagella and spreads as cysts in drinking water, causing diarrhoea, beaver fever, in people and animals. It has no proper mitochondria and was once thought to be a living relic of the first eukaryotes.",
+   "v": "포유류의 작은창자에 사는 서양배 모양의 편모충으로, 배 쪽에 있는 흡착판으로 장 내벽에 달라붙는다. 핵 두 개와 그 아래의 구조물 때문에 현미경을 내려다보는 얼굴처럼 보인다. 네 쌍의 편모로 헤엄치며, 마시는 물속에서 포낭으로 퍼져 사람과 동물에게 설사, 이른바 '비버 열병'을 일으킨다. 제대로 된 미토콘드리아가 없어서 한때 최초의 진핵생물이 남긴 살아 있는 유물이라고 여겨지기도 했다."
+  },
+  {
    "k": "A pecking order settles who gets what.",
    "v": "서열이 누가 무엇을 차지할지 정합니다."
   },
@@ -803,6 +835,10 @@
   {
    "k": "A planktonic dendroid graptolite of the earliest Ordovician (long known as Dictyonema flabelliforme): a cone-shaped colony of tiny filter-feeding zooids living in tubes along many forking branches, joined by cross-links into a net and hung from a thin thread. Graptolites were hemichordates, relatives of today's tiny pterobranchs, and because it appears just above the base of the Ordovician it long served as a rough marker for the start of the period; graptolites in general are key index fossils for dating Ordovician and Silurian rocks.",
    "v": "최초기 오르도비스기의 부유성 수지상 필석(오랫동안 Dictyonema flabelliforme로 알려짐)입니다: 여러 갈래로 갈라진 가지를 따라 관 속에 사는 작은 여과 섭식 개충들의 원뿔형 군체로, 가로 연결로 그물을 이루고 가는 실에 매달려 있습니다. 필석류는 오늘날의 작은 익새류와 가까운 반삭동물이며, 이 종은 오르도비스기 기저 바로 위에 나타나 오랫동안 이 시대의 시작을 대략 알리는 표지로 쓰였습니다. 필석류는 대체로 오르도비스기와 실루리아기 암석의 연대를 정하는 핵심 표준화석입니다."
+  },
+  {
+   "k": "A planktonic foraminifer drifting in cool surface waters, its small chalky shell of four swollen chambers bristling with long fine spines that hold out a web of cytoplasm for catching food. When they die, the shells of Globigerina and its kin rain down and cover vast areas of the deep ocean floor as globigerina ooze; the oxygen in them records the temperature of the seas they lived in, which makes them a key to past climates.",
+   "v": "차가운 표층수를 떠다니는 부유성 유공충이다. 부풀어 오른 방 네 개로 이루어진 작은 석회질 껍데기에 길고 가는 가시가 빽빽이 돋아 있으며, 이 가시로 먹이를 잡기 위한 세포질 그물을 펼친다. 죽으면 글로비게리나와 그 친척들의 껍데기가 비처럼 내려앉아 글로비게리나 연니가 되어 깊은 바다 밑바닥의 넓은 지역을 덮는다. 껍데기 속의 산소는 그들이 살았던 바다의 수온을 기록하고 있어, 과거 기후를 밝히는 열쇠가 된다."
   },
   {
    "k": "A planktonic graptolite of the Early Ordovician, about 477 million years ago, whose colony of four slender, horizontal branches spread out from a tiny founding tube in two close pairs. Each branch carried a row of small cups, each holding a filter-feeding zooid. It spread across the world's oceans so quickly that its first appearance is used to define the start of the Floian Stage of the Ordovician.",
@@ -981,6 +1017,10 @@
    "v": "중앙아메리카 열대우림의 가냘픈 청개구리로, 낮에는 파랑과 크림색 옆구리와 주황색 발을 감추고 잎에 납작 붙어 자서 온통 초록색으로 보입니다. 방해를 받으면 거대한 진홍색 눈과 화려한 색을 번뜩여 포식자를 놀라게 하며, 끈끈한 발가락 패드로 잎 뒷면에 매달립니다. 알은 연못 위 잎에 낳는데, 뱀이나 말벌이 알 덩어리를 공격하면 배아가 일찍 부화해 물로 떨어질 수 있습니다."
   },
   {
+   "k": "A slender, corkscrewing flagellate that lives in the blood of African mammals and is carried from one to the next by the bite of tsetse flies. It swims with a flagellum running along a frilly undulating membrane, and escapes the host's immune defences by changing its coat of surface proteins again and again. In people and cattle it causes sleeping sickness and nagana; wild antelopes and other game mostly carry it unharmed.",
+   "v": "가는 몸을 코르크 따개처럼 비틀며 헤엄치는 편모충으로, 아프리카 포유류의 혈액 속에 살며 체체파리에게 물릴 때 다음 숙주로 옮겨 간다. 주름진 파동막을 따라 뻗은 편모로 헤엄치며, 표면 단백질 외피를 계속해서 바꿈으로써 숙주의 면역 방어를 피한다. 사람과 소에게는 수면병과 나가나병을 일으키지만, 야생 영양을 비롯한 야생 동물은 대개 해를 입지 않고 지니고 있다."
+  },
+  {
    "k": "A slender, eel-like jawless fish about 17 cm long from the early Silurian of Lesmahagow, Scotland, about 430 million years ago. Its body was soft and only lightly scaled, with a long fin fold along each side, a round mouth, large eyes and a row of gill openings. It may be a relative of the anaspids or of the lampreys, and it probably sucked up small food from the water or the sea floor.",
    "v": "스코틀랜드 레스머헤이고의 전기 실루리아기 지층에서 나온, 약 4억 3,000만 년 전의 몸길이 약 17cm인 가늘고 뱀장어 같은 무악어류입니다. 몸은 부드럽고 비늘이 적었으며, 양옆에 긴 지느러미 주름이 하나씩 있고 둥근 입, 큰 눈, 한 줄의 아가미구멍을 가졌습니다. 결갑류나 칠성장어의 친척일 수 있으며, 아마 물속이나 해저에서 작은 먹이를 빨아들였을 것입니다."
   },
@@ -1081,6 +1121,10 @@
    "v": "소리굽쇠 모양의 전기 오르도비스기 작은 부유성 필석입니다: 시조 개충의 원뿔에서 가느다란 가지 두 개가 늘어지고, 가지마다 여과 섭식 개충이 사는 톱니 모양 관이 줄지어 있습니다. 필석류는 현대 익새류와 가까운 군체성 반삭동물로, 종이 빠르게 바뀌고 대양 전체로 떠다녔기 때문에 이와 같은 두 가지 디디모그랍투스류는 오르도비스기 암석의 연대를 정하는 핵심 표준화석입니다."
   },
   {
+   "k": "A small predatory flagellate of seas and lakes that swims with two unequal flagella and swallows bacteria and smaller flagellates whole. Telonemids are a deep branch of their own, next to the great group of the ciliates, foraminifera, diatoms and brown algae, the SAR, within the Diaphoretickes, which also holds the red and green algae and the plants. It stands here for the ancestor of that whole branch, over a billion years old.",
+   "v": "바다와 호수에 사는 작은 포식성 편모충으로, 길이가 서로 다른 두 개의 편모로 헤엄치며 세균과 더 작은 편모충을 통째로 삼킨다. 텔로네마류는 독자적인 깊은 계통으로, 섬모충, 유공충, 규조류, 갈조류를 아우르는 거대한 무리인 SAR 바로 옆에 자리하며, 홍조류와 녹조류, 식물도 포함하는 디아포레티케스(Diaphoretickes)에 속한다. 여기서는 10억 년도 더 된 이 계통 전체의 조상을 대표한다."
+  },
+  {
    "k": "A small ptyctodont placoderm from the Late Devonian Gogo reef of Western Australia, about 380 million years ago, named in honour of David Attenborough. Its fossil, the 'mother fish', contains an embryo still joined to it by an umbilical cord, the oldest known evidence of live birth in any vertebrate. About 25 centimetres long, it had big eyes, beak-like crushing tooth plates for shellfish and a long, whip-like tail.",
    "v": "서오스트레일리아 후기 데본기 고고 초에서 나온 작은 프틱토두스류 판피어로, 약 3억 8,000만 년 전의 것이며 데이비드 애튼버러를 기려 명명되었습니다. '어미 물고기'라 불리는 이 화석에는 아직 탯줄로 연결된 배아가 들어 있는데, 이는 척추동물을 통틀어 가장 오래된 태생의 증거입니다. 몸길이는 약 25cm로, 큰 눈과 조개를 부수는 부리 모양의 이빨판, 길고 채찍 같은 꼬리를 가졌습니다."
   },
@@ -1169,8 +1213,16 @@
    "v": "석탄기의 거대한 노래기 친척 아르트로플레우라 중 작은 종으로, 길이 30-50센티미터 정도였을 것입니다. 주로 갑옷 조각으로 알려져 있는데, 그 배판에는 거대한 사촌보다 더 두드러진 볏 모양 융기가 있었습니다. 다른 아르트로플레우라류처럼 석탄 늪지 숲 바닥의 식물 부스러기를 먹었을 것입니다."
   },
   {
+   "k": "A social amoeba of forest soil and leaf litter. Its cells live alone, eating bacteria, until food runs out; then tens of thousands stream together, called by pulses of a chemical signal, into a slug that crawls toward light and heat. The slug rises into a fruiting body: a fifth of the cells die to build a stalk, lifting the rest as a ball of spores to be carried away. Its cooperation, and its cheaters, make it a model of how multicellular life could arise.",
+   "v": "숲의 흙과 낙엽층에 사는 사회성 아메바(세포성 점균)다. 평소에는 세포 하나하나가 따로 살며 세균을 먹다가, 먹이가 떨어지면 화학 신호의 맥동에 이끌려 수만 개의 세포가 줄지어 모여들어 민달팽이 모양의 덩어리를 이루고, 빛과 열을 향해 기어간다. 이 민달팽이는 곧 일어서서 자실체가 된다. 세포의 5분의 1은 죽어서 자루를 만들고, 나머지 세포를 포자 덩어리로 들어 올려 멀리 퍼져 나가게 한다. 이런 협동과 그 속의 '사기꾼'들 덕분에, 다세포 생명이 어떻게 생겨날 수 있었는지를 연구하는 모델 생물이 되었다."
+  },
+  {
    "k": "A social bee living in colonies of tens of thousands of workers around a single queen. Workers gather nectar and pollen from flowers, store honey in wax combs, and use the waggle dance to tell nestmates where food is. As pollinators of crops and wild plants, they are among the most important insects to people.",
    "v": "여왕 한 마리를 중심으로 수만 마리의 일벌이 군락을 이루어 사는 사회성 벌입니다. 일벌은 꽃에서 꿀과 꽃가루를 모아 밀랍 벌집에 꿀을 저장하고, 8자 춤으로 동료에게 먹이가 있는 곳을 알립니다. 농작물과 야생 식물의 꽃가루 매개자로서 사람에게 가장 중요한 곤충 중 하나입니다."
+  },
+  {
+   "k": "A soil and pond amoeba that is not an amoebozoan at all but belongs to the excavates, far from the true amoebae: it crawls by bursting out one broad rounded pseudopod after another and eats bacteria. When its water changes it can grow two flagella and swim off within minutes, then turn back into an amoeba, or wall itself up in a cyst to wait out drying. It shows how often the amoeboid way of life evolved in different branches of the eukaryotes.",
+   "v": "흙과 연못에 사는 아메바지만 아메바동물(아메보조아)에는 전혀 속하지 않고, 진짜 아메바와는 거리가 먼 엑스카바타에 속한다. 넓고 둥근 위족을 하나씩 차례로 불쑥 내밀며 기어 다니고 세균을 먹는다. 주변의 물이 바뀌면 몇 분 만에 편모 두 개를 만들어 헤엄쳐 가 버렸다가 다시 아메바로 돌아오거나, 포낭 속에 틀어박혀 건조한 시기를 견딘다. 아메바 같은 생활 방식이 진핵생물의 여러 갈래에서 얼마나 자주 진화했는지를 보여 준다."
   },
   {
    "k": "A solitary sea anemone of rocky tide pools along the coast of California and Baja California, named for the pink-lavender rays on its green oral disc. Its stinging tentacles catch small crustaceans, fish and drifting animals, while symbiotic algae in its tissues add food from sunlight and give it its green colour. Long confused with the cloning aggregating anemone, it was only described as a separate species in 2000.",
@@ -1179,6 +1231,10 @@
   {
    "k": "A sparrow-sized bird of Eurasian rivers and lakes that watches from a low perch, then plunges headfirst into the water after small fish. Its brilliant blue is structural colour, made by light scattering in the feathers rather than by pigment.",
    "v": "유라시아의 강과 호수에 사는 참새만 한 새로, 낮은 횃대에서 지켜보다가 작은 물고기를 쫓아 머리부터 물속으로 뛰어듭니다. 선명한 파란색은 색소가 아니라 깃털 속 빛의 산란으로 생기는 구조색입니다."
+  },
+  {
+   "k": "A spindle-shaped green flagellate of ponds and puddles that swims with one long whip and steers toward light with a red eyespot. It has chloroplasts, captured long ago from a green alga, and makes its food by photosynthesis, but in the dark it lives on dissolved food like an animal, which is why it was claimed both by botanists and zoologists. Its flexible skin of spiral protein strips lets it squirm and change shape.",
+   "v": "연못과 웅덩이에 사는 방추형의 녹색 편모충으로, 기다란 편모 하나로 헤엄치며 붉은 안점으로 빛을 향해 방향을 잡는다. 오래전 녹조류에게서 얻은 엽록체를 가지고 있어 광합성으로 양분을 만들지만, 어둠 속에서는 동물처럼 물에 녹은 양분을 흡수하며 산다. 그래서 식물학자와 동물학자 모두 이 생물을 자기 분야의 것이라고 주장했다. 나선형으로 배열된 단백질 띠로 이루어진 유연한 겉껍질 덕분에 몸을 꿈틀거리며 모양을 바꿀 수 있다."
   },
   {
    "k": "A spindle-shaped rangeomorph that lay flat on the deep seafloor at Mistaken Point, Newfoundland, about 565 million years ago. Its two rows of frondlets branched again and again into smaller copies of themselves. Maps of whole bedding surfaces show that it spread in clusters, probably both by runner-like stolons and by drifting propagules, making it one of the earliest records of how a population of large organisms grew. It is named after S. B. Misra, who found the Mistaken Point fossils in 1967.",
@@ -1299,6 +1355,14 @@
   {
    "k": "A tiny chelicerate about 5 mm long from the Herefordshire Lagerstaette of England, about 430 million years ago, preserved in three dimensions in volcanic ash. Its broad, horseshoe-shaped head shield covered a ring of legs, some carrying fringed outer branches, and its short body ended in a spine-like tail. It is an early relative of horseshoe crabs and sea scorpions.",
    "v": "약 4억 3,000만 년 전 잉글랜드의 헤리퍼드셔 라거슈테테에서 발견된 몸길이 약 5mm의 아주 작은 협각류로, 화산재 속에 입체적으로 보존되어 있습니다. 넓은 말굽 모양 머리방패가 고리 모양으로 배열된 다리를 덮었고, 그중 일부에는 술 장식 같은 바깥가지가 달려 있었으며, 짧은 몸은 가시 같은 꼬리로 끝났습니다. 투구게와 바다전갈의 초기 친척입니다."
+  },
+  {
+   "k": "A tiny freshwater flagellate that beats a long flagellum inside a deep groove along its underside, sweeping bacteria into it to eat. This feeding groove gave the excavates their name, a scattered set of flagellates that includes the euglenids and trypanosomes and the gut parasites without mitochondria. Malawimonads may sit near the very root of the eukaryote tree, and stand here for the ancestor of the excavates, well over a billion years old.",
+   "v": "민물에 사는 작은 편모충으로, 몸 아랫면을 따라 난 깊은 홈 안에서 긴 편모를 쳐서 세균을 홈 속으로 쓸어 넣어 먹는다. 굴착류(Excavata, '파낸 것'이라는 뜻)라는 이름은 바로 이 섭식 홈에서 유래했다. 굴착류는 유글레나류와 트리파노소마, 그리고 미토콘드리아가 없는 장내 기생충을 포함하는, 여기저기 흩어진 편모충 무리다. 말라위모나스류는 진핵생물 계통수의 뿌리 바로 가까이에 있을지도 모르며, 여기서는 10억 년을 훌쩍 넘는 굴착류의 조상을 대표한다."
+  },
+  {
+   "k": "A tiny gliding flagellate of mud and soil that slides along on its long trailing flagellum, feeling the way with a short one sheathed in a stiff snout, and eats bacteria. Apusomonads are the closest single-celled relatives of the branch that holds the amoebae, the fungi and the animals, the Amorphea, and stand here for its ancestor, over a billion years old: a small, bacteria-eating cell with two flagella that could also put out pseudopods.",
+   "v": "진흙과 흙 속에 사는 작은 활주성 편모충으로, 뒤로 길게 끌리는 편모로 미끄러지듯 나아가고, 단단한 주둥이 집 속에 싸인 짧은 편모로 길을 더듬으며 세균을 먹는다. 아푸소모나스류는 아메바, 균류, 동물을 포함하는 계통인 아모르페아(Amorphea)와 가장 가까운 단세포 친척이며, 여기서는 10억 년도 더 된 그 조상을 대표한다. 그 조상은 두 개의 편모를 지니고 위족도 내밀 수 있었던, 세균을 먹는 작은 세포였다."
   },
   {
    "k": "A tiny gliding reptile, about 25 cm long including its long tail, from the Triassic Madygen Formation of Kyrgyzstan, about 230 million years ago. Unlike any other known glider, its main wing was a skin membrane stretched between its very long hind legs and the base of its tail, forming a delta wing, with perhaps a smaller membrane in front. It probably glided between trees around a lake, catching insects.",
@@ -1741,6 +1805,10 @@
    "v": "자주졸각버섯"
   },
   {
+   "k": "Ammodiscus",
+   "v": "암모디스쿠스"
+  },
+  {
    "k": "Ammonia Excretion",
    "v": "암모니아 배설"
   },
@@ -1807,6 +1875,10 @@
   {
    "k": "An ammonoid from the Early Permian seas of west Texas and Mexico, around 280 million years ago. Its smooth, disc-shaped shell, about 10 cm across, was tightly coiled so that each whorl almost hid the one before. The walls between its gas-filled chambers met the shell in very complex, finely frilled suture lines, early examples of the pattern later typical of ammonites. It is a common index fossil of Permian rocks in the Glass Mountains of Texas.",
    "v": "약 2억 8,000만 년 전 텍사스주 서부와 멕시코의 전기 페름기 바다에 살았던 암모노이드입니다. 지름 약 10 cm의 매끄러운 원반형 껍데기는 단단히 감겨 각 나선층이 앞의 층을 거의 가렸습니다. 가스로 찬 방들 사이의 격벽은 매우 복잡하고 잘게 주름진 봉합선으로 껍데기와 만났는데, 이는 나중에 암모나이트의 전형이 되는 무늬의 초기 예입니다. 텍사스주 글래스산맥 페름기 암석의 흔한 표준화석입니다."
+  },
+  {
+   "k": "An amoeba that lives inside a shell it builds itself: a brown, hat-shaped test of protein plates, open underneath by a round hole through which it puts out a few blunt pseudopods to crawl over pond mud and moss and to engulf algae and bacteria. Small vase-shaped shells of testate amoebae in rocks some 750 million years old are among the oldest fossils of any eukaryote that can be named, so shelled amoebae were already living before the Ediacaran began.",
+   "v": "스스로 만든 껍데기 안에 사는 아메바다. 껍데기는 단백질 판으로 이루어진 갈색 모자 모양이며, 아래쪽에 둥근 구멍이 뚫려 있어 그 구멍으로 뭉툭한 위족 몇 개를 내밀어 연못 진흙과 이끼 위를 기어 다니고 조류와 세균을 삼킨다. 약 7억 5천만 년 전 암석에서 발견되는 유각아메바의 작은 항아리 모양 껍데기는 정체를 밝힐 수 있는 진핵생물 화석 가운데 가장 오래된 것에 속한다. 따라서 껍데기를 가진 아메바는 에디아카라기가 시작되기 전부터 이미 살고 있었던 셈이다."
   },
   {
    "k": "An antiarch placoderm from the Late Devonian Miguasha estuary of Quebec, about 380 million years ago; its genus is the most widespread placoderm, found on every continent. About 30 to 40 centimetres long, its front half was a box of bony plates with the eyes together on top, and jointed, armour-plated arm-like pectoral fins. It probably grubbed through the mud for food, perhaps using its arms to prop itself up or push along the bottom.",
@@ -2057,6 +2129,10 @@
    "v": "사과꽃"
   },
   {
+   "k": "Apusomonad",
+   "v": "아푸소모나스류"
+  },
+  {
    "k": "Aquatic Larvae",
    "v": "수생 유생"
   },
@@ -2103,6 +2179,10 @@
   {
    "k": "Arbuscular mycorrhiza",
    "v": "수지상 균근"
+  },
+  {
+   "k": "Arcella",
+   "v": "아르셀라"
   },
   {
    "k": "Archaeanthus",
@@ -2159,6 +2239,10 @@
   {
    "k": "Archaeothyris",
    "v": "아르카이오티리스"
+  },
+  {
+   "k": "Archamoeba",
+   "v": "고아메바류"
   },
   {
    "k": "Archelon",
@@ -2691,6 +2775,10 @@
   {
    "k": "Blood from the gut passes through the liver before reaching the body.",
    "v": "장에서 나온 혈액이 온몸으로 가기 전에 간을 거칩니다."
+  },
+  {
+   "k": "Blood parasites, carried from host to host by biting insects.",
+   "v": "흡혈 곤충에 의해 숙주에서 숙주로 옮겨 가는 혈액 기생충."
   },
   {
    "k": "Blood proteins that tag invaders and burst them open.",
@@ -3475,6 +3563,14 @@
   {
    "k": "Ciliate",
    "v": "섬모충"
+  },
+  {
+   "k": "Ciliates and sporozoans share a skin of flattened sacs under the cell membrane.",
+   "v": "섬모충과 포자충은 세포막 아래에 납작한 주머니들로 된 외피를 공유한다."
+  },
+  {
+   "k": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals.",
+   "v": "섬모충, 유공충, 규조류와 그 친척들은 동물과는 멀리 떨어진 진핵생물의 큰 계통을 이룬다."
   },
   {
    "k": "Cincinnati Arch",
@@ -4365,6 +4461,10 @@
    "v": "딕티오필룸"
   },
   {
+   "k": "Dictyostelium",
+   "v": "딕티오스텔리움"
+  },
+  {
    "k": "Dicynodont therapsid",
    "v": "디키노돈류 수궁류"
   },
@@ -4433,6 +4533,10 @@
    "v": "디노크로쿠타"
   },
   {
+   "k": "Dinoflagellate",
+   "v": "와편모충류"
+  },
+  {
    "k": "Dinosaur National Monument",
    "v": "다이노소어 국립기념물"
   },
@@ -4451,6 +4555,10 @@
   {
    "k": "Diplodocus",
    "v": "디플로도쿠스"
+  },
+  {
+   "k": "Diplomonad",
+   "v": "디플로모나스류"
   },
   {
    "k": "Diplopora",
@@ -4753,6 +4861,10 @@
    "v": "엑디손이 절지동물의 탈피 시기를 정합니다."
   },
   {
+   "k": "Echidnina",
+   "v": "에키드니나"
+  },
+  {
    "k": "Echinochimaera",
    "v": "에키노키마이라"
   },
@@ -4965,6 +5077,10 @@
    "v": "용각류의 긴 목 위로 피를 밀어 올릴 만큼의 압력."
   },
   {
+   "k": "Entamoeba",
+   "v": "이질아메바"
+  },
+  {
    "k": "Entelodont",
    "v": "엔텔로돈류"
   },
@@ -5047,6 +5163,14 @@
   {
    "k": "Eugeneodont",
    "v": "에우게네오두스류"
+  },
+  {
+   "k": "Euglena",
+   "v": "유글레나"
+  },
+  {
+   "k": "Euglenid",
+   "v": "유글레나류"
   },
   {
    "k": "Eugonophyllum",
@@ -5135,6 +5259,14 @@
   {
    "k": "Evolving one {0}",
    "v": "{0} 하나를 진화시키는 중"
+  },
+  {
+   "k": "Excavates: flagellates with a feeding groove along the underside.",
+   "v": "굴착류: 아랫면을 따라 섭식 홈을 가진 편모충."
+  },
+  {
+   "k": "Excavates: flagellates with a feeding groove, far from the animals and from the true amoebae.",
+   "v": "굴착류: 섭식 홈을 가진 편모충으로, 동물과도 진정한 아메바와도 거리가 멀다."
   },
   {
    "k": "Excretory System",
@@ -5589,6 +5721,10 @@
    "v": "섭식 행동"
   },
   {
+   "k": "Foraminifer",
+   "v": "유공충"
+  },
+  {
    "k": "Forebrain, midbrain and hindbrain, each with its own jobs.",
    "v": "각자 맡은 일이 있는 전뇌, 중뇌, 후뇌."
   },
@@ -5675,6 +5811,10 @@
   {
    "k": "Fur and Glands",
    "v": "털과 분비샘"
+  },
+  {
+   "k": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat.",
+   "v": "방추충류는 여러 개의 방으로 이루어진 밀알만 한 크기의 방추형 껍데기를 만들었다."
   },
   {
    "k": "Fuxianospira",
@@ -5873,6 +6013,10 @@
    "v": "빅토리아수련"
   },
   {
+   "k": "Giardia",
+   "v": "지아르디아"
+  },
+  {
    "k": "Giganotosaurus",
    "v": "기가노토사우루스"
   },
@@ -5963,6 +6107,10 @@
   {
    "k": "Gliding",
    "v": "활공"
+  },
+  {
+   "k": "Globigerina",
+   "v": "글로비게리나"
   },
   {
    "k": "Gloeocapsomorpha",
@@ -6193,6 +6341,10 @@
    "v": "온실 기후, 극빙 없음"
   },
   {
+   "k": "Gregarine",
+   "v": "그레가린"
+  },
+  {
    "k": "Grey mangrove",
    "v": "회색맹그로브"
   },
@@ -6327,6 +6479,10 @@
   {
    "k": "Haemoglobin packed into cells carries far more oxygen.",
    "v": "세포에 담긴 헤모글로빈은 훨씬 많은 산소를 운반합니다."
+  },
+  {
+   "k": "Haemosporidian",
+   "v": "혈포자충류"
   },
   {
    "k": "Haikou",
@@ -6543,6 +6699,10 @@
   {
    "k": "Hess Schwagerina",
    "v": "헤스 슈바게리나"
+  },
+  {
+   "k": "Heterolobosean",
+   "v": "헤테로로보사류"
   },
   {
    "k": "Heteromorph ammonite",
@@ -7357,6 +7517,10 @@
    "v": "혈연 인식"
   },
   {
+   "k": "Kinetoplastid",
+   "v": "키네토플라스트류"
+  },
+  {
    "k": "King crab",
    "v": "왕게"
   },
@@ -8149,6 +8313,18 @@
    "v": "화학 반응으로 빛을 냅니다."
   },
   {
+   "k": "Malaria Parasite",
+   "v": "열대열원충"
+  },
+  {
+   "k": "Malawimonad",
+   "v": "말라위모나스류"
+  },
+  {
+   "k": "Malawimonas",
+   "v": "말라위모나스"
+  },
+  {
    "k": "Male Combat",
    "v": "수컷 간 싸움"
   },
@@ -8487,6 +8663,10 @@
   {
    "k": "Messinian salinity crisis (~6 Ma): the Mediterranean partly dries up",
    "v": "메시나절 염분 위기 (~6 Ma): 지중해가 부분적으로 말라붙음"
+  },
+  {
+   "k": "Metamonads live without proper mitochondria, many of them in the guts of animals.",
+   "v": "메타모나스류는 제대로 된 미토콘드리아 없이 살며, 상당수가 동물의 장 속에 산다."
   },
   {
    "k": "Metamorphosis Trigger",
@@ -8937,6 +9117,10 @@
    "v": "다지류는 최초의 육상 동물 중 하나였고, 아르트로플레우라가 가장 컸습니다."
   },
   {
+   "k": "Naegleria",
+   "v": "네글레리아"
+  },
+  {
    "k": "Naiadita",
    "v": "나이아디타"
   },
@@ -9301,6 +9485,10 @@
    "v": "누이아"
   },
   {
+   "k": "Nummulites",
+   "v": "화폐석"
+  },
+  {
    "k": "Nuptial Gifts",
    "v": "혼인 선물"
   },
@@ -9605,6 +9793,10 @@
    "v": "약 2억 1,000만 년 전 이탈리아 북부 후기 트라이아스기에서 나온 가장 오래된 익룡 중 하나로, 날개폭은 약 1미터입니다. 짧은 턱에는 백 개가 넘는 작은 이빨이 있었고 그중 다수는 뾰족한 끝이 셋에서 다섯 개였으며, 화석의 배 속에서 발견된 물고기 비늘로 보아 물고기를 잡아먹었습니다. 다른 초기 익룡처럼 길고 뻣뻣한 꼬리가 있었습니다."
   },
   {
+   "k": "One of the oldest known radiolarians, from the middle Cambrian of Australia: a drifting single cell with a spherical lattice shell of glass (silica) bristling with long radial spines. Along the spines it spread threads of cytoplasm to catch smaller plankton. Radiolarian skeletons, sinking for half a billion years, have built up thick layers of siliceous ooze and chert on the ocean floor.",
+   "v": "오스트레일리아의 캄브리아기 중기 지층에서 발견된, 가장 오래된 방산충 가운데 하나다. 물속을 떠다니는 단세포로, 유리질(규산)로 된 둥근 격자 모양 껍데기에 길게 뻗은 방사상 가시가 빽빽이 돋아 있다. 가시를 따라 세포질 실을 뻗어 더 작은 플랑크톤을 잡았다. 5억 년 동안 가라앉아 온 방산충의 골격은 바다 밑바닥에 두꺼운 규질 연니와 처트 층을 쌓아 올렸다."
+  },
+  {
    "k": "One of the oldest known synapsids, the group that much later produced mammals, found in fossilised tree stumps at Florence, Nova Scotia, about 306 million years old. It looked like a lizard about half a metre long, but its skull already had the single opening behind each eye typical of synapsids. Its sharp teeth, including enlarged ones near the front of the upper jaw, suggest it hunted insects and small tetrapods in the coal forests.",
    "v": "알려진 가장 오래된 단궁류 중 하나로, 단궁류는 훨씬 뒤에 포유류를 낳은 집단입니다. 노바스코샤주 플로렌스의 화석화된 나무 그루터기 속에서 발견되었으며 약 3억 600만 년 전의 것입니다. 생김새는 몸길이 약 반 미터의 도마뱀 같았지만, 두개골에는 이미 단궁류의 특징인 눈 뒤의 구멍이 하나씩 있었습니다. 위턱 앞쪽의 커진 이빨을 포함한 날카로운 이빨로 보아, 석탄림에서 곤충과 작은 네발동물을 사냥했을 것입니다."
   },
@@ -9671,6 +9863,10 @@
   {
    "k": "Ophthalmosaurus",
    "v": "오프탈모사우루스"
+  },
+  {
+   "k": "Opisthokonts swim with a single flagellum at the back: the branch of the fungi, choanoflagellates and animals.",
+   "v": "후편모생물은 뒤쪽에 달린 하나의 편모로 헤엄친다. 균류, 깃편모충, 동물이 속한 계통이다."
   },
   {
    "k": "Orange peel fungus",
@@ -10305,8 +10501,16 @@
    "v": "필로테카"
   },
   {
+   "k": "Physarum",
+   "v": "황색망사점균"
+  },
+  {
    "k": "Physoporella",
    "v": "피소포렐라"
+  },
+  {
+   "k": "Pigeon Trichomonad",
+   "v": "비둘기트리코모나스"
   },
   {
    "k": "Pigment cells that can change colour.",
@@ -10397,6 +10601,10 @@
    "v": "부유 유생"
   },
   {
+   "k": "Planktonic foraminifera drift in the open sea with spiny, balloon-chambered shells.",
+   "v": "부유성 유공충은 가시가 돋고 풍선 같은 방으로 이루어진 껍데기를 지니고 넓은 바다를 떠다닌다."
+  },
+  {
    "k": "Planning and self-control (great apes).",
    "v": "계획과 자기 통제 (대형 유인원)."
   },
@@ -10407,6 +10615,10 @@
   {
    "k": "Plants: {0}",
    "v": "식물: {0}"
+  },
+  {
+   "k": "Plasmodial slime mould",
+   "v": "변형균류"
   },
   {
    "k": "Plateosaurus",
@@ -10795,6 +11007,10 @@
   {
    "k": "Radiodont",
    "v": "방사치류"
+  },
+  {
+   "k": "Radiolarian",
+   "v": "방산충"
   },
   {
    "k": "Radula",
@@ -11249,6 +11465,10 @@
    "v": "로탈라"
   },
   {
+   "k": "Rotaliids build chalky shells of many chambers coiled in a spiral, some with algae inside.",
+   "v": "로탈리아류는 여러 개의 방이 나선형으로 감긴 석회질 껍데기를 만들며, 일부는 안에 조류를 품고 있다."
+  },
+  {
    "k": "Rothpletzella",
    "v": "로트플레첼라"
   },
@@ -11549,6 +11769,10 @@
    "v": "스쿠토사우루스"
   },
   {
+   "k": "Sea Sparkle",
+   "v": "야광충"
+  },
+  {
    "k": "Sea Turtle Leech",
    "v": "바다거북거머리"
   },
@@ -11655,6 +11879,10 @@
   {
    "k": "Select an item",
    "v": "항목을 선택하세요"
+  },
+  {
+   "k": "Selenidium",
+   "v": "셀레니디움"
   },
   {
    "k": "Selenopeltis",
@@ -12105,6 +12333,10 @@
    "v": "사회적 서열"
   },
   {
+   "k": "Social amoeba",
+   "v": "사회성 아메바"
+  },
+  {
    "k": "Sokolki",
    "v": "소콜키"
   },
@@ -12291,6 +12523,10 @@
   {
    "k": "Sporogonites",
    "v": "스포로고니테스"
+  },
+  {
+   "k": "Sporozoans are parasites that enter their hosts' cells with a complex at their tip.",
+   "v": "포자충은 끝에 있는 복합체로 숙주의 세포 안으로 들어가는 기생충이다."
   },
   {
    "k": "Spraying irritants (bombardier beetles, later skunks).",
@@ -12813,6 +13049,14 @@
    "v": "냄새나 모습으로 친족과 낯선 개체를 구별합니다."
   },
   {
+   "k": "Telonema",
+   "v": "텔로네마"
+  },
+  {
+   "k": "Telonemid",
+   "v": "텔로네마류"
+  },
+  {
    "k": "Temnospondyl",
    "v": "분추류"
   },
@@ -12883,6 +13127,14 @@
   {
    "k": "Terror bird",
    "v": "공포새"
+  },
+  {
+   "k": "Testate amoeba",
+   "v": "유각아메바"
+  },
+  {
+   "k": "Testate amoebae build shells around themselves, with an opening for their pseudopods.",
+   "v": "유각아메바는 몸 주위에 껍데기를 만들고, 위족을 내밀 수 있는 구멍을 남겨 둔다."
   },
   {
    "k": "Testosterone and oestrogen shape adult bodies.",
@@ -13019,6 +13271,10 @@
   {
    "k": "The commonest radiodont of the Chengjiang biota of Yunnan, China, about 518 million years old, and a close relative of Anomalocaris. Each frontal appendage carried one enormous forward spine that closed against the rest of the limb like the jaw of a pair of pincers. It swam with eleven pairs of body flaps and had a long tail fan with streamers; a 2023 study of its growth suggests the biggest individuals were well over half a metre long.",
    "v": "약 5억 1,800만 년 전 중국 윈난성 청장 생물군에서 가장 흔한 방사치류로, 아노말로카리스의 가까운 친척입니다. 앞부속지마다 앞으로 뻗은 거대한 가시가 하나씩 있어, 집게의 턱처럼 부속지의 나머지 부분을 향해 닫혔습니다. 열한 쌍의 몸 지느러미로 헤엄쳤고 띠 모양 장식이 달린 긴 꼬리 부채가 있었으며, 2023년 성장 연구에 따르면 가장 큰 개체는 몸길이가 반 미터를 훌쩍 넘었습니다."
+  },
+  {
+   "k": "The deadliest malaria parasite, a sporozoan that lives inside the red blood cells of people and multiplies there, bursting them in waves of fever. Its life alternates between humans and Anopheles mosquitoes, which pick up its crescent-shaped sexual stages with a meal of blood and pass it on with their next bite. It descends from a parasite of gorillas, which crossed over to humans in Africa, and has shaped human history and even the human genome.",
+   "v": "가장 치명적인 말라리아 원충으로, 사람의 적혈구 속에 살면서 증식하는 포자충이며, 적혈구를 터뜨려 주기적인 열을 일으킨다. 생활사는 사람과 얼룩날개모기 사이를 오가는데, 모기는 피를 빨 때 초승달 모양의 유성 생식 단계를 함께 빨아들이고 다음번에 물 때 그것을 옮긴다. 아프리카에서 사람에게 옮겨 온 고릴라의 기생충에서 유래했으며, 인류의 역사, 나아가 인간의 유전체까지 바꾸어 놓았다."
   },
   {
    "k": "The earliest known diapsid reptile, the lineage that later gave rise to lizards, crocodiles and dinosaurs, from Late Carboniferous rocks near Garnett, Kansas, about 302 million years old. It was a slender animal some 40 cm long, with a small head, a long neck, long legs and a tail longer than the rest of its body. It probably darted through the undergrowth of the coal forests hunting insects and other small invertebrates.",
@@ -13243,6 +13499,10 @@
   {
    "k": "The {0} has begun",
    "v": "{0}이(가) 시작되었습니다"
+  },
+  {
+   "k": "Thecamonas",
+   "v": "테카모나스"
   },
   {
    "k": "Therizinosaurus",
@@ -13497,6 +13757,10 @@
    "v": "트리케라톱스"
   },
   {
+   "k": "Trichonymphids digest wood in the guts of termites, with thousands of flagella.",
+   "v": "트리코님파류는 수천 개의 편모를 지니고 흰개미의 장 속에서 나무를 소화한다."
+  },
+  {
    "k": "Trichopitys",
    "v": "트리코피티스"
   },
@@ -13595,6 +13859,10 @@
   {
    "k": "Trumpet pitcher",
    "v": "사라세니아"
+  },
+  {
+   "k": "Trypanosome",
+   "v": "트리파노소마"
   },
   {
    "k": "Tsingy de Bemaraha",
@@ -16561,6 +16829,10 @@
    "v": "표시된 칸을 클릭해 새끼를 놓으세요"
   },
   {
+   "k": "New this turn: it can act from the next turn",
+   "v": "이번 턴에 새로 등장: 다음 턴부터 행동할 수 있습니다"
+  },
+  {
    "k": "La Brea",
    "v": "라브레아"
   },
@@ -16807,6 +17079,22 @@
   {
    "k": "Zealandia Realm",
    "v": "질랜디아구"
+  },
+  {
+   "k": "Encyclopedia",
+   "v": "백과사전"
+  },
+  {
+   "k": "Search",
+   "v": "검색"
+  },
+  {
+   "k": "{0} species",
+   "v": "{0}종"
+  },
+  {
+   "k": "Evolves from",
+   "v": "조상"
   }
  ]
 }

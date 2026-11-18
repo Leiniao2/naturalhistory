@@ -110,10 +110,10 @@ namespace NaturalHistory.UI
         }
 
         // Habitat entries are TerrainKind names; shown the way the tile panel names terrain
-        private static string HabitatName(string habitat) =>
+        internal static string HabitatName(string habitat) =>
             System.Enum.TryParse(habitat, out TerrainKind kind) ? EraFlora.DisplayName(kind) : habitat;
 
-        private static string FormatSize(float cm) => cm switch
+        internal static string FormatSize(float cm) => cm switch
         {
             >= 100f => Loc.F("{0:0.#} m", cm / 100f),
             >= 1f   => Loc.F("{0:0.#} cm", cm),

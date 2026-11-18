@@ -59,6 +59,9 @@ namespace NaturalHistory.World
         private const int TargetWildGroups       = 800; // 5× the original 160
         private const int MinCopies              = 10;
         private const int MaxCopies              = 30;
+        // Every species alive in the period placed wild on the map (the old opening); off, the game
+        // starts with only the players' founders and wild groups are born along the way (WildBirths)
+        public static bool PlaceAllWild = false;
         private const double RareShare          = 0.5;  // of each period's species, chosen at random, shown as one group only
         private const int TilesPerCopy           = 6;   // a species with little habitat gets fewer copies
         private const int MaxBigCopies           = 10;  // animals spilling over their tile (ReserveSpan)
@@ -230,6 +233,7 @@ namespace NaturalHistory.World
         // Raised after the groups for the displayed period have been (re)placed; all earlier groups,
         // including player-owned ones, are gone by then.
         public event System.Action ColoniesPlaced;
+        public event System.Action ColoniesClearing; // just before PlaceColonies clears the map's groups (WildBirths)
 
         // True if this click is (or was just) about colonies, so other click handlers (the player
         // ball) should leave it alone. Safe to call before or after this component handles the click.
@@ -341,7 +345,7 @@ namespace NaturalHistory.World
             foreach (var c in marked) if (c != null) c.SetGroupTarget(HexCell.GroupTarget.None);
             marked.Clear();
             selected = group;
-            if (group == null) return;
+            if (group == null || group.JustBorn) return; // new this turn: its card shows, but no orders yet
             foreach (var n in grid.GetNeighbors(group.Cell))
             {
                 var rival = GroupAt(n, Niches.Of(group.Definition, n));
@@ -352,10 +356,12 @@ namespace NaturalHistory.World
             }
         }
 
-        // Shows the species alive in the period the map currently shows. Runs again whenever the
-        // period changes, replacing the previous period's groups.
+        // Clears the map's groups whenever the period changes (the players' are put back by
+        // TerritoryManager/EvolutionManager, the wild ones by WildBirths). With PlaceAllWild it also
+        // shows every species alive in the period; normally the wild ones only come from WildBirths.
         private void PlaceColonies()
         {
+            ColoniesClearing?.Invoke();
             Select(null);
             foreach (var g in groups) if (g != null) Destroy(g.gameObject); // a regenerated map already destroyed them
             groups.Clear();
@@ -363,6 +369,7 @@ namespace NaturalHistory.World
             slots.Clear();
             UnderView.Focus.Reset();
             if (material == null) material = AnimalMaterial();
+            if (!PlaceAllWild) { ColoniesPlaced?.Invoke(); return; }
             var age  = grid.DisplayedAge;
             var rng  = new System.Random(grid.WorldSeed ^ 0x5eed ^ ((int)age * 7919));
             var used = new HashSet<(HexCell, Niche)>();

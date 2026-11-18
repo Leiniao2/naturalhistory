@@ -112,6 +112,7 @@
             <ui:VisualElement class="panel menu-panel">
                 <ui:Label class="panel-title" text="Natural History" />
                 <ui:Button name="resume-button" class="menu-button" text="Resume" />
+                <ui:Button name="encyclopedia-button" class="menu-button" text="Encyclopedia" />
                 <ui:Button name="new-game-button" class="menu-button" text="New Game" />
                 <ui:Button name="save-button" class="menu-button" text="Save Game" />
                 <ui:Button name="load-button" class="menu-button" text="Load Game" />
@@ -134,15 +135,14 @@
             <ui:VisualElement class="panel tree-panel">
                 <ui:VisualElement class="tree-header">
                     <ui:Label name="tree-title" class="panel-title tree-title" text="Functions" />
-                    <!-- Whose trees these are: centred over the header -->
-                    <ui:VisualElement name="tree-species" class="tree-species" picking-mode="Ignore">
-                        <ui:VisualElement name="tree-species-portrait" class="species-portrait tree-species-portrait" picking-mode="Ignore" />
-                        <ui:Label name="tree-species-name" class="tree-species-name" text="" picking-mode="Ignore" />
-                    </ui:VisualElement>
                     <ui:Label name="tree-progress" class="tree-progress" text="" />
                     <ui:Label name="tree-ep-label" class="ep-label" text="EP 0" />
                     <ui:Button name="tree-close-button" class="close-button" text="✕" />
                 </ui:VisualElement>
+                <!-- Whose trees these are: a tab per species of yours, to switch (SpeciesTabs) -->
+                <ui:ScrollView name="tree-species-scroll" class="species-tabs-scroll" mode="Horizontal">
+                    <ui:VisualElement name="tree-species-tabs" class="species-tabs" />
+                </ui:ScrollView>
                 <!-- One tab per branch (sub-tree); created in code -->
                 <ui:ScrollView name="tree-branches-scroll" class="tree-branches-scroll" mode="Horizontal">
                     <ui:VisualElement name="tree-branches" class="tree-branches" />
@@ -208,16 +208,51 @@
                     <ui:Label name="zoology-subtitle" class="tree-progress" text="" />
                     <ui:Button name="zoology-close-button" class="close-button" text="✕" />
                 </ui:VisualElement>
+                <ui:ScrollView name="zoology-species-scroll" class="species-tabs-scroll" mode="Horizontal">
+                    <ui:VisualElement name="zoology-species-tabs" class="species-tabs" />
+                </ui:ScrollView>
                 <ui:VisualElement class="zoology-body">
                     <ui:ScrollView name="zoology-scroll" class="tree-scroll" mode="VerticalAndHorizontal">
                         <ui:VisualElement name="zoology-canvas" class="tree-canvas" />
                     </ui:ScrollView>
                     <ui:ScrollView class="zoology-details">
-                        <ui:VisualElement name="zoology-portrait" class="species-portrait zoology-portrait" />
-                        <ui:Label name="zoology-name" class="age-name" text="" />
-                        <ui:Label name="zoology-meta" class="age-range" text="" />
-                        <ui:Label name="zoology-description" class="age-description" text="" />
+                        <ui:VisualElement class="zoology-detail-head">
+                            <ui:VisualElement class="zoology-detail-names">
+                                <ui:Label name="zoology-name" class="age-name" text="" />
+                                <ui:Label name="zoology-meta" class="age-range" text="" />
+                            </ui:VisualElement>
+                            <!-- its portrait and description are in the Encyclopedia -->
+                            <ui:Button name="zoology-encyclopedia-button" class="hud-button zoology-encyclopedia" text="Encyclopedia" />
+                        </ui:VisualElement>
                         <ui:VisualElement name="zoology-links" class="zoology-links" />
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Encyclopedia (EncyclopediaPanel): every species of the game, its painting and description -->
+        <ui:VisualElement name="encyclopedia-overlay" class="overlay hidden">
+            <ui:VisualElement class="panel tree-panel">
+                <ui:VisualElement class="tree-header">
+                    <ui:Label class="panel-title tree-title" text="Encyclopedia" />
+                    <ui:TextField name="encyclopedia-search" class="encyclopedia-search" />
+                    <ui:Label name="encyclopedia-count" class="tree-progress" text="" />
+                    <ui:Button name="encyclopedia-close-button" class="close-button" text="✕" />
+                </ui:VisualElement>
+                <ui:VisualElement class="encyclopedia-body">
+                    <ui:ListView name="encyclopedia-list" class="encyclopedia-list" />
+                    <ui:ScrollView class="encyclopedia-entry">
+                        <ui:VisualElement class="encyclopedia-top">
+                            <ui:VisualElement name="encyclopedia-painting" class="encyclopedia-painting" />
+                            <ui:VisualElement class="encyclopedia-facts">
+                                <ui:Label name="encyclopedia-name" class="encyclopedia-name" text="" />
+                                <ui:Label name="encyclopedia-scientific" class="encyclopedia-scientific" text="" />
+                                <ui:Label name="encyclopedia-stats" class="encyclopedia-stats" text="" />
+                                <ui:Button name="encyclopedia-tree-button" class="hud-button encyclopedia-tree-button" text="Evolution Tree" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:Label name="encyclopedia-description" class="encyclopedia-description" text="" />
+                        <ui:VisualElement name="encyclopedia-relatives" class="encyclopedia-relatives" />
                     </ui:ScrollView>
                 </ui:VisualElement>
             </ui:VisualElement>
