@@ -18521,6 +18521,18 @@
    "v": "이번 턴에 새로 등장: 다음 턴부터 행동할 수 있습니다"
   },
   {
+   "k": "Unexplored",
+   "v": "미탐험"
+  },
+  {
+   "k": "Send an animal within sight of it to explore it.",
+   "v": "동물을 이 칸이 보이는 곳까지 보내면 탐험할 수 있습니다."
+  },
+  {
+   "k": "Out of sight: its animals can't be seen from here.",
+   "v": "시야 밖: 이곳의 동물이 보이지 않습니다."
+  },
+  {
    "k": "Next animal ({0})",
    "v": "다음 동물 ({0})"
   },
@@ -18891,6 +18903,10 @@
   {
    "k": "Your {0} starved: no food on its tile or next to it",
    "v": "당신의 {0}이(가) 굶어 죽었습니다: 자기 칸과 이웃 칸에 먹이가 없었음"
+  },
+  {
+   "k": "Next Turn",
+   "v": "다음 턴"
   }
  ]
 }

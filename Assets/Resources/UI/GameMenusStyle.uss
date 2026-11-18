@@ -459,8 +459,8 @@
 
 .end-turn-button {
     height: 66px;
-    min-width: 130px;
-    margin-left: 8px;
+    min-width: 170px;
+    margin-left: 10px;
     font-size: 19px;
     -unity-font-style: bold;
     color: rgb(255, 255, 255);
@@ -1061,11 +1061,18 @@
 
 /* ---------- Selected animal ---------- */
 
-.unit-panel {
+/* the selected animal's panel and the turn button side by side at the bottom centre */
+.unit-dock {
     position: absolute;
     bottom: 12px;
-    left: 50%;
-    translate: -50% 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.unit-panel {
     flex-direction: row;
     align-items: center;
     padding: 10px 14px;

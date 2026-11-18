@@ -34,8 +34,31 @@ namespace NaturalHistory.World
         public static bool Sky => Layer == MapLayer.Sky;
         public static event Action Changed;
 
+        // Life goes ashore from the Cambrian: before it (the Ediacaran) there is nothing on land or in
+        // the air, and only the layer under sea level can be shown
+        public static bool SurfaceOpen
+        {
+            get
+            {
+                var grid = HexGrid.Instance;
+                var age = grid != null && grid.IsGenerated ? grid.DisplayedAge
+                        : AgeManager.Instance != null ? AgeManager.Instance.CurrentAge : GeologicalAge.Quaternary;
+                return age >= GeologicalAge.Cambrian;
+            }
+        }
+        private static bool wasOpen = true;
+
+        // Re-applies the Ediacaran lock after the map shows another period
+        public static void Refresh()
+        {
+            bool open = SurfaceOpen;
+            if (open != wasOpen) { wasOpen = open; Changed?.Invoke(); }
+            Set(Layer);
+        }
+
         public static void Set(MapLayer layer)
         {
+            if (!SurfaceOpen) layer = MapLayer.Under;
             if (layer == Layer) return;
             Layer = layer;
             Focus.Reset();
@@ -63,11 +86,11 @@ namespace NaturalHistory.World
             };
         }
 
-        // Whether a group is drawn (and clickable) now: every group of the layer, except on the
-        // selected tile, which shows one at a time (see Focus)
+        // Whether a group is drawn (and clickable) now: every group of the layer in sight
+        // (FogOfWar), except on the selected tile, which shows one at a time (see Focus)
         public static bool Shows(ColonyGroup g)
         {
-            if (!InLayer(g, Layer)) return false;
+            if (!InLayer(g, Layer) || !FogOfWar.Reveals(g)) return false;
             return g.Cell != CellSelector.Selected || Focus.Current(g.Cell) == g;
         }
 
@@ -84,7 +107,7 @@ namespace NaturalHistory.World
                 var list = new List<ColonyGroup>();
                 var colonies = SpeciesColonies.Instance;
                 if (at == null || colonies == null) return list;
-                foreach (var g in colonies.GroupsAt(at)) if (InLayer(g, Layer)) list.Add(g);
+                foreach (var g in colonies.GroupsAt(at)) if (InLayer(g, Layer) && FogOfWar.Reveals(g)) list.Add(g);
                 // the human player's own groups first, so a click on the tile picks yours
                 static bool Mine(ColonyGroup g) => g.Owner != null && g.Owner.IsHuman;
                 list.Sort((a, b) => Mine(a) != Mine(b) ? Mine(b).CompareTo(Mine(a))

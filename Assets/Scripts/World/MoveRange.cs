@@ -72,6 +72,7 @@ namespace NaturalHistory.World
                 {
                     if (n == null || range.AttackFrom.ContainsKey(n)) continue;
                     if (!(group.CanEnter(n) || !group.CanMove)) continue; // fixed colonies strike in place
+                    if (!FogOfWar.IsVisible(n)) continue; // no striking at what can't be seen (fog of war)
                     if (SpeciesColonies.Attackable(group, n) != null) range.AttackFrom[n] = c;
                 }
             }

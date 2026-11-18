@@ -18521,6 +18521,18 @@
    "v": "Nouveau ce tour-ci : peut agir dès le tour suivant"
   },
   {
+   "k": "Unexplored",
+   "v": "Inexploré"
+  },
+  {
+   "k": "Send an animal within sight of it to explore it.",
+   "v": "Envoyez un animal à portée de vue pour explorer cette case."
+  },
+  {
+   "k": "Out of sight: its animals can't be seen from here.",
+   "v": "Hors de vue : ses animaux ne sont pas visibles."
+  },
+  {
    "k": "Next animal ({0})",
    "v": "Animal suivant ({0})"
   },
@@ -18891,6 +18903,10 @@
   {
    "k": "Your {0} starved: no food on its tile or next to it",
    "v": "Votre {0} est mort de faim : pas de nourriture sur sa case ni à côté"
+  },
+  {
+   "k": "Next Turn",
+   "v": "Tour suivant"
   }
  ]
 }

@@ -18521,6 +18521,18 @@
    "v": "Nuovo in questo turno: potrà agire dal turno successivo"
   },
   {
+   "k": "Unexplored",
+   "v": "Inesplorato"
+  },
+  {
+   "k": "Send an animal within sight of it to explore it.",
+   "v": "Manda un animale in vista di questa casella per esplorarla."
+  },
+  {
+   "k": "Out of sight: its animals can't be seen from here.",
+   "v": "Fuori vista: i suoi animali non si vedono."
+  },
+  {
    "k": "Next animal ({0})",
    "v": "Animale successivo ({0})"
   },
@@ -18891,6 +18903,10 @@
   {
    "k": "Your {0} starved: no food on its tile or next to it",
    "v": "Il tuo {0} è morto di fame: niente cibo nella propria casella né accanto"
+  },
+  {
+   "k": "Next Turn",
+   "v": "Turno successivo"
   }
  ]
 }

@@ -18521,6 +18521,18 @@
    "v": "このターンに登場：次のターンから行動できます"
   },
   {
+   "k": "Unexplored",
+   "v": "未探索"
+  },
+  {
+   "k": "Send an animal within sight of it to explore it.",
+   "v": "動物をこのマスが見える位置まで動かすと探索できます。"
+  },
+  {
+   "k": "Out of sight: its animals can't be seen from here.",
+   "v": "視界外：ここにいる動物は見えません。"
+  },
+  {
    "k": "Next animal ({0})",
    "v": "次の動物（{0}）"
   },
@@ -18891,6 +18903,10 @@
   {
    "k": "Your {0} starved: no food on its tile or next to it",
    "v": "あなたの{0}が餓死した：自分のマスにも隣にも食べ物がなかった"
+  },
+  {
+   "k": "Next Turn",
+   "v": "次のターン"
   }
  ]
 }

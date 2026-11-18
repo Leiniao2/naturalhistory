@@ -41,6 +41,7 @@ namespace NaturalHistory.World
         // The map wraps east–west (a cylinder): column -1 is column width-1. Cells are moved by
         // whole map widths to whichever copy of the world is nearest the camera (RecenterWrap).
         public float WrapWidth => Mathf.Sqrt(3f) * cellSize * width;
+        public float CellSize => cellSize; // centre to corner (FogOfWar)
 
         [SerializeField] private int width = 50;
         [SerializeField] private int height = 30;

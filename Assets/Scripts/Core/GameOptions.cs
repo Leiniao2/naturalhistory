@@ -33,9 +33,10 @@ namespace NaturalHistory.Core
         public static GeologicalAge StartAge =>
             Enum.TryParse(Current.startAge, true, out GeologicalAge a) ? a : GeologicalAge.Ediacaran;
 
-        // Life in the Ediacaran and Cambrian is all in the sea: games starting then begin on the
-        // seabed, in the layer under sea level; later periods begin on the surface.
-        public static bool StartsUnderSea(GeologicalAge age) => age <= GeologicalAge.Cambrian;
+        // Until the Devonian life is mostly in the sea: games starting then begin on the seabed, in
+        // the layer under sea level; from the Devonian on they begin on the surface. (The surface
+        // can be shown from the Cambrian on, see UnderView.SurfaceOpen.)
+        public static bool StartsUnderSea(GeologicalAge age) => age < GeologicalAge.Devonian;
 
         // Saves from before these settings existed: the defaults (Large land, Fast)
         public static GameSettings FromSave(GameSettings saved, bool present) =>

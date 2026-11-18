@@ -51,6 +51,7 @@ namespace NaturalHistory.Players
             if (grid != null)
             {
                 grid.Generated += OnMapGenerated;
+                grid.TerrainChanged += UnderView.Refresh; // the surface opens in the Cambrian
                 if (grid.IsGenerated) OnMapGenerated();
             }
             if (TurnManager.Instance != null) TurnManager.Instance.OnTurnBegin += OnTurnBegin;
@@ -60,6 +61,7 @@ namespace NaturalHistory.Players
         private void OnDestroy()
         {
             if (grid != null) grid.Generated -= OnMapGenerated;
+            if (grid != null) grid.TerrainChanged -= UnderView.Refresh;
             if (TurnManager.Instance != null) TurnManager.Instance.OnTurnBegin -= OnTurnBegin;
             if (AgeManager.Instance != null) AgeManager.Instance.OnAgeTransition -= OnAgeTransition;
             if (Instance == this) Instance = null;
@@ -80,8 +82,8 @@ namespace NaturalHistory.Players
         // New game: these players on a fresh map, back to turn 1 and the starting Evolution Points.
         // The new game's settings (GameOptions.Next: land area, game length, starting period) take
         // effect first; the clock is set to the starting period before the map is generated, so the
-        // map is made for that period's climate and sea level. Ediacaran and Cambrian games begin on
-        // the seabed (start hexes in shallow sea, the under view on), later ones on the surface.
+        // map is made for that period's climate and sea level. Games before the Devonian begin on the
+        // seabed (start hexes in shallow sea, the under view on), later ones on the surface.
         public void StartNewGame(List<PlayerSetup> newSetups)
         {
             GameOptions.Current = GameOptions.Next;
@@ -93,6 +95,7 @@ namespace NaturalHistory.Players
             TurnManager.Instance?.Restore(startTurn); // the first turn activates the starting period's iconic animals
             if (grid != null) grid.Generate(grid.Width, grid.Height, UnityEngine.Random.Range(1, int.MaxValue)); // places everyone
             UnderView.Set(GameOptions.StartsUnderSea(GameOptions.StartAge));
+            UnderView.Refresh(); // the layer buttons follow the Ediacaran lock
         }
 
         private static int GameStartTurn => AgeManager.Instance != null ? AgeManager.Instance.FirstTurnOf(GameOptions.StartAge) : 1;
@@ -156,7 +159,7 @@ namespace NaturalHistory.Players
                 if (cell != null && !cell.IsMountain) result[i] = cell;
             }
 
-            // Life begins in the sea: in the Ediacaran and Cambrian everyone starts on shallow seabed.
+            // Life begins in the sea: before the Devonian everyone starts on shallow seabed.
             // The whole core (the start and its 6 neighbours) has to be open: all seabed, or all
             // land, nothing in the way (mountains, solid rock under water, ice). Failing that, the
             // start alone.
@@ -225,7 +228,63 @@ namespace NaturalHistory.Players
             if (turn == GameStartTurn && AgeManager.Instance != null) ActivateAnimals(AgeManager.Instance.CurrentAge);
         }
 
-        private void OnAgeTransition(GeologicalAge from, GeologicalAge to) => ActivateAnimals(to);
+        private void OnAgeTransition(GeologicalAge from, GeologicalAge to)
+        {
+            ActivateAnimals(to);
+            if (from < GeologicalAge.Devonian && to >= GeologicalAge.Devonian) GoAshore();
+        }
+
+        // ---------- Going ashore ----------
+
+        // The first turn of the Devonian shows the surface, and every habitat center still in the
+        // sea moves onto a land hex its player already holds: one of their groups stands on it if
+        // possible, else just inside their territory, nearest the old center, its core clear of
+        // the other players' cores. A player holding no land keeps their center.
+        private void GoAshore()
+        {
+            var territory = Territory.TerritoryManager.Instance;
+            if (grid == null || territory == null) { UnderView.Set(MapLayer.Surface); return; }
+            var colonies = SpeciesColonies.Instance;
+            var cores = new Dictionary<Player, HashSet<HexCell>>();
+            foreach (var c in territory.Centers) cores[c.Owner] = new HashSet<HexCell>(c.Core.Where(x => x != null));
+
+            bool moved = false;
+            foreach (var player in players)
+            {
+                var old = player.StartCell;
+                if (old == null || !old.IsWater) continue;
+                var occupied = new HashSet<HexCell>(colonies != null
+                    ? colonies.Groups.Where(g => g != null && g.Owner?.Index == player.Index && g.Cell != null).Select(g => g.Cell)
+                    : Enumerable.Empty<HexCell>());
+                var others = new HashSet<HexCell>(cores.Where(kv => kv.Key != player).SelectMany(kv => kv.Value));
+
+                HexCell best = null;
+                float bestScore = float.MaxValue;
+                for (int r = 0; r < grid.Height; r++)
+                for (int q = 0; q < grid.Width; q++)
+                {
+                    var cell = grid.GetCell(q, r);
+                    if (territory.OwnerOf(cell)?.Index != player.Index || !OpenStart(cell, false, true) || others.Contains(cell)) continue;
+                    if (grid.GetNeighbors(cell).Any(others.Contains)) continue;
+                    float score = WrappedDistance(old, cell) + (occupied.Contains(cell) ? 0f : 100f);
+                    if (score < bestScore) { bestScore = score; best = cell; }
+                }
+                if (best == null) continue;
+
+                player.StartCell = best;
+                cores[player] = new HashSet<HexCell>(grid.GetNeighbors(best)) { best };
+                moved = true;
+                if (player.IsHuman)
+                    FindAnyObjectByType<PlayerBall>()?.PlaceAt(best);
+                else
+                {
+                    foreach (var banner in old.GetComponentsInChildren<PlayerMarker>()) Destroy(banner.gameObject);
+                    PlayerMarker.Create(player, best.transform, best.transform.InverseTransformPoint(best.SurfacePosition));
+                }
+            }
+            UnderView.Set(MapLayer.Surface);
+            if (moved) PlayersChanged?.Invoke(); // TerritoryManager rebuilds the centers and their names
+        }
 
         private void ActivateAnimals(GeologicalAge age)
         {

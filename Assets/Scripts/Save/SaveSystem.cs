@@ -46,6 +46,7 @@ namespace NaturalHistory.Save
         public List<WildSave> wild = new();     // wild groups born during the game (WildBirths)
         public List<string> evolved = new();    // "player:from>to" links each player has used (older saves: "from>to", the human's)
         public string focusSpecies;
+        public string explored;                 // tiles the human player has explored, a bit per tile (FogOfWar); null in older saves
 
         public DateTime SavedAt => DateTime.TryParse(savedAtUtc, null, System.Globalization.DateTimeStyles.RoundtripKind, out var t) ? t.ToLocalTime() : DateTime.MinValue;
     }
@@ -151,6 +152,7 @@ namespace NaturalHistory.Save
             }
             EvolutionManager.Instance?.Capture(data);
             WildBirths.Instance?.Capture(data);
+            data.explored = FogOfWar.Instance?.CaptureExplored();
             return data;
         }
 
@@ -182,6 +184,7 @@ namespace NaturalHistory.Save
             ProgressionManager.Instance?.Restore(data.evolutionPoints, data.morphology, data.ethology);
             EvolutionManager.Instance?.Restore(data); // after the map: puts the copies back on it
             WildBirths.Instance?.Restore(data);       // and the wild groups
+            FogOfWar.Instance?.RestoreExplored(data.explored);
         }
     }
 }

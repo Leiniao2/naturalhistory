@@ -18781,6 +18781,18 @@
    "v": "本回合新出现：下回合起才能行动"
   },
   {
+   "k": "Unexplored",
+   "v": "未探索"
+  },
+  {
+   "k": "Send an animal within sight of it to explore it.",
+   "v": "让一只动物走到能看见这里的位置，即可探索这一格。"
+  },
+  {
+   "k": "Out of sight: its animals can't be seen from here.",
+   "v": "视野之外：看不到这里的动物。"
+  },
+  {
    "k": "Next animal ({0})",
    "v": "下一个动物（{0}）"
   },
@@ -19151,6 +19163,10 @@
   {
    "k": "Your {0} starved: no food on its tile or next to it",
    "v": "你的{0}饿死了：所在格和相邻格都没有食物"
+  },
+  {
+   "k": "Next Turn",
+   "v": "下一回合"
   }
  ]
 }

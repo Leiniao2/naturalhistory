@@ -46,6 +46,7 @@ namespace NaturalHistory.UI
                 Grid.TerrainChanged += MarkDirty;
             }
             UnderView.Changed += MarkDirty;
+            FogOfWar.Changed  += MarkDirty;
         }
 
         public void Dispose()
@@ -56,6 +57,7 @@ namespace NaturalHistory.UI
                 Grid.TerrainChanged -= MarkDirty;
             }
             UnderView.Changed -= MarkDirty;
+            FogOfWar.Changed  -= MarkDirty;
             if (territory != null) territory.TerritoryChanged -= MarkDirty;
             if (texture != null) Object.Destroy(texture);
         }
@@ -108,8 +110,8 @@ namespace NaturalHistory.UI
             for (int c = 0; c < cols; c++)
             {
                 var cell = Grid.GetCell(c, r);
-                colors[c, r] = CellColor(cell);
-                owners[c, r] = territory != null ? territory.OwnerOf(cell) : null;
+                colors[c, r] = FoggedColor(cell, CellColor(cell));
+                owners[c, r] = territory != null && FogOfWar.IsExplored(cell) ? territory.OwnerOf(cell) : null;
             }
 
             // Each pixel takes the nearest hex centre, which draws the hexes' true shapes. Where
@@ -153,6 +155,17 @@ namespace NaturalHistory.UI
             }
             texture.SetPixels32(pixels);
             texture.Apply(false);
+        }
+
+        // Fog of war (FogOfWar): unexplored tiles dark, explored ones out of sight dimmed
+        private static Color FoggedColor(HexCell cell, Color color)
+        {
+            if (!FogOfWar.IsExplored(cell)) return new Color(0.11f, 0.12f, 0.14f);
+            if (FogOfWar.IsVisible(cell)) return color;
+            float lum = color.r * 0.3f + color.g * 0.59f + color.b * 0.11f;
+            var dim = Color.Lerp(color, new Color(lum * 0.82f, lum * 0.88f, lum), 0.6f) * 0.55f;
+            dim.a = 1f;
+            return dim;
         }
 
         private static Color CellColor(HexCell cell)

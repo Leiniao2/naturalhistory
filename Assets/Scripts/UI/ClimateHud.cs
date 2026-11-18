@@ -94,6 +94,13 @@ namespace NaturalHistory.UI
             var t = climate.Get(cell);
             tilePanel.RemoveFromClassList("hidden");
             var (col, row) = cell.Coordinates.ToOffsetCoordinates();
+            if (!FogOfWar.IsExplored(cell)) // under the fog of war: nothing known yet
+            {
+                tileTitle.text = $"{Loc.T("Unexplored")}  ·  ({col}, {row})";
+                tileZone.text  = "";
+                tileStats.text = Loc.T("Send an animal within sight of it to explore it.");
+                return;
+            }
             if (layer == MapLayer.Under)
             {
                 ShowUnderTile(cell, col, row, occupants);
@@ -156,6 +163,7 @@ namespace NaturalHistory.UI
         // the sea surface, burrowers underground).
         private static string NicheLines(HexCell cell, MapLayer layer)
         {
+            if (!FogOfWar.IsVisible(cell)) return "\n" + Loc.T("Out of sight: its animals can't be seen from here.");
             var colonies = SpeciesColonies.Instance;
             var sb = new System.Text.StringBuilder();
             bool any = false;

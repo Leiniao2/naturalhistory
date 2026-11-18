@@ -27,7 +27,6 @@
                 <ui:Label name="age-label" class="age-label" text="Cambrian" picking-mode="Ignore" />
                 <ui:Label name="date-label" class="date-label" text="538.8 Ma · Turn 1" picking-mode="Ignore" />
             </ui:Button>
-            <ui:Button name="end-turn-button" class="end-turn-button" text="End Turn" />
         </ui:VisualElement>
 
         <!-- Bottom-left corner: overview map (MiniMap.cs) with the layer switch (sky / surface / underground) above it -->
@@ -64,21 +63,26 @@
             </ui:VisualElement>
         </ui:VisualElement>
 
-        <!-- Selected animal of yours: species, and what it can do -->
-        <ui:VisualElement name="unit-panel" class="unit-panel hidden">
-            <ui:VisualElement name="unit-portrait" class="species-portrait unit-portrait" />
-            <ui:VisualElement class="unit-info">
-                <ui:Label name="unit-name" class="unit-name" text="" />
-                <ui:Label name="unit-detail" class="unit-detail" text="" />
-                <ui:VisualElement class="unit-actions">
-                    <ui:Button name="unit-functions" class="unit-button" text="Functions" />
-                    <ui:Button name="unit-behaviors" class="unit-button" text="Behaviors" />
-                    <ui:Button name="unit-reproduce" class="unit-button" text="Reproduce" />
-                    <ui:Button name="unit-evolve" class="unit-button unit-evolve" text="Evolve" />
-                    <!-- sit this turn out: the next animal awaiting orders comes up (UnitCycle) -->
-                    <ui:Button name="unit-skip" class="unit-button unit-skip" text="Skip turn" />
+        <!-- Bottom centre: the selected animal and its orders, and beside it the turn button, which
+             reads "Next animal (n)" while any of yours await orders and "Next Turn" once all are done (UnitCycle) -->
+        <ui:VisualElement name="unit-dock" class="unit-dock" picking-mode="Ignore">
+            <!-- Selected animal of yours: species, and what it can do -->
+            <ui:VisualElement name="unit-panel" class="unit-panel hidden">
+                <ui:VisualElement name="unit-portrait" class="species-portrait unit-portrait" />
+                <ui:VisualElement class="unit-info">
+                    <ui:Label name="unit-name" class="unit-name" text="" />
+                    <ui:Label name="unit-detail" class="unit-detail" text="" />
+                    <ui:VisualElement class="unit-actions">
+                        <ui:Button name="unit-functions" class="unit-button" text="Functions" />
+                        <ui:Button name="unit-behaviors" class="unit-button" text="Behaviors" />
+                        <ui:Button name="unit-reproduce" class="unit-button" text="Reproduce" />
+                        <ui:Button name="unit-evolve" class="unit-button unit-evolve" text="Evolve" />
+                        <!-- sit this turn out: the next animal awaiting orders comes up (UnitCycle) -->
+                        <ui:Button name="unit-skip" class="unit-button unit-skip" text="Skip turn" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
+            <ui:Button name="end-turn-button" class="end-turn-button" text="Next Turn" />
         </ui:VisualElement>
 
         <!-- Geologic timeline: all periods, details of the selected one -->

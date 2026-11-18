@@ -160,6 +160,7 @@ namespace NaturalHistory.UI
             {
                 button.text = Loc.T(layer switch { MapLayer.Sky => "Sky", MapLayer.Under => "Underground", _ => "Surface" });
                 button.EnableInClassList("selected", layer == UnderView.Layer);
+                button.SetEnabled(layer == MapLayer.Under || UnderView.SurfaceOpen); // Ediacaran: under only
             }
         }
 

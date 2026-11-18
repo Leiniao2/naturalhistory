@@ -18521,6 +18521,18 @@
    "v": "Novo neste turno: pode agir a partir do próximo"
   },
   {
+   "k": "Unexplored",
+   "v": "Inexplorado"
+  },
+  {
+   "k": "Send an animal within sight of it to explore it.",
+   "v": "Leve um animal até onde ele possa ver este hexágono para explorá-lo."
+  },
+  {
+   "k": "Out of sight: its animals can't be seen from here.",
+   "v": "Fora de vista: não é possível ver os animais daqui."
+  },
+  {
    "k": "Next animal ({0})",
    "v": "Próximo animal ({0})"
   },
@@ -18891,6 +18903,10 @@
   {
    "k": "Your {0} starved: no food on its tile or next to it",
    "v": "O seu {0} morreu de fome: sem comida na sua casa nem ao lado"
+  },
+  {
+   "k": "Next Turn",
+   "v": "Próximo turno"
   }
  ]
 }

@@ -18521,6 +18521,18 @@
    "v": "Neu in dieser Runde: kann ab der nächsten Runde handeln"
   },
   {
+   "k": "Unexplored",
+   "v": "Unerforscht"
+  },
+  {
+   "k": "Send an animal within sight of it to explore it.",
+   "v": "Schicke ein Tier in Sichtweite, um dieses Feld zu erkunden."
+  },
+  {
+   "k": "Out of sight: its animals can't be seen from here.",
+   "v": "Außer Sicht: Die Tiere hier sind nicht zu sehen."
+  },
+  {
    "k": "Next animal ({0})",
    "v": "Nächstes Tier ({0})"
   },
@@ -18891,6 +18903,10 @@
   {
    "k": "Your {0} starved: no food on its tile or next to it",
    "v": "Dein {0} ist verhungert: kein Futter auf dem eigenen Feld oder daneben"
+  },
+  {
+   "k": "Next Turn",
+   "v": "Nächste Runde"
   }
  ]
 }

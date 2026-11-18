@@ -13,8 +13,8 @@ namespace NaturalHistory.UI
     // .ActionsLeft) and somewhere to go, something to attack or the chance to reproduce, that isn't
     // new this turn (JustBorn) and hasn't been told to skip the turn. Once a group has used its
     // actions the next one is picked; one that still has some after a move stays picked.
-    // While any await orders the End Turn button reads "Next animal (n)" and moves on to the next;
-    // when none do it ends the turn. Shift+click or Shift+Enter ends the turn regardless.
+    // While any await orders the turn button (beside the selected animal's orders) reads
+    // "Next animal (n)" and moves on to the next; when none do it reads "Next Turn" and ends the turn. Shift+click or Shift+Enter ends the turn regardless.
     // Groups with no food within reach (Diets.Starving) come up first.
     public class UnitCycle
     {
@@ -154,7 +154,7 @@ namespace NaturalHistory.UI
                 if (pending.Count > 0) Next();
             }
 
-            endTurnButton.text = pending.Count > 0 ? Loc.F("Next animal ({0})", pending.Count) : Loc.T("End Turn");
+            endTurnButton.text = pending.Count > 0 ? Loc.F("Next animal ({0})", pending.Count) : Loc.T("Next Turn");
             endTurnButton.EnableInClassList("next-unit", pending.Count > 0);
         }
     }
