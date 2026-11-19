@@ -30,6 +30,7 @@ namespace NaturalHistory.UI
         private ZoologyPanel zoologyPanel;
         private EncyclopediaPanel encyclopedia;
         private LoadingScreen loading;
+        private DiscoveryPanel discoveryPanel;
         private SettingsPanel settings;
         private bool settingsFromPause; // reopen the pause menu when Settings closes
         private MiniMap miniMap;
@@ -111,6 +112,7 @@ namespace NaturalHistory.UI
             newGameOptions = new NewGameOptions(root);
             zoologyPanel = new ZoologyPanel(root);
             loading      = new LoadingScreen(root, this);
+            discoveryPanel = new DiscoveryPanel(root);
             TurnWait.Init(root, this);
             encyclopedia = new EncyclopediaPanel(root);
             miniMap      = new MiniMap(root);
@@ -135,6 +137,8 @@ namespace NaturalHistory.UI
 
             root.Q<Button>("morphology-button").clicked += () => ToggleTree(Progression?.Morphology);
             root.Q<Button>("ethology-button").clicked   += () => ToggleTree(Progression?.Ethology);
+            UiIcons.Decorate(root.Q<Button>("morphology-button"), UiIcons.Functions);
+            UiIcons.Decorate(root.Q<Button>("ethology-button"), UiIcons.Behaviors);
             root.Q<Button>("zoology-button").clicked    += ToggleZoology;
             layerButtons = new[]
             {
@@ -253,6 +257,7 @@ namespace NaturalHistory.UI
 
         private void OnDestroy()
         {
+            discoveryPanel?.Dispose();
             UnderView.Changed -= OnUnderViewChanged;
             Loc.Changed -= OnLanguageChanged;
             miniMap?.Dispose();
@@ -330,6 +335,7 @@ namespace NaturalHistory.UI
             animalPanel.Update();
             miniMap.Update();
             TurnWait.Update();
+            if (discoveryPanel.IsOpen && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))) discoveryPanel.Next();
             mainMenu.Update();
             UpdateAutosave();
             if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)
@@ -343,7 +349,8 @@ namespace NaturalHistory.UI
         // Esc closes the top-most panel, or opens the pause menu if nothing is open
         private void HandleEscape()
         {
-            if (settings.IsOpen) settings.Close();
+            if (discoveryPanel != null && discoveryPanel.IsOpen) discoveryPanel.Next();
+            else if (settings.IsOpen) settings.Close();
             else if (IsOpen(slotsOverlay))  CloseSlots();
             else if (playersPanel.SetupOpen) { playersPanel.CloseSetup(); BackToMenu(); }
             else if (playersPanel.FactionOpen) playersPanel.CloseFaction();
@@ -367,7 +374,7 @@ namespace NaturalHistory.UI
             if (cameraController != null) cameraController.enabled = !modal; // keep edge/WASD panning near the HUD
         }
 
-        private bool AnyModalOpen() => (loading != null && loading.IsOpen) || mainMenu.IsOpen || settings.IsOpen || IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen || encyclopedia.IsOpen
+        private bool AnyModalOpen() => (loading != null && loading.IsOpen) || (discoveryPanel != null && discoveryPanel.IsOpen) || mainMenu.IsOpen || settings.IsOpen || IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen || encyclopedia.IsOpen
                                        || playersPanel.FactionOpen || playersPanel.SetupOpen;
 
         private bool PointerOverUI()

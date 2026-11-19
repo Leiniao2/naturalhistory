@@ -49,7 +49,7 @@ namespace NaturalHistory.UI
         // Keys while it is up (GameMenus.Update has no other use for them then)
         public void HandleKeys()
         {
-            if (!IsOpen) return;
+            if (!IsOpen || !waiting) return; // browsing once the world is made
             if (Input.GetKeyDown(KeyCode.RightArrow)) Browse(+1);
             if (Input.GetKeyDown(KeyCode.LeftArrow))  Browse(-1);
             if (waiting && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Space)))
@@ -70,10 +70,14 @@ namespace NaturalHistory.UI
             var rng = new System.Random();
             var tex = Resources.Load<Texture2D>("UI/MainMenu/" + Paintings[rng.Next(Paintings.Length)]);
             art.style.backgroundImage = tex != null ? new StyleBackground(tex) : new StyleBackground(StyleKeyword.None);
-            order = GameDataLoader.Species?.Where(s => SpeciesPortraits.Painting(s) != null).OrderBy(_ => rng.Next()).ToList();
+            // (portraits are loaded one at a time as they are shown: loading all of them here would stall the game)
+            order = GameDataLoader.Species?.Where(s => !string.IsNullOrEmpty(s.model)).OrderBy(_ => rng.Next()).ToList();
             index = 0;
             ShowSpecies();
             continueButton.AddToClassList("hidden");
+            // browsing only once the world is made: until then the game can't answer clicks
+            prev.AddToClassList("hidden");
+            next.AddToClassList("hidden");
             overlay.RemoveFromClassList("hidden");
             overlay.BringToFront();
             // two frames, so the screen is really on display before the main thread is busy
@@ -86,6 +90,8 @@ namespace NaturalHistory.UI
             // ready: the player can read on and browse, and goes in with Continue
             title.text = Loc.T("Ready");
             continueButton.RemoveFromClassList("hidden");
+            prev.RemoveFromClassList("hidden");
+            next.RemoveFromClassList("hidden");
             waiting = true;
             while (waiting) yield return null;
             overlay.AddToClassList("hidden");
@@ -103,7 +109,8 @@ namespace NaturalHistory.UI
         {
             if (order == null || order.Count == 0) { portrait.style.backgroundImage = new StyleBackground(StyleKeyword.None); return; }
             var def = order[index];
-            portrait.style.backgroundImage = Background.FromTexture2D(SpeciesPortraits.Painting(def));
+            var painting = SpeciesPortraits.Painting(def);
+            portrait.style.backgroundImage = painting != null ? Background.FromTexture2D(painting) : new StyleBackground(StyleKeyword.None);
             speciesName.text = Loc.T(def.commonName);
             var span = string.IsNullOrEmpty(def.lastAge) ? Loc.F("{0} – today", Loc.T(def.firstAge))
                      : def.firstAge == def.lastAge ? Loc.T(def.firstAge) : $"{Loc.T(def.firstAge)} – {Loc.T(def.lastAge)}";

@@ -18945,6 +18945,14 @@
    "v": "Появился в этом ходу: сможет действовать со следующего хода"
   },
   {
+   "k": "First encounter with the wild",
+   "v": "Первая встреча с дикой природой"
+  },
+  {
+   "k": "Your animals meet a wild group for the first time: {0} ({1}). Others share this world with you.",
+   "v": "Ваши животные впервые встречают дикую группу: {0} ({1}). Вы делите этот мир с другими."
+  },
+  {
    "k": "Unexplored",
    "v": "Не исследовано"
   },
@@ -19619,6 +19627,3106 @@
   {
    "k": "Ready",
    "v": "Готово"
+  },
+  {
+   "k": "Microbial mats",
+   "v": "Микробные маты"
+  },
+  {
+   "k": "Damp flats crusted with layers of microbes that trap sediment and build stromatolites: the oldest ecosystems on Earth, making oxygen for billions of years.",
+   "v": "Влажные отмели, покрытые слоями микробов, которые улавливают осадки и строят строматолиты: древнейшие экосистемы Земли, производящие кислород уже миллиарды лет."
+  },
+  {
+   "k": "Mosses, liverworts and the first small vascular plants: the green film that first covered the land and began to make soil.",
+   "v": "Мхи, печёночники и первые мелкие сосудистые растения: зелёная плёнка, которая первой покрыла сушу и начала создавать почву."
+  },
+  {
+   "k": "Open country covered in ferns and horsetails, the meadows of the world long before grasses evolved.",
+   "v": "Открытые просторы, поросшие папоротниками и хвощами, — луга мира задолго до появления злаков."
+  },
+  {
+   "k": "Warm, wet forest with layer upon layer of life: the richest habitat on land, home to most land species.",
+   "v": "Тёплый влажный лес, где жизнь ярус за ярусом: богатейшая среда обитания на суше, дом большинства наземных видов."
+  },
+  {
+   "k": "Dry country where little rain falls: its life saves water, shelters by day and comes out at night.",
+   "v": "Сухой край, где почти не бывает дождей: его обитатели берегут воду, днём прячутся, а ночью выходят."
+  },
+  {
+   "k": "Swamps and marshes between land and water, where many of the first land animals and plants took hold.",
+   "v": "Болота и топи между сушей и водой, где закрепились многие из первых наземных животных и растений."
+  },
+  {
+   "k": "Warm grassland dotted with trees, grazed by great herds and hunted by their predators.",
+   "v": "Тёплые травяные равнины с редкими деревьями, где пасутся огромные стада и охотятся их хищники."
+  },
+  {
+   "k": "Cool, dry grassland stretching to the horizon, where speed and endurance pay.",
+   "v": "Прохладные сухие травяные равнины до самого горизонта, где выигрывают скорость и выносливость."
+  },
+  {
+   "k": "Cold treeless land frozen for much of the year, with a brief, busy summer.",
+   "v": "Холодная безлесная земля, скованная льдом большую часть года, с коротким, но оживлённым летом."
+  },
+  {
+   "k": "A dome of ice kilometres thick; little lives on it, but its cold edges feed rich seas.",
+   "v": "Купол льда толщиной в километры; на нём почти ничего не живёт, но его холодные края питают богатые моря."
+  },
+  {
+   "k": "Reef",
+   "v": "Риф"
+  },
+  {
+   "k": "Built by living things over countless generations: stromatolites, sponges, then corals. Reefs shelter a crowd of sea life.",
+   "v": "Создан живыми существами за бессчётные поколения: строматолитами, губками, затем кораллами. Рифы дают приют множеству морских обитателей."
+  },
+  {
+   "k": "Oasis",
+   "v": "Оазис"
+  },
+  {
+   "k": "Water in the desert: a pond fed from underground, a refuge every desert animal knows.",
+   "v": "Вода в пустыне: пруд, питаемый подземными водами, убежище, которое знает каждое животное пустыни."
+  },
+  {
+   "k": "Volcano",
+   "v": "Вулкан"
+  },
+  {
+   "k": "Molten rock breaking through the crust; its ash and lava destroy, then make some of the most fertile ground there is.",
+   "v": "Расплавленная порода прорывается сквозь кору; пепел и лава сначала разрушают, а потом создают одни из самых плодородных земель на свете."
+  },
+  {
+   "k": "Hot springs, geysers and steaming vents where heat-loving microbes paint the ground in bright colours.",
+   "v": "Горячие источники, гейзеры и парящие фумаролы, где теплолюбивые микробы раскрашивают землю в яркие цвета."
+  },
+  {
+   "k": "A flat-topped table of layered rock left standing as the land around it wore away.",
+   "v": "Плоская вершина из слоистых пород, уцелевшая, пока окружающая земля разрушалась."
+  },
+  {
+   "k": "A deep gorge cut by a river through layer after layer of rock, a record of millions of years.",
+   "v": "Глубокое ущелье, прорезанное рекой сквозь слой за слоем горных пород, — летопись миллионов лет."
+  },
+  {
+   "k": "Chalk cliffs made of the skeletons of countless tiny sea algae that lived in Cretaceous seas.",
+   "v": "Меловые скалы, сложенные из скелетов бесчисленных крошечных морских водорослей, живших в морях мелового периода."
+  },
+  {
+   "k": "A lake with no outlet, where the water evaporates and leaves a white crust of salt.",
+   "v": "Озеро без стока, где вода испаряется и оставляет белую корку соли."
+  },
+  {
+   "k": "A salt lake coloured pink by salt-loving microbes and algae thriving where little else can.",
+   "v": "Солёное озеро, окрашенное в розовый цвет солелюбивыми микробами и водорослями, процветающими там, где почти никто не выживает."
+  },
+  {
+   "k": "Hills of red sandstone striped in many colours, laid down in ancient deserts and lakes.",
+   "v": "Холмы из красного песчаника с разноцветными полосами, отложенные в древних пустынях и озёрах."
+  },
+  {
+   "k": "Limestone towers and caves dissolved by rain over millions of years, full of hidden waters.",
+   "v": "Известняковые башни и пещеры, растворённые дождями за миллионы лет и полные скрытых вод."
+  },
+  {
+   "k": "Jungle",
+   "v": "Джунгли"
+  },
+  {
+   "k": "A dense tropical canopy so thick that little light reaches the ground.",
+   "v": "Плотный тропический полог, такой густой, что до земли почти не доходит свет."
+  },
+  {
+   "k": "Broadleaf forest",
+   "v": "Широколиственный лес"
+  },
+  {
+   "k": "A forest of leafy trees that shade and feed a great web of life beneath them.",
+   "v": "Лес из лиственных деревьев, дающих тень и пищу огромной сети жизни под ними."
+  },
+  {
+   "k": "Conifer forest",
+   "v": "Хвойный лес"
+  },
+  {
+   "k": "Evergreen cone-bearing trees, the oldest kind of forest still standing today.",
+   "v": "Вечнозелёные шишконосные деревья — древнейший тип леса, сохранившийся до наших дней."
+  },
+  {
+   "k": "Underwater volcano",
+   "v": "Подводный вулкан"
+  },
+  {
+   "k": "A seamount rising from the sea floor; its slopes gather sea life and its eruptions remake the sea bed.",
+   "v": "Подводная гора, поднимающаяся со дна моря; на её склонах собирается морская жизнь, а извержения перекраивают морское дно."
+  },
+  {
+   "k": "Hydrothermal vents",
+   "v": "Гидротермальные источники"
+  },
+  {
+   "k": "Black smokers pouring out hot, mineral-rich water: in the dark, whole communities live on chemical energy instead of sunlight, perhaps as the first life did.",
+   "v": "Чёрные курильщики извергают горячую, богатую минералами воду: во тьме целые сообщества живут за счёт химической энергии, а не солнечного света, — возможно, так жила и первая жизнь."
+  },
+  {
+   "k": "Shallow hydrothermal field",
+   "v": "Мелководное гидротермальное поле"
+  },
+  {
+   "k": "White smokers, gas seeps and sulphur on a shallow sea floor, covered in bacterial mats.",
+   "v": "Белые курильщики, газовые просачивания и сера на мелководном морском дне, покрытые бактериальными матами."
+  },
+  {
+   "k": "Stromatolite sea floor",
+   "v": "Строматолитовое морское дно"
+  },
+  {
+   "k": "Domes and mounds built layer by layer by microbial mats, the first reefs and for most of Earth's history its most common sign of life.",
+   "v": "Купола и холмики, слой за слоем выстроенные микробными матами: первые рифы и на протяжении большей части истории Земли самый распространённый признак жизни."
+  },
+  {
+   "k": "Your {0} gains {1} for free",
+   "v": "Ваш вид {0} бесплатно получает «{1}»"
+  },
+  {
+   "k": "{0} group of yours nearby is healed",
+   "v": "Ваших групп поблизости исцелено: {0}"
+  },
+  {
+   "k": "{0} groups of yours nearby are healed",
+   "v": "Ваших групп поблизости исцелено: {0}"
+  },
+  {
+   "k": "A group of {0} joins you",
+   "v": "К вам присоединяется группа: {0}"
+  },
+  {
+   "k": "A feast: your {0} raises young for free",
+   "v": "Пиршество: ваш вид {0} бесплатно выводит потомство"
+  },
+  {
+   "k": "A second wind: every group of yours gets an extra action this turn",
+   "v": "Второе дыхание: каждая ваша группа получает дополнительное действие в этом ходу"
+  },
+  {
+   "k": "Fertile ground: your groups nearby can reproduce again at once",
+   "v": "Плодородная земля: ваши группы поблизости могут сразу снова размножиться"
+  },
+  {
+   "k": "New animal discovered",
+   "v": "Открыто новое животное"
+  },
+  {
+   "k": "New plant discovered",
+   "v": "Открыто новое растение"
+  },
+  {
+   "k": "New landscape discovered",
+   "v": "Открыт новый ландшафт"
+  },
+  {
+   "k": "Reward: {0}",
+   "v": "Награда: {0}"
+  },
+  {
+   "k": "OK",
+   "v": "OK"
+  },
+  {
+   "k": "Life is still all in the sea: you begin on the seabed, in the layer under sea level",
+   "v": "Вся жизнь ещё в море: вы начинаете на морском дне, ниже уровня моря"
+  },
+  {
+   "k": "Starting period",
+   "v": "Начальный период"
+  },
+  {
+   "k": "You begin on the surface",
+   "v": "Вы начинаете на поверхности"
+  },
+  {
+   "k": "{0:0} % of the world is land today",
+   "v": "Сейчас {0:0} % мира — суша"
+  },
+  {
+   "k": "{0} turns to the present day ({1} in all)",
+   "v": "{0} ходов до наших дней (всего {1})"
+  },
+  {
+   "k": "Flat green lobes on damp ground: among the very first land plants.",
+   "v": "Плоские зелёные лопасти на сырой земле: одни из самых первых наземных растений."
+  },
+  {
+   "k": "Known only from their spores; tiny moss-like crusts.",
+   "v": "Известны только по спорам; крошечные мохоподобные корочки."
+  },
+  {
+   "k": "Flat thalli sprouting horn-shaped spore capsules.",
+   "v": "Плоские слоевища, из которых вырастают рожковидные спорангии."
+  },
+  {
+   "k": "The first known vascular plant: forked stems a few centimetres tall.",
+   "v": "Первое известное сосудистое растение: вильчатые стебли высотой в несколько сантиметров."
+  },
+  {
+   "k": "An early clubmoss with leafy stems.",
+   "v": "Ранний плаун с облиственными стеблями."
+  },
+  {
+   "k": "Cushions of moss on damp ground and rocks.",
+   "v": "Подушки мха на сырой земле и камнях."
+  },
+  {
+   "k": "Leafless forked stems from the Rhynie chert hot springs.",
+   "v": "Безлистные вильчатые стебли из горячих источников райниевых кремней."
+  },
+  {
+   "k": "Rhynie chert plant with water-conducting tissue but no leaves.",
+   "v": "Растение райниевых кремней с водопроводящей тканью, но без листьев."
+  },
+  {
+   "k": "Clumps of stems with spore sacs along the sides.",
+   "v": "Пучки стеблей со спорангиями по бокам."
+  },
+  {
+   "k": "Branching stems up to half a metre: forerunner of ferns and seed plants.",
+   "v": "Ветвистые стебли до полуметра высотой: предшественник папоротников и семенных растений."
+  },
+  {
+   "k": "Leafy clubmoss of the Rhynie chert.",
+   "v": "Облиственный плаун из райниевых кремней."
+  },
+  {
+   "k": "Creeping clubmoss with spiny leaves.",
+   "v": "Стелющийся плаун с колючими листьями."
+  },
+  {
+   "k": "Herbaceous clubmoss with forked leaves.",
+   "v": "Травянистый плаун с вильчатыми листьями."
+  },
+  {
+   "k": "Upright, much-branched stems nearly a metre tall.",
+   "v": "Прямостоячие, сильно ветвящиеся стебли почти метровой высоты."
+  },
+  {
+   "k": "Shrubby progymnosperm.",
+   "v": "Кустарниковая прогимносперма."
+  },
+  {
+   "k": "The oldest known seed plant.",
+   "v": "Древнейшее известное семенное растение."
+  },
+  {
+   "k": "The first modern-looking tree, forming the first forests.",
+   "v": "Первое дерево современного облика, образовавшее первые леса."
+  },
+  {
+   "k": "The earliest known tree: a pole with a crown of branches, Gilboa forest.",
+   "v": "Древнейшее известное дерево: ствол с кроной из ветвей, лес Гилбоа."
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches.",
+   "v": "Небольшое дерево с кроной из пальцевидных ветвей."
+  },
+  {
+   "k": "A small early scale tree.",
+   "v": "Небольшое раннее чешуедрево."
+  },
+  {
+   "k": "Giant club moss up to 40 m; its trunks became coal.",
+   "v": "Гигантский плаун высотой до 40 м; его стволы превратились в уголь."
+  },
+  {
+   "k": "Scale tree with a dense, drooping crown.",
+   "v": "Чешуедрево с густой поникающей кроной."
+  },
+  {
+   "k": "Ribbed lycopsid trunk topped by tufts of grassy leaves.",
+   "v": "Ребристый ствол плауновидного, увенчанный пучками злаковидных листьев."
+  },
+  {
+   "k": "Tree-sized horsetail growing in thickets along rivers.",
+   "v": "Древовидный хвощ, образовывавший заросли вдоль рек."
+  },
+  {
+   "k": "Marattialean tree fern with a trunk wrapped in roots.",
+   "v": "Мараттиевый древовидный папоротник со стволом, окутанным корнями."
+  },
+  {
+   "k": "Seed fern tree with huge fronds and seeds the size of eggs.",
+   "v": "Древовидный семенной папоротник с огромными вайями и семенами величиной с яйцо."
+  },
+  {
+   "k": "Tall tree with strap-shaped leaves, related to conifers.",
+   "v": "Высокое дерево с лентовидными листьями, родственное хвойным."
+  },
+  {
+   "k": "One of the first conifers, like a small Norfolk pine.",
+   "v": "Одно из первых хвойных, похожее на небольшую норфолкскую араукарию."
+  },
+  {
+   "k": "Seed fern whose tongue-shaped leaflets are common coal-ball fossils.",
+   "v": "Семенной папоротник, чьи языковидные перышки часто встречаются в угольных почках."
+  },
+  {
+   "k": "Fern-like seed plant of the coal forests.",
+   "v": "Папоротниковидное семенное растение каменноугольных лесов."
+  },
+  {
+   "k": "Scrambling horsetail with wedge-shaped leaves in whorls.",
+   "v": "Цепляющийся хвощ с клиновидными листьями, собранными в мутовки."
+  },
+  {
+   "k": "Small early fern, often growing on other plants.",
+   "v": "Небольшой ранний папоротник, часто росший на других растениях."
+  },
+  {
+   "k": "Low clubmoss lineage that survives today.",
+   "v": "Линия низкорослых плауновидных, дожившая до наших дней."
+  },
+  {
+   "k": "Evergreen creeping clubmoss.",
+   "v": "Вечнозелёный стелющийся плаун."
+  },
+  {
+   "k": "Tongue-leaved tree of Gondwana; its spread helped prove continental drift.",
+   "v": "Дерево Гондваны с языковидными листьями; его распространение помогло доказать дрейф континентов."
+  },
+  {
+   "k": "Early glossopterid of the cold southern lowlands.",
+   "v": "Ранний глоссоптерид холодных южных низменностей."
+  },
+  {
+   "k": "Climbing seed plant with broad, net-veined leaves, in tropical Cathaysia.",
+   "v": "Лазающее семенное растение с широкими сетчатонервными листьями из тропической Катазии."
+  },
+  {
+   "k": "Conifer of the dry Zechstein coasts.",
+   "v": "Хвойное засушливых побережий цехштейна."
+  },
+  {
+   "k": "Conifer of the Permian and Triassic.",
+   "v": "Хвойное пермского и триасового периодов."
+  },
+  {
+   "k": "Strap-leaved plant related to the cycads.",
+   "v": "Растение с лентовидными листьями, родственное саговникам."
+  },
+  {
+   "k": "Horsetails as thick as a wrist, lining Triassic rivers.",
+   "v": "Хвощи толщиной с запястье, окаймлявшие триасовые реки."
+  },
+  {
+   "k": "Royal ferns have barely changed in 200 million years.",
+   "v": "Чистоусты почти не изменились за 200 миллионов лет."
+  },
+  {
+   "k": "Early Permian walchian conifer.",
+   "v": "Вальхиевое хвойное ранней перми."
+  },
+  {
+   "k": "Seed fern tree that dominated southern Triassic forests.",
+   "v": "Древовидный семенной папоротник, господствовавший в южных триасовых лесах."
+  },
+  {
+   "k": "The great logs of the Petrified Forest, Arizona.",
+   "v": "Огромные стволы Окаменелого леса в Аризоне."
+  },
+  {
+   "k": "Unbranched lycopsid that spread over the world after the end-Permian extinction.",
+   "v": "Неветвящееся плауновидное, распространившееся по всему миру после пермского вымирания."
+  },
+  {
+   "k": "Triassic horsetail of river banks.",
+   "v": "Триасовый хвощ речных берегов."
+  },
+  {
+   "k": "One of the earliest true cycads.",
+   "v": "Один из самых ранних настоящих саговников."
+  },
+  {
+   "k": "Ginkgo relative with deeply divided leaves.",
+   "v": "Родственник гинкго с глубоко рассечёнными листьями."
+  },
+  {
+   "k": "Common Mesozoic fern foliage.",
+   "v": "Обычная листва папоротников мезозоя."
+  },
+  {
+   "k": "Gondwanan horsetail with split leaf sheaths.",
+   "v": "Хвощ Гондваны с расщеплёнными листовыми влагалищами."
+  },
+  {
+   "k": "Peltasperm seed fern.",
+   "v": "Пельтаспермовый семенной папоротник."
+  },
+  {
+   "k": "Strap-leaved Triassic conifer of dry ground.",
+   "v": "Триасовое хвойное с лентовидными листьями, росшее на сухих почвах."
+  },
+  {
+   "k": "Jurassic monkey-puzzle tree, fossilised cones from Cerro Cuadrado.",
+   "v": "Юрская араукария; окаменевшие шишки из Серро-Куадрадо."
+  },
+  {
+   "k": "Scale-leaved conifer of dry Mesozoic coasts.",
+   "v": "Чешуелистное хвойное засушливых побережий мезозоя."
+  },
+  {
+   "k": "Conifer with stiff, awl-shaped leaves.",
+   "v": "Хвойное с жёсткими шиловидными листьями."
+  },
+  {
+   "k": "Ginkgo with lobed fan leaves.",
+   "v": "Гинкго с лопастными веерными листьями."
+  },
+  {
+   "k": "Deciduous ginkgo relative of cool, wet forests.",
+   "v": "Листопадный родственник гинкго из прохладных влажных лесов."
+  },
+  {
+   "k": "Conifer with broad, flat leaves.",
+   "v": "Хвойное с широкими плоскими листьями."
+  },
+  {
+   "k": "Soft tree ferns, alive today in Australia and New Zealand.",
+   "v": "Мягкие древовидные папоротники, растущие сегодня в Австралии и Новой Зеландии."
+  },
+  {
+   "k": "Bennettitalean with flower-like cones.",
+   "v": "Беннеттит с цветковидными стробилами."
+  },
+  {
+   "k": "Squat, barrel-trunked bennettitalean.",
+   "v": "Приземистый беннеттит с бочковидным стволом."
+  },
+  {
+   "k": "Umbrella-fronded fern; a Jurassic fern-prairie dominant.",
+   "v": "Папоротник с зонтиковидными вайями; доминант юрских папоротниковых прерий."
+  },
+  {
+   "k": "Fern of the Jurassic understory; the 'giant ferns' of dinosaur country.",
+   "v": "Папоротник юрского подлеска; те самые «гигантские папоротники» страны динозавров."
+  },
+  {
+   "k": "Living horsetails; their kind has been around since the Jurassic.",
+   "v": "Современные хвощи; их род существует с юрского периода."
+  },
+  {
+   "k": "Palm-like cycads, a group older than the dinosaurs.",
+   "v": "Пальмовидные саговники — группа древнее динозавров."
+  },
+  {
+   "k": "A living fossil, now only in Japan.",
+   "v": "Живое ископаемое, ныне растущее только в Японии."
+  },
+  {
+   "k": "One of the oldest flowering plants, a water plant from Liaoning.",
+   "v": "Одно из древнейших цветковых растений, водное растение из Ляонина."
+  },
+  {
+   "k": "An early aquatic flowering plant from Spain.",
+   "v": "Раннее водное цветковое растение из Испании."
+  },
+  {
+   "k": "Water lilies are among the oldest flowering plant lineages.",
+   "v": "Кувшинки — одна из древнейших линий цветковых растений."
+  },
+  {
+   "k": "Magnolias were pollinated by beetles before bees existed.",
+   "v": "Магнолии опылялись жуками ещё до появления пчёл."
+  },
+  {
+   "k": "Plane trees along Cretaceous rivers.",
+   "v": "Платаны вдоль меловых рек."
+  },
+  {
+   "k": "Laurel-family tree with mitten-shaped leaves.",
+   "v": "Дерево семейства лавровых с листьями в форме варежки."
+  },
+  {
+   "k": "Tall magnolia relative with tulip-like flowers.",
+   "v": "Высокий родственник магнолии с тюльпановидными цветками."
+  },
+  {
+   "k": "Redwoods: the tallest trees on Earth.",
+   "v": "Секвойи — самые высокие деревья на Земле."
+  },
+  {
+   "k": "Deciduous redwood; once covered the Arctic, now wild only in China.",
+   "v": "Листопадная секвойя; некогда покрывала Арктику, а теперь в дикой природе растёт только в Китае."
+  },
+  {
+   "k": "Drought-hardy, jointed conifer of dry coasts.",
+   "v": "Засухоустойчивое членистое хвойное засушливых побережий."
+  },
+  {
+   "k": "Tough fern of Cretaceous coastal flats.",
+   "v": "Выносливый папоротник меловых прибрежных равнин."
+  },
+  {
+   "k": "False tree fern: its 'trunk' was a mass of stems and roots.",
+   "v": "Ложный древовидный папоротник: его «ствол» был массой стеблей и корней."
+  },
+  {
+   "k": "Fan palms appear late in the Cretaceous.",
+   "v": "Веерные пальмы появляются в конце мелового периода."
+  },
+  {
+   "k": "Mangrove palm; Eocene London was full of them.",
+   "v": "Мангровая пальма; эоценовый Лондон был полон ими."
+  },
+  {
+   "k": "Small herbs among the first flowering plants.",
+   "v": "Небольшие травы — одни из первых цветковых растений."
+  },
+  {
+   "k": "Swamp conifer with 'knees' poking out of the water.",
+   "v": "Болотное хвойное с «коленями», торчащими из воды."
+  },
+  {
+   "k": "Oaks spread across the northern continents.",
+   "v": "Дубы распространились по северным материкам."
+  },
+  {
+   "k": "Smooth-barked trees of shady forests.",
+   "v": "Гладкокорые деревья тенистых лесов."
+  },
+  {
+   "k": "Maples, with winged seeds.",
+   "v": "Клёны с крылатыми семенами."
+  },
+  {
+   "k": "Evergreen laurel forests of the warm Eocene.",
+   "v": "Вечнозелёные лавровые леса тёплого эоцена."
+  },
+  {
+   "k": "Alders grow with their roots in wet ground.",
+   "v": "Ольха растёт, погрузив корни в сырую почву."
+  },
+  {
+   "k": "Figs and their wasps have evolved together for 60 million years.",
+   "v": "Фикусы и их осы эволюционируют вместе уже 60 миллионов лет."
+  },
+  {
+   "k": "Mangroves stand on stilt roots in salt water.",
+   "v": "Мангры стоят на ходульных корнях в солёной воде."
+  },
+  {
+   "k": "The last ginkgo: a living fossil.",
+   "v": "Последний гинкго: живое ископаемое."
+  },
+  {
+   "k": "Grasses existed but didn't form grasslands until the Neogene.",
+   "v": "Злаки существовали, но образовали степи и саванны лишь в неогене."
+  },
+  {
+   "k": "Beeches of the southern continents, from Antarctica to Patagonia.",
+   "v": "Буки южных материков, от Антарктиды до Патагонии."
+  },
+  {
+   "k": "Laurel-family tree of warm forests.",
+   "v": "Дерево семейства лавровых из тёплых лесов."
+  },
+  {
+   "k": "Pines: hardy conifers of poor soils and cold.",
+   "v": "Сосны: выносливые хвойные бедных почв и холода."
+  },
+  {
+   "k": "The dark spruces of the boreal forest.",
+   "v": "Тёмные ели бореальной тайги."
+  },
+  {
+   "k": "A conifer that drops its needles in winter.",
+   "v": "Хвойное, сбрасывающее хвою на зиму."
+  },
+  {
+   "k": "Firs of cool mountain forests.",
+   "v": "Пихты прохладных горных лесов."
+  },
+  {
+   "k": "White-barked birches, first trees back after the ice.",
+   "v": "Белокорые берёзы — первые деревья, вернувшиеся после ледника."
+  },
+  {
+   "k": "Gum trees: fire-adapted Australian forests.",
+   "v": "Эвкалипты: австралийские леса, приспособленные к пожарам."
+  },
+  {
+   "k": "Flat-topped thorn trees of the savanna.",
+   "v": "Колючие деревья саванны с плоской кроной."
+  },
+  {
+   "k": "Swollen trunks store water through the dry season.",
+   "v": "Вздутые стволы запасают воду на сухой сезон."
+  },
+  {
+   "k": "Emergent giant towering over the rainforest canopy.",
+   "v": "Гигант-эмергент, возвышающийся над пологом тропического леса."
+  },
+  {
+   "k": "Tall trees of Southeast Asian rainforests.",
+   "v": "Высокие деревья тропических лесов Юго-Восточной Азии."
+  },
+  {
+   "k": "Giant grasses that grow a metre a day.",
+   "v": "Гигантские злаки, вырастающие на метр в день."
+  },
+  {
+   "k": "Palm of desert oases.",
+   "v": "Пальма пустынных оазисов."
+  },
+  {
+   "k": "Its floating nuts spread it to tropical shores worldwide.",
+   "v": "Плавучие орехи разнесли её по тропическим берегам всего мира."
+  },
+  {
+   "k": "C4 grass of the African and Australian savannas.",
+   "v": "C4-злак африканских и австралийских саванн."
+  },
+  {
+   "k": "Feathery grass of the Eurasian steppe.",
+   "v": "Перистый злак евразийской степи."
+  },
+  {
+   "k": "Temperate meadow grasses.",
+   "v": "Луговые злаки умеренного пояса."
+  },
+  {
+   "k": "Tall grass of the North American prairie.",
+   "v": "Высокий злак североамериканской прерии."
+  },
+  {
+   "k": "Spiny hummock grass of Australia's deserts.",
+   "v": "Колючий кочковатый злак австралийских пустынь."
+  },
+  {
+   "k": "Grasses and sedges of the Ice Age mammoth steppe.",
+   "v": "Злаки и осоки мамонтовой степи ледникового периода."
+  },
+  {
+   "k": "Silvery, aromatic shrubs of dry plains.",
+   "v": "Серебристые ароматные кустарники сухих равнин."
+  },
+  {
+   "k": "Purple-flowering heath of acid moorland.",
+   "v": "Вереск с пурпурными цветками на кислых пустошах."
+  },
+  {
+   "k": "Desert shrub; some clones are over 10,000 years old.",
+   "v": "Пустынный кустарник; некоторым клонам более 10 000 лет."
+  },
+  {
+   "k": "Giant columnar cactus of the Sonoran Desert.",
+   "v": "Гигантский колонновидный кактус пустыни Сонора."
+  },
+  {
+   "k": "Cactus with flat, padded stems.",
+   "v": "Кактус с плоскими лепёшковидными стеблями."
+  },
+  {
+   "k": "Two strap leaves that grow for over a thousand years, Namib Desert.",
+   "v": "Два лентовидных листа, растущих более тысячи лет, пустыня Намиб."
+  },
+  {
+   "k": "African succulent that looks like a cactus.",
+   "v": "Африканский суккулент, похожий на кактус."
+  },
+  {
+   "k": "Tundra flower that gave its name to the Younger Dryas cold snap.",
+   "v": "Тундровый цветок, давший имя похолоданию позднего дриаса."
+  },
+  {
+   "k": "A willow that grows only a few centimetres tall.",
+   "v": "Ива высотой всего несколько сантиметров."
+  },
+  {
+   "k": "Sedge with cotton-white seed heads.",
+   "v": "Осока с белыми, как хлопок, семенными головками."
+  },
+  {
+   "k": "One of the northernmost flowering plants.",
+   "v": "Одно из самых северных цветковых растений."
+  },
+  {
+   "k": "Builds peat bogs that store vast amounts of carbon.",
+   "v": "Создаёт торфяные болота, хранящие огромные запасы углерода."
+  },
+  {
+   "k": "Tall reed beds of marshes and lakes.",
+   "v": "Высокие тростниковые заросли болот и озёр."
+  },
+  {
+   "k": "Sedge of the Nile, made into the first paper.",
+   "v": "Нильская осока, из которой сделали первую бумагу."
+  },
+  {
+   "k": "Bulrushes with brown, sausage-shaped flower spikes.",
+   "v": "Рогоз с бурыми колбасовидными соцветиями."
+  },
+  {
+   "k": "Lobster-claw flowers pollinated by hummingbirds.",
+   "v": "Цветки, похожие на клешни омара, опыляемые колибри."
+  },
+  {
+   "k": "Fern rosettes of the rainforest floor and branches.",
+   "v": "Розетки папоротника на земле и ветвях тропического леса."
+  },
+  {
+   "k": "Daisies, clovers and their kin in the grass.",
+   "v": "Ромашки, клевер и их родичи среди травы."
+  },
+  {
+   "k": "Succulent rosettes of African dry lands.",
+   "v": "Суккулентные розетки засушливых земель Африки."
+  },
+  {
+   "k": "Fire-adapted fynbos shrub; Proteaceae date back to Gondwana.",
+   "v": "Приспособленный к пожарам кустарник финбоша; протейные восходят к Гондване."
+  },
+  {
+   "k": "Australian shrub with bottlebrush flower spikes.",
+   "v": "Австралийский кустарник с соцветиями-ёршиками."
+  },
+  {
+   "k": "Evergreen shrub of forest edges.",
+   "v": "Вечнозелёный кустарник лесных опушек."
+  },
+  {
+   "k": "Flowering shrubs of mountain slopes.",
+   "v": "Цветущие кустарники горных склонов."
+  },
+  {
+   "k": "Turf of green seaweed on sunlit seabed; land plants descend from green algae.",
+   "v": "Дернина зелёных водорослей на освещённом морском дне; наземные растения произошли от зелёных водорослей."
+  },
+  {
+   "k": "Red seaweeds, among the oldest complex algae.",
+   "v": "Красные водоросли — одни из древнейших сложных водорослей."
+  },
+  {
+   "k": "Tough microbial mats that carpeted the Ediacaran seafloor, wrinkled like elephant skin; the first grazers and burrowers broke them up in the Cambrian.",
+   "v": "Прочные микробные маты, устилавшие дно эдиакарского моря и сморщенные, как кожа слона; первые пасущиеся и роющие животные разрушили их в кембрии."
+  },
+  {
+   "k": "Layered mounds built by cyanobacteria; rare today, as at Shark Bay.",
+   "v": "Слоистые постройки цианобактерий; сегодня редки, например в заливе Шарк."
+  },
+  {
+   "k": "Bushy calcified microbes that built Cambrian reefs with archaeocyathids.",
+   "v": "Кустистые обызвествлённые микробы, строившие кембрийские рифы вместе с археоциатами."
+  },
+  {
+   "k": "Little umbrella-shaped green algae of warm lagoons.",
+   "v": "Маленькие зонтиковидные зелёные водоросли тёплых лагун."
+  },
+  {
+   "k": "The 'sunflower coral': a disc-shaped calcareous alga.",
+   "v": "«Коралл-подсолнух»: дисковидная известковая водоросль."
+  },
+  {
+   "k": "Calcified red alga that helped build Paleozoic reefs.",
+   "v": "Обызвествлённая красная водоросль, помогавшая строить палеозойские рифы."
+  },
+  {
+   "k": "Calcified green algae whose fragments make carbonate sand.",
+   "v": "Обызвествлённые зелёные водоросли, обломки которых образуют карбонатный песок."
+  },
+  {
+   "k": "Potato-chip-shaped algae that formed Late Paleozoic mounds.",
+   "v": "Водоросли в форме чипсов, образовавшие холмы в позднем палеозое."
+  },
+  {
+   "k": "Segmented green alga; its plates pile up into sand banks.",
+   "v": "Членистая зелёная водоросль; её пластинки накапливаются в песчаные банки."
+  },
+  {
+   "k": "A creeping seaweed that is a single giant cell.",
+   "v": "Ползучая водоросль, представляющая собой одну гигантскую клетку."
+  },
+  {
+   "k": "Pink, rock-hard crusts that cement coral reefs together.",
+   "v": "Розовые, твёрдые как камень корки, скрепляющие коралловые рифы."
+  },
+  {
+   "k": "One of the first flowering plants to return to the sea.",
+   "v": "Одно из первых цветковых растений, вернувшихся в море."
+  },
+  {
+   "k": "Mediterranean seagrass; some meadows are thousands of years old.",
+   "v": "Средиземноморская морская трава; некоторым её лугам тысячи лет."
+  },
+  {
+   "k": "Seagrass meadows of cool coasts, nurseries for fish.",
+   "v": "Луга морской травы у прохладных берегов — питомники для рыб."
+  },
+  {
+   "k": "Tropical seagrass grazed by turtles and manatees.",
+   "v": "Тропическая морская трава, которую поедают черепахи и ламантины."
+  },
+  {
+   "k": "Small seagrass, food of dugongs.",
+   "v": "Маленькая морская трава, корм дюгоней."
+  },
+  {
+   "k": "Brown seaweed with air bladders; rafts of it float in the Sargasso Sea.",
+   "v": "Бурая водоросль с воздушными пузырями; её плавучие острова дрейфуют в Саргассовом море."
+  },
+  {
+   "k": "Kelp forests up to 50 m tall along cool coasts.",
+   "v": "Леса ламинариевых высотой до 50 м вдоль прохладных берегов."
+  },
+  {
+   "k": "Kelp with broad, strap-like blades.",
+   "v": "Ламинария с широкими лентовидными пластинами."
+  },
+  {
+   "k": "Rockweed of the tidal shore, buoyed by air bladders.",
+   "v": "Фукус приливной полосы, удерживаемый на плаву воздушными пузырями."
+  },
+  {
+   "k": "Films and tufts of simple green algae in lakes and ponds, long before any plant reached land.",
+   "v": "Плёнки и пучки простых зелёных водорослей в озёрах и прудах — задолго до выхода растений на сушу."
+  },
+  {
+   "k": "Slimy green threads in still fresh water; zygnematophyte algae like it leave no sure fossils before the late Palaeozoic.",
+   "v": "Слизистые зелёные нити в стоячей пресной воде; подобные ей зигнематовые водоросли не оставляют достоверных окаменелостей до позднего палеозоя."
+  },
+  {
+   "k": "Whorled charophytes, the closest algal relatives of land plants.",
+   "v": "Мутовчатые харовые — ближайшие родственники наземных растений среди водорослей."
+  },
+  {
+   "k": "A stonewort from the Rhynie chert hot springs.",
+   "v": "Харовая водоросль из горячих источников райниевых кремней."
+  },
+  {
+   "k": "Delicate, translucent stonewort.",
+   "v": "Нежная полупрозрачная харовая водоросль."
+  },
+  {
+   "k": "Underwater clubmoss, the last relative of the giant scale trees.",
+   "v": "Подводный плаун, последний родственник гигантских чешуедревов."
+  },
+  {
+   "k": "Rooted water plant with floating leaves.",
+   "v": "Укореняющееся водное растение с плавающими листьями."
+  },
+  {
+   "k": "Ribbon-leaved underwater meadows of rivers and lakes.",
+   "v": "Подводные луга с лентовидными листьями в реках и озёрах."
+  },
+  {
+   "k": "Bushy waterweed of ponds.",
+   "v": "Кустистое водное растение прудов."
+  },
+  {
+   "k": "The oldest known fungal threads, spreading through Ordovician soils.",
+   "v": "Древнейшие известные грибные нити, пронизывавшие ордовикские почвы."
+  },
+  {
+   "k": "Root partners of nearly all land plants, trading minerals for sugar.",
+   "v": "Корневые партнёры почти всех наземных растений, обменивающие минералы на сахара."
+  },
+  {
+   "k": "Giant fungal trunks up to 8 m tall, the largest living things on land.",
+   "v": "Гигантские грибные стволы высотой до 8 м — крупнейшие живые существа на суше."
+  },
+  {
+   "k": "Fungi preserved inside the Rhynie chert plants.",
+   "v": "Грибы, сохранившиеся внутри растений райниевых кремней."
+  },
+  {
+   "k": "The earliest known lichen: a fungus farming algae.",
+   "v": "Древнейший известный лишайник: гриб, выращивающий водоросли."
+  },
+  {
+   "k": "An early sac fungus with flask-shaped fruiting bodies.",
+   "v": "Ранний сумчатый гриб с колбовидными плодовыми телами."
+  },
+  {
+   "k": "Coal-forest fungus with clamp connections, an early mushroom relative.",
+   "v": "Гриб каменноугольных лесов с пряжками — ранний родственник шляпочных грибов."
+  },
+  {
+   "k": "Small round fruiting bodies from the coal swamps.",
+   "v": "Маленькие круглые плодовые тела из угольных болот."
+  },
+  {
+   "k": "The fungal spike of the great Permian extinction, rotting dead forests.",
+   "v": "Грибной всплеск великого пермского вымирания, гноившего мёртвые леса."
+  },
+  {
+   "k": "White-rot fungi breaking down fallen conifer logs.",
+   "v": "Грибы белой гнили, разлагавшие упавшие стволы хвойных."
+  },
+  {
+   "k": "An early bracket fungus on Jurassic araucarias.",
+   "v": "Ранний трутовик на юрских араукариях."
+  },
+  {
+   "k": "White moulds living on guano and debris in dark caves.",
+   "v": "Белые плесени, живущие на гуано и остатках в тёмных пещерах."
+  },
+  {
+   "k": "The oldest gilled mushroom known, from Brazil.",
+   "v": "Древнейший известный пластинчатый гриб, из Бразилии."
+  },
+  {
+   "k": "A tiny mushroom preserved in Burmese amber.",
+   "v": "Крошечный гриб, сохранившийся в бирманском янтаре."
+  },
+  {
+   "k": "Delicate amber-preserved mushroom.",
+   "v": "Нежный гриб, сохранившийся в янтаре."
+  },
+  {
+   "k": "A Cretaceous polypore bracket.",
+   "v": "Меловой трутовик."
+  },
+  {
+   "k": "A predatory fungus with sticky rings for catching worms.",
+   "v": "Хищный гриб с липкими кольцами для ловли червей."
+  },
+  {
+   "k": "A single giant cell that solves mazes as it feeds.",
+   "v": "Одна гигантская клетка, решающая лабиринты в поисках пищи."
+  },
+  {
+   "k": "Glossy red-brown lacquered bracket.",
+   "v": "Блестящий красно-бурый, словно лакированный трутовик."
+  },
+  {
+   "k": "Takes over ants and sprouts from their bodies.",
+   "v": "Захватывает муравьёв и прорастает из их тел."
+  },
+  {
+   "k": "Golden, funnel-shaped and smelling of apricots.",
+   "v": "Золотистая, воронковидная и пахнущая абрикосом."
+  },
+  {
+   "k": "One of these is the largest organism on Earth.",
+   "v": "Один из них — крупнейший организм на Земле."
+  },
+  {
+   "k": "Underground fruit body found by smell.",
+   "v": "Подземное плодовое тело, которое находят по запаху."
+  },
+  {
+   "k": "Honeycombed cap on a hollow stem.",
+   "v": "Ячеистая шляпка на полой ножке."
+  },
+  {
+   "k": "Bright orange cups on bare soil.",
+   "v": "Ярко-оранжевые чаши на голой почве."
+  },
+  {
+   "k": "Scarlet cups on mossy sticks in winter.",
+   "v": "Алые чаши на замшелых ветках зимой."
+  },
+  {
+   "k": "Stains the wood it lives in blue-green.",
+   "v": "Окрашивает древесину, в которой живёт, в сине-зелёный цвет."
+  },
+  {
+   "k": "Orange rosettes on rocks and bark.",
+   "v": "Оранжевые розетки на камнях и коре."
+  },
+  {
+   "k": "The red, white-spotted toadstool of fairy tales.",
+   "v": "Красный мухомор в белых пятнах из сказок."
+  },
+  {
+   "k": "Fat brown cap over a sponge of pores.",
+   "v": "Толстая бурая шляпка над губкой из пор."
+  },
+  {
+   "k": "Dissolves into black ink as it ripens.",
+   "v": "Созревая, растекается чёрными чернилами."
+  },
+  {
+   "k": "Puffs clouds of spores when raindrops hit it.",
+   "v": "Выпускает облака спор, когда по нему ударяют капли дождя."
+  },
+  {
+   "k": "Can grow as big as a football.",
+   "v": "Может вырасти размером с футбольный мяч."
+  },
+  {
+   "k": "A spore ball sitting on a star of split skin.",
+   "v": "Шар со спорами, сидящий на звезде из лопнувшей оболочки."
+  },
+  {
+   "k": "A hollow scarlet lattice that smells of rotting meat.",
+   "v": "Полая алая решётка с запахом гниющего мяса."
+  },
+  {
+   "k": "Branches like a yellow sea coral.",
+   "v": "Ветви, похожие на жёлтый морской коралл."
+  },
+  {
+   "k": "Purple coral-like tufts in grassland.",
+   "v": "Фиолетовые кораллоподобные пучки на лугах."
+  },
+  {
+   "k": "Cascades of white icicle spines.",
+   "v": "Каскады белых шипов, похожих на сосульки."
+  },
+  {
+   "k": "Sulphur-yellow shelves on old trees.",
+   "v": "Серно-жёлтые полки на старых деревьях."
+  },
+  {
+   "k": "Banded fans like a turkey's tail.",
+   "v": "Полосатые веера, похожие на хвост индюка."
+  },
+  {
+   "k": "Hoof-shaped brackets used to carry fire.",
+   "v": "Копытообразные плодовые тела, в которых переносили огонь."
+  },
+  {
+   "k": "Grey shelves that also catch tiny worms.",
+   "v": "Серые полки, которые к тому же ловят крошечных червей."
+  },
+  {
+   "k": "The most prized fungus in the world.",
+   "v": "Самый ценный гриб в мире."
+  },
+  {
+   "k": "A small mushroom of startling blue.",
+   "v": "Маленький гриб поразительно синего цвета."
+  },
+  {
+   "k": "Waxy scarlet caps of old meadows.",
+   "v": "Восковые алые шляпки старых лугов."
+  },
+  {
+   "k": "Violet all over when fresh.",
+   "v": "Свежий — фиолетовый целиком."
+  },
+  {
+   "k": "A tall stem under a wide scaly parasol.",
+   "v": "Высокая ножка под широким чешуйчатым зонтиком."
+  },
+  {
+   "k": "Lemon-yellow mushrooms of warm soils.",
+   "v": "Лимонно-жёлтые грибы тёплых почв."
+  },
+  {
+   "k": "Glows green in the dark.",
+   "v": "Светится зелёным в темноте."
+  },
+  {
+   "k": "Tiny bioluminescent caps lighting up cave floors.",
+   "v": "Крошечные светящиеся шляпки, озаряющие пол пещер."
+  },
+  {
+   "k": "Orange and faintly glowing gills.",
+   "v": "Оранжевые, слабо светящиеся пластинки."
+  },
+  {
+   "k": "One of the brightest glowing fungi.",
+   "v": "Один из самых ярко светящихся грибов."
+  },
+  {
+   "k": "Scarlet arms around a slimy, smelly heart.",
+   "v": "Алые лучи вокруг слизистой зловонной середины."
+  },
+  {
+   "k": "A white lace skirt hanging from its cap.",
+   "v": "Белая кружевная юбочка, свисающая из-под шляпки."
+  },
+  {
+   "k": "Yellow slime that creeps across mulch.",
+   "v": "Жёлтый слизевик, ползущий по мульче."
+  },
+  {
+   "k": "Forests of tiny brown spore stalks.",
+   "v": "Леса крошечных бурых спороносных ножек."
+  },
+  {
+   "k": "Spongy grey-white cushions grazed by reindeer.",
+   "v": "Губчатые серовато-белые подушки, которые поедают северные олени."
+  },
+  {
+   "k": "Blue-green mould that gave us penicillin.",
+   "v": "Сине-зелёная плесень, подарившая нам пенициллин."
+  },
+  {
+   "k": "Pale crusts coating damp cave walls.",
+   "v": "Бледные корки, покрывающие сырые стены пещер."
+  },
+  {
+   "k": "Clotted microbial mounds that replaced stromatolites.",
+   "v": "Сгустковые микробные постройки, пришедшие на смену строматолитам."
+  },
+  {
+   "k": "Calcified cyanobacterial tubes building early reefs.",
+   "v": "Обызвествлённые трубочки цианобактерий, строившие первые рифы."
+  },
+  {
+   "k": "Kidney-shaped calcimicrobes of Cambrian reefs.",
+   "v": "Почковидные кальцимикробы кембрийских рифов."
+  },
+  {
+   "k": "Burgess Shale green alga with feathery branches.",
+   "v": "Зелёная водоросль из сланцев Бёрджес с перистыми ветвями."
+  },
+  {
+   "k": "Bushy Burgess Shale seaweed.",
+   "v": "Кустистая водоросль из сланцев Бёрджес."
+  },
+  {
+   "k": "An early branching red alga.",
+   "v": "Ранняя ветвящаяся красная водоросль."
+  },
+  {
+   "k": "Slimy green mats carpeting lake beds.",
+   "v": "Слизистые зелёные маты, устилающие дно озёр."
+  },
+  {
+   "k": "A dasyclad alga shaped like a knobbly ball.",
+   "v": "Дазикладовая водоросль в форме бугорчатого шарика."
+  },
+  {
+   "k": "Calcified green alga in tangled chains.",
+   "v": "Обызвествлённая зелёная водоросль в спутанных цепочках."
+  },
+  {
+   "k": "Disc-shaped green alga of shallow fresh water.",
+   "v": "Дисковидная зелёная водоросль мелководных пресных вод."
+  },
+  {
+   "k": "Ribbon-like Silurian seaweed.",
+   "v": "Лентовидная силурийская водоросль."
+  },
+  {
+   "k": "Thick Devonian seaweed with spores like land plants.",
+   "v": "Толстая девонская водоросль со спорами, как у наземных растений."
+  },
+  {
+   "k": "Mysterious crusts of tubes on wet ground and pools.",
+   "v": "Загадочные корки из трубочек на сырой земле и в лужах."
+  },
+  {
+   "k": "Leafy red alga that built Carboniferous mounds.",
+   "v": "Листоватая красная водоросль, строившая каменноугольные холмы."
+  },
+  {
+   "k": "Phylloid green alga with potato-crisp blades.",
+   "v": "Филлоидная зелёная водоросль с пластинами в виде чипсов."
+  },
+  {
+   "k": "Leaf-like alga of Late Paleozoic shelves.",
+   "v": "Листовидная водоросль позднепалеозойских шельфов."
+  },
+  {
+   "k": "Bead-chained dasyclad of Permian reefs.",
+   "v": "Дазикладовая водоросль в виде цепочек бусин из пермских рифов."
+  },
+  {
+   "k": "Calcified red alga in segmented chains.",
+   "v": "Обызвествлённая красная водоросль в членистых цепочках."
+  },
+  {
+   "k": "Dasyclad that built Triassic carbonate platforms.",
+   "v": "Дазикладовая водоросль, строившая триасовые карбонатные платформы."
+  },
+  {
+   "k": "Whorled dasyclad of Jurassic lagoons.",
+   "v": "Мутовчатая дазикладовая водоросль юрских лагун."
+  },
+  {
+   "k": "Fan-shaped calcified bushes.",
+   "v": "Веерообразные обызвествлённые кустики."
+  },
+  {
+   "k": "Extinct stoneworts with spiny fruiting cases.",
+   "v": "Вымершие харовые с шипастыми оболочками плодов."
+  },
+  {
+   "k": "Rootless whorls of fine leaves, an ancient flowering plant.",
+   "v": "Бескорневые мутовки тонких листьев — древнее цветковое растение."
+  },
+  {
+   "k": "Round leaves on long stalks rising from the mud.",
+   "v": "Круглые листья на длинных черешках, поднимающиеся из ила."
+  },
+  {
+   "k": "A single giant cell shaped like a tiny umbrella.",
+   "v": "Одна гигантская клетка в форме крошечного зонтика."
+  },
+  {
+   "k": "Bright green sheets on rocky shores.",
+   "v": "Ярко-зелёные пластины на скалистых берегах."
+  },
+  {
+   "k": "Banded fans dusted with lime.",
+   "v": "Полосатые веера, припудренные известью."
+  },
+  {
+   "k": "Glossy green spheres, among the largest single cells.",
+   "v": "Блестящие зелёные шары — одни из крупнейших одиночных клеток."
+  },
+  {
+   "k": "Runners hung with little green beads.",
+   "v": "Побеги, увешанные зелёными бусинками."
+  },
+  {
+   "k": "Soft green plumes.",
+   "v": "Мягкие зелёные перья."
+  },
+  {
+   "k": "Pink, jointed, stony fronds.",
+   "v": "Розовые членистые каменистые веточки."
+  },
+  {
+   "k": "Wiry red seaweed, a source of agar.",
+   "v": "Жёсткая, как проволока, красная водоросль — источник агара."
+  },
+  {
+   "k": "Purple-red fans on cold shores.",
+   "v": "Пурпурно-красные веера на холодных берегах."
+  },
+  {
+   "k": "Southern kelp with a crown of blades.",
+   "v": "Южная ламинариевая водоросль с короной пластин."
+  },
+  {
+   "k": "Feathery whorls swaying in ponds.",
+   "v": "Перистые мутовки, колышущиеся в прудах."
+  },
+  {
+   "k": "Broad sword-shaped leaves in a rosette.",
+   "v": "Широкие мечевидные листья в розетке."
+  },
+  {
+   "k": "Bronze-green rosettes of Asian streams.",
+   "v": "Бронзово-зелёные розетки азиатских ручьёв."
+  },
+  {
+   "k": "Carnivorous: tiny bladders snap up water fleas.",
+   "v": "Хищник: крошечные пузырьки заглатывают дафний."
+  },
+  {
+   "k": "Dark green moss streaming in currents.",
+   "v": "Тёмно-зелёный мох, струящийся в течении."
+  },
+  {
+   "k": "Velvety green balls rolling on lake beds.",
+   "v": "Бархатистые зелёные шары, перекатывающиеся по дну озёр."
+  },
+  {
+   "k": "Brittle, finely toothed pondweed.",
+   "v": "Ломкий, мелкозубчатый водный рдест."
+  },
+  {
+   "k": "Spongy green fingers.",
+   "v": "Губчатые зелёные пальцы."
+  },
+  {
+   "k": "Fern-like runners that can carpet the seabed.",
+   "v": "Папоротниковидные побеги, способные покрыть морское дно ковром."
+  },
+  {
+   "k": "Strings of olive beads on southern shores.",
+   "v": "Нити оливковых бусин на южных берегах."
+  },
+  {
+   "k": "Ruffled brown kelp.",
+   "v": "Волнистая бурая ламинариевая водоросль."
+  },
+  {
+   "k": "Leathery straps pounded by Southern Ocean surf.",
+   "v": "Кожистые ремни, избиваемые прибоем Южного океана."
+  },
+  {
+   "k": "Thin purple sheets, dried as sushi wrap.",
+   "v": "Тонкие пурпурные листы, которые сушат для обёртки суши."
+  },
+  {
+   "k": "Fluffy pink plumes.",
+   "v": "Пушистые розовые перья."
+  },
+  {
+   "k": "Rosy red sheets of warm seas.",
+   "v": "Розово-красные пластины тёплых морей."
+  },
+  {
+   "k": "Leaves big enough to hold a child.",
+   "v": "Листья настолько большие, что выдерживают ребёнка."
+  },
+  {
+   "k": "Copper-red leaves underwater.",
+   "v": "Медно-красные листья под водой."
+  },
+  {
+   "k": "Pink-tipped stems of Asian rice paddies.",
+   "v": "Стебли с розовыми верхушками с азиатских рисовых полей."
+  },
+  {
+   "k": "Purple-red leaves glowing in clear water.",
+   "v": "Пурпурно-красные листья, сияющие в прозрачной воде."
+  },
+  {
+   "k": "White sulphur-eating bacterial mats of the dark seafloor.",
+   "v": "Белые серные бактериальные маты тёмного морского дна."
+  },
+  {
+   "k": "Bundled bacterial threads in oxygen-poor deep mud.",
+   "v": "Пучки бактериальных нитей в бедном кислородом глубинном иле."
+  },
+  {
+   "k": "Clouds of pale pink blossom.",
+   "v": "Облака бледно-розового цвета."
+  },
+  {
+   "k": "Tiers of deep red, hand-shaped leaves.",
+   "v": "Ярусы тёмно-красных пальчатых листьев."
+  },
+  {
+   "k": "A spreading canopy of violet-blue trumpets.",
+   "v": "Раскидистая крона из фиолетово-синих трубочек."
+  },
+  {
+   "k": "Magenta-pink flowers before the leaves.",
+   "v": "Пурпурно-розовые цветки до появления листьев."
+  },
+  {
+   "k": "A flat crown ablaze with scarlet flowers.",
+   "v": "Плоская крона, пылающая алыми цветками."
+  },
+  {
+   "k": "Crinkled pink blossoms all summer.",
+   "v": "Морщинистые розовые цветки всё лето."
+  },
+  {
+   "k": "Towers over the forest in a cloud of pink.",
+   "v": "Возвышается над лесом в розовом облаке."
+  },
+  {
+   "k": "A great dome of deep purple leaves.",
+   "v": "Огромный купол тёмно-пурпурной листвы."
+  },
+  {
+   "k": "Purple leaves and smoky plumes.",
+   "v": "Пурпурные листья и дымчатые метёлки."
+  },
+  {
+   "k": "Star-shaped leaves turning crimson.",
+   "v": "Звёздчатые листья, становящиеся багряными."
+  },
+  {
+   "k": "Coral-red flowers on a gnarled frame.",
+   "v": "Коралло-красные цветки на корявом остове."
+  },
+  {
+   "k": "Lavender foxglove-like flowers.",
+   "v": "Лавандовые цветки, похожие на наперстянку."
+  },
+  {
+   "k": "Orchid-like purple-pink flowers.",
+   "v": "Пурпурно-розовые цветки, похожие на орхидеи."
+  },
+  {
+   "k": "Goblet-shaped pink and white flowers.",
+   "v": "Бокаловидные розово-белые цветки."
+  },
+  {
+   "k": "Flame-orange tulips held above the canopy.",
+   "v": "Огненно-оранжевые тюльпаны над пологом леса."
+  },
+  {
+   "k": "Whole hillsides of trembling gold in autumn.",
+   "v": "Осенью целые склоны трепещут золотом."
+  },
+  {
+   "k": "Showers of small yellow flowers.",
+   "v": "Дожди мелких жёлтых цветков."
+  },
+  {
+   "k": "Long cascades of bright yellow blossom.",
+   "v": "Длинные каскады ярко-жёлтых цветков."
+  },
+  {
+   "k": "A burst of gold above the forest.",
+   "v": "Вспышка золота над лесом."
+  },
+  {
+   "k": "Hanging chains of yellow pea flowers.",
+   "v": "Свисающие цепи жёлтых мотыльковых цветков."
+  },
+  {
+   "k": "A deciduous conifer turning golden-orange.",
+   "v": "Листопадное хвойное, становящееся золотисто-оранжевым."
+  },
+  {
+   "k": "Blazing orange in the autumn forests of the north.",
+   "v": "Пылающий оранжевый цвет осенних лесов севера."
+  },
+  {
+   "k": "Orange leaves and bright orange fruit hanging on.",
+   "v": "Оранжевые листья и висящие ярко-оранжевые плоды."
+  },
+  {
+   "k": "Layers of amber, orange and red.",
+   "v": "Слои янтарного, оранжевого и красного."
+  },
+  {
+   "k": "Leafless branches covered in flame-orange flowers.",
+   "v": "Безлистные ветви, покрытые огненно-оранжевыми цветками."
+  },
+  {
+   "k": "Snows white cotton seed fluff over river valleys.",
+   "v": "Засыпает речные долины белым семенным пухом."
+  },
+  {
+   "k": "A giant hung with clouds of white silk-cotton.",
+   "v": "Гигант, увешанный облаками белого шёлкового пуха."
+  },
+  {
+   "k": "A tight oval of pure white spring blossom.",
+   "v": "Плотный овал чисто-белого весеннего цветения."
+  },
+  {
+   "k": "Tiers of white bracts in the spring woods.",
+   "v": "Ярусы белых прицветников в весеннем лесу."
+  },
+  {
+   "k": "May blossom: hedges and hills turned white.",
+   "v": "Майское цветение: живые изгороди и холмы становятся белыми."
+  },
+  {
+   "k": "White flushed pink, then small apples.",
+   "v": "Белые с розовым румянцем цветки, а затем маленькие яблоки."
+  },
+  {
+   "k": "Fluffy pink powder-puff flowers on a flat crown.",
+   "v": "Пушистые розовые цветки-пуховки на плоской кроне."
+  },
+  {
+   "k": "Deep pink spring blossom.",
+   "v": "Насыщенно-розовое весеннее цветение."
+  },
+  {
+   "k": "Big crimson cups on bare branches.",
+   "v": "Крупные багряные чаши на голых ветвях."
+  },
+  {
+   "k": "The scarlet of a swamp in autumn.",
+   "v": "Алый цвет осеннего болота."
+  },
+  {
+   "k": "Scented purple plumes.",
+   "v": "Душистые пурпурные метёлки."
+  },
+  {
+   "k": "A canopy dripping with violet blossom.",
+   "v": "Полог, с которого свисают фиолетовые соцветия."
+  },
+  {
+   "k": "Spores shed in fours tell of tiny plants carpeting Ordovician shores.",
+   "v": "Споры, рассеиваемые четвёрками, говорят о крошечных растениях, покрывавших ордовикские берега."
+  },
+  {
+   "k": "Patchy green crusts of the first liverworts on wet mud.",
+   "v": "Пятнистые зелёные корки первых печёночников на влажном иле."
+  },
+  {
+   "k": "Twisted little stems ending in spore capsules.",
+   "v": "Скрученные стебельки, оканчивающиеся спорангиями."
+  },
+  {
+   "k": "Forked stems tipped with long spore sacs.",
+   "v": "Вильчатые стебли с длинными спорангиями на концах."
+  },
+  {
+   "k": "A small Welsh plant with flat-topped spore capsules.",
+   "v": "Маленькое валлийское растение со спорангиями с плоской верхушкой."
+  },
+  {
+   "k": "Forking stems with oval spore sacs.",
+   "v": "Вильчатые стебли с овальными спорангиями."
+  },
+  {
+   "k": "A moss-like plant with stalked capsules rising from a green mat.",
+   "v": "Мохоподобное растение со спорангиями на ножках, поднимающимися из зелёного мата."
+  },
+  {
+   "k": "Rhynie chert plant with a lumpy, corm-like base.",
+   "v": "Растение райниевых кремней с бугристым клубневидным основанием."
+  },
+  {
+   "k": "Leafless, bumpy stems with clustered spore sacs.",
+   "v": "Безлистные бугорчатые стебли со скученными спорангиями."
+  },
+  {
+   "k": "Spiny stems with coiled tips spreading over the ground.",
+   "v": "Колючие стебли с закрученными верхушками, стелющиеся по земле."
+  },
+  {
+   "k": "Branching zosterophyll with fiddlehead tips.",
+   "v": "Ветвящийся зостерофилл с улиткообразными верхушками."
+  },
+  {
+   "k": "Fern-like thickets that filled Late Devonian floodplains.",
+   "v": "Папоротниковидные заросли, заполнявшие поймы позднего девона."
+  },
+  {
+   "k": "Bushy progymnosperm, a step toward seed plants.",
+   "v": "Кустистая прогимносперма — шаг к семенным растениям."
+  },
+  {
+   "k": "Whorled branchlets: a distant cousin of horsetails.",
+   "v": "Мутовчатые веточки: дальний родственник хвощей."
+  },
+  {
+   "k": "Middle Devonian plant with the oldest seed-like organs.",
+   "v": "Среднедевонское растение с древнейшими семяподобными органами."
+  },
+  {
+   "k": "Sturdy small lycopsid, forerunner of the scale trees.",
+   "v": "Крепкое небольшое плауновидное, предшественник чешуедревов."
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches, from Belgium.",
+   "v": "Небольшое дерево с кроной из пальцевидных ветвей, из Бельгии."
+  },
+  {
+   "k": "Late Devonian lycopsid tree of the Kiltorcan swamps.",
+   "v": "Позднедевонское древовидное плауновидное болот Килторкана."
+  },
+  {
+   "k": "Archaeopteris relative of Arctic Devonian forests.",
+   "v": "Родственник археоптериса из девонских лесов Арктики."
+  },
+  {
+   "k": "Knee-high lycopsid trees in dense coastal stands: China's oldest forest.",
+   "v": "Плауновидные деревья высотой по колено в густых прибрежных зарослях: древнейший лес Китая."
+  },
+  {
+   "k": "Fronds of marattialean tree ferns, the commonest coal-measure fern.",
+   "v": "Вайи мараттиевых древовидных папоротников — самый обычный папоротник угленосных толщ."
+  },
+  {
+   "k": "Scrambling seed fern with sticky glandular hairs.",
+   "v": "Цепляющийся семенной папоротник с липкими железистыми волосками."
+  },
+  {
+   "k": "Climbing seed fern that hung from the scale trees.",
+   "v": "Лазающий семенной папоротник, свисавший с чешуедревов."
+  },
+  {
+   "k": "Star-shaped leaf whorls on calamite branches.",
+   "v": "Звёздчатые мутовки листьев на ветвях каламитов."
+  },
+  {
+   "k": "Needle-leaved calamite shoots.",
+   "v": "Побеги каламитов с игловидными листьями."
+  },
+  {
+   "k": "Early fern with H-shaped stems.",
+   "v": "Ранний папоротник с H-образными стеблями."
+  },
+  {
+   "k": "Unbranched, bulb-based lycopsid of open swamps.",
+   "v": "Неветвящееся плауновидное с луковицеобразным основанием из открытых болот."
+  },
+  {
+   "k": "Sprawling seed-fern shrub.",
+   "v": "Раскидистый кустарниковый семенной папоротник."
+  },
+  {
+   "k": "Scale tree of the wettest coal swamps.",
+   "v": "Чешуедрево самых сырых угольных болот."
+  },
+  {
+   "k": "Woody calamite trunk with ringed joints.",
+   "v": "Древесный ствол каламита с кольчатыми узлами."
+  },
+  {
+   "k": "Finely cut fern foliage, from the coal swamps to the Jurassic.",
+   "v": "Тонкорассечённая листва папоротников — от угольных болот до юры."
+  },
+  {
+   "k": "Drought-tolerant seed fern of the dry Early Permian.",
+   "v": "Засухоустойчивый семенной папоротник сухой ранней перми."
+  },
+  {
+   "k": "Gondwanan horsetail with leaf collars.",
+   "v": "Хвощ Гондваны с листовыми воротничками."
+  },
+  {
+   "k": "Odd fern-like plants with cone-borne spores, from Cathaysia.",
+   "v": "Странные папоротниковидные растения со спорами в стробилах, из Катазии."
+  },
+  {
+   "k": "Shield-seeded shrub of dry uplands.",
+   "v": "Кустарник со щитовидными семенами из сухих возвышенностей."
+  },
+  {
+   "k": "Fan-leaved plant, perhaps an early ginkgo relative.",
+   "v": "Растение с веерными листьями, возможно ранний родственник гинкго."
+  },
+  {
+   "k": "Cathaysian horsetail with lobed leaf whorls.",
+   "v": "Катазиатский хвощ с мутовками лопастных листьев."
+  },
+  {
+   "k": "Cordaite of the cold Angaran forests of Siberia.",
+   "v": "Кордаит холодных ангарских лесов Сибири."
+  },
+  {
+   "k": "Tufts of long, unbranched strands from the Burgess Shale.",
+   "v": "Пучки длинных неветвящихся нитей из сланцев Бёрджес."
+  },
+  {
+   "k": "A branched Burgess Shale seaweed several centimetres tall.",
+   "v": "Ветвистая водоросль из сланцев Бёрджес высотой несколько сантиметров."
+  },
+  {
+   "k": "Spiral ribbons of seaweed from Chengjiang.",
+   "v": "Спиральные ленты водорослей из Чэнцзяна."
+  },
+  {
+   "k": "Clusters of cylindrical green fronds.",
+   "v": "Скопления цилиндрических зелёных слоевищ."
+  },
+  {
+   "k": "Oily green colonies; their remains make oil shale.",
+   "v": "Маслянистые зелёные колонии; их остатки образуют горючие сланцы."
+  },
+  {
+   "k": "Large branching seaweed of Ordovician seas, tall enough to sway.",
+   "v": "Крупная ветвистая водоросль ордовикских морей, достаточно высокая, чтобы колыхаться."
+  },
+  {
+   "k": "Calcified green alga with whorled branches.",
+   "v": "Обызвествлённая зелёная водоросль с мутовчатыми ветвями."
+  },
+  {
+   "k": "Club-shaped dasyclad with a ball-like head.",
+   "v": "Булавовидная дазикладовая водоросль с шаровидной головкой."
+  },
+  {
+   "k": "Tall, bushy green alga with whorls of hair-like branches.",
+   "v": "Высокая кустистая зелёная водоросль с мутовками волосовидных веточек."
+  },
+  {
+   "k": "One of the oldest stoneworts.",
+   "v": "Одна из древнейших харовых водорослей."
+  },
+  {
+   "k": "Clusters of bladder-like fronds.",
+   "v": "Скопления пузыревидных слоевищ."
+  },
+  {
+   "k": "Fan-shaped Silurian seaweed.",
+   "v": "Веерообразная силурийская водоросль."
+  },
+  {
+   "k": "Long, strap-like fronds of a large Silurian seaweed.",
+   "v": "Длинные лентовидные слоевища крупной силурийской водоросли."
+  },
+  {
+   "k": "Small balls of tubes; perhaps a green alga.",
+   "v": "Маленькие шарики из трубочек; возможно, зелёная водоросль."
+  },
+  {
+   "k": "Broad leafy fronds of a large Devonian seaweed.",
+   "v": "Широкие листоватые слоевища крупной девонской водоросли."
+  },
+  {
+   "k": "Fan-like branched alga, perhaps a red seaweed.",
+   "v": "Веерообразная ветвистая водоросль, возможно красная."
+  },
+  {
+   "k": "Stonewort with spiralled egg cases.",
+   "v": "Харовая водоросль со спирально закрученными оболочками ооспор."
+  },
+  {
+   "k": "Thick, ribbon-like stems found in Siberian Devonian coals.",
+   "v": "Толстые лентовидные стебли из девонских углей Сибири."
+  },
+  {
+   "k": "Bushy calcareous alga that built Carboniferous mud mounds.",
+   "v": "Кустистая известковая водоросль, строившая каменноугольные иловые холмы."
+  },
+  {
+   "k": "Calcified dasyclad of Early Carboniferous shelves.",
+   "v": "Обызвествлённая дазикладовая водоросль раннекаменноугольных шельфов."
+  },
+  {
+   "k": "A Carboniferous stonewort.",
+   "v": "Каменноугольная харовая водоросль."
+  },
+  {
+   "k": "Dasyclad that grew in thickets on Late Paleozoic mounds.",
+   "v": "Дазикладовая водоросль, образовывавшая заросли на позднепалеозойских холмах."
+  },
+  {
+   "k": "Encrusting, finger-like growths that built Permian reefs such as El Capitan.",
+   "v": "Инкрустирующие пальцевидные наросты, строившие пермские рифы вроде Эль-Капитана."
+  },
+  {
+   "k": "Crust-forming alga that bound Permian reefs together.",
+   "v": "Корковая водоросль, скреплявшая пермские рифы."
+  },
+  {
+   "k": "Dark ribbon-like strands, a few millimetres wide and a few centimetres long, common in late Ediacaran shales; they lay on the sea floor rather than standing as tall seaweed.",
+   "v": "Тёмные лентовидные нити шириной в несколько миллиметров и длиной в несколько сантиметров, обычные в позднеэдиакарских сланцах; они лежали на морском дне, а не поднимались высокими водорослями."
+  },
+  {
+   "k": "Tufts of thin forked threads from the Lantian biota of China.",
+   "v": "Пучки тонких вильчатых нитей из ланьтяньской биоты Китая."
+  },
+  {
+   "k": "Small upright branching seaweed, a few centimetres tall, of the Miaohe biota, anchored by rhizoids.",
+   "v": "Маленькая прямостоячая ветвистая водоросль высотой несколько сантиметров из биоты Мяохэ, прикреплённая ризоидами."
+  },
+  {
+   "k": "Weng'an red alga with growing tips and possible reproductive cells.",
+   "v": "Красная водоросль из Вэнъаня с точками роста и возможными репродуктивными клетками."
+  },
+  {
+   "k": "Tiny globular red algae preserved cell by cell in phosphate.",
+   "v": "Крошечные шаровидные красные водоросли, сохранившиеся в фосфате клетка за клеткой."
+  },
+  {
+   "k": "Dark microbial films on bare rock, long before any plant reached land.",
+   "v": "Тёмные микробные плёнки на голых скалах — задолго до выхода растений на сушу."
+  },
+  {
+   "k": "Bushy calcified microbe building reefs with archaeocyaths.",
+   "v": "Кустистый обызвествлённый микроб, строивший рифы вместе с археоциатами."
+  },
+  {
+   "k": "Fans of tiny calcified tubes in early Cambrian reefs.",
+   "v": "Веера крошечных обызвествлённых трубочек в раннекембрийских рифах."
+  },
+  {
+   "k": "Clustered chambers of lime, a cousin of Renalcis.",
+   "v": "Скопления известковых камер, родственник ренальциса."
+  },
+  {
+   "k": "Calcified microbial tubes of Cambrian and Ordovician reefs.",
+   "v": "Обызвествлённые микробные трубочки кембрийских и ордовикских рифов."
+  },
+  {
+   "k": "Tiny lime cylinders that piled up in Ordovician shoals.",
+   "v": "Крошечные известковые цилиндры, накапливавшиеся на ордовикских отмелях."
+  },
+  {
+   "k": "Rare branching seaweed of the Burgess Shale.",
+   "v": "Редкая ветвистая водоросль из сланцев Бёрджес."
+  },
+  {
+   "k": "Burgess Shale alga with a net-like thallus.",
+   "v": "Водоросль из сланцев Бёрджес с сетчатым слоевищем."
+  },
+  {
+   "k": "Dense tufts of cyanobacterial filaments on the Burgess seafloor.",
+   "v": "Густые пучки цианобактериальных нитей на дне моря Бёрджес."
+  },
+  {
+   "k": "Dark slimy sheets of cyanobacteria, the commonest Burgess 'alga'.",
+   "v": "Тёмные слизистые пласты цианобактерий — самая обычная «водоросль» Бёрджеса."
+  },
+  {
+   "k": "Known from spores shed in pairs; a low crust on damp ground.",
+   "v": "Известно по спорам, рассеивавшимся парами; низкая корочка на сырой земле."
+  },
+  {
+   "k": "Its three-scarred spores mark the first steps towards vascular plants.",
+   "v": "Его споры с трёхлучевым рубцом знаменуют первые шаги к сосудистым растениям."
+  },
+  {
+   "k": "Colonial microbe whose remains became the Estonian oil shale kukersite.",
+   "v": "Колониальный микроб, остатки которого превратились в эстонский горючий сланец кукерсит."
+  },
+  {
+   "k": "Calcified cyanobacterium with fan-shaped branching tubes.",
+   "v": "Обызвествлённая цианобактерия с веерообразно ветвящимися трубочками."
+  },
+  {
+   "k": "Pear-shaped receptaculitid, probably a calcified green alga.",
+   "v": "Грушевидный рецептакулит, вероятно обызвествлённая зелёная водоросль."
+  },
+  {
+   "k": "Sunflower-patterned receptaculitid of Ordovician seafloors.",
+   "v": "Рецептакулит с узором подсолнуха с ордовикского морского дна."
+  },
+  {
+   "k": "One of the first truly calcified dasyclad algae.",
+   "v": "Одна из первых по-настоящему обызвествлённых дазикладовых водорослей."
+  },
+  {
+   "k": "Ball-shaped dasyclad of the Baltic Ordovician.",
+   "v": "Шаровидная дазикладовая водоросль балтийского ордовика."
+  },
+  {
+   "k": "Small club-shaped dasyclad of the Ordovician.",
+   "v": "Небольшая булавовидная дазикладовая водоросль ордовика."
+  },
+  {
+   "k": "Branched calcified green alga related to Halimeda.",
+   "v": "Ветвистая обызвествлённая зелёная водоросль, родственная халимеде."
+  },
+  {
+   "k": "Floating green-alga cysts that sank to form oil shales.",
+   "v": "Плавающие цисты зелёных водорослей, оседавшие на дно и образовывавшие горючие сланцы."
+  },
+  {
+   "k": "Bushy calcified filaments of Paleozoic reef flats.",
+   "v": "Кустистые обызвествлённые нити палеозойских рифовых равнин."
+  },
+  {
+   "k": "Spiny early Silurian stems from Maine, among the oldest land plant fossils.",
+   "v": "Колючие раннесилурийские стебли из Мэна — одни из древнейших окаменелостей наземных растений."
+  },
+  {
+   "k": "Tiny forked stems ending in spore capsules.",
+   "v": "Крошечные вильчатые стебли, оканчивающиеся спорангиями."
+  },
+  {
+   "k": "Cooksonia-like plant with kidney-shaped sporangia.",
+   "v": "Похожее на куксонию растение с почковидными спорангиями."
+  },
+  {
+   "k": "Plant of the Australian Baragwanathia flora with clustered sporangia.",
+   "v": "Растение австралийской бараганатиевой флоры со скученными спорангиями."
+  },
+  {
+   "k": "Naked forking stems, common in early land floras.",
+   "v": "Голые вильчатые стебли, обычные в ранних наземных флорах."
+  },
+  {
+   "k": "Late Silurian rhyniophyte-like plant from Xinjiang.",
+   "v": "Позднесилурийское риниофитоподобное растение из Синьцзяна."
+  },
+  {
+   "k": "Toothed zosterophyll from the Late Silurian of Arctic Canada.",
+   "v": "Зубчатый зостерофилл из позднего силура Арктической Канады."
+  },
+  {
+   "k": "Zosterophyll with spore capsules in two neat rows.",
+   "v": "Зостерофилл со спорангиями, расположенными двумя аккуратными рядами."
+  },
+  {
+   "k": "Tube-bodied nematophyte, possibly a fungus, on early land.",
+   "v": "Нематофит с трубчатым телом, возможно гриб, на ранней суше."
+  },
+  {
+   "k": "Cellular crusts of a nematophyte, perhaps lichen-like.",
+   "v": "Клеточные корки нематофита, возможно похожего на лишайник."
+  },
+  {
+   "k": "Calcified microbe encrusting Silurian and Devonian reefs.",
+   "v": "Обызвествлённый микроб, обраставший силурийские и девонские рифы."
+  },
+  {
+   "k": "Small encrusting tubes in Silurian reef rocks.",
+   "v": "Маленькие инкрустирующие трубочки в силурийских рифовых породах."
+  },
+  {
+   "k": "Lime-coated nodules built by microbes on reef flats.",
+   "v": "Покрытые известью желваки, построенные микробами на рифовых равнинах."
+  },
+  {
+   "k": "Diamond-scarred lycopsid tree spread across Late Devonian Gondwana.",
+   "v": "Плауновидное дерево с ромбическими рубцами, распространённое по позднедевонской Гондване."
+  },
+  {
+   "k": "Late Devonian scale tree from New York.",
+   "v": "Позднедевонское чешуедрево из Нью-Йорка."
+  },
+  {
+   "k": "Scale tree of the latest Devonian and early coal swamps.",
+   "v": "Чешуедрево конца девона и ранних угольных болот."
+  },
+  {
+   "k": "Tree-sized sphenopsid of Bear Island, up to 20 m tall.",
+   "v": "Древовидное клинолистное с острова Медвежий высотой до 20 м."
+  },
+  {
+   "k": "Early tree whose trunk grew by tearing and repairing hundreds of wood strands.",
+   "v": "Раннее дерево, ствол которого рос, разрывая и восстанавливая сотни древесинных тяжей."
+  },
+  {
+   "k": "Scrambling clubmoss that climbed the trunks of the Gilboa forest.",
+   "v": "Цепляющийся плаун, взбиравшийся по стволам леса Гилбоа."
+  },
+  {
+   "k": "Early sphenopsid with whorled branches and cones.",
+   "v": "Раннее клинолистное с мутовчатыми ветвями и стробилами."
+  },
+  {
+   "k": "Late Devonian seed plant with cupped seeds.",
+   "v": "Позднедевонское семенное растение с семенами в купулах."
+  },
+  {
+   "k": "Woody shrub several metres tall, a forerunner of seed plants.",
+   "v": "Древесный кустарник высотой несколько метров, предшественник семенных растений."
+  },
+  {
+   "k": "Small plant with forked branchlets rising from a creeping stem.",
+   "v": "Небольшое растение с вильчатыми веточками, поднимающимися от ползучего стебля."
+  },
+  {
+   "k": "Ribbon-stemmed plant growing in shallow Early Devonian water.",
+   "v": "Растение с лентовидными стеблями, росшее на мелководье раннего девона."
+  },
+  {
+   "k": "Forked stems with kidney-shaped sporangia, from Gaspé.",
+   "v": "Вильчатые стебли с почковидными спорангиями, из Гаспе."
+  },
+  {
+   "k": "Cup-topped sexual generation of Aglaophyton, from the Rhynie chert.",
+   "v": "Половое поколение аглаофитона с чашевидными верхушками, из райниевых кремней."
+  },
+  {
+   "k": "Zosterophyll of the Rhynie hot-spring flora.",
+   "v": "Зостерофилл флоры горячих источников Райни."
+  },
+  {
+   "k": "Zosterophyll with toothed stems and coiled tips.",
+   "v": "Зостерофилл с зубчатыми стеблями и закрученными верхушками."
+  },
+  {
+   "k": "Stout three-forked stems topped with clusters of sporangia.",
+   "v": "Мощные трижды вильчатые стебли, увенчанные скоплениями спорангиев."
+  },
+  {
+   "k": "Ribbon-like Middle Devonian liverwort from New York.",
+   "v": "Лентовидный печёночник среднего девона из Нью-Йорка."
+  },
+  {
+   "k": "Leafy-winged thalloid liverwort of the Late Devonian.",
+   "v": "Слоевищный печёночник с листоватыми крыльями из позднего девона."
+  },
+  {
+   "k": "Ribbed horsetail stems with forked leaves, a forerunner of Calamites.",
+   "v": "Ребристые стебли хвоща с вильчатыми листьями — предшественник каламитов."
+  },
+  {
+   "k": "The oldest known member of the stonewort order Charales.",
+   "v": "Древнейший известный представитель порядка харовых (Charales)."
+  },
+  {
+   "k": "Charophyte with ribbed, lime-encased egg capsules.",
+   "v": "Харовая водоросль с ребристыми, одетыми известью ооспорангиями."
+  },
+  {
+   "k": "Devonian stonewort with spiralled gyrogonites.",
+   "v": "Девонская харовая водоросль со спиральными гирогонитами."
+  },
+  {
+   "k": "Lime-walled tubular alga of Late Devonian shallow seas.",
+   "v": "Трубчатая водоросль с известковыми стенками из мелководных морей позднего девона."
+  },
+  {
+   "k": "Pitted, leathery thalli thought to be an early lichen.",
+   "v": "Ямчатые кожистые слоевища, которые считают ранним лишайником."
+  },
+  {
+   "k": "Early Devonian lichen with cyanobacterial partners, from the Welsh Borderland.",
+   "v": "Раннедевонский лишайник с цианобактериями-партнёрами из Валлийского пограничья."
+  },
+  {
+   "k": "Tangled tubes of a nematophyte from the Rhynie chert.",
+   "v": "Спутанные трубки нематофита из райниевых кремней."
+  },
+  {
+   "k": "Tiny chytrid fungus living on dead Rhynie chert plants.",
+   "v": "Крошечный хитридиевый гриб, живший на мёртвых растениях райниевых кремней."
+  },
+  {
+   "k": "Scale tree that branched early into a broad crown; a coal-ball favourite.",
+   "v": "Чешуедрево, рано ветвившееся в широкую крону; любимец исследователей угольных почек."
+  },
+  {
+   "k": "Scale tree of the Pennsylvanian peat swamps, long confused with Lepidodendron.",
+   "v": "Чешуедрево пенсильванских торфяных болот, долго путаемое с лепидодендроном."
+  },
+  {
+   "k": "Lycopsid trunk marked with two rows of big round scars where branches fell away.",
+   "v": "Ствол плауновидного с двумя рядами крупных круглых рубцов на месте опавших ветвей."
+  },
+  {
+   "k": "Smooth-barked scale tree with tiny, widely spaced leaf scars.",
+   "v": "Гладкокорое чешуедрево с крошечными, далеко расставленными листовыми рубцами."
+  },
+  {
+   "k": "Calamite with thick, banded wood: the woodiest of the tree horsetails.",
+   "v": "Каламит с толстой полосчатой древесиной — самый деревянистый из древовидных хвощей."
+  },
+  {
+   "k": "Big Early Carboniferous tree known from logs a metre thick buried in Scottish volcanic ash.",
+   "v": "Крупное раннекаменноугольное дерево, известное по метровым стволам, погребённым в шотландском вулканическом пепле."
+  },
+  {
+   "k": "Cordaitean shrub-tree of the coal swamps, perhaps growing in mangrove-like stands.",
+   "v": "Кордаитовое деревце угольных болот, возможно образовывавшее заросли наподобие мангров."
+  },
+  {
+   "k": "Among the oldest known conifers, from Pennsylvanian Yorkshire.",
+   "v": "Одно из древнейших известных хвойных, из пенсильвания Йоркшира."
+  },
+  {
+   "k": "Marattialean tree fern whose fronds grew in two rows down the trunk.",
+   "v": "Мараттиевый древовидный папоротник, вайи которого росли двумя рядами вдоль ствола."
+  },
+  {
+   "k": "Medullosan seed fern with a strangely tangled stem.",
+   "v": "Медуллозовый семенной папоротник со странно перепутанным стеблем."
+  },
+  {
+   "k": "Strap-leaved cordaite of the cold Gondwana lands as the great ice age waned.",
+   "v": "Кордаит с лентовидными листьями холодных земель Гондваны на излёте великого оледенения."
+  },
+  {
+   "k": "Scale tree of the Cathaysian coal swamps of China.",
+   "v": "Чешуедрево катазиатских угольных болот Китая."
+  },
+  {
+   "k": "Seed fern with broad, blunt leaflets joined at the base.",
+   "v": "Семенной папоротник с широкими тупыми перышками, сросшимися у основания."
+  },
+  {
+   "k": "Big-leafleted seed fern covered in fine hairs, common in coal shales.",
+   "v": "Семенной папоротник с крупными перышками в тонких волосках, обычный в угленосных сланцах."
+  },
+  {
+   "k": "Lacy foliage of scrambling lyginopterid seed ferns.",
+   "v": "Кружевная листва цепляющихся лигиноптерисовых семенных папоротников."
+  },
+  {
+   "k": "Zygopterid fern with clusters of big spore sacs.",
+   "v": "Зигоптерисовый папоротник со скоплениями крупных спорангиев."
+  },
+  {
+   "k": "Small fern that clambered over the trunks of tree ferns.",
+   "v": "Небольшой папоротник, карабкавшийся по стволам древовидных папоротников."
+  },
+  {
+   "k": "Leafless, bushy little fern relative of the coal-swamp floor.",
+   "v": "Безлистный кустистый родственник папоротников с почвы угольных болот."
+  },
+  {
+   "k": "Shrubby lycopsid with a cone on each branch tip.",
+   "v": "Кустарниковое плауновидное со стробилом на конце каждой ветви."
+  },
+  {
+   "k": "Tiny spikemoss-like lycopsid known from coal balls.",
+   "v": "Крошечное плауновидное, похожее на селагинеллу, известное по угольным почкам."
+  },
+  {
+   "k": "Small herbaceous lycopsid of Early Carboniferous Scotland.",
+   "v": "Небольшое травянистое плауновидное раннего карбона Шотландии."
+  },
+  {
+   "k": "Early relative of the climbing ferns (Schizaeales).",
+   "v": "Ранний родственник лазающих папоротников (Schizaeales)."
+  },
+  {
+   "k": "Forked, needle-leaved plant of dry Late Paleozoic uplands.",
+   "v": "Вильчатое растение с игловидными листьями сухих позднепалеозойских возвышенностей."
+  },
+  {
+   "k": "One of the few Carboniferous mosses known, from French coal measures.",
+   "v": "Один из немногих известных каменноугольных мхов, из угленосных толщ Франции."
+  },
+  {
+   "k": "Leafy liverwort from the Pennsylvanian coal measures.",
+   "v": "Листостебельный печёночник из пенсильванских угленосных толщ."
+  },
+  {
+   "k": "Marattialean fern with star-shaped clusters of spore sacs.",
+   "v": "Мараттиевый папоротник со звёздчатыми скоплениями спорангиев."
+  },
+  {
+   "k": "Horsetail of the cool Angaran and Gondwanan floodplains.",
+   "v": "Хвощ прохладных пойм Ангариды и Гондваны."
+  },
+  {
+   "k": "Tube-shaped dasyclad alga of Carboniferous shelf seas.",
+   "v": "Трубчатая дазикладовая водоросль каменноугольных шельфовых морей."
+  },
+  {
+   "k": "Dasyclad alga with a pitted sleeve of lime.",
+   "v": "Дазикладовая водоросль с ямчатым известковым чехлом."
+  },
+  {
+   "k": "Leaf-like calcareous alga of Russian Carboniferous seas.",
+   "v": "Листовидная известковая водоросль каменноугольных морей России."
+  },
+  {
+   "k": "Encrusting alga that coated shells and grains.",
+   "v": "Инкрустирующая водоросль, обраставшая раковины и зёрна."
+  },
+  {
+   "k": "Tiny round fungal spore cases found in coal balls.",
+   "v": "Крошечные круглые грибные спороношения из угольных почек."
+  },
+  {
+   "k": "Oily colonial alga whose remains make torbanite, the boghead coal.",
+   "v": "Маслянистая колониальная водоросль, остатки которой образуют торбанит — богхедовый уголь."
+  },
+  {
+   "k": "Walchian conifer of the dry Early Permian of Europe.",
+   "v": "Вальхиевое хвойное сухой ранней перми Европы."
+  },
+  {
+   "k": "Early conifer with flat, fern-like sprays of needles.",
+   "v": "Раннее хвойное с плоскими папоротниковидными веточками хвои."
+  },
+  {
+   "k": "Voltzian conifer of the Zechstein sea shores.",
+   "v": "Вольциевое хвойное побережий цехштейнового моря."
+  },
+  {
+   "k": "Small conifer from the Late Permian Bletterbach gorge in the Dolomites.",
+   "v": "Небольшое хвойное поздней перми из ущелья Блеттербах в Доломитовых Альпах."
+  },
+  {
+   "k": "Late Permian conifer with dense, short-needled shoots.",
+   "v": "Позднепермское хвойное с густыми коротко-хвойными побегами."
+  },
+  {
+   "k": "The oldest known ginkgophyte, with thread-like forked leaves.",
+   "v": "Древнейший известный гинкгофит с нитевидными вильчатыми листьями."
+  },
+  {
+   "k": "Ginkgo relative with wedge-shaped, deeply split leaves.",
+   "v": "Родственник гинкго с клиновидными, глубоко рассечёнными листьями."
+  },
+  {
+   "k": "Gigantopterid with huge, net-veined leaves, climbing through Cathaysian forests.",
+   "v": "Гигантоптерид с огромными сетчатонервными листьями, взбиравшийся по катазиатским лесам."
+  },
+  {
+   "k": "Early cycad from the Permian of China.",
+   "v": "Ранний саговник из перми Китая."
+  },
+  {
+   "k": "Peltasperm seed fern of the dry red beds of the Grand Canyon.",
+   "v": "Пельтаспермовый семенной папоротник засушливых красноцветов Гранд-Каньона."
+  },
+  {
+   "k": "Seed fern of the Late Permian Angaran and Russian floras.",
+   "v": "Семенной папоротник позднепермских ангарских и русских флор."
+  },
+  {
+   "k": "Cathaysian seed fern that bore its seeds right on its leaflets.",
+   "v": "Катазиатский семенной папоротник, нёсший семена прямо на перышках."
+  },
+  {
+   "k": "Marattialean fern of the Permian coal swamps of China.",
+   "v": "Мараттиевый папоротник пермских угольных болот Китая."
+  },
+  {
+   "k": "Gondwanan sphenophyll with leaves in lopsided whorls of three pairs.",
+   "v": "Гондванский клинолист с листьями в неравных мутовках из трёх пар."
+  },
+  {
+   "k": "Angaran moss with cells like those of peat mosses.",
+   "v": "Ангарский мох с клетками, как у торфяных мхов."
+  },
+  {
+   "k": "Peltasperm shrub of the dry Late Permian of Russia.",
+   "v": "Пельтаспермовый кустарник сухой поздней перми России."
+  },
+  {
+   "k": "Thick-leaved peltasperm of the Late Permian Angaran floodplains.",
+   "v": "Толстолистный пельтасперм позднепермских ангарских пойм."
+  },
+  {
+   "k": "Lycopsid of the Permian Paraná Basin in Brazil.",
+   "v": "Плауновидное перми бассейна Параны в Бразилии."
+  },
+  {
+   "k": "Cycad with long, comb-like leaves.",
+   "v": "Саговник с длинными гребенчатыми листьями."
+  },
+  {
+   "k": "Lime-crusted red alga of warm shelf seas from the Permian to the Cretaceous.",
+   "v": "Покрытая известковой коркой красная водоросль тёплых шельфовых морей от перми до мела."
+  },
+  {
+   "k": "Dasyclad alga with whorls of fine branches.",
+   "v": "Дазикладовая водоросль с мутовками тонких веточек."
+  },
+  {
+   "k": "Dasyclad with a pitted, finger-like sleeve of lime.",
+   "v": "Дазикладовая водоросль с ямчатым пальцевидным известковым чехлом."
+  },
+  {
+   "k": "Encrusting, worm-like alga of Permian reefs.",
+   "v": "Инкрустирующая червеобразная водоросль пермских рифов."
+  },
+  {
+   "k": "Southern voltzian conifer of the earliest Triassic.",
+   "v": "Южное вольциевое хвойное самого раннего триаса."
+  },
+  {
+   "k": "Strap-leaved conifer that grew in dense stands along Gondwanan rivers.",
+   "v": "Хвойное с лентовидными листьями, образовывавшее густые заросли вдоль рек Гондваны."
+  },
+  {
+   "k": "Early podocarp-like conifer of Gondwana.",
+   "v": "Раннее подокарпоподобное хвойное Гондваны."
+  },
+  {
+   "k": "Petrified Forest conifer with short shoot traces all along its logs.",
+   "v": "Хвойное Окаменелого леса со следами укороченных побегов вдоль всех стволов."
+  },
+  {
+   "k": "Petrified Forest tree with distinctive wood; its relatives are still debated.",
+   "v": "Дерево Окаменелого леса с характерной древесиной; его родство до сих пор обсуждается."
+  },
+  {
+   "k": "Fossil ginkgo leaves with broad, lobed fans, found worldwide in the Mesozoic.",
+   "v": "Ископаемые листья гинкго с широкими лопастными веерами, встречающиеся по всему миру в мезозое."
+  },
+  {
+   "k": "Cycad with long, ribbon-like leaves, common across the Mesozoic.",
+   "v": "Саговник с длинными лентовидными листьями, обычный на протяжении всего мезозоя."
+  },
+  {
+   "k": "Cheirolepid conifer whose pollen dominates the Triassic-Jurassic boundary.",
+   "v": "Хейролепидиевое хвойное, пыльца которого преобладает на границе триаса и юры."
+  },
+  {
+   "k": "Bennettitalean with neatly ranked, square-ended leaflets.",
+   "v": "Беннеттит с аккуратно расположенными перышками с усечёнными концами."
+  },
+  {
+   "k": "Small bennettitalean shrub with short, uneven leaflets.",
+   "v": "Небольшой беннеттитовый кустарник с короткими неравными перышками."
+  },
+  {
+   "k": "Slender, forking bennettitalean bush with small flower-like cones.",
+   "v": "Стройный ветвящийся беннеттитовый куст с маленькими цветковидными стробилами."
+  },
+  {
+   "k": "Slender-stemmed early cycad from Late Triassic North Carolina.",
+   "v": "Ранний тонкоствольный саговник позднего триаса Северной Каролины."
+  },
+  {
+   "k": "Puzzling plant with pleated, palm-like leaves, once claimed as a flowering plant.",
+   "v": "Загадочное растение со складчатыми пальмовидными листьями, которое когда-то считали цветковым."
+  },
+  {
+   "k": "Corystosperm with fine, needle-like leaflets, a dry-ground cousin of Dicroidium.",
+   "v": "Користосперм с тонкими игловидными перышками — засухоустойчивый родственник дикроидиума."
+  },
+  {
+   "k": "Caytonialean shrub with net-veined leaflets and berry-like seed cups.",
+   "v": "Кейтониевый кустарник с сетчатонервными листочками и ягодоподобными семенными купулами."
+  },
+  {
+   "k": "Dipterid fern with big, umbrella-like fronds.",
+   "v": "Диптерисовый папоротник с большими зонтиковидными вайями."
+  },
+  {
+   "k": "Dipterid fern with leaves netted like a window lattice.",
+   "v": "Диптерисовый папоротник с листьями, сетчатыми, как оконная решётка."
+  },
+  {
+   "k": "Royal-fern relative common in Mesozoic floras.",
+   "v": "Родственник чистоуста, обычный в мезозойских флорах."
+  },
+  {
+   "k": "Marattialean fern with huge fronds, common in the Middle Triassic.",
+   "v": "Мараттиевый папоротник с огромными вайями, обычный в среднем триасе."
+  },
+  {
+   "k": "Fern close to the living king ferns.",
+   "v": "Папоротник, близкий к современным мараттиевым."
+  },
+  {
+   "k": "Forking, thicket-forming fern of open ground.",
+   "v": "Вильчато ветвящийся папоротник, образующий заросли на открытых местах."
+  },
+  {
+   "k": "Quillwort-like lycopsid that greened the shores after the end-Permian extinction.",
+   "v": "Похожее на полушник плауновидное, озеленившее берега после пермского вымирания."
+  },
+  {
+   "k": "Herb-sized conifer from the Triassic sandstones of the Vosges.",
+   "v": "Хвойное размером с траву из триасовых песчаников Вогезов."
+  },
+  {
+   "k": "Small leafy liverwort of Rhaetian ponds.",
+   "v": "Небольшой листостебельный печёночник рэтских прудов."
+  },
+  {
+   "k": "Fossil liverwort with flat, forking lobes.",
+   "v": "Ископаемый печёночник с плоскими вильчатыми лопастями."
+  },
+  {
+   "k": "Large dasyclad of Triassic reefs.",
+   "v": "Крупная дазикладовая водоросль триасовых рифов."
+  },
+  {
+   "k": "Dasyclad with swollen, bladder-tipped branches.",
+   "v": "Дазикладовая водоросль с вздутыми, пузыревидными на концах веточками."
+  },
+  {
+   "k": "Puzzling encrusting alga of Mesozoic lagoons.",
+   "v": "Загадочная инкрустирующая водоросль мезозойских лагун."
+  },
+  {
+   "k": "Triassic stonewort with star-patterned fruiting cases.",
+   "v": "Триасовая харовая водоросль с плодовыми оболочками звёздчатого узора."
+  },
+  {
+   "k": "Mushroom-relative threads with clamp connections, from Antarctica.",
+   "v": "Нити родственника шляпочных грибов с пряжками, из Антарктиды."
+  },
+  {
+   "k": "Spiny fungal spore cases preserved in Antarctic Triassic peat.",
+   "v": "Шипастые грибные спороношения, сохранившиеся в триасовом торфе Антарктиды."
+  },
+  {
+   "k": "Cheirolepid conifer with tiny cones petrified in Patagonia.",
+   "v": "Хейролепидиевое хвойное с крошечными шишками, окаменевшими в Патагонии."
+  },
+  {
+   "k": "Kauri relative from the Jurassic Talbragar fish beds, Australia.",
+   "v": "Родственник каури из юрских рыбных слоёв Талбрагара в Австралии."
+  },
+  {
+   "k": "Early cypress-family conifer like a Chinese fir.",
+   "v": "Раннее хвойное семейства кипарисовых, похожее на куннингамию."
+  },
+  {
+   "k": "Early pine relative with split cone scales.",
+   "v": "Ранний родственник сосны с расщеплёнными семенными чешуями."
+  },
+  {
+   "k": "The oldest known member of the pine family, from Scotland.",
+   "v": "Древнейший известный представитель семейства сосновых, из Шотландии."
+  },
+  {
+   "k": "Jurassic ginkgo from Henan with clusters of seeds on forked stalks.",
+   "v": "Юрский гинкго из Хэнани с гроздьями семян на вильчатых ножках."
+  },
+  {
+   "k": "Ginkgo relative with tufts of strap leaves on short shoots.",
+   "v": "Родственник гинкго с пучками лентовидных листьев на укороченных побегах."
+  },
+  {
+   "k": "Large cycad with comb-like fronds.",
+   "v": "Крупный саговник с гребенчатыми листьями."
+  },
+  {
+   "k": "Bennettitalean of dry coasts with stiff, closely set leaflets.",
+   "v": "Беннеттит засушливых побережий с жёсткими, тесно сидящими перышками."
+  },
+  {
+   "k": "Bennettitalean whose leaflets have ear-like lobes at the base.",
+   "v": "Беннеттит, перышки которого имеют ушковидные лопасти у основания."
+  },
+  {
+   "k": "Slender bennettitalean bush with small two-sexed 'flowers', from Yorkshire.",
+   "v": "Стройный беннеттитовый куст с маленькими обоеполыми «цветками», из Йоркшира."
+  },
+  {
+   "k": "Thick-leaved seed fern of salty coastal flats.",
+   "v": "Толстолистный семенной папоротник солоноватых прибрежных равнин."
+  },
+  {
+   "k": "Early climbing-fern relative of the Jurassic Yorkshire delta.",
+   "v": "Ранний родственник схизейных папоротников из юрской дельты Йоркшира."
+  },
+  {
+   "k": "Fern with small fan-shaped leaves, kin of the living Dipteris.",
+   "v": "Папоротник с небольшими веерными листьями, родственник современного диптериса."
+  },
+  {
+   "k": "Common fern of the Jurassic Yorkshire flora.",
+   "v": "Обычный папоротник юрской флоры Йоркшира."
+  },
+  {
+   "k": "Delicately cut fern of the Jurassic and Early Cretaceous.",
+   "v": "Тонкорассечённый папоротник юры и раннего мела."
+  },
+  {
+   "k": "Dasyclad of Early Jurassic carbonate lagoons.",
+   "v": "Дазикладовая водоросль раннеюрских карбонатных лагун."
+  },
+  {
+   "k": "Small tube-shaped dasyclad of Tethyan lagoons.",
+   "v": "Небольшая трубчатая дазикладовая водоросль лагун Тетиса."
+  },
+  {
+   "k": "Dasyclad with star-like whorls of rays.",
+   "v": "Дазикладовая водоросль со звёздчатыми мутовками лучей."
+  },
+  {
+   "k": "Crust-building organism of Jurassic and Cretaceous reefs.",
+   "v": "Коркообразующий организм юрских и меловых рифов."
+  },
+  {
+   "k": "Bubbly calcified mats on shallow Mesozoic platforms.",
+   "v": "Пузырчатые обызвествлённые маты на мелководных мезозойских платформах."
+  },
+  {
+   "k": "Stonewort of Jurassic and Cretaceous lakes.",
+   "v": "Харовая водоросль юрских и меловых озёр."
+  },
+  {
+   "k": "Leafy lichen from Jurassic Daohugou, China.",
+   "v": "Листоватый лишайник из юрского Даохугоу в Китае."
+  },
+  {
+   "k": "Magnolia-like tree with big, many-parted flowers, from Kansas.",
+   "v": "Магнолиеподобное дерево с крупными многочленными цветками, из Канзаса."
+  },
+  {
+   "k": "Early plane-tree relative with lobed leaves, along Cretaceous streams.",
+   "v": "Ранний родственник платана с лопастными листьями вдоль меловых ручьёв."
+  },
+  {
+   "k": "Big-leaved plane-tree relative of the Late Cretaceous.",
+   "v": "Крупнолистный родственник платана позднего мела."
+  },
+  {
+   "k": "One of the oldest laurels, its tiny flowers preserved as charcoal.",
+   "v": "Один из древнейших лавров; его крошечные цветки сохранились в виде древесного угля."
+  },
+  {
+   "k": "Toothed-leaved early relative of oaks and chestnuts.",
+   "v": "Ранний родственник дубов и каштанов с зубчатыми листьями."
+  },
+  {
+   "k": "Swamp conifer that once ringed the Arctic, now nearly extinct in the wild.",
+   "v": "Болотное хвойное, некогда окружавшее Арктику, а ныне почти исчезнувшее в природе."
+  },
+  {
+   "k": "Stiff-needled cypress-family conifer, known since the Late Cretaceous.",
+   "v": "Жёсткохвойное растение семейства кипарисовых, известное с позднего мела."
+  },
+  {
+   "k": "Its pollen is common in Cretaceous rocks; the living trees were found only in 1994.",
+   "v": "Его пыльца обычна в меловых породах; живые деревья нашли лишь в 1994 году."
+  },
+  {
+   "k": "Succulent-jointed cheirolepid of salty Cretaceous coasts.",
+   "v": "Хейролепидиевое с сочными члениками солоноватых меловых побережий."
+  },
+  {
+   "k": "Chloranthoid herb from Early Cretaceous Portugal with tiny, petal-less flowers.",
+   "v": "Хлорантоподобная трава раннего мела Португалии с крошечными цветками без лепестков."
+  },
+  {
+   "k": "Buttercup relative from Liaoning, among the oldest eudicots.",
+   "v": "Родственник лютика из Ляонина, один из древнейших эвдикотов."
+  },
+  {
+   "k": "Small herb with paired flower stalks, from the Yixian lakes.",
+   "v": "Небольшая трава с парными цветоносами из озёр Исянь."
+  },
+  {
+   "k": "Early Cretaceous herb with tiny flowers, from Liaoning.",
+   "v": "Раннемеловая трава с крошечными цветками из Ляонина."
+  },
+  {
+   "k": "Tiny saxifrage-like flower preserved in Swedish charcoal.",
+   "v": "Крошечный камнеломкоподобный цветок, сохранившийся в шведском древесном угле."
+  },
+  {
+   "k": "Buttercup-order flower with a spiral of small tepals, from Portugal.",
+   "v": "Цветок из порядка лютикоцветных со спиралью мелких листочков околоцветника, из Португалии."
+  },
+  {
+   "k": "Small eudicot herb from the Crato limestone of Brazil.",
+   "v": "Небольшая травянистая эвдикота из известняков Крато в Бразилии."
+  },
+  {
+   "k": "Magnoliid shrub with small flowers, from the Crato limestone.",
+   "v": "Магнолиидный кустарник с мелкими цветками из известняков Крато."
+  },
+  {
+   "k": "Magnoliid of the Crato lake shores, near the custard-apple family.",
+   "v": "Магнолиид берегов озера Крато, близкий к семейству анноновых."
+  },
+  {
+   "k": "Spicebush relative with many-tepaled flowers, from Virginia.",
+   "v": "Родственник каликанта с многочленными цветками, из Виргинии."
+  },
+  {
+   "k": "Early water-lily flower from Portugal.",
+   "v": "Ранний цветок кувшинковых из Португалии."
+  },
+  {
+   "k": "Tiny relative of the giant water lily, from New Jersey.",
+   "v": "Крошечный родственник гигантской виктории из Нью-Джерси."
+  },
+  {
+   "k": "Fanwort-family water plant with round floating leaves, from Brazil.",
+   "v": "Водное растение семейства кабомбовых с круглыми плавающими листьями, из Бразилии."
+  },
+  {
+   "k": "Floating aroid rosettes like water lettuce, from Late Cretaceous Alberta.",
+   "v": "Плавающие розетки ароидных, похожие на пистию, из позднего мела Альберты."
+  },
+  {
+   "k": "Leafless green-jointed shrub of dry lands, known since the Early Cretaceous.",
+   "v": "Безлистный кустарник засушливых земель с зелёными члениками, известный с раннего мела."
+  },
+  {
+   "k": "Welwitschia-like gnetophyte of the dry Crato coast.",
+   "v": "Вельвичиеподобный гнетовый с засушливого побережья Крато."
+  },
+  {
+   "k": "Finely divided fern of the Wealden wetlands.",
+   "v": "Тонкорассечённый папоротник вельдских болот."
+  },
+  {
+   "k": "Small Indian tree-shrub with mulberry-like seed heads, of its own extinct order.",
+   "v": "Небольшое индийское деревце с шелковицеподобными семенными головками, из собственного вымершего порядка."
+  },
+  {
+   "k": "Late-surviving bennettitalean with a cone at each leaf base.",
+   "v": "Поздно доживший беннеттит со стробилом у основания каждого листа."
+  },
+  {
+   "k": "Club-shaped dasyclad, still alive in tropical lagoons.",
+   "v": "Булавовидная дазикладовая водоросль, до сих пор живущая в тропических лагунах."
+  },
+  {
+   "k": "Beaded dasyclad with tufts at its tips.",
+   "v": "Чётковидная дазикладовая водоросль с пучками на концах."
+  },
+  {
+   "k": "Clavatoracean stonewort with three-fold symmetric fruiting cases.",
+   "v": "Клаваторовая харовая водоросль с плодовыми оболочками тройной симметрии."
+  },
+  {
+   "k": "Early lotus relative with round, shield-like leaves.",
+   "v": "Ранний родственник лотоса с круглыми щитовидными листьями."
+  },
+  {
+   "k": "Tiny floating fern that turns ponds red; in the Eocene it covered the Arctic Ocean.",
+   "v": "Крошечный плавающий папоротник, окрашивающий пруды в красный; в эоцене он покрывал Северный Ледовитый океан."
+  },
+  {
+   "k": "Coral fungus preserved in Burmese amber.",
+   "v": "Рогатиковый гриб, сохранившийся в бирманском янтаре."
+  },
+  {
+   "k": "The oldest insect-killing fungus, sprouting from a scale insect in amber.",
+   "v": "Древнейший гриб-паразит насекомых, проросший из червеца в янтаре."
+  },
+  {
+   "k": "Crusty lichen from the Early Cretaceous of Vancouver Island.",
+   "v": "Накипной лишайник раннего мела острова Ванкувер."
+  },
+  {
+   "k": "Walnuts appear in the Eocene and spread across the northern continents.",
+   "v": "Орехи появляются в эоцене и распространяются по северным материкам."
+  },
+  {
+   "k": "Hickories filled Paleocene forests of North America and Europe.",
+   "v": "Гикори заполняли палеоценовые леса Северной Америки и Европы."
+  },
+  {
+   "k": "Chestnuts, with spiny husks around glossy nuts.",
+   "v": "Каштаны с колючими плюсками вокруг блестящих орехов."
+  },
+  {
+   "k": "Elms, with round papery seeds, date back to the Paleocene.",
+   "v": "Вязы с круглыми бумажистыми семенами восходят к палеоцену."
+  },
+  {
+   "k": "Lindens hum with bees when their sweet flowers open.",
+   "v": "Липы гудят пчёлами, когда раскрываются их сладкие цветки."
+  },
+  {
+   "k": "Katsura relatives were common along Paleocene rivers; its autumn leaves smell of caramel.",
+   "v": "Родственники кацуры были обычны вдоль палеоценовых рек; её осенние листья пахнут карамелью."
+  },
+  {
+   "k": "Extinct wheel-wood relative of the warm Paleocene Arctic.",
+   "v": "Вымерший родственник троходендрона из тёплой палеоценовой Арктики."
+  },
+  {
+   "k": "Extinct Eocene plane tree with big lobed leaves.",
+   "v": "Вымерший эоценовый платан с крупными лопастными листьями."
+  },
+  {
+   "k": "Swamp tree whose leaves turn a blazing scarlet in autumn.",
+   "v": "Болотное дерево, листья которого осенью становятся пылающе-алыми."
+  },
+  {
+   "k": "Elm relative found from the Eocene; a few relict species survive.",
+   "v": "Родственник вяза, известный с эоцена; сохранилось лишь несколько реликтовых видов."
+  },
+  {
+   "k": "Walnut relative hung with long chains of winged nuts.",
+   "v": "Родственник ореха, увешанный длинными цепочками крылатых орешков."
+  },
+  {
+   "k": "Rainforest tree with bright blue fruit, known from the Eocene of Australia.",
+   "v": "Дерево тропического леса с ярко-синими плодами, известное с эоцена Австралии."
+  },
+  {
+   "k": "Evergreen chestnut relative of warm Asian forests since the Eocene.",
+   "v": "Вечнозелёный родственник каштана тёплых азиатских лесов с эоцена."
+  },
+  {
+   "k": "Fan palm of tropical swamps; its pollen goes back to the Paleocene.",
+   "v": "Веерная пальма тропических болот; её пыльца известна с палеоцена."
+  },
+  {
+   "k": "Shade-loving conifer with drooping tips and tiny cones.",
+   "v": "Теневыносливое хвойное с поникающими верхушками и крошечными шишками."
+  },
+  {
+   "k": "Scale-leaved conifer known from the Paleocene Arctic.",
+   "v": "Чешуелистное хвойное, известное с палеоценовой Арктики."
+  },
+  {
+   "k": "True cedars, with flat-topped tiers and upright barrel cones.",
+   "v": "Настоящие кедры с плосковерхими ярусами и стоячими бочонковидными шишками."
+  },
+  {
+   "k": "Tall conifer whose cones have three-pointed bracts; known since the Oligocene.",
+   "v": "Высокое хвойное, шишки которого имеют трёхзубчатые кроющие чешуи; известно с олигоцена."
+  },
+  {
+   "k": "Hardy conifer with blue, berry-like cones.",
+   "v": "Выносливое хвойное с синими ягодоподобными шишками."
+  },
+  {
+   "k": "Ash trees, with bunches of winged keys, since the Eocene.",
+   "v": "Ясени с гроздьями крылаток, начиная с эоцена."
+  },
+  {
+   "k": "Candles of white flowers and shiny conkers; known from the Paleocene.",
+   "v": "Свечи белых цветков и блестящие каштаны; известен с палеоцена."
+  },
+  {
+   "k": "Mango leaves are found in Paleocene rocks of India.",
+   "v": "Листья манго найдены в палеоценовых породах Индии."
+  },
+  {
+   "k": "Giant herb with huge leaves; fossil banana seeds come from early Paleogene India.",
+   "v": "Гигантская трава с огромными листьями; ископаемые семена банана происходят из раннего палеогена Индии."
+  },
+  {
+   "k": "Floating fern that carpeted the Eocene Arctic Ocean and drew down carbon dioxide.",
+   "v": "Плавающий папоротник, покрывший эоценовый Северный Ледовитый океан и поглотивший углекислый газ."
+  },
+  {
+   "k": "Sharp-edged sedge; its seeds are common in Paleogene swamp deposits.",
+   "v": "Осока с острыми краями; её семена обычны в палеогеновых болотных отложениях."
+  },
+  {
+   "k": "Fern almost unchanged since the Paleocene.",
+   "v": "Папоротник, почти не изменившийся с палеоцена."
+  },
+  {
+   "k": "Large fern of wet ground, known from Paleocene rocks.",
+   "v": "Крупный папоротник сырых мест, известный из палеоценовых пород."
+  },
+  {
+   "k": "Tall, leathery fern that grows among mangroves.",
+   "v": "Высокий кожистый папоротник, растущий среди мангров."
+  },
+  {
+   "k": "Roses grew in Eocene North America, with red hips after their flowers.",
+   "v": "Розы росли в эоценовой Северной Америке, а после цветения давали красные плоды."
+  },
+  {
+   "k": "Thorny thickets with blackberries and raspberries.",
+   "v": "Колючие заросли с ежевикой и малиной."
+  },
+  {
+   "k": "Shrub with flat white flower heads and dark berries.",
+   "v": "Кустарник с плоскими белыми соцветиями и тёмными ягодами."
+  },
+  {
+   "k": "Extinct ginger of Paleocene and Eocene tropical forests.",
+   "v": "Вымерший имбирь тропических лесов палеоцена и эоцена."
+  },
+  {
+   "k": "Giant arum of river banks, found in the Paleocene rainforest of Cerrejón.",
+   "v": "Гигантский ароид речных берегов, найденный в палеоценовом тропическом лесу Серрехона."
+  },
+  {
+   "k": "The oldest fossil orchids are in Eocene amber.",
+   "v": "Древнейшие ископаемые орхидеи найдены в эоценовом янтаре."
+  },
+  {
+   "k": "Thorny shrub of dry ground with sweet red fruit.",
+   "v": "Колючий кустарник сухих мест со сладкими красными плодами."
+  },
+  {
+   "k": "Shrub with big round heads of blue or pink flowers.",
+   "v": "Кустарник с крупными шаровидными соцветиями синих или розовых цветков."
+  },
+  {
+   "k": "Water lily with round yellow flowers held above the water.",
+   "v": "Кувшинка с круглыми жёлтыми цветками, поднятыми над водой."
+  },
+  {
+   "k": "Seagrass of warm shallow seas since the Eocene.",
+   "v": "Морская трава тёплых мелководных морей с эоцена."
+  },
+  {
+   "k": "Woody-stemmed seagrass found in Eocene limestones of Florida.",
+   "v": "Морская трава с одревесневшими стеблями из эоценовых известняков Флориды."
+  },
+  {
+   "k": "Jointed coralline alga with forked chalky branches.",
+   "v": "Членистая коралловая водоросль с вильчатыми известковыми веточками."
+  },
+  {
+   "k": "Fine pink coralline tufts that grow on other seaweeds.",
+   "v": "Тонкие розовые кустики коралловых водорослей, растущие на других водорослях."
+  },
+  {
+   "k": "Extinct chalky green alga whose egg-shaped segments fill Paleogene sands.",
+   "v": "Вымершая известковая зелёная водоросль, яйцевидные членики которой заполняют палеогеновые пески."
+  },
+  {
+   "k": "Star-shaped plankton plates that pile up as ooze on the deep sea floor.",
+   "v": "Звёздчатые планктонные пластинки, накапливающиеся илом на дне глубокого моря."
+  },
+  {
+   "k": "Spiky rosette that rises and sinks in the water; its seeds are common in Paleogene lake beds.",
+   "v": "Колючая розетка, то всплывающая, то погружающаяся; её семена обычны в палеогеновых озёрных отложениях."
+  },
+  {
+   "k": "Bolete partnered with pine roots; its fossil root sheaths are Eocene.",
+   "v": "Болет-партнёр корней сосны; его ископаемые корневые чехлы — эоценовые."
+  },
+  {
+   "k": "Tiny pin-shaped fungus that grows on resin; found in Eocene amber.",
+   "v": "Крошечный булавковидный гриб, растущий на смоле; найден в эоценовом янтаре."
+  },
+  {
+   "k": "Pink slime mould whose fruiting bodies are preserved in Baltic amber.",
+   "v": "Розовый слизевик, плодовые тела которого сохранились в балтийском янтаре."
+  },
+  {
+   "k": "Leafy grey-green lichen, known from Eocene amber.",
+   "v": "Листоватый серо-зелёный лишайник, известный из эоценового янтаря."
+  },
+  {
+   "k": "Its resin hardened into the Miocene amber of the Caribbean.",
+   "v": "Его смола затвердела в миоценовый янтарь Карибского бассейна."
+  },
+  {
+   "k": "Mangrove that breathes through pencil-like roots poking out of the mud.",
+   "v": "Мангр, дышащий карандашевидными корнями, торчащими из ила."
+  },
+  {
+   "k": "The most massive trees on Earth, on the slopes of the Sierra Nevada.",
+   "v": "Самые массивные деревья на Земле, на склонах Сьерра-Невады."
+  },
+  {
+   "k": "Dark green flame of the Mediterranean hills.",
+   "v": "Тёмно-зелёное пламя средиземноморских холмов."
+  },
+  {
+   "k": "Umbrella-shaped pine with edible pine nuts.",
+   "v": "Зонтиковидная сосна со съедобными орешками."
+  },
+  {
+   "k": "Savanna tree whose yellow fruit elephants seek out.",
+   "v": "Дерево саванны, жёлтые плоды которого разыскивают слоны."
+  },
+  {
+   "k": "Woodland tree of central Africa; new leaves flush red and copper.",
+   "v": "Дерево лесов Центральной Африки; молодые листья распускаются красными и медными."
+  },
+  {
+   "k": "Dark red flowers and huge sausage-shaped fruit hanging on ropes.",
+   "v": "Тёмно-красные цветки и огромные колбасовидные плоды, висящие на верёвках."
+  },
+  {
+   "k": "Feathery-leaved savanna tree with brown, sticky pods.",
+   "v": "Дерево саванны с перистыми листьями и бурыми липкими бобами."
+  },
+  {
+   "k": "Fan palm with forked trunks, along desert rivers like the Nile.",
+   "v": "Веерная пальма с ветвящимися стволами вдоль пустынных рек, таких как Нил."
+  },
+  {
+   "k": "Small understory tree with pods growing straight from its trunk.",
+   "v": "Небольшое дерево подлеска, плоды которого растут прямо из ствола."
+  },
+  {
+   "k": "Amazon giant whose heavy fruit is opened only by agoutis.",
+   "v": "Амазонский гигант, тяжёлые плоды которого вскрывают только агути."
+  },
+  {
+   "k": "Bat-pollinated tree with spiny, famously smelly fruit.",
+   "v": "Опыляемое летучими мышами дерево с колючими, знаменито пахучими плодами."
+  },
+  {
+   "k": "Pink flowers and round fruit grow straight from its trunk.",
+   "v": "Розовые цветки и круглые плоды растут прямо из ствола."
+  },
+  {
+   "k": "Silvery willow of river banks.",
+   "v": "Серебристая ива речных берегов."
+  },
+  {
+   "k": "Gnarled, silver-leaved tree of the Mediterranean.",
+   "v": "Корявое серебристолистное дерево Средиземноморья."
+  },
+  {
+   "k": "Evergreen with red bark and round, bumpy red fruit.",
+   "v": "Вечнозелёное дерево с красной корой и круглыми бугорчатыми красными плодами."
+  },
+  {
+   "k": "New Zealand's 'Christmas tree' bursts into crimson flowers.",
+   "v": "Новозеландская «рождественская ёлка» взрывается багряными цветками."
+  },
+  {
+   "k": "Drops its leaves and covers itself in scarlet bells.",
+   "v": "Сбрасывает листья и покрывается алыми колокольчиками."
+  },
+  {
+   "k": "Desert palm of oases, wearing a skirt of dead leaves.",
+   "v": "Пустынная пальма оазисов в юбке из засохших листьев."
+  },
+  {
+   "k": "Very tall grass of African savannas and river banks.",
+   "v": "Очень высокий злак африканских саванн и речных берегов."
+  },
+  {
+   "k": "Fine-leaved tussock grass of cool steppes and mountains.",
+   "v": "Тонколистный дерновинный злак прохладных степей и гор."
+  },
+  {
+   "k": "Shortgrass of the prairies with eyelash-like seed heads.",
+   "v": "Низкий злак прерий с колосьями, похожими на ресницы."
+  },
+  {
+   "k": "Tulips come from the steppes and mountains of Central Asia.",
+   "v": "Тюльпаны происходят из степей и гор Средней Азии."
+  },
+  {
+   "k": "Scarlet poppies of open, disturbed ground.",
+   "v": "Алые маки открытых нарушенных земель."
+  },
+  {
+   "k": "Spires of blue-purple pea flowers.",
+   "v": "Свечи сине-фиолетовых мотыльковых цветков."
+  },
+  {
+   "k": "Tall daisy of the American prairies whose heads follow the sun.",
+   "v": "Высокая сложноцветная американских прерий, соцветия которой следят за солнцем."
+  },
+  {
+   "k": "Fragrant grey shrub of dry Mediterranean hills.",
+   "v": "Душистый серый кустарник сухих средиземноморских холмов."
+  },
+  {
+   "k": "Deep blue trumpets of mountain meadows.",
+   "v": "Тёмно-синие трубы горных лугов."
+  },
+  {
+   "k": "Low shrub with blue-black berries in heaths and forests.",
+   "v": "Низкий кустарник с иссиня-чёрными ягодами в вересковых пустошах и лесах."
+  },
+  {
+   "k": "Knee-high birch of the tundra; a sign of cold ice-age climates.",
+   "v": "Тундровая берёза высотой по колено; признак холодного ледникового климата."
+  },
+  {
+   "k": "Tight cushion of tundra covered in pink flowers.",
+   "v": "Плотная тундровая подушка, усыпанная розовыми цветками."
+  },
+  {
+   "k": "Round, golden-spined cactus of Mexican deserts.",
+   "v": "Круглый кактус с золотистыми колючками из мексиканских пустынь."
+  },
+  {
+   "k": "Spiky rosette that flowers once, on a tall pole, then dies.",
+   "v": "Колючая розетка, которая цветёт один раз на высоком стебле, а затем умирает."
+  },
+  {
+   "k": "Branching tree yucca of the Mojave Desert.",
+   "v": "Ветвистая древовидная юкка пустыни Мохаве."
+  },
+  {
+   "k": "Bundle of thorny whips tipped with red flowers after rain.",
+   "v": "Пучок колючих плетей с красными цветками на концах после дождя."
+  },
+  {
+   "k": "Salt-tolerant shrub of desert rivers, clouded in pink flowers.",
+   "v": "Солеустойчивый кустарник пустынных рек в облаке розовых цветков."
+  },
+  {
+   "k": "Leafless, twisted shrub of the Central Asian deserts.",
+   "v": "Безлистный искривлённый кустарник пустынь Средней Азии."
+  },
+  {
+   "k": "Pairs of fat leaves that look like pebbles in the Namib sand.",
+   "v": "Пары толстых листьев, похожих на камешки в песках Намиба."
+  },
+  {
+   "k": "Iris with sword-like leaves and yellow flowers on pond edges.",
+   "v": "Ирис с мечевидными листьями и жёлтыми цветками по берегам прудов."
+  },
+  {
+   "k": "Floating Amazon plant with lilac flower spikes.",
+   "v": "Плавающее амазонское растение с сиреневыми соцветиями."
+  },
+  {
+   "k": "Carnivorous bog plant whose tall pitchers drown insects.",
+   "v": "Болотное хищное растение, в высоких кувшинах которого тонут насекомые."
+  },
+  {
+   "k": "Tropical vine with hanging pitchers that trap insects.",
+   "v": "Тропическая лиана с висячими кувшинами, ловящими насекомых."
+  },
+  {
+   "k": "Rosettes of the American tropics that hold pools of water in their leaves.",
+   "v": "Розетки американских тропиков, удерживающие в листьях лужицы воды."
+  },
+  {
+   "k": "Leafless parasite with the world's largest single flower, smelling of rotting meat.",
+   "v": "Безлистный паразит с самым крупным одиночным цветком в мире, пахнущим гниющим мясом."
+  },
+  {
+   "k": "Orange and blue flowers shaped like a bird's head.",
+   "v": "Оранжево-синие цветки в форме птичьей головы."
+  },
+  {
+   "k": "Tall spikes of purple bells at forest edges.",
+   "v": "Высокие кисти пурпурных колокольчиков на лесных опушках."
+  },
+  {
+   "k": "Long-leaved seagrass of tropical shallows, grazed by dugongs.",
+   "v": "Длиннолистная морская трава тропических мелководий, которую поедают дюгони."
+  },
+  {
+   "k": "Bright green seagrass of wave-beaten Pacific rocks.",
+   "v": "Ярко-зелёная морская трава омываемых прибоем тихоокеанских скал."
+  },
+  {
+   "k": "Chalky green alga shaped like a shaving brush.",
+   "v": "Известковая зелёная водоросль в форме помазка для бритья."
+  },
+  {
+   "k": "Green alga with a stiff, chalky fan on a stalk.",
+   "v": "Зелёная водоросль с жёстким известковым веером на ножке."
+  },
+  {
+   "k": "Kelp with a float the size of a fist at the end of a long whip-like stalk.",
+   "v": "Ламинариевая водоросль с поплавком размером с кулак на конце длинного хлыстовидного стволика."
+  },
+  {
+   "k": "Long, frilly-edged kelp of cold Atlantic coasts.",
+   "v": "Длинная ламинариевая водоросль с волнистыми краями холодных атлантических берегов."
+  },
+  {
+   "k": "Floating rosette with horned nuts.",
+   "v": "Плавающая розетка с рогатыми орехами."
+  },
+  {
+   "k": "Fast-growing waterweed with whorls of small leaves.",
+   "v": "Быстрорастущее водное растение с мутовками мелких листьев."
+  },
+  {
+   "k": "Water plant with fans of finely cut leaves.",
+   "v": "Водное растение с веерами тонкорассечённых листьев."
+  },
+  {
+   "k": "Buttercup of streams with white flowers on the surface.",
+   "v": "Лютик ручьёв с белыми цветками на поверхности воды."
+  },
+  {
+   "k": "An ink cap preserved in Miocene Dominican amber.",
+   "v": "Навозник, сохранившийся в миоценовом доминиканском янтаре."
+  },
+  {
+   "k": "Bright red brittlegill of pine woods.",
+   "v": "Ярко-красная сыроежка сосновых лесов."
+  },
+  {
+   "k": "Blue mushroom that bleeds blue milk when cut.",
+   "v": "Синий гриб, выделяющий на срезе синий млечный сок."
+  },
+  {
+   "k": "Black, trumpet-shaped mushroom of leaf litter.",
+   "v": "Чёрный трубовидный гриб лесной подстилки."
+  },
+  {
+   "k": "Japanese bonnet that glows green on rainy nights.",
+   "v": "Японская мицена, светящаяся зелёным в дождливые ночи."
+  },
+  {
+   "k": "Cold-loving cave mould that grows on the noses of hibernating bats.",
+   "v": "Холодолюбивая пещерная плесень, растущая на мордах зимующих летучих мышей."
+  },
+  {
+   "k": "Lichen that hangs from branches in grey-green tassels.",
+   "v": "Лишайник, свисающий с ветвей серо-зелёными кистями."
+  },
+  {
+   "k": "Yellow-green crusts on bare rock; grows so slowly it is used to date glacier retreat.",
+   "v": "Жёлто-зелёные корки на голых скалах; растёт так медленно, что по нему датируют отступание ледников."
+  },
+  {
+   "k": "Wild wheat of the Fertile Crescent, ancestor of the first farmed wheats.",
+   "v": "Дикая пшеница Плодородного полумесяца, предок первых культурных пшениц."
+  },
+  {
+   "k": "A new species born in an English salt marsh in the 1890s.",
+   "v": "Новый вид, возникший на английском солончаковом болоте в 1890-х годах."
+  },
+  {
+   "k": "Chalk-plated plankton whose blooms whiten the sea; it appeared about 270,000 years ago.",
+   "v": "Планктон с известковыми пластинками, цветение которого делает море белым; появился около 270 000 лет назад."
+  },
+  {
+   "k": "Microbial matground",
+   "v": "Микробные маты"
+  },
+  {
+   "k": "Revive ({0} EP)",
+   "v": "Возродить ({0} EP)"
+  },
+  {
+   "k": "All your groups of it are gone. You can bring one back to a habitat center of yours.",
+   "v": "Все ваши группы этого вида исчезли. Вы можете вернуть одну в один из ваших центров обитания."
+  },
+  {
+   "k": "No free tile for it on or near your habitat centers",
+   "v": "Нет свободной клетки для него у ваших центров обитания"
+  },
+  {
+   "k": "No free {0} on or near your habitat centers",
+   "v": "Нет свободного места ({0}) у ваших центров обитания"
+  },
+  {
+   "k": "The {0} is back (−{1} EP)",
+   "v": "{0} возвращается (−{1} EP)"
+  },
+  {
+   "k": "Nothing to bring back",
+   "v": "Нечего возвращать"
+  },
+  {
+   "k": "Couldn't place it",
+   "v": "Не удалось разместить"
+  },
+  {
+   "k": "Evolved",
+   "v": "Эволюционировал"
+  },
+  {
+   "k": "{0} → {1}",
+   "v": "{0} → {1}"
   }
  ]
 }

@@ -118,6 +118,9 @@ namespace NaturalHistory.World
             }
         }
 
+        // Extra actions this turn (a discovery's second wind, Progression/Discoveries)
+        public void GrantActions(int n) => ActionsLeft += Mathf.Max(0, n);
+
         // Whether it can still move `tiles` tiles / attack this turn
         public bool HasActions(int tiles = 1) => !Ordered || ActionsLeft >= tiles;
         public bool CanStrike => !Ordered || (AttacksLeft > 0 && ActionsLeft > 0);

@@ -142,6 +142,7 @@ namespace NaturalHistory.Progression
                 found.Add(g.Definition);
             }
             if (found.Count == 0) return;
+            if (Discoveries.Instance != null) return; // a discovery card and its reward instead (Discoveries)
             int ep = found.Count * DiscoveryReward;
             EvolutionPoints += ep;
             Changed?.Invoke();

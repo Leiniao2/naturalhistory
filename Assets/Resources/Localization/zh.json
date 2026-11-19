@@ -19205,6 +19205,14 @@
    "v": "本回合新出现：下回合起才能行动"
   },
   {
+   "k": "First encounter with the wild",
+   "v": "初遇野生族群"
+  },
+  {
+   "k": "Your animals meet a wild group for the first time: {0} ({1}). Others share this world with you.",
+   "v": "你的动物第一次遇到了野生族群：{0}（{1}）。这个世界并不只属于你。"
+  },
+  {
    "k": "Unexplored",
    "v": "未探索"
   },
@@ -19863,6 +19871,3086 @@
   {
    "k": "Ready",
    "v": "准备就绪"
+  },
+  {
+   "k": "Microbial mats",
+   "v": "微生物席"
+  },
+  {
+   "k": "Damp flats crusted with layers of microbes that trap sediment and build stromatolites: the oldest ecosystems on Earth, making oxygen for billions of years.",
+   "v": "潮湿的滩地上覆盖着层层微生物，它们捕获沉积物、筑起叠层石：这是地球上最古老的生态系统，数十亿年来一直在制造氧气。"
+  },
+  {
+   "k": "Mosses, liverworts and the first small vascular plants: the green film that first covered the land and began to make soil.",
+   "v": "苔藓、地钱和最早的小型维管植物：这层绿膜最先覆盖了陆地，并开始形成土壤。"
+  },
+  {
+   "k": "Open country covered in ferns and horsetails, the meadows of the world long before grasses evolved.",
+   "v": "长满蕨类和木贼的开阔原野，早在禾草演化出来之前，它们就是世界的草地。"
+  },
+  {
+   "k": "Warm, wet forest with layer upon layer of life: the richest habitat on land, home to most land species.",
+   "v": "温暖湿润的森林，生命层层叠叠：陆地上最丰富的栖息地，大多数陆生物种的家园。"
+  },
+  {
+   "k": "Dry country where little rain falls: its life saves water, shelters by day and comes out at night.",
+   "v": "少雨的干旱之地：这里的生命节约水分，白天躲藏，夜间出没。"
+  },
+  {
+   "k": "Swamps and marshes between land and water, where many of the first land animals and plants took hold.",
+   "v": "介于陆地与水域之间的沼泽和湿地，许多最早的陆生动植物在这里站稳了脚跟。"
+  },
+  {
+   "k": "Warm grassland dotted with trees, grazed by great herds and hunted by their predators.",
+   "v": "点缀着树木的温暖草原，有庞大的兽群在此吃草，也有捕食它们的猎手。"
+  },
+  {
+   "k": "Cool, dry grassland stretching to the horizon, where speed and endurance pay.",
+   "v": "凉爽干燥的草原一直延伸到天边，在这里速度与耐力最有回报。"
+  },
+  {
+   "k": "Cold treeless land frozen for much of the year, with a brief, busy summer.",
+   "v": "寒冷无树的土地，一年中大部分时间冰封，只有短暂而繁忙的夏季。"
+  },
+  {
+   "k": "A dome of ice kilometres thick; little lives on it, but its cold edges feed rich seas.",
+   "v": "厚达数千米的冰穹；冰上几乎没有生命，但它寒冷的边缘滋养着富饶的海洋。"
+  },
+  {
+   "k": "Reef",
+   "v": "礁"
+  },
+  {
+   "k": "Built by living things over countless generations: stromatolites, sponges, then corals. Reefs shelter a crowd of sea life.",
+   "v": "由生物历经无数代建造而成：先是叠层石，再是海绵，然后是珊瑚。礁为大量海洋生物提供庇护。"
+  },
+  {
+   "k": "Oasis",
+   "v": "绿洲"
+  },
+  {
+   "k": "Water in the desert: a pond fed from underground, a refuge every desert animal knows.",
+   "v": "沙漠中的水源：由地下水补给的水塘，每一种沙漠动物都熟知的避难所。"
+  },
+  {
+   "k": "Volcano",
+   "v": "火山"
+  },
+  {
+   "k": "Molten rock breaking through the crust; its ash and lava destroy, then make some of the most fertile ground there is.",
+   "v": "熔岩冲破地壳；它的火山灰和熔岩先带来毁灭，随后又造就世上最肥沃的土地之一。"
+  },
+  {
+   "k": "Hot springs, geysers and steaming vents where heat-loving microbes paint the ground in bright colours.",
+   "v": "温泉、间歇泉和蒸汽喷孔，喜热的微生物在这里把地面染成鲜艳的色彩。"
+  },
+  {
+   "k": "A flat-topped table of layered rock left standing as the land around it wore away.",
+   "v": "一座由层状岩石构成的平顶台地，周围的土地被侵蚀殆尽后，它依然屹立。"
+  },
+  {
+   "k": "A deep gorge cut by a river through layer after layer of rock, a record of millions of years.",
+   "v": "河流切穿一层又一层岩石形成的深谷，记录着数百万年的历史。"
+  },
+  {
+   "k": "Chalk cliffs made of the skeletons of countless tiny sea algae that lived in Cretaceous seas.",
+   "v": "由白垩构成的悬崖，由生活在白垩纪海洋中的无数微小海藻的骨骼堆积而成。"
+  },
+  {
+   "k": "A lake with no outlet, where the water evaporates and leaves a white crust of salt.",
+   "v": "没有出口的湖泊，湖水蒸发后留下一层白色的盐壳。"
+  },
+  {
+   "k": "A salt lake coloured pink by salt-loving microbes and algae thriving where little else can.",
+   "v": "被嗜盐微生物和藻类染成粉色的盐湖，它们在别的生物难以生存的地方繁盛生长。"
+  },
+  {
+   "k": "Hills of red sandstone striped in many colours, laid down in ancient deserts and lakes.",
+   "v": "条纹斑斓的红色砂岩山丘，形成于远古的沙漠和湖泊之中。"
+  },
+  {
+   "k": "Limestone towers and caves dissolved by rain over millions of years, full of hidden waters.",
+   "v": "雨水历经数百万年溶蚀而成的石灰岩峰林与洞穴，其中藏着隐秘的水源。"
+  },
+  {
+   "k": "Jungle",
+   "v": "丛林"
+  },
+  {
+   "k": "A dense tropical canopy so thick that little light reaches the ground.",
+   "v": "茂密的热带林冠，浓密得几乎没有阳光能照到地面。"
+  },
+  {
+   "k": "Broadleaf forest",
+   "v": "阔叶林"
+  },
+  {
+   "k": "A forest of leafy trees that shade and feed a great web of life beneath them.",
+   "v": "由阔叶树组成的森林，为树下庞大的生命网络遮荫并提供食物。"
+  },
+  {
+   "k": "Conifer forest",
+   "v": "针叶林"
+  },
+  {
+   "k": "Evergreen cone-bearing trees, the oldest kind of forest still standing today.",
+   "v": "常绿的球果类树木，是如今仍然屹立的最古老的森林类型。"
+  },
+  {
+   "k": "Underwater volcano",
+   "v": "海底火山"
+  },
+  {
+   "k": "A seamount rising from the sea floor; its slopes gather sea life and its eruptions remake the sea bed.",
+   "v": "从海底升起的海山；它的山坡汇聚海洋生物，它的喷发重塑海床。"
+  },
+  {
+   "k": "Hydrothermal vents",
+   "v": "热液喷口"
+  },
+  {
+   "k": "Black smokers pouring out hot, mineral-rich water: in the dark, whole communities live on chemical energy instead of sunlight, perhaps as the first life did.",
+   "v": "黑烟囱喷涌出炽热、富含矿物的水：在黑暗中，整个群落依靠化学能而非阳光生存，也许最早的生命正是如此。"
+  },
+  {
+   "k": "Shallow hydrothermal field",
+   "v": "浅海热液区"
+  },
+  {
+   "k": "White smokers, gas seeps and sulphur on a shallow sea floor, covered in bacterial mats.",
+   "v": "浅海海底的白烟囱、气体渗漏和硫磺，覆盖着细菌席。"
+  },
+  {
+   "k": "Stromatolite sea floor",
+   "v": "叠层石海底"
+  },
+  {
+   "k": "Domes and mounds built layer by layer by microbial mats, the first reefs and for most of Earth's history its most common sign of life.",
+   "v": "由微生物席一层层筑起的穹丘和土丘，它们是最早的礁，也是地球历史大部分时间里最常见的生命迹象。"
+  },
+  {
+   "k": "Your {0} gains {1} for free",
+   "v": "你的{0}免费获得{1}"
+  },
+  {
+   "k": "{0} group of yours nearby is healed",
+   "v": "附近你的{0}个群体得到治疗"
+  },
+  {
+   "k": "{0} groups of yours nearby are healed",
+   "v": "附近你的{0}个群体得到治疗"
+  },
+  {
+   "k": "A group of {0} joins you",
+   "v": "一群{0}加入了你"
+  },
+  {
+   "k": "A feast: your {0} raises young for free",
+   "v": "饱餐一顿：你的{0}免费繁育后代"
+  },
+  {
+   "k": "A second wind: every group of yours gets an extra action this turn",
+   "v": "重振旗鼓：你的每个群体本回合都获得一次额外行动"
+  },
+  {
+   "k": "Fertile ground: your groups nearby can reproduce again at once",
+   "v": "沃土：你附近的群体可以立即再次繁殖"
+  },
+  {
+   "k": "New animal discovered",
+   "v": "发现新动物"
+  },
+  {
+   "k": "New plant discovered",
+   "v": "发现新植物"
+  },
+  {
+   "k": "New landscape discovered",
+   "v": "发现新景观"
+  },
+  {
+   "k": "Reward: {0}",
+   "v": "奖励：{0}"
+  },
+  {
+   "k": "OK",
+   "v": "确定"
+  },
+  {
+   "k": "Flat green lobes on damp ground: among the very first land plants.",
+   "v": "潮湿地面上扁平的绿色裂片：最早的陆地植物之一。"
+  },
+  {
+   "k": "Known only from their spores; tiny moss-like crusts.",
+   "v": "仅凭孢子为人所知；是微小的苔藓状结壳。"
+  },
+  {
+   "k": "Flat thalli sprouting horn-shaped spore capsules.",
+   "v": "扁平的叶状体上长出角状的孢蒴。"
+  },
+  {
+   "k": "The first known vascular plant: forked stems a few centimetres tall.",
+   "v": "已知最早的维管植物：二叉分枝的茎，仅高几厘米。"
+  },
+  {
+   "k": "An early clubmoss with leafy stems.",
+   "v": "一种具多叶茎的早期石松类植物。"
+  },
+  {
+   "k": "Cushions of moss on damp ground and rocks.",
+   "v": "潮湿地面和岩石上的垫状苔藓。"
+  },
+  {
+   "k": "Leafless forked stems from the Rhynie chert hot springs.",
+   "v": "来自莱尼燧石层古温泉的无叶二叉分枝茎。"
+  },
+  {
+   "k": "Rhynie chert plant with water-conducting tissue but no leaves.",
+   "v": "莱尼燧石层植物，具输水组织但没有叶。"
+  },
+  {
+   "k": "Clumps of stems with spore sacs along the sides.",
+   "v": "丛生的茎，侧面着生孢子囊。"
+  },
+  {
+   "k": "Branching stems up to half a metre: forerunner of ferns and seed plants.",
+   "v": "分枝的茎高达半米：蕨类和种子植物的先驱。"
+  },
+  {
+   "k": "Leafy clubmoss of the Rhynie chert.",
+   "v": "莱尼燧石层中具叶的石松类植物。"
+  },
+  {
+   "k": "Creeping clubmoss with spiny leaves.",
+   "v": "具刺状叶的匍匐石松类植物。"
+  },
+  {
+   "k": "Herbaceous clubmoss with forked leaves.",
+   "v": "叶片分叉的草本石松类植物。"
+  },
+  {
+   "k": "Upright, much-branched stems nearly a metre tall.",
+   "v": "直立、多分枝的茎，高近一米。"
+  },
+  {
+   "k": "Shrubby progymnosperm.",
+   "v": "灌木状的前裸子植物。"
+  },
+  {
+   "k": "The oldest known seed plant.",
+   "v": "已知最古老的种子植物。"
+  },
+  {
+   "k": "The first modern-looking tree, forming the first forests.",
+   "v": "第一种外形近似现代树木的植物，形成了最早的森林。"
+  },
+  {
+   "k": "The earliest known tree: a pole with a crown of branches, Gilboa forest.",
+   "v": "已知最早的树：一根树干顶着一丛枝条，见于吉尔博阿森林。"
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches.",
+   "v": "树冠由指状枝条组成的小乔木。"
+  },
+  {
+   "k": "A small early scale tree.",
+   "v": "一种小型的早期鳞木类。"
+  },
+  {
+   "k": "Giant club moss up to 40 m; its trunks became coal.",
+   "v": "高达40米的巨型石松，其树干后来变成了煤。"
+  },
+  {
+   "k": "Scale tree with a dense, drooping crown.",
+   "v": "树冠浓密下垂的鳞木类。"
+  },
+  {
+   "k": "Ribbed lycopsid trunk topped by tufts of grassy leaves.",
+   "v": "有纵棱的石松类树干，顶端生有簇簇草状叶。"
+  },
+  {
+   "k": "Tree-sized horsetail growing in thickets along rivers.",
+   "v": "乔木大小的木贼类，在河岸边形成密丛。"
+  },
+  {
+   "k": "Marattialean tree fern with a trunk wrapped in roots.",
+   "v": "合囊蕨目树蕨，树干外包裹着根。"
+  },
+  {
+   "k": "Seed fern tree with huge fronds and seeds the size of eggs.",
+   "v": "种子蕨乔木，具巨大的叶和鸡蛋大小的种子。"
+  },
+  {
+   "k": "Tall tree with strap-shaped leaves, related to conifers.",
+   "v": "具带状叶的高大乔木，与松柏类有亲缘关系。"
+  },
+  {
+   "k": "One of the first conifers, like a small Norfolk pine.",
+   "v": "最早的松柏类之一，形似小型的异叶南洋杉。"
+  },
+  {
+   "k": "Seed fern whose tongue-shaped leaflets are common coal-ball fossils.",
+   "v": "种子蕨，其舌形小羽片是煤核中常见的化石。"
+  },
+  {
+   "k": "Fern-like seed plant of the coal forests.",
+   "v": "煤炭森林中形似蕨类的种子植物。"
+  },
+  {
+   "k": "Scrambling horsetail with wedge-shaped leaves in whorls.",
+   "v": "蔓生的木贼类，楔形叶轮生。"
+  },
+  {
+   "k": "Small early fern, often growing on other plants.",
+   "v": "小型早期蕨类，常附生于其他植物上。"
+  },
+  {
+   "k": "Low clubmoss lineage that survives today.",
+   "v": "延续至今的低矮石松类谱系。"
+  },
+  {
+   "k": "Evergreen creeping clubmoss.",
+   "v": "常绿匍匐的石松。"
+  },
+  {
+   "k": "Tongue-leaved tree of Gondwana; its spread helped prove continental drift.",
+   "v": "冈瓦纳大陆的舌叶乔木；它的分布帮助证明了大陆漂移。"
+  },
+  {
+   "k": "Early glossopterid of the cold southern lowlands.",
+   "v": "南方寒冷低地的早期舌羊齿类。"
+  },
+  {
+   "k": "Climbing seed plant with broad, net-veined leaves, in tropical Cathaysia.",
+   "v": "攀援的种子植物，具宽阔的网状脉叶，生长于热带华夏古陆。"
+  },
+  {
+   "k": "Conifer of the dry Zechstein coasts.",
+   "v": "干燥的蔡希斯坦海沿岸的松柏类。"
+  },
+  {
+   "k": "Conifer of the Permian and Triassic.",
+   "v": "二叠纪和三叠纪的松柏类。"
+  },
+  {
+   "k": "Strap-leaved plant related to the cycads.",
+   "v": "与苏铁类有亲缘关系的带状叶植物。"
+  },
+  {
+   "k": "Horsetails as thick as a wrist, lining Triassic rivers.",
+   "v": "粗如手腕的木贼，排列在三叠纪的河岸边。"
+  },
+  {
+   "k": "Royal ferns have barely changed in 200 million years.",
+   "v": "紫萁类在2亿年间几乎没有变化。"
+  },
+  {
+   "k": "Early Permian walchian conifer.",
+   "v": "早二叠世的瓦契杉类松柏。"
+  },
+  {
+   "k": "Seed fern tree that dominated southern Triassic forests.",
+   "v": "主宰三叠纪南方森林的种子蕨乔木。"
+  },
+  {
+   "k": "The great logs of the Petrified Forest, Arizona.",
+   "v": "亚利桑那州石化林中的巨大原木。"
+  },
+  {
+   "k": "Unbranched lycopsid that spread over the world after the end-Permian extinction.",
+   "v": "不分枝的石松类，在二叠纪末大灭绝后遍布全球。"
+  },
+  {
+   "k": "Triassic horsetail of river banks.",
+   "v": "三叠纪河岸边的木贼类。"
+  },
+  {
+   "k": "One of the earliest true cycads.",
+   "v": "最早的真正苏铁之一。"
+  },
+  {
+   "k": "Ginkgo relative with deeply divided leaves.",
+   "v": "叶片深裂的银杏类近亲。"
+  },
+  {
+   "k": "Common Mesozoic fern foliage.",
+   "v": "中生代常见的蕨类叶化石。"
+  },
+  {
+   "k": "Gondwanan horsetail with split leaf sheaths.",
+   "v": "叶鞘开裂的冈瓦纳木贼类。"
+  },
+  {
+   "k": "Peltasperm seed fern.",
+   "v": "盾籽目种子蕨。"
+  },
+  {
+   "k": "Strap-leaved Triassic conifer of dry ground.",
+   "v": "生于干燥地带、具带状叶的三叠纪松柏类。"
+  },
+  {
+   "k": "Jurassic monkey-puzzle tree, fossilised cones from Cerro Cuadrado.",
+   "v": "侏罗纪的智利南洋杉类，石化球果出自塞罗夸德拉多。"
+  },
+  {
+   "k": "Scale-leaved conifer of dry Mesozoic coasts.",
+   "v": "中生代干燥海岸上的鳞叶松柏类。"
+  },
+  {
+   "k": "Conifer with stiff, awl-shaped leaves.",
+   "v": "具坚硬钻形叶的松柏类。"
+  },
+  {
+   "k": "Ginkgo with lobed fan leaves.",
+   "v": "具分裂扇形叶的银杏。"
+  },
+  {
+   "k": "Deciduous ginkgo relative of cool, wet forests.",
+   "v": "生于凉爽潮湿森林中的落叶性银杏类近亲。"
+  },
+  {
+   "k": "Conifer with broad, flat leaves.",
+   "v": "具宽阔扁平叶的松柏类。"
+  },
+  {
+   "k": "Soft tree ferns, alive today in Australia and New Zealand.",
+   "v": "柔软的树蕨，至今仍生长于澳大利亚和新西兰。"
+  },
+  {
+   "k": "Bennettitalean with flower-like cones.",
+   "v": "具花状球穗的本内苏铁类。"
+  },
+  {
+   "k": "Squat, barrel-trunked bennettitalean.",
+   "v": "矮壮、树干呈桶状的本内苏铁类。"
+  },
+  {
+   "k": "Umbrella-fronded fern; a Jurassic fern-prairie dominant.",
+   "v": "叶呈伞状的蕨类；侏罗纪蕨类草原的优势植物。"
+  },
+  {
+   "k": "Fern of the Jurassic understory; the 'giant ferns' of dinosaur country.",
+   "v": "侏罗纪林下层的蕨类；恐龙世界中的“巨蕨”。"
+  },
+  {
+   "k": "Living horsetails; their kind has been around since the Jurassic.",
+   "v": "现生的木贼；它们这一类自侏罗纪起就已存在。"
+  },
+  {
+   "k": "Palm-like cycads, a group older than the dinosaurs.",
+   "v": "形似棕榈的苏铁，这一类群比恐龙还要古老。"
+  },
+  {
+   "k": "A living fossil, now only in Japan.",
+   "v": "一种活化石，如今仅分布于日本。"
+  },
+  {
+   "k": "One of the oldest flowering plants, a water plant from Liaoning.",
+   "v": "最古老的开花植物之一，一种来自辽宁的水生植物。"
+  },
+  {
+   "k": "An early aquatic flowering plant from Spain.",
+   "v": "来自西班牙的一种早期水生开花植物。"
+  },
+  {
+   "k": "Water lilies are among the oldest flowering plant lineages.",
+   "v": "睡莲是最古老的开花植物谱系之一。"
+  },
+  {
+   "k": "Magnolias were pollinated by beetles before bees existed.",
+   "v": "早在蜜蜂出现之前，木兰就已由甲虫传粉。"
+  },
+  {
+   "k": "Plane trees along Cretaceous rivers.",
+   "v": "白垩纪河岸边的悬铃木。"
+  },
+  {
+   "k": "Laurel-family tree with mitten-shaped leaves.",
+   "v": "樟科乔木，叶形如连指手套。"
+  },
+  {
+   "k": "Tall magnolia relative with tulip-like flowers.",
+   "v": "高大的木兰类近亲，花形似郁金香。"
+  },
+  {
+   "k": "Redwoods: the tallest trees on Earth.",
+   "v": "红杉：地球上最高的树。"
+  },
+  {
+   "k": "Deciduous redwood; once covered the Arctic, now wild only in China.",
+   "v": "落叶性的红杉类；曾覆盖北极地区，如今野生种仅见于中国。"
+  },
+  {
+   "k": "Drought-hardy, jointed conifer of dry coasts.",
+   "v": "干燥海岸上耐旱、具节的松柏类。"
+  },
+  {
+   "k": "Tough fern of Cretaceous coastal flats.",
+   "v": "白垩纪海岸平地上坚韧的蕨类。"
+  },
+  {
+   "k": "False tree fern: its 'trunk' was a mass of stems and roots.",
+   "v": "假树蕨：它的“树干”是一团茎和根。"
+  },
+  {
+   "k": "Fan palms appear late in the Cretaceous.",
+   "v": "扇叶棕榈出现于白垩纪晚期。"
+  },
+  {
+   "k": "Mangrove palm; Eocene London was full of them.",
+   "v": "红树林棕榈；始新世的伦敦遍布这种植物。"
+  },
+  {
+   "k": "Small herbs among the first flowering plants.",
+   "v": "最早的开花植物中的小型草本。"
+  },
+  {
+   "k": "Swamp conifer with 'knees' poking out of the water.",
+   "v": "沼泽中的松柏类，“膝根”从水中探出。"
+  },
+  {
+   "k": "Oaks spread across the northern continents.",
+   "v": "栎树遍布北方各大陆。"
+  },
+  {
+   "k": "Smooth-barked trees of shady forests.",
+   "v": "阴凉森林中树皮光滑的乔木。"
+  },
+  {
+   "k": "Maples, with winged seeds.",
+   "v": "枫树，具有带翅的种子。"
+  },
+  {
+   "k": "Evergreen laurel forests of the warm Eocene.",
+   "v": "温暖始新世的常绿月桂林。"
+  },
+  {
+   "k": "Alders grow with their roots in wet ground.",
+   "v": "桤木的根扎在潮湿的土地中。"
+  },
+  {
+   "k": "Figs and their wasps have evolved together for 60 million years.",
+   "v": "榕属植物与其传粉榕小蜂已协同演化了6000万年。"
+  },
+  {
+   "k": "Mangroves stand on stilt roots in salt water.",
+   "v": "红树以支柱根立于咸水之中。"
+  },
+  {
+   "k": "The last ginkgo: a living fossil.",
+   "v": "最后的银杏：一种活化石。"
+  },
+  {
+   "k": "Grasses existed but didn't form grasslands until the Neogene.",
+   "v": "禾草早已存在，但直到新近纪才形成草原。"
+  },
+  {
+   "k": "Beeches of the southern continents, from Antarctica to Patagonia.",
+   "v": "南方大陆的山毛榉类，从南极洲一直分布到巴塔哥尼亚。"
+  },
+  {
+   "k": "Laurel-family tree of warm forests.",
+   "v": "温暖森林中的樟科乔木。"
+  },
+  {
+   "k": "Pines: hardy conifers of poor soils and cold.",
+   "v": "松树：耐寒、耐贫瘠土壤的松柏类。"
+  },
+  {
+   "k": "The dark spruces of the boreal forest.",
+   "v": "北方针叶林中深色的云杉。"
+  },
+  {
+   "k": "A conifer that drops its needles in winter.",
+   "v": "一种冬季落叶的松柏类。"
+  },
+  {
+   "k": "Firs of cool mountain forests.",
+   "v": "凉爽山地森林中的冷杉。"
+  },
+  {
+   "k": "White-barked birches, first trees back after the ice.",
+   "v": "白色树皮的桦树，冰期后最先重返的树木。"
+  },
+  {
+   "k": "Gum trees: fire-adapted Australian forests.",
+   "v": "桉树：适应火灾的澳大利亚森林。"
+  },
+  {
+   "k": "Flat-topped thorn trees of the savanna.",
+   "v": "稀树草原上树冠平顶的有刺乔木。"
+  },
+  {
+   "k": "Swollen trunks store water through the dry season.",
+   "v": "膨大的树干在旱季储存水分。"
+  },
+  {
+   "k": "Emergent giant towering over the rainforest canopy.",
+   "v": "高耸于雨林冠层之上的露生巨树。"
+  },
+  {
+   "k": "Tall trees of Southeast Asian rainforests.",
+   "v": "东南亚雨林中的高大乔木。"
+  },
+  {
+   "k": "Giant grasses that grow a metre a day.",
+   "v": "一天能长一米的巨型禾草。"
+  },
+  {
+   "k": "Palm of desert oases.",
+   "v": "沙漠绿洲中的棕榈。"
+  },
+  {
+   "k": "Its floating nuts spread it to tropical shores worldwide.",
+   "v": "它能漂浮的果实将其传播到世界各地的热带海岸。"
+  },
+  {
+   "k": "C4 grass of the African and Australian savannas.",
+   "v": "非洲和澳大利亚稀树草原上的C4禾草。"
+  },
+  {
+   "k": "Feathery grass of the Eurasian steppe.",
+   "v": "欧亚草原上羽毛状的禾草。"
+  },
+  {
+   "k": "Temperate meadow grasses.",
+   "v": "温带草甸中的禾草。"
+  },
+  {
+   "k": "Tall grass of the North American prairie.",
+   "v": "北美高草草原上的高大禾草。"
+  },
+  {
+   "k": "Spiny hummock grass of Australia's deserts.",
+   "v": "澳大利亚沙漠中多刺的丘状禾草。"
+  },
+  {
+   "k": "Grasses and sedges of the Ice Age mammoth steppe.",
+   "v": "冰期猛犸草原上的禾草和莎草。"
+  },
+  {
+   "k": "Silvery, aromatic shrubs of dry plains.",
+   "v": "干燥平原上银白色、有香气的灌木。"
+  },
+  {
+   "k": "Purple-flowering heath of acid moorland.",
+   "v": "酸性荒原上开紫花的石南。"
+  },
+  {
+   "k": "Desert shrub; some clones are over 10,000 years old.",
+   "v": "沙漠灌木；有些克隆体已超过一万岁。"
+  },
+  {
+   "k": "Giant columnar cactus of the Sonoran Desert.",
+   "v": "索诺拉沙漠中巨大的柱状仙人掌。"
+  },
+  {
+   "k": "Cactus with flat, padded stems.",
+   "v": "具扁平肉质茎节的仙人掌。"
+  },
+  {
+   "k": "Two strap leaves that grow for over a thousand years, Namib Desert.",
+   "v": "两片带状叶能生长一千多年，见于纳米布沙漠。"
+  },
+  {
+   "k": "African succulent that looks like a cactus.",
+   "v": "外形像仙人掌的非洲多肉植物。"
+  },
+  {
+   "k": "Tundra flower that gave its name to the Younger Dryas cold snap.",
+   "v": "苔原上的花，新仙女木期寒潮即以它命名。"
+  },
+  {
+   "k": "A willow that grows only a few centimetres tall.",
+   "v": "一种只长几厘米高的柳树。"
+  },
+  {
+   "k": "Sedge with cotton-white seed heads.",
+   "v": "果穗如棉花般洁白的莎草。"
+  },
+  {
+   "k": "One of the northernmost flowering plants.",
+   "v": "分布最靠北的开花植物之一。"
+  },
+  {
+   "k": "Builds peat bogs that store vast amounts of carbon.",
+   "v": "形成储存大量碳的泥炭沼泽。"
+  },
+  {
+   "k": "Tall reed beds of marshes and lakes.",
+   "v": "沼泽和湖泊中高大的芦苇丛。"
+  },
+  {
+   "k": "Sedge of the Nile, made into the first paper.",
+   "v": "尼罗河的莎草，被制成最早的纸。"
+  },
+  {
+   "k": "Bulrushes with brown, sausage-shaped flower spikes.",
+   "v": "具褐色香肠状花穗的香蒲。"
+  },
+  {
+   "k": "Lobster-claw flowers pollinated by hummingbirds.",
+   "v": "龙虾爪般的花，由蜂鸟传粉。"
+  },
+  {
+   "k": "Fern rosettes of the rainforest floor and branches.",
+   "v": "雨林地面和枝干上莲座状的蕨类。"
+  },
+  {
+   "k": "Daisies, clovers and their kin in the grass.",
+   "v": "草丛中的雏菊、三叶草及其近亲。"
+  },
+  {
+   "k": "Succulent rosettes of African dry lands.",
+   "v": "非洲干旱地区莲座状的多肉植物。"
+  },
+  {
+   "k": "Fire-adapted fynbos shrub; Proteaceae date back to Gondwana.",
+   "v": "适应火灾的凡波斯灌木；山龙眼科可追溯到冈瓦纳时代。"
+  },
+  {
+   "k": "Australian shrub with bottlebrush flower spikes.",
+   "v": "花穗如瓶刷的澳大利亚灌木。"
+  },
+  {
+   "k": "Evergreen shrub of forest edges.",
+   "v": "森林边缘的常绿灌木。"
+  },
+  {
+   "k": "Flowering shrubs of mountain slopes.",
+   "v": "山坡上开花的灌木。"
+  },
+  {
+   "k": "Turf of green seaweed on sunlit seabed; land plants descend from green algae.",
+   "v": "阳光照耀的海底上成片的绿色海藻；陆地植物起源于绿藻。"
+  },
+  {
+   "k": "Red seaweeds, among the oldest complex algae.",
+   "v": "红色海藻，最古老的复杂藻类之一。"
+  },
+  {
+   "k": "Tough microbial mats that carpeted the Ediacaran seafloor, wrinkled like elephant skin; the first grazers and burrowers broke them up in the Cambrian.",
+   "v": "坚韧的微生物席覆盖着埃迪卡拉纪的海底，皱纹如象皮；寒武纪时，最早的啃食者和掘穴动物将其破坏。"
+  },
+  {
+   "k": "Layered mounds built by cyanobacteria; rare today, as at Shark Bay.",
+   "v": "由蓝细菌建造的层状丘；如今已很罕见，鲨鱼湾即为一例。"
+  },
+  {
+   "k": "Bushy calcified microbes that built Cambrian reefs with archaeocyathids.",
+   "v": "灌丛状的钙化微生物，与古杯类一起建造了寒武纪的礁。"
+  },
+  {
+   "k": "Little umbrella-shaped green algae of warm lagoons.",
+   "v": "温暖潟湖中小伞状的绿藻。"
+  },
+  {
+   "k": "The 'sunflower coral': a disc-shaped calcareous alga.",
+   "v": "“向日葵珊瑚”：一种盘状的钙质藻类。"
+  },
+  {
+   "k": "Calcified red alga that helped build Paleozoic reefs.",
+   "v": "帮助建造古生代礁体的钙化红藻。"
+  },
+  {
+   "k": "Calcified green algae whose fragments make carbonate sand.",
+   "v": "钙化绿藻，其碎片构成碳酸盐砂。"
+  },
+  {
+   "k": "Potato-chip-shaped algae that formed Late Paleozoic mounds.",
+   "v": "形如薯片的藻类，在晚古生代形成了藻丘。"
+  },
+  {
+   "k": "Segmented green alga; its plates pile up into sand banks.",
+   "v": "分节的绿藻；其钙质片堆积成沙洲。"
+  },
+  {
+   "k": "A creeping seaweed that is a single giant cell.",
+   "v": "一种匍匐生长的海藻，整体只是一个巨大的细胞。"
+  },
+  {
+   "k": "Pink, rock-hard crusts that cement coral reefs together.",
+   "v": "粉红色、坚硬如石的壳状藻，将珊瑚礁胶结在一起。"
+  },
+  {
+   "k": "One of the first flowering plants to return to the sea.",
+   "v": "最早重返海洋的开花植物之一。"
+  },
+  {
+   "k": "Mediterranean seagrass; some meadows are thousands of years old.",
+   "v": "地中海的海草；有些海草床已有数千年历史。"
+  },
+  {
+   "k": "Seagrass meadows of cool coasts, nurseries for fish.",
+   "v": "凉爽海岸的海草床，是鱼类的育幼场。"
+  },
+  {
+   "k": "Tropical seagrass grazed by turtles and manatees.",
+   "v": "被海龟和海牛啃食的热带海草。"
+  },
+  {
+   "k": "Small seagrass, food of dugongs.",
+   "v": "小型海草，儒艮的食物。"
+  },
+  {
+   "k": "Brown seaweed with air bladders; rafts of it float in the Sargasso Sea.",
+   "v": "具气囊的褐藻；成片的漂浮藻筏见于马尾藻海。"
+  },
+  {
+   "k": "Kelp forests up to 50 m tall along cool coasts.",
+   "v": "凉爽海岸边高达50米的海藻林。"
+  },
+  {
+   "k": "Kelp with broad, strap-like blades.",
+   "v": "具宽阔带状叶片的海带。"
+  },
+  {
+   "k": "Rockweed of the tidal shore, buoyed by air bladders.",
+   "v": "潮间带岩岸上的岩藻，靠气囊漂浮。"
+  },
+  {
+   "k": "Films and tufts of simple green algae in lakes and ponds, long before any plant reached land.",
+   "v": "湖泊和池塘中由简单绿藻形成的薄膜和簇丛，远早于任何植物登上陆地。"
+  },
+  {
+   "k": "Slimy green threads in still fresh water; zygnematophyte algae like it leave no sure fossils before the late Palaeozoic.",
+   "v": "静止淡水中黏滑的绿色丝状体；像它这样的双星藻类在晚古生代之前没有留下确切的化石。"
+  },
+  {
+   "k": "Whorled charophytes, the closest algal relatives of land plants.",
+   "v": "轮生的轮藻类，是陆地植物亲缘关系最近的藻类。"
+  },
+  {
+   "k": "A stonewort from the Rhynie chert hot springs.",
+   "v": "来自莱尼燧石层古温泉的轮藻。"
+  },
+  {
+   "k": "Delicate, translucent stonewort.",
+   "v": "纤细、半透明的轮藻。"
+  },
+  {
+   "k": "Underwater clubmoss, the last relative of the giant scale trees.",
+   "v": "水下的石松类，是巨型鳞木最后的亲属。"
+  },
+  {
+   "k": "Rooted water plant with floating leaves.",
+   "v": "具浮水叶的有根水生植物。"
+  },
+  {
+   "k": "Ribbon-leaved underwater meadows of rivers and lakes.",
+   "v": "河流和湖泊中由带状叶组成的水下草甸。"
+  },
+  {
+   "k": "Bushy waterweed of ponds.",
+   "v": "池塘中茂密的水草。"
+  },
+  {
+   "k": "The oldest known fungal threads, spreading through Ordovician soils.",
+   "v": "已知最古老的真菌菌丝，蔓延于奥陶纪的土壤中。"
+  },
+  {
+   "k": "Root partners of nearly all land plants, trading minerals for sugar.",
+   "v": "几乎所有陆地植物的根部伙伴，用矿物质换取糖分。"
+  },
+  {
+   "k": "Giant fungal trunks up to 8 m tall, the largest living things on land.",
+   "v": "高达8米的巨型真菌“树干”，是当时陆地上最大的生物。"
+  },
+  {
+   "k": "Fungi preserved inside the Rhynie chert plants.",
+   "v": "保存在莱尼燧石层植物体内的真菌。"
+  },
+  {
+   "k": "The earliest known lichen: a fungus farming algae.",
+   "v": "已知最早的地衣：一种“养殖”藻类的真菌。"
+  },
+  {
+   "k": "An early sac fungus with flask-shaped fruiting bodies.",
+   "v": "具瓶状子实体的早期子囊菌。"
+  },
+  {
+   "k": "Coal-forest fungus with clamp connections, an early mushroom relative.",
+   "v": "煤炭森林中具锁状联合的真菌，是蘑菇的早期亲属。"
+  },
+  {
+   "k": "Small round fruiting bodies from the coal swamps.",
+   "v": "来自煤炭沼泽的小型圆形子实体。"
+  },
+  {
+   "k": "The fungal spike of the great Permian extinction, rotting dead forests.",
+   "v": "二叠纪大灭绝时期的“真菌高峰”，分解着死去的森林。"
+  },
+  {
+   "k": "White-rot fungi breaking down fallen conifer logs.",
+   "v": "分解倒伏松柏原木的白腐真菌。"
+  },
+  {
+   "k": "An early bracket fungus on Jurassic araucarias.",
+   "v": "生长在侏罗纪南洋杉上的早期多孔菌。"
+  },
+  {
+   "k": "White moulds living on guano and debris in dark caves.",
+   "v": "生活在黑暗洞穴中鸟粪和碎屑上的白色霉菌。"
+  },
+  {
+   "k": "The oldest gilled mushroom known, from Brazil.",
+   "v": "已知最古老的有褶菌，来自巴西。"
+  },
+  {
+   "k": "A tiny mushroom preserved in Burmese amber.",
+   "v": "保存在缅甸琥珀中的小蘑菇。"
+  },
+  {
+   "k": "Delicate amber-preserved mushroom.",
+   "v": "保存在琥珀中的纤细蘑菇。"
+  },
+  {
+   "k": "A Cretaceous polypore bracket.",
+   "v": "白垩纪的多孔菌。"
+  },
+  {
+   "k": "A predatory fungus with sticky rings for catching worms.",
+   "v": "一种捕食性真菌，用黏性菌环捕捉线虫。"
+  },
+  {
+   "k": "A single giant cell that solves mazes as it feeds.",
+   "v": "一个巨大的单细胞，觅食时能解开迷宫。"
+  },
+  {
+   "k": "Glossy red-brown lacquered bracket.",
+   "v": "表面如漆、光亮红褐的多孔菌。"
+  },
+  {
+   "k": "Takes over ants and sprouts from their bodies.",
+   "v": "控制蚂蚁，并从其身体中长出。"
+  },
+  {
+   "k": "Golden, funnel-shaped and smelling of apricots.",
+   "v": "金黄色的漏斗状菌，散发杏子般的香气。"
+  },
+  {
+   "k": "One of these is the largest organism on Earth.",
+   "v": "其中一个个体是地球上最大的生物。"
+  },
+  {
+   "k": "Underground fruit body found by smell.",
+   "v": "靠气味寻找的地下子实体。"
+  },
+  {
+   "k": "Honeycombed cap on a hollow stem.",
+   "v": "中空菌柄上长着蜂窝状菌盖。"
+  },
+  {
+   "k": "Bright orange cups on bare soil.",
+   "v": "裸露土地上鲜橙色的杯状菌。"
+  },
+  {
+   "k": "Scarlet cups on mossy sticks in winter.",
+   "v": "冬季生于长满苔藓的枯枝上的绯红色杯状菌。"
+  },
+  {
+   "k": "Stains the wood it lives in blue-green.",
+   "v": "把它所寄居的木材染成蓝绿色。"
+  },
+  {
+   "k": "Orange rosettes on rocks and bark.",
+   "v": "岩石和树皮上的橙色莲座状地衣。"
+  },
+  {
+   "k": "The red, white-spotted toadstool of fairy tales.",
+   "v": "童话中那种红底白点的毒蘑菇。"
+  },
+  {
+   "k": "Fat brown cap over a sponge of pores.",
+   "v": "肥厚的褐色菌盖下是海绵状的菌孔。"
+  },
+  {
+   "k": "Dissolves into black ink as it ripens.",
+   "v": "成熟时自溶成黑色墨汁。"
+  },
+  {
+   "k": "Puffs clouds of spores when raindrops hit it.",
+   "v": "雨滴打在上面时会喷出孢子云。"
+  },
+  {
+   "k": "Can grow as big as a football.",
+   "v": "可以长到足球那么大。"
+  },
+  {
+   "k": "A spore ball sitting on a star of split skin.",
+   "v": "孢子球坐落在裂开外皮形成的星状结构上。"
+  },
+  {
+   "k": "A hollow scarlet lattice that smells of rotting meat.",
+   "v": "中空的猩红色网格，散发着腐肉的气味。"
+  },
+  {
+   "k": "Branches like a yellow sea coral.",
+   "v": "分枝如黄色的海洋珊瑚。"
+  },
+  {
+   "k": "Purple coral-like tufts in grassland.",
+   "v": "草地中紫色的珊瑚状菌丛。"
+  },
+  {
+   "k": "Cascades of white icicle spines.",
+   "v": "瀑布般垂下的白色冰柱状菌刺。"
+  },
+  {
+   "k": "Sulphur-yellow shelves on old trees.",
+   "v": "老树上硫磺黄色的层架状菌。"
+  },
+  {
+   "k": "Banded fans like a turkey's tail.",
+   "v": "带有环纹的扇形菌，形似火鸡的尾巴。"
+  },
+  {
+   "k": "Hoof-shaped brackets used to carry fire.",
+   "v": "蹄形的多孔菌，曾被用来携带火种。"
+  },
+  {
+   "k": "Grey shelves that also catch tiny worms.",
+   "v": "灰色的层架状菌，还会捕捉微小的线虫。"
+  },
+  {
+   "k": "The most prized fungus in the world.",
+   "v": "世界上最珍贵的真菌。"
+  },
+  {
+   "k": "A small mushroom of startling blue.",
+   "v": "一种蓝得惊人的小蘑菇。"
+  },
+  {
+   "k": "Waxy scarlet caps of old meadows.",
+   "v": "古老草甸上蜡质的猩红色菌盖。"
+  },
+  {
+   "k": "Violet all over when fresh.",
+   "v": "新鲜时通体紫色。"
+  },
+  {
+   "k": "A tall stem under a wide scaly parasol.",
+   "v": "高高的菌柄上撑着一把宽大、带鳞片的阳伞。"
+  },
+  {
+   "k": "Lemon-yellow mushrooms of warm soils.",
+   "v": "温暖土壤中柠檬黄色的蘑菇。"
+  },
+  {
+   "k": "Glows green in the dark.",
+   "v": "在黑暗中发出绿光。"
+  },
+  {
+   "k": "Tiny bioluminescent caps lighting up cave floors.",
+   "v": "微小的生物发光菌盖，照亮洞穴地面。"
+  },
+  {
+   "k": "Orange and faintly glowing gills.",
+   "v": "橙色，菌褶发出微弱的光。"
+  },
+  {
+   "k": "One of the brightest glowing fungi.",
+   "v": "发光最亮的真菌之一。"
+  },
+  {
+   "k": "Scarlet arms around a slimy, smelly heart.",
+   "v": "猩红色的臂环绕着黏滑而恶臭的中心。"
+  },
+  {
+   "k": "A white lace skirt hanging from its cap.",
+   "v": "菌盖下垂挂着一条白色的蕾丝裙。"
+  },
+  {
+   "k": "Yellow slime that creeps across mulch.",
+   "v": "在覆盖物上缓缓爬行的黄色黏菌。"
+  },
+  {
+   "k": "Forests of tiny brown spore stalks.",
+   "v": "由微小褐色孢子柄组成的“森林”。"
+  },
+  {
+   "k": "Spongy grey-white cushions grazed by reindeer.",
+   "v": "海绵状的灰白色垫丛，是驯鹿的食物。"
+  },
+  {
+   "k": "Blue-green mould that gave us penicillin.",
+   "v": "蓝绿色的霉菌，为我们带来了青霉素。"
+  },
+  {
+   "k": "Pale crusts coating damp cave walls.",
+   "v": "覆盖在潮湿洞壁上的浅色壳状菌。"
+  },
+  {
+   "k": "Clotted microbial mounds that replaced stromatolites.",
+   "v": "取代了叠层石的凝块状微生物丘。"
+  },
+  {
+   "k": "Calcified cyanobacterial tubes building early reefs.",
+   "v": "钙化的蓝细菌管，建造了早期的礁体。"
+  },
+  {
+   "k": "Kidney-shaped calcimicrobes of Cambrian reefs.",
+   "v": "寒武纪礁中肾形的钙化微生物。"
+  },
+  {
+   "k": "Burgess Shale green alga with feathery branches.",
+   "v": "布尔吉斯页岩中具羽状分枝的绿藻。"
+  },
+  {
+   "k": "Bushy Burgess Shale seaweed.",
+   "v": "布尔吉斯页岩中灌丛状的海藻。"
+  },
+  {
+   "k": "An early branching red alga.",
+   "v": "一种早期的分枝红藻。"
+  },
+  {
+   "k": "Slimy green mats carpeting lake beds.",
+   "v": "覆盖湖床的黏滑绿色微生物席。"
+  },
+  {
+   "k": "A dasyclad alga shaped like a knobbly ball.",
+   "v": "形如多瘤圆球的绒枝藻。"
+  },
+  {
+   "k": "Calcified green alga in tangled chains.",
+   "v": "呈缠结链状的钙化绿藻。"
+  },
+  {
+   "k": "Disc-shaped green alga of shallow fresh water.",
+   "v": "浅淡水中的盘状绿藻。"
+  },
+  {
+   "k": "Ribbon-like Silurian seaweed.",
+   "v": "志留纪的带状海藻。"
+  },
+  {
+   "k": "Thick Devonian seaweed with spores like land plants.",
+   "v": "厚实的泥盆纪海藻，其孢子类似陆地植物。"
+  },
+  {
+   "k": "Mysterious crusts of tubes on wet ground and pools.",
+   "v": "潮湿地面和水洼上由管状体组成的神秘结壳。"
+  },
+  {
+   "k": "Leafy red alga that built Carboniferous mounds.",
+   "v": "叶状的红藻，建造了石炭纪的藻丘。"
+  },
+  {
+   "k": "Phylloid green alga with potato-crisp blades.",
+   "v": "叶状绿藻，叶片形如薯片。"
+  },
+  {
+   "k": "Leaf-like alga of Late Paleozoic shelves.",
+   "v": "晚古生代陆架上的叶状藻类。"
+  },
+  {
+   "k": "Bead-chained dasyclad of Permian reefs.",
+   "v": "二叠纪礁中串珠状的绒枝藻。"
+  },
+  {
+   "k": "Calcified red alga in segmented chains.",
+   "v": "呈分节链状的钙化红藻。"
+  },
+  {
+   "k": "Dasyclad that built Triassic carbonate platforms.",
+   "v": "建造了三叠纪碳酸盐台地的绒枝藻。"
+  },
+  {
+   "k": "Whorled dasyclad of Jurassic lagoons.",
+   "v": "侏罗纪潟湖中轮生的绒枝藻。"
+  },
+  {
+   "k": "Fan-shaped calcified bushes.",
+   "v": "扇形的钙化灌丛状藻体。"
+  },
+  {
+   "k": "Extinct stoneworts with spiny fruiting cases.",
+   "v": "已灭绝的轮藻类，具多刺的生殖结构。"
+  },
+  {
+   "k": "Rootless whorls of fine leaves, an ancient flowering plant.",
+   "v": "无根的细叶轮生体，是一种古老的开花植物。"
+  },
+  {
+   "k": "Round leaves on long stalks rising from the mud.",
+   "v": "长柄托起的圆叶从淤泥中升起。"
+  },
+  {
+   "k": "A single giant cell shaped like a tiny umbrella.",
+   "v": "一个巨大的单细胞，形如一把小伞。"
+  },
+  {
+   "k": "Bright green sheets on rocky shores.",
+   "v": "岩岸上鲜绿色的薄片。"
+  },
+  {
+   "k": "Banded fans dusted with lime.",
+   "v": "带状纹路的扇形藻体，表面撒着石灰。"
+  },
+  {
+   "k": "Glossy green spheres, among the largest single cells.",
+   "v": "光亮的绿色球体，是最大的单细胞之一。"
+  },
+  {
+   "k": "Runners hung with little green beads.",
+   "v": "匍匐茎上挂满绿色小珠。"
+  },
+  {
+   "k": "Soft green plumes.",
+   "v": "柔软的绿色羽状体。"
+  },
+  {
+   "k": "Pink, jointed, stony fronds.",
+   "v": "粉红色、分节、石质的叶状体。"
+  },
+  {
+   "k": "Wiry red seaweed, a source of agar.",
+   "v": "坚韧如丝的红色海藻，是琼脂的来源。"
+  },
+  {
+   "k": "Purple-red fans on cold shores.",
+   "v": "寒冷海岸上紫红色的扇形藻体。"
+  },
+  {
+   "k": "Southern kelp with a crown of blades.",
+   "v": "顶生一丛叶片的南方海带。"
+  },
+  {
+   "k": "Feathery whorls swaying in ponds.",
+   "v": "在池塘中摇曳的羽状轮生叶。"
+  },
+  {
+   "k": "Broad sword-shaped leaves in a rosette.",
+   "v": "宽阔的剑形叶排成莲座状。"
+  },
+  {
+   "k": "Bronze-green rosettes of Asian streams.",
+   "v": "亚洲溪流中古铜绿色的莲座状植物。"
+  },
+  {
+   "k": "Carnivorous: tiny bladders snap up water fleas.",
+   "v": "食虫植物：微小的捕虫囊能迅速吞入水蚤。"
+  },
+  {
+   "k": "Dark green moss streaming in currents.",
+   "v": "在水流中飘荡的深绿色苔藓。"
+  },
+  {
+   "k": "Velvety green balls rolling on lake beds.",
+   "v": "在湖底滚动的天鹅绒般的绿色球体。"
+  },
+  {
+   "k": "Brittle, finely toothed pondweed.",
+   "v": "质脆、叶缘具细齿的水草。"
+  },
+  {
+   "k": "Spongy green fingers.",
+   "v": "海绵质的绿色指状藻体。"
+  },
+  {
+   "k": "Fern-like runners that can carpet the seabed.",
+   "v": "蕨叶状的匍匐茎，能覆盖整片海底。"
+  },
+  {
+   "k": "Strings of olive beads on southern shores.",
+   "v": "南方海岸上一串串橄榄色的珠子。"
+  },
+  {
+   "k": "Ruffled brown kelp.",
+   "v": "边缘呈褶皱状的褐色海带。"
+  },
+  {
+   "k": "Leathery straps pounded by Southern Ocean surf.",
+   "v": "被南大洋海浪拍打的革质带状藻体。"
+  },
+  {
+   "k": "Thin purple sheets, dried as sushi wrap.",
+   "v": "薄薄的紫色片状藻体，晒干后用来包寿司。"
+  },
+  {
+   "k": "Fluffy pink plumes.",
+   "v": "蓬松的粉红色羽状藻体。"
+  },
+  {
+   "k": "Rosy red sheets of warm seas.",
+   "v": "温暖海域中玫瑰红色的片状藻体。"
+  },
+  {
+   "k": "Leaves big enough to hold a child.",
+   "v": "叶片大到能托起一个孩子。"
+  },
+  {
+   "k": "Copper-red leaves underwater.",
+   "v": "水下的铜红色叶片。"
+  },
+  {
+   "k": "Pink-tipped stems of Asian rice paddies.",
+   "v": "亚洲稻田中顶端粉红的茎。"
+  },
+  {
+   "k": "Purple-red leaves glowing in clear water.",
+   "v": "在清澈水中闪耀的紫红色叶片。"
+  },
+  {
+   "k": "White sulphur-eating bacterial mats of the dark seafloor.",
+   "v": "黑暗海底上以硫为食的白色细菌席。"
+  },
+  {
+   "k": "Bundled bacterial threads in oxygen-poor deep mud.",
+   "v": "缺氧深层淤泥中成束的细菌丝。"
+  },
+  {
+   "k": "Clouds of pale pink blossom.",
+   "v": "如云般的淡粉色花朵。"
+  },
+  {
+   "k": "Tiers of deep red, hand-shaped leaves.",
+   "v": "层层叠叠的深红色掌状叶。"
+  },
+  {
+   "k": "A spreading canopy of violet-blue trumpets.",
+   "v": "舒展的树冠上开满紫蓝色的喇叭状花。"
+  },
+  {
+   "k": "Magenta-pink flowers before the leaves.",
+   "v": "先叶开放的洋红色花朵。"
+  },
+  {
+   "k": "A flat crown ablaze with scarlet flowers.",
+   "v": "平展的树冠上开满火红的花朵。"
+  },
+  {
+   "k": "Crinkled pink blossoms all summer.",
+   "v": "整个夏天开满皱褶的粉红色花朵。"
+  },
+  {
+   "k": "Towers over the forest in a cloud of pink.",
+   "v": "笼罩在一片粉红云霞中，高耸于森林之上。"
+  },
+  {
+   "k": "A great dome of deep purple leaves.",
+   "v": "由深紫色叶片构成的巨大穹顶。"
+  },
+  {
+   "k": "Purple leaves and smoky plumes.",
+   "v": "紫色的叶片和烟雾般的羽状花序。"
+  },
+  {
+   "k": "Star-shaped leaves turning crimson.",
+   "v": "星形的叶片秋季变为深红。"
+  },
+  {
+   "k": "Coral-red flowers on a gnarled frame.",
+   "v": "虬曲的枝干上开着珊瑚红色的花。"
+  },
+  {
+   "k": "Lavender foxglove-like flowers.",
+   "v": "淡紫色的花，形似毛地黄。"
+  },
+  {
+   "k": "Orchid-like purple-pink flowers.",
+   "v": "形似兰花的紫粉色花朵。"
+  },
+  {
+   "k": "Goblet-shaped pink and white flowers.",
+   "v": "高脚杯状的粉白色花朵。"
+  },
+  {
+   "k": "Flame-orange tulips held above the canopy.",
+   "v": "火焰般橙红的郁金香状花朵高擎于林冠之上。"
+  },
+  {
+   "k": "Whole hillsides of trembling gold in autumn.",
+   "v": "秋天，整片山坡都是颤动的金色。"
+  },
+  {
+   "k": "Showers of small yellow flowers.",
+   "v": "如雨般洒落的黄色小花。"
+  },
+  {
+   "k": "Long cascades of bright yellow blossom.",
+   "v": "长长垂下的亮黄色花串。"
+  },
+  {
+   "k": "A burst of gold above the forest.",
+   "v": "在森林上空绽放的一片金黄。"
+  },
+  {
+   "k": "Hanging chains of yellow pea flowers.",
+   "v": "垂挂成串的黄色蝶形花。"
+  },
+  {
+   "k": "A deciduous conifer turning golden-orange.",
+   "v": "一种落叶松柏类，秋季变为金橙色。"
+  },
+  {
+   "k": "Blazing orange in the autumn forests of the north.",
+   "v": "北方秋林中燃烧般的橙色。"
+  },
+  {
+   "k": "Orange leaves and bright orange fruit hanging on.",
+   "v": "橙色的叶片和挂在枝头的鲜橙色果实。"
+  },
+  {
+   "k": "Layers of amber, orange and red.",
+   "v": "琥珀色、橙色与红色层层交叠。"
+  },
+  {
+   "k": "Leafless branches covered in flame-orange flowers.",
+   "v": "无叶的枝条上开满火焰般的橙色花朵。"
+  },
+  {
+   "k": "Snows white cotton seed fluff over river valleys.",
+   "v": "在河谷上空飘洒如雪的白色棉絮状种毛。"
+  },
+  {
+   "k": "A giant hung with clouds of white silk-cotton.",
+   "v": "挂满云团般白色丝棉的巨树。"
+  },
+  {
+   "k": "A tight oval of pure white spring blossom.",
+   "v": "紧凑的卵圆形树冠开满纯白的春花。"
+  },
+  {
+   "k": "Tiers of white bracts in the spring woods.",
+   "v": "春日林间层层叠叠的白色苞片。"
+  },
+  {
+   "k": "May blossom: hedges and hills turned white.",
+   "v": "五月花开：树篱和山丘一片洁白。"
+  },
+  {
+   "k": "White flushed pink, then small apples.",
+   "v": "白中透粉的花朵，随后结出小苹果。"
+  },
+  {
+   "k": "Fluffy pink powder-puff flowers on a flat crown.",
+   "v": "平展树冠上蓬松的粉红色绒球状花。"
+  },
+  {
+   "k": "Deep pink spring blossom.",
+   "v": "深粉红色的春花。"
+  },
+  {
+   "k": "Big crimson cups on bare branches.",
+   "v": "光秃的枝条上开着大朵深红色的杯状花。"
+  },
+  {
+   "k": "The scarlet of a swamp in autumn.",
+   "v": "秋日沼泽中的一片猩红。"
+  },
+  {
+   "k": "Scented purple plumes.",
+   "v": "芳香的紫色圆锥花序。"
+  },
+  {
+   "k": "A canopy dripping with violet blossom.",
+   "v": "垂满紫罗兰色花朵的树冠。"
+  },
+  {
+   "k": "Spores shed in fours tell of tiny plants carpeting Ordovician shores.",
+   "v": "四分体孢子表明，奥陶纪的海岸上铺满了微小的植物。"
+  },
+  {
+   "k": "Patchy green crusts of the first liverworts on wet mud.",
+   "v": "湿泥上斑驳的绿色结皮，由最早的苔类形成。"
+  },
+  {
+   "k": "Twisted little stems ending in spore capsules.",
+   "v": "扭曲的小茎，顶端着生孢蒴。"
+  },
+  {
+   "k": "Forked stems tipped with long spore sacs.",
+   "v": "二叉分枝的茎，顶端着生细长的孢子囊。"
+  },
+  {
+   "k": "A small Welsh plant with flat-topped spore capsules.",
+   "v": "一种来自威尔士的小型植物，孢蒴顶部平截。"
+  },
+  {
+   "k": "Forking stems with oval spore sacs.",
+   "v": "二叉分枝的茎上着生卵圆形孢子囊。"
+  },
+  {
+   "k": "A moss-like plant with stalked capsules rising from a green mat.",
+   "v": "一种苔藓状植物，具柄的孢蒴从绿色的垫状体上升起。"
+  },
+  {
+   "k": "Rhynie chert plant with a lumpy, corm-like base.",
+   "v": "莱尼燧石层植物，基部呈块状、似球茎。"
+  },
+  {
+   "k": "Leafless, bumpy stems with clustered spore sacs.",
+   "v": "无叶、表面多瘤的茎，孢子囊簇生。"
+  },
+  {
+   "k": "Spiny stems with coiled tips spreading over the ground.",
+   "v": "多刺的茎顶端拳卷，在地面上蔓延。"
+  },
+  {
+   "k": "Branching zosterophyll with fiddlehead tips.",
+   "v": "分枝的工蕨类，枝端拳卷如提琴头。"
+  },
+  {
+   "k": "Fern-like thickets that filled Late Devonian floodplains.",
+   "v": "似蕨类的灌丛，遍布晚泥盆世的泛滥平原。"
+  },
+  {
+   "k": "Bushy progymnosperm, a step toward seed plants.",
+   "v": "灌丛状的前裸子植物，是迈向种子植物的一步。"
+  },
+  {
+   "k": "Whorled branchlets: a distant cousin of horsetails.",
+   "v": "轮生的小枝：木贼类的远亲。"
+  },
+  {
+   "k": "Middle Devonian plant with the oldest seed-like organs.",
+   "v": "中泥盆世植物，具有最古老的似种子器官。"
+  },
+  {
+   "k": "Sturdy small lycopsid, forerunner of the scale trees.",
+   "v": "粗壮的小型石松类，是鳞木的先驱。"
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches, from Belgium.",
+   "v": "树冠由指状枝条组成的小乔木，产自比利时。"
+  },
+  {
+   "k": "Late Devonian lycopsid tree of the Kiltorcan swamps.",
+   "v": "基尔托坎沼泽中的晚泥盆世石松类乔木。"
+  },
+  {
+   "k": "Archaeopteris relative of Arctic Devonian forests.",
+   "v": "北极泥盆纪森林中古羊齿的近亲。"
+  },
+  {
+   "k": "Knee-high lycopsid trees in dense coastal stands: China's oldest forest.",
+   "v": "齐膝高的石松类树木在海岸边密集成林：中国最古老的森林。"
+  },
+  {
+   "k": "Fronds of marattialean tree ferns, the commonest coal-measure fern.",
+   "v": "合囊蕨目树蕨的叶，是煤系地层中最常见的蕨类。"
+  },
+  {
+   "k": "Scrambling seed fern with sticky glandular hairs.",
+   "v": "蔓生的种子蕨，具黏性腺毛。"
+  },
+  {
+   "k": "Climbing seed fern that hung from the scale trees.",
+   "v": "攀援的种子蕨，悬挂在鳞木上。"
+  },
+  {
+   "k": "Star-shaped leaf whorls on calamite branches.",
+   "v": "芦木枝条上星状的轮生叶。"
+  },
+  {
+   "k": "Needle-leaved calamite shoots.",
+   "v": "具针状叶的芦木枝条。"
+  },
+  {
+   "k": "Early fern with H-shaped stems.",
+   "v": "茎干横切面呈H形的早期蕨类。"
+  },
+  {
+   "k": "Unbranched, bulb-based lycopsid of open swamps.",
+   "v": "开阔沼泽中不分枝、基部呈球茎状的石松类。"
+  },
+  {
+   "k": "Sprawling seed-fern shrub.",
+   "v": "铺散蔓生的种子蕨灌木。"
+  },
+  {
+   "k": "Scale tree of the wettest coal swamps.",
+   "v": "最潮湿的煤炭沼泽中的鳞木类。"
+  },
+  {
+   "k": "Woody calamite trunk with ringed joints.",
+   "v": "具环节的木质芦木树干。"
+  },
+  {
+   "k": "Finely cut fern foliage, from the coal swamps to the Jurassic.",
+   "v": "细裂的蕨类叶片，从煤炭沼泽一直延续到侏罗纪。"
+  },
+  {
+   "k": "Drought-tolerant seed fern of the dry Early Permian.",
+   "v": "干燥的早二叠世中耐旱的种子蕨。"
+  },
+  {
+   "k": "Gondwanan horsetail with leaf collars.",
+   "v": "具叶领的冈瓦纳木贼类。"
+  },
+  {
+   "k": "Odd fern-like plants with cone-borne spores, from Cathaysia.",
+   "v": "来自华夏古陆的奇特似蕨植物，孢子生于球穗上。"
+  },
+  {
+   "k": "Shield-seeded shrub of dry uplands.",
+   "v": "干燥高地上具盾状种子的灌木。"
+  },
+  {
+   "k": "Fan-leaved plant, perhaps an early ginkgo relative.",
+   "v": "具扇形叶的植物，可能是银杏的早期近亲。"
+  },
+  {
+   "k": "Cathaysian horsetail with lobed leaf whorls.",
+   "v": "华夏古陆的木贼类，具分瓣的轮生叶。"
+  },
+  {
+   "k": "Cordaite of the cold Angaran forests of Siberia.",
+   "v": "西伯利亚寒冷的安加拉森林中的科达类。"
+  },
+  {
+   "k": "Tufts of long, unbranched strands from the Burgess Shale.",
+   "v": "来自布尔吉斯页岩的一簇簇细长、不分枝的丝状体。"
+  },
+  {
+   "k": "A branched Burgess Shale seaweed several centimetres tall.",
+   "v": "布尔吉斯页岩中一种分枝的海藻，高几厘米。"
+  },
+  {
+   "k": "Spiral ribbons of seaweed from Chengjiang.",
+   "v": "来自澄江的螺旋状带形海藻。"
+  },
+  {
+   "k": "Clusters of cylindrical green fronds.",
+   "v": "成簇的圆柱状绿色叶状体。"
+  },
+  {
+   "k": "Oily green colonies; their remains make oil shale.",
+   "v": "富含油脂的绿色群体；其遗骸形成油页岩。"
+  },
+  {
+   "k": "Large branching seaweed of Ordovician seas, tall enough to sway.",
+   "v": "奥陶纪海洋中的大型分枝海藻，高到足以随波摇曳。"
+  },
+  {
+   "k": "Calcified green alga with whorled branches.",
+   "v": "具轮生分枝的钙化绿藻。"
+  },
+  {
+   "k": "Club-shaped dasyclad with a ball-like head.",
+   "v": "棒状的绒枝藻，顶端呈球形。"
+  },
+  {
+   "k": "Tall, bushy green alga with whorls of hair-like branches.",
+   "v": "高大、灌丛状的绿藻，具轮生的毛状分枝。"
+  },
+  {
+   "k": "One of the oldest stoneworts.",
+   "v": "最古老的轮藻之一。"
+  },
+  {
+   "k": "Clusters of bladder-like fronds.",
+   "v": "成簇的囊泡状叶状体。"
+  },
+  {
+   "k": "Fan-shaped Silurian seaweed.",
+   "v": "志留纪的扇形海藻。"
+  },
+  {
+   "k": "Long, strap-like fronds of a large Silurian seaweed.",
+   "v": "一种志留纪大型海藻细长的带状叶状体。"
+  },
+  {
+   "k": "Small balls of tubes; perhaps a green alga.",
+   "v": "由管状体组成的小球；可能是一种绿藻。"
+  },
+  {
+   "k": "Broad leafy fronds of a large Devonian seaweed.",
+   "v": "一种泥盆纪大型海藻宽阔的叶状体。"
+  },
+  {
+   "k": "Fan-like branched alga, perhaps a red seaweed.",
+   "v": "扇形分枝的藻类，可能是一种红藻。"
+  },
+  {
+   "k": "Stonewort with spiralled egg cases.",
+   "v": "具螺旋状卵囊的轮藻。"
+  },
+  {
+   "k": "Thick, ribbon-like stems found in Siberian Devonian coals.",
+   "v": "发现于西伯利亚泥盆纪煤层中的厚实带状茎。"
+  },
+  {
+   "k": "Bushy calcareous alga that built Carboniferous mud mounds.",
+   "v": "灌丛状的钙质藻类，建造了石炭纪的泥丘。"
+  },
+  {
+   "k": "Calcified dasyclad of Early Carboniferous shelves.",
+   "v": "早石炭世陆架上的钙化绒枝藻。"
+  },
+  {
+   "k": "A Carboniferous stonewort.",
+   "v": "一种石炭纪轮藻。"
+  },
+  {
+   "k": "Dasyclad that grew in thickets on Late Paleozoic mounds.",
+   "v": "在晚古生代藻丘上丛生的绒枝藻。"
+  },
+  {
+   "k": "Encrusting, finger-like growths that built Permian reefs such as El Capitan.",
+   "v": "包覆生长的指状体，建造了埃尔卡皮坦等二叠纪礁。"
+  },
+  {
+   "k": "Crust-forming alga that bound Permian reefs together.",
+   "v": "形成结壳的藻类，将二叠纪礁胶结在一起。"
+  },
+  {
+   "k": "Dark ribbon-like strands, a few millimetres wide and a few centimetres long, common in late Ediacaran shales; they lay on the sea floor rather than standing as tall seaweed.",
+   "v": "深色的带状丝体，宽几毫米、长几厘米，常见于晚埃迪卡拉纪页岩；它们平躺在海底，而不是像高大海藻那样直立。"
+  },
+  {
+   "k": "Tufts of thin forked threads from the Lantian biota of China.",
+   "v": "来自中国蓝田生物群的一簇簇细二叉分枝丝体。"
+  },
+  {
+   "k": "Small upright branching seaweed, a few centimetres tall, of the Miaohe biota, anchored by rhizoids.",
+   "v": "庙河生物群中直立分枝的小型海藻，高几厘米，以假根固着。"
+  },
+  {
+   "k": "Weng'an red alga with growing tips and possible reproductive cells.",
+   "v": "瓮安的红藻，具生长尖端和可能的生殖细胞。"
+  },
+  {
+   "k": "Tiny globular red algae preserved cell by cell in phosphate.",
+   "v": "以磷酸盐逐个细胞保存下来的微小球状红藻。"
+  },
+  {
+   "k": "Dark microbial films on bare rock, long before any plant reached land.",
+   "v": "裸露岩石上深色的微生物膜，远早于任何植物登上陆地。"
+  },
+  {
+   "k": "Bushy calcified microbe building reefs with archaeocyaths.",
+   "v": "灌丛状的钙化微生物，与古杯类一起建造礁体。"
+  },
+  {
+   "k": "Fans of tiny calcified tubes in early Cambrian reefs.",
+   "v": "早寒武世礁中由微小钙化管组成的扇形体。"
+  },
+  {
+   "k": "Clustered chambers of lime, a cousin of Renalcis.",
+   "v": "簇生的石灰质小室，是肾形藻的近亲。"
+  },
+  {
+   "k": "Calcified microbial tubes of Cambrian and Ordovician reefs.",
+   "v": "寒武纪和奥陶纪礁中的钙化微生物管。"
+  },
+  {
+   "k": "Tiny lime cylinders that piled up in Ordovician shoals.",
+   "v": "在奥陶纪浅滩中堆积起来的微小石灰质圆柱体。"
+  },
+  {
+   "k": "Rare branching seaweed of the Burgess Shale.",
+   "v": "布尔吉斯页岩中罕见的分枝海藻。"
+  },
+  {
+   "k": "Burgess Shale alga with a net-like thallus.",
+   "v": "布尔吉斯页岩中具网状藻体的藻类。"
+  },
+  {
+   "k": "Dense tufts of cyanobacterial filaments on the Burgess seafloor.",
+   "v": "布尔吉斯海底上浓密成簇的蓝细菌丝体。"
+  },
+  {
+   "k": "Dark slimy sheets of cyanobacteria, the commonest Burgess 'alga'.",
+   "v": "深色黏滑的蓝细菌薄层，是布尔吉斯最常见的“藻类”。"
+  },
+  {
+   "k": "Known from spores shed in pairs; a low crust on damp ground.",
+   "v": "仅凭成对散落的孢子为人所知；是潮湿地面上低矮的结皮。"
+  },
+  {
+   "k": "Its three-scarred spores mark the first steps towards vascular plants.",
+   "v": "它具三射线痕的孢子标志着迈向维管植物的第一步。"
+  },
+  {
+   "k": "Colonial microbe whose remains became the Estonian oil shale kukersite.",
+   "v": "群体微生物，其遗骸形成了爱沙尼亚的油页岩——库克油页岩。"
+  },
+  {
+   "k": "Calcified cyanobacterium with fan-shaped branching tubes.",
+   "v": "具扇状分枝管的钙化蓝细菌。"
+  },
+  {
+   "k": "Pear-shaped receptaculitid, probably a calcified green alga.",
+   "v": "梨形的托盘类，可能是一种钙化绿藻。"
+  },
+  {
+   "k": "Sunflower-patterned receptaculitid of Ordovician seafloors.",
+   "v": "奥陶纪海底上具向日葵状花纹的托盘类。"
+  },
+  {
+   "k": "One of the first truly calcified dasyclad algae.",
+   "v": "最早真正钙化的绒枝藻之一。"
+  },
+  {
+   "k": "Ball-shaped dasyclad of the Baltic Ordovician.",
+   "v": "波罗的海奥陶系中的球形绒枝藻。"
+  },
+  {
+   "k": "Small club-shaped dasyclad of the Ordovician.",
+   "v": "奥陶纪的小型棒状绒枝藻。"
+  },
+  {
+   "k": "Branched calcified green alga related to Halimeda.",
+   "v": "与仙掌藻有亲缘关系的分枝钙化绿藻。"
+  },
+  {
+   "k": "Floating green-alga cysts that sank to form oil shales.",
+   "v": "漂浮的绿藻孢囊，沉积后形成油页岩。"
+  },
+  {
+   "k": "Bushy calcified filaments of Paleozoic reef flats.",
+   "v": "古生代礁坪上灌丛状的钙化丝体。"
+  },
+  {
+   "k": "Spiny early Silurian stems from Maine, among the oldest land plant fossils.",
+   "v": "来自缅因州的早志留世多刺茎，是最古老的陆地植物化石之一。"
+  },
+  {
+   "k": "Tiny forked stems ending in spore capsules.",
+   "v": "微小的二叉分枝茎，顶端着生孢蒴。"
+  },
+  {
+   "k": "Cooksonia-like plant with kidney-shaped sporangia.",
+   "v": "类似库克逊蕨的植物，具肾形孢子囊。"
+  },
+  {
+   "k": "Plant of the Australian Baragwanathia flora with clustered sporangia.",
+   "v": "澳大利亚巴拉瓦纳石松植物群中的植物，孢子囊簇生。"
+  },
+  {
+   "k": "Naked forking stems, common in early land floras.",
+   "v": "裸露的二叉分枝茎，常见于早期陆地植物群。"
+  },
+  {
+   "k": "Late Silurian rhyniophyte-like plant from Xinjiang.",
+   "v": "来自新疆的晚志留世类莱尼蕨植物。"
+  },
+  {
+   "k": "Toothed zosterophyll from the Late Silurian of Arctic Canada.",
+   "v": "来自加拿大北极地区晚志留世的具齿工蕨类。"
+  },
+  {
+   "k": "Zosterophyll with spore capsules in two neat rows.",
+   "v": "孢蒴整齐排成两列的工蕨类。"
+  },
+  {
+   "k": "Tube-bodied nematophyte, possibly a fungus, on early land.",
+   "v": "早期陆地上具管状体的线丝植物，可能是一种真菌。"
+  },
+  {
+   "k": "Cellular crusts of a nematophyte, perhaps lichen-like.",
+   "v": "线丝植物的细胞状结壳，可能类似地衣。"
+  },
+  {
+   "k": "Calcified microbe encrusting Silurian and Devonian reefs.",
+   "v": "包覆志留纪和泥盆纪礁体的钙化微生物。"
+  },
+  {
+   "k": "Small encrusting tubes in Silurian reef rocks.",
+   "v": "志留纪礁岩中包覆生长的小管。"
+  },
+  {
+   "k": "Lime-coated nodules built by microbes on reef flats.",
+   "v": "礁坪上由微生物建造的石灰质包壳结核。"
+  },
+  {
+   "k": "Diamond-scarred lycopsid tree spread across Late Devonian Gondwana.",
+   "v": "具菱形叶痕的石松类乔木，遍布晚泥盆世的冈瓦纳。"
+  },
+  {
+   "k": "Late Devonian scale tree from New York.",
+   "v": "来自纽约州的晚泥盆世鳞木类。"
+  },
+  {
+   "k": "Scale tree of the latest Devonian and early coal swamps.",
+   "v": "最晚泥盆世和早期煤炭沼泽中的鳞木类。"
+  },
+  {
+   "k": "Tree-sized sphenopsid of Bear Island, up to 20 m tall.",
+   "v": "熊岛上乔木大小的楔叶类，高达20米。"
+  },
+  {
+   "k": "Early tree whose trunk grew by tearing and repairing hundreds of wood strands.",
+   "v": "早期的树木，其树干靠数百条木质束的撕裂与修复而生长。"
+  },
+  {
+   "k": "Scrambling clubmoss that climbed the trunks of the Gilboa forest.",
+   "v": "蔓生的石松，攀附在吉尔博阿森林的树干上。"
+  },
+  {
+   "k": "Early sphenopsid with whorled branches and cones.",
+   "v": "具轮生分枝和球穗的早期楔叶类。"
+  },
+  {
+   "k": "Late Devonian seed plant with cupped seeds.",
+   "v": "种子生于杯状结构中的晚泥盆世种子植物。"
+  },
+  {
+   "k": "Woody shrub several metres tall, a forerunner of seed plants.",
+   "v": "高达数米的木质灌木，是种子植物的先驱。"
+  },
+  {
+   "k": "Small plant with forked branchlets rising from a creeping stem.",
+   "v": "从匍匐茎上长出二叉分枝小枝的小型植物。"
+  },
+  {
+   "k": "Ribbon-stemmed plant growing in shallow Early Devonian water.",
+   "v": "生长在早泥盆世浅水中的带状茎植物。"
+  },
+  {
+   "k": "Forked stems with kidney-shaped sporangia, from Gaspé.",
+   "v": "来自加斯佩的二叉分枝茎，具肾形孢子囊。"
+  },
+  {
+   "k": "Cup-topped sexual generation of Aglaophyton, from the Rhynie chert.",
+   "v": "Aglaophyton的有性世代，顶端呈杯状，来自莱尼燧石层。"
+  },
+  {
+   "k": "Zosterophyll of the Rhynie hot-spring flora.",
+   "v": "莱尼温泉植物群中的工蕨类。"
+  },
+  {
+   "k": "Zosterophyll with toothed stems and coiled tips.",
+   "v": "茎具齿、顶端拳卷的工蕨类。"
+  },
+  {
+   "k": "Stout three-forked stems topped with clusters of sporangia.",
+   "v": "粗壮的三叉分枝茎，顶端着生成簇的孢子囊。"
+  },
+  {
+   "k": "Ribbon-like Middle Devonian liverwort from New York.",
+   "v": "来自纽约州的中泥盆世带状苔类。"
+  },
+  {
+   "k": "Leafy-winged thalloid liverwort of the Late Devonian.",
+   "v": "晚泥盆世具叶状翼的叶状体苔类。"
+  },
+  {
+   "k": "Ribbed horsetail stems with forked leaves, a forerunner of Calamites.",
+   "v": "具纵棱的木贼类茎，叶二叉分裂，是芦木的先驱。"
+  },
+  {
+   "k": "The oldest known member of the stonewort order Charales.",
+   "v": "轮藻目已知最古老的成员。"
+  },
+  {
+   "k": "Charophyte with ribbed, lime-encased egg capsules.",
+   "v": "具纵棱、外包石灰质卵囊的轮藻类。"
+  },
+  {
+   "k": "Devonian stonewort with spiralled gyrogonites.",
+   "v": "具螺旋状藏卵器化石的泥盆纪轮藻。"
+  },
+  {
+   "k": "Lime-walled tubular alga of Late Devonian shallow seas.",
+   "v": "晚泥盆世浅海中具石灰质壁的管状藻类。"
+  },
+  {
+   "k": "Pitted, leathery thalli thought to be an early lichen.",
+   "v": "表面有凹坑的革质叶状体，被认为是一种早期地衣。"
+  },
+  {
+   "k": "Early Devonian lichen with cyanobacterial partners, from the Welsh Borderland.",
+   "v": "来自威尔士边境地区的早泥盆世地衣，以蓝细菌为共生伙伴。"
+  },
+  {
+   "k": "Tangled tubes of a nematophyte from the Rhynie chert.",
+   "v": "来自莱尼燧石层的线丝植物，由缠结的管状体构成。"
+  },
+  {
+   "k": "Tiny chytrid fungus living on dead Rhynie chert plants.",
+   "v": "生活在莱尼燧石层死亡植物上的微小壶菌。"
+  },
+  {
+   "k": "Scale tree that branched early into a broad crown; a coal-ball favourite.",
+   "v": "很早就分枝形成宽阔树冠的鳞木类；是煤核中的常客。"
+  },
+  {
+   "k": "Scale tree of the Pennsylvanian peat swamps, long confused with Lepidodendron.",
+   "v": "宾夕法尼亚亚纪泥炭沼泽中的鳞木类，长期被与鳞木属混淆。"
+  },
+  {
+   "k": "Lycopsid trunk marked with two rows of big round scars where branches fell away.",
+   "v": "石松类树干，带有两列枝条脱落后留下的大圆痕。"
+  },
+  {
+   "k": "Smooth-barked scale tree with tiny, widely spaced leaf scars.",
+   "v": "树皮光滑的鳞木类，叶痕微小且间隔疏远。"
+  },
+  {
+   "k": "Calamite with thick, banded wood: the woodiest of the tree horsetails.",
+   "v": "具厚实带状木质部的芦木：最木质化的树状木贼。"
+  },
+  {
+   "k": "Big Early Carboniferous tree known from logs a metre thick buried in Scottish volcanic ash.",
+   "v": "早石炭世的大树，由埋藏在苏格兰火山灰中、直径一米的原木而为人所知。"
+  },
+  {
+   "k": "Cordaitean shrub-tree of the coal swamps, perhaps growing in mangrove-like stands.",
+   "v": "煤炭沼泽中的科达类灌木状小乔木，可能像红树林一样成片生长。"
+  },
+  {
+   "k": "Among the oldest known conifers, from Pennsylvanian Yorkshire.",
+   "v": "已知最古老的松柏类之一，来自宾夕法尼亚亚纪的约克郡。"
+  },
+  {
+   "k": "Marattialean tree fern whose fronds grew in two rows down the trunk.",
+   "v": "合囊蕨目树蕨，其叶沿树干排成两列。"
+  },
+  {
+   "k": "Medullosan seed fern with a strangely tangled stem.",
+   "v": "茎干结构奇特缠结的髓木类种子蕨。"
+  },
+  {
+   "k": "Strap-leaved cordaite of the cold Gondwana lands as the great ice age waned.",
+   "v": "大冰期消退时，冈瓦纳寒冷大地上具带状叶的科达类。"
+  },
+  {
+   "k": "Scale tree of the Cathaysian coal swamps of China.",
+   "v": "中国华夏古陆煤炭沼泽中的鳞木类。"
+  },
+  {
+   "k": "Seed fern with broad, blunt leaflets joined at the base.",
+   "v": "小羽片宽阔、钝圆、基部相连的种子蕨。"
+  },
+  {
+   "k": "Big-leafleted seed fern covered in fine hairs, common in coal shales.",
+   "v": "具大型小羽片、密被细毛的种子蕨，常见于含煤页岩中。"
+  },
+  {
+   "k": "Lacy foliage of scrambling lyginopterid seed ferns.",
+   "v": "蔓生的皱羊齿类种子蕨的花边状叶。"
+  },
+  {
+   "k": "Zygopterid fern with clusters of big spore sacs.",
+   "v": "具成簇大型孢子囊的对叶蕨类。"
+  },
+  {
+   "k": "Small fern that clambered over the trunks of tree ferns.",
+   "v": "攀爬在树蕨树干上的小型蕨类。"
+  },
+  {
+   "k": "Leafless, bushy little fern relative of the coal-swamp floor.",
+   "v": "煤炭沼泽地面上无叶、灌丛状的小型蕨类近亲。"
+  },
+  {
+   "k": "Shrubby lycopsid with a cone on each branch tip.",
+   "v": "灌木状的石松类，每个枝端都着生一个球穗。"
+  },
+  {
+   "k": "Tiny spikemoss-like lycopsid known from coal balls.",
+   "v": "由煤核而为人所知的微小、似卷柏的石松类。"
+  },
+  {
+   "k": "Small herbaceous lycopsid of Early Carboniferous Scotland.",
+   "v": "早石炭世苏格兰的小型草本石松类。"
+  },
+  {
+   "k": "Early relative of the climbing ferns (Schizaeales).",
+   "v": "海金沙类（莎草蕨目）的早期亲属。"
+  },
+  {
+   "k": "Forked, needle-leaved plant of dry Late Paleozoic uplands.",
+   "v": "晚古生代干燥高地上具二叉针状叶的植物。"
+  },
+  {
+   "k": "One of the few Carboniferous mosses known, from French coal measures.",
+   "v": "已知为数不多的石炭纪藓类之一，来自法国的煤系。"
+  },
+  {
+   "k": "Leafy liverwort from the Pennsylvanian coal measures.",
+   "v": "来自宾夕法尼亚亚纪煤系的有叶苔类。"
+  },
+  {
+   "k": "Marattialean fern with star-shaped clusters of spore sacs.",
+   "v": "孢子囊呈星状簇生的合囊蕨类。"
+  },
+  {
+   "k": "Horsetail of the cool Angaran and Gondwanan floodplains.",
+   "v": "凉爽的安加拉和冈瓦纳泛滥平原上的木贼类。"
+  },
+  {
+   "k": "Tube-shaped dasyclad alga of Carboniferous shelf seas.",
+   "v": "石炭纪陆架海中管状的绒枝藻。"
+  },
+  {
+   "k": "Dasyclad alga with a pitted sleeve of lime.",
+   "v": "外被多孔石灰质套鞘的绒枝藻。"
+  },
+  {
+   "k": "Leaf-like calcareous alga of Russian Carboniferous seas.",
+   "v": "俄罗斯石炭纪海洋中的叶状钙质藻类。"
+  },
+  {
+   "k": "Encrusting alga that coated shells and grains.",
+   "v": "包覆贝壳和颗粒的结壳藻类。"
+  },
+  {
+   "k": "Tiny round fungal spore cases found in coal balls.",
+   "v": "在煤核中发现的微小圆形真菌孢子囊。"
+  },
+  {
+   "k": "Oily colonial alga whose remains make torbanite, the boghead coal.",
+   "v": "富含油脂的群体藻类，其遗骸形成藻煤（托班煤）。"
+  },
+  {
+   "k": "Walchian conifer of the dry Early Permian of Europe.",
+   "v": "欧洲干燥的早二叠世中的瓦契杉类松柏。"
+  },
+  {
+   "k": "Early conifer with flat, fern-like sprays of needles.",
+   "v": "早期松柏类，针叶排成扁平的蕨叶状枝序。"
+  },
+  {
+   "k": "Voltzian conifer of the Zechstein sea shores.",
+   "v": "蔡希斯坦海沿岸的伏脂杉类松柏。"
+  },
+  {
+   "k": "Small conifer from the Late Permian Bletterbach gorge in the Dolomites.",
+   "v": "来自多洛米蒂山晚二叠世布莱特巴赫峡谷的小型松柏。"
+  },
+  {
+   "k": "Late Permian conifer with dense, short-needled shoots.",
+   "v": "具浓密短针叶枝条的晚二叠世松柏。"
+  },
+  {
+   "k": "The oldest known ginkgophyte, with thread-like forked leaves.",
+   "v": "已知最古老的银杏类植物，叶呈丝状二叉分裂。"
+  },
+  {
+   "k": "Ginkgo relative with wedge-shaped, deeply split leaves.",
+   "v": "叶呈楔形、深裂的银杏类近亲。"
+  },
+  {
+   "k": "Gigantopterid with huge, net-veined leaves, climbing through Cathaysian forests.",
+   "v": "具巨大网状脉叶的大羽羊齿类，攀援于华夏古陆的森林中。"
+  },
+  {
+   "k": "Early cycad from the Permian of China.",
+   "v": "来自中国二叠纪的早期苏铁。"
+  },
+  {
+   "k": "Peltasperm seed fern of the dry red beds of the Grand Canyon.",
+   "v": "大峡谷干燥红层中的盾籽目种子蕨。"
+  },
+  {
+   "k": "Seed fern of the Late Permian Angaran and Russian floras.",
+   "v": "晚二叠世安加拉及俄罗斯植物群中的种子蕨。"
+  },
+  {
+   "k": "Cathaysian seed fern that bore its seeds right on its leaflets.",
+   "v": "华夏古陆的种子蕨，种子直接着生在小羽片上。"
+  },
+  {
+   "k": "Marattialean fern of the Permian coal swamps of China.",
+   "v": "中国二叠纪煤炭沼泽中的合囊蕨类。"
+  },
+  {
+   "k": "Gondwanan sphenophyll with leaves in lopsided whorls of three pairs.",
+   "v": "冈瓦纳的楔叶类，叶片以三对不对称地轮生。"
+  },
+  {
+   "k": "Angaran moss with cells like those of peat mosses.",
+   "v": "安加拉的藓类，细胞与泥炭藓相似。"
+  },
+  {
+   "k": "Peltasperm shrub of the dry Late Permian of Russia.",
+   "v": "俄罗斯干燥的晚二叠世中的盾籽目灌木。"
+  },
+  {
+   "k": "Thick-leaved peltasperm of the Late Permian Angaran floodplains.",
+   "v": "晚二叠世安加拉泛滥平原上具厚叶的盾籽目植物。"
+  },
+  {
+   "k": "Lycopsid of the Permian Paraná Basin in Brazil.",
+   "v": "巴西二叠纪巴拉那盆地的石松类。"
+  },
+  {
+   "k": "Cycad with long, comb-like leaves.",
+   "v": "具长篦齿状叶的苏铁。"
+  },
+  {
+   "k": "Lime-crusted red alga of warm shelf seas from the Permian to the Cretaceous.",
+   "v": "从二叠纪到白垩纪生活在温暖陆架海中、具石灰质外壳的红藻。"
+  },
+  {
+   "k": "Dasyclad alga with whorls of fine branches.",
+   "v": "具轮生细枝的绒枝藻。"
+  },
+  {
+   "k": "Dasyclad with a pitted, finger-like sleeve of lime.",
+   "v": "外被多孔指状石灰质套鞘的绒枝藻。"
+  },
+  {
+   "k": "Encrusting, worm-like alga of Permian reefs.",
+   "v": "二叠纪礁中包覆生长的蠕虫状藻类。"
+  },
+  {
+   "k": "Southern voltzian conifer of the earliest Triassic.",
+   "v": "最早三叠世南方的伏脂杉类松柏。"
+  },
+  {
+   "k": "Strap-leaved conifer that grew in dense stands along Gondwanan rivers.",
+   "v": "具带状叶的松柏类，沿冈瓦纳的河流密集成林。"
+  },
+  {
+   "k": "Early podocarp-like conifer of Gondwana.",
+   "v": "冈瓦纳早期类似罗汉松的松柏。"
+  },
+  {
+   "k": "Petrified Forest conifer with short shoot traces all along its logs.",
+   "v": "石化林中的松柏类，原木上处处留有短枝痕迹。"
+  },
+  {
+   "k": "Petrified Forest tree with distinctive wood; its relatives are still debated.",
+   "v": "石化林中木材结构独特的树木；其亲缘关系至今仍有争议。"
+  },
+  {
+   "k": "Fossil ginkgo leaves with broad, lobed fans, found worldwide in the Mesozoic.",
+   "v": "具宽阔分裂扇形叶的银杏叶化石，遍布中生代世界各地。"
+  },
+  {
+   "k": "Cycad with long, ribbon-like leaves, common across the Mesozoic.",
+   "v": "具长带状叶的苏铁，在整个中生代都很常见。"
+  },
+  {
+   "k": "Cheirolepid conifer whose pollen dominates the Triassic-Jurassic boundary.",
+   "v": "掌鳞杉类松柏，其花粉在三叠纪-侏罗纪界线上占主导地位。"
+  },
+  {
+   "k": "Bennettitalean with neatly ranked, square-ended leaflets.",
+   "v": "小羽片排列整齐、末端平截的本内苏铁类。"
+  },
+  {
+   "k": "Small bennettitalean shrub with short, uneven leaflets.",
+   "v": "具短而不等小羽片的小型本内苏铁类灌木。"
+  },
+  {
+   "k": "Slender, forking bennettitalean bush with small flower-like cones.",
+   "v": "纤细、二叉分枝的本内苏铁类灌木，具小型花状球穗。"
+  },
+  {
+   "k": "Slender-stemmed early cycad from Late Triassic North Carolina.",
+   "v": "来自晚三叠世北卡罗来纳州、茎干纤细的早期苏铁。"
+  },
+  {
+   "k": "Puzzling plant with pleated, palm-like leaves, once claimed as a flowering plant.",
+   "v": "令人费解的植物，具褶扇状、似棕榈的叶，曾被认为是开花植物。"
+  },
+  {
+   "k": "Corystosperm with fine, needle-like leaflets, a dry-ground cousin of Dicroidium.",
+   "v": "具细针状小羽片的盔籽类，是二叉羊齿生长于干燥地带的近亲。"
+  },
+  {
+   "k": "Caytonialean shrub with net-veined leaflets and berry-like seed cups.",
+   "v": "开通目灌木，具网状脉小叶和浆果状的种子壳斗。"
+  },
+  {
+   "k": "Dipterid fern with big, umbrella-like fronds.",
+   "v": "具巨大伞状叶的双扇蕨类。"
+  },
+  {
+   "k": "Dipterid fern with leaves netted like a window lattice.",
+   "v": "叶脉如窗格般交织成网的双扇蕨类。"
+  },
+  {
+   "k": "Royal-fern relative common in Mesozoic floras.",
+   "v": "紫萁类的近亲，常见于中生代植物群。"
+  },
+  {
+   "k": "Marattialean fern with huge fronds, common in the Middle Triassic.",
+   "v": "具巨大叶片的合囊蕨类，常见于中三叠世。"
+  },
+  {
+   "k": "Fern close to the living king ferns.",
+   "v": "与现生观音座莲类亲缘很近的蕨类。"
+  },
+  {
+   "k": "Forking, thicket-forming fern of open ground.",
+   "v": "二叉分枝、在开阔地上形成密丛的蕨类。"
+  },
+  {
+   "k": "Quillwort-like lycopsid that greened the shores after the end-Permian extinction.",
+   "v": "类似水韭的石松类，在二叠纪末大灭绝后让海岸重新披上绿装。"
+  },
+  {
+   "k": "Herb-sized conifer from the Triassic sandstones of the Vosges.",
+   "v": "来自孚日山三叠纪砂岩、草本大小的松柏类。"
+  },
+  {
+   "k": "Small leafy liverwort of Rhaetian ponds.",
+   "v": "瑞替期池塘中的小型有叶苔类。"
+  },
+  {
+   "k": "Fossil liverwort with flat, forking lobes.",
+   "v": "具扁平二叉裂片的苔类化石。"
+  },
+  {
+   "k": "Large dasyclad of Triassic reefs.",
+   "v": "三叠纪礁中的大型绒枝藻。"
+  },
+  {
+   "k": "Dasyclad with swollen, bladder-tipped branches.",
+   "v": "分枝膨大、末端呈囊泡状的绒枝藻。"
+  },
+  {
+   "k": "Puzzling encrusting alga of Mesozoic lagoons.",
+   "v": "中生代潟湖中令人费解的结壳藻类。"
+  },
+  {
+   "k": "Triassic stonewort with star-patterned fruiting cases.",
+   "v": "生殖结构具星状花纹的三叠纪轮藻。"
+  },
+  {
+   "k": "Mushroom-relative threads with clamp connections, from Antarctica.",
+   "v": "来自南极洲、具锁状联合的蘑菇近亲菌丝。"
+  },
+  {
+   "k": "Spiny fungal spore cases preserved in Antarctic Triassic peat.",
+   "v": "保存在南极三叠纪泥炭中的多刺真菌孢子囊。"
+  },
+  {
+   "k": "Cheirolepid conifer with tiny cones petrified in Patagonia.",
+   "v": "掌鳞杉类松柏，其小球果在巴塔哥尼亚石化保存。"
+  },
+  {
+   "k": "Kauri relative from the Jurassic Talbragar fish beds, Australia.",
+   "v": "来自澳大利亚侏罗纪塔尔布拉加鱼化石层的贝壳杉近亲。"
+  },
+  {
+   "k": "Early cypress-family conifer like a Chinese fir.",
+   "v": "早期的柏科松柏，形似杉木。"
+  },
+  {
+   "k": "Early pine relative with split cone scales.",
+   "v": "球果鳞片开裂的早期松类近亲。"
+  },
+  {
+   "k": "The oldest known member of the pine family, from Scotland.",
+   "v": "已知最古老的松科成员，来自苏格兰。"
+  },
+  {
+   "k": "Jurassic ginkgo from Henan with clusters of seeds on forked stalks.",
+   "v": "来自河南的侏罗纪银杏，种子簇生在分叉的柄上。"
+  },
+  {
+   "k": "Ginkgo relative with tufts of strap leaves on short shoots.",
+   "v": "银杏类近亲，短枝上簇生带状叶。"
+  },
+  {
+   "k": "Large cycad with comb-like fronds.",
+   "v": "具篦齿状叶的大型苏铁。"
+  },
+  {
+   "k": "Bennettitalean of dry coasts with stiff, closely set leaflets.",
+   "v": "干燥海岸上的本内苏铁类，小羽片坚硬而紧密排列。"
+  },
+  {
+   "k": "Bennettitalean whose leaflets have ear-like lobes at the base.",
+   "v": "小羽片基部具耳状裂片的本内苏铁类。"
+  },
+  {
+   "k": "Slender bennettitalean bush with small two-sexed 'flowers', from Yorkshire.",
+   "v": "来自约克郡的纤细本内苏铁类灌木，具两性的小型“花”。"
+  },
+  {
+   "k": "Thick-leaved seed fern of salty coastal flats.",
+   "v": "咸水海岸滩地上具厚叶的种子蕨。"
+  },
+  {
+   "k": "Early climbing-fern relative of the Jurassic Yorkshire delta.",
+   "v": "侏罗纪约克郡三角洲上海金沙类的早期近亲。"
+  },
+  {
+   "k": "Fern with small fan-shaped leaves, kin of the living Dipteris.",
+   "v": "具小型扇形叶的蕨类，与现生的双扇蕨同属一类。"
+  },
+  {
+   "k": "Common fern of the Jurassic Yorkshire flora.",
+   "v": "侏罗纪约克郡植物群中常见的蕨类。"
+  },
+  {
+   "k": "Delicately cut fern of the Jurassic and Early Cretaceous.",
+   "v": "侏罗纪和早白垩世叶片细裂的蕨类。"
+  },
+  {
+   "k": "Dasyclad of Early Jurassic carbonate lagoons.",
+   "v": "早侏罗世碳酸盐潟湖中的绒枝藻。"
+  },
+  {
+   "k": "Small tube-shaped dasyclad of Tethyan lagoons.",
+   "v": "特提斯海潟湖中的小型管状绒枝藻。"
+  },
+  {
+   "k": "Dasyclad with star-like whorls of rays.",
+   "v": "具星状轮生射枝的绒枝藻。"
+  },
+  {
+   "k": "Crust-building organism of Jurassic and Cretaceous reefs.",
+   "v": "侏罗纪和白垩纪礁中建造结壳的生物。"
+  },
+  {
+   "k": "Bubbly calcified mats on shallow Mesozoic platforms.",
+   "v": "中生代浅水台地上气泡状的钙化席。"
+  },
+  {
+   "k": "Stonewort of Jurassic and Cretaceous lakes.",
+   "v": "侏罗纪和白垩纪湖泊中的轮藻。"
+  },
+  {
+   "k": "Leafy lichen from Jurassic Daohugou, China.",
+   "v": "来自中国侏罗纪道虎沟的叶状地衣。"
+  },
+  {
+   "k": "Magnolia-like tree with big, many-parted flowers, from Kansas.",
+   "v": "来自堪萨斯州、形似木兰的乔木，花大而多部分。"
+  },
+  {
+   "k": "Early plane-tree relative with lobed leaves, along Cretaceous streams.",
+   "v": "白垩纪溪流边具分裂叶的早期悬铃木近亲。"
+  },
+  {
+   "k": "Big-leaved plane-tree relative of the Late Cretaceous.",
+   "v": "晚白垩世具大型叶的悬铃木近亲。"
+  },
+  {
+   "k": "One of the oldest laurels, its tiny flowers preserved as charcoal.",
+   "v": "最古老的樟科植物之一，其微小的花以木炭形式保存下来。"
+  },
+  {
+   "k": "Toothed-leaved early relative of oaks and chestnuts.",
+   "v": "叶缘具齿的栎树和栗树的早期亲属。"
+  },
+  {
+   "k": "Swamp conifer that once ringed the Arctic, now nearly extinct in the wild.",
+   "v": "曾环绕北极分布的沼泽松柏类，如今野生种已濒临灭绝。"
+  },
+  {
+   "k": "Stiff-needled cypress-family conifer, known since the Late Cretaceous.",
+   "v": "针叶坚硬的柏科松柏，自晚白垩世起即有记录。"
+  },
+  {
+   "k": "Its pollen is common in Cretaceous rocks; the living trees were found only in 1994.",
+   "v": "它的花粉在白垩纪岩层中很常见；现生的树直到1994年才被发现。"
+  },
+  {
+   "k": "Succulent-jointed cheirolepid of salty Cretaceous coasts.",
+   "v": "白垩纪咸水海岸上具肉质节的掌鳞杉类。"
+  },
+  {
+   "k": "Chloranthoid herb from Early Cretaceous Portugal with tiny, petal-less flowers.",
+   "v": "来自早白垩世葡萄牙的金粟兰类草本，花微小、无花瓣。"
+  },
+  {
+   "k": "Buttercup relative from Liaoning, among the oldest eudicots.",
+   "v": "来自辽宁的毛茛类近亲，是最古老的真双子叶植物之一。"
+  },
+  {
+   "k": "Small herb with paired flower stalks, from the Yixian lakes.",
+   "v": "来自义县湖泊的小型草本，花梗成对着生。"
+  },
+  {
+   "k": "Early Cretaceous herb with tiny flowers, from Liaoning.",
+   "v": "来自辽宁的早白垩世草本，花微小。"
+  },
+  {
+   "k": "Tiny saxifrage-like flower preserved in Swedish charcoal.",
+   "v": "保存在瑞典木炭中的微小虎耳草状花朵。"
+  },
+  {
+   "k": "Buttercup-order flower with a spiral of small tepals, from Portugal.",
+   "v": "来自葡萄牙的毛茛目花朵，小型花被片螺旋排列。"
+  },
+  {
+   "k": "Small eudicot herb from the Crato limestone of Brazil.",
+   "v": "来自巴西克拉图灰岩的小型真双子叶草本。"
+  },
+  {
+   "k": "Magnoliid shrub with small flowers, from the Crato limestone.",
+   "v": "来自克拉图灰岩、开小花的木兰类灌木。"
+  },
+  {
+   "k": "Magnoliid of the Crato lake shores, near the custard-apple family.",
+   "v": "克拉图湖岸边的木兰类植物，与番荔枝科相近。"
+  },
+  {
+   "k": "Spicebush relative with many-tepaled flowers, from Virginia.",
+   "v": "来自弗吉尼亚州的蜡梅近亲，花具多枚花被片。"
+  },
+  {
+   "k": "Early water-lily flower from Portugal.",
+   "v": "来自葡萄牙的早期睡莲花朵。"
+  },
+  {
+   "k": "Tiny relative of the giant water lily, from New Jersey.",
+   "v": "来自新泽西州的王莲微小近亲。"
+  },
+  {
+   "k": "Fanwort-family water plant with round floating leaves, from Brazil.",
+   "v": "来自巴西的莼菜科水生植物，具圆形浮水叶。"
+  },
+  {
+   "k": "Floating aroid rosettes like water lettuce, from Late Cretaceous Alberta.",
+   "v": "来自晚白垩世艾伯塔省的漂浮天南星类莲座体，形似大薸。"
+  },
+  {
+   "k": "Leafless green-jointed shrub of dry lands, known since the Early Cretaceous.",
+   "v": "干燥地区无叶、具绿色节的灌木，自早白垩世起即有记录。"
+  },
+  {
+   "k": "Welwitschia-like gnetophyte of the dry Crato coast.",
+   "v": "干燥的克拉图海岸上类似百岁兰的买麻藤类。"
+  },
+  {
+   "k": "Finely divided fern of the Wealden wetlands.",
+   "v": "威尔德湿地中叶片细裂的蕨类。"
+  },
+  {
+   "k": "Small Indian tree-shrub with mulberry-like seed heads, of its own extinct order.",
+   "v": "印度的小型乔木状灌木，具桑葚状种子头，自成一个已灭绝的目。"
+  },
+  {
+   "k": "Late-surviving bennettitalean with a cone at each leaf base.",
+   "v": "延续至很晚的本内苏铁类，每个叶基都着生一个球穗。"
+  },
+  {
+   "k": "Club-shaped dasyclad, still alive in tropical lagoons.",
+   "v": "棒状的绒枝藻，至今仍生活在热带潟湖中。"
+  },
+  {
+   "k": "Beaded dasyclad with tufts at its tips.",
+   "v": "串珠状的绒枝藻，末端具簇毛。"
+  },
+  {
+   "k": "Clavatoracean stonewort with three-fold symmetric fruiting cases.",
+   "v": "生殖结构呈三重对称的棒轮藻类轮藻。"
+  },
+  {
+   "k": "Early lotus relative with round, shield-like leaves.",
+   "v": "具圆形盾状叶的早期莲类近亲。"
+  },
+  {
+   "k": "Tiny floating fern that turns ponds red; in the Eocene it covered the Arctic Ocean.",
+   "v": "微小的漂浮蕨类，能把池塘染红；始新世时它曾覆盖整个北冰洋。"
+  },
+  {
+   "k": "Coral fungus preserved in Burmese amber.",
+   "v": "保存在缅甸琥珀中的珊瑚菌。"
+  },
+  {
+   "k": "The oldest insect-killing fungus, sprouting from a scale insect in amber.",
+   "v": "最古老的杀虫真菌，从琥珀中的一只介壳虫体内长出。"
+  },
+  {
+   "k": "Crusty lichen from the Early Cretaceous of Vancouver Island.",
+   "v": "来自温哥华岛早白垩世的壳状地衣。"
+  },
+  {
+   "k": "Walnuts appear in the Eocene and spread across the northern continents.",
+   "v": "胡桃出现于始新世，并遍布北方各大陆。"
+  },
+  {
+   "k": "Hickories filled Paleocene forests of North America and Europe.",
+   "v": "山核桃遍布北美和欧洲古新世的森林。"
+  },
+  {
+   "k": "Chestnuts, with spiny husks around glossy nuts.",
+   "v": "栗树，光亮的坚果外包着多刺的壳斗。"
+  },
+  {
+   "k": "Elms, with round papery seeds, date back to the Paleocene.",
+   "v": "榆树具圆形纸质的翅果，可追溯到古新世。"
+  },
+  {
+   "k": "Lindens hum with bees when their sweet flowers open.",
+   "v": "椴树香甜的花开放时，蜜蜂嗡嗡作响。"
+  },
+  {
+   "k": "Katsura relatives were common along Paleocene rivers; its autumn leaves smell of caramel.",
+   "v": "连香树类近亲在古新世河岸边很常见；它的秋叶散发着焦糖的香气。"
+  },
+  {
+   "k": "Extinct wheel-wood relative of the warm Paleocene Arctic.",
+   "v": "温暖的古新世北极地区的已灭绝昆栏树近亲。"
+  },
+  {
+   "k": "Extinct Eocene plane tree with big lobed leaves.",
+   "v": "已灭绝的始新世悬铃木，具大型分裂叶。"
+  },
+  {
+   "k": "Swamp tree whose leaves turn a blazing scarlet in autumn.",
+   "v": "沼泽中的树木，秋季叶片变为灿烂的猩红色。"
+  },
+  {
+   "k": "Elm relative found from the Eocene; a few relict species survive.",
+   "v": "榆树的近亲，自始新世起即有发现；少数孑遗种存活至今。"
+  },
+  {
+   "k": "Walnut relative hung with long chains of winged nuts.",
+   "v": "胡桃的近亲，挂满一串串长长的带翅坚果。"
+  },
+  {
+   "k": "Rainforest tree with bright blue fruit, known from the Eocene of Australia.",
+   "v": "结亮蓝色果实的雨林乔木，见于澳大利亚始新世。"
+  },
+  {
+   "k": "Evergreen chestnut relative of warm Asian forests since the Eocene.",
+   "v": "常绿的栗类近亲，自始新世起就生长在温暖的亚洲森林中。"
+  },
+  {
+   "k": "Fan palm of tropical swamps; its pollen goes back to the Paleocene.",
+   "v": "热带沼泽中的扇叶棕榈；其花粉可追溯到古新世。"
+  },
+  {
+   "k": "Shade-loving conifer with drooping tips and tiny cones.",
+   "v": "喜阴的松柏类，枝梢下垂，球果小巧。"
+  },
+  {
+   "k": "Scale-leaved conifer known from the Paleocene Arctic.",
+   "v": "鳞叶松柏类，见于古新世的北极地区。"
+  },
+  {
+   "k": "True cedars, with flat-topped tiers and upright barrel cones.",
+   "v": "真正的雪松，枝层平展，桶状球果直立。"
+  },
+  {
+   "k": "Tall conifer whose cones have three-pointed bracts; known since the Oligocene.",
+   "v": "高大的松柏类，球果具三尖的苞鳞；自渐新世起即有记录。"
+  },
+  {
+   "k": "Hardy conifer with blue, berry-like cones.",
+   "v": "耐寒的松柏类，具蓝色浆果状的球果。"
+  },
+  {
+   "k": "Ash trees, with bunches of winged keys, since the Eocene.",
+   "v": "白蜡树，自始新世起就挂着一簇簇带翅的翅果。"
+  },
+  {
+   "k": "Candles of white flowers and shiny conkers; known from the Paleocene.",
+   "v": "烛台般的白色花序和光亮的果实；自古新世起即有记录。"
+  },
+  {
+   "k": "Mango leaves are found in Paleocene rocks of India.",
+   "v": "在印度的古新世岩层中发现了杧果叶。"
+  },
+  {
+   "k": "Giant herb with huge leaves; fossil banana seeds come from early Paleogene India.",
+   "v": "叶片巨大的大型草本；香蕉种子化石出自印度的早古近纪。"
+  },
+  {
+   "k": "Floating fern that carpeted the Eocene Arctic Ocean and drew down carbon dioxide.",
+   "v": "漂浮的蕨类，曾覆盖始新世的北冰洋，并大量吸收二氧化碳。"
+  },
+  {
+   "k": "Sharp-edged sedge; its seeds are common in Paleogene swamp deposits.",
+   "v": "叶缘锋利的莎草；其种子在古近纪沼泽沉积中很常见。"
+  },
+  {
+   "k": "Fern almost unchanged since the Paleocene.",
+   "v": "自古新世以来几乎没有变化的蕨类。"
+  },
+  {
+   "k": "Large fern of wet ground, known from Paleocene rocks.",
+   "v": "潮湿地带的大型蕨类，见于古新世岩层。"
+  },
+  {
+   "k": "Tall, leathery fern that grows among mangroves.",
+   "v": "生长在红树林中的高大革质蕨类。"
+  },
+  {
+   "k": "Roses grew in Eocene North America, with red hips after their flowers.",
+   "v": "始新世的北美就生长着蔷薇，花后结出红色的蔷薇果。"
+  },
+  {
+   "k": "Thorny thickets with blackberries and raspberries.",
+   "v": "结黑莓和树莓的多刺灌丛。"
+  },
+  {
+   "k": "Shrub with flat white flower heads and dark berries.",
+   "v": "开扁平白色花序、结深色浆果的灌木。"
+  },
+  {
+   "k": "Extinct ginger of Paleocene and Eocene tropical forests.",
+   "v": "古新世和始新世热带森林中已灭绝的姜类植物。"
+  },
+  {
+   "k": "Giant arum of river banks, found in the Paleocene rainforest of Cerrejón.",
+   "v": "河岸边的巨型天南星类，见于塞雷洪的古新世雨林。"
+  },
+  {
+   "k": "The oldest fossil orchids are in Eocene amber.",
+   "v": "最古老的兰花化石保存在始新世的琥珀中。"
+  },
+  {
+   "k": "Thorny shrub of dry ground with sweet red fruit.",
+   "v": "干燥地带的有刺灌木，结香甜的红色果实。"
+  },
+  {
+   "k": "Shrub with big round heads of blue or pink flowers.",
+   "v": "开着蓝色或粉色大型圆球状花序的灌木。"
+  },
+  {
+   "k": "Water lily with round yellow flowers held above the water.",
+   "v": "黄色圆形花朵挺出水面的睡莲类植物。"
+  },
+  {
+   "k": "Seagrass of warm shallow seas since the Eocene.",
+   "v": "自始新世起生长在温暖浅海中的海草。"
+  },
+  {
+   "k": "Woody-stemmed seagrass found in Eocene limestones of Florida.",
+   "v": "茎呈木质的海草，发现于佛罗里达州的始新世石灰岩中。"
+  },
+  {
+   "k": "Jointed coralline alga with forked chalky branches.",
+   "v": "分节的珊瑚藻，具二叉分枝的白垩质枝条。"
+  },
+  {
+   "k": "Fine pink coralline tufts that grow on other seaweeds.",
+   "v": "附生在其他海藻上的纤细粉红色珊瑚藻丛。"
+  },
+  {
+   "k": "Extinct chalky green alga whose egg-shaped segments fill Paleogene sands.",
+   "v": "已灭绝的白垩质绿藻，其卵形节片充满古近纪的砂层。"
+  },
+  {
+   "k": "Star-shaped plankton plates that pile up as ooze on the deep sea floor.",
+   "v": "星形的浮游生物骨板，在深海海底堆积成软泥。"
+  },
+  {
+   "k": "Spiky rosette that rises and sinks in the water; its seeds are common in Paleogene lake beds.",
+   "v": "多刺的莲座状植物，能在水中浮起和下沉；其种子在古近纪湖床中很常见。"
+  },
+  {
+   "k": "Bolete partnered with pine roots; its fossil root sheaths are Eocene.",
+   "v": "与松树根共生的牛肝菌；其菌根鞘化石出自始新世。"
+  },
+  {
+   "k": "Tiny pin-shaped fungus that grows on resin; found in Eocene amber.",
+   "v": "生长在树脂上的微小针状真菌；发现于始新世琥珀中。"
+  },
+  {
+   "k": "Pink slime mould whose fruiting bodies are preserved in Baltic amber.",
+   "v": "粉红色的黏菌，其子实体保存在波罗的海琥珀中。"
+  },
+  {
+   "k": "Leafy grey-green lichen, known from Eocene amber.",
+   "v": "灰绿色的叶状地衣，见于始新世琥珀中。"
+  },
+  {
+   "k": "Its resin hardened into the Miocene amber of the Caribbean.",
+   "v": "它的树脂硬化成了加勒比地区的中新世琥珀。"
+  },
+  {
+   "k": "Mangrove that breathes through pencil-like roots poking out of the mud.",
+   "v": "靠伸出泥面、如铅笔般的根呼吸的红树。"
+  },
+  {
+   "k": "The most massive trees on Earth, on the slopes of the Sierra Nevada.",
+   "v": "地球上体量最大的树，生长在内华达山脉的山坡上。"
+  },
+  {
+   "k": "Dark green flame of the Mediterranean hills.",
+   "v": "地中海山丘上深绿色的火焰。"
+  },
+  {
+   "k": "Umbrella-shaped pine with edible pine nuts.",
+   "v": "伞形的松树，松子可食。"
+  },
+  {
+   "k": "Savanna tree whose yellow fruit elephants seek out.",
+   "v": "稀树草原上的乔木，大象会专门寻找它的黄色果实。"
+  },
+  {
+   "k": "Woodland tree of central Africa; new leaves flush red and copper.",
+   "v": "中非林地的乔木；新叶萌发时呈红色和铜色。"
+  },
+  {
+   "k": "Dark red flowers and huge sausage-shaped fruit hanging on ropes.",
+   "v": "深红色的花，以及挂在绳状长柄上的巨大香肠形果实。"
+  },
+  {
+   "k": "Feathery-leaved savanna tree with brown, sticky pods.",
+   "v": "叶如羽毛的稀树草原乔木，结褐色、黏稠的荚果。"
+  },
+  {
+   "k": "Fan palm with forked trunks, along desert rivers like the Nile.",
+   "v": "树干分叉的扇叶棕榈，生长在尼罗河等沙漠河流沿岸。"
+  },
+  {
+   "k": "Small understory tree with pods growing straight from its trunk.",
+   "v": "林下层的小乔木，果荚直接从树干上长出。"
+  },
+  {
+   "k": "Amazon giant whose heavy fruit is opened only by agoutis.",
+   "v": "亚马孙的巨树，沉重的果实只有刺豚鼠能打开。"
+  },
+  {
+   "k": "Bat-pollinated tree with spiny, famously smelly fruit.",
+   "v": "由蝙蝠传粉的乔木，果实多刺，气味出了名地浓烈。"
+  },
+  {
+   "k": "Pink flowers and round fruit grow straight from its trunk.",
+   "v": "粉红色的花和圆球形果实直接从树干上长出。"
+  },
+  {
+   "k": "Silvery willow of river banks.",
+   "v": "河岸边银白色的柳树。"
+  },
+  {
+   "k": "Gnarled, silver-leaved tree of the Mediterranean.",
+   "v": "枝干虬曲、叶片银白的地中海树木。"
+  },
+  {
+   "k": "Evergreen with red bark and round, bumpy red fruit.",
+   "v": "常绿树，树皮红色，结圆形、表面凹凸的红色果实。"
+  },
+  {
+   "k": "New Zealand's 'Christmas tree' bursts into crimson flowers.",
+   "v": "新西兰的“圣诞树”，开满深红色的花。"
+  },
+  {
+   "k": "Drops its leaves and covers itself in scarlet bells.",
+   "v": "落尽叶片后，全身挂满猩红色的钟形花。"
+  },
+  {
+   "k": "Desert palm of oases, wearing a skirt of dead leaves.",
+   "v": "绿洲中的沙漠棕榈，身披一圈枯叶组成的“裙子”。"
+  },
+  {
+   "k": "Very tall grass of African savannas and river banks.",
+   "v": "非洲稀树草原和河岸边非常高大的禾草。"
+  },
+  {
+   "k": "Fine-leaved tussock grass of cool steppes and mountains.",
+   "v": "凉爽草原和山地中叶片纤细的丛生禾草。"
+  },
+  {
+   "k": "Shortgrass of the prairies with eyelash-like seed heads.",
+   "v": "北美草原上的矮草，种穗形如睫毛。"
+  },
+  {
+   "k": "Tulips come from the steppes and mountains of Central Asia.",
+   "v": "郁金香原产于中亚的草原和山地。"
+  },
+  {
+   "k": "Scarlet poppies of open, disturbed ground.",
+   "v": "开阔、受干扰土地上的猩红色罂粟。"
+  },
+  {
+   "k": "Spires of blue-purple pea flowers.",
+   "v": "蓝紫色蝶形花组成的尖塔状花序。"
+  },
+  {
+   "k": "Tall daisy of the American prairies whose heads follow the sun.",
+   "v": "美洲草原上高大的菊科植物，花盘追随太阳转动。"
+  },
+  {
+   "k": "Fragrant grey shrub of dry Mediterranean hills.",
+   "v": "地中海干燥山丘上芳香的灰色灌木。"
+  },
+  {
+   "k": "Deep blue trumpets of mountain meadows.",
+   "v": "山地草甸中深蓝色的喇叭状花。"
+  },
+  {
+   "k": "Low shrub with blue-black berries in heaths and forests.",
+   "v": "石南荒原和森林中的低矮灌木，结蓝黑色浆果。"
+  },
+  {
+   "k": "Knee-high birch of the tundra; a sign of cold ice-age climates.",
+   "v": "苔原上齐膝高的桦树；是冰期寒冷气候的标志。"
+  },
+  {
+   "k": "Tight cushion of tundra covered in pink flowers.",
+   "v": "苔原上紧密的垫状植物，开满粉红色的花。"
+  },
+  {
+   "k": "Round, golden-spined cactus of Mexican deserts.",
+   "v": "墨西哥沙漠中球形、具金色刺的仙人掌。"
+  },
+  {
+   "k": "Spiky rosette that flowers once, on a tall pole, then dies.",
+   "v": "多刺的莲座状植物，一生只在高高的花茎上开一次花，随后死去。"
+  },
+  {
+   "k": "Branching tree yucca of the Mojave Desert.",
+   "v": "莫哈韦沙漠中分枝的树状丝兰。"
+  },
+  {
+   "k": "Bundle of thorny whips tipped with red flowers after rain.",
+   "v": "一束多刺的鞭状枝，雨后枝端开出红花。"
+  },
+  {
+   "k": "Salt-tolerant shrub of desert rivers, clouded in pink flowers.",
+   "v": "沙漠河流边耐盐的灌木，笼罩在粉红色的花海中。"
+  },
+  {
+   "k": "Leafless, twisted shrub of the Central Asian deserts.",
+   "v": "中亚沙漠中无叶、枝干扭曲的灌木。"
+  },
+  {
+   "k": "Pairs of fat leaves that look like pebbles in the Namib sand.",
+   "v": "成对的肥厚叶片，在纳米布的沙地中看起来像卵石。"
+  },
+  {
+   "k": "Iris with sword-like leaves and yellow flowers on pond edges.",
+   "v": "池塘边的鸢尾，叶如长剑，开黄色的花。"
+  },
+  {
+   "k": "Floating Amazon plant with lilac flower spikes.",
+   "v": "原产亚马孙的漂浮植物，具淡紫色的花穗。"
+  },
+  {
+   "k": "Carnivorous bog plant whose tall pitchers drown insects.",
+   "v": "沼泽中的食虫植物，高高的瓶状叶能溺死昆虫。"
+  },
+  {
+   "k": "Tropical vine with hanging pitchers that trap insects.",
+   "v": "热带藤本，悬挂的捕虫笼能诱捕昆虫。"
+  },
+  {
+   "k": "Rosettes of the American tropics that hold pools of water in their leaves.",
+   "v": "美洲热带的莲座状植物，叶丛中能蓄积一汪汪水。"
+  },
+  {
+   "k": "Leafless parasite with the world's largest single flower, smelling of rotting meat.",
+   "v": "无叶的寄生植物，拥有世界上最大的单朵花，散发着腐肉的气味。"
+  },
+  {
+   "k": "Orange and blue flowers shaped like a bird's head.",
+   "v": "橙色与蓝色相间的花，形如鸟头。"
+  },
+  {
+   "k": "Tall spikes of purple bells at forest edges.",
+   "v": "森林边缘高高的紫色钟形花穗。"
+  },
+  {
+   "k": "Long-leaved seagrass of tropical shallows, grazed by dugongs.",
+   "v": "热带浅海中叶片修长的海草，是儒艮的食物。"
+  },
+  {
+   "k": "Bright green seagrass of wave-beaten Pacific rocks.",
+   "v": "太平洋浪击岩石上鲜绿色的海草。"
+  },
+  {
+   "k": "Chalky green alga shaped like a shaving brush.",
+   "v": "形如剃须刷的白垩质绿藻。"
+  },
+  {
+   "k": "Green alga with a stiff, chalky fan on a stalk.",
+   "v": "柄上生有坚硬白垩质扇形体的绿藻。"
+  },
+  {
+   "k": "Kelp with a float the size of a fist at the end of a long whip-like stalk.",
+   "v": "长长的鞭状柄末端有一个拳头大小浮囊的海带。"
+  },
+  {
+   "k": "Long, frilly-edged kelp of cold Atlantic coasts.",
+   "v": "大西洋寒冷海岸上边缘呈褶皱的修长海带。"
+  },
+  {
+   "k": "Floating rosette with horned nuts.",
+   "v": "漂浮的莲座状植物，结有角的坚果。"
+  },
+  {
+   "k": "Fast-growing waterweed with whorls of small leaves.",
+   "v": "生长迅速的水草，小叶轮生。"
+  },
+  {
+   "k": "Water plant with fans of finely cut leaves.",
+   "v": "叶片细裂成扇形的水生植物。"
+  },
+  {
+   "k": "Buttercup of streams with white flowers on the surface.",
+   "v": "溪流中的毛茛，白色的花开在水面上。"
+  },
+  {
+   "k": "An ink cap preserved in Miocene Dominican amber.",
+   "v": "保存在中新世多米尼加琥珀中的鬼伞。"
+  },
+  {
+   "k": "Bright red brittlegill of pine woods.",
+   "v": "松林中鲜红色的红菇。"
+  },
+  {
+   "k": "Blue mushroom that bleeds blue milk when cut.",
+   "v": "切开后会渗出蓝色乳汁的蓝色蘑菇。"
+  },
+  {
+   "k": "Black, trumpet-shaped mushroom of leaf litter.",
+   "v": "落叶层中黑色的喇叭状蘑菇。"
+  },
+  {
+   "k": "Japanese bonnet that glows green on rainy nights.",
+   "v": "日本的小菇，在雨夜发出绿光。"
+  },
+  {
+   "k": "Cold-loving cave mould that grows on the noses of hibernating bats.",
+   "v": "喜冷的洞穴霉菌，生长在冬眠蝙蝠的鼻子上。"
+  },
+  {
+   "k": "Lichen that hangs from branches in grey-green tassels.",
+   "v": "从枝条上垂下灰绿色流苏的地衣。"
+  },
+  {
+   "k": "Yellow-green crusts on bare rock; grows so slowly it is used to date glacier retreat.",
+   "v": "裸露岩石上的黄绿色壳状地衣；生长极其缓慢，被用来测定冰川退缩的年代。"
+  },
+  {
+   "k": "Wild wheat of the Fertile Crescent, ancestor of the first farmed wheats.",
+   "v": "新月沃地的野生小麦，是最早栽培小麦的祖先。"
+  },
+  {
+   "k": "A new species born in an English salt marsh in the 1890s.",
+   "v": "19世纪90年代诞生于英格兰一处盐沼中的新物种。"
+  },
+  {
+   "k": "Chalk-plated plankton whose blooms whiten the sea; it appeared about 270,000 years ago.",
+   "v": "具白垩质骨板的浮游生物，其水华能把海水染白；它大约出现于27万年前。"
+  },
+  {
+   "k": "Microbial matground",
+   "v": "微生物席底"
+  },
+  {
+   "k": "Revive ({0} EP)",
+   "v": "重生（{0} EP）"
+  },
+  {
+   "k": "All your groups of it are gone. You can bring one back to a habitat center of yours.",
+   "v": "你的这个物种已全部消失。你可以在自己的栖息地中心让它重生一群。"
+  },
+  {
+   "k": "No free tile for it on or near your habitat centers",
+   "v": "你的栖息地中心及附近没有适合它的空格"
+  },
+  {
+   "k": "No free {0} on or near your habitat centers",
+   "v": "你的栖息地中心及附近没有空闲的{0}"
+  },
+  {
+   "k": "The {0} is back (−{1} EP)",
+   "v": "{0}重生了（−{1} EP）"
+  },
+  {
+   "k": "Nothing to bring back",
+   "v": "没有可以重生的"
+  },
+  {
+   "k": "Couldn't place it",
+   "v": "无法放置"
+  },
+  {
+   "k": "Evolved",
+   "v": "已演化"
+  },
+  {
+   "k": "{0} → {1}",
+   "v": "{0} → {1}"
   }
  ]
 }

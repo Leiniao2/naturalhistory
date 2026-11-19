@@ -18945,6 +18945,14 @@
    "v": "이번 턴에 새로 등장: 다음 턴부터 행동할 수 있습니다"
   },
   {
+   "k": "First encounter with the wild",
+   "v": "야생 무리와의 첫 만남"
+  },
+  {
+   "k": "Your animals meet a wild group for the first time: {0} ({1}). Others share this world with you.",
+   "v": "당신의 동물이 처음으로 야생 무리를 만났습니다: {0} ({1}). 이 세상은 당신만의 것이 아닙니다."
+  },
+  {
    "k": "Unexplored",
    "v": "미탐험"
   },
@@ -19619,6 +19627,3106 @@
   {
    "k": "Ready",
    "v": "준비 완료"
+  },
+  {
+   "k": "Microbial mats",
+   "v": "미생물 매트"
+  },
+  {
+   "k": "Damp flats crusted with layers of microbes that trap sediment and build stromatolites: the oldest ecosystems on Earth, making oxygen for billions of years.",
+   "v": "미생물 층으로 뒤덮인 축축한 갯벌. 미생물이 퇴적물을 붙잡아 스트로마톨라이트를 쌓습니다. 지구에서 가장 오래된 생태계로, 수십억 년 동안 산소를 만들어 왔습니다."
+  },
+  {
+   "k": "Mosses, liverworts and the first small vascular plants: the green film that first covered the land and began to make soil.",
+   "v": "이끼, 우산이끼, 그리고 최초의 작은 관다발식물. 처음으로 땅을 덮고 흙을 만들기 시작한 초록빛 막입니다."
+  },
+  {
+   "k": "Open country covered in ferns and horsetails, the meadows of the world long before grasses evolved.",
+   "v": "양치식물과 속새로 뒤덮인 탁 트인 땅. 풀이 진화하기 훨씬 전의 세계의 초원입니다."
+  },
+  {
+   "k": "Warm, wet forest with layer upon layer of life: the richest habitat on land, home to most land species.",
+   "v": "생명이 층층이 겹친 따뜻하고 습한 숲. 육지에서 가장 풍요로운 서식지이며 육상 생물 대부분의 보금자리입니다."
+  },
+  {
+   "k": "Dry country where little rain falls: its life saves water, shelters by day and comes out at night.",
+   "v": "비가 거의 내리지 않는 메마른 땅. 이곳의 생물은 물을 아끼고, 낮에는 숨어 있다가 밤에 나옵니다."
+  },
+  {
+   "k": "Swamps and marshes between land and water, where many of the first land animals and plants took hold.",
+   "v": "육지와 물 사이의 늪과 습원. 최초의 육상 동물과 식물 다수가 이곳에 자리를 잡았습니다."
+  },
+  {
+   "k": "Warm grassland dotted with trees, grazed by great herds and hunted by their predators.",
+   "v": "나무가 드문드문 서 있는 따뜻한 초원. 거대한 무리가 풀을 뜯고, 포식자가 그들을 사냥합니다."
+  },
+  {
+   "k": "Cool, dry grassland stretching to the horizon, where speed and endurance pay.",
+   "v": "지평선까지 펼쳐진 서늘하고 건조한 초원. 이곳에서는 속도와 지구력이 보상받습니다."
+  },
+  {
+   "k": "Cold treeless land frozen for much of the year, with a brief, busy summer.",
+   "v": "일 년 중 대부분 얼어 있는 춥고 나무 없는 땅. 여름은 짧지만 분주합니다."
+  },
+  {
+   "k": "A dome of ice kilometres thick; little lives on it, but its cold edges feed rich seas.",
+   "v": "두께가 수 킬로미터에 이르는 얼음 돔. 그 위에는 생물이 거의 없지만, 차가운 가장자리가 풍요로운 바다를 먹여 살립니다."
+  },
+  {
+   "k": "Reef",
+   "v": "초"
+  },
+  {
+   "k": "Built by living things over countless generations: stromatolites, sponges, then corals. Reefs shelter a crowd of sea life.",
+   "v": "생물이 수많은 세대에 걸쳐 쌓아 올린 구조물. 스트로마톨라이트, 해면, 그리고 산호. 초는 수많은 바다 생물의 은신처입니다."
+  },
+  {
+   "k": "Oasis",
+   "v": "오아시스"
+  },
+  {
+   "k": "Water in the desert: a pond fed from underground, a refuge every desert animal knows.",
+   "v": "사막 속의 물. 지하수가 채우는 연못으로, 사막의 모든 동물이 아는 피난처입니다."
+  },
+  {
+   "k": "Volcano",
+   "v": "화산"
+  },
+  {
+   "k": "Molten rock breaking through the crust; its ash and lava destroy, then make some of the most fertile ground there is.",
+   "v": "지각을 뚫고 나오는 용암. 화산재와 용암은 모든 것을 파괴한 뒤, 가장 비옥한 땅 가운데 하나를 만들어 냅니다."
+  },
+  {
+   "k": "Hot springs, geysers and steaming vents where heat-loving microbes paint the ground in bright colours.",
+   "v": "온천, 간헐천, 증기 분기공. 열을 좋아하는 미생물이 땅을 선명한 색으로 물들입니다."
+  },
+  {
+   "k": "A flat-topped table of layered rock left standing as the land around it wore away.",
+   "v": "주변 땅이 깎여 나가는 동안 홀로 남은, 층진 암석으로 된 평평한 꼭대기의 대지."
+  },
+  {
+   "k": "A deep gorge cut by a river through layer after layer of rock, a record of millions of years.",
+   "v": "강이 층층이 쌓인 암석을 깎아 만든 깊은 골짜기. 수백만 년의 기록입니다."
+  },
+  {
+   "k": "Chalk cliffs made of the skeletons of countless tiny sea algae that lived in Cretaceous seas.",
+   "v": "백악기 바다에 살던 수많은 작은 해조류의 골격으로 이루어진 백악 절벽."
+  },
+  {
+   "k": "A lake with no outlet, where the water evaporates and leaves a white crust of salt.",
+   "v": "출구가 없는 호수. 물이 증발하면서 하얀 소금 껍질이 남습니다."
+  },
+  {
+   "k": "A salt lake coloured pink by salt-loving microbes and algae thriving where little else can.",
+   "v": "호염성 미생물과 조류가 분홍색으로 물들인 염호. 다른 생물이 거의 살 수 없는 곳에서 이들은 번성합니다."
+  },
+  {
+   "k": "Hills of red sandstone striped in many colours, laid down in ancient deserts and lakes.",
+   "v": "여러 빛깔의 줄무늬가 진 붉은 사암 언덕. 고대의 사막과 호수에서 퇴적되었습니다."
+  },
+  {
+   "k": "Limestone towers and caves dissolved by rain over millions of years, full of hidden waters.",
+   "v": "수백만 년 동안 빗물에 녹아 만들어진 석회암 탑과 동굴. 숨겨진 물로 가득합니다."
+  },
+  {
+   "k": "Jungle",
+   "v": "정글"
+  },
+  {
+   "k": "A dense tropical canopy so thick that little light reaches the ground.",
+   "v": "빛이 땅에 거의 닿지 못할 만큼 빽빽한 열대 숲 지붕."
+  },
+  {
+   "k": "Broadleaf forest",
+   "v": "활엽수림"
+  },
+  {
+   "k": "A forest of leafy trees that shade and feed a great web of life beneath them.",
+   "v": "잎이 무성한 나무들의 숲. 그 아래의 거대한 생명망에 그늘과 먹이를 제공합니다."
+  },
+  {
+   "k": "Conifer forest",
+   "v": "침엽수림"
+  },
+  {
+   "k": "Evergreen cone-bearing trees, the oldest kind of forest still standing today.",
+   "v": "구과를 맺는 상록수. 오늘날까지 남아 있는 가장 오래된 종류의 숲입니다."
+  },
+  {
+   "k": "Underwater volcano",
+   "v": "해저 화산"
+  },
+  {
+   "k": "A seamount rising from the sea floor; its slopes gather sea life and its eruptions remake the sea bed.",
+   "v": "해저에서 솟아오른 해산. 그 비탈에는 바다 생물이 모여들고, 분화는 해저를 새로 빚어냅니다."
+  },
+  {
+   "k": "Hydrothermal vents",
+   "v": "열수 분출공"
+  },
+  {
+   "k": "Black smokers pouring out hot, mineral-rich water: in the dark, whole communities live on chemical energy instead of sunlight, perhaps as the first life did.",
+   "v": "블랙 스모커가 뜨겁고 광물이 풍부한 물을 뿜어냅니다. 어둠 속에서 군집 전체가 햇빛 대신 화학 에너지로 살아갑니다. 최초의 생명도 아마 그랬을 것입니다."
+  },
+  {
+   "k": "Shallow hydrothermal field",
+   "v": "얕은 바다 열수 지대"
+  },
+  {
+   "k": "White smokers, gas seeps and sulphur on a shallow sea floor, covered in bacterial mats.",
+   "v": "얕은 해저의 화이트 스모커, 가스 누출, 황. 온통 세균 매트로 덮여 있습니다."
+  },
+  {
+   "k": "Stromatolite sea floor",
+   "v": "스트로마톨라이트 해저"
+  },
+  {
+   "k": "Domes and mounds built layer by layer by microbial mats, the first reefs and for most of Earth's history its most common sign of life.",
+   "v": "미생물 매트가 한 층씩 쌓아 올린 돔과 둔덕. 최초의 초이자, 지구 역사 대부분의 기간 동안 가장 흔한 생명의 흔적이었습니다."
+  },
+  {
+   "k": "Your {0} gains {1} for free",
+   "v": "당신의 {0}이(가) {1}을(를) 무료로 얻습니다"
+  },
+  {
+   "k": "{0} group of yours nearby is healed",
+   "v": "근처에 있는 당신의 무리 {0}개가 회복되었습니다"
+  },
+  {
+   "k": "{0} groups of yours nearby are healed",
+   "v": "근처에 있는 당신의 무리 {0}개가 회복되었습니다"
+  },
+  {
+   "k": "A group of {0} joins you",
+   "v": "{0} 무리가 합류했습니다"
+  },
+  {
+   "k": "A feast: your {0} raises young for free",
+   "v": "성찬: 당신의 {0}이(가) 무료로 새끼를 기릅니다"
+  },
+  {
+   "k": "A second wind: every group of yours gets an extra action this turn",
+   "v": "재충전: 당신의 모든 무리가 이번 턴에 추가 행동을 1회 얻습니다"
+  },
+  {
+   "k": "Fertile ground: your groups nearby can reproduce again at once",
+   "v": "비옥한 땅: 근처에 있는 당신의 무리가 즉시 다시 번식할 수 있습니다"
+  },
+  {
+   "k": "New animal discovered",
+   "v": "새로운 동물 발견"
+  },
+  {
+   "k": "New plant discovered",
+   "v": "새로운 식물 발견"
+  },
+  {
+   "k": "New landscape discovered",
+   "v": "새로운 경관 발견"
+  },
+  {
+   "k": "Reward: {0}",
+   "v": "보상: {0}"
+  },
+  {
+   "k": "OK",
+   "v": "확인"
+  },
+  {
+   "k": "Life is still all in the sea: you begin on the seabed, in the layer under sea level",
+   "v": "생명은 아직 모두 바다에 있습니다: 해수면 아래 층의 해저에서 시작합니다"
+  },
+  {
+   "k": "Starting period",
+   "v": "시작 시대"
+  },
+  {
+   "k": "You begin on the surface",
+   "v": "지표에서 시작합니다"
+  },
+  {
+   "k": "{0:0} % of the world is land today",
+   "v": "현재 세계의 {0:0} %가 육지입니다"
+  },
+  {
+   "k": "{0} turns to the present day ({1} in all)",
+   "v": "현재까지 {0}턴 (전체 {1}턴)"
+  },
+  {
+   "k": "Flat green lobes on damp ground: among the very first land plants.",
+   "v": "축축한 땅 위에 펼쳐진 납작한 초록 엽편. 가장 초기의 육상 식물 가운데 하나다."
+  },
+  {
+   "k": "Known only from their spores; tiny moss-like crusts.",
+   "v": "포자로만 알려져 있으며, 이끼를 닮은 아주 작은 껍질 모양 식물이다."
+  },
+  {
+   "k": "Flat thalli sprouting horn-shaped spore capsules.",
+   "v": "납작한 엽상체에서 뿔 모양의 포자낭이 솟아난다."
+  },
+  {
+   "k": "The first known vascular plant: forked stems a few centimetres tall.",
+   "v": "알려진 가장 오래된 관다발 식물. 키가 몇 센티미터에 불과한 두 갈래로 갈라진 줄기를 가졌다."
+  },
+  {
+   "k": "An early clubmoss with leafy stems.",
+   "v": "잎이 무성한 줄기를 지닌 초기 석송류."
+  },
+  {
+   "k": "Cushions of moss on damp ground and rocks.",
+   "v": "축축한 땅과 바위 위에 방석처럼 자라는 이끼."
+  },
+  {
+   "k": "Leafless forked stems from the Rhynie chert hot springs.",
+   "v": "라이니 처트의 온천 지대에서 나온, 잎이 없고 두 갈래로 갈라진 줄기."
+  },
+  {
+   "k": "Rhynie chert plant with water-conducting tissue but no leaves.",
+   "v": "라이니 처트의 식물로, 물을 나르는 조직은 있지만 잎은 없다."
+  },
+  {
+   "k": "Clumps of stems with spore sacs along the sides.",
+   "v": "줄기가 무더기로 자라며 옆면을 따라 포자낭이 달린다."
+  },
+  {
+   "k": "Branching stems up to half a metre: forerunner of ferns and seed plants.",
+   "v": "높이 50센티미터에 이르는 가지 친 줄기. 양치식물과 종자식물의 선구자다."
+  },
+  {
+   "k": "Leafy clubmoss of the Rhynie chert.",
+   "v": "라이니 처트에서 나온 잎을 지닌 석송류."
+  },
+  {
+   "k": "Creeping clubmoss with spiny leaves.",
+   "v": "가시 같은 잎을 지닌 기는 석송류."
+  },
+  {
+   "k": "Herbaceous clubmoss with forked leaves.",
+   "v": "잎이 갈라진 초본성 석송류."
+  },
+  {
+   "k": "Upright, much-branched stems nearly a metre tall.",
+   "v": "높이 1미터 가까이 자라는 곧게 선, 가지가 많은 줄기."
+  },
+  {
+   "k": "Shrubby progymnosperm.",
+   "v": "관목 모양의 전겉씨식물."
+  },
+  {
+   "k": "The oldest known seed plant.",
+   "v": "알려진 가장 오래된 종자식물."
+  },
+  {
+   "k": "The first modern-looking tree, forming the first forests.",
+   "v": "처음으로 현대적인 모습을 갖춘 나무로, 최초의 숲을 이루었다."
+  },
+  {
+   "k": "The earliest known tree: a pole with a crown of branches, Gilboa forest.",
+   "v": "알려진 가장 오래된 나무. 기둥 같은 줄기 끝에 가지 다발이 달려 있으며, 길보아 숲에서 발견되었다."
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches.",
+   "v": "손가락 같은 가지들이 수관을 이루는 작은 나무."
+  },
+  {
+   "k": "A small early scale tree.",
+   "v": "작은 초기 인목류."
+  },
+  {
+   "k": "Giant club moss up to 40 m; its trunks became coal.",
+   "v": "높이 40미터에 이르는 거대한 석송류로, 그 줄기가 석탄이 되었다."
+  },
+  {
+   "k": "Scale tree with a dense, drooping crown.",
+   "v": "빽빽하고 늘어진 수관을 지닌 인목류."
+  },
+  {
+   "k": "Ribbed lycopsid trunk topped by tufts of grassy leaves.",
+   "v": "세로 골이 진 석송류 줄기 끝에 풀 같은 잎이 다발로 달린다."
+  },
+  {
+   "k": "Tree-sized horsetail growing in thickets along rivers.",
+   "v": "나무만 한 크기의 속새류로, 강가를 따라 덤불을 이루었다."
+  },
+  {
+   "k": "Marattialean tree fern with a trunk wrapped in roots.",
+   "v": "마라티아목 나무고사리로, 줄기가 뿌리로 감싸여 있다."
+  },
+  {
+   "k": "Seed fern tree with huge fronds and seeds the size of eggs.",
+   "v": "거대한 잎과 달걀만 한 씨앗을 지닌 종자고사리 나무."
+  },
+  {
+   "k": "Tall tree with strap-shaped leaves, related to conifers.",
+   "v": "띠 모양 잎을 가진 키 큰 나무로, 침엽수와 가까운 친척이다."
+  },
+  {
+   "k": "One of the first conifers, like a small Norfolk pine.",
+   "v": "최초의 침엽수 가운데 하나로, 작은 노퍽소나무를 닮았다."
+  },
+  {
+   "k": "Seed fern whose tongue-shaped leaflets are common coal-ball fossils.",
+   "v": "혀 모양의 작은 잎이 탄구에서 흔히 발견되는 화석인 종자고사리."
+  },
+  {
+   "k": "Fern-like seed plant of the coal forests.",
+   "v": "석탄림에 자라던 양치식물을 닮은 종자식물."
+  },
+  {
+   "k": "Scrambling horsetail with wedge-shaped leaves in whorls.",
+   "v": "쐐기 모양 잎이 돌려나는, 덩굴처럼 퍼지는 속새류."
+  },
+  {
+   "k": "Small early fern, often growing on other plants.",
+   "v": "작은 초기 양치식물로, 흔히 다른 식물에 붙어 자랐다."
+  },
+  {
+   "k": "Low clubmoss lineage that survives today.",
+   "v": "오늘날까지 살아남은 키 작은 석송류 계통."
+  },
+  {
+   "k": "Evergreen creeping clubmoss.",
+   "v": "늘푸른 기는 석송."
+  },
+  {
+   "k": "Tongue-leaved tree of Gondwana; its spread helped prove continental drift.",
+   "v": "곤드와나의 혀 모양 잎을 지닌 나무. 그 분포는 대륙 이동을 증명하는 데 도움이 되었다."
+  },
+  {
+   "k": "Early glossopterid of the cold southern lowlands.",
+   "v": "춥던 남반구 저지대의 초기 글로소프테리스류."
+  },
+  {
+   "k": "Climbing seed plant with broad, net-veined leaves, in tropical Cathaysia.",
+   "v": "그물맥이 있는 넓은 잎을 지닌 덩굴성 종자식물로, 열대 카타이시아에 자랐다."
+  },
+  {
+   "k": "Conifer of the dry Zechstein coasts.",
+   "v": "건조한 체히슈타인 해 연안의 침엽수."
+  },
+  {
+   "k": "Conifer of the Permian and Triassic.",
+   "v": "페름기와 트라이아스기의 침엽수."
+  },
+  {
+   "k": "Strap-leaved plant related to the cycads.",
+   "v": "소철류와 가까운 띠 모양 잎 식물."
+  },
+  {
+   "k": "Horsetails as thick as a wrist, lining Triassic rivers.",
+   "v": "손목만큼 굵은 속새로, 트라이아스기 강가에 늘어서 자랐다."
+  },
+  {
+   "k": "Royal ferns have barely changed in 200 million years.",
+   "v": "고비류는 2억 년 동안 거의 변하지 않았다."
+  },
+  {
+   "k": "Early Permian walchian conifer.",
+   "v": "전기 페름기의 발키아류 침엽수."
+  },
+  {
+   "k": "Seed fern tree that dominated southern Triassic forests.",
+   "v": "트라이아스기 남반구 숲을 지배한 종자고사리 나무."
+  },
+  {
+   "k": "The great logs of the Petrified Forest, Arizona.",
+   "v": "애리조나 석화림의 거대한 통나무."
+  },
+  {
+   "k": "Unbranched lycopsid that spread over the world after the end-Permian extinction.",
+   "v": "가지를 치지 않는 석송류로, 페름기 말 대멸종 이후 전 세계로 퍼졌다."
+  },
+  {
+   "k": "Triassic horsetail of river banks.",
+   "v": "트라이아스기 강둑의 속새류."
+  },
+  {
+   "k": "One of the earliest true cycads.",
+   "v": "가장 이른 진정한 소철 가운데 하나."
+  },
+  {
+   "k": "Ginkgo relative with deeply divided leaves.",
+   "v": "잎이 깊게 갈라진 은행나무의 친척."
+  },
+  {
+   "k": "Common Mesozoic fern foliage.",
+   "v": "중생대에 흔한 양치식물 잎 화석."
+  },
+  {
+   "k": "Gondwanan horsetail with split leaf sheaths.",
+   "v": "잎집이 갈라진 곤드와나의 속새류."
+  },
+  {
+   "k": "Peltasperm seed fern.",
+   "v": "펠타스페르뭄목 종자고사리."
+  },
+  {
+   "k": "Strap-leaved Triassic conifer of dry ground.",
+   "v": "건조한 땅에 자라던 띠 모양 잎의 트라이아스기 침엽수."
+  },
+  {
+   "k": "Jurassic monkey-puzzle tree, fossilised cones from Cerro Cuadrado.",
+   "v": "쥐라기의 칠레소나무류로, 세로 쿠아드라도에서 화석화된 구과가 나온다."
+  },
+  {
+   "k": "Scale-leaved conifer of dry Mesozoic coasts.",
+   "v": "중생대 건조한 해안의 비늘잎 침엽수."
+  },
+  {
+   "k": "Conifer with stiff, awl-shaped leaves.",
+   "v": "단단한 송곳 모양 잎을 지닌 침엽수."
+  },
+  {
+   "k": "Ginkgo with lobed fan leaves.",
+   "v": "갈라진 부채꼴 잎을 지닌 은행나무."
+  },
+  {
+   "k": "Deciduous ginkgo relative of cool, wet forests.",
+   "v": "서늘하고 습한 숲에 자라던 낙엽성 은행나무 친척."
+  },
+  {
+   "k": "Conifer with broad, flat leaves.",
+   "v": "넓고 납작한 잎을 지닌 침엽수."
+  },
+  {
+   "k": "Soft tree ferns, alive today in Australia and New Zealand.",
+   "v": "부드러운 나무고사리로, 오늘날에도 오스트레일리아와 뉴질랜드에 자란다."
+  },
+  {
+   "k": "Bennettitalean with flower-like cones.",
+   "v": "꽃 같은 구과를 다는 베네티테스류."
+  },
+  {
+   "k": "Squat, barrel-trunked bennettitalean.",
+   "v": "땅딸막한 통 모양 줄기를 지닌 베네티테스류."
+  },
+  {
+   "k": "Umbrella-fronded fern; a Jurassic fern-prairie dominant.",
+   "v": "우산 모양 잎을 지닌 양치식물. 쥐라기 양치 초원의 우점종이었다."
+  },
+  {
+   "k": "Fern of the Jurassic understory; the 'giant ferns' of dinosaur country.",
+   "v": "쥐라기 숲 하층의 양치식물. 공룡 세계의 '거대 고사리'다."
+  },
+  {
+   "k": "Living horsetails; their kind has been around since the Jurassic.",
+   "v": "현생 속새. 이 무리는 쥐라기부터 존재해 왔다."
+  },
+  {
+   "k": "Palm-like cycads, a group older than the dinosaurs.",
+   "v": "야자나무를 닮은 소철로, 공룡보다 오래된 무리다."
+  },
+  {
+   "k": "A living fossil, now only in Japan.",
+   "v": "살아 있는 화석으로, 지금은 일본에만 자생한다."
+  },
+  {
+   "k": "One of the oldest flowering plants, a water plant from Liaoning.",
+   "v": "가장 오래된 꽃식물 가운데 하나로, 랴오닝에서 나온 수생 식물이다."
+  },
+  {
+   "k": "An early aquatic flowering plant from Spain.",
+   "v": "스페인에서 나온 초기 수생 꽃식물."
+  },
+  {
+   "k": "Water lilies are among the oldest flowering plant lineages.",
+   "v": "수련은 가장 오래된 꽃식물 계통 가운데 하나다."
+  },
+  {
+   "k": "Magnolias were pollinated by beetles before bees existed.",
+   "v": "목련은 벌이 나타나기 전부터 딱정벌레에 의해 꽃가루받이를 했다."
+  },
+  {
+   "k": "Plane trees along Cretaceous rivers.",
+   "v": "백악기 강가에 자라던 플라타너스."
+  },
+  {
+   "k": "Laurel-family tree with mitten-shaped leaves.",
+   "v": "벙어리장갑 모양의 잎을 지닌 녹나무과 나무."
+  },
+  {
+   "k": "Tall magnolia relative with tulip-like flowers.",
+   "v": "튤립을 닮은 꽃을 피우는 키 큰 목련의 친척."
+  },
+  {
+   "k": "Redwoods: the tallest trees on Earth.",
+   "v": "레드우드: 지구에서 가장 키가 큰 나무."
+  },
+  {
+   "k": "Deciduous redwood; once covered the Arctic, now wild only in China.",
+   "v": "낙엽성 레드우드류. 한때 북극권을 뒤덮었으나 지금은 중국에만 야생으로 남아 있다."
+  },
+  {
+   "k": "Drought-hardy, jointed conifer of dry coasts.",
+   "v": "건조한 해안에 자라던 가뭄에 강하고 마디가 있는 침엽수."
+  },
+  {
+   "k": "Tough fern of Cretaceous coastal flats.",
+   "v": "백악기 해안 평지에 자라던 질긴 양치식물."
+  },
+  {
+   "k": "False tree fern: its 'trunk' was a mass of stems and roots.",
+   "v": "가짜 나무고사리. 그 '줄기'는 줄기와 뿌리가 뭉친 덩어리였다."
+  },
+  {
+   "k": "Fan palms appear late in the Cretaceous.",
+   "v": "부채꼴 잎의 야자는 백악기 후기에 나타난다."
+  },
+  {
+   "k": "Mangrove palm; Eocene London was full of them.",
+   "v": "맹그로브 야자. 에오세의 런던에는 이 야자가 가득했다."
+  },
+  {
+   "k": "Small herbs among the first flowering plants.",
+   "v": "가장 이른 꽃식물에 속하는 작은 풀."
+  },
+  {
+   "k": "Swamp conifer with 'knees' poking out of the water.",
+   "v": "물 위로 '무릎뿌리'를 내미는 늪지의 침엽수."
+  },
+  {
+   "k": "Oaks spread across the northern continents.",
+   "v": "참나무는 북반구 대륙 전역으로 퍼졌다."
+  },
+  {
+   "k": "Smooth-barked trees of shady forests.",
+   "v": "그늘진 숲에 자라는 껍질이 매끈한 나무."
+  },
+  {
+   "k": "Maples, with winged seeds.",
+   "v": "날개 달린 씨앗을 지닌 단풍나무."
+  },
+  {
+   "k": "Evergreen laurel forests of the warm Eocene.",
+   "v": "따뜻한 에오세의 상록 월계수 숲."
+  },
+  {
+   "k": "Alders grow with their roots in wet ground.",
+   "v": "오리나무는 축축한 땅에 뿌리를 내리고 자란다."
+  },
+  {
+   "k": "Figs and their wasps have evolved together for 60 million years.",
+   "v": "무화과나무와 무화과말벌은 6천만 년 동안 함께 진화해 왔다."
+  },
+  {
+   "k": "Mangroves stand on stilt roots in salt water.",
+   "v": "맹그로브는 버팀뿌리로 바닷물 속에 서 있다."
+  },
+  {
+   "k": "The last ginkgo: a living fossil.",
+   "v": "마지막 남은 은행나무. 살아 있는 화석이다."
+  },
+  {
+   "k": "Grasses existed but didn't form grasslands until the Neogene.",
+   "v": "볏과 식물은 이미 있었지만 신제3기에 와서야 초원을 이루었다."
+  },
+  {
+   "k": "Beeches of the southern continents, from Antarctica to Patagonia.",
+   "v": "남극에서 파타고니아까지 남반구 대륙에 분포하는 너도밤나무류."
+  },
+  {
+   "k": "Laurel-family tree of warm forests.",
+   "v": "따뜻한 숲에 자라는 녹나무과 나무."
+  },
+  {
+   "k": "Pines: hardy conifers of poor soils and cold.",
+   "v": "소나무: 척박한 땅과 추위에 강한 침엽수."
+  },
+  {
+   "k": "The dark spruces of the boreal forest.",
+   "v": "북방림의 짙은 색 가문비나무."
+  },
+  {
+   "k": "A conifer that drops its needles in winter.",
+   "v": "겨울에 바늘잎을 떨어뜨리는 침엽수."
+  },
+  {
+   "k": "Firs of cool mountain forests.",
+   "v": "서늘한 산지 숲의 전나무."
+  },
+  {
+   "k": "White-barked birches, first trees back after the ice.",
+   "v": "하얀 껍질의 자작나무. 빙하기 뒤 가장 먼저 돌아온 나무다."
+  },
+  {
+   "k": "Gum trees: fire-adapted Australian forests.",
+   "v": "유칼립투스: 산불에 적응한 오스트레일리아의 숲."
+  },
+  {
+   "k": "Flat-topped thorn trees of the savanna.",
+   "v": "사바나에 자라는 수관이 평평한 가시나무."
+  },
+  {
+   "k": "Swollen trunks store water through the dry season.",
+   "v": "부풀어 오른 줄기에 물을 저장해 건기를 버틴다."
+  },
+  {
+   "k": "Emergent giant towering over the rainforest canopy.",
+   "v": "열대우림의 수관층 위로 우뚝 솟은 돌출목 거인."
+  },
+  {
+   "k": "Tall trees of Southeast Asian rainforests.",
+   "v": "동남아시아 열대우림의 키 큰 나무."
+  },
+  {
+   "k": "Giant grasses that grow a metre a day.",
+   "v": "하루에 1미터씩 자라는 거대한 볏과 식물."
+  },
+  {
+   "k": "Palm of desert oases.",
+   "v": "사막 오아시스의 야자."
+  },
+  {
+   "k": "Its floating nuts spread it to tropical shores worldwide.",
+   "v": "물에 뜨는 열매 덕분에 전 세계 열대 해안으로 퍼졌다."
+  },
+  {
+   "k": "C4 grass of the African and Australian savannas.",
+   "v": "아프리카와 오스트레일리아 사바나의 C4 볏과 식물."
+  },
+  {
+   "k": "Feathery grass of the Eurasian steppe.",
+   "v": "유라시아 스텝의 깃털 같은 풀."
+  },
+  {
+   "k": "Temperate meadow grasses.",
+   "v": "온대 초원의 풀."
+  },
+  {
+   "k": "Tall grass of the North American prairie.",
+   "v": "북아메리카 프레리의 키 큰 풀."
+  },
+  {
+   "k": "Spiny hummock grass of Australia's deserts.",
+   "v": "오스트레일리아 사막의 가시 돋친 둔덕 모양 풀."
+  },
+  {
+   "k": "Grasses and sedges of the Ice Age mammoth steppe.",
+   "v": "빙하기 매머드 스텝의 풀과 사초."
+  },
+  {
+   "k": "Silvery, aromatic shrubs of dry plains.",
+   "v": "건조한 평원에 자라는 은빛의 향기로운 관목."
+  },
+  {
+   "k": "Purple-flowering heath of acid moorland.",
+   "v": "산성 황야에 보라색 꽃을 피우는 히스."
+  },
+  {
+   "k": "Desert shrub; some clones are over 10,000 years old.",
+   "v": "사막 관목. 어떤 클론은 1만 년이 넘었다."
+  },
+  {
+   "k": "Giant columnar cactus of the Sonoran Desert.",
+   "v": "소노라 사막의 거대한 기둥선인장."
+  },
+  {
+   "k": "Cactus with flat, padded stems.",
+   "v": "납작하고 두툼한 줄기마디를 지닌 선인장."
+  },
+  {
+   "k": "Two strap leaves that grow for over a thousand years, Namib Desert.",
+   "v": "두 장의 띠 모양 잎이 천 년 넘게 자란다. 나미브 사막에 산다."
+  },
+  {
+   "k": "African succulent that looks like a cactus.",
+   "v": "선인장처럼 생긴 아프리카의 다육식물."
+  },
+  {
+   "k": "Tundra flower that gave its name to the Younger Dryas cold snap.",
+   "v": "툰드라의 꽃으로, 영거 드라이아스 한랭기의 이름이 여기서 나왔다."
+  },
+  {
+   "k": "A willow that grows only a few centimetres tall.",
+   "v": "키가 몇 센티미터밖에 자라지 않는 버드나무."
+  },
+  {
+   "k": "Sedge with cotton-white seed heads.",
+   "v": "솜처럼 하얀 열매 이삭을 단 사초."
+  },
+  {
+   "k": "One of the northernmost flowering plants.",
+   "v": "가장 북쪽에 사는 꽃식물 가운데 하나."
+  },
+  {
+   "k": "Builds peat bogs that store vast amounts of carbon.",
+   "v": "막대한 양의 탄소를 저장하는 이탄 습지를 만든다."
+  },
+  {
+   "k": "Tall reed beds of marshes and lakes.",
+   "v": "습지와 호수의 키 큰 갈대밭."
+  },
+  {
+   "k": "Sedge of the Nile, made into the first paper.",
+   "v": "나일강의 사초로, 최초의 종이가 되었다."
+  },
+  {
+   "k": "Bulrushes with brown, sausage-shaped flower spikes.",
+   "v": "갈색 소시지 모양 꽃이삭을 단 부들."
+  },
+  {
+   "k": "Lobster-claw flowers pollinated by hummingbirds.",
+   "v": "바닷가재 집게 같은 꽃으로, 벌새가 꽃가루받이를 한다."
+  },
+  {
+   "k": "Fern rosettes of the rainforest floor and branches.",
+   "v": "열대우림의 땅과 나뭇가지에 자라는 로제트 모양 양치식물."
+  },
+  {
+   "k": "Daisies, clovers and their kin in the grass.",
+   "v": "풀밭 속의 데이지, 클로버와 그 친척들."
+  },
+  {
+   "k": "Succulent rosettes of African dry lands.",
+   "v": "아프리카 건조 지대의 로제트 모양 다육식물."
+  },
+  {
+   "k": "Fire-adapted fynbos shrub; Proteaceae date back to Gondwana.",
+   "v": "산불에 적응한 핀보스 관목. 프로테아과의 기원은 곤드와나로 거슬러 올라간다."
+  },
+  {
+   "k": "Australian shrub with bottlebrush flower spikes.",
+   "v": "병솔 같은 꽃이삭을 지닌 오스트레일리아 관목."
+  },
+  {
+   "k": "Evergreen shrub of forest edges.",
+   "v": "숲 가장자리의 상록 관목."
+  },
+  {
+   "k": "Flowering shrubs of mountain slopes.",
+   "v": "산비탈에 꽃을 피우는 관목."
+  },
+  {
+   "k": "Turf of green seaweed on sunlit seabed; land plants descend from green algae.",
+   "v": "햇빛 드는 해저를 덮은 녹색 해조류. 육상 식물은 녹조류에서 유래했다."
+  },
+  {
+   "k": "Red seaweeds, among the oldest complex algae.",
+   "v": "붉은 해조류로, 가장 오래된 복잡한 조류 가운데 하나다."
+  },
+  {
+   "k": "Tough microbial mats that carpeted the Ediacaran seafloor, wrinkled like elephant skin; the first grazers and burrowers broke them up in the Cambrian.",
+   "v": "에디아카라기 해저를 뒤덮었던 질긴 미생물 매트로, 코끼리 가죽처럼 주름져 있었다. 캄브리아기에 최초의 섭식 동물과 굴 파는 동물들이 이를 부숴 버렸다."
+  },
+  {
+   "k": "Layered mounds built by cyanobacteria; rare today, as at Shark Bay.",
+   "v": "남세균이 쌓은 층상 둔덕. 오늘날에는 샤크만처럼 드문 곳에서만 볼 수 있다."
+  },
+  {
+   "k": "Bushy calcified microbes that built Cambrian reefs with archaeocyathids.",
+   "v": "고배류와 함께 캄브리아기 초를 쌓은 덤불 모양의 석회화 미생물."
+  },
+  {
+   "k": "Little umbrella-shaped green algae of warm lagoons.",
+   "v": "따뜻한 석호에 사는 작은 우산 모양의 녹조류."
+  },
+  {
+   "k": "The 'sunflower coral': a disc-shaped calcareous alga.",
+   "v": "'해바라기 산호'라 불리는 원반 모양의 석회질 조류."
+  },
+  {
+   "k": "Calcified red alga that helped build Paleozoic reefs.",
+   "v": "고생대 초를 쌓는 데 한몫한 석회화 홍조류."
+  },
+  {
+   "k": "Calcified green algae whose fragments make carbonate sand.",
+   "v": "석회화한 녹조류로, 그 조각이 탄산염 모래가 된다."
+  },
+  {
+   "k": "Potato-chip-shaped algae that formed Late Paleozoic mounds.",
+   "v": "감자칩 모양의 조류로, 후기 고생대에 둔덕을 이루었다."
+  },
+  {
+   "k": "Segmented green alga; its plates pile up into sand banks.",
+   "v": "마디로 나뉜 녹조류. 석회질 조각이 쌓여 모래톱이 된다."
+  },
+  {
+   "k": "A creeping seaweed that is a single giant cell.",
+   "v": "기어가듯 퍼지는 해조류로, 전체가 하나의 거대한 세포다."
+  },
+  {
+   "k": "Pink, rock-hard crusts that cement coral reefs together.",
+   "v": "분홍색의 돌처럼 단단한 껍질 모양 조류로, 산호초를 단단히 붙여 준다."
+  },
+  {
+   "k": "One of the first flowering plants to return to the sea.",
+   "v": "바다로 돌아간 최초의 꽃식물 가운데 하나."
+  },
+  {
+   "k": "Mediterranean seagrass; some meadows are thousands of years old.",
+   "v": "지중해의 해초. 어떤 해초밭은 수천 년이나 되었다."
+  },
+  {
+   "k": "Seagrass meadows of cool coasts, nurseries for fish.",
+   "v": "서늘한 해안의 해초밭으로, 물고기의 산란·육아장이다."
+  },
+  {
+   "k": "Tropical seagrass grazed by turtles and manatees.",
+   "v": "바다거북과 매너티가 뜯어 먹는 열대 해초."
+  },
+  {
+   "k": "Small seagrass, food of dugongs.",
+   "v": "듀공의 먹이가 되는 작은 해초."
+  },
+  {
+   "k": "Brown seaweed with air bladders; rafts of it float in the Sargasso Sea.",
+   "v": "공기주머니를 지닌 갈조류. 그 뗏목이 사르가소해에 떠다닌다."
+  },
+  {
+   "k": "Kelp forests up to 50 m tall along cool coasts.",
+   "v": "서늘한 해안을 따라 높이 50미터에 이르는 켈프 숲."
+  },
+  {
+   "k": "Kelp with broad, strap-like blades.",
+   "v": "넓은 띠 모양 엽상부를 지닌 다시마류."
+  },
+  {
+   "k": "Rockweed of the tidal shore, buoyed by air bladders.",
+   "v": "조간대 바위에 자라는 해조류로, 공기주머니로 떠 있다."
+  },
+  {
+   "k": "Films and tufts of simple green algae in lakes and ponds, long before any plant reached land.",
+   "v": "호수와 연못에 막이나 술 모양으로 자라는 단순한 녹조류. 어떤 식물이 육지에 오르기 훨씬 전부터 있었다."
+  },
+  {
+   "k": "Slimy green threads in still fresh water; zygnematophyte algae like it leave no sure fossils before the late Palaeozoic.",
+   "v": "고인 민물 속 미끈미끈한 초록 실. 이와 같은 접합조류는 후기 고생대 이전의 확실한 화석을 남기지 않았다."
+  },
+  {
+   "k": "Whorled charophytes, the closest algal relatives of land plants.",
+   "v": "돌려나는 윤조류로, 육상 식물과 가장 가까운 조류다."
+  },
+  {
+   "k": "A stonewort from the Rhynie chert hot springs.",
+   "v": "라이니 처트의 온천 지대에서 나온 윤조류."
+  },
+  {
+   "k": "Delicate, translucent stonewort.",
+   "v": "섬세하고 반투명한 윤조류."
+  },
+  {
+   "k": "Underwater clubmoss, the last relative of the giant scale trees.",
+   "v": "물속에 사는 석송류로, 거대한 인목의 마지막 친척이다."
+  },
+  {
+   "k": "Rooted water plant with floating leaves.",
+   "v": "물에 뜨는 잎을 지닌, 뿌리를 내리는 수생 식물."
+  },
+  {
+   "k": "Ribbon-leaved underwater meadows of rivers and lakes.",
+   "v": "강과 호수 속에 펼쳐지는 리본 모양 잎의 수중 초원."
+  },
+  {
+   "k": "Bushy waterweed of ponds.",
+   "v": "연못에 무성하게 자라는 수초."
+  },
+  {
+   "k": "The oldest known fungal threads, spreading through Ordovician soils.",
+   "v": "알려진 가장 오래된 균사로, 오르도비스기 토양 속에 퍼져 있었다."
+  },
+  {
+   "k": "Root partners of nearly all land plants, trading minerals for sugar.",
+   "v": "거의 모든 육상 식물의 뿌리 동반자로, 무기질을 당과 맞바꾼다."
+  },
+  {
+   "k": "Giant fungal trunks up to 8 m tall, the largest living things on land.",
+   "v": "높이 8미터에 이르는 거대한 균류 '줄기'로, 당시 육지에서 가장 큰 생물이었다."
+  },
+  {
+   "k": "Fungi preserved inside the Rhynie chert plants.",
+   "v": "라이니 처트 식물 안에 보존된 균류."
+  },
+  {
+   "k": "The earliest known lichen: a fungus farming algae.",
+   "v": "알려진 가장 오래된 지의류. 조류를 '기르는' 균류다."
+  },
+  {
+   "k": "An early sac fungus with flask-shaped fruiting bodies.",
+   "v": "플라스크 모양 자실체를 지닌 초기 자낭균."
+  },
+  {
+   "k": "Coal-forest fungus with clamp connections, an early mushroom relative.",
+   "v": "꺾쇠연결을 지닌 석탄림의 균류로, 버섯의 초기 친척이다."
+  },
+  {
+   "k": "Small round fruiting bodies from the coal swamps.",
+   "v": "석탄 늪에서 나온 작고 둥근 자실체."
+  },
+  {
+   "k": "The fungal spike of the great Permian extinction, rotting dead forests.",
+   "v": "페름기 대멸종 때 급증한 균류로, 죽은 숲을 썩게 했다."
+  },
+  {
+   "k": "White-rot fungi breaking down fallen conifer logs.",
+   "v": "쓰러진 침엽수 통나무를 분해하는 백색부후균."
+  },
+  {
+   "k": "An early bracket fungus on Jurassic araucarias.",
+   "v": "쥐라기 남양삼나무에 자라던 초기 선반버섯."
+  },
+  {
+   "k": "White moulds living on guano and debris in dark caves.",
+   "v": "어두운 동굴의 구아노와 부스러기 위에 사는 하얀 곰팡이."
+  },
+  {
+   "k": "The oldest gilled mushroom known, from Brazil.",
+   "v": "알려진 가장 오래된 주름버섯으로, 브라질에서 나왔다."
+  },
+  {
+   "k": "A tiny mushroom preserved in Burmese amber.",
+   "v": "미얀마 호박 속에 보존된 작은 버섯."
+  },
+  {
+   "k": "Delicate amber-preserved mushroom.",
+   "v": "호박 속에 보존된 섬세한 버섯."
+  },
+  {
+   "k": "A Cretaceous polypore bracket.",
+   "v": "백악기의 구멍장이버섯."
+  },
+  {
+   "k": "A predatory fungus with sticky rings for catching worms.",
+   "v": "끈끈한 고리로 선충을 잡는 포식성 균류."
+  },
+  {
+   "k": "A single giant cell that solves mazes as it feeds.",
+   "v": "먹이를 찾으며 미로를 푸는 하나의 거대한 세포."
+  },
+  {
+   "k": "Glossy red-brown lacquered bracket.",
+   "v": "옻칠한 듯 윤기 나는 적갈색 선반버섯."
+  },
+  {
+   "k": "Takes over ants and sprouts from their bodies.",
+   "v": "개미를 조종하고 그 몸에서 자라난다."
+  },
+  {
+   "k": "Golden, funnel-shaped and smelling of apricots.",
+   "v": "금빛 깔때기 모양으로, 살구 향이 난다."
+  },
+  {
+   "k": "One of these is the largest organism on Earth.",
+   "v": "그중 한 개체는 지구에서 가장 큰 생물이다."
+  },
+  {
+   "k": "Underground fruit body found by smell.",
+   "v": "냄새로 찾아내는 땅속 자실체."
+  },
+  {
+   "k": "Honeycombed cap on a hollow stem.",
+   "v": "속이 빈 대 위에 벌집 모양 갓이 달려 있다."
+  },
+  {
+   "k": "Bright orange cups on bare soil.",
+   "v": "맨땅 위에 자라는 선명한 주황색 컵 모양 버섯."
+  },
+  {
+   "k": "Scarlet cups on mossy sticks in winter.",
+   "v": "겨울에 이끼 낀 나뭇가지 위에 돋는 진홍색 컵 모양 버섯."
+  },
+  {
+   "k": "Stains the wood it lives in blue-green.",
+   "v": "자신이 사는 나무를 청록색으로 물들인다."
+  },
+  {
+   "k": "Orange rosettes on rocks and bark.",
+   "v": "바위와 나무껍질 위의 주황색 로제트 모양 지의류."
+  },
+  {
+   "k": "The red, white-spotted toadstool of fairy tales.",
+   "v": "동화 속에 나오는 빨간 바탕에 흰 점박이 독버섯."
+  },
+  {
+   "k": "Fat brown cap over a sponge of pores.",
+   "v": "두툼한 갈색 갓 아래에 스펀지 같은 관공이 있다."
+  },
+  {
+   "k": "Dissolves into black ink as it ripens.",
+   "v": "다 자라면 녹아서 검은 먹물이 된다."
+  },
+  {
+   "k": "Puffs clouds of spores when raindrops hit it.",
+   "v": "빗방울이 떨어지면 포자 구름을 뿜어낸다."
+  },
+  {
+   "k": "Can grow as big as a football.",
+   "v": "축구공만큼 크게 자랄 수 있다."
+  },
+  {
+   "k": "A spore ball sitting on a star of split skin.",
+   "v": "갈라진 껍질이 만든 별 모양 위에 포자 공이 앉아 있다."
+  },
+  {
+   "k": "A hollow scarlet lattice that smells of rotting meat.",
+   "v": "썩은 고기 냄새를 풍기는 속 빈 진홍색 격자."
+  },
+  {
+   "k": "Branches like a yellow sea coral.",
+   "v": "노란 바다 산호처럼 가지를 친다."
+  },
+  {
+   "k": "Purple coral-like tufts in grassland.",
+   "v": "풀밭에 자라는 보라색 산호 모양 버섯 다발."
+  },
+  {
+   "k": "Cascades of white icicle spines.",
+   "v": "하얀 고드름 같은 가시가 폭포처럼 늘어진다."
+  },
+  {
+   "k": "Sulphur-yellow shelves on old trees.",
+   "v": "오래된 나무에 자라는 유황빛 선반 모양 버섯."
+  },
+  {
+   "k": "Banded fans like a turkey's tail.",
+   "v": "칠면조 꼬리를 닮은 띠무늬 부채꼴 버섯."
+  },
+  {
+   "k": "Hoof-shaped brackets used to carry fire.",
+   "v": "말굽 모양 선반버섯으로, 불씨를 옮기는 데 쓰였다."
+  },
+  {
+   "k": "Grey shelves that also catch tiny worms.",
+   "v": "회색 선반 모양 버섯으로, 작은 선충도 잡는다."
+  },
+  {
+   "k": "The most prized fungus in the world.",
+   "v": "세상에서 가장 귀하게 여겨지는 균류."
+  },
+  {
+   "k": "A small mushroom of startling blue.",
+   "v": "놀랄 만큼 파란 작은 버섯."
+  },
+  {
+   "k": "Waxy scarlet caps of old meadows.",
+   "v": "오래된 초원에 자라는 밀랍 같은 진홍색 갓."
+  },
+  {
+   "k": "Violet all over when fresh.",
+   "v": "싱싱할 때는 온통 보라색이다."
+  },
+  {
+   "k": "A tall stem under a wide scaly parasol.",
+   "v": "높은 대 위에 비늘 덮인 넓은 양산을 편다."
+  },
+  {
+   "k": "Lemon-yellow mushrooms of warm soils.",
+   "v": "따뜻한 흙에 자라는 레몬빛 노란 버섯."
+  },
+  {
+   "k": "Glows green in the dark.",
+   "v": "어둠 속에서 초록빛으로 빛난다."
+  },
+  {
+   "k": "Tiny bioluminescent caps lighting up cave floors.",
+   "v": "동굴 바닥을 밝히는 작은 생물발광 갓."
+  },
+  {
+   "k": "Orange and faintly glowing gills.",
+   "v": "주황색이며 주름이 희미하게 빛난다."
+  },
+  {
+   "k": "One of the brightest glowing fungi.",
+   "v": "가장 밝게 빛나는 균류 가운데 하나."
+  },
+  {
+   "k": "Scarlet arms around a slimy, smelly heart.",
+   "v": "끈적이고 고약한 냄새가 나는 중심을 진홍색 팔이 둘러싸고 있다."
+  },
+  {
+   "k": "A white lace skirt hanging from its cap.",
+   "v": "갓에서 하얀 레이스 치마가 늘어져 있다."
+  },
+  {
+   "k": "Yellow slime that creeps across mulch.",
+   "v": "덮개 낙엽 위를 기어 다니는 노란 점균."
+  },
+  {
+   "k": "Forests of tiny brown spore stalks.",
+   "v": "작은 갈색 포자 자루들이 숲처럼 늘어서 있다."
+  },
+  {
+   "k": "Spongy grey-white cushions grazed by reindeer.",
+   "v": "순록이 뜯어 먹는 푹신한 회백색 방석."
+  },
+  {
+   "k": "Blue-green mould that gave us penicillin.",
+   "v": "우리에게 페니실린을 선사한 청록색 곰팡이."
+  },
+  {
+   "k": "Pale crusts coating damp cave walls.",
+   "v": "축축한 동굴 벽을 덮은 옅은 색 껍질."
+  },
+  {
+   "k": "Clotted microbial mounds that replaced stromatolites.",
+   "v": "스트로마톨라이트를 대신한 응괴 모양 미생물 둔덕."
+  },
+  {
+   "k": "Calcified cyanobacterial tubes building early reefs.",
+   "v": "초기 초를 쌓은 석회화된 남세균 관."
+  },
+  {
+   "k": "Kidney-shaped calcimicrobes of Cambrian reefs.",
+   "v": "캄브리아기 초의 콩팥 모양 석회 미생물."
+  },
+  {
+   "k": "Burgess Shale green alga with feathery branches.",
+   "v": "깃털처럼 가지를 친 버제스 셰일의 녹조류."
+  },
+  {
+   "k": "Bushy Burgess Shale seaweed.",
+   "v": "덤불 모양의 버제스 셰일 해조류."
+  },
+  {
+   "k": "An early branching red alga.",
+   "v": "초기의 가지 치는 홍조류."
+  },
+  {
+   "k": "Slimy green mats carpeting lake beds.",
+   "v": "호수 바닥을 덮은 미끈한 초록 매트."
+  },
+  {
+   "k": "A dasyclad alga shaped like a knobbly ball.",
+   "v": "울퉁불퉁한 공 모양의 다시클라두스류 조류."
+  },
+  {
+   "k": "Calcified green alga in tangled chains.",
+   "v": "엉킨 사슬 모양의 석회화 녹조류."
+  },
+  {
+   "k": "Disc-shaped green alga of shallow fresh water.",
+   "v": "얕은 민물에 사는 원반 모양 녹조류."
+  },
+  {
+   "k": "Ribbon-like Silurian seaweed.",
+   "v": "리본 모양의 실루리아기 해조류."
+  },
+  {
+   "k": "Thick Devonian seaweed with spores like land plants.",
+   "v": "육상 식물과 비슷한 포자를 지닌 두툼한 데본기 해조류."
+  },
+  {
+   "k": "Mysterious crusts of tubes on wet ground and pools.",
+   "v": "축축한 땅과 웅덩이 위의 관들로 이루어진 수수께끼의 껍질."
+  },
+  {
+   "k": "Leafy red alga that built Carboniferous mounds.",
+   "v": "석탄기 둔덕을 쌓은 잎 모양 홍조류."
+  },
+  {
+   "k": "Phylloid green alga with potato-crisp blades.",
+   "v": "감자칩 같은 엽상부를 지닌 엽상 녹조류."
+  },
+  {
+   "k": "Leaf-like alga of Late Paleozoic shelves.",
+   "v": "후기 고생대 대륙붕의 잎 모양 조류."
+  },
+  {
+   "k": "Bead-chained dasyclad of Permian reefs.",
+   "v": "페름기 초의 구슬 사슬 모양 다시클라두스류."
+  },
+  {
+   "k": "Calcified red alga in segmented chains.",
+   "v": "마디진 사슬 모양의 석회화 홍조류."
+  },
+  {
+   "k": "Dasyclad that built Triassic carbonate platforms.",
+   "v": "트라이아스기 탄산염 대지를 쌓은 다시클라두스류."
+  },
+  {
+   "k": "Whorled dasyclad of Jurassic lagoons.",
+   "v": "쥐라기 석호의 돌려나는 다시클라두스류."
+  },
+  {
+   "k": "Fan-shaped calcified bushes.",
+   "v": "부채꼴의 석회화된 덤불."
+  },
+  {
+   "k": "Extinct stoneworts with spiny fruiting cases.",
+   "v": "가시 돋친 생식 기관을 지닌 멸종한 윤조류."
+  },
+  {
+   "k": "Rootless whorls of fine leaves, an ancient flowering plant.",
+   "v": "뿌리 없이 가는 잎이 돌려나는 오래된 꽃식물."
+  },
+  {
+   "k": "Round leaves on long stalks rising from the mud.",
+   "v": "긴 잎자루 끝의 둥근 잎이 진흙 속에서 솟아오른다."
+  },
+  {
+   "k": "A single giant cell shaped like a tiny umbrella.",
+   "v": "작은 우산 모양을 한 하나의 거대한 세포."
+  },
+  {
+   "k": "Bright green sheets on rocky shores.",
+   "v": "바위 해안의 선명한 초록 얇은 잎."
+  },
+  {
+   "k": "Banded fans dusted with lime.",
+   "v": "석회가 뿌려진 띠무늬 부채."
+  },
+  {
+   "k": "Glossy green spheres, among the largest single cells.",
+   "v": "윤기 나는 초록 공으로, 가장 큰 단세포 가운데 하나다."
+  },
+  {
+   "k": "Runners hung with little green beads.",
+   "v": "기는줄기에 작은 초록 구슬이 주렁주렁 달려 있다."
+  },
+  {
+   "k": "Soft green plumes.",
+   "v": "부드러운 초록 깃털."
+  },
+  {
+   "k": "Pink, jointed, stony fronds.",
+   "v": "분홍색에 마디가 있는 돌처럼 단단한 엽상체."
+  },
+  {
+   "k": "Wiry red seaweed, a source of agar.",
+   "v": "철사처럼 질긴 홍조류로, 한천의 원료다."
+  },
+  {
+   "k": "Purple-red fans on cold shores.",
+   "v": "차가운 해안의 자홍색 부채꼴 해조류."
+  },
+  {
+   "k": "Southern kelp with a crown of blades.",
+   "v": "엽상부가 관처럼 달린 남반구 켈프."
+  },
+  {
+   "k": "Feathery whorls swaying in ponds.",
+   "v": "연못 속에서 흔들리는 깃털 같은 돌려난 잎."
+  },
+  {
+   "k": "Broad sword-shaped leaves in a rosette.",
+   "v": "넓은 칼 모양 잎이 로제트를 이룬다."
+  },
+  {
+   "k": "Bronze-green rosettes of Asian streams.",
+   "v": "아시아 개울에 자라는 청동빛 초록 로제트."
+  },
+  {
+   "k": "Carnivorous: tiny bladders snap up water fleas.",
+   "v": "식충 식물. 작은 벌레잡이주머니로 물벼룩을 빨아들인다."
+  },
+  {
+   "k": "Dark green moss streaming in currents.",
+   "v": "물살 속에서 나부끼는 짙은 초록 이끼."
+  },
+  {
+   "k": "Velvety green balls rolling on lake beds.",
+   "v": "호수 바닥을 구르는 벨벳 같은 초록 공."
+  },
+  {
+   "k": "Brittle, finely toothed pondweed.",
+   "v": "부서지기 쉽고 잎 가장자리에 잔톱니가 있는 수초."
+  },
+  {
+   "k": "Spongy green fingers.",
+   "v": "스펀지 같은 초록 손가락 모양 해조류."
+  },
+  {
+   "k": "Fern-like runners that can carpet the seabed.",
+   "v": "고사리 같은 기는줄기가 해저를 온통 뒤덮기도 한다."
+  },
+  {
+   "k": "Strings of olive beads on southern shores.",
+   "v": "남반구 해안에 늘어진 올리브색 구슬 줄."
+  },
+  {
+   "k": "Ruffled brown kelp.",
+   "v": "가장자리가 주름진 갈색 해조류."
+  },
+  {
+   "k": "Leathery straps pounded by Southern Ocean surf.",
+   "v": "남극해 파도에 두들겨 맞는 가죽 같은 띠 모양 해조류."
+  },
+  {
+   "k": "Thin purple sheets, dried as sushi wrap.",
+   "v": "얇은 보라색 잎으로, 말려서 초밥을 싸는 데 쓴다."
+  },
+  {
+   "k": "Fluffy pink plumes.",
+   "v": "보송보송한 분홍 깃털 모양 해조류."
+  },
+  {
+   "k": "Rosy red sheets of warm seas.",
+   "v": "따뜻한 바다의 장밋빛 잎 모양 해조류."
+  },
+  {
+   "k": "Leaves big enough to hold a child.",
+   "v": "아이 하나를 올려놓을 수 있을 만큼 큰 잎."
+  },
+  {
+   "k": "Copper-red leaves underwater.",
+   "v": "물속에서 구릿빛 붉은색을 띠는 잎."
+  },
+  {
+   "k": "Pink-tipped stems of Asian rice paddies.",
+   "v": "아시아 논에 자라는 끝이 분홍빛인 줄기."
+  },
+  {
+   "k": "Purple-red leaves glowing in clear water.",
+   "v": "맑은 물속에서 빛나는 자홍색 잎."
+  },
+  {
+   "k": "White sulphur-eating bacterial mats of the dark seafloor.",
+   "v": "어두운 해저에 깔린, 황을 먹는 하얀 세균 매트."
+  },
+  {
+   "k": "Bundled bacterial threads in oxygen-poor deep mud.",
+   "v": "산소가 부족한 깊은 진흙 속의 다발진 세균 실."
+  },
+  {
+   "k": "Clouds of pale pink blossom.",
+   "v": "구름처럼 피어나는 연분홍 꽃."
+  },
+  {
+   "k": "Tiers of deep red, hand-shaped leaves.",
+   "v": "층층이 겹친 짙붉은 손바닥 모양 잎."
+  },
+  {
+   "k": "A spreading canopy of violet-blue trumpets.",
+   "v": "넓게 퍼진 수관에 보랏빛 파란 나팔꽃이 핀다."
+  },
+  {
+   "k": "Magenta-pink flowers before the leaves.",
+   "v": "잎보다 먼저 피는 자홍색 꽃."
+  },
+  {
+   "k": "A flat crown ablaze with scarlet flowers.",
+   "v": "평평한 수관이 진홍색 꽃으로 불타오른다."
+  },
+  {
+   "k": "Crinkled pink blossoms all summer.",
+   "v": "여름 내내 피는 쪼글쪼글한 분홍 꽃."
+  },
+  {
+   "k": "Towers over the forest in a cloud of pink.",
+   "v": "분홍 구름에 싸여 숲 위로 우뚝 솟는다."
+  },
+  {
+   "k": "A great dome of deep purple leaves.",
+   "v": "짙은 보라색 잎으로 된 거대한 돔."
+  },
+  {
+   "k": "Purple leaves and smoky plumes.",
+   "v": "보라색 잎과 연기 같은 깃털 꽃차례."
+  },
+  {
+   "k": "Star-shaped leaves turning crimson.",
+   "v": "별 모양 잎이 진홍색으로 물든다."
+  },
+  {
+   "k": "Coral-red flowers on a gnarled frame.",
+   "v": "울퉁불퉁한 가지에 산호빛 붉은 꽃이 핀다."
+  },
+  {
+   "k": "Lavender foxglove-like flowers.",
+   "v": "디기탈리스를 닮은 연보라색 꽃."
+  },
+  {
+   "k": "Orchid-like purple-pink flowers.",
+   "v": "난초를 닮은 자줏빛 분홍 꽃."
+  },
+  {
+   "k": "Goblet-shaped pink and white flowers.",
+   "v": "술잔 모양의 분홍빛과 흰빛 꽃."
+  },
+  {
+   "k": "Flame-orange tulips held above the canopy.",
+   "v": "불꽃같은 주황색 튤립 모양 꽃을 수관 위로 들어 올린다."
+  },
+  {
+   "k": "Whole hillsides of trembling gold in autumn.",
+   "v": "가을이면 온 산비탈이 떨리는 금빛으로 물든다."
+  },
+  {
+   "k": "Showers of small yellow flowers.",
+   "v": "비처럼 쏟아지는 작은 노란 꽃."
+  },
+  {
+   "k": "Long cascades of bright yellow blossom.",
+   "v": "길게 늘어지는 샛노란 꽃송이."
+  },
+  {
+   "k": "A burst of gold above the forest.",
+   "v": "숲 위로 터져 나오는 황금빛."
+  },
+  {
+   "k": "Hanging chains of yellow pea flowers.",
+   "v": "늘어진 노란 콩꽃 사슬."
+  },
+  {
+   "k": "A deciduous conifer turning golden-orange.",
+   "v": "가을에 금빛 주황색으로 변하는 낙엽성 침엽수."
+  },
+  {
+   "k": "Blazing orange in the autumn forests of the north.",
+   "v": "북쪽 가을 숲에서 불타는 듯한 주황빛."
+  },
+  {
+   "k": "Orange leaves and bright orange fruit hanging on.",
+   "v": "주황색 잎과 가지에 매달린 선명한 주황색 열매."
+  },
+  {
+   "k": "Layers of amber, orange and red.",
+   "v": "호박색, 주황색, 붉은색이 층층이 겹친다."
+  },
+  {
+   "k": "Leafless branches covered in flame-orange flowers.",
+   "v": "잎 없는 가지가 불꽃같은 주황색 꽃으로 뒤덮인다."
+  },
+  {
+   "k": "Snows white cotton seed fluff over river valleys.",
+   "v": "강 골짜기 위로 하얀 솜털 씨앗을 눈처럼 흩날린다."
+  },
+  {
+   "k": "A giant hung with clouds of white silk-cotton.",
+   "v": "하얀 솜 구름을 주렁주렁 매단 거목."
+  },
+  {
+   "k": "A tight oval of pure white spring blossom.",
+   "v": "촘촘한 달걀 모양 수관이 새하얀 봄꽃으로 덮인다."
+  },
+  {
+   "k": "Tiers of white bracts in the spring woods.",
+   "v": "봄 숲에 층층이 펼쳐진 하얀 포엽."
+  },
+  {
+   "k": "May blossom: hedges and hills turned white.",
+   "v": "오월의 꽃. 산울타리와 언덕이 하얗게 변한다."
+  },
+  {
+   "k": "White flushed pink, then small apples.",
+   "v": "분홍빛이 감도는 흰 꽃이 피고, 이어 작은 사과가 열린다."
+  },
+  {
+   "k": "Fluffy pink powder-puff flowers on a flat crown.",
+   "v": "평평한 수관에 보송보송한 분홍 분첩 같은 꽃이 핀다."
+  },
+  {
+   "k": "Deep pink spring blossom.",
+   "v": "진분홍 봄꽃."
+  },
+  {
+   "k": "Big crimson cups on bare branches.",
+   "v": "헐벗은 가지에 커다란 진홍색 잔 모양 꽃이 핀다."
+  },
+  {
+   "k": "The scarlet of a swamp in autumn.",
+   "v": "가을 늪지를 물들이는 진홍빛."
+  },
+  {
+   "k": "Scented purple plumes.",
+   "v": "향기로운 보라색 꽃송이."
+  },
+  {
+   "k": "A canopy dripping with violet blossom.",
+   "v": "보랏빛 꽃이 뚝뚝 떨어질 듯 늘어진 수관."
+  },
+  {
+   "k": "Spores shed in fours tell of tiny plants carpeting Ordovician shores.",
+   "v": "넷씩 묶여 퍼진 포자는 오르도비스기 해안을 뒤덮었던 작은 식물들의 존재를 알려 준다."
+  },
+  {
+   "k": "Patchy green crusts of the first liverworts on wet mud.",
+   "v": "젖은 진흙 위에 얼룩덜룩 퍼진 최초의 태류의 초록 피막."
+  },
+  {
+   "k": "Twisted little stems ending in spore capsules.",
+   "v": "꼬인 작은 줄기 끝에 포자낭이 달린다."
+  },
+  {
+   "k": "Forked stems tipped with long spore sacs.",
+   "v": "두 갈래로 갈라진 줄기 끝에 길쭉한 포자낭이 달린다."
+  },
+  {
+   "k": "A small Welsh plant with flat-topped spore capsules.",
+   "v": "윗면이 평평한 포자낭을 지닌 웨일스의 작은 식물."
+  },
+  {
+   "k": "Forking stems with oval spore sacs.",
+   "v": "두 갈래로 갈라진 줄기에 타원형 포자낭이 달린다."
+  },
+  {
+   "k": "A moss-like plant with stalked capsules rising from a green mat.",
+   "v": "초록 매트에서 자루 달린 포자낭이 솟아오르는 이끼 같은 식물."
+  },
+  {
+   "k": "Rhynie chert plant with a lumpy, corm-like base.",
+   "v": "라이니 처트의 식물로, 밑부분이 울퉁불퉁한 알줄기 모양이다."
+  },
+  {
+   "k": "Leafless, bumpy stems with clustered spore sacs.",
+   "v": "잎이 없고 울퉁불퉁한 줄기에 포자낭이 모여 달린다."
+  },
+  {
+   "k": "Spiny stems with coiled tips spreading over the ground.",
+   "v": "가시 돋친 줄기가 끝을 돌돌 말며 땅 위로 퍼진다."
+  },
+  {
+   "k": "Branching zosterophyll with fiddlehead tips.",
+   "v": "가지 끝이 고사리순처럼 말린, 가지 치는 조스테로필룸류."
+  },
+  {
+   "k": "Fern-like thickets that filled Late Devonian floodplains.",
+   "v": "후기 데본기 범람원을 가득 메운 양치식물 같은 덤불."
+  },
+  {
+   "k": "Bushy progymnosperm, a step toward seed plants.",
+   "v": "덤불 모양의 전겉씨식물로, 종자식물로 가는 한 걸음이다."
+  },
+  {
+   "k": "Whorled branchlets: a distant cousin of horsetails.",
+   "v": "돌려나는 잔가지를 지닌 속새류의 먼 친척."
+  },
+  {
+   "k": "Middle Devonian plant with the oldest seed-like organs.",
+   "v": "가장 오래된 씨앗 같은 기관을 지닌 중기 데본기 식물."
+  },
+  {
+   "k": "Sturdy small lycopsid, forerunner of the scale trees.",
+   "v": "튼튼한 작은 석송류로, 인목류의 선구자다."
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches, from Belgium.",
+   "v": "손가락 같은 가지들이 수관을 이루는 작은 나무로, 벨기에에서 나왔다."
+  },
+  {
+   "k": "Late Devonian lycopsid tree of the Kiltorcan swamps.",
+   "v": "킬토칸 늪지의 후기 데본기 석송류 나무."
+  },
+  {
+   "k": "Archaeopteris relative of Arctic Devonian forests.",
+   "v": "북극권 데본기 숲에 자라던 아르카이옵테리스의 친척."
+  },
+  {
+   "k": "Knee-high lycopsid trees in dense coastal stands: China's oldest forest.",
+   "v": "무릎 높이의 석송류 나무가 해안에 빽빽이 자란 숲. 중국에서 가장 오래된 숲이다."
+  },
+  {
+   "k": "Fronds of marattialean tree ferns, the commonest coal-measure fern.",
+   "v": "마라티아목 나무고사리의 잎으로, 석탄층에서 가장 흔한 양치식물이다."
+  },
+  {
+   "k": "Scrambling seed fern with sticky glandular hairs.",
+   "v": "끈적한 샘털을 지닌, 덩굴처럼 퍼지는 종자고사리."
+  },
+  {
+   "k": "Climbing seed fern that hung from the scale trees.",
+   "v": "인목에 매달려 자라던 덩굴성 종자고사리."
+  },
+  {
+   "k": "Star-shaped leaf whorls on calamite branches.",
+   "v": "칼라미테스 가지에 달린 별 모양의 돌려난 잎."
+  },
+  {
+   "k": "Needle-leaved calamite shoots.",
+   "v": "바늘잎이 달린 칼라미테스의 어린 가지."
+  },
+  {
+   "k": "Early fern with H-shaped stems.",
+   "v": "줄기 단면이 H자 모양인 초기 양치식물."
+  },
+  {
+   "k": "Unbranched, bulb-based lycopsid of open swamps.",
+   "v": "탁 트인 늪지에 자라던, 가지 없이 밑동이 알뿌리 모양인 석송류."
+  },
+  {
+   "k": "Sprawling seed-fern shrub.",
+   "v": "옆으로 퍼지는 종자고사리 관목."
+  },
+  {
+   "k": "Scale tree of the wettest coal swamps.",
+   "v": "가장 축축한 석탄 늪에 자라던 인목류."
+  },
+  {
+   "k": "Woody calamite trunk with ringed joints.",
+   "v": "고리 모양 마디가 있는 목질 칼라미테스 줄기."
+  },
+  {
+   "k": "Finely cut fern foliage, from the coal swamps to the Jurassic.",
+   "v": "잘게 갈라진 양치식물 잎으로, 석탄 늪에서 쥐라기까지 나타난다."
+  },
+  {
+   "k": "Drought-tolerant seed fern of the dry Early Permian.",
+   "v": "건조했던 전기 페름기의 가뭄에 강한 종자고사리."
+  },
+  {
+   "k": "Gondwanan horsetail with leaf collars.",
+   "v": "잎 깃을 지닌 곤드와나의 속새류."
+  },
+  {
+   "k": "Odd fern-like plants with cone-borne spores, from Cathaysia.",
+   "v": "카타이시아에서 나온 기묘한 양치식물 같은 식물로, 포자를 구과에 단다."
+  },
+  {
+   "k": "Shield-seeded shrub of dry uplands.",
+   "v": "건조한 고지에 자라는 방패 모양 씨앗을 지닌 관목."
+  },
+  {
+   "k": "Fan-leaved plant, perhaps an early ginkgo relative.",
+   "v": "부채꼴 잎을 지닌 식물로, 은행나무의 초기 친척일지도 모른다."
+  },
+  {
+   "k": "Cathaysian horsetail with lobed leaf whorls.",
+   "v": "갈라진 돌려난 잎을 지닌 카타이시아의 속새류."
+  },
+  {
+   "k": "Cordaite of the cold Angaran forests of Siberia.",
+   "v": "시베리아의 추운 앙가라 숲에 자라던 코르다이테스류."
+  },
+  {
+   "k": "Tufts of long, unbranched strands from the Burgess Shale.",
+   "v": "버제스 셰일에서 나온, 가지 없는 긴 가닥의 다발."
+  },
+  {
+   "k": "A branched Burgess Shale seaweed several centimetres tall.",
+   "v": "높이 몇 센티미터의 가지 친 버제스 셰일 해조류."
+  },
+  {
+   "k": "Spiral ribbons of seaweed from Chengjiang.",
+   "v": "청장에서 나온 나선형 리본 모양 해조류."
+  },
+  {
+   "k": "Clusters of cylindrical green fronds.",
+   "v": "원통 모양 초록 엽상체의 무리."
+  },
+  {
+   "k": "Oily green colonies; their remains make oil shale.",
+   "v": "기름이 풍부한 초록 군체. 그 유해가 오일셰일이 된다."
+  },
+  {
+   "k": "Large branching seaweed of Ordovician seas, tall enough to sway.",
+   "v": "오르도비스기 바다의 큰 가지 친 해조류로, 물결에 흔들릴 만큼 키가 컸다."
+  },
+  {
+   "k": "Calcified green alga with whorled branches.",
+   "v": "돌려나는 가지를 지닌 석회화 녹조류."
+  },
+  {
+   "k": "Club-shaped dasyclad with a ball-like head.",
+   "v": "공 같은 머리를 지닌 곤봉 모양 다시클라두스류."
+  },
+  {
+   "k": "Tall, bushy green alga with whorls of hair-like branches.",
+   "v": "털 같은 가지가 돌려나는 키 크고 덤불 같은 녹조류."
+  },
+  {
+   "k": "One of the oldest stoneworts.",
+   "v": "가장 오래된 윤조류 가운데 하나."
+  },
+  {
+   "k": "Clusters of bladder-like fronds.",
+   "v": "주머니 같은 엽상체의 무리."
+  },
+  {
+   "k": "Fan-shaped Silurian seaweed.",
+   "v": "부채꼴의 실루리아기 해조류."
+  },
+  {
+   "k": "Long, strap-like fronds of a large Silurian seaweed.",
+   "v": "실루리아기 대형 해조류의 길고 띠 모양인 엽상체."
+  },
+  {
+   "k": "Small balls of tubes; perhaps a green alga.",
+   "v": "관들이 모여 이룬 작은 공. 녹조류일지도 모른다."
+  },
+  {
+   "k": "Broad leafy fronds of a large Devonian seaweed.",
+   "v": "데본기 대형 해조류의 넓은 잎 모양 엽상체."
+  },
+  {
+   "k": "Fan-like branched alga, perhaps a red seaweed.",
+   "v": "부채꼴로 가지를 친 조류로, 홍조류일지도 모른다."
+  },
+  {
+   "k": "Stonewort with spiralled egg cases.",
+   "v": "나선형 알주머니를 지닌 윤조류."
+  },
+  {
+   "k": "Thick, ribbon-like stems found in Siberian Devonian coals.",
+   "v": "시베리아 데본기 석탄에서 발견되는 두툼한 리본 모양 줄기."
+  },
+  {
+   "k": "Bushy calcareous alga that built Carboniferous mud mounds.",
+   "v": "석탄기 진흙 둔덕을 쌓은 덤불 모양 석회조류."
+  },
+  {
+   "k": "Calcified dasyclad of Early Carboniferous shelves.",
+   "v": "전기 석탄기 대륙붕의 석회화 다시클라두스류."
+  },
+  {
+   "k": "A Carboniferous stonewort.",
+   "v": "석탄기의 윤조류."
+  },
+  {
+   "k": "Dasyclad that grew in thickets on Late Paleozoic mounds.",
+   "v": "후기 고생대 둔덕 위에 덤불을 이룬 다시클라두스류."
+  },
+  {
+   "k": "Encrusting, finger-like growths that built Permian reefs such as El Capitan.",
+   "v": "엘캐피탄 같은 페름기 초를 쌓은, 표면을 덮으며 자라는 손가락 모양 생물."
+  },
+  {
+   "k": "Crust-forming alga that bound Permian reefs together.",
+   "v": "껍질을 만들어 페름기 초를 단단히 묶은 조류."
+  },
+  {
+   "k": "Dark ribbon-like strands, a few millimetres wide and a few centimetres long, common in late Ediacaran shales; they lay on the sea floor rather than standing as tall seaweed.",
+   "v": "폭 몇 밀리미터, 길이 몇 센티미터의 검은 리본 모양 가닥으로, 후기 에디아카라기 셰일에 흔하다. 키 큰 해조류처럼 서 있지 않고 해저에 누워 있었다."
+  },
+  {
+   "k": "Tufts of thin forked threads from the Lantian biota of China.",
+   "v": "중국 란톈 생물군에서 나온, 가늘게 두 갈래로 갈라진 실의 다발."
+  },
+  {
+   "k": "Small upright branching seaweed, a few centimetres tall, of the Miaohe biota, anchored by rhizoids.",
+   "v": "먀오허 생물군의 높이 몇 센티미터인 곧게 선 가지 친 작은 해조류로, 헛뿌리로 고착했다."
+  },
+  {
+   "k": "Weng'an red alga with growing tips and possible reproductive cells.",
+   "v": "자라는 끝부분과 생식 세포로 보이는 것을 지닌 웡안의 홍조류."
+  },
+  {
+   "k": "Tiny globular red algae preserved cell by cell in phosphate.",
+   "v": "인산염 속에 세포 하나하나까지 보존된 작은 공 모양 홍조류."
+  },
+  {
+   "k": "Dark microbial films on bare rock, long before any plant reached land.",
+   "v": "맨 바위를 덮은 검은 미생물 막. 어떤 식물이 육지에 오르기 훨씬 전부터 있었다."
+  },
+  {
+   "k": "Bushy calcified microbe building reefs with archaeocyaths.",
+   "v": "고배류와 함께 초를 쌓은 덤불 모양 석회화 미생물."
+  },
+  {
+   "k": "Fans of tiny calcified tubes in early Cambrian reefs.",
+   "v": "전기 캄브리아기 초에서 나온 작은 석회화 관들의 부채."
+  },
+  {
+   "k": "Clustered chambers of lime, a cousin of Renalcis.",
+   "v": "석회질 방이 모여 이룬 것으로, 레날키스의 친척이다."
+  },
+  {
+   "k": "Calcified microbial tubes of Cambrian and Ordovician reefs.",
+   "v": "캄브리아기와 오르도비스기 초의 석회화 미생물 관."
+  },
+  {
+   "k": "Tiny lime cylinders that piled up in Ordovician shoals.",
+   "v": "오르도비스기 여울에 쌓인 작은 석회질 원통."
+  },
+  {
+   "k": "Rare branching seaweed of the Burgess Shale.",
+   "v": "버제스 셰일의 드문 가지 친 해조류."
+  },
+  {
+   "k": "Burgess Shale alga with a net-like thallus.",
+   "v": "그물 모양 엽상체를 지닌 버제스 셰일의 조류."
+  },
+  {
+   "k": "Dense tufts of cyanobacterial filaments on the Burgess seafloor.",
+   "v": "버제스 해저에 빽빽이 자란 남세균 실의 다발."
+  },
+  {
+   "k": "Dark slimy sheets of cyanobacteria, the commonest Burgess 'alga'.",
+   "v": "검고 끈적한 남세균 막으로, 버제스에서 가장 흔한 '조류'다."
+  },
+  {
+   "k": "Known from spores shed in pairs; a low crust on damp ground.",
+   "v": "둘씩 짝지어 퍼진 포자로만 알려져 있다. 축축한 땅 위의 낮은 피막이다."
+  },
+  {
+   "k": "Its three-scarred spores mark the first steps towards vascular plants.",
+   "v": "세 갈래 흔적이 있는 포자는 관다발 식물을 향한 첫걸음을 보여 준다."
+  },
+  {
+   "k": "Colonial microbe whose remains became the Estonian oil shale kukersite.",
+   "v": "군체성 미생물로, 그 유해가 에스토니아의 오일셰일인 쿠케르사이트가 되었다."
+  },
+  {
+   "k": "Calcified cyanobacterium with fan-shaped branching tubes.",
+   "v": "부채꼴로 가지 친 관을 지닌 석회화 남세균."
+  },
+  {
+   "k": "Pear-shaped receptaculitid, probably a calcified green alga.",
+   "v": "배 모양의 레켑타쿨리테스류로, 아마 석회화 녹조류일 것이다."
+  },
+  {
+   "k": "Sunflower-patterned receptaculitid of Ordovician seafloors.",
+   "v": "오르도비스기 해저의 해바라기 무늬 레켑타쿨리테스류."
+  },
+  {
+   "k": "One of the first truly calcified dasyclad algae.",
+   "v": "진정으로 석회화된 최초의 다시클라두스류 가운데 하나."
+  },
+  {
+   "k": "Ball-shaped dasyclad of the Baltic Ordovician.",
+   "v": "발트 지역 오르도비스계의 공 모양 다시클라두스류."
+  },
+  {
+   "k": "Small club-shaped dasyclad of the Ordovician.",
+   "v": "오르도비스기의 작은 곤봉 모양 다시클라두스류."
+  },
+  {
+   "k": "Branched calcified green alga related to Halimeda.",
+   "v": "할리메다와 가까운 가지 친 석회화 녹조류."
+  },
+  {
+   "k": "Floating green-alga cysts that sank to form oil shales.",
+   "v": "떠다니던 녹조류의 포낭으로, 가라앉아 오일셰일이 되었다."
+  },
+  {
+   "k": "Bushy calcified filaments of Paleozoic reef flats.",
+   "v": "고생대 초원 위의 덤불 모양 석회화 실."
+  },
+  {
+   "k": "Spiny early Silurian stems from Maine, among the oldest land plant fossils.",
+   "v": "메인주에서 나온 전기 실루리아기의 가시 돋친 줄기로, 가장 오래된 육상 식물 화석 가운데 하나다."
+  },
+  {
+   "k": "Tiny forked stems ending in spore capsules.",
+   "v": "작은 두 갈래 줄기 끝에 포자낭이 달린다."
+  },
+  {
+   "k": "Cooksonia-like plant with kidney-shaped sporangia.",
+   "v": "콩팥 모양 포자낭을 지닌 쿡소니아 같은 식물."
+  },
+  {
+   "k": "Plant of the Australian Baragwanathia flora with clustered sporangia.",
+   "v": "오스트레일리아 바라그와나티아 식물군의 식물로, 포자낭이 모여 달린다."
+  },
+  {
+   "k": "Naked forking stems, common in early land floras.",
+   "v": "잎 없는 두 갈래 줄기로, 초기 육상 식물군에 흔하다."
+  },
+  {
+   "k": "Late Silurian rhyniophyte-like plant from Xinjiang.",
+   "v": "신장에서 나온 후기 실루리아기의 리니아류 같은 식물."
+  },
+  {
+   "k": "Toothed zosterophyll from the Late Silurian of Arctic Canada.",
+   "v": "캐나다 북극권 후기 실루리아기의 톱니 있는 조스테로필룸류."
+  },
+  {
+   "k": "Zosterophyll with spore capsules in two neat rows.",
+   "v": "포자낭이 두 줄로 가지런히 늘어선 조스테로필룸류."
+  },
+  {
+   "k": "Tube-bodied nematophyte, possibly a fungus, on early land.",
+   "v": "초기 육지의 관 모양 몸을 지닌 네마토파이트로, 균류일지도 모른다."
+  },
+  {
+   "k": "Cellular crusts of a nematophyte, perhaps lichen-like.",
+   "v": "네마토파이트의 세포 모양 껍질로, 지의류와 비슷했을지도 모른다."
+  },
+  {
+   "k": "Calcified microbe encrusting Silurian and Devonian reefs.",
+   "v": "실루리아기와 데본기 초를 덮은 석회화 미생물."
+  },
+  {
+   "k": "Small encrusting tubes in Silurian reef rocks.",
+   "v": "실루리아기 초암 속의 표면을 덮는 작은 관."
+  },
+  {
+   "k": "Lime-coated nodules built by microbes on reef flats.",
+   "v": "초원 위에서 미생물이 만든 석회 피복 단괴."
+  },
+  {
+   "k": "Diamond-scarred lycopsid tree spread across Late Devonian Gondwana.",
+   "v": "마름모꼴 잎자국을 지닌 석송류 나무로, 후기 데본기 곤드와나 전역에 퍼졌다."
+  },
+  {
+   "k": "Late Devonian scale tree from New York.",
+   "v": "뉴욕주에서 나온 후기 데본기 인목류."
+  },
+  {
+   "k": "Scale tree of the latest Devonian and early coal swamps.",
+   "v": "데본기 최말기와 초기 석탄 늪의 인목류."
+  },
+  {
+   "k": "Tree-sized sphenopsid of Bear Island, up to 20 m tall.",
+   "v": "베어섬의 나무만 한 쐐기잎류로, 높이 20미터에 이르렀다."
+  },
+  {
+   "k": "Early tree whose trunk grew by tearing and repairing hundreds of wood strands.",
+   "v": "수백 가닥의 목질 다발이 찢어지고 아물기를 거듭하며 줄기가 자란 초기 나무."
+  },
+  {
+   "k": "Scrambling clubmoss that climbed the trunks of the Gilboa forest.",
+   "v": "길보아 숲의 줄기를 타고 오른 덩굴성 석송류."
+  },
+  {
+   "k": "Early sphenopsid with whorled branches and cones.",
+   "v": "돌려나는 가지와 구과를 지닌 초기 쐐기잎류."
+  },
+  {
+   "k": "Late Devonian seed plant with cupped seeds.",
+   "v": "잔 모양 기관에 싸인 씨앗을 지닌 후기 데본기 종자식물."
+  },
+  {
+   "k": "Woody shrub several metres tall, a forerunner of seed plants.",
+   "v": "높이 몇 미터의 목질 관목으로, 종자식물의 선구자다."
+  },
+  {
+   "k": "Small plant with forked branchlets rising from a creeping stem.",
+   "v": "기는줄기에서 두 갈래로 갈라진 잔가지를 올리는 작은 식물."
+  },
+  {
+   "k": "Ribbon-stemmed plant growing in shallow Early Devonian water.",
+   "v": "전기 데본기 얕은 물에 자라던 리본 모양 줄기 식물."
+  },
+  {
+   "k": "Forked stems with kidney-shaped sporangia, from Gaspé.",
+   "v": "콩팥 모양 포자낭을 단 두 갈래 줄기로, 가스페에서 나왔다."
+  },
+  {
+   "k": "Cup-topped sexual generation of Aglaophyton, from the Rhynie chert.",
+   "v": "끝이 잔 모양인 아글라오피톤의 유성 세대로, 라이니 처트에서 나왔다."
+  },
+  {
+   "k": "Zosterophyll of the Rhynie hot-spring flora.",
+   "v": "라이니 온천 식물군의 조스테로필룸류."
+  },
+  {
+   "k": "Zosterophyll with toothed stems and coiled tips.",
+   "v": "톱니 있는 줄기와 말린 끝을 지닌 조스테로필룸류."
+  },
+  {
+   "k": "Stout three-forked stems topped with clusters of sporangia.",
+   "v": "굵은 세 갈래 줄기 끝에 포자낭이 다발로 달린다."
+  },
+  {
+   "k": "Ribbon-like Middle Devonian liverwort from New York.",
+   "v": "뉴욕주에서 나온 중기 데본기의 리본 모양 태류."
+  },
+  {
+   "k": "Leafy-winged thalloid liverwort of the Late Devonian.",
+   "v": "잎 같은 날개를 지닌 후기 데본기 엽상 태류."
+  },
+  {
+   "k": "Ribbed horsetail stems with forked leaves, a forerunner of Calamites.",
+   "v": "두 갈래 잎이 달린 골진 속새류 줄기로, 칼라미테스의 선구자다."
+  },
+  {
+   "k": "The oldest known member of the stonewort order Charales.",
+   "v": "윤조목에서 알려진 가장 오래된 구성원."
+  },
+  {
+   "k": "Charophyte with ribbed, lime-encased egg capsules.",
+   "v": "골이 지고 석회로 싸인 알주머니를 지닌 윤조류."
+  },
+  {
+   "k": "Devonian stonewort with spiralled gyrogonites.",
+   "v": "나선형 장란기 화석을 지닌 데본기 윤조류."
+  },
+  {
+   "k": "Lime-walled tubular alga of Late Devonian shallow seas.",
+   "v": "후기 데본기 얕은 바다의 석회질 벽을 지닌 관 모양 조류."
+  },
+  {
+   "k": "Pitted, leathery thalli thought to be an early lichen.",
+   "v": "구멍이 팬 가죽질 엽상체로, 초기 지의류로 여겨진다."
+  },
+  {
+   "k": "Early Devonian lichen with cyanobacterial partners, from the Welsh Borderland.",
+   "v": "웨일스 접경 지역에서 나온 전기 데본기 지의류로, 남세균을 공생 동반자로 삼았다."
+  },
+  {
+   "k": "Tangled tubes of a nematophyte from the Rhynie chert.",
+   "v": "라이니 처트에서 나온 네마토파이트로, 엉킨 관으로 이루어져 있다."
+  },
+  {
+   "k": "Tiny chytrid fungus living on dead Rhynie chert plants.",
+   "v": "라이니 처트의 죽은 식물 위에 살던 작은 항아리곰팡이."
+  },
+  {
+   "k": "Scale tree that branched early into a broad crown; a coal-ball favourite.",
+   "v": "일찍부터 가지를 쳐 넓은 수관을 이룬 인목류. 탄구에서 자주 발견된다."
+  },
+  {
+   "k": "Scale tree of the Pennsylvanian peat swamps, long confused with Lepidodendron.",
+   "v": "펜실베이니아기 이탄 늪의 인목류로, 오랫동안 레피도덴드론과 혼동되었다."
+  },
+  {
+   "k": "Lycopsid trunk marked with two rows of big round scars where branches fell away.",
+   "v": "가지가 떨어져 나간 자리에 커다란 둥근 흉터가 두 줄로 남은 석송류 줄기."
+  },
+  {
+   "k": "Smooth-barked scale tree with tiny, widely spaced leaf scars.",
+   "v": "껍질이 매끈하고 작은 잎자국이 드문드문 난 인목류."
+  },
+  {
+   "k": "Calamite with thick, banded wood: the woodiest of the tree horsetails.",
+   "v": "띠무늬의 두꺼운 목재를 지닌 칼라미테스로, 나무 속새 가운데 가장 목질화되었다."
+  },
+  {
+   "k": "Big Early Carboniferous tree known from logs a metre thick buried in Scottish volcanic ash.",
+   "v": "스코틀랜드 화산재에 묻힌 지름 1미터의 통나무로 알려진 전기 석탄기의 큰 나무."
+  },
+  {
+   "k": "Cordaitean shrub-tree of the coal swamps, perhaps growing in mangrove-like stands.",
+   "v": "석탄 늪에 자라던 코르다이테스류 관목성 나무로, 맹그로브처럼 무리 지어 자랐을지도 모른다."
+  },
+  {
+   "k": "Among the oldest known conifers, from Pennsylvanian Yorkshire.",
+   "v": "알려진 가장 오래된 침엽수 가운데 하나로, 펜실베이니아기 요크셔에서 나왔다."
+  },
+  {
+   "k": "Marattialean tree fern whose fronds grew in two rows down the trunk.",
+   "v": "잎이 줄기를 따라 두 줄로 난 마라티아목 나무고사리."
+  },
+  {
+   "k": "Medullosan seed fern with a strangely tangled stem.",
+   "v": "기묘하게 엉킨 줄기를 지닌 메둘로사류 종자고사리."
+  },
+  {
+   "k": "Strap-leaved cordaite of the cold Gondwana lands as the great ice age waned.",
+   "v": "대빙하기가 끝나 가던 무렵, 추운 곤드와나 땅에 자라던 띠 모양 잎의 코르다이테스류."
+  },
+  {
+   "k": "Scale tree of the Cathaysian coal swamps of China.",
+   "v": "중국 카타이시아 석탄 늪의 인목류."
+  },
+  {
+   "k": "Seed fern with broad, blunt leaflets joined at the base.",
+   "v": "넓고 끝이 뭉툭한 작은잎이 밑동에서 이어진 종자고사리."
+  },
+  {
+   "k": "Big-leafleted seed fern covered in fine hairs, common in coal shales.",
+   "v": "잔털로 덮인 큰 작은잎을 지닌 종자고사리로, 석탄 셰일에 흔하다."
+  },
+  {
+   "k": "Lacy foliage of scrambling lyginopterid seed ferns.",
+   "v": "덩굴성 리기놉테리스류 종자고사리의 레이스 같은 잎."
+  },
+  {
+   "k": "Zygopterid fern with clusters of big spore sacs.",
+   "v": "큰 포자낭이 다발로 달린 지곱테리스류 양치식물."
+  },
+  {
+   "k": "Small fern that clambered over the trunks of tree ferns.",
+   "v": "나무고사리 줄기를 타고 오르던 작은 양치식물."
+  },
+  {
+   "k": "Leafless, bushy little fern relative of the coal-swamp floor.",
+   "v": "석탄 늪 바닥에 자라던, 잎 없이 덤불진 작은 양치식물 친척."
+  },
+  {
+   "k": "Shrubby lycopsid with a cone on each branch tip.",
+   "v": "가지 끝마다 구과를 단 관목 모양 석송류."
+  },
+  {
+   "k": "Tiny spikemoss-like lycopsid known from coal balls.",
+   "v": "탄구로 알려진, 부처손을 닮은 작은 석송류."
+  },
+  {
+   "k": "Small herbaceous lycopsid of Early Carboniferous Scotland.",
+   "v": "전기 석탄기 스코틀랜드의 작은 초본성 석송류."
+  },
+  {
+   "k": "Early relative of the climbing ferns (Schizaeales).",
+   "v": "실고사리류(실고사리목)의 초기 친척."
+  },
+  {
+   "k": "Forked, needle-leaved plant of dry Late Paleozoic uplands.",
+   "v": "후기 고생대 건조한 고지의 두 갈래 바늘잎 식물."
+  },
+  {
+   "k": "One of the few Carboniferous mosses known, from French coal measures.",
+   "v": "몇 안 되는 석탄기 선류 가운데 하나로, 프랑스 석탄층에서 나왔다."
+  },
+  {
+   "k": "Leafy liverwort from the Pennsylvanian coal measures.",
+   "v": "펜실베이니아기 석탄층에서 나온 잎이 있는 태류."
+  },
+  {
+   "k": "Marattialean fern with star-shaped clusters of spore sacs.",
+   "v": "포자낭이 별 모양으로 모여 달린 마라티아류 양치식물."
+  },
+  {
+   "k": "Horsetail of the cool Angaran and Gondwanan floodplains.",
+   "v": "서늘한 앙가라와 곤드와나 범람원의 속새류."
+  },
+  {
+   "k": "Tube-shaped dasyclad alga of Carboniferous shelf seas.",
+   "v": "석탄기 대륙붕 바다의 관 모양 다시클라두스류."
+  },
+  {
+   "k": "Dasyclad alga with a pitted sleeve of lime.",
+   "v": "구멍 뚫린 석회 덮개를 두른 다시클라두스류."
+  },
+  {
+   "k": "Leaf-like calcareous alga of Russian Carboniferous seas.",
+   "v": "러시아 석탄기 바다의 잎 모양 석회조류."
+  },
+  {
+   "k": "Encrusting alga that coated shells and grains.",
+   "v": "조개껍데기와 알갱이를 덮은 피복성 조류."
+  },
+  {
+   "k": "Tiny round fungal spore cases found in coal balls.",
+   "v": "탄구에서 발견되는 작고 둥근 균류 포자낭."
+  },
+  {
+   "k": "Oily colonial alga whose remains make torbanite, the boghead coal.",
+   "v": "기름이 풍부한 군체성 조류로, 그 유해가 보그헤드탄(토바나이트)이 된다."
+  },
+  {
+   "k": "Walchian conifer of the dry Early Permian of Europe.",
+   "v": "건조한 전기 페름기 유럽의 발키아류 침엽수."
+  },
+  {
+   "k": "Early conifer with flat, fern-like sprays of needles.",
+   "v": "바늘잎이 납작한 고사리 같은 가지에 늘어선 초기 침엽수."
+  },
+  {
+   "k": "Voltzian conifer of the Zechstein sea shores.",
+   "v": "체히슈타인 해 연안의 볼치아류 침엽수."
+  },
+  {
+   "k": "Small conifer from the Late Permian Bletterbach gorge in the Dolomites.",
+   "v": "돌로미티 블레터바흐 협곡의 후기 페름기 지층에서 나온 작은 침엽수."
+  },
+  {
+   "k": "Late Permian conifer with dense, short-needled shoots.",
+   "v": "짧은 바늘잎이 빽빽한 가지를 지닌 후기 페름기 침엽수."
+  },
+  {
+   "k": "The oldest known ginkgophyte, with thread-like forked leaves.",
+   "v": "알려진 가장 오래된 은행나무류로, 실처럼 두 갈래로 갈라진 잎을 지녔다."
+  },
+  {
+   "k": "Ginkgo relative with wedge-shaped, deeply split leaves.",
+   "v": "쐐기 모양으로 깊게 갈라진 잎을 지닌 은행나무 친척."
+  },
+  {
+   "k": "Gigantopterid with huge, net-veined leaves, climbing through Cathaysian forests.",
+   "v": "거대한 그물맥 잎을 지닌 기간톱테리스류로, 카타이시아 숲을 타고 올랐다."
+  },
+  {
+   "k": "Early cycad from the Permian of China.",
+   "v": "중국 페름기에서 나온 초기 소철."
+  },
+  {
+   "k": "Peltasperm seed fern of the dry red beds of the Grand Canyon.",
+   "v": "그랜드캐니언 건조한 적색층의 펠타스페르뭄목 종자고사리."
+  },
+  {
+   "k": "Seed fern of the Late Permian Angaran and Russian floras.",
+   "v": "후기 페름기 앙가라 및 러시아 식물군의 종자고사리."
+  },
+  {
+   "k": "Cathaysian seed fern that bore its seeds right on its leaflets.",
+   "v": "작은잎 위에 바로 씨앗을 단 카타이시아의 종자고사리."
+  },
+  {
+   "k": "Marattialean fern of the Permian coal swamps of China.",
+   "v": "중국 페름기 석탄 늪의 마라티아류 양치식물."
+  },
+  {
+   "k": "Gondwanan sphenophyll with leaves in lopsided whorls of three pairs.",
+   "v": "세 쌍의 잎이 비대칭으로 돌려나는 곤드와나의 쐐기잎류."
+  },
+  {
+   "k": "Angaran moss with cells like those of peat mosses.",
+   "v": "물이끼류와 비슷한 세포를 지닌 앙가라의 선류."
+  },
+  {
+   "k": "Peltasperm shrub of the dry Late Permian of Russia.",
+   "v": "건조한 후기 페름기 러시아의 펠타스페르뭄목 관목."
+  },
+  {
+   "k": "Thick-leaved peltasperm of the Late Permian Angaran floodplains.",
+   "v": "후기 페름기 앙가라 범람원의 두꺼운 잎을 지닌 펠타스페르뭄류."
+  },
+  {
+   "k": "Lycopsid of the Permian Paraná Basin in Brazil.",
+   "v": "브라질 페름기 파라나 분지의 석송류."
+  },
+  {
+   "k": "Cycad with long, comb-like leaves.",
+   "v": "빗살 같은 긴 잎을 지닌 소철."
+  },
+  {
+   "k": "Lime-crusted red alga of warm shelf seas from the Permian to the Cretaceous.",
+   "v": "페름기부터 백악기까지 따뜻한 대륙붕 바다에 살던 석회 껍질의 홍조류."
+  },
+  {
+   "k": "Dasyclad alga with whorls of fine branches.",
+   "v": "가는 가지가 돌려나는 다시클라두스류."
+  },
+  {
+   "k": "Dasyclad with a pitted, finger-like sleeve of lime.",
+   "v": "구멍 뚫린 손가락 모양 석회 덮개를 지닌 다시클라두스류."
+  },
+  {
+   "k": "Encrusting, worm-like alga of Permian reefs.",
+   "v": "페름기 초의 벌레 같은 피복성 조류."
+  },
+  {
+   "k": "Southern voltzian conifer of the earliest Triassic.",
+   "v": "트라이아스기 최초기 남반구의 볼치아류 침엽수."
+  },
+  {
+   "k": "Strap-leaved conifer that grew in dense stands along Gondwanan rivers.",
+   "v": "곤드와나 강가를 따라 빽빽이 자라던 띠 모양 잎의 침엽수."
+  },
+  {
+   "k": "Early podocarp-like conifer of Gondwana.",
+   "v": "곤드와나의 초기 나한송류 같은 침엽수."
+  },
+  {
+   "k": "Petrified Forest conifer with short shoot traces all along its logs.",
+   "v": "통나무 곳곳에 짧은가지 흔적이 남은 석화림의 침엽수."
+  },
+  {
+   "k": "Petrified Forest tree with distinctive wood; its relatives are still debated.",
+   "v": "독특한 목재를 지닌 석화림의 나무. 그 계통은 아직도 논란거리다."
+  },
+  {
+   "k": "Fossil ginkgo leaves with broad, lobed fans, found worldwide in the Mesozoic.",
+   "v": "넓고 갈라진 부채꼴 은행잎 화석으로, 중생대 전 세계에서 발견된다."
+  },
+  {
+   "k": "Cycad with long, ribbon-like leaves, common across the Mesozoic.",
+   "v": "긴 리본 모양 잎을 지닌 소철로, 중생대 내내 흔했다."
+  },
+  {
+   "k": "Cheirolepid conifer whose pollen dominates the Triassic-Jurassic boundary.",
+   "v": "케이롤레피스류 침엽수로, 그 꽃가루가 트라이아스기-쥐라기 경계에서 우세하다."
+  },
+  {
+   "k": "Bennettitalean with neatly ranked, square-ended leaflets.",
+   "v": "끝이 반듯한 작은잎이 가지런히 늘어선 베네티테스류."
+  },
+  {
+   "k": "Small bennettitalean shrub with short, uneven leaflets.",
+   "v": "짧고 고르지 않은 작은잎을 지닌 작은 베네티테스류 관목."
+  },
+  {
+   "k": "Slender, forking bennettitalean bush with small flower-like cones.",
+   "v": "꽃 같은 작은 구과를 단, 가늘고 두 갈래로 갈라진 베네티테스류 관목."
+  },
+  {
+   "k": "Slender-stemmed early cycad from Late Triassic North Carolina.",
+   "v": "후기 트라이아스기 노스캐롤라이나에서 나온 가는 줄기의 초기 소철."
+  },
+  {
+   "k": "Puzzling plant with pleated, palm-like leaves, once claimed as a flowering plant.",
+   "v": "주름진 야자 같은 잎을 지닌 수수께끼의 식물로, 한때 꽃식물이라고 주장되었다."
+  },
+  {
+   "k": "Corystosperm with fine, needle-like leaflets, a dry-ground cousin of Dicroidium.",
+   "v": "가는 바늘 모양 작은잎을 지닌 코리스토스페르뭄류로, 건조한 땅에 자라던 디크로이디움의 친척."
+  },
+  {
+   "k": "Caytonialean shrub with net-veined leaflets and berry-like seed cups.",
+   "v": "그물맥 작은잎과 장과 같은 씨앗 컵을 지닌 케이토니아목 관목."
+  },
+  {
+   "k": "Dipterid fern with big, umbrella-like fronds.",
+   "v": "커다란 우산 같은 잎을 지닌 딥테리스류 양치식물."
+  },
+  {
+   "k": "Dipterid fern with leaves netted like a window lattice.",
+   "v": "잎맥이 창살처럼 그물을 이룬 딥테리스류 양치식물."
+  },
+  {
+   "k": "Royal-fern relative common in Mesozoic floras.",
+   "v": "고비류의 친척으로, 중생대 식물군에 흔하다."
+  },
+  {
+   "k": "Marattialean fern with huge fronds, common in the Middle Triassic.",
+   "v": "거대한 잎을 지닌 마라티아류 양치식물로, 중기 트라이아스기에 흔하다."
+  },
+  {
+   "k": "Fern close to the living king ferns.",
+   "v": "현생 용비늘고사리류와 가까운 양치식물."
+  },
+  {
+   "k": "Forking, thicket-forming fern of open ground.",
+   "v": "트인 땅에서 덤불을 이루는 두 갈래 가지의 양치식물."
+  },
+  {
+   "k": "Quillwort-like lycopsid that greened the shores after the end-Permian extinction.",
+   "v": "물부추를 닮은 석송류로, 페름기 말 대멸종 뒤 해안을 다시 초록으로 덮었다."
+  },
+  {
+   "k": "Herb-sized conifer from the Triassic sandstones of the Vosges.",
+   "v": "보주산맥 트라이아스기 사암에서 나온 풀만 한 크기의 침엽수."
+  },
+  {
+   "k": "Small leafy liverwort of Rhaetian ponds.",
+   "v": "레티아절 연못의 작은 잎이 있는 태류."
+  },
+  {
+   "k": "Fossil liverwort with flat, forking lobes.",
+   "v": "납작하고 두 갈래로 갈라진 엽편을 지닌 태류 화석."
+  },
+  {
+   "k": "Large dasyclad of Triassic reefs.",
+   "v": "트라이아스기 초의 대형 다시클라두스류."
+  },
+  {
+   "k": "Dasyclad with swollen, bladder-tipped branches.",
+   "v": "끝이 부풀어 주머니 모양인 가지를 지닌 다시클라두스류."
+  },
+  {
+   "k": "Puzzling encrusting alga of Mesozoic lagoons.",
+   "v": "중생대 석호의 수수께끼 같은 피복성 조류."
+  },
+  {
+   "k": "Triassic stonewort with star-patterned fruiting cases.",
+   "v": "별무늬 생식 기관을 지닌 트라이아스기 윤조류."
+  },
+  {
+   "k": "Mushroom-relative threads with clamp connections, from Antarctica.",
+   "v": "남극에서 나온, 꺾쇠연결을 지닌 버섯 친척의 균사."
+  },
+  {
+   "k": "Spiny fungal spore cases preserved in Antarctic Triassic peat.",
+   "v": "남극 트라이아스기 이탄에 보존된 가시 돋친 균류 포자낭."
+  },
+  {
+   "k": "Cheirolepid conifer with tiny cones petrified in Patagonia.",
+   "v": "작은 구과가 파타고니아에서 화석화된 케이롤레피스류 침엽수."
+  },
+  {
+   "k": "Kauri relative from the Jurassic Talbragar fish beds, Australia.",
+   "v": "오스트레일리아 쥐라기 탈브라가 어류 화석층에서 나온 카우리 친척."
+  },
+  {
+   "k": "Early cypress-family conifer like a Chinese fir.",
+   "v": "넓은잎삼나무를 닮은 초기 측백나무과 침엽수."
+  },
+  {
+   "k": "Early pine relative with split cone scales.",
+   "v": "갈라진 구과 비늘을 지닌 초기 소나무 친척."
+  },
+  {
+   "k": "The oldest known member of the pine family, from Scotland.",
+   "v": "알려진 가장 오래된 소나무과 식물로, 스코틀랜드에서 나왔다."
+  },
+  {
+   "k": "Jurassic ginkgo from Henan with clusters of seeds on forked stalks.",
+   "v": "허난성에서 나온 쥐라기 은행나무로, 갈라진 자루에 씨앗이 모여 달린다."
+  },
+  {
+   "k": "Ginkgo relative with tufts of strap leaves on short shoots.",
+   "v": "짧은가지에 띠 모양 잎이 다발로 나는 은행나무 친척."
+  },
+  {
+   "k": "Large cycad with comb-like fronds.",
+   "v": "빗살 같은 잎을 지닌 대형 소철."
+  },
+  {
+   "k": "Bennettitalean of dry coasts with stiff, closely set leaflets.",
+   "v": "건조한 해안의 베네티테스류로, 단단한 작은잎이 촘촘히 늘어서 있다."
+  },
+  {
+   "k": "Bennettitalean whose leaflets have ear-like lobes at the base.",
+   "v": "작은잎 밑동에 귀 모양 돌출부가 있는 베네티테스류."
+  },
+  {
+   "k": "Slender bennettitalean bush with small two-sexed 'flowers', from Yorkshire.",
+   "v": "요크셔에서 나온 가느다란 베네티테스류 관목으로, 양성의 작은 '꽃'을 단다."
+  },
+  {
+   "k": "Thick-leaved seed fern of salty coastal flats.",
+   "v": "짠 해안 갯벌에 자라던 두꺼운 잎의 종자고사리."
+  },
+  {
+   "k": "Early climbing-fern relative of the Jurassic Yorkshire delta.",
+   "v": "쥐라기 요크셔 삼각주의 실고사리류 초기 친척."
+  },
+  {
+   "k": "Fern with small fan-shaped leaves, kin of the living Dipteris.",
+   "v": "작은 부채꼴 잎을 지닌 양치식물로, 현생 딥테리스의 친척이다."
+  },
+  {
+   "k": "Common fern of the Jurassic Yorkshire flora.",
+   "v": "쥐라기 요크셔 식물군에 흔한 양치식물."
+  },
+  {
+   "k": "Delicately cut fern of the Jurassic and Early Cretaceous.",
+   "v": "쥐라기와 전기 백악기의 섬세하게 갈라진 잎의 양치식물."
+  },
+  {
+   "k": "Dasyclad of Early Jurassic carbonate lagoons.",
+   "v": "전기 쥐라기 탄산염 석호의 다시클라두스류."
+  },
+  {
+   "k": "Small tube-shaped dasyclad of Tethyan lagoons.",
+   "v": "테티스해 석호의 작은 관 모양 다시클라두스류."
+  },
+  {
+   "k": "Dasyclad with star-like whorls of rays.",
+   "v": "별 같은 돌려난 방사 가지를 지닌 다시클라두스류."
+  },
+  {
+   "k": "Crust-building organism of Jurassic and Cretaceous reefs.",
+   "v": "쥐라기와 백악기 초에서 껍질을 쌓은 생물."
+  },
+  {
+   "k": "Bubbly calcified mats on shallow Mesozoic platforms.",
+   "v": "중생대 얕은 대지 위의 거품 같은 석회화 매트."
+  },
+  {
+   "k": "Stonewort of Jurassic and Cretaceous lakes.",
+   "v": "쥐라기와 백악기 호수의 윤조류."
+  },
+  {
+   "k": "Leafy lichen from Jurassic Daohugou, China.",
+   "v": "중국 쥐라기 다오후거우에서 나온 잎 모양 지의류."
+  },
+  {
+   "k": "Magnolia-like tree with big, many-parted flowers, from Kansas.",
+   "v": "캔자스에서 나온 목련 같은 나무로, 여러 부분으로 된 큰 꽃을 피운다."
+  },
+  {
+   "k": "Early plane-tree relative with lobed leaves, along Cretaceous streams.",
+   "v": "백악기 개울가에 자라던 갈라진 잎의 플라타너스 초기 친척."
+  },
+  {
+   "k": "Big-leaved plane-tree relative of the Late Cretaceous.",
+   "v": "후기 백악기의 큰 잎을 지닌 플라타너스 친척."
+  },
+  {
+   "k": "One of the oldest laurels, its tiny flowers preserved as charcoal.",
+   "v": "가장 오래된 녹나무류 가운데 하나로, 작은 꽃이 숯이 되어 보존되었다."
+  },
+  {
+   "k": "Toothed-leaved early relative of oaks and chestnuts.",
+   "v": "톱니 있는 잎을 지닌 참나무와 밤나무의 초기 친척."
+  },
+  {
+   "k": "Swamp conifer that once ringed the Arctic, now nearly extinct in the wild.",
+   "v": "한때 북극을 둘러싸고 자랐던 늪지 침엽수로, 지금은 야생에서 거의 멸종했다."
+  },
+  {
+   "k": "Stiff-needled cypress-family conifer, known since the Late Cretaceous.",
+   "v": "단단한 바늘잎을 지닌 측백나무과 침엽수로, 후기 백악기부터 알려져 있다."
+  },
+  {
+   "k": "Its pollen is common in Cretaceous rocks; the living trees were found only in 1994.",
+   "v": "그 꽃가루는 백악기 암석에 흔하지만, 살아 있는 나무는 1994년에야 발견되었다."
+  },
+  {
+   "k": "Succulent-jointed cheirolepid of salty Cretaceous coasts.",
+   "v": "백악기 짠 해안의 다육질 마디를 지닌 케이롤레피스류."
+  },
+  {
+   "k": "Chloranthoid herb from Early Cretaceous Portugal with tiny, petal-less flowers.",
+   "v": "전기 백악기 포르투갈에서 나온 홀아비꽃대류 같은 풀로, 꽃잎 없는 작은 꽃을 피운다."
+  },
+  {
+   "k": "Buttercup relative from Liaoning, among the oldest eudicots.",
+   "v": "랴오닝에서 나온 미나리아재비 친척으로, 가장 오래된 진정쌍떡잎식물 가운데 하나다."
+  },
+  {
+   "k": "Small herb with paired flower stalks, from the Yixian lakes.",
+   "v": "이현 호수에서 나온, 꽃자루가 짝지어 나는 작은 풀."
+  },
+  {
+   "k": "Early Cretaceous herb with tiny flowers, from Liaoning.",
+   "v": "랴오닝에서 나온 전기 백악기 풀로, 작은 꽃을 피운다."
+  },
+  {
+   "k": "Tiny saxifrage-like flower preserved in Swedish charcoal.",
+   "v": "스웨덴 숯 화석에 보존된 범의귀를 닮은 작은 꽃."
+  },
+  {
+   "k": "Buttercup-order flower with a spiral of small tepals, from Portugal.",
+   "v": "포르투갈에서 나온 미나리아재비목의 꽃으로, 작은 화피편이 나선형으로 배열된다."
+  },
+  {
+   "k": "Small eudicot herb from the Crato limestone of Brazil.",
+   "v": "브라질 크라투 석회암에서 나온 작은 진정쌍떡잎식물 풀."
+  },
+  {
+   "k": "Magnoliid shrub with small flowers, from the Crato limestone.",
+   "v": "크라투 석회암에서 나온 작은 꽃을 피우는 목련류 관목."
+  },
+  {
+   "k": "Magnoliid of the Crato lake shores, near the custard-apple family.",
+   "v": "크라투 호숫가에 자라던 목련류로, 번려지과와 가깝다."
+  },
+  {
+   "k": "Spicebush relative with many-tepaled flowers, from Virginia.",
+   "v": "버지니아에서 나온 납매 친척으로, 화피편이 많은 꽃을 피운다."
+  },
+  {
+   "k": "Early water-lily flower from Portugal.",
+   "v": "포르투갈에서 나온 초기 수련의 꽃."
+  },
+  {
+   "k": "Tiny relative of the giant water lily, from New Jersey.",
+   "v": "뉴저지에서 나온 빅토리아수련의 작은 친척."
+  },
+  {
+   "k": "Fanwort-family water plant with round floating leaves, from Brazil.",
+   "v": "브라질에서 나온 어항마름과 수생 식물로, 둥근 뜬잎을 지녔다."
+  },
+  {
+   "k": "Floating aroid rosettes like water lettuce, from Late Cretaceous Alberta.",
+   "v": "후기 백악기 앨버타에서 나온 떠다니는 천남성류 로제트로, 물상추를 닮았다."
+  },
+  {
+   "k": "Leafless green-jointed shrub of dry lands, known since the Early Cretaceous.",
+   "v": "건조한 땅에 자라는 잎 없는 초록 마디 관목으로, 전기 백악기부터 알려져 있다."
+  },
+  {
+   "k": "Welwitschia-like gnetophyte of the dry Crato coast.",
+   "v": "건조한 크라투 해안의 웰위치아를 닮은 마황류."
+  },
+  {
+   "k": "Finely divided fern of the Wealden wetlands.",
+   "v": "윌드 습지의 잘게 갈라진 잎을 지닌 양치식물."
+  },
+  {
+   "k": "Small Indian tree-shrub with mulberry-like seed heads, of its own extinct order.",
+   "v": "오디 같은 씨앗 덩이를 단 인도의 작은 관목성 나무로, 독자적인 멸종 목에 속한다."
+  },
+  {
+   "k": "Late-surviving bennettitalean with a cone at each leaf base.",
+   "v": "늦게까지 살아남은 베네티테스류로, 잎 밑동마다 구과를 단다."
+  },
+  {
+   "k": "Club-shaped dasyclad, still alive in tropical lagoons.",
+   "v": "곤봉 모양 다시클라두스류로, 지금도 열대 석호에 산다."
+  },
+  {
+   "k": "Beaded dasyclad with tufts at its tips.",
+   "v": "끝에 술이 달린 구슬 모양 다시클라두스류."
+  },
+  {
+   "k": "Clavatoracean stonewort with three-fold symmetric fruiting cases.",
+   "v": "삼중 대칭의 생식 기관을 지닌 클라바토르류 윤조류."
+  },
+  {
+   "k": "Early lotus relative with round, shield-like leaves.",
+   "v": "둥근 방패 모양 잎을 지닌 연꽃의 초기 친척."
+  },
+  {
+   "k": "Tiny floating fern that turns ponds red; in the Eocene it covered the Arctic Ocean.",
+   "v": "연못을 붉게 물들이는 작은 부유성 양치식물. 에오세에는 북극해를 뒤덮었다."
+  },
+  {
+   "k": "Coral fungus preserved in Burmese amber.",
+   "v": "미얀마 호박에 보존된 싸리버섯류."
+  },
+  {
+   "k": "The oldest insect-killing fungus, sprouting from a scale insect in amber.",
+   "v": "가장 오래된 곤충 기생 균류로, 호박 속 깍지벌레에서 자라나 있다."
+  },
+  {
+   "k": "Crusty lichen from the Early Cretaceous of Vancouver Island.",
+   "v": "밴쿠버섬 전기 백악기에서 나온 껍질 모양 지의류."
+  },
+  {
+   "k": "Walnuts appear in the Eocene and spread across the northern continents.",
+   "v": "호두나무는 에오세에 나타나 북반구 대륙 전역으로 퍼졌다."
+  },
+  {
+   "k": "Hickories filled Paleocene forests of North America and Europe.",
+   "v": "히코리는 북아메리카와 유럽의 팔레오세 숲을 가득 채웠다."
+  },
+  {
+   "k": "Chestnuts, with spiny husks around glossy nuts.",
+   "v": "밤나무는 윤기 나는 열매를 가시투성이 밤송이로 감싼다."
+  },
+  {
+   "k": "Elms, with round papery seeds, date back to the Paleocene.",
+   "v": "둥근 종이 같은 날개열매를 지닌 느릅나무는 팔레오세까지 거슬러 올라간다."
+  },
+  {
+   "k": "Lindens hum with bees when their sweet flowers open.",
+   "v": "피나무의 달콤한 꽃이 피면 벌들이 윙윙거린다."
+  },
+  {
+   "k": "Katsura relatives were common along Paleocene rivers; its autumn leaves smell of caramel.",
+   "v": "계수나무 친척은 팔레오세 강가에 흔했다. 가을 낙엽에서는 캐러멜 향이 난다."
+  },
+  {
+   "k": "Extinct wheel-wood relative of the warm Paleocene Arctic.",
+   "v": "따뜻했던 팔레오세 북극권의 멸종한 바퀴나무 친척."
+  },
+  {
+   "k": "Extinct Eocene plane tree with big lobed leaves.",
+   "v": "크게 갈라진 잎을 지닌 멸종한 에오세 플라타너스."
+  },
+  {
+   "k": "Swamp tree whose leaves turn a blazing scarlet in autumn.",
+   "v": "가을에 잎이 불타는 진홍색으로 변하는 늪지의 나무."
+  },
+  {
+   "k": "Elm relative found from the Eocene; a few relict species survive.",
+   "v": "에오세부터 발견되는 느릅나무 친척으로, 몇몇 잔존종이 살아남았다."
+  },
+  {
+   "k": "Walnut relative hung with long chains of winged nuts.",
+   "v": "날개 달린 열매가 긴 줄로 주렁주렁 달리는 호두나무 친척."
+  },
+  {
+   "k": "Rainforest tree with bright blue fruit, known from the Eocene of Australia.",
+   "v": "선명한 파란 열매를 맺는 열대우림 나무로, 오스트레일리아 에오세에서 알려져 있다."
+  },
+  {
+   "k": "Evergreen chestnut relative of warm Asian forests since the Eocene.",
+   "v": "에오세부터 따뜻한 아시아 숲에 자라 온 상록성 밤나무 친척."
+  },
+  {
+   "k": "Fan palm of tropical swamps; its pollen goes back to the Paleocene.",
+   "v": "열대 늪의 부채꼴 잎 야자. 그 꽃가루는 팔레오세까지 거슬러 올라간다."
+  },
+  {
+   "k": "Shade-loving conifer with drooping tips and tiny cones.",
+   "v": "가지 끝이 늘어지고 작은 구과를 다는, 그늘을 좋아하는 침엽수."
+  },
+  {
+   "k": "Scale-leaved conifer known from the Paleocene Arctic.",
+   "v": "팔레오세 북극권에서 알려진 비늘잎 침엽수."
+  },
+  {
+   "k": "True cedars, with flat-topped tiers and upright barrel cones.",
+   "v": "진정한 개잎갈나무류로, 평평한 가지 층과 곧게 선 통 모양 구과를 지닌다."
+  },
+  {
+   "k": "Tall conifer whose cones have three-pointed bracts; known since the Oligocene.",
+   "v": "구과에 세 갈래 포린이 있는 키 큰 침엽수로, 올리고세부터 알려져 있다."
+  },
+  {
+   "k": "Hardy conifer with blue, berry-like cones.",
+   "v": "파란 장과 같은 구과를 다는 강인한 침엽수."
+  },
+  {
+   "k": "Ash trees, with bunches of winged keys, since the Eocene.",
+   "v": "날개열매 다발을 단 물푸레나무로, 에오세부터 존재했다."
+  },
+  {
+   "k": "Candles of white flowers and shiny conkers; known from the Paleocene.",
+   "v": "촛대 같은 하얀 꽃차례와 반들반들한 열매. 팔레오세부터 알려져 있다."
+  },
+  {
+   "k": "Mango leaves are found in Paleocene rocks of India.",
+   "v": "인도 팔레오세 암석에서 망고 잎이 발견된다."
+  },
+  {
+   "k": "Giant herb with huge leaves; fossil banana seeds come from early Paleogene India.",
+   "v": "거대한 잎을 지닌 큰 풀. 바나나 씨앗 화석은 인도의 초기 고제3기에서 나온다."
+  },
+  {
+   "k": "Floating fern that carpeted the Eocene Arctic Ocean and drew down carbon dioxide.",
+   "v": "에오세 북극해를 뒤덮고 이산화탄소를 대량으로 흡수한 부유성 양치식물."
+  },
+  {
+   "k": "Sharp-edged sedge; its seeds are common in Paleogene swamp deposits.",
+   "v": "잎 가장자리가 날카로운 사초. 그 씨앗은 고제3기 늪 퇴적층에 흔하다."
+  },
+  {
+   "k": "Fern almost unchanged since the Paleocene.",
+   "v": "팔레오세 이후 거의 변하지 않은 양치식물."
+  },
+  {
+   "k": "Large fern of wet ground, known from Paleocene rocks.",
+   "v": "축축한 땅에 자라는 큰 양치식물로, 팔레오세 암석에서 알려져 있다."
+  },
+  {
+   "k": "Tall, leathery fern that grows among mangroves.",
+   "v": "맹그로브 사이에 자라는 키 크고 가죽 같은 양치식물."
+  },
+  {
+   "k": "Roses grew in Eocene North America, with red hips after their flowers.",
+   "v": "에오세 북아메리카에는 장미가 자랐고, 꽃이 지면 붉은 열매가 맺혔다."
+  },
+  {
+   "k": "Thorny thickets with blackberries and raspberries.",
+   "v": "블랙베리와 라즈베리가 열리는 가시덤불."
+  },
+  {
+   "k": "Shrub with flat white flower heads and dark berries.",
+   "v": "평평한 흰 꽃차례와 검은 열매를 다는 관목."
+  },
+  {
+   "k": "Extinct ginger of Paleocene and Eocene tropical forests.",
+   "v": "팔레오세와 에오세 열대림의 멸종한 생강류."
+  },
+  {
+   "k": "Giant arum of river banks, found in the Paleocene rainforest of Cerrejón.",
+   "v": "강가에 자라는 거대한 천남성류로, 세레혼의 팔레오세 열대우림에서 발견되었다."
+  },
+  {
+   "k": "The oldest fossil orchids are in Eocene amber.",
+   "v": "가장 오래된 난초 화석은 에오세 호박 속에 있다."
+  },
+  {
+   "k": "Thorny shrub of dry ground with sweet red fruit.",
+   "v": "달콤한 붉은 열매를 맺는 건조한 땅의 가시 관목."
+  },
+  {
+   "k": "Shrub with big round heads of blue or pink flowers.",
+   "v": "파란색이나 분홍색의 크고 둥근 꽃송이를 다는 관목."
+  },
+  {
+   "k": "Water lily with round yellow flowers held above the water.",
+   "v": "둥근 노란 꽃을 물 위로 피우는 수련류."
+  },
+  {
+   "k": "Seagrass of warm shallow seas since the Eocene.",
+   "v": "에오세부터 따뜻하고 얕은 바다에 자라 온 해초."
+  },
+  {
+   "k": "Woody-stemmed seagrass found in Eocene limestones of Florida.",
+   "v": "목질 줄기를 지닌 해초로, 플로리다 에오세 석회암에서 발견되었다."
+  },
+  {
+   "k": "Jointed coralline alga with forked chalky branches.",
+   "v": "두 갈래로 갈라진 석회질 가지를 지닌 마디 있는 산호말."
+  },
+  {
+   "k": "Fine pink coralline tufts that grow on other seaweeds.",
+   "v": "다른 해조류 위에 자라는 가는 분홍색 산호말 다발."
+  },
+  {
+   "k": "Extinct chalky green alga whose egg-shaped segments fill Paleogene sands.",
+   "v": "멸종한 석회질 녹조류로, 달걀 모양 마디 조각이 고제3기 모래를 가득 채운다."
+  },
+  {
+   "k": "Star-shaped plankton plates that pile up as ooze on the deep sea floor.",
+   "v": "별 모양의 플랑크톤 골판으로, 깊은 해저에 쌓여 연니가 된다."
+  },
+  {
+   "k": "Spiky rosette that rises and sinks in the water; its seeds are common in Paleogene lake beds.",
+   "v": "물속에서 떠올랐다 가라앉았다 하는 가시 돋친 로제트. 그 씨앗은 고제3기 호수 퇴적층에 흔하다."
+  },
+  {
+   "k": "Bolete partnered with pine roots; its fossil root sheaths are Eocene.",
+   "v": "소나무 뿌리와 공생하는 그물버섯류. 균근 덮개 화석은 에오세의 것이다."
+  },
+  {
+   "k": "Tiny pin-shaped fungus that grows on resin; found in Eocene amber.",
+   "v": "수지 위에 자라는 작은 핀 모양 균류로, 에오세 호박에서 발견된다."
+  },
+  {
+   "k": "Pink slime mould whose fruiting bodies are preserved in Baltic amber.",
+   "v": "분홍색 점균으로, 그 자실체가 발트해 호박에 보존되어 있다."
+  },
+  {
+   "k": "Leafy grey-green lichen, known from Eocene amber.",
+   "v": "회녹색 잎 모양 지의류로, 에오세 호박에서 알려져 있다."
+  },
+  {
+   "k": "Its resin hardened into the Miocene amber of the Caribbean.",
+   "v": "그 수지가 굳어 카리브해의 마이오세 호박이 되었다."
+  },
+  {
+   "k": "Mangrove that breathes through pencil-like roots poking out of the mud.",
+   "v": "진흙 위로 솟은 연필 같은 뿌리로 숨 쉬는 맹그로브."
+  },
+  {
+   "k": "The most massive trees on Earth, on the slopes of the Sierra Nevada.",
+   "v": "시에라네바다 산비탈에 자라는, 지구에서 가장 부피가 큰 나무."
+  },
+  {
+   "k": "Dark green flame of the Mediterranean hills.",
+   "v": "지중해 언덕의 짙푸른 불꽃."
+  },
+  {
+   "k": "Umbrella-shaped pine with edible pine nuts.",
+   "v": "먹을 수 있는 잣을 맺는 우산 모양 소나무."
+  },
+  {
+   "k": "Savanna tree whose yellow fruit elephants seek out.",
+   "v": "코끼리가 찾아다니는 노란 열매를 맺는 사바나의 나무."
+  },
+  {
+   "k": "Woodland tree of central Africa; new leaves flush red and copper.",
+   "v": "중앙아프리카 삼림지의 나무. 새잎이 붉은빛과 구릿빛으로 돋는다."
+  },
+  {
+   "k": "Dark red flowers and huge sausage-shaped fruit hanging on ropes.",
+   "v": "검붉은 꽃과, 밧줄 같은 자루에 매달린 거대한 소시지 모양 열매."
+  },
+  {
+   "k": "Feathery-leaved savanna tree with brown, sticky pods.",
+   "v": "깃털 같은 잎을 지닌 사바나 나무로, 끈적한 갈색 꼬투리를 맺는다."
+  },
+  {
+   "k": "Fan palm with forked trunks, along desert rivers like the Nile.",
+   "v": "줄기가 두 갈래로 갈라지는 부채꼴 잎 야자로, 나일강 같은 사막 강가에 자란다."
+  },
+  {
+   "k": "Small understory tree with pods growing straight from its trunk.",
+   "v": "열매 꼬투리가 줄기에서 바로 열리는 숲 하층의 작은 나무."
+  },
+  {
+   "k": "Amazon giant whose heavy fruit is opened only by agoutis.",
+   "v": "아마존의 거목으로, 무거운 열매는 아구티만이 열 수 있다."
+  },
+  {
+   "k": "Bat-pollinated tree with spiny, famously smelly fruit.",
+   "v": "박쥐가 꽃가루받이를 하는 나무로, 가시 돋친 열매는 지독한 냄새로 유명하다."
+  },
+  {
+   "k": "Pink flowers and round fruit grow straight from its trunk.",
+   "v": "분홍색 꽃과 둥근 열매가 줄기에서 바로 자란다."
+  },
+  {
+   "k": "Silvery willow of river banks.",
+   "v": "강가에 자라는 은빛 버드나무."
+  },
+  {
+   "k": "Gnarled, silver-leaved tree of the Mediterranean.",
+   "v": "울퉁불퉁한 줄기와 은빛 잎을 지닌 지중해의 나무."
+  },
+  {
+   "k": "Evergreen with red bark and round, bumpy red fruit.",
+   "v": "붉은 껍질과 둥글고 오돌토돌한 붉은 열매를 지닌 상록수."
+  },
+  {
+   "k": "New Zealand's 'Christmas tree' bursts into crimson flowers.",
+   "v": "뉴질랜드의 '크리스마스트리'로, 진홍색 꽃을 한꺼번에 피운다."
+  },
+  {
+   "k": "Drops its leaves and covers itself in scarlet bells.",
+   "v": "잎을 떨군 뒤 온몸을 진홍색 종 모양 꽃으로 뒤덮는다."
+  },
+  {
+   "k": "Desert palm of oases, wearing a skirt of dead leaves.",
+   "v": "마른 잎 치마를 두른 오아시스의 사막 야자."
+  },
+  {
+   "k": "Very tall grass of African savannas and river banks.",
+   "v": "아프리카 사바나와 강가에 자라는 아주 키 큰 풀."
+  },
+  {
+   "k": "Fine-leaved tussock grass of cool steppes and mountains.",
+   "v": "서늘한 스텝과 산지의 가는 잎을 지닌 다발 풀."
+  },
+  {
+   "k": "Shortgrass of the prairies with eyelash-like seed heads.",
+   "v": "속눈썹 같은 이삭을 지닌 프레리의 키 작은 풀."
+  },
+  {
+   "k": "Tulips come from the steppes and mountains of Central Asia.",
+   "v": "튤립은 중앙아시아의 스텝과 산지에서 왔다."
+  },
+  {
+   "k": "Scarlet poppies of open, disturbed ground.",
+   "v": "트이고 교란된 땅에 피는 진홍색 양귀비."
+  },
+  {
+   "k": "Spires of blue-purple pea flowers.",
+   "v": "푸른 보랏빛 콩꽃이 첨탑처럼 피어오른다."
+  },
+  {
+   "k": "Tall daisy of the American prairies whose heads follow the sun.",
+   "v": "꽃이 해를 따라 도는, 아메리카 프레리의 키 큰 국화과 식물."
+  },
+  {
+   "k": "Fragrant grey shrub of dry Mediterranean hills.",
+   "v": "지중해의 건조한 언덕에 자라는 향기로운 회색 관목."
+  },
+  {
+   "k": "Deep blue trumpets of mountain meadows.",
+   "v": "산지 초원에 피는 짙푸른 나팔 모양 꽃."
+  },
+  {
+   "k": "Low shrub with blue-black berries in heaths and forests.",
+   "v": "황야와 숲에 자라는 키 작은 관목으로, 검푸른 열매를 맺는다."
+  },
+  {
+   "k": "Knee-high birch of the tundra; a sign of cold ice-age climates.",
+   "v": "무릎 높이의 툰드라 자작나무로, 빙하기 추운 기후의 지표다."
+  },
+  {
+   "k": "Tight cushion of tundra covered in pink flowers.",
+   "v": "분홍 꽃으로 뒤덮인 툰드라의 촘촘한 방석 식물."
+  },
+  {
+   "k": "Round, golden-spined cactus of Mexican deserts.",
+   "v": "멕시코 사막의 금빛 가시를 지닌 둥근 선인장."
+  },
+  {
+   "k": "Spiky rosette that flowers once, on a tall pole, then dies.",
+   "v": "가시 돋친 로제트로, 평생 단 한 번 높은 꽃대에 꽃을 피우고 죽는다."
+  },
+  {
+   "k": "Branching tree yucca of the Mojave Desert.",
+   "v": "모하비 사막의 가지 치는 나무 유카."
+  },
+  {
+   "k": "Bundle of thorny whips tipped with red flowers after rain.",
+   "v": "가시 돋친 채찍 같은 가지 다발로, 비가 온 뒤 끝에 붉은 꽃을 피운다."
+  },
+  {
+   "k": "Salt-tolerant shrub of desert rivers, clouded in pink flowers.",
+   "v": "사막 강가에 자라는 소금에 강한 관목으로, 분홍 꽃 구름에 싸인다."
+  },
+  {
+   "k": "Leafless, twisted shrub of the Central Asian deserts.",
+   "v": "중앙아시아 사막의 잎 없고 뒤틀린 관목."
+  },
+  {
+   "k": "Pairs of fat leaves that look like pebbles in the Namib sand.",
+   "v": "나미브 모래 속에서 조약돌처럼 보이는 한 쌍의 두툼한 잎."
+  },
+  {
+   "k": "Iris with sword-like leaves and yellow flowers on pond edges.",
+   "v": "연못가에 자라는 붓꽃류로, 칼 같은 잎과 노란 꽃을 지녔다."
+  },
+  {
+   "k": "Floating Amazon plant with lilac flower spikes.",
+   "v": "연보라색 꽃이삭을 단 아마존 원산의 부유 식물."
+  },
+  {
+   "k": "Carnivorous bog plant whose tall pitchers drown insects.",
+   "v": "키 큰 통 모양 잎으로 곤충을 빠뜨려 죽이는 습지의 식충 식물."
+  },
+  {
+   "k": "Tropical vine with hanging pitchers that trap insects.",
+   "v": "매달린 통으로 곤충을 잡는 열대 덩굴식물."
+  },
+  {
+   "k": "Rosettes of the American tropics that hold pools of water in their leaves.",
+   "v": "잎 사이에 물웅덩이를 담는 아메리카 열대의 로제트 식물."
+  },
+  {
+   "k": "Leafless parasite with the world's largest single flower, smelling of rotting meat.",
+   "v": "세계에서 가장 큰 단일 꽃을 피우는 잎 없는 기생 식물로, 썩은 고기 냄새를 풍긴다."
+  },
+  {
+   "k": "Orange and blue flowers shaped like a bird's head.",
+   "v": "새의 머리 모양을 한 주황색과 파란색 꽃."
+  },
+  {
+   "k": "Tall spikes of purple bells at forest edges.",
+   "v": "숲 가장자리에 높이 솟은 보라색 종 모양 꽃이삭."
+  },
+  {
+   "k": "Long-leaved seagrass of tropical shallows, grazed by dugongs.",
+   "v": "열대 얕은 바다의 긴 잎 해초로, 듀공이 뜯어 먹는다."
+  },
+  {
+   "k": "Bright green seagrass of wave-beaten Pacific rocks.",
+   "v": "태평양의 파도치는 바위에 자라는 선명한 초록 해초."
+  },
+  {
+   "k": "Chalky green alga shaped like a shaving brush.",
+   "v": "면도솔 모양을 한 석회질 녹조류."
+  },
+  {
+   "k": "Green alga with a stiff, chalky fan on a stalk.",
+   "v": "자루 위에 단단한 석회질 부채를 단 녹조류."
+  },
+  {
+   "k": "Kelp with a float the size of a fist at the end of a long whip-like stalk.",
+   "v": "긴 채찍 같은 자루 끝에 주먹만 한 공기주머니를 단 켈프."
+  },
+  {
+   "k": "Long, frilly-edged kelp of cold Atlantic coasts.",
+   "v": "차가운 대서양 해안의 가장자리가 주름진 긴 켈프."
+  },
+  {
+   "k": "Floating rosette with horned nuts.",
+   "v": "뿔 달린 열매를 맺는 떠다니는 로제트."
+  },
+  {
+   "k": "Fast-growing waterweed with whorls of small leaves.",
+   "v": "작은 잎이 돌려나는 빨리 자라는 수초."
+  },
+  {
+   "k": "Water plant with fans of finely cut leaves.",
+   "v": "잘게 갈라진 부채꼴 잎을 지닌 수생 식물."
+  },
+  {
+   "k": "Buttercup of streams with white flowers on the surface.",
+   "v": "개울에 자라는 미나리아재비류로, 물 위에 하얀 꽃을 피운다."
+  },
+  {
+   "k": "An ink cap preserved in Miocene Dominican amber.",
+   "v": "마이오세 도미니카 호박에 보존된 먹물버섯류."
+  },
+  {
+   "k": "Bright red brittlegill of pine woods.",
+   "v": "소나무 숲의 새빨간 무당버섯."
+  },
+  {
+   "k": "Blue mushroom that bleeds blue milk when cut.",
+   "v": "자르면 파란 젖이 배어 나오는 파란 버섯."
+  },
+  {
+   "k": "Black, trumpet-shaped mushroom of leaf litter.",
+   "v": "낙엽 속에 자라는 검은 나팔 모양 버섯."
+  },
+  {
+   "k": "Japanese bonnet that glows green on rainy nights.",
+   "v": "비 오는 밤에 초록빛으로 빛나는 일본의 애주름버섯."
+  },
+  {
+   "k": "Cold-loving cave mould that grows on the noses of hibernating bats.",
+   "v": "겨울잠 자는 박쥐의 코에 자라는, 추위를 좋아하는 동굴 곰팡이."
+  },
+  {
+   "k": "Lichen that hangs from branches in grey-green tassels.",
+   "v": "나뭇가지에서 회녹색 술처럼 늘어지는 지의류."
+  },
+  {
+   "k": "Yellow-green crusts on bare rock; grows so slowly it is used to date glacier retreat.",
+   "v": "맨 바위 위의 황록색 껍질 모양 지의류. 매우 느리게 자라서 빙하 후퇴 연대를 측정하는 데 쓰인다."
+  },
+  {
+   "k": "Wild wheat of the Fertile Crescent, ancestor of the first farmed wheats.",
+   "v": "비옥한 초승달 지대의 야생 밀로, 최초로 재배된 밀의 조상이다."
+  },
+  {
+   "k": "A new species born in an English salt marsh in the 1890s.",
+   "v": "1890년대 잉글랜드의 염습지에서 태어난 새로운 종."
+  },
+  {
+   "k": "Chalk-plated plankton whose blooms whiten the sea; it appeared about 270,000 years ago.",
+   "v": "석회질 골판을 지닌 플랑크톤으로, 대번성하면 바다가 하얗게 변한다. 약 27만 년 전에 나타났다."
+  },
+  {
+   "k": "Microbial matground",
+   "v": "미생물 매트 바닥"
+  },
+  {
+   "k": "Revive ({0} EP)",
+   "v": "부활 ({0} EP)"
+  },
+  {
+   "k": "All your groups of it are gone. You can bring one back to a habitat center of yours.",
+   "v": "이 종의 무리가 모두 사라졌습니다. 서식지 중심에 한 무리를 되살릴 수 있습니다."
+  },
+  {
+   "k": "No free tile for it on or near your habitat centers",
+   "v": "서식지 중심이나 그 근처에 빈 칸이 없습니다"
+  },
+  {
+   "k": "No free {0} on or near your habitat centers",
+   "v": "서식지 중심이나 그 근처에 빈 {0}이(가) 없습니다"
+  },
+  {
+   "k": "The {0} is back (−{1} EP)",
+   "v": "{0}이(가) 부활했습니다 (−{1} EP)"
+  },
+  {
+   "k": "Nothing to bring back",
+   "v": "되살릴 것이 없습니다"
+  },
+  {
+   "k": "Couldn't place it",
+   "v": "배치할 수 없습니다"
+  },
+  {
+   "k": "Evolved",
+   "v": "진화함"
+  },
+  {
+   "k": "{0} → {1}",
+   "v": "{0} → {1}"
   }
  ]
 }

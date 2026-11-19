@@ -120,6 +120,7 @@ namespace NaturalHistory.Evolution
             aiTraits.Clear();
             copies.Clear();
             evolved.Clear();
+            everOwned.Clear();
             legacyTraits = null;
             FocusSpecies = null;
             ProgressionManager.Instance?.BindSpecies(null, new HashSet<string>(), new HashSet<string>());
@@ -231,6 +232,7 @@ namespace NaturalHistory.Evolution
             var copy = new OwnedCopy { player = player.Index, species = group.Definition.id, group = group, cell = group.Cell };
             copies.Add(copy);
             Track(copy);
+            NoteOwned(copy);
             if (player.IsHuman && legacyTraits != null)
             {
                 var t = TraitsOf(copy.species);
@@ -309,6 +311,65 @@ namespace NaturalHistory.Evolution
             return null;
         }
 
+        // ---------- Revive ----------
+        //
+        // A species the human player once had and has lost every group of can be brought back: a
+        // group on or near one of their habitat centers, for EP equal to the sum of its combat
+        // stats (attack + defense + HP + moves, as they stand in its period: CombatStats).
+
+        private readonly HashSet<string> everOwned = new(); // species the human player has ever had
+
+        private void NoteOwned(OwnedCopy copy)
+        {
+            if (copy != null && Human != null && copy.player == Human.Index && !string.IsNullOrEmpty(copy.species)) everOwned.Add(copy.species);
+        }
+
+        public int ReviveCost(string speciesId)
+        {
+            var s = CombatStats.Of(GameDataLoader.GetSpecies(speciesId));
+            return s.attack + s.defense + s.hp + s.moves;
+        }
+
+        // Once had, none left, and its period has come (a species that died out since lives on in your hands)
+        public bool CanRevive(string speciesId) =>
+            !string.IsNullOrEmpty(speciesId) && everOwned.Contains(speciesId) && !HumanOwns(speciesId)
+            && GameDataLoader.GetSpecies(speciesId) is { } def && HasAppeared(def);
+
+        // Where it would come back: on or around one of the human's habitat centers (2 tiles), free and fitting
+        public HexCell ReviveCell(string speciesId)
+        {
+            var def = GameDataLoader.GetSpecies(speciesId);
+            var territory = TerritoryManager.Instance;
+            var grid = HexGrid.Instance;
+            if (def == null || territory == null || grid == null || Human == null) return null;
+            foreach (var center in territory.Centers.Where(c => c.Owner == Human && c.Cell != null))
+                for (int r = 0; r <= 2; r++)
+                    foreach (var cell in grid.GetCellsInRange(center.Cell, r))
+                        if (cell.Coordinates.DistanceTo(center.Cell.Coordinates) == r && IsFree(def, cell) && FoodWeb.HasFood(def, cell, SpeciesColonies.Instance, null))
+                            return cell;
+            return null;
+        }
+
+        public bool Revive(string speciesId, out string message)
+        {
+            message = null;
+            var def = GameDataLoader.GetSpecies(speciesId);
+            if (def == null || !CanRevive(speciesId)) { message = Loc.T("Nothing to bring back"); return false; }
+            int cost = ReviveCost(speciesId), ep = PointsFor(null);
+            if (ep < cost) { message = Loc.F("Needs {0} EP (you have {1})", cost, ep); return false; }
+            var cell = ReviveCell(speciesId);
+            if (cell == null) { message = Loc.F("No free {0} on or near your habitat centers", HabitatText(def)); return false; }
+            var group = SpeciesColonies.Instance.SpawnColony(def, cell, Human, Seed(Human.Index, copies.Count + 7) ^ CurrentTurn);
+            if (group == null) { message = Loc.T("Couldn't place it"); return false; }
+            Spend(null, cost);
+            group.BornTurn = CurrentTurn;
+            RegisterFounder(Human, group);
+            TerritoryManager.Instance?.Refresh();
+            message = Loc.F("The {0} is back (−{1} EP)", Loc.T(def.commonName), cost);
+            Changed?.Invoke();
+            return true;
+        }
+
         // ---------- Reproduce ----------
 
         public int TurnsUntilReproduce(OwnedCopy copy) =>
@@ -358,6 +419,7 @@ namespace NaturalHistory.Evolution
             var young = new OwnedCopy { player = copy.player, species = copy.species, group = group, cell = cell, lastBred = CurrentTurn, bornTurn = CurrentTurn };
             copies.Add(young);
             Track(young);
+            NoteOwned(young);
             TerritoryManager.Instance?.Refresh();
             message = Loc.F("{0} reproduced", Loc.T(def.commonName));
             Changed?.Invoke();
@@ -455,6 +517,7 @@ namespace NaturalHistory.Evolution
             copy.cell     = cell;
             copy.bornTurn = group.BornTurn = CurrentTurn;
             Track(copy);
+            NoteOwned(copy);
             FocusSpecies = null; // force a rebind: the target's set may have just been created
             Focus(link.to);
             TerritoryManager.Instance?.Refresh();
@@ -478,6 +541,7 @@ namespace NaturalHistory.Evolution
         public void Capture(Save.SaveData data)
         {
             data.focusSpecies = FocusSpecies;
+            data.everOwned = everOwned.ToList();
             data.speciesTraits = traits.Select(kv => new SpeciesTraitsSave
             {
                 species = kv.Key, functions = kv.Value.functions.ToList(), behaviors = kv.Value.behaviors.ToList(),
@@ -560,6 +624,10 @@ namespace NaturalHistory.Evolution
             if (copies.Count > 0 && SpeciesColonies.Instance != null)
                 foreach (var g in SpeciesColonies.Instance.Groups.Where(g => g != null && g.Owner != null).ToList())
                     SpeciesColonies.Instance.DespawnColony(g);
+
+            everOwned.Clear();
+            if (data.everOwned != null) everOwned.UnionWith(data.everOwned);
+            foreach (var c in copies) NoteOwned(c); // older saves: at least what is owned now
 
             var focus = data.focusSpecies;
             if (string.IsNullOrEmpty(focus)) focus = copies.FirstOrDefault(c => c.player == Human?.Index)?.species;

@@ -55,6 +55,7 @@ namespace NaturalHistory.World
         public bool JustBorn => BornTurn >= 0 && Core.TurnManager.Instance != null && Core.TurnManager.Instance.CurrentTurn == BornTurn;
 
         public event Action<ColonyGroup> Arrived;            // finished a move or an attack and settled in
+        public static event Action<ColonyGroup, HexCell> AttackStarted; // the attacker and the tile it strikes
         public event Action<ColonyGroup, HexCell> Struck;    // reached the border of the tile it attacks
 
         public class Member
@@ -238,6 +239,7 @@ namespace NaturalHistory.World
         {
             if (!CanAttack || IsBusy || JustBorn || !CanStrike || target == null || target == Cell || !AreNeighbors(Cell, target)) return false;
             SpendAttack();
+            AttackStarted?.Invoke(this, target); // e.g. the camera goes to watch an attack on the player (AttackCamera)
             var (hold, reachFraction, approach) = StrikeTiming();
             if (!CanMove) reachFraction = 0f;
             var home   = Spot + Vector3.up * Cell.SurfaceHeight;

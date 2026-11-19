@@ -47,7 +47,9 @@ namespace NaturalHistory.Save
         public List<WildSave> wild = new();     // wild groups born during the game (WildBirths)
         public List<string> evolved = new();    // "player:from>to" links each player has used (older saves: "from>to", the human's)
         public string focusSpecies;
-        public List<int> aiPoints;              // each AI player's EP, by player index (Players/AiPlayers); null in older saves
+        public List<string> everOwned;          // species the human player has ever had (EvolutionManager: Revive); null in older saves
+        public List<int> aiPoints;
+        public List<string> discoveries;        // grounds, plants and animals the human player has discovered (Progression/Discoveries); null in older saves              // each AI player's EP, by player index (Players/AiPlayers); null in older saves
         public string explored;                 // tiles the human player has explored, a bit per tile (FogOfWar); null in older saves
 
         public DateTime SavedAt => DateTime.TryParse(savedAtUtc, null, System.Globalization.DateTimeStyles.RoundtripKind, out var t) ? t.ToLocalTime() : DateTime.MinValue;
@@ -157,6 +159,7 @@ namespace NaturalHistory.Save
             }
             EvolutionManager.Instance?.Capture(data);
             data.aiPoints = Players.AiPlayers.Instance?.Capture();
+            data.discoveries = Discoveries.Instance?.Capture();
             WildBirths.Instance?.Capture(data);
             data.explored = FogOfWar.Instance?.CaptureExplored();
             return data;
@@ -192,6 +195,7 @@ namespace NaturalHistory.Save
             ProgressionManager.Instance?.Restore(data.evolutionPoints, data.morphology, data.ethology, data.discovered);
             EvolutionManager.Instance?.Restore(data); // after the map: puts the copies back on it
             Players.AiPlayers.Instance?.Restore(data.aiPoints);
+            Discoveries.Instance?.Restore(data.discoveries);
             WildBirths.Instance?.Restore(data);       // and the wild groups
             FogOfWar.Instance?.RestoreExplored(data.explored);
         }

@@ -256,7 +256,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
 
-        <!-- Evolution tree (ZoologyPanel): from one species to what it can become, and what each step requires -->
+        <!-- Evolution tree (ZoologyPanel): from one species to what it can become; each species evolves or is revived from its own card -->
         <ui:VisualElement name="zoology-overlay" class="overlay hidden">
             <ui:VisualElement class="panel tree-panel">
                 <ui:VisualElement class="tree-header">
@@ -272,19 +272,10 @@
                     <ui:ScrollView name="zoology-scroll" class="tree-scroll" mode="VerticalAndHorizontal">
                         <ui:VisualElement name="zoology-canvas" class="tree-canvas" />
                     </ui:ScrollView>
-                    <ui:ScrollView class="zoology-details">
-                        <ui:VisualElement class="zoology-detail-head">
-                            <ui:VisualElement class="zoology-detail-names">
-                                <ui:Label name="zoology-name" class="age-name" text="" />
-                                <ui:Label name="zoology-meta" class="age-range" text="" />
-                            </ui:VisualElement>
-                            <!-- its portrait and description are in the Encyclopedia -->
-                            <ui:Button name="zoology-encyclopedia-button" class="hud-button zoology-encyclopedia" text="Encyclopedia" />
-                        </ui:VisualElement>
-                        <ui:VisualElement name="zoology-links" class="zoology-links" />
-                    </ui:ScrollView>
                 </ui:VisualElement>
             </ui:VisualElement>
+            <!-- what an Evolve / Revive button needs, under the pointer (ZoologyPanel) -->
+            <ui:Label name="zoology-tip" class="zoology-tip hidden" text="" picking-mode="Ignore" />
         </ui:VisualElement>
 
         <!-- Encyclopedia (EncyclopediaPanel): every species of the game, its painting and description -->
@@ -313,6 +304,22 @@
                         <ui:VisualElement name="encyclopedia-relatives" class="encyclopedia-relatives" />
                     </ui:ScrollView>
                 </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- A discovery: new ground, plant or animal in sight, and its reward (DiscoveryPanel) -->
+        <ui:VisualElement name="discovery-overlay" class="overlay discovery-overlay hidden">
+            <ui:VisualElement class="panel discovery-panel">
+                <ui:Label name="discovery-kind" class="discovery-kind" text="" />
+                <ui:VisualElement class="discovery-body">
+                    <ui:VisualElement name="discovery-picture" class="discovery-picture" />
+                    <ui:VisualElement class="discovery-words">
+                        <ui:Label name="discovery-title" class="discovery-title" text="" />
+                        <ui:Label name="discovery-text" class="discovery-text" text="" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label name="discovery-reward" class="discovery-reward" text="" />
+                <ui:Button name="discovery-ok-button" class="menu-button discovery-ok" text="OK" />
             </ui:VisualElement>
         </ui:VisualElement>
 

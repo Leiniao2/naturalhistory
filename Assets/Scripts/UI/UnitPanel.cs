@@ -39,6 +39,8 @@ namespace NaturalHistory.UI
 
             root.Q<Button>("unit-functions").clicked += () => ShowTree(ProgressionManager.Instance?.Morphology);
             root.Q<Button>("unit-behaviors").clicked += () => ShowTree(ProgressionManager.Instance?.Ethology);
+            UiIcons.Decorate(root.Q<Button>("unit-functions"), UiIcons.Functions);
+            UiIcons.Decorate(root.Q<Button>("unit-behaviors"), UiIcons.Behaviors);
             reproduceButton.clicked += OnReproduce;
             evolveButton.clicked    += () => { if (Copy != null) OpenEvolve?.Invoke(Copy); };
             skipButton.clicked      += () => { if (Copy?.group != null) UnitCycle.Instance?.Skip(Copy.group); };

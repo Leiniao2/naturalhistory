@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using NaturalHistory.Core;
@@ -119,19 +120,54 @@ namespace NaturalHistory.Players
         {
             yield return null;
             yield return null;
-            try { Play(turn); }
-            finally { Thinking = false; }
+            var play = Play(turn);
+            while (true)
+            {
+                bool more;
+                try { more = play.MoveNext(); }
+                catch (Exception e) { Debug.LogException(e); more = false; }
+                if (!more) break;
+                yield return play.Current;
+            }
+            Thinking = false;
         }
 
-        private void Play(int turn)
+        // Set by World/AttackCamera: true while the camera is showing an attack on one of the human's
+        // groups; the next such attack waits for it, so each is seen
+        public static Func<bool> HoldForCamera;
+        private static bool Holding => HoldForCamera != null && HoldForCamera();
+
+        // Before an attack on the human's group: wait for the camera to be free; after it, for the
+        // attacker to arrive and strike (it may move there first) and the camera to show it
+        private static IEnumerator WaitForCamera()
         {
-            if (Colonies == null || GameManager.Instance != null && GameManager.Instance.State != GameState.Playing) return;
+            while (Holding) yield return null;
+        }
+
+        private IEnumerator Shown(ColonyGroup attacker)
+        {
+            yield return null; // the camera picks the attack up
+            while (attacker != null && Colonies.Groups.Contains(attacker) && attacker.IsBusy) yield return null;
+            while (Holding) yield return null;
+        }
+
+        private IEnumerator Play(int turn)
+        {
+            if (Colonies == null || GameManager.Instance != null && GameManager.Instance.State != GameState.Playing) yield break;
             rng = new System.Random((HexGrid.Instance != null ? HexGrid.Instance.WorldSeed : 0) ^ (turn * 7919));
             var players = PlayerManager.Instance != null ? PlayerManager.Instance.Players.Where(p => !p.IsHuman).ToList() : new List<Player>();
             if (turn > 1)
                 foreach (var p in players) AddPoints(p.Index, Income(p));
-            foreach (var p in players) PlayTurn(p);
-            if (!SpeciesColonies.SafariMode) PlayWild();
+            foreach (var p in players)
+            {
+                var turnOf = PlayTurn(p);
+                while (turnOf.MoveNext()) yield return turnOf.Current;
+            }
+            if (!SpeciesColonies.SafariMode)
+            {
+                var wild = PlayWild();
+                while (wild.MoveNext()) yield return wild.Current;
+            }
         }
 
         private static int Income(Player p)
@@ -146,9 +182,9 @@ namespace NaturalHistory.Players
 
         // ---------- AI players ----------
 
-        private void PlayTurn(Player player)
+        private IEnumerator PlayTurn(Player player)
         {
-            if (Evolution == null) return;
+            if (Evolution == null) yield break;
             var mood = Personality(player);
             BuyItems(player, mood);
             foreach (var copy in Evolution.CopiesOf(player).ToList())
@@ -156,7 +192,17 @@ namespace NaturalHistory.Players
                 var g = copy.group;
                 if (g == null || !Colonies.Groups.Contains(g) || g.JustBorn || g.IsBusy) continue;
                 if (TryEvolve(copy, mood)) continue;
-                if (TryAttack(g, mood)) continue;
+                var attack = ChooseAttack(g, mood);
+                if (attack.foe != null)
+                {
+                    bool onHuman = attack.foe.Owner != null && attack.foe.Owner.IsHuman;
+                    if (onHuman) { var w = WaitForCamera(); while (w.MoveNext()) yield return w.Current; }
+                    if (Colonies.Groups.Contains(g) && !g.IsBusy && Attack(g, attack.tile, attack.from, attack.range))
+                    {
+                        if (onHuman) { var w = Shown(g); while (w.MoveNext()) yield return w.Current; }
+                        continue;
+                    }
+                }
                 if (TryReproduce(copy, mood)) continue;
                 TryMove(g, mood.expansion);
             }
@@ -238,10 +284,10 @@ namespace NaturalHistory.Players
 
         // ---------- Fighting ----------
 
-        // Attacks the most worthwhile foe it can reach this turn, if any is worth it
-        private bool TryAttack(ColonyGroup g, FactionPersonality mood)
+        // The most worthwhile foe it can reach this turn, if any is worth attacking
+        private (ColonyGroup foe, HexCell tile, HexCell from, MoveRange range) ChooseAttack(ColonyGroup g, FactionPersonality mood)
         {
-            if (!g.CanAttack || !g.CanStrike) return false;
+            if (!g.CanAttack || !g.CanStrike) return default;
             var range = MoveRange.For(g, Colonies);
             ColonyGroup best = null;
             HexCell bestTile = null, bestFrom = null;
@@ -253,9 +299,13 @@ namespace NaturalHistory.Players
                 float score = AttackScore(g, foe, mood);
                 if (score > bestScore) { bestScore = score; best = foe; bestTile = kv.Key; bestFrom = kv.Value; }
             }
-            if (best == null) return false;
+            return best == null ? default : (best, bestTile, bestFrom, range);
+        }
+
+        // Strikes the foe's tile, moving next to it first if it is a few tiles off
+        private bool Attack(ColonyGroup g, HexCell bestTile, HexCell bestFrom, MoveRange range)
+        {
             if (bestFrom == null || bestFrom == g.Cell) return g.Attack(bestTile);
-            // move next to it first, then strike on arrival
             var path = range.PathTo(bestFrom);
             if (path == null || path.Count == 0 || !Colonies.Travel(g, path)) return false;
             void Strike(ColonyGroup arrived)
@@ -315,7 +365,7 @@ namespace NaturalHistory.Players
 
         // ---------- Wild animals ----------
 
-        private void PlayWild()
+        private IEnumerator PlayWild()
         {
             var wild = Colonies.Groups.Where(g => g != null && g.Owner == null && g.Definition != null && g.Cell != null).ToList();
             int total = wild.Count;
@@ -325,7 +375,20 @@ namespace NaturalHistory.Players
             {
                 if (!Colonies.Groups.Contains(g) || g.IsBusy || g.JustBorn) continue;
                 // hunters go for their prey; others only defend themselves (when attacked)
-                if (IsHunter(g) && rng.NextDouble() < WildHuntChance && TryHunt(g, calm)) continue;
+                if (IsHunter(g) && rng.NextDouble() < WildHuntChance)
+                {
+                    var (prey, tile) = ChooseHunt(g);
+                    if (prey != null)
+                    {
+                        bool onHuman = prey.Owner != null && prey.Owner.IsHuman;
+                        if (onHuman) { var w = WaitForCamera(); while (w.MoveNext()) yield return w.Current; }
+                        if (Colonies.Groups.Contains(g) && !g.IsBusy && g.Attack(tile))
+                        {
+                            if (onHuman) { var w = Shown(g); while (w.MoveNext()) yield return w.Current; }
+                            continue;
+                        }
+                    }
+                }
                 if (Diets.Starving(g) && TryMove(g, 0f)) continue;
                 if (total < WildTotal && perSpecies[g.Definition.id] < WildPerSpecies && rng.NextDouble() < WildBreedChance && Breed(g))
                 {
@@ -338,18 +401,18 @@ namespace NaturalHistory.Players
         private static bool IsHunter(ColonyGroup g) =>
             FoodWeb.SourceOf(g.Definition) is FoodWeb.FoodSource.Prey or FoodWeb.FoodSource.ForageOrPrey;
 
-        // A wild hunter only goes for what it can eat
-        private bool TryHunt(ColonyGroup g, FactionPersonality mood)
+        // A wild hunter only goes for what it can eat: a neighbouring group of its prey
+        private static (ColonyGroup prey, HexCell tile) ChooseHunt(ColonyGroup g)
         {
-            if (!g.CanAttack) return false;
+            if (!g.CanAttack) return default;
             foreach (var n in HexGrid.Instance.GetNeighbors(g.Cell))
             {
                 var foe = Combat.Defender(g, n);
                 if (foe == null || !Combat.SizesMatch(g, foe) || !Combat.IsPredation(g, foe)) continue;
-                if ((g.CanMove && !g.CanEnter(n))) continue;
-                return g.Attack(n);
+                if (g.CanMove && !g.CanEnter(n)) continue;
+                return (foe, n);
             }
-            return false;
+            return default;
         }
 
         // A wild group's young on a free neighbouring tile it can live on

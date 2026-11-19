@@ -20,18 +20,20 @@ namespace NaturalHistory.UI
     // again from the group's first species. Clicking a species makes it the starting point; Back
     // returns to the previous view.
     //
-    // Selecting a species shows where it comes from and, for each species it can become, the
-    // requirements ticked off for your copies, with an Evolve button; its painting and description
-    // are in the Encyclopedia (the button by its name, or double-click the species). Opened from the
-    // HUD (browse) or from a selected animal's Evolve button: then that copy is the one that evolves.
-    // A tab per species of yours along the top starts the tree from that one.
+    // Each card has icon buttons down its right side (UiIcons): Evolve on a species you don't have
+    // (into it, along the step from the species before it), lit when it can be done and grey when
+    // not, pointing at it listing what the step needs (ticked off for your copies) and grants;
+    // Revive, only when a species you have lost every group of can be brought back now; and the
+    // Encyclopedia (its painting and description). Clicking a card starts the tree from it.
+    // Opened from the HUD (browse) or from a selected animal's Evolve button: then that copy is the
+    // one that evolves. A tab per species of yours along the top starts the tree from that one.
     public class ZoologyPanel
     {
-        private const float ColumnWidth = 330f; // wide enough for long names (Chinese, German...)
-        private const float RowHeight   = 102f;
+        private const float ColumnWidth = 480f; // wide enough for long names and the card's buttons
+        private const float RowHeight   = 128f;
         private const float Padding     = 24f;
-        private const float NodeWidth   = 290f;
-        private const float NodeHeight  = 86f;
+        private const float NodeWidth   = 430f; // .zoology-node in the USS
+        private const float NodeHeight  = 108f;
         private const int   MaxGenerations = 3;  // generations shown after the starting species…
         private const float MaxRows        = 14f; // …fewer where the tree would grow taller than this (hubs like the choanoflagellate)
         private const float LineageGap  = 0.4f;  // extra rows between neighbouring lineages
@@ -72,10 +74,12 @@ namespace NaturalHistory.UI
             public int more;         // descendants not shown (the view stops here)
             public VisualElement view;
             public Vector2 position;
+            public EvolutionLink link;       // the step into it shown on the left (null for the starting species)
+            public Button evolve, revive;
         }
 
-        private readonly VisualElement overlay, canvas, linksBox;
-        private readonly Label subtitle, nameLabel, metaLabel;
+        private readonly VisualElement overlay, canvas;
+        private readonly Label subtitle, tip;
         private readonly SpeciesTabs speciesTabs;
         private readonly Button backButton;
         private readonly Dictionary<string, Node> nodes = new();
@@ -97,14 +101,11 @@ namespace NaturalHistory.UI
         {
             overlay          = root.Q("zoology-overlay");
             canvas           = root.Q("zoology-canvas");
-            linksBox         = root.Q("zoology-links");
             subtitle         = root.Q<Label>("zoology-subtitle");
-            nameLabel        = root.Q<Label>("zoology-name");
-            metaLabel        = root.Q<Label>("zoology-meta");
+            tip              = root.Q<Label>("zoology-tip");
             backButton       = root.Q<Button>("zoology-back-button");
             backButton.clicked += Back;
             root.Q<Button>("zoology-close-button").clicked += Close;
-            root.Q<Button>("zoology-encyclopedia-button").clicked += () => { if (selected != null) OpenEncyclopedia?.Invoke(selected); };
             speciesTabs = new SpeciesTabs(root.Q("zoology-species-tabs"));
             speciesTabs.Picked += id =>
             {
@@ -137,6 +138,7 @@ namespace NaturalHistory.UI
         public void Close()
         {
             overlay.AddToClassList("hidden");
+            tip.AddToClassList("hidden");
             context = null;
         }
 
@@ -353,15 +355,12 @@ namespace NaturalHistory.UI
                         text.Add(new Label(Loc.F("{0} more species ▸", node.more)) { pickingMode = PickingMode.Ignore }.WithClass("node-more"));
                     }
                     var id = node.species;
+                    AddActions(node, view);
                     view.RegisterCallback<ClickEvent>(e =>
                     {
-                        if (roots.Count == 1 && roots[0] == id)
-                        {
-                            selected = id;
-                            if (e.clickCount == 2) OpenEncyclopedia?.Invoke(id); // its entry
-                            else Refresh();
-                        }
-                        else Show(new List<string> { id }, null);
+                        if (IsOnButton(e.target as VisualElement, view)) return; // the card's own buttons
+                        if (roots.Count == 1 && roots[0] == id) { if (e.clickCount == 2) OpenEncyclopedia?.Invoke(id); }
+                        else Show(new List<string> { id }, null); // the tree from this species on
                     });
                 }
                 canvas.Add(view);
@@ -436,71 +435,133 @@ namespace NaturalHistory.UI
                 bool canBecome = EvolutionData.To(id).Any(l => ReadyFor(l) != null);
                 node.view.EnableInClassList("owned",    owned.Contains(id));
                 node.view.EnableInClassList("ready",    canBecome);
-                node.view.EnableInClassList("selected", id == selected);
                 var def = GameDataLoader.GetSpecies(id);
                 // a direct descendant that starts a major group says so
                 int clade = node.ancestor ? -1 : EvolutionData.To(id).Where(l => roots.Contains(l.from)).Select(l => NewClade(l.from, id)).DefaultIfEmpty(-1).Max();
                 var state = Loc.T(owned.Contains(id) ? "Yours" : canBecome ? "Can evolve" : def.firstAge);
                 node.view.Q<Label>(className: "node-cost").text = clade >= 0 ? $"{state} · {Loc.T(Clades[clade].name)}" : state;
+                RefreshActions(node, owned.Contains(id));
             }
             lines?.MarkDirtyRepaint();
-            ShowDetails();
         }
 
-        private void ShowDetails()
+        // ---------- The card's actions ----------
+
+        // The icon buttons down the card's right side: Evolve, Revive, Encyclopedia
+        private void AddActions(Node node, VisualElement view)
         {
-            linksBox.Clear();
-            var def = selected != null ? GameDataLoader.GetSpecies(selected) : null;
-            if (def == null)
+            var icons = new VisualElement().WithClass("zoology-node-icons");
+            var id = node.species;
+            if (!node.ancestor)
+                node.link = edges.Where(e => e.to == node.key && e.link != null).Select(e => e.link)
+                                 .OrderByDescending(l => ReadyFor(l) != null).ThenByDescending(l => Evolution.HumanOwns(l.from)).FirstOrDefault();
+            if (node.link != null)
             {
-                nameLabel.text = Loc.T("Select a species");
-                metaLabel.text = "";
-                return;
+                var link = node.link;
+                node.evolve = Icon(UiIcons.Upgrade, () => { if (CopyFor(link) is { } c && Evolution.CanEvolve(link, c)) DoEvolve(link, c); });
+                Hint(node.evolve, () => EvolveTip(link));
+                icons.Add(node.evolve);
             }
-
-            nameLabel.text = Loc.T(def.commonName);
-            var span = string.IsNullOrEmpty(def.lastAge) ? Loc.F("{0} – today", Loc.T(def.firstAge)) : def.firstAge == def.lastAge ? Loc.T(def.firstAge) : $"{Loc.T(def.firstAge)} – {Loc.T(def.lastAge)}";
-            var count = Evolution.CopiesOf(Players.PlayerManager.Instance?.Human).Count(c => c.species == def.id);
-            metaLabel.text = $"{def.scientificName}  ·  {Loc.T(def.group)}  ·  {span}" + (count > 0 ? "\n" + Loc.F(count == 1 ? "You have {0} copy" : "You have {0} copies", count) : "");
-
-            var parents = EvolutionData.To(def.id).Select(l => Loc.T(GameDataLoader.GetSpecies(l.from)?.commonName ?? l.from)).ToList();
-            if (parents.Count > 0) linksBox.Add(new Label(Loc.F("Evolves from: {0}", string.Join(", ", parents))).WithClass("zoology-from"));
-
-            var outgoing = EvolutionData.From(def.id).ToList();
-            if (outgoing.Count == 0) { linksBox.Add(new Label(Loc.T("No known descendants among the game's species.")).WithClass("zoology-from")); return; }
-            linksBox.Add(new Label(Loc.T("Can evolve into")).WithClass("age-section"));
-            foreach (var link in outgoing) linksBox.Add(LinkCard(link));
+            node.revive = Icon(UiIcons.Revive, () =>
+            {
+                if (!ReviveReady(id)) return;
+                Evolution.Revive(id, out var message);
+                if (message != null) Message?.Invoke(message);
+                Refresh();
+            });
+            Hint(node.revive, () => ReviveTip(id));
+            icons.Add(node.revive);
+            var book = Icon(UiIcons.Book, () => OpenEncyclopedia?.Invoke(id));
+            Hint(book, () => Loc.T("Encyclopedia"));
+            icons.Add(book);
+            view.Add(icons);
         }
 
-        private VisualElement LinkCard(EvolutionLink link)
+        private static Button Icon(Texture2D image, Action onClick)
+        {
+            var b = new Button(onClick).WithClass("zoology-icon");
+            b.style.backgroundImage = new StyleBackground(image);
+            b.EnableInClassList("drawn", !UiIcons.Painted(image)); // a white stand-in shape: tinted gold
+            return b;
+        }
+
+        // Evolve: only on species you don't have, lit when it can be done; Revive: only when it can
+        private void RefreshActions(Node node, bool owned)
+        {
+            if (node.evolve != null)
+            {
+                node.evolve.style.display = owned ? DisplayStyle.None : DisplayStyle.Flex;
+                var copy = CopyFor(node.link);
+                bool can = copy != null && Evolution.CanEvolve(node.link, copy);
+                node.evolve.EnableInClassList("ready", can);
+                node.evolve.EnableInClassList("locked", !can);
+            }
+            if (node.revive != null)
+                node.revive.style.display = ReviveReady(node.species) ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+
+        // The copy that would evolve along `link`: the one being evolved, else one of yours that is
+        // ready, else any of yours of its species (to tick the requirements off for)
+        private OwnedCopy CopyFor(EvolutionLink link)
+        {
+            if (link == null) return null;
+            if (context != null) return context.species == link.from ? context : null;
+            return ReadyFor(link) ?? Evolution.CopiesOf(Players.PlayerManager.Instance?.Human).FirstOrDefault(c => c.species == link.from);
+        }
+
+        private static int Points => Progression.ProgressionManager.Instance != null ? Progression.ProgressionManager.Instance.EvolutionPoints : 0;
+
+        private bool ReviveReady(string id) =>
+            Evolution.CanRevive(id) && Points >= Evolution.ReviveCost(id) && Evolution.ReviveCell(id) != null;
+
+        // What the step needs, ticked off, what it is and what it grants
+        private string EvolveTip(EvolutionLink link)
         {
             var target = GameDataLoader.GetSpecies(link.to);
-            var card = new VisualElement().WithClass("zoology-link");
-            var head = new VisualElement().WithClass("zoology-link-head");
-            var pic  = new VisualElement().WithClass("species-portrait").WithClass("zoology-link-portrait");
-            if (SpeciesPortraits.Get(target) is RenderTexture rt) pic.style.backgroundImage = Background.FromRenderTexture(rt);
-            head.Add(pic);
-            var title = new Label(Loc.T(target?.commonName ?? link.to)).WithClass("zoology-link-name");
-            title.RegisterCallback<ClickEvent>(_ => Show(new List<string> { link.to }, null));
-            head.Add(title);
-            card.Add(head);
-            if (!string.IsNullOrEmpty(link.description)) card.Add(new Label(Loc.T(link.description)).WithClass("zoology-link-text"));
-
-            // The copy this card is about: the one being evolved, else one of yours that is ready
-            var copy = context != null ? (context.species == link.from ? context : null) : ReadyFor(link);
-            foreach (var r in Evolution.Requirements(link, copy))
-                card.Add(new Label((r.met ? "✓  " : "✗  ") + r.text).WithClass("zoology-req").WithClass(r.met ? "met" : "unmet"));
-
+            var origin = GameDataLoader.GetSpecies(link.from);
+            var lines = new List<string> { Loc.F("{0} → {1}", Loc.T(origin?.commonName ?? link.from), Loc.T(target?.commonName ?? link.to)) };
+            if (!string.IsNullOrEmpty(link.description)) lines.Add(Loc.T(link.description));
+            lines.Add("");
+            foreach (var r in Evolution.Requirements(link, CopyFor(link)))
+                lines.Add((r.met ? "✓  " : "✗  ") + r.text);
             var grants = link.grantFunctions.Select(id => ProgressionNodeName(true, id))
                 .Concat(link.grantBehaviors.Select(id => ProgressionNodeName(false, id))).ToList();
-            if (grants.Count > 0) card.Add(new Label(Loc.F("Gains on evolving: {0}", string.Join(", ", grants))).WithClass("zoology-link-text"));
+            if (grants.Count > 0) { lines.Add(""); lines.Add(Loc.F("Gains on evolving: {0}", string.Join(", ", grants))); }
+            return string.Join("\n", lines);
+        }
 
-            bool can = copy != null && Evolution.CanEvolve(link, copy);
-            var button = new Button(() => DoEvolve(link, copy)) { text = can ? Loc.F("Evolve into {0}", Loc.T(target?.commonName)) : Loc.T("Evolve") }.WithClass("evolve-button").WithClass("zoology-evolve");
-            button.SetEnabled(can);
-            if (Evolution.HasEvolved(link)) button.text = Loc.T("Already evolved by another copy");
-            card.Add(button);
-            return card;
+        private string ReviveTip(string id)
+        {
+            var lines = new List<string> { Loc.T("All your groups of it are gone. You can bring one back to a habitat center of yours.") };
+            int cost = Evolution.ReviveCost(id);
+            lines.Add((Points >= cost ? "✓  " : "✗  ") + Loc.F("Needs {0} EP (you have {1})", cost, Points));
+            if (Evolution.ReviveCell(id) == null) lines.Add("✗  " + Loc.T("No free tile for it on or near your habitat centers"));
+            return string.Join("\n", lines);
+        }
+
+        // A tip that follows the pointer over `target` (UI Toolkit's own tooltips only show in the Editor)
+        private void Hint(VisualElement target, Func<string> text)
+        {
+            target.RegisterCallback<PointerEnterEvent>(e => { tip.text = text(); tip.RemoveFromClassList("hidden"); tip.BringToFront(); PlaceTip(e.position); });
+            target.RegisterCallback<PointerMoveEvent>(e => PlaceTip(e.position));
+            target.RegisterCallback<PointerLeaveEvent>(_ => tip.AddToClassList("hidden"));
+        }
+
+        private void PlaceTip(Vector2 pointer)
+        {
+            var area = overlay.worldBound;
+            var size = tip.layout.size;
+            float x = pointer.x + 18f, y = pointer.y + 18f;
+            if (!float.IsNaN(size.x) && x + size.x > area.xMax - 8f) x = pointer.x - size.x - 18f;
+            if (!float.IsNaN(size.y) && y + size.y > area.yMax - 8f) y = pointer.y - size.y - 18f;
+            tip.style.left = x - area.xMin;
+            tip.style.top  = y - area.yMin;
+        }
+
+        private static bool IsOnButton(VisualElement e, VisualElement card)
+        {
+            for (; e != null && e != card; e = e.parent) if (e is Button) return true;
+            return false;
         }
 
         private static string ProgressionNodeName(bool function, string id)

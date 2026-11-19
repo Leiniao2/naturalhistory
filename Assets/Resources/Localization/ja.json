@@ -18945,6 +18945,14 @@
    "v": "このターンに登場：次のターンから行動できます"
   },
   {
+   "k": "First encounter with the wild",
+   "v": "野生の群れとの初遭遇"
+  },
+  {
+   "k": "Your animals meet a wild group for the first time: {0} ({1}). Others share this world with you.",
+   "v": "あなたの動物が初めて野生の群れに出会いました：{0}（{1}）。この世界にはほかの生き物もいます。"
+  },
+  {
    "k": "Unexplored",
    "v": "未探索"
   },
@@ -19619,6 +19627,3106 @@
   {
    "k": "Ready",
    "v": "準備完了"
+  },
+  {
+   "k": "Microbial mats",
+   "v": "微生物マット"
+  },
+  {
+   "k": "Damp flats crusted with layers of microbes that trap sediment and build stromatolites: the oldest ecosystems on Earth, making oxygen for billions of years.",
+   "v": "微生物の層に覆われた湿った干潟。微生物は堆積物を捕らえてストロマトライトを築く。地球最古の生態系であり、数十億年にわたって酸素を生み出してきた。"
+  },
+  {
+   "k": "Mosses, liverworts and the first small vascular plants: the green film that first covered the land and began to make soil.",
+   "v": "コケ、苔類、そして最初の小さな維管束植物。陸地を初めて覆い、土壌を作り始めた緑の膜。"
+  },
+  {
+   "k": "Open country covered in ferns and horsetails, the meadows of the world long before grasses evolved.",
+   "v": "シダやトクサに覆われた開けた土地。イネ科の草が進化するはるか以前の、世界の草原。"
+  },
+  {
+   "k": "Warm, wet forest with layer upon layer of life: the richest habitat on land, home to most land species.",
+   "v": "暖かく湿った森で、生命が幾層にも重なる。陸上で最も豊かな生息地であり、陸上生物の大半のすみか。"
+  },
+  {
+   "k": "Dry country where little rain falls: its life saves water, shelters by day and comes out at night.",
+   "v": "雨がほとんど降らない乾いた土地。ここの生き物は水を節約し、昼は身を隠し、夜に姿を現す。"
+  },
+  {
+   "k": "Swamps and marshes between land and water, where many of the first land animals and plants took hold.",
+   "v": "陸と水のあいだに広がる沼地や湿原。最初の陸上動物や植物の多くがここで根を下ろした。"
+  },
+  {
+   "k": "Warm grassland dotted with trees, grazed by great herds and hunted by their predators.",
+   "v": "木々が点在する暖かな草原。大きな群れが草を食み、それを捕食者が狙う。"
+  },
+  {
+   "k": "Cool, dry grassland stretching to the horizon, where speed and endurance pay.",
+   "v": "地平線まで続く涼しく乾いた草原。速さと持久力がものを言う。"
+  },
+  {
+   "k": "Cold treeless land frozen for much of the year, with a brief, busy summer.",
+   "v": "一年の大半が凍りつく、寒く木のない土地。夏は短く、にぎやかだ。"
+  },
+  {
+   "k": "A dome of ice kilometres thick; little lives on it, but its cold edges feed rich seas.",
+   "v": "厚さ数キロメートルの氷のドーム。氷上にはほとんど生き物がいないが、その冷たい縁が豊かな海を育む。"
+  },
+  {
+   "k": "Reef",
+   "v": "礁"
+  },
+  {
+   "k": "Built by living things over countless generations: stromatolites, sponges, then corals. Reefs shelter a crowd of sea life.",
+   "v": "生き物が数えきれない世代をかけて築いたもの。ストロマトライト、海綿、そしてサンゴへ。礁は多くの海の生き物をかくまう。"
+  },
+  {
+   "k": "Oasis",
+   "v": "オアシス"
+  },
+  {
+   "k": "Water in the desert: a pond fed from underground, a refuge every desert animal knows.",
+   "v": "砂漠の中の水。地下から湧く池で、砂漠の動物なら誰もが知る避難所。"
+  },
+  {
+   "k": "Volcano",
+   "v": "火山"
+  },
+  {
+   "k": "Molten rock breaking through the crust; its ash and lava destroy, then make some of the most fertile ground there is.",
+   "v": "地殻を突き破る溶岩。その火山灰と溶岩はすべてを破壊し、やがて最も肥沃な大地の一つを生み出す。"
+  },
+  {
+   "k": "Hot springs, geysers and steaming vents where heat-loving microbes paint the ground in bright colours.",
+   "v": "温泉、間欠泉、噴気孔。好熱性の微生物が地面を鮮やかな色に染める。"
+  },
+  {
+   "k": "A flat-topped table of layered rock left standing as the land around it wore away.",
+   "v": "周囲の土地が削られたあとに残った、層状の岩でできた平らな頂の台地。"
+  },
+  {
+   "k": "A deep gorge cut by a river through layer after layer of rock, a record of millions of years.",
+   "v": "川が幾層もの岩を刻んでできた深い谷。数百万年の記録そのもの。"
+  },
+  {
+   "k": "Chalk cliffs made of the skeletons of countless tiny sea algae that lived in Cretaceous seas.",
+   "v": "白亜紀の海に暮らした無数の小さな海藻の骨格でできたチョークの崖。"
+  },
+  {
+   "k": "A lake with no outlet, where the water evaporates and leaves a white crust of salt.",
+   "v": "流れ出る川のない湖。水が蒸発し、白い塩の殻が残る。"
+  },
+  {
+   "k": "A salt lake coloured pink by salt-loving microbes and algae thriving where little else can.",
+   "v": "好塩性の微生物や藻類によってピンク色に染まった塩湖。ほかの生き物がほとんど暮らせない場所で彼らは栄える。"
+  },
+  {
+   "k": "Hills of red sandstone striped in many colours, laid down in ancient deserts and lakes.",
+   "v": "多くの色の縞模様が入った赤い砂岩の丘。古代の砂漠や湖で堆積したもの。"
+  },
+  {
+   "k": "Limestone towers and caves dissolved by rain over millions of years, full of hidden waters.",
+   "v": "数百万年にわたって雨に溶かされてできた石灰岩の塔と洞窟。隠れた水に満ちている。"
+  },
+  {
+   "k": "Jungle",
+   "v": "ジャングル"
+  },
+  {
+   "k": "A dense tropical canopy so thick that little light reaches the ground.",
+   "v": "地面にほとんど光が届かないほど密な熱帯の林冠。"
+  },
+  {
+   "k": "Broadleaf forest",
+   "v": "広葉樹林"
+  },
+  {
+   "k": "A forest of leafy trees that shade and feed a great web of life beneath them.",
+   "v": "葉の茂った木々の森。その下に広がる生命の網に日陰と食べ物を与える。"
+  },
+  {
+   "k": "Conifer forest",
+   "v": "針葉樹林"
+  },
+  {
+   "k": "Evergreen cone-bearing trees, the oldest kind of forest still standing today.",
+   "v": "球果をつける常緑樹。今も残る最も古いタイプの森。"
+  },
+  {
+   "k": "Underwater volcano",
+   "v": "海底火山"
+  },
+  {
+   "k": "A seamount rising from the sea floor; its slopes gather sea life and its eruptions remake the sea bed.",
+   "v": "海底からそびえる海山。その斜面には海の生き物が集まり、噴火は海底を作り変える。"
+  },
+  {
+   "k": "Hydrothermal vents",
+   "v": "熱水噴出孔"
+  },
+  {
+   "k": "Black smokers pouring out hot, mineral-rich water: in the dark, whole communities live on chemical energy instead of sunlight, perhaps as the first life did.",
+   "v": "ブラックスモーカーが熱く鉱物に富んだ水を噴き出す。暗闇の中で、生物群集がまるごと日光ではなく化学エネルギーで生きている。最初の生命もそうだったのかもしれない。"
+  },
+  {
+   "k": "Shallow hydrothermal field",
+   "v": "浅海の熱水域"
+  },
+  {
+   "k": "White smokers, gas seeps and sulphur on a shallow sea floor, covered in bacterial mats.",
+   "v": "浅い海底に広がるホワイトスモーカー、ガスの湧出、硫黄。一面がバクテリアマットに覆われている。"
+  },
+  {
+   "k": "Stromatolite sea floor",
+   "v": "ストロマトライトの海底"
+  },
+  {
+   "k": "Domes and mounds built layer by layer by microbial mats, the first reefs and for most of Earth's history its most common sign of life.",
+   "v": "微生物マットが一層ずつ築いたドームや塚。最初の礁であり、地球の歴史の大半において最もありふれた生命の痕跡だった。"
+  },
+  {
+   "k": "Your {0} gains {1} for free",
+   "v": "あなたの{0}が{1}を無償で獲得"
+  },
+  {
+   "k": "{0} group of yours nearby is healed",
+   "v": "近くにいるあなたの群れ{0}つが回復した"
+  },
+  {
+   "k": "{0} groups of yours nearby are healed",
+   "v": "近くにいるあなたの群れ{0}つが回復した"
+  },
+  {
+   "k": "A group of {0} joins you",
+   "v": "{0}の群れが仲間に加わった"
+  },
+  {
+   "k": "A feast: your {0} raises young for free",
+   "v": "ごちそう：あなたの{0}が無償で子を育てる"
+  },
+  {
+   "k": "A second wind: every group of yours gets an extra action this turn",
+   "v": "息を吹き返す：あなたのすべての群れがこのターン追加行動を1回得る"
+  },
+  {
+   "k": "Fertile ground: your groups nearby can reproduce again at once",
+   "v": "肥沃な大地：近くにいるあなたの群れはすぐにもう一度繁殖できる"
+  },
+  {
+   "k": "New animal discovered",
+   "v": "新しい動物を発見"
+  },
+  {
+   "k": "New plant discovered",
+   "v": "新しい植物を発見"
+  },
+  {
+   "k": "New landscape discovered",
+   "v": "新しい景観を発見"
+  },
+  {
+   "k": "Reward: {0}",
+   "v": "報酬：{0}"
+  },
+  {
+   "k": "OK",
+   "v": "OK"
+  },
+  {
+   "k": "Life is still all in the sea: you begin on the seabed, in the layer under sea level",
+   "v": "生命はまだすべて海の中：海面下の層、海底から始まる"
+  },
+  {
+   "k": "Starting period",
+   "v": "開始時代"
+  },
+  {
+   "k": "You begin on the surface",
+   "v": "地表から始まる"
+  },
+  {
+   "k": "{0:0} % of the world is land today",
+   "v": "現在、世界の{0:0} %が陸地"
+  },
+  {
+   "k": "{0} turns to the present day ({1} in all)",
+   "v": "現代まで{0}ターン（全{1}ターン）"
+  },
+  {
+   "k": "Flat green lobes on damp ground: among the very first land plants.",
+   "v": "湿った地面に広がる平たい緑の裂片。最初期の陸上植物のひとつ。"
+  },
+  {
+   "k": "Known only from their spores; tiny moss-like crusts.",
+   "v": "胞子だけが知られている、コケに似た小さな皮殻状の植物。"
+  },
+  {
+   "k": "Flat thalli sprouting horn-shaped spore capsules.",
+   "v": "平たい葉状体から角のような胞子嚢が伸びる。"
+  },
+  {
+   "k": "The first known vascular plant: forked stems a few centimetres tall.",
+   "v": "知られている最古の維管束植物。高さ数センチの二又に分かれた茎をもつ。"
+  },
+  {
+   "k": "An early clubmoss with leafy stems.",
+   "v": "葉の茂った茎をもつ初期のヒカゲノカズラ類。"
+  },
+  {
+   "k": "Cushions of moss on damp ground and rocks.",
+   "v": "湿った地面や岩を覆うクッション状のコケ。"
+  },
+  {
+   "k": "Leafless forked stems from the Rhynie chert hot springs.",
+   "v": "ライニーチャートの温泉跡から見つかる、葉のない二又分枝の茎。"
+  },
+  {
+   "k": "Rhynie chert plant with water-conducting tissue but no leaves.",
+   "v": "ライニーチャートの植物。通水組織をもつが葉はない。"
+  },
+  {
+   "k": "Clumps of stems with spore sacs along the sides.",
+   "v": "茎が叢生し、その側面に胞子嚢が並ぶ。"
+  },
+  {
+   "k": "Branching stems up to half a metre: forerunner of ferns and seed plants.",
+   "v": "高さ50センチに達する分枝した茎。シダ類と種子植物の先駆け。"
+  },
+  {
+   "k": "Leafy clubmoss of the Rhynie chert.",
+   "v": "ライニーチャートに見られる、葉をもつヒカゲノカズラ類。"
+  },
+  {
+   "k": "Creeping clubmoss with spiny leaves.",
+   "v": "とげ状の葉をもつ匍匐性のヒカゲノカズラ類。"
+  },
+  {
+   "k": "Herbaceous clubmoss with forked leaves.",
+   "v": "葉の先が分かれた草本性のヒカゲノカズラ類。"
+  },
+  {
+   "k": "Upright, much-branched stems nearly a metre tall.",
+   "v": "高さ1メートル近くになる、直立してよく分枝する茎。"
+  },
+  {
+   "k": "Shrubby progymnosperm.",
+   "v": "低木状の前裸子植物。"
+  },
+  {
+   "k": "The oldest known seed plant.",
+   "v": "知られている最古の種子植物。"
+  },
+  {
+   "k": "The first modern-looking tree, forming the first forests.",
+   "v": "初めて現代的な姿をした樹木で、最初の森林をつくった。"
+  },
+  {
+   "k": "The earliest known tree: a pole with a crown of branches, Gilboa forest.",
+   "v": "知られている最古の樹木。棒状の幹の先に枝の冠をつける。ギルボアの森で見つかった。"
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches.",
+   "v": "指のような枝が冠をなす小高木。"
+  },
+  {
+   "k": "A small early scale tree.",
+   "v": "小型の初期鱗木類。"
+  },
+  {
+   "k": "Giant club moss up to 40 m; its trunks became coal.",
+   "v": "高さ40メートルに達する巨大なヒカゲノカズラ類。その幹は石炭になった。"
+  },
+  {
+   "k": "Scale tree with a dense, drooping crown.",
+   "v": "密に茂った垂れ下がる樹冠をもつ鱗木類。"
+  },
+  {
+   "k": "Ribbed lycopsid trunk topped by tufts of grassy leaves.",
+   "v": "縦の畝がある小葉植物の幹の先に、草のような葉の房をつける。"
+  },
+  {
+   "k": "Tree-sized horsetail growing in thickets along rivers.",
+   "v": "樹木ほどの大きさのトクサ類で、川沿いに茂みをつくった。"
+  },
+  {
+   "k": "Marattialean tree fern with a trunk wrapped in roots.",
+   "v": "マラッティア目の木生シダで、幹が根に包まれている。"
+  },
+  {
+   "k": "Seed fern tree with huge fronds and seeds the size of eggs.",
+   "v": "巨大な葉と卵ほどの大きさの種子をもつ種子シダの高木。"
+  },
+  {
+   "k": "Tall tree with strap-shaped leaves, related to conifers.",
+   "v": "帯状の葉をもつ高木で、針葉樹と近縁。"
+  },
+  {
+   "k": "One of the first conifers, like a small Norfolk pine.",
+   "v": "最初期の針葉樹のひとつで、小さなシマナンヨウスギのような姿。"
+  },
+  {
+   "k": "Seed fern whose tongue-shaped leaflets are common coal-ball fossils.",
+   "v": "舌形の小羽片が炭球によく見られる化石となる種子シダ。"
+  },
+  {
+   "k": "Fern-like seed plant of the coal forests.",
+   "v": "石炭紀の森に生えた、シダに似た種子植物。"
+  },
+  {
+   "k": "Scrambling horsetail with wedge-shaped leaves in whorls.",
+   "v": "くさび形の葉を輪生する、這い広がるトクサ類。"
+  },
+  {
+   "k": "Small early fern, often growing on other plants.",
+   "v": "小型の初期シダ類で、しばしば他の植物に着生した。"
+  },
+  {
+   "k": "Low clubmoss lineage that survives today.",
+   "v": "現在まで生き残る背の低いヒカゲノカズラ類の系統。"
+  },
+  {
+   "k": "Evergreen creeping clubmoss.",
+   "v": "常緑で地を這うヒカゲノカズラ。"
+  },
+  {
+   "k": "Tongue-leaved tree of Gondwana; its spread helped prove continental drift.",
+   "v": "ゴンドワナの舌状葉の樹木。その分布は大陸移動の証明に役立った。"
+  },
+  {
+   "k": "Early glossopterid of the cold southern lowlands.",
+   "v": "寒冷な南方低地に生えた初期の舌羊歯類。"
+  },
+  {
+   "k": "Climbing seed plant with broad, net-veined leaves, in tropical Cathaysia.",
+   "v": "網状脈の広い葉をもつつる性の種子植物で、熱帯のカタイシア大陸に生えた。"
+  },
+  {
+   "k": "Conifer of the dry Zechstein coasts.",
+   "v": "乾燥したツェヒシュタイン海沿岸の針葉樹。"
+  },
+  {
+   "k": "Conifer of the Permian and Triassic.",
+   "v": "ペルム紀と三畳紀の針葉樹。"
+  },
+  {
+   "k": "Strap-leaved plant related to the cycads.",
+   "v": "ソテツ類に近縁な帯状の葉をもつ植物。"
+  },
+  {
+   "k": "Horsetails as thick as a wrist, lining Triassic rivers.",
+   "v": "手首ほどの太さのトクサで、三畳紀の川岸に立ち並んだ。"
+  },
+  {
+   "k": "Royal ferns have barely changed in 200 million years.",
+   "v": "ゼンマイ類は2億年のあいだほとんど姿を変えていない。"
+  },
+  {
+   "k": "Early Permian walchian conifer.",
+   "v": "前期ペルム紀のワルキア類針葉樹。"
+  },
+  {
+   "k": "Seed fern tree that dominated southern Triassic forests.",
+   "v": "三畳紀の南半球の森を支配した種子シダの高木。"
+  },
+  {
+   "k": "The great logs of the Petrified Forest, Arizona.",
+   "v": "アリゾナ州ペトリファイド・フォレストの巨大な丸太。"
+  },
+  {
+   "k": "Unbranched lycopsid that spread over the world after the end-Permian extinction.",
+   "v": "分枝しない小葉植物で、ペルム紀末の大量絶滅後に世界中に広がった。"
+  },
+  {
+   "k": "Triassic horsetail of river banks.",
+   "v": "三畳紀の川岸に生えたトクサ類。"
+  },
+  {
+   "k": "One of the earliest true cycads.",
+   "v": "最初期の真のソテツのひとつ。"
+  },
+  {
+   "k": "Ginkgo relative with deeply divided leaves.",
+   "v": "葉が深く切れ込んだイチョウの近縁種。"
+  },
+  {
+   "k": "Common Mesozoic fern foliage.",
+   "v": "中生代によく見られるシダの葉の化石。"
+  },
+  {
+   "k": "Gondwanan horsetail with split leaf sheaths.",
+   "v": "葉鞘が裂けたゴンドワナのトクサ類。"
+  },
+  {
+   "k": "Peltasperm seed fern.",
+   "v": "ペルタスペルマ目の種子シダ。"
+  },
+  {
+   "k": "Strap-leaved Triassic conifer of dry ground.",
+   "v": "乾いた土地に生えた、帯状の葉をもつ三畳紀の針葉樹。"
+  },
+  {
+   "k": "Jurassic monkey-puzzle tree, fossilised cones from Cerro Cuadrado.",
+   "v": "ジュラ紀のチリマツ類。セロ・クアドラードから球果の化石が出る。"
+  },
+  {
+   "k": "Scale-leaved conifer of dry Mesozoic coasts.",
+   "v": "中生代の乾いた海岸に生えた鱗片葉の針葉樹。"
+  },
+  {
+   "k": "Conifer with stiff, awl-shaped leaves.",
+   "v": "硬い錐形の葉をもつ針葉樹。"
+  },
+  {
+   "k": "Ginkgo with lobed fan leaves.",
+   "v": "切れ込みのある扇形の葉をもつイチョウ。"
+  },
+  {
+   "k": "Deciduous ginkgo relative of cool, wet forests.",
+   "v": "冷涼で湿潤な森に生えた落葉性のイチョウ類近縁種。"
+  },
+  {
+   "k": "Conifer with broad, flat leaves.",
+   "v": "幅広く平たい葉をもつ針葉樹。"
+  },
+  {
+   "k": "Soft tree ferns, alive today in Australia and New Zealand.",
+   "v": "柔らかな木生シダで、現在もオーストラリアとニュージーランドに生育する。"
+  },
+  {
+   "k": "Bennettitalean with flower-like cones.",
+   "v": "花のような球果をつけるベネチテス類。"
+  },
+  {
+   "k": "Squat, barrel-trunked bennettitalean.",
+   "v": "ずんぐりした樽形の幹をもつベネチテス類。"
+  },
+  {
+   "k": "Umbrella-fronded fern; a Jurassic fern-prairie dominant.",
+   "v": "傘状の葉をもつシダ。ジュラ紀のシダ草原の優占種。"
+  },
+  {
+   "k": "Fern of the Jurassic understory; the 'giant ferns' of dinosaur country.",
+   "v": "ジュラ紀の林床のシダ。恐竜の世界の「巨大シダ」。"
+  },
+  {
+   "k": "Living horsetails; their kind has been around since the Jurassic.",
+   "v": "現生のトクサ。その仲間はジュラ紀から存在している。"
+  },
+  {
+   "k": "Palm-like cycads, a group older than the dinosaurs.",
+   "v": "ヤシに似たソテツ。恐竜よりも古いグループだ。"
+  },
+  {
+   "k": "A living fossil, now only in Japan.",
+   "v": "生きた化石で、現在は日本にのみ自生する。"
+  },
+  {
+   "k": "One of the oldest flowering plants, a water plant from Liaoning.",
+   "v": "最古の被子植物のひとつで、遼寧省産の水生植物。"
+  },
+  {
+   "k": "An early aquatic flowering plant from Spain.",
+   "v": "スペイン産の初期の水生被子植物。"
+  },
+  {
+   "k": "Water lilies are among the oldest flowering plant lineages.",
+   "v": "スイレンは最も古い被子植物の系統のひとつ。"
+  },
+  {
+   "k": "Magnolias were pollinated by beetles before bees existed.",
+   "v": "モクレンはミツバチが現れる前から甲虫によって受粉していた。"
+  },
+  {
+   "k": "Plane trees along Cretaceous rivers.",
+   "v": "白亜紀の川沿いに生えたスズカケノキ類。"
+  },
+  {
+   "k": "Laurel-family tree with mitten-shaped leaves.",
+   "v": "ミトンのような形の葉をもつクスノキ科の樹木。"
+  },
+  {
+   "k": "Tall magnolia relative with tulip-like flowers.",
+   "v": "チューリップに似た花をつける、背の高いモクレンの近縁種。"
+  },
+  {
+   "k": "Redwoods: the tallest trees on Earth.",
+   "v": "セコイア：地球上で最も背の高い木。"
+  },
+  {
+   "k": "Deciduous redwood; once covered the Arctic, now wild only in China.",
+   "v": "落葉性のセコイア類。かつて北極圏を覆っていたが、現在野生では中国にしか残っていない。"
+  },
+  {
+   "k": "Drought-hardy, jointed conifer of dry coasts.",
+   "v": "乾燥した海岸に生えた、乾燥に強く節のある針葉樹。"
+  },
+  {
+   "k": "Tough fern of Cretaceous coastal flats.",
+   "v": "白亜紀の海岸平野に生えた丈夫なシダ。"
+  },
+  {
+   "k": "False tree fern: its 'trunk' was a mass of stems and roots.",
+   "v": "偽の木生シダ。その「幹」は茎と根の塊だった。"
+  },
+  {
+   "k": "Fan palms appear late in the Cretaceous.",
+   "v": "扇状の葉をもつヤシは白亜紀後期に現れる。"
+  },
+  {
+   "k": "Mangrove palm; Eocene London was full of them.",
+   "v": "マングローブに生えるヤシ。始新世のロンドンはこのヤシであふれていた。"
+  },
+  {
+   "k": "Small herbs among the first flowering plants.",
+   "v": "最初期の被子植物に含まれる小さな草本。"
+  },
+  {
+   "k": "Swamp conifer with 'knees' poking out of the water.",
+   "v": "水面から「膝根」を突き出す沼沢地の針葉樹。"
+  },
+  {
+   "k": "Oaks spread across the northern continents.",
+   "v": "ナラ類は北半球の大陸に広がった。"
+  },
+  {
+   "k": "Smooth-barked trees of shady forests.",
+   "v": "日陰の森に生える、樹皮のなめらかな木。"
+  },
+  {
+   "k": "Maples, with winged seeds.",
+   "v": "翼のある種子をもつカエデ。"
+  },
+  {
+   "k": "Evergreen laurel forests of the warm Eocene.",
+   "v": "温暖な始新世の常緑の照葉樹林。"
+  },
+  {
+   "k": "Alders grow with their roots in wet ground.",
+   "v": "ハンノキは湿った土地に根を張って育つ。"
+  },
+  {
+   "k": "Figs and their wasps have evolved together for 60 million years.",
+   "v": "イチジク類とイチジクコバチは6000万年にわたり共進化してきた。"
+  },
+  {
+   "k": "Mangroves stand on stilt roots in salt water.",
+   "v": "マングローブは支柱根で海水の中に立つ。"
+  },
+  {
+   "k": "The last ginkgo: a living fossil.",
+   "v": "最後のイチョウ。生きた化石だ。"
+  },
+  {
+   "k": "Grasses existed but didn't form grasslands until the Neogene.",
+   "v": "イネ科植物は存在していたが、新第三紀まで草原をつくることはなかった。"
+  },
+  {
+   "k": "Beeches of the southern continents, from Antarctica to Patagonia.",
+   "v": "南極からパタゴニアまで、南半球の大陸に分布するブナ類。"
+  },
+  {
+   "k": "Laurel-family tree of warm forests.",
+   "v": "温暖な森に生えるクスノキ科の樹木。"
+  },
+  {
+   "k": "Pines: hardy conifers of poor soils and cold.",
+   "v": "マツ：やせた土地と寒さに強い針葉樹。"
+  },
+  {
+   "k": "The dark spruces of the boreal forest.",
+   "v": "北方林に茂る暗い色のトウヒ。"
+  },
+  {
+   "k": "A conifer that drops its needles in winter.",
+   "v": "冬に針葉を落とす針葉樹。"
+  },
+  {
+   "k": "Firs of cool mountain forests.",
+   "v": "冷涼な山地林に生えるモミ。"
+  },
+  {
+   "k": "White-barked birches, first trees back after the ice.",
+   "v": "白い樹皮のカバノキ。氷期の後に最初に戻ってきた木。"
+  },
+  {
+   "k": "Gum trees: fire-adapted Australian forests.",
+   "v": "ユーカリ：火災に適応したオーストラリアの森。"
+  },
+  {
+   "k": "Flat-topped thorn trees of the savanna.",
+   "v": "サバンナに生える、樹冠の平らなとげのある木。"
+  },
+  {
+   "k": "Swollen trunks store water through the dry season.",
+   "v": "ふくらんだ幹に水を蓄えて乾季をしのぐ。"
+  },
+  {
+   "k": "Emergent giant towering over the rainforest canopy.",
+   "v": "熱帯雨林の林冠の上にそびえる超出木。"
+  },
+  {
+   "k": "Tall trees of Southeast Asian rainforests.",
+   "v": "東南アジアの熱帯雨林に生える高木。"
+  },
+  {
+   "k": "Giant grasses that grow a metre a day.",
+   "v": "1日に1メートルも伸びる巨大なイネ科植物。"
+  },
+  {
+   "k": "Palm of desert oases.",
+   "v": "砂漠のオアシスに生えるヤシ。"
+  },
+  {
+   "k": "Its floating nuts spread it to tropical shores worldwide.",
+   "v": "海に浮かぶ果実によって、世界中の熱帯の海岸に広がった。"
+  },
+  {
+   "k": "C4 grass of the African and Australian savannas.",
+   "v": "アフリカとオーストラリアのサバンナに生えるC4型のイネ科植物。"
+  },
+  {
+   "k": "Feathery grass of the Eurasian steppe.",
+   "v": "ユーラシアのステップに生える羽毛のようなイネ科植物。"
+  },
+  {
+   "k": "Temperate meadow grasses.",
+   "v": "温帯の草地に生えるイネ科植物。"
+  },
+  {
+   "k": "Tall grass of the North American prairie.",
+   "v": "北アメリカのプレーリーに生える背の高いイネ科植物。"
+  },
+  {
+   "k": "Spiny hummock grass of Australia's deserts.",
+   "v": "オーストラリアの砂漠に生える、とげのある株立ちのイネ科植物。"
+  },
+  {
+   "k": "Grasses and sedges of the Ice Age mammoth steppe.",
+   "v": "氷河時代のマンモス・ステップに生えたイネ科植物とスゲ類。"
+  },
+  {
+   "k": "Silvery, aromatic shrubs of dry plains.",
+   "v": "乾いた平原に生える、銀白色で香りの強い低木。"
+  },
+  {
+   "k": "Purple-flowering heath of acid moorland.",
+   "v": "酸性の荒れ地に紫の花を咲かせるヒース。"
+  },
+  {
+   "k": "Desert shrub; some clones are over 10,000 years old.",
+   "v": "砂漠の低木。1万年以上生き続けているクローンもある。"
+  },
+  {
+   "k": "Giant columnar cactus of the Sonoran Desert.",
+   "v": "ソノラ砂漠の巨大な柱サボテン。"
+  },
+  {
+   "k": "Cactus with flat, padded stems.",
+   "v": "平たい肉質の茎節をもつサボテン。"
+  },
+  {
+   "k": "Two strap leaves that grow for over a thousand years, Namib Desert.",
+   "v": "2枚の帯状の葉が千年以上も伸び続ける。ナミブ砂漠に生える。"
+  },
+  {
+   "k": "African succulent that looks like a cactus.",
+   "v": "サボテンのような姿をしたアフリカの多肉植物。"
+  },
+  {
+   "k": "Tundra flower that gave its name to the Younger Dryas cold snap.",
+   "v": "ツンドラの花で、寒冷期ヤンガードリアスの名の由来となった。"
+  },
+  {
+   "k": "A willow that grows only a few centimetres tall.",
+   "v": "高さ数センチにしかならないヤナギ。"
+  },
+  {
+   "k": "Sedge with cotton-white seed heads.",
+   "v": "綿のように白い果穂をつけるスゲ類。"
+  },
+  {
+   "k": "One of the northernmost flowering plants.",
+   "v": "最も北に分布する被子植物のひとつ。"
+  },
+  {
+   "k": "Builds peat bogs that store vast amounts of carbon.",
+   "v": "大量の炭素を蓄える泥炭湿原をつくる。"
+  },
+  {
+   "k": "Tall reed beds of marshes and lakes.",
+   "v": "湿地や湖に広がる背の高いヨシ原。"
+  },
+  {
+   "k": "Sedge of the Nile, made into the first paper.",
+   "v": "ナイル川のカヤツリグサ類で、最初の紙の材料となった。"
+  },
+  {
+   "k": "Bulrushes with brown, sausage-shaped flower spikes.",
+   "v": "茶色のソーセージ形の花穂をつけるガマ。"
+  },
+  {
+   "k": "Lobster-claw flowers pollinated by hummingbirds.",
+   "v": "ロブスターのはさみのような花で、ハチドリが受粉する。"
+  },
+  {
+   "k": "Fern rosettes of the rainforest floor and branches.",
+   "v": "熱帯雨林の地面や枝に生えるロゼット状のシダ。"
+  },
+  {
+   "k": "Daisies, clovers and their kin in the grass.",
+   "v": "草地に咲くヒナギク、クローバーとその仲間。"
+  },
+  {
+   "k": "Succulent rosettes of African dry lands.",
+   "v": "アフリカの乾燥地に生えるロゼット状の多肉植物。"
+  },
+  {
+   "k": "Fire-adapted fynbos shrub; Proteaceae date back to Gondwana.",
+   "v": "火災に適応したフィンボスの低木。ヤマモガシ科の起源はゴンドワナにさかのぼる。"
+  },
+  {
+   "k": "Australian shrub with bottlebrush flower spikes.",
+   "v": "ブラシのような花穂をつけるオーストラリアの低木。"
+  },
+  {
+   "k": "Evergreen shrub of forest edges.",
+   "v": "森の縁に生える常緑低木。"
+  },
+  {
+   "k": "Flowering shrubs of mountain slopes.",
+   "v": "山の斜面に花を咲かせる低木。"
+  },
+  {
+   "k": "Turf of green seaweed on sunlit seabed; land plants descend from green algae.",
+   "v": "日の当たる海底を覆う緑色の海藻。陸上植物は緑藻から生まれた。"
+  },
+  {
+   "k": "Red seaweeds, among the oldest complex algae.",
+   "v": "紅色の海藻で、最古の複雑な藻類のひとつ。"
+  },
+  {
+   "k": "Tough microbial mats that carpeted the Ediacaran seafloor, wrinkled like elephant skin; the first grazers and burrowers broke them up in the Cambrian.",
+   "v": "エディアカラ紀の海底を覆った丈夫な微生物マット。ゾウの皮膚のようにしわが寄っていた。カンブリア紀になると、最初の摂食者や穿孔動物がこれを壊していった。"
+  },
+  {
+   "k": "Layered mounds built by cyanobacteria; rare today, as at Shark Bay.",
+   "v": "シアノバクテリアがつくる層状の塚。現在ではシャーク湾などに見られるだけの珍しいものだ。"
+  },
+  {
+   "k": "Bushy calcified microbes that built Cambrian reefs with archaeocyathids.",
+   "v": "アーキオシアタとともにカンブリア紀の礁をつくった、茂みのような石灰化微生物。"
+  },
+  {
+   "k": "Little umbrella-shaped green algae of warm lagoons.",
+   "v": "暖かな潟湖に生える小さな傘形の緑藻。"
+  },
+  {
+   "k": "The 'sunflower coral': a disc-shaped calcareous alga.",
+   "v": "「ヒマワリサンゴ」と呼ばれる円盤状の石灰藻。"
+  },
+  {
+   "k": "Calcified red alga that helped build Paleozoic reefs.",
+   "v": "古生代の礁の形成に一役買った石灰化した紅藻。"
+  },
+  {
+   "k": "Calcified green algae whose fragments make carbonate sand.",
+   "v": "石灰化した緑藻で、その破片が炭酸塩の砂になる。"
+  },
+  {
+   "k": "Potato-chip-shaped algae that formed Late Paleozoic mounds.",
+   "v": "ポテトチップスのような形の藻類で、後期古生代にマウンドをつくった。"
+  },
+  {
+   "k": "Segmented green alga; its plates pile up into sand banks.",
+   "v": "節に分かれた緑藻。その石灰質の節片が積もって砂州になる。"
+  },
+  {
+   "k": "A creeping seaweed that is a single giant cell.",
+   "v": "這うように広がる海藻で、全体がひとつの巨大な細胞だ。"
+  },
+  {
+   "k": "Pink, rock-hard crusts that cement coral reefs together.",
+   "v": "ピンク色で岩のように硬い殻状の藻で、サンゴ礁を固め合わせる。"
+  },
+  {
+   "k": "One of the first flowering plants to return to the sea.",
+   "v": "海に戻った最初の被子植物のひとつ。"
+  },
+  {
+   "k": "Mediterranean seagrass; some meadows are thousands of years old.",
+   "v": "地中海の海草。数千年の歴史をもつ藻場もある。"
+  },
+  {
+   "k": "Seagrass meadows of cool coasts, nurseries for fish.",
+   "v": "冷涼な海岸のアマモ場で、魚の稚魚の揺りかごとなる。"
+  },
+  {
+   "k": "Tropical seagrass grazed by turtles and manatees.",
+   "v": "ウミガメやマナティーが食べる熱帯の海草。"
+  },
+  {
+   "k": "Small seagrass, food of dugongs.",
+   "v": "ジュゴンの餌になる小さな海草。"
+  },
+  {
+   "k": "Brown seaweed with air bladders; rafts of it float in the Sargasso Sea.",
+   "v": "気胞をもつ褐藻。その流れ藻がサルガッソー海に浮かぶ。"
+  },
+  {
+   "k": "Kelp forests up to 50 m tall along cool coasts.",
+   "v": "冷たい海の沿岸に広がる、高さ50メートルに達するケルプの森。"
+  },
+  {
+   "k": "Kelp with broad, strap-like blades.",
+   "v": "幅広い帯状の葉状部をもつコンブ。"
+  },
+  {
+   "k": "Rockweed of the tidal shore, buoyed by air bladders.",
+   "v": "潮間帯の岩場に生える海藻で、気胞で浮かぶ。"
+  },
+  {
+   "k": "Films and tufts of simple green algae in lakes and ponds, long before any plant reached land.",
+   "v": "湖や池に膜や房をつくる単純な緑藻。植物が陸に上がるよりずっと前から存在した。"
+  },
+  {
+   "k": "Slimy green threads in still fresh water; zygnematophyte algae like it leave no sure fossils before the late Palaeozoic.",
+   "v": "止水の中のぬるぬるした緑の糸。このような接合藻類は後期古生代より前の確かな化石を残していない。"
+  },
+  {
+   "k": "Whorled charophytes, the closest algal relatives of land plants.",
+   "v": "輪生する車軸藻類で、陸上植物に最も近縁な藻類。"
+  },
+  {
+   "k": "A stonewort from the Rhynie chert hot springs.",
+   "v": "ライニーチャートの温泉跡から見つかったシャジクモ類。"
+  },
+  {
+   "k": "Delicate, translucent stonewort.",
+   "v": "繊細で半透明のシャジクモ類。"
+  },
+  {
+   "k": "Underwater clubmoss, the last relative of the giant scale trees.",
+   "v": "水中に生えるヒカゲノカズラ類で、巨大な鱗木の最後の親類。"
+  },
+  {
+   "k": "Rooted water plant with floating leaves.",
+   "v": "浮葉をもつ、根を張る水草。"
+  },
+  {
+   "k": "Ribbon-leaved underwater meadows of rivers and lakes.",
+   "v": "川や湖の水中に広がる、リボン状の葉の草原。"
+  },
+  {
+   "k": "Bushy waterweed of ponds.",
+   "v": "池に茂るふさふさした水草。"
+  },
+  {
+   "k": "The oldest known fungal threads, spreading through Ordovician soils.",
+   "v": "知られている最古の菌糸で、オルドビス紀の土壌に広がっていた。"
+  },
+  {
+   "k": "Root partners of nearly all land plants, trading minerals for sugar.",
+   "v": "ほぼすべての陸上植物の根の相棒で、ミネラルと糖を交換する。"
+  },
+  {
+   "k": "Giant fungal trunks up to 8 m tall, the largest living things on land.",
+   "v": "高さ8メートルに達する巨大な菌類の「幹」で、当時の陸上で最大の生物。"
+  },
+  {
+   "k": "Fungi preserved inside the Rhynie chert plants.",
+   "v": "ライニーチャートの植物の中に保存された菌類。"
+  },
+  {
+   "k": "The earliest known lichen: a fungus farming algae.",
+   "v": "知られている最古の地衣類。藻類を「栽培」する菌類だ。"
+  },
+  {
+   "k": "An early sac fungus with flask-shaped fruiting bodies.",
+   "v": "フラスコ形の子実体をもつ初期の子嚢菌。"
+  },
+  {
+   "k": "Coal-forest fungus with clamp connections, an early mushroom relative.",
+   "v": "かすがい連結をもつ石炭紀の森の菌類で、キノコの初期の親類。"
+  },
+  {
+   "k": "Small round fruiting bodies from the coal swamps.",
+   "v": "石炭紀の沼沢地から見つかる小さな丸い子実体。"
+  },
+  {
+   "k": "The fungal spike of the great Permian extinction, rotting dead forests.",
+   "v": "ペルム紀の大量絶滅期に急増した菌類で、枯れた森を腐らせた。"
+  },
+  {
+   "k": "White-rot fungi breaking down fallen conifer logs.",
+   "v": "倒れた針葉樹の丸太を分解する白色腐朽菌。"
+  },
+  {
+   "k": "An early bracket fungus on Jurassic araucarias.",
+   "v": "ジュラ紀のナンヨウスギに生えた初期のサルノコシカケ類。"
+  },
+  {
+   "k": "White moulds living on guano and debris in dark caves.",
+   "v": "暗い洞窟でグアノや残骸の上に生える白いカビ。"
+  },
+  {
+   "k": "The oldest gilled mushroom known, from Brazil.",
+   "v": "知られている最古のひだのあるキノコで、ブラジル産。"
+  },
+  {
+   "k": "A tiny mushroom preserved in Burmese amber.",
+   "v": "ミャンマー産の琥珀に保存された小さなキノコ。"
+  },
+  {
+   "k": "Delicate amber-preserved mushroom.",
+   "v": "琥珀に保存された繊細なキノコ。"
+  },
+  {
+   "k": "A Cretaceous polypore bracket.",
+   "v": "白亜紀のサルノコシカケ類。"
+  },
+  {
+   "k": "A predatory fungus with sticky rings for catching worms.",
+   "v": "粘着性の輪で線虫を捕らえる捕食性の菌類。"
+  },
+  {
+   "k": "A single giant cell that solves mazes as it feeds.",
+   "v": "餌を探しながら迷路を解く、ひとつの巨大な細胞。"
+  },
+  {
+   "k": "Glossy red-brown lacquered bracket.",
+   "v": "漆を塗ったように光沢のある赤褐色のサルノコシカケ。"
+  },
+  {
+   "k": "Takes over ants and sprouts from their bodies.",
+   "v": "アリを乗っ取り、その体から生えてくる。"
+  },
+  {
+   "k": "Golden, funnel-shaped and smelling of apricots.",
+   "v": "金色の漏斗形で、アンズのような香りがする。"
+  },
+  {
+   "k": "One of these is the largest organism on Earth.",
+   "v": "その一個体は地球上で最大の生物だ。"
+  },
+  {
+   "k": "Underground fruit body found by smell.",
+   "v": "においで探し当てる地下の子実体。"
+  },
+  {
+   "k": "Honeycombed cap on a hollow stem.",
+   "v": "中空の柄にハチの巣状の傘をつける。"
+  },
+  {
+   "k": "Bright orange cups on bare soil.",
+   "v": "むき出しの土の上に生える鮮やかなオレンジ色の椀形のキノコ。"
+  },
+  {
+   "k": "Scarlet cups on mossy sticks in winter.",
+   "v": "冬、コケむした枝の上に現れる緋色の椀形のキノコ。"
+  },
+  {
+   "k": "Stains the wood it lives in blue-green.",
+   "v": "すみかとする木材を青緑色に染める。"
+  },
+  {
+   "k": "Orange rosettes on rocks and bark.",
+   "v": "岩や樹皮に広がるオレンジ色のロゼット状の地衣類。"
+  },
+  {
+   "k": "The red, white-spotted toadstool of fairy tales.",
+   "v": "おとぎ話に出てくる、赤地に白い斑点の毒キノコ。"
+  },
+  {
+   "k": "Fat brown cap over a sponge of pores.",
+   "v": "肉厚の茶色の傘の下に、スポンジ状の管孔がある。"
+  },
+  {
+   "k": "Dissolves into black ink as it ripens.",
+   "v": "成熟すると溶けて黒いインクのようになる。"
+  },
+  {
+   "k": "Puffs clouds of spores when raindrops hit it.",
+   "v": "雨粒が当たると胞子の煙を吹き出す。"
+  },
+  {
+   "k": "Can grow as big as a football.",
+   "v": "サッカーボールほどの大きさに育つこともある。"
+  },
+  {
+   "k": "A spore ball sitting on a star of split skin.",
+   "v": "裂けた外皮がつくる星形の上に胞子の球がのっている。"
+  },
+  {
+   "k": "A hollow scarlet lattice that smells of rotting meat.",
+   "v": "腐肉のにおいを放つ、中空の緋色の格子。"
+  },
+  {
+   "k": "Branches like a yellow sea coral.",
+   "v": "黄色いサンゴのように枝分かれする。"
+  },
+  {
+   "k": "Purple coral-like tufts in grassland.",
+   "v": "草地に生える紫色のサンゴ状の株。"
+  },
+  {
+   "k": "Cascades of white icicle spines.",
+   "v": "白いつららのような針が滝のように垂れ下がる。"
+  },
+  {
+   "k": "Sulphur-yellow shelves on old trees.",
+   "v": "老木に生える硫黄色の棚状のキノコ。"
+  },
+  {
+   "k": "Banded fans like a turkey's tail.",
+   "v": "七面鳥の尾のような縞模様の扇形のキノコ。"
+  },
+  {
+   "k": "Hoof-shaped brackets used to carry fire.",
+   "v": "ひづめ形のサルノコシカケで、火種を運ぶのに使われた。"
+  },
+  {
+   "k": "Grey shelves that also catch tiny worms.",
+   "v": "灰色の棚状のキノコで、小さな線虫も捕らえる。"
+  },
+  {
+   "k": "The most prized fungus in the world.",
+   "v": "世界で最も珍重される菌類。"
+  },
+  {
+   "k": "A small mushroom of startling blue.",
+   "v": "驚くほど青い小さなキノコ。"
+  },
+  {
+   "k": "Waxy scarlet caps of old meadows.",
+   "v": "古い草地に生える、ろうのような光沢の緋色の傘。"
+  },
+  {
+   "k": "Violet all over when fresh.",
+   "v": "新鮮なうちは全体が紫色。"
+  },
+  {
+   "k": "A tall stem under a wide scaly parasol.",
+   "v": "高い柄の上に、鱗片のある大きな傘を広げる。"
+  },
+  {
+   "k": "Lemon-yellow mushrooms of warm soils.",
+   "v": "暖かな土に生えるレモンイエローのキノコ。"
+  },
+  {
+   "k": "Glows green in the dark.",
+   "v": "暗闇で緑色に光る。"
+  },
+  {
+   "k": "Tiny bioluminescent caps lighting up cave floors.",
+   "v": "洞窟の床を照らす、小さな生物発光の傘。"
+  },
+  {
+   "k": "Orange and faintly glowing gills.",
+   "v": "オレンジ色で、ひだがかすかに光る。"
+  },
+  {
+   "k": "One of the brightest glowing fungi.",
+   "v": "最も明るく光る菌類のひとつ。"
+  },
+  {
+   "k": "Scarlet arms around a slimy, smelly heart.",
+   "v": "ぬるぬるして悪臭を放つ中心を、緋色の腕が取り囲む。"
+  },
+  {
+   "k": "A white lace skirt hanging from its cap.",
+   "v": "傘から白いレースのスカートが垂れ下がる。"
+  },
+  {
+   "k": "Yellow slime that creeps across mulch.",
+   "v": "腐葉やマルチの上を這い進む黄色い粘菌。"
+  },
+  {
+   "k": "Forests of tiny brown spore stalks.",
+   "v": "小さな茶色の胞子の柄が林立する。"
+  },
+  {
+   "k": "Spongy grey-white cushions grazed by reindeer.",
+   "v": "トナカイが食べる、スポンジ状の灰白色のクッション。"
+  },
+  {
+   "k": "Blue-green mould that gave us penicillin.",
+   "v": "ペニシリンをもたらした青緑色のカビ。"
+  },
+  {
+   "k": "Pale crusts coating damp cave walls.",
+   "v": "湿った洞窟の壁を覆う淡い色の皮膜。"
+  },
+  {
+   "k": "Clotted microbial mounds that replaced stromatolites.",
+   "v": "ストロマトライトに取って代わった、凝塊状の微生物の塚。"
+  },
+  {
+   "k": "Calcified cyanobacterial tubes building early reefs.",
+   "v": "初期の礁をつくった石灰化したシアノバクテリアの管。"
+  },
+  {
+   "k": "Kidney-shaped calcimicrobes of Cambrian reefs.",
+   "v": "カンブリア紀の礁に見られる腎臓形の石灰質微生物。"
+  },
+  {
+   "k": "Burgess Shale green alga with feathery branches.",
+   "v": "羽毛状に枝分かれするバージェス頁岩の緑藻。"
+  },
+  {
+   "k": "Bushy Burgess Shale seaweed.",
+   "v": "茂みのようなバージェス頁岩の海藻。"
+  },
+  {
+   "k": "An early branching red alga.",
+   "v": "初期の枝分かれする紅藻。"
+  },
+  {
+   "k": "Slimy green mats carpeting lake beds.",
+   "v": "湖底を覆うぬるぬるした緑色のマット。"
+  },
+  {
+   "k": "A dasyclad alga shaped like a knobbly ball.",
+   "v": "こぶだらけの球のような形をしたカサノリ類。"
+  },
+  {
+   "k": "Calcified green alga in tangled chains.",
+   "v": "もつれた鎖のような石灰化した緑藻。"
+  },
+  {
+   "k": "Disc-shaped green alga of shallow fresh water.",
+   "v": "浅い淡水に生える円盤状の緑藻。"
+  },
+  {
+   "k": "Ribbon-like Silurian seaweed.",
+   "v": "リボン状のシルル紀の海藻。"
+  },
+  {
+   "k": "Thick Devonian seaweed with spores like land plants.",
+   "v": "陸上植物に似た胞子をもつ、厚みのあるデボン紀の海藻。"
+  },
+  {
+   "k": "Mysterious crusts of tubes on wet ground and pools.",
+   "v": "湿った地面や水たまりに見られる、管が集まった謎の皮殻。"
+  },
+  {
+   "k": "Leafy red alga that built Carboniferous mounds.",
+   "v": "石炭紀のマウンドをつくった葉状の紅藻。"
+  },
+  {
+   "k": "Phylloid green alga with potato-crisp blades.",
+   "v": "ポテトチップスのような葉状部をもつ葉状緑藻。"
+  },
+  {
+   "k": "Leaf-like alga of Late Paleozoic shelves.",
+   "v": "後期古生代の大陸棚に生えた葉のような藻類。"
+  },
+  {
+   "k": "Bead-chained dasyclad of Permian reefs.",
+   "v": "ペルム紀の礁に見られる数珠つなぎのカサノリ類。"
+  },
+  {
+   "k": "Calcified red alga in segmented chains.",
+   "v": "節のある鎖状の石灰化した紅藻。"
+  },
+  {
+   "k": "Dasyclad that built Triassic carbonate platforms.",
+   "v": "三畳紀の炭酸塩プラットフォームをつくったカサノリ類。"
+  },
+  {
+   "k": "Whorled dasyclad of Jurassic lagoons.",
+   "v": "ジュラ紀の潟湖に生えた輪生のカサノリ類。"
+  },
+  {
+   "k": "Fan-shaped calcified bushes.",
+   "v": "扇形の石灰化した茂み。"
+  },
+  {
+   "k": "Extinct stoneworts with spiny fruiting cases.",
+   "v": "とげのある生殖器官をもつ絶滅したシャジクモ類。"
+  },
+  {
+   "k": "Rootless whorls of fine leaves, an ancient flowering plant.",
+   "v": "根のない細い葉の輪生体で、古い系統の被子植物。"
+  },
+  {
+   "k": "Round leaves on long stalks rising from the mud.",
+   "v": "泥の中から長い柄の先に丸い葉が立ち上がる。"
+  },
+  {
+   "k": "A single giant cell shaped like a tiny umbrella.",
+   "v": "小さな傘の形をした、ひとつの巨大な細胞。"
+  },
+  {
+   "k": "Bright green sheets on rocky shores.",
+   "v": "岩場に広がる鮮やかな緑の薄い葉状体。"
+  },
+  {
+   "k": "Banded fans dusted with lime.",
+   "v": "石灰をまぶしたような縞模様の扇。"
+  },
+  {
+   "k": "Glossy green spheres, among the largest single cells.",
+   "v": "つやのある緑色の球で、最大級の単細胞のひとつ。"
+  },
+  {
+   "k": "Runners hung with little green beads.",
+   "v": "匍匐枝に小さな緑の粒が連なる。"
+  },
+  {
+   "k": "Soft green plumes.",
+   "v": "柔らかな緑の羽毛状の藻体。"
+  },
+  {
+   "k": "Pink, jointed, stony fronds.",
+   "v": "ピンク色で節があり、石のように硬い葉状体。"
+  },
+  {
+   "k": "Wiry red seaweed, a source of agar.",
+   "v": "針金のように硬い紅藻で、寒天の原料。"
+  },
+  {
+   "k": "Purple-red fans on cold shores.",
+   "v": "冷たい海岸に生える紫紅色の扇形の海藻。"
+  },
+  {
+   "k": "Southern kelp with a crown of blades.",
+   "v": "葉状部の冠をもつ南半球のコンブ類。"
+  },
+  {
+   "k": "Feathery whorls swaying in ponds.",
+   "v": "池の中で揺れる羽毛のような輪生葉。"
+  },
+  {
+   "k": "Broad sword-shaped leaves in a rosette.",
+   "v": "幅広い剣形の葉がロゼット状に広がる。"
+  },
+  {
+   "k": "Bronze-green rosettes of Asian streams.",
+   "v": "アジアの渓流に生えるブロンズがかった緑色のロゼット。"
+  },
+  {
+   "k": "Carnivorous: tiny bladders snap up water fleas.",
+   "v": "食虫植物。小さな捕虫嚢でミジンコを吸い込む。"
+  },
+  {
+   "k": "Dark green moss streaming in currents.",
+   "v": "流れの中でなびく深緑のコケ。"
+  },
+  {
+   "k": "Velvety green balls rolling on lake beds.",
+   "v": "湖底を転がるビロードのような緑の球。"
+  },
+  {
+   "k": "Brittle, finely toothed pondweed.",
+   "v": "もろく、葉の縁に細かい鋸歯のある水草。"
+  },
+  {
+   "k": "Spongy green fingers.",
+   "v": "スポンジのような緑の指状の海藻。"
+  },
+  {
+   "k": "Fern-like runners that can carpet the seabed.",
+   "v": "シダのような匍匐枝で、海底一面を覆い尽くすこともある。"
+  },
+  {
+   "k": "Strings of olive beads on southern shores.",
+   "v": "南半球の海岸に連なるオリーブ色の数珠。"
+  },
+  {
+   "k": "Ruffled brown kelp.",
+   "v": "縁がフリル状に波打つ褐色のコンブ類。"
+  },
+  {
+   "k": "Leathery straps pounded by Southern Ocean surf.",
+   "v": "南極海の荒波に打たれる革のような帯状の海藻。"
+  },
+  {
+   "k": "Thin purple sheets, dried as sushi wrap.",
+   "v": "薄い紫色の葉状体で、干して寿司を巻くのに使われる。"
+  },
+  {
+   "k": "Fluffy pink plumes.",
+   "v": "ふわふわしたピンク色の羽毛状の海藻。"
+  },
+  {
+   "k": "Rosy red sheets of warm seas.",
+   "v": "暖かい海に生えるバラ色の葉状の海藻。"
+  },
+  {
+   "k": "Leaves big enough to hold a child.",
+   "v": "子どもを乗せられるほど大きな葉。"
+  },
+  {
+   "k": "Copper-red leaves underwater.",
+   "v": "水中で銅のような赤色になる葉。"
+  },
+  {
+   "k": "Pink-tipped stems of Asian rice paddies.",
+   "v": "アジアの水田に生える、先端がピンク色の茎。"
+  },
+  {
+   "k": "Purple-red leaves glowing in clear water.",
+   "v": "澄んだ水の中で輝く紫紅色の葉。"
+  },
+  {
+   "k": "White sulphur-eating bacterial mats of the dark seafloor.",
+   "v": "暗い海底に広がる、硫黄を食べる白い細菌マット。"
+  },
+  {
+   "k": "Bundled bacterial threads in oxygen-poor deep mud.",
+   "v": "酸素の乏しい深い泥の中で束になった細菌の糸。"
+  },
+  {
+   "k": "Clouds of pale pink blossom.",
+   "v": "雲のように咲き誇る淡いピンクの花。"
+  },
+  {
+   "k": "Tiers of deep red, hand-shaped leaves.",
+   "v": "幾重にも重なる深紅の手のひら形の葉。"
+  },
+  {
+   "k": "A spreading canopy of violet-blue trumpets.",
+   "v": "大きく広がる樹冠に青紫色のラッパ形の花が咲く。"
+  },
+  {
+   "k": "Magenta-pink flowers before the leaves.",
+   "v": "葉より先に咲くマゼンタピンクの花。"
+  },
+  {
+   "k": "A flat crown ablaze with scarlet flowers.",
+   "v": "平らな樹冠が緋色の花で燃え立つ。"
+  },
+  {
+   "k": "Crinkled pink blossoms all summer.",
+   "v": "夏じゅう咲き続ける縮れたピンクの花。"
+  },
+  {
+   "k": "Towers over the forest in a cloud of pink.",
+   "v": "ピンクの雲に包まれて森の上にそびえる。"
+  },
+  {
+   "k": "A great dome of deep purple leaves.",
+   "v": "深い紫色の葉でできた大きなドーム。"
+  },
+  {
+   "k": "Purple leaves and smoky plumes.",
+   "v": "紫色の葉と煙のような羽毛状の花穂。"
+  },
+  {
+   "k": "Star-shaped leaves turning crimson.",
+   "v": "星形の葉が深紅に色づく。"
+  },
+  {
+   "k": "Coral-red flowers on a gnarled frame.",
+   "v": "節くれだった枝に珊瑚色の赤い花をつける。"
+  },
+  {
+   "k": "Lavender foxglove-like flowers.",
+   "v": "ジギタリスに似た薄紫色の花。"
+  },
+  {
+   "k": "Orchid-like purple-pink flowers.",
+   "v": "ランのような紫がかったピンクの花。"
+  },
+  {
+   "k": "Goblet-shaped pink and white flowers.",
+   "v": "ゴブレット形のピンクと白の花。"
+  },
+  {
+   "k": "Flame-orange tulips held above the canopy.",
+   "v": "炎のようなオレンジ色のチューリップ形の花を林冠の上に掲げる。"
+  },
+  {
+   "k": "Whole hillsides of trembling gold in autumn.",
+   "v": "秋には丘の斜面一面が金色に揺れる。"
+  },
+  {
+   "k": "Showers of small yellow flowers.",
+   "v": "雨のように降り注ぐ小さな黄色い花。"
+  },
+  {
+   "k": "Long cascades of bright yellow blossom.",
+   "v": "長く垂れ下がる鮮やかな黄色の花房。"
+  },
+  {
+   "k": "A burst of gold above the forest.",
+   "v": "森の上にはじける黄金色。"
+  },
+  {
+   "k": "Hanging chains of yellow pea flowers.",
+   "v": "垂れ下がる黄色い蝶形花の房。"
+  },
+  {
+   "k": "A deciduous conifer turning golden-orange.",
+   "v": "秋に金色がかったオレンジ色に変わる落葉性の針葉樹。"
+  },
+  {
+   "k": "Blazing orange in the autumn forests of the north.",
+   "v": "北の秋の森で燃えるようなオレンジ色。"
+  },
+  {
+   "k": "Orange leaves and bright orange fruit hanging on.",
+   "v": "オレンジ色の葉と、枝に残る鮮やかなオレンジ色の実。"
+  },
+  {
+   "k": "Layers of amber, orange and red.",
+   "v": "琥珀色、オレンジ、赤が幾重にも重なる。"
+  },
+  {
+   "k": "Leafless branches covered in flame-orange flowers.",
+   "v": "葉のない枝が炎のようなオレンジ色の花で覆われる。"
+  },
+  {
+   "k": "Snows white cotton seed fluff over river valleys.",
+   "v": "川沿いの谷に白い綿毛の種を雪のように降らせる。"
+  },
+  {
+   "k": "A giant hung with clouds of white silk-cotton.",
+   "v": "白い綿毛の雲をまとった巨木。"
+  },
+  {
+   "k": "A tight oval of pure white spring blossom.",
+   "v": "こんもりとした卵形の樹冠が純白の春の花で覆われる。"
+  },
+  {
+   "k": "Tiers of white bracts in the spring woods.",
+   "v": "春の林に幾重にも広がる白い苞。"
+  },
+  {
+   "k": "May blossom: hedges and hills turned white.",
+   "v": "五月の花。生け垣も丘も真っ白に染まる。"
+  },
+  {
+   "k": "White flushed pink, then small apples.",
+   "v": "白にほんのりピンクを帯びた花の後、小さなリンゴが実る。"
+  },
+  {
+   "k": "Fluffy pink powder-puff flowers on a flat crown.",
+   "v": "平らな樹冠にふわふわしたピンクのパフのような花が咲く。"
+  },
+  {
+   "k": "Deep pink spring blossom.",
+   "v": "濃いピンクの春の花。"
+  },
+  {
+   "k": "Big crimson cups on bare branches.",
+   "v": "葉のない枝に大きな深紅の杯形の花が咲く。"
+  },
+  {
+   "k": "The scarlet of a swamp in autumn.",
+   "v": "秋の沼地を彩る緋色。"
+  },
+  {
+   "k": "Scented purple plumes.",
+   "v": "香り高い紫色の花穂。"
+  },
+  {
+   "k": "A canopy dripping with violet blossom.",
+   "v": "紫色の花が滴るように垂れる樹冠。"
+  },
+  {
+   "k": "Spores shed in fours tell of tiny plants carpeting Ordovician shores.",
+   "v": "四つ組で放出された胞子は、オルドビス紀の海岸を覆っていた小さな植物の存在を物語る。"
+  },
+  {
+   "k": "Patchy green crusts of the first liverworts on wet mud.",
+   "v": "湿った泥の上にまだらに広がる、最初の苔類の緑の皮膜。"
+  },
+  {
+   "k": "Twisted little stems ending in spore capsules.",
+   "v": "ねじれた小さな茎の先に胞子嚢がつく。"
+  },
+  {
+   "k": "Forked stems tipped with long spore sacs.",
+   "v": "二又に分かれた茎の先に細長い胞子嚢がつく。"
+  },
+  {
+   "k": "A small Welsh plant with flat-topped spore capsules.",
+   "v": "上面が平らな胞子嚢をもつ、ウェールズ産の小さな植物。"
+  },
+  {
+   "k": "Forking stems with oval spore sacs.",
+   "v": "二又に分かれた茎に楕円形の胞子嚢がつく。"
+  },
+  {
+   "k": "A moss-like plant with stalked capsules rising from a green mat.",
+   "v": "緑のマットから柄のある胞子嚢が立ち上がる、コケに似た植物。"
+  },
+  {
+   "k": "Rhynie chert plant with a lumpy, corm-like base.",
+   "v": "ライニーチャートの植物で、基部がこぶ状の球茎のようになっている。"
+  },
+  {
+   "k": "Leafless, bumpy stems with clustered spore sacs.",
+   "v": "葉がなく、こぶの多い茎に胞子嚢が集まってつく。"
+  },
+  {
+   "k": "Spiny stems with coiled tips spreading over the ground.",
+   "v": "とげのある茎が先端を巻きながら地面に広がる。"
+  },
+  {
+   "k": "Branching zosterophyll with fiddlehead tips.",
+   "v": "枝先がゼンマイのように巻いた、枝分かれするゾステロフィルム類。"
+  },
+  {
+   "k": "Fern-like thickets that filled Late Devonian floodplains.",
+   "v": "後期デボン紀の氾濫原を埋め尽くした、シダに似た茂み。"
+  },
+  {
+   "k": "Bushy progymnosperm, a step toward seed plants.",
+   "v": "低木状の前裸子植物で、種子植物への一歩。"
+  },
+  {
+   "k": "Whorled branchlets: a distant cousin of horsetails.",
+   "v": "輪生する小枝をもつ、トクサ類の遠い親戚。"
+  },
+  {
+   "k": "Middle Devonian plant with the oldest seed-like organs.",
+   "v": "最古の種子様器官をもつ中期デボン紀の植物。"
+  },
+  {
+   "k": "Sturdy small lycopsid, forerunner of the scale trees.",
+   "v": "がっしりした小型の小葉植物で、鱗木類の先駆け。"
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches, from Belgium.",
+   "v": "指のような枝が冠をなす小高木で、ベルギー産。"
+  },
+  {
+   "k": "Late Devonian lycopsid tree of the Kiltorcan swamps.",
+   "v": "キルトーカンの沼沢地に生えた後期デボン紀の小葉植物の樹木。"
+  },
+  {
+   "k": "Archaeopteris relative of Arctic Devonian forests.",
+   "v": "北極圏のデボン紀の森に生えたアルカエオプテリスの近縁種。"
+  },
+  {
+   "k": "Knee-high lycopsid trees in dense coastal stands: China's oldest forest.",
+   "v": "膝丈ほどの小葉植物の樹木が海岸に密生した、中国最古の森林。"
+  },
+  {
+   "k": "Fronds of marattialean tree ferns, the commonest coal-measure fern.",
+   "v": "マラッティア目の木生シダの葉で、炭層で最もよく見られるシダ。"
+  },
+  {
+   "k": "Scrambling seed fern with sticky glandular hairs.",
+   "v": "粘り気のある腺毛をもつ、這い広がる種子シダ。"
+  },
+  {
+   "k": "Climbing seed fern that hung from the scale trees.",
+   "v": "鱗木から垂れ下がった、よじ登る種子シダ。"
+  },
+  {
+   "k": "Star-shaped leaf whorls on calamite branches.",
+   "v": "カラミテスの枝につく星形の輪生葉。"
+  },
+  {
+   "k": "Needle-leaved calamite shoots.",
+   "v": "針状の葉をつけたカラミテスの若枝。"
+  },
+  {
+   "k": "Early fern with H-shaped stems.",
+   "v": "茎の断面がH字形をした初期のシダ。"
+  },
+  {
+   "k": "Unbranched, bulb-based lycopsid of open swamps.",
+   "v": "開けた沼地に生えた、分枝せず基部が球根状の小葉植物。"
+  },
+  {
+   "k": "Sprawling seed-fern shrub.",
+   "v": "横に広がる種子シダの低木。"
+  },
+  {
+   "k": "Scale tree of the wettest coal swamps.",
+   "v": "最も湿った石炭紀の沼沢地に生えた鱗木類。"
+  },
+  {
+   "k": "Woody calamite trunk with ringed joints.",
+   "v": "輪状の節をもつ木質のカラミテスの幹。"
+  },
+  {
+   "k": "Finely cut fern foliage, from the coal swamps to the Jurassic.",
+   "v": "細かく裂けたシダの葉で、石炭紀の沼地からジュラ紀まで見られる。"
+  },
+  {
+   "k": "Drought-tolerant seed fern of the dry Early Permian.",
+   "v": "乾燥した前期ペルム紀の、乾燥に強い種子シダ。"
+  },
+  {
+   "k": "Gondwanan horsetail with leaf collars.",
+   "v": "葉の襟をもつゴンドワナのトクサ類。"
+  },
+  {
+   "k": "Odd fern-like plants with cone-borne spores, from Cathaysia.",
+   "v": "カタイシア産の奇妙なシダに似た植物で、胞子を球果につける。"
+  },
+  {
+   "k": "Shield-seeded shrub of dry uplands.",
+   "v": "乾いた高地に生える、盾形の種子をもつ低木。"
+  },
+  {
+   "k": "Fan-leaved plant, perhaps an early ginkgo relative.",
+   "v": "扇形の葉をもつ植物で、イチョウの初期の近縁種かもしれない。"
+  },
+  {
+   "k": "Cathaysian horsetail with lobed leaf whorls.",
+   "v": "切れ込みのある輪生葉をもつカタイシアのトクサ類。"
+  },
+  {
+   "k": "Cordaite of the cold Angaran forests of Siberia.",
+   "v": "シベリアの寒冷なアンガラの森に生えたコルダイテス類。"
+  },
+  {
+   "k": "Tufts of long, unbranched strands from the Burgess Shale.",
+   "v": "バージェス頁岩から見つかる、分枝しない長い糸の房。"
+  },
+  {
+   "k": "A branched Burgess Shale seaweed several centimetres tall.",
+   "v": "高さ数センチの枝分かれしたバージェス頁岩の海藻。"
+  },
+  {
+   "k": "Spiral ribbons of seaweed from Chengjiang.",
+   "v": "澄江から見つかったらせん状のリボンのような海藻。"
+  },
+  {
+   "k": "Clusters of cylindrical green fronds.",
+   "v": "円柱形の緑の葉状体が群がる。"
+  },
+  {
+   "k": "Oily green colonies; their remains make oil shale.",
+   "v": "油分に富む緑色の群体。その遺骸がオイルシェールになる。"
+  },
+  {
+   "k": "Large branching seaweed of Ordovician seas, tall enough to sway.",
+   "v": "オルドビス紀の海の大型の枝分かれする海藻で、波に揺れるほど背が高い。"
+  },
+  {
+   "k": "Calcified green alga with whorled branches.",
+   "v": "輪生する枝をもつ石灰化した緑藻。"
+  },
+  {
+   "k": "Club-shaped dasyclad with a ball-like head.",
+   "v": "球のような頭部をもつ棍棒形のカサノリ類。"
+  },
+  {
+   "k": "Tall, bushy green alga with whorls of hair-like branches.",
+   "v": "毛のような枝が輪生する、背が高く茂みのような緑藻。"
+  },
+  {
+   "k": "One of the oldest stoneworts.",
+   "v": "最古のシャジクモ類のひとつ。"
+  },
+  {
+   "k": "Clusters of bladder-like fronds.",
+   "v": "袋のような葉状体の集まり。"
+  },
+  {
+   "k": "Fan-shaped Silurian seaweed.",
+   "v": "扇形のシルル紀の海藻。"
+  },
+  {
+   "k": "Long, strap-like fronds of a large Silurian seaweed.",
+   "v": "シルル紀の大型海藻の長い帯状の葉状体。"
+  },
+  {
+   "k": "Small balls of tubes; perhaps a green alga.",
+   "v": "管が集まってできた小さな球。緑藻かもしれない。"
+  },
+  {
+   "k": "Broad leafy fronds of a large Devonian seaweed.",
+   "v": "デボン紀の大型海藻の幅広い葉状体。"
+  },
+  {
+   "k": "Fan-like branched alga, perhaps a red seaweed.",
+   "v": "扇状に枝分かれする藻類で、紅藻かもしれない。"
+  },
+  {
+   "k": "Stonewort with spiralled egg cases.",
+   "v": "らせん状の卵殻をもつシャジクモ類。"
+  },
+  {
+   "k": "Thick, ribbon-like stems found in Siberian Devonian coals.",
+   "v": "シベリアのデボン紀の石炭から見つかる、厚いリボン状の茎。"
+  },
+  {
+   "k": "Bushy calcareous alga that built Carboniferous mud mounds.",
+   "v": "石炭紀の泥マウンドをつくった、茂み状の石灰藻。"
+  },
+  {
+   "k": "Calcified dasyclad of Early Carboniferous shelves.",
+   "v": "前期石炭紀の大陸棚に生えた石灰化したカサノリ類。"
+  },
+  {
+   "k": "A Carboniferous stonewort.",
+   "v": "石炭紀のシャジクモ類。"
+  },
+  {
+   "k": "Dasyclad that grew in thickets on Late Paleozoic mounds.",
+   "v": "後期古生代のマウンド上に茂みをつくったカサノリ類。"
+  },
+  {
+   "k": "Encrusting, finger-like growths that built Permian reefs such as El Capitan.",
+   "v": "エル・キャピタンなどペルム紀の礁をつくった、被覆性の指状の生物。"
+  },
+  {
+   "k": "Crust-forming alga that bound Permian reefs together.",
+   "v": "皮殻をつくってペルム紀の礁を結びつけた藻類。"
+  },
+  {
+   "k": "Dark ribbon-like strands, a few millimetres wide and a few centimetres long, common in late Ediacaran shales; they lay on the sea floor rather than standing as tall seaweed.",
+   "v": "幅数ミリ、長さ数センチの黒っぽいリボン状の糸で、後期エディアカラ紀の頁岩によく見られる。背の高い海藻のように立つのではなく、海底に横たわっていた。"
+  },
+  {
+   "k": "Tufts of thin forked threads from the Lantian biota of China.",
+   "v": "中国の藍田生物群から見つかる、細く二又に分かれた糸の房。"
+  },
+  {
+   "k": "Small upright branching seaweed, a few centimetres tall, of the Miaohe biota, anchored by rhizoids.",
+   "v": "廟河生物群の高さ数センチの直立して枝分かれする小さな海藻で、仮根で固着していた。"
+  },
+  {
+   "k": "Weng'an red alga with growing tips and possible reproductive cells.",
+   "v": "成長する先端と生殖細胞らしきものをもつ甕安の紅藻。"
+  },
+  {
+   "k": "Tiny globular red algae preserved cell by cell in phosphate.",
+   "v": "リン酸塩の中に細胞ひとつひとつまで保存された小さな球状の紅藻。"
+  },
+  {
+   "k": "Dark microbial films on bare rock, long before any plant reached land.",
+   "v": "むき出しの岩を覆う黒っぽい微生物の膜。植物が陸に上がるよりずっと前から存在した。"
+  },
+  {
+   "k": "Bushy calcified microbe building reefs with archaeocyaths.",
+   "v": "アーキオシアタとともに礁をつくった、茂み状の石灰化微生物。"
+  },
+  {
+   "k": "Fans of tiny calcified tubes in early Cambrian reefs.",
+   "v": "前期カンブリア紀の礁に見られる、小さな石灰化した管の扇。"
+  },
+  {
+   "k": "Clustered chambers of lime, a cousin of Renalcis.",
+   "v": "石灰質の小室が集まったもので、レナルキスの親類。"
+  },
+  {
+   "k": "Calcified microbial tubes of Cambrian and Ordovician reefs.",
+   "v": "カンブリア紀とオルドビス紀の礁に見られる石灰化した微生物の管。"
+  },
+  {
+   "k": "Tiny lime cylinders that piled up in Ordovician shoals.",
+   "v": "オルドビス紀の浅瀬に積もった小さな石灰質の円柱。"
+  },
+  {
+   "k": "Rare branching seaweed of the Burgess Shale.",
+   "v": "バージェス頁岩に見られるまれな枝分かれした海藻。"
+  },
+  {
+   "k": "Burgess Shale alga with a net-like thallus.",
+   "v": "網目状の葉状体をもつバージェス頁岩の藻類。"
+  },
+  {
+   "k": "Dense tufts of cyanobacterial filaments on the Burgess seafloor.",
+   "v": "バージェスの海底に密生したシアノバクテリアの糸状体の房。"
+  },
+  {
+   "k": "Dark slimy sheets of cyanobacteria, the commonest Burgess 'alga'.",
+   "v": "黒っぽくぬるぬるしたシアノバクテリアの膜で、バージェスで最もありふれた「藻類」。"
+  },
+  {
+   "k": "Known from spores shed in pairs; a low crust on damp ground.",
+   "v": "対になって放出された胞子だけが知られている。湿った地面の低い皮膜。"
+  },
+  {
+   "k": "Its three-scarred spores mark the first steps towards vascular plants.",
+   "v": "三条の痕をもつ胞子は、維管束植物への第一歩を示している。"
+  },
+  {
+   "k": "Colonial microbe whose remains became the Estonian oil shale kukersite.",
+   "v": "群体性の微生物で、その遺骸はエストニアのオイルシェール、クケルサイトとなった。"
+  },
+  {
+   "k": "Calcified cyanobacterium with fan-shaped branching tubes.",
+   "v": "扇状に枝分かれする管をもつ石灰化したシアノバクテリア。"
+  },
+  {
+   "k": "Pear-shaped receptaculitid, probably a calcified green alga.",
+   "v": "洋ナシ形のレセプタクリテス類で、おそらく石灰化した緑藻。"
+  },
+  {
+   "k": "Sunflower-patterned receptaculitid of Ordovician seafloors.",
+   "v": "オルドビス紀の海底に見られるヒマワリ模様のレセプタクリテス類。"
+  },
+  {
+   "k": "One of the first truly calcified dasyclad algae.",
+   "v": "真に石灰化した最初期のカサノリ類のひとつ。"
+  },
+  {
+   "k": "Ball-shaped dasyclad of the Baltic Ordovician.",
+   "v": "バルト地方のオルドビス系に見られる球形のカサノリ類。"
+  },
+  {
+   "k": "Small club-shaped dasyclad of the Ordovician.",
+   "v": "オルドビス紀の小さな棍棒形のカサノリ類。"
+  },
+  {
+   "k": "Branched calcified green alga related to Halimeda.",
+   "v": "サボテングサに近縁な、枝分かれする石灰化した緑藻。"
+  },
+  {
+   "k": "Floating green-alga cysts that sank to form oil shales.",
+   "v": "浮遊する緑藻のシストで、沈積してオイルシェールになった。"
+  },
+  {
+   "k": "Bushy calcified filaments of Paleozoic reef flats.",
+   "v": "古生代の礁原に生えた、茂み状の石灰化した糸状体。"
+  },
+  {
+   "k": "Spiny early Silurian stems from Maine, among the oldest land plant fossils.",
+   "v": "メイン州産の前期シルル紀のとげのある茎で、最古の陸上植物化石のひとつ。"
+  },
+  {
+   "k": "Tiny forked stems ending in spore capsules.",
+   "v": "小さな二又分枝の茎の先に胞子嚢がつく。"
+  },
+  {
+   "k": "Cooksonia-like plant with kidney-shaped sporangia.",
+   "v": "腎臓形の胞子嚢をもつ、クックソニアに似た植物。"
+  },
+  {
+   "k": "Plant of the Australian Baragwanathia flora with clustered sporangia.",
+   "v": "オーストラリアのバラグワナチア植物群の植物で、胞子嚢が集まってつく。"
+  },
+  {
+   "k": "Naked forking stems, common in early land floras.",
+   "v": "葉のない二又分枝の茎で、初期の陸上植物群によく見られる。"
+  },
+  {
+   "k": "Late Silurian rhyniophyte-like plant from Xinjiang.",
+   "v": "新疆産の後期シルル紀のリニア類に似た植物。"
+  },
+  {
+   "k": "Toothed zosterophyll from the Late Silurian of Arctic Canada.",
+   "v": "カナダ北極圏の後期シルル紀に産する、鋸歯のあるゾステロフィルム類。"
+  },
+  {
+   "k": "Zosterophyll with spore capsules in two neat rows.",
+   "v": "胞子嚢が2列にきれいに並ぶゾステロフィルム類。"
+  },
+  {
+   "k": "Tube-bodied nematophyte, possibly a fungus, on early land.",
+   "v": "初期の陸上に生えた管状の体をもつネマトファイトで、菌類かもしれない。"
+  },
+  {
+   "k": "Cellular crusts of a nematophyte, perhaps lichen-like.",
+   "v": "ネマトファイトの細胞状の皮殻で、地衣類に似ていたかもしれない。"
+  },
+  {
+   "k": "Calcified microbe encrusting Silurian and Devonian reefs.",
+   "v": "シルル紀とデボン紀の礁を覆った石灰化微生物。"
+  },
+  {
+   "k": "Small encrusting tubes in Silurian reef rocks.",
+   "v": "シルル紀の礁岩に見られる小さな被覆性の管。"
+  },
+  {
+   "k": "Lime-coated nodules built by microbes on reef flats.",
+   "v": "礁原で微生物がつくった石灰に覆われた団塊。"
+  },
+  {
+   "k": "Diamond-scarred lycopsid tree spread across Late Devonian Gondwana.",
+   "v": "菱形の葉痕をもつ小葉植物の樹木で、後期デボン紀のゴンドワナに広がった。"
+  },
+  {
+   "k": "Late Devonian scale tree from New York.",
+   "v": "ニューヨーク州産の後期デボン紀の鱗木類。"
+  },
+  {
+   "k": "Scale tree of the latest Devonian and early coal swamps.",
+   "v": "デボン紀最末期と初期の石炭紀の沼沢地に生えた鱗木類。"
+  },
+  {
+   "k": "Tree-sized sphenopsid of Bear Island, up to 20 m tall.",
+   "v": "ベア島に生えた樹木ほどの大きさの楔葉類で、高さ20メートルに達した。"
+  },
+  {
+   "k": "Early tree whose trunk grew by tearing and repairing hundreds of wood strands.",
+   "v": "何百本もの木部の束が裂けては修復されることで幹が太った初期の樹木。"
+  },
+  {
+   "k": "Scrambling clubmoss that climbed the trunks of the Gilboa forest.",
+   "v": "ギルボアの森の幹をよじ登った、這い広がるヒカゲノカズラ類。"
+  },
+  {
+   "k": "Early sphenopsid with whorled branches and cones.",
+   "v": "輪生する枝と球穂をもつ初期の楔葉類。"
+  },
+  {
+   "k": "Late Devonian seed plant with cupped seeds.",
+   "v": "杯状の器官に包まれた種子をもつ後期デボン紀の種子植物。"
+  },
+  {
+   "k": "Woody shrub several metres tall, a forerunner of seed plants.",
+   "v": "高さ数メートルの木質の低木で、種子植物の先駆け。"
+  },
+  {
+   "k": "Small plant with forked branchlets rising from a creeping stem.",
+   "v": "匍匐茎から二又に分かれた小枝を立ち上げる小さな植物。"
+  },
+  {
+   "k": "Ribbon-stemmed plant growing in shallow Early Devonian water.",
+   "v": "前期デボン紀の浅い水中に生えた、リボン状の茎をもつ植物。"
+  },
+  {
+   "k": "Forked stems with kidney-shaped sporangia, from Gaspé.",
+   "v": "腎臓形の胞子嚢をつけた二又分枝の茎で、ガスペ産。"
+  },
+  {
+   "k": "Cup-topped sexual generation of Aglaophyton, from the Rhynie chert.",
+   "v": "先端が杯状になったアグラオフィトンの有性世代で、ライニーチャート産。"
+  },
+  {
+   "k": "Zosterophyll of the Rhynie hot-spring flora.",
+   "v": "ライニーの温泉植物群に属するゾステロフィルム類。"
+  },
+  {
+   "k": "Zosterophyll with toothed stems and coiled tips.",
+   "v": "鋸歯のある茎と巻いた先端をもつゾステロフィルム類。"
+  },
+  {
+   "k": "Stout three-forked stems topped with clusters of sporangia.",
+   "v": "がっしりした三叉の茎の先に胞子嚢が房状につく。"
+  },
+  {
+   "k": "Ribbon-like Middle Devonian liverwort from New York.",
+   "v": "ニューヨーク州産の中期デボン紀のリボン状の苔類。"
+  },
+  {
+   "k": "Leafy-winged thalloid liverwort of the Late Devonian.",
+   "v": "葉のような翼をもつ後期デボン紀の葉状体苔類。"
+  },
+  {
+   "k": "Ribbed horsetail stems with forked leaves, a forerunner of Calamites.",
+   "v": "二又に分かれた葉をもつ畝のあるトクサ類の茎で、カラミテスの先駆け。"
+  },
+  {
+   "k": "The oldest known member of the stonewort order Charales.",
+   "v": "シャジクモ目で知られている最古のメンバー。"
+  },
+  {
+   "k": "Charophyte with ribbed, lime-encased egg capsules.",
+   "v": "畝があり石灰に包まれた卵殻をもつ車軸藻類。"
+  },
+  {
+   "k": "Devonian stonewort with spiralled gyrogonites.",
+   "v": "らせん状の藏卵器化石（ジャイロゴナイト）をもつデボン紀のシャジクモ類。"
+  },
+  {
+   "k": "Lime-walled tubular alga of Late Devonian shallow seas.",
+   "v": "後期デボン紀の浅い海に生えた石灰質の壁をもつ管状の藻類。"
+  },
+  {
+   "k": "Pitted, leathery thalli thought to be an early lichen.",
+   "v": "くぼみのある革質の葉状体で、初期の地衣類と考えられている。"
+  },
+  {
+   "k": "Early Devonian lichen with cyanobacterial partners, from the Welsh Borderland.",
+   "v": "ウェールズ国境地方産の前期デボン紀の地衣類で、シアノバクテリアを共生相手とする。"
+  },
+  {
+   "k": "Tangled tubes of a nematophyte from the Rhynie chert.",
+   "v": "ライニーチャート産のネマトファイトで、絡み合った管でできている。"
+  },
+  {
+   "k": "Tiny chytrid fungus living on dead Rhynie chert plants.",
+   "v": "ライニーチャートの枯れた植物の上で暮らした小さなツボカビ。"
+  },
+  {
+   "k": "Scale tree that branched early into a broad crown; a coal-ball favourite.",
+   "v": "早くから枝分かれして広い樹冠をつくる鱗木類。炭球によく見られる。"
+  },
+  {
+   "k": "Scale tree of the Pennsylvanian peat swamps, long confused with Lepidodendron.",
+   "v": "ペンシルバニア亜紀の泥炭湿地に生えた鱗木類で、長らくレピドデンドロンと混同されていた。"
+  },
+  {
+   "k": "Lycopsid trunk marked with two rows of big round scars where branches fell away.",
+   "v": "枝が落ちた跡の大きな丸い痕が2列に並ぶ小葉植物の幹。"
+  },
+  {
+   "k": "Smooth-barked scale tree with tiny, widely spaced leaf scars.",
+   "v": "樹皮がなめらかで、小さな葉痕がまばらに並ぶ鱗木類。"
+  },
+  {
+   "k": "Calamite with thick, banded wood: the woodiest of the tree horsetails.",
+   "v": "縞模様の厚い木部をもつカラミテス類で、木生トクサの中で最も木質化したもの。"
+  },
+  {
+   "k": "Big Early Carboniferous tree known from logs a metre thick buried in Scottish volcanic ash.",
+   "v": "スコットランドの火山灰に埋もれた直径1メートルの丸太から知られる、前期石炭紀の大木。"
+  },
+  {
+   "k": "Cordaitean shrub-tree of the coal swamps, perhaps growing in mangrove-like stands.",
+   "v": "石炭紀の沼地に生えたコルダイテス類の低木状の木で、マングローブのような群落をつくっていたかもしれない。"
+  },
+  {
+   "k": "Among the oldest known conifers, from Pennsylvanian Yorkshire.",
+   "v": "知られている最古の針葉樹のひとつで、ペンシルバニア亜紀のヨークシャー産。"
+  },
+  {
+   "k": "Marattialean tree fern whose fronds grew in two rows down the trunk.",
+   "v": "葉が幹に沿って2列に並んで生えたマラッティア目の木生シダ。"
+  },
+  {
+   "k": "Medullosan seed fern with a strangely tangled stem.",
+   "v": "奇妙に絡み合った茎をもつメデュロサ類の種子シダ。"
+  },
+  {
+   "k": "Strap-leaved cordaite of the cold Gondwana lands as the great ice age waned.",
+   "v": "大氷河時代が終わりつつあった頃、寒冷なゴンドワナに生えた帯状の葉のコルダイテス類。"
+  },
+  {
+   "k": "Scale tree of the Cathaysian coal swamps of China.",
+   "v": "中国のカタイシアの石炭紀の沼地に生えた鱗木類。"
+  },
+  {
+   "k": "Seed fern with broad, blunt leaflets joined at the base.",
+   "v": "幅広く先の丸い小羽片が基部でつながった種子シダ。"
+  },
+  {
+   "k": "Big-leafleted seed fern covered in fine hairs, common in coal shales.",
+   "v": "細かい毛に覆われた大きな小羽片をもつ種子シダで、炭層の頁岩によく見られる。"
+  },
+  {
+   "k": "Lacy foliage of scrambling lyginopterid seed ferns.",
+   "v": "這い広がるリギノプテリス類の種子シダのレース状の葉。"
+  },
+  {
+   "k": "Zygopterid fern with clusters of big spore sacs.",
+   "v": "大きな胞子嚢が房になってつくジゴプテリス類のシダ。"
+  },
+  {
+   "k": "Small fern that clambered over the trunks of tree ferns.",
+   "v": "木生シダの幹をよじ登った小さなシダ。"
+  },
+  {
+   "k": "Leafless, bushy little fern relative of the coal-swamp floor.",
+   "v": "石炭紀の沼地の地面に生えた、葉のない茂み状の小さなシダの親類。"
+  },
+  {
+   "k": "Shrubby lycopsid with a cone on each branch tip.",
+   "v": "枝先ごとに球穂をつける低木状の小葉植物。"
+  },
+  {
+   "k": "Tiny spikemoss-like lycopsid known from coal balls.",
+   "v": "炭球から知られる、イワヒバに似た小さな小葉植物。"
+  },
+  {
+   "k": "Small herbaceous lycopsid of Early Carboniferous Scotland.",
+   "v": "前期石炭紀のスコットランドに生えた小型の草本性小葉植物。"
+  },
+  {
+   "k": "Early relative of the climbing ferns (Schizaeales).",
+   "v": "カニクサ類（フサシダ目）の初期の親類。"
+  },
+  {
+   "k": "Forked, needle-leaved plant of dry Late Paleozoic uplands.",
+   "v": "後期古生代の乾いた高地に生えた、二又に分かれた針状の葉をもつ植物。"
+  },
+  {
+   "k": "One of the few Carboniferous mosses known, from French coal measures.",
+   "v": "数少ない石炭紀の蘚類のひとつで、フランスの炭層から見つかった。"
+  },
+  {
+   "k": "Leafy liverwort from the Pennsylvanian coal measures.",
+   "v": "ペンシルバニア亜紀の炭層から見つかった茎葉性の苔類。"
+  },
+  {
+   "k": "Marattialean fern with star-shaped clusters of spore sacs.",
+   "v": "胞子嚢が星形に集まってつくマラッティア類のシダ。"
+  },
+  {
+   "k": "Horsetail of the cool Angaran and Gondwanan floodplains.",
+   "v": "冷涼なアンガラとゴンドワナの氾濫原に生えたトクサ類。"
+  },
+  {
+   "k": "Tube-shaped dasyclad alga of Carboniferous shelf seas.",
+   "v": "石炭紀の大陸棚の海に生えた管状のカサノリ類。"
+  },
+  {
+   "k": "Dasyclad alga with a pitted sleeve of lime.",
+   "v": "小孔のある石灰の鞘をまとったカサノリ類。"
+  },
+  {
+   "k": "Leaf-like calcareous alga of Russian Carboniferous seas.",
+   "v": "ロシアの石炭紀の海に生えた葉のような石灰藻。"
+  },
+  {
+   "k": "Encrusting alga that coated shells and grains.",
+   "v": "貝殻や粒子を覆った被覆性の藻類。"
+  },
+  {
+   "k": "Tiny round fungal spore cases found in coal balls.",
+   "v": "炭球から見つかる小さな丸い菌類の胞子嚢。"
+  },
+  {
+   "k": "Oily colonial alga whose remains make torbanite, the boghead coal.",
+   "v": "油分に富む群体性の藻類で、その遺骸がボグヘッド炭（トーバナイト）になる。"
+  },
+  {
+   "k": "Walchian conifer of the dry Early Permian of Europe.",
+   "v": "乾燥した前期ペルム紀のヨーロッパに生えたワルキア類の針葉樹。"
+  },
+  {
+   "k": "Early conifer with flat, fern-like sprays of needles.",
+   "v": "針葉が平たいシダのような枝に並ぶ初期の針葉樹。"
+  },
+  {
+   "k": "Voltzian conifer of the Zechstein sea shores.",
+   "v": "ツェヒシュタイン海の沿岸に生えたボルツィア類の針葉樹。"
+  },
+  {
+   "k": "Small conifer from the Late Permian Bletterbach gorge in the Dolomites.",
+   "v": "ドロミテのブレッターバッハ峡谷の後期ペルム紀層から見つかった小さな針葉樹。"
+  },
+  {
+   "k": "Late Permian conifer with dense, short-needled shoots.",
+   "v": "短い針葉が密についた枝をもつ後期ペルム紀の針葉樹。"
+  },
+  {
+   "k": "The oldest known ginkgophyte, with thread-like forked leaves.",
+   "v": "知られている最古のイチョウ類で、糸のように二又に分かれた葉をもつ。"
+  },
+  {
+   "k": "Ginkgo relative with wedge-shaped, deeply split leaves.",
+   "v": "くさび形で深く裂けた葉をもつイチョウの近縁種。"
+  },
+  {
+   "k": "Gigantopterid with huge, net-veined leaves, climbing through Cathaysian forests.",
+   "v": "巨大な網状脈の葉をもつギガントプテリス類で、カタイシアの森をよじ登った。"
+  },
+  {
+   "k": "Early cycad from the Permian of China.",
+   "v": "中国のペルム紀から見つかった初期のソテツ。"
+  },
+  {
+   "k": "Peltasperm seed fern of the dry red beds of the Grand Canyon.",
+   "v": "グランドキャニオンの乾燥した赤色層に産するペルタスペルマ目の種子シダ。"
+  },
+  {
+   "k": "Seed fern of the Late Permian Angaran and Russian floras.",
+   "v": "後期ペルム紀のアンガラおよびロシアの植物群に見られる種子シダ。"
+  },
+  {
+   "k": "Cathaysian seed fern that bore its seeds right on its leaflets.",
+   "v": "小羽片の上に直接種子をつけたカタイシアの種子シダ。"
+  },
+  {
+   "k": "Marattialean fern of the Permian coal swamps of China.",
+   "v": "中国のペルム紀の石炭沼沢地に生えたマラッティア類のシダ。"
+  },
+  {
+   "k": "Gondwanan sphenophyll with leaves in lopsided whorls of three pairs.",
+   "v": "3対の葉が不揃いな輪生をなすゴンドワナの楔葉類。"
+  },
+  {
+   "k": "Angaran moss with cells like those of peat mosses.",
+   "v": "ミズゴケ類に似た細胞をもつアンガラの蘚類。"
+  },
+  {
+   "k": "Peltasperm shrub of the dry Late Permian of Russia.",
+   "v": "乾燥した後期ペルム紀のロシアに生えたペルタスペルマ目の低木。"
+  },
+  {
+   "k": "Thick-leaved peltasperm of the Late Permian Angaran floodplains.",
+   "v": "後期ペルム紀のアンガラの氾濫原に生えた厚い葉のペルタスペルマ類。"
+  },
+  {
+   "k": "Lycopsid of the Permian Paraná Basin in Brazil.",
+   "v": "ブラジルのペルム紀パラナ盆地に生えた小葉植物。"
+  },
+  {
+   "k": "Cycad with long, comb-like leaves.",
+   "v": "櫛のような長い葉をもつソテツ。"
+  },
+  {
+   "k": "Lime-crusted red alga of warm shelf seas from the Permian to the Cretaceous.",
+   "v": "ペルム紀から白亜紀にかけて暖かい大陸棚の海に生えた、石灰の殻をもつ紅藻。"
+  },
+  {
+   "k": "Dasyclad alga with whorls of fine branches.",
+   "v": "細い枝が輪生するカサノリ類。"
+  },
+  {
+   "k": "Dasyclad with a pitted, finger-like sleeve of lime.",
+   "v": "小孔のある指状の石灰の鞘をもつカサノリ類。"
+  },
+  {
+   "k": "Encrusting, worm-like alga of Permian reefs.",
+   "v": "ペルム紀の礁に見られる、虫のような被覆性の藻類。"
+  },
+  {
+   "k": "Southern voltzian conifer of the earliest Triassic.",
+   "v": "三畳紀最初期の南半球に生えたボルツィア類の針葉樹。"
+  },
+  {
+   "k": "Strap-leaved conifer that grew in dense stands along Gondwanan rivers.",
+   "v": "ゴンドワナの川沿いに密生した帯状の葉の針葉樹。"
+  },
+  {
+   "k": "Early podocarp-like conifer of Gondwana.",
+   "v": "ゴンドワナの初期のマキ科に似た針葉樹。"
+  },
+  {
+   "k": "Petrified Forest conifer with short shoot traces all along its logs.",
+   "v": "丸太全体に短枝の痕が残る、ペトリファイド・フォレストの針葉樹。"
+  },
+  {
+   "k": "Petrified Forest tree with distinctive wood; its relatives are still debated.",
+   "v": "独特な材をもつペトリファイド・フォレストの樹木。その類縁関係は今も議論されている。"
+  },
+  {
+   "k": "Fossil ginkgo leaves with broad, lobed fans, found worldwide in the Mesozoic.",
+   "v": "幅広く切れ込んだ扇形のイチョウの葉の化石で、中生代の世界中から見つかる。"
+  },
+  {
+   "k": "Cycad with long, ribbon-like leaves, common across the Mesozoic.",
+   "v": "長いリボン状の葉をもつソテツで、中生代を通じてよく見られる。"
+  },
+  {
+   "k": "Cheirolepid conifer whose pollen dominates the Triassic-Jurassic boundary.",
+   "v": "ケイロレピス類の針葉樹で、その花粉が三畳紀とジュラ紀の境界で優勢となる。"
+  },
+  {
+   "k": "Bennettitalean with neatly ranked, square-ended leaflets.",
+   "v": "先端が角張った小羽片が整然と並ぶベネチテス類。"
+  },
+  {
+   "k": "Small bennettitalean shrub with short, uneven leaflets.",
+   "v": "短く不揃いな小羽片をもつ小型のベネチテス類の低木。"
+  },
+  {
+   "k": "Slender, forking bennettitalean bush with small flower-like cones.",
+   "v": "花のような小さな球果をつける、細く二又に分かれたベネチテス類の低木。"
+  },
+  {
+   "k": "Slender-stemmed early cycad from Late Triassic North Carolina.",
+   "v": "後期三畳紀のノースカロライナ州産の、細い茎をもつ初期のソテツ。"
+  },
+  {
+   "k": "Puzzling plant with pleated, palm-like leaves, once claimed as a flowering plant.",
+   "v": "ひだのあるヤシのような葉をもつ謎の植物で、かつて被子植物だと主張された。"
+  },
+  {
+   "k": "Corystosperm with fine, needle-like leaflets, a dry-ground cousin of Dicroidium.",
+   "v": "細い針状の小羽片をもつコリストスペルマ類で、乾いた土地に生えたディクロイディウムの親類。"
+  },
+  {
+   "k": "Caytonialean shrub with net-veined leaflets and berry-like seed cups.",
+   "v": "網状脈の小葉と液果のような種子の殻斗をもつケイトニア目の低木。"
+  },
+  {
+   "k": "Dipterid fern with big, umbrella-like fronds.",
+   "v": "大きな傘のような葉をもつヤブレガサウラボシ類のシダ。"
+  },
+  {
+   "k": "Dipterid fern with leaves netted like a window lattice.",
+   "v": "葉脈が窓の格子のように網目をなすヤブレガサウラボシ類のシダ。"
+  },
+  {
+   "k": "Royal-fern relative common in Mesozoic floras.",
+   "v": "ゼンマイ類の近縁で、中生代の植物群によく見られる。"
+  },
+  {
+   "k": "Marattialean fern with huge fronds, common in the Middle Triassic.",
+   "v": "巨大な葉をもつマラッティア類のシダで、中期三畳紀によく見られる。"
+  },
+  {
+   "k": "Fern close to the living king ferns.",
+   "v": "現生のリュウビンタイ類に近いシダ。"
+  },
+  {
+   "k": "Forking, thicket-forming fern of open ground.",
+   "v": "開けた土地で茂みをつくる、二又に分枝するシダ。"
+  },
+  {
+   "k": "Quillwort-like lycopsid that greened the shores after the end-Permian extinction.",
+   "v": "ミズニラに似た小葉植物で、ペルム紀末の大量絶滅の後、海岸を再び緑で覆った。"
+  },
+  {
+   "k": "Herb-sized conifer from the Triassic sandstones of the Vosges.",
+   "v": "ヴォージュ山地の三畳紀砂岩から見つかった、草ほどの大きさの針葉樹。"
+  },
+  {
+   "k": "Small leafy liverwort of Rhaetian ponds.",
+   "v": "レート期の池に生えた小さな茎葉性の苔類。"
+  },
+  {
+   "k": "Fossil liverwort with flat, forking lobes.",
+   "v": "平たく二又に分かれた裂片をもつ苔類の化石。"
+  },
+  {
+   "k": "Large dasyclad of Triassic reefs.",
+   "v": "三畳紀の礁に見られる大型のカサノリ類。"
+  },
+  {
+   "k": "Dasyclad with swollen, bladder-tipped branches.",
+   "v": "ふくらんだ袋状の先端をもつ枝のカサノリ類。"
+  },
+  {
+   "k": "Puzzling encrusting alga of Mesozoic lagoons.",
+   "v": "中生代の潟湖に見られる謎の被覆性藻類。"
+  },
+  {
+   "k": "Triassic stonewort with star-patterned fruiting cases.",
+   "v": "星模様の生殖器官をもつ三畳紀のシャジクモ類。"
+  },
+  {
+   "k": "Mushroom-relative threads with clamp connections, from Antarctica.",
+   "v": "南極大陸産の、かすがい連結をもつキノコの親類の菌糸。"
+  },
+  {
+   "k": "Spiny fungal spore cases preserved in Antarctic Triassic peat.",
+   "v": "南極の三畳紀の泥炭に保存された、とげのある菌類の胞子嚢。"
+  },
+  {
+   "k": "Cheirolepid conifer with tiny cones petrified in Patagonia.",
+   "v": "小さな球果がパタゴニアで石化して残るケイロレピス類の針葉樹。"
+  },
+  {
+   "k": "Kauri relative from the Jurassic Talbragar fish beds, Australia.",
+   "v": "オーストラリアのジュラ紀タルブラガー魚類化石層から見つかったカウリの近縁種。"
+  },
+  {
+   "k": "Early cypress-family conifer like a Chinese fir.",
+   "v": "コウヨウザンに似た初期のヒノキ科針葉樹。"
+  },
+  {
+   "k": "Early pine relative with split cone scales.",
+   "v": "裂けた種鱗をもつ初期のマツの親類。"
+  },
+  {
+   "k": "The oldest known member of the pine family, from Scotland.",
+   "v": "知られている最古のマツ科植物で、スコットランド産。"
+  },
+  {
+   "k": "Jurassic ginkgo from Henan with clusters of seeds on forked stalks.",
+   "v": "河南省産のジュラ紀のイチョウで、分かれた柄に種子が房状につく。"
+  },
+  {
+   "k": "Ginkgo relative with tufts of strap leaves on short shoots.",
+   "v": "短枝に帯状の葉を束生するイチョウの近縁種。"
+  },
+  {
+   "k": "Large cycad with comb-like fronds.",
+   "v": "櫛のような葉をもつ大型のソテツ。"
+  },
+  {
+   "k": "Bennettitalean of dry coasts with stiff, closely set leaflets.",
+   "v": "乾いた海岸に生えたベネチテス類で、硬い小羽片が密に並ぶ。"
+  },
+  {
+   "k": "Bennettitalean whose leaflets have ear-like lobes at the base.",
+   "v": "小羽片の基部に耳のような突出部があるベネチテス類。"
+  },
+  {
+   "k": "Slender bennettitalean bush with small two-sexed 'flowers', from Yorkshire.",
+   "v": "ヨークシャー産の細身のベネチテス類の低木で、両性の小さな「花」をつける。"
+  },
+  {
+   "k": "Thick-leaved seed fern of salty coastal flats.",
+   "v": "塩分の多い海岸の干潟に生えた、厚い葉をもつ種子シダ。"
+  },
+  {
+   "k": "Early climbing-fern relative of the Jurassic Yorkshire delta.",
+   "v": "ジュラ紀のヨークシャーの三角州に生えた、カニクサ類の初期の親類。"
+  },
+  {
+   "k": "Fern with small fan-shaped leaves, kin of the living Dipteris.",
+   "v": "小さな扇形の葉をもつシダで、現生のヤブレガサウラボシ属の仲間。"
+  },
+  {
+   "k": "Common fern of the Jurassic Yorkshire flora.",
+   "v": "ジュラ紀のヨークシャー植物群によく見られるシダ。"
+  },
+  {
+   "k": "Delicately cut fern of the Jurassic and Early Cretaceous.",
+   "v": "ジュラ紀から前期白亜紀にかけての、繊細に裂けた葉のシダ。"
+  },
+  {
+   "k": "Dasyclad of Early Jurassic carbonate lagoons.",
+   "v": "前期ジュラ紀の炭酸塩の潟湖に生えたカサノリ類。"
+  },
+  {
+   "k": "Small tube-shaped dasyclad of Tethyan lagoons.",
+   "v": "テチス海の潟湖に生えた小さな管状のカサノリ類。"
+  },
+  {
+   "k": "Dasyclad with star-like whorls of rays.",
+   "v": "星のような輪生の放射枝をもつカサノリ類。"
+  },
+  {
+   "k": "Crust-building organism of Jurassic and Cretaceous reefs.",
+   "v": "ジュラ紀と白亜紀の礁で皮殻をつくった生物。"
+  },
+  {
+   "k": "Bubbly calcified mats on shallow Mesozoic platforms.",
+   "v": "中生代の浅いプラットフォーム上に広がる泡状の石灰化マット。"
+  },
+  {
+   "k": "Stonewort of Jurassic and Cretaceous lakes.",
+   "v": "ジュラ紀と白亜紀の湖に生えたシャジクモ類。"
+  },
+  {
+   "k": "Leafy lichen from Jurassic Daohugou, China.",
+   "v": "中国のジュラ紀、道虎溝から見つかった葉状の地衣類。"
+  },
+  {
+   "k": "Magnolia-like tree with big, many-parted flowers, from Kansas.",
+   "v": "カンザス州産のモクレンに似た樹木で、多数の部分からなる大きな花をつける。"
+  },
+  {
+   "k": "Early plane-tree relative with lobed leaves, along Cretaceous streams.",
+   "v": "白亜紀の川沿いに生えた、切れ込みのある葉をもつスズカケノキの初期の親類。"
+  },
+  {
+   "k": "Big-leaved plane-tree relative of the Late Cretaceous.",
+   "v": "後期白亜紀の大きな葉をもつスズカケノキの親類。"
+  },
+  {
+   "k": "One of the oldest laurels, its tiny flowers preserved as charcoal.",
+   "v": "最古のクスノキ類のひとつで、小さな花が木炭化して保存されている。"
+  },
+  {
+   "k": "Toothed-leaved early relative of oaks and chestnuts.",
+   "v": "鋸歯のある葉をもつ、ナラやクリの初期の親類。"
+  },
+  {
+   "k": "Swamp conifer that once ringed the Arctic, now nearly extinct in the wild.",
+   "v": "かつて北極を取り巻いて分布した沼沢地の針葉樹で、現在は野生ではほぼ絶滅している。"
+  },
+  {
+   "k": "Stiff-needled cypress-family conifer, known since the Late Cretaceous.",
+   "v": "硬い針葉をもつヒノキ科の針葉樹で、後期白亜紀から知られている。"
+  },
+  {
+   "k": "Its pollen is common in Cretaceous rocks; the living trees were found only in 1994.",
+   "v": "その花粉は白亜紀の地層によく見られるが、生きた木が発見されたのは1994年のことだった。"
+  },
+  {
+   "k": "Succulent-jointed cheirolepid of salty Cretaceous coasts.",
+   "v": "白亜紀の塩分の多い海岸に生えた、多肉質の節をもつケイロレピス類。"
+  },
+  {
+   "k": "Chloranthoid herb from Early Cretaceous Portugal with tiny, petal-less flowers.",
+   "v": "前期白亜紀のポルトガル産のセンリョウ類に似た草本で、花弁のない小さな花をつける。"
+  },
+  {
+   "k": "Buttercup relative from Liaoning, among the oldest eudicots.",
+   "v": "遼寧省産のキンポウゲの親類で、最古の真正双子葉類のひとつ。"
+  },
+  {
+   "k": "Small herb with paired flower stalks, from the Yixian lakes.",
+   "v": "義県の湖から見つかった、対になった花柄をもつ小さな草本。"
+  },
+  {
+   "k": "Early Cretaceous herb with tiny flowers, from Liaoning.",
+   "v": "遼寧省産の前期白亜紀の草本で、小さな花をつける。"
+  },
+  {
+   "k": "Tiny saxifrage-like flower preserved in Swedish charcoal.",
+   "v": "スウェーデンの木炭化石に保存された、ユキノシタに似た小さな花。"
+  },
+  {
+   "k": "Buttercup-order flower with a spiral of small tepals, from Portugal.",
+   "v": "ポルトガル産のキンポウゲ目の花で、小さな花被片がらせん状に並ぶ。"
+  },
+  {
+   "k": "Small eudicot herb from the Crato limestone of Brazil.",
+   "v": "ブラジルのクラト石灰岩から見つかった小さな真正双子葉類の草本。"
+  },
+  {
+   "k": "Magnoliid shrub with small flowers, from the Crato limestone.",
+   "v": "クラト石灰岩から見つかった、小さな花をつけるモクレン類の低木。"
+  },
+  {
+   "k": "Magnoliid of the Crato lake shores, near the custard-apple family.",
+   "v": "クラトの湖岸に生えたモクレン類で、バンレイシ科に近い。"
+  },
+  {
+   "k": "Spicebush relative with many-tepaled flowers, from Virginia.",
+   "v": "バージニア州産のロウバイの親類で、多数の花被片をもつ花をつける。"
+  },
+  {
+   "k": "Early water-lily flower from Portugal.",
+   "v": "ポルトガル産の初期のスイレンの花。"
+  },
+  {
+   "k": "Tiny relative of the giant water lily, from New Jersey.",
+   "v": "ニュージャージー州産のオオオニバスの小さな親類。"
+  },
+  {
+   "k": "Fanwort-family water plant with round floating leaves, from Brazil.",
+   "v": "ブラジル産のハゴロモモ科の水草で、丸い浮葉をもつ。"
+  },
+  {
+   "k": "Floating aroid rosettes like water lettuce, from Late Cretaceous Alberta.",
+   "v": "後期白亜紀のアルバータ州産の浮遊性サトイモ類のロゼットで、ボタンウキクサに似る。"
+  },
+  {
+   "k": "Leafless green-jointed shrub of dry lands, known since the Early Cretaceous.",
+   "v": "乾燥地に生える、葉がなく緑の節をもつ低木で、前期白亜紀から知られている。"
+  },
+  {
+   "k": "Welwitschia-like gnetophyte of the dry Crato coast.",
+   "v": "乾燥したクラトの海岸に生えた、ウェルウィッチアに似たグネツム類。"
+  },
+  {
+   "k": "Finely divided fern of the Wealden wetlands.",
+   "v": "ウィールドの湿地に生えた、細かく裂けた葉のシダ。"
+  },
+  {
+   "k": "Small Indian tree-shrub with mulberry-like seed heads, of its own extinct order.",
+   "v": "クワの実のような種子の集まりをつけるインドの小さな低木状の木で、独自の絶滅した目に属する。"
+  },
+  {
+   "k": "Late-surviving bennettitalean with a cone at each leaf base.",
+   "v": "遅くまで生き残ったベネチテス類で、葉の基部ごとに球果をつける。"
+  },
+  {
+   "k": "Club-shaped dasyclad, still alive in tropical lagoons.",
+   "v": "棍棒形のカサノリ類で、今も熱帯の潟湖に生きている。"
+  },
+  {
+   "k": "Beaded dasyclad with tufts at its tips.",
+   "v": "先端に房をもつ数珠状のカサノリ類。"
+  },
+  {
+   "k": "Clavatoracean stonewort with three-fold symmetric fruiting cases.",
+   "v": "三回対称の生殖器官をもつクラヴァトル類のシャジクモ。"
+  },
+  {
+   "k": "Early lotus relative with round, shield-like leaves.",
+   "v": "丸い盾形の葉をもつハスの初期の親類。"
+  },
+  {
+   "k": "Tiny floating fern that turns ponds red; in the Eocene it covered the Arctic Ocean.",
+   "v": "池を赤く染める小さな浮遊性のシダ。始新世には北極海を覆い尽くした。"
+  },
+  {
+   "k": "Coral fungus preserved in Burmese amber.",
+   "v": "ミャンマー産の琥珀に保存されたホウキタケ類。"
+  },
+  {
+   "k": "The oldest insect-killing fungus, sprouting from a scale insect in amber.",
+   "v": "最古の昆虫病原菌で、琥珀の中のカイガラムシから生えている。"
+  },
+  {
+   "k": "Crusty lichen from the Early Cretaceous of Vancouver Island.",
+   "v": "バンクーバー島の前期白亜紀から見つかった固着地衣。"
+  },
+  {
+   "k": "Walnuts appear in the Eocene and spread across the northern continents.",
+   "v": "クルミは始新世に現れ、北半球の大陸に広がった。"
+  },
+  {
+   "k": "Hickories filled Paleocene forests of North America and Europe.",
+   "v": "ヒッコリーは北アメリカとヨーロッパの暁新世の森を満たした。"
+  },
+  {
+   "k": "Chestnuts, with spiny husks around glossy nuts.",
+   "v": "クリはつやのある実を、とげだらけのいがで包む。"
+  },
+  {
+   "k": "Elms, with round papery seeds, date back to the Paleocene.",
+   "v": "丸い紙のような翼果をもつニレは、暁新世にまでさかのぼる。"
+  },
+  {
+   "k": "Lindens hum with bees when their sweet flowers open.",
+   "v": "シナノキの甘い花が開くと、ミツバチの羽音が響く。"
+  },
+  {
+   "k": "Katsura relatives were common along Paleocene rivers; its autumn leaves smell of caramel.",
+   "v": "カツラの親類は暁新世の川沿いにふつうに見られた。秋の落ち葉はキャラメルの香りがする。"
+  },
+  {
+   "k": "Extinct wheel-wood relative of the warm Paleocene Arctic.",
+   "v": "温暖な暁新世の北極圏に生えた、絶滅したヤマグルマの親類。"
+  },
+  {
+   "k": "Extinct Eocene plane tree with big lobed leaves.",
+   "v": "大きく切れ込んだ葉をもつ、絶滅した始新世のスズカケノキ。"
+  },
+  {
+   "k": "Swamp tree whose leaves turn a blazing scarlet in autumn.",
+   "v": "秋に葉が燃えるような緋色に変わる沼地の木。"
+  },
+  {
+   "k": "Elm relative found from the Eocene; a few relict species survive.",
+   "v": "始新世から見つかっているニレの親類で、わずかな遺存種が生き残っている。"
+  },
+  {
+   "k": "Walnut relative hung with long chains of winged nuts.",
+   "v": "翼のある実の長い房を垂らすクルミの親類。"
+  },
+  {
+   "k": "Rainforest tree with bright blue fruit, known from the Eocene of Australia.",
+   "v": "鮮やかな青い実をつける熱帯雨林の木で、オーストラリアの始新世から知られる。"
+  },
+  {
+   "k": "Evergreen chestnut relative of warm Asian forests since the Eocene.",
+   "v": "始新世から温暖なアジアの森に生える常緑のクリの親類。"
+  },
+  {
+   "k": "Fan palm of tropical swamps; its pollen goes back to the Paleocene.",
+   "v": "熱帯の沼地に生える扇状の葉のヤシ。その花粉は暁新世にまでさかのぼる。"
+  },
+  {
+   "k": "Shade-loving conifer with drooping tips and tiny cones.",
+   "v": "先端が垂れ下がり、小さな球果をつける陰を好む針葉樹。"
+  },
+  {
+   "k": "Scale-leaved conifer known from the Paleocene Arctic.",
+   "v": "暁新世の北極圏から知られる鱗片葉の針葉樹。"
+  },
+  {
+   "k": "True cedars, with flat-topped tiers and upright barrel cones.",
+   "v": "真のスギ類（ヒマラヤスギ属）。平らな枝の層と直立する樽形の球果をもつ。"
+  },
+  {
+   "k": "Tall conifer whose cones have three-pointed bracts; known since the Oligocene.",
+   "v": "球果に三叉の苞鱗をもつ背の高い針葉樹で、漸新世から知られている。"
+  },
+  {
+   "k": "Hardy conifer with blue, berry-like cones.",
+   "v": "青い液果のような球果をつける丈夫な針葉樹。"
+  },
+  {
+   "k": "Ash trees, with bunches of winged keys, since the Eocene.",
+   "v": "翼果の房をつけるトネリコ類で、始新世から存在する。"
+  },
+  {
+   "k": "Candles of white flowers and shiny conkers; known from the Paleocene.",
+   "v": "ろうそくのような白い花穂とつやのある実。暁新世から知られている。"
+  },
+  {
+   "k": "Mango leaves are found in Paleocene rocks of India.",
+   "v": "インドの暁新世の地層からマンゴーの葉が見つかっている。"
+  },
+  {
+   "k": "Giant herb with huge leaves; fossil banana seeds come from early Paleogene India.",
+   "v": "巨大な葉をもつ大型の草本。バナナの種子化石はインドの古第三紀初期から見つかる。"
+  },
+  {
+   "k": "Floating fern that carpeted the Eocene Arctic Ocean and drew down carbon dioxide.",
+   "v": "始新世の北極海を覆い、二酸化炭素を大量に吸収した浮遊性のシダ。"
+  },
+  {
+   "k": "Sharp-edged sedge; its seeds are common in Paleogene swamp deposits.",
+   "v": "葉の縁が鋭いカヤツリグサ類。その種子は古第三紀の沼沢地の堆積物によく見られる。"
+  },
+  {
+   "k": "Fern almost unchanged since the Paleocene.",
+   "v": "暁新世からほとんど変わっていないシダ。"
+  },
+  {
+   "k": "Large fern of wet ground, known from Paleocene rocks.",
+   "v": "湿った土地に生える大型のシダで、暁新世の地層から知られる。"
+  },
+  {
+   "k": "Tall, leathery fern that grows among mangroves.",
+   "v": "マングローブの中に生える、背の高い革質のシダ。"
+  },
+  {
+   "k": "Roses grew in Eocene North America, with red hips after their flowers.",
+   "v": "始新世の北アメリカにはバラが生え、花の後に赤い実をつけた。"
+  },
+  {
+   "k": "Thorny thickets with blackberries and raspberries.",
+   "v": "ブラックベリーやラズベリーを実らせるとげの茂み。"
+  },
+  {
+   "k": "Shrub with flat white flower heads and dark berries.",
+   "v": "平たい白い花序と黒っぽい実をつける低木。"
+  },
+  {
+   "k": "Extinct ginger of Paleocene and Eocene tropical forests.",
+   "v": "暁新世と始新世の熱帯林に生えた、絶滅したショウガ類。"
+  },
+  {
+   "k": "Giant arum of river banks, found in the Paleocene rainforest of Cerrejón.",
+   "v": "川岸に生える巨大なサトイモ類で、セレホンの暁新世の熱帯雨林から見つかった。"
+  },
+  {
+   "k": "The oldest fossil orchids are in Eocene amber.",
+   "v": "最古のランの化石は始新世の琥珀の中にある。"
+  },
+  {
+   "k": "Thorny shrub of dry ground with sweet red fruit.",
+   "v": "甘い赤い実をつける、乾いた土地のとげのある低木。"
+  },
+  {
+   "k": "Shrub with big round heads of blue or pink flowers.",
+   "v": "青やピンクの大きな丸い花房をつける低木。"
+  },
+  {
+   "k": "Water lily with round yellow flowers held above the water.",
+   "v": "丸い黄色の花を水面の上に咲かせるスイレンの仲間。"
+  },
+  {
+   "k": "Seagrass of warm shallow seas since the Eocene.",
+   "v": "始新世から暖かく浅い海に生える海草。"
+  },
+  {
+   "k": "Woody-stemmed seagrass found in Eocene limestones of Florida.",
+   "v": "木質の茎をもつ海草で、フロリダ州の始新世石灰岩から見つかった。"
+  },
+  {
+   "k": "Jointed coralline alga with forked chalky branches.",
+   "v": "二又に分かれた石灰質の枝をもつ、節のあるサンゴモ。"
+  },
+  {
+   "k": "Fine pink coralline tufts that grow on other seaweeds.",
+   "v": "他の海藻の上に生える、細いピンク色のサンゴモの房。"
+  },
+  {
+   "k": "Extinct chalky green alga whose egg-shaped segments fill Paleogene sands.",
+   "v": "絶滅した石灰質の緑藻で、卵形の節片が古第三紀の砂を埋め尽くしている。"
+  },
+  {
+   "k": "Star-shaped plankton plates that pile up as ooze on the deep sea floor.",
+   "v": "星形をした浮遊生物の殻板で、深海底に積もって軟泥になる。"
+  },
+  {
+   "k": "Spiky rosette that rises and sinks in the water; its seeds are common in Paleogene lake beds.",
+   "v": "水中で浮き沈みするとげのあるロゼット。その種子は古第三紀の湖成層によく見られる。"
+  },
+  {
+   "k": "Bolete partnered with pine roots; its fossil root sheaths are Eocene.",
+   "v": "マツの根と共生するイグチ類。菌根の菌鞘の化石は始新世のもの。"
+  },
+  {
+   "k": "Tiny pin-shaped fungus that grows on resin; found in Eocene amber.",
+   "v": "樹脂の上に生える小さなピン形の菌類で、始新世の琥珀から見つかる。"
+  },
+  {
+   "k": "Pink slime mould whose fruiting bodies are preserved in Baltic amber.",
+   "v": "ピンク色の変形菌で、その子実体がバルト海の琥珀に保存されている。"
+  },
+  {
+   "k": "Leafy grey-green lichen, known from Eocene amber.",
+   "v": "灰緑色の葉状地衣で、始新世の琥珀から知られる。"
+  },
+  {
+   "k": "Its resin hardened into the Miocene amber of the Caribbean.",
+   "v": "その樹脂は固まってカリブ海地域の中新世の琥珀になった。"
+  },
+  {
+   "k": "Mangrove that breathes through pencil-like roots poking out of the mud.",
+   "v": "泥から突き出た鉛筆のような根で呼吸するマングローブ。"
+  },
+  {
+   "k": "The most massive trees on Earth, on the slopes of the Sierra Nevada.",
+   "v": "シエラネバダ山脈の斜面に生える、地球上で最も体積の大きな木。"
+  },
+  {
+   "k": "Dark green flame of the Mediterranean hills.",
+   "v": "地中海の丘に立つ深緑の炎。"
+  },
+  {
+   "k": "Umbrella-shaped pine with edible pine nuts.",
+   "v": "食べられる松の実をつける、傘の形をしたマツ。"
+  },
+  {
+   "k": "Savanna tree whose yellow fruit elephants seek out.",
+   "v": "ゾウが探し求める黄色い実をつけるサバンナの木。"
+  },
+  {
+   "k": "Woodland tree of central Africa; new leaves flush red and copper.",
+   "v": "中央アフリカの疎林の木。新芽は赤や銅色に色づく。"
+  },
+  {
+   "k": "Dark red flowers and huge sausage-shaped fruit hanging on ropes.",
+   "v": "暗赤色の花と、ロープのような柄から垂れ下がる巨大なソーセージ形の実。"
+  },
+  {
+   "k": "Feathery-leaved savanna tree with brown, sticky pods.",
+   "v": "羽のような葉をもつサバンナの木で、茶色く粘り気のある莢をつける。"
+  },
+  {
+   "k": "Fan palm with forked trunks, along desert rivers like the Nile.",
+   "v": "幹が二又に分かれる扇状の葉のヤシで、ナイル川などの砂漠の川沿いに生える。"
+  },
+  {
+   "k": "Small understory tree with pods growing straight from its trunk.",
+   "v": "実が幹から直接ぶら下がる、林床の小高木。"
+  },
+  {
+   "k": "Amazon giant whose heavy fruit is opened only by agoutis.",
+   "v": "アマゾンの巨木で、その重い実を割れるのはアグーチだけ。"
+  },
+  {
+   "k": "Bat-pollinated tree with spiny, famously smelly fruit.",
+   "v": "コウモリが受粉する木で、とげのある実は強烈なにおいで知られる。"
+  },
+  {
+   "k": "Pink flowers and round fruit grow straight from its trunk.",
+   "v": "ピンク色の花と丸い実が幹から直接つく。"
+  },
+  {
+   "k": "Silvery willow of river banks.",
+   "v": "川岸に生える銀白色のヤナギ。"
+  },
+  {
+   "k": "Gnarled, silver-leaved tree of the Mediterranean.",
+   "v": "節くれだった幹と銀色の葉をもつ地中海の木。"
+  },
+  {
+   "k": "Evergreen with red bark and round, bumpy red fruit.",
+   "v": "赤い樹皮と、丸くでこぼこした赤い実をもつ常緑樹。"
+  },
+  {
+   "k": "New Zealand's 'Christmas tree' bursts into crimson flowers.",
+   "v": "ニュージーランドの「クリスマスツリー」で、深紅の花を一斉に咲かせる。"
+  },
+  {
+   "k": "Drops its leaves and covers itself in scarlet bells.",
+   "v": "葉を落とし、全身を緋色の鐘形の花で覆う。"
+  },
+  {
+   "k": "Desert palm of oases, wearing a skirt of dead leaves.",
+   "v": "枯れ葉のスカートをまとった、オアシスの砂漠のヤシ。"
+  },
+  {
+   "k": "Very tall grass of African savannas and river banks.",
+   "v": "アフリカのサバンナや川岸に生える非常に背の高いイネ科植物。"
+  },
+  {
+   "k": "Fine-leaved tussock grass of cool steppes and mountains.",
+   "v": "冷涼なステップや山地に生える、細い葉の株立ちのイネ科植物。"
+  },
+  {
+   "k": "Shortgrass of the prairies with eyelash-like seed heads.",
+   "v": "まつげのような穂をつけるプレーリーの短茎草。"
+  },
+  {
+   "k": "Tulips come from the steppes and mountains of Central Asia.",
+   "v": "チューリップは中央アジアのステップや山地の出身だ。"
+  },
+  {
+   "k": "Scarlet poppies of open, disturbed ground.",
+   "v": "開けた荒れ地に咲く緋色のケシ。"
+  },
+  {
+   "k": "Spires of blue-purple pea flowers.",
+   "v": "青紫色の蝶形花が塔のように咲き上がる。"
+  },
+  {
+   "k": "Tall daisy of the American prairies whose heads follow the sun.",
+   "v": "花が太陽を追って向きを変える、アメリカのプレーリーの背の高いキク科植物。"
+  },
+  {
+   "k": "Fragrant grey shrub of dry Mediterranean hills.",
+   "v": "地中海の乾いた丘に生える、香りのよい灰色の低木。"
+  },
+  {
+   "k": "Deep blue trumpets of mountain meadows.",
+   "v": "山の草原に咲く深い青色のラッパ形の花。"
+  },
+  {
+   "k": "Low shrub with blue-black berries in heaths and forests.",
+   "v": "ヒースや森に生える低木で、青黒い実をつける。"
+  },
+  {
+   "k": "Knee-high birch of the tundra; a sign of cold ice-age climates.",
+   "v": "膝ほどの高さのツンドラのカバノキで、氷期の寒冷な気候の目印。"
+  },
+  {
+   "k": "Tight cushion of tundra covered in pink flowers.",
+   "v": "ピンクの花に覆われた、ぎっしり詰まったツンドラのクッション植物。"
+  },
+  {
+   "k": "Round, golden-spined cactus of Mexican deserts.",
+   "v": "メキシコの砂漠に生える、金色のとげをもつ球形のサボテン。"
+  },
+  {
+   "k": "Spiky rosette that flowers once, on a tall pole, then dies.",
+   "v": "とげのあるロゼットで、一生に一度だけ高い花茎に花を咲かせて枯れる。"
+  },
+  {
+   "k": "Branching tree yucca of the Mojave Desert.",
+   "v": "モハーベ砂漠に生える、枝分かれする木立ちのユッカ。"
+  },
+  {
+   "k": "Bundle of thorny whips tipped with red flowers after rain.",
+   "v": "とげのある鞭のような枝の束で、雨の後に先端に赤い花をつける。"
+  },
+  {
+   "k": "Salt-tolerant shrub of desert rivers, clouded in pink flowers.",
+   "v": "砂漠の川沿いに生える塩に強い低木で、ピンクの花に包まれる。"
+  },
+  {
+   "k": "Leafless, twisted shrub of the Central Asian deserts.",
+   "v": "中央アジアの砂漠に生える、葉がなくねじれた低木。"
+  },
+  {
+   "k": "Pairs of fat leaves that look like pebbles in the Namib sand.",
+   "v": "ナミブの砂の中で小石のように見える、対になった肉厚の葉。"
+  },
+  {
+   "k": "Iris with sword-like leaves and yellow flowers on pond edges.",
+   "v": "池のほとりに生えるアヤメ類で、剣のような葉と黄色い花をもつ。"
+  },
+  {
+   "k": "Floating Amazon plant with lilac flower spikes.",
+   "v": "薄紫色の花穂をつける、アマゾン原産の浮遊植物。"
+  },
+  {
+   "k": "Carnivorous bog plant whose tall pitchers drown insects.",
+   "v": "背の高い筒状の葉で昆虫を溺れさせる湿原の食虫植物。"
+  },
+  {
+   "k": "Tropical vine with hanging pitchers that trap insects.",
+   "v": "垂れ下がる捕虫袋で昆虫を捕らえる熱帯のつる植物。"
+  },
+  {
+   "k": "Rosettes of the American tropics that hold pools of water in their leaves.",
+   "v": "葉の間に水をためるアメリカ熱帯のロゼット植物。"
+  },
+  {
+   "k": "Leafless parasite with the world's largest single flower, smelling of rotting meat.",
+   "v": "世界最大の単一の花を咲かせる葉のない寄生植物で、腐肉のにおいを放つ。"
+  },
+  {
+   "k": "Orange and blue flowers shaped like a bird's head.",
+   "v": "鳥の頭のような形をしたオレンジと青の花。"
+  },
+  {
+   "k": "Tall spikes of purple bells at forest edges.",
+   "v": "森の縁に立つ、紫色の釣鐘形の花の高い穂。"
+  },
+  {
+   "k": "Long-leaved seagrass of tropical shallows, grazed by dugongs.",
+   "v": "熱帯の浅瀬に生える長い葉の海草で、ジュゴンが食べる。"
+  },
+  {
+   "k": "Bright green seagrass of wave-beaten Pacific rocks.",
+   "v": "太平洋の波に打たれる岩に生える鮮やかな緑の海草。"
+  },
+  {
+   "k": "Chalky green alga shaped like a shaving brush.",
+   "v": "ひげそりブラシのような形をした石灰質の緑藻。"
+  },
+  {
+   "k": "Green alga with a stiff, chalky fan on a stalk.",
+   "v": "柄の上に硬い石灰質の扇をつける緑藻。"
+  },
+  {
+   "k": "Kelp with a float the size of a fist at the end of a long whip-like stalk.",
+   "v": "長い鞭のような柄の先に、拳ほどの浮きをつけたケルプ。"
+  },
+  {
+   "k": "Long, frilly-edged kelp of cold Atlantic coasts.",
+   "v": "大西洋の寒冷な海岸に生える、縁がフリル状の長いコンブ類。"
+  },
+  {
+   "k": "Floating rosette with horned nuts.",
+   "v": "角のある実をつける浮遊性のロゼット。"
+  },
+  {
+   "k": "Fast-growing waterweed with whorls of small leaves.",
+   "v": "小さな葉が輪生する、成長の速い水草。"
+  },
+  {
+   "k": "Water plant with fans of finely cut leaves.",
+   "v": "細かく裂けた扇状の葉をもつ水草。"
+  },
+  {
+   "k": "Buttercup of streams with white flowers on the surface.",
+   "v": "渓流に生えるキンポウゲの仲間で、水面に白い花を咲かせる。"
+  },
+  {
+   "k": "An ink cap preserved in Miocene Dominican amber.",
+   "v": "中新世のドミニカ産琥珀に保存されたヒトヨタケ類。"
+  },
+  {
+   "k": "Bright red brittlegill of pine woods.",
+   "v": "マツ林に生える真っ赤なベニタケ。"
+  },
+  {
+   "k": "Blue mushroom that bleeds blue milk when cut.",
+   "v": "切ると青い乳液がにじみ出る青いキノコ。"
+  },
+  {
+   "k": "Black, trumpet-shaped mushroom of leaf litter.",
+   "v": "落ち葉の中に生える黒いラッパ形のキノコ。"
+  },
+  {
+   "k": "Japanese bonnet that glows green on rainy nights.",
+   "v": "雨の夜に緑色に光る日本のクヌギタケ類。"
+  },
+  {
+   "k": "Cold-loving cave mould that grows on the noses of hibernating bats.",
+   "v": "冬眠中のコウモリの鼻に生える、寒さを好む洞窟のカビ。"
+  },
+  {
+   "k": "Lichen that hangs from branches in grey-green tassels.",
+   "v": "枝から灰緑色の房となって垂れ下がる地衣類。"
+  },
+  {
+   "k": "Yellow-green crusts on bare rock; grows so slowly it is used to date glacier retreat.",
+   "v": "むき出しの岩に広がる黄緑色の固着地衣。成長が非常に遅いため、氷河後退の年代測定に使われる。"
+  },
+  {
+   "k": "Wild wheat of the Fertile Crescent, ancestor of the first farmed wheats.",
+   "v": "肥沃な三日月地帯の野生のコムギで、最初に栽培されたコムギの祖先。"
+  },
+  {
+   "k": "A new species born in an English salt marsh in the 1890s.",
+   "v": "1890年代にイングランドの塩性湿地で誕生した新しい種。"
+  },
+  {
+   "k": "Chalk-plated plankton whose blooms whiten the sea; it appeared about 270,000 years ago.",
+   "v": "石灰質の殻板をもつ浮遊生物で、その大増殖は海を白く染める。約27万年前に出現した。"
+  },
+  {
+   "k": "Microbial matground",
+   "v": "微生物マット底"
+  },
+  {
+   "k": "Revive ({0} EP)",
+   "v": "復活（{0} EP）"
+  },
+  {
+   "k": "All your groups of it are gone. You can bring one back to a habitat center of yours.",
+   "v": "この種のあなたの群れはすべて失われた。生息地の中心に1つ呼び戻せる。"
+  },
+  {
+   "k": "No free tile for it on or near your habitat centers",
+   "v": "生息地の中心やその近くに空いているマスがない"
+  },
+  {
+   "k": "No free {0} on or near your habitat centers",
+   "v": "生息地の中心やその近くに空いている{0}がない"
+  },
+  {
+   "k": "The {0} is back (−{1} EP)",
+   "v": "{0}が復活した（−{1} EP）"
+  },
+  {
+   "k": "Nothing to bring back",
+   "v": "呼び戻せるものはない"
+  },
+  {
+   "k": "Couldn't place it",
+   "v": "配置できなかった"
+  },
+  {
+   "k": "Evolved",
+   "v": "進化済み"
+  },
+  {
+   "k": "{0} → {1}",
+   "v": "{0} → {1}"
   }
  ]
 }

@@ -18945,6 +18945,14 @@
    "v": "Novo neste turno: pode agir a partir do próximo"
   },
   {
+   "k": "First encounter with the wild",
+   "v": "Primeiro encontro com a vida selvagem"
+  },
+  {
+   "k": "Your animals meet a wild group for the first time: {0} ({1}). Others share this world with you.",
+   "v": "Seus animais encontram um grupo selvagem pela primeira vez: {0} ({1}). Outros compartilham este mundo com você."
+  },
+  {
    "k": "Unexplored",
    "v": "Inexplorado"
   },
@@ -19619,6 +19627,3106 @@
   {
    "k": "Ready",
    "v": "Pronto"
+  },
+  {
+   "k": "Microbial mats",
+   "v": "Esteiras microbianas"
+  },
+  {
+   "k": "Damp flats crusted with layers of microbes that trap sediment and build stromatolites: the oldest ecosystems on Earth, making oxygen for billions of years.",
+   "v": "Planícies úmidas cobertas por camadas de micróbios que retêm sedimentos e constroem estromatólitos: os ecossistemas mais antigos da Terra, produzindo oxigênio há bilhões de anos."
+  },
+  {
+   "k": "Mosses, liverworts and the first small vascular plants: the green film that first covered the land and began to make soil.",
+   "v": "Musgos, hepáticas e as primeiras pequenas plantas vasculares: a película verde que primeiro cobriu a terra e começou a formar o solo."
+  },
+  {
+   "k": "Open country covered in ferns and horsetails, the meadows of the world long before grasses evolved.",
+   "v": "Campo aberto coberto de samambaias e cavalinhas, as pradarias do mundo muito antes de as gramíneas surgirem."
+  },
+  {
+   "k": "Warm, wet forest with layer upon layer of life: the richest habitat on land, home to most land species.",
+   "v": "Floresta quente e úmida com camada sobre camada de vida: o hábitat mais rico em terra firme, lar da maioria das espécies terrestres."
+  },
+  {
+   "k": "Dry country where little rain falls: its life saves water, shelters by day and comes out at night.",
+   "v": "Terra seca onde pouco chove: sua vida economiza água, se abriga de dia e sai à noite."
+  },
+  {
+   "k": "Swamps and marshes between land and water, where many of the first land animals and plants took hold.",
+   "v": "Pântanos e brejos entre a terra e a água, onde muitos dos primeiros animais e plantas terrestres se estabeleceram."
+  },
+  {
+   "k": "Warm grassland dotted with trees, grazed by great herds and hunted by their predators.",
+   "v": "Campo quente salpicado de árvores, pastado por grandes manadas e caçado por seus predadores."
+  },
+  {
+   "k": "Cool, dry grassland stretching to the horizon, where speed and endurance pay.",
+   "v": "Campo fresco e seco que se estende até o horizonte, onde velocidade e resistência compensam."
+  },
+  {
+   "k": "Cold treeless land frozen for much of the year, with a brief, busy summer.",
+   "v": "Terra fria e sem árvores, congelada durante a maior parte do ano, com um verão breve e agitado."
+  },
+  {
+   "k": "A dome of ice kilometres thick; little lives on it, but its cold edges feed rich seas.",
+   "v": "Uma cúpula de gelo com quilômetros de espessura; pouca coisa vive nela, mas suas bordas frias alimentam mares ricos."
+  },
+  {
+   "k": "Reef",
+   "v": "Recife"
+  },
+  {
+   "k": "Built by living things over countless generations: stromatolites, sponges, then corals. Reefs shelter a crowd of sea life.",
+   "v": "Construído por seres vivos ao longo de incontáveis gerações: estromatólitos, esponjas e depois corais. Os recifes abrigam uma multidão de vida marinha."
+  },
+  {
+   "k": "Oasis",
+   "v": "Oásis"
+  },
+  {
+   "k": "Water in the desert: a pond fed from underground, a refuge every desert animal knows.",
+   "v": "Água no deserto: uma lagoa alimentada pelo subsolo, um refúgio que todo animal do deserto conhece."
+  },
+  {
+   "k": "Volcano",
+   "v": "Vulcão"
+  },
+  {
+   "k": "Molten rock breaking through the crust; its ash and lava destroy, then make some of the most fertile ground there is.",
+   "v": "Rocha derretida rompendo a crosta; suas cinzas e lava destroem e depois criam alguns dos solos mais férteis que existem."
+  },
+  {
+   "k": "Hot springs, geysers and steaming vents where heat-loving microbes paint the ground in bright colours.",
+   "v": "Fontes termais, gêiseres e fumarolas onde micróbios amantes do calor pintam o chão com cores vivas."
+  },
+  {
+   "k": "A flat-topped table of layered rock left standing as the land around it wore away.",
+   "v": "Uma mesa de rocha em camadas, de topo plano, que permaneceu de pé enquanto o terreno ao redor se desgastava."
+  },
+  {
+   "k": "A deep gorge cut by a river through layer after layer of rock, a record of millions of years.",
+   "v": "Um desfiladeiro profundo escavado por um rio através de camada após camada de rocha, um registro de milhões de anos."
+  },
+  {
+   "k": "Chalk cliffs made of the skeletons of countless tiny sea algae that lived in Cretaceous seas.",
+   "v": "Falésias de giz formadas pelos esqueletos de incontáveis algas marinhas minúsculas que viveram nos mares do Cretáceo."
+  },
+  {
+   "k": "A lake with no outlet, where the water evaporates and leaves a white crust of salt.",
+   "v": "Um lago sem saída, onde a água evapora e deixa uma crosta branca de sal."
+  },
+  {
+   "k": "A salt lake coloured pink by salt-loving microbes and algae thriving where little else can.",
+   "v": "Um lago salgado tingido de rosa por micróbios e algas amantes do sal, que prosperam onde quase nada mais consegue."
+  },
+  {
+   "k": "Hills of red sandstone striped in many colours, laid down in ancient deserts and lakes.",
+   "v": "Colinas de arenito vermelho listradas em muitas cores, depositadas em desertos e lagos antigos."
+  },
+  {
+   "k": "Limestone towers and caves dissolved by rain over millions of years, full of hidden waters.",
+   "v": "Torres e cavernas de calcário dissolvidas pela chuva ao longo de milhões de anos, cheias de águas escondidas."
+  },
+  {
+   "k": "Jungle",
+   "v": "Selva"
+  },
+  {
+   "k": "A dense tropical canopy so thick that little light reaches the ground.",
+   "v": "Um dossel tropical tão denso que pouca luz chega ao chão."
+  },
+  {
+   "k": "Broadleaf forest",
+   "v": "Floresta de folhosas"
+  },
+  {
+   "k": "A forest of leafy trees that shade and feed a great web of life beneath them.",
+   "v": "Uma floresta de árvores frondosas que dão sombra e alimento a uma grande teia de vida abaixo delas."
+  },
+  {
+   "k": "Conifer forest",
+   "v": "Floresta de coníferas"
+  },
+  {
+   "k": "Evergreen cone-bearing trees, the oldest kind of forest still standing today.",
+   "v": "Árvores perenes com pinhas, o tipo de floresta mais antigo ainda de pé hoje."
+  },
+  {
+   "k": "Underwater volcano",
+   "v": "Vulcão submarino"
+  },
+  {
+   "k": "A seamount rising from the sea floor; its slopes gather sea life and its eruptions remake the sea bed.",
+   "v": "Um monte submarino que se ergue do fundo do mar; suas encostas reúnem vida marinha e suas erupções remodelam o leito oceânico."
+  },
+  {
+   "k": "Hydrothermal vents",
+   "v": "Fontes hidrotermais"
+  },
+  {
+   "k": "Black smokers pouring out hot, mineral-rich water: in the dark, whole communities live on chemical energy instead of sunlight, perhaps as the first life did.",
+   "v": "Fumarolas negras despejando água quente e rica em minerais: no escuro, comunidades inteiras vivem de energia química em vez de luz solar, talvez como a primeira vida."
+  },
+  {
+   "k": "Shallow hydrothermal field",
+   "v": "Campo hidrotermal raso"
+  },
+  {
+   "k": "White smokers, gas seeps and sulphur on a shallow sea floor, covered in bacterial mats.",
+   "v": "Fumarolas brancas, exalações de gás e enxofre num fundo marinho raso, cobertos por esteiras bacterianas."
+  },
+  {
+   "k": "Stromatolite sea floor",
+   "v": "Fundo marinho de estromatólitos"
+  },
+  {
+   "k": "Domes and mounds built layer by layer by microbial mats, the first reefs and for most of Earth's history its most common sign of life.",
+   "v": "Cúpulas e montes construídos camada por camada por esteiras microbianas: os primeiros recifes e, durante a maior parte da história da Terra, o sinal de vida mais comum."
+  },
+  {
+   "k": "Your {0} gains {1} for free",
+   "v": "Seu {0} ganha {1} de graça"
+  },
+  {
+   "k": "{0} group of yours nearby is healed",
+   "v": "{0} grupo seu por perto é curado"
+  },
+  {
+   "k": "{0} groups of yours nearby are healed",
+   "v": "{0} grupos seus por perto são curados"
+  },
+  {
+   "k": "A group of {0} joins you",
+   "v": "Um grupo de {0} se junta a você"
+  },
+  {
+   "k": "A feast: your {0} raises young for free",
+   "v": "Um banquete: seu {0} cria filhotes de graça"
+  },
+  {
+   "k": "A second wind: every group of yours gets an extra action this turn",
+   "v": "Um novo fôlego: cada grupo seu ganha uma ação extra neste turno"
+  },
+  {
+   "k": "Fertile ground: your groups nearby can reproduce again at once",
+   "v": "Terra fértil: seus grupos por perto podem se reproduzir de novo na hora"
+  },
+  {
+   "k": "New animal discovered",
+   "v": "Novo animal descoberto"
+  },
+  {
+   "k": "New plant discovered",
+   "v": "Nova planta descoberta"
+  },
+  {
+   "k": "New landscape discovered",
+   "v": "Nova paisagem descoberta"
+  },
+  {
+   "k": "Reward: {0}",
+   "v": "Recompensa: {0}"
+  },
+  {
+   "k": "OK",
+   "v": "OK"
+  },
+  {
+   "k": "Life is still all in the sea: you begin on the seabed, in the layer under sea level",
+   "v": "Toda a vida ainda está no mar: você começa no fundo do mar, abaixo do nível do mar"
+  },
+  {
+   "k": "Starting period",
+   "v": "Período inicial"
+  },
+  {
+   "k": "You begin on the surface",
+   "v": "Você começa na superfície"
+  },
+  {
+   "k": "{0:0} % of the world is land today",
+   "v": "Hoje {0:0} % do mundo é terra firme"
+  },
+  {
+   "k": "{0} turns to the present day ({1} in all)",
+   "v": "{0} turnos até o presente ({1} no total)"
+  },
+  {
+   "k": "Flat green lobes on damp ground: among the very first land plants.",
+   "v": "Lóbulos verdes e achatados sobre solo úmido: entre as primeiras plantas terrestres."
+  },
+  {
+   "k": "Known only from their spores; tiny moss-like crusts.",
+   "v": "Conhecidas apenas pelos seus esporos; minúsculas crostas semelhantes a musgo."
+  },
+  {
+   "k": "Flat thalli sprouting horn-shaped spore capsules.",
+   "v": "Talos achatados dos quais brotam cápsulas de esporos em forma de chifre."
+  },
+  {
+   "k": "The first known vascular plant: forked stems a few centimetres tall.",
+   "v": "A primeira planta vascular conhecida: caules bifurcados com poucos centímetros de altura."
+  },
+  {
+   "k": "An early clubmoss with leafy stems.",
+   "v": "Um licopódio primitivo de caules folhosos."
+  },
+  {
+   "k": "Cushions of moss on damp ground and rocks.",
+   "v": "Almofadas de musgo sobre solo úmido e rochas."
+  },
+  {
+   "k": "Leafless forked stems from the Rhynie chert hot springs.",
+   "v": "Caules bifurcados e sem folhas das fontes termais do sílex de Rhynie."
+  },
+  {
+   "k": "Rhynie chert plant with water-conducting tissue but no leaves.",
+   "v": "Planta do sílex de Rhynie com tecido condutor de água, mas sem folhas."
+  },
+  {
+   "k": "Clumps of stems with spore sacs along the sides.",
+   "v": "Tufos de caules com esporângios ao longo das laterais."
+  },
+  {
+   "k": "Branching stems up to half a metre: forerunner of ferns and seed plants.",
+   "v": "Caules ramificados de até meio metro: precursor das samambaias e das plantas com sementes."
+  },
+  {
+   "k": "Leafy clubmoss of the Rhynie chert.",
+   "v": "Licopódio folhoso do sílex de Rhynie."
+  },
+  {
+   "k": "Creeping clubmoss with spiny leaves.",
+   "v": "Licopódio rastejante de folhas espinhosas."
+  },
+  {
+   "k": "Herbaceous clubmoss with forked leaves.",
+   "v": "Licopódio herbáceo de folhas bifurcadas."
+  },
+  {
+   "k": "Upright, much-branched stems nearly a metre tall.",
+   "v": "Caules eretos e muito ramificados com quase um metro de altura."
+  },
+  {
+   "k": "Shrubby progymnosperm.",
+   "v": "Progimnosperma arbustiva."
+  },
+  {
+   "k": "The oldest known seed plant.",
+   "v": "A planta com sementes mais antiga conhecida."
+  },
+  {
+   "k": "The first modern-looking tree, forming the first forests.",
+   "v": "A primeira árvore de aspecto moderno, que formou as primeiras florestas."
+  },
+  {
+   "k": "The earliest known tree: a pole with a crown of branches, Gilboa forest.",
+   "v": "A árvore mais antiga conhecida: um tronco com uma coroa de ramos, da floresta de Gilboa."
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches.",
+   "v": "Pequena árvore com uma coroa de ramos em forma de dedos."
+  },
+  {
+   "k": "A small early scale tree.",
+   "v": "Uma pequena árvore-escamosa primitiva."
+  },
+  {
+   "k": "Giant club moss up to 40 m; its trunks became coal.",
+   "v": "Licopódio gigante de até 40 m; seus troncos viraram carvão."
+  },
+  {
+   "k": "Scale tree with a dense, drooping crown.",
+   "v": "Árvore-escamosa de copa densa e pendente."
+  },
+  {
+   "k": "Ribbed lycopsid trunk topped by tufts of grassy leaves.",
+   "v": "Tronco canelado de licófita coroado por tufos de folhas semelhantes a capim."
+  },
+  {
+   "k": "Tree-sized horsetail growing in thickets along rivers.",
+   "v": "Cavalinha do tamanho de uma árvore que crescia em matagais ao longo dos rios."
+  },
+  {
+   "k": "Marattialean tree fern with a trunk wrapped in roots.",
+   "v": "Samambaia arborescente maratiácea com o tronco envolto em raízes."
+  },
+  {
+   "k": "Seed fern tree with huge fronds and seeds the size of eggs.",
+   "v": "Pteridosperma arborescente com frondes enormes e sementes do tamanho de ovos."
+  },
+  {
+   "k": "Tall tree with strap-shaped leaves, related to conifers.",
+   "v": "Árvore alta de folhas em forma de fita, aparentada com as coníferas."
+  },
+  {
+   "k": "One of the first conifers, like a small Norfolk pine.",
+   "v": "Uma das primeiras coníferas, parecida com uma pequena araucária-de-norfolk."
+  },
+  {
+   "k": "Seed fern whose tongue-shaped leaflets are common coal-ball fossils.",
+   "v": "Pteridosperma cujos folíolos em forma de língua são fósseis comuns nos nódulos de carvão."
+  },
+  {
+   "k": "Fern-like seed plant of the coal forests.",
+   "v": "Planta com sementes de aspecto de samambaia das florestas do carvão."
+  },
+  {
+   "k": "Scrambling horsetail with wedge-shaped leaves in whorls.",
+   "v": "Cavalinha trepadeira com folhas em forma de cunha dispostas em verticilos."
+  },
+  {
+   "k": "Small early fern, often growing on other plants.",
+   "v": "Pequena samambaia primitiva que frequentemente crescia sobre outras plantas."
+  },
+  {
+   "k": "Low clubmoss lineage that survives today.",
+   "v": "Linhagem de licopódios baixos que sobrevive até hoje."
+  },
+  {
+   "k": "Evergreen creeping clubmoss.",
+   "v": "Licopódio rastejante perene."
+  },
+  {
+   "k": "Tongue-leaved tree of Gondwana; its spread helped prove continental drift.",
+   "v": "Árvore de folhas em forma de língua de Gondwana; sua distribuição ajudou a provar a deriva continental."
+  },
+  {
+   "k": "Early glossopterid of the cold southern lowlands.",
+   "v": "Glossopterídea primitiva das frias planícies do sul."
+  },
+  {
+   "k": "Climbing seed plant with broad, net-veined leaves, in tropical Cathaysia.",
+   "v": "Planta trepadeira com sementes, de folhas largas com nervação reticulada, da Cataísia tropical."
+  },
+  {
+   "k": "Conifer of the dry Zechstein coasts.",
+   "v": "Conífera das costas áridas do Zechstein."
+  },
+  {
+   "k": "Conifer of the Permian and Triassic.",
+   "v": "Conífera do Permiano e do Triássico."
+  },
+  {
+   "k": "Strap-leaved plant related to the cycads.",
+   "v": "Planta de folhas em forma de fita aparentada com as cicadáceas."
+  },
+  {
+   "k": "Horsetails as thick as a wrist, lining Triassic rivers.",
+   "v": "Cavalinhas grossas como um pulso que ladeavam os rios do Triássico."
+  },
+  {
+   "k": "Royal ferns have barely changed in 200 million years.",
+   "v": "As samambaias-reais quase não mudaram em 200 milhões de anos."
+  },
+  {
+   "k": "Early Permian walchian conifer.",
+   "v": "Conífera walchiana do Permiano inicial."
+  },
+  {
+   "k": "Seed fern tree that dominated southern Triassic forests.",
+   "v": "Pteridosperma arborescente que dominou as florestas triássicas do sul."
+  },
+  {
+   "k": "The great logs of the Petrified Forest, Arizona.",
+   "v": "Os grandes troncos da Floresta Petrificada, no Arizona."
+  },
+  {
+   "k": "Unbranched lycopsid that spread over the world after the end-Permian extinction.",
+   "v": "Licófita não ramificada que se espalhou pelo mundo após a extinção do fim do Permiano."
+  },
+  {
+   "k": "Triassic horsetail of river banks.",
+   "v": "Cavalinha triássica das margens dos rios."
+  },
+  {
+   "k": "One of the earliest true cycads.",
+   "v": "Uma das primeiras cicadáceas verdadeiras."
+  },
+  {
+   "k": "Ginkgo relative with deeply divided leaves.",
+   "v": "Parente do ginkgo com folhas profundamente divididas."
+  },
+  {
+   "k": "Common Mesozoic fern foliage.",
+   "v": "Folhagem de samambaia comum no Mesozoico."
+  },
+  {
+   "k": "Gondwanan horsetail with split leaf sheaths.",
+   "v": "Cavalinha de Gondwana com bainhas foliares fendidas."
+  },
+  {
+   "k": "Peltasperm seed fern.",
+   "v": "Pteridosperma peltasperma."
+  },
+  {
+   "k": "Strap-leaved Triassic conifer of dry ground.",
+   "v": "Conífera triássica de folhas em forma de fita de terrenos secos."
+  },
+  {
+   "k": "Jurassic monkey-puzzle tree, fossilised cones from Cerro Cuadrado.",
+   "v": "Araucária jurássica, com pinhas fossilizadas do Cerro Cuadrado."
+  },
+  {
+   "k": "Scale-leaved conifer of dry Mesozoic coasts.",
+   "v": "Conífera de folhas escamiformes das costas áridas do Mesozoico."
+  },
+  {
+   "k": "Conifer with stiff, awl-shaped leaves.",
+   "v": "Conífera de folhas rígidas em forma de sovela."
+  },
+  {
+   "k": "Ginkgo with lobed fan leaves.",
+   "v": "Ginkgo com folhas em leque lobadas."
+  },
+  {
+   "k": "Deciduous ginkgo relative of cool, wet forests.",
+   "v": "Parente decídua do ginkgo de florestas frias e úmidas."
+  },
+  {
+   "k": "Conifer with broad, flat leaves.",
+   "v": "Conífera de folhas largas e achatadas."
+  },
+  {
+   "k": "Soft tree ferns, alive today in Australia and New Zealand.",
+   "v": "Samambaias arborescentes macias, vivas hoje na Austrália e na Nova Zelândia."
+  },
+  {
+   "k": "Bennettitalean with flower-like cones.",
+   "v": "Bennettitale com cones semelhantes a flores."
+  },
+  {
+   "k": "Squat, barrel-trunked bennettitalean.",
+   "v": "Bennettitale atarracada de tronco em forma de barril."
+  },
+  {
+   "k": "Umbrella-fronded fern; a Jurassic fern-prairie dominant.",
+   "v": "Samambaia de frondes em guarda-chuva; dominante nas pradarias de samambaias do Jurássico."
+  },
+  {
+   "k": "Fern of the Jurassic understory; the 'giant ferns' of dinosaur country.",
+   "v": "Samambaia do sub-bosque jurássico; as «samambaias gigantes» da terra dos dinossauros."
+  },
+  {
+   "k": "Living horsetails; their kind has been around since the Jurassic.",
+   "v": "Cavalinhas atuais; sua linhagem existe desde o Jurássico."
+  },
+  {
+   "k": "Palm-like cycads, a group older than the dinosaurs.",
+   "v": "Cicadáceas de aspecto de palmeira, um grupo mais antigo que os dinossauros."
+  },
+  {
+   "k": "A living fossil, now only in Japan.",
+   "v": "Um fóssil vivo, hoje encontrado apenas no Japão."
+  },
+  {
+   "k": "One of the oldest flowering plants, a water plant from Liaoning.",
+   "v": "Uma das plantas com flores mais antigas, uma planta aquática de Liaoning."
+  },
+  {
+   "k": "An early aquatic flowering plant from Spain.",
+   "v": "Uma planta com flores aquática primitiva da Espanha."
+  },
+  {
+   "k": "Water lilies are among the oldest flowering plant lineages.",
+   "v": "Os nenúfares estão entre as linhagens de plantas com flores mais antigas."
+  },
+  {
+   "k": "Magnolias were pollinated by beetles before bees existed.",
+   "v": "As magnólias eram polinizadas por besouros antes de existirem abelhas."
+  },
+  {
+   "k": "Plane trees along Cretaceous rivers.",
+   "v": "Plátanos ao longo dos rios do Cretáceo."
+  },
+  {
+   "k": "Laurel-family tree with mitten-shaped leaves.",
+   "v": "Árvore da família do louro com folhas em forma de luva."
+  },
+  {
+   "k": "Tall magnolia relative with tulip-like flowers.",
+   "v": "Parente alto da magnólia com flores semelhantes a tulipas."
+  },
+  {
+   "k": "Redwoods: the tallest trees on Earth.",
+   "v": "Sequoias: as árvores mais altas da Terra."
+  },
+  {
+   "k": "Deciduous redwood; once covered the Arctic, now wild only in China.",
+   "v": "Sequoia decídua; já cobriu o Ártico, hoje cresce em estado selvagem apenas na China."
+  },
+  {
+   "k": "Drought-hardy, jointed conifer of dry coasts.",
+   "v": "Conífera articulada e resistente à seca das costas áridas."
+  },
+  {
+   "k": "Tough fern of Cretaceous coastal flats.",
+   "v": "Samambaia resistente das planícies costeiras do Cretáceo."
+  },
+  {
+   "k": "False tree fern: its 'trunk' was a mass of stems and roots.",
+   "v": "Falsa samambaia arborescente: seu «tronco» era uma massa de caules e raízes."
+  },
+  {
+   "k": "Fan palms appear late in the Cretaceous.",
+   "v": "As palmeiras-leque surgem no fim do Cretáceo."
+  },
+  {
+   "k": "Mangrove palm; Eocene London was full of them.",
+   "v": "Palmeira de manguezal; a Londres do Eoceno estava repleta delas."
+  },
+  {
+   "k": "Small herbs among the first flowering plants.",
+   "v": "Pequenas ervas entre as primeiras plantas com flores."
+  },
+  {
+   "k": "Swamp conifer with 'knees' poking out of the water.",
+   "v": "Conífera de pântano com «joelhos» que despontam da água."
+  },
+  {
+   "k": "Oaks spread across the northern continents.",
+   "v": "Os carvalhos se espalharam pelos continentes do norte."
+  },
+  {
+   "k": "Smooth-barked trees of shady forests.",
+   "v": "Árvores de casca lisa das florestas sombrias."
+  },
+  {
+   "k": "Maples, with winged seeds.",
+   "v": "Bordos, com sementes aladas."
+  },
+  {
+   "k": "Evergreen laurel forests of the warm Eocene.",
+   "v": "Florestas perenifólias de louros do Eoceno quente."
+  },
+  {
+   "k": "Alders grow with their roots in wet ground.",
+   "v": "Os amieiros crescem com as raízes em solo encharcado."
+  },
+  {
+   "k": "Figs and their wasps have evolved together for 60 million years.",
+   "v": "As figueiras e suas vespas evoluem juntas há 60 milhões de anos."
+  },
+  {
+   "k": "Mangroves stand on stilt roots in salt water.",
+   "v": "Os mangues se apoiam em raízes-escora na água salgada."
+  },
+  {
+   "k": "The last ginkgo: a living fossil.",
+   "v": "O último ginkgo: um fóssil vivo."
+  },
+  {
+   "k": "Grasses existed but didn't form grasslands until the Neogene.",
+   "v": "As gramíneas existiam, mas só formaram campos no Neógeno."
+  },
+  {
+   "k": "Beeches of the southern continents, from Antarctica to Patagonia.",
+   "v": "Faias dos continentes do sul, da Antártida à Patagônia."
+  },
+  {
+   "k": "Laurel-family tree of warm forests.",
+   "v": "Árvore da família do louro de florestas quentes."
+  },
+  {
+   "k": "Pines: hardy conifers of poor soils and cold.",
+   "v": "Pinheiros: coníferas resistentes de solos pobres e do frio."
+  },
+  {
+   "k": "The dark spruces of the boreal forest.",
+   "v": "Os escuros abetos-vermelhos da floresta boreal."
+  },
+  {
+   "k": "A conifer that drops its needles in winter.",
+   "v": "Uma conífera que perde as agulhas no inverno."
+  },
+  {
+   "k": "Firs of cool mountain forests.",
+   "v": "Abetos das frescas florestas de montanha."
+  },
+  {
+   "k": "White-barked birches, first trees back after the ice.",
+   "v": "Bétulas de casca branca, as primeiras árvores a voltar depois do gelo."
+  },
+  {
+   "k": "Gum trees: fire-adapted Australian forests.",
+   "v": "Eucaliptos: florestas australianas adaptadas ao fogo."
+  },
+  {
+   "k": "Flat-topped thorn trees of the savanna.",
+   "v": "Árvores espinhosas de copa achatada da savana."
+  },
+  {
+   "k": "Swollen trunks store water through the dry season.",
+   "v": "Seus troncos dilatados armazenam água durante a estação seca."
+  },
+  {
+   "k": "Emergent giant towering over the rainforest canopy.",
+   "v": "Gigante emergente que se ergue acima do dossel da floresta tropical."
+  },
+  {
+   "k": "Tall trees of Southeast Asian rainforests.",
+   "v": "Árvores altas das florestas tropicais do Sudeste Asiático."
+  },
+  {
+   "k": "Giant grasses that grow a metre a day.",
+   "v": "Gramíneas gigantes que crescem um metro por dia."
+  },
+  {
+   "k": "Palm of desert oases.",
+   "v": "Palmeira dos oásis do deserto."
+  },
+  {
+   "k": "Its floating nuts spread it to tropical shores worldwide.",
+   "v": "Seus cocos flutuantes a levaram às costas tropicais do mundo inteiro."
+  },
+  {
+   "k": "C4 grass of the African and Australian savannas.",
+   "v": "Gramínea C4 das savanas africanas e australianas."
+  },
+  {
+   "k": "Feathery grass of the Eurasian steppe.",
+   "v": "Gramínea plumosa da estepe eurasiática."
+  },
+  {
+   "k": "Temperate meadow grasses.",
+   "v": "Gramíneas dos prados temperados."
+  },
+  {
+   "k": "Tall grass of the North American prairie.",
+   "v": "Gramínea alta da pradaria norte-americana."
+  },
+  {
+   "k": "Spiny hummock grass of Australia's deserts.",
+   "v": "Gramínea espinhosa em touceiras dos desertos da Austrália."
+  },
+  {
+   "k": "Grasses and sedges of the Ice Age mammoth steppe.",
+   "v": "Gramíneas e ciperáceas da estepe-dos-mamutes da Era do Gelo."
+  },
+  {
+   "k": "Silvery, aromatic shrubs of dry plains.",
+   "v": "Arbustos prateados e aromáticos das planícies secas."
+  },
+  {
+   "k": "Purple-flowering heath of acid moorland.",
+   "v": "Urze de flores roxas das charnecas ácidas."
+  },
+  {
+   "k": "Desert shrub; some clones are over 10,000 years old.",
+   "v": "Arbusto do deserto; alguns clones têm mais de 10 000 anos."
+  },
+  {
+   "k": "Giant columnar cactus of the Sonoran Desert.",
+   "v": "Cacto colunar gigante do deserto de Sonora."
+  },
+  {
+   "k": "Cactus with flat, padded stems.",
+   "v": "Cacto de caules achatados em forma de raquete."
+  },
+  {
+   "k": "Two strap leaves that grow for over a thousand years, Namib Desert.",
+   "v": "Duas folhas em forma de fita que crescem por mais de mil anos, no deserto do Namibe."
+  },
+  {
+   "k": "African succulent that looks like a cactus.",
+   "v": "Suculenta africana que parece um cacto."
+  },
+  {
+   "k": "Tundra flower that gave its name to the Younger Dryas cold snap.",
+   "v": "Flor da tundra que deu nome ao resfriamento do Dryas Recente."
+  },
+  {
+   "k": "A willow that grows only a few centimetres tall.",
+   "v": "Um salgueiro que cresce apenas alguns centímetros de altura."
+  },
+  {
+   "k": "Sedge with cotton-white seed heads.",
+   "v": "Ciperácea com infrutescências brancas como algodão."
+  },
+  {
+   "k": "One of the northernmost flowering plants.",
+   "v": "Uma das plantas com flores mais setentrionais."
+  },
+  {
+   "k": "Builds peat bogs that store vast amounts of carbon.",
+   "v": "Forma turfeiras que armazenam enormes quantidades de carbono."
+  },
+  {
+   "k": "Tall reed beds of marshes and lakes.",
+   "v": "Altos caniçais de pântanos e lagos."
+  },
+  {
+   "k": "Sedge of the Nile, made into the first paper.",
+   "v": "Ciperácea do Nilo, transformada no primeiro papel."
+  },
+  {
+   "k": "Bulrushes with brown, sausage-shaped flower spikes.",
+   "v": "Taboas com espigas florais marrons em forma de salsicha."
+  },
+  {
+   "k": "Lobster-claw flowers pollinated by hummingbirds.",
+   "v": "Flores em forma de garra de lagosta polinizadas por beija-flores."
+  },
+  {
+   "k": "Fern rosettes of the rainforest floor and branches.",
+   "v": "Rosetas de samambaia do chão e dos galhos da floresta tropical."
+  },
+  {
+   "k": "Daisies, clovers and their kin in the grass.",
+   "v": "Margaridas, trevos e seus parentes no meio do capim."
+  },
+  {
+   "k": "Succulent rosettes of African dry lands.",
+   "v": "Rosetas suculentas das terras secas da África."
+  },
+  {
+   "k": "Fire-adapted fynbos shrub; Proteaceae date back to Gondwana.",
+   "v": "Arbusto do fynbos adaptado ao fogo; as proteáceas remontam a Gondwana."
+  },
+  {
+   "k": "Australian shrub with bottlebrush flower spikes.",
+   "v": "Arbusto australiano com espigas florais em forma de escova."
+  },
+  {
+   "k": "Evergreen shrub of forest edges.",
+   "v": "Arbusto perene das orlas da floresta."
+  },
+  {
+   "k": "Flowering shrubs of mountain slopes.",
+   "v": "Arbustos floríferos das encostas das montanhas."
+  },
+  {
+   "k": "Turf of green seaweed on sunlit seabed; land plants descend from green algae.",
+   "v": "Tapete de algas verdes no fundo marinho iluminado; as plantas terrestres descendem das algas verdes."
+  },
+  {
+   "k": "Red seaweeds, among the oldest complex algae.",
+   "v": "Algas vermelhas, entre as algas complexas mais antigas."
+  },
+  {
+   "k": "Tough microbial mats that carpeted the Ediacaran seafloor, wrinkled like elephant skin; the first grazers and burrowers broke them up in the Cambrian.",
+   "v": "Resistentes esteiras microbianas que atapetavam o fundo marinho do Ediacarano, enrugadas como pele de elefante; os primeiros pastadores e escavadores as romperam no Cambriano."
+  },
+  {
+   "k": "Layered mounds built by cyanobacteria; rare today, as at Shark Bay.",
+   "v": "Montículos estratificados construídos por cianobactérias; hoje raros, como na baía Shark."
+  },
+  {
+   "k": "Bushy calcified microbes that built Cambrian reefs with archaeocyathids.",
+   "v": "Micróbios calcificados e ramosos que construíram recifes cambrianos com os arqueociatos."
+  },
+  {
+   "k": "Little umbrella-shaped green algae of warm lagoons.",
+   "v": "Pequenas algas verdes em forma de guarda-chuva de lagunas quentes."
+  },
+  {
+   "k": "The 'sunflower coral': a disc-shaped calcareous alga.",
+   "v": "O «coral-girassol»: uma alga calcária em forma de disco."
+  },
+  {
+   "k": "Calcified red alga that helped build Paleozoic reefs.",
+   "v": "Alga vermelha calcificada que ajudou a construir os recifes do Paleozoico."
+  },
+  {
+   "k": "Calcified green algae whose fragments make carbonate sand.",
+   "v": "Algas verdes calcificadas cujos fragmentos formam areia carbonática."
+  },
+  {
+   "k": "Potato-chip-shaped algae that formed Late Paleozoic mounds.",
+   "v": "Algas em forma de batata frita que formaram montículos no Paleozoico Superior."
+  },
+  {
+   "k": "Segmented green alga; its plates pile up into sand banks.",
+   "v": "Alga verde segmentada; suas placas se acumulam em bancos de areia."
+  },
+  {
+   "k": "A creeping seaweed that is a single giant cell.",
+   "v": "Uma alga rastejante que é uma única célula gigante."
+  },
+  {
+   "k": "Pink, rock-hard crusts that cement coral reefs together.",
+   "v": "Crostas rosadas e duras como pedra que cimentam os recifes de coral."
+  },
+  {
+   "k": "One of the first flowering plants to return to the sea.",
+   "v": "Uma das primeiras plantas com flores a voltar ao mar."
+  },
+  {
+   "k": "Mediterranean seagrass; some meadows are thousands of years old.",
+   "v": "Erva marinha do Mediterrâneo; alguns prados têm milhares de anos."
+  },
+  {
+   "k": "Seagrass meadows of cool coasts, nurseries for fish.",
+   "v": "Prados de ervas marinhas de costas frias, berçários de peixes."
+  },
+  {
+   "k": "Tropical seagrass grazed by turtles and manatees.",
+   "v": "Erva marinha tropical pastada por tartarugas e peixes-boi."
+  },
+  {
+   "k": "Small seagrass, food of dugongs.",
+   "v": "Pequena erva marinha, alimento dos dugongos."
+  },
+  {
+   "k": "Brown seaweed with air bladders; rafts of it float in the Sargasso Sea.",
+   "v": "Alga parda com vesículas de ar; suas jangadas flutuam no mar dos Sargaços."
+  },
+  {
+   "k": "Kelp forests up to 50 m tall along cool coasts.",
+   "v": "Florestas de kelp de até 50 m de altura ao longo de costas frias."
+  },
+  {
+   "k": "Kelp with broad, strap-like blades.",
+   "v": "Kelp de lâminas largas em forma de fita."
+  },
+  {
+   "k": "Rockweed of the tidal shore, buoyed by air bladders.",
+   "v": "Alga da zona entremarés, mantida à tona por vesículas de ar."
+  },
+  {
+   "k": "Films and tufts of simple green algae in lakes and ponds, long before any plant reached land.",
+   "v": "Películas e tufos de algas verdes simples em lagos e lagoas, muito antes de qualquer planta chegar à terra."
+  },
+  {
+   "k": "Slimy green threads in still fresh water; zygnematophyte algae like it leave no sure fossils before the late Palaeozoic.",
+   "v": "Filamentos verdes e viscosos em água doce parada; algas zignematofíceas como esta não deixam fósseis seguros antes do Paleozoico Superior."
+  },
+  {
+   "k": "Whorled charophytes, the closest algal relatives of land plants.",
+   "v": "Carófitas verticiladas, os parentes algais mais próximos das plantas terrestres."
+  },
+  {
+   "k": "A stonewort from the Rhynie chert hot springs.",
+   "v": "Uma carófita das fontes termais do sílex de Rhynie."
+  },
+  {
+   "k": "Delicate, translucent stonewort.",
+   "v": "Carófita delicada e translúcida."
+  },
+  {
+   "k": "Underwater clubmoss, the last relative of the giant scale trees.",
+   "v": "Licopódio subaquático, o último parente das gigantescas árvores-escamosas."
+  },
+  {
+   "k": "Rooted water plant with floating leaves.",
+   "v": "Planta aquática enraizada com folhas flutuantes."
+  },
+  {
+   "k": "Ribbon-leaved underwater meadows of rivers and lakes.",
+   "v": "Prados subaquáticos de folhas em fita em rios e lagos."
+  },
+  {
+   "k": "Bushy waterweed of ponds.",
+   "v": "Planta aquática densa de lagoas."
+  },
+  {
+   "k": "The oldest known fungal threads, spreading through Ordovician soils.",
+   "v": "Os mais antigos filamentos de fungos conhecidos, espalhando-se pelos solos do Ordoviciano."
+  },
+  {
+   "k": "Root partners of nearly all land plants, trading minerals for sugar.",
+   "v": "Parceiros das raízes de quase todas as plantas terrestres, trocando minerais por açúcar."
+  },
+  {
+   "k": "Giant fungal trunks up to 8 m tall, the largest living things on land.",
+   "v": "Troncos fúngicos gigantes de até 8 m de altura, os maiores seres vivos em terra firme."
+  },
+  {
+   "k": "Fungi preserved inside the Rhynie chert plants.",
+   "v": "Fungos preservados dentro das plantas do sílex de Rhynie."
+  },
+  {
+   "k": "The earliest known lichen: a fungus farming algae.",
+   "v": "O líquen mais antigo conhecido: um fungo que cultiva algas."
+  },
+  {
+   "k": "An early sac fungus with flask-shaped fruiting bodies.",
+   "v": "Um ascomiceto primitivo com corpos de frutificação em forma de frasco."
+  },
+  {
+   "k": "Coal-forest fungus with clamp connections, an early mushroom relative.",
+   "v": "Fungo das florestas do carvão com grampos de conexão, um parente primitivo dos cogumelos."
+  },
+  {
+   "k": "Small round fruiting bodies from the coal swamps.",
+   "v": "Pequenos corpos de frutificação redondos dos pântanos do carvão."
+  },
+  {
+   "k": "The fungal spike of the great Permian extinction, rotting dead forests.",
+   "v": "O pico de fungos da grande extinção do Permiano, apodrecendo as florestas mortas."
+  },
+  {
+   "k": "White-rot fungi breaking down fallen conifer logs.",
+   "v": "Fungos de podridão branca que decompunham troncos caídos de coníferas."
+  },
+  {
+   "k": "An early bracket fungus on Jurassic araucarias.",
+   "v": "Um fungo-orelha primitivo em araucárias jurássicas."
+  },
+  {
+   "k": "White moulds living on guano and debris in dark caves.",
+   "v": "Bolores brancos que vivem sobre guano e detritos em cavernas escuras."
+  },
+  {
+   "k": "The oldest gilled mushroom known, from Brazil.",
+   "v": "O cogumelo com lamelas mais antigo conhecido, do Brasil."
+  },
+  {
+   "k": "A tiny mushroom preserved in Burmese amber.",
+   "v": "Um minúsculo cogumelo preservado em âmbar birmanês."
+  },
+  {
+   "k": "Delicate amber-preserved mushroom.",
+   "v": "Delicado cogumelo preservado em âmbar."
+  },
+  {
+   "k": "A Cretaceous polypore bracket.",
+   "v": "Um poliporo em prateleira do Cretáceo."
+  },
+  {
+   "k": "A predatory fungus with sticky rings for catching worms.",
+   "v": "Um fungo predador com anéis pegajosos para capturar vermes."
+  },
+  {
+   "k": "A single giant cell that solves mazes as it feeds.",
+   "v": "Uma única célula gigante que resolve labirintos enquanto se alimenta."
+  },
+  {
+   "k": "Glossy red-brown lacquered bracket.",
+   "v": "Prateleira lustrosa marrom-avermelhada, como laqueada."
+  },
+  {
+   "k": "Takes over ants and sprouts from their bodies.",
+   "v": "Domina formigas e brota de seus corpos."
+  },
+  {
+   "k": "Golden, funnel-shaped and smelling of apricots.",
+   "v": "Dourado, em forma de funil e com cheiro de damasco."
+  },
+  {
+   "k": "One of these is the largest organism on Earth.",
+   "v": "Um destes é o maior organismo da Terra."
+  },
+  {
+   "k": "Underground fruit body found by smell.",
+   "v": "Corpo de frutificação subterrâneo encontrado pelo olfato."
+  },
+  {
+   "k": "Honeycombed cap on a hollow stem.",
+   "v": "Chapéu alveolado sobre um pé oco."
+  },
+  {
+   "k": "Bright orange cups on bare soil.",
+   "v": "Taças de um laranja vivo sobre solo nu."
+  },
+  {
+   "k": "Scarlet cups on mossy sticks in winter.",
+   "v": "Taças escarlates sobre gravetos musgosos no inverno."
+  },
+  {
+   "k": "Stains the wood it lives in blue-green.",
+   "v": "Tinge de verde-azulado a madeira em que vive."
+  },
+  {
+   "k": "Orange rosettes on rocks and bark.",
+   "v": "Rosetas alaranjadas sobre rochas e cascas de árvores."
+  },
+  {
+   "k": "The red, white-spotted toadstool of fairy tales.",
+   "v": "O cogumelo vermelho de pintas brancas dos contos de fadas."
+  },
+  {
+   "k": "Fat brown cap over a sponge of pores.",
+   "v": "Chapéu marrom e grosso sobre uma esponja de poros."
+  },
+  {
+   "k": "Dissolves into black ink as it ripens.",
+   "v": "Dissolve-se em tinta preta ao amadurecer."
+  },
+  {
+   "k": "Puffs clouds of spores when raindrops hit it.",
+   "v": "Solta nuvens de esporos quando as gotas de chuva o atingem."
+  },
+  {
+   "k": "Can grow as big as a football.",
+   "v": "Pode crescer até o tamanho de uma bola de futebol."
+  },
+  {
+   "k": "A spore ball sitting on a star of split skin.",
+   "v": "Uma bola de esporos pousada sobre uma estrela de pele rasgada."
+  },
+  {
+   "k": "A hollow scarlet lattice that smells of rotting meat.",
+   "v": "Uma treliça oca escarlate que cheira a carne podre."
+  },
+  {
+   "k": "Branches like a yellow sea coral.",
+   "v": "Ramos como um coral marinho amarelo."
+  },
+  {
+   "k": "Purple coral-like tufts in grassland.",
+   "v": "Tufos roxos semelhantes a coral nos campos."
+  },
+  {
+   "k": "Cascades of white icicle spines.",
+   "v": "Cascatas de espinhos brancos como pingentes de gelo."
+  },
+  {
+   "k": "Sulphur-yellow shelves on old trees.",
+   "v": "Prateleiras amarelo-enxofre em árvores velhas."
+  },
+  {
+   "k": "Banded fans like a turkey's tail.",
+   "v": "Leques com faixas como a cauda de um peru."
+  },
+  {
+   "k": "Hoof-shaped brackets used to carry fire.",
+   "v": "Prateleiras em forma de casco usadas para transportar o fogo."
+  },
+  {
+   "k": "Grey shelves that also catch tiny worms.",
+   "v": "Prateleiras cinzentas que também capturam minúsculos vermes."
+  },
+  {
+   "k": "The most prized fungus in the world.",
+   "v": "O fungo mais valorizado do mundo."
+  },
+  {
+   "k": "A small mushroom of startling blue.",
+   "v": "Um pequeno cogumelo de um azul surpreendente."
+  },
+  {
+   "k": "Waxy scarlet caps of old meadows.",
+   "v": "Chapéus escarlates e cerosos dos prados antigos."
+  },
+  {
+   "k": "Violet all over when fresh.",
+   "v": "Totalmente violeta quando fresco."
+  },
+  {
+   "k": "A tall stem under a wide scaly parasol.",
+   "v": "Um pé alto sob um amplo guarda-sol escamoso."
+  },
+  {
+   "k": "Lemon-yellow mushrooms of warm soils.",
+   "v": "Cogumelos amarelo-limão de solos quentes."
+  },
+  {
+   "k": "Glows green in the dark.",
+   "v": "Brilha em verde no escuro."
+  },
+  {
+   "k": "Tiny bioluminescent caps lighting up cave floors.",
+   "v": "Minúsculos chapéus bioluminescentes que iluminam o chão das cavernas."
+  },
+  {
+   "k": "Orange and faintly glowing gills.",
+   "v": "Lamelas alaranjadas que brilham fracamente."
+  },
+  {
+   "k": "One of the brightest glowing fungi.",
+   "v": "Um dos fungos luminosos mais brilhantes."
+  },
+  {
+   "k": "Scarlet arms around a slimy, smelly heart.",
+   "v": "Braços escarlates em torno de um centro viscoso e malcheiroso."
+  },
+  {
+   "k": "A white lace skirt hanging from its cap.",
+   "v": "Uma saia de renda branca pendendo do chapéu."
+  },
+  {
+   "k": "Yellow slime that creeps across mulch.",
+   "v": "Mixomiceto amarelo que se arrasta sobre a cobertura morta."
+  },
+  {
+   "k": "Forests of tiny brown spore stalks.",
+   "v": "Florestas de minúsculas hastes de esporos marrons."
+  },
+  {
+   "k": "Spongy grey-white cushions grazed by reindeer.",
+   "v": "Almofadas esponjosas branco-acinzentadas pastadas por renas."
+  },
+  {
+   "k": "Blue-green mould that gave us penicillin.",
+   "v": "Bolor verde-azulado que nos deu a penicilina."
+  },
+  {
+   "k": "Pale crusts coating damp cave walls.",
+   "v": "Crostas pálidas que revestem as paredes úmidas das cavernas."
+  },
+  {
+   "k": "Clotted microbial mounds that replaced stromatolites.",
+   "v": "Montículos microbianos grumosos que substituíram os estromatólitos."
+  },
+  {
+   "k": "Calcified cyanobacterial tubes building early reefs.",
+   "v": "Tubos de cianobactérias calcificados que construíram os primeiros recifes."
+  },
+  {
+   "k": "Kidney-shaped calcimicrobes of Cambrian reefs.",
+   "v": "Calcimicróbios em forma de rim dos recifes cambrianos."
+  },
+  {
+   "k": "Burgess Shale green alga with feathery branches.",
+   "v": "Alga verde do folhelho de Burgess com ramos plumosos."
+  },
+  {
+   "k": "Bushy Burgess Shale seaweed.",
+   "v": "Alga ramosa do folhelho de Burgess."
+  },
+  {
+   "k": "An early branching red alga.",
+   "v": "Uma alga vermelha ramificada primitiva."
+  },
+  {
+   "k": "Slimy green mats carpeting lake beds.",
+   "v": "Esteiras verdes e viscosas que atapetam o fundo dos lagos."
+  },
+  {
+   "k": "A dasyclad alga shaped like a knobbly ball.",
+   "v": "Uma alga dasicladal em forma de bola nodosa."
+  },
+  {
+   "k": "Calcified green alga in tangled chains.",
+   "v": "Alga verde calcificada em cadeias emaranhadas."
+  },
+  {
+   "k": "Disc-shaped green alga of shallow fresh water.",
+   "v": "Alga verde em forma de disco de águas doces rasas."
+  },
+  {
+   "k": "Ribbon-like Silurian seaweed.",
+   "v": "Alga siluriana em forma de fita."
+  },
+  {
+   "k": "Thick Devonian seaweed with spores like land plants.",
+   "v": "Alga espessa do Devoniano com esporos como os das plantas terrestres."
+  },
+  {
+   "k": "Mysterious crusts of tubes on wet ground and pools.",
+   "v": "Misteriosas crostas de tubos sobre solo úmido e poças."
+  },
+  {
+   "k": "Leafy red alga that built Carboniferous mounds.",
+   "v": "Alga vermelha foliácea que construiu montículos no Carbonífero."
+  },
+  {
+   "k": "Phylloid green alga with potato-crisp blades.",
+   "v": "Alga verde filoide com lâminas como batatas fritas."
+  },
+  {
+   "k": "Leaf-like alga of Late Paleozoic shelves.",
+   "v": "Alga de aspecto foliáceo das plataformas do Paleozoico Superior."
+  },
+  {
+   "k": "Bead-chained dasyclad of Permian reefs.",
+   "v": "Dasicladal em colar de contas dos recifes permianos."
+  },
+  {
+   "k": "Calcified red alga in segmented chains.",
+   "v": "Alga vermelha calcificada em cadeias segmentadas."
+  },
+  {
+   "k": "Dasyclad that built Triassic carbonate platforms.",
+   "v": "Dasicladal que construiu plataformas carbonáticas no Triássico."
+  },
+  {
+   "k": "Whorled dasyclad of Jurassic lagoons.",
+   "v": "Dasicladal verticilada das lagunas jurássicas."
+  },
+  {
+   "k": "Fan-shaped calcified bushes.",
+   "v": "Moitas calcificadas em forma de leque."
+  },
+  {
+   "k": "Extinct stoneworts with spiny fruiting cases.",
+   "v": "Carófitas extintas com cápsulas frutíferas espinhosas."
+  },
+  {
+   "k": "Rootless whorls of fine leaves, an ancient flowering plant.",
+   "v": "Verticilos sem raízes de folhas finas, uma planta com flores antiga."
+  },
+  {
+   "k": "Round leaves on long stalks rising from the mud.",
+   "v": "Folhas redondas em longos pecíolos que se erguem da lama."
+  },
+  {
+   "k": "A single giant cell shaped like a tiny umbrella.",
+   "v": "Uma única célula gigante em forma de minúsculo guarda-chuva."
+  },
+  {
+   "k": "Bright green sheets on rocky shores.",
+   "v": "Lâminas verde-vivo nas costas rochosas."
+  },
+  {
+   "k": "Banded fans dusted with lime.",
+   "v": "Leques com faixas polvilhados de calcário."
+  },
+  {
+   "k": "Glossy green spheres, among the largest single cells.",
+   "v": "Esferas verdes e lustrosas, entre as maiores células individuais."
+  },
+  {
+   "k": "Runners hung with little green beads.",
+   "v": "Estolões dos quais pendem continhas verdes."
+  },
+  {
+   "k": "Soft green plumes.",
+   "v": "Plumas verdes e macias."
+  },
+  {
+   "k": "Pink, jointed, stony fronds.",
+   "v": "Frondes rosadas, articuladas e pétreas."
+  },
+  {
+   "k": "Wiry red seaweed, a source of agar.",
+   "v": "Alga vermelha de aspecto aramado, fonte de ágar."
+  },
+  {
+   "k": "Purple-red fans on cold shores.",
+   "v": "Leques vermelho-arroxeados em costas frias."
+  },
+  {
+   "k": "Southern kelp with a crown of blades.",
+   "v": "Kelp austral com uma coroa de lâminas."
+  },
+  {
+   "k": "Feathery whorls swaying in ponds.",
+   "v": "Verticilos plumosos balançando nas lagoas."
+  },
+  {
+   "k": "Broad sword-shaped leaves in a rosette.",
+   "v": "Folhas largas em forma de espada dispostas em roseta."
+  },
+  {
+   "k": "Bronze-green rosettes of Asian streams.",
+   "v": "Rosetas verde-bronze dos riachos asiáticos."
+  },
+  {
+   "k": "Carnivorous: tiny bladders snap up water fleas.",
+   "v": "Carnívora: minúsculas vesículas capturam pulgas-d'água."
+  },
+  {
+   "k": "Dark green moss streaming in currents.",
+   "v": "Musgo verde-escuro que ondula na correnteza."
+  },
+  {
+   "k": "Velvety green balls rolling on lake beds.",
+   "v": "Bolas verdes aveludadas que rolam no fundo dos lagos."
+  },
+  {
+   "k": "Brittle, finely toothed pondweed.",
+   "v": "Planta aquática quebradiça de folhas finamente denteadas."
+  },
+  {
+   "k": "Spongy green fingers.",
+   "v": "Dedos verdes esponjosos."
+  },
+  {
+   "k": "Fern-like runners that can carpet the seabed.",
+   "v": "Estolões semelhantes a samambaias que podem atapetar o fundo do mar."
+  },
+  {
+   "k": "Strings of olive beads on southern shores.",
+   "v": "Fileiras de contas verde-oliva nas costas do sul."
+  },
+  {
+   "k": "Ruffled brown kelp.",
+   "v": "Kelp pardo e franzido."
+  },
+  {
+   "k": "Leathery straps pounded by Southern Ocean surf.",
+   "v": "Tiras coriáceas golpeadas pelas ondas do oceano Austral."
+  },
+  {
+   "k": "Thin purple sheets, dried as sushi wrap.",
+   "v": "Finas lâminas roxas, secas para enrolar sushi."
+  },
+  {
+   "k": "Fluffy pink plumes.",
+   "v": "Plumas rosadas e fofas."
+  },
+  {
+   "k": "Rosy red sheets of warm seas.",
+   "v": "Lâminas vermelho-rosadas dos mares quentes."
+  },
+  {
+   "k": "Leaves big enough to hold a child.",
+   "v": "Folhas grandes o bastante para sustentar uma criança."
+  },
+  {
+   "k": "Copper-red leaves underwater.",
+   "v": "Folhas vermelho-acobreadas debaixo d'água."
+  },
+  {
+   "k": "Pink-tipped stems of Asian rice paddies.",
+   "v": "Caules de pontas rosadas dos arrozais asiáticos."
+  },
+  {
+   "k": "Purple-red leaves glowing in clear water.",
+   "v": "Folhas vermelho-arroxeadas que reluzem na água limpa."
+  },
+  {
+   "k": "White sulphur-eating bacterial mats of the dark seafloor.",
+   "v": "Esteiras bacterianas brancas que se alimentam de enxofre no fundo marinho escuro."
+  },
+  {
+   "k": "Bundled bacterial threads in oxygen-poor deep mud.",
+   "v": "Feixes de filamentos bacterianos na lama profunda pobre em oxigênio."
+  },
+  {
+   "k": "Clouds of pale pink blossom.",
+   "v": "Nuvens de flores rosa-pálido."
+  },
+  {
+   "k": "Tiers of deep red, hand-shaped leaves.",
+   "v": "Camadas de folhas palmadas vermelho-escuras."
+  },
+  {
+   "k": "A spreading canopy of violet-blue trumpets.",
+   "v": "Uma copa ampla de trombetas azul-violeta."
+  },
+  {
+   "k": "Magenta-pink flowers before the leaves.",
+   "v": "Flores rosa-magenta antes das folhas."
+  },
+  {
+   "k": "A flat crown ablaze with scarlet flowers.",
+   "v": "Uma copa achatada em chamas de flores escarlates."
+  },
+  {
+   "k": "Crinkled pink blossoms all summer.",
+   "v": "Flores rosadas e enrugadas durante todo o verão."
+  },
+  {
+   "k": "Towers over the forest in a cloud of pink.",
+   "v": "Ergue-se acima da floresta numa nuvem cor-de-rosa."
+  },
+  {
+   "k": "A great dome of deep purple leaves.",
+   "v": "Uma grande cúpula de folhas roxo-escuras."
+  },
+  {
+   "k": "Purple leaves and smoky plumes.",
+   "v": "Folhas roxas e plumas como fumaça."
+  },
+  {
+   "k": "Star-shaped leaves turning crimson.",
+   "v": "Folhas em forma de estrela que ficam carmesim."
+  },
+  {
+   "k": "Coral-red flowers on a gnarled frame.",
+   "v": "Flores vermelho-coral sobre uma estrutura retorcida."
+  },
+  {
+   "k": "Lavender foxglove-like flowers.",
+   "v": "Flores lavanda semelhantes às da dedaleira."
+  },
+  {
+   "k": "Orchid-like purple-pink flowers.",
+   "v": "Flores rosa-arroxeadas parecidas com orquídeas."
+  },
+  {
+   "k": "Goblet-shaped pink and white flowers.",
+   "v": "Flores rosa e brancas em forma de taça."
+  },
+  {
+   "k": "Flame-orange tulips held above the canopy.",
+   "v": "Tulipas laranja-chama erguidas acima do dossel."
+  },
+  {
+   "k": "Whole hillsides of trembling gold in autumn.",
+   "v": "Encostas inteiras de ouro trêmulo no outono."
+  },
+  {
+   "k": "Showers of small yellow flowers.",
+   "v": "Chuvas de pequenas flores amarelas."
+  },
+  {
+   "k": "Long cascades of bright yellow blossom.",
+   "v": "Longas cascatas de flores amarelo-vivo."
+  },
+  {
+   "k": "A burst of gold above the forest.",
+   "v": "Uma explosão de ouro acima da floresta."
+  },
+  {
+   "k": "Hanging chains of yellow pea flowers.",
+   "v": "Cachos pendentes de flores amarelas de ervilha."
+  },
+  {
+   "k": "A deciduous conifer turning golden-orange.",
+   "v": "Uma conífera decídua que fica laranja-dourada."
+  },
+  {
+   "k": "Blazing orange in the autumn forests of the north.",
+   "v": "Laranja flamejante nas florestas outonais do norte."
+  },
+  {
+   "k": "Orange leaves and bright orange fruit hanging on.",
+   "v": "Folhas alaranjadas e frutos laranja-vivo que permanecem pendurados."
+  },
+  {
+   "k": "Layers of amber, orange and red.",
+   "v": "Camadas de âmbar, laranja e vermelho."
+  },
+  {
+   "k": "Leafless branches covered in flame-orange flowers.",
+   "v": "Galhos sem folhas cobertos de flores laranja-chama."
+  },
+  {
+   "k": "Snows white cotton seed fluff over river valleys.",
+   "v": "Cobre os vales fluviais com uma neve de penugem branca de sementes."
+  },
+  {
+   "k": "A giant hung with clouds of white silk-cotton.",
+   "v": "Um gigante coberto de nuvens de paina branca."
+  },
+  {
+   "k": "A tight oval of pure white spring blossom.",
+   "v": "Um oval compacto de flores primaveris de um branco puro."
+  },
+  {
+   "k": "Tiers of white bracts in the spring woods.",
+   "v": "Camadas de brácteas brancas nos bosques de primavera."
+  },
+  {
+   "k": "May blossom: hedges and hills turned white.",
+   "v": "Flor de maio: sebes e colinas tingidas de branco."
+  },
+  {
+   "k": "White flushed pink, then small apples.",
+   "v": "Flores brancas com um rubor rosado e depois pequenas maçãs."
+  },
+  {
+   "k": "Fluffy pink powder-puff flowers on a flat crown.",
+   "v": "Flores rosa e fofas como pompons sobre uma copa achatada."
+  },
+  {
+   "k": "Deep pink spring blossom.",
+   "v": "Flores primaveris rosa-escuras."
+  },
+  {
+   "k": "Big crimson cups on bare branches.",
+   "v": "Grandes taças carmesim em galhos nus."
+  },
+  {
+   "k": "The scarlet of a swamp in autumn.",
+   "v": "O escarlate de um pântano no outono."
+  },
+  {
+   "k": "Scented purple plumes.",
+   "v": "Plumas roxas perfumadas."
+  },
+  {
+   "k": "A canopy dripping with violet blossom.",
+   "v": "Um dossel pingando flores violeta."
+  },
+  {
+   "k": "Spores shed in fours tell of tiny plants carpeting Ordovician shores.",
+   "v": "Esporos liberados em grupos de quatro revelam minúsculas plantas que atapetavam as costas do Ordoviciano."
+  },
+  {
+   "k": "Patchy green crusts of the first liverworts on wet mud.",
+   "v": "Crostas verdes irregulares das primeiras hepáticas sobre a lama úmida."
+  },
+  {
+   "k": "Twisted little stems ending in spore capsules.",
+   "v": "Pequenos caules retorcidos que terminam em cápsulas de esporos."
+  },
+  {
+   "k": "Forked stems tipped with long spore sacs.",
+   "v": "Caules bifurcados com longos esporângios nas pontas."
+  },
+  {
+   "k": "A small Welsh plant with flat-topped spore capsules.",
+   "v": "Uma pequena planta galesa com cápsulas de esporos de topo achatado."
+  },
+  {
+   "k": "Forking stems with oval spore sacs.",
+   "v": "Caules bifurcados com esporângios ovais."
+  },
+  {
+   "k": "A moss-like plant with stalked capsules rising from a green mat.",
+   "v": "Uma planta semelhante a musgo com cápsulas pedunculadas que se erguem de um tapete verde."
+  },
+  {
+   "k": "Rhynie chert plant with a lumpy, corm-like base.",
+   "v": "Planta do sílex de Rhynie com uma base nodosa semelhante a um cormo."
+  },
+  {
+   "k": "Leafless, bumpy stems with clustered spore sacs.",
+   "v": "Caules sem folhas e nodosos com esporângios agrupados."
+  },
+  {
+   "k": "Spiny stems with coiled tips spreading over the ground.",
+   "v": "Caules espinhosos com pontas enroladas que se espalham pelo chão."
+  },
+  {
+   "k": "Branching zosterophyll with fiddlehead tips.",
+   "v": "Zosterofilo ramificado com pontas em forma de báculo."
+  },
+  {
+   "k": "Fern-like thickets that filled Late Devonian floodplains.",
+   "v": "Matagais de aspecto de samambaia que ocupavam as planícies aluviais do Devoniano Superior."
+  },
+  {
+   "k": "Bushy progymnosperm, a step toward seed plants.",
+   "v": "Progimnosperma arbustiva, um passo rumo às plantas com sementes."
+  },
+  {
+   "k": "Whorled branchlets: a distant cousin of horsetails.",
+   "v": "Raminhos verticilados: um primo distante das cavalinhas."
+  },
+  {
+   "k": "Middle Devonian plant with the oldest seed-like organs.",
+   "v": "Planta do Devoniano Médio com os órgãos seminíferos mais antigos."
+  },
+  {
+   "k": "Sturdy small lycopsid, forerunner of the scale trees.",
+   "v": "Licófita pequena e robusta, precursora das árvores-escamosas."
+  },
+  {
+   "k": "Small tree with a crown of finger-like branches, from Belgium.",
+   "v": "Pequena árvore com uma coroa de ramos em forma de dedos, da Bélgica."
+  },
+  {
+   "k": "Late Devonian lycopsid tree of the Kiltorcan swamps.",
+   "v": "Licófita arborescente do Devoniano Superior dos pântanos de Kiltorcan."
+  },
+  {
+   "k": "Archaeopteris relative of Arctic Devonian forests.",
+   "v": "Parente de Archaeopteris das florestas devonianas do Ártico."
+  },
+  {
+   "k": "Knee-high lycopsid trees in dense coastal stands: China's oldest forest.",
+   "v": "Licófitas arborescentes da altura do joelho em densos agrupamentos costeiros: a floresta mais antiga da China."
+  },
+  {
+   "k": "Fronds of marattialean tree ferns, the commonest coal-measure fern.",
+   "v": "Frondes de samambaias arborescentes maratiáceas, a samambaia mais comum das camadas de carvão."
+  },
+  {
+   "k": "Scrambling seed fern with sticky glandular hairs.",
+   "v": "Pteridosperma trepadeira com pelos glandulares pegajosos."
+  },
+  {
+   "k": "Climbing seed fern that hung from the scale trees.",
+   "v": "Pteridosperma trepadeira que pendia das árvores-escamosas."
+  },
+  {
+   "k": "Star-shaped leaf whorls on calamite branches.",
+   "v": "Verticilos de folhas em forma de estrela nos ramos de calamites."
+  },
+  {
+   "k": "Needle-leaved calamite shoots.",
+   "v": "Brotos de calamites de folhas aciculares."
+  },
+  {
+   "k": "Early fern with H-shaped stems.",
+   "v": "Samambaia primitiva com caules em forma de H."
+  },
+  {
+   "k": "Unbranched, bulb-based lycopsid of open swamps.",
+   "v": "Licófita não ramificada de base bulbosa dos pântanos abertos."
+  },
+  {
+   "k": "Sprawling seed-fern shrub.",
+   "v": "Arbusto pteridospermo esparramado."
+  },
+  {
+   "k": "Scale tree of the wettest coal swamps.",
+   "v": "Árvore-escamosa dos pântanos de carvão mais úmidos."
+  },
+  {
+   "k": "Woody calamite trunk with ringed joints.",
+   "v": "Tronco lenhoso de calamites com nós anelados."
+  },
+  {
+   "k": "Finely cut fern foliage, from the coal swamps to the Jurassic.",
+   "v": "Folhagem de samambaia finamente recortada, dos pântanos do carvão ao Jurássico."
+  },
+  {
+   "k": "Drought-tolerant seed fern of the dry Early Permian.",
+   "v": "Pteridosperma tolerante à seca do árido Permiano inicial."
+  },
+  {
+   "k": "Gondwanan horsetail with leaf collars.",
+   "v": "Cavalinha de Gondwana com colares foliares."
+  },
+  {
+   "k": "Odd fern-like plants with cone-borne spores, from Cathaysia.",
+   "v": "Estranhas plantas de aspecto de samambaia com esporos em cones, da Cataísia."
+  },
+  {
+   "k": "Shield-seeded shrub of dry uplands.",
+   "v": "Arbusto de sementes em escudo dos planaltos secos."
+  },
+  {
+   "k": "Fan-leaved plant, perhaps an early ginkgo relative.",
+   "v": "Planta de folhas em leque, talvez um parente primitivo do ginkgo."
+  },
+  {
+   "k": "Cathaysian horsetail with lobed leaf whorls.",
+   "v": "Cavalinha da Cataísia com verticilos de folhas lobadas."
+  },
+  {
+   "k": "Cordaite of the cold Angaran forests of Siberia.",
+   "v": "Cordaitale das frias florestas angarianas da Sibéria."
+  },
+  {
+   "k": "Tufts of long, unbranched strands from the Burgess Shale.",
+   "v": "Tufos de longos filamentos não ramificados do folhelho de Burgess."
+  },
+  {
+   "k": "A branched Burgess Shale seaweed several centimetres tall.",
+   "v": "Uma alga ramificada do folhelho de Burgess com vários centímetros de altura."
+  },
+  {
+   "k": "Spiral ribbons of seaweed from Chengjiang.",
+   "v": "Fitas espirais de alga de Chengjiang."
+  },
+  {
+   "k": "Clusters of cylindrical green fronds.",
+   "v": "Agrupamentos de frondes verdes cilíndricas."
+  },
+  {
+   "k": "Oily green colonies; their remains make oil shale.",
+   "v": "Colônias verdes e oleosas; seus restos formam folhelho betuminoso."
+  },
+  {
+   "k": "Large branching seaweed of Ordovician seas, tall enough to sway.",
+   "v": "Grande alga ramificada dos mares do Ordoviciano, alta o bastante para ondular."
+  },
+  {
+   "k": "Calcified green alga with whorled branches.",
+   "v": "Alga verde calcificada com ramos verticilados."
+  },
+  {
+   "k": "Club-shaped dasyclad with a ball-like head.",
+   "v": "Dasicladal em forma de clava com uma cabeça globosa."
+  },
+  {
+   "k": "Tall, bushy green alga with whorls of hair-like branches.",
+   "v": "Alga verde alta e densa com verticilos de ramos filiformes."
+  },
+  {
+   "k": "One of the oldest stoneworts.",
+   "v": "Uma das carófitas mais antigas."
+  },
+  {
+   "k": "Clusters of bladder-like fronds.",
+   "v": "Agrupamentos de frondes em forma de vesícula."
+  },
+  {
+   "k": "Fan-shaped Silurian seaweed.",
+   "v": "Alga siluriana em forma de leque."
+  },
+  {
+   "k": "Long, strap-like fronds of a large Silurian seaweed.",
+   "v": "Frondes longas em forma de fita de uma grande alga siluriana."
+  },
+  {
+   "k": "Small balls of tubes; perhaps a green alga.",
+   "v": "Pequenas bolas de tubos; talvez uma alga verde."
+  },
+  {
+   "k": "Broad leafy fronds of a large Devonian seaweed.",
+   "v": "Frondes largas e foliáceas de uma grande alga devoniana."
+  },
+  {
+   "k": "Fan-like branched alga, perhaps a red seaweed.",
+   "v": "Alga ramificada em forma de leque, talvez uma alga vermelha."
+  },
+  {
+   "k": "Stonewort with spiralled egg cases.",
+   "v": "Carófita com invólucros de oósporos em espiral."
+  },
+  {
+   "k": "Thick, ribbon-like stems found in Siberian Devonian coals.",
+   "v": "Caules espessos em forma de fita encontrados em carvões devonianos da Sibéria."
+  },
+  {
+   "k": "Bushy calcareous alga that built Carboniferous mud mounds.",
+   "v": "Alga calcária densa que construiu montes de lama no Carbonífero."
+  },
+  {
+   "k": "Calcified dasyclad of Early Carboniferous shelves.",
+   "v": "Dasicladal calcificada das plataformas do Carbonífero inicial."
+  },
+  {
+   "k": "A Carboniferous stonewort.",
+   "v": "Uma carófita do Carbonífero."
+  },
+  {
+   "k": "Dasyclad that grew in thickets on Late Paleozoic mounds.",
+   "v": "Dasicladal que crescia em moitas nos montículos do Paleozoico Superior."
+  },
+  {
+   "k": "Encrusting, finger-like growths that built Permian reefs such as El Capitan.",
+   "v": "Crescimentos incrustantes em forma de dedo que construíram recifes permianos como El Capitan."
+  },
+  {
+   "k": "Crust-forming alga that bound Permian reefs together.",
+   "v": "Alga formadora de crostas que mantinha coesos os recifes permianos."
+  },
+  {
+   "k": "Dark ribbon-like strands, a few millimetres wide and a few centimetres long, common in late Ediacaran shales; they lay on the sea floor rather than standing as tall seaweed.",
+   "v": "Filamentos escuros em forma de fita, com alguns milímetros de largura e poucos centímetros de comprimento, comuns nos folhelhos do Ediacarano Superior; jaziam no fundo do mar em vez de se erguer como algas altas."
+  },
+  {
+   "k": "Tufts of thin forked threads from the Lantian biota of China.",
+   "v": "Tufos de finos filamentos bifurcados da biota de Lantian, na China."
+  },
+  {
+   "k": "Small upright branching seaweed, a few centimetres tall, of the Miaohe biota, anchored by rhizoids.",
+   "v": "Pequena alga ereta e ramificada, com poucos centímetros de altura, da biota de Miaohe, ancorada por rizoides."
+  },
+  {
+   "k": "Weng'an red alga with growing tips and possible reproductive cells.",
+   "v": "Alga vermelha de Weng'an com pontas de crescimento e possíveis células reprodutivas."
+  },
+  {
+   "k": "Tiny globular red algae preserved cell by cell in phosphate.",
+   "v": "Minúsculas algas vermelhas globulares preservadas célula a célula em fosfato."
+  },
+  {
+   "k": "Dark microbial films on bare rock, long before any plant reached land.",
+   "v": "Películas microbianas escuras sobre rocha nua, muito antes de qualquer planta chegar à terra."
+  },
+  {
+   "k": "Bushy calcified microbe building reefs with archaeocyaths.",
+   "v": "Micróbio calcificado e denso que construía recifes com os arqueociatos."
+  },
+  {
+   "k": "Fans of tiny calcified tubes in early Cambrian reefs.",
+   "v": "Leques de minúsculos tubos calcificados nos recifes do Cambriano inicial."
+  },
+  {
+   "k": "Clustered chambers of lime, a cousin of Renalcis.",
+   "v": "Câmaras de cal agrupadas, prima de Renalcis."
+  },
+  {
+   "k": "Calcified microbial tubes of Cambrian and Ordovician reefs.",
+   "v": "Tubos microbianos calcificados dos recifes do Cambriano e do Ordoviciano."
+  },
+  {
+   "k": "Tiny lime cylinders that piled up in Ordovician shoals.",
+   "v": "Minúsculos cilindros de cal que se acumulavam nos baixios do Ordoviciano."
+  },
+  {
+   "k": "Rare branching seaweed of the Burgess Shale.",
+   "v": "Rara alga ramificada do folhelho de Burgess."
+  },
+  {
+   "k": "Burgess Shale alga with a net-like thallus.",
+   "v": "Alga do folhelho de Burgess com um talo reticulado."
+  },
+  {
+   "k": "Dense tufts of cyanobacterial filaments on the Burgess seafloor.",
+   "v": "Densos tufos de filamentos de cianobactérias no fundo marinho de Burgess."
+  },
+  {
+   "k": "Dark slimy sheets of cyanobacteria, the commonest Burgess 'alga'.",
+   "v": "Lâminas escuras e viscosas de cianobactérias, a «alga» mais comum de Burgess."
+  },
+  {
+   "k": "Known from spores shed in pairs; a low crust on damp ground.",
+   "v": "Conhecida por esporos liberados aos pares; uma crosta baixa sobre solo úmido."
+  },
+  {
+   "k": "Its three-scarred spores mark the first steps towards vascular plants.",
+   "v": "Seus esporos com marca trilete assinalam os primeiros passos rumo às plantas vasculares."
+  },
+  {
+   "k": "Colonial microbe whose remains became the Estonian oil shale kukersite.",
+   "v": "Micróbio colonial cujos restos se tornaram o kukersito, o folhelho betuminoso da Estônia."
+  },
+  {
+   "k": "Calcified cyanobacterium with fan-shaped branching tubes.",
+   "v": "Cianobactéria calcificada com tubos ramificados em leque."
+  },
+  {
+   "k": "Pear-shaped receptaculitid, probably a calcified green alga.",
+   "v": "Receptaculitídeo em forma de pera, provavelmente uma alga verde calcificada."
+  },
+  {
+   "k": "Sunflower-patterned receptaculitid of Ordovician seafloors.",
+   "v": "Receptaculitídeo com padrão de girassol dos fundos marinhos do Ordoviciano."
+  },
+  {
+   "k": "One of the first truly calcified dasyclad algae.",
+   "v": "Uma das primeiras algas dasicladais verdadeiramente calcificadas."
+  },
+  {
+   "k": "Ball-shaped dasyclad of the Baltic Ordovician.",
+   "v": "Dasicladal globosa do Ordoviciano báltico."
+  },
+  {
+   "k": "Small club-shaped dasyclad of the Ordovician.",
+   "v": "Pequena dasicladal em forma de clava do Ordoviciano."
+  },
+  {
+   "k": "Branched calcified green alga related to Halimeda.",
+   "v": "Alga verde calcificada e ramificada aparentada com Halimeda."
+  },
+  {
+   "k": "Floating green-alga cysts that sank to form oil shales.",
+   "v": "Cistos flutuantes de algas verdes que afundaram e formaram folhelhos betuminosos."
+  },
+  {
+   "k": "Bushy calcified filaments of Paleozoic reef flats.",
+   "v": "Filamentos calcificados e densos das planícies recifais do Paleozoico."
+  },
+  {
+   "k": "Spiny early Silurian stems from Maine, among the oldest land plant fossils.",
+   "v": "Caules espinhosos do Siluriano inicial do Maine, entre os fósseis de plantas terrestres mais antigos."
+  },
+  {
+   "k": "Tiny forked stems ending in spore capsules.",
+   "v": "Minúsculos caules bifurcados terminados em cápsulas de esporos."
+  },
+  {
+   "k": "Cooksonia-like plant with kidney-shaped sporangia.",
+   "v": "Planta semelhante a Cooksonia com esporângios em forma de rim."
+  },
+  {
+   "k": "Plant of the Australian Baragwanathia flora with clustered sporangia.",
+   "v": "Planta da flora australiana de Baragwanathia com esporângios agrupados."
+  },
+  {
+   "k": "Naked forking stems, common in early land floras.",
+   "v": "Caules nus e bifurcados, comuns nas primeiras floras terrestres."
+  },
+  {
+   "k": "Late Silurian rhyniophyte-like plant from Xinjiang.",
+   "v": "Planta semelhante às riniófitas do Siluriano Superior de Xinjiang."
+  },
+  {
+   "k": "Toothed zosterophyll from the Late Silurian of Arctic Canada.",
+   "v": "Zosterofilo denteado do Siluriano Superior do Ártico canadense."
+  },
+  {
+   "k": "Zosterophyll with spore capsules in two neat rows.",
+   "v": "Zosterofilo com cápsulas de esporos em duas fileiras ordenadas."
+  },
+  {
+   "k": "Tube-bodied nematophyte, possibly a fungus, on early land.",
+   "v": "Nematófito de corpo tubular, possivelmente um fungo, das primeiras terras emersas."
+  },
+  {
+   "k": "Cellular crusts of a nematophyte, perhaps lichen-like.",
+   "v": "Crostas celulares de um nematófito, talvez semelhante a um líquen."
+  },
+  {
+   "k": "Calcified microbe encrusting Silurian and Devonian reefs.",
+   "v": "Micróbio calcificado que incrustava os recifes do Siluriano e do Devoniano."
+  },
+  {
+   "k": "Small encrusting tubes in Silurian reef rocks.",
+   "v": "Pequenos tubos incrustantes nas rochas recifais do Siluriano."
+  },
+  {
+   "k": "Lime-coated nodules built by microbes on reef flats.",
+   "v": "Nódulos revestidos de cal construídos por micróbios nas planícies recifais."
+  },
+  {
+   "k": "Diamond-scarred lycopsid tree spread across Late Devonian Gondwana.",
+   "v": "Licófita arborescente com cicatrizes em losango espalhada pela Gondwana do Devoniano Superior."
+  },
+  {
+   "k": "Late Devonian scale tree from New York.",
+   "v": "Árvore-escamosa do Devoniano Superior de Nova York."
+  },
+  {
+   "k": "Scale tree of the latest Devonian and early coal swamps.",
+   "v": "Árvore-escamosa do fim do Devoniano e dos primeiros pântanos de carvão."
+  },
+  {
+   "k": "Tree-sized sphenopsid of Bear Island, up to 20 m tall.",
+   "v": "Esfenópsida arborescente da ilha dos Ursos, com até 20 m de altura."
+  },
+  {
+   "k": "Early tree whose trunk grew by tearing and repairing hundreds of wood strands.",
+   "v": "Árvore primitiva cujo tronco crescia rasgando e reparando centenas de feixes de madeira."
+  },
+  {
+   "k": "Scrambling clubmoss that climbed the trunks of the Gilboa forest.",
+   "v": "Licopódio trepador que escalava os troncos da floresta de Gilboa."
+  },
+  {
+   "k": "Early sphenopsid with whorled branches and cones.",
+   "v": "Esfenópsida primitiva com ramos verticilados e cones."
+  },
+  {
+   "k": "Late Devonian seed plant with cupped seeds.",
+   "v": "Planta com sementes do Devoniano Superior com sementes em cúpulas."
+  },
+  {
+   "k": "Woody shrub several metres tall, a forerunner of seed plants.",
+   "v": "Arbusto lenhoso de vários metros de altura, precursor das plantas com sementes."
+  },
+  {
+   "k": "Small plant with forked branchlets rising from a creeping stem.",
+   "v": "Pequena planta com raminhos bifurcados que se erguem de um caule rastejante."
+  },
+  {
+   "k": "Ribbon-stemmed plant growing in shallow Early Devonian water.",
+   "v": "Planta de caules em fita que crescia em águas rasas do Devoniano Inferior."
+  },
+  {
+   "k": "Forked stems with kidney-shaped sporangia, from Gaspé.",
+   "v": "Caules bifurcados com esporângios em forma de rim, de Gaspé."
+  },
+  {
+   "k": "Cup-topped sexual generation of Aglaophyton, from the Rhynie chert.",
+   "v": "Geração sexuada de Aglaophyton com topos em forma de taça, do sílex de Rhynie."
+  },
+  {
+   "k": "Zosterophyll of the Rhynie hot-spring flora.",
+   "v": "Zosterofilo da flora das fontes termais de Rhynie."
+  },
+  {
+   "k": "Zosterophyll with toothed stems and coiled tips.",
+   "v": "Zosterofilo de caules denteados e pontas enroladas."
+  },
+  {
+   "k": "Stout three-forked stems topped with clusters of sporangia.",
+   "v": "Caules robustos trifurcados encimados por agrupamentos de esporângios."
+  },
+  {
+   "k": "Ribbon-like Middle Devonian liverwort from New York.",
+   "v": "Hepática em forma de fita do Devoniano Médio de Nova York."
+  },
+  {
+   "k": "Leafy-winged thalloid liverwort of the Late Devonian.",
+   "v": "Hepática talosa com asas foliáceas do Devoniano Superior."
+  },
+  {
+   "k": "Ribbed horsetail stems with forked leaves, a forerunner of Calamites.",
+   "v": "Caules canelados de cavalinha com folhas bifurcadas, precursora de Calamites."
+  },
+  {
+   "k": "The oldest known member of the stonewort order Charales.",
+   "v": "O mais antigo membro conhecido da ordem das carófitas Charales."
+  },
+  {
+   "k": "Charophyte with ribbed, lime-encased egg capsules.",
+   "v": "Carófita com cápsulas de oósporos caneladas e envoltas em cal."
+  },
+  {
+   "k": "Devonian stonewort with spiralled gyrogonites.",
+   "v": "Carófita devoniana com girogonitos em espiral."
+  },
+  {
+   "k": "Lime-walled tubular alga of Late Devonian shallow seas.",
+   "v": "Alga tubular de paredes calcárias dos mares rasos do Devoniano Superior."
+  },
+  {
+   "k": "Pitted, leathery thalli thought to be an early lichen.",
+   "v": "Talos coriáceos e pontuados considerados um líquen primitivo."
+  },
+  {
+   "k": "Early Devonian lichen with cyanobacterial partners, from the Welsh Borderland.",
+   "v": "Líquen do Devoniano Inferior com cianobactérias parceiras, da fronteira galesa."
+  },
+  {
+   "k": "Tangled tubes of a nematophyte from the Rhynie chert.",
+   "v": "Tubos emaranhados de um nematófito do sílex de Rhynie."
+  },
+  {
+   "k": "Tiny chytrid fungus living on dead Rhynie chert plants.",
+   "v": "Minúsculo fungo quitrídio que vivia sobre plantas mortas do sílex de Rhynie."
+  },
+  {
+   "k": "Scale tree that branched early into a broad crown; a coal-ball favourite.",
+   "v": "Árvore-escamosa que se ramificava cedo numa copa larga; uma favorita dos nódulos de carvão."
+  },
+  {
+   "k": "Scale tree of the Pennsylvanian peat swamps, long confused with Lepidodendron.",
+   "v": "Árvore-escamosa das turfeiras do Pensilvaniano, por muito tempo confundida com Lepidodendron."
+  },
+  {
+   "k": "Lycopsid trunk marked with two rows of big round scars where branches fell away.",
+   "v": "Tronco de licófita marcado por duas fileiras de grandes cicatrizes redondas onde os ramos caíram."
+  },
+  {
+   "k": "Smooth-barked scale tree with tiny, widely spaced leaf scars.",
+   "v": "Árvore-escamosa de casca lisa com minúsculas cicatrizes foliares bem espaçadas."
+  },
+  {
+   "k": "Calamite with thick, banded wood: the woodiest of the tree horsetails.",
+   "v": "Calamites de madeira espessa e em faixas: a mais lenhosa das cavalinhas arborescentes."
+  },
+  {
+   "k": "Big Early Carboniferous tree known from logs a metre thick buried in Scottish volcanic ash.",
+   "v": "Grande árvore do Carbonífero Inferior conhecida por troncos de um metro de espessura soterrados em cinza vulcânica escocesa."
+  },
+  {
+   "k": "Cordaitean shrub-tree of the coal swamps, perhaps growing in mangrove-like stands.",
+   "v": "Arvoreta cordaitale dos pântanos de carvão, talvez crescendo em agrupamentos semelhantes a manguezais."
+  },
+  {
+   "k": "Among the oldest known conifers, from Pennsylvanian Yorkshire.",
+   "v": "Entre as coníferas mais antigas conhecidas, do Pensilvaniano de Yorkshire."
+  },
+  {
+   "k": "Marattialean tree fern whose fronds grew in two rows down the trunk.",
+   "v": "Samambaia arborescente maratiácea cujas frondes cresciam em duas fileiras ao longo do tronco."
+  },
+  {
+   "k": "Medullosan seed fern with a strangely tangled stem.",
+   "v": "Pteridosperma medulosácea com um caule estranhamente emaranhado."
+  },
+  {
+   "k": "Strap-leaved cordaite of the cold Gondwana lands as the great ice age waned.",
+   "v": "Cordaitale de folhas em fita das frias terras de Gondwana quando a grande glaciação recuava."
+  },
+  {
+   "k": "Scale tree of the Cathaysian coal swamps of China.",
+   "v": "Árvore-escamosa dos pântanos de carvão da Cataísia, na China."
+  },
+  {
+   "k": "Seed fern with broad, blunt leaflets joined at the base.",
+   "v": "Pteridosperma de folíolos largos e rombos unidos na base."
+  },
+  {
+   "k": "Big-leafleted seed fern covered in fine hairs, common in coal shales.",
+   "v": "Pteridosperma de grandes folíolos cobertos de pelos finos, comum nos folhelhos de carvão."
+  },
+  {
+   "k": "Lacy foliage of scrambling lyginopterid seed ferns.",
+   "v": "Folhagem rendada de pteridospermas lyginopteridales trepadeiras."
+  },
+  {
+   "k": "Zygopterid fern with clusters of big spore sacs.",
+   "v": "Samambaia zigopterídea com agrupamentos de grandes esporângios."
+  },
+  {
+   "k": "Small fern that clambered over the trunks of tree ferns.",
+   "v": "Pequena samambaia que subia pelos troncos das samambaias arborescentes."
+  },
+  {
+   "k": "Leafless, bushy little fern relative of the coal-swamp floor.",
+   "v": "Pequeno parente das samambaias, denso e sem folhas, do chão dos pântanos de carvão."
+  },
+  {
+   "k": "Shrubby lycopsid with a cone on each branch tip.",
+   "v": "Licófita arbustiva com um cone na ponta de cada ramo."
+  },
+  {
+   "k": "Tiny spikemoss-like lycopsid known from coal balls.",
+   "v": "Minúscula licófita semelhante a uma selaginela, conhecida dos nódulos de carvão."
+  },
+  {
+   "k": "Small herbaceous lycopsid of Early Carboniferous Scotland.",
+   "v": "Pequena licófita herbácea do Carbonífero Inferior da Escócia."
+  },
+  {
+   "k": "Early relative of the climbing ferns (Schizaeales).",
+   "v": "Parente primitivo das samambaias trepadeiras (Schizaeales)."
+  },
+  {
+   "k": "Forked, needle-leaved plant of dry Late Paleozoic uplands.",
+   "v": "Planta bifurcada de folhas aciculares dos planaltos secos do Paleozoico Superior."
+  },
+  {
+   "k": "One of the few Carboniferous mosses known, from French coal measures.",
+   "v": "Um dos poucos musgos carboníferos conhecidos, das camadas de carvão da França."
+  },
+  {
+   "k": "Leafy liverwort from the Pennsylvanian coal measures.",
+   "v": "Hepática folhosa das camadas de carvão do Pensilvaniano."
+  },
+  {
+   "k": "Marattialean fern with star-shaped clusters of spore sacs.",
+   "v": "Samambaia maratiácea com agrupamentos de esporângios em forma de estrela."
+  },
+  {
+   "k": "Horsetail of the cool Angaran and Gondwanan floodplains.",
+   "v": "Cavalinha das frescas planícies aluviais de Angara e Gondwana."
+  },
+  {
+   "k": "Tube-shaped dasyclad alga of Carboniferous shelf seas.",
+   "v": "Alga dasicladal tubular dos mares de plataforma do Carbonífero."
+  },
+  {
+   "k": "Dasyclad alga with a pitted sleeve of lime.",
+   "v": "Alga dasicladal com uma bainha de cal pontuada."
+  },
+  {
+   "k": "Leaf-like calcareous alga of Russian Carboniferous seas.",
+   "v": "Alga calcária de aspecto foliáceo dos mares carboníferos da Rússia."
+  },
+  {
+   "k": "Encrusting alga that coated shells and grains.",
+   "v": "Alga incrustante que revestia conchas e grãos."
+  },
+  {
+   "k": "Tiny round fungal spore cases found in coal balls.",
+   "v": "Minúsculas cápsulas de esporos fúngicos redondas encontradas em nódulos de carvão."
+  },
+  {
+   "k": "Oily colonial alga whose remains make torbanite, the boghead coal.",
+   "v": "Alga colonial oleosa cujos restos formam a torbanita, o carvão boghead."
+  },
+  {
+   "k": "Walchian conifer of the dry Early Permian of Europe.",
+   "v": "Conífera walchiana do árido Permiano inicial da Europa."
+  },
+  {
+   "k": "Early conifer with flat, fern-like sprays of needles.",
+   "v": "Conífera primitiva com ramos achatados de agulhas semelhantes a samambaias."
+  },
+  {
+   "k": "Voltzian conifer of the Zechstein sea shores.",
+   "v": "Conífera voltziana das costas do mar de Zechstein."
+  },
+  {
+   "k": "Small conifer from the Late Permian Bletterbach gorge in the Dolomites.",
+   "v": "Pequena conífera do Permiano Superior do desfiladeiro de Bletterbach, nas Dolomitas."
+  },
+  {
+   "k": "Late Permian conifer with dense, short-needled shoots.",
+   "v": "Conífera do Permiano Superior com brotos densos de agulhas curtas."
+  },
+  {
+   "k": "The oldest known ginkgophyte, with thread-like forked leaves.",
+   "v": "A mais antiga ginkgófita conhecida, com folhas bifurcadas filiformes."
+  },
+  {
+   "k": "Ginkgo relative with wedge-shaped, deeply split leaves.",
+   "v": "Parente do ginkgo com folhas cuneiformes profundamente fendidas."
+  },
+  {
+   "k": "Gigantopterid with huge, net-veined leaves, climbing through Cathaysian forests.",
+   "v": "Gigantopterídea com enormes folhas de nervação reticulada, trepando pelas florestas da Cataísia."
+  },
+  {
+   "k": "Early cycad from the Permian of China.",
+   "v": "Cicadácea primitiva do Permiano da China."
+  },
+  {
+   "k": "Peltasperm seed fern of the dry red beds of the Grand Canyon.",
+   "v": "Pteridosperma peltasperma das áridas camadas vermelhas do Grand Canyon."
+  },
+  {
+   "k": "Seed fern of the Late Permian Angaran and Russian floras.",
+   "v": "Pteridosperma das floras do Permiano Superior de Angara e da Rússia."
+  },
+  {
+   "k": "Cathaysian seed fern that bore its seeds right on its leaflets.",
+   "v": "Pteridosperma da Cataísia que trazia as sementes diretamente sobre os folíolos."
+  },
+  {
+   "k": "Marattialean fern of the Permian coal swamps of China.",
+   "v": "Samambaia maratiácea dos pântanos de carvão permianos da China."
+  },
+  {
+   "k": "Gondwanan sphenophyll with leaves in lopsided whorls of three pairs.",
+   "v": "Esfenofilo de Gondwana com folhas em verticilos assimétricos de três pares."
+  },
+  {
+   "k": "Angaran moss with cells like those of peat mosses.",
+   "v": "Musgo de Angara com células como as dos musgos de turfeira."
+  },
+  {
+   "k": "Peltasperm shrub of the dry Late Permian of Russia.",
+   "v": "Arbusto peltaspermo do árido Permiano Superior da Rússia."
+  },
+  {
+   "k": "Thick-leaved peltasperm of the Late Permian Angaran floodplains.",
+   "v": "Peltasperma de folhas grossas das planícies aluviais de Angara do Permiano Superior."
+  },
+  {
+   "k": "Lycopsid of the Permian Paraná Basin in Brazil.",
+   "v": "Licófita do Permiano da bacia do Paraná, no Brasil."
+  },
+  {
+   "k": "Cycad with long, comb-like leaves.",
+   "v": "Cicadácea de folhas longas em forma de pente."
+  },
+  {
+   "k": "Lime-crusted red alga of warm shelf seas from the Permian to the Cretaceous.",
+   "v": "Alga vermelha com crosta de cal dos mares de plataforma quentes do Permiano ao Cretáceo."
+  },
+  {
+   "k": "Dasyclad alga with whorls of fine branches.",
+   "v": "Alga dasicladal com verticilos de ramos finos."
+  },
+  {
+   "k": "Dasyclad with a pitted, finger-like sleeve of lime.",
+   "v": "Dasicladal com uma bainha de cal pontuada em forma de dedo."
+  },
+  {
+   "k": "Encrusting, worm-like alga of Permian reefs.",
+   "v": "Alga incrustante vermiforme dos recifes permianos."
+  },
+  {
+   "k": "Southern voltzian conifer of the earliest Triassic.",
+   "v": "Conífera voltziana austral do início do Triássico."
+  },
+  {
+   "k": "Strap-leaved conifer that grew in dense stands along Gondwanan rivers.",
+   "v": "Conífera de folhas em fita que crescia em densos agrupamentos ao longo dos rios de Gondwana."
+  },
+  {
+   "k": "Early podocarp-like conifer of Gondwana.",
+   "v": "Conífera primitiva semelhante aos podocarpos, de Gondwana."
+  },
+  {
+   "k": "Petrified Forest conifer with short shoot traces all along its logs.",
+   "v": "Conífera da Floresta Petrificada com marcas de braquiblastos ao longo dos troncos."
+  },
+  {
+   "k": "Petrified Forest tree with distinctive wood; its relatives are still debated.",
+   "v": "Árvore da Floresta Petrificada de madeira característica; seu parentesco ainda é debatido."
+  },
+  {
+   "k": "Fossil ginkgo leaves with broad, lobed fans, found worldwide in the Mesozoic.",
+   "v": "Folhas fósseis de ginkgo com leques largos e lobados, encontradas no mundo todo no Mesozoico."
+  },
+  {
+   "k": "Cycad with long, ribbon-like leaves, common across the Mesozoic.",
+   "v": "Cicadácea de folhas longas em forma de fita, comum em todo o Mesozoico."
+  },
+  {
+   "k": "Cheirolepid conifer whose pollen dominates the Triassic-Jurassic boundary.",
+   "v": "Conífera queirolepidiácea cujo pólen domina o limite Triássico-Jurássico."
+  },
+  {
+   "k": "Bennettitalean with neatly ranked, square-ended leaflets.",
+   "v": "Bennettitale com folíolos ordenados de ponta truncada."
+  },
+  {
+   "k": "Small bennettitalean shrub with short, uneven leaflets.",
+   "v": "Pequeno arbusto bennettitale com folíolos curtos e desiguais."
+  },
+  {
+   "k": "Slender, forking bennettitalean bush with small flower-like cones.",
+   "v": "Arbusto bennettitale esguio e ramificado com pequenos cones semelhantes a flores."
+  },
+  {
+   "k": "Slender-stemmed early cycad from Late Triassic North Carolina.",
+   "v": "Cicadácea primitiva de caule esguio do Triássico Superior da Carolina do Norte."
+  },
+  {
+   "k": "Puzzling plant with pleated, palm-like leaves, once claimed as a flowering plant.",
+   "v": "Planta enigmática de folhas plissadas como de palmeira, já tida como planta com flores."
+  },
+  {
+   "k": "Corystosperm with fine, needle-like leaflets, a dry-ground cousin of Dicroidium.",
+   "v": "Corystosperma de folíolos finos e aciculares, prima de Dicroidium dos terrenos secos."
+  },
+  {
+   "k": "Caytonialean shrub with net-veined leaflets and berry-like seed cups.",
+   "v": "Arbusto caytoniale de folíolos com nervação reticulada e cúpulas seminíferas semelhantes a bagas."
+  },
+  {
+   "k": "Dipterid fern with big, umbrella-like fronds.",
+   "v": "Samambaia dipterídea com grandes frondes em forma de guarda-chuva."
+  },
+  {
+   "k": "Dipterid fern with leaves netted like a window lattice.",
+   "v": "Samambaia dipterídea com folhas reticuladas como uma treliça de janela."
+  },
+  {
+   "k": "Royal-fern relative common in Mesozoic floras.",
+   "v": "Parente da samambaia-real, comum nas floras mesozoicas."
+  },
+  {
+   "k": "Marattialean fern with huge fronds, common in the Middle Triassic.",
+   "v": "Samambaia maratiácea de frondes enormes, comum no Triássico Médio."
+  },
+  {
+   "k": "Fern close to the living king ferns.",
+   "v": "Samambaia próxima das atuais samambaias maratiáceas gigantes."
+  },
+  {
+   "k": "Forking, thicket-forming fern of open ground.",
+   "v": "Samambaia bifurcada que forma matagais em terreno aberto."
+  },
+  {
+   "k": "Quillwort-like lycopsid that greened the shores after the end-Permian extinction.",
+   "v": "Licófita semelhante a Isoetes que reverdeceu as costas após a extinção do fim do Permiano."
+  },
+  {
+   "k": "Herb-sized conifer from the Triassic sandstones of the Vosges.",
+   "v": "Conífera do tamanho de uma erva dos arenitos triássicos dos Vosges."
+  },
+  {
+   "k": "Small leafy liverwort of Rhaetian ponds.",
+   "v": "Pequena hepática folhosa das lagoas do Rético."
+  },
+  {
+   "k": "Fossil liverwort with flat, forking lobes.",
+   "v": "Hepática fóssil de lobos achatados e bifurcados."
+  },
+  {
+   "k": "Large dasyclad of Triassic reefs.",
+   "v": "Grande dasicladal dos recifes triássicos."
+  },
+  {
+   "k": "Dasyclad with swollen, bladder-tipped branches.",
+   "v": "Dasicladal com ramos inchados terminados em vesícula."
+  },
+  {
+   "k": "Puzzling encrusting alga of Mesozoic lagoons.",
+   "v": "Enigmática alga incrustante das lagunas mesozoicas."
+  },
+  {
+   "k": "Triassic stonewort with star-patterned fruiting cases.",
+   "v": "Carófita triássica com cápsulas frutíferas de padrão estrelado."
+  },
+  {
+   "k": "Mushroom-relative threads with clamp connections, from Antarctica.",
+   "v": "Filamentos aparentados com os cogumelos, com grampos de conexão, da Antártida."
+  },
+  {
+   "k": "Spiny fungal spore cases preserved in Antarctic Triassic peat.",
+   "v": "Cápsulas de esporos fúngicos espinhosas preservadas em turfa triássica da Antártida."
+  },
+  {
+   "k": "Cheirolepid conifer with tiny cones petrified in Patagonia.",
+   "v": "Conífera queirolepidiácea com minúsculos cones petrificados na Patagônia."
+  },
+  {
+   "k": "Kauri relative from the Jurassic Talbragar fish beds, Australia.",
+   "v": "Parente do kauri dos leitos de peixes jurássicos de Talbragar, na Austrália."
+  },
+  {
+   "k": "Early cypress-family conifer like a Chinese fir.",
+   "v": "Conífera primitiva da família dos ciprestes, semelhante a um abeto-chinês."
+  },
+  {
+   "k": "Early pine relative with split cone scales.",
+   "v": "Parente primitivo do pinheiro com escamas do cone fendidas."
+  },
+  {
+   "k": "The oldest known member of the pine family, from Scotland.",
+   "v": "O mais antigo membro conhecido da família dos pinheiros, da Escócia."
+  },
+  {
+   "k": "Jurassic ginkgo from Henan with clusters of seeds on forked stalks.",
+   "v": "Ginkgo jurássico de Henan com grupos de sementes em pedúnculos bifurcados."
+  },
+  {
+   "k": "Ginkgo relative with tufts of strap leaves on short shoots.",
+   "v": "Parente do ginkgo com tufos de folhas em fita sobre braquiblastos."
+  },
+  {
+   "k": "Large cycad with comb-like fronds.",
+   "v": "Grande cicadácea de frondes em forma de pente."
+  },
+  {
+   "k": "Bennettitalean of dry coasts with stiff, closely set leaflets.",
+   "v": "Bennettitale das costas áridas com folíolos rígidos e muito próximos."
+  },
+  {
+   "k": "Bennettitalean whose leaflets have ear-like lobes at the base.",
+   "v": "Bennettitale cujos folíolos têm lobos auriculados na base."
+  },
+  {
+   "k": "Slender bennettitalean bush with small two-sexed 'flowers', from Yorkshire.",
+   "v": "Arbusto bennettitale esguio com pequenas «flores» bissexuadas, de Yorkshire."
+  },
+  {
+   "k": "Thick-leaved seed fern of salty coastal flats.",
+   "v": "Pteridosperma de folhas grossas das planícies costeiras salobras."
+  },
+  {
+   "k": "Early climbing-fern relative of the Jurassic Yorkshire delta.",
+   "v": "Parente primitivo das samambaias trepadeiras do delta jurássico de Yorkshire."
+  },
+  {
+   "k": "Fern with small fan-shaped leaves, kin of the living Dipteris.",
+   "v": "Samambaia de pequenas folhas em leque, parente do atual Dipteris."
+  },
+  {
+   "k": "Common fern of the Jurassic Yorkshire flora.",
+   "v": "Samambaia comum da flora jurássica de Yorkshire."
+  },
+  {
+   "k": "Delicately cut fern of the Jurassic and Early Cretaceous.",
+   "v": "Samambaia delicadamente recortada do Jurássico e do Cretáceo Inferior."
+  },
+  {
+   "k": "Dasyclad of Early Jurassic carbonate lagoons.",
+   "v": "Dasicladal das lagunas carbonáticas do Jurássico Inferior."
+  },
+  {
+   "k": "Small tube-shaped dasyclad of Tethyan lagoons.",
+   "v": "Pequena dasicladal tubular das lagunas do Tétis."
+  },
+  {
+   "k": "Dasyclad with star-like whorls of rays.",
+   "v": "Dasicladal com verticilos de raios em forma de estrela."
+  },
+  {
+   "k": "Crust-building organism of Jurassic and Cretaceous reefs.",
+   "v": "Organismo construtor de crostas dos recifes do Jurássico e do Cretáceo."
+  },
+  {
+   "k": "Bubbly calcified mats on shallow Mesozoic platforms.",
+   "v": "Esteiras calcificadas borbulhantes das plataformas rasas do Mesozoico."
+  },
+  {
+   "k": "Stonewort of Jurassic and Cretaceous lakes.",
+   "v": "Carófita dos lagos do Jurássico e do Cretáceo."
+  },
+  {
+   "k": "Leafy lichen from Jurassic Daohugou, China.",
+   "v": "Líquen folhoso do Jurássico de Daohugou, na China."
+  },
+  {
+   "k": "Magnolia-like tree with big, many-parted flowers, from Kansas.",
+   "v": "Árvore semelhante à magnólia com grandes flores de muitas peças, do Kansas."
+  },
+  {
+   "k": "Early plane-tree relative with lobed leaves, along Cretaceous streams.",
+   "v": "Parente primitivo do plátano com folhas lobadas, ao longo dos riachos do Cretáceo."
+  },
+  {
+   "k": "Big-leaved plane-tree relative of the Late Cretaceous.",
+   "v": "Parente do plátano de folhas grandes do Cretáceo Superior."
+  },
+  {
+   "k": "One of the oldest laurels, its tiny flowers preserved as charcoal.",
+   "v": "Um dos louros mais antigos; suas minúsculas flores se preservaram como carvão vegetal."
+  },
+  {
+   "k": "Toothed-leaved early relative of oaks and chestnuts.",
+   "v": "Parente primitivo dos carvalhos e castanheiros, de folhas denteadas."
+  },
+  {
+   "k": "Swamp conifer that once ringed the Arctic, now nearly extinct in the wild.",
+   "v": "Conífera de pântano que já circundou o Ártico, hoje quase extinta na natureza."
+  },
+  {
+   "k": "Stiff-needled cypress-family conifer, known since the Late Cretaceous.",
+   "v": "Conífera da família dos ciprestes de agulhas rígidas, conhecida desde o Cretáceo Superior."
+  },
+  {
+   "k": "Its pollen is common in Cretaceous rocks; the living trees were found only in 1994.",
+   "v": "Seu pólen é comum em rochas cretáceas; as árvores vivas só foram encontradas em 1994."
+  },
+  {
+   "k": "Succulent-jointed cheirolepid of salty Cretaceous coasts.",
+   "v": "Queirolepidiácea de articulações suculentas das costas salobras do Cretáceo."
+  },
+  {
+   "k": "Chloranthoid herb from Early Cretaceous Portugal with tiny, petal-less flowers.",
+   "v": "Erva clorantoide do Cretáceo Inferior de Portugal com minúsculas flores sem pétalas."
+  },
+  {
+   "k": "Buttercup relative from Liaoning, among the oldest eudicots.",
+   "v": "Parente do ranúnculo de Liaoning, entre as eudicotiledôneas mais antigas."
+  },
+  {
+   "k": "Small herb with paired flower stalks, from the Yixian lakes.",
+   "v": "Pequena erva com pedúnculos florais aos pares, dos lagos de Yixian."
+  },
+  {
+   "k": "Early Cretaceous herb with tiny flowers, from Liaoning.",
+   "v": "Erva do Cretáceo Inferior com minúsculas flores, de Liaoning."
+  },
+  {
+   "k": "Tiny saxifrage-like flower preserved in Swedish charcoal.",
+   "v": "Minúscula flor semelhante a uma saxífraga preservada em carvão vegetal sueco."
+  },
+  {
+   "k": "Buttercup-order flower with a spiral of small tepals, from Portugal.",
+   "v": "Flor da ordem dos ranúnculos com uma espiral de pequenas tépalas, de Portugal."
+  },
+  {
+   "k": "Small eudicot herb from the Crato limestone of Brazil.",
+   "v": "Pequena erva eudicotiledônea do calcário do Crato, no Brasil."
+  },
+  {
+   "k": "Magnoliid shrub with small flowers, from the Crato limestone.",
+   "v": "Arbusto magnoliídeo de flores pequenas, do calcário do Crato."
+  },
+  {
+   "k": "Magnoliid of the Crato lake shores, near the custard-apple family.",
+   "v": "Magnoliídea das margens do lago do Crato, próxima da família da fruta-do-conde."
+  },
+  {
+   "k": "Spicebush relative with many-tepaled flowers, from Virginia.",
+   "v": "Parente do calicanto com flores de muitas tépalas, da Virgínia."
+  },
+  {
+   "k": "Early water-lily flower from Portugal.",
+   "v": "Flor primitiva de nenúfar de Portugal."
+  },
+  {
+   "k": "Tiny relative of the giant water lily, from New Jersey.",
+   "v": "Minúsculo parente da vitória-régia, de Nova Jersey."
+  },
+  {
+   "k": "Fanwort-family water plant with round floating leaves, from Brazil.",
+   "v": "Planta aquática da família da cabomba com folhas flutuantes redondas, do Brasil."
+  },
+  {
+   "k": "Floating aroid rosettes like water lettuce, from Late Cretaceous Alberta.",
+   "v": "Rosetas flutuantes de arácea semelhantes à alface-d'água, do Cretáceo Superior de Alberta."
+  },
+  {
+   "k": "Leafless green-jointed shrub of dry lands, known since the Early Cretaceous.",
+   "v": "Arbusto sem folhas de articulações verdes das terras secas, conhecido desde o Cretáceo Inferior."
+  },
+  {
+   "k": "Welwitschia-like gnetophyte of the dry Crato coast.",
+   "v": "Gnetófita semelhante a Welwitschia da costa árida do Crato."
+  },
+  {
+   "k": "Finely divided fern of the Wealden wetlands.",
+   "v": "Samambaia finamente dividida das áreas úmidas do Wealden."
+  },
+  {
+   "k": "Small Indian tree-shrub with mulberry-like seed heads, of its own extinct order.",
+   "v": "Pequena arvoreta indiana com infrutescências semelhantes a amoras, de sua própria ordem extinta."
+  },
+  {
+   "k": "Late-surviving bennettitalean with a cone at each leaf base.",
+   "v": "Bennettitale de sobrevivência tardia com um cone na base de cada folha."
+  },
+  {
+   "k": "Club-shaped dasyclad, still alive in tropical lagoons.",
+   "v": "Dasicladal em forma de clava, ainda viva em lagunas tropicais."
+  },
+  {
+   "k": "Beaded dasyclad with tufts at its tips.",
+   "v": "Dasicladal em contas com tufos nas pontas."
+  },
+  {
+   "k": "Clavatoracean stonewort with three-fold symmetric fruiting cases.",
+   "v": "Carófita clavatorácea com cápsulas frutíferas de simetria tripla."
+  },
+  {
+   "k": "Early lotus relative with round, shield-like leaves.",
+   "v": "Parente primitivo do lótus com folhas redondas em forma de escudo."
+  },
+  {
+   "k": "Tiny floating fern that turns ponds red; in the Eocene it covered the Arctic Ocean.",
+   "v": "Minúscula samambaia flutuante que deixa as lagoas vermelhas; no Eoceno cobriu o oceano Ártico."
+  },
+  {
+   "k": "Coral fungus preserved in Burmese amber.",
+   "v": "Fungo coraloide preservado em âmbar birmanês."
+  },
+  {
+   "k": "The oldest insect-killing fungus, sprouting from a scale insect in amber.",
+   "v": "O mais antigo fungo entomopatogênico, brotando de uma cochonilha em âmbar."
+  },
+  {
+   "k": "Crusty lichen from the Early Cretaceous of Vancouver Island.",
+   "v": "Líquen crostoso do Cretáceo Inferior da ilha de Vancouver."
+  },
+  {
+   "k": "Walnuts appear in the Eocene and spread across the northern continents.",
+   "v": "As nogueiras surgem no Eoceno e se espalham pelos continentes do norte."
+  },
+  {
+   "k": "Hickories filled Paleocene forests of North America and Europe.",
+   "v": "As nogueiras-americanas povoaram as florestas paleocenas da América do Norte e da Europa."
+  },
+  {
+   "k": "Chestnuts, with spiny husks around glossy nuts.",
+   "v": "Castanheiros, com ouriços espinhosos em torno de castanhas lustrosas."
+  },
+  {
+   "k": "Elms, with round papery seeds, date back to the Paleocene.",
+   "v": "Os olmos, com sementes redondas e papiráceas, remontam ao Paleoceno."
+  },
+  {
+   "k": "Lindens hum with bees when their sweet flowers open.",
+   "v": "As tílias zumbem de abelhas quando suas flores doces se abrem."
+  },
+  {
+   "k": "Katsura relatives were common along Paleocene rivers; its autumn leaves smell of caramel.",
+   "v": "Parentes da katsura eram comuns ao longo dos rios do Paleoceno; suas folhas de outono cheiram a caramelo."
+  },
+  {
+   "k": "Extinct wheel-wood relative of the warm Paleocene Arctic.",
+   "v": "Parente extinto da árvore-roda do Ártico quente do Paleoceno."
+  },
+  {
+   "k": "Extinct Eocene plane tree with big lobed leaves.",
+   "v": "Plátano extinto do Eoceno com grandes folhas lobadas."
+  },
+  {
+   "k": "Swamp tree whose leaves turn a blazing scarlet in autumn.",
+   "v": "Árvore de pântano cujas folhas ficam escarlate-flamejante no outono."
+  },
+  {
+   "k": "Elm relative found from the Eocene; a few relict species survive.",
+   "v": "Parente do olmo conhecido desde o Eoceno; algumas espécies relictas sobrevivem."
+  },
+  {
+   "k": "Walnut relative hung with long chains of winged nuts.",
+   "v": "Parente da nogueira de que pendem longas correntes de nozes aladas."
+  },
+  {
+   "k": "Rainforest tree with bright blue fruit, known from the Eocene of Australia.",
+   "v": "Árvore da floresta tropical com frutos azul-vivo, conhecida desde o Eoceno da Austrália."
+  },
+  {
+   "k": "Evergreen chestnut relative of warm Asian forests since the Eocene.",
+   "v": "Parente perene do castanheiro das florestas quentes da Ásia desde o Eoceno."
+  },
+  {
+   "k": "Fan palm of tropical swamps; its pollen goes back to the Paleocene.",
+   "v": "Palmeira-leque dos pântanos tropicais; seu pólen remonta ao Paleoceno."
+  },
+  {
+   "k": "Shade-loving conifer with drooping tips and tiny cones.",
+   "v": "Conífera de sombra com pontas pendentes e cones minúsculos."
+  },
+  {
+   "k": "Scale-leaved conifer known from the Paleocene Arctic.",
+   "v": "Conífera de folhas escamiformes conhecida desde o Ártico paleoceno."
+  },
+  {
+   "k": "True cedars, with flat-topped tiers and upright barrel cones.",
+   "v": "Cedros verdadeiros, com camadas de topo achatado e cones eretos em forma de barril."
+  },
+  {
+   "k": "Tall conifer whose cones have three-pointed bracts; known since the Oligocene.",
+   "v": "Conífera alta cujos cones têm brácteas trífidas; conhecida desde o Oligoceno."
+  },
+  {
+   "k": "Hardy conifer with blue, berry-like cones.",
+   "v": "Conífera resistente com cones azuis semelhantes a bagas."
+  },
+  {
+   "k": "Ash trees, with bunches of winged keys, since the Eocene.",
+   "v": "Freixos, com cachos de sâmaras, desde o Eoceno."
+  },
+  {
+   "k": "Candles of white flowers and shiny conkers; known from the Paleocene.",
+   "v": "Velas de flores brancas e castanhas lustrosas; conhecido desde o Paleoceno."
+  },
+  {
+   "k": "Mango leaves are found in Paleocene rocks of India.",
+   "v": "Folhas de mangueira foram encontradas em rochas paleocenas da Índia."
+  },
+  {
+   "k": "Giant herb with huge leaves; fossil banana seeds come from early Paleogene India.",
+   "v": "Erva gigante de folhas enormes; sementes fósseis de bananeira vêm do Paleógeno inicial da Índia."
+  },
+  {
+   "k": "Floating fern that carpeted the Eocene Arctic Ocean and drew down carbon dioxide.",
+   "v": "Samambaia flutuante que atapetou o oceano Ártico do Eoceno e retirou dióxido de carbono da atmosfera."
+  },
+  {
+   "k": "Sharp-edged sedge; its seeds are common in Paleogene swamp deposits.",
+   "v": "Ciperácea de bordas cortantes; suas sementes são comuns em depósitos de pântano do Paleógeno."
+  },
+  {
+   "k": "Fern almost unchanged since the Paleocene.",
+   "v": "Samambaia quase inalterada desde o Paleoceno."
+  },
+  {
+   "k": "Large fern of wet ground, known from Paleocene rocks.",
+   "v": "Grande samambaia de solos úmidos, conhecida em rochas do Paleoceno."
+  },
+  {
+   "k": "Tall, leathery fern that grows among mangroves.",
+   "v": "Samambaia alta e coriácea que cresce entre os mangues."
+  },
+  {
+   "k": "Roses grew in Eocene North America, with red hips after their flowers.",
+   "v": "As rosas cresciam na América do Norte do Eoceno, com frutos vermelhos depois das flores."
+  },
+  {
+   "k": "Thorny thickets with blackberries and raspberries.",
+   "v": "Matagais espinhosos com amoras e framboesas."
+  },
+  {
+   "k": "Shrub with flat white flower heads and dark berries.",
+   "v": "Arbusto com inflorescências brancas e achatadas e bagas escuras."
+  },
+  {
+   "k": "Extinct ginger of Paleocene and Eocene tropical forests.",
+   "v": "Gengibre extinto das florestas tropicais do Paleoceno e do Eoceno."
+  },
+  {
+   "k": "Giant arum of river banks, found in the Paleocene rainforest of Cerrejón.",
+   "v": "Arácea gigante das margens dos rios, encontrada na floresta tropical paleocena de Cerrejón."
+  },
+  {
+   "k": "The oldest fossil orchids are in Eocene amber.",
+   "v": "As orquídeas fósseis mais antigas estão em âmbar do Eoceno."
+  },
+  {
+   "k": "Thorny shrub of dry ground with sweet red fruit.",
+   "v": "Arbusto espinhoso de terrenos secos com frutos vermelhos e doces."
+  },
+  {
+   "k": "Shrub with big round heads of blue or pink flowers.",
+   "v": "Arbusto com grandes cabeças redondas de flores azuis ou rosa."
+  },
+  {
+   "k": "Water lily with round yellow flowers held above the water.",
+   "v": "Nenúfar com flores amarelas redondas erguidas acima da água."
+  },
+  {
+   "k": "Seagrass of warm shallow seas since the Eocene.",
+   "v": "Erva marinha de mares quentes e rasos desde o Eoceno."
+  },
+  {
+   "k": "Woody-stemmed seagrass found in Eocene limestones of Florida.",
+   "v": "Erva marinha de caule lenhoso encontrada em calcários eocenos da Flórida."
+  },
+  {
+   "k": "Jointed coralline alga with forked chalky branches.",
+   "v": "Alga coralina articulada com ramos calcários bifurcados."
+  },
+  {
+   "k": "Fine pink coralline tufts that grow on other seaweeds.",
+   "v": "Finos tufos coralinos rosados que crescem sobre outras algas."
+  },
+  {
+   "k": "Extinct chalky green alga whose egg-shaped segments fill Paleogene sands.",
+   "v": "Alga verde calcária extinta cujos segmentos ovoides enchem as areias do Paleógeno."
+  },
+  {
+   "k": "Star-shaped plankton plates that pile up as ooze on the deep sea floor.",
+   "v": "Placas de plâncton em forma de estrela que se acumulam como vasa no fundo do mar profundo."
+  },
+  {
+   "k": "Spiky rosette that rises and sinks in the water; its seeds are common in Paleogene lake beds.",
+   "v": "Roseta espinhosa que sobe e afunda na água; suas sementes são comuns em leitos lacustres do Paleógeno."
+  },
+  {
+   "k": "Bolete partnered with pine roots; its fossil root sheaths are Eocene.",
+   "v": "Boleto associado às raízes do pinheiro; suas bainhas radiculares fósseis são do Eoceno."
+  },
+  {
+   "k": "Tiny pin-shaped fungus that grows on resin; found in Eocene amber.",
+   "v": "Minúsculo fungo em forma de alfinete que cresce na resina; encontrado em âmbar do Eoceno."
+  },
+  {
+   "k": "Pink slime mould whose fruiting bodies are preserved in Baltic amber.",
+   "v": "Mixomiceto rosado cujos corpos de frutificação estão preservados em âmbar báltico."
+  },
+  {
+   "k": "Leafy grey-green lichen, known from Eocene amber.",
+   "v": "Líquen folhoso verde-acinzentado, conhecido em âmbar do Eoceno."
+  },
+  {
+   "k": "Its resin hardened into the Miocene amber of the Caribbean.",
+   "v": "Sua resina endureceu no âmbar mioceno do Caribe."
+  },
+  {
+   "k": "Mangrove that breathes through pencil-like roots poking out of the mud.",
+   "v": "Mangue que respira por raízes semelhantes a lápis que despontam da lama."
+  },
+  {
+   "k": "The most massive trees on Earth, on the slopes of the Sierra Nevada.",
+   "v": "As árvores mais volumosas da Terra, nas encostas da Sierra Nevada."
+  },
+  {
+   "k": "Dark green flame of the Mediterranean hills.",
+   "v": "Chama verde-escura das colinas mediterrâneas."
+  },
+  {
+   "k": "Umbrella-shaped pine with edible pine nuts.",
+   "v": "Pinheiro em forma de guarda-chuva com pinhões comestíveis."
+  },
+  {
+   "k": "Savanna tree whose yellow fruit elephants seek out.",
+   "v": "Árvore da savana cujos frutos amarelos os elefantes procuram."
+  },
+  {
+   "k": "Woodland tree of central Africa; new leaves flush red and copper.",
+   "v": "Árvore dos bosques da África central; suas folhas novas brotam vermelhas e acobreadas."
+  },
+  {
+   "k": "Dark red flowers and huge sausage-shaped fruit hanging on ropes.",
+   "v": "Flores vermelho-escuras e enormes frutos em forma de salsicha pendurados em cordas."
+  },
+  {
+   "k": "Feathery-leaved savanna tree with brown, sticky pods.",
+   "v": "Árvore da savana de folhas plumosas com vagens marrons e pegajosas."
+  },
+  {
+   "k": "Fan palm with forked trunks, along desert rivers like the Nile.",
+   "v": "Palmeira-leque de troncos bifurcados, ao longo de rios do deserto como o Nilo."
+  },
+  {
+   "k": "Small understory tree with pods growing straight from its trunk.",
+   "v": "Pequena árvore do sub-bosque cujos frutos crescem diretamente do tronco."
+  },
+  {
+   "k": "Amazon giant whose heavy fruit is opened only by agoutis.",
+   "v": "Gigante amazônico cujos pesados frutos só as cutias conseguem abrir."
+  },
+  {
+   "k": "Bat-pollinated tree with spiny, famously smelly fruit.",
+   "v": "Árvore polinizada por morcegos com frutos espinhosos de cheiro notoriamente forte."
+  },
+  {
+   "k": "Pink flowers and round fruit grow straight from its trunk.",
+   "v": "Flores rosa e frutos redondos crescem diretamente do tronco."
+  },
+  {
+   "k": "Silvery willow of river banks.",
+   "v": "Salgueiro prateado das margens dos rios."
+  },
+  {
+   "k": "Gnarled, silver-leaved tree of the Mediterranean.",
+   "v": "Árvore retorcida de folhas prateadas do Mediterrâneo."
+  },
+  {
+   "k": "Evergreen with red bark and round, bumpy red fruit.",
+   "v": "Árvore perene de casca vermelha e frutos vermelhos, redondos e granulosos."
+  },
+  {
+   "k": "New Zealand's 'Christmas tree' bursts into crimson flowers.",
+   "v": "A «árvore de Natal» da Nova Zelândia explode em flores carmesim."
+  },
+  {
+   "k": "Drops its leaves and covers itself in scarlet bells.",
+   "v": "Perde as folhas e se cobre de sinos escarlates."
+  },
+  {
+   "k": "Desert palm of oases, wearing a skirt of dead leaves.",
+   "v": "Palmeira dos oásis do deserto, vestida com uma saia de folhas mortas."
+  },
+  {
+   "k": "Very tall grass of African savannas and river banks.",
+   "v": "Gramínea muito alta das savanas e margens de rios africanas."
+  },
+  {
+   "k": "Fine-leaved tussock grass of cool steppes and mountains.",
+   "v": "Gramínea em touceira de folhas finas das estepes frias e montanhas."
+  },
+  {
+   "k": "Shortgrass of the prairies with eyelash-like seed heads.",
+   "v": "Gramínea baixa das pradarias com espigas semelhantes a cílios."
+  },
+  {
+   "k": "Tulips come from the steppes and mountains of Central Asia.",
+   "v": "As tulipas vêm das estepes e montanhas da Ásia Central."
+  },
+  {
+   "k": "Scarlet poppies of open, disturbed ground.",
+   "v": "Papoulas escarlates de terrenos abertos e perturbados."
+  },
+  {
+   "k": "Spires of blue-purple pea flowers.",
+   "v": "Espigas de flores de ervilha azul-arroxeadas."
+  },
+  {
+   "k": "Tall daisy of the American prairies whose heads follow the sun.",
+   "v": "Margarida alta das pradarias americanas cujos capítulos seguem o sol."
+  },
+  {
+   "k": "Fragrant grey shrub of dry Mediterranean hills.",
+   "v": "Arbusto cinzento e perfumado das colinas secas do Mediterrâneo."
+  },
+  {
+   "k": "Deep blue trumpets of mountain meadows.",
+   "v": "Trombetas azul-escuras dos prados de montanha."
+  },
+  {
+   "k": "Low shrub with blue-black berries in heaths and forests.",
+   "v": "Arbusto baixo com bagas negro-azuladas em charnecas e florestas."
+  },
+  {
+   "k": "Knee-high birch of the tundra; a sign of cold ice-age climates.",
+   "v": "Bétula da altura do joelho da tundra; sinal de climas frios da Era do Gelo."
+  },
+  {
+   "k": "Tight cushion of tundra covered in pink flowers.",
+   "v": "Almofada compacta da tundra coberta de flores rosa."
+  },
+  {
+   "k": "Round, golden-spined cactus of Mexican deserts.",
+   "v": "Cacto redondo de espinhos dourados dos desertos do México."
+  },
+  {
+   "k": "Spiky rosette that flowers once, on a tall pole, then dies.",
+   "v": "Roseta espinhosa que floresce uma única vez, numa haste alta, e depois morre."
+  },
+  {
+   "k": "Branching tree yucca of the Mojave Desert.",
+   "v": "Iúca arborescente ramificada do deserto de Mojave."
+  },
+  {
+   "k": "Bundle of thorny whips tipped with red flowers after rain.",
+   "v": "Feixe de varas espinhosas com flores vermelhas nas pontas após a chuva."
+  },
+  {
+   "k": "Salt-tolerant shrub of desert rivers, clouded in pink flowers.",
+   "v": "Arbusto tolerante ao sal dos rios do deserto, envolto em flores rosa."
+  },
+  {
+   "k": "Leafless, twisted shrub of the Central Asian deserts.",
+   "v": "Arbusto retorcido e sem folhas dos desertos da Ásia Central."
+  },
+  {
+   "k": "Pairs of fat leaves that look like pebbles in the Namib sand.",
+   "v": "Pares de folhas carnudas que parecem seixos na areia do Namibe."
+  },
+  {
+   "k": "Iris with sword-like leaves and yellow flowers on pond edges.",
+   "v": "Íris de folhas em forma de espada e flores amarelas nas margens das lagoas."
+  },
+  {
+   "k": "Floating Amazon plant with lilac flower spikes.",
+   "v": "Planta flutuante amazônica com espigas de flores lilás."
+  },
+  {
+   "k": "Carnivorous bog plant whose tall pitchers drown insects.",
+   "v": "Planta carnívora de turfeira cujos altos jarros afogam insetos."
+  },
+  {
+   "k": "Tropical vine with hanging pitchers that trap insects.",
+   "v": "Trepadeira tropical com jarros pendentes que capturam insetos."
+  },
+  {
+   "k": "Rosettes of the American tropics that hold pools of water in their leaves.",
+   "v": "Rosetas dos trópicos americanos que guardam poças de água entre as folhas."
+  },
+  {
+   "k": "Leafless parasite with the world's largest single flower, smelling of rotting meat.",
+   "v": "Parasita sem folhas com a maior flor individual do mundo, cheirando a carne podre."
+  },
+  {
+   "k": "Orange and blue flowers shaped like a bird's head.",
+   "v": "Flores laranja e azuis em forma de cabeça de pássaro."
+  },
+  {
+   "k": "Tall spikes of purple bells at forest edges.",
+   "v": "Altas espigas de sinos roxos nas orlas da floresta."
+  },
+  {
+   "k": "Long-leaved seagrass of tropical shallows, grazed by dugongs.",
+   "v": "Erva marinha de folhas longas dos baixios tropicais, pastada por dugongos."
+  },
+  {
+   "k": "Bright green seagrass of wave-beaten Pacific rocks.",
+   "v": "Erva marinha verde-viva das rochas do Pacífico batidas pelas ondas."
+  },
+  {
+   "k": "Chalky green alga shaped like a shaving brush.",
+   "v": "Alga verde calcária em forma de pincel de barba."
+  },
+  {
+   "k": "Green alga with a stiff, chalky fan on a stalk.",
+   "v": "Alga verde com um leque rígido e calcário sobre um pedúnculo."
+  },
+  {
+   "k": "Kelp with a float the size of a fist at the end of a long whip-like stalk.",
+   "v": "Kelp com um flutuador do tamanho de um punho na ponta de um longo estipe em forma de chicote."
+  },
+  {
+   "k": "Long, frilly-edged kelp of cold Atlantic coasts.",
+   "v": "Kelp longo de bordas franzidas das frias costas do Atlântico."
+  },
+  {
+   "k": "Floating rosette with horned nuts.",
+   "v": "Roseta flutuante com frutos cornudos."
+  },
+  {
+   "k": "Fast-growing waterweed with whorls of small leaves.",
+   "v": "Planta aquática de crescimento rápido com verticilos de pequenas folhas."
+  },
+  {
+   "k": "Water plant with fans of finely cut leaves.",
+   "v": "Planta aquática com leques de folhas finamente recortadas."
+  },
+  {
+   "k": "Buttercup of streams with white flowers on the surface.",
+   "v": "Ranúnculo dos riachos com flores brancas na superfície."
+  },
+  {
+   "k": "An ink cap preserved in Miocene Dominican amber.",
+   "v": "Um coprino preservado em âmbar dominicano do Mioceno."
+  },
+  {
+   "k": "Bright red brittlegill of pine woods.",
+   "v": "Rússula vermelho-viva dos pinhais."
+  },
+  {
+   "k": "Blue mushroom that bleeds blue milk when cut.",
+   "v": "Cogumelo azul que verte um leite azul quando cortado."
+  },
+  {
+   "k": "Black, trumpet-shaped mushroom of leaf litter.",
+   "v": "Cogumelo preto em forma de trombeta da serapilheira."
+  },
+  {
+   "k": "Japanese bonnet that glows green on rainy nights.",
+   "v": "Mycena japonesa que brilha em verde nas noites chuvosas."
+  },
+  {
+   "k": "Cold-loving cave mould that grows on the noses of hibernating bats.",
+   "v": "Bolor de caverna amante do frio que cresce no focinho de morcegos em hibernação."
+  },
+  {
+   "k": "Lichen that hangs from branches in grey-green tassels.",
+   "v": "Líquen que pende dos galhos em borlas verde-acinzentadas."
+  },
+  {
+   "k": "Yellow-green crusts on bare rock; grows so slowly it is used to date glacier retreat.",
+   "v": "Crostas verde-amareladas sobre rocha nua; cresce tão devagar que é usado para datar o recuo das geleiras."
+  },
+  {
+   "k": "Wild wheat of the Fertile Crescent, ancestor of the first farmed wheats.",
+   "v": "Trigo selvagem do Crescente Fértil, ancestral dos primeiros trigos cultivados."
+  },
+  {
+   "k": "A new species born in an English salt marsh in the 1890s.",
+   "v": "Uma nova espécie surgida num sapal inglês na década de 1890."
+  },
+  {
+   "k": "Chalk-plated plankton whose blooms whiten the sea; it appeared about 270,000 years ago.",
+   "v": "Plâncton de placas calcárias cujas florações embranquecem o mar; surgiu há cerca de 270 000 anos."
+  },
+  {
+   "k": "Microbial matground",
+   "v": "Solo de tapetes microbianos"
+  },
+  {
+   "k": "Revive ({0} EP)",
+   "v": "Reviver ({0} EP)"
+  },
+  {
+   "k": "All your groups of it are gone. You can bring one back to a habitat center of yours.",
+   "v": "Todos os seus grupos desta espécie desapareceram. Você pode trazer um de volta a um dos seus centros de habitat."
+  },
+  {
+   "k": "No free tile for it on or near your habitat centers",
+   "v": "Nenhuma casa livre para ela em ou perto dos seus centros de habitat"
+  },
+  {
+   "k": "No free {0} on or near your habitat centers",
+   "v": "Nenhum {0} livre em ou perto dos seus centros de habitat"
+  },
+  {
+   "k": "The {0} is back (−{1} EP)",
+   "v": "{0} está de volta (−{1} EP)"
+  },
+  {
+   "k": "Nothing to bring back",
+   "v": "Nada para trazer de volta"
+  },
+  {
+   "k": "Couldn't place it",
+   "v": "Não foi possível posicioná-lo"
+  },
+  {
+   "k": "Evolved",
+   "v": "Evoluído"
+  },
+  {
+   "k": "{0} → {1}",
+   "v": "{0} → {1}"
   }
  ]
 }

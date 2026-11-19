@@ -66,6 +66,24 @@ namespace NaturalHistory.World
         // Re-centre on the followed unit after the player has panned away.
         public void ResumeFollow() => following = followTarget != null;
 
+        // Glide so a ground point comes to screen centre over `seconds` (AttackCamera). Stops following.
+        public void GlideTo(Vector3 point, float seconds)
+        {
+            if (!TryGroundPoint(ScreenCenter, out var center)) return;
+            var grid = HexGrid.Instance;
+            if (grid != null) point.x -= Mathf.Round((point.x - center.x) / grid.WrapWidth) * grid.WrapWidth;
+            following  = false;
+            glideFrom  = transform.position;
+            glideTo    = transform.position + new Vector3(point.x - center.x, 0f, point.z - center.z);
+            glideStart = Time.unscaledTime;
+            glideTime  = Mathf.Max(0.01f, seconds);
+            gliding    = true;
+        }
+
+        private bool gliding;
+        private Vector3 glideFrom, glideTo;
+        private float glideStart, glideTime;
+
         // Put a ground point at screen centre (the minimap). Stops following.
         public void CenterOn(Vector3 point)
         {
@@ -93,6 +111,13 @@ namespace NaturalHistory.World
 
         private void Update()
         {
+            if (gliding)
+            {
+                float t = Mathf.Clamp01((Time.unscaledTime - glideStart) / glideTime);
+                transform.position = Vector3.Lerp(glideFrom, glideTo, Mathf.SmoothStep(0f, 1f, t));
+                if (t >= 1f) gliding = false;
+                else return; // the player's own panning waits for the glide
+            }
             HandleDrag();
             if (dragButton < 0)
             {
