@@ -19595,6 +19595,18 @@
   {
    "k": "No more tips",
    "v": "Больше не показывать советы"
+  },
+  {
+   "k": "Your animals lived through the {0}: hardship drives evolution (+{1} EP)",
+   "v": "Ваши животные пережили бедствие ({0}): трудности двигают эволюцию (+{1} EP)"
+  },
+  {
+   "k": "The {0} wiped out {1} of your groups",
+   "v": "{0}: уничтожено ваших групп — {1}"
+  },
+  {
+   "k": "The {0} hit {1} of your groups",
+   "v": "{0}: пострадало ваших групп — {1}"
   }
  ]
 }

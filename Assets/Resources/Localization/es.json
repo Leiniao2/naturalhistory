@@ -19595,6 +19595,18 @@
   {
    "k": "No more tips",
    "v": "No mostrar más consejos"
+  },
+  {
+   "k": "Your animals lived through the {0}: hardship drives evolution (+{1} EP)",
+   "v": "Tus animales sobrevivieron: {0}. La adversidad impulsa la evolución (+{1} EP)"
+  },
+  {
+   "k": "The {0} wiped out {1} of your groups",
+   "v": "{0}: {1} de tus grupos han sido aniquilados"
+  },
+  {
+   "k": "The {0} hit {1} of your groups",
+   "v": "{0}: {1} de tus grupos afectados"
   }
  ]
 }

@@ -132,7 +132,8 @@ namespace NaturalHistory.Evolution
         // Evolving costs the human player EP (the trees' points, ProgressionManager), so EP set the pace of
         // evolution: a game starts with 20 and earns 5 a turn from turn 2, so 36 EP first come together
         // on turn 5 (sooner with bonus EP, later if some go on Functions and Behaviors).
-        public const int EvolveCost = 36;
+        public const int EvolveCost = 36; // EP in the Ediacaran; EvolveCostNow grows with the periods (EpCosts)
+        public static int EvolveCostNow => EpCosts.Of(EvolveCost);
         // Only the human player has EP; other players' copies evolve without paying
         private static bool PaysEP(OwnedCopy copy) => copy == null || (Human != null && copy.player == Human.Index);
 
@@ -398,7 +399,7 @@ namespace NaturalHistory.Evolution
             if (PaysEP(copy) || IsAi(copy))
             {
                 int ep = PointsFor(copy);
-                list.Add(new Requirement(Loc.F("Needs {0} EP (you have {1})", EvolveCost, ep), ep >= EvolveCost));
+                list.Add(new Requirement(Loc.F("Needs {0} EP (you have {1})", EvolveCostNow, ep), ep >= EvolveCostNow));
             }
             if (copy != null && copy.JustBorn)
                 list.Add(new Requirement(Loc.T("New this turn: it can act from the next turn"), false));
@@ -447,7 +448,7 @@ namespace NaturalHistory.Evolution
             to.functions.UnionWith(link.grantFunctions);
             to.behaviors.UnionWith(link.grantBehaviors);
 
-            Spend(copy, EvolveCost);
+            Spend(copy, EvolveCostNow);
             EvolvedBy(copy.player).Add(link.Key);
             copy.species  = link.to;
             copy.group    = group;

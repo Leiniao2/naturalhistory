@@ -12,6 +12,8 @@ import json
 import os
 import re
 
+from palette import LINES, aquatic, line_of, water_for
+
 ROOT = os.path.join(os.path.dirname(__file__), "..", "..")
 SPECIES = os.path.join(ROOT, "Assets", "Resources", "Data", "species.json")
 OUT = os.path.join(os.path.dirname(__file__), "prompts.json")
@@ -110,6 +112,18 @@ def size_text(cm):
 def backdrop(s):
     if s["id"] in INSIDE:
         return INSIDE[s["id"]]
+    text = plain_backdrop(s)
+    # backdrop colours (palette.py): the founding protists' lines, and varied water for the rest
+    line = LINEAGE.get(s["id"])
+    if line:
+        return text.replace("clear blue-green", LINES[line][1]) if "clear blue-green" in text else f"{text}, the water {LINES[line][1]}"
+    if aquatic(s):
+        words = water_for(s["id"])[4]
+        return text.replace("vivid turquoise and cobalt blue", words) if "vivid turquoise" in text else f"{text}, the water {words}"
+    return text
+
+
+def plain_backdrop(s):
     age = s.get("firstAge")
     habitats = s.get("habitats") or ["SaltWater"]
     h = habitats[0]
@@ -148,8 +162,13 @@ def short(desc, limit=260):
     return out
 
 
+LINEAGE = {}  # species id -> founding protist, filled in main()
+
+
 def main():
     species = json.load(open(SPECIES, encoding="utf-8"))["species"]
+    links = json.load(open(os.path.join(ROOT, "Assets", "Resources", "Data", "evolution.json"), encoding="utf-8"))
+    LINEAGE.update(line_of({s["id"]: s for s in species}, links["links"] if isinstance(links, dict) else links))
     out = [{"id": s["id"], "name": s["commonName"], "prompt": prompt(s)} for s in species]
     json.dump({"style": STYLE, "prompts": out}, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(len(out), "prompts ->", OUT)

@@ -19595,6 +19595,18 @@
   {
    "k": "No more tips",
    "v": "今後ヒントを表示しない"
+  },
+  {
+   "k": "Your animals lived through the {0}: hardship drives evolution (+{1} EP)",
+   "v": "あなたの生き物は{0}を生き延びた。厳しい環境が進化を促す（+{1} EP）"
+  },
+  {
+   "k": "The {0} wiped out {1} of your groups",
+   "v": "{0}であなたの群れが {1} つ全滅した"
+  },
+  {
+   "k": "The {0} hit {1} of your groups",
+   "v": "{0}があなたの群れ {1} つを襲った"
   }
  ]
 }

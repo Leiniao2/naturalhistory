@@ -25,7 +25,8 @@ namespace NaturalHistory.World
     // where the camera is looking (so the player sees it) and is announced. Each kind needs the
     // right ground and climate: tornadoes on open temperate lowland, sandstorms in deserts,
     // blizzards where it is freezing, floods along big rivers, eruptions at volcanoes, tsunamis on
-    // low coasts... They are purely visual for now; Occurred lets other systems react later.
+    // low coasts... Struck reports the tiles each one hits, so the animals there suffer
+    // (DisasterEffects); Occurred lets other systems react too.
     public class NaturalEvents : MonoBehaviour
     {
         private const float ChancePerTurn = 0.35f; // that some event happens this turn
@@ -47,6 +48,10 @@ namespace NaturalHistory.World
         // Message for the player (e.g. a toast) and the tile it happened on
         public static event Action<string, HexCell> Announced;
         public event Action<Phenomenon, HexCell> Occurred;
+        // the kind, the tile it happened on and every tile it hits
+        public event Action<Phenomenon, HexCell, IReadOnlyList<HexCell>> Struck;
+
+        public static void Announce(string message, HexCell cell) => Announced?.Invoke(message, cell);
 
         public static readonly string[] Names =
         {
@@ -154,7 +159,7 @@ namespace NaturalHistory.World
         }
 
         // A (translated) name used mid-sentence: lower case, except in German, which capitalises nouns
-        private static string InSentence(string name) => Loc.Current == "de" ? name : name.ToLower();
+        public static string InSentence(string name) => Loc.Current == "de" ? name : name.ToLower();
 
         // Candidate tiles per kind within the camera's view (scaled by `reach`), nearest first.
         private List<HexCell>[] SitesNearCamera(float reach)
@@ -281,6 +286,32 @@ namespace NaturalHistory.World
             Debug.Log($"[NaturalEvents] {kind} at {c}");
             Announced?.Invoke(msg, c);
             Occurred?.Invoke(kind, c);
+            Struck?.Invoke(kind, c, AreaOf(kind, c));
+        }
+
+        // The tiles an event hits: around its tile for meteors, eruptions, storms and earthquakes,
+        // the river's flooding tiles, a slide's tile and the one below, the sea and low coast a
+        // tsunami runs over, a calving glacier and the sea at its front
+        private List<HexCell> AreaOf(Phenomenon kind, HexCell c)
+        {
+            var area = new List<HexCell>();
+            void Hit(HexCell x) { if (x != null && !area.Contains(x)) area.Add(x); }
+            switch (kind)
+            {
+                case Phenomenon.Flood: foreach (var x in FloodArea(c)) Hit(x); break;
+                case Phenomenon.Rockslide: Hit(c); Hit(LowerNeighbor(c, 2)); break;
+                case Phenomenon.Avalanche: Hit(c); Hit(LowerNeighbor(c, 1)); break;
+                case Phenomenon.GlacierCalving: Hit(c); Hit(SeaNeighbor(c)); break;
+                case Phenomenon.Tsunami:
+                    Hit(c);
+                    foreach (var n in grid.GetNeighbors(c)) if (PhenomenaUtil.IsSea(n)) Hit(n);
+                    var coast = LowCoast(c);
+                    Hit(coast);
+                    if (coast != null) foreach (var x in LowLandAround(coast)) Hit(x);
+                    break;
+                default: foreach (var x in grid.GetCellsInRange(c, 1)) Hit(x); break;
+            }
+            return area;
         }
 
         private static T Add<T>(GameObject go, Action<T> setup) where T : PhenomenonFx

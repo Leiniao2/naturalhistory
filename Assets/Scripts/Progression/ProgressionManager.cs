@@ -18,7 +18,7 @@ namespace NaturalHistory.Progression
     //  - each turn, PointsPerCenter for every habitat center they have
     //  - KillReward for wiping out a foreign group (Combat), DiscoveryReward the first time a wild or
     //    other player's species comes into sight (FogOfWar; not in Safari Mode)
-    //  - spent on the trees' items, on evolving (EvolutionManager.EvolveCost) and reproducing
+    //  - spent on the trees' items and on evolving, at prices that grow with the periods (EpCosts), and on reproducing
     //    (EvolutionManager.ReproduceCost)
     public class ProgressionManager : MonoBehaviour
     {
@@ -27,7 +27,7 @@ namespace NaturalHistory.Progression
         [SerializeField] private int startingPoints = 20;
         [SerializeField] private int pointsPerCenter = 5; // per habitat center, each turn
 
-        public const int KillReward      = 3;
+        public const int KillReward      = 3; // EP for wiping out a foreign group of average Ediacaran strength (see KillRewardFor)
         public const int DiscoveryReward = 2;
 
         public ProgressionTree Morphology { get; private set; } // "Functions" in the game
@@ -38,14 +38,27 @@ namespace NaturalHistory.Progression
         public int PointsPerCenter => pointsPerCenter;
 
         // EP the next turn brings: PointsPerCenter for each of the human player's habitat centers,
-        // scaled by the difficulty (GameOptions.IncomeShare)
+        // scaled by the difficulty (GameOptions.IncomeShare) and grown with the periods like the
+        // prices (EpCosts.Factor: ×1 in the Ediacaran, ×1.6 in the Cambrian, ×2.6 in the Ordovician...)
+        // EP for wiping out `loser`: KillReward for a group of about Ediacaran average strength
+        // (attack + defense + HP ≈ 8), more the stronger it is (its numbers grow with its period,
+        // CombatStats.Era) and a fifth more for each special ability it has
+        public static int KillRewardFor(World.ColonyGroup loser)
+        {
+            if (loser == null || loser.Definition == null) return KillReward;
+            var s = loser.Stats;
+            float strength = (s.attack + s.defense + s.hp) / 8f;
+            float abilities = 1f + 0.2f * World.Abilities.Of(loser.Definition).Count;
+            return Mathf.Max(1, Mathf.RoundToInt(KillReward * strength * abilities));
+        }
+
         public int Income
         {
             get
             {
                 var territory = TerritoryManager.Instance;
                 int centers = territory == null ? 1 : territory.Centers.Count(c => c.Owner != null && c.Owner.IsHuman);
-                return Mathf.RoundToInt(pointsPerCenter * centers * GameOptions.IncomeShare); // fewer on harder difficulties
+                return Mathf.RoundToInt(pointsPerCenter * centers * GameOptions.IncomeShare * EpCosts.Factor); // fewer on harder difficulties
             }
         }
 
@@ -164,16 +177,18 @@ namespace NaturalHistory.Progression
             if (!CanAcquire(tree, node))   return Loc.F("Not in the {0}'s {1}", Loc.T(Species?.commonName ?? "species"), Loc.T(tree.DisplayName).ToLowerInvariant());
             if (!tree.PrerequisitesMet(node)) return Loc.F("Requires: {0}", string.Join(", ", MissingPrerequisites(tree, node)));
             if (!AgeAllows(node))          return Loc.F("Available from the {0}", Loc.T(node.age));
-            if (EvolutionPoints < node.cost) return Loc.F("Needs {0} EP (you have {1})", node.cost, EvolutionPoints);
+            int cost = EpCosts.Of(node.cost); // grows with the periods
+            if (EvolutionPoints < cost) return Loc.F("Needs {0} EP (you have {1})", cost, EvolutionPoints);
             return null;
         }
 
         public bool TryUnlock(ProgressionTree tree, TreeNodeDefinition node)
         {
             if (UnlockBlocker(tree, node) != null) return false;
-            EvolutionPoints -= node.cost;
+            int cost = EpCosts.Of(node.cost);
+            EvolutionPoints -= cost;
             tree.MarkUnlocked(node.id);
-            Debug.Log($"[Progression] {Species?.commonName}: acquired {node.displayName} ({tree.DisplayName}, -{node.cost} EP)");
+            Debug.Log($"[Progression] {Species?.commonName}: acquired {node.displayName} ({tree.DisplayName}, -{cost} EP)");
             NodeUnlocked?.Invoke(tree, node);
             Changed?.Invoke();
             return true;

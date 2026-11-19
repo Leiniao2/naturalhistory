@@ -19839,6 +19839,18 @@
   {
    "k": "No more tips",
    "v": "不再提示"
+  },
+  {
+   "k": "Your animals lived through the {0}: hardship drives evolution (+{1} EP)",
+   "v": "你的动物挺过了{0}：恶劣环境推动演化（+{1} EP）"
+  },
+  {
+   "k": "The {0} wiped out {1} of your groups",
+   "v": "{0}消灭了你的 {1} 个群"
+  },
+  {
+   "k": "The {0} hit {1} of your groups",
+   "v": "{0}波及了你的 {1} 个群"
   }
  ]
 }

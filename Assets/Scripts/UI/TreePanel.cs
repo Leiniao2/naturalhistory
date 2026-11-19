@@ -119,7 +119,7 @@ namespace NaturalHistory.UI
                 {
                     NodeState.Unlocked    => Loc.T("Acquired"),
                     NodeState.Unavailable => Loc.T("Not for this species"),
-                    _                     => Loc.F("{0} EP · {1}", node.cost, Loc.T(node.age)),
+                    _                     => Loc.F("{0} EP · {1}", EpCosts.Of(node.cost), Loc.T(node.age)),
                 };
             }
             lines.MarkDirtyRepaint();
@@ -278,7 +278,7 @@ namespace NaturalHistory.UI
                 .Select(id => Loc.T(GameDataLoader.GetGene(id)?.displayName ?? id))
                 .ToList();
             var blocker = Progression.UnlockBlocker(tree, selected);
-            var meta = Loc.F("{0}  ·  Cost {1} EP  ·  From the {2}", Loc.T(tree.BranchName(selected.branch)), selected.cost, Loc.T(selected.age));
+            var meta = Loc.F("{0}  ·  Cost {1} EP  ·  From the {2}", Loc.T(tree.BranchName(selected.branch)), EpCosts.Of(selected.cost), Loc.T(selected.age));
             if (genes.Count > 0) meta += "  ·  " + Loc.F("Unlocks genes: {0}", string.Join(", ", genes));
             // abilities of the bound species this item switches on (World.Abilities)
             bool function = tree == Progression.Morphology;

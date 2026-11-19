@@ -274,7 +274,7 @@ namespace NaturalHistory.World
             ColonyStyle.Swarm => 1.3f,
             ColonyStyle.Swim  => 1.2f,
             ColonyStyle.Float => 1.0f,
-            ColonyStyle.Drift => 1.0f,
+            ColonyStyle.Drift => 0.75f,
             _                 => 1.1f,
         }) * (Definition != null && SlowGroups.Contains(Definition.group) ? SlowFactor : 1f);
 

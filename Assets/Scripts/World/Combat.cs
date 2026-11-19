@@ -238,19 +238,21 @@ namespace NaturalHistory.World
 
         private static string Notes(List<string> notes) => notes.Count == 0 ? "" : " — " + string.Join("; ", notes);
 
-        // The human player earns KillReward EP when one of their groups wipes out a foreign one
+        // A player earns EP when one of their groups wipes out a foreign one: more for a stronger foe
+        // (ProgressionManager.KillRewardFor)
         // (attacking, eating it, or in a counterattack); the text to add to the report
         private static string Reward(ColonyGroup winner, ColonyGroup loser)
         {
             var progression = Progression.ProgressionManager.Instance;
             if (winner.Owner != null && !winner.Owner.IsHuman && loser.Owner != winner.Owner) // AI players earn the same
             {
-                Players.AiPlayers.Instance?.AddPoints(winner.Owner.Index, Progression.ProgressionManager.KillReward);
+                Players.AiPlayers.Instance?.AddPoints(winner.Owner.Index, Progression.ProgressionManager.KillRewardFor(loser));
                 return "";
             }
             if (progression == null || winner.Owner == null || !winner.Owner.IsHuman || loser.Owner == winner.Owner) return "";
-            progression.AddPoints(Progression.ProgressionManager.KillReward);
-            return Loc.F(" (+{0} EP)", Progression.ProgressionManager.KillReward);
+            int ep = Progression.ProgressionManager.KillRewardFor(loser);
+            progression.AddPoints(ep);
+            return Loc.F(" (+{0} EP)", ep);
         }
 
         private static string Hp(float v) => v.ToString(v < 10f ? "0.#" : "0");

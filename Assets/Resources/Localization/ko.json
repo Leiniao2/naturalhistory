@@ -19595,6 +19595,18 @@
   {
    "k": "No more tips",
    "v": "더 이상 팁 보지 않기"
+  },
+  {
+   "k": "Your animals lived through the {0}: hardship drives evolution (+{1} EP)",
+   "v": "당신의 동물이 {0}을(를) 견뎌냈습니다. 혹독한 환경이 진화를 이끕니다 (+{1} EP)"
+  },
+  {
+   "k": "The {0} wiped out {1} of your groups",
+   "v": "{0}(으)로 당신의 무리 {1}개가 전멸했습니다"
+  },
+  {
+   "k": "The {0} hit {1} of your groups",
+   "v": "{0}이(가) 당신의 무리 {1}개를 덮쳤습니다"
   }
  ]
 }
