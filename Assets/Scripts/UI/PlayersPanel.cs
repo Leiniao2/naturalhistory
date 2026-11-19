@@ -10,8 +10,8 @@ using UnityEngine.UIElements;
 namespace NaturalHistory.UI
 {
     // Players in the top-left HUD (colour band + name), the faction panel with each faction's
-    // iconic animals, and the new-game screen: your realm (faction) picked from cards grouped by
-    // category, your name and colours, and the competitors: how many (up to what the map size
+    // iconic animals, and the new-game screen, in three pages (SetupPages): your realm (faction)
+    // picked from one set of cards, your name and colours; the world (NewGameOptions); and the competitors: how many (up to what the map size
     // holds) and each one's realm, name and colours.
     public class PlayersPanel
     {
@@ -27,6 +27,26 @@ namespace NaturalHistory.UI
 
         public bool FactionOpen => !factionOverlay.ClassListContains("hidden");
         public bool SetupOpen => !setupOverlay.ClassListContains("hidden");
+
+        // The new-game screen's pages: your realm, the world, your competitors
+        private const int SetupPages = 3;
+        private readonly VisualElement[] pages = new VisualElement[SetupPages];
+        private readonly Button[] steps = new Button[SetupPages];
+        private Button nextButton, startButton;
+        private int page;
+
+        private void ShowPage(int index)
+        {
+            page = Mathf.Clamp(index, 0, SetupPages - 1);
+            for (int i = 0; i < SetupPages; i++)
+            {
+                pages[i].EnableInClassList("hidden", i != page);
+                steps[i].EnableInClassList("selected", i == page);
+            }
+            bool last = page == SetupPages - 1;
+            nextButton.EnableInClassList("hidden", last);
+            startButton.EnableInClassList("hidden", !last);
+        }
 
         private static PlayerManager Manager => PlayerManager.Instance;
         private static IReadOnlyList<FactionDefinition> Factions => GameDataLoader.Factions;
@@ -54,8 +74,19 @@ namespace NaturalHistory.UI
             root.Q<Button>("setup-fewer").clicked          += () => ChangeCount(-1);
             root.Q<Button>("setup-more").clicked           += () => ChangeCount(+1);
             root.Q<Button>("setup-randomize").clicked      += Randomize;
-            root.Q<Button>("setup-back-button").clicked    += () => { CloseSetup(); SetupClosed?.Invoke(); };
+            // Back goes a page back, and from the first page back to the menu
+            root.Q<Button>("setup-back-button").clicked    += () => { if (page > 0) ShowPage(page - 1); else { CloseSetup(); SetupClosed?.Invoke(); } };
+            root.Q<Button>("setup-next-button").clicked    += () => ShowPage(page + 1);
             root.Q<Button>("setup-start-button").clicked   += StartGame;
+            nextButton  = root.Q<Button>("setup-next-button");
+            startButton = root.Q<Button>("setup-start-button");
+            for (int i = 0; i < SetupPages; i++)
+            {
+                int captured = i;
+                pages[i] = root.Q("setup-page-" + i);
+                steps[i] = root.Q<Button>("setup-step-" + i);
+                steps[i].clicked += () => ShowPage(captured);
+            }
         }
 
         // ---------- HUD ----------
@@ -129,6 +160,7 @@ namespace NaturalHistory.UI
             draft = Manager.CurrentSetups();
             if (draft.Count == 0) draft = PlayerManager.RandomSetup(PlayerManager.DefaultPlayerCount, new System.Random());
             RebuildSetup();
+            ShowPage(0);
             setupOverlay.RemoveFromClassList("hidden");
         }
 
@@ -188,7 +220,6 @@ namespace NaturalHistory.UI
             for (int i = 1; i < draft.Count; i++)
             {
                 var setup = draft[i];
-                var faction = GameDataLoader.GetFaction(setup.faction);
                 var row = new VisualElement().WithClass("setup-row");
 
                 row.Add(new Label(Loc.F("AI {0}", i)).WithClass("setup-seat"));
@@ -199,45 +230,39 @@ namespace NaturalHistory.UI
                 row.Add(dropdown);
 
                 row.Add(NameField(setup));
-                row.Add(new Label(Loc.T(faction?.category ?? "")).WithClass("setup-category"));
                 setupList.Add(row);
             }
             if (draft.Count == 1) setupList.Add(new Label(Loc.T("No competitors: the world is yours alone.")).WithClass("setup-empty"));
         }
 
-        // Every realm as a card, grouped by category (modern realms, paleocontinents, ancient oceans);
-        // yours lit, the ones a competitor has marked with their seat. Picking one a competitor has
-        // swaps the two.
+        // Every realm as a card, all together (not sorted into categories); yours lit, the ones a
+        // competitor has marked with their seat. Picking one a competitor has swaps the two.
         private void BuildRealms()
         {
             var offset = setupRealms.scrollOffset;
             setupRealms.Clear();
             var you = draft[0];
-            foreach (var group in Factions.GroupBy(f => f.category))
+            var cards = new VisualElement().WithClass("setup-realm-cards");
+            foreach (var f in Factions)
             {
-                setupRealms.Add(new Label(Loc.T(group.Key)).WithClass("setup-realm-group"));
-                var cards = new VisualElement().WithClass("setup-realm-cards");
-                foreach (var f in group)
-                {
-                    var faction = f;
-                    var card = new Button(() => ChangeFaction(you, faction)).WithClass("setup-realm");
-                    card.EnableInClassList("selected", f.id == you.faction);
-                    card.tooltip = Loc.T(f.description);
-                    var band = new VisualElement { pickingMode = PickingMode.Ignore }.WithClass("band");
-                    band.Add(BandHalf(Parse(f.primaryColor)));
-                    band.Add(BandHalf(Parse(f.secondaryColor)));
-                    card.Add(band);
-                    card.Add(new Label(Loc.T(f.displayName)) { pickingMode = PickingMode.Ignore }.WithClass("setup-realm-name"));
-                    int seat = draft.FindIndex(x => x.faction == f.id);
-                    if (seat > 0) card.Add(new Label(Loc.F("AI {0}", seat)) { pickingMode = PickingMode.Ignore }.WithClass("setup-realm-taken"));
-                    cards.Add(card);
-                }
-                setupRealms.Add(cards);
+                var faction = f;
+                var card = new Button(() => ChangeFaction(you, faction)).WithClass("setup-realm");
+                card.EnableInClassList("selected", f.id == you.faction);
+                card.tooltip = Loc.T(f.description);
+                var band = new VisualElement { pickingMode = PickingMode.Ignore }.WithClass("band");
+                band.Add(BandHalf(Parse(f.primaryColor)));
+                band.Add(BandHalf(Parse(f.secondaryColor)));
+                card.Add(band);
+                card.Add(new Label(Loc.T(f.displayName)) { pickingMode = PickingMode.Ignore }.WithClass("setup-realm-name"));
+                int seat = draft.FindIndex(x => x.faction == f.id);
+                if (seat > 0) card.Add(new Label(Loc.F("AI {0}", seat)) { pickingMode = PickingMode.Ignore }.WithClass("setup-realm-taken"));
+                cards.Add(card);
             }
+            setupRealms.Add(cards);
             setupRealms.schedule.Execute(() => setupRealms.scrollOffset = offset); // once laid out again
 
             var mine = GameDataLoader.GetFaction(you.faction);
-            realmDescription.text = mine == null ? "" : $"{Loc.T(mine.displayName)} · {Loc.T(mine.category)}\n{Loc.T(mine.description)}";
+            realmDescription.text = mine == null ? "" : $"{Loc.T(mine.displayName)}\n{Loc.T(mine.description)}";
             realmAnimals.text = mine == null || mine.iconicAnimals.Count == 0 ? "" :
                 Loc.F("Iconic animals: {0}", string.Join(", ", mine.iconicAnimals.OrderBy(x => AgeOrder(x.age))
                     .Select(x => $"{Loc.T(x.name)} ({Loc.T(GameDataLoader.GetAge(x.age)?.displayName ?? x.age)})")));

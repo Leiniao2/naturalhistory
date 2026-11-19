@@ -15,7 +15,7 @@
                 <ui:Button name="main-new-game-button" class="menu-button main-menu-button" text="New Game" />
                 <ui:Button name="main-load-button" class="menu-button main-menu-button" text="Load Game" />
                 <ui:Button name="main-encyclopedia-button" class="menu-button main-menu-button" text="Encyclopedia" />
-                <ui:DropdownField name="main-language-dropdown" class="language-dropdown main-language" label="Language" />
+                <ui:Button name="main-settings-button" class="menu-button main-menu-button" text="Settings" />
                 <ui:Button name="main-quit-button" class="menu-button main-menu-button" text="Quit to Desktop" />
             </ui:VisualElement>
             <ui:Label name="main-menu-credit" class="main-menu-credit" text="" />
@@ -140,9 +140,22 @@
                 <ui:Button name="new-game-button" class="menu-button" text="New Game" />
                 <ui:Button name="save-button" class="menu-button" text="Save Game" />
                 <ui:Button name="load-button" class="menu-button" text="Load Game" />
+                <ui:Button name="settings-button" class="menu-button" text="Settings" />
                 <ui:Button name="main-menu-button" class="menu-button" text="Main Menu" />
                 <ui:Button name="quit-button" class="menu-button" text="Quit to Desktop" />
-                <ui:DropdownField name="language-dropdown" class="language-dropdown" label="Language" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Settings (title screen and pause menu): language, volumes, fullscreen -->
+        <ui:VisualElement name="settings-overlay" class="overlay hidden">
+            <ui:VisualElement class="panel menu-panel settings-panel">
+                <ui:Label class="panel-title" text="Settings" />
+                <ui:DropdownField name="language-dropdown" class="language-dropdown settings-row" label="Language" />
+                <ui:Slider name="master-volume" class="settings-row" label="Master Volume" low-value="0" high-value="1" />
+                <ui:Slider name="music-volume" class="settings-row" label="Music" low-value="0" high-value="1" />
+                <ui:Slider name="effects-volume" class="settings-row" label="Sound Effects" low-value="0" high-value="1" />
+                <ui:Toggle name="fullscreen-toggle" class="settings-row" label="Fullscreen" />
+                <ui:Button name="settings-back-button" class="menu-button" text="Back" />
             </ui:VisualElement>
         </ui:VisualElement>
 
@@ -201,39 +214,43 @@
             </ui:VisualElement>
         </ui:VisualElement>
 
-        <!-- New game (PlayersPanel): your realm on the left, picked from cards by category, with what
-             it brings; the world (NewGameOptions), difficulty and your competitors on the right -->
+        <!-- New game (PlayersPanel), in three pages: your realm, picked from cards, with what it
+             brings; the world (NewGameOptions) and difficulty; your competitors -->
         <ui:VisualElement name="setup-overlay" class="overlay hidden">
             <ui:VisualElement class="panel setup-panel">
                 <ui:Label class="panel-title" text="New Game" />
-                <ui:VisualElement class="setup-columns">
-                    <ui:VisualElement class="setup-column setup-realm-column">
-                        <ui:Label class="setup-section" text="Your realm" />
-                        <ui:ScrollView name="setup-realms" class="setup-realms" />
-                        <ui:VisualElement name="setup-you" class="setup-you" />
-                        <ui:ScrollView class="setup-realm-details">
-                            <ui:Label name="setup-realm-description" class="setup-realm-description" text="" />
-                            <ui:Label name="setup-realm-animals" class="setup-realm-animals" text="" />
-                        </ui:ScrollView>
-                    </ui:VisualElement>
-                    <ui:VisualElement class="setup-column setup-world-column">
-                        <ui:Label class="setup-section" text="World" />
-                        <!-- Map size, land area, starting period, game length, difficulty (NewGameOptions) -->
-                        <ui:VisualElement name="setup-options" class="setup-options" />
-                        <ui:VisualElement class="setup-count-row">
-                            <ui:Label class="setup-section setup-count-label" text="Competitors" />
-                            <ui:Button name="setup-fewer" class="count-button" text="−" />
-                            <ui:IntegerField name="setup-count" class="setup-count" value="3" />
-                            <ui:Button name="setup-more" class="count-button" text="+" />
-                            <ui:VisualElement class="spacer" />
-                            <ui:Button name="setup-randomize" class="slot-button" text="Randomize" />
-                        </ui:VisualElement>
-                        <ui:ScrollView name="setup-list" class="setup-list" />
-                    </ui:VisualElement>
+                <ui:VisualElement class="setup-steps">
+                    <ui:Button name="setup-step-0" class="setup-step" text="1 · Your realm" />
+                    <ui:Button name="setup-step-1" class="setup-step" text="2 · World" />
+                    <ui:Button name="setup-step-2" class="setup-step" text="3 · Competitors" />
                 </ui:VisualElement>
-                <ui:Label class="setup-hint" text="Click a colour band to change it. Names can be anything; the realm decides the iconic animals." />
+                <ui:VisualElement name="setup-page-0" class="setup-page">
+                    <ui:ScrollView name="setup-realms" class="setup-realms" />
+                    <ui:VisualElement name="setup-you" class="setup-you" />
+                    <ui:ScrollView class="setup-realm-details">
+                        <ui:Label name="setup-realm-description" class="setup-realm-description" text="" />
+                        <ui:Label name="setup-realm-animals" class="setup-realm-animals" text="" />
+                    </ui:ScrollView>
+                </ui:VisualElement>
+                <ui:VisualElement name="setup-page-1" class="setup-page hidden">
+                    <!-- Map size, land area, starting period, game length, difficulty (NewGameOptions) -->
+                    <ui:VisualElement name="setup-options" class="setup-options" />
+                </ui:VisualElement>
+                <ui:VisualElement name="setup-page-2" class="setup-page hidden">
+                    <ui:VisualElement class="setup-count-row">
+                        <ui:Label class="setup-section setup-count-label" text="Competitors" />
+                        <ui:Button name="setup-fewer" class="count-button" text="−" />
+                        <ui:IntegerField name="setup-count" class="setup-count" value="3" />
+                        <ui:Button name="setup-more" class="count-button" text="+" />
+                        <ui:VisualElement class="spacer" />
+                        <ui:Button name="setup-randomize" class="slot-button" text="Randomize" />
+                    </ui:VisualElement>
+                    <ui:ScrollView name="setup-list" class="setup-list" />
+                    <ui:Label class="setup-hint" text="Click a colour band to change it. Names can be anything; the realm decides the iconic animals." />
+                </ui:VisualElement>
                 <ui:VisualElement class="setup-actions">
                     <ui:Button name="setup-back-button" class="menu-button setup-action" text="Back" />
+                    <ui:Button name="setup-next-button" class="menu-button setup-action" text="Next" />
                     <ui:Button name="setup-start-button" class="menu-button setup-action start" text="Start" />
                 </ui:VisualElement>
             </ui:VisualElement>

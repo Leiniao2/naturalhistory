@@ -19394,7 +19394,7 @@
   },
   {
    "k": "Tiny",
-   "v": "Minuscola"
+   "v": "Minuscolo"
   },
   {
    "k": "Difficulty",
@@ -19435,6 +19435,58 @@
   {
    "k": "Loaded the autosave",
    "v": "Salvataggio automatico caricato"
+  },
+  {
+   "k": "Settings",
+   "v": "Impostazioni"
+  },
+  {
+   "k": "Master Volume",
+   "v": "Volume generale"
+  },
+  {
+   "k": "Music",
+   "v": "Musica"
+  },
+  {
+   "k": "Sound Effects",
+   "v": "Effetti sonori"
+  },
+  {
+   "k": "Fullscreen",
+   "v": "Schermo intero"
+  },
+  {
+   "k": "Small",
+   "v": "Piccolo"
+  },
+  {
+   "k": "Medium",
+   "v": "Medio"
+  },
+  {
+   "k": "Large",
+   "v": "Grande"
+  },
+  {
+   "k": "Huge",
+   "v": "Enorme"
+  },
+  {
+   "k": "1 · Your realm",
+   "v": "1 · Il tuo regno"
+  },
+  {
+   "k": "2 · World",
+   "v": "2 · Mondo"
+  },
+  {
+   "k": "3 · Competitors",
+   "v": "3 · Avversari"
+  },
+  {
+   "k": "Next",
+   "v": "Avanti"
   }
  ]
 }

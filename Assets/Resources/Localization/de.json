@@ -19435,6 +19435,58 @@
   {
    "k": "Loaded the autosave",
    "v": "Autospeicherstand geladen"
+  },
+  {
+   "k": "Settings",
+   "v": "Einstellungen"
+  },
+  {
+   "k": "Master Volume",
+   "v": "Gesamtlautstärke"
+  },
+  {
+   "k": "Music",
+   "v": "Musik"
+  },
+  {
+   "k": "Sound Effects",
+   "v": "Soundeffekte"
+  },
+  {
+   "k": "Fullscreen",
+   "v": "Vollbild"
+  },
+  {
+   "k": "Small",
+   "v": "Klein"
+  },
+  {
+   "k": "Medium",
+   "v": "Mittel"
+  },
+  {
+   "k": "Large",
+   "v": "Groß"
+  },
+  {
+   "k": "Huge",
+   "v": "Riesig"
+  },
+  {
+   "k": "1 · Your realm",
+   "v": "1 · Dein Reich"
+  },
+  {
+   "k": "2 · World",
+   "v": "2 · Welt"
+  },
+  {
+   "k": "3 · Competitors",
+   "v": "3 · Gegner"
+  },
+  {
+   "k": "Next",
+   "v": "Weiter"
   }
  ]
 }

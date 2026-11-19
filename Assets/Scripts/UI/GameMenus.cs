@@ -29,6 +29,8 @@ namespace NaturalHistory.UI
         private NewGameOptions newGameOptions;
         private ZoologyPanel zoologyPanel;
         private EncyclopediaPanel encyclopedia;
+        private SettingsPanel settings;
+        private bool settingsFromPause; // reopen the pause menu when Settings closes
         private MiniMap miniMap;
         private MainMenu mainMenu;
         private bool slotsAreForSaving;
@@ -101,6 +103,8 @@ namespace NaturalHistory.UI
             encyclopedia = new EncyclopediaPanel(root);
             miniMap      = new MiniMap(root);
             mainMenu     = new MainMenu(root);
+            settings     = new SettingsPanel(root);
+            settings.Closed += () => { if (settingsFromPause) pauseOverlay.RemoveFromClassList("hidden"); settingsFromPause = false; };
             CameraController.IsPointerOverUI = PointerOverUI;
             unitPanel.OpenTree   += tree => { CloseSidePanels(); treePanel.Open(tree); };
             unitPanel.OpenEvolve += copy => { CloseSidePanels(); zoologyPanel.Open(copy); };
@@ -135,6 +139,7 @@ namespace NaturalHistory.UI
             root.Q<Button>("save-button").clicked       += () => OpenSlots(saving: true);
             root.Q<Button>("load-button").clicked       += () => OpenSlots(saving: false);
             root.Q<Button>("quit-button").clicked       += Quit;
+            root.Q<Button>("settings-button").clicked   += () => { settingsFromPause = true; pauseOverlay.AddToClassList("hidden"); settings.Open(); };
             root.Q<Button>("main-menu-button").clicked  += () => { SetPauseOpen(false); mainMenu.Show(); };
             // The title screen: the same choices as the pause menu
             // Continue: back to the game being played (left for the title screen from the pause menu), else the latest save
@@ -143,9 +148,9 @@ namespace NaturalHistory.UI
             mainMenu.LoadGame.clicked     += () => OpenSlots(saving: false);
             mainMenu.Encyclopedia.clicked += () => encyclopedia.Open();
             mainMenu.Quit.clicked         += Quit;
+            mainMenu.Settings.clicked     += () => { settingsFromPause = false; settings.Open(); };
             root.Q<Button>("slots-back-button").clicked += CloseSlots;
             root.Q<Button>("age-button").clicked        += ToggleAges;
-            SetUpLanguageDropdown();
             Loc.Changed += OnLanguageChanged;
 
             cellSelector     = FindAnyObjectByType<CellSelector>();
@@ -218,33 +223,12 @@ namespace NaturalHistory.UI
 
         // ---------- Language ----------
 
-        // The pause menu's and the title screen's
-        private void SetUpLanguageDropdown()
-        {
-            foreach (var dropdown in new[] { root.Q<DropdownField>("language-dropdown"), root.Q<DropdownField>("main-language-dropdown") })
-            {
-                if (dropdown == null) continue;
-                dropdown.choices = new System.Collections.Generic.List<string>();
-                foreach (var (_, name) in Loc.Languages) dropdown.choices.Add(name);
-                dropdown.index = System.Array.FindIndex(Loc.Languages, l => l.code == Loc.Current);
-                dropdown.RegisterValueChangedCallback(_ =>
-                {
-                    if (dropdown.index >= 0) Loc.SetLanguage(Loc.Languages[dropdown.index].code);
-                });
-            }
-        }
-
         // Everything showing text is filled in again in the new language
         private void OnLanguageChanged()
         {
             LocalizedUI.ApplyFonts(document.panelSettings);
             LocalizedUI.Apply();
-            int language = System.Array.FindIndex(Loc.Languages, l => l.code == Loc.Current);
-            foreach (var name in new[] { "language-dropdown", "main-language-dropdown" })
-            {
-                var dropdown = root.Q<DropdownField>(name);
-                if (dropdown != null && language >= 0) dropdown.SetValueWithoutNotify(dropdown.choices[language]);
-            }
+            settings.Refresh();
             playersPanel.OnOptionsChanged(); // the New Game screen, if open
             newGameOptions.Refresh();
             OnUnderViewChanged();
@@ -344,7 +328,8 @@ namespace NaturalHistory.UI
         // Esc closes the top-most panel, or opens the pause menu if nothing is open
         private void HandleEscape()
         {
-            if (IsOpen(slotsOverlay))  CloseSlots();
+            if (settings.IsOpen) settings.Close();
+            else if (IsOpen(slotsOverlay))  CloseSlots();
             else if (playersPanel.SetupOpen) { playersPanel.CloseSetup(); BackToMenu(); }
             else if (playersPanel.FactionOpen) playersPanel.CloseFaction();
             else if (encyclopedia.IsOpen) encyclopedia.Close();
@@ -367,7 +352,7 @@ namespace NaturalHistory.UI
             if (cameraController != null) cameraController.enabled = !modal; // keep edge/WASD panning near the HUD
         }
 
-        private bool AnyModalOpen() => mainMenu.IsOpen || IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen || encyclopedia.IsOpen
+        private bool AnyModalOpen() => mainMenu.IsOpen || settings.IsOpen || IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen || encyclopedia.IsOpen
                                        || playersPanel.FactionOpen || playersPanel.SetupOpen;
 
         private bool PointerOverUI()

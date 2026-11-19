@@ -147,6 +147,32 @@
     min-height: 32px;
 }
 
+/* ---------- Settings ---------- */
+
+.settings-panel {
+    width: 520px;
+}
+
+.settings-row {
+    margin: 10px 0 0 0;
+}
+
+.settings-row > Label {
+    min-width: 170px;
+    margin-right: 12px;
+    font-size: 17px;
+    color: rgb(235, 232, 220);
+}
+
+.settings-row .unity-base-field__input {
+    font-size: 17px;
+    min-height: 28px;
+}
+
+.settings-panel > .menu-button {
+    margin-top: 18px;
+}
+
 /* ---------- Save slots ---------- */
 
 .slots-panel {
@@ -2052,10 +2078,6 @@
     padding-left: 24px;
 }
 
-.main-language {
-    margin: 10px 0 6px 0;
-}
-
 .main-menu-credit {
     position: absolute;
     right: 18px;
@@ -2203,3 +2225,84 @@
     -unity-text-align: middle-center;
     min-height: 32px;
 }
+
+/* ---------- New Game pages ----------
+   The New Game screen in three pages (PlayersPanel.ShowPage), with room for larger text. These
+   come last, so they override the sizes above. */
+
+.setup-steps {
+    flex-direction: row;
+    margin: 0 0 16px 0;
+}
+
+.setup-step {
+    flex-grow: 1;
+    height: 48px;
+    margin: 0 6px;
+    font-size: 21px;
+    color: rgb(175, 180, 168);
+    background-color: rgba(255, 255, 255, 0.04);
+    background-image: none;
+    border-width: 0 0 3px 0;
+    border-color: rgba(190, 154, 88, 0.3);
+    border-radius: 0;
+}
+
+.setup-step:hover {
+    color: rgb(240, 238, 228);
+}
+
+.setup-step.selected {
+    color: rgb(245, 215, 120);
+    border-color: rgb(230, 190, 80);
+    -unity-font-style: bold;
+}
+
+.setup-page {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 0;
+}
+
+.setup-section { font-size: 24px; }
+
+.setup-realm {
+    width: 24%;
+    height: 72px;
+}
+
+.setup-realm .band {
+    width: 28px;
+    height: 44px;
+}
+
+.setup-realm-name  { font-size: 19px; }
+.setup-realm-taken { font-size: 15px; }
+
+.setup-realm-details { max-height: 260px; }
+.setup-realm-description { font-size: 19px; }
+.setup-realm-animals     { font-size: 18px; margin-top: 8px; }
+
+.setup-options { padding: 14px 18px; }
+.setup-option-row { margin: 10px 0; }
+.setup-option-label { width: 210px; font-size: 21px; }
+.setup-option {
+    min-width: 130px;
+    height: 44px;
+    margin: 0 6px 0 0;
+    font-size: 19px;
+}
+.setup-option-dropdown { min-width: 380px; font-size: 19px; }
+.setup-option-note { font-size: 17px; margin-left: 12px; }
+
+.setup-count-label { font-size: 24px; }
+.setup-list { max-height: none; flex-grow: 1; }
+.setup-row { height: 60px; }
+.setup-seat { width: 90px; font-size: 20px; }
+.setup-band { width: 44px; height: 44px; }
+.setup-faction { width: 340px; font-size: 19px; }
+.setup-name { font-size: 19px; }
+.setup-hint { font-size: 17px; margin-top: 10px; }
+.setup-empty { font-size: 19px; }
+
+.setup-action { width: 200px; font-size: 21px; }

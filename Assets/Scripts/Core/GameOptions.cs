@@ -15,13 +15,15 @@ namespace NaturalHistory.Core
         public string difficulty; // GameOptions.DifficultyNames
 
         public static GameSettings Default => new() { landTier = 3, lengthTier = 1, startAge = nameof(GeologicalAge.Ediacaran),
-                                                      mapSize = "Standard", difficulty = "Normal" };
+                                                      mapSize = "Medium", difficulty = "Normal" };
     }
 
     // Current game's settings and the ones the New Game screen will start with (Next)
     public static class GameOptions
     {
-        public static readonly string[] LandNames   = { "Very small", "Small", "Medium", "Large", "Huge" };
+        // Map size and land area share one scale of words (SizeNames)
+        public static readonly string[] SizeNames   = { "Tiny", "Small", "Medium", "Large", "Huge" };
+        public static readonly string[] LandNames   = SizeNames;
         public static readonly float[]  LandShares  = { 0.2f, 0.3f, 0.4f, 0.5f, 0.6f }; // share of the map that is land today
 
         // Turns per period × this; tier 2 ("Fast") is the base table in ages.json
@@ -29,7 +31,7 @@ namespace NaturalHistory.Core
         public static readonly float[]  LengthFactors = { 0.6f, 1f, 1.5f, 2f, 3f };
 
         // Map size: columns × rows of hexes, and how many players it suits (a suggestion, not a limit)
-        public static readonly string[]     MapSizeNames = { "Tiny", "Small", "Standard", "Large", "Huge" };
+        public static readonly string[]     MapSizeNames = SizeNames; // saves naming "Standard" (now Medium) fall back to the default tier, the same one
         public static readonly Vector2Int[] MapSizes     = { new(30, 18), new(40, 24), new(50, 30), new(62, 38), new(76, 46) };
         public static readonly int[]        MapPlayers   = { 4, 6, 8, 12, 16 };
         public const int DefaultMapSize = 2;

@@ -17402,7 +17402,7 @@
   },
   {
    "k": "Huge",
-   "v": "很大"
+   "v": "极大"
   },
   {
    "k": "Very fast",
@@ -19695,6 +19695,42 @@
   {
    "k": "Loaded the autosave",
    "v": "已读取自动存档"
+  },
+  {
+   "k": "Settings",
+   "v": "设置"
+  },
+  {
+   "k": "Master Volume",
+   "v": "主音量"
+  },
+  {
+   "k": "Music",
+   "v": "音乐"
+  },
+  {
+   "k": "Sound Effects",
+   "v": "音效"
+  },
+  {
+   "k": "Fullscreen",
+   "v": "全屏"
+  },
+  {
+   "k": "1 · Your realm",
+   "v": "1 · 你的生物区"
+  },
+  {
+   "k": "2 · World",
+   "v": "2 · 世界"
+  },
+  {
+   "k": "3 · Competitors",
+   "v": "3 · 对手"
+  },
+  {
+   "k": "Next",
+   "v": "下一步"
   }
  ]
 }

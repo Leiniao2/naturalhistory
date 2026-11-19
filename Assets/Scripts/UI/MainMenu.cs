@@ -41,6 +41,7 @@ namespace NaturalHistory.UI
         public Button NewGame      => root.Q<Button>("main-new-game-button");
         public Button LoadGame     => root.Q<Button>("main-load-button");
         public Button Encyclopedia => root.Q<Button>("main-encyclopedia-button");
+        public Button Settings     => root.Q<Button>("main-settings-button");
         public Button Quit         => root.Q<Button>("main-quit-button");
 
         public MainMenu(VisualElement root)

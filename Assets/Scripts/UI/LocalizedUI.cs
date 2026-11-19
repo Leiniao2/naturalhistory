@@ -14,11 +14,15 @@ namespace NaturalHistory.UI
         // language changes
         private static readonly Dictionary<VisualElement, string> texts  = new();
         private static readonly Dictionary<BaseField<string>, string> labels = new();
+        private static readonly Dictionary<VisualElement, string> fieldLabels = new(); // sliders and toggles
 
         public static void Register(VisualElement root)
         {
             texts.Clear();
             labels.Clear();
+            fieldLabels.Clear();
+            root.Query<Slider>().ForEach(s => { if (!string.IsNullOrEmpty(s.label)) fieldLabels[s] = s.label; });
+            root.Query<Toggle>().ForEach(t => { if (!string.IsNullOrEmpty(t.label)) fieldLabels[t] = t.label; });
             root.Query<TextElement>().ForEach(e => { if (!string.IsNullOrEmpty(e.text)) texts[e] = e.text; });
             root.Query<Foldout>().ForEach(f => { if (!string.IsNullOrEmpty(f.text)) texts[f] = f.text; });
             root.Query<DropdownField>().ForEach(d => { if (!string.IsNullOrEmpty(d.label)) labels[d] = d.label; });
@@ -33,6 +37,11 @@ namespace NaturalHistory.UI
                 else if (element is Foldout f) f.text = Loc.T(english);
             }
             foreach (var (field, english) in labels) field.label = Loc.T(english);
+            foreach (var (field, english) in fieldLabels)
+            {
+                if (field is Slider s) s.label = Loc.T(english);
+                else if (field is Toggle t) t.label = Loc.T(english);
+            }
         }
 
         // ---------- Fonts ----------
