@@ -78,5 +78,78 @@ namespace NaturalHistory.World
             }
             return range;
         }
+
+        // ---------- Beyond this turn (MoveOrders) ----------
+
+        // Whether the group may end a turn on `cell`: it can live there and its niche is free
+        public static bool CanStop(ColonyGroup group, HexCell cell, SpeciesColonies colonies)
+        {
+            if (group == null || cell == null || colonies == null || !group.CanLiveAt(cell)) return false;
+            var holder = colonies.GroupAt(cell, Niches.Of(group.Definition, cell));
+            return holder == null || holder == group;
+        }
+
+        // The shortest way over the whole map from the group's tile to `target` (not included its
+        // own tile), through tiles it can enter and not through a foe; null if there is none or
+        // it can't stop there. A breadth-first search: one action per tile, as MoveAlong spends.
+        public static List<HexCell> FarPath(ColonyGroup group, HexCell target, SpeciesColonies colonies)
+        {
+            var grid = HexGrid.Instance;
+            if (group == null || group.Cell == null || target == null || target == group.Cell || grid == null || !group.CanMove) return null;
+            if (!CanStop(group, target, colonies)) return null;
+            var parent = new Dictionary<HexCell, HexCell> { [group.Cell] = null };
+            var frontier = new Queue<HexCell>();
+            frontier.Enqueue(group.Cell);
+            while (frontier.Count > 0)
+            {
+                var c = frontier.Dequeue();
+                if (c == target) break;
+                foreach (var n in grid.GetNeighbors(c))
+                {
+                    if (n == null || parent.ContainsKey(n) || !group.CanEnter(n)) continue;
+                    if (SpeciesColonies.Attackable(group, n) != null) continue;
+                    parent[n] = c;
+                    frontier.Enqueue(n);
+                }
+            }
+            if (!parent.ContainsKey(target)) return null;
+            var path = new List<HexCell>();
+            for (var c = target; c != null && c != group.Cell; c = parent[c]) path.Add(c);
+            path.Reverse();
+            return path;
+        }
+
+        // How many turns walking `path` takes, this one counting as the first: the actions left
+        // now, then a full turn's moves (CombatStats.moves) each turn, every turn ending on a tile
+        // it can stop on (CanStop), so a turn may fall short. `legs` gets the number of path tiles
+        // covered by the end of each turn. -1 if it can't get there.
+        public static int TurnsAlong(ColonyGroup group, List<HexCell> path, SpeciesColonies colonies, List<int> legs = null)
+        {
+            legs?.Clear();
+            if (group == null || path == null || path.Count == 0) return path != null && path.Count == 0 ? 0 : -1;
+            int perTurn = Mathf.Max(1, group.Stats.moves);
+            int actions = group.JustBorn ? 0 : group.ActionsLeft;
+            int at = 0, turn = 1;
+            for (int guard = 0; guard < 200; guard++)
+            {
+                int to = Mathf.Min(path.Count, at + actions);
+                while (to > at && !CanStop(group, path[to - 1], colonies)) to--;
+                if (to == at && actions >= perTurn) return -1; // a full turn can't reach a tile to stop on
+                at = to;
+                legs?.Add(at);
+                if (at == path.Count) return turn;
+                turn++;
+                actions = perTurn;
+            }
+            return -1;
+        }
+
+        // The tiles to walk this turn along `path` (TurnsAlong's first leg)
+        public static List<HexCell> FirstLeg(ColonyGroup group, List<HexCell> path, SpeciesColonies colonies)
+        {
+            var legs = new List<int>();
+            if (TurnsAlong(group, path, colonies, legs) < 0 || legs.Count == 0) return new List<HexCell>();
+            return path.GetRange(0, legs[0]);
+        }
     }
 }

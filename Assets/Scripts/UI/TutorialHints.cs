@@ -146,7 +146,7 @@ namespace NaturalHistory.UI
         {
             if (GameManager.Instance != null && GameManager.Instance.State != GameState.Playing) return false;
             if (root == null) return false;
-            foreach (var name in new[] { "main-menu", "setup-overlay", "pause-overlay", "settings-overlay", "slots-overlay" })
+            foreach (var name in new[] { "main-menu", "setup-overlay", "pause-overlay", "settings-overlay", "slots-overlay", "loading-overlay" })
             {
                 var e = root.Q(name);
                 if (e != null && !e.ClassListContains("hidden")) return false;

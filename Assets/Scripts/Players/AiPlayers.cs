@@ -106,13 +106,21 @@ namespace NaturalHistory.Players
 
         // A couple of frames on: a new period rebuilds the map's groups as the turn begins, and the
         // players' copies are only put back at the end of that frame
-        private void OnTurnBegin(int turn) => StartCoroutine(PlayLater(turn));
+        // True from the start of a turn until the AI players and wild animals have acted (UI/TurnWait)
+        public bool Thinking { get; private set; }
+
+        private void OnTurnBegin(int turn)
+        {
+            Thinking = true;
+            StartCoroutine(PlayLater(turn));
+        }
 
         private System.Collections.IEnumerator PlayLater(int turn)
         {
             yield return null;
             yield return null;
-            Play(turn);
+            try { Play(turn); }
+            finally { Thinking = false; }
         }
 
         private void Play(int turn)
@@ -348,8 +356,10 @@ namespace NaturalHistory.Players
         private bool Breed(ColonyGroup g)
         {
             var def = g.Definition;
+            var births = WildBirths.Instance;
             var cells = HexGrid.Instance.GetNeighbors(g.Cell)
-                .Where(c => SpeciesColonies.FitsHabitat(def, c) && Colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, Colonies, null))
+                .Where(c => births != null ? births.CanBeBornAt(def, c)
+                                           : SpeciesColonies.FitsHabitat(def, c) && Colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, Colonies, null))
                 .ToList();
             if (cells.Count == 0) return false;
             var young = Colonies.SpawnColony(def, cells[rng.Next(cells.Count)], null, rng.Next());

@@ -38,7 +38,7 @@ namespace NaturalHistory.UI
         public static void EndTurn(bool force = false)
         {
             if (UnitCycle.Instance != null) UnitCycle.Instance.EndTurnOrNext(force);
-            else TurnManager.Instance?.EndTurn();
+            else TurnWait.Run(() => TurnManager.Instance?.EndTurn());
         }
 
         // Called when the turn / climate changes

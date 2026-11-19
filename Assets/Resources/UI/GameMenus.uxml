@@ -334,6 +334,13 @@
                         <ui:Label name="loading-species-text" class="loading-species-text" text="" picking-mode="Ignore" />
                     </ui:VisualElement>
                 </ui:VisualElement>
+                <!-- browse the species; Continue once the world is ready (LoadingScreen) -->
+                <ui:VisualElement class="loading-actions">
+                    <ui:Button name="loading-prev" class="slot-button loading-nav" text="◀ Previous" />
+                    <ui:Button name="loading-next" class="slot-button loading-nav" text="Next ▶" />
+                    <ui:VisualElement class="spacer" />
+                    <ui:Button name="loading-continue" class="menu-button loading-continue hidden" text="Continue" />
+                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
 

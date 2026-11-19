@@ -19607,6 +19607,18 @@
   {
    "k": "The {0} hit {1} of your groups",
    "v": "{0}: {1} dos seus grupos atingidos"
+  },
+  {
+   "k": "◀ Previous",
+   "v": "◀ Anterior"
+  },
+  {
+   "k": "Next ▶",
+   "v": "Próximo ▶"
+  },
+  {
+   "k": "Ready",
+   "v": "Pronto"
   }
  ]
 }

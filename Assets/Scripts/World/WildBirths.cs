@@ -9,11 +9,13 @@ namespace NaturalHistory.World
 {
     // The wild animals of the map. The game starts with only the three founding protists: a group of
     // each for every player (TerritoryManager) and a few wild groups of each far from the habitat
-    // centers. At the end of each turn, now and then, a wild group of a new species
-    // is born, far from every habitat center: always a sibling of one of the players' species on the
-    // evolution tree (another species evolving from the same ancestor), alive in the period the map
-    // shows, on a tile it can live and eat on. So the wild world fills up along the branches the
-    // players have taken, with their nearest relatives as rivals.
+    // centers. At the end of each turn, wild groups are born on BirthShare of the tiles no player can
+    // see (out of every player's groups' vision and territory), one on each such tile that something
+    // suits: one of the players' species, or a relative of one on the evolution tree (a sibling: another
+    // species evolving from the same ancestor; for the founders, which have none, what they evolve
+    // into), alive in the period the map shows, able to live and eat there with its niche free. In
+    // the Ediacaran and the Cambrian only on the sea floor. So the wild world fills up along the
+    // branches the players have taken, with their nearest relatives as rivals.
     //
     // The wild groups outlive the period: when the map is rebuilt for another period
     // (SpeciesColonies.PlaceColonies), those whose species still lives are put back where they were,
@@ -22,7 +24,7 @@ namespace NaturalHistory.World
     {
         public static WildBirths Instance { get; private set; }
 
-        private const float BirthChance = 0.45f; // per turn
+        private const float BirthShare = 0.05f; // of the tiles out of every player's sight, each turn
         private const int   FarFromCenters = 6;  // tiles from every habitat center, at least
         private const int   WildFounders   = 3;  // wild groups of each founding protist at the start
 
@@ -115,8 +117,52 @@ namespace NaturalHistory.World
         {
             if (colonies == null || grid == null || !grid.IsGenerated || SpeciesColonies.SafariMode) return;
             var rng = new System.Random(grid.WorldSeed ^ (turn * 7349));
-            if (rng.NextDouble() >= BirthChance) return;
-            BirthOne(rng);
+            var candidates = Siblings().ToList();
+            if (candidates.Count == 0) return;
+            var blind = BlindCells();
+            int births = 0, tries = Mathf.RoundToInt(blind.Count * BirthShare);
+            for (int i = 0; i < tries && blind.Count > 0; i++)
+            {
+                int k = rng.Next(blind.Count);
+                var cell = blind[k];
+                blind[k] = blind[blind.Count - 1];
+                blind.RemoveAt(blind.Count - 1);
+                var fits = candidates.Where(d => CanBeBornAt(d, cell)).ToList();
+                if (fits.Count == 0) continue;
+                if (colonies.SpawnColony(fits[rng.Next(fits.Count)], cell, null, rng.Next()) != null) births++;
+            }
+            if (births > 0) Debug.Log($"[WildBirths] {births} wild groups born out of the players' sight.");
+        }
+
+        // Tiles no player sees: out of the vision of every player's groups and off their territory
+        private List<HexCell> BlindCells()
+        {
+            var seen = new HashSet<HexCell>();
+            foreach (var g in colonies.Groups)
+                if (g != null && g.Owner != null && g.Cell != null)
+                    foreach (var c in grid.GetCellsInRange(g.Cell, Mathf.Max(0, FogOfWar.Vision(g) - 1))) seen.Add(c);
+            var territory = Territory.TerritoryManager.Instance;
+            var blind = new List<HexCell>();
+            for (int r = 0; r < grid.Height; r++)
+            for (int q = 0; q < grid.Width; q++)
+            {
+                var cell = grid.GetCell(q, r);
+                if (cell == null || seen.Contains(cell) || (territory != null && territory.OwnerOf(cell) != null)) continue;
+                blind.Add(cell);
+            }
+            return blind;
+        }
+
+        // Ediacaran and Cambrian: only sea-floor life (no wild animals on land or at the sea surface yet)
+        private static bool EarlyPeriod =>
+            AgeManager.Instance != null && AgeManager.Instance.CurrentAge <= GeologicalAge.Cambrian;
+
+        public bool CanBeBornAt(SpeciesDefinition def, HexCell cell)
+        {
+            if (!SpeciesColonies.FitsHabitat(def, cell)) return false;
+            var niche = Niches.Of(def, cell);
+            if (EarlyPeriod && (!cell.IsWater || Niches.LayerOf(niche) != MapLayer.Under)) return false;
+            return colonies.GroupAt(cell, niche) == null && FoodWeb.HasFood(def, cell, colonies, null);
         }
 
         // Tries the candidate species in random order until one has a far tile to be born on
@@ -139,20 +185,26 @@ namespace NaturalHistory.World
             return null;
         }
 
-        // Species evolving from the same ancestor as one of the players' species, alive now, that
-        // no player has (the players' own lines are theirs to evolve)
+        // The players' species themselves, and the species evolving from the same ancestor as one of
+        // them (for a species without one, the founders at the root of the tree: what it evolves
+        // into), alive now
         private IEnumerable<SpeciesDefinition> Siblings()
         {
             var owned = new HashSet<string>(colonies.Groups.Where(g => g != null && g.Owner != null).Select(g => g.Definition.id));
             var seen  = new HashSet<string>();
             foreach (var id in owned)
-                foreach (var parent in EvolutionData.To(id).Select(l => l.from).Distinct())
-                    foreach (var link in EvolutionData.From(parent))
-                    {
-                        if (owned.Contains(link.to) || !seen.Add(link.to)) continue;
-                        var def = GameDataLoader.GetSpecies(link.to);
-                        if (def != null && !string.IsNullOrEmpty(def.model) && colonies.IsAliveNow(def)) yield return def;
-                    }
+            {
+                var own = GameDataLoader.GetSpecies(id);
+                if (seen.Add(id) && own != null && !string.IsNullOrEmpty(own.model) && colonies.IsAliveNow(own)) yield return own;
+                var parents = EvolutionData.To(id).Select(l => l.from).Distinct().ToList();
+                var relatives = parents.Count > 0 ? parents.SelectMany(p => EvolutionData.From(p)) : EvolutionData.From(id);
+                foreach (var link in relatives)
+                {
+                    if (!seen.Add(link.to)) continue;
+                    var def = GameDataLoader.GetSpecies(link.to);
+                    if (def != null && !string.IsNullOrEmpty(def.model) && colonies.IsAliveNow(def)) yield return def;
+                }
+            }
         }
 
         // Tiles `def` can live and eat on, its niche free, at least FarFromCenters from every habitat center
@@ -166,8 +218,7 @@ namespace NaturalHistory.World
             for (int q = 0; q < grid.Width; q++)
             {
                 var cell = grid.GetCell(q, r);
-                if (cell == null || !SpeciesColonies.FitsHabitat(def, cell)) continue;
-                if (colonies.GroupAt(cell, Niches.Of(def, cell)) != null || !FoodWeb.HasFood(def, cell, colonies, null)) continue;
+                if (cell == null || !CanBeBornAt(def, cell)) continue;
                 if (centers.Any(c => Distance(c, cell) < FarFromCenters)) continue;
                 result.Add(cell);
             }

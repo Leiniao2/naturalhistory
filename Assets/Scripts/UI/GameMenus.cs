@@ -111,6 +111,7 @@ namespace NaturalHistory.UI
             newGameOptions = new NewGameOptions(root);
             zoologyPanel = new ZoologyPanel(root);
             loading      = new LoadingScreen(root, this);
+            TurnWait.Init(root, this);
             encyclopedia = new EncyclopediaPanel(root);
             miniMap      = new MiniMap(root);
             mainMenu     = new MainMenu(root);
@@ -315,6 +316,7 @@ namespace NaturalHistory.UI
         {
             if (root == null) return;
 
+            if (loading.IsOpen) { loading.HandleKeys(); return; } // browsing species / Continue while it is up
             if (Input.GetKeyDown(KeyCode.Escape)) HandleEscape();
             if (Input.GetKeyDown(KeyCode.BackQuote)) adminPanel.Toggle();
             if (Input.GetKeyDown(KeyCode.U) && !AnyModalOpen()) UnderView.Toggle();    // the layer under sea level
@@ -327,6 +329,7 @@ namespace NaturalHistory.UI
             unitCycle.Update(AnyModalOpen());
             animalPanel.Update();
             miniMap.Update();
+            TurnWait.Update();
             mainMenu.Update();
             UpdateAutosave();
             if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)

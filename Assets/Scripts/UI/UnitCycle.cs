@@ -49,7 +49,7 @@ namespace NaturalHistory.UI
         public bool Awaits(ColonyGroup g)
         {
             if (g == null || g.Cell == null || g.Owner == null || !g.Owner.IsHuman) return false;
-            if (g.JustBorn || !g.CanAttack || g.ActionsLeft <= 0 || skipped.Contains(g)) return false;
+            if (g.JustBorn || !g.CanAttack || g.ActionsLeft <= 0 || skipped.Contains(g) || MoveOrders.Has(g)) return false; // under orders: on its way
             return HasOrders(g);
         }
 
@@ -84,7 +84,7 @@ namespace NaturalHistory.UI
         {
             Recount();
             if (!force && pending.Count > 0) { Next(); return; }
-            TurnManager.Instance?.EndTurn();
+            TurnWait.Run(() => TurnManager.Instance?.EndTurn()); // the turning ring by the pointer while the world moves on
         }
 
         // Picks the next group awaiting orders after the current one, and brings the camera to it

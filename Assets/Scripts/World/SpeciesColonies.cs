@@ -159,6 +159,14 @@ namespace NaturalHistory.World
         }
 
         // A group takes the niche it has on its (new) tile
+        // Walks the group along `path` (MoveOrders) and gives it its new tile's niche
+        public bool MoveGroup(ColonyGroup group, List<HexCell> path)
+        {
+            if (group == null || !group.MoveAlong(path)) return false;
+            Occupy(group);
+            return true;
+        }
+
         private void Occupy(ColonyGroup group)
         {
             Vacate(group);
@@ -349,6 +357,7 @@ namespace NaturalHistory.World
                     var order = range;
                     Select(null);
                     lastClicked = null;
+                    MoveOrders.Cancel(group); // an order of its own replaces a long move
                     if (order.AttackFrom.TryGetValue(cell, out var from))
                     {
                         if (from == group.Cell) { group.Attack(cell); return; }
@@ -366,6 +375,14 @@ namespace NaturalHistory.World
                 }
                 var clicked = PickAt(cell, again);
                 bool orderable = clicked != null && (SafariMode || (clicked.Owner != null && clicked.Owner.IsHuman));
+                // a tile beyond this turn's reach without an animal of yours to pick: go there over
+                // the coming turns (MoveOrders; MovePathView shows how many)
+                if (!orderable && cell != group.Cell && !group.JustBorn && MoveOrders.Give(group, cell))
+                {
+                    Select(null);
+                    lastClicked = null;
+                    return;
+                }
                 Select(clicked != group && orderable && clicked.CanAttack && !clicked.IsBusy ? clicked : null);
                 return;
             }

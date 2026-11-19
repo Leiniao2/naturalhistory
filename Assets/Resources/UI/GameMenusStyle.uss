@@ -2408,3 +2408,22 @@
     color: rgb(228, 224, 208);
     white-space: normal;
 }
+
+/* Loading screen: browsing the species, and Continue once ready (LoadingScreen) */
+.loading-actions {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.loading-nav {
+    min-width: 160px;
+    height: 42px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.loading-continue {
+    width: 240px;
+    font-size: 21px;
+}

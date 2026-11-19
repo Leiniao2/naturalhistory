@@ -7,8 +7,11 @@ namespace NaturalHistory.World
     // reach this turn are washed green and the groups it can attack red (HexCell.SetGroupTarget),
     // with a fine, soft line round the edge of the range and round each target; and, for the
     // tile under the mouse, an arrow along the path it would take, a dot at each tile it passes and
-    // a badge at the end with the number of steps (actions) it costs. Drawn over everything
-    // (Shaders/MoveOverlay), at the height of the layer on view (surface, seabed, sky).
+    // a badge at the end with the number of turns it takes to get there. Tiles beyond this turn's
+    // reach can be pointed at too (MoveRange.FarPath, MoveOrders): the arrow goes on, paler, with a
+    // gold marker where each turn ends. With nothing pointed at, a group under orders shows the
+    // way it is going. Drawn over everything (Shaders/MoveOverlay), at the height of the layer on
+    // view (surface, seabed, sky).
     public class MovePathView : MonoBehaviour
     {
         private static MovePathView instance;
@@ -18,10 +21,13 @@ namespace NaturalHistory.World
         private static readonly Color AttackColor  = new(1f, 0.30f, 0.24f, 0.95f);
         private static readonly Color PathColor    = new(1f, 1f, 1f, 0.95f);
         private static readonly Color Shadow       = new(0f, 0f, 0f, 0.45f);
+        private static readonly Color FarColor     = new(0.78f, 0.88f, 1f, 0.9f);   // beyond this turn
+        private static readonly Color TurnEndColor = new(1f, 0.82f, 0.3f, 1f);     // where a turn ends
         private const float Lift = 0.04f; // above the tile surface
 
         private MoveRange range;
         private HexCell hovered;
+        private List<HexCell> farPath; // to `hovered` (or the group's order) when beyond this turn's reach
         private float builtAtX = float.NaN; // the group tile's x when the outline was built (the map wraps)
         private float radius = 1f;          // hex corner radius in world units
         private Mesh outlineMesh, pathMesh;
@@ -123,7 +129,7 @@ namespace NaturalHistory.World
             if (cam == null) return;
 
             var cell = Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out var hit) ? hit.collider.GetComponent<HexCell>() : null;
-            if (!range.Contains(cell)) cell = null;
+            if (cell == range.Group.Cell) cell = null;
             bool moved = !Mathf.Approximately(builtAtX, range.Group.Cell.transform.position.x);
             if (cell != hovered || moved) { hovered = cell; Refresh(); }
 
@@ -142,7 +148,15 @@ namespace NaturalHistory.World
             builtAtX = start.transform.position.x;
             radius = CellRadius(start);
             BuildOutline(start);
-            if (hovered != null) BuildPath(start, hovered);
+            farPath = null;
+            var target = hovered ?? MoveOrders.TargetOf(range.Group);
+            if (target == null) return;
+            if (range.Contains(target)) BuildPath(start, target);
+            else
+            {
+                farPath = MoveRange.FarPath(range.Group, target, SpeciesColonies.Instance);
+                if (farPath != null) BuildFarPath(start, farPath);
+            }
         }
 
         private static float CellRadius(HexCell cell)
@@ -265,21 +279,65 @@ namespace NaturalHistory.World
             pathMesh.SetVertices(v); pathMesh.SetColors(c); pathMesh.SetTriangles(t, 0);
             pathMesh.RecalculateBounds();
 
-            int steps = range.StepsTo(attack ? from : target) + (attack ? 1 : 0);
-            badge.gameObject.SetActive(true);
-            badge.position = pts[^1] + Vector3.up * radius * 0.45f;
-            badge.localScale = Vector3.one * radius * 0.24f;
-            label.text = steps.ToString();
-            label.color = attack ? new Color(1f, 0.75f, 0.7f) : Color.white;
+            ShowBadge(pts[^1], 1, attack ? new Color(1f, 0.75f, 0.7f) : Color.white); // within reach: this turn
         }
 
-        // A ribbon along `pts` with an arrowhead at the end
-        private static void AddArrow(List<Vector3> v, List<Color> c, List<int> t, List<Vector3> pts, float width, Color color)
+        // The number of turns over the end of the path
+        private void ShowBadge(Vector3 at, int turns, Color color)
         {
-            float head = width * 2.6f;
+            badge.gameObject.SetActive(true);
+            badge.position = at + Vector3.up * radius * 0.45f;
+            badge.localScale = Vector3.one * radius * 0.24f;
+            label.text = turns.ToString();
+            label.color = color;
+        }
+
+        // Beyond this turn's reach: the whole way, white as far as this turn goes and paler after,
+        // a gold marker at each tile where a turn ends, and the turns it takes in the badge
+        private void BuildFarPath(HexCell start, List<HexCell> cells)
+        {
+            var legs = new List<int>();
+            int turns = MoveRange.TurnsAlong(range.Group, cells, SpeciesColonies.Instance, legs);
+            if (turns < 0 || cells.Count == 0) return;
+
+            var pts = new List<Vector3>();
+            var basePos = start.transform.position;
+            pts.Add(new Vector3(basePos.x, Height(start), basePos.z));
+            var prev = start;
+            var offset = Vector3.zero;
+            foreach (var cell in cells)
+            {
+                offset += Delta(prev, cell);
+                pts.Add(new Vector3(basePos.x + offset.x, Height(cell), basePos.z + offset.z));
+                prev = cell;
+            }
+            pts[0] = Vector3.Lerp(pts[0], pts[1], 0.3f);
+
+            var v = new List<Vector3>(); var c = new List<Color>(); var t = new List<int>();
+            AddArrow(v, c, t, pts, radius * 0.22f, Shadow);
+            int now = legs.Count > 0 ? legs[0] : 0; // tiles walked this turn
+            if (now >= 1) AddArrow(v, c, t, pts.GetRange(0, now + 1), radius * 0.13f, PathColor, head: false);
+            AddArrow(v, c, t, pts.GetRange(Mathf.Max(0, now), pts.Count - Mathf.Max(0, now)), radius * 0.13f, FarColor);
+            var ends = new HashSet<int>(legs);
+            for (int i = 1; i < pts.Count - 1; i++)
+            {
+                bool turnEnd = ends.Contains(i);
+                AddFlatDisc(v, c, t, pts[i], radius * (turnEnd ? 0.2f : 0.13f), Shadow);
+                AddFlatDisc(v, c, t, pts[i], radius * (turnEnd ? 0.15f : 0.09f), turnEnd ? TurnEndColor : i <= now ? PathColor : FarColor);
+            }
+            pathMesh.SetVertices(v); pathMesh.SetColors(c); pathMesh.SetTriangles(t, 0);
+            pathMesh.RecalculateBounds();
+            ShowBadge(pts[^1], turns, turns <= 1 ? Color.white : new Color(1f, 0.88f, 0.55f));
+        }
+
+        // A ribbon along `pts`, with an arrowhead at the end unless `head` is false
+        private static void AddArrow(List<Vector3> v, List<Color> c, List<int> t, List<Vector3> pts, float width, Color color, bool head = true)
+        {
+            if (pts.Count < 2) return;
+            float headSize = width * 2.6f;
             var end = pts[^1];
             var lastDir = Flat(end - pts[^2]).normalized;
-            var shaftEnd = end - lastDir * head * 0.9f;
+            var shaftEnd = head ? end - lastDir * headSize * 0.9f : end;
             var line = new List<Vector3>(pts) { [pts.Count - 1] = shaftEnd };
 
             int first = v.Count;
@@ -299,7 +357,8 @@ namespace NaturalHistory.World
                     t.Add(a + 1); t.Add(a + 2); t.Add(a + 3);
                 }
             }
-            var sideHead = new Vector3(-lastDir.z, 0f, lastDir.x) * head * 0.62f;
+            if (!head) return;
+            var sideHead = new Vector3(-lastDir.z, 0f, lastDir.x) * headSize * 0.62f;
             int h = v.Count;
             v.Add(shaftEnd + sideHead); v.Add(shaftEnd - sideHead); v.Add(end + lastDir * width * 0.4f);
             c.Add(color); c.Add(color); c.Add(color);
