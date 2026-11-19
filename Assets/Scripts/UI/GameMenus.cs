@@ -29,6 +29,7 @@ namespace NaturalHistory.UI
         private NewGameOptions newGameOptions;
         private ZoologyPanel zoologyPanel;
         private EncyclopediaPanel encyclopedia;
+        private LoadingScreen loading;
         private SettingsPanel settings;
         private bool settingsFromPause; // reopen the pause menu when Settings closes
         private MiniMap miniMap;
@@ -81,6 +82,15 @@ namespace NaturalHistory.UI
 
             root = document.rootVisualElement;
             root.styleSheets.Add(Resources.Load<StyleSheet>("UI/GameMenusStyle"));
+            // Form controls (Controls.uss): on the panel's top element too, where Unity puts a
+            // dropdown's open list, outside this root
+            var controls = Resources.Load<StyleSheet>("UI/Controls");
+            if (controls != null)
+            {
+                root.styleSheets.Add(controls);
+                if (root.panel != null) root.panel.visualTree.styleSheets.Add(controls);
+                else root.RegisterCallback<AttachToPanelEvent>(e => e.destinationPanel.visualTree.styleSheets.Add(controls));
+            }
             root.pickingMode = PickingMode.Ignore;
             LocalizedUI.Register(root); // before the panels fill in their own text
 
@@ -100,6 +110,7 @@ namespace NaturalHistory.UI
             animalPanel  = new AnimalPanel(root);
             newGameOptions = new NewGameOptions(root);
             zoologyPanel = new ZoologyPanel(root);
+            loading      = new LoadingScreen(root, this);
             encyclopedia = new EncyclopediaPanel(root);
             miniMap      = new MiniMap(root);
             mainMenu     = new MainMenu(root);
@@ -115,6 +126,7 @@ namespace NaturalHistory.UI
             NaturalEvents.Announced += OnPhenomenon;
             Combat.Reported += OnPhenomenon;
             // the title screen goes first, so the new period's panel can show over the new game
+            playersPanel.Loading = work => loading.Run("Creating the world…", work);
             playersPanel.NewGameStarting += () => { mainMenu.InGame = true; mainMenu.Hide(); };
             playersPanel.NewGameStarted += () => { RequestAutosave(); SetPauseOpen(false); ShowToast(Loc.T("New game started")); };
             playersPanel.SetupClosed    += BackToMenu;
@@ -352,7 +364,7 @@ namespace NaturalHistory.UI
             if (cameraController != null) cameraController.enabled = !modal; // keep edge/WASD panning near the HUD
         }
 
-        private bool AnyModalOpen() => mainMenu.IsOpen || settings.IsOpen || IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen || encyclopedia.IsOpen
+        private bool AnyModalOpen() => (loading != null && loading.IsOpen) || mainMenu.IsOpen || settings.IsOpen || IsOpen(pauseOverlay) || IsOpen(slotsOverlay) || treePanel.IsOpen || agePanel.IsOpen || zoologyPanel.IsOpen || encyclopedia.IsOpen
                                        || playersPanel.FactionOpen || playersPanel.SetupOpen;
 
         private bool PointerOverUI()
@@ -493,7 +505,9 @@ namespace NaturalHistory.UI
             else RebuildSlots();
         }
 
-        private void LoadFrom(int slot)
+        private void LoadFrom(int slot) => loading.Run("Loading the game…", () => LoadNow(slot));
+
+        private void LoadNow(int slot)
         {
             bool fromTitle = mainMenu.IsOpen;
             mainMenu.Hide(); // first, like a new game

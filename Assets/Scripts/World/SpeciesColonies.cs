@@ -149,6 +149,15 @@ namespace NaturalHistory.World
         private readonly Dictionary<(HexCell, Niche), ColonyGroup> occupants = new();
         private readonly Dictionary<ColonyGroup, (HexCell, Niche)> slots = new();
 
+        // Moves a group along a path the way a player's order does (AI players and wild groups:
+        // Players/AiPlayers): the group takes its niche on the tile it ends on
+        public bool Travel(ColonyGroup group, IReadOnlyList<HexCell> path)
+        {
+            if (group == null || !group.MoveAlong(path)) return false;
+            Occupy(group);
+            return true;
+        }
+
         // A group takes the niche it has on its (new) tile
         private void Occupy(ColonyGroup group)
         {

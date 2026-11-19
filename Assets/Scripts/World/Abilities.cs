@@ -110,17 +110,18 @@ namespace NaturalHistory.World
         {
             if (g == null || g.Definition == null) return false;
             foreach (var a in Of(g.Definition))
-                if (a.id == id) return g.Owner == null || Unlocked(g.Definition, a);
+                if (a.id == id) return g.Owner == null || Unlocked(g.Definition, a, g.Owner.Index);
             return false;
         }
 
         // Unlocked for the players' groups of the species: it needs nothing, its species has acquired
         // one of the items that unlock it, or it can't acquire any of them (then it's innate)
-        public static bool Unlocked(SpeciesDefinition def, AbilityDefinition a)
+        // player: whose items count (an AI player's own; -1 the human's)
+        public static bool Unlocked(SpeciesDefinition def, AbilityDefinition a, int player = -1)
         {
             if (!a.NeedsUnlock) return true;
             var progression = ProgressionManager.Instance;
-            var traits = EvolutionManager.Instance != null ? EvolutionManager.Instance.TraitsOf(def.id) : null;
+            var traits = EvolutionManager.Instance != null ? EvolutionManager.Instance.TraitsOf(player, def.id) : null;
             if (progression == null || traits == null) return true;
             bool any = false;
             foreach (var id in a.unlockFunctions)

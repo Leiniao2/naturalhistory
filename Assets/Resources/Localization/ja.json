@@ -19487,6 +19487,114 @@
   {
    "k": "Next",
    "v": "次へ"
+  },
+  {
+   "k": "Creating the world…",
+   "v": "世界を創造しています…"
+  },
+  {
+   "k": "Loading the game…",
+   "v": "ゲームを読み込んでいます…"
+  },
+  {
+   "k": "Did you know?",
+   "v": "知っていましたか？"
+  },
+  {
+   "k": "Your first creatures",
+   "v": "最初の生き物たち"
+  },
+  {
+   "k": "You begin with three single-celled founders, one from each great branch of life, living around your habitat center. Guide them through 600 million years: spread out, compete, and evolve into the animals of later periods.",
+   "v": "最初は、生命の三大系統からそれぞれ1種ずつ、計3種の単細胞の祖先から始まります。彼らは生息地の中心の周りで暮らしています。6億年にわたって導き、広がり、競い合い、後の時代の動物へと進化させましょう。"
+  },
+  {
+   "k": "Layers of the map",
+   "v": "マップの階層"
+  },
+  {
+   "k": "Every tile has layers: the sky, the surface, and below it the underground or the seabed. Animals live in one of them, and a layer shows only its own. Switch with the Sky, Surface and Underground buttons at the top (U and K on the keyboard) to find yours.",
+   "v": "どのタイルにも階層があります。空、地表、そしてその下の地下または海底です。動物はそのいずれかで暮らし、各階層にはその階層の動物だけが表示されます。上部の「空」「地表」「地下」ボタン（キーボードでは U と K）で切り替えて、自分の動物を探しましょう。"
+  },
+  {
+   "k": "Select an animal",
+   "v": "動物を選択"
+  },
+  {
+   "k": "Click one of your groups to select it. On a tile with several animals, click again or press Tab to pick the next one.",
+   "v": "自分の群れをクリックすると選択できます。複数の動物がいるタイルでは、もう一度クリックするか Tab を押すと次の動物を選べます。"
+  },
+  {
+   "k": "Moving",
+   "v": "移動"
+  },
+  {
+   "k": "The green tiles are where it can go this turn: each tile costs one action. Point at a tile to see the path and its cost, then click to move there. A group ringed in red can be attacked.",
+   "v": "緑色のタイルは、このターンに移動できる場所です。1タイルごとに1行動を消費します。タイルにカーソルを合わせると経路とコストが表示され、クリックするとそこへ移動します。赤い輪で囲まれた群れは攻撃できます。"
+  },
+  {
+   "k": "Ending the turn",
+   "v": "ターンの終了"
+  },
+  {
+   "k": "When your animals have used their actions, press Next Turn (or Enter). Each turn your habitat centers earn Evolution Points (EP); kills and sightings of new species earn more.",
+   "v": "動物たちが行動を使い切ったら、「次のターン」（または Enter）を押しましょう。毎ターン、生息地の中心から進化ポイント（EP）が得られます。敵を倒したり新種を発見したりすると、さらに獲得できます。"
+  },
+  {
+   "k": "Reproducing",
+   "v": "繁殖"
+  },
+  {
+   "k": "Select a group and press Reproduce, then pick a neighbouring tile: for 1 EP a new group is born there. More groups hold more territory and earn more.",
+   "v": "群れを選択して「繁殖」を押し、隣のタイルを選びます。1 EP でそこに新しい群れが生まれます。群れが多いほど縄張りが広がり、獲得量も増えます。"
+  },
+  {
+   "k": "Functions and Behaviors",
+   "v": "機能と行動"
+  },
+  {
+   "k": "Spend EP in the Functions and Behaviors trees to give a species new traits. Evolving into another species needs certain traits, so look at what the species you want to become requires.",
+   "v": "「機能」と「行動」のツリーで EP を使うと、種に新しい形質を与えられます。別の種へ進化するには特定の形質が必要なので、なりたい種の条件を確認しましょう。"
+  },
+  {
+   "k": "Ready to evolve",
+   "v": "進化の準備完了"
+  },
+  {
+   "k": "One of your groups can now evolve. Press Evolve on its card, or open the Evolution Tree to see every species it can become and what each needs. Later species are stronger: their attack, defense and health grow with each period.",
+   "v": "群れの1つが進化できるようになりました。カードの「進化」を押すか、「進化系統樹」を開いて、進化先となるすべての種とそれぞれの条件を確認しましょう。後の時代の種ほど強く、攻撃力・防御力・体力は時代ごとに上がっていきます。"
+  },
+  {
+   "k": "Wild relatives",
+   "v": "野生の近縁種"
+  },
+  {
+   "k": "Wild animals have appeared far away: close relatives of your species, evolved from the same ancestor. They compete with you for food and space, and some will fight.",
+   "v": "遠くに野生動物が現れました。あなたの種と同じ祖先から進化した近縁種です。食べ物や生息場所をめぐって競い合い、中には戦いを挑んでくるものもいます。"
+  },
+  {
+   "k": "Hunger",
+   "v": "飢え"
+  },
+  {
+   "k": "One of your groups has no food on its tile or next to it. Each turn it goes hungry it loses a quarter of its health: move it to where it can eat.",
+   "v": "群れの1つが、いるタイルにも隣のタイルにも食べ物がありません。飢えたターンごとに体力の4分の1を失います。食べ物のある場所へ移動させましょう。"
+  },
+  {
+   "k": "A new period",
+   "v": "新しい時代"
+  },
+  {
+   "k": "A new geological period has begun. The land, the climate and the wild animals change; your animals and territory carry on. New species can now evolve.",
+   "v": "新しい地質時代が始まりました。陸地や気候、野生動物は変わりますが、あなたの動物と縄張りはそのまま引き継がれます。新しい種へ進化できるようになりました。"
+  },
+  {
+   "k": "Got it",
+   "v": "了解"
+  },
+  {
+   "k": "No more tips",
+   "v": "今後ヒントを表示しない"
   }
  ]
 }

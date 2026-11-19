@@ -134,7 +134,10 @@ namespace NaturalHistory.Territory
 
         private void EnsureColony(Player player, List<HexCell> core)
         {
-            if (playerColonies.TryGetValue(player.Index, out var existing) && existing != null)
+            // (a group the map has just cleared away is only destroyed at the end of the frame, so it
+            // also has to still be one of the map's groups)
+            if (playerColonies.TryGetValue(player.Index, out var existing) && existing != null
+                && colonies != null && colonies.Groups.Contains(existing))
             {
                 existing.Owner = player; // the Player object is replaced when a game is set up again
                 return;

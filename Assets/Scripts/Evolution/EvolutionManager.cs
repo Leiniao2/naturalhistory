@@ -117,6 +117,7 @@ namespace NaturalHistory.Evolution
         private void ResetGame()
         {
             traits.Clear();
+            aiTraits.Clear();
             copies.Clear();
             evolved.Clear();
             legacyTraits = null;
@@ -135,14 +136,48 @@ namespace NaturalHistory.Evolution
         // Only the human player has EP; other players' copies evolve without paying
         private static bool PaysEP(OwnedCopy copy) => copy == null || (Human != null && copy.player == Human.Index);
 
+        // The EP a copy's player has: the human's (ProgressionManager), an AI player's (AiPlayers)
+        private static bool IsAi(OwnedCopy copy) => copy != null && !PaysEP(copy) && AiPlayers.Instance != null;
+        private static int PointsFor(OwnedCopy copy) =>
+            IsAi(copy) ? AiPlayers.Instance.Points(copy.player) : ProgressionManager.Instance != null ? ProgressionManager.Instance.EvolutionPoints : 0;
+        private static void Spend(OwnedCopy copy, int amount)
+        {
+            if (IsAi(copy)) AiPlayers.Instance.Spend(copy.player, amount);
+            else if (PaysEP(copy)) ProgressionManager.Instance?.SpendPoints(amount);
+        }
+
         // ---------- Species items ----------
+
+        // AI players' items, per player and species: each player evolves its own copy of a species
+        // (all of them start with the same three), so what an AI acquires isn't the human's
+        private readonly Dictionary<(int player, string species), SpeciesTraits> aiTraits = new();
+
+        // A player's items of a species: the human's (player < 0 or the human) are TraitsOf's
+        public SpeciesTraits TraitsOf(int player, string speciesId)
+        {
+            if (player < 0 || Human == null || player == Human.Index) return TraitsOf(speciesId);
+            if (string.IsNullOrEmpty(speciesId)) return null;
+            if (aiTraits.TryGetValue((player, speciesId), out var t)) return t;
+            t = NewTraits(speciesId);
+            aiTraits[(player, speciesId)] = t;
+            return t;
+        }
+
+        private SpeciesTraits TraitsFor(OwnedCopy copy, string speciesId) => TraitsOf(copy?.player ?? -1, speciesId);
 
         // The species' acquired items, starting with the free root items it can have.
         public SpeciesTraits TraitsOf(string speciesId)
         {
             if (string.IsNullOrEmpty(speciesId)) return null;
             if (traits.TryGetValue(speciesId, out var t)) return t;
-            t = new SpeciesTraits();
+            t = NewTraits(speciesId);
+            traits[speciesId] = t;
+            return t;
+        }
+
+        private static SpeciesTraits NewTraits(string speciesId)
+        {
+            var t = new SpeciesTraits();
             var def = GameDataLoader.GetSpecies(speciesId);
             var progression = ProgressionManager.Instance;
             if (progression != null)
@@ -152,7 +187,6 @@ namespace NaturalHistory.Evolution
                 foreach (var n in progression.Ethology.StartingNodes)
                     if (EvolutionData.CanAcquire(def, n, false)) t.behaviors.Add(n.id);
             }
-            traits[speciesId] = t;
             return t;
         }
 
@@ -221,7 +255,9 @@ namespace NaturalHistory.Evolution
             foreach (var copy in copies.Where(c => c.player == player.Index).ToList())
             {
                 i++;
-                if (copy.group != null) { copy.group.Owner = player; continue; }
+                // a group the map has just cleared away is only destroyed at the end of the frame
+                if (copy.group != null && colonies.Groups.Contains(copy.group)) { copy.group.Owner = player; continue; }
+                copy.group = null;
                 var def = GameDataLoader.GetSpecies(copy.species);
                 if (def == null) continue;
                 // Not yet evolved in the period the map shows (the admin bar jumped back in time): keep
@@ -292,7 +328,7 @@ namespace NaturalHistory.Evolution
         public HexCell ReproduceCell(OwnedCopy copy) => ReproduceCells(copy).FirstOrDefault();
 
         public bool CanAffordReproduce(OwnedCopy copy) =>
-            !PaysEP(copy) || (ProgressionManager.Instance != null && ProgressionManager.Instance.EvolutionPoints >= ReproduceCost);
+            !(PaysEP(copy) || IsAi(copy)) || PointsFor(copy) >= ReproduceCost;
 
         // at: the tile the player chose for the young (one of ReproduceCells), or null for the first
         public bool Reproduce(OwnedCopy copy, out string message, HexCell at = null)
@@ -304,7 +340,7 @@ namespace NaturalHistory.Evolution
             if (!copy.group.HasActions()) { message = Loc.T("No actions left this turn"); return false; }
             if (!CanAffordReproduce(copy))
             {
-                message = Loc.F("Needs {0} EP (you have {1})", ReproduceCost, ProgressionManager.Instance != null ? ProgressionManager.Instance.EvolutionPoints : 0);
+                message = Loc.F("Needs {0} EP (you have {1})", ReproduceCost, PointsFor(copy));
                 return false;
             }
             var def  = GameDataLoader.GetSpecies(copy.species);
@@ -316,7 +352,7 @@ namespace NaturalHistory.Evolution
             if (group == null) { message = Loc.T("Couldn't place the young"); return false; }
             copy.lastBred = CurrentTurn;
             copy.group.SpendActions(1);
-            if (PaysEP(copy)) ProgressionManager.Instance?.SpendPoints(ReproduceCost);
+            Spend(copy, ReproduceCost);
             group.BornTurn = CurrentTurn;
             var young = new OwnedCopy { player = copy.player, species = copy.species, group = group, cell = cell, lastBred = CurrentTurn, bornTurn = CurrentTurn };
             copies.Add(young);
@@ -347,7 +383,7 @@ namespace NaturalHistory.Evolution
             var target = GameDataLoader.GetSpecies(link.to);
             var progression = ProgressionManager.Instance;
             if (origin == null || target == null || progression == null) return list;
-            var t = TraitsOf(link.from);
+            var t = TraitsFor(copy, link.from);
             var originCopies = copy != null ? new List<OwnedCopy> { copy } : CopiesOf(Human).Where(c => c.species == link.from).ToList();
 
             list.Add(new Requirement(Loc.F(copy != null ? "A {0}" : "You have a {0}", Loc.T(origin.commonName)), originCopies.Count > 0 && (copy == null || copy.species == link.from)));
@@ -359,9 +395,9 @@ namespace NaturalHistory.Evolution
             bool periodMet = !Enum.TryParse(target.firstAge, true, out GeologicalAge first) || AgeManager.Instance == null || AgeManager.Instance.CurrentAge >= first;
             list.Add(new Requirement(Loc.F("The {0} has begun", Loc.T(target.firstAge)), periodMet));
             list.Add(new Requirement(Loc.F("On or next to {0}", HabitatText(target)), originCopies.Any(c => EvolveCell(c, target) != null)));
-            if (PaysEP(copy))
+            if (PaysEP(copy) || IsAi(copy))
             {
-                int ep = ProgressionManager.Instance != null ? ProgressionManager.Instance.EvolutionPoints : 0;
+                int ep = PointsFor(copy);
                 list.Add(new Requirement(Loc.F("Needs {0} EP (you have {1})", EvolveCost, ep), ep >= EvolveCost));
             }
             if (copy != null && copy.JustBorn)
@@ -404,14 +440,14 @@ namespace NaturalHistory.Evolution
             }
 
             // The new species inherits everything the origin had, plus what evolving grants
-            var from = TraitsOf(link.from);
-            var to   = TraitsOf(link.to);
+            var from = TraitsFor(copy, link.from);
+            var to   = TraitsFor(copy, link.to);
             to.functions.UnionWith(from.functions);
             to.behaviors.UnionWith(from.behaviors);
             to.functions.UnionWith(link.grantFunctions);
             to.behaviors.UnionWith(link.grantBehaviors);
 
-            if (PaysEP(copy)) ProgressionManager.Instance?.SpendPoints(EvolveCost);
+            Spend(copy, EvolveCost);
             EvolvedBy(copy.player).Add(link.Key);
             copy.species  = link.to;
             copy.group    = group;
@@ -444,7 +480,10 @@ namespace NaturalHistory.Evolution
             data.speciesTraits = traits.Select(kv => new SpeciesTraitsSave
             {
                 species = kv.Key, functions = kv.Value.functions.ToList(), behaviors = kv.Value.behaviors.ToList(),
-            }).ToList();
+            }).Concat(aiTraits.Select(kv => new SpeciesTraitsSave
+            {
+                player = kv.Key.player, species = kv.Key.species, functions = kv.Value.functions.ToList(), behaviors = kv.Value.behaviors.ToList(),
+            })).ToList();
             data.copies = copies.Select(c =>
             {
                 var cell = c.group != null && c.group.Cell != null ? c.group.Cell : c.cell;
@@ -484,6 +523,7 @@ namespace NaturalHistory.Evolution
         public void Restore(Save.SaveData data)
         {
             traits.Clear();
+            aiTraits.Clear();
             copies.Clear();
             evolved.Clear();
             FocusSpecies = null;
@@ -494,7 +534,8 @@ namespace NaturalHistory.Evolution
                 t.functions.UnionWith(s.functions ?? new List<string>());
                 t.behaviors.UnionWith(s.behaviors ?? new List<string>());
                 MigrateItems(t);
-                traits[s.species] = t;
+                if (s.player >= 0) aiTraits[(s.player, s.species)] = t;
+                else traits[s.species] = t;
             }
             foreach (var c in data.copies ?? new List<CopySave>())
                 copies.Add(new OwnedCopy { player = c.player, species = c.species, cell = HexGrid.Instance?.GetCell(c.col, c.row), lastBred = c.lastBred, bornTurn = c.bornTurn,
@@ -529,6 +570,7 @@ namespace NaturalHistory.Evolution
     [Serializable]
     public class SpeciesTraitsSave
     {
+        public int player = -1; // an AI player's (EvolutionManager.TraitsOf(player, …)); -1 the human's
         public string species;
         public List<string> functions = new();
         public List<string> behaviors = new();

@@ -1,0 +1,166 @@
+/* Form controls in the menus' brass and dark green (imported by NHRuntimeTheme.tss, so it also
+   reaches what Unity puts outside the menus' root, such as a dropdown's open list): dropdown
+   fields as framed buttons with a gold arrow, their lists as a dark panel with gold edges,
+   sliders as a sunken gold-edged groove with a gold knob, toggles as a framed box with a gold tick. */
+
+/* ---------- Dropdown field ---------- */
+
+.unity-base-popup-field > .unity-base-popup-field__input,
+.unity-base-popup-field:enabled > .unity-base-popup-field__input {
+    min-height: 34px;
+    padding: 2px 12px 2px 14px;
+    color: rgb(242, 236, 218);
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+    background-image: url("Frames/button.png");
+    -unity-slice-left: 18;
+    -unity-slice-right: 18;
+    -unity-slice-top: 30;
+    -unity-slice-bottom: 30;
+    -unity-slice-scale: 0.5px;
+}
+
+.unity-base-popup-field:hover:enabled > .unity-base-popup-field__input,
+.unity-base-popup-field:focus:enabled > .unity-base-popup-field__input {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("Frames/button-hover.png");
+}
+
+.unity-base-popup-field__text {
+    color: rgb(242, 236, 218);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    -unity-text-align: middle-left;
+}
+
+.unity-base-popup-field__arrow {
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    -unity-background-image-tint-color: rgb(226, 196, 128);
+}
+
+/* ---------- Its open list ---------- */
+
+.unity-base-dropdown .unity-base-dropdown__container-outer {
+    background-color: rgb(20, 27, 22);
+    border-width: 2px;
+    border-color: rgb(176, 142, 80);
+    border-top-color: rgb(222, 192, 124);
+    border-bottom-color: rgb(110, 86, 46);
+    border-radius: 4px;
+    padding: 4px 0;
+}
+
+.unity-base-dropdown .unity-base-dropdown__container-inner {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+}
+
+.unity-base-dropdown .unity-base-dropdown__item {
+    min-height: 32px;
+    padding: 0 14px 0 8px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.unity-base-dropdown .unity-base-dropdown__item:hover {
+    background-color: rgba(190, 154, 88, 0.22);
+}
+
+.unity-base-dropdown .unity-base-dropdown__item:checked,
+.unity-base-dropdown .unity-base-dropdown__item:checked:hover {
+    background-color: rgba(190, 154, 88, 0.38);
+}
+
+.unity-base-dropdown .unity-base-dropdown__label {
+    font-size: 17px;
+    color: rgb(232, 226, 205);
+}
+
+.unity-base-dropdown .unity-base-dropdown__item:checked .unity-base-dropdown__label {
+    color: rgb(242, 214, 130);
+}
+
+.unity-base-dropdown .unity-base-dropdown__checkmark {
+    -unity-background-image-tint-color: rgb(242, 214, 130);
+}
+
+.unity-base-dropdown .unity-base-dropdown__separator {
+    background-color: rgba(190, 154, 88, 0.35);
+}
+
+.unity-base-dropdown .unity-scroller {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    width: 10px;
+}
+
+.unity-base-dropdown .unity-scroller__low-button,
+.unity-base-dropdown .unity-scroller__high-button {
+    display: none;
+}
+
+.unity-base-dropdown .unity-base-slider__tracker {
+    background-color: rgba(6, 10, 8, 0.75);
+    border-color: rgba(190, 154, 88, 0.45);
+    border-radius: 5px;
+}
+
+.unity-base-dropdown .unity-base-slider__dragger {
+    background-color: rgb(190, 154, 88);
+    border-width: 0;
+    border-radius: 4px;
+}
+
+/* ---------- Slider ---------- */
+
+.unity-slider .unity-base-slider__tracker {
+    height: 8px;
+    margin-top: -4px;
+    background-color: rgba(6, 10, 8, 0.8);
+    border-width: 1px;
+    border-color: rgba(190, 154, 88, 0.55);
+    border-top-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+}
+
+.unity-slider .unity-base-slider__dragger {
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+    background-image: url("Frames/button-gold.png");
+    -unity-slice-left: 12;
+    -unity-slice-right: 12;
+    -unity-slice-top: 12;
+    -unity-slice-bottom: 12;
+    -unity-slice-scale: 0.4px;
+}
+
+.unity-slider .unity-base-slider__dragger:hover {
+    background-image: url("Frames/button-gold-hover.png");
+}
+
+.unity-slider .unity-base-slider__dragger-border {
+    display: none;
+}
+
+/* ---------- Toggle ---------- */
+
+.unity-toggle__checkmark {
+    width: 22px;
+    height: 22px;
+    background-color: rgba(6, 10, 8, 0.8);
+    border-width: 2px;
+    border-color: rgb(176, 142, 80);
+    border-top-color: rgb(222, 192, 124);
+    border-bottom-color: rgb(110, 86, 46);
+    border-radius: 3px;
+    -unity-background-image-tint-color: rgb(242, 214, 130);
+}
+
+.unity-toggle:hover .unity-toggle__checkmark {
+    border-color: rgb(226, 196, 128);
+}

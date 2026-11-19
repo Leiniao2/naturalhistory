@@ -19487,6 +19487,114 @@
   {
    "k": "Next",
    "v": "Далее"
+  },
+  {
+   "k": "Creating the world…",
+   "v": "Создание мира…"
+  },
+  {
+   "k": "Loading the game…",
+   "v": "Загрузка игры…"
+  },
+  {
+   "k": "Did you know?",
+   "v": "А вы знали?"
+  },
+  {
+   "k": "Your first creatures",
+   "v": "Ваши первые существа"
+  },
+  {
+   "k": "You begin with three single-celled founders, one from each great branch of life, living around your habitat center. Guide them through 600 million years: spread out, compete, and evolve into the animals of later periods.",
+   "v": "Вы начинаете с трёх одноклеточных предков — по одному из каждой великой ветви жизни, — живущих вокруг вашего центра обитания. Проведите их через 600 миллионов лет: расселяйтесь, соперничайте и превратите их в животных последующих периодов."
+  },
+  {
+   "k": "Layers of the map",
+   "v": "Слои карты"
+  },
+  {
+   "k": "Every tile has layers: the sky, the surface, and below it the underground or the seabed. Animals live in one of them, and a layer shows only its own. Switch with the Sky, Surface and Underground buttons at the top (U and K on the keyboard) to find yours.",
+   "v": "У каждой клетки есть слои: небо, поверхность, а под ней — подземный слой или морское дно. Животные живут в одном из них, и каждый слой показывает только своих. Переключайтесь кнопками «Небо», «Поверхность» и «Под землёй» вверху (U и K на клавиатуре), чтобы найти своих."
+  },
+  {
+   "k": "Select an animal",
+   "v": "Выбор животного"
+  },
+  {
+   "k": "Click one of your groups to select it. On a tile with several animals, click again or press Tab to pick the next one.",
+   "v": "Щёлкните по одной из своих групп, чтобы выбрать её. Если в клетке несколько животных, щёлкните ещё раз или нажмите Tab, чтобы выбрать следующее."
+  },
+  {
+   "k": "Moving",
+   "v": "Передвижение"
+  },
+  {
+   "k": "The green tiles are where it can go this turn: each tile costs one action. Point at a tile to see the path and its cost, then click to move there. A group ringed in red can be attacked.",
+   "v": "Зелёные клетки — это места, куда группа может пойти в этот ход: каждая клетка стоит одно действие. Наведите курсор на клетку, чтобы увидеть путь и его стоимость, и щёлкните, чтобы переместиться туда. Группу, обведённую красным, можно атаковать."
+  },
+  {
+   "k": "Ending the turn",
+   "v": "Конец хода"
+  },
+  {
+   "k": "When your animals have used their actions, press Next Turn (or Enter). Each turn your habitat centers earn Evolution Points (EP); kills and sightings of new species earn more.",
+   "v": "Когда ваши животные потратят свои действия, нажмите «Следующий ход» (или Enter). Каждый ход ваши центры обитания приносят очки эволюции (EP); убийства и обнаружение новых видов приносят ещё больше."
+  },
+  {
+   "k": "Reproducing",
+   "v": "Размножение"
+  },
+  {
+   "k": "Select a group and press Reproduce, then pick a neighbouring tile: for 1 EP a new group is born there. More groups hold more territory and earn more.",
+   "v": "Выберите группу, нажмите «Размножиться» и укажите соседнюю клетку: за 1 EP там появится новая группа. Чем больше групп, тем больше территории вы занимаете и тем больше получаете."
+  },
+  {
+   "k": "Functions and Behaviors",
+   "v": "Функции и поведение"
+  },
+  {
+   "k": "Spend EP in the Functions and Behaviors trees to give a species new traits. Evolving into another species needs certain traits, so look at what the species you want to become requires.",
+   "v": "Тратьте EP в деревьях «Функции» и «Поведение», чтобы давать виду новые признаки. Для эволюции в другой вид нужны определённые признаки, так что посмотрите, что требуется виду, которым вы хотите стать."
+  },
+  {
+   "k": "Ready to evolve",
+   "v": "Готов к эволюции"
+  },
+  {
+   "k": "One of your groups can now evolve. Press Evolve on its card, or open the Evolution Tree to see every species it can become and what each needs. Later species are stronger: their attack, defense and health grow with each period.",
+   "v": "Одна из ваших групп теперь может эволюционировать. Нажмите «Эволюционировать» на её карточке или откройте «Эволюционное древо», чтобы увидеть все виды, в которые она может превратиться, и что нужно для каждого. Поздние виды сильнее: их атака, защита и здоровье растут с каждым периодом."
+  },
+  {
+   "k": "Wild relatives",
+   "v": "Дикие родственники"
+  },
+  {
+   "k": "Wild animals have appeared far away: close relatives of your species, evolved from the same ancestor. They compete with you for food and space, and some will fight.",
+   "v": "Вдали появились дикие животные — близкие родственники вашего вида, произошедшие от общего предка. Они соперничают с вами за пищу и пространство, а некоторые вступят в бой."
+  },
+  {
+   "k": "Hunger",
+   "v": "Голод"
+  },
+  {
+   "k": "One of your groups has no food on its tile or next to it. Each turn it goes hungry it loses a quarter of its health: move it to where it can eat.",
+   "v": "У одной из ваших групп нет пищи ни в её клетке, ни рядом. За каждый голодный ход она теряет четверть здоровья: переместите её туда, где есть еда."
+  },
+  {
+   "k": "A new period",
+   "v": "Новый период"
+  },
+  {
+   "k": "A new geological period has begun. The land, the climate and the wild animals change; your animals and territory carry on. New species can now evolve.",
+   "v": "Начался новый геологический период. Суша, климат и дикие животные меняются, а ваши животные и территория остаются. Теперь доступна эволюция в новые виды."
+  },
+  {
+   "k": "Got it",
+   "v": "Понятно"
+  },
+  {
+   "k": "No more tips",
+   "v": "Больше не показывать советы"
   }
  ]
 }

@@ -19487,6 +19487,114 @@
   {
    "k": "Next",
    "v": "다음"
+  },
+  {
+   "k": "Creating the world…",
+   "v": "세계를 만드는 중…"
+  },
+  {
+   "k": "Loading the game…",
+   "v": "게임을 불러오는 중…"
+  },
+  {
+   "k": "Did you know?",
+   "v": "알고 계셨나요?"
+  },
+  {
+   "k": "Your first creatures",
+   "v": "첫 번째 생물들"
+  },
+  {
+   "k": "You begin with three single-celled founders, one from each great branch of life, living around your habitat center. Guide them through 600 million years: spread out, compete, and evolve into the animals of later periods.",
+   "v": "생명의 세 갈래에서 하나씩 나온 단세포 시조 셋으로 시작합니다. 이들은 서식지 중심 주변에 살고 있습니다. 6억 년 동안 이들을 이끌며 퍼져 나가고, 경쟁하고, 이후 시대의 동물로 진화시키세요."
+  },
+  {
+   "k": "Layers of the map",
+   "v": "지도의 층"
+  },
+  {
+   "k": "Every tile has layers: the sky, the surface, and below it the underground or the seabed. Animals live in one of them, and a layer shows only its own. Switch with the Sky, Surface and Underground buttons at the top (U and K on the keyboard) to find yours.",
+   "v": "모든 타일에는 층이 있습니다. 하늘, 지표, 그리고 그 아래의 지하 또는 해저입니다. 동물은 그중 한 층에 살며, 각 층에는 그 층의 동물만 표시됩니다. 위쪽의 ‘하늘’, ‘지표’, ‘지하’ 버튼(키보드 U와 K)으로 전환해 내 동물을 찾아보세요."
+  },
+  {
+   "k": "Select an animal",
+   "v": "동물 선택"
+  },
+  {
+   "k": "Click one of your groups to select it. On a tile with several animals, click again or press Tab to pick the next one.",
+   "v": "내 무리를 클릭하면 선택됩니다. 동물이 여럿 있는 타일에서는 다시 클릭하거나 Tab을 눌러 다음 동물을 고르세요."
+  },
+  {
+   "k": "Moving",
+   "v": "이동"
+  },
+  {
+   "k": "The green tiles are where it can go this turn: each tile costs one action. Point at a tile to see the path and its cost, then click to move there. A group ringed in red can be attacked.",
+   "v": "초록색 타일은 이번 턴에 갈 수 있는 곳입니다. 타일마다 행동 1회가 소모됩니다. 타일에 마우스를 올리면 경로와 비용이 표시되고, 클릭하면 그곳으로 이동합니다. 빨간 테두리가 둘린 무리는 공격할 수 있습니다."
+  },
+  {
+   "k": "Ending the turn",
+   "v": "턴 종료"
+  },
+  {
+   "k": "When your animals have used their actions, press Next Turn (or Enter). Each turn your habitat centers earn Evolution Points (EP); kills and sightings of new species earn more.",
+   "v": "동물들이 행동을 모두 쓰면 ‘다음 턴’(또는 Enter)을 누르세요. 매 턴 서식지 중심에서 진화 포인트(EP)를 얻으며, 적을 처치하거나 새로운 종을 발견하면 더 얻습니다."
+  },
+  {
+   "k": "Reproducing",
+   "v": "번식"
+  },
+  {
+   "k": "Select a group and press Reproduce, then pick a neighbouring tile: for 1 EP a new group is born there. More groups hold more territory and earn more.",
+   "v": "무리를 선택하고 ‘번식’을 누른 뒤 인접한 타일을 고르세요. 1 EP로 그곳에 새 무리가 태어납니다. 무리가 많을수록 더 넓은 영역을 차지하고 더 많이 얻습니다."
+  },
+  {
+   "k": "Functions and Behaviors",
+   "v": "기능과 행동"
+  },
+  {
+   "k": "Spend EP in the Functions and Behaviors trees to give a species new traits. Evolving into another species needs certain traits, so look at what the species you want to become requires.",
+   "v": "‘기능’과 ‘행동’ 트리에서 EP를 써서 종에게 새로운 형질을 주세요. 다른 종으로 진화하려면 특정 형질이 필요하니, 되고 싶은 종의 조건을 확인하세요."
+  },
+  {
+   "k": "Ready to evolve",
+   "v": "진화 준비 완료"
+  },
+  {
+   "k": "One of your groups can now evolve. Press Evolve on its card, or open the Evolution Tree to see every species it can become and what each needs. Later species are stronger: their attack, defense and health grow with each period.",
+   "v": "무리 하나가 이제 진화할 수 있습니다. 카드에서 ‘진화’를 누르거나 ‘진화 계통수’를 열어 진화할 수 있는 모든 종과 각각의 조건을 확인하세요. 나중 시대의 종일수록 강하며, 공격력·방어력·체력이 시대마다 올라갑니다."
+  },
+  {
+   "k": "Wild relatives",
+   "v": "야생 친척"
+  },
+  {
+   "k": "Wild animals have appeared far away: close relatives of your species, evolved from the same ancestor. They compete with you for food and space, and some will fight.",
+   "v": "먼 곳에 야생 동물이 나타났습니다. 같은 조상에서 진화한 내 종의 가까운 친척입니다. 먹이와 공간을 두고 경쟁하며, 일부는 싸움을 걸어옵니다."
+  },
+  {
+   "k": "Hunger",
+   "v": "굶주림"
+  },
+  {
+   "k": "One of your groups has no food on its tile or next to it. Each turn it goes hungry it loses a quarter of its health: move it to where it can eat.",
+   "v": "무리 하나가 있는 타일과 인접한 타일 모두에 먹이가 없습니다. 굶는 턴마다 체력의 4분의 1을 잃으니, 먹이가 있는 곳으로 옮기세요."
+  },
+  {
+   "k": "A new period",
+   "v": "새로운 시대"
+  },
+  {
+   "k": "A new geological period has begun. The land, the climate and the wild animals change; your animals and territory carry on. New species can now evolve.",
+   "v": "새로운 지질 시대가 시작되었습니다. 땅과 기후, 야생 동물이 바뀌지만 내 동물과 영역은 그대로 이어집니다. 이제 새로운 종으로 진화할 수 있습니다."
+  },
+  {
+   "k": "Got it",
+   "v": "알겠습니다"
+  },
+  {
+   "k": "No more tips",
+   "v": "더 이상 팁 보지 않기"
   }
  ]
 }

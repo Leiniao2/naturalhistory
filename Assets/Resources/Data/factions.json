@@ -8,6 +8,13 @@
       "primaryColor": "#6A5ACD",
       "secondaryColor": "#F2E6C9",
       "description": "Europe, Asia north of the Himalayas and North Africa: the largest realm on Earth.",
+      "personality": {
+        "style": "Expansionist",
+        "aggression": 0.5,
+        "expansion": 0.8,
+        "evolution": 0.5,
+        "caution": 0.4
+      },
       "iconicAnimals": [
         {
           "name": "Plateosaurus",
@@ -47,6 +54,13 @@
       "primaryColor": "#2F6DB5",
       "secondaryColor": "#E8D44D",
       "description": "North America, Greenland and the Mexican highlands.",
+      "personality": {
+        "style": "Balanced",
+        "aggression": 0.5,
+        "expansion": 0.6,
+        "evolution": 0.6,
+        "caution": 0.5
+      },
       "iconicAnimals": [
         {
           "name": "Allosaurus",
@@ -86,6 +100,13 @@
       "primaryColor": "#E08A1E",
       "secondaryColor": "#1F6E43",
       "description": "The Indian subcontinent, Indochina, southern China and the Sunda islands (also called Indomalayan).",
+      "personality": {
+        "style": "Evolver",
+        "aggression": 0.4,
+        "expansion": 0.5,
+        "evolution": 0.9,
+        "caution": 0.5
+      },
       "iconicAnimals": [
         {
           "name": "Rajasaurus",
@@ -125,6 +146,13 @@
       "primaryColor": "#C8502A",
       "secondaryColor": "#F1C232",
       "description": "Africa south of the Sahara, Madagascar and southern Arabia.",
+      "personality": {
+        "style": "Predator",
+        "aggression": 0.85,
+        "expansion": 0.6,
+        "evolution": 0.5,
+        "caution": 0.3
+      },
       "iconicAnimals": [
         {
           "name": "Gorgonops",
@@ -164,6 +192,13 @@
       "primaryColor": "#2EA34A",
       "secondaryColor": "#F2D43D",
       "description": "South and Central America, the Caribbean and southern Florida.",
+      "personality": {
+        "style": "Evolver",
+        "aggression": 0.4,
+        "expansion": 0.6,
+        "evolution": 0.85,
+        "caution": 0.5
+      },
       "iconicAnimals": [
         {
           "name": "Herrerasaurus",
@@ -210,6 +245,13 @@
       "primaryColor": "#B3261E",
       "secondaryColor": "#F4E3B5",
       "description": "Australia, New Guinea, New Zealand and nearby islands east of Wallace's Line.",
+      "personality": {
+        "style": "Cautious",
+        "aggression": 0.3,
+        "expansion": 0.4,
+        "evolution": 0.7,
+        "caution": 0.8
+      },
       "iconicAnimals": [
         {
           "name": "Gogonasus",
@@ -249,6 +291,13 @@
       "primaryColor": "#14A3A3",
       "secondaryColor": "#FFFFFF",
       "description": "Polynesia, Micronesia and Fiji: volcanic islands and atolls of the Pacific.",
+      "personality": {
+        "style": "Isolationist",
+        "aggression": 0.2,
+        "expansion": 0.3,
+        "evolution": 0.6,
+        "caution": 0.85
+      },
       "iconicAnimals": [
         {
           "name": "Reef-building corals",
@@ -288,6 +337,13 @@
       "primaryColor": "#DCE6EF",
       "secondaryColor": "#2C4A6B",
       "description": "Antarctica and the sub-Antarctic islands. Ice-free and forested for most of its history.",
+      "personality": {
+        "style": "Cautious",
+        "aggression": 0.25,
+        "expansion": 0.35,
+        "evolution": 0.5,
+        "caution": 0.9
+      },
       "iconicAnimals": [
         {
           "name": "Lystrosaurus",
@@ -327,6 +383,13 @@
       "primaryColor": "#8E3B46",
       "secondaryColor": "#E9C46A",
       "description": "The ancient core of North America, straddling the equator in the early Paleozoic.",
+      "personality": {
+        "style": "Expansionist",
+        "aggression": 0.5,
+        "expansion": 0.85,
+        "evolution": 0.5,
+        "caution": 0.4
+      },
       "iconicAnimals": [
         {
           "name": "Anomalocaris",
@@ -366,6 +429,13 @@
       "primaryColor": "#1D3557",
       "secondaryColor": "#A8DADC",
       "description": "Scandinavia, the Baltic and western Russia, which drifted from cold southern seas to the tropics.",
+      "personality": {
+        "style": "Balanced",
+        "aggression": 0.45,
+        "expansion": 0.6,
+        "evolution": 0.55,
+        "caution": 0.55
+      },
       "iconicAnimals": [
         {
           "name": "Agnostus",
@@ -405,6 +475,13 @@
       "primaryColor": "#6E2C8A",
       "secondaryColor": "#F4A261",
       "description": "A microcontinent (eastern Newfoundland, Nova Scotia, England, Wales, Belgium) that crossed the Iapetus Ocean.",
+      "personality": {
+        "style": "Opportunist",
+        "aggression": 0.6,
+        "expansion": 0.5,
+        "evolution": 0.6,
+        "caution": 0.4
+      },
       "iconicAnimals": [
         {
           "name": "Paradoxides",
@@ -444,6 +521,13 @@
       "primaryColor": "#5C6B73",
       "secondaryColor": "#E63946",
       "description": "The Siberian craton, later the heart of Angaraland and the Siberian Traps.",
+      "personality": {
+        "style": "Predator",
+        "aggression": 0.8,
+        "expansion": 0.6,
+        "evolution": 0.4,
+        "caution": 0.3
+      },
       "iconicAnimals": [
         {
           "name": "Archaeocyathids",
@@ -483,6 +567,13 @@
       "primaryColor": "#A4161A",
       "secondaryColor": "#FFD23F",
       "description": "The North and South China blocks and Indochina, islands in the Paleo-Tethys.",
+      "personality": {
+        "style": "Evolver",
+        "aggression": 0.45,
+        "expansion": 0.55,
+        "evolution": 0.85,
+        "caution": 0.5
+      },
       "iconicAnimals": [
         {
           "name": "Myllokunmingia",
@@ -522,6 +613,13 @@
       "primaryColor": "#5B7F1E",
       "secondaryColor": "#3E2723",
       "description": "The great southern supercontinent: South America, Africa, Antarctica, India and Australia.",
+      "personality": {
+        "style": "Expansionist",
+        "aggression": 0.55,
+        "expansion": 0.9,
+        "evolution": 0.5,
+        "caution": 0.4
+      },
       "iconicAnimals": [
         {
           "name": "Sacabambaspis",
@@ -561,6 +659,13 @@
       "primaryColor": "#264653",
       "secondaryColor": "#E76F51",
       "description": "Laurussia, the Old Red Sandstone continent formed when Laurentia, Baltica and Avalonia collided.",
+      "personality": {
+        "style": "Predator",
+        "aggression": 0.75,
+        "expansion": 0.65,
+        "evolution": 0.5,
+        "caution": 0.35
+      },
       "iconicAnimals": [
         {
           "name": "Dunkleosteus",
@@ -600,6 +705,13 @@
       "primaryColor": "#8D6E63",
       "secondaryColor": "#FFB74D",
       "description": "The supercontinent that joined nearly all land from the late Paleozoic to the Early Jurassic.",
+      "personality": {
+        "style": "Conqueror",
+        "aggression": 0.9,
+        "expansion": 0.85,
+        "evolution": 0.4,
+        "caution": 0.2
+      },
       "iconicAnimals": [
         {
           "name": "Dimetrodon",
@@ -639,6 +751,13 @@
       "primaryColor": "#3A5A40",
       "secondaryColor": "#DAD7CD",
       "description": "The northern supercontinent left after Pangaea split: North America and Eurasia.",
+      "personality": {
+        "style": "Balanced",
+        "aggression": 0.55,
+        "expansion": 0.65,
+        "evolution": 0.6,
+        "caution": 0.45
+      },
       "iconicAnimals": [
         {
           "name": "Megalosaurus",
@@ -678,6 +797,13 @@
       "primaryColor": "#0077B6",
       "secondaryColor": "#90E0EF",
       "description": "The warm tropical ocean between Laurasia and Gondwana; its remnant is the Mediterranean.",
+      "personality": {
+        "style": "Evolver",
+        "aggression": 0.4,
+        "expansion": 0.55,
+        "evolution": 0.9,
+        "caution": 0.5
+      },
       "iconicAnimals": [
         {
           "name": "Tanystropheus",
@@ -717,6 +843,13 @@
       "primaryColor": "#14213D",
       "secondaryColor": "#FCA311",
       "description": "The world ocean surrounding Pangaea; the ancestor of the Pacific.",
+      "personality": {
+        "style": "Predator",
+        "aggression": 0.85,
+        "expansion": 0.7,
+        "evolution": 0.45,
+        "caution": 0.3
+      },
       "iconicAnimals": [
         {
           "name": "Cameroceras",
@@ -756,6 +889,13 @@
       "primaryColor": "#1B1B1B",
       "secondaryColor": "#B8C4C2",
       "description": "A mostly sunken continent that split from Gondwana; New Zealand is its peak.",
+      "personality": {
+        "style": "Isolationist",
+        "aggression": 0.2,
+        "expansion": 0.35,
+        "evolution": 0.7,
+        "caution": 0.85
+      },
       "iconicAnimals": [
         {
           "name": "Tuarangisaurus",

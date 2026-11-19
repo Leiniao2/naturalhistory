@@ -19487,6 +19487,114 @@
   {
    "k": "Next",
    "v": "Siguiente"
+  },
+  {
+   "k": "Creating the world…",
+   "v": "Creando el mundo…"
+  },
+  {
+   "k": "Loading the game…",
+   "v": "Cargando la partida…"
+  },
+  {
+   "k": "Did you know?",
+   "v": "¿Sabías que…?"
+  },
+  {
+   "k": "Your first creatures",
+   "v": "Tus primeras criaturas"
+  },
+  {
+   "k": "You begin with three single-celled founders, one from each great branch of life, living around your habitat center. Guide them through 600 million years: spread out, compete, and evolve into the animals of later periods.",
+   "v": "Empiezas con tres fundadores unicelulares, uno de cada gran rama de la vida, que viven alrededor de tu centro de hábitat. Guíalos a lo largo de 600 millones de años: expándete, compite y haz que evolucionen hasta convertirse en los animales de periodos posteriores."
+  },
+  {
+   "k": "Layers of the map",
+   "v": "Capas del mapa"
+  },
+  {
+   "k": "Every tile has layers: the sky, the surface, and below it the underground or the seabed. Animals live in one of them, and a layer shows only its own. Switch with the Sky, Surface and Underground buttons at the top (U and K on the keyboard) to find yours.",
+   "v": "Cada casilla tiene capas: el cielo, la superficie y, por debajo, el subsuelo o el fondo marino. Los animales viven en una de ellas, y cada capa muestra solo los suyos. Cambia con los botones «Cielo», «Superficie» y «Subsuelo» de arriba (U y K en el teclado) para encontrar los tuyos."
+  },
+  {
+   "k": "Select an animal",
+   "v": "Selecciona un animal"
+  },
+  {
+   "k": "Click one of your groups to select it. On a tile with several animals, click again or press Tab to pick the next one.",
+   "v": "Haz clic en uno de tus grupos para seleccionarlo. En una casilla con varios animales, vuelve a hacer clic o pulsa Tab para elegir el siguiente."
+  },
+  {
+   "k": "Moving",
+   "v": "Moverse"
+  },
+  {
+   "k": "The green tiles are where it can go this turn: each tile costs one action. Point at a tile to see the path and its cost, then click to move there. A group ringed in red can be attacked.",
+   "v": "Las casillas verdes son adonde puede ir en este turno: cada casilla cuesta una acción. Pasa el cursor por una casilla para ver la ruta y su coste, y haz clic para moverte allí. Un grupo rodeado en rojo puede ser atacado."
+  },
+  {
+   "k": "Ending the turn",
+   "v": "Terminar el turno"
+  },
+  {
+   "k": "When your animals have used their actions, press Next Turn (or Enter). Each turn your habitat centers earn Evolution Points (EP); kills and sightings of new species earn more.",
+   "v": "Cuando tus animales hayan usado sus acciones, pulsa «Siguiente turno» (o Enter). Cada turno, tus centros de hábitat generan puntos de evolución (EP); las presas abatidas y los avistamientos de especies nuevas dan más."
+  },
+  {
+   "k": "Reproducing",
+   "v": "Reproducirse"
+  },
+  {
+   "k": "Select a group and press Reproduce, then pick a neighbouring tile: for 1 EP a new group is born there. More groups hold more territory and earn more.",
+   "v": "Selecciona un grupo, pulsa «Reproducir» y elige una casilla vecina: por 1 EP nace allí un grupo nuevo. Cuantos más grupos, más territorio ocupas y más ganas."
+  },
+  {
+   "k": "Functions and Behaviors",
+   "v": "Funciones y Conductas"
+  },
+  {
+   "k": "Spend EP in the Functions and Behaviors trees to give a species new traits. Evolving into another species needs certain traits, so look at what the species you want to become requires.",
+   "v": "Gasta EP en los árboles de «Funciones» y «Conductas» para dar nuevos rasgos a una especie. Para evolucionar a otra especie hacen falta ciertos rasgos, así que mira qué necesita la especie en la que quieres convertirte."
+  },
+  {
+   "k": "Ready to evolve",
+   "v": "Listo para evolucionar"
+  },
+  {
+   "k": "One of your groups can now evolve. Press Evolve on its card, or open the Evolution Tree to see every species it can become and what each needs. Later species are stronger: their attack, defense and health grow with each period.",
+   "v": "Uno de tus grupos ya puede evolucionar. Pulsa «Evolucionar» en su ficha o abre el «Árbol evolutivo» para ver todas las especies en las que puede convertirse y qué necesita cada una. Las especies posteriores son más fuertes: su ataque, defensa y salud crecen con cada periodo."
+  },
+  {
+   "k": "Wild relatives",
+   "v": "Parientes salvajes"
+  },
+  {
+   "k": "Wild animals have appeared far away: close relatives of your species, evolved from the same ancestor. They compete with you for food and space, and some will fight.",
+   "v": "Han aparecido animales salvajes a lo lejos: parientes cercanos de tu especie, que evolucionaron del mismo antepasado. Compiten contigo por la comida y el espacio, y algunos pelearán."
+  },
+  {
+   "k": "Hunger",
+   "v": "Hambre"
+  },
+  {
+   "k": "One of your groups has no food on its tile or next to it. Each turn it goes hungry it loses a quarter of its health: move it to where it can eat.",
+   "v": "Uno de tus grupos no tiene comida ni en su casilla ni al lado. Cada turno que pasa hambre pierde una cuarta parte de su salud: llévalo a donde pueda comer."
+  },
+  {
+   "k": "A new period",
+   "v": "Un nuevo periodo"
+  },
+  {
+   "k": "A new geological period has begun. The land, the climate and the wild animals change; your animals and territory carry on. New species can now evolve.",
+   "v": "Ha comenzado un nuevo periodo geológico. La tierra, el clima y los animales salvajes cambian; tus animales y tu territorio siguen adelante. Ya pueden evolucionar especies nuevas."
+  },
+  {
+   "k": "Got it",
+   "v": "Entendido"
+  },
+  {
+   "k": "No more tips",
+   "v": "No mostrar más consejos"
   }
  ]
 }

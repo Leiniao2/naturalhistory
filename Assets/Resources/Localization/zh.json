@@ -19731,6 +19731,114 @@
   {
    "k": "Next",
    "v": "下一步"
+  },
+  {
+   "k": "Creating the world…",
+   "v": "正在创造世界……"
+  },
+  {
+   "k": "Loading the game…",
+   "v": "正在读取存档……"
+  },
+  {
+   "k": "Did you know?",
+   "v": "你知道吗？"
+  },
+  {
+   "k": "Your first creatures",
+   "v": "你的第一批生物"
+  },
+  {
+   "k": "You begin with three single-celled founders, one from each great branch of life, living around your habitat center. Guide them through 600 million years: spread out, compete, and evolve into the animals of later periods.",
+   "v": "你将从三种单细胞始祖起步，它们分别来自生命的三大分支，生活在你的栖息地中心周围。带领它们走过6亿年：扩散、竞争，并演化成后来各个时期的动物。"
+  },
+  {
+   "k": "Layers of the map",
+   "v": "地图分层"
+  },
+  {
+   "k": "Every tile has layers: the sky, the surface, and below it the underground or the seabed. Animals live in one of them, and a layer shows only its own. Switch with the Sky, Surface and Underground buttons at the top (U and K on the keyboard) to find yours.",
+   "v": "每个地块都分为几层：天空、地表，以及其下的地下或海床。动物只生活在其中一层，而每一层只显示该层的动物。用顶部的“天空”“地表”“地下”按钮（键盘上的 U 和 K）切换，找到你的动物。"
+  },
+  {
+   "k": "Select an animal",
+   "v": "选择动物"
+  },
+  {
+   "k": "Click one of your groups to select it. On a tile with several animals, click again or press Tab to pick the next one.",
+   "v": "单击你的一个群即可选中。如果一个地块上有多只动物，再次单击或按 Tab 即可选中下一只。"
+  },
+  {
+   "k": "Moving",
+   "v": "移动"
+  },
+  {
+   "k": "The green tiles are where it can go this turn: each tile costs one action. Point at a tile to see the path and its cost, then click to move there. A group ringed in red can be attacked.",
+   "v": "绿色地块是它本回合可以前往的地方：每个地块消耗一次行动。将鼠标指向某个地块可查看路径和消耗，单击即可移动过去。被红圈标出的群可以被攻击。"
+  },
+  {
+   "k": "Ending the turn",
+   "v": "结束回合"
+  },
+  {
+   "k": "When your animals have used their actions, press Next Turn (or Enter). Each turn your habitat centers earn Evolution Points (EP); kills and sightings of new species earn more.",
+   "v": "当你的动物用完行动后，按“下一回合”（或 Enter）。每回合你的栖息地中心都会产出进化点（EP）；击杀敌人和发现新物种还能获得更多。"
+  },
+  {
+   "k": "Reproducing",
+   "v": "繁殖"
+  },
+  {
+   "k": "Select a group and press Reproduce, then pick a neighbouring tile: for 1 EP a new group is born there. More groups hold more territory and earn more.",
+   "v": "选中一个群并按“繁殖”，然后选择一个相邻地块：花费 1 EP，就会在那里诞生一个新群。群越多，占据的领地越大，收益也越多。"
+  },
+  {
+   "k": "Functions and Behaviors",
+   "v": "形态与行为"
+  },
+  {
+   "k": "Spend EP in the Functions and Behaviors trees to give a species new traits. Evolving into another species needs certain traits, so look at what the species you want to become requires.",
+   "v": "在“形态”和“行为”树中花费 EP，可以为物种赋予新特征。演化成另一个物种需要具备特定特征，所以先看看你想成为的物种需要什么。"
+  },
+  {
+   "k": "Ready to evolve",
+   "v": "可以演化了"
+  },
+  {
+   "k": "One of your groups can now evolve. Press Evolve on its card, or open the Evolution Tree to see every species it can become and what each needs. Later species are stronger: their attack, defense and health grow with each period.",
+   "v": "你的一个群现在可以演化了。在它的卡片上按“演化”，或打开“进化树”，查看它能变成的所有物种以及各自的条件。越晚出现的物种越强：它们的攻击、防御和生命值会随每个时期提升。"
+  },
+  {
+   "k": "Wild relatives",
+   "v": "野生近亲"
+  },
+  {
+   "k": "Wild animals have appeared far away: close relatives of your species, evolved from the same ancestor. They compete with you for food and space, and some will fight.",
+   "v": "远方出现了野生动物：它们是你的物种的近亲，由同一个祖先演化而来。它们会与你争夺食物和空间，有些还会和你交战。"
+  },
+  {
+   "k": "Hunger",
+   "v": "饥饿"
+  },
+  {
+   "k": "One of your groups has no food on its tile or next to it. Each turn it goes hungry it loses a quarter of its health: move it to where it can eat.",
+   "v": "你的一个群所在的地块及相邻地块都没有食物。每挨饿一回合，它就会损失四分之一的生命值：快把它移到有食物的地方吧。"
+  },
+  {
+   "k": "A new period",
+   "v": "新的时期"
+  },
+  {
+   "k": "A new geological period has begun. The land, the climate and the wild animals change; your animals and territory carry on. New species can now evolve.",
+   "v": "一个新的地质时期开始了。陆地、气候和野生动物都会改变，而你的动物和领地会延续下去。现在可以演化出新的物种了。"
+  },
+  {
+   "k": "Got it",
+   "v": "知道了"
+  },
+  {
+   "k": "No more tips",
+   "v": "不再提示"
   }
  ]
 }

@@ -258,23 +258,29 @@ namespace NaturalHistory.World
             return true;
         }
 
-        // Cells per second when travelling; big animals take longer strides but each takes longer
-        private float TravelSpeed() => Style switch
+        // Cells per second when travelling; big animals take longer strides but each takes longer.
+        // Brisk for nearly everything (drifting protists and plankton included), so moving a group
+        // never drags; only the few animals everyone knows as slow (SlowGroups) creep.
+        private float TravelSpeed() => (Style switch
         {
             ColonyStyle.Ground => Gait switch
             {
-                ColonyGait.Hop     => Definition != null && Definition.mapLegs == 1 ? 1.1f : 0.7f, // bounding bipeds / frogs, which rest between leaps
-                ColonyGait.Slither => 0.55f,
-                ColonyGait.Run     => Mathf.Lerp(1.2f, 1.0f, Mathf.InverseLerp(0.4f, 2.5f, MemberSpan)),
-                _                  => Mathf.Lerp(0.85f, 0.65f, Mathf.InverseLerp(0.4f, 2.5f, MemberSpan)),
+                ColonyGait.Hop     => Definition != null && Definition.mapLegs == 1 ? 1.45f : 1.0f, // bounding bipeds / frogs, which rest between leaps
+                ColonyGait.Slither => 0.9f,
+                ColonyGait.Run     => Mathf.Lerp(1.6f, 1.35f, Mathf.InverseLerp(0.4f, 2.5f, MemberSpan)),
+                _                  => Mathf.Lerp(1.2f, 0.95f, Mathf.InverseLerp(0.4f, 2.5f, MemberSpan)),
             },
-            ColonyStyle.Soar  => 1.3f,
-            ColonyStyle.Swarm => 1.0f,
-            ColonyStyle.Swim  => 0.8f,
-            ColonyStyle.Float => 0.5f,
-            ColonyStyle.Drift => 0.35f,
-            _                 => 0.8f,
-        };
+            ColonyStyle.Soar  => 1.6f,
+            ColonyStyle.Swarm => 1.3f,
+            ColonyStyle.Swim  => 1.2f,
+            ColonyStyle.Float => 1.0f,
+            ColonyStyle.Drift => 1.0f,
+            _                 => 1.1f,
+        }) * (Definition != null && SlowGroups.Contains(Definition.group) ? SlowFactor : 1f);
+
+        // Animals famous for being slow keep a slow pace on the map
+        private static readonly HashSet<string> SlowGroups = new() { "Tree sloth", "Land snail", "Sea snail", "Sea star", "Tortoise", "Tardigrade" };
+        private const float SlowFactor = 0.4f;
 
         private static Leg MakeLeg(List<Vector3> points, float speed)
         {

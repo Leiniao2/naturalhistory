@@ -316,6 +316,27 @@
             </ui:VisualElement>
         </ui:VisualElement>
 
+        <!-- Making a new world or loading a game (LoadingScreen) -->
+        <ui:VisualElement name="loading-overlay" class="overlay loading-overlay hidden">
+            <ui:VisualElement name="loading-art" class="loading-art" picking-mode="Ignore" />
+            <ui:VisualElement class="loading-veil" picking-mode="Ignore" />
+            <ui:VisualElement class="loading-box" picking-mode="Ignore">
+                <ui:Label name="loading-title" class="loading-title" text="" picking-mode="Ignore" />
+                <ui:VisualElement class="loading-bar" picking-mode="Ignore">
+                    <ui:VisualElement class="loading-bar-fill" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:VisualElement class="loading-species panel" picking-mode="Ignore">
+                    <ui:VisualElement name="loading-portrait" class="loading-portrait" picking-mode="Ignore" />
+                    <ui:VisualElement class="loading-species-text-box" picking-mode="Ignore">
+                        <ui:Label class="loading-know" text="Did you know?" picking-mode="Ignore" />
+                        <ui:Label name="loading-species-name" class="loading-species-name" text="" picking-mode="Ignore" />
+                        <ui:Label name="loading-species-meta" class="loading-species-meta" text="" picking-mode="Ignore" />
+                        <ui:Label name="loading-species-text" class="loading-species-text" text="" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
         <ui:Label name="toast" class="toast hidden" text="" picking-mode="Ignore" />
     </ui:VisualElement>
 </ui:UXML>

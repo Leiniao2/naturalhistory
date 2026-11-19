@@ -33,6 +33,7 @@ namespace NaturalHistory.World
         public int MaxHp => Stats.hp;
         public int ActionsLeft { get; private set; }
         public int AttacksLeft { get; private set; }
+        private int actionsTurn = -1; // the turn ActionsLeft / AttacksLeft (and its healing) are for
 
         public int PoisonTurns { get; private set; }
         public float PoisonPerTurn { get; private set; }
@@ -61,13 +62,14 @@ namespace NaturalHistory.World
             Hp = Stats.hp;
             ActionsLeft = MaxActions;
             AttacksLeft = 1;
+            actionsTurn = CurrentTurn;
         }
 
         private static int CurrentTurn => Core.TurnManager.Instance != null ? Core.TurnManager.Instance.CurrentTurn : 0;
 
         public CombatState CombatNow => new()
         {
-            hp = Hp, actionsLeft = ActionsLeft, attacksLeft = AttacksLeft, turn = CurrentTurn,
+            hp = Hp, actionsLeft = ActionsLeft, attacksLeft = AttacksLeft, turn = actionsTurn,
             poisonTurns = PoisonTurns, poisonPerTurn = PoisonPerTurn, heldTurns = HeldTurns, limbShed = LimbShed,
         };
 
@@ -83,13 +85,23 @@ namespace NaturalHistory.World
             {
                 ActionsLeft = Mathf.Clamp(state.actionsLeft, 0, MaxActions);
                 AttacksLeft = Mathf.Clamp(state.attacksLeft, 0, 1);
+                actionsTurn = CurrentTurn;
             }
-            else BeginTurn();
+            else
+            {
+                // taken before this turn began (the map is rebuilt as a turn begins, when another
+                // period or climate shows): this turn's actions and healing
+                actionsTurn = state.turn;
+                BeginTurn();
+            }
         }
 
         // fed: it found food on its tile or next to it (Diets.Starving): it heals, else it goes hungry
+        // Once a turn, whether the group was re-spawned before or after Combat.BeginTurn reached it
         public void BeginTurn(bool fed = true)
         {
+            if (actionsTurn == CurrentTurn) return;
+            actionsTurn = CurrentTurn;
             ActionsLeft = MaxActions;
             AttacksLeft = 1;
             ActedThisTurn = false;

@@ -243,6 +243,11 @@ namespace NaturalHistory.World
         private static string Reward(ColonyGroup winner, ColonyGroup loser)
         {
             var progression = Progression.ProgressionManager.Instance;
+            if (winner.Owner != null && !winner.Owner.IsHuman && loser.Owner != winner.Owner) // AI players earn the same
+            {
+                Players.AiPlayers.Instance?.AddPoints(winner.Owner.Index, Progression.ProgressionManager.KillReward);
+                return "";
+            }
             if (progression == null || winner.Owner == null || !winner.Owner.IsHuman || loser.Owner == winner.Owner) return "";
             progression.AddPoints(Progression.ProgressionManager.KillReward);
             return Loc.F(" (+{0} EP)", Progression.ProgressionManager.KillReward);

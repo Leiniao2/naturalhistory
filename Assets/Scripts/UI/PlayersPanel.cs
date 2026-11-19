@@ -23,6 +23,7 @@ namespace NaturalHistory.UI
 
         public event Action NewGameStarting; // just before the new map is made
         public event Action NewGameStarted;
+        public Action<Action> Loading; // runs the new game's setup behind the loading screen (GameMenus)
         public event Action SetupClosed;
 
         public bool FactionOpen => !factionOverlay.ClassListContains("hidden");
@@ -169,9 +170,14 @@ namespace NaturalHistory.UI
         private void StartGame()
         {
             CloseSetup();
-            NewGameStarting?.Invoke();
-            Manager?.StartNewGame(draft);
-            NewGameStarted?.Invoke();
+            void Start()
+            {
+                NewGameStarting?.Invoke();
+                Manager?.StartNewGame(draft);
+                NewGameStarted?.Invoke();
+            }
+            if (Loading != null) Loading(Start);
+            else Start();
         }
 
         // Seats the new game can have: up to PlayerManager.MaxPlayers, each with a realm of their own

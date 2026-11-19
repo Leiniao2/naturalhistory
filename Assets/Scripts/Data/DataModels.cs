@@ -211,7 +211,19 @@ namespace NaturalHistory.Data
         public string primaryColor;       // hex, e.g. "#2F6DB5"
         public string secondaryColor;
         public string description;
+        public FactionPersonality personality; // how its AI plays (Players/AiPlayers)
         public List<IconicAnimalDefinition> iconicAnimals;
+    }
+
+    // An AI player's temperament, from its faction: each 0..1
+    [Serializable]
+    public class FactionPersonality
+    {
+        public string style = "Balanced"; // Conqueror, Predator, Expansionist, Evolver, Balanced, Cautious, Isolationist, Opportunist
+        public float aggression = 0.5f;   // how readily it attacks: other players, then wild animals
+        public float expansion  = 0.5f;   // how keen it is to reproduce and spread out
+        public float evolution  = 0.5f;   // how much it saves EP for its trees and for evolving
+        public float caution    = 0.5f;   // how much a fight's risk puts it off
     }
 
     [Serializable]
