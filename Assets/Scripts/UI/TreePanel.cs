@@ -15,13 +15,17 @@ namespace NaturalHistory.UI
     // branch (Nervous System, Hunting, …), the branch's nodes in columns joined by prerequisite
     // curves, and a details strip with an Evolve button underneath. Prerequisites in another branch
     // are listed on the node instead of drawn.
+    // Each item is a card like the Evolution Tree's (ZoologyPanel): its painting (TraitIcons) on the
+    // left, its name, state and the bonus it gives the species' groups (TraitBonuses) in the middle,
+    // and an Acquire icon button on the right, lit when it can be acquired now, whose tip says what
+    // it costs and needs.
     public class TreePanel
     {
-        private const float ColumnWidth = 250f;
-        private const float RowHeight   = 96f;
+        private const float ColumnWidth = 400f;
+        private const float RowHeight   = 120f;
         private const float Padding     = 24f;
-        private const float NodeWidth   = 206f;
-        private const float NodeHeight  = 74f;
+        private const float NodeWidth   = 350f; // .trait-node in the USS
+        private const float NodeHeight  = 100f;
 
         private const float ForkRadius  = 10f;   // rounded corners of the lines, as in the Evolution Tree
 
@@ -41,6 +45,7 @@ namespace NaturalHistory.UI
         private readonly Button evolveButton;
         private readonly Dictionary<string, VisualElement> nodeViews = new();
         private VisualElement lines;
+        private readonly Label tip; // follows the pointer over an Acquire button (as in the Evolution Tree)
 
         private ProgressionTree tree;
         private TreeNodeDefinition selected;
@@ -65,6 +70,10 @@ namespace NaturalHistory.UI
             speciesTabs        = new SpeciesTabs(root.Q("tree-species-tabs"));
             speciesTabs.Picked += id => EvolutionManager.Instance?.Focus(id); // its trees rebind and Refresh follows
 
+            tip = new Label { pickingMode = PickingMode.Ignore }.WithClass("zoology-tip");
+            tip.AddToClassList("hidden");
+            overlay.Add(tip);
+
             root.Q<Button>("tree-close-button").clicked += Close;
             evolveButton.clicked += OnEvolveClicked;
         }
@@ -81,11 +90,19 @@ namespace NaturalHistory.UI
                 branch = branchByTree.TryGetValue(tree, out var last) ? last : tree.Branches.FirstOrDefault()?.id;
                 Build();
             }
+            // each tree its own colours, so the two read as different things: Functions blue,
+            // Behaviors purple (the Evolution tree is green, ZoologyPanel)
+            overlay.EnableInClassList("theme-functions", tree == Progression?.Morphology);
+            overlay.EnableInClassList("theme-behaviors", tree == Progression?.Ethology);
             overlay.RemoveFromClassList("hidden");
             Refresh();
         }
 
-        public void Close() => overlay.AddToClassList("hidden");
+        public void Close()
+        {
+            overlay.AddToClassList("hidden");
+            tip.AddToClassList("hidden");
+        }
 
         // Re-applies node states, labels and details (after unlocks / point changes / loading).
         public void Refresh()
@@ -121,6 +138,14 @@ namespace NaturalHistory.UI
                     NodeState.Unavailable => Loc.T("Not for this species"),
                     _                     => Loc.F("{0} EP · {1}", EpCosts.Of(node.cost), Loc.T(node.age)),
                 };
+                view.Q<Label>(className: "trait-node-bonus").text = BonusText(node);
+                if (view.Q<Button>(className: "zoology-icon") is { } acquire)
+                {
+                    bool can = Progression.UnlockBlocker(tree, node) == null;
+                    acquire.style.display = state == NodeState.Unlocked || state == NodeState.Unavailable ? DisplayStyle.None : DisplayStyle.Flex;
+                    acquire.EnableInClassList("ready", can);
+                    acquire.EnableInClassList("locked", !can);
+                }
             }
             lines.MarkDirtyRepaint();
             RefreshDetails();
@@ -189,20 +214,35 @@ namespace NaturalHistory.UI
 
             foreach (var node in nodes)
             {
-                var view = new VisualElement();
-                view.AddToClassList("tree-node");
+                var view = new VisualElement().WithClass("tree-node").WithClass("trait-node");
                 view.style.left = NodePosition(node).x;
                 view.style.top  = NodePosition(node).y;
-                view.Add(new Label(Loc.T(node.displayName)) { pickingMode = PickingMode.Ignore }.WithClass("node-name"));
-                view.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("node-cost"));
+                var pic = new VisualElement { pickingMode = PickingMode.Ignore }.WithClass("trait-node-image");
+                if (TraitIcons.Get(tree == Progression.Morphology, node.id) is { } image) pic.style.backgroundImage = new StyleBackground(image);
+                else pic.Add(new Label(Loc.T(node.displayName).Substring(0, 1)) { pickingMode = PickingMode.Ignore }.WithClass("trait-node-initial"));
+                view.Add(pic);
+                var text = new VisualElement { pickingMode = PickingMode.Ignore }.WithClass("trait-node-text");
+                text.Add(new Label(Loc.T(node.displayName)) { pickingMode = PickingMode.Ignore }.WithClass("node-name"));
+                text.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("node-cost"));
+                text.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("trait-node-bonus"));
                 var external = node.prerequisites.Select(tree.Get).Where(p => p != null && p.branch != node.branch).ToList();
                 if (external.Count > 0)
-                    view.Add(new Label(Loc.F("Needs {0}", string.Join(", ", external.Select(p => Loc.T(p.displayName))))) { pickingMode = PickingMode.Ignore }
+                    text.Add(new Label(Loc.F("Needs {0}", string.Join(", ", external.Select(p => Loc.T(p.displayName))))) { pickingMode = PickingMode.Ignore }
                         .WithClass("node-external"));
+                view.Add(text);
 
                 var captured = node;
+                if (node.prerequisites.Count > 0) // the free roots are had from the start
+                {
+                    var acquire = new Button(() => { Progression.TryUnlock(tree, captured); selected = captured; Refresh(); }).WithClass("zoology-icon");
+                    acquire.style.backgroundImage = new StyleBackground(UiIcons.Upgrade);
+                    acquire.EnableInClassList("drawn", !UiIcons.Painted(UiIcons.Upgrade));
+                    Hint(acquire, () => AcquireTip(captured));
+                    view.Add(acquire);
+                }
                 view.RegisterCallback<ClickEvent>(e =>
                 {
+                    if (e.target is Button) return; // the card's own button
                     selected = captured;
                     // Double-click evolves straight away
                     if (e.clickCount == 2) Progression.TryUnlock(tree, captured);
@@ -260,6 +300,52 @@ namespace NaturalHistory.UI
             }
         }
 
+        // "+1 Attack", the item's bonus for the species whose trees these are (era factor included)
+        private string BonusText(TreeNodeDefinition node)
+        {
+            var b = World.TraitBonuses.Scaled(node, Progression.Species);
+            if (b == null) return "";
+            var parts = new List<string>();
+            if (b.attack  != 0) parts.Add(Loc.F("Attack +{0}", b.attack));
+            if (b.defense != 0) parts.Add(Loc.F("Defense +{0}", b.defense));
+            if (b.hp      != 0) parts.Add(Loc.F("HP +{0}", b.hp));
+            if (b.moves   != 0) parts.Add(Loc.F("Actions +{0}", b.moves));
+            return string.Join("  ", parts);
+        }
+
+        // What the item is, gives, costs and still needs, ticked off
+        private string AcquireTip(TreeNodeDefinition node)
+        {
+            var lines = new List<string> { Loc.T(node.displayName), Loc.T(node.description) };
+            var bonus = BonusText(node);
+            if (bonus != "") lines.Add(Loc.F("Your groups of it: {0}", bonus));
+            lines.Add("");
+            int cost = EpCosts.Of(node.cost);
+            lines.Add((Progression.EvolutionPoints >= cost ? "✓  " : "✗  ") + Loc.F("Needs {0} EP (you have {1})", cost, Progression.EvolutionPoints));
+            var blocker = Progression.UnlockBlocker(tree, node);
+            if (blocker != null && Progression.EvolutionPoints >= cost) lines.Add("✗  " + blocker);
+            return string.Join("\n", lines);
+        }
+
+        // A tip that follows the pointer over `target` (UI Toolkit's own tooltips only show in the Editor)
+        private void Hint(VisualElement target, System.Func<string> text)
+        {
+            target.RegisterCallback<PointerEnterEvent>(e => { tip.text = text(); tip.RemoveFromClassList("hidden"); tip.BringToFront(); PlaceTip(e.position); });
+            target.RegisterCallback<PointerMoveEvent>(e => PlaceTip(e.position));
+            target.RegisterCallback<PointerLeaveEvent>(_ => tip.AddToClassList("hidden"));
+        }
+
+        private void PlaceTip(Vector2 pointer)
+        {
+            var area = overlay.worldBound;
+            var size = tip.layout.size;
+            float x = pointer.x + 18f, y = pointer.y + 18f;
+            if (!float.IsNaN(size.x) && x + size.x > area.xMax - 8f) x = pointer.x - size.x - 18f;
+            if (!float.IsNaN(size.y) && y + size.y > area.yMax - 8f) y = pointer.y - size.y - 18f;
+            tip.style.left = x - area.xMin;
+            tip.style.top  = y - area.yMin;
+        }
+
         private void RefreshDetails()
         {
             if (selected == null)
@@ -279,6 +365,8 @@ namespace NaturalHistory.UI
                 .ToList();
             var blocker = Progression.UnlockBlocker(tree, selected);
             var meta = Loc.F("{0}  ·  Cost {1} EP  ·  From the {2}", Loc.T(tree.BranchName(selected.branch)), EpCosts.Of(selected.cost), Loc.T(selected.age));
+            var bonusText = BonusText(selected);
+            if (bonusText != "") meta += "  ·  " + bonusText;
             if (genes.Count > 0) meta += "  ·  " + Loc.F("Unlocks genes: {0}", string.Join(", ", genes));
             // abilities of the bound species this item switches on (World.Abilities)
             bool function = tree == Progression.Morphology;

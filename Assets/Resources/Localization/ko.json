@@ -1,8 +1,24 @@
 {
  "entries": [
   {
+   "k": "Actions +{0}",
+   "v": "행동 +{0}"
+  },
+  {
+   "k": "Attack +{0}",
+   "v": "공격 +{0}"
+  },
+  {
+   "k": "Defense +{0}",
+   "v": "방어 +{0}"
+  },
+  {
    "k": "Electric Organs",
    "v": "발전 기관"
+  },
+  {
+   "k": "HP +{0}",
+   "v": "체력 +{0}"
   },
   {
    "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
@@ -143,6 +159,10 @@
   {
    "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
    "v": "번식이 빠름: 3턴마다가 아니라 2턴마다 번식할 수 있다."
+  },
+  {
+   "k": "Your groups of it: {0}",
+   "v": "이 종의 내 무리: {0}"
   },
   {
    "k": "the {0} charged",
@@ -22727,6 +22747,14 @@
   {
    "k": "{0} → {1}",
    "v": "{0} → {1}"
+  },
+  {
+   "k": "The Evolution Tree",
+   "v": "진화 계통수"
+  },
+  {
+   "k": "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
+   "v": "오른쪽의 종은 왼쪽의 종에서 진화합니다. 아직 갖지 않은 종에는 DNA 버튼이 있어, 당신의 무리를 그 종으로 진화시킵니다. 진화할 수 있으면 금빛으로 빛나고, 조건이 될 때까지는 회색입니다(포인터를 올리면 무엇이 부족한지 보입니다). 책 버튼은 백과를 열고, 원형 화살표는 잃어버린 종을 되살립니다. 종을 클릭하면 그 종이 무엇으로 진화할 수 있는지 볼 수 있습니다."
   }
  ]
 }

@@ -1,8 +1,24 @@
 {
  "entries": [
   {
+   "k": "Actions +{0}",
+   "v": "Действия +{0}"
+  },
+  {
+   "k": "Attack +{0}",
+   "v": "Атака +{0}"
+  },
+  {
+   "k": "Defense +{0}",
+   "v": "Защита +{0}"
+  },
+  {
    "k": "Electric Organs",
    "v": "Электрические органы"
+  },
+  {
+   "k": "HP +{0}",
+   "v": "Здоровье +{0}"
   },
   {
    "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
@@ -143,6 +159,10 @@
   {
    "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
    "v": "Быстро размножается: может размножаться каждые 2 хода вместо каждых 3."
+  },
+  {
+   "k": "Your groups of it: {0}",
+   "v": "Ваши группы этого вида: {0}"
   },
   {
    "k": "the {0} charged",
@@ -22727,6 +22747,14 @@
   {
    "k": "{0} → {1}",
    "v": "{0} → {1}"
+  },
+  {
+   "k": "The Evolution Tree",
+   "v": "Эволюционное древо"
+  },
+  {
+   "k": "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
+   "v": "Виды справа происходят от видов слева от них. Кнопка ДНК на виде, которого у вас ещё нет, превращает в него одну из ваших групп: она светится золотом, когда это возможно, и остаётся серой, пока нельзя (наведите на неё, чтобы увидеть, чего не хватает). Книга открывает статью энциклопедии; круговая стрелка возвращает утраченный вид. Нажмите на вид, чтобы увидеть, во что он может превратиться."
   }
  ]
 }

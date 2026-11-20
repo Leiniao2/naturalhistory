@@ -324,7 +324,7 @@ namespace NaturalHistory.Players
             bool predation = Combat.IsPredation(g, foe);
             float dealt = Combat.Damage(g, foe);
             bool kills = predation || dealt >= foe.Hp;
-            float back = kills ? 0f : Combat.Damage(foe, g);
+            float back = kills ? 0f : Combat.BackDamage(foe, g);
             float risk = back / Mathf.Max(0.1f, g.Hp); // 1 = the counterattack would kill it
             if (risk >= 1f) return 0f;
             float gain = predation ? 1.5f : kills ? 1.2f : dealt / Mathf.Max(1f, foe.MaxHp);

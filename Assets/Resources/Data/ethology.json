@@ -80,7 +80,10 @@
       "unlocksGenes": [
         "decomposition"
       ],
-      "description": "Feeding on the dead."
+      "description": "Feeding on the dead.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "active_predation",
@@ -96,7 +99,10 @@
       "unlocksGenes": [
         "carnivory"
       ],
-      "description": "Hunting other animals (Anomalocaris)."
+      "description": "Hunting other animals (Anomalocaris).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "ambush_hunting",
@@ -111,7 +117,10 @@
         "hiding"
       ],
       "unlocksGenes": [],
-      "description": "Waiting hidden and striking at passing prey."
+      "description": "Waiting hidden and striking at passing prey.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "patch_foraging",
@@ -125,7 +134,10 @@
         "foraging"
       ],
       "unlocksGenes": [],
-      "description": "Moving on when a food patch runs low."
+      "description": "Moving on when a food patch runs low.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "pursuit_hunting",
@@ -139,7 +151,10 @@
         "active_predation"
       ],
       "unlocksGenes": [],
-      "description": "Chasing prey down in open water."
+      "description": "Chasing prey down in open water.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "plant_feeding",
@@ -155,7 +170,10 @@
       "unlocksGenes": [
         "herbivory"
       ],
-      "description": "Eating land plants."
+      "description": "Eating land plants.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "silk_traps",
@@ -169,7 +187,10 @@
         "ambush_hunting"
       ],
       "unlocksGenes": [],
-      "description": "Webs and trip-lines of silk."
+      "description": "Webs and trip-lines of silk.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "omnivory_node",
@@ -186,7 +207,10 @@
       "unlocksGenes": [
         "omnivory"
       ],
-      "description": "Eating whatever is available."
+      "description": "Eating whatever is available.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "stalking",
@@ -200,7 +224,10 @@
         "ambush_hunting"
       ],
       "unlocksGenes": [],
-      "description": "Creeping up on prey unseen."
+      "description": "Creeping up on prey unseen.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "pack_hunting",
@@ -215,7 +242,10 @@
         "territoriality"
       ],
       "unlocksGenes": [],
-      "description": "Hunting together to take bigger prey."
+      "description": "Hunting together to take bigger prey.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "nectar_feeding_node",
@@ -231,7 +261,10 @@
       "unlocksGenes": [
         "nectar_feeding"
       ],
-      "description": "Drinking nectar and carrying pollen between flowers."
+      "description": "Drinking nectar and carrying pollen between flowers.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "fruit_eating",
@@ -245,7 +278,10 @@
         "plant_feeding"
       ],
       "unlocksGenes": [],
-      "description": "Eating fruit and spreading the seeds."
+      "description": "Eating fruit and spreading the seeds.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "food_caching",
@@ -259,7 +295,10 @@
         "patch_foraging"
       ],
       "unlocksGenes": [],
-      "description": "Hiding food for later (squirrels, jays)."
+      "description": "Hiding food for later (squirrels, jays).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "fungus_farming",
@@ -273,7 +312,10 @@
         "plant_feeding"
       ],
       "unlocksGenes": [],
-      "description": "Growing fungus gardens for food (leafcutter ants, termites)."
+      "description": "Growing fungus gardens for food (leafcutter ants, termites).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "grass_grazing",
@@ -287,7 +329,10 @@
         "plant_feeding"
       ],
       "unlocksGenes": [],
-      "description": "Grazing the new grasslands in herds."
+      "description": "Grazing the new grasslands in herds.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "tool_use",
@@ -301,7 +346,10 @@
         "food_caching"
       ],
       "unlocksGenes": [],
-      "description": "Using objects as tools."
+      "description": "Using objects as tools.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "persistence_hunting",
@@ -315,7 +363,10 @@
         "pursuit_hunting"
       ],
       "unlocksGenes": [],
-      "description": "Running prey to exhaustion (humans)."
+      "description": "Running prey to exhaustion (humans).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "withdrawal",
@@ -343,7 +394,10 @@
       "unlocksGenes": [
         "camouflage"
       ],
-      "description": "Keeping still in cover."
+      "description": "Keeping still in cover.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "burrowing_escape",
@@ -359,7 +413,10 @@
       "unlocksGenes": [
         "burrowing"
       ],
-      "description": "Digging into the sediment to escape."
+      "description": "Digging into the sediment to escape.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "rolling_up",
@@ -373,7 +430,10 @@
         "withdrawal"
       ],
       "unlocksGenes": [],
-      "description": "Curling into an armoured ball (trilobites, pill bugs)."
+      "description": "Curling into an armoured ball (trilobites, pill bugs).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "autotomy",
@@ -387,7 +447,10 @@
         "withdrawal"
       ],
       "unlocksGenes": [],
-      "description": "Dropping a limb or tail to escape."
+      "description": "Dropping a limb or tail to escape.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "freezing",
@@ -401,7 +464,10 @@
         "hiding"
       ],
       "unlocksGenes": [],
-      "description": "Staying motionless so predators lose interest."
+      "description": "Staying motionless so predators lose interest.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "startle_escape",
@@ -415,7 +481,10 @@
         "withdrawal"
       ],
       "unlocksGenes": [],
-      "description": "A lightning-fast flick of the body away from danger (fish)."
+      "description": "A lightning-fast flick of the body away from danger (fish).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "playing_dead",
@@ -429,7 +498,10 @@
         "freezing"
       ],
       "unlocksGenes": [],
-      "description": "Going limp until the predator gives up."
+      "description": "Going limp until the predator gives up.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "eyespot_display",
@@ -443,7 +515,10 @@
         "freezing"
       ],
       "unlocksGenes": [],
-      "description": "Flashing fake eyes to startle attackers."
+      "description": "Flashing fake eyes to startle attackers.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "group_vigilance",
@@ -457,7 +532,10 @@
         "freezing"
       ],
       "unlocksGenes": [],
-      "description": "Many eyes: some watch while others feed."
+      "description": "Many eyes: some watch while others feed.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "mobbing",
@@ -471,7 +549,10 @@
         "group_vigilance"
       ],
       "unlocksGenes": [],
-      "description": "Ganging up to drive a predator away."
+      "description": "Ganging up to drive a predator away.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "distraction_display",
@@ -485,7 +566,10 @@
         "playing_dead"
       ],
       "unlocksGenes": [],
-      "description": "Faking a broken wing to lure predators from the nest."
+      "description": "Faking a broken wing to lure predators from the nest.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "stotting",
@@ -499,7 +583,10 @@
         "startle_escape"
       ],
       "unlocksGenes": [],
-      "description": "Leaping high to show predators you are too fit to chase."
+      "description": "Leaping high to show predators you are too fit to chase.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "selfish_herd",
@@ -514,7 +601,10 @@
         "schooling"
       ],
       "unlocksGenes": [],
-      "description": "Pushing into the middle of the group so others are on the outside."
+      "description": "Pushing into the middle of the group so others are on the outside.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "spawning_aggregations",
@@ -540,7 +630,10 @@
         "spawning_aggregations"
       ],
       "unlocksGenes": [],
-      "description": "Spawning together on a cue from the moon or temperature."
+      "description": "Spawning together on a cue from the moon or temperature.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "egg_sites",
@@ -554,7 +647,10 @@
         "spawning_aggregations"
       ],
       "unlocksGenes": [],
-      "description": "Laying eggs in safe places."
+      "description": "Laying eggs in safe places.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "mate_guarding",
@@ -568,7 +664,10 @@
         "spawning_aggregations"
       ],
       "unlocksGenes": [],
-      "description": "Staying close to a mate to keep rivals away."
+      "description": "Staying close to a mate to keep rivals away.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "egg_guarding",
@@ -582,7 +681,10 @@
         "egg_sites"
       ],
       "unlocksGenes": [],
-      "description": "Staying with the eggs to drive off egg-eaters."
+      "description": "Staying with the eggs to drive off egg-eaters.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "sperm_competition",
@@ -596,7 +698,10 @@
         "mate_guarding"
       ],
       "unlocksGenes": [],
-      "description": "Rival males compete after mating, inside the female."
+      "description": "Rival males compete after mating, inside the female.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "courtship",
@@ -610,7 +715,10 @@
         "mate_guarding"
       ],
       "unlocksGenes": [],
-      "description": "Rituals that persuade a mate."
+      "description": "Rituals that persuade a mate.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "nuptial_gifts",
@@ -624,7 +732,10 @@
         "courtship"
       ],
       "unlocksGenes": [],
-      "description": "Offering food to a mate."
+      "description": "Offering food to a mate.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "female_choice",
@@ -638,7 +749,10 @@
         "courtship"
       ],
       "unlocksGenes": [],
-      "description": "Females choose the best-looking or best-sounding male."
+      "description": "Females choose the best-looking or best-sounding male.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "courtship_dance",
@@ -652,7 +766,10 @@
         "courtship"
       ],
       "unlocksGenes": [],
-      "description": "Elaborate dances performed for a mate."
+      "description": "Elaborate dances performed for a mate.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "feeding_young",
@@ -666,7 +783,10 @@
         "egg_guarding"
       ],
       "unlocksGenes": [],
-      "description": "Bringing food to the young."
+      "description": "Bringing food to the young.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "pair_bonds",
@@ -680,7 +800,10 @@
         "courtship"
       ],
       "unlocksGenes": [],
-      "description": "Staying with one partner for a season or for life."
+      "description": "Staying with one partner for a season or for life.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "leks",
@@ -694,7 +817,10 @@
         "courtship_dance"
       ],
       "unlocksGenes": [],
-      "description": "Males display side by side while females choose."
+      "description": "Males display side by side while females choose.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "biparental_care",
@@ -708,7 +834,10 @@
         "feeding_young"
       ],
       "unlocksGenes": [],
-      "description": "Both parents raise the young."
+      "description": "Both parents raise the young.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "mouthbrooding",
@@ -722,7 +851,10 @@
         "egg_guarding"
       ],
       "unlocksGenes": [],
-      "description": "Sheltering eggs and fry in the mouth (cichlids)."
+      "description": "Sheltering eggs and fry in the mouth (cichlids).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "alloparenting",
@@ -736,7 +868,10 @@
         "biparental_care"
       ],
       "unlocksGenes": [],
-      "description": "Aunts, siblings and others help raise the young."
+      "description": "Aunts, siblings and others help raise the young.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "brood_parasitism",
@@ -751,7 +886,10 @@
         "incubation"
       ],
       "unlocksGenes": [],
-      "description": "Tricking others into raising your chicks (cuckoos)."
+      "description": "Tricking others into raising your chicks (cuckoos).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "teaching",
@@ -765,7 +903,10 @@
         "alloparenting"
       ],
       "unlocksGenes": [],
-      "description": "Showing the young how to do things on purpose."
+      "description": "Showing the young how to do things on purpose.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "aggregation",
@@ -793,7 +934,10 @@
       "unlocksGenes": [
         "group_defense"
       ],
-      "description": "Swimming in coordinated groups for safety."
+      "description": "Swimming in coordinated groups for safety.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "kin_recognition",
@@ -807,7 +951,10 @@
         "aggregation"
       ],
       "unlocksGenes": [],
-      "description": "Telling relatives from strangers by smell or sight."
+      "description": "Telling relatives from strangers by smell or sight.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "family_groups",
@@ -821,7 +968,10 @@
         "aggregation"
       ],
       "unlocksGenes": [],
-      "description": "Parents and young stay together."
+      "description": "Parents and young stay together.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "herding",
@@ -835,7 +985,10 @@
         "schooling"
       ],
       "unlocksGenes": [],
-      "description": "Moving and feeding in herds (dinosaurs)."
+      "description": "Moving and feeding in herds (dinosaurs).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "eusociality",
@@ -849,7 +1002,10 @@
         "family_groups"
       ],
       "unlocksGenes": [],
-      "description": "Sterile workers serve a breeding queen (termites, ants)."
+      "description": "Sterile workers serve a breeding queen (termites, ants).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "castes",
@@ -863,7 +1019,10 @@
         "eusociality"
       ],
       "unlocksGenes": [],
-      "description": "Soldiers, workers and nurses, each built for its job."
+      "description": "Soldiers, workers and nurses, each built for its job.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "social_hierarchy",
@@ -878,7 +1037,10 @@
         "territoriality"
       ],
       "unlocksGenes": [],
-      "description": "A pecking order settles who gets what."
+      "description": "A pecking order settles who gets what.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "cooperative_breeding",
@@ -892,7 +1054,10 @@
         "family_groups"
       ],
       "unlocksGenes": [],
-      "description": "Helpers raise young that are not their own."
+      "description": "Helpers raise young that are not their own.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "creches",
@@ -906,7 +1071,10 @@
         "family_groups"
       ],
       "unlocksGenes": [],
-      "description": "Young gathered together in nurseries."
+      "description": "Young gathered together in nurseries.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "social_grooming",
@@ -920,7 +1088,10 @@
         "social_hierarchy"
       ],
       "unlocksGenes": [],
-      "description": "Cleaning each other to build bonds."
+      "description": "Cleaning each other to build bonds.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "superorganism",
@@ -934,7 +1105,10 @@
         "castes"
       ],
       "unlocksGenes": [],
-      "description": "A colony acting as one body (army ants)."
+      "description": "A colony acting as one body (army ants).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "coalitions",
@@ -948,7 +1122,10 @@
         "social_hierarchy"
       ],
       "unlocksGenes": [],
-      "description": "Allies band together to rise in rank."
+      "description": "Allies band together to rise in rank.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "fission_fusion",
@@ -962,7 +1139,10 @@
         "coalitions"
       ],
       "unlocksGenes": [],
-      "description": "Groups split and merge day by day (chimpanzees, elephants)."
+      "description": "Groups split and merge day by day (chimpanzees, elephants).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "reciprocal_altruism",
@@ -976,7 +1156,10 @@
         "social_grooming"
       ],
       "unlocksGenes": [],
-      "description": "Helping those who help you (vampire bats sharing blood)."
+      "description": "Helping those who help you (vampire bats sharing blood).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "mixed_species_flocks",
@@ -990,7 +1173,10 @@
         "herding"
       ],
       "unlocksGenes": [],
-      "description": "Different species forage together for safety."
+      "description": "Different species forage together for safety.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "matriarchs",
@@ -1004,7 +1190,10 @@
         "fission_fusion"
       ],
       "unlocksGenes": [],
-      "description": "Old females lead the group with remembered knowledge."
+      "description": "Old females lead the group with remembered knowledge.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "traditions",
@@ -1018,7 +1207,10 @@
         "matriarchs"
       ],
       "unlocksGenes": [],
-      "description": "Behaviour passed down the generations (whale songs, chimp tool kits)."
+      "description": "Behaviour passed down the generations (whale songs, chimp tool kits).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "large_societies",
@@ -1033,7 +1225,10 @@
         "reciprocal_altruism"
       ],
       "unlocksGenes": [],
-      "description": "Cooperation among many unrelated individuals."
+      "description": "Cooperation among many unrelated individuals.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "aggression",
@@ -1059,7 +1254,10 @@
         "aggression"
       ],
       "unlocksGenes": [],
-      "description": "Backing off from a stronger rival before getting hurt."
+      "description": "Backing off from a stronger rival before getting hurt.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "overgrowth_fights",
@@ -1073,7 +1271,10 @@
         "aggression"
       ],
       "unlocksGenes": [],
-      "description": "Sessile animals fight for space by overgrowing or stinging their neighbours (corals)."
+      "description": "Sessile animals fight for space by overgrowing or stinging their neighbours (corals).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "threat_display",
@@ -1087,7 +1288,10 @@
         "aggression"
       ],
       "unlocksGenes": [],
-      "description": "Spreading fins, gaping or rearing up to look bigger instead of fighting."
+      "description": "Spreading fins, gaping or rearing up to look bigger instead of fighting.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "submission",
@@ -1101,7 +1305,10 @@
         "retreat"
       ],
       "unlocksGenes": [],
-      "description": "Showing that you give up, so the winner stops attacking."
+      "description": "Showing that you give up, so the winner stops attacking.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "claw_duels",
@@ -1115,7 +1322,10 @@
         "threat_display"
       ],
       "unlocksGenes": [],
-      "description": "Sizing each other up and grappling with claws (crustaceans, scorpions)."
+      "description": "Sizing each other up and grappling with claws (crustaceans, scorpions).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "territoriality",
@@ -1129,7 +1339,10 @@
         "aggression"
       ],
       "unlocksGenes": [],
-      "description": "Claiming and defending an area."
+      "description": "Claiming and defending an area.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "ritualised_fighting",
@@ -1143,7 +1356,10 @@
         "threat_display"
       ],
       "unlocksGenes": [],
-      "description": "Contests with rules: pushing and wrestling that rarely cause injury."
+      "description": "Contests with rules: pushing and wrestling that rarely cause injury.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "rival_assessment",
@@ -1157,7 +1373,10 @@
         "threat_display"
       ],
       "unlocksGenes": [],
-      "description": "Judging a rival's strength before deciding whether to fight."
+      "description": "Judging a rival's strength before deciding whether to fight.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "winner_effect",
@@ -1171,7 +1390,10 @@
         "submission"
       ],
       "unlocksGenes": [],
-      "description": "Winning makes an animal bolder; losing makes it cautious."
+      "description": "Winning makes an animal bolder; losing makes it cautious.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "male_combat",
@@ -1185,7 +1407,10 @@
         "ritualised_fighting"
       ],
       "unlocksGenes": [],
-      "description": "Shoving, wrestling and butting rivals."
+      "description": "Shoving, wrestling and butting rivals.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "dear_enemy",
@@ -1199,7 +1424,10 @@
         "territoriality"
       ],
       "unlocksGenes": [],
-      "description": "Known neighbours are tolerated; fights are saved for strangers."
+      "description": "Known neighbours are tolerated; fights are saved for strangers.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "head_butting",
@@ -1213,7 +1441,10 @@
         "male_combat"
       ],
       "unlocksGenes": [],
-      "description": "Dome-headed clashes (pachycephalosaurs, later rams)."
+      "description": "Dome-headed clashes (pachycephalosaurs, later rams).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "siblicide",
@@ -1227,7 +1458,10 @@
         "aggression"
       ],
       "unlocksGenes": [],
-      "description": "The strongest chick kills its nestmates (eagles, boobies)."
+      "description": "The strongest chick kills its nestmates (eagles, boobies).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "food_stealing",
@@ -1241,7 +1475,10 @@
         "aggression"
       ],
       "unlocksGenes": [],
-      "description": "Robbing other animals of their catch (skuas)."
+      "description": "Robbing other animals of their catch (skuas).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "harems",
@@ -1255,7 +1492,10 @@
         "male_combat"
       ],
       "unlocksGenes": [],
-      "description": "One male defends a group of females."
+      "description": "One male defends a group of females.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "infanticide",
@@ -1269,7 +1509,10 @@
         "harems"
       ],
       "unlocksGenes": [],
-      "description": "A male taking over a group kills his rival's young (lions)."
+      "description": "A male taking over a group kills his rival's young (lions).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "antler_tournaments",
@@ -1283,7 +1526,10 @@
         "male_combat"
       ],
       "unlocksGenes": [],
-      "description": "Ritual antler fights (deer)."
+      "description": "Ritual antler fights (deer).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "rutting_season",
@@ -1297,7 +1543,10 @@
         "male_combat"
       ],
       "unlocksGenes": [],
-      "description": "A short, intense mating season."
+      "description": "A short, intense mating season.",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "border_patrols",
@@ -1312,7 +1561,10 @@
         "coalitions"
       ],
       "unlocksGenes": [],
-      "description": "Groups patrol and raid the edges of their range (chimpanzees, wolves)."
+      "description": "Groups patrol and raid the edges of their range (chimpanzees, wolves).",
+      "bonus": {
+        "attack": 1
+      }
     },
     {
       "id": "chemical_signals",
@@ -1338,7 +1590,10 @@
         "chemical_signals"
       ],
       "unlocksGenes": [],
-      "description": "Chemical messages to your own species."
+      "description": "Chemical messages to your own species.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "substrate_vibration",
@@ -1352,7 +1607,10 @@
         "chemical_signals"
       ],
       "unlocksGenes": [],
-      "description": "Tapping signals through the ground or a web."
+      "description": "Tapping signals through the ground or a web.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "colour_signals",
@@ -1366,7 +1624,10 @@
         "chemical_signals"
       ],
       "unlocksGenes": [],
-      "description": "Changing or showing colours to send messages."
+      "description": "Changing or showing colours to send messages.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "light_signals",
@@ -1380,7 +1641,10 @@
         "colour_signals"
       ],
       "unlocksGenes": [],
-      "description": "Flashing light codes (deep-sea fish, later fireflies)."
+      "description": "Flashing light codes (deep-sea fish, later fireflies).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "stridulation",
@@ -1394,7 +1658,10 @@
         "substrate_vibration"
       ],
       "unlocksGenes": [],
-      "description": "Rubbing body parts together to chirp."
+      "description": "Rubbing body parts together to chirp.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "display_postures",
@@ -1408,7 +1675,10 @@
         "colour_signals"
       ],
       "unlocksGenes": [],
-      "description": "Showing size and colour to settle disputes without fighting."
+      "description": "Showing size and colour to settle disputes without fighting.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "scent_marking",
@@ -1422,7 +1692,10 @@
         "pheromones"
       ],
       "unlocksGenes": [],
-      "description": "Marking territory with scent."
+      "description": "Marking territory with scent.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "vocal_communication",
@@ -1436,7 +1709,10 @@
         "stridulation"
       ],
       "unlocksGenes": [],
-      "description": "Calls made with the voice."
+      "description": "Calls made with the voice.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "alarm_calls",
@@ -1450,7 +1726,10 @@
         "vocal_communication"
       ],
       "unlocksGenes": [],
-      "description": "Warning the group that a predator is near."
+      "description": "Warning the group that a predator is near.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "electric_signals",
@@ -1464,7 +1743,10 @@
         "chemical_signals"
       ],
       "unlocksGenes": [],
-      "description": "Talking with electric pulses (weakly electric fish)."
+      "description": "Talking with electric pulses (weakly electric fish).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "waggle_dance",
@@ -1478,7 +1760,10 @@
         "substrate_vibration"
       ],
       "unlocksGenes": [],
-      "description": "Dancing the direction of food to the hive (honeybees)."
+      "description": "Dancing the direction of food to the hive (honeybees).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "learned_song",
@@ -1492,7 +1777,10 @@
         "vocal_communication"
       ],
       "unlocksGenes": [],
-      "description": "Songs copied from adults (songbirds)."
+      "description": "Songs copied from adults (songbirds).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "facial_expressions",
@@ -1506,7 +1794,10 @@
         "display_postures"
       ],
       "unlocksGenes": [],
-      "description": "Faces that show mood (mammals)."
+      "description": "Faces that show mood (mammals).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "duets",
@@ -1520,7 +1811,10 @@
         "learned_song"
       ],
       "unlocksGenes": [],
-      "description": "Pairs singing together in time."
+      "description": "Pairs singing together in time.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "referential_calls",
@@ -1534,7 +1828,10 @@
         "alarm_calls"
       ],
       "unlocksGenes": [],
-      "description": "Different alarms for eagle, snake and leopard (vervet monkeys)."
+      "description": "Different alarms for eagle, snake and leopard (vervet monkeys).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "infrasound",
@@ -1548,7 +1845,10 @@
         "vocal_communication"
       ],
       "unlocksGenes": [],
-      "description": "Calls too low for us to hear that carry for kilometres (elephants)."
+      "description": "Calls too low for us to hear that carry for kilometres (elephants).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "whale_song",
@@ -1562,7 +1862,10 @@
         "learned_song"
       ],
       "unlocksGenes": [],
-      "description": "Long songs that change from year to year."
+      "description": "Long songs that change from year to year.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "gestures",
@@ -1576,7 +1879,10 @@
         "facial_expressions"
       ],
       "unlocksGenes": [],
-      "description": "Meaningful hand and body movements (great apes)."
+      "description": "Meaningful hand and body movements (great apes).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "language",
@@ -1591,7 +1897,10 @@
         "gestures"
       ],
       "unlocksGenes": [],
-      "description": "Open-ended symbolic speech."
+      "description": "Open-ended symbolic speech.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "taxis",
@@ -1617,7 +1926,10 @@
         "taxis"
       ],
       "unlocksGenes": [],
-      "description": "Moving toward or away from light."
+      "description": "Moving toward or away from light.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "home_range",
@@ -1631,7 +1943,10 @@
         "taxis"
       ],
       "unlocksGenes": [],
-      "description": "Staying in and returning to a familiar area."
+      "description": "Staying in and returning to a familiar area.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "vertical_migration",
@@ -1645,7 +1960,10 @@
         "light_following"
       ],
       "unlocksGenes": [],
-      "description": "Rising at night and sinking by day (plankton)."
+      "description": "Rising at night and sinking by day (plankton).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "facing_current",
@@ -1659,7 +1977,10 @@
         "taxis"
       ],
       "unlocksGenes": [],
-      "description": "Holding position against flowing water."
+      "description": "Holding position against flowing water.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "land_excursions",
@@ -1673,7 +1994,10 @@
         "home_range"
       ],
       "unlocksGenes": [],
-      "description": "Short trips out of the water onto land."
+      "description": "Short trips out of the water onto land.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "seasonal_migration",
@@ -1689,7 +2013,10 @@
       "unlocksGenes": [
         "hibernation"
       ],
-      "description": "Moving with the seasons."
+      "description": "Moving with the seasons.",
+      "bonus": {
+        "moves": 1
+      }
     },
     {
       "id": "sun_compass",
@@ -1703,7 +2030,10 @@
         "light_following"
       ],
       "unlocksGenes": [],
-      "description": "Navigating by the sun's position."
+      "description": "Navigating by the sun's position.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "mass_dispersal",
@@ -1717,7 +2047,10 @@
         "land_excursions"
       ],
       "unlocksGenes": [],
-      "description": "Swarms take off together to settle new ground."
+      "description": "Swarms take off together to settle new ground.",
+      "bonus": {
+        "moves": 1
+      }
     },
     {
       "id": "ballooning",
@@ -1731,7 +2064,10 @@
         "mass_dispersal"
       ],
       "unlocksGenes": [],
-      "description": "Drifting on the wind on silk threads (spiders)."
+      "description": "Drifting on the wind on silk threads (spiders).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "landmark_maps",
@@ -1745,7 +2081,10 @@
         "home_range"
       ],
       "unlocksGenes": [],
-      "description": "Learning landmarks to find the way home."
+      "description": "Learning landmarks to find the way home.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "natal_homing",
@@ -1759,7 +2098,10 @@
         "seasonal_migration"
       ],
       "unlocksGenes": [],
-      "description": "Returning to the place of birth to breed (salmon, turtles)."
+      "description": "Returning to the place of birth to breed (salmon, turtles).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "magnetic_navigation",
@@ -1773,7 +2115,10 @@
         "natal_homing"
       ],
       "unlocksGenes": [],
-      "description": "Steering by the Earth's magnetic field."
+      "description": "Steering by the Earth's magnetic field.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "path_integration",
@@ -1787,7 +2132,10 @@
         "sun_compass"
       ],
       "unlocksGenes": [],
-      "description": "Counting steps and turns to head straight home (ants)."
+      "description": "Counting steps and turns to head straight home (ants).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "star_navigation",
@@ -1801,7 +2149,10 @@
         "sun_compass"
       ],
       "unlocksGenes": [],
-      "description": "Steering by the stars (migrating birds)."
+      "description": "Steering by the stars (migrating birds).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "ocean_migration",
@@ -1815,7 +2166,10 @@
         "magnetic_navigation"
       ],
       "unlocksGenes": [],
-      "description": "Journeys of thousands of kilometres every year (whales, terns)."
+      "description": "Journeys of thousands of kilometres every year (whales, terns).",
+      "bonus": {
+        "moves": 1
+      }
     },
     {
       "id": "rafting",
@@ -1829,7 +2183,10 @@
         "land_excursions"
       ],
       "unlocksGenes": [],
-      "description": "Crossing oceans on floating vegetation (monkeys to South America)."
+      "description": "Crossing oceans on floating vegetation (monkeys to South America).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "nomadic_herds",
@@ -1843,7 +2200,10 @@
         "seasonal_migration"
       ],
       "unlocksGenes": [],
-      "description": "Following the rains and the grass (wildebeest)."
+      "description": "Following the rains and the grass (wildebeest).",
+      "bonus": {
+        "moves": 1
+      }
     },
     {
       "id": "altitudinal_migration",
@@ -1857,7 +2217,10 @@
         "seasonal_migration"
       ],
       "unlocksGenes": [],
-      "description": "Up the mountain in summer, down in winter."
+      "description": "Up the mountain in summer, down in winter.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "settling",
@@ -1883,7 +2246,10 @@
         "settling"
       ],
       "unlocksGenes": [],
-      "description": "Building a protective tube to live in."
+      "description": "Building a protective tube to live in.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "burrow_systems",
@@ -1899,7 +2265,10 @@
       "unlocksGenes": [
         "burrowing"
       ],
-      "description": "Digging tunnels in the sediment."
+      "description": "Digging tunnels in the sediment.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "reef_building",
@@ -1913,7 +2282,10 @@
         "tube_building"
       ],
       "unlocksGenes": [],
-      "description": "Building reefs together (archaeocyathids, later corals)."
+      "description": "Building reefs together (archaeocyathids, later corals).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "rock_boring",
@@ -1927,7 +2299,10 @@
         "burrow_systems"
       ],
       "unlocksGenes": [],
-      "description": "Drilling homes into rock and wood."
+      "description": "Drilling homes into rock and wood.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "burrow_nests",
@@ -1941,7 +2316,10 @@
         "burrow_systems"
       ],
       "unlocksGenes": [],
-      "description": "Raising young underground."
+      "description": "Raising young underground.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "silk_shelters",
@@ -1955,7 +2333,10 @@
         "tube_building"
       ],
       "unlocksGenes": [],
-      "description": "Spinning silk retreats and cocoons."
+      "description": "Spinning silk retreats and cocoons.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "nesting",
@@ -1972,7 +2353,10 @@
       "unlocksGenes": [
         "parental_care"
       ],
-      "description": "Building a nest for eggs and young."
+      "description": "Building a nest for eggs and young.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "nest_defence",
@@ -1986,7 +2370,10 @@
         "nesting"
       ],
       "unlocksGenes": [],
-      "description": "Fighting off nest raiders."
+      "description": "Fighting off nest raiders.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "provisioned_cells",
@@ -2000,7 +2387,10 @@
         "burrow_nests"
       ],
       "unlocksGenes": [],
-      "description": "Sealed cells stocked with food for the larvae (wasps)."
+      "description": "Sealed cells stocked with food for the larvae (wasps).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "incubation",
@@ -2014,7 +2404,10 @@
         "nesting"
       ],
       "unlocksGenes": [],
-      "description": "Sitting on the eggs to keep them warm."
+      "description": "Sitting on the eggs to keep them warm.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "colonial_nesting",
@@ -2028,7 +2421,10 @@
         "nest_defence"
       ],
       "unlocksGenes": [],
-      "description": "Nesting in large, defended colonies."
+      "description": "Nesting in large, defended colonies.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "woven_nests",
@@ -2042,7 +2438,10 @@
         "nesting"
       ],
       "unlocksGenes": [],
-      "description": "Weaving nests from plant fibres."
+      "description": "Weaving nests from plant fibres.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "mud_nests",
@@ -2056,7 +2455,10 @@
         "nesting"
       ],
       "unlocksGenes": [],
-      "description": "Nests plastered together from pellets of mud (swallows, potter wasps)."
+      "description": "Nests plastered together from pellets of mud (swallows, potter wasps).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "paper_nests",
@@ -2070,7 +2472,10 @@
         "provisioned_cells"
       ],
       "unlocksGenes": [],
-      "description": "Chewed wood pulp shaped into hanging combs (paper wasps)."
+      "description": "Chewed wood pulp shaped into hanging combs (paper wasps).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "termite_mounds",
@@ -2084,7 +2489,10 @@
         "burrow_systems"
       ],
       "unlocksGenes": [],
-      "description": "Climate-controlled mound cities."
+      "description": "Climate-controlled mound cities.",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "wax_combs",
@@ -2098,7 +2506,10 @@
         "provisioned_cells"
       ],
       "unlocksGenes": [],
-      "description": "Building combs of hexagonal wax cells (bees)."
+      "description": "Building combs of hexagonal wax cells (bees).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "bubble_nests",
@@ -2112,7 +2523,10 @@
         "nesting"
       ],
       "unlocksGenes": [],
-      "description": "Floating rafts of mucus bubbles that hold the eggs (gouramis, bettas)."
+      "description": "Floating rafts of mucus bubbles that hold the eggs (gouramis, bettas).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "bowers",
@@ -2126,7 +2540,10 @@
         "woven_nests"
       ],
       "unlocksGenes": [],
-      "description": "Decorated display structures (bowerbirds)."
+      "description": "Decorated display structures (bowerbirds).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "dam_building",
@@ -2140,7 +2557,10 @@
         "burrow_systems"
       ],
       "unlocksGenes": [],
-      "description": "Engineering ponds with dams (beavers)."
+      "description": "Engineering ponds with dams (beavers).",
+      "bonus": {
+        "defense": 1
+      }
     },
     {
       "id": "self_cleaning",
@@ -2166,7 +2586,10 @@
         "self_cleaning"
       ],
       "unlocksGenes": [],
-      "description": "Hiding away while a new cuticle hardens."
+      "description": "Hiding away while a new cuticle hardens.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "basking",
@@ -2180,7 +2603,10 @@
         "self_cleaning"
       ],
       "unlocksGenes": [],
-      "description": "Warming up in the sun before becoming active."
+      "description": "Warming up in the sun before becoming active.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "shade_seeking",
@@ -2194,7 +2620,10 @@
         "basking"
       ],
       "unlocksGenes": [],
-      "description": "Moving into shade or burrows to avoid overheating."
+      "description": "Moving into shade or burrows to avoid overheating.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "antenna_grooming",
@@ -2208,7 +2637,10 @@
         "self_cleaning"
       ],
       "unlocksGenes": [],
-      "description": "Cleaning antennae and legs with special combs (insects)."
+      "description": "Cleaning antennae and legs with special combs (insects).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "scratching",
@@ -2222,7 +2654,10 @@
         "self_cleaning"
       ],
       "unlocksGenes": [],
-      "description": "Scratching itchy skin with a hind foot."
+      "description": "Scratching itchy skin with a hind foot.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "skin_rubbing",
@@ -2236,7 +2671,10 @@
         "scratching"
       ],
       "unlocksGenes": [],
-      "description": "Rubbing against rocks and trees to scrape off parasites."
+      "description": "Rubbing against rocks and trees to scrape off parasites.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "skin_shedding",
@@ -2250,7 +2688,10 @@
         "moulting_behaviour"
       ],
       "unlocksGenes": [],
-      "description": "Rubbing off the old skin, sometimes in one piece (snakes, lizards)."
+      "description": "Rubbing off the old skin, sometimes in one piece (snakes, lizards).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "mud_wallowing",
@@ -2264,7 +2705,10 @@
         "skin_rubbing"
       ],
       "unlocksGenes": [],
-      "description": "Coating the skin with mud to cool off and keep insects away."
+      "description": "Coating the skin with mud to cool off and keep insects away.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "wound_licking",
@@ -2278,7 +2722,10 @@
         "scratching"
       ],
       "unlocksGenes": [],
-      "description": "Licking wounds clean: saliva kills bacteria."
+      "description": "Licking wounds clean: saliva kills bacteria.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "panting",
@@ -2292,7 +2739,10 @@
         "shade_seeking"
       ],
       "unlocksGenes": [],
-      "description": "Cooling off by breathing fast."
+      "description": "Cooling off by breathing fast.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "preening",
@@ -2306,7 +2756,10 @@
         "scratching"
       ],
       "unlocksGenes": [],
-      "description": "Straightening and oiling feathers with the beak."
+      "description": "Straightening and oiling feathers with the beak.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "huddling",
@@ -2320,7 +2773,10 @@
         "basking"
       ],
       "unlocksGenes": [],
-      "description": "Pressing together to keep warm (penguins, mice)."
+      "description": "Pressing together to keep warm (penguins, mice).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "cleaning_stations",
@@ -2334,7 +2790,10 @@
         "self_cleaning"
       ],
       "unlocksGenes": [],
-      "description": "Cleaner fish and shrimp service visiting 'clients'."
+      "description": "Cleaner fish and shrimp service visiting 'clients'.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "dust_bathing",
@@ -2348,7 +2807,10 @@
         "preening"
       ],
       "unlocksGenes": [],
-      "description": "Rolling in dust to remove excess oil and parasites."
+      "description": "Rolling in dust to remove excess oil and parasites.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "bathing",
@@ -2362,7 +2824,10 @@
         "preening"
       ],
       "unlocksGenes": [],
-      "description": "Splashing in water to clean feathers or fur."
+      "description": "Splashing in water to clean feathers or fur.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "nest_sanitation",
@@ -2376,7 +2841,10 @@
         "self_cleaning"
       ],
       "unlocksGenes": [],
-      "description": "Carrying waste and dead nestmates out of the nest (bees, birds)."
+      "description": "Carrying waste and dead nestmates out of the nest (bees, birds).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "anting",
@@ -2390,7 +2858,10 @@
         "preening"
       ],
       "unlocksGenes": [],
-      "description": "Rubbing ants into the feathers for their formic acid."
+      "description": "Rubbing ants into the feathers for their formic acid.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "latrines",
@@ -2404,7 +2875,10 @@
         "nest_sanitation"
       ],
       "unlocksGenes": [],
-      "description": "Using fixed dung sites away from food and young."
+      "description": "Using fixed dung sites away from food and young.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "self_medication",
@@ -2418,7 +2892,10 @@
         "wound_licking"
       ],
       "unlocksGenes": [],
-      "description": "Eating bitter plants or clay to fight parasites and toxins (chimpanzees, parrots)."
+      "description": "Eating bitter plants or clay to fight parasites and toxins (chimpanzees, parrots).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "quiescence",
@@ -2444,7 +2921,10 @@
         "quiescence"
       ],
       "unlocksGenes": [],
-      "description": "An internal clock sets the times for activity and rest."
+      "description": "An internal clock sets the times for activity and rest.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "shelter_resting",
@@ -2458,7 +2938,10 @@
         "quiescence"
       ],
       "unlocksGenes": [],
-      "description": "Resting in crevices or burrows out of sight."
+      "description": "Resting in crevices or burrows out of sight.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "sleep",
@@ -2472,7 +2955,10 @@
         "daily_rhythm"
       ],
       "unlocksGenes": [],
-      "description": "Deep, reversible rest with the senses turned down."
+      "description": "Deep, reversible rest with the senses turned down.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "mucus_cocoon",
@@ -2486,7 +2972,10 @@
         "shelter_resting"
       ],
       "unlocksGenes": [],
-      "description": "Sleeping inside a bubble of mucus (parrotfish, lungfish)."
+      "description": "Sleeping inside a bubble of mucus (parrotfish, lungfish).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "deep_sleep",
@@ -2500,7 +2989,10 @@
         "sleep"
       ],
       "unlocksGenes": [],
-      "description": "Slow-wave sleep that restores the brain."
+      "description": "Slow-wave sleep that restores the brain.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "nocturnal_refuge",
@@ -2514,7 +3006,10 @@
         "daily_rhythm"
       ],
       "unlocksGenes": [],
-      "description": "Active only at night (early mammals)."
+      "description": "Active only at night (early mammals).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "roosting",
@@ -2528,7 +3023,10 @@
         "shelter_resting"
       ],
       "unlocksGenes": [],
-      "description": "Resting high off the ground, out of reach of predators."
+      "description": "Resting high off the ground, out of reach of predators.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "dreaming_sleep",
@@ -2542,7 +3040,10 @@
         "deep_sleep"
       ],
       "unlocksGenes": [],
-      "description": "REM sleep that consolidates memories (mammals, birds)."
+      "description": "REM sleep that consolidates memories (mammals, birds).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "half_brain_sleep",
@@ -2556,7 +3057,10 @@
         "deep_sleep"
       ],
       "unlocksGenes": [],
-      "description": "One half of the brain sleeps while the other keeps watch (dolphins, ducks)."
+      "description": "One half of the brain sleeps while the other keeps watch (dolphins, ducks).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "communal_roosts",
@@ -2570,7 +3074,10 @@
         "roosting"
       ],
       "unlocksGenes": [],
-      "description": "Sleeping together in large numbers."
+      "description": "Sleeping together in large numbers.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "hanging_roost",
@@ -2584,7 +3091,10 @@
         "roosting"
       ],
       "unlocksGenes": [],
-      "description": "Resting upside down, ready to drop into flight (bats)."
+      "description": "Resting upside down, ready to drop into flight (bats).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "crepuscular_activity",
@@ -2598,7 +3108,10 @@
         "daily_rhythm"
       ],
       "unlocksGenes": [],
-      "description": "Active in twilight, between the day and night shifts of predators."
+      "description": "Active in twilight, between the day and night shifts of predators.",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "winter_dens",
@@ -2612,7 +3125,10 @@
         "shelter_resting"
       ],
       "unlocksGenes": [],
-      "description": "Sheltering in a den through the cold months (bears)."
+      "description": "Sheltering in a den through the cold months (bears).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "sleeping_nests",
@@ -2626,7 +3142,10 @@
         "roosting"
       ],
       "unlocksGenes": [],
-      "description": "Building a fresh bed in the trees every night (great apes)."
+      "description": "Building a fresh bed in the trees every night (great apes).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "sleeping_on_the_wing",
@@ -2640,7 +3159,10 @@
         "half_brain_sleep"
       ],
       "unlocksGenes": [],
-      "description": "Sleeping in flight (swifts, frigatebirds)."
+      "description": "Sleeping in flight (swifts, frigatebirds).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "sentinels",
@@ -2655,7 +3177,10 @@
         "group_vigilance"
       ],
       "unlocksGenes": [],
-      "description": "One keeps watch while the rest sleep or feed (meerkats)."
+      "description": "One keeps watch while the rest sleep or feed (meerkats).",
+      "bonus": {
+        "hp": 2
+      }
     },
     {
       "id": "rafting_rest",
@@ -2669,7 +3194,10 @@
         "communal_roosts"
       ],
       "unlocksGenes": [],
-      "description": "Floating together, holding on to each other or to kelp (sea otters)."
+      "description": "Floating together, holding on to each other or to kelp (sea otters).",
+      "bonus": {
+        "hp": 2
+      }
     }
   ]
 }

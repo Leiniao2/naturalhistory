@@ -1,0 +1,2387 @@
+{
+ "style": "Painterly concept-art card illustration in the style of the culture and technology illustrations of the strategy game Humankind; visible confident brush strokes, semi-realistic stylised forms, saturated and vibrant colours, clean natural daylight with a soft rim light. NO sepia, NO golden-brown tint. One clear, readable subject filling most of the frame, centred, recognisable even as a small thumbnail; a soft, loosely painted backdrop. Scientifically accurate anatomy and natural colouring. Square image. No text, no letters, no labels, no UI, no frame, no logo.",
+ "prompts": [
+  {
+   "id": "f_nerve_net",
+   "tree": "morphology",
+   "item": "nerve_net",
+   "prompt": "Nerve Net: an illustration of the animal body part, organ or body system \"Nerve Net\" (Nervous System). A diffuse web of neurons, like a jellyfish's. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_nerve_cords",
+   "tree": "morphology",
+   "item": "nerve_cords",
+   "prompt": "Nerve Cords: an illustration of the animal body part, organ or body system \"Nerve Cords\" (Nervous System). Nerves bundled into cords along the body. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_cephalisation",
+   "tree": "morphology",
+   "item": "cephalisation",
+   "prompt": "Cephalisation: an illustration of the animal body part, organ or body system \"Cephalisation\" (Nervous System). Nerve tissue gathers at the front, next to the senses. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_ganglia",
+   "tree": "morphology",
+   "item": "ganglia",
+   "prompt": "Ganglia: an illustration of the animal body part, organ or body system \"Ganglia\" (Nervous System). Clusters of neurons in each segment that process signals locally. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_chemoreceptors",
+   "tree": "morphology",
+   "item": "chemoreceptors",
+   "prompt": "Chemoreceptors: an illustration of the animal body part, organ or body system \"Chemoreceptors\" (Nervous System). Smell and taste: detecting dissolved chemicals. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_compound_eyes",
+   "tree": "morphology",
+   "item": "compound_eyes",
+   "prompt": "Compound Eyes: an illustration of the animal body part, organ or body system \"Compound Eyes\" (Nervous System). Hundreds of lenses, each seeing a pixel: the eyes of trilobites and insects. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_dorsal_nerve_cord",
+   "tree": "morphology",
+   "item": "dorsal_nerve_cord",
+   "prompt": "Spinal Cord: an illustration of the animal body part, organ or body system \"Spinal Cord\" (Nervous System). A hollow nerve cord along the back: the chordate spinal cord. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_camera_eyes",
+   "tree": "morphology",
+   "item": "camera_eyes",
+   "prompt": "Camera Eyes: an illustration of the animal body part, organ or body system \"Camera Eyes\" (Nervous System). A lens focuses an image on the retina (vertebrates, cephalopods). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_three_part_brain",
+   "tree": "morphology",
+   "item": "three_part_brain",
+   "prompt": "Three-part Brain: an illustration of the animal body part, organ or body system \"Three-part Brain\" (Nervous System). Forebrain, midbrain and hindbrain, each with its own jobs. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_giant_axons",
+   "tree": "morphology",
+   "item": "giant_axons",
+   "prompt": "Giant Axons: an illustration of the animal body part, organ or body system \"Giant Axons\" (Nervous System). Extra-wide nerve fibres for lightning-fast escapes (squid). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_lateral_line_organ",
+   "tree": "morphology",
+   "item": "lateral_line_organ",
+   "prompt": "Lateral Line: an illustration of the animal body part, organ or body system \"Lateral Line\" (Nervous System). Senses water movement along the flanks. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_myelin",
+   "tree": "morphology",
+   "item": "myelin",
+   "prompt": "Myelin: an illustration of the animal body part, organ or body system \"Myelin\" (Nervous System). Insulated nerves carry signals far faster; first seen in jawed fish. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_cerebellum",
+   "tree": "morphology",
+   "item": "cerebellum",
+   "prompt": "Cerebellum: an illustration of the animal body part, organ or body system \"Cerebellum\" (Nervous System). Coordinates movement and balance (jawed vertebrates). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_electroreceptors",
+   "tree": "morphology",
+   "item": "electroreceptors",
+   "prompt": "Electroreceptors: an illustration of the animal body part, organ or body system \"Electroreceptors\" (Nervous System). Sense the faint electric fields of hidden prey. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_pallium",
+   "tree": "morphology",
+   "item": "pallium",
+   "prompt": "Pallium: an illustration of the animal body part, organ or body system \"Pallium\" (Nervous System). A forebrain roof that combines the senses: the ancestor of the cortex. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_eardrums",
+   "tree": "morphology",
+   "item": "eardrums",
+   "prompt": "Eardrums: an illustration of the animal body part, organ or body system \"Eardrums\" (Nervous System). Membranes that pick up sound in air. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_large_brain",
+   "tree": "morphology",
+   "item": "large_brain",
+   "prompt": "Large Brain: an illustration of the animal body part, organ or body system \"Large Brain\" (Nervous System). More brain per kilo of body (early mammals and birds). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_neocortex",
+   "tree": "morphology",
+   "item": "neocortex",
+   "prompt": "Neocortex: an illustration of the animal body part, organ or body system \"Neocortex\" (Nervous System). Six-layered cortex for flexible behaviour (mammals). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_echolocating_ears",
+   "tree": "morphology",
+   "item": "echolocating_ears",
+   "prompt": "Echolocating Ears: an illustration of the animal body part, organ or body system \"Echolocating Ears\" (Nervous System). Hearing returning echoes of your own calls (bats, toothed whales). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_prefrontal_cortex",
+   "tree": "morphology",
+   "item": "prefrontal_cortex",
+   "prompt": "Prefrontal Cortex: an illustration of the animal body part, organ or body system \"Prefrontal Cortex\" (Nervous System). Planning and self-control (great apes). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_fluid_circulation",
+   "tree": "morphology",
+   "item": "fluid_circulation",
+   "prompt": "Fluid Circulation: an illustration of the animal body part, organ or body system \"Fluid Circulation\" (Circulatory System). Body fluid is moved around by body movement and beating cilia. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_pulsing_vessel",
+   "tree": "morphology",
+   "item": "pulsing_vessel",
+   "prompt": "Pulsing Vessel: an illustration of the animal body part, organ or body system \"Pulsing Vessel\" (Circulatory System). A muscular tube that squeezes blood along. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_open_circulation",
+   "tree": "morphology",
+   "item": "open_circulation",
+   "prompt": "Open Circulation: an illustration of the animal body part, organ or body system \"Open Circulation\" (Circulatory System). Blood bathes the organs directly (arthropods, most molluscs). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_closed_circulation",
+   "tree": "morphology",
+   "item": "closed_circulation",
+   "prompt": "Closed Circulation: an illustration of the animal body part, organ or body system \"Closed Circulation\" (Circulatory System). Blood stays inside vessels and moves faster (annelids, vertebrates). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_haemocyanin",
+   "tree": "morphology",
+   "item": "haemocyanin",
+   "prompt": "Haemocyanin: an illustration of the animal body part, organ or body system \"Haemocyanin\" (Circulatory System). Copper-based blue blood that carries oxygen. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_haemoglobin",
+   "tree": "morphology",
+   "item": "haemoglobin",
+   "prompt": "Haemoglobin: an illustration of the animal body part, organ or body system \"Haemoglobin\" (Circulatory System). Iron-based red pigment that carries oxygen. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_red_blood_cells",
+   "tree": "morphology",
+   "item": "red_blood_cells",
+   "prompt": "Red Blood Cells: an illustration of the animal body part, organ or body system \"Red Blood Cells\" (Circulatory System). Haemoglobin packed into cells carries far more oxygen. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_two_chambered_heart",
+   "tree": "morphology",
+   "item": "two_chambered_heart",
+   "prompt": "Two-chambered Heart: an illustration of the animal body part, organ or body system \"Two-chambered Heart\" (Circulatory System). An atrium and a ventricle (fish). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_three_hearts",
+   "tree": "morphology",
+   "item": "three_hearts",
+   "prompt": "Three Hearts: an illustration of the animal body part, organ or body system \"Three Hearts\" (Circulatory System). Extra hearts pump blood through the gills (cephalopods). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_capillaries",
+   "tree": "morphology",
+   "item": "capillaries",
+   "prompt": "Capillaries: an illustration of the animal body part, organ or body system \"Capillaries\" (Circulatory System). Vessels one cell thick bring oxygen right up to every tissue. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_blood_clotting",
+   "tree": "morphology",
+   "item": "blood_clotting",
+   "prompt": "Blood Clotting: an illustration of the animal body part, organ or body system \"Blood Clotting\" (Circulatory System). Clotting proteins seal a wound before too much blood is lost. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_hepatic_portal",
+   "tree": "morphology",
+   "item": "hepatic_portal",
+   "prompt": "Hepatic Portal Vein: an illustration of the animal body part, organ or body system \"Hepatic Portal Vein\" (Circulatory System). Blood from the gut passes through the liver before reaching the body. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_three_chambered_heart",
+   "tree": "morphology",
+   "item": "three_chambered_heart",
+   "prompt": "Three-chambered Heart: an illustration of the animal body part, organ or body system \"Three-chambered Heart\" (Circulatory System). Two atria keep lung blood and body blood partly apart (amphibians). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_coronary_arteries",
+   "tree": "morphology",
+   "item": "coronary_arteries",
+   "prompt": "Coronary Arteries: an illustration of the animal body part, organ or body system \"Coronary Arteries\" (Circulatory System). The heart muscle gets a blood supply of its own, so it can work harder. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_accessory_hearts",
+   "tree": "morphology",
+   "item": "accessory_hearts",
+   "prompt": "Accessory Hearts: an illustration of the animal body part, organ or body system \"Accessory Hearts\" (Circulatory System). Extra pumps push blood into the wings, legs and antennae (insects). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_four_chambered_heart",
+   "tree": "morphology",
+   "item": "four_chambered_heart",
+   "prompt": "Four-chambered Heart: an illustration of the animal body part, organ or body system \"Four-chambered Heart\" (Circulatory System). Fully separate lung and body circuits (archosaurs, mammals). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_high_blood_pressure",
+   "tree": "morphology",
+   "item": "high_blood_pressure",
+   "prompt": "High Blood Pressure: an illustration of the animal body part, organ or body system \"High Blood Pressure\" (Circulatory System). Enough pressure to push blood up a sauropod's long neck. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_countercurrent_exchange",
+   "tree": "morphology",
+   "item": "countercurrent_exchange",
+   "prompt": "Countercurrent Heat Exchange: an illustration of the animal body part, organ or body system \"Countercurrent Heat Exchange\" (Circulatory System). Outgoing warm blood heats returning cold blood in flippers and legs. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_diving_reflex",
+   "tree": "morphology",
+   "item": "diving_reflex",
+   "prompt": "Diving Reflex: an illustration of the animal body part, organ or body system \"Diving Reflex\" (Circulatory System). On long dives the heart slows and blood goes to the brain (whales, seals). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_myoglobin_stores",
+   "tree": "morphology",
+   "item": "myoglobin_stores",
+   "prompt": "Myoglobin Stores: an illustration of the animal body part, organ or body system \"Myoglobin Stores\" (Circulatory System). Muscles packed with oxygen-storing myoglobin. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_skin_breathing",
+   "tree": "morphology",
+   "item": "skin_breathing",
+   "prompt": "Skin Breathing: an illustration of the animal body part, organ or body system \"Skin Breathing\" (Respiratory System). Oxygen diffuses in through a thin body wall. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_gills",
+   "tree": "morphology",
+   "item": "gills",
+   "prompt": "Gills: an illustration of the animal body part, organ or body system \"Gills\" (Respiratory System). Feathery surfaces for taking oxygen from water. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_pharyngeal_slits",
+   "tree": "morphology",
+   "item": "pharyngeal_slits",
+   "prompt": "Pharyngeal Slits: an illustration of the animal body part, organ or body system \"Pharyngeal Slits\" (Respiratory System). Slits in the throat that let water flow out past the gills. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_book_gills",
+   "tree": "morphology",
+   "item": "book_gills",
+   "prompt": "Book Gills: an illustration of the animal body part, organ or body system \"Book Gills\" (Respiratory System). Stacked gill plates (horseshoe crabs, sea scorpions). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_gill_arches",
+   "tree": "morphology",
+   "item": "gill_arches",
+   "prompt": "Gill Arches: an illustration of the animal body part, organ or body system \"Gill Arches\" (Respiratory System). Bony or cartilage arches support the gills. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_tracheae",
+   "tree": "morphology",
+   "item": "tracheae",
+   "prompt": "Tracheae: an illustration of the animal body part, organ or body system \"Tracheae\" (Respiratory System). Air tubes run straight to the tissues (insects, millipedes). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_spiracles",
+   "tree": "morphology",
+   "item": "spiracles",
+   "prompt": "Spiracles: an illustration of the animal body part, organ or body system \"Spiracles\" (Respiratory System). Closable openings to the tracheae that save water. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_book_lungs",
+   "tree": "morphology",
+   "item": "book_lungs",
+   "prompt": "Book Lungs: an illustration of the animal body part, organ or body system \"Book Lungs\" (Respiratory System). Air-breathing gill plates (scorpions, spiders). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_gill_cover",
+   "tree": "morphology",
+   "item": "gill_cover",
+   "prompt": "Gill Cover: an illustration of the animal body part, organ or body system \"Gill Cover\" (Respiratory System). A bony flap that pumps water over the gills. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_lungs",
+   "tree": "morphology",
+   "item": "lungs",
+   "prompt": "Lungs: an illustration of the animal body part, organ or body system \"Lungs\" (Respiratory System). Air sacs off the gut let fish gulp air in stagnant water. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_swim_bladder",
+   "tree": "morphology",
+   "item": "swim_bladder",
+   "prompt": "Swim Bladder: an illustration of the animal body part, organ or body system \"Swim Bladder\" (Respiratory System). The lung becomes a gas float for buoyancy (ray-finned fish). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_throat_pumping",
+   "tree": "morphology",
+   "item": "throat_pumping",
+   "prompt": "Throat Pumping: an illustration of the animal body part, organ or body system \"Throat Pumping\" (Respiratory System). Gulping air in with the floor of the mouth (amphibians). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_larynx",
+   "tree": "morphology",
+   "item": "larynx",
+   "prompt": "Larynx: an illustration of the animal body part, organ or body system \"Larynx\" (Respiratory System). A valve that guards the airway; later the voice box. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_rib_breathing",
+   "tree": "morphology",
+   "item": "rib_breathing",
+   "prompt": "Rib Breathing: an illustration of the animal body part, organ or body system \"Rib Breathing\" (Respiratory System). Expanding the ribcage to draw air in (amniotes). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_diaphragm",
+   "tree": "morphology",
+   "item": "diaphragm",
+   "prompt": "Diaphragm: an illustration of the animal body part, organ or body system \"Diaphragm\" (Respiratory System). A muscle sheet for powerful breathing (synapsids). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_turbinates",
+   "tree": "morphology",
+   "item": "turbinates",
+   "prompt": "Turbinates: an illustration of the animal body part, organ or body system \"Turbinates\" (Respiratory System). Scrolled nose bones that warm and moisten the air (warm-blooded animals). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_air_sacs",
+   "tree": "morphology",
+   "item": "air_sacs",
+   "prompt": "Air Sacs: an illustration of the animal body part, organ or body system \"Air Sacs\" (Respiratory System). Air flows one way through the lungs (dinosaurs, birds). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_plastron_gill",
+   "tree": "morphology",
+   "item": "plastron_gill",
+   "prompt": "Bubble Gill: an illustration of the animal body part, organ or body system \"Bubble Gill\" (Respiratory System). Breathing from a film of air held under water (water beetles). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_syrinx",
+   "tree": "morphology",
+   "item": "syrinx",
+   "prompt": "Syrinx: an illustration of the animal body part, organ or body system \"Syrinx\" (Respiratory System). The twin voice box of birds. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_labyrinth_organ",
+   "tree": "morphology",
+   "item": "labyrinth_organ",
+   "prompt": "Labyrinth Organ: an illustration of the animal body part, organ or body system \"Labyrinth Organ\" (Respiratory System). A folded chamber above the gills for breathing air (gouramis). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_blind_gut",
+   "tree": "morphology",
+   "item": "blind_gut",
+   "prompt": "Blind Gut: an illustration of the animal body part, organ or body system \"Blind Gut\" (Digestive System). A sac with one opening, like a sea anemone's. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_through_gut",
+   "tree": "morphology",
+   "item": "through_gut",
+   "prompt": "Through-gut: an illustration of the animal body part, organ or body system \"Through-gut\" (Digestive System). A mouth at one end and an anus at the other. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_filter_apparatus",
+   "tree": "morphology",
+   "item": "filter_apparatus",
+   "prompt": "Filter Apparatus: an illustration of the animal body part, organ or body system \"Filter Apparatus\" (Digestive System). Mucus nets or gill rakers strain food from water. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_radula",
+   "tree": "morphology",
+   "item": "radula",
+   "prompt": "Radula: an illustration of the animal body part, organ or body system \"Radula\" (Digestive System). A rasping tongue-ribbon (molluscs). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_mandibles",
+   "tree": "morphology",
+   "item": "mandibles",
+   "prompt": "Mandibles: an illustration of the animal body part, organ or body system \"Mandibles\" (Digestive System). Biting jaws of arthropods. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_jaws",
+   "tree": "morphology",
+   "item": "jaws",
+   "prompt": "Jaws: an illustration of the animal body part, organ or body system \"Jaws\" (Digestive System). Hinged jaws made from gill arches, so prey can be grabbed. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_gizzard",
+   "tree": "morphology",
+   "item": "gizzard",
+   "prompt": "Gizzard: an illustration of the animal body part, organ or body system \"Gizzard\" (Digestive System). A muscular stomach that grinds food. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_acid_stomach",
+   "tree": "morphology",
+   "item": "acid_stomach",
+   "prompt": "Acid Stomach: an illustration of the animal body part, organ or body system \"Acid Stomach\" (Digestive System). An acidic stomach digests large prey (jawed vertebrates). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_teeth",
+   "tree": "morphology",
+   "item": "teeth",
+   "prompt": "Teeth: an illustration of the animal body part, organ or body system \"Teeth\" (Digestive System). Hard teeth for gripping and cutting. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_spiral_valve",
+   "tree": "morphology",
+   "item": "spiral_valve",
+   "prompt": "Spiral Valve: an illustration of the animal body part, organ or body system \"Spiral Valve\" (Digestive System). A corkscrew intestine packs in more surface (sharks). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_tooth_replacement",
+   "tree": "morphology",
+   "item": "tooth_replacement",
+   "prompt": "Tooth Replacement: an illustration of the animal body part, organ or body system \"Tooth Replacement\" (Digestive System). Lost teeth are replaced all through life (sharks, reptiles). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_hindgut_fermentation",
+   "tree": "morphology",
+   "item": "hindgut_fermentation",
+   "prompt": "Hindgut Fermentation: an illustration of the animal body part, organ or body system \"Hindgut Fermentation\" (Digestive System). Microbes in an enlarged gut break down plant fibre. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_differentiated_teeth",
+   "tree": "morphology",
+   "item": "differentiated_teeth",
+   "prompt": "Differentiated Teeth: an illustration of the animal body part, organ or body system \"Differentiated Teeth\" (Digestive System). Incisors, canines and molars for different jobs. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_venom_glands",
+   "tree": "morphology",
+   "item": "venom_glands",
+   "prompt": "Venom Glands: an illustration of the animal body part, organ or body system \"Venom Glands\" (Digestive System). Glands that make venom, delivered by fangs, stings or grooved teeth (scorpions, centipedes, snakes). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_secondary_palate",
+   "tree": "morphology",
+   "item": "secondary_palate",
+   "prompt": "Secondary Palate: an illustration of the animal body part, organ or body system \"Secondary Palate\" (Digestive System). A bony roof to the mouth: breathe while chewing. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_gastroliths",
+   "tree": "morphology",
+   "item": "gastroliths",
+   "prompt": "Gastroliths: an illustration of the animal body part, organ or body system \"Gastroliths\" (Digestive System). Swallowed stones grind food (sauropods, birds). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_beak",
+   "tree": "morphology",
+   "item": "beak",
+   "prompt": "Beak: an illustration of the animal body part, organ or body system \"Beak\" (Digestive System). A toothless keratin beak (turtles, birds, ceratopsians). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_cusped_molars",
+   "tree": "morphology",
+   "item": "cusped_molars",
+   "prompt": "Cusped Molars: an illustration of the animal body part, organ or body system \"Cusped Molars\" (Digestive System). Molars that both slice and crush (mammals). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_dental_batteries",
+   "tree": "morphology",
+   "item": "dental_batteries",
+   "prompt": "Dental Batteries: an illustration of the animal body part, organ or body system \"Dental Batteries\" (Digestive System). Hundreds of stacked teeth grind tough plants (hadrosaurs). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_rumen",
+   "tree": "morphology",
+   "item": "rumen",
+   "prompt": "Rumen: an illustration of the animal body part, organ or body system \"Rumen\" (Digestive System). A many-chambered stomach for chewing the cud (ruminants). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_diffusion_waste",
+   "tree": "morphology",
+   "item": "diffusion_waste",
+   "prompt": "Diffusion: an illustration of the animal body part, organ or body system \"Diffusion\" (Excretory System). Waste simply leaks out through the thin body wall. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_osmoconformity",
+   "tree": "morphology",
+   "item": "osmoconformity",
+   "prompt": "Osmoconformity: an illustration of the animal body part, organ or body system \"Osmoconformity\" (Excretory System). Body fluids as salty as the sea, so there is no water balance to fight for (most marine invertebrates). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_nephridia",
+   "tree": "morphology",
+   "item": "nephridia",
+   "prompt": "Nephridia: an illustration of the animal body part, organ or body system \"Nephridia\" (Excretory System). Paired tubules in each segment filter the body fluid (worms). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_flame_cells",
+   "tree": "morphology",
+   "item": "flame_cells",
+   "prompt": "Flame Cells: an illustration of the animal body part, organ or body system \"Flame Cells\" (Excretory System). Beating cilia draw fluid into fine tubules (flatworms). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_ammonia_excretion",
+   "tree": "morphology",
+   "item": "ammonia_excretion",
+   "prompt": "Ammonia Excretion: an illustration of the animal body part, organ or body system \"Ammonia Excretion\" (Excretory System). Toxic ammonia is flushed away with plenty of water: cheap in the sea. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_antennal_glands",
+   "tree": "morphology",
+   "item": "antennal_glands",
+   "prompt": "Antennal Glands: an illustration of the animal body part, organ or body system \"Antennal Glands\" (Excretory System). Kidney-like glands at the base of the antennae (crustaceans). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_pronephros",
+   "tree": "morphology",
+   "item": "pronephros",
+   "prompt": "Head Kidney: an illustration of the animal body part, organ or body system \"Head Kidney\" (Excretory System). The first vertebrate kidney: a few tubules just behind the head. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_glomerular_kidney",
+   "tree": "morphology",
+   "item": "glomerular_kidney",
+   "prompt": "Filtering Kidney: an illustration of the animal body part, organ or body system \"Filtering Kidney\" (Excretory System). Kidneys filter waste out of the blood. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_malpighian_tubules",
+   "tree": "morphology",
+   "item": "malpighian_tubules",
+   "prompt": "Malpighian Tubules: an illustration of the animal body part, organ or body system \"Malpighian Tubules\" (Excretory System). Tubules pull waste out of the body fluid into the gut (insects, spiders). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_gill_salt_cells",
+   "tree": "morphology",
+   "item": "gill_salt_cells",
+   "prompt": "Gill Salt Cells: an illustration of the animal body part, organ or body system \"Gill Salt Cells\" (Excretory System). Cells in the gills pump salt in or out, for life in fresh or salt water. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_detox_liver",
+   "tree": "morphology",
+   "item": "detox_liver",
+   "prompt": "Detoxifying Liver: an illustration of the animal body part, organ or body system \"Detoxifying Liver\" (Excretory System). A liver that breaks down poisons and worn-out blood for disposal. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_urinary_bladder",
+   "tree": "morphology",
+   "item": "urinary_bladder",
+   "prompt": "Urinary Bladder: an illustration of the animal body part, organ or body system \"Urinary Bladder\" (Excretory System). Stores urine and lets water be taken back (tetrapods). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_urea_cycle",
+   "tree": "morphology",
+   "item": "urea_cycle",
+   "prompt": "Urea: an illustration of the animal body part, organ or body system \"Urea\" (Excretory System). Ammonia is turned into urea, which is less toxic and needs less water (amphibians, sharks). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_rectal_gland",
+   "tree": "morphology",
+   "item": "rectal_gland",
+   "prompt": "Rectal Gland: an illustration of the animal body part, organ or body system \"Rectal Gland\" (Excretory System). A gland that pumps out excess salt (sharks). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_water_saving_rectum",
+   "tree": "morphology",
+   "item": "water_saving_rectum",
+   "prompt": "Water-saving Rectum: an illustration of the animal body part, organ or body system \"Water-saving Rectum\" (Excretory System). Almost every drop of water is recovered from the waste (desert beetles). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_uric_acid",
+   "tree": "morphology",
+   "item": "uric_acid",
+   "prompt": "Uric Acid Waste: an illustration of the animal body part, organ or body system \"Uric Acid Waste\" (Excretory System). Water-saving solid waste (reptiles, birds, insects). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_metanephros",
+   "tree": "morphology",
+   "item": "metanephros",
+   "prompt": "Back Kidney: an illustration of the animal body part, organ or body system \"Back Kidney\" (Excretory System). A compact kidney with many more filtering units (amniotes). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_salt_glands",
+   "tree": "morphology",
+   "item": "salt_glands",
+   "prompt": "Salt Glands: an illustration of the animal body part, organ or body system \"Salt Glands\" (Excretory System). Glands that get rid of excess salt (marine reptiles, seabirds). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_loop_of_henle",
+   "tree": "morphology",
+   "item": "loop_of_henle",
+   "prompt": "Loop of Henle: an illustration of the animal body part, organ or body system \"Loop of Henle\" (Excretory System). Concentrated urine saves water (mammals, birds). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_desert_kidneys",
+   "tree": "morphology",
+   "item": "desert_kidneys",
+   "prompt": "Desert Kidneys: an illustration of the animal body part, organ or body system \"Desert Kidneys\" (Excretory System). Kidneys so efficient the animal never needs to drink (kangaroo rats). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_hormone_signalling",
+   "tree": "morphology",
+   "item": "hormone_signalling",
+   "prompt": "Hormone Signalling: an illustration of the animal body part, organ or body system \"Hormone Signalling\" (Endocrine System). Cells release chemical messages carried in body fluids. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_neurosecretory_cells",
+   "tree": "morphology",
+   "item": "neurosecretory_cells",
+   "prompt": "Neurosecretory Cells: an illustration of the animal body part, organ or body system \"Neurosecretory Cells\" (Endocrine System). Nerve cells that release hormones. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_insulin_signalling",
+   "tree": "morphology",
+   "item": "insulin_signalling",
+   "prompt": "Insulin Signalling: an illustration of the animal body part, organ or body system \"Insulin Signalling\" (Endocrine System). Hormones that control growth and the use of sugar. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_moulting_hormone",
+   "tree": "morphology",
+   "item": "moulting_hormone",
+   "prompt": "Moulting Hormone: an illustration of the animal body part, organ or body system \"Moulting Hormone\" (Endocrine System). Ecdysone decides when an arthropod moults. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_pituitary",
+   "tree": "morphology",
+   "item": "pituitary",
+   "prompt": "Pituitary Gland: an illustration of the animal body part, organ or body system \"Pituitary Gland\" (Endocrine System). The master gland under the brain. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_pineal_clock",
+   "tree": "morphology",
+   "item": "pineal_clock",
+   "prompt": "Pineal Clock: an illustration of the animal body part, organ or body system \"Pineal Clock\" (Endocrine System). Melatonin keeps track of day length and season. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_antifreeze_proteins",
+   "tree": "morphology",
+   "item": "antifreeze_proteins",
+   "prompt": "Antifreeze Proteins: an illustration of the animal body part, organ or body system \"Antifreeze Proteins\" (Endocrine System). Proteins that stop ice crystals forming in the blood. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_thyroid",
+   "tree": "morphology",
+   "item": "thyroid",
+   "prompt": "Thyroid: an illustration of the animal body part, organ or body system \"Thyroid\" (Endocrine System). Iodine hormones set the metabolic rate. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_stress_hormones",
+   "tree": "morphology",
+   "item": "stress_hormones",
+   "prompt": "Stress Hormones: an illustration of the animal body part, organ or body system \"Stress Hormones\" (Endocrine System). Adrenaline and cortisol: the fight-or-flight response. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_sex_hormones",
+   "tree": "morphology",
+   "item": "sex_hormones",
+   "prompt": "Sex Hormones: an illustration of the animal body part, organ or body system \"Sex Hormones\" (Endocrine System). Testosterone and oestrogen shape adult bodies. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_juvenile_hormone",
+   "tree": "morphology",
+   "item": "juvenile_hormone",
+   "prompt": "Juvenile Hormone: an illustration of the animal body part, organ or body system \"Juvenile Hormone\" (Endocrine System). Keeps insects as larvae until it is time to change. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_metamorphosis_hormones",
+   "tree": "morphology",
+   "item": "metamorphosis_hormones",
+   "prompt": "Metamorphosis Trigger: an illustration of the animal body part, organ or body system \"Metamorphosis Trigger\" (Endocrine System). A thyroid surge turns tadpoles into frogs. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_aestivation",
+   "tree": "morphology",
+   "item": "aestivation",
+   "prompt": "Aestivation: an illustration of the animal body part, organ or body system \"Aestivation\" (Endocrine System). Sleeping through droughts, like lungfish in mud cocoons. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_raised_metabolism",
+   "tree": "morphology",
+   "item": "raised_metabolism",
+   "prompt": "Raised Metabolism: an illustration of the animal body part, organ or body system \"Raised Metabolism\" (Endocrine System). Faster cells for sustained activity (therapsids). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_prolactin",
+   "tree": "morphology",
+   "item": "prolactin",
+   "prompt": "Prolactin: an illustration of the animal body part, organ or body system \"Prolactin\" (Endocrine System). The hormone behind brooding and milk. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_endothermy_node",
+   "tree": "morphology",
+   "item": "endothermy_node",
+   "prompt": "Endothermy: an illustration of the animal body part, organ or body system \"Endothermy\" (Endocrine System). Warm-blooded: body heat comes from metabolism. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_torpor",
+   "tree": "morphology",
+   "item": "torpor",
+   "prompt": "Torpor: an illustration of the animal body part, organ or body system \"Torpor\" (Endocrine System). A daily drop in body temperature to save energy. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_brown_fat",
+   "tree": "morphology",
+   "item": "brown_fat",
+   "prompt": "Brown Fat: an illustration of the animal body part, organ or body system \"Brown Fat\" (Endocrine System). Fat that burns to make heat. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_oxytocin_bonding",
+   "tree": "morphology",
+   "item": "oxytocin_bonding",
+   "prompt": "Oxytocin Bonding: an illustration of the animal body part, organ or body system \"Oxytocin Bonding\" (Endocrine System). The hormone of pair bonds and mother–young attachment. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_hibernation_node",
+   "tree": "morphology",
+   "item": "hibernation_node",
+   "prompt": "Hibernation: an illustration of the animal body part, organ or body system \"Hibernation\" (Endocrine System). Weeks-long deep torpor through the winter. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_broadcast_spawning",
+   "tree": "morphology",
+   "item": "broadcast_spawning",
+   "prompt": "Broadcast Spawning: an illustration of the animal body part, organ or body system \"Broadcast Spawning\" (Reproductive System). Releasing eggs and sperm into the sea. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_budding",
+   "tree": "morphology",
+   "item": "budding",
+   "prompt": "Budding: an illustration of the animal body part, organ or body system \"Budding\" (Reproductive System). Growing copies of yourself. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_planktonic_larvae",
+   "tree": "morphology",
+   "item": "planktonic_larvae",
+   "prompt": "Planktonic Larvae: an illustration of the animal body part, organ or body system \"Planktonic Larvae\" (Reproductive System). Drifting young that spread far. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_yolky_eggs",
+   "tree": "morphology",
+   "item": "yolky_eggs",
+   "prompt": "Yolky Eggs: an illustration of the animal body part, organ or body system \"Yolky Eggs\" (Reproductive System). Bigger eggs with stored food. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_regeneration_node",
+   "tree": "morphology",
+   "item": "regeneration_node",
+   "prompt": "Regeneration: an illustration of the animal body part, organ or body system \"Regeneration\" (Reproductive System). Regrowing lost body parts. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_internal_fertilisation",
+   "tree": "morphology",
+   "item": "internal_fertilisation",
+   "prompt": "Internal Fertilisation: an illustration of the animal body part, organ or body system \"Internal Fertilisation\" (Reproductive System). Sperm is delivered inside the female. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_spermatophores",
+   "tree": "morphology",
+   "item": "spermatophores",
+   "prompt": "Spermatophores: an illustration of the animal body part, organ or body system \"Spermatophores\" (Reproductive System). Sperm packets left for the female to pick up. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_parthenogenesis",
+   "tree": "morphology",
+   "item": "parthenogenesis",
+   "prompt": "Parthenogenesis: an illustration of the animal body part, organ or body system \"Parthenogenesis\" (Reproductive System). Females reproduce without males. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_claspers",
+   "tree": "morphology",
+   "item": "claspers",
+   "prompt": "Claspers: an illustration of the animal body part, organ or body system \"Claspers\" (Reproductive System). Fin organs for mating (sharks, placoderms). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_egg_cases",
+   "tree": "morphology",
+   "item": "egg_cases",
+   "prompt": "Egg Cases: an illustration of the animal body part, organ or body system \"Egg Cases\" (Reproductive System). Tough capsules that protect the embryo (mermaid's purses). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_aquatic_larvae",
+   "tree": "morphology",
+   "item": "aquatic_larvae",
+   "prompt": "Aquatic Larvae: an illustration of the animal body part, organ or body system \"Aquatic Larvae\" (Reproductive System). Tadpoles: amphibian young grow up in the water. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_live_birth",
+   "tree": "morphology",
+   "item": "live_birth",
+   "prompt": "Live Birth: an illustration of the animal body part, organ or body system \"Live Birth\" (Reproductive System). Young develop inside the mother (placoderms, ichthyosaurs). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_amniotic_egg",
+   "tree": "morphology",
+   "item": "amniotic_egg",
+   "prompt": "Amniotic Egg: an illustration of the animal body part, organ or body system \"Amniotic Egg\" (Reproductive System). An egg with its own membranes and water supply, so it can be laid on land. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_complete_metamorphosis",
+   "tree": "morphology",
+   "item": "complete_metamorphosis",
+   "prompt": "Complete Metamorphosis: an illustration of the animal body part, organ or body system \"Complete Metamorphosis\" (Reproductive System). Larva, pupa and adult (beetles, flies, butterflies). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_temperature_sex",
+   "tree": "morphology",
+   "item": "temperature_sex",
+   "prompt": "Temperature Sex Determination: an illustration of the animal body part, organ or body system \"Temperature Sex Determination\" (Reproductive System). Nest temperature decides the sex of the young (crocodiles, turtles). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_hard_eggshell",
+   "tree": "morphology",
+   "item": "hard_eggshell",
+   "prompt": "Hard Eggshell: an illustration of the animal body part, organ or body system \"Hard Eggshell\" (Reproductive System). Calcified shells (dinosaurs, birds). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_mammary_glands",
+   "tree": "morphology",
+   "item": "mammary_glands",
+   "prompt": "Mammary Glands: an illustration of the animal body part, organ or body system \"Mammary Glands\" (Reproductive System). Milk for the young. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_placenta",
+   "tree": "morphology",
+   "item": "placenta",
+   "prompt": "Placenta: an illustration of the animal body part, organ or body system \"Placenta\" (Reproductive System). The embryo is fed through the womb wall. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_pouch",
+   "tree": "morphology",
+   "item": "pouch",
+   "prompt": "Pouch: an illustration of the animal body part, organ or body system \"Pouch\" (Reproductive System). Tiny newborns finish growing in a pouch (marsupials). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_long_childhood",
+   "tree": "morphology",
+   "item": "long_childhood",
+   "prompt": "Long Childhood: an illustration of the animal body part, organ or body system \"Long Childhood\" (Reproductive System). Slow growth gives time for a bigger brain to develop. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_bilateral_body",
+   "tree": "morphology",
+   "item": "bilateral_body",
+   "prompt": "Bilateral Body: an illustration of the animal body part, organ or body system \"Bilateral Body\" (Locomotor System). A front, a back and two mirrored sides: the body plan of most animals. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_muscle_bands",
+   "tree": "morphology",
+   "item": "muscle_bands",
+   "prompt": "Muscle Bands: an illustration of the animal body part, organ or body system \"Muscle Bands\" (Locomotor System). Long and circular muscles for crawling, wriggling and burrowing. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_segmentation",
+   "tree": "morphology",
+   "item": "segmentation",
+   "prompt": "Segmentation: an illustration of the animal body part, organ or body system \"Segmentation\" (Locomotor System). The body is built from repeated segments that can specialise independently. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_coelom",
+   "tree": "morphology",
+   "item": "coelom",
+   "prompt": "Body Cavity: an illustration of the animal body part, organ or body system \"Body Cavity\" (Locomotor System). A fluid-filled cavity that cushions the organs and works as a hydrostatic skeleton. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_exoskeleton",
+   "tree": "morphology",
+   "item": "exoskeleton",
+   "prompt": "Exoskeleton: an illustration of the animal body part, organ or body system \"Exoskeleton\" (Locomotor System). A hard outer cuticle that protects the body and anchors the muscles. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_jointed_limbs",
+   "tree": "morphology",
+   "item": "jointed_limbs",
+   "prompt": "Jointed Limbs: an illustration of the animal body part, organ or body system \"Jointed Limbs\" (Locomotor System). Hinged legs inside the exoskeleton: the arthropod toolkit. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_notochord",
+   "tree": "morphology",
+   "item": "notochord",
+   "prompt": "Notochord: an illustration of the animal body part, organ or body system \"Notochord\" (Locomotor System). A stiff, flexible rod along the back: the first chordate skeleton. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_myomeres",
+   "tree": "morphology",
+   "item": "myomeres",
+   "prompt": "Myomeres: an illustration of the animal body part, organ or body system \"Myomeres\" (Locomotor System). Zig-zag muscle blocks that bend the body from side to side: fish-style swimming. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_vertebral_column",
+   "tree": "morphology",
+   "item": "vertebral_column",
+   "prompt": "Vertebrae: an illustration of the animal body part, organ or body system \"Vertebrae\" (Locomotor System). Blocks of cartilage or bone protect the nerve cord and stiffen the back. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_tail_fin",
+   "tree": "morphology",
+   "item": "tail_fin",
+   "prompt": "Tail Fin: an illustration of the animal body part, organ or body system \"Tail Fin\" (Locomotor System). A broad tail turns side-to-side bending into thrust. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_paired_fins",
+   "tree": "morphology",
+   "item": "paired_fins",
+   "prompt": "Paired Fins: an illustration of the animal body part, organ or body system \"Paired Fins\" (Locomotor System). Fins on both sides give steering, braking and lift. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_endochondral_bone",
+   "tree": "morphology",
+   "item": "endochondral_bone",
+   "prompt": "Internal Bone: an illustration of the animal body part, organ or body system \"Internal Bone\" (Locomotor System). Bone that replaces cartilage: the inner skeleton of bony fish and their descendants. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_terrestrial_legs",
+   "tree": "morphology",
+   "item": "terrestrial_legs",
+   "prompt": "Terrestrial Legs: an illustration of the animal body part, organ or body system \"Terrestrial Legs\" (Locomotor System). Legs that hold the body up out of water: the first land millipedes. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_lobe_fins",
+   "tree": "morphology",
+   "item": "lobe_fins",
+   "prompt": "Lobe Fins: an illustration of the animal body part, organ or body system \"Lobe Fins\" (Locomotor System). Fleshy fins with a bony core, the starting point for legs. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_digits",
+   "tree": "morphology",
+   "item": "digits",
+   "prompt": "Digits: an illustration of the animal body part, organ or body system \"Digits\" (Locomotor System). Fingers and toes at the end of the limb (Acanthostega had eight). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_weight_bearing_girdles",
+   "tree": "morphology",
+   "item": "weight_bearing_girdles",
+   "prompt": "Weight-bearing Girdles: an illustration of the animal body part, organ or body system \"Weight-bearing Girdles\" (Locomotor System). Shoulder and hip girdles strong enough to carry the body out of water. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_insect_wings",
+   "tree": "morphology",
+   "item": "insect_wings",
+   "prompt": "Insect Wings: an illustration of the animal body part, organ or body system \"Insect Wings\" (Locomotor System). Thin outgrowths of the thorax: the first animals to fly. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_upright_stance",
+   "tree": "morphology",
+   "item": "upright_stance",
+   "prompt": "Upright Stance: an illustration of the animal body part, organ or body system \"Upright Stance\" (Locomotor System). Legs held under the body for efficient running and breathing. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_hollow_bones",
+   "tree": "morphology",
+   "item": "hollow_bones",
+   "prompt": "Hollow Bones: an illustration of the animal body part, organ or body system \"Hollow Bones\" (Locomotor System). Air-filled bones are light and strong (dinosaurs, pterosaurs, birds). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_feathered_wings",
+   "tree": "morphology",
+   "item": "feathered_wings",
+   "prompt": "Feathered Wings: an illustration of the animal body part, organ or body system \"Feathered Wings\" (Locomotor System). Arms lined with flight feathers, as on Archaeopteryx. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_phagocytes",
+   "tree": "morphology",
+   "item": "phagocytes",
+   "prompt": "Phagocytes: an illustration of the animal body part, organ or body system \"Phagocytes\" (Immune System). Wandering cells that engulf bacteria and debris. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_antimicrobial_peptides",
+   "tree": "morphology",
+   "item": "antimicrobial_peptides",
+   "prompt": "Antimicrobial Peptides: an illustration of the animal body part, organ or body system \"Antimicrobial Peptides\" (Immune System). Small proteins that punch holes in bacteria. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_pattern_receptors",
+   "tree": "morphology",
+   "item": "pattern_receptors",
+   "prompt": "Pattern Recognition: an illustration of the animal body part, organ or body system \"Pattern Recognition\" (Immune System). Receptors that recognise molecules common to many microbes. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_encapsulation",
+   "tree": "morphology",
+   "item": "encapsulation",
+   "prompt": "Encapsulation: an illustration of the animal body part, organ or body system \"Encapsulation\" (Immune System). Parasites too big to swallow are walled off inside a capsule of cells. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_complement",
+   "tree": "morphology",
+   "item": "complement",
+   "prompt": "Complement System: an illustration of the animal body part, organ or body system \"Complement System\" (Immune System). Blood proteins that tag invaders and burst them open. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_melanisation",
+   "tree": "morphology",
+   "item": "melanisation",
+   "prompt": "Melanisation: an illustration of the animal body part, organ or body system \"Melanisation\" (Immune System). Invaders are smothered in melanin (insects, crustaceans). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_inflammation",
+   "tree": "morphology",
+   "item": "inflammation",
+   "prompt": "Inflammation: an illustration of the animal body part, organ or body system \"Inflammation\" (Immune System). Heat, swelling and a rush of defender cells to a wound. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_variable_receptors",
+   "tree": "morphology",
+   "item": "variable_receptors",
+   "prompt": "Variable Receptors: an illustration of the animal body part, organ or body system \"Variable Receptors\" (Immune System). An adaptive immune system of its own, built from different genes (lampreys, hagfish). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_adaptive_immunity",
+   "tree": "morphology",
+   "item": "adaptive_immunity",
+   "prompt": "Adaptive Immunity: an illustration of the animal body part, organ or body system \"Adaptive Immunity\" (Immune System). Lymphocytes reshuffle their genes to recognise almost any invader (jawed vertebrates). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_antibodies",
+   "tree": "morphology",
+   "item": "antibodies",
+   "prompt": "Antibodies: an illustration of the animal body part, organ or body system \"Antibodies\" (Immune System). Y-shaped proteins that lock on to one particular invader. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_thymus",
+   "tree": "morphology",
+   "item": "thymus",
+   "prompt": "Thymus: an illustration of the animal body part, organ or body system \"Thymus\" (Immune System). A gland where T cells learn to tell self from foreign. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_mhc",
+   "tree": "morphology",
+   "item": "mhc",
+   "prompt": "MHC Molecules: an illustration of the animal body part, organ or body system \"MHC Molecules\" (Immune System). Molecules that show fragments of invaders to T cells. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_spleen",
+   "tree": "morphology",
+   "item": "spleen",
+   "prompt": "Spleen: an illustration of the animal body part, organ or body system \"Spleen\" (Immune System). Filters the blood and stores immune cells. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_lymphatic_system",
+   "tree": "morphology",
+   "item": "lymphatic_system",
+   "prompt": "Lymphatic System: an illustration of the animal body part, organ or body system \"Lymphatic System\" (Immune System). Vessels that return fluid and carry immune cells. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_immune_memory",
+   "tree": "morphology",
+   "item": "immune_memory",
+   "prompt": "Immune Memory: an illustration of the animal body part, organ or body system \"Immune Memory\" (Immune System). A second infection is beaten faster than the first. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_bone_marrow",
+   "tree": "morphology",
+   "item": "bone_marrow",
+   "prompt": "Bone Marrow: an illustration of the animal body part, organ or body system \"Bone Marrow\" (Immune System). Blood and immune cells are made inside the bones (tetrapods). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_fever",
+   "tree": "morphology",
+   "item": "fever",
+   "prompt": "Fever: an illustration of the animal body part, organ or body system \"Fever\" (Immune System). Raising body temperature to slow down pathogens. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_maternal_antibodies",
+   "tree": "morphology",
+   "item": "maternal_antibodies",
+   "prompt": "Maternal Antibodies: an illustration of the animal body part, organ or body system \"Maternal Antibodies\" (Immune System). Mothers pass their protection on through the egg or milk. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_lymph_nodes",
+   "tree": "morphology",
+   "item": "lymph_nodes",
+   "prompt": "Lymph Nodes: an illustration of the animal body part, organ or body system \"Lymph Nodes\" (Immune System). Filter stations where immune cells meet invaders (mammals). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_germinal_centres",
+   "tree": "morphology",
+   "item": "germinal_centres",
+   "prompt": "Germinal Centres: an illustration of the animal body part, organ or body system \"Germinal Centres\" (Immune System). Antibodies are fine-tuned to fit their target better and better (mammals). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_epidermis",
+   "tree": "morphology",
+   "item": "epidermis",
+   "prompt": "Epidermis: an illustration of the animal body part, organ or body system \"Epidermis\" (Integumentary System). A protective outer layer of cells. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_mucus_coat",
+   "tree": "morphology",
+   "item": "mucus_coat",
+   "prompt": "Mucus Coat: an illustration of the animal body part, organ or body system \"Mucus Coat\" (Integumentary System). Slippery slime that protects the skin and eases movement. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_chitin_cuticle",
+   "tree": "morphology",
+   "item": "chitin_cuticle",
+   "prompt": "Chitin Cuticle: an illustration of the animal body part, organ or body system \"Chitin Cuticle\" (Integumentary System). A tough skin made of a sugar polymer. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_spines",
+   "tree": "morphology",
+   "item": "spines",
+   "prompt": "Spines: an illustration of the animal body part, organ or body system \"Spines\" (Integumentary System). Sharp projections deter predators (Wiwaxia, Hallucigenia). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_chromatophores",
+   "tree": "morphology",
+   "item": "chromatophores",
+   "prompt": "Chromatophores: an illustration of the animal body part, organ or body system \"Chromatophores\" (Integumentary System). Pigment cells that can change colour. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_dermal_armour",
+   "tree": "morphology",
+   "item": "dermal_armour",
+   "prompt": "Dermal Armour: an illustration of the animal body part, organ or body system \"Dermal Armour\" (Integumentary System). Bony plates in the skin (early jawless fish). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_placoid_scales",
+   "tree": "morphology",
+   "item": "placoid_scales",
+   "prompt": "Placoid Scales: an illustration of the animal body part, organ or body system \"Placoid Scales\" (Integumentary System). Tiny tooth-like scales that cut drag (sharks). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_bioluminescence",
+   "tree": "morphology",
+   "item": "bioluminescence",
+   "prompt": "Bioluminescence: an illustration of the animal body part, organ or body system \"Bioluminescence\" (Integumentary System). Making light with a chemical reaction. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_waterproof_cuticle",
+   "tree": "morphology",
+   "item": "waterproof_cuticle",
+   "prompt": "Waterproof Cuticle: an illustration of the animal body part, organ or body system \"Waterproof Cuticle\" (Integumentary System). A wax layer stops the body drying out on land. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_toxic_skin",
+   "tree": "morphology",
+   "item": "toxic_skin",
+   "prompt": "Toxic Skin: an illustration of the animal body part, organ or body system \"Toxic Skin\" (Integumentary System). Skin glands that make poison (amphibians). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_keratin_scales",
+   "tree": "morphology",
+   "item": "keratin_scales",
+   "prompt": "Keratin Scales: an illustration of the animal body part, organ or body system \"Keratin Scales\" (Integumentary System). Dry, waterproof scales (reptiles). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_osteoderms",
+   "tree": "morphology",
+   "item": "osteoderms",
+   "prompt": "Osteoderms: an illustration of the animal body part, organ or body system \"Osteoderms\" (Integumentary System). Bony plates under the scales (crocodiles, ankylosaurs). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_protofeathers",
+   "tree": "morphology",
+   "item": "protofeathers",
+   "prompt": "Protofeathers: an illustration of the animal body part, organ or body system \"Protofeathers\" (Integumentary System). Fuzzy filaments for insulation. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_fur_and_glands",
+   "tree": "morphology",
+   "item": "fur_and_glands",
+   "prompt": "Fur and Glands: an illustration of the animal body part, organ or body system \"Fur and Glands\" (Integumentary System). Insulating hair and skin glands (mammals). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_feathers",
+   "tree": "morphology",
+   "item": "feathers",
+   "prompt": "Feathers: an illustration of the animal body part, organ or body system \"Feathers\" (Integumentary System). Vaned feathers for warmth, display and flight. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_structural_colour",
+   "tree": "morphology",
+   "item": "structural_colour",
+   "prompt": "Structural Colour: an illustration of the animal body part, organ or body system \"Structural Colour\" (Integumentary System). Iridescent colour from microscopic structure instead of pigment. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_horns",
+   "tree": "morphology",
+   "item": "horns",
+   "prompt": "Horns: an illustration of the animal body part, organ or body system \"Horns\" (Integumentary System). Keratin-sheathed bony horns (ceratopsians, later antelopes and cattle). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_sweat_glands",
+   "tree": "morphology",
+   "item": "sweat_glands",
+   "prompt": "Sweat Glands: an illustration of the animal body part, organ or body system \"Sweat Glands\" (Integumentary System). Cooling by evaporation. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_blubber",
+   "tree": "morphology",
+   "item": "blubber",
+   "prompt": "Blubber: an illustration of the animal body part, organ or body system \"Blubber\" (Integumentary System). A thick fat layer insulates in cold seas. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_quills",
+   "tree": "morphology",
+   "item": "quills",
+   "prompt": "Quills: an illustration of the animal body part, organ or body system \"Quills\" (Integumentary System). Hairs hardened into spines (porcupines, hedgehogs). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_warning_colours",
+   "tree": "morphology",
+   "item": "warning_colours",
+   "prompt": "Warning Colours: an illustration of the animal body part, organ or body system \"Warning Colours\" (Integumentary System). Bright colours that advertise poison. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_countershading",
+   "tree": "morphology",
+   "item": "countershading",
+   "prompt": "Countershading: an illustration of the animal body part, organ or body system \"Countershading\" (Integumentary System). Dark above and pale below, so the body looks flat. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_ink_cloud",
+   "tree": "morphology",
+   "item": "ink_cloud",
+   "prompt": "Ink Cloud: an illustration of the animal body part, organ or body system \"Ink Cloud\" (Integumentary System). A cloud of ink covers the escape (cephalopods). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_chemical_spray",
+   "tree": "morphology",
+   "item": "chemical_spray",
+   "prompt": "Chemical Spray: an illustration of the animal body part, organ or body system \"Chemical Spray\" (Integumentary System). Spraying irritants (bombardier beetles, later skunks). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_mimicry",
+   "tree": "morphology",
+   "item": "mimicry",
+   "prompt": "Mimicry: an illustration of the animal body part, organ or body system \"Mimicry\" (Integumentary System). Harmless species copying dangerous ones. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_tail_weapons",
+   "tree": "morphology",
+   "item": "tail_weapons",
+   "prompt": "Tail Weapons: an illustration of the animal body part, organ or body system \"Tail Weapons\" (Locomotor System). Clubs and spikes swung at attackers (stegosaurs, ankylosaurs). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_hermaphroditism",
+   "tree": "morphology",
+   "item": "hermaphroditism",
+   "prompt": "Hermaphroditism: an illustration of the animal body part, organ or body system \"Hermaphroditism\" (Reproductive System). Both sexes in one body (snails, worms). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_colonial_living",
+   "tree": "morphology",
+   "item": "colonial_living",
+   "prompt": "Colonial Living: an illustration of the animal body part, organ or body system \"Colonial Living\" (Reproductive System). Clones joined into one colony (corals, graptolites). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_gliding",
+   "tree": "morphology",
+   "item": "gliding",
+   "prompt": "Gliding: an illustration of the animal body part, organ or body system \"Gliding\" (Locomotor System). Leaping and gliding between trees. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_diapause",
+   "tree": "morphology",
+   "item": "diapause",
+   "prompt": "Diapause: an illustration of the animal body part, organ or body system \"Diapause\" (Endocrine System). Development pauses until conditions improve. Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "f_electric_organs",
+   "tree": "morphology",
+   "item": "electric_organs",
+   "prompt": "Electric Organs: an illustration of the animal body part, organ or body system \"Electric Organs\" (Nervous System). Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays). Show it clearly on a typical animal that has it, the relevant body part emphasised, in a cutaway or close-up where it is internal."
+  },
+  {
+   "id": "b_foraging",
+   "tree": "ethology",
+   "item": "foraging",
+   "prompt": "Foraging: an illustration of the animal behaviour \"Foraging\" (Foraging Behaviour). Searching the sea floor for food. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_scavenging",
+   "tree": "ethology",
+   "item": "scavenging",
+   "prompt": "Scavenging: an illustration of the animal behaviour \"Scavenging\" (Foraging Behaviour). Feeding on the dead. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_active_predation",
+   "tree": "ethology",
+   "item": "active_predation",
+   "prompt": "Active Predation: an illustration of the animal behaviour \"Active Predation\" (Foraging Behaviour). Hunting other animals (Anomalocaris). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_ambush_hunting",
+   "tree": "ethology",
+   "item": "ambush_hunting",
+   "prompt": "Ambush Hunting: an illustration of the animal behaviour \"Ambush Hunting\" (Foraging Behaviour). Waiting hidden and striking at passing prey. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_patch_foraging",
+   "tree": "ethology",
+   "item": "patch_foraging",
+   "prompt": "Patch Foraging: an illustration of the animal behaviour \"Patch Foraging\" (Foraging Behaviour). Moving on when a food patch runs low. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_pursuit_hunting",
+   "tree": "ethology",
+   "item": "pursuit_hunting",
+   "prompt": "Pursuit Hunting: an illustration of the animal behaviour \"Pursuit Hunting\" (Foraging Behaviour). Chasing prey down in open water. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_plant_feeding",
+   "tree": "ethology",
+   "item": "plant_feeding",
+   "prompt": "Plant Feeding: an illustration of the animal behaviour \"Plant Feeding\" (Foraging Behaviour). Eating land plants. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_silk_traps",
+   "tree": "ethology",
+   "item": "silk_traps",
+   "prompt": "Silk Traps: an illustration of the animal behaviour \"Silk Traps\" (Foraging Behaviour). Webs and trip-lines of silk. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_omnivory_node",
+   "tree": "ethology",
+   "item": "omnivory_node",
+   "prompt": "Omnivory: an illustration of the animal behaviour \"Omnivory\" (Foraging Behaviour). Eating whatever is available. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_stalking",
+   "tree": "ethology",
+   "item": "stalking",
+   "prompt": "Stalking: an illustration of the animal behaviour \"Stalking\" (Foraging Behaviour). Creeping up on prey unseen. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_pack_hunting",
+   "tree": "ethology",
+   "item": "pack_hunting",
+   "prompt": "Pack Hunting: an illustration of the animal behaviour \"Pack Hunting\" (Foraging Behaviour). Hunting together to take bigger prey. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_nectar_feeding_node",
+   "tree": "ethology",
+   "item": "nectar_feeding_node",
+   "prompt": "Nectar Feeding: an illustration of the animal behaviour \"Nectar Feeding\" (Foraging Behaviour). Drinking nectar and carrying pollen between flowers. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_fruit_eating",
+   "tree": "ethology",
+   "item": "fruit_eating",
+   "prompt": "Fruit Eating: an illustration of the animal behaviour \"Fruit Eating\" (Foraging Behaviour). Eating fruit and spreading the seeds. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_food_caching",
+   "tree": "ethology",
+   "item": "food_caching",
+   "prompt": "Food Caching: an illustration of the animal behaviour \"Food Caching\" (Foraging Behaviour). Hiding food for later (squirrels, jays). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_fungus_farming",
+   "tree": "ethology",
+   "item": "fungus_farming",
+   "prompt": "Fungus Farming: an illustration of the animal behaviour \"Fungus Farming\" (Foraging Behaviour). Growing fungus gardens for food (leafcutter ants, termites). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_grass_grazing",
+   "tree": "ethology",
+   "item": "grass_grazing",
+   "prompt": "Grass Grazing: an illustration of the animal behaviour \"Grass Grazing\" (Foraging Behaviour). Grazing the new grasslands in herds. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_tool_use",
+   "tree": "ethology",
+   "item": "tool_use",
+   "prompt": "Tool Use: an illustration of the animal behaviour \"Tool Use\" (Foraging Behaviour). Using objects as tools. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_persistence_hunting",
+   "tree": "ethology",
+   "item": "persistence_hunting",
+   "prompt": "Persistence Hunting: an illustration of the animal behaviour \"Persistence Hunting\" (Foraging Behaviour). Running prey to exhaustion (humans). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_withdrawal",
+   "tree": "ethology",
+   "item": "withdrawal",
+   "prompt": "Withdrawal Reflex: an illustration of the animal behaviour \"Withdrawal Reflex\" (Antipredator Behaviour). Pulling back into a tube or shell when touched. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_hiding",
+   "tree": "ethology",
+   "item": "hiding",
+   "prompt": "Hiding: an illustration of the animal behaviour \"Hiding\" (Antipredator Behaviour). Keeping still in cover. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_burrowing_escape",
+   "tree": "ethology",
+   "item": "burrowing_escape",
+   "prompt": "Burrowing Escape: an illustration of the animal behaviour \"Burrowing Escape\" (Antipredator Behaviour). Digging into the sediment to escape. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_rolling_up",
+   "tree": "ethology",
+   "item": "rolling_up",
+   "prompt": "Rolling Up: an illustration of the animal behaviour \"Rolling Up\" (Antipredator Behaviour). Curling into an armoured ball (trilobites, pill bugs). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_autotomy",
+   "tree": "ethology",
+   "item": "autotomy",
+   "prompt": "Autotomy: an illustration of the animal behaviour \"Autotomy\" (Antipredator Behaviour). Dropping a limb or tail to escape. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_freezing",
+   "tree": "ethology",
+   "item": "freezing",
+   "prompt": "Freezing: an illustration of the animal behaviour \"Freezing\" (Antipredator Behaviour). Staying motionless so predators lose interest. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_startle_escape",
+   "tree": "ethology",
+   "item": "startle_escape",
+   "prompt": "Startle Escape: an illustration of the animal behaviour \"Startle Escape\" (Antipredator Behaviour). A lightning-fast flick of the body away from danger (fish). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_playing_dead",
+   "tree": "ethology",
+   "item": "playing_dead",
+   "prompt": "Playing Dead: an illustration of the animal behaviour \"Playing Dead\" (Antipredator Behaviour). Going limp until the predator gives up. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_eyespot_display",
+   "tree": "ethology",
+   "item": "eyespot_display",
+   "prompt": "Eyespot Display: an illustration of the animal behaviour \"Eyespot Display\" (Antipredator Behaviour). Flashing fake eyes to startle attackers. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_group_vigilance",
+   "tree": "ethology",
+   "item": "group_vigilance",
+   "prompt": "Group Vigilance: an illustration of the animal behaviour \"Group Vigilance\" (Antipredator Behaviour). Many eyes: some watch while others feed. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_mobbing",
+   "tree": "ethology",
+   "item": "mobbing",
+   "prompt": "Mobbing: an illustration of the animal behaviour \"Mobbing\" (Antipredator Behaviour). Ganging up to drive a predator away. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_distraction_display",
+   "tree": "ethology",
+   "item": "distraction_display",
+   "prompt": "Distraction Display: an illustration of the animal behaviour \"Distraction Display\" (Antipredator Behaviour). Faking a broken wing to lure predators from the nest. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_stotting",
+   "tree": "ethology",
+   "item": "stotting",
+   "prompt": "Stotting: an illustration of the animal behaviour \"Stotting\" (Antipredator Behaviour). Leaping high to show predators you are too fit to chase. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_selfish_herd",
+   "tree": "ethology",
+   "item": "selfish_herd",
+   "prompt": "Selfish Herd: an illustration of the animal behaviour \"Selfish Herd\" (Antipredator Behaviour). Pushing into the middle of the group so others are on the outside. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_spawning_aggregations",
+   "tree": "ethology",
+   "item": "spawning_aggregations",
+   "prompt": "Spawning Aggregations: an illustration of the animal behaviour \"Spawning Aggregations\" (Reproductive Behaviour). Gathering in one place to spawn. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_synchronised_spawning",
+   "tree": "ethology",
+   "item": "synchronised_spawning",
+   "prompt": "Synchronised Spawning: an illustration of the animal behaviour \"Synchronised Spawning\" (Reproductive Behaviour). Spawning together on a cue from the moon or temperature. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_egg_sites",
+   "tree": "ethology",
+   "item": "egg_sites",
+   "prompt": "Choosing Egg Sites: an illustration of the animal behaviour \"Choosing Egg Sites\" (Reproductive Behaviour). Laying eggs in safe places. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_mate_guarding",
+   "tree": "ethology",
+   "item": "mate_guarding",
+   "prompt": "Mate Guarding: an illustration of the animal behaviour \"Mate Guarding\" (Reproductive Behaviour). Staying close to a mate to keep rivals away. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_egg_guarding",
+   "tree": "ethology",
+   "item": "egg_guarding",
+   "prompt": "Egg Guarding: an illustration of the animal behaviour \"Egg Guarding\" (Reproductive Behaviour). Staying with the eggs to drive off egg-eaters. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_sperm_competition",
+   "tree": "ethology",
+   "item": "sperm_competition",
+   "prompt": "Sperm Competition: an illustration of the animal behaviour \"Sperm Competition\" (Reproductive Behaviour). Rival males compete after mating, inside the female. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_courtship",
+   "tree": "ethology",
+   "item": "courtship",
+   "prompt": "Courtship: an illustration of the animal behaviour \"Courtship\" (Reproductive Behaviour). Rituals that persuade a mate. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_nuptial_gifts",
+   "tree": "ethology",
+   "item": "nuptial_gifts",
+   "prompt": "Nuptial Gifts: an illustration of the animal behaviour \"Nuptial Gifts\" (Reproductive Behaviour). Offering food to a mate. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_female_choice",
+   "tree": "ethology",
+   "item": "female_choice",
+   "prompt": "Female Choice: an illustration of the animal behaviour \"Female Choice\" (Reproductive Behaviour). Females choose the best-looking or best-sounding male. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_courtship_dance",
+   "tree": "ethology",
+   "item": "courtship_dance",
+   "prompt": "Courtship Dance: an illustration of the animal behaviour \"Courtship Dance\" (Reproductive Behaviour). Elaborate dances performed for a mate. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_feeding_young",
+   "tree": "ethology",
+   "item": "feeding_young",
+   "prompt": "Feeding the Young: an illustration of the animal behaviour \"Feeding the Young\" (Reproductive Behaviour). Bringing food to the young. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_pair_bonds",
+   "tree": "ethology",
+   "item": "pair_bonds",
+   "prompt": "Pair Bonds: an illustration of the animal behaviour \"Pair Bonds\" (Reproductive Behaviour). Staying with one partner for a season or for life. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_leks",
+   "tree": "ethology",
+   "item": "leks",
+   "prompt": "Leks: an illustration of the animal behaviour \"Leks\" (Reproductive Behaviour). Males display side by side while females choose. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_biparental_care",
+   "tree": "ethology",
+   "item": "biparental_care",
+   "prompt": "Biparental Care: an illustration of the animal behaviour \"Biparental Care\" (Reproductive Behaviour). Both parents raise the young. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_mouthbrooding",
+   "tree": "ethology",
+   "item": "mouthbrooding",
+   "prompt": "Mouthbrooding: an illustration of the animal behaviour \"Mouthbrooding\" (Reproductive Behaviour). Sheltering eggs and fry in the mouth (cichlids). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_alloparenting",
+   "tree": "ethology",
+   "item": "alloparenting",
+   "prompt": "Alloparenting: an illustration of the animal behaviour \"Alloparenting\" (Reproductive Behaviour). Aunts, siblings and others help raise the young. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_brood_parasitism",
+   "tree": "ethology",
+   "item": "brood_parasitism",
+   "prompt": "Brood Parasitism: an illustration of the animal behaviour \"Brood Parasitism\" (Reproductive Behaviour). Tricking others into raising your chicks (cuckoos). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_teaching",
+   "tree": "ethology",
+   "item": "teaching",
+   "prompt": "Teaching: an illustration of the animal behaviour \"Teaching\" (Reproductive Behaviour). Showing the young how to do things on purpose. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_aggregation",
+   "tree": "ethology",
+   "item": "aggregation",
+   "prompt": "Aggregation: an illustration of the animal behaviour \"Aggregation\" (Social Behaviour). Gathering where conditions are good. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_schooling",
+   "tree": "ethology",
+   "item": "schooling",
+   "prompt": "Schooling: an illustration of the animal behaviour \"Schooling\" (Social Behaviour). Swimming in coordinated groups for safety. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_kin_recognition",
+   "tree": "ethology",
+   "item": "kin_recognition",
+   "prompt": "Kin Recognition: an illustration of the animal behaviour \"Kin Recognition\" (Social Behaviour). Telling relatives from strangers by smell or sight. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_family_groups",
+   "tree": "ethology",
+   "item": "family_groups",
+   "prompt": "Family Groups: an illustration of the animal behaviour \"Family Groups\" (Social Behaviour). Parents and young stay together. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_herding",
+   "tree": "ethology",
+   "item": "herding",
+   "prompt": "Herding: an illustration of the animal behaviour \"Herding\" (Social Behaviour). Moving and feeding in herds (dinosaurs). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_eusociality",
+   "tree": "ethology",
+   "item": "eusociality",
+   "prompt": "Eusociality: an illustration of the animal behaviour \"Eusociality\" (Social Behaviour). Sterile workers serve a breeding queen (termites, ants). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_castes",
+   "tree": "ethology",
+   "item": "castes",
+   "prompt": "Castes: an illustration of the animal behaviour \"Castes\" (Social Behaviour). Soldiers, workers and nurses, each built for its job. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_social_hierarchy",
+   "tree": "ethology",
+   "item": "social_hierarchy",
+   "prompt": "Social Hierarchy: an illustration of the animal behaviour \"Social Hierarchy\" (Social Behaviour). A pecking order settles who gets what. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_cooperative_breeding",
+   "tree": "ethology",
+   "item": "cooperative_breeding",
+   "prompt": "Cooperative Breeding: an illustration of the animal behaviour \"Cooperative Breeding\" (Social Behaviour). Helpers raise young that are not their own. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_creches",
+   "tree": "ethology",
+   "item": "creches",
+   "prompt": "Crèches: an illustration of the animal behaviour \"Crèches\" (Social Behaviour). Young gathered together in nurseries. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_social_grooming",
+   "tree": "ethology",
+   "item": "social_grooming",
+   "prompt": "Social Grooming: an illustration of the animal behaviour \"Social Grooming\" (Social Behaviour). Cleaning each other to build bonds. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_superorganism",
+   "tree": "ethology",
+   "item": "superorganism",
+   "prompt": "Superorganism: an illustration of the animal behaviour \"Superorganism\" (Social Behaviour). A colony acting as one body (army ants). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_coalitions",
+   "tree": "ethology",
+   "item": "coalitions",
+   "prompt": "Coalitions: an illustration of the animal behaviour \"Coalitions\" (Social Behaviour). Allies band together to rise in rank. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_fission_fusion",
+   "tree": "ethology",
+   "item": "fission_fusion",
+   "prompt": "Fission–fusion Groups: an illustration of the animal behaviour \"Fission–fusion Groups\" (Social Behaviour). Groups split and merge day by day (chimpanzees, elephants). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_reciprocal_altruism",
+   "tree": "ethology",
+   "item": "reciprocal_altruism",
+   "prompt": "Reciprocal Altruism: an illustration of the animal behaviour \"Reciprocal Altruism\" (Social Behaviour). Helping those who help you (vampire bats sharing blood). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_mixed_species_flocks",
+   "tree": "ethology",
+   "item": "mixed_species_flocks",
+   "prompt": "Mixed-species Flocks: an illustration of the animal behaviour \"Mixed-species Flocks\" (Social Behaviour). Different species forage together for safety. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_matriarchs",
+   "tree": "ethology",
+   "item": "matriarchs",
+   "prompt": "Matriarchs: an illustration of the animal behaviour \"Matriarchs\" (Social Behaviour). Old females lead the group with remembered knowledge. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_traditions",
+   "tree": "ethology",
+   "item": "traditions",
+   "prompt": "Traditions: an illustration of the animal behaviour \"Traditions\" (Social Behaviour). Behaviour passed down the generations (whale songs, chimp tool kits). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_large_societies",
+   "tree": "ethology",
+   "item": "large_societies",
+   "prompt": "Large Societies: an illustration of the animal behaviour \"Large Societies\" (Social Behaviour). Cooperation among many unrelated individuals. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_aggression",
+   "tree": "ethology",
+   "item": "aggression",
+   "prompt": "Aggression: an illustration of the animal behaviour \"Aggression\" (Agonistic Behaviour). Pushing, nipping or chasing a rival away from food or space. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_retreat",
+   "tree": "ethology",
+   "item": "retreat",
+   "prompt": "Retreat: an illustration of the animal behaviour \"Retreat\" (Agonistic Behaviour). Backing off from a stronger rival before getting hurt. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_overgrowth_fights",
+   "tree": "ethology",
+   "item": "overgrowth_fights",
+   "prompt": "Overgrowth Contests: an illustration of the animal behaviour \"Overgrowth Contests\" (Agonistic Behaviour). Sessile animals fight for space by overgrowing or stinging their neighbours (corals). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_threat_display",
+   "tree": "ethology",
+   "item": "threat_display",
+   "prompt": "Threat Display: an illustration of the animal behaviour \"Threat Display\" (Agonistic Behaviour). Spreading fins, gaping or rearing up to look bigger instead of fighting. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_submission",
+   "tree": "ethology",
+   "item": "submission",
+   "prompt": "Submission Signals: an illustration of the animal behaviour \"Submission Signals\" (Agonistic Behaviour). Showing that you give up, so the winner stops attacking. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_claw_duels",
+   "tree": "ethology",
+   "item": "claw_duels",
+   "prompt": "Claw Duels: an illustration of the animal behaviour \"Claw Duels\" (Agonistic Behaviour). Sizing each other up and grappling with claws (crustaceans, scorpions). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_territoriality",
+   "tree": "ethology",
+   "item": "territoriality",
+   "prompt": "Territoriality: an illustration of the animal behaviour \"Territoriality\" (Agonistic Behaviour). Claiming and defending an area. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_ritualised_fighting",
+   "tree": "ethology",
+   "item": "ritualised_fighting",
+   "prompt": "Ritualised Fighting: an illustration of the animal behaviour \"Ritualised Fighting\" (Agonistic Behaviour). Contests with rules: pushing and wrestling that rarely cause injury. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_rival_assessment",
+   "tree": "ethology",
+   "item": "rival_assessment",
+   "prompt": "Assessing Rivals: an illustration of the animal behaviour \"Assessing Rivals\" (Agonistic Behaviour). Judging a rival's strength before deciding whether to fight. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_winner_effect",
+   "tree": "ethology",
+   "item": "winner_effect",
+   "prompt": "Winner and Loser Effects: an illustration of the animal behaviour \"Winner and Loser Effects\" (Agonistic Behaviour). Winning makes an animal bolder; losing makes it cautious. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_male_combat",
+   "tree": "ethology",
+   "item": "male_combat",
+   "prompt": "Male Combat: an illustration of the animal behaviour \"Male Combat\" (Agonistic Behaviour). Shoving, wrestling and butting rivals. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_dear_enemy",
+   "tree": "ethology",
+   "item": "dear_enemy",
+   "prompt": "Dear Enemy Effect: an illustration of the animal behaviour \"Dear Enemy Effect\" (Agonistic Behaviour). Known neighbours are tolerated; fights are saved for strangers. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_head_butting",
+   "tree": "ethology",
+   "item": "head_butting",
+   "prompt": "Head Butting: an illustration of the animal behaviour \"Head Butting\" (Agonistic Behaviour). Dome-headed clashes (pachycephalosaurs, later rams). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_siblicide",
+   "tree": "ethology",
+   "item": "siblicide",
+   "prompt": "Siblicide: an illustration of the animal behaviour \"Siblicide\" (Agonistic Behaviour). The strongest chick kills its nestmates (eagles, boobies). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_food_stealing",
+   "tree": "ethology",
+   "item": "food_stealing",
+   "prompt": "Food Stealing: an illustration of the animal behaviour \"Food Stealing\" (Agonistic Behaviour). Robbing other animals of their catch (skuas). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_harems",
+   "tree": "ethology",
+   "item": "harems",
+   "prompt": "Harems: an illustration of the animal behaviour \"Harems\" (Agonistic Behaviour). One male defends a group of females. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_infanticide",
+   "tree": "ethology",
+   "item": "infanticide",
+   "prompt": "Infanticide: an illustration of the animal behaviour \"Infanticide\" (Agonistic Behaviour). A male taking over a group kills his rival's young (lions). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_antler_tournaments",
+   "tree": "ethology",
+   "item": "antler_tournaments",
+   "prompt": "Antler Tournaments: an illustration of the animal behaviour \"Antler Tournaments\" (Agonistic Behaviour). Ritual antler fights (deer). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_rutting_season",
+   "tree": "ethology",
+   "item": "rutting_season",
+   "prompt": "Rutting Season: an illustration of the animal behaviour \"Rutting Season\" (Agonistic Behaviour). A short, intense mating season. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_border_patrols",
+   "tree": "ethology",
+   "item": "border_patrols",
+   "prompt": "Border Patrols: an illustration of the animal behaviour \"Border Patrols\" (Agonistic Behaviour). Groups patrol and raid the edges of their range (chimpanzees, wolves). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_chemical_signals",
+   "tree": "ethology",
+   "item": "chemical_signals",
+   "prompt": "Chemical Signals: an illustration of the animal behaviour \"Chemical Signals\" (Communication Behaviour). Leaving chemical traces for others to detect. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_pheromones",
+   "tree": "ethology",
+   "item": "pheromones",
+   "prompt": "Pheromones: an illustration of the animal behaviour \"Pheromones\" (Communication Behaviour). Chemical messages to your own species. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_substrate_vibration",
+   "tree": "ethology",
+   "item": "substrate_vibration",
+   "prompt": "Substrate Vibration: an illustration of the animal behaviour \"Substrate Vibration\" (Communication Behaviour). Tapping signals through the ground or a web. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_colour_signals",
+   "tree": "ethology",
+   "item": "colour_signals",
+   "prompt": "Colour Signals: an illustration of the animal behaviour \"Colour Signals\" (Communication Behaviour). Changing or showing colours to send messages. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_light_signals",
+   "tree": "ethology",
+   "item": "light_signals",
+   "prompt": "Light Signals: an illustration of the animal behaviour \"Light Signals\" (Communication Behaviour). Flashing light codes (deep-sea fish, later fireflies). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_stridulation",
+   "tree": "ethology",
+   "item": "stridulation",
+   "prompt": "Stridulation: an illustration of the animal behaviour \"Stridulation\" (Communication Behaviour). Rubbing body parts together to chirp. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_display_postures",
+   "tree": "ethology",
+   "item": "display_postures",
+   "prompt": "Display Postures: an illustration of the animal behaviour \"Display Postures\" (Communication Behaviour). Showing size and colour to settle disputes without fighting. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_scent_marking",
+   "tree": "ethology",
+   "item": "scent_marking",
+   "prompt": "Scent Marking: an illustration of the animal behaviour \"Scent Marking\" (Communication Behaviour). Marking territory with scent. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_vocal_communication",
+   "tree": "ethology",
+   "item": "vocal_communication",
+   "prompt": "Vocal Communication: an illustration of the animal behaviour \"Vocal Communication\" (Communication Behaviour). Calls made with the voice. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_alarm_calls",
+   "tree": "ethology",
+   "item": "alarm_calls",
+   "prompt": "Alarm Calls: an illustration of the animal behaviour \"Alarm Calls\" (Communication Behaviour). Warning the group that a predator is near. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_electric_signals",
+   "tree": "ethology",
+   "item": "electric_signals",
+   "prompt": "Electric Signals: an illustration of the animal behaviour \"Electric Signals\" (Communication Behaviour). Talking with electric pulses (weakly electric fish). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_waggle_dance",
+   "tree": "ethology",
+   "item": "waggle_dance",
+   "prompt": "Waggle Dance: an illustration of the animal behaviour \"Waggle Dance\" (Communication Behaviour). Dancing the direction of food to the hive (honeybees). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_learned_song",
+   "tree": "ethology",
+   "item": "learned_song",
+   "prompt": "Learned Song: an illustration of the animal behaviour \"Learned Song\" (Communication Behaviour). Songs copied from adults (songbirds). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_facial_expressions",
+   "tree": "ethology",
+   "item": "facial_expressions",
+   "prompt": "Facial Expressions: an illustration of the animal behaviour \"Facial Expressions\" (Communication Behaviour). Faces that show mood (mammals). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_duets",
+   "tree": "ethology",
+   "item": "duets",
+   "prompt": "Duets: an illustration of the animal behaviour \"Duets\" (Communication Behaviour). Pairs singing together in time. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_referential_calls",
+   "tree": "ethology",
+   "item": "referential_calls",
+   "prompt": "Referential Calls: an illustration of the animal behaviour \"Referential Calls\" (Communication Behaviour). Different alarms for eagle, snake and leopard (vervet monkeys). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_infrasound",
+   "tree": "ethology",
+   "item": "infrasound",
+   "prompt": "Infrasound: an illustration of the animal behaviour \"Infrasound\" (Communication Behaviour). Calls too low for us to hear that carry for kilometres (elephants). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_whale_song",
+   "tree": "ethology",
+   "item": "whale_song",
+   "prompt": "Whale Song: an illustration of the animal behaviour \"Whale Song\" (Communication Behaviour). Long songs that change from year to year. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_gestures",
+   "tree": "ethology",
+   "item": "gestures",
+   "prompt": "Gestures: an illustration of the animal behaviour \"Gestures\" (Communication Behaviour). Meaningful hand and body movements (great apes). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_language",
+   "tree": "ethology",
+   "item": "language",
+   "prompt": "Language: an illustration of the animal behaviour \"Language\" (Communication Behaviour). Open-ended symbolic speech. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_taxis",
+   "tree": "ethology",
+   "item": "taxis",
+   "prompt": "Taxis: an illustration of the animal behaviour \"Taxis\" (Migratory Behaviour). Steering toward food and away from danger by following gradients. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_light_following",
+   "tree": "ethology",
+   "item": "light_following",
+   "prompt": "Light Following: an illustration of the animal behaviour \"Light Following\" (Migratory Behaviour). Moving toward or away from light. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_home_range",
+   "tree": "ethology",
+   "item": "home_range",
+   "prompt": "Home Range: an illustration of the animal behaviour \"Home Range\" (Migratory Behaviour). Staying in and returning to a familiar area. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_vertical_migration",
+   "tree": "ethology",
+   "item": "vertical_migration",
+   "prompt": "Daily Vertical Migration: an illustration of the animal behaviour \"Daily Vertical Migration\" (Migratory Behaviour). Rising at night and sinking by day (plankton). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_facing_current",
+   "tree": "ethology",
+   "item": "facing_current",
+   "prompt": "Facing the Current: an illustration of the animal behaviour \"Facing the Current\" (Migratory Behaviour). Holding position against flowing water. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_land_excursions",
+   "tree": "ethology",
+   "item": "land_excursions",
+   "prompt": "Land Excursions: an illustration of the animal behaviour \"Land Excursions\" (Migratory Behaviour). Short trips out of the water onto land. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_seasonal_migration",
+   "tree": "ethology",
+   "item": "seasonal_migration",
+   "prompt": "Seasonal Migration: an illustration of the animal behaviour \"Seasonal Migration\" (Migratory Behaviour). Moving with the seasons. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_sun_compass",
+   "tree": "ethology",
+   "item": "sun_compass",
+   "prompt": "Sun Compass: an illustration of the animal behaviour \"Sun Compass\" (Migratory Behaviour). Navigating by the sun's position. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_mass_dispersal",
+   "tree": "ethology",
+   "item": "mass_dispersal",
+   "prompt": "Mass Dispersal Flights: an illustration of the animal behaviour \"Mass Dispersal Flights\" (Migratory Behaviour). Swarms take off together to settle new ground. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_ballooning",
+   "tree": "ethology",
+   "item": "ballooning",
+   "prompt": "Ballooning: an illustration of the animal behaviour \"Ballooning\" (Migratory Behaviour). Drifting on the wind on silk threads (spiders). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_landmark_maps",
+   "tree": "ethology",
+   "item": "landmark_maps",
+   "prompt": "Landmark Maps: an illustration of the animal behaviour \"Landmark Maps\" (Migratory Behaviour). Learning landmarks to find the way home. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_natal_homing",
+   "tree": "ethology",
+   "item": "natal_homing",
+   "prompt": "Natal Homing: an illustration of the animal behaviour \"Natal Homing\" (Migratory Behaviour). Returning to the place of birth to breed (salmon, turtles). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_magnetic_navigation",
+   "tree": "ethology",
+   "item": "magnetic_navigation",
+   "prompt": "Magnetic Navigation: an illustration of the animal behaviour \"Magnetic Navigation\" (Migratory Behaviour). Steering by the Earth's magnetic field. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_path_integration",
+   "tree": "ethology",
+   "item": "path_integration",
+   "prompt": "Path Integration: an illustration of the animal behaviour \"Path Integration\" (Migratory Behaviour). Counting steps and turns to head straight home (ants). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_star_navigation",
+   "tree": "ethology",
+   "item": "star_navigation",
+   "prompt": "Star Navigation: an illustration of the animal behaviour \"Star Navigation\" (Migratory Behaviour). Steering by the stars (migrating birds). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_ocean_migration",
+   "tree": "ethology",
+   "item": "ocean_migration",
+   "prompt": "Ocean Migration: an illustration of the animal behaviour \"Ocean Migration\" (Migratory Behaviour). Journeys of thousands of kilometres every year (whales, terns). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_rafting",
+   "tree": "ethology",
+   "item": "rafting",
+   "prompt": "Rafting: an illustration of the animal behaviour \"Rafting\" (Migratory Behaviour). Crossing oceans on floating vegetation (monkeys to South America). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_nomadic_herds",
+   "tree": "ethology",
+   "item": "nomadic_herds",
+   "prompt": "Nomadic Herds: an illustration of the animal behaviour \"Nomadic Herds\" (Migratory Behaviour). Following the rains and the grass (wildebeest). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_altitudinal_migration",
+   "tree": "ethology",
+   "item": "altitudinal_migration",
+   "prompt": "Altitudinal Migration: an illustration of the animal behaviour \"Altitudinal Migration\" (Migratory Behaviour). Up the mountain in summer, down in winter. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_settling",
+   "tree": "ethology",
+   "item": "settling",
+   "prompt": "Settling: an illustration of the animal behaviour \"Settling\" (Nest-building Behaviour). Choosing a good spot on the sea floor to settle. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_tube_building",
+   "tree": "ethology",
+   "item": "tube_building",
+   "prompt": "Tube Building: an illustration of the animal behaviour \"Tube Building\" (Nest-building Behaviour). Building a protective tube to live in. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_burrow_systems",
+   "tree": "ethology",
+   "item": "burrow_systems",
+   "prompt": "Burrow Systems: an illustration of the animal behaviour \"Burrow Systems\" (Nest-building Behaviour). Digging tunnels in the sediment. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_reef_building",
+   "tree": "ethology",
+   "item": "reef_building",
+   "prompt": "Reef Building: an illustration of the animal behaviour \"Reef Building\" (Nest-building Behaviour). Building reefs together (archaeocyathids, later corals). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_rock_boring",
+   "tree": "ethology",
+   "item": "rock_boring",
+   "prompt": "Rock Boring: an illustration of the animal behaviour \"Rock Boring\" (Nest-building Behaviour). Drilling homes into rock and wood. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_burrow_nests",
+   "tree": "ethology",
+   "item": "burrow_nests",
+   "prompt": "Burrow Nests: an illustration of the animal behaviour \"Burrow Nests\" (Nest-building Behaviour). Raising young underground. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_silk_shelters",
+   "tree": "ethology",
+   "item": "silk_shelters",
+   "prompt": "Silk Shelters: an illustration of the animal behaviour \"Silk Shelters\" (Nest-building Behaviour). Spinning silk retreats and cocoons. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_nesting",
+   "tree": "ethology",
+   "item": "nesting",
+   "prompt": "Nesting: an illustration of the animal behaviour \"Nesting\" (Nest-building Behaviour). Building a nest for eggs and young. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_nest_defence",
+   "tree": "ethology",
+   "item": "nest_defence",
+   "prompt": "Nest Defence: an illustration of the animal behaviour \"Nest Defence\" (Nest-building Behaviour). Fighting off nest raiders. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_provisioned_cells",
+   "tree": "ethology",
+   "item": "provisioned_cells",
+   "prompt": "Provisioned Cells: an illustration of the animal behaviour \"Provisioned Cells\" (Nest-building Behaviour). Sealed cells stocked with food for the larvae (wasps). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_incubation",
+   "tree": "ethology",
+   "item": "incubation",
+   "prompt": "Incubation: an illustration of the animal behaviour \"Incubation\" (Nest-building Behaviour). Sitting on the eggs to keep them warm. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_colonial_nesting",
+   "tree": "ethology",
+   "item": "colonial_nesting",
+   "prompt": "Colonial Nesting: an illustration of the animal behaviour \"Colonial Nesting\" (Nest-building Behaviour). Nesting in large, defended colonies. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_woven_nests",
+   "tree": "ethology",
+   "item": "woven_nests",
+   "prompt": "Woven Nests: an illustration of the animal behaviour \"Woven Nests\" (Nest-building Behaviour). Weaving nests from plant fibres. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_mud_nests",
+   "tree": "ethology",
+   "item": "mud_nests",
+   "prompt": "Mud Nests: an illustration of the animal behaviour \"Mud Nests\" (Nest-building Behaviour). Nests plastered together from pellets of mud (swallows, potter wasps). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_paper_nests",
+   "tree": "ethology",
+   "item": "paper_nests",
+   "prompt": "Paper Nests: an illustration of the animal behaviour \"Paper Nests\" (Nest-building Behaviour). Chewed wood pulp shaped into hanging combs (paper wasps). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_termite_mounds",
+   "tree": "ethology",
+   "item": "termite_mounds",
+   "prompt": "Termite Mounds: an illustration of the animal behaviour \"Termite Mounds\" (Nest-building Behaviour). Climate-controlled mound cities. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_wax_combs",
+   "tree": "ethology",
+   "item": "wax_combs",
+   "prompt": "Wax Combs: an illustration of the animal behaviour \"Wax Combs\" (Nest-building Behaviour). Building combs of hexagonal wax cells (bees). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_bubble_nests",
+   "tree": "ethology",
+   "item": "bubble_nests",
+   "prompt": "Bubble Nests: an illustration of the animal behaviour \"Bubble Nests\" (Nest-building Behaviour). Floating rafts of mucus bubbles that hold the eggs (gouramis, bettas). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_bowers",
+   "tree": "ethology",
+   "item": "bowers",
+   "prompt": "Bowers: an illustration of the animal behaviour \"Bowers\" (Nest-building Behaviour). Decorated display structures (bowerbirds). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_dam_building",
+   "tree": "ethology",
+   "item": "dam_building",
+   "prompt": "Dam Building: an illustration of the animal behaviour \"Dam Building\" (Nest-building Behaviour). Engineering ponds with dams (beavers). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_self_cleaning",
+   "tree": "ethology",
+   "item": "self_cleaning",
+   "prompt": "Self-cleaning: an illustration of the animal behaviour \"Self-cleaning\" (Maintenance Behaviour). Wiping sediment and fouling off the body with cilia or limbs. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_moulting_behaviour",
+   "tree": "ethology",
+   "item": "moulting_behaviour",
+   "prompt": "Moulting Behaviour: an illustration of the animal behaviour \"Moulting Behaviour\" (Maintenance Behaviour). Hiding away while a new cuticle hardens. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_basking",
+   "tree": "ethology",
+   "item": "basking",
+   "prompt": "Basking: an illustration of the animal behaviour \"Basking\" (Maintenance Behaviour). Warming up in the sun before becoming active. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_shade_seeking",
+   "tree": "ethology",
+   "item": "shade_seeking",
+   "prompt": "Shade Seeking: an illustration of the animal behaviour \"Shade Seeking\" (Maintenance Behaviour). Moving into shade or burrows to avoid overheating. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_antenna_grooming",
+   "tree": "ethology",
+   "item": "antenna_grooming",
+   "prompt": "Antenna Grooming: an illustration of the animal behaviour \"Antenna Grooming\" (Maintenance Behaviour). Cleaning antennae and legs with special combs (insects). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_scratching",
+   "tree": "ethology",
+   "item": "scratching",
+   "prompt": "Scratching: an illustration of the animal behaviour \"Scratching\" (Maintenance Behaviour). Scratching itchy skin with a hind foot. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_skin_rubbing",
+   "tree": "ethology",
+   "item": "skin_rubbing",
+   "prompt": "Rubbing: an illustration of the animal behaviour \"Rubbing\" (Maintenance Behaviour). Rubbing against rocks and trees to scrape off parasites. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_skin_shedding",
+   "tree": "ethology",
+   "item": "skin_shedding",
+   "prompt": "Skin Shedding: an illustration of the animal behaviour \"Skin Shedding\" (Maintenance Behaviour). Rubbing off the old skin, sometimes in one piece (snakes, lizards). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_mud_wallowing",
+   "tree": "ethology",
+   "item": "mud_wallowing",
+   "prompt": "Mud Wallowing: an illustration of the animal behaviour \"Mud Wallowing\" (Maintenance Behaviour). Coating the skin with mud to cool off and keep insects away. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_wound_licking",
+   "tree": "ethology",
+   "item": "wound_licking",
+   "prompt": "Wound Licking: an illustration of the animal behaviour \"Wound Licking\" (Maintenance Behaviour). Licking wounds clean: saliva kills bacteria. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_panting",
+   "tree": "ethology",
+   "item": "panting",
+   "prompt": "Panting: an illustration of the animal behaviour \"Panting\" (Maintenance Behaviour). Cooling off by breathing fast. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_preening",
+   "tree": "ethology",
+   "item": "preening",
+   "prompt": "Preening: an illustration of the animal behaviour \"Preening\" (Maintenance Behaviour). Straightening and oiling feathers with the beak. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_huddling",
+   "tree": "ethology",
+   "item": "huddling",
+   "prompt": "Huddling: an illustration of the animal behaviour \"Huddling\" (Maintenance Behaviour). Pressing together to keep warm (penguins, mice). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_cleaning_stations",
+   "tree": "ethology",
+   "item": "cleaning_stations",
+   "prompt": "Cleaning Stations: an illustration of the animal behaviour \"Cleaning Stations\" (Maintenance Behaviour). Cleaner fish and shrimp service visiting 'clients'. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_dust_bathing",
+   "tree": "ethology",
+   "item": "dust_bathing",
+   "prompt": "Dust Bathing: an illustration of the animal behaviour \"Dust Bathing\" (Maintenance Behaviour). Rolling in dust to remove excess oil and parasites. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_bathing",
+   "tree": "ethology",
+   "item": "bathing",
+   "prompt": "Bathing: an illustration of the animal behaviour \"Bathing\" (Maintenance Behaviour). Splashing in water to clean feathers or fur. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_nest_sanitation",
+   "tree": "ethology",
+   "item": "nest_sanitation",
+   "prompt": "Nest Sanitation: an illustration of the animal behaviour \"Nest Sanitation\" (Maintenance Behaviour). Carrying waste and dead nestmates out of the nest (bees, birds). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_anting",
+   "tree": "ethology",
+   "item": "anting",
+   "prompt": "Anting: an illustration of the animal behaviour \"Anting\" (Maintenance Behaviour). Rubbing ants into the feathers for their formic acid. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_latrines",
+   "tree": "ethology",
+   "item": "latrines",
+   "prompt": "Latrines: an illustration of the animal behaviour \"Latrines\" (Maintenance Behaviour). Using fixed dung sites away from food and young. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_self_medication",
+   "tree": "ethology",
+   "item": "self_medication",
+   "prompt": "Self-medication: an illustration of the animal behaviour \"Self-medication\" (Maintenance Behaviour). Eating bitter plants or clay to fight parasites and toxins (chimpanzees, parrots). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_quiescence",
+   "tree": "ethology",
+   "item": "quiescence",
+   "prompt": "Quiescence: an illustration of the animal behaviour \"Quiescence\" (Resting Behaviour). Periods of stillness that save energy. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_daily_rhythm",
+   "tree": "ethology",
+   "item": "daily_rhythm",
+   "prompt": "Daily Rhythm: an illustration of the animal behaviour \"Daily Rhythm\" (Resting Behaviour). An internal clock sets the times for activity and rest. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_shelter_resting",
+   "tree": "ethology",
+   "item": "shelter_resting",
+   "prompt": "Resting in Shelter: an illustration of the animal behaviour \"Resting in Shelter\" (Resting Behaviour). Resting in crevices or burrows out of sight. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_sleep",
+   "tree": "ethology",
+   "item": "sleep",
+   "prompt": "Sleep: an illustration of the animal behaviour \"Sleep\" (Resting Behaviour). Deep, reversible rest with the senses turned down. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_mucus_cocoon",
+   "tree": "ethology",
+   "item": "mucus_cocoon",
+   "prompt": "Mucus Cocoon: an illustration of the animal behaviour \"Mucus Cocoon\" (Resting Behaviour). Sleeping inside a bubble of mucus (parrotfish, lungfish). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_deep_sleep",
+   "tree": "ethology",
+   "item": "deep_sleep",
+   "prompt": "Deep Sleep: an illustration of the animal behaviour \"Deep Sleep\" (Resting Behaviour). Slow-wave sleep that restores the brain. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_nocturnal_refuge",
+   "tree": "ethology",
+   "item": "nocturnal_refuge",
+   "prompt": "Nocturnal Refuge: an illustration of the animal behaviour \"Nocturnal Refuge\" (Resting Behaviour). Active only at night (early mammals). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_roosting",
+   "tree": "ethology",
+   "item": "roosting",
+   "prompt": "Roosting: an illustration of the animal behaviour \"Roosting\" (Resting Behaviour). Resting high off the ground, out of reach of predators. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_dreaming_sleep",
+   "tree": "ethology",
+   "item": "dreaming_sleep",
+   "prompt": "Dreaming Sleep: an illustration of the animal behaviour \"Dreaming Sleep\" (Resting Behaviour). REM sleep that consolidates memories (mammals, birds). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_half_brain_sleep",
+   "tree": "ethology",
+   "item": "half_brain_sleep",
+   "prompt": "Half-brain Sleep: an illustration of the animal behaviour \"Half-brain Sleep\" (Resting Behaviour). One half of the brain sleeps while the other keeps watch (dolphins, ducks). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_communal_roosts",
+   "tree": "ethology",
+   "item": "communal_roosts",
+   "prompt": "Communal Roosts: an illustration of the animal behaviour \"Communal Roosts\" (Resting Behaviour). Sleeping together in large numbers. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_hanging_roost",
+   "tree": "ethology",
+   "item": "hanging_roost",
+   "prompt": "Hanging Roost: an illustration of the animal behaviour \"Hanging Roost\" (Resting Behaviour). Resting upside down, ready to drop into flight (bats). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_crepuscular_activity",
+   "tree": "ethology",
+   "item": "crepuscular_activity",
+   "prompt": "Dawn and Dusk Activity: an illustration of the animal behaviour \"Dawn and Dusk Activity\" (Resting Behaviour). Active in twilight, between the day and night shifts of predators. Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_winter_dens",
+   "tree": "ethology",
+   "item": "winter_dens",
+   "prompt": "Winter Dens: an illustration of the animal behaviour \"Winter Dens\" (Resting Behaviour). Sheltering in a den through the cold months (bears). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_sleeping_nests",
+   "tree": "ethology",
+   "item": "sleeping_nests",
+   "prompt": "Sleeping Nests: an illustration of the animal behaviour \"Sleeping Nests\" (Resting Behaviour). Building a fresh bed in the trees every night (great apes). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_sleeping_on_the_wing",
+   "tree": "ethology",
+   "item": "sleeping_on_the_wing",
+   "prompt": "Sleeping on the Wing: an illustration of the animal behaviour \"Sleeping on the Wing\" (Resting Behaviour). Sleeping in flight (swifts, frigatebirds). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_sentinels",
+   "tree": "ethology",
+   "item": "sentinels",
+   "prompt": "Sentinels: an illustration of the animal behaviour \"Sentinels\" (Resting Behaviour). One keeps watch while the rest sleep or feed (meerkats). Show it clearly on a typical animal that has it, caught in the act."
+  },
+  {
+   "id": "b_rafting_rest",
+   "tree": "ethology",
+   "item": "rafting_rest",
+   "prompt": "Resting in Rafts: an illustration of the animal behaviour \"Resting in Rafts\" (Resting Behaviour). Floating together, holding on to each other or to kelp (sea otters). Show it clearly on a typical animal that has it, caught in the act."
+  }
+ ]
+}

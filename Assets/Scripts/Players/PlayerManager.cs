@@ -89,6 +89,14 @@ namespace NaturalHistory.Players
         // seabed (start hexes in shallow sea, the under view on), later ones on the surface.
         public void StartNewGame(List<PlayerSetup> newSetups)
         {
+            var steps = StartNewGameSteps(newSetups, float.PositiveInfinity);
+            while (steps.MoveNext()) { }
+        }
+
+        // The same, giving the frame back now and then while the map is made (the loading screen
+        // runs it as a coroutine)
+        public System.Collections.IEnumerator StartNewGameSteps(List<PlayerSetup> newSetups, float budget = 0.04f)
+        {
             GameOptions.Current = GameOptions.Next;
             var ages = AgeManager.Instance;
             ages?.ReloadAges();
@@ -98,7 +106,11 @@ namespace NaturalHistory.Players
                                                  Array.Empty<string>(), Array.Empty<string>());
             TurnManager.Instance?.Restore(startTurn); // the first turn activates the starting period's iconic animals
             var size = GameOptions.MapSize(GameOptions.Current);
-            if (grid != null) grid.Generate(size.x, size.y, UnityEngine.Random.Range(1, int.MaxValue)); // places everyone
+            if (grid != null) // places everyone
+            {
+                var generate = grid.GenerateSteps(size.x, size.y, UnityEngine.Random.Range(1, int.MaxValue), budget);
+                while (generate.MoveNext()) yield return generate.Current;
+            }
             UnderView.Set(GameOptions.StartsUnderSea(GameOptions.StartAge));
             UnderView.Refresh(); // the layer buttons follow the Ediacaran lock
         }

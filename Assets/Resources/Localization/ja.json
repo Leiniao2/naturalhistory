@@ -1,8 +1,24 @@
 {
  "entries": [
   {
+   "k": "Actions +{0}",
+   "v": "行動 +{0}"
+  },
+  {
+   "k": "Attack +{0}",
+   "v": "攻撃 +{0}"
+  },
+  {
+   "k": "Defense +{0}",
+   "v": "防御 +{0}"
+  },
+  {
    "k": "Electric Organs",
    "v": "発電器官"
+  },
+  {
+   "k": "HP +{0}",
+   "v": "HP +{0}"
   },
   {
    "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
@@ -143,6 +159,10 @@
   {
    "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
    "v": "繁殖が早い：3ターンごとではなく2ターンごとに繁殖できる。"
+  },
+  {
+   "k": "Your groups of it: {0}",
+   "v": "この種のあなたの群れ：{0}"
   },
   {
    "k": "the {0} charged",
@@ -22727,6 +22747,14 @@
   {
    "k": "{0} → {1}",
    "v": "{0} → {1}"
+  },
+  {
+   "k": "The Evolution Tree",
+   "v": "進化系統樹"
+  },
+  {
+   "k": "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
+   "v": "右側の種は、その左側の種から進化します。まだ持っていない種には DNA ボタンがあり、あなたの群れをその種へ進化させます。進化できるときは金色に光り、条件がそろうまでは灰色です（ポインターを合わせると足りないものが分かります）。本のボタンは図鑑を開き、円形の矢印は失った種を復活させます。種をクリックすると、その種が何に進化できるかが分かります。"
   }
  ]
 }

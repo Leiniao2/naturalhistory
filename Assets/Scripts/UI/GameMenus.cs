@@ -112,6 +112,7 @@ namespace NaturalHistory.UI
             newGameOptions = new NewGameOptions(root);
             zoologyPanel = new ZoologyPanel(root);
             loading      = new LoadingScreen(root, this);
+            loading.Closed += () => { foreach (var m in heldToasts) ShowToast(m); heldToasts.Clear(); };
             discoveryPanel = new DiscoveryPanel(root);
             TurnWait.Init(root, this);
             encyclopedia = new EncyclopediaPanel(root);
@@ -139,6 +140,7 @@ namespace NaturalHistory.UI
             root.Q<Button>("ethology-button").clicked   += () => ToggleTree(Progression?.Ethology);
             UiIcons.Decorate(root.Q<Button>("morphology-button"), UiIcons.Functions);
             UiIcons.Decorate(root.Q<Button>("ethology-button"), UiIcons.Behaviors);
+            UiIcons.Decorate(root.Q<Button>("zoology-button"), UiIcons.Tree);
             root.Q<Button>("zoology-button").clicked    += ToggleZoology;
             layerButtons = new[]
             {
@@ -517,19 +519,26 @@ namespace NaturalHistory.UI
 
         private void LoadFrom(int slot) => loading.Run("Loading the game…", () => LoadNow(slot));
 
-        private void LoadNow(int slot)
+        private System.Collections.IEnumerator LoadNow(int slot)
         {
             bool fromTitle = mainMenu.IsOpen;
             mainMenu.Hide(); // first, like a new game
-            bool ok = SaveSystem.Load(slot);
+            bool ok = false;
+            var steps = SaveSystem.LoadSteps(slot, r => ok = r);
+            while (steps.MoveNext()) yield return steps.Current;
             if (!ok && fromTitle) mainMenu.Show();
             ShowToast(!ok ? Loc.T("Load failed (see Console)") : slot == SaveSystem.AutoSlot ? Loc.T("Loaded the autosave") : Loc.F("Loaded slot {0}", slot));
             if (ok) { mainMenu.InGame = true; SetPauseOpen(false); }
         }
 
         // Messages shown in the same frame (e.g. two animals arriving together) are combined
+        // Messages that came while the loading screen was up, shown once it closes
+        private readonly System.Collections.Generic.List<string> heldToasts = new();
+
         private void ShowToast(string message)
         {
+            if (loading != null && loading.IsOpen) { heldToasts.Add(message); return; } // not over the loading screen
+
             toast.text = toastFrame == Time.frameCount && !toast.ClassListContains("hidden") ? toast.text + "\n" + message : message;
             toastFrame = Time.frameCount;
             toast.RemoveFromClassList("hidden");

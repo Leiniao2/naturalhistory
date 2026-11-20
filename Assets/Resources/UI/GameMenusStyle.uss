@@ -2579,19 +2579,19 @@
 
 /* Evolution Tree card icons (ZoologyPanel.AddActions; images in Resources/UI/Icons, UiIcons) */
 .zoology-node-icons {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
     flex-shrink: 0;
     margin-left: 8px;
 }
 
 .zoology-icon {
-    width: 32px;
-    height: 32px;
-    margin: 1px 0;
+    width: 52px;
+    height: 52px;
+    margin: 0 0 0 6px;
     padding: 0;
     border-width: 0;
-    border-radius: 16px;
+    border-radius: 26px;
     background-color: rgba(0, 0, 0, 0);
     -unity-background-scale-mode: scale-to-fit;
 }
@@ -2626,3 +2626,82 @@
     flex-shrink: 0;
     -unity-background-scale-mode: scale-to-fit;
 }
+
+/* ---------- Functions / Behaviors cards (TreePanel), in the Evolution Tree's style ----------
+   The item's painting (TraitIcons) on the left, name / state / bonus in the middle, the Acquire
+   icon (.zoology-icon) on the right; the .tree-node state colours (unlocked, available...) apply. */
+
+.trait-node {
+    width: 350px;   /* TreePanel.NodeWidth / NodeHeight */
+    height: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 6px 8px 6px 6px;
+}
+
+.trait-node-image {
+    width: 84px;
+    height: 84px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.25);
+    -unity-background-scale-mode: scale-and-crop;
+    align-items: center;
+    justify-content: center;
+}
+
+.trait-node-initial {
+    font-size: 34px;
+    -unity-font-style: bold;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.trait-node-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.trait-node .node-name { font-size: 17px; }
+.trait-node .node-cost { font-size: 13px; white-space: normal; }
+
+.trait-node-bonus {
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: rgb(150, 220, 140);
+}
+
+.trait-node .zoology-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    flex-shrink: 0;
+}
+
+/* ---------- Colour themes of the three trees ----------
+   Functions blue, Behaviors purple, Evolution green, so each reads as its own thing: the panel's
+   tree area, the title, and the cards' plain, acquired/owned and ready states. Set on the overlays
+   (TreePanel.Open toggles theme-functions / theme-behaviors; zoology-overlay is theme-evolution). */
+
+.theme-functions .tree-title { color: rgb(140, 190, 255); }
+.theme-functions .tree-scroll { background-color: rgba(20, 34, 60, 0.75); border-color: rgba(110, 160, 230, 0.45); }
+.theme-functions .tree-node { background-color: rgb(36, 46, 64); border-color: rgb(70, 92, 125); }
+.theme-functions .tree-node:hover { border-color: rgb(200, 225, 255); }
+.theme-functions .tree-node.unlocked { background-color: rgb(40, 78, 132); border-color: rgb(110, 165, 235); }
+.theme-functions .tree-node.available { background-color: rgb(58, 96, 150); border-color: rgb(160, 210, 255); }
+
+.theme-behaviors .tree-title { color: rgb(205, 160, 255); }
+.theme-behaviors .tree-scroll { background-color: rgba(42, 24, 60, 0.75); border-color: rgba(180, 130, 230, 0.45); }
+.theme-behaviors .tree-node { background-color: rgb(50, 40, 64); border-color: rgb(100, 80, 128); }
+.theme-behaviors .tree-node:hover { border-color: rgb(235, 215, 255); }
+.theme-behaviors .tree-node.unlocked { background-color: rgb(92, 56, 130); border-color: rgb(185, 135, 235); }
+.theme-behaviors .tree-node.available { background-color: rgb(112, 74, 152); border-color: rgb(220, 175, 255); }
+
+.theme-evolution .tree-title { color: rgb(150, 225, 140); }
+.theme-evolution .tree-scroll { background-color: rgba(18, 44, 26, 0.75); border-color: rgba(120, 200, 120, 0.45); }
+.theme-evolution .zoology-node { background-color: rgb(36, 52, 40); border-color: rgb(70, 106, 78); }
+.theme-evolution .zoology-node:hover { border-color: rgb(210, 245, 200); }
+.theme-evolution .zoology-node.owned { background-color: rgb(46, 110, 60); border-color: rgb(125, 205, 125); }
+.theme-evolution .zoology-node.ready { background-color: rgb(72, 122, 50); border-color: rgb(195, 232, 110); }

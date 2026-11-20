@@ -28,7 +28,37 @@ namespace NaturalHistory.World
     {
         public const float HealPerTurn = 0.2f; // of the maximum HP
 
-        public CombatStats Stats { get; private set; }
+        // The species' stats plus what its owner's Functions and Behaviors items add (TraitBonuses),
+        // worked out again when those change or the group changes hands; HP it gains comes on top
+        public CombatStats Stats
+        {
+            get
+            {
+                if (bonusVersion != TraitBonuses.Version || bonusOwner != Owner) ApplyBonus();
+                return stats;
+            }
+            private set { baseStats = value; stats = value; bonusVersion = -1; }
+        }
+        private CombatStats baseStats, stats;
+        private int bonusVersion = -1;
+        private Players.Player bonusOwner;
+
+        private void ApplyBonus()
+        {
+            var b = TraitBonuses.For(Definition, Owner);
+            int before = stats.hp;
+            bool first = bonusVersion < 0 && bonusOwner == null && Owner == null;
+            stats = new CombatStats
+            {
+                attack  = baseStats.attack  + b.attack,
+                defense = baseStats.defense + b.defense,
+                hp      = baseStats.hp      + b.hp,
+                moves   = Mathf.Min(baseStats.moves + b.moves, 5),
+            };
+            bonusVersion = TraitBonuses.Version;
+            bonusOwner   = Owner;
+            if (!first && stats.hp != before) Hp = Mathf.Clamp(Hp + (stats.hp - before), 1f, stats.hp);
+        }
         public float Hp { get; set; }
         public int MaxHp => Stats.hp;
         public int ActionsLeft { get; private set; }

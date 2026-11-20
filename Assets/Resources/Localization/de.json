@@ -1,8 +1,24 @@
 {
  "entries": [
   {
+   "k": "Actions +{0}",
+   "v": "Aktionen +{0}"
+  },
+  {
+   "k": "Attack +{0}",
+   "v": "Angriff +{0}"
+  },
+  {
+   "k": "Defense +{0}",
+   "v": "Verteidigung +{0}"
+  },
+  {
    "k": "Electric Organs",
    "v": "Elektrische Organe"
+  },
+  {
+   "k": "HP +{0}",
+   "v": "LP +{0}"
   },
   {
    "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
@@ -143,6 +159,10 @@
   {
    "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
    "v": "Vermehrt sich schnell: kann sich alle 2 statt alle 3 Züge fortpflanzen."
+  },
+  {
+   "k": "Your groups of it: {0}",
+   "v": "Deine Gruppen dieser Art: {0}"
   },
   {
    "k": "the {0} charged",
@@ -22727,6 +22747,14 @@
   {
    "k": "{0} → {1}",
    "v": "{0} → {1}"
+  },
+  {
+   "k": "The Evolution Tree",
+   "v": "Der Stammbaum"
+  },
+  {
+   "k": "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
+   "v": "Die Arten rechts entwickeln sich aus denen links von ihnen. Der DNA-Knopf an einer Art, die du noch nicht hast, entwickelt eine deiner Gruppen zu ihr: Er leuchtet golden, wenn es geht, und bleibt grau, bis es geht (zeig darauf, um zu sehen, was fehlt). Das Buch öffnet den Lexikoneintrag der Art; der Kreispfeil holt eine verlorene Art zurück. Klicke auf eine Art, um zu sehen, wozu sie werden kann."
   }
  ]
 }

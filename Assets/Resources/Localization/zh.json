@@ -1,8 +1,24 @@
 {
  "entries": [
   {
+   "k": "Actions +{0}",
+   "v": "行动 +{0}"
+  },
+  {
+   "k": "Attack +{0}",
+   "v": "攻击 +{0}"
+  },
+  {
+   "k": "Defense +{0}",
+   "v": "防御 +{0}"
+  },
+  {
    "k": "Electric Organs",
    "v": "发电器官"
+  },
+  {
+   "k": "HP +{0}",
+   "v": "生命 +{0}"
   },
   {
    "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
@@ -143,6 +159,10 @@
   {
    "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
    "v": "繁殖迅速：每2回合即可繁殖一次，而非每3回合。"
+  },
+  {
+   "k": "Your groups of it: {0}",
+   "v": "你的该物种群体：{0}"
   },
   {
    "k": "the {0} charged",
@@ -610,7 +630,7 @@
   },
   {
    "k": "A crocodile-line archosaur about 2-3 metres long from the Late Triassic Ghost Ranch quarry of New Mexico, about 210 million years ago, named after the painter Georgia O'Keeffe who lived nearby. Although more closely related to crocodiles than to dinosaurs, it looked astonishingly like the much later ostrich dinosaurs: a toothless beaked head with big eyes on a long neck, tiny arms, and long legs on which it walked upright. It is a striking case of convergent evolution, and was found in blocks of rock collected decades before it was recognised in 2006.",
-   "v": "一种体长约2-3米的鳄类支系主龙，来自约2.1亿年前美国新墨西哥州晚三叠世的幽灵牧场采石场，以住在附近的画家乔治娅·奥基弗命名。尽管它与鳄类的亲缘关系比与恐龙更近，外形却与晚得多的似鸵龙类惊人地相似：长颈上顶着一个大眼睛、无牙有喙的头，前肢细小，靠修长的后腿直立行走。它是趋同演化的一个突出例子，其化石所在的岩块早在2006年被识别出来的几十年前就已采集。"
+   "v": "一种体长约2-3米的鳄类支系主龙，来自约2.1亿年前美国新墨西哥州晚三叠世的幽灵牧场采石场，以住在附近的画家乔治娅·奥基弗命名。尽管它与鳄类的亲缘关系比与恐龙更近，外形却与晚得多的似鸵龙类惊人地相似：长颈上顶着一个大眼睛、无牙有喙的头，前肢细小，靠修长的后腿直立行走。它是趋同进化的一个突出例子，其化石所在的岩块早在2006年被识别出来的几十年前就已采集。"
   },
   {
    "k": "A crow-sized dromaeosaurid about 80 cm long from the forests of north-eastern China around 120 million years ago. It had long flight feathers on its legs as well as its arms, giving it four wings, and a fan of feathers at the end of its tail, and probably glided and flapped between trees. Melanosomes show its plumage was glossy, iridescent black. Fossils preserve its last meals: a small mammal, a bird, a lizard and fish.",
@@ -886,7 +906,7 @@
   },
   {
    "k": "A giraffid of the Late Miocene of Samos in Greece and Turkey, with a neck about half way in length between the okapi's and the giraffe's, and two long ossicones sweeping back above its eyes. Its neck bones show how the giraffe's long neck evolved in steps. Worn teeth suggest it grazed as well as browsed.",
-   "v": "一种长颈鹿科动物，生活在希腊萨摩斯岛和土耳其的晚中新世，脖子长度介于㺢㹢狓和长颈鹿之间，眼睛上方有两只向后伸展的长皮骨角。它的颈椎显示了长颈鹿的长脖子是如何逐步演化而来的。磨损的牙齿表明它既吃草也啃食树叶。"
+   "v": "一种长颈鹿科动物，生活在希腊萨摩斯岛和土耳其的晚中新世，脖子长度介于㺢㹢狓和长颈鹿之间，眼睛上方有两只向后伸展的长皮骨角。它的颈椎显示了长颈鹿的长脖子是如何逐步进化而来的。磨损的牙齿表明它既吃草也啃食树叶。"
   },
   {
    "k": "A gliding reptile about 40 centimetres long from the Late Permian of Germany, around 256 million years ago, named after Glaurung, the first of the dragons in Tolkien's tales. Long rods of bone growing from its flanks supported skin wings that let it glide swiftly from tree to tree, and the back of its skull bore a broad frill of spikes. It hunted insects in the trees and escaped danger by launching into the air, but its delicate body could not take much punishment.",
@@ -982,7 +1002,7 @@
   },
   {
    "k": "A jaguar-sized predator of the Late Miocene and Pliocene of Argentina, a sparassodont related to marsupials that evolved a sabre-toothed body like the cats on its own. Its huge upper canines grew throughout life, their roots reaching back over the eyes, and were sheathed by deep bony flanges on the lower jaw. Unlike sabre-toothed cats it had no lower incisors, and some think it ate soft insides of carcasses.",
-   "v": "一种美洲豹大小的掠食者，生活在晚中新世和上新世的阿根廷，属于与有袋类有亲缘关系的袋犬目，独立演化出了类似猫科剑齿虎的身体。它巨大的上犬齿终生生长，齿根向后一直延伸到眼睛上方，并由下颌上深深的骨质凸缘护住。与剑齿猫类不同，它没有下门齿，有人认为它以动物尸体柔软的内脏为食。"
+   "v": "一种美洲豹大小的掠食者，生活在晚中新世和上新世的阿根廷，属于与有袋类有亲缘关系的袋犬目，独立进化出了类似猫科剑齿虎的身体。它巨大的上犬齿终生生长，齿根向后一直延伸到眼睛上方，并由下颌上深深的骨质凸缘护住。与剑齿猫类不同，它没有下门齿，有人认为它以动物尸体柔软的内脏为食。"
   },
   {
    "k": "A jawless armoured fish (a heterostracan) from the Early Devonian of Britain and western Europe, about 415 million years ago. About 20 centimetres long, its front half was enclosed in a streamlined bony shield with a long pointed snout, a dorsal spine and two wing-like side spines that may have kept it stable while swimming. Having no jaws, it probably fed on small particles and plankton in coastal waters and estuaries.",
@@ -1046,7 +1066,7 @@
   },
   {
    "k": "A large meat-eating cynodont about 1.2 metres long from the Late Triassic of southern Brazil, about 230 million years ago; its name means 'butcher cynodont'. It belonged to the group that gave rise to mammals, with a long, dog-like skull, big canine teeth and long, slender legs. A swift hunter of small animals, it was lightly built and could not take much punishment.",
-   "v": "一种大型肉食性犬齿兽，体长约1.2米，约2.3亿年前生活在晚三叠世的巴西南部，学名意为“屠夫犬齿兽”。它属于演化出哺乳动物的类群，长着像狗一样的长头骨、粗大的犬齿和修长的四肢。它是迅捷的猎手，专门捕食小型动物，但体格轻巧，经不起重创。"
+   "v": "一种大型肉食性犬齿兽，体长约1.2米，约2.3亿年前生活在晚三叠世的巴西南部，学名意为“屠夫犬齿兽”。它属于进化出哺乳动物的类群，长着像狗一样的长头骨、粗大的犬齿和修长的四肢。它是迅捷的猎手，专门捕食小型动物，但体格轻巧，经不起重创。"
   },
   {
    "k": "A large porolepiform lobe-finned fish from the Late Devonian Old Red Sandstone of Scotland; its genus was widespread in rivers around the world, about 380 to 360 million years ago. It had a deep body covered in big, thick, rounded scales with wavy ridges, long pointed pectoral fins, fangs, and dorsal and anal fins set far back next to the tail. Some Holoptychius grew well over a metre long and were major predators of their river systems.",
@@ -1118,7 +1138,7 @@
   },
   {
    "k": "A leopard-sized \"false sabre-tooth\" of the early Oligocene of North America. Nimravids were cat-like carnivores that evolved long, flattened upper canines independently of the true sabre-toothed cats, sheathed by a bony flange on the lower jaw. It had a long, low body, short powerful legs and probably ambushed early horses and other mammals.",
-   "v": "一种豹子大小的\"伪剑齿虎\"，来自北美洲早渐新世。猎猫类是一类像猫的食肉动物，独立于真正的剑齿猫演化出了又长又扁的上犬齿，并由下颌上的骨质突缘保护。它身体长而低矮，四肢短而有力，很可能以伏击方式捕食早期马类和其他哺乳动物。"
+   "v": "一种豹子大小的\"伪剑齿虎\"，来自北美洲早渐新世。猎猫类是一类像猫的食肉动物，独立于真正的剑齿猫进化出了又长又扁的上犬齿，并由下颌上的骨质突缘保护。它身体长而低矮，四肢短而有力，很可能以伏击方式捕食早期马类和其他哺乳动物。"
   },
   {
    "k": "A leopard-sized marsupial predator of Pleistocene Australia, related to wombats and koalas. Pound for pound it had one of the strongest bites of any mammal, with blade-like cheek teeth instead of long canines, and a huge claw on each thumb. Scratch marks in caves show it could climb, and it may have dropped on prey from trees.",
@@ -1638,7 +1658,7 @@
   },
   {
    "k": "A ray-like placoderm from the Early Devonian Hunsrück Slate of Germany, about 400 million years ago, about 25 to 30 centimetres long. With its flat body, broad wing-like pectoral fins, upward-looking eyes and long thin tail, it looked remarkably like a modern skate, a striking case of convergent evolution. Its skin was covered in small bony tiles, and it probably lay on the sea floor and fed on small invertebrates.",
-   "v": "一种形似鳐鱼的盾皮鱼，来自德国早泥盆世的洪斯吕克板岩，距今约4亿年，体长约25至30厘米。它身体扁平，有宽阔如翼的胸鳍、朝上看的眼睛和细长的尾巴，看起来与现代鳐鱼惊人地相似，是趋同演化的一个突出例子。它的皮肤覆盖着小骨片，可能伏在海底以小型无脊椎动物为食。"
+   "v": "一种形似鳐鱼的盾皮鱼，来自德国早泥盆世的洪斯吕克板岩，距今约4亿年，体长约25至30厘米。它身体扁平，有宽阔如翼的胸鳍、朝上看的眼睛和细长的尾巴，看起来与现代鳐鱼惊人地相似，是趋同进化的一个突出例子。它的皮肤覆盖着小骨片，可能伏在海底以小型无脊椎动物为食。"
   },
   {
    "k": "A reddish-brown, spiny ant of the forests of Central and South America that cuts pieces of leaves and carries them back to its nest along cleared trails. The ants do not eat the leaves: they chew them into a mulch on which they grow a fungus that is the colony's main food and the only food of its larvae. A mature colony can hold millions of workers of very different sizes in a nest that reaches several metres underground.",
@@ -2062,7 +2082,7 @@
   },
   {
    "k": "A small whale related to narwhals from the Late Miocene and Pliocene of Peru that evolved a walrus-like face. It had a blunt, beakless snout with a muscular upper lip for sucking clams from the sea floor, eyes facing forward and up, and two tusks pointing backwards along the body; in males the right tusk was much longer, over a metre.",
-   "v": "一种与一角鲸有亲缘关系的小型鲸类，出自秘鲁晚中新世和上新世地层，演化出了类似海象的面部。它的吻部钝圆无喙，有肌肉发达的上唇，用来从海底吸食蛤蜊；双眼朝前上方；两根獠牙沿身体向后伸；雄性的右侧獠牙要长得多，超过1米。"
+   "v": "一种与一角鲸有亲缘关系的小型鲸类，出自秘鲁晚中新世和上新世地层，进化出了类似海象的面部。它的吻部钝圆无喙，有肌肉发达的上唇，用来从海底吸食蛤蜊；双眼朝前上方；两根獠牙沿身体向后伸；雄性的右侧獠牙要长得多，超过1米。"
   },
   {
    "k": "A small whip spider from the Middle Coal Measures of Coseley in England, about 315 million years old, long known as Graeophonus anglicus. Like modern amblypygids it had a flat body and used its enormously long, thin first legs as feelers while walking on the other three pairs. Scans of its fossils show the least specialised pedipalps of any whip spider, still moving up and down like walking legs, which it used to seize insects in the leaf litter of the coal forests.",
@@ -2102,7 +2122,7 @@
   },
   {
    "k": "A small, lightly built hoofed mammal of Miocene Patagonia, about 70 cm long, belonging to the litopterns, a South American group unrelated to horses. It evolved a single-toed foot even more reduced than a modern horse's, with the side toes shrunk to tiny splints. It was fast and nimble on its long, thin legs, but small and defenceless if caught.",
-   "v": "巴塔哥尼亚中新世一种体型小、身体轻盈的有蹄哺乳动物，长约70厘米，属于滑距骨目——一支与马无关的南美类群。它演化出了单趾的脚，退化程度甚至超过现代马，侧趾缩成了细小的骨片。它四肢细长，敏捷迅速，但体型小，一旦被抓住便毫无还手之力。"
+   "v": "巴塔哥尼亚中新世一种体型小、身体轻盈的有蹄哺乳动物，长约70厘米，属于滑距骨目——一支与马无关的南美类群。它进化出了单趾的脚，退化程度甚至超过现代马，侧趾缩成了细小的骨片。它四肢细长，敏捷迅速，但体型小，一旦被抓住便毫无还手之力。"
   },
   {
    "k": "A small, lightly built theropod about one metre long, much of it tail, from the Late Jurassic lagoons of Bavaria and southern France, about 150 million years old. For over a century it was the smallest dinosaur known. Its long hind legs made it a fast runner, and the first skeleton has a whole lizard, Bavarisaurus, preserved in its stomach. Close relatives had a coat of simple filament feathers.",
@@ -2182,7 +2202,7 @@
   },
   {
    "k": "A soil and pond amoeba that is not an amoebozoan at all but belongs to the excavates, far from the true amoebae: it crawls by bursting out one broad rounded pseudopod after another and eats bacteria. When its water changes it can grow two flagella and swim off within minutes, then turn back into an amoeba, or wall itself up in a cyst to wait out drying. It shows how often the amoeboid way of life evolved in different branches of the eukaryotes.",
-   "v": "一种生活在土壤和池塘中的变形虫，但它根本不属于变形虫门，而是属于古虫类，与真正的变形虫亲缘关系很远：它通过一个接一个地猛然鼓出宽大圆钝的伪足来爬行，以细菌为食。当周围的水环境发生变化时，它能在几分钟内长出两根鞭毛游走，之后再变回变形虫；它也可以把自己封闭在包囊中，熬过干旱。它说明了变形虫式的生活方式曾在真核生物的不同分支中多次演化出来。"
+   "v": "一种生活在土壤和池塘中的变形虫，但它根本不属于变形虫门，而是属于古虫类，与真正的变形虫亲缘关系很远：它通过一个接一个地猛然鼓出宽大圆钝的伪足来爬行，以细菌为食。当周围的水环境发生变化时，它能在几分钟内长出两根鞭毛游走，之后再变回变形虫；它也可以把自己封闭在包囊中，熬过干旱。它说明了变形虫式的生活方式曾在真核生物的不同分支中多次进化出来。"
   },
   {
    "k": "A solitary horn coral a few centimetres tall from mid-Silurian reefs of Gotland and England, shaped like an upside-down, four-sided pyramid. Its polyp could close itself in completely with four triangular lid plates that fitted over the square cup like a trapdoor. Fixed in place and catching small prey with its tentacles, it was almost impossible to harm once shut.",
@@ -2378,7 +2398,7 @@
   },
   {
    "k": "A tiny freshwater flagellate that beats a long flagellum inside a deep groove along its underside, sweeping bacteria into it to eat. This feeding groove gave the excavates their name, a scattered set of flagellates that includes the euglenids and trypanosomes and the gut parasites without mitochondria. Malawimonads may sit near the very root of the eukaryote tree, and stand here for the ancestor of the excavates, well over a billion years old.",
-   "v": "一种微小的淡水鞭毛虫，在身体腹面一道深沟里摆动一根长鞭毛，把细菌扫进沟中吃掉。古虫类（Excavata，意为“挖空的”）正是因这道摄食沟而得名；这是一群零散的鞭毛虫，包括眼虫类、锥虫，以及没有线粒体的肠道寄生虫。马拉维虫类可能就位于真核生物演化树的根部附近，在这里代表古虫类的祖先，距今远超十亿年。"
+   "v": "一种微小的淡水鞭毛虫，在身体腹面一道深沟里摆动一根长鞭毛，把细菌扫进沟中吃掉。古虫类（Excavata，意为“挖空的”）正是因这道摄食沟而得名；这是一群零散的鞭毛虫，包括眼虫类、锥虫，以及没有线粒体的肠道寄生虫。马拉维虫类可能就位于真核生物进化树的根部附近，在这里代表古虫类的祖先，距今远超十亿年。"
   },
   {
    "k": "A tiny gliding flagellate of mud and soil that slides along on its long trailing flagellum, feeling the way with a short one sheathed in a stiff snout, and eats bacteria. Apusomonads are the closest single-celled relatives of the branch that holds the amoebae, the fungi and the animals, the Amorphea, and stand here for its ancestor, over a billion years old: a small, bacteria-eating cell with two flagella that could also put out pseudopods.",
@@ -2550,7 +2570,7 @@
   },
   {
    "k": "A {0} has already become a {1}; evolve another copy into a different species",
-   "v": "已有一只{0}演化成了{1}；请让另一只演化为不同的物种"
+   "v": "已有一只{0}进化成了{1}；请让另一只进化为不同的物种"
   },
   {
    "k": "ADMIN",
@@ -2818,7 +2838,7 @@
   },
   {
    "k": "Already evolved by another copy",
-   "v": "已由另一只演化"
+   "v": "已由另一只进化"
   },
   {
    "k": "Also called the Norway rat, it originated on the plains of northern China and Mongolia and followed people around the world, reaching every continent except Antarctica. A female can raise five or more litters a year, and colonies dig burrow networks near water, food stores and sewers. Tame strains of it became the laboratory rat and the pet fancy rat.",
@@ -2970,7 +2990,7 @@
   },
   {
    "k": "An armoured placoderm about 20 cm long from the Late Silurian Kuanti Formation of Qujing, Yunnan, China, about 423 million years ago, described in 2013. Its head and trunk were boxed in bony plates like other placoderms, but its mouth was edged with the same jaw bones (maxilla and dentary) found in bony fishes, including ourselves. Its name means 'complete jaw'. It showed that the bony fish jaw first evolved in placoderms.",
-   "v": "一种披甲的盾皮鱼，长约20厘米，来自中国云南曲靖晚志留世的关底组，距今约4.23亿年，于2013年命名。它的头部和躯干像其他盾皮鱼一样包裹在骨板中，但口缘却长着与硬骨鱼类（包括我们人类）相同的颌骨——上颌骨和齿骨。它的名字意为“完整的颌”。它表明硬骨鱼式的颌最早是在盾皮鱼中演化出来的。"
+   "v": "一种披甲的盾皮鱼，长约20厘米，来自中国云南曲靖晚志留世的关底组，距今约4.23亿年，于2013年命名。它的头部和躯干像其他盾皮鱼一样包裹在骨板中，但口缘却长着与硬骨鱼类（包括我们人类）相同的颌骨——上颌骨和齿骨。它的名字意为“完整的颌”。它表明硬骨鱼式的颌最早是在盾皮鱼中进化出来的。"
   },
   {
    "k": "An armoured placoderm about 20 cm long from the Late Silurian Kuanti Formation of Qujing, Yunnan, China, about 423 million years ago, described in 2016. Like Entelognathus it combined a box-like placoderm armour with bony-fish-like jaw bones, but its snout was drawn out into a short, pointed rostrum. It was named after the qilin, a chimera of Chinese mythology, because it mixes features of different fish groups.",
@@ -3046,7 +3066,7 @@
   },
   {
    "k": "An early synapsid about 2 metres long from the Early Permian of Texas, around 295 million years ago. Its very long, tall and narrow skull, up to a quarter of its body length, was lined with many sharp teeth. It probably lived along rivers and swamps, catching fish and smaller tetrapods in the water and on the banks. Its family is one of the oldest branches of the synapsid line that later led to mammals.",
-   "v": "一种体长约2米的早期合弓类，生活在约2.95亿年前早二叠世的得克萨斯。它的头骨非常长、高而窄，可达体长的四分之一，长满了尖利的牙齿。它可能生活在河流和沼泽边，在水中和岸上捕捉鱼类和较小的四足动物。它所在的科是合弓类演化线上最古老的分支之一，这条演化线后来产生了哺乳动物。"
+   "v": "一种体长约2米的早期合弓类，生活在约2.95亿年前早二叠世的得克萨斯。它的头骨非常长、高而窄，可达体长的四分之一，长满了尖利的牙齿。它可能生活在河流和沼泽边，在水中和岸上捕捉鱼类和较小的四足动物。它所在的科是合弓类进化线上最古老的分支之一，这条进化线后来产生了哺乳动物。"
   },
   {
    "k": "An early tetrapod about a metre long from Dumbarton in Scotland, about 348 million years old, one of the few known from 'Romer's Gap', the poorly fossilised start of the Carboniferous. It had a broad, triangular head, a stout body and sturdy limbs, and its feet are the oldest known to point forward, a sign that it walked on land rather than only paddling. It probably hunted along the edges of rivers and swamps.",
@@ -4534,11 +4554,11 @@
   },
   {
    "k": "Can evolve",
-   "v": "可演化"
+   "v": "可进化"
   },
   {
    "k": "Can evolve into",
-   "v": "可演化为"
+   "v": "可进化为"
   },
   {
    "k": "Can reproduce again in {0} turn",
@@ -4926,7 +4946,7 @@
   },
   {
    "k": "Click an item to see details. Double-click to acquire it. Tabs above switch between branches. Greyed-out items aren't in this species' trees.",
-   "v": "单击条目查看详情，双击即可获取。上方标签页可切换分支。灰色条目不在该物种的演化树中。"
+   "v": "单击条目查看详情，双击即可获取。上方标签页可切换分支。灰色条目不在该物种的进化树中。"
   },
   {
    "k": "Climate-controlled mound cities.",
@@ -6682,19 +6702,19 @@
   },
   {
    "k": "Evolve",
-   "v": "演化"
+   "v": "进化"
   },
   {
    "k": "Evolve into {0}",
-   "v": "演化为{0}"
+   "v": "进化为{0}"
   },
   {
    "k": "Evolves from: {0}",
-   "v": "演化自：{0}"
+   "v": "进化自：{0}"
   },
   {
    "k": "Evolving one {0}",
-   "v": "正在演化一只{0}"
+   "v": "正在进化一只{0}"
   },
   {
    "k": "Excavates: flagellates with a feeding groove along the underside.",
@@ -6962,7 +6982,7 @@
   },
   {
    "k": "First birds (Archaeopteryx, ~150 Ma) evolve from feathered dinosaurs",
-   "v": "最早的鸟类（始祖鸟，约 150 Ma）由带羽毛的恐龙演化而来"
+   "v": "最早的鸟类（始祖鸟，约 150 Ma）由带羽毛的恐龙进化而来"
   },
   {
    "k": "First chordates and jawless vertebrates (e.g. Haikouichthys)",
@@ -7282,7 +7302,7 @@
   },
   {
    "k": "Gains on evolving: {0}",
-   "v": "演化后获得：{0}"
+   "v": "进化后获得：{0}"
   },
   {
    "k": "Gallimimus",
@@ -8934,7 +8954,7 @@
   },
   {
    "k": "Jaws evolved from gill arches; armoured placoderms were the first giant predators.",
-   "v": "颌由鳃弓演化而来；披甲的盾皮鱼是最早的巨型掠食者。"
+   "v": "颌由鳃弓进化而来；披甲的盾皮鱼是最早的巨型掠食者。"
   },
   {
    "k": "Jebel Irhoud",
@@ -9746,7 +9766,7 @@
   },
   {
    "k": "Lobopodians gave rise to the arthropods; radiodonts were the first top predators.",
-   "v": "叶足动物演化出了节肢动物；放射齿目是最早的顶级掠食者。"
+   "v": "叶足动物进化出了节肢动物；放射齿目是最早的顶级掠食者。"
   },
   {
    "k": "Locomotor System",
@@ -11198,7 +11218,7 @@
   },
   {
    "k": "Not ready to evolve yet",
-   "v": "尚不能演化"
+   "v": "尚不能进化"
   },
   {
    "k": "Nothia",
@@ -11394,7 +11414,7 @@
   },
   {
    "k": "One of the earliest four-limbed vertebrates, from the Late Devonian of East Greenland about 365 million years ago, about 60 centimetres long. It had legs with eight digits on each foot, but they were paddle-like and too weak to carry it far on land, and it still had internal gills and a deep tail fin. It lived mostly in shallow, weedy river channels, showing that limbs with digits first evolved in the water.",
-   "v": "最早的四肢脊椎动物之一，来自东格陵兰的晚泥盆世，距今约3.65亿年，体长约60厘米。它的四肢每只脚上有八个趾，但这些肢呈桨状，过于孱弱，无法在陆地上支撑它走远；它还保留着内鳃和高大的尾鳍。它主要生活在水草丛生的浅河道中，表明带趾的四肢最初是在水中演化出来的。"
+   "v": "最早的四肢脊椎动物之一，来自东格陵兰的晚泥盆世，距今约3.65亿年，体长约60厘米。它的四肢每只脚上有八个趾，但这些肢呈桨状，过于孱弱，无法在陆地上支撑它走远；它还保留着内鳃和高大的尾鳍。它主要生活在水草丛生的浅河道中，表明带趾的四肢最初是在水中进化出来的。"
   },
   {
    "k": "One of the earliest giant indricotheres, a hornless rhinoceros from the late Eocene and early Oligocene of China and Mongolia, close in size to Paraceratherium. Long, pillar-like legs and a long neck let it browse treetops, and unlike its later relatives it kept a full set of front teeth. Its enormous size gave it huge stamina in a fight, but it had no horns and moved slowly.",
@@ -11422,7 +11442,7 @@
   },
   {
    "k": "One of the earliest mammaliaforms, a shrew-like animal about 10 centimetres long that lived from the latest Triassic into the Early Jurassic. Its sharp teeth suggest it hunted insects, and thousands of its teeth and bones have been recovered from ancient cave and fissure fillings in south Wales. Its lower jaw still had the old reptilian joint working alongside the new mammal-type joint, a step in the evolution of the mammalian middle ear.",
-   "v": "最早的哺乳形类之一，一种形似鼩鼱、体长约10厘米的动物，生活在三叠纪末至早侏罗世。锋利的牙齿表明它捕食昆虫，人们已从威尔士南部的古代洞穴和裂隙堆积中找到了数千颗它的牙齿和骨骼。它的下颌仍保留着旧的爬行类关节，与新的哺乳类关节并行工作，这是哺乳动物中耳演化中的一步。"
+   "v": "最早的哺乳形类之一，一种形似鼩鼱、体长约10厘米的动物，生活在三叠纪末至早侏罗世。锋利的牙齿表明它捕食昆虫，人们已从威尔士南部的古代洞穴和裂隙堆积中找到了数千颗它的牙齿和骨骼。它的下颌仍保留着旧的爬行类关节，与新的哺乳类关节并行工作，这是哺乳动物中耳进化中的一步。"
   },
   {
    "k": "One of the earliest scorpions, about 4 cm long, from the Late Silurian Bertie Group of New York, about 420 million years ago. It already had the scorpion body plan: grasping pincers, four pairs of walking legs and a curled tail ending in a sting. It lacks clear evidence of book lungs, so it probably still lived in shallow water or at its edges rather than fully on land.",
@@ -11446,7 +11466,7 @@
   },
   {
    "k": "One of the earliest vertebrates, a small jawless fish about 6 cm long from the Burgess Shale and the nearby Marble Canyon site of British Columbia. It had a pair of large camera eyes, zig-zag muscle blocks along its body and seven pairs of gill bars. The first pair of bars was a little thicker than the rest, foreshadowing the gill arch that later became jaws. Specimens from Marble Canyon were described in 2014.",
-   "v": "最早的脊椎动物之一，一种体长约6厘米的小型无颌鱼，来自伯吉斯页岩及附近不列颠哥伦比亚省的大理石峡谷化石点。它有一对大型相机眼、沿身体排列的\"之\"字形肌节和七对鳃弓。第一对鳃弓比其余稍粗，预示了后来演化成颌的鳃弓。大理石峡谷的标本于2014年被描述。"
+   "v": "最早的脊椎动物之一，一种体长约6厘米的小型无颌鱼，来自伯吉斯页岩及附近不列颠哥伦比亚省的大理石峡谷化石点。它有一对大型相机眼、沿身体排列的\"之\"字形肌节和七对鳃弓。第一对鳃弓比其余稍粗，预示了后来进化成颌的鳃弓。大理石峡谷的标本于2014年被描述。"
   },
   {
    "k": "One of the earliest vertebrates, from the Chengjiang biota, Yunnan.",
@@ -11618,7 +11638,7 @@
   },
   {
    "k": "One of the oldest and largest penguins, from the late Paleocene of New Zealand, about 1.6 m long and perhaps 100 kg. It shows that penguins became flightless, wing-propelled divers and giants within a few million years of the end-Cretaceous extinction. It had a long, narrow beak for catching fish and squid.",
-   "v": "最古老、最大的企鹅之一，出自新西兰晚古新世，体长约1.6米，体重可能达100千克。它表明，在白垩纪末大灭绝后的短短几百万年内，企鹅就已演化成不会飞、靠翅膀推进的潜水者和巨型种类。它有长而窄的喙，用来捕捉鱼和乌贼。"
+   "v": "最古老、最大的企鹅之一，出自新西兰晚古新世，体长约1.6米，体重可能达100千克。它表明，在白垩纪末大灭绝后的短短几百万年内，企鹅就已进化成不会飞、靠翅膀推进的潜水者和巨型种类。它有长而窄的喙，用来捕捉鱼和乌贼。"
   },
   {
    "k": "One of the oldest armoured fish, a jawless vertebrate from the Late Ordovician coastal seas of Colorado, about 455 million years ago. Its head was encased in a shield of many small bony plates carved with fine ridges, and inside lay one of the oldest known cartilage braincases. Slow and toothless, it fed on small particles near the bottom, trusting its heavy armour to protect it.",
@@ -11654,7 +11674,7 @@
   },
   {
    "k": "One of the oldest known synapsids, the group that much later produced mammals, found in fossilised tree stumps at Florence, Nova Scotia, about 306 million years old. It looked like a lizard about half a metre long, but its skull already had the single opening behind each eye typical of synapsids. Its sharp teeth, including enlarged ones near the front of the upper jaw, suggest it hunted insects and small tetrapods in the coal forests.",
-   "v": "已知最古老的合弓类之一——这一类群在很久以后演化出了哺乳动物——发现于加拿大新斯科舍省弗洛伦斯的化石树桩中，距今约3.06亿年。它看起来像一只约半米长的蜥蜴，但头骨上每只眼睛后方已经具有合弓类典型的单个颞孔。它锋利的牙齿，包括上颌前部的几颗增大的牙齿，表明它在煤炭森林中捕食昆虫和小型四足动物。"
+   "v": "已知最古老的合弓类之一——这一类群在很久以后进化出了哺乳动物——发现于加拿大新斯科舍省弗洛伦斯的化石树桩中，距今约3.06亿年。它看起来像一只约半米长的蜥蜴，但头骨上每只眼睛后方已经具有合弓类典型的单个颞孔。它锋利的牙齿，包括上颌前部的几颗增大的牙齿，表明它在煤炭森林中捕食昆虫和小型四足动物。"
   },
   {
    "k": "One of the oldest known vertebrates with a bony armour, from the Early to Middle Ordovician Stairway Sandstone of central Australia. About 15 cm long, it had flattened dorsal and ventral head shields joined by rows of small plates over the gills, tiny eyes at the front of the head, no paired fins and no jaws. Its body was covered in long, narrow, saw-edged scales, which gave it its name.",
@@ -11690,7 +11710,7 @@
   },
   {
    "k": "One of the world's most damaging plant pests, a half-millimetre mite recorded on more than a thousand kinds of plants. It pierces leaf cells and sucks out their contents, leaving pale speckles, and its colonies cover leaves in fine silk webbing. In warm weather a generation takes only about a week, so populations explode and quickly evolve resistance to pesticides.",
-   "v": "世界上危害最大的植物害虫之一，一种半毫米长的螨，已在一千多种植物上有记录。它刺破叶片细胞吸食其内容物，留下浅色斑点，其群体会用细密的丝网覆盖叶片。在温暖天气里，一代只需约一周，因此种群数量爆发式增长，并迅速演化出对杀虫剂的抗性。"
+   "v": "世界上危害最大的植物害虫之一，一种半毫米长的螨，已在一千多种植物上有记录。它刺破叶片细胞吸食其内容物，留下浅色斑点，其群体会用细密的丝网覆盖叶片。在温暖天气里，一代只需约一周，因此种群数量爆发式增长，并迅速进化出对杀虫剂的抗性。"
   },
   {
    "k": "Onset of Northern Hemisphere glaciation",
@@ -15274,7 +15294,7 @@
   },
   {
    "k": "Tetrapods evolve from lobe-finned fish (Tiktaalik ~375 Ma, Acanthostega ~365 Ma)",
-   "v": "四足动物由肉鳍鱼演化而来（提塔利克鱼约 375 Ma，棘螈约 365 Ma）"
+   "v": "四足动物由肉鳍鱼进化而来（提塔利克鱼约 375 Ma，棘螈约 365 Ma）"
   },
   {
    "k": "Tetraxylopteris",
@@ -15322,7 +15342,7 @@
   },
   {
    "k": "The \"giraffe camel\" of the Middle and Late Miocene of North America, where camels first evolved. A humpless camel with very long, slender legs and a long neck, it held its small head about 3 m above the ground to browse on trees like a giraffe. Like modern camels it walked on padded feet with two toes.",
-   "v": "“长颈鹿骆驼”，生活在北美的中、晚中新世，而北美正是骆驼最早演化的地方。它是一种没有驼峰的骆驼，腿非常修长，脖子很长，小小的头部离地约3米，能像长颈鹿一样啃食树叶。和现代骆驼一样，它用带肉垫的双趾足行走。"
+   "v": "“长颈鹿骆驼”，生活在北美的中、晚中新世，而北美正是骆驼最早进化的地方。它是一种没有驼峰的骆驼，腿非常修长，脖子很长，小小的头部离地约3米，能像长颈鹿一样啃食树叶。和现代骆驼一样，它用带肉垫的双趾足行走。"
   },
   {
    "k": "The \"shovel-tusker\", an elephant relative of the Middle Miocene of China, Mongolia and Kazakhstan, about 3 m tall. Its very long lower jaw ended in two broad, flat incisors forming a scoop, and a broad trunk rested on top of it. Once thought to shovel water plants, it is now thought to have cut and stripped branches and bark with the sharp edge of its scoop.",
@@ -15386,11 +15406,11 @@
   },
   {
    "k": "The earliest known diapsid reptile, the lineage that later gave rise to lizards, crocodiles and dinosaurs, from Late Carboniferous rocks near Garnett, Kansas, about 302 million years old. It was a slender animal some 40 cm long, with a small head, a long neck, long legs and a tail longer than the rest of its body. It probably darted through the undergrowth of the coal forests hunting insects and other small invertebrates.",
-   "v": "已知最早的双孔类爬行动物——这一支系后来演化出蜥蜴、鳄类和恐龙——发现于美国堪萨斯州加尼特附近的晚石炭世岩层，距今约3.02亿年。它体形纤细，长约40厘米，头小、颈长、腿长，尾巴比身体其余部分还长。它可能在煤炭森林的林下灌丛中穿梭，捕食昆虫和其他小型无脊椎动物。"
+   "v": "已知最早的双孔类爬行动物——这一支系后来进化出蜥蜴、鳄类和恐龙——发现于美国堪萨斯州加尼特附近的晚石炭世岩层，距今约3.02亿年。它体形纤细，长约40厘米，头小、颈长、腿长，尾巴比身体其余部分还长。它可能在煤炭森林的林下灌丛中穿梭，捕食昆虫和其他小型无脊椎动物。"
   },
   {
    "k": "The fastest land animal of the Americas, a deer-sized runner of the western prairies and deserts that can sprint at about 90 km/h and keep up 50 to 70 km/h for several kilometres. It is the last survivor of a family once rich in species and not a true antelope; its forked horn sheaths are shed every year. Its huge eyes spot danger kilometres away, and its speed may have evolved to escape the cheetah-like cats of Ice Age North America.",
-   "v": "美洲跑得最快的陆生动物，是生活在北美西部草原和荒漠中的一种鹿般大小的奔跑者，冲刺速度约每小时90千米，还能以每小时50到70千米的速度连续奔跑数千米。它是一个曾经物种繁多的科的最后幸存者，并非真正的羚羊；它的分叉角鞘每年都会脱落。它巨大的眼睛能在数千米外发现危险，而它的速度或许是为了逃避冰河时代北美类似猎豹的猫科动物而演化出来的。"
+   "v": "美洲跑得最快的陆生动物，是生活在北美西部草原和荒漠中的一种鹿般大小的奔跑者，冲刺速度约每小时90千米，还能以每小时50到70千米的速度连续奔跑数千米。它是一个曾经物种繁多的科的最后幸存者，并非真正的羚羊；它的分叉角鞘每年都会脱落。它巨大的眼睛能在数千米外发现危险，而它的速度或许是为了逃避冰河时代北美类似猎豹的猫科动物而进化出来的。"
   },
   {
    "k": "The first known burrowing dinosaur, a small plant-eater about 2 metres long from Montana and Idaho about 95 million years ago. It was found curled up with two half-grown young at the end of a sloping, S-shaped burrow, the first evidence of a dinosaur digging dens and caring for its offspring. Its strong snout, shoulders and hips helped it dig, and a burrow offered shelter from predators and the weather.",
@@ -15614,7 +15634,7 @@
   },
   {
    "k": "The largest king crab of the North Pacific's cold seas, with a spiny shell up to 28 cm across and legs spanning up to 1.8 m; its right claw is bigger than the left and the fifth pair of legs is tiny and hidden under the shell. King crabs descend from hermit crab-like ancestors rather than true crabs. Introduced to the Barents Sea by Soviet scientists in the 1960s, it has spread along the coasts of Russia and Norway.",
-   "v": "北太平洋寒冷海域中最大的帝王蟹，多刺的甲壳宽达28厘米，步足展开可达1.8米；右螯比左螯大，第五对足细小且藏于甲壳之下。帝王蟹由类似寄居蟹的祖先演化而来，而非真正的螃蟹。20世纪60年代，苏联科学家将其引入巴伦支海，此后它沿俄罗斯和挪威海岸扩散。"
+   "v": "北太平洋寒冷海域中最大的帝王蟹，多刺的甲壳宽达28厘米，步足展开可达1.8米；右螯比左螯大，第五对足细小且藏于甲壳之下。帝王蟹由类似寄居蟹的祖先进化而来，而非真正的螃蟹。20世纪60年代，苏联科学家将其引入巴伦支海，此后它沿俄罗斯和挪威海岸扩散。"
   },
   {
    "k": "The largest land arthropod known, a millipede relative that grew to over two metres long and half a metre wide. It walked the open floors of Carboniferous coal forests on dozens of pairs of short legs, leaving trackways up to 50 centimetres across. It probably fed on plant matter and spores, and lived on into the earliest Permian.",
@@ -16770,7 +16790,7 @@
   },
   {
    "k": "Whales and dolphins evolved from hoofed mammals that returned to the sea.",
-   "v": "鲸和海豚由重返海洋的有蹄哺乳动物演化而来。"
+   "v": "鲸和海豚由重返海洋的有蹄哺乳动物进化而来。"
   },
   {
    "k": "Wheeler Shale",
@@ -17022,7 +17042,7 @@
   },
   {
    "k": "Your {0} evolved into a {1}",
-   "v": "你的{0}演化成了{1}"
+   "v": "你的{0}进化成了{1}"
   },
   {
    "k": "Yours",
@@ -17198,19 +17218,19 @@
   },
   {
    "k": "{0} evolution ready",
-   "v": "{0} 次演化就绪"
+   "v": "{0} 次进化就绪"
   },
   {
    "k": "{0} evolutions ready",
-   "v": "{0} 次演化就绪"
+   "v": "{0} 次进化就绪"
   },
   {
    "k": "{0} of your species  ·  {1} evolution ready",
-   "v": "你的物种 {0} 个  ·  {1} 次演化就绪"
+   "v": "你的物种 {0} 个  ·  {1} 次进化就绪"
   },
   {
    "k": "{0} of your species  ·  {1} evolutions ready",
-   "v": "你的物种 {0} 个  ·  {1} 次演化就绪"
+   "v": "你的物种 {0} 个  ·  {1} 次进化就绪"
   },
   {
    "k": "{0} or {1}",
@@ -17218,11 +17238,11 @@
   },
   {
    "k": "{0} possible evolution",
-   "v": "{0} 种可能的演化"
+   "v": "{0} 种可能的进化"
   },
   {
    "k": "{0} possible evolutions",
-   "v": "{0} 种可能的演化"
+   "v": "{0} 种可能的进化"
   },
   {
    "k": "{0} reproduced",
@@ -17494,7 +17514,7 @@
   },
   {
    "k": "Evolution Tree",
-   "v": "进化树"
+   "v": "进化"
   },
   {
    "k": "{0} species ▸",
@@ -17850,7 +17870,7 @@
   },
   {
    "k": "Jaws evolved from gill arches, opening up new ways of feeding.",
-   "v": "颌由鳃弓演化而来，开辟了新的取食方式。"
+   "v": "颌由鳃弓进化而来，开辟了新的取食方式。"
   },
   {
    "k": "Placoderms were armoured jawed fish, the first giant predators.",
@@ -18030,7 +18050,7 @@
   },
   {
    "k": "Mammals that went on to give birth to live young.",
-   "v": "后来演化出胎生的哺乳动物。"
+   "v": "后来进化出胎生的哺乳动物。"
   },
   {
    "k": "Therian mammals give birth to live young.",
@@ -18050,7 +18070,7 @@
   },
   {
    "k": "Placentals that evolved on the southern continents.",
-   "v": "在南方大陆演化的有胎盘类。"
+   "v": "在南方大陆进化的有胎盘类。"
   },
   {
    "k": "Xenarthrans, with extra joints in the backbone: sloths, anteaters and armadillos.",
@@ -18066,11 +18086,11 @@
   },
   {
    "k": "Afrotheres evolved in Africa.",
-   "v": "非洲兽类在非洲演化。"
+   "v": "非洲兽类在非洲进化。"
   },
   {
    "k": "Elephants, sea cows and their kin evolved along the Tethys Sea.",
-   "v": "大象、海牛及其亲属沿着特提斯海演化。"
+   "v": "大象、海牛及其亲属沿着特提斯海进化。"
   },
   {
    "k": "Proboscideans: a trunk and tusks.",
@@ -18134,7 +18154,7 @@
   },
   {
    "k": "Laurasiatheres evolved on the northern continents.",
-   "v": "劳亚兽类在北方大陆演化。"
+   "v": "劳亚兽类在北方大陆进化。"
   },
   {
    "k": "Shrews, hedgehogs and moles.",
@@ -18230,7 +18250,7 @@
   },
   {
    "k": "Whales evolved from hoofed mammals that returned to the sea.",
-   "v": "鲸由重返大海的有蹄哺乳动物演化而来。"
+   "v": "鲸由重返大海的有蹄哺乳动物进化而来。"
   },
   {
    "k": "Fully aquatic whales, no longer able to walk on land.",
@@ -18834,7 +18854,7 @@
   },
   {
    "k": "A small, slender, straight-shelled cephalopod of the Devonian seas, about 10 cm long, with its siphuncle running along the edge of the shell rather than through the middle. Bactritids look plain, but they were the root of two great lineages: some coiled their shells and became the ammonites, others drew the shell inside the body and gave rise to the belemnites, squid and octopuses.",
-   "v": "泥盆纪海洋中一种细小、修长的直壳头足类，长约10厘米，体管沿壳缘而不是从中央穿过。杆石类外表朴素，却是两大类群的根：一些卷起了壳，成为菊石；另一些把壳收进体内，演化出箭石、乌贼和章鱼。"
+   "v": "泥盆纪海洋中一种细小、修长的直壳头足类，长约10厘米，体管沿壳缘而不是从中央穿过。杆石类外表朴素，却是两大类群的根：一些卷起了壳，成为菊石；另一些把壳收进体内，进化出箭石、乌贼和章鱼。"
   },
   {
    "k": "One of the oldest known bivalves, from the Early Cambrian of New York, Greenland and beyond: a tiny clam only about 4 mm long, its two smooth, thin, sideways-flattened valves joined by a straight hinge. It probably lay half buried in the sediment, digging with a muscular foot and drawing in water to feed. From little clams like it came the mussels, oysters, scallops and giant clams.",
@@ -18894,7 +18914,7 @@
   },
   {
    "k": "A sheep-sized early hoofed mammal of the late Paleocene and early Eocene of North America and Europe, about 1.5 m long. Phenacodus had a long low body, a long heavy tail and five toes on each foot ending in small hooves, the middle one the largest: the plan from which horses, rhinos and the other hoofed mammals grew. It browsed and ate fruit in open woodland.",
-   "v": "北美洲和欧洲晚古新世至早始新世一种绵羊大小的早期有蹄哺乳动物，长约1.5米。原蹄兽身体长而低矮，尾巴又长又粗，每只脚有五趾，末端是小蹄，中趾最大：马、犀牛和其他有蹄类就是从这样的体型演化而来。它在开阔的林地中啃食枝叶、吃果实。"
+   "v": "北美洲和欧洲晚古新世至早始新世一种绵羊大小的早期有蹄哺乳动物，长约1.5米。原蹄兽身体长而低矮，尾巴又长又粗，每只脚有五趾，末端是小蹄，中趾最大：马、犀牛和其他有蹄类就是从这样的体型进化而来。它在开阔的林地中啃食枝叶、吃果实。"
   },
   {
    "k": "A raccoon-sized even-toed ungulate of the middle Eocene of Kashmir, about 40 cm long, like a small mousedeer on long slender legs. It is the closest known relative of the whales: its ear bones already had the thick, shell-like wall of a whale's, and its heavy limb bones weighed it down in water, where it probably waded and hid from predators, as the African water chevrotain does today.",
@@ -18902,7 +18922,7 @@
   },
   {
    "k": "Bactritids, small straight-shelled cephalopods, gave rise to both the ammonites and the squid line.",
-   "v": "杆石类是一类小型直壳头足类，菊石和乌贼一支都由它们演化而来。"
+   "v": "杆石类是一类小型直壳头足类，菊石和乌贼一支都由它们进化而来。"
   },
   {
    "k": "Nephila jurassica",
@@ -19494,7 +19514,7 @@
   },
   {
    "k": "Evolves from",
-   "v": "演化自"
+   "v": "进化自"
   },
   {
    "k": "Safari Mode",
@@ -19758,7 +19778,7 @@
   },
   {
    "k": "You begin with three single-celled founders, one from each great branch of life, living around your habitat center. Guide them through 600 million years: spread out, compete, and evolve into the animals of later periods.",
-   "v": "你将从三种单细胞始祖起步，它们分别来自生命的三大分支，生活在你的栖息地中心周围。带领它们走过6亿年：扩散、竞争，并演化成后来各个时期的动物。"
+   "v": "你将从三种单细胞始祖起步，它们分别来自生命的三大分支，生活在你的栖息地中心周围。带领它们走过6亿年：扩散、竞争，并进化成后来各个时期的动物。"
   },
   {
    "k": "Layers of the map",
@@ -19806,15 +19826,15 @@
   },
   {
    "k": "Spend EP in the Functions and Behaviors trees to give a species new traits. Evolving into another species needs certain traits, so look at what the species you want to become requires.",
-   "v": "在“形态”和“行为”树中花费 EP，可以为物种赋予新特征。演化成另一个物种需要具备特定特征，所以先看看你想成为的物种需要什么。"
+   "v": "在“形态”和“行为”树中花费 EP，可以为物种赋予新特征。进化成另一个物种需要具备特定特征，所以先看看你想成为的物种需要什么。"
   },
   {
    "k": "Ready to evolve",
-   "v": "可以演化了"
+   "v": "可以进化了"
   },
   {
    "k": "One of your groups can now evolve. Press Evolve on its card, or open the Evolution Tree to see every species it can become and what each needs. Later species are stronger: their attack, defense and health grow with each period.",
-   "v": "你的一个群现在可以演化了。在它的卡片上按“演化”，或打开“进化树”，查看它能变成的所有物种以及各自的条件。越晚出现的物种越强：它们的攻击、防御和生命值会随每个时期提升。"
+   "v": "你的一个群现在可以进化了。在它的卡片上按“进化”，或打开“进化”，查看它能变成的所有物种以及各自的条件。越晚出现的物种越强：它们的攻击、防御和生命值会随每个时期提升。"
   },
   {
    "k": "Wild relatives",
@@ -19822,7 +19842,7 @@
   },
   {
    "k": "Wild animals have appeared far away: close relatives of your species, evolved from the same ancestor. They compete with you for food and space, and some will fight.",
-   "v": "远方出现了野生动物：它们是你的物种的近亲，由同一个祖先演化而来。它们会与你争夺食物和空间，有些还会和你交战。"
+   "v": "远方出现了野生动物：它们是你的物种的近亲，由同一个祖先进化而来。它们会与你争夺食物和空间，有些还会和你交战。"
   },
   {
    "k": "Hunger",
@@ -19838,7 +19858,7 @@
   },
   {
    "k": "A new geological period has begun. The land, the climate and the wild animals change; your animals and territory carry on. New species can now evolve.",
-   "v": "一个新的地质时期开始了。陆地、气候和野生动物都会改变，而你的动物和领地会延续下去。现在可以演化出新的物种了。"
+   "v": "一个新的地质时期开始了。陆地、气候和野生动物都会改变，而你的动物和领地会延续下去。现在可以进化出新的物种了。"
   },
   {
    "k": "Got it",
@@ -19850,7 +19870,7 @@
   },
   {
    "k": "Your animals lived through the {0}: hardship drives evolution (+{1} EP)",
-   "v": "你的动物挺过了{0}：恶劣环境推动演化（+{1} EP）"
+   "v": "你的动物挺过了{0}：恶劣环境推动进化（+{1} EP）"
   },
   {
    "k": "The {0} wiped out {1} of your groups",
@@ -19886,7 +19906,7 @@
   },
   {
    "k": "Open country covered in ferns and horsetails, the meadows of the world long before grasses evolved.",
-   "v": "长满蕨类和木贼的开阔原野，早在禾草演化出来之前，它们就是世界的草地。"
+   "v": "长满蕨类和木贼的开阔原野，早在禾草进化出来之前，它们就是世界的草地。"
   },
   {
    "k": "Warm, wet forest with layer upon layer of life: the richest habitat on land, home to most land species.",
@@ -20430,7 +20450,7 @@
   },
   {
    "k": "Figs and their wasps have evolved together for 60 million years.",
-   "v": "榕属植物与其传粉榕小蜂已协同演化了6000万年。"
+   "v": "榕属植物与其传粉榕小蜂已协同进化了6000万年。"
   },
   {
    "k": "Mangroves stand on stilt roots in salt water.",
@@ -22946,11 +22966,19 @@
   },
   {
    "k": "Evolved",
-   "v": "已演化"
+   "v": "已进化"
   },
   {
    "k": "{0} → {1}",
    "v": "{0} → {1}"
+  },
+  {
+   "k": "The Evolution Tree",
+   "v": "进化"
+  },
+  {
+   "k": "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
+   "v": "右边的物种由左边的物种进化而来。你还没有的物种上有一个 DNA 按钮，点它就能把你的一群动物进化成这个物种：可以进化时它会发出金光，条件不够时是灰色的（鼠标指向它可以看到还缺什么）。书本按钮打开这个物种的百科；环形箭头可以让你失去的物种重生。点击一个物种，可以看它能进化成什么。"
   }
  ]
 }

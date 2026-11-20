@@ -104,16 +104,28 @@ namespace NaturalHistory.Save
 
         public static bool Load(int slot)
         {
+            bool ok = false;
+            var steps = LoadSteps(slot, r => ok = r, float.PositiveInfinity);
+            while (steps.MoveNext()) { }
+            return ok;
+        }
+
+        // Load in steps, giving the frame back now and then while the map is rebuilt (the loading
+        // screen runs it as a coroutine); `done` gets whether it worked
+        public static System.Collections.IEnumerator LoadSteps(int slot, Action<bool> done, float budget = 0.04f)
+        {
             var data = Peek(slot);
-            if (data == null) return false;
+            if (data == null) { done(false); yield break; }
             if (data.version > SaveData.CurrentVersion)
             {
                 Debug.LogError($"[SaveSystem] Slot {slot} is from a newer version ({data.version}).");
-                return false;
+                done(false);
+                yield break;
             }
-            Apply(data);
+            var apply = Apply(data, budget);
+            while (apply.MoveNext()) yield return apply.Current;
             Debug.Log($"[SaveSystem] Loaded slot {slot} (seed {data.worldSeed}, turn {data.turn})");
-            return true;
+            done(true);
         }
 
         public static void Delete(int slot)
@@ -165,7 +177,7 @@ namespace NaturalHistory.Save
             return data;
         }
 
-        private static void Apply(SaveData data)
+        private static System.Collections.IEnumerator Apply(SaveData data, float budget)
         {
             // The game's settings first: the land area shapes the regenerated map, the game length
             // how turns map onto dates
@@ -179,7 +191,8 @@ namespace NaturalHistory.Save
             if (grid != null)
             {
                 // Generated listeners (PlayerBall, camera) run inside this call
-                grid.Generate(data.mapWidth, data.mapHeight, data.worldSeed);
+                var generate = grid.GenerateSteps(data.mapWidth, data.mapHeight, data.worldSeed, budget);
+                while (generate.MoveNext()) yield return generate.Current;
 
                 var player = UnityEngine.Object.FindAnyObjectByType<PlayerBall>();
                 var cell   = grid.GetCell(data.playerCol, data.playerRow);

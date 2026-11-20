@@ -62,6 +62,10 @@ namespace NaturalHistory.UI
 
         private void Define()
         {
+            // first, so it shows the moment the Evolution Tree is first opened
+            Add("tree", "The Evolution Tree",
+                "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
+                () => Open("zoology-overlay"));
             Add("start", "Your first creatures",
                 "You begin with three single-celled founders, one from each great branch of life, living around your habitat center. Guide them through 600 million years: spread out, compete, and evolve into the animals of later periods.",
                 () => MyGroups().Any());
@@ -141,6 +145,8 @@ namespace NaturalHistory.UI
 
         private bool Seen(string id) => seen.Contains(id);
 
+        private bool Open(string overlay) => root?.Q(overlay) is { } e && !e.ClassListContains("hidden");
+
         // Only during play: not over the title screen, the New Game screen or a loading screen
         private bool InPlay()
         {
@@ -187,6 +193,7 @@ namespace NaturalHistory.UI
             gotIt.text = Loc.T("Got it");
             noMore.text = Loc.T("No more tips");
             card.style.display = DisplayStyle.Flex;
+            card.BringToFront(); // over whatever panel is open (the Evolution Tree)
         }
 
         private void Dismiss(bool all)

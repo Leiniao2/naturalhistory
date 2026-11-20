@@ -15,9 +15,9 @@ namespace NaturalHistory.World
     //  - Animals more than MaxSizeRatio times apart in size can't fight: the attack can't be made.
     //  - A hunter attacking its prey (FoodWeb.IsPrey) eats it: the prey is wiped out whatever its HP,
     //    and the hunter heals by the HP the prey had left (up to its maximum).
-    //  - Otherwise the defender loses attack / defense × (attacker size / defender size) × the
-    //    attacker's era factor (CombatStats.Era) HP and, if it survives, strikes back the same way;
-    //    a group at 0 HP is wiped out.
+    //  - Otherwise the defender loses (attacker's attack / defender's defense) × the attacker's era
+    //    factor (CombatStats.Era) HP and, if it survives, the attacker takes back (defender's defense
+    //    / attacker's attack) × the defender's era factor; a group at 0 HP is wiped out.
     //  - A group attacks at most once a turn, and attacking uses up the rest of its actions.
     // Each turn every group gets its actions back and heals a little, or, finding no food on its tile
     // or next to it, loses HP and may starve to death (BeginTurn, Diets).
@@ -66,13 +66,21 @@ namespace NaturalHistory.World
             && FoodWeb.SourceOf(attacker.Definition) is FoodWeb.FoodSource.Prey or FoodWeb.FoodSource.ForageOrPrey
             && FoodWeb.IsPrey(attacker.Definition, defender.Definition);
 
-        // attack / defense × size ratio, times the attacker's era factor: HP grows with the era too,
-        // so equals still need as many blows in every period, and a later species hits an earlier one
-        // all the harder (CombatStats.Era); the counterattack goes the same way
-        // and rival or wild animals hit the human player's harder on harder difficulties
+        // The blow: the attacker's attack / the defender's defense × the attacker's era factor
+        // (CombatStats.Era: HP grows with the era too, so equals need as many blows in every period,
+        // and a later species hits an earlier one all the harder)
         public static float Damage(ColonyGroup from, ColonyGroup to) =>
-            (float)from.Stats.attack / Mathf.Max(1, to.Stats.defense) * SizeRatio(from, to) * CombatStats.Era(from.Definition)
-            * (to.Owner != null && to.Owner.IsHuman && from.Owner != to.Owner ? GameOptions.FoeDamageShare : 1f);
+            (float)from.Stats.attack / Mathf.Max(1, to.Stats.defense) * CombatStats.Era(from.Definition) * Difficulty(from, to);
+
+        // What the attacker takes back: the defender's defense / the attacker's attack × the defender's
+        // era factor, so a strong attack on a weak defender costs little and a feeble one on a
+        // well-defended foe costs a lot
+        public static float BackDamage(ColonyGroup defender, ColonyGroup attacker) =>
+            (float)defender.Stats.defense / Mathf.Max(1, attacker.Stats.attack) * CombatStats.Era(defender.Definition) * Difficulty(defender, attacker);
+
+        // rival or wild animals hit the human player's harder on harder difficulties
+        private static float Difficulty(ColonyGroup from, ColonyGroup to) =>
+            to.Owner != null && to.Owner.IsHuman && from.Owner != to.Owner ? GameOptions.FoeDamageShare : 1f;
 
         // Called when the attacker's blow lands on `cell`. Abilities (see Abilities) change the fight:
         //  - swallowing whole: spines, rolling up, a shell or ink stop it (a crushing bite gets through
@@ -180,7 +188,7 @@ namespace NaturalHistory.World
 
             bool ambush = Abilities.Has(attacker, Abilities.Ambush) && !attacker.ActedThisTurn;
             if (ambush && Abilities.Has(defender, Abilities.Vigilance)) { ambush = false; notes.Add(Loc.F("the {0} saw the ambush coming", D)); }
-            float back = ambush ? 0f : Damage(defender, attacker) * (Abilities.Has(defender, Abilities.TailWeapon) ? 2f : 1f);
+            float back = ambush ? 0f : BackDamage(defender, attacker) * (Abilities.Has(defender, Abilities.TailWeapon) ? 2f : 1f);
             if (ambush) notes.Add(Loc.T("an ambush: no counterattack"));
             else if (Abilities.Has(defender, Abilities.TailWeapon)) notes.Add(Loc.F("the {0} swung its tail", D));
             attacker.Hp -= back + hurt;

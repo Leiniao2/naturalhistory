@@ -257,7 +257,7 @@
         </ui:VisualElement>
 
         <!-- Evolution tree (ZoologyPanel): from one species to what it can become; each species evolves or is revived from its own card -->
-        <ui:VisualElement name="zoology-overlay" class="overlay hidden">
+        <ui:VisualElement name="zoology-overlay" class="overlay theme-evolution hidden">
             <ui:VisualElement class="panel tree-panel">
                 <ui:VisualElement class="tree-header">
                     <ui:Button name="zoology-back-button" class="hud-button zoology-back" text="Back" />

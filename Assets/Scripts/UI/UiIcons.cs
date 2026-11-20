@@ -6,20 +6,25 @@ namespace NaturalHistory.UI
     // The buttons' icons: painted images (generated in Google Flow) in Resources/UI/Icons/<name>.png.
     //  - encyclopedia: an open book
     //  - revive: a circular arrow round a seedling (bringing a lost species back)
-    //  - evolve: chevrons rising (evolving)
+    //  - evolve: a DNA double helix (evolving)
     //  - functions / behaviors: the two trait trees
+    //  - reproduce: a cell dividing in two
+    //  - evolution-tree: a branching tree (the Evolution Tree)
     // Until an image is there, a plain white shape drawn here stands in (signed distances,
     // antialiased over about a pixel), so the buttons always show something.
     public static class UiIcons
     {
         private const int Size = 64;
 
-        private static Texture2D book, revive, upgrade, functions, behaviors;
+        private static Texture2D book, revive, upgrade, functions, behaviors, reproduce, evolve, tree;
         public static Texture2D Book      => book      ??= Load("encyclopedia") ?? Draw("IconBook", BookShape);
         public static Texture2D Revive    => revive    ??= Load("revive") ?? Draw("IconRevive", ReviveShape);
         public static Texture2D Upgrade   => upgrade   ??= Load("evolve") ?? Draw("IconUpgrade", UpgradeShape);
         public static Texture2D Functions => functions ??= Load("functions");
         public static Texture2D Behaviors => behaviors ??= Load("behaviors");
+        public static Texture2D Reproduce => reproduce ??= Load("reproduce");
+        public static Texture2D Evolve    => evolve    ??= Load("evolve"); // the painting only (no stand-in)
+        public static Texture2D Tree      => tree      ??= Load("evolution-tree");
 
         // Whether the painted image exists (a drawn stand-in is white: tint it; a painting isn't)
         public static bool Painted(Texture2D icon) => icon != null && !icon.name.StartsWith("Icon");
@@ -97,11 +102,24 @@ namespace NaturalHistory.UI
             return Mathf.Min(ring, head);
         }
 
+        // a DNA double helix standing upright: two strands twisting round each other, with rungs
         private static float UpgradeShape(Vector2 p)
         {
-            float Chevron(float y) => Mathf.Min(Segment(p, new Vector2(-0.55f, y - 0.3f), new Vector2(0f, y + 0.12f), 0.11f),
-                                                Segment(p, new Vector2(0.55f, y - 0.3f), new Vector2(0f, y + 0.12f), 0.11f));
-            return Mathf.Min(Chevron(0.3f), Chevron(-0.25f));
+            if (Mathf.Abs(p.y) > 0.88f) return Mathf.Abs(p.y) - 0.88f + 0.05f; // ends
+            const float amp = 0.36f, k = 4.2f, w = 0.075f;
+            float f = amp * Mathf.Sin(k * p.y), slope = amp * k * Mathf.Cos(k * p.y);
+            float norm = Mathf.Sqrt(1f + slope * slope);
+            float strands = Mathf.Min(Mathf.Abs(p.x - f), Mathf.Abs(p.x + f)) / norm - w;
+            // rungs between the strands, where they are apart
+            float rungs = float.MaxValue;
+            for (int i = -3; i <= 3; i++)
+            {
+                float y = i * 0.25f;
+                float half = Mathf.Abs(amp * Mathf.Sin(k * y));
+                if (half < 0.12f) continue;
+                rungs = Mathf.Min(rungs, Box(p, new Vector2(0f, y), new Vector2(half, 0.035f)));
+            }
+            return Mathf.Min(strands, rungs);
         }
     }
 }

@@ -20,11 +20,12 @@ namespace NaturalHistory.UI
     // again from the group's first species. Clicking a species makes it the starting point; Back
     // returns to the previous view.
     //
-    // Each card has icon buttons down its right side (UiIcons): Evolve on a species you don't have
-    // (into it, along the step from the species before it), lit when it can be done and grey when
-    // not, pointing at it listing what the step needs (ticked off for your copies) and grants;
-    // Revive, only when a species you have lost every group of can be brought back now; and the
-    // Encyclopedia (its painting and description). Clicking a card starts the tree from it.
+    // Each card has icon buttons in a row on its right (UiIcons), in two slots. The first holds
+    // Revive when a species you have lost every group of can be brought back now, else Evolve on a
+    // species you don't have (into it, along the step from the species before it), lit when it can
+    // be done and grey when not, pointing at it listing what the step needs (ticked off for your
+    // copies) and grants. The second is the Encyclopedia (its painting and description). Clicking a
+    // card starts the tree from it.
     // Opened from the HUD (browse) or from a selected animal's Evolve button: then that copy is the
     // one that evolves. A tab per species of yours along the top starts the tree from that one.
     public class ZoologyPanel
@@ -106,6 +107,7 @@ namespace NaturalHistory.UI
             backButton       = root.Q<Button>("zoology-back-button");
             backButton.clicked += Back;
             root.Q<Button>("zoology-close-button").clicked += Close;
+            overlay.schedule.Execute(Pulse).Every(33); // the glow round Evolve buttons that can be used
             speciesTabs = new SpeciesTabs(root.Q("zoology-species-tabs"));
             speciesTabs.Picked += id =>
             {
@@ -447,7 +449,7 @@ namespace NaturalHistory.UI
 
         // ---------- The card's actions ----------
 
-        // The icon buttons down the card's right side: Evolve, Revive, Encyclopedia
+        // The icon buttons in a row on the card's right: Evolve or Revive (one slot), Encyclopedia
         private void AddActions(Node node, VisualElement view)
         {
             var icons = new VisualElement().WithClass("zoology-node-icons");
@@ -485,19 +487,52 @@ namespace NaturalHistory.UI
             return b;
         }
 
-        // Evolve: only on species you don't have, lit when it can be done; Revive: only when it can
+        // A glow that swells and fades round every Evolve button that can be used now, so they catch
+        // the eye: the ring, a soft halo behind the icon, and a slight swell
+        private static readonly Color Glow = new(1f, 0.84f, 0.38f);
+
+        private void Pulse()
+        {
+            if (!IsOpen) return;
+            float t = 0.5f + 0.5f * Mathf.Sin(Time.unscaledTime * 4f);
+            foreach (var node in nodes.Values)
+            {
+                var b = node.evolve;
+                if (b == null) continue;
+                if (b.ClassListContains("ready") && b.resolvedStyle.display != DisplayStyle.None)
+                {
+                    var ring = new Color(Glow.r, Glow.g, Glow.b, Mathf.Lerp(0.35f, 1f, t));
+                    b.style.borderTopColor = b.style.borderBottomColor = b.style.borderLeftColor = b.style.borderRightColor = ring;
+                    float w = Mathf.Lerp(2f, 4f, t);
+                    b.style.borderTopWidth = b.style.borderBottomWidth = b.style.borderLeftWidth = b.style.borderRightWidth = w;
+                    b.style.backgroundColor = new Color(Glow.r, Glow.g, Glow.b, Mathf.Lerp(0.12f, 0.45f, t));
+                    b.style.scale = new Scale(Vector3.one * Mathf.Lerp(1f, 1.1f, t));
+                }
+                else if (b.style.scale.keyword != StyleKeyword.Null)
+                {
+                    // back to the stylesheet's look
+                    b.style.borderTopColor = b.style.borderBottomColor = b.style.borderLeftColor = b.style.borderRightColor = StyleKeyword.Null;
+                    b.style.borderTopWidth = b.style.borderBottomWidth = b.style.borderLeftWidth = b.style.borderRightWidth = StyleKeyword.Null;
+                    b.style.backgroundColor = StyleKeyword.Null;
+                    b.style.scale = StyleKeyword.Null;
+                }
+            }
+        }
+
+        // The first slot: Revive when it can be done now, else Evolve on species you don't have
+        // (lit when it can be done)
         private void RefreshActions(Node node, bool owned)
         {
+            bool revive = node.revive != null && ReviveReady(node.species);
+            if (node.revive != null) node.revive.style.display = revive ? DisplayStyle.Flex : DisplayStyle.None;
             if (node.evolve != null)
             {
-                node.evolve.style.display = owned ? DisplayStyle.None : DisplayStyle.Flex;
+                node.evolve.style.display = owned || revive ? DisplayStyle.None : DisplayStyle.Flex;
                 var copy = CopyFor(node.link);
                 bool can = copy != null && Evolution.CanEvolve(node.link, copy);
                 node.evolve.EnableInClassList("ready", can);
                 node.evolve.EnableInClassList("locked", !can);
             }
-            if (node.revive != null)
-                node.revive.style.display = ReviveReady(node.species) ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
         // The copy that would evolve along `link`: the one being evolved, else one of yours that is

@@ -93,6 +93,16 @@ namespace NaturalHistory.Data
         public List<string> prerequisites;
         public List<string> unlocksGenes; // gene ids from genes.json
         public string description;
+        public TraitBonus bonus;          // what the player's groups of a species with it gain (World/TraitBonuses)
+    }
+
+    // A Functions / Behaviors item's stat bonus (tools/trees/bonuses.py): added to CombatStats
+    // before the era factor; usually one of them is set
+    [Serializable]
+    public class TraitBonus
+    {
+        public int attack, defense, hp, moves;
+        public bool Any => attack != 0 || defense != 0 || hp != 0 || moves != 0;
     }
 
     [Serializable]

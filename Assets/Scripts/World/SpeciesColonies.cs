@@ -434,6 +434,16 @@ namespace NaturalHistory.World
             MovePathView.Show(range);
         }
 
+        // The map is being rebuilt (HexGrid.GenerateSteps): its groups go with the old cells at the
+        // end of this frame, so nothing should look at them in the frames before the new map is ready
+        public void DropForNewMap()
+        {
+            Select(null);
+            groups.Clear();
+            occupants.Clear();
+            slots.Clear();
+        }
+
         // Clears the map's groups whenever the period changes (the players' are put back by
         // TerritoryManager/EvolutionManager, the wild ones by WildBirths). With PlaceAllWild it also
         // shows every species alive in the period; normally the wild ones only come from WildBirths.

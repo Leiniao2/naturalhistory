@@ -20,7 +20,8 @@ namespace NaturalHistory.World
         public event Action TerrainChanged;
         // Period whose ground cover and plants the map currently shows (see EraFlora)
         public GeologicalAge DisplayedAge { get; private set; }
-        public bool IsGenerated => cells != null;
+        public bool IsGenerated => cells != null && !building;
+        private bool building; // GenerateSteps under way
         public int Width => width;
         public int Height => height;
         public int WorldSeed { get; private set; } // seed of the current map; saves store this instead of every cell
@@ -173,25 +174,54 @@ namespace NaturalHistory.World
         // Rebuilds the map at a given size from a known seed (used when loading a save).
         public void Generate(int cols, int rows, int worldSeed)
         {
-            width  = cols;
-            height = rows;
-            WorldSeed = worldSeed;
-            ClearCells();
-            sharedHexMesh = HexMeshGenerator.Create(cellSize * TileRadius);
-            sharedHexMesh.hideFlags = HideFlags.DontSave;
-            cells = new HexCell[width, height];
-            for (int r = 0; r < height; r++)
-                for (int q = 0; q < width; q++)
-                    CreateCell(q, r);
-            Debug.Log($"[HexGrid] Generated {width}×{height} grid ({width * height} cells)");
+            var steps = GenerateSteps(cols, rows, worldSeed, float.PositiveInfinity);
+            while (steps.MoveNext()) { }
+        }
 
-            WorldGenerator.Generate(cells, width, height, worldSeed);
-            RefreshSurfaceHeights(); // the seabed below is shaped from them
-            GenerateRivers(worldSeed);
-            GenerateUnder(worldSeed);
-            UpdateCellMeshes();
-            DressForAge(CurrentAge);
-            wrapFocusX = float.NaN; // new cells sit in the base copy; recentre on the next call
+        // The same in steps, giving the frame back whenever a step has run past `budget` seconds,
+        // so the window stays responsive behind the loading screen (Unity objects can only be made
+        // on the main thread, so the work can't go to another one). IsGenerated stays false until
+        // the map is complete, so nothing else uses it half made.
+        public System.Collections.IEnumerator GenerateSteps(int cols, int rows, int worldSeed, float budget = 0.04f)
+        {
+            building = true;
+            try
+            {
+                float since = Time.realtimeSinceStartup;
+                bool Due() => Time.realtimeSinceStartup - since > budget;
+                int frames = 0; float longest = 0f; // reported below, to find steps that still hold a frame too long
+                void Slice() { frames++; longest = Mathf.Max(longest, Time.realtimeSinceStartup - since); }
+                width  = cols;
+                height = rows;
+                WorldSeed = worldSeed;
+                if (Application.isPlaying && SpeciesColonies.Instance != null) SpeciesColonies.Instance.DropForNewMap();
+                ClearCells();
+                sharedHexMesh = HexMeshGenerator.Create(cellSize * TileRadius);
+                sharedHexMesh.hideFlags = HideFlags.DontSave;
+                cells = new HexCell[width, height];
+                for (int r = 0; r < height; r++)
+                    for (int q = 0; q < width; q++)
+                        CreateCell(q, r);
+                Debug.Log($"[HexGrid] Generated {width}×{height} grid ({width * height} cells)");
+                if (Due()) { Slice(); yield return null; since = Time.realtimeSinceStartup; }
+
+                WorldGenerator.Generate(cells, width, height, worldSeed);
+                RefreshSurfaceHeights(); // the seabed below is shaped from them
+                if (Due()) { Slice(); yield return null; since = Time.realtimeSinceStartup; }
+                GenerateRivers(worldSeed);
+                GenerateUnder(worldSeed);
+                if (Due()) { Slice(); yield return null; since = Time.realtimeSinceStartup; }
+                var meshes = UpdateCellMeshesSteps();
+                while (meshes.MoveNext())
+                    if (Due()) { Slice(); yield return null; since = Time.realtimeSinceStartup; }
+                var dress = DressSteps(CurrentAge);
+                while (dress.MoveNext())
+                    if (Due()) { Slice(); yield return null; since = Time.realtimeSinceStartup; }
+                wrapFocusX = float.NaN; // new cells sit in the base copy; recentre on the next call
+                Slice();
+                if (!float.IsPositiveInfinity(budget)) Debug.Log($"[HexGrid] Built over {frames} frames, longest step {longest * 1000f:0} ms");
+            }
+            finally { building = false; }
             Generated?.Invoke();
         }
 
@@ -207,7 +237,15 @@ namespace NaturalHistory.World
 
         private void DressForAge(GeologicalAge age)
         {
+            var steps = DressSteps(age);
+            while (steps.MoveNext()) { }
+        }
+
+        // DressForAge in steps (a yield between them; GenerateSteps decides whether to give the frame back)
+        private System.Collections.Generic.IEnumerator<object> DressSteps(GeologicalAge age)
+        {
             ApplyClimate(age); // sea level, deserts, tundra, forests, volcanoes of the date (HexGrid.Climate)
+            yield return null;
             DisplayedAge = age;
             terrainTypes ??= LoadTerrainTypes();
             for (int r = 0; r < height; r++)
@@ -222,13 +260,18 @@ namespace NaturalHistory.World
                 if (cell.HasRiver && feature == TerrainFeature.Oasis) feature = TerrainFeature.None; // no pond where a river runs through
                 cell.SetFeature(feature);
             }
-            PlaceLandforms(age);
+            yield return null;
+            var landforms = PlaceLandformsSteps(age);
+            while (landforms.MoveNext()) yield return null;
             PlaceGeothermal();
             DressMountainGround();
             DressDesertGround(); // dense, ordinary or sparse sand by region (HexGrid.Desert)
             ClearFeatures();
-            PlaceFeatures(WorldSeed, age);
-            UpdateEdgeBlends();
+            yield return null;
+            var features = PlaceFeaturesSteps(WorldSeed, age);
+            while (features.MoveNext()) yield return null;
+            var blends = UpdateEdgeBlendsSteps();
+            while (blends.MoveNext()) yield return null;
             DressUnder(age);
             CountShares();
         }
@@ -276,11 +319,17 @@ namespace NaturalHistory.World
         // variation. Seeded from the world seed, so a regenerated map (e.g. a loaded save) looks the same.
         private void PlaceFeatures(int worldSeed, GeologicalAge age)
         {
+            var steps = PlaceFeaturesSteps(worldSeed, age);
+            while (steps.MoveNext()) { }
+        }
+
+        private IEnumerator<object> PlaceFeaturesSteps(int worldSeed, GeologicalAge age)
+        {
             if (featureMaterial == null) featureMaterial = Resources.Load<Material>("Materials/MapFeatures");
             if (featureMaterial == null)
             {
                 Debug.LogWarning("[HexGrid] Resources/Materials/MapFeatures not found; skipping mountains and forests.");
-                return;
+                yield break;
             }
 
             var rng = new System.Random(worldSeed);
@@ -293,12 +342,14 @@ namespace NaturalHistory.World
             var jungles    = CreateFeatureVariants(() => MapFeatureMeshes.CreateEraForest(rng, cellSize, age, TerrainFeature.Jungle));
             var reefs      = CreateFeatureVariants(() => MapFeatureMeshes.CreateEraReef(rng, cellSize, age));
             var oases      = CreateFeatureVariants(() => MapFeatureMeshes.CreateEraOasis(rng, cellSize, age));
+            yield return null;
             // Small terrain props (grass, rocks, dunes…) for cells without a feature
             var details = new Dictionary<TerrainKind, Mesh[]>();
             foreach (TerrainKind kind in System.Enum.GetValues(typeof(TerrainKind)))
             {
                 var variants = CreateFeatureVariants(() => MapFeatureMeshes.CreateEraDetail(rng, cellSize, kind, age));
                 if (variants != null) details[kind] = variants;
+                yield return null;
             }
 
             var oceanDepth  = DistanceFromLand(6);
@@ -338,6 +389,7 @@ namespace NaturalHistory.World
             for (int r = 0; r < height; r++)
             for (int q = 0; q < width; q++)
             {
+                yield return null;
                 var cell = cells[q, r];
                 if (cell.Terrain == null) continue;
                 cell.SetTintVariation(TileTint(cell, oceanDepth[q, r], rng, noiseOffset));
@@ -675,10 +727,17 @@ namespace NaturalHistory.World
         // white chalk cliffs on mild coasts from the Cretaceous on. Not where a river runs.
         private void PlaceLandforms(GeologicalAge age)
         {
+            var steps = PlaceLandformsSteps(age);
+            while (steps.MoveNext()) { }
+        }
+
+        private IEnumerator<object> PlaceLandformsSteps(GeologicalAge age)
+        {
             var counts = new Dictionary<TerrainFeature, int>();
             for (int r = 0; r < height; r++)
             for (int q = 0; q < width; q++)
             {
+                yield return null;
                 var cell = cells[q, r];
                 if (cell.Terrain == null || cell.HasRiver) continue;
                 var form = LandformFor(cell, q, r, age);
@@ -939,6 +998,12 @@ namespace NaturalHistory.World
         // into it. Land blends only with land and water only with water, so coastlines stay crisp.
         private void UpdateEdgeBlends()
         {
+            var steps = UpdateEdgeBlendsSteps();
+            while (steps.MoveNext()) { }
+        }
+
+        private IEnumerator<object> UpdateEdgeBlendsSteps()
+        {
             Shader.SetGlobalFloat("_HexApothem", cellSize * TileRadius * 0.8660254f);
             Shader.SetGlobalFloat("_HexBlendWidth", cellSize * TileBlendWidth);
             // Steep land faces (cliffs) use the Mountain terrain's rock texture
@@ -952,6 +1017,7 @@ namespace NaturalHistory.World
             for (int r = 0; r < height; r++)
             for (int q = 0; q < width; q++)
             {
+                yield return null;
                 var cell = cells[q, r];
                 if (cell.Terrain == null) continue;
                 System.Array.Clear(textures, 0, 6);
@@ -1094,6 +1160,12 @@ namespace NaturalHistory.World
 
         private void UpdateCellMeshes()
         {
+            var steps = UpdateCellMeshesSteps();
+            while (steps.MoveNext()) { }
+        }
+
+        private IEnumerator<object> UpdateCellMeshesSteps()
+        {
             RefreshSurfaceHeights();
 
             int updated = 0;
@@ -1105,6 +1177,7 @@ namespace NaturalHistory.World
             for (int r = 0; r < height; r++)
             for (int q = 0; q < width; q++)
             {
+                yield return null;
                 var cell = cells[q, r];
                 if (cell.Terrain == null) continue;
                 float h = cell.SurfaceHeight;

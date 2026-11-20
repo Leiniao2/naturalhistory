@@ -1,8 +1,24 @@
 {
  "entries": [
   {
+   "k": "Actions +{0}",
+   "v": "Azioni +{0}"
+  },
+  {
+   "k": "Attack +{0}",
+   "v": "Attacco +{0}"
+  },
+  {
+   "k": "Defense +{0}",
+   "v": "Difesa +{0}"
+  },
+  {
    "k": "Electric Organs",
    "v": "Organi elettrici"
+  },
+  {
+   "k": "HP +{0}",
+   "v": "PV +{0}"
   },
   {
    "k": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
@@ -143,6 +159,10 @@
   {
    "k": "Breeds fast: it can reproduce every 2 turns instead of every 3.",
    "v": "Si riproduce in fretta: può riprodursi ogni 2 turni anziché ogni 3."
+  },
+  {
+   "k": "Your groups of it: {0}",
+   "v": "I tuoi gruppi di questa specie: {0}"
   },
   {
    "k": "the {0} charged",
@@ -22727,6 +22747,14 @@
   {
    "k": "{0} → {1}",
    "v": "{0} → {1}"
+  },
+  {
+   "k": "The Evolution Tree",
+   "v": "L'albero evolutivo"
+  },
+  {
+   "k": "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
+   "v": "Le specie a destra si evolvono da quelle alla loro sinistra. Il pulsante DNA su una specie che non hai ancora fa evolvere uno dei tuoi gruppi in essa: brilla d'oro quando puoi e resta grigio finché non puoi (passaci sopra per vedere cosa manca). Il libro apre la voce dell'enciclopedia; la freccia circolare riporta una specie che hai perso. Clicca una specie per vedere cosa può diventare."
   }
  ]
 }
