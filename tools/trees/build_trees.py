@@ -5,8 +5,8 @@
 
 Each tree is split into branches (sub-trees shown as tabs in the game's tree panel). A node is
     (id, name, age, prerequisites, description[, genes])
-age is a GeologicalAge abbreviation (see AGES); prerequisites is a space-separated list of ids and
-may point into another branch of the same tree. Column (tier) and row are laid out automatically
+age is a GeologicalAge abbreviation (see AGES); prerequisites is a space-separated list of ids in the
+same branch (each is drawn as a line). Column (tier) and row are laid out automatically
 from the prerequisites, and cost from column and period. Once the trees are tuned by hand in the
 concept editor, edit the JSON there instead of re-running this (it overwrites the files).
 """
@@ -95,7 +95,7 @@ MORPHOLOGY = [
         ("filter_apparatus", "Filter Apparatus", "Ed", "through_gut", "Mucus nets or gill rakers strain food from water.", "filter_feeding"),
         ("radula", "Radula", "Ed", "through_gut", "A rasping tongue-ribbon (molluscs)."),
         ("mandibles", "Mandibles", "Ed", "through_gut", "Biting jaws of arthropods."),
-        ("jaws", "Jaws", "Si", "filter_apparatus gill_arches", "Hinged jaws made from gill arches, so prey can be grabbed.", "carnivory"),
+        ("jaws", "Jaws", "Si", "filter_apparatus", "Hinged jaws made from gill arches, so prey can be grabbed.", "carnivory"),
         ("gizzard", "Gizzard", "Si", "through_gut", "A muscular stomach that grinds food."),
         ("acid_stomach", "Acid Stomach", "Si", "jaws", "An acidic stomach digests large prey (jawed vertebrates)."),
         ("teeth", "Teeth", "Si", "jaws", "Hard teeth for gripping and cutting."),
@@ -169,7 +169,7 @@ MORPHOLOGY = [
         ("egg_cases", "Egg Cases", "De", "yolky_eggs", "Tough capsules that protect the embryo (mermaid's purses)."),
         ("aquatic_larvae", "Aquatic Larvae", "De", "planktonic_larvae", "Tadpoles: amphibian young grow up in the water."),
         ("live_birth", "Live Birth", "De", "internal_fertilisation", "Young develop inside the mother (placoderms, ichthyosaurs)."),
-        ("amniotic_egg", "Amniotic Egg", "Cb", "internal_fertilisation lungs", "An egg with its own membranes and water supply, so it can be laid on land.", "clutch_size"),
+        ("amniotic_egg", "Amniotic Egg", "Cb", "internal_fertilisation", "An egg with its own membranes and water supply, so it can be laid on land.", "clutch_size"),
         ("complete_metamorphosis", "Complete Metamorphosis", "Cb", "planktonic_larvae", "Larva, pupa and adult (beetles, flies, butterflies)."),
         ("temperature_sex", "Temperature Sex Determination", "Pe", "amniotic_egg", "Nest temperature decides the sex of the young (crocodiles, turtles)."),
         ("hard_eggshell", "Hard Eggshell", "Ju", "amniotic_egg", "Calcified shells (dinosaurs, birds)."),
@@ -194,13 +194,13 @@ MORPHOLOGY = [
         ("paired_fins", "Paired Fins", "Si", "tail_fin", "Fins on both sides give steering, braking and lift.", "electroreception"),
         ("endochondral_bone", "Internal Bone", "Si", "vertebral_column", "Bone that replaces cartilage: the inner skeleton of bony fish and their descendants."),
         ("terrestrial_legs", "Terrestrial Legs", "Si", "jointed_limbs", "Legs that hold the body up out of water: the first land millipedes."),
-        ("lobe_fins", "Lobe Fins", "De", "paired_fins jaws", "Fleshy fins with a bony core, the starting point for legs.", "climbing"),
+        ("lobe_fins", "Lobe Fins", "De", "paired_fins", "Fleshy fins with a bony core, the starting point for legs.", "climbing"),
         ("digits", "Digits", "De", "lobe_fins", "Fingers and toes at the end of the limb (Acanthostega had eight)."),
         ("weight_bearing_girdles", "Weight-bearing Girdles", "De", "endochondral_bone", "Shoulder and hip girdles strong enough to carry the body out of water."),
         ("insect_wings", "Insect Wings", "Cb", "terrestrial_legs", "Thin outgrowths of the thorax: the first animals to fly.", "flight_capability"),
         ("upright_stance", "Upright Stance", "Tr", "digits weight_bearing_girdles", "Legs held under the body for efficient running and breathing."),
         ("hollow_bones", "Hollow Bones", "Tr", "endochondral_bone", "Air-filled bones are light and strong (dinosaurs, pterosaurs, birds)."),
-        ("feathered_wings", "Feathered Wings", "Ju", "upright_stance hollow_bones feathers", "Arms lined with flight feathers, as on Archaeopteryx."),
+        ("feathered_wings", "Feathered Wings", "Ju", "upright_stance hollow_bones", "Arms lined with flight feathers, as on Archaeopteryx."),
         ("tail_weapons", "Tail Weapons", "Ju", "bilateral_body", "Clubs and spikes swung at attackers (stegosaurs, ankylosaurs)."),
         ("gliding", "Gliding", "Pe", "bilateral_body", "Leaping and gliding between trees."),
     ]),
@@ -262,14 +262,14 @@ ETHOLOGY = [
         ("foraging", "Foraging", "Ed", "", "Searching the sea floor for food.", "filter_feeding"),
         ("scavenging", "Scavenging", "Ed", "foraging", "Feeding on the dead.", "decomposition"),
         ("active_predation", "Active Predation", "Ed", "foraging", "Hunting other animals (Anomalocaris).", "carnivory"),
-        ("ambush_hunting", "Ambush Hunting", "Ed", "active_predation hiding", "Waiting hidden and striking at passing prey."),
+        ("ambush_hunting", "Ambush Hunting", "Ed", "active_predation", "Waiting hidden and striking at passing prey."),
         ("patch_foraging", "Patch Foraging", "Or", "foraging", "Moving on when a food patch runs low."),
         ("pursuit_hunting", "Pursuit Hunting", "Or", "active_predation", "Chasing prey down in open water."),
         ("plant_feeding", "Plant Feeding", "Si", "patch_foraging", "Eating land plants.", "herbivory"),
         ("silk_traps", "Silk Traps", "Cb", "ambush_hunting", "Webs and trip-lines of silk."),
         ("omnivory_node", "Omnivory", "Pe", "scavenging plant_feeding", "Eating whatever is available.", "omnivory"),
         ("stalking", "Stalking", "Pe", "ambush_hunting", "Creeping up on prey unseen."),
-        ("pack_hunting", "Pack Hunting", "Ju", "stalking territoriality", "Hunting together to take bigger prey."),
+        ("pack_hunting", "Pack Hunting", "Ju", "stalking", "Hunting together to take bigger prey."),
         ("nectar_feeding_node", "Nectar Feeding", "Cr", "plant_feeding", "Drinking nectar and carrying pollen between flowers.", "nectar_feeding"),
         ("fruit_eating", "Fruit Eating", "Cr", "plant_feeding", "Eating fruit and spreading the seeds."),
         ("food_caching", "Food Caching", "Pg", "patch_foraging", "Hiding food for later (squirrels, jays)."),
@@ -292,7 +292,7 @@ ETHOLOGY = [
         ("mobbing", "Mobbing", "Cr", "group_vigilance", "Ganging up to drive a predator away."),
         ("distraction_display", "Distraction Display", "Cr", "playing_dead", "Faking a broken wing to lure predators from the nest."),
         ("stotting", "Stotting", "Ng", "startle_escape", "Leaping high to show predators you are too fit to chase."),
-        ("selfish_herd", "Selfish Herd", "Or", "hiding schooling", "Pushing into the middle of the group so others are on the outside."),
+        ("selfish_herd", "Selfish Herd", "Or", "hiding", "Pushing into the middle of the group so others are on the outside."),
     ]),
     ("reproductive", "Reproductive Behaviour", "Courtship, mating and raising the young.", [
         ("spawning_aggregations", "Spawning Aggregations", "Ed", "", "Gathering in one place to spawn."),
@@ -311,7 +311,7 @@ ETHOLOGY = [
         ("biparental_care", "Biparental Care", "Ju", "feeding_young", "Both parents raise the young."),
         ("mouthbrooding", "Mouthbrooding", "Pg", "egg_guarding", "Sheltering eggs and fry in the mouth (cichlids)."),
         ("alloparenting", "Alloparenting", "Pg", "biparental_care", "Aunts, siblings and others help raise the young."),
-        ("brood_parasitism", "Brood Parasitism", "Ng", "feeding_young incubation", "Tricking others into raising your chicks (cuckoos)."),
+        ("brood_parasitism", "Brood Parasitism", "Ng", "feeding_young", "Tricking others into raising your chicks (cuckoos)."),
         ("teaching", "Teaching", "Ng", "alloparenting", "Showing the young how to do things on purpose."),
     ]),
     ("social", "Social Behaviour", "Groups, colonies, hierarchies and traditions.", [
@@ -322,7 +322,7 @@ ETHOLOGY = [
         ("herding", "Herding", "Tr", "schooling", "Moving and feeding in herds (dinosaurs)."),
         ("eusociality", "Eusociality", "Cr", "family_groups", "Sterile workers serve a breeding queen (termites, ants)."),
         ("castes", "Castes", "Cr", "eusociality", "Soldiers, workers and nurses, each built for its job."),
-        ("social_hierarchy", "Social Hierarchy", "Pg", "herding territoriality", "A pecking order settles who gets what."),
+        ("social_hierarchy", "Social Hierarchy", "Pg", "herding", "A pecking order settles who gets what."),
         ("cooperative_breeding", "Cooperative Breeding", "Pg", "family_groups", "Helpers raise young that are not their own."),
         ("creches", "Crèches", "Cr", "family_groups", "Young gathered together in nurseries."),
         ("social_grooming", "Social Grooming", "Pg", "social_hierarchy", "Cleaning each other to build bonds."),
@@ -355,7 +355,7 @@ ETHOLOGY = [
         ("infanticide", "Infanticide", "Pg", "harems", "A male taking over a group kills his rival's young (lions)."),
         ("antler_tournaments", "Antler Tournaments", "Ng", "male_combat", "Ritual antler fights (deer)."),
         ("rutting_season", "Rutting Season", "Ng", "male_combat", "A short, intense mating season."),
-        ("border_patrols", "Border Patrols", "Ng", "territoriality coalitions", "Groups patrol and raid the edges of their range (chimpanzees, wolves)."),
+        ("border_patrols", "Border Patrols", "Ng", "territoriality", "Groups patrol and raid the edges of their range (chimpanzees, wolves)."),
     ]),
     ("communication", "Communication Behaviour", "Scent, colour, sound and language.", [
         ("chemical_signals", "Chemical Signals", "Ed", "", "Leaving chemical traces for others to detect."),
@@ -408,7 +408,7 @@ ETHOLOGY = [
         ("rock_boring", "Rock Boring", "Or", "burrow_systems", "Drilling homes into rock and wood."),
         ("burrow_nests", "Burrow Nests", "Pe", "burrow_systems", "Raising young underground."),
         ("silk_shelters", "Silk Shelters", "Pe", "tube_building", "Spinning silk retreats and cocoons."),
-        ("nesting", "Nesting", "Tr", "burrow_nests egg_sites", "Building a nest for eggs and young.", "parental_care"),
+        ("nesting", "Nesting", "Tr", "burrow_nests", "Building a nest for eggs and young.", "parental_care"),
         ("nest_defence", "Nest Defence", "Tr", "nesting", "Fighting off nest raiders."),
         ("provisioned_cells", "Provisioned Cells", "Ju", "burrow_nests", "Sealed cells stocked with food for the larvae (wasps)."),
         ("incubation", "Incubation", "Cr", "nesting", "Sitting on the eggs to keep them warm."),
@@ -461,7 +461,7 @@ ETHOLOGY = [
         ("winter_dens", "Winter Dens", "Pg", "shelter_resting", "Sheltering in a den through the cold months (bears)."),
         ("sleeping_nests", "Sleeping Nests", "Ng", "roosting", "Building a fresh bed in the trees every night (great apes)."),
         ("sleeping_on_the_wing", "Sleeping on the Wing", "Ng", "half_brain_sleep", "Sleeping in flight (swifts, frigatebirds)."),
-        ("sentinels", "Sentinels", "Ng", "communal_roosts group_vigilance", "One keeps watch while the rest sleep or feed (meerkats)."),
+        ("sentinels", "Sentinels", "Ng", "communal_roosts", "One keeps watch while the rest sleep or feed (meerkats)."),
         ("rafting_rest", "Resting in Rafts", "Ng", "communal_roosts", "Floating together, holding on to each other or to kelp (sea otters)."),
     ]),
 ]
@@ -479,11 +479,13 @@ def build(branches, out_path):
             nodes.append(by_id[node_id])
 
     # Checks: references exist, prerequisites are not from a later period
+    # and are in the node's own branch, so every one is drawn as a line in its tab
     for n in nodes:
         for p in n["prerequisites"]:
             assert p in by_id, f"{n['id']}: unknown prerequisite {p}"
             pa, na = list(AGES.values()).index(by_id[p]["age"]), list(AGES.values()).index(n["age"])
             assert pa <= na, f"{n['id']} ({n['age']}) requires later {p} ({by_id[p]['age']})"
+            assert by_id[p]["branch"] == n["branch"], f"{n['id']}: prerequisite {p} is in another branch"
 
     # Layout per branch: column = longest chain of same-branch prerequisites; rows in order,
     # each node as close as possible to the average row of its prerequisites

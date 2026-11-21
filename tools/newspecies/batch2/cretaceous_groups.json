@@ -1,0 +1,18 @@
+{
+  "Rudist": {
+    "tags": "B+['Mollusc','Bivalve']",
+    "path": "MOLL + '/Conchifera/Bivalvia/Autobranchia/Heteroconchia/Heterodonta/Hippuritida'"
+  },
+  "Crab": {
+    "tags": "ART+['Crustacean']",
+    "path": "PANCRUST + '/Malacostraca/Decapoda/Brachyura'"
+  },
+  "Multituberculate": {
+    "tags": "MAM",
+    "path": "MAMMALIA + '/Theriimorpha/Allotheria/Multituberculata'"
+  },
+  "Choristodere": {
+    "tags": "REP",
+    "path": "NEODIAPSIDA + '/Sauria/Choristodera'"
+  }
+}

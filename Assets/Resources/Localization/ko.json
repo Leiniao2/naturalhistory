@@ -1,6 +1,2670 @@
 {
  "entries": [
   {
+   "k": "A 'cystoid', an extinct stalked echinoderm from the Silurian of New York, Ontario and Britain. Its egg-shaped body, about 3-4 cm across, was built of large six-sided plates crossed by diamond-shaped pore patches used for breathing. A ring of long, thin arms around the mouth on top gathered food from the water.",
+   "v": "‘시스토이드(낭상류)’라 불리는 멸종한 자루 달린 극피동물로, 미국 뉴욕주, 캐나다 온타리오주, 영국의 실루리아기에서 발견되었다. 지름 약 3-4cm의 달걀 모양 몸은 큰 육각형 판으로 이루어졌고, 판을 가로질러 호흡에 쓰이는 마름모꼴 구멍 무리가 있었다. 위쪽 입 주위에 둥글게 난 길고 가는 팔들로 물속의 먹이를 모았다."
+  },
+  {
+   "k": "A 3-metre dolphin-like whale from the Miocene seas of the North Atlantic. Its long beak held pointed front teeth and triangular, serrated cheek teeth like a shark's, from which it gets its name. It caught fish and squid and could probably already find them by echolocation.",
+   "v": "마이오세 북대서양에 살던 몸길이 3미터의 돌고래 닮은 고래다. 긴 주둥이에는 뾰족한 앞니와 상어처럼 톱니가 난 세모꼴 어금니가 늘어서 있었고, 이름도 여기서 왔다. 물고기와 오징어를 잡았으며, 이미 반향정위로 먹이를 찾을 수 있었을 것이다."
+  },
+  {
+   "k": "A 3.5-metre snake from Late Cretaceous India, found fossilised coiled around a crushed sauropod egg next to a newly hatched baby. It could not open its jaws as wide as modern snakes, but it was big enough to raid sauropod nesting grounds and swallow the hatchlings. Its name means ancient gape in Sanskrit.",
+   "v": "백악기 후기 인도에 살았던 길이 3.5미터의 뱀으로, 부서진 용각류 알을 감싼 채 막 부화한 새끼 옆에서 화석으로 발견되었다. 현대의 뱀만큼 입을 크게 벌리지는 못했지만, 용각류의 둥지 터를 습격해 새끼를 삼킬 만큼 컸다. 이름은 산스크리트어로 '고대의 벌린 입'이라는 뜻이다."
+  },
+  {
+   "k": "A 9-metre duck-billed dinosaur whose name means good mother lizard. Huge nesting colonies found in Montana show that it laid eggs in mound nests and cared for its babies until they could leave the nest. It moved in big herds and fed on low plants with its broad, toothless beak and grinding cheek teeth.",
+   "v": "길이 9미터의 오리주둥이 공룡으로, 이름은 '좋은 어미 도마뱀'이라는 뜻이다. 몬태나에서 발견된 거대한 둥지 군락은 이들이 흙더미 둥지에 알을 낳고 새끼가 둥지를 떠날 수 있을 때까지 돌보았음을 보여 준다. 큰 무리를 지어 이동했으며, 넓고 이빨 없는 부리와 갈아 먹는 볼니로 낮은 식물을 먹었다."
+  },
+  {
+   "k": "A 9-metre early tyrannosaur from the Early Cretaceous of China, the largest dinosaur known for certain to have had feathers. Its body was covered in long shaggy filaments that probably kept it warm in the cool winters of its forests. It hunted sauropods and other large plant-eaters, perhaps in groups.",
+   "v": "중국 백악기 전기에 살았던 길이 9미터의 초기 티라노사우루스류로, 깃털이 있었던 것이 확실한 공룡 중 가장 크다. 몸은 길고 덥수룩한 섬유 모양 깃털로 덮여 있어, 숲의 추운 겨울에 몸을 따뜻하게 지켰을 것이다. 용각류와 다른 큰 초식 공룡을 사냥했으며, 무리를 지어 사냥했을지도 모른다."
+  },
+  {
+   "k": "A Cambrian comb jelly from the Burgess Shale of Canada, a jelly-like drifting animal with twenty-four rows of beating comb plates instead of the eight of living comb jellies. It drifted through the water catching tiny animals, but its body is soft and fragile.",
+   "v": "캐나다 버제스 셰일에서 나온 캄브리아기 빗해파리로, 젤리 같은 떠다니는 동물이며 현생 빗해파리의 여덟 줄 대신 스물네 줄의 움직이는 빗판을 가졌다. 물속을 떠다니며 아주 작은 동물을 잡아먹었지만 몸이 부드럽고 연약하다."
+  },
+  {
+   "k": "A Jurassic coelacanth about 50 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of the living Latimeria. It had fleshy, limb-like lobed fins, a big head with a wide mouth and the coelacanths' three-lobed tail with a small extra lobe in the middle. It lurked near the bottom and ambushed fish and other small animals.",
+   "v": "약 1억 5000만 년 전 독일 남부 후기 쥐라기 석호에 살았던 몸길이 약 50센티미터의 실러캔스로, 현생 라티메리아의 친척이다. 살집이 있는 팔다리 같은 육기지느러미, 입이 큰 커다란 머리, 그리고 가운데에 작은 덧잎이 있는 실러캔스 특유의 세 갈래 꼬리지느러미를 가졌다. 바닥 가까이에 숨어 물고기 같은 작은 동물을 매복해 잡았다."
+  },
+  {
+   "k": "A Late Devonian conodont, a small eel-like animal a few centimetres long with large eyes, known mainly from its tiny comb-like teeth. Its broad, palm-shaped tooth plates are so common and changed so quickly that they are used to date Late Devonian rocks worldwide. It swarmed in the open sea, catching small prey, and the genus died out in the crises at the end of the Devonian.",
+   "v": "데본기 후기의 코노돈트로, 큰 눈을 가진 몸길이 몇 센티미터의 뱀장어 같은 작은 동물이며 주로 작은 빗 모양 이빨로 알려져 있다. 넓은 손바닥 모양의 이빨판은 매우 흔하고 빠르게 변했기 때문에 전 세계 데본기 후기 암석의 연대를 정하는 데 쓰인다. 넓은 바다에서 떼를 지어 작은 먹이를 잡았고, 이 속은 데본기 말의 위기 때 사라졌다."
+  },
+  {
+   "k": "A badger-sized relative of marsupials about 60 centimetres long including its tail, from the last days of the dinosaurs in North America. It had the strongest bite for its size of any known mammal, with crushing teeth able to break snail shells, bones and small turtles. It probably hunted along streams like an otter.",
+   "v": "오소리만 한 크기의 유대류 친척으로, 꼬리를 포함해 길이가 약 60센티미터이며 북아메리카에서 공룡 시대의 마지막 시기에 살았다. 몸 크기에 비해 알려진 포유류 중 무는 힘이 가장 강했고, 으깨는 이빨로 달팽이 껍데기와 뼈, 작은 거북까지 부술 수 있었다. 수달처럼 개울을 따라 사냥했을 것이다."
+  },
+  {
+   "k": "A barrel-shaped giant up to 5 m long and over 3 tonnes, and the closest living relative of whales. It spends the day in rivers and lakes with only its eyes, ears and nostrils above water and comes out at night to graze. Its huge jaws open almost 180 degrees and carry tusk-like canines, making it one of Africa's most dangerous animals; in warm Ice Age spells hippos lived as far north as Britain.",
+   "v": "몸길이 5m, 몸무게 3톤이 넘는 통 모양의 거구로, 고래와 가장 가까운 현생 친척이다. 낮에는 눈, 귀, 콧구멍만 물 밖으로 내놓은 채 강과 호수에서 지내고 밤에 뭍으로 나와 풀을 뜯는다. 거의 180도로 벌어지는 거대한 턱에 엄니 같은 송곳니가 있어 아프리카에서 가장 위험한 동물 중 하나이며, 빙하기의 따뜻한 시기에는 영국까지 살았다."
+  },
+  {
+   "k": "A beaver the size of a black bear, about 2 m long and up to 100 kg, that lived in the lakes and swamps of Ice Age North America. Its incisors were up to 15 cm long, but it probably did not fell trees or build dams: it ate soft water plants. It died out about 10,000 years ago as the climate dried.",
+   "v": "흑곰만 한 비버로 몸길이 약 2m, 몸무게 최대 100kg이며 빙하기 북아메리카의 호수와 늪에 살았다. 앞니가 15cm에 달했지만 나무를 쓰러뜨리거나 댐을 짓지는 않았고 부드러운 수생 식물을 먹었던 것으로 보인다. 약 1만 년 전 기후가 건조해지면서 멸종했다."
+  },
+  {
+   "k": "A big, smooth trilobite up to about 20 cm long from mid-Silurian seas of North America and England. Its triangular head ended in a blunt, upturned snout, which gives it its name, 'dolphin head'. Its eyes were small and its shell was broad and smooth, with a pointed tail shield. It ploughed through soft mud, feeding on buried scraps.",
+   "v": "몸길이가 최대 약 20cm에 이르는 크고 매끈한 삼엽충으로, 북아메리카와 잉글랜드의 중기 실루리아기 바다에서 살았다. 삼각형 머리 끝에는 뭉툭하게 위로 들린 주둥이가 있었는데, 이 때문에 ‘돌고래 머리’라는 이름이 붙었다. 눈은 작았고 껍데기는 넓고 매끈했으며, 꼬리 방패는 뾰족했다. 부드러운 진흙 속을 헤치고 다니며 묻혀 있는 찌꺼기를 먹었다."
+  },
+  {
+   "k": "A big, thick relative of the sand dollars from the Miocene and Pliocene seas around the Mediterranean and Red Sea. Its heavy, high-domed test, up to 15 centimetres across, was covered in a felt of tiny spines and marked on top with a five-petalled flower of breathing tube feet. It lived half-buried in sand, picking food particles from the sediment.",
+   "v": "마이오세부터 플라이오세까지 지중해와 홍해 주변 바다에 살던 크고 두꺼운 성게로, 연잎성게의 친척이다. 지름이 15센티미터에 이르는 무겁고 높은 돔형 껍데기는 아주 작은 가시로 털처럼 덮였고, 윗면에는 숨쉬는 관족이 그리는 다섯 잎 꽃무늬가 있었다. 모래에 반쯤 묻혀 살며 퇴적물에서 먹이 알갱이를 골라 먹었다."
+  },
+  {
+   "k": "A blastoid, one of an extinct group of stalked echinoderms related to sea lilies, and one of the most common fossils of the Early Carboniferous limestones of North America, about 335 million years ago. Its pear-shaped, five-sided cup, only 2 to 3 centimetres long, sat on a short stem and bore five petal-shaped food grooves fringed with fine, thread-like arms. It drew water in through slits along the grooves, filtering out food and breathing at the same time.",
+   "v": "바다나리와 가까운 자루 달린 멸종 극피동물 무리인 해뢰류의 하나로, 약 3억 3500만 년 전 북아메리카 석탄기 전기 석회암에서 가장 흔한 화석 중 하나다. 길이가 2~3센티미터에 불과한 서양배 모양의 오각형 꽃받침은 짧은 줄기 위에 놓였고, 가는 실 같은 팔이 가장자리를 두른 꽃잎 모양의 먹이 홈 다섯 개가 있었다. 홈을 따라 난 틈으로 물을 빨아들여 먹이를 걸러 내는 동시에 호흡도 했다."
+  },
+  {
+   "k": "A bonytongue fish about 50 cm long from the early Eocene Green River lakes of Wyoming, related to the arowanas of tropical rivers today. It had a deep, flattened body, a large upturned mouth with sharp teeth and long pectoral fins. It hunted smaller fish such as Knightia near the surface.",
+   "v": "에오세 전기 와이오밍주 그린리버 호수에 살았던 몸길이 약 50cm의 골설어류로, 오늘날 열대 강의 아로와나의 친척이다. 납작하고 높은 몸, 날카로운 이빨이 난 크고 위로 향한 입, 긴 가슴지느러미를 가졌다. 수면 가까이에서 크니그티아 같은 작은 물고기를 사냥했다."
+  },
+  {
+   "k": "A brachiopod with a very thin, broad, D-shaped shell about 4 cm wide, with a long straight hinge and fine radiating ribs. Its two valves nested one inside the other, so the shell was barely thicker than a coin. It lay loose on soft mud, its wide, flat shell keeping it from sinking, and filtered food from the water.",
+   "v": "폭 약 4센티미터의 매우 얇고 넓은 D자 모양 껍데기를 가진 완족동물로, 길고 곧은 경첩과 가는 방사륵이 있다. 두 장의 껍데기가 포개져 겹쳐 있어서 껍데기 전체의 두께가 동전만 했다. 부드러운 진흙 위에 그냥 놓여 지냈는데, 넓고 납작한 껍데기 덕분에 가라앉지 않았으며 물에서 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "A bristle worm a few centimetres long from the Silurian of England, preserved in three dimensions with its soft parts. Its slender body had about forty segments, each with a pair of two-branched paddles bearing fans of fine bristles. It crawled and swam over and through the sea floor, rowing with its paddles.",
+   "v": "잉글랜드의 실루리아기에서 발견된 몸길이 몇 cm의 다모류(갯지렁이류)로, 연조직이 입체적으로 보존되어 있다. 가느다란 몸에는 약 40개의 체절이 있었고, 각 체절마다 가는 강모 다발이 부채처럼 달린 두 갈래의 노 모양 부속지가 한 쌍씩 있었다. 노로 물을 저으며 해저 위와 퇴적물 속을 기어 다니고 헤엄쳤다."
+  },
+  {
+   "k": "A brittle star about 10-15 cm across from the Early Jurassic seas of England, about 190 million years ago. It had a rounded central disc and five long, slender, spiny arms that it rowed in snake-like strokes across the sea floor, picking up food particles. Huge crowds of them lived together, and a single storm could bury thousands alive in sand, preserving them complete.",
+   "v": "약 1억 9000만 년 전 잉글랜드 전기 쥐라기 바다에 살았던 지름 약 10~15센티미터의 거미불가사리이다. 둥근 중앙 반과 가시가 난 가늘고 긴 다섯 팔이 있었고, 팔을 뱀처럼 저으며 바다 밑을 기어 다니면서 먹이 알갱이를 주워 먹었다. 거대한 무리를 이루어 살았기 때문에 폭풍 한 번에 수천 마리가 산 채로 모래에 묻혀 온전한 모습으로 보존되었다."
+  },
+  {
+   "k": "A brush-footed butterfly with a wingspan of about 5 cm from the late Eocene lake beds of Florissant, Colorado, one of the finest fossil butterflies ever found. Even the pattern of its wings survives: dark brown with pale spots and small eyespots near the edge of the hind wings. As an adult it drank nectar from flowers.",
+   "v": "콜로라도주 플로리선트의 에오세 후기 호수 퇴적층에서 나온 날개 편 길이 약 5cm의 네발나비류로, 지금까지 발견된 가장 훌륭한 나비 화석 중 하나다. 날개 무늬까지 남아 있는데, 짙은 갈색에 옅은 점이 있고 뒷날개 가장자리 근처에 작은 눈알 무늬가 있다. 어른벌레는 꽃꿀을 빨았다."
+  },
+  {
+   "k": "A bryozoan colony of countless tiny filter-feeding animals, growing as flattened, branching fronds a few centimetres tall. Its surface is dotted with regular star-shaped patches, which gave it its name, where filtered water flowed out of the colony. It was common in the shallow seas of what is now the Cincinnati region.",
+   "v": "수많은 작은 여과섭식 개충으로 이루어진 이끼벌레 군체로, 높이 몇 센티미터의 납작하고 갈라진 잎 모양으로 자랐다. 표면에는 규칙적으로 별 모양의 무늬가 흩어져 있어 이름이 붙었는데, 걸러진 물이 이곳을 통해 군체 밖으로 흘러나갔다. 오늘날 신시내티 일대의 얕은 바다에서 흔했다."
+  },
+  {
+   "k": "A bryozoan, a colony of thousands of tiny filter-feeding animals living in tubes, from the Silurian of North America and Britain. The tubes were packed into slender, forking stony branches a few millimetres thick, forming small bushy thickets on the sea floor. The colony grew by budding new members at the tips of its branches.",
+   "v": "태형동물(이끼벌레)로, 관 속에 사는 수천 마리의 작은 여과 섭식 동물로 이루어진 군체이며 북아메리카와 영국의 실루리아기에서 발견되었다. 관들은 굵기 몇 mm의 가늘고 갈라지는 돌 같은 가지에 빽빽이 들어차 해저에 작은 덤불을 이루었다. 군체는 가지 끝에서 새 개체를 출아하여 자라났다."
+  },
+  {
+   "k": "A bulky, beaked plant-eater 5-7 metres long from the Late Jurassic of North America, about 155-150 million years ago, an early relative of Iguanodon. It cropped low plants with a toothless horny beak and chewed them with rows of cheek teeth. It could run on its hind legs but often walked on all fours, its hands bearing hoof-like fingers. Its name means 'flexible lizard'.",
+   "v": "약 1억 5500만~1억 5000만 년 전 북아메리카 후기 쥐라기에 살았던, 부리가 있는 육중한 초식 공룡으로 몸길이는 5~7미터이며 이구아노돈의 초기 친척이다. 이빨 없는 각질 부리로 낮은 식물을 뜯고 줄지어 난 볼니로 씹었다. 뒷다리로 달릴 수도 있었지만 흔히 네 발로 걸었고, 손에는 발굽 같은 손가락이 있었다. 이름은 '굽은 도마뱀'이라는 뜻이다."
+  },
+  {
+   "k": "A bushy, cabbage-like rangeomorph up to about 20 cm across from England and Newfoundland, about 565 million years old. Many spoon-shaped frondlets fanned out from a single base, each branching again and again into smaller copies of itself. Its overlapping leaves soak up damage and regrow, but it cannot strike back.",
+   "v": "잉글랜드와 뉴펀들랜드에서 발견된, 폭이 약 20cm에 이르는 덤불 같은 양배추 모양의 랑게오모르프류로, 약 5억 6500만 년 전에 살았다. 하나의 밑동에서 숟가락 모양의 작은 잎이 사방으로 펼쳐졌고, 각 잎은 자신의 작은 복제판으로 거듭 갈라졌다. 겹겹이 쌓인 잎은 피해를 흡수하고 다시 자라지만, 반격할 수는 없다."
+  },
+  {
+   "k": "A calcified tube a few centimetres long from China, Namibia and other places, about 545 million years old. Its wall was built of many thin, wrinkled layers nested one inside the next, and it lived beside Cloudina in some of the first reefs built by animals with skeletons. Its mineral tube made it hard to crush, an early defence against the first predators.",
+   "v": "중국, 나미비아 등지에서 발견된 길이 수 cm의 석회질 관으로, 약 5억 4500만 년 전에 살았다. 관벽은 서로 겹쳐 들어간 얇고 주름진 여러 층으로 이루어졌고, 골격을 가진 동물이 만든 최초의 초에서 클라우디나와 함께 살았다. 광물질 관은 잘 부서지지 않아 최초의 포식자에 대한 이른 방어 수단이 되었다."
+  },
+  {
+   "k": "A cat-sized relative of mammals, about 50 centimetres long, from the Middle Triassic of Argentina, about 235 million years ago. Unlike most earlier cynodonts it ate plants, grinding them with broad, ridged cheek teeth, and it had a short, deep head and strong jaw muscles. Many skeletons have been found together, so it may have lived in groups.",
+   "v": "중기 트라이아스기인 약 2억 3500만 년 전 아르헨티나에서 발견된 길이 약 50센티미터, 고양이만 한 포유류의 친척이다. 그 이전의 대부분의 키노돈트와 달리 식물을 먹었으며, 넓고 능선이 있는 볼니로 식물을 갈아 먹었다. 머리는 짧고 높았으며 턱 근육이 강했다. 많은 골격이 함께 발견되어 무리 지어 살았을지도 모른다."
+  },
+  {
+   "k": "A chicken-sized bird about 40 cm long from the late Paleocene of North America, a distant relative of ostriches, emus and tinamous that could still fly. It had a long, slightly down-curved beak with sensitive pits at the tip, which it probed into soft ground for worms and insects, much as kiwis do today. Its kin show that the flightless giant birds descend from flying ancestors.",
+   "v": "팔레오세 후기 북아메리카에 살았던 닭만 한 몸길이 약 40cm의 새로, 타조, 에뮤, 티나무의 먼 친척이지만 여전히 날 수 있었다. 끝에 민감한 작은 구멍이 있는 길고 살짝 아래로 굽은 부리를 오늘날의 키위처럼 부드러운 땅에 찔러 넣어 벌레와 곤충을 찾았다. 그 친척들은 날지 못하는 거대한 새들이 날던 조상에서 나왔음을 보여 준다."
+  },
+  {
+   "k": "A chiton a few centimetres long with a row of eight overlapping shell plates on its back, like all chitons, but with rows of long, hollow spines sticking out from them. It is the oldest chiton known from a complete specimen. It crept over the sea floor on its muscular foot, scraping algae from surfaces with its rasping tongue, while its spines kept predators at bay.",
+   "v": "몸길이 몇 센티미터의 군부로, 다른 군부처럼 등에 겹쳐진 여덟 장의 껍데기판이 한 줄로 늘어서 있지만, 그 위로 길고 속이 빈 가시들이 여러 줄 튀어나와 있었다. 완전한 표본으로 알려진 가장 오래된 군부이다. 근육질의 발로 해저를 천천히 기어 다니며 치설로 표면의 조류를 긁어 먹었고, 가시로 포식자를 막았다."
+  },
+  {
+   "k": "A coelacanth about 30 centimetres long, common in the coal-swamp waters and coastal lagoons of North America and Europe about 310 million years ago. It already had the shape that survives today in the living coelacanth: a stout body, fleshy lobed fins on stalks and a three-lobed tail with a small tuft in the middle. Fossils of tiny young still carrying yolk sacs show how it grew up, and it hunted small fish and shrimps.",
+   "v": "길이 약 30센티미터의 실러캔스로, 약 3억 1000만 년 전 북아메리카와 유럽의 석탄 늪 물과 해안 석호에서 흔했다. 이미 오늘날 살아 있는 실러캔스에 이어지는 몸 형태를 갖추고 있었는데, 다부진 몸, 자루가 달린 살집 있는 엽상 지느러미, 가운데에 작은 술이 달린 세 갈래 꼬리가 그것이다. 아직 난황낭을 달고 있는 작은 새끼들의 화석은 이 물고기가 어떻게 자랐는지 보여 주며, 작은 물고기와 새우를 사냥했다."
+  },
+  {
+   "k": "A coelacanth from the coastal seas of Madagascar in the Early Triassic, about 250 million years ago. It had a deep body, a large head, fleshy lobed fins that moved like legs and the three-lobed tail typical of coelacanths. Its relatives survived to the present day: the living coelacanth was thought extinct until one was caught off South Africa in 1938.",
+   "v": "전기 트라이아스기인 약 2억 5000만 년 전 마다가스카르의 연안 바다에 살았던 실러캔스이다. 몸높이가 높고 머리가 컸으며, 다리처럼 움직이는 살집 있는 엽상 지느러미와 실러캔스 특유의 세 갈래 꼬리를 가졌다. 그 친척들은 오늘날까지 살아남았다. 살아 있는 실러캔스는 멸종한 것으로 여겨졌으나, 1938년 남아프리카 앞바다에서 한 마리가 잡혔다."
+  },
+  {
+   "k": "A colonial horn coral that helped build the reefs of the Permian Tethys Ocean, from Asia to Europe. Its colonies were bushes of many slender, branching tubes a few millimetres thick growing up side by side, each topped by a cup with radiating ridges from which a small polyp caught food with its tentacles. Like all horn corals it disappeared in the end-Permian extinction.",
+   "v": "아시아에서 유럽까지 페름기 테티스해의 초를 쌓는 데 기여한 군체성 사방산호이다. 군체는 굵기 몇 밀리미터의 가늘고 가지 치는 관들이 나란히 자라 올라간 덤불 모양이었고, 각 관 끝의 방사상 주름이 있는 컵에서 작은 폴립이 촉수로 먹이를 잡았다. 모든 사방산호처럼 페름기 말 대멸종으로 사라졌다."
+  },
+  {
+   "k": "A colonial rugose coral forming massive, cushion-shaped heads of hundreds of long, slender corallites packed so tightly that their walls were shared and six-sided, like a honeycomb. Each corallite held a small polyp that caught tiny prey with its tentacles. Its sturdy colonies helped to build early reefs.",
+   "v": "군체를 이루는 사방산호로, 수백 개의 가늘고 긴 개체가 빽빽하게 들어차 벽을 공유하며 벌집처럼 육각형이 된 육중한 방석 모양 덩어리를 만들었다. 각 개체에는 작은 폴립이 살면서 촉수로 아주 작은 먹이를 잡았다. 튼튼한 군체는 초기 산호초를 쌓는 데 한몫했다."
+  },
+  {
+   "k": "A colonial rugose coral that built thickets in the warm, clear Early Carboniferous seas of Europe, about 340 million years ago. Its colonies were bundles of slender stony tubes, each less than a centimetre wide and home to one polyp, growing up side by side and branching into clumps tens of centimetres across. The polyps caught plankton with their stinging tentacles, and the fossil colonies are among the most familiar fossils of Carboniferous limestones.",
+   "v": "약 3억 4000만 년 전 유럽의 따뜻하고 맑은 석탄기 전기 바다에서 덤불을 이루었던 군체성 사방산호. 군체는 가느다란 돌 관의 다발로, 각 관은 너비가 1센티미터도 안 되며 폴립 하나가 살았다. 관들은 나란히 위로 자라며 가지를 쳐 지름 수십 센티미터의 덩어리를 이루었다. 폴립은 쏘는 촉수로 플랑크톤을 잡았고, 그 군체 화석은 석탄기 석회암에서 가장 친숙한 화석 중 하나다."
+  },
+  {
+   "k": "A colony of tiny moss animals named after the screw of the Greek inventor Archimedes, from the shallow Early Carboniferous seas of North America about 335 million years ago. The colony grew a thick, corkscrew-shaped central axis up to about 20 centimetres tall, from which lacy, net-like fronds spiralled outwards like a spiral staircase. Thousands of tiny animals lived in the mesh and strained food from the water with rings of tentacles, and their stony screws pack some limestones.",
+   "v": "그리스의 발명가 아르키메데스의 나선 양수기에서 이름을 딴 작은 이끼벌레 군체로, 약 3억 3500만 년 전 북아메리카 석탄기 전기의 얕은 바다에 살았다. 군체는 높이 최대 약 20센티미터의 굵은 코르크 마개뽑이 모양 중심축을 키웠고, 그 축에서 레이스 같은 그물 모양의 잎이 나선 계단처럼 바깥으로 휘감겨 뻗어 나갔다. 수천 마리의 작은 동물이 그물눈 속에 살며 촉수 고리로 물에서 먹이를 걸러 먹었고, 이들의 돌 나선은 어떤 석회암에는 빽빽이 들어차 있다."
+  },
+  {
+   "k": "A crab from the Eocene seas of southern Europe, with a broad, smooth, oval shell about 10 cm wide covered in fine dots. Its strong pincers were of unequal size, the larger one able to crush shells. It lived on the warm, shallow sea floor, eating clams, snails, worms and dead animals, and its fossils are common in the limestones of northern Italy.",
+   "v": "에오세 남유럽 바다에 살았던 게로, 폭 약 10cm의 넓고 매끈한 타원형 등딱지에 잔 점이 덮여 있었다. 강한 집게발은 크기가 서로 달라 큰 쪽은 조개껍데기를 부술 수 있었다. 따뜻하고 얕은 바다 밑에서 조개, 고둥, 갯지렁이와 사체를 먹었으며, 그 화석은 이탈리아 북부 석회암에서 흔하다."
+  },
+  {
+   "k": "A crocodile-like temnospondyl about 1.5 metres long, one of the most common large animals of the Late Carboniferous coal swamps of Bohemia in the Czech Republic, about 307 million years ago. Its long, flat skull ended at the back in a pair of short, horn-like points, and its jaws were lined with sharp teeth. It lurked at the edges of swamp lakes like a crocodile, catching fish and smaller amphibians.",
+   "v": "악어 비슷한 분추류로 길이 약 1.5미터이며, 약 3억 700만 년 전 체코 보헤미아의 석탄기 후기 석탄 늪에서 가장 흔한 대형 동물 중 하나였다. 길고 납작한 두개골의 뒤쪽 끝에는 짧은 뿔 같은 돌기 한 쌍이 있었고, 턱에는 날카로운 이빨이 늘어서 있었다. 악어처럼 늪 호수 가장자리에 숨어 물고기와 더 작은 양서류를 잡았다."
+  },
+  {
+   "k": "A deep-bodied, almost disc-shaped fish about 35 cm long from the Early Jurassic seas of Europe, about 195 million years ago. Its body was armoured with thick, shiny, diamond-shaped scales, and its small mouth held peg-like and button-shaped teeth for crushing shellfish, sea urchins and other hard-shelled prey. It probably manoeuvred slowly around reefs and sea floors like a modern butterflyfish.",
+   "v": "약 1억 9500만 년 전 유럽 전기 쥐라기 바다에 살았던, 몸이 높고 거의 원반 모양인 물고기로 몸길이는 약 35센티미터이다. 온몸이 두껍고 반짝이는 마름모 비늘로 덮여 있었고, 작은 입에는 말뚝 모양과 단추 모양의 이빨이 있어 조개, 성게 같은 단단한 껍데기의 먹이를 부수었다. 오늘날의 나비고기처럼 암초와 바다 밑바닥 주변을 천천히 능숙하게 헤엄쳤을 것이다."
+  },
+  {
+   "k": "A deer-sized hoofed mammal about 1 m long from the early Oligocene of North America, a distant relative of camels. Males carried three pairs of short bony knobs and flanges on the head, the tallest pair on the snout, and tusk-like upper canines; females were hornless. Males probably used them to display and fight over mates in the woodlands where they browsed.",
+   "v": "올리고세 전기 북아메리카에 살았던 사슴만 한 몸길이 약 1m의 유제류로, 낙타의 먼 친척이다. 수컷은 머리에 세 쌍의 짧은 뼈 혹과 판을 가졌는데 가장 높은 한 쌍은 주둥이에 있었고, 위 송곳니는 엄니 같았다. 암컷은 뿔이 없었다. 수컷은 숲에서 잎을 뜯으며 이것으로 과시하고 짝을 두고 싸웠을 것이다."
+  },
+  {
+   "k": "A deer-sized hoofed mammal from the Late Miocene of North America, the last and largest of the protoceratids, distant relatives of camels. Males had a pair of horns behind the eyes and a long nose horn that forked into a Y at the tip, probably used for display and sparring. It grazed and browsed in herds on open plains.",
+   "v": "후기 마이오세 북아메리카에 살던 사슴만 한 발굽동물로, 낙타의 먼 친척인 프로토케라스과의 마지막이자 가장 큰 종이다. 수컷은 눈 뒤에 한 쌍의 뿔과, 끝이 Y자로 갈라진 긴 코뿔이 있어 과시와 겨루기에 썼을 것이다. 탁 트인 평원에서 무리 지어 풀과 잎을 먹었다."
+  },
+  {
+   "k": "A dog-sized marsupial lion from the Miocene forests of Australia, an earlier relative of Thylacoleo. It had a short, powerful head with blade-like cheek teeth for slicing meat and strong forelimbs for gripping prey. It probably climbed well and ambushed smaller marsupials from cover.",
+   "v": "오스트레일리아 마이오세 숲에 살던 개만 한 주머니사자로, 틸라콜레오의 이른 친척이다. 짧고 강한 머리에는 고기를 자르는 칼날 같은 어금니가 있었고, 앞다리는 먹이를 붙잡을 만큼 튼튼했다. 나무를 잘 탔고 숨어 있다가 작은 유대류를 기습했을 것이다."
+  },
+  {
+   "k": "A domed disc up to about 6 cm wide from the White Sea coast of Russia, about 555 million years old. Three broad, curved tubes crossed by fine ridges radiated from its centre, giving it the three-fold symmetry of the trilobozoans, a group with no living members. It lay on the seabed, probably feeding on particles in the water.",
+   "v": "러시아 백해 연안에서 발견된 폭 약 6cm에 이르는 돔 모양 원반으로, 약 5억 5500만 년 전에 살았다. 가는 융기가 가로지르는 넓고 휘어진 관 세 개가 중심에서 방사상으로 뻗어, 살아 있는 구성원이 없는 삼엽동물류 특유의 삼방사 대칭을 이루었다. 해저에 누워 아마 물속 입자를 먹었을 것이다."
+  },
+  {
+   "k": "A dugong relative from the Miocene shallow seas of Florida and the Caribbean, about 3 metres long. It had a fat, spindle-shaped body, paddle-like flippers and a tail fluke, and a down-turned snout with small tusks for uprooting seagrass. Slow and peaceful, it relied on its size and thick bones for protection.",
+   "v": "마이오세 플로리다와 카리브해의 얕은 바다에 살던 듀공의 친척으로, 몸길이가 약 3미터였다. 뚱뚱한 방추형 몸에 노 같은 지느러미발과 꼬리지느러미가 있었고, 아래로 굽은 주둥이의 작은 엄니로 해초를 뽑아 먹었다. 느리고 온순했으며 큰 몸집과 두꺼운 뼈로 몸을 지켰다."
+  },
+  {
+   "k": "A flamingo-like pterosaur with a 2.5-metre wingspan from Early Cretaceous Argentina. Its long, upturned lower jaw held about a thousand bristle-like teeth, which it used to sieve tiny crustaceans and algae from shallow lakes. It lived in big flocks, and like flamingos it may have turned pink from its food.",
+   "v": "아르헨티나 백악기 전기에 살았던, 날개폭 2.5미터의 홍학 닮은 익룡이다. 길고 위로 휜 아래턱에는 솔털 같은 이빨이 약 천 개 나 있어, 얕은 호수에서 작은 갑각류와 조류를 걸러 먹었다. 큰 무리를 지어 살았으며, 홍학처럼 먹이 때문에 분홍색이 되었을지도 모른다."
+  },
+  {
+   "k": "A flat, broad lobster about 10-15 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of today's blind deep-sea lobsters. Its wide, almost rectangular shell had saw-toothed edges, and all its walking legs ended in pincers, the first pair long and slender. It crawled over the soft lagoon floor feeding on carcasses and small animals, and its tracks are sometimes found leading to its body.",
+   "v": "약 1억 5000만 년 전 독일 남부 후기 쥐라기 석호에 살았던, 길이 약 10~15센티미터의 납작하고 넓은 바닷가재로, 오늘날 심해에 사는 눈먼 바닷가재의 친척이다. 넓고 거의 직사각형인 갑각의 가장자리는 톱니 모양이었고, 걷는다리 끝은 모두 집게였으며 첫째 다리는 길고 가늘었다. 부드러운 석호 바닥을 기어 다니며 사체와 작은 동물을 먹었고, 몸까지 이어진 발자국이 함께 발견되기도 한다."
+  },
+  {
+   "k": "A flat, oval, slug-like animal up to about 12 cm long from the Burgess Shale of Canada, with no shell or armour at all. Under its head it had a toothed feeding ribbon like the radula of snails, which it used to scrape microbial mats off the seabed, so it is seen as a very early relative of the molluscs. Soft and unprotected, it relies on its size and numbers.",
+   "v": "캐나다 버제스 셰일에서 나온 몸길이 최대 약 12cm의 납작하고 타원형인 민달팽이 같은 동물로, 껍데기나 갑옷이 전혀 없다. 머리 아래에 달팽이의 치설 같은 이빨 달린 섭식띠가 있어 해저의 미생물 매트를 긁어 먹었으며, 그래서 연체동물의 아주 초기 친척으로 여겨진다. 부드럽고 무방비하여 몸집과 수에 의지한다."
+  },
+  {
+   "k": "A flat-headed, crocodile-like fish about 1.5 metres long from the estuaries of Late Devonian Quebec, about 380 million years ago. Its eyes sat on top of its head and it had lost the fins on its back, so it could lurk in the shallows like a crocodile. Its pectoral fin held rows of small finger bones: the oldest known digits, still wrapped in a fish's fin.",
+   "v": "약 3억 8천만 년 전 데본기 후기 퀘벡의 하구에 살았던, 머리가 납작하고 악어를 닮은 물고기로 몸길이는 약 1.5미터였다. 눈은 머리 위에 있었고 등지느러미가 사라져서 악어처럼 얕은 물에 숨어 있을 수 있었다. 가슴지느러미 안에는 작은 손가락뼈가 줄지어 있었는데, 아직 물고기 지느러미에 싸여 있는 가장 오래된 손가락이다."
+  },
+  {
+   "k": "A flattened jawless fish about 20 centimetres long from Early Devonian Scotland, about 410 million years ago, one of the last thelodonts. Instead of solid armour its body was covered in thousands of tiny tooth-like scales, and broad flaps stuck out behind its head. It glided over the bottom, sucking up mud and small food particles.",
+   "v": "약 4억 1천만 년 전 데본기 전기 스코틀랜드에 살았던 몸길이 약 20센티미터의 납작한 무악어류로, 마지막 텔로두스류 가운데 하나이다. 단단한 갑옷 대신 몸이 수천 개의 작은 이빨 같은 비늘로 덮여 있었고, 머리 뒤로 넓은 날개 모양 돌출부가 뻗어 있었다. 바닥 위를 미끄러지듯 다니며 진흙과 작은 먹이 알갱이를 빨아들였다."
+  },
+  {
+   "k": "A flightless giant pigeon about 1 m tall and 10-18 kg from the island of Mauritius, a close relative of the Nicobar pigeon. With no predators on the island it lost the power of flight and nested on the ground, eating fallen fruit and seeds with its big hooked bill. Sailors, rats, pigs and monkeys arriving from 1598 wiped it out within a lifetime; it was last seen in 1662.",
+   "v": "모리셔스섬에 살던 날지 못하는 거대한 비둘기로 키 약 1m, 몸무게 10~18kg이며 니코바비둘기의 가까운 친척이다. 섬에 천적이 없어 나는 능력을 잃고 땅에 둥지를 틀었으며, 크고 갈고리진 부리로 떨어진 열매와 씨앗을 먹었다. 1598년부터 들어온 선원, 쥐, 돼지, 원숭이 때문에 한 세대 만에 사라졌으며, 마지막 목격은 1662년이었다."
+  },
+  {
+   "k": "A freshwater turtle about 30 cm long from the middle Eocene lake of Messel in Germany, a relative of the pig-nosed turtle of New Guinea and Australia, with flipper-like front limbs and a fleshy snout. It ate plants, snails and other small animals. Several pairs were found joined together: they had sunk into the poisonous deep water of the lake while mating, the only fossil vertebrates known to have died in the act.",
+   "v": "에오세 중기 독일 메셀 호수에 살았던 몸길이 약 30cm의 민물 거북으로, 뉴기니와 오스트레일리아의 돼지코거북의 친척이며 지느러미 같은 앞다리와 살집 있는 주둥이를 가졌다. 식물과 달팽이 등 작은 동물을 먹었다. 여러 쌍이 붙은 채로 발견되었는데, 짝짓기 중 호수의 독성 깊은 물로 가라앉은 것으로, 짝짓기 도중 죽은 것으로 알려진 유일한 척추동물 화석이다."
+  },
+  {
+   "k": "A gar about 1 m long from the early Eocene Green River lakes of Wyoming, a close relative of the alligator gar. Its long body was covered in hard, diamond-shaped scales that fitted together like armour, and its long snout held rows of needle teeth. It lay still among the water plants and seized passing fish with a sudden sideways snap.",
+   "v": "에오세 전기 와이오밍주 그린리버 호수에 살았던 몸길이 약 1m의 가아로, 앨리게이터가아의 가까운 친척이다. 긴 몸은 갑옷처럼 맞물린 단단한 마름모꼴 비늘로 덮였고, 긴 주둥이에는 바늘 같은 이빨이 줄지어 있었다. 수초 사이에 가만히 숨어 있다가 지나가는 물고기를 옆으로 재빨리 물어 잡았다."
+  },
+  {
+   "k": "A gharial-like amphibian about 1.5 metres long from the Early Permian lakes of south-western Germany, around 295 million years ago. Its long, narrow snout was lined with sharp teeth for snapping up fish, and it swam with its long, flattened tail, holding its small legs against its body. Hundreds of fossils, from tiny larvae to adults, show how it grew up.",
+   "v": "약 2억 9500만 년 전 페름기 전기 독일 남서부의 호수에 살았던, 몸길이 약 1.5미터의 가비알을 닮은 양서류이다. 길고 좁은 주둥이에는 물고기를 낚아채는 날카로운 이빨이 줄지어 있었고, 길고 납작한 꼬리로 헤엄치며 작은 다리는 몸에 붙이고 있었다. 작은 유생부터 성체까지 수백 점의 화석이 성장 과정을 보여 준다."
+  },
+  {
+   "k": "A gharial-like reptile about 1.5 metres long with a long, narrow, toothy snout, which lived in the rivers and lakes of Late Cretaceous North America. It was not a crocodile but a choristodere, an ancient reptile group that survived the end of the dinosaurs. It swam with its flattened tail and snapped up fish with sideways sweeps of its head.",
+   "v": "길이 약 1.5미터의 가비알 닮은 파충류로, 길고 좁으며 이빨이 가득한 주둥이를 가졌고 백악기 후기 북아메리카의 강과 호수에 살았다. 악어가 아니라, 공룡의 멸종에서 살아남은 오래된 파충류 무리인 코리스토데라에 속한다. 납작한 꼬리로 헤엄치며 머리를 옆으로 휘둘러 물고기를 낚아챘다."
+  },
+  {
+   "k": "A giant among ostracods, the tiny crustaceans enclosed in a two-valved shell: its smooth, bean-shaped shell grew to about 2 cm long. It had a small eye spot near the front of each valve and crawled over shallow, often salty sea floors on short legs that poked out from under the shell. It fed on detritus and small particles.",
+   "v": "두 장의 껍데기 속에 든 작은 갑각류인 패충류 가운데 거인으로, 매끈한 콩 모양 껍데기가 길이 약 2센티미터까지 자랐다. 각 껍데기 앞쪽에 작은 눈점이 있었고, 껍데기 아래로 나온 짧은 다리로 얕고 종종 염분이 높은 해저를 기어 다녔다. 유기물 부스러기와 작은 알갱이를 먹었다."
+  },
+  {
+   "k": "A giant burrowing bat from the Early Miocene of New Zealand, about three times the size of an ordinary small bat. Like New Zealand's living burrowing bats it foraged on the forest floor as well as in the air, eating insects, spiders and probably fruit and nectar. Its relatives also lived in Australia, a sign of the old forest links between the two lands.",
+   "v": "전기 마이오세 뉴질랜드에 살던 거대한 땅굴박쥐로, 보통 작은 박쥐의 세 배쯤 되었다. 뉴질랜드의 현생 짧은꼬리박쥐처럼 공중뿐 아니라 숲 바닥에서도 먹이를 찾아 곤충과 거미, 아마도 열매와 꿀까지 먹었다. 그 친척들은 오스트레일리아에도 살았는데, 이는 두 땅의 숲이 오래전에 이어져 있었다는 표시다."
+  },
+  {
+   "k": "A giant clam from the Middle Permian reef lagoons of Japan and the warm Tethys Ocean, around 265 million years ago, up to about a metre across. Its thick central shell was drawn out on both sides into huge, thin, flat wings, so it lay on the sea floor like a boomerang and did not sink into the soft lime mud. Like modern giant clams it may have kept sun-loving algae in its tissues.",
+   "v": "약 2억 6500만 년 전 페름기 중기 일본과 따뜻한 테티스해의 초호에 살았던, 폭이 약 1미터에 이르는 거대한 조개이다. 두꺼운 가운데 껍데기가 양쪽으로 거대하고 얇고 평평한 날개처럼 뻗어, 부메랑처럼 바닥에 누워 부드러운 석회 진흙에 가라앉지 않았다. 오늘날의 대왕조개처럼 몸속에 햇빛을 좋아하는 조류를 품었을지도 모른다."
+  },
+  {
+   "k": "A giant coelacanth about 4 metres long, a cousin of the living coelacanth, from the rivers and lagoons of Cretaceous Brazil and Africa. Its heavy body was covered in thick bony scales, and it moved its fleshy, lobed fins in pairs much like the legs of a walking animal. A slow ambush hunter, it sucked in prey with a sudden snap of its wide mouth.",
+   "v": "길이 약 4미터의 거대한 실러캔스로, 현생 실러캔스의 친척이며 백악기 브라질과 아프리카의 강과 석호에 살았다. 무거운 몸은 두꺼운 뼈 비늘로 덮였고, 살집 있는 잎 모양 지느러미를 걷는 동물의 다리처럼 짝지어 움직였다. 느린 매복 사냥꾼으로, 넓은 입을 순식간에 벌려 먹이를 빨아들였다."
+  },
+  {
+   "k": "A giant flightless bird from the Late Miocene of central Australia, about 3 metres tall and up to 600 kilograms, among the heaviest birds ever. Despite its huge, deep beak it was a distant relative of ducks and geese, and it most likely ate tough leaves, fruit and seeds. Its legs were stout and its wings tiny, so it walked rather than ran.",
+   "v": "후기 마이오세 오스트레일리아 중부에 살던 거대한 날지 못하는 새로, 키 약 3미터에 몸무게가 600킬로그램에 이르러 역사상 가장 무거운 새 가운데 하나다. 크고 두꺼운 부리를 가졌지만 오리와 거위의 먼 친척이며, 질긴 잎과 열매, 씨앗을 먹었을 가능성이 크다. 다리는 굵고 날개는 아주 작아서 달리기보다는 걸어 다녔다."
+  },
+  {
+   "k": "A giant relative of grasshoppers and crickets from the Late Triassic lake shores of Madygen in Kyrgyzstan, about 230 million years ago, with wings spanning around 30 centimetres or more. Its long, spiny forelegs were made for grabbing other insects. A ribbed patch on each forewing was probably rubbed to make loud calls or flashed as a display, making it an early example of insect song.",
+   "v": "메뚜기와 귀뚜라미의 거대한 친척으로, 후기 트라이아스기인 약 2억 3000만 년 전 키르기스스탄 마디겐의 호숫가에 살았으며 날개를 편 길이가 약 30센티미터 이상이었다. 길고 가시 돋친 앞다리는 다른 곤충을 붙잡는 데 쓰였다. 각 앞날개에 있는 줄무늬 부분은 문질러 큰 소리를 내거나 과시용으로 내보였을 것으로 보이며, 곤충 울음소리의 초기 사례이다."
+  },
+  {
+   "k": "A giant relative of the gharials from the Miocene rivers of India and Pakistan, perhaps 8 to 11 metres long. Its long, narrow snout was lined with many sharp teeth, but it was stouter than a living gharial's, so it may have taken larger prey as well as fish. It was one of the largest crocodilians that ever lived.",
+   "v": "마이오세 인도와 파키스탄의 강에 살던 가비알의 거대한 친척으로, 몸길이가 8~11미터에 이르렀을 수 있다. 길고 좁은 주둥이에는 날카로운 이빨이 많았지만 현생 가비알보다 굵어서, 물고기뿐 아니라 더 큰 먹이도 잡았을 것이다. 역사상 가장 큰 악어류 가운데 하나였다."
+  },
+  {
+   "k": "A giant sawfish-like ray up to about 7 metres long from the great rivers of mid-Cretaceous North Africa. Its long flat snout was lined with widely spaced, barbed teeth like harpoon points, which it swept sideways to stun and slash fish. It shared its rivers with Spinosaurus, which may have hunted it.",
+   "v": "몸길이 약 7미터에 이르는 거대한 톱가오리 닮은 가오리로, 백악기 중기 북아프리카의 큰 강에 살았다. 길고 납작한 주둥이 양옆에는 작살 끝처럼 미늘이 달린 이빨이 넓은 간격으로 늘어서 있었고, 이것을 옆으로 휘둘러 물고기를 기절시키고 베었다. 같은 강에 살던 스피노사우루스가 이것을 사냥했을지도 모른다."
+  },
+  {
+   "k": "A giant scorpion from the Late Silurian of England, estimated at about 90 cm long from a single, massive pincer finger, making it the largest scorpion that ever lived. Like other early scorpions it probably still lived in water. With its huge pincers and stinging tail it could tackle fish and other large prey.",
+   "v": "잉글랜드의 후기 실루리아기에서 발견된 거대한 전갈이다. 거대한 집게 손가락 화석 하나로 몸길이가 약 90cm로 추정되어, 지금까지 살았던 가장 큰 전갈로 여겨진다. 다른 초기 전갈들처럼 아마도 여전히 물속에서 살았을 것이다. 거대한 집게와 독침이 달린 꼬리로 물고기와 다른 큰 먹이도 상대할 수 있었다."
+  },
+  {
+   "k": "A giant sea spider with a leg span of up to 40 centimetres from the Early Devonian seas of the German Hunsrück, about 400 million years ago. Its thin body carried a long sucking proboscis, and its front legs were flattened into paddles, so it could probably swim. It fed on soft-bodied animals such as sea anemones and crinoids by sucking out their tissues.",
+   "v": "다리를 펼친 폭이 최대 40센티미터에 이르는 거대한 바다거미로, 약 4억 년 전 데본기 전기 독일 훈스뤼크의 바다에 살았다. 가는 몸에는 긴 빨대 같은 주둥이가 있었고 앞다리는 노처럼 납작해서 아마 헤엄칠 수 있었다. 말미잘과 바다나리 같은 연한 동물의 조직을 빨아 먹었다."
+  },
+  {
+   "k": "A giant spiny millipede up to about 30 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old. Each of its body rings carried a pair of long, forked spines pointing up and out, making it one of the spikiest animals of the coal forests. It crawled through the leaf litter on many pairs of short legs, feeding on rotting plant matter, while its spines kept amphibian predators at bay.",
+   "v": "몸길이가 최대 약 30센티미터에 이르는 거대한 가시투성이 노래기로, 약 3억 900만 년 전 일리노이주 메이즌크리크 화석층에서 발견되었다. 몸의 고리마다 위쪽과 바깥쪽으로 뻗은 두 갈래의 긴 가시가 한 쌍씩 있어 석탄 숲에서 가장 가시가 많은 동물 중 하나였다. 짧은 다리 여러 쌍으로 낙엽층을 기어 다니며 썩은 식물을 먹었고, 가시 덕분에 양서류 포식자를 멀리할 수 있었다."
+  },
+  {
+   "k": "A giant, long-legged pig from the Middle Miocene of Eurasia, as large as a small horse and weighing perhaps 500 kilograms. It had big tusks, and males carried a single horn on the forehead, probably used in head-butting contests. It rooted and browsed in forests and wet woodlands.",
+   "v": "중기 마이오세 유라시아에 살던 다리가 긴 거대한 멧돼지로, 작은 말만 했고 몸무게가 500킬로그램쯤 되었을 것이다. 큰 엄니가 있었고, 수컷은 이마에 뿔이 하나 있어 머리 박치기 싸움에 썼을 것이다. 숲과 습한 삼림에서 땅을 파헤치고 잎을 뜯어 먹었다."
+  },
+  {
+   "k": "A heart-shaped sea urchin about 6 centimetres long that lived buried in the soft chalky mud of the Late Cretaceous sea floor in Europe. A short fuzz of spines covered its shell, and a groove at the front led food-rich mud to its mouth. Its shape changed so steadily over time that it became a classic example of gradual evolution.",
+   "v": "길이 약 6센티미터의 하트 모양 성게로, 백악기 후기 유럽 바다 밑의 부드러운 백악 진흙 속에 묻혀 살았다. 껍데기는 짧고 가는 가시로 덮여 있었고, 앞쪽의 홈이 먹이가 풍부한 진흙을 입으로 이끌었다. 모양이 시간에 따라 꾸준히 조금씩 변해서 점진적 진화의 고전적인 예가 되었다."
+  },
+  {
+   "k": "A heavy early long-necked dinosaur, about 6.5 metres long, from the Late Triassic of La Rioja, Argentina, about 220 million years ago. Unlike its two-legged relative Plateosaurus, it walked on all four stout legs, carrying a bulky body, a long neck and a small head with leaf-shaped teeth for stripping plants. Hollow spaces in its backbone kept its weight down, a trick later used by the giant sauropods.",
+   "v": "후기 트라이아스기인 약 2억 2000만 년 전 아르헨티나 라리오하에서 발견된 길이 약 6.5미터의 육중한 초기 목긴 공룡이다. 두 발로 걷던 친척 플라테오사우루스와 달리 굵은 네 다리로 걸으며, 큰 몸통과 긴 목, 그리고 식물을 훑어 먹는 나뭇잎 모양 이빨이 난 작은 머리를 지탱했다. 등뼈 속의 빈 공간이 몸무게를 줄여 주었는데, 이는 나중에 거대한 용각류가 사용한 방식이었다."
+  },
+  {
+   "k": "A heavy, tapir-sized grazer from the Early Miocene of Patagonia, an early member of the toxodonts, hoofed mammals found only in South America. It had a barrel-shaped body on short legs and a big head with chisel-like front teeth and ever-growing cheek teeth for chewing tough plants. Many skeletons, from calves to adults, are known.",
+   "v": "전기 마이오세 파타고니아에 살던 맥만 한 육중한 초식동물로, 남아메리카에만 살았던 발굽동물 톡소돈류의 초기 구성원이다. 짧은 다리 위에 통 모양의 몸이 얹혀 있었고, 큰 머리에는 끌 같은 앞니와 평생 자라는 어금니가 있어 질긴 식물을 씹었다. 새끼부터 어른까지 많은 골격이 알려져 있다."
+  },
+  {
+   "k": "A huge, bizarre ostrich-dinosaur about 11 metres long, known for decades only from its giant arms with 2.4-metre-long clawed hands. Complete skeletons later revealed a hump-backed giant with a long, toothless, duck-like bill and broad feet for walking on soft ground. It waded in rivers, eating water plants and fish.",
+   "v": "길이 약 11미터의 거대하고 기묘한 타조 공룡으로, 수십 년 동안 2.4미터 길이의 갈고리발톱 달린 손이 있는 거대한 팔만 알려져 있었다. 나중에 발견된 완전한 골격은 등에 혹이 있는 거대한 몸에, 길고 이빨 없는 오리 같은 부리와 부드러운 땅을 걷기 위한 넓은 발을 가졌음을 보여 주었다. 강을 걸어 다니며 물풀과 물고기를 먹었다."
+  },
+  {
+   "k": "A hyolith, a member of a vanished group of animals with a cone-shaped shell closed by a lid, from the Burgess Shale of Canada. A pair of long, curved spines stuck out from under the lid and propped it up on the seabed. Fossils with soft parts show it fed with a ring of tentacles, like brachiopods, which settled a long debate about what hyoliths were. It can shut itself in its shell but cannot fight.",
+   "v": "히올리테스류의 하나로, 뚜껑으로 닫히는 원뿔형 껍데기를 가진 사라진 동물 무리에 속하며 캐나다 버제스 셰일에서 나왔다. 뚜껑 아래에서 길고 휜 가시 한 쌍이 뻗어 나와 껍데기를 해저 위로 받쳤다. 연조직이 남은 화석을 통해 완족동물처럼 촉수 고리로 먹이를 먹었음이 밝혀져, 히올리테스류의 정체를 둘러싼 오랜 논쟁이 정리되었다. 껍데기 속에 숨을 수는 있지만 싸우지 못한다."
+  },
+  {
+   "k": "A land-living amphibian about 1 metre long from the Early Permian of New Mexico, Colorado and Utah, around 295 million years ago. It carried a tall sail on its back made of long spines covered in rough bumps, a little like that of Dimetrodon, and had a broad head and sturdy legs. The sail may have helped it warm up in the sun or impress rivals.",
+   "v": "약 2억 9500만 년 전 페름기 전기 뉴멕시코, 콜로라도, 유타에 살았던 몸길이 약 1미터의 육상 양서류이다. 등에는 울퉁불퉁한 혹으로 덮인 긴 가시로 이루어진 높은 돛이 있어 디메트로돈과 조금 닮았으며, 머리가 넓고 다리가 튼튼했다. 돛은 햇볕에 몸을 데우거나 경쟁자에게 과시하는 데 쓰였을지도 모른다."
+  },
+  {
+   "k": "A large South American hoofed mammal about 3 m long from the late Oligocene of Argentina and Bolivia. It looked strikingly like an elephant, with pillar-like legs, probably a short trunk and forward-pointing tusks in both jaws, but it belonged to a native South American lineage and evolved these features on its own. Its name, 'fire beast', comes from the volcanic ash beds where it was found.",
+   "v": "올리고세 후기 아르헨티나와 볼리비아에 살았던 몸길이 약 3m의 큰 남아메리카 유제류. 기둥 같은 다리, 아마도 짧은 코, 위아래 턱의 앞으로 뻗은 엄니까지 놀랄 만큼 코끼리를 닮았지만, 남아메리카 고유 계통에 속하며 이런 특징을 독자적으로 진화시켰다. 이름은 '불의 짐승'이라는 뜻으로, 화산재 지층에서 발견된 데서 왔다."
+  },
+  {
+   "k": "A large glass sponge up to about 30 cm across, shaped like an upturned glove or crown: a broad central body with an opening on top and a ring of big, hollow, finger-like lobes that held it up off the muddy sea floor. Its thin wall was a lattice of fused glassy spicules, through which it pumped water to filter out food.",
+   "v": "지름이 약 30센티미터에 이르는 커다란 유리해면으로, 뒤집어 놓은 장갑이나 왕관처럼 생겼다. 넓은 몸통 윗면에 구멍이 있고, 그 둘레의 크고 속이 빈 손가락 모양 돌기들이 몸을 진흙 해저 위로 받쳐 올렸다. 얇은 몸벽은 서로 붙은 유리질 골편의 격자로 되어 있었고, 그 사이로 물을 뿜어 먹이를 걸러 냈다."
+  },
+  {
+   "k": "A large lungfish of Triassic rivers and lakes, from the Late Triassic of Austria, about 230 million years ago. It had a long, heavy body with big round scales, fleshy paddle-like fins and a fin fringe running round the tail, much like the living Australian lungfish. Its fan-shaped, ridged tooth plates crushed snails, crayfish and plants, and it could gulp air when the water became warm and stale.",
+   "v": "트라이아스기의 강과 호수에 살았던 대형 폐어로, 후기 트라이아스기인 약 2억 3000만 년 전 오스트리아에서 발견되었다. 크고 둥근 비늘로 덮인 길고 묵직한 몸, 살집이 있는 노 모양의 지느러미, 꼬리를 둘러싼 지느러미 테두리를 가져 오늘날의 오스트레일리아폐어와 매우 비슷했다. 부채 모양에 능선이 있는 이빨판으로 달팽이, 가재, 식물을 부수어 먹었고, 물이 따뜻해지고 탁해지면 공기를 들이마실 수 있었다."
+  },
+  {
+   "k": "A large plant eater, about 3 metres long, from the Early to Middle Triassic of South Africa, about 245 million years ago, and a distant relative of mammals. It had a barrel-shaped body, sturdy legs, a long, high snout ending in a horny beak and a pair of short tusks. It sheared tough plants with its beak and was one of the biggest land animals of its time.",
+   "v": "전기~중기 트라이아스기인 약 2억 4500만 년 전 남아프리카에서 발견된 길이 약 3미터의 대형 초식동물로, 포유류의 먼 친척이다. 술통 같은 몸통, 튼튼한 다리, 각질 부리로 끝나는 길고 높은 주둥이, 그리고 한 쌍의 짧은 엄니를 가졌다. 부리로 질긴 식물을 잘라 먹었으며, 당시 가장 큰 육상동물 중 하나였다."
+  },
+  {
+   "k": "A large predatory synapsid about 3 metres long from the Early Permian of New Mexico and Utah, around 295 million years ago, and a close relative of Dimetrodon. It had the same deep skull with long, stabbing canine teeth, but instead of a tall sail only a low crest of spines along its back. It was a top predator of its time, hunting other large four-legged animals.",
+   "v": "약 2억 9500만 년 전 페름기 전기 뉴멕시코와 유타에 살았던 몸길이 약 3미터의 대형 육식 단궁류로, 디메트로돈의 가까운 친척이다. 똑같이 높은 두개골과 찌르는 긴 송곳니를 가졌지만, 높은 돛 대신 등에 낮은 가시 줄만 있었다. 당대의 최상위 포식자로 다른 대형 네발 동물을 사냥했다."
+  },
+  {
+   "k": "A large rhizodont, a fang-toothed lobe-finned fish probably about 1.8 metres long, from the Late Devonian rivers of Pennsylvania and New York, about 365 million years ago. Its huge pectoral fins were stiffened by eight finger-like bones, an independent experiment in building a limb. It lay in wait in the river and lunged at passing fish.",
+   "v": "송곳니를 가진 육기어류인 대형 리조두스류로, 몸길이는 아마 약 1.8미터였으며 약 3억 6500만 년 전 데본기 후기 펜실베이니아와 뉴욕의 강에 살았다. 거대한 가슴지느러미는 손가락 같은 뼈 8개로 받쳐져 있었는데, 팔다리를 만드는 독자적인 실험이었다. 강에서 매복하다가 지나가는 물고기를 덮쳤다."
+  },
+  {
+   "k": "A large scallop from the Pliocene seas of Virginia and North Carolina, up to about 17 centimetres across, with broad radiating ribs. Like living scallops it lay on the sea floor filtering food from the water, watched with a row of small eyes along its mantle, and could clap its valves to swim away from danger. It was the first fossil from North America ever illustrated.",
+   "v": "플라이오세 버지니아와 노스캐롤라이나 바다에 살던 큰 가리비로, 폭이 약 17센티미터에 이르고 넓은 방사륵이 있었다. 현생 가리비처럼 바닥에 누워 물속 먹이를 걸러 먹었고, 외투막 가장자리에 줄지은 작은 눈으로 주위를 살폈으며, 위험하면 껍데기를 여닫으며 헤엄쳐 달아났다. 북아메리카에서 처음으로 그림으로 기록된 화석이다."
+  },
+  {
+   "k": "A large sea lily (crinoid) from the Silurian reefs of North America. A long stem held up a heavy cup of thick, rigid plates, and its ten arms folded upright into slots around a tall central column, forming a ribbed, bud-like crown. When feeding, the arms opened out into a filter that caught food from the current.",
+   "v": "북아메리카의 실루리아기 암초에서 발견된 큰 바다나리이다. 긴 줄기가 두껍고 단단한 판으로 된 무거운 꽃받침을 받치고 있었고, 열 개의 팔은 높은 중앙 기둥을 둘러싼 홈에 곧게 접혀 들어가 골이 진 꽃봉오리 모양의 관을 이루었다. 먹이를 먹을 때는 팔을 펼쳐 물살에서 먹이를 걸러 내는 그물을 만들었다."
+  },
+  {
+   "k": "A large sea star about 20 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago. It had a small central disc and fourteen to sixteen long, slender arms radiating like a sunburst. It crept over the muddy sea floor hunting small animals.",
+   "v": "약 4억 년 전 데본기 전기 독일 훈스뤼크 바다에 살았던 지름 약 20센티미터의 큰 불가사리이다. 작은 중심 원반에서 가늘고 긴 팔 14~16개가 햇살처럼 뻗어 있었다. 진흙 바닥을 기어 다니며 작은 동물을 사냥했다."
+  },
+  {
+   "k": "A large therocephalian about 2 metres long from the Middle Permian of South Africa, around 262 million years ago, one of the top predators of its time. Its name means wolf crocodile: it had a long, wolf-like body and a long snout with two pairs of long canine teeth side by side, a new tooth growing in beside the old one. It hunted the big plant eaters of its world.",
+   "v": "약 2억 6200만 년 전 페름기 중기 남아프리카에 살았던 몸길이 약 2미터의 대형 테로케팔리아류로, 당대 최상위 포식자 가운데 하나였다. 이름은 '늑대 악어'라는 뜻이다. 늑대 같은 긴 몸과 긴 주둥이를 가졌고, 긴 송곳니 두 쌍이 나란히 나 있었는데 옛 이빨 옆에서 새 이빨이 자라 나온 것이다. 그 세계의 대형 초식 동물을 사냥했다."
+  },
+  {
+   "k": "A large white owl of the Arctic tundra, about 65 cm long with a 1.5 m wingspan, which spread across Ice Age Europe with the cold. It hunts by day in the endless Arctic summer, mainly lemmings, and a pair may eat over a thousand in a season. Its plumage is white with dark bars, and its feet are thickly feathered against the cold.",
+   "v": "북극 툰드라에 사는 커다란 흰 올빼미로 몸길이 약 65cm, 날개폭 1.5m이며, 빙하기에는 추위를 따라 유럽 전역에 퍼졌다. 해가 지지 않는 북극의 여름에는 낮에 사냥하며 주로 레밍을 먹는데, 한 쌍이 한 철에 천 마리 넘게 먹기도 한다. 깃털은 흰 바탕에 짙은 가로무늬가 있고 발은 추위에 대비해 두꺼운 깃털로 덮여 있다."
+  },
+  {
+   "k": "A lizard-like plant eater, about 2.5 metres long, from the Late Triassic of Texas, about 220 million years ago. Its short, deep skull had a toothless beak at the front and wide cheek teeth with three cutting crests, which give it its name and sliced up tough plants. Strong claws on its feet may have helped it dig for roots or climb.",
+   "v": "후기 트라이아스기인 약 2억 2000만 년 전 미국 텍사스에서 발견된 길이 약 2.5미터의 도마뱀 같은 초식동물이다. 짧고 높은 두개골 앞쪽에는 이빨 없는 부리가, 뒤쪽에는 자르는 능선이 세 개 있는 넓은 볼니가 있었는데, 이 능선에서 이름이 유래했으며 질긴 식물을 잘게 썰었다. 발의 튼튼한 발톱은 뿌리를 파거나 나무를 오르는 데 도움이 되었을지도 모른다."
+  },
+  {
+   "k": "A lizard-like reptile about 30 centimetres long, an early relative of the living tuatara of New Zealand, from the Late Triassic of south-west England, about 205 million years ago. Its teeth were fused to the jawbones and worn into sharp blades for slicing insects and perhaps plants. Thousands of its bones have been found in old cave and crack fillings of limestone islands.",
+   "v": "길이 약 30센티미터의 도마뱀 같은 파충류로, 뉴질랜드에 살아 있는 투아타라의 초기 친척이며, 후기 트라이아스기인 약 2억 500만 년 전 잉글랜드 남서부에서 발견되었다. 이빨은 턱뼈에 붙어 있었고 닳아서 날카로운 칼날처럼 되어 곤충과 아마도 식물을 잘랐다. 석회암 섬의 오래된 동굴과 틈새를 메운 퇴적물에서 수천 개의 뼈가 발견되었다."
+  },
+  {
+   "k": "A long, eel-like marine reptile, about 2 metres long, from the Middle Triassic seas of the Alps between Switzerland and Italy, about 240 million years ago. It had a narrow, pointed snout full of small teeth, big eyes and short limbs, and swam by waving its very long, flattened tail. It belonged to the thalattosaurs, a group of sea reptiles found only in the Triassic.",
+   "v": "길이 약 2미터의 길쭉한 뱀장어 모양 해양 파충류로, 중기 트라이아스기인 약 2억 4000만 년 전 스위스와 이탈리아 사이 알프스의 바다에 살았다. 작은 이빨이 가득한 좁고 뾰족한 주둥이, 큰 눈, 짧은 다리를 가졌으며, 아주 길고 납작한 꼬리를 물결치듯 흔들어 헤엄쳤다. 트라이아스기에만 존재했던 해양 파충류 무리인 탈라토사우루스류에 속했다."
+  },
+  {
+   "k": "A long, thin, flexible tube a few centimetres long and under a millimetre wide, made of tough, finely ringed organic material, from the very end of the Ediacaran into the early Cambrian. Its wall structure suggests it was built by a worm related to modern beard worms, which would make it one of the oldest known annelids. The tube sheltered the soft worm inside.",
+   "v": "길이 수 cm, 폭 1mm 미만의 가늘고 유연한 관으로, 가는 고리 무늬가 있는 질긴 유기물로 이루어졌으며 에디아카라기 맨 끝부터 캄브리아기 초까지 발견된다. 관벽 구조로 보아 현생 수염벌레와 가까운 벌레가 만든 것으로 보이며, 그렇다면 알려진 가장 오래된 환형동물 중 하나가 된다. 관은 안에 사는 부드러운 벌레를 보호했다."
+  },
+  {
+   "k": "A long-bodied early tetrapod about 1.5 metres long from Early Carboniferous rocks of West Virginia, about 330 million years old. It had a flat, broad head marked with the grooves of a lateral-line system for sensing movement in the water, small legs and an eel-like body with about 40 vertebrae in front of the hips. It lived almost entirely in water, swimming with side-to-side waves of its body and snapping up fish.",
+   "v": "길이 약 1.5미터의 몸이 긴 초기 사지동물로, 약 3억 3000만 년 전 웨스트버지니아주의 석탄기 전기 암석에서 발견되었다. 납작하고 넓은 머리에는 물속의 움직임을 감지하는 옆줄 계통의 홈이 새겨져 있었고, 작은 다리와 엉덩이 앞쪽에 척추뼈가 약 40개 있는 뱀장어 같은 몸을 가졌다. 거의 평생을 물속에서 살며 몸을 좌우로 물결치듯 움직여 헤엄치고 물고기를 낚아챘다."
+  },
+  {
+   "k": "A low disc a few centimetres across with a raised rim, a central boss and fine radial creases, found in huge numbers in Newfoundland, about 565 million years old. Described in 1872, it was the first Ediacaran fossil ever named, long before anyone accepted that large organisms lived so early. Most of these discs were probably the buried anchors of fronds.",
+   "v": "솟아오른 테두리와 가운데 돌기, 가는 방사상 주름이 있는 지름 수 cm의 낮은 원반으로, 뉴펀들랜드에서 엄청나게 많이 발견되며 약 5억 6500만 년 전의 것이다. 1872년에 기재되어 최초로 이름 붙은 에디아카라 화석이 되었는데, 당시에는 큰 생물이 그렇게 일찍 살았다는 사실을 아무도 받아들이지 않았다. 이 원반들은 대부분 엽상체의 묻힌 고착부였을 것이다."
+  },
+  {
+   "k": "A low, round dome a few centimetres across from South Australia, about 555 million years old, covered in a raised lattice of radiating struts crossed by rings. The net-like pattern resembles the skeleton of glass sponges, so it is often considered one of the oldest sponges. It sat on the seabed filtering food from the water.",
+   "v": "남오스트레일리아에서 발견된 지름 수 cm의 낮고 둥근 돔으로, 약 5억 5500만 년 전에 살았으며, 방사상 지주와 고리가 교차하는 도드라진 격자로 덮여 있었다. 이 그물 무늬가 유리해면의 골격을 닮아, 흔히 가장 오래된 해면 중 하나로 여겨진다. 해저에 붙어 물에서 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "A lungfish about a metre long, common in the Late Carboniferous and Early Permian swamps, rivers and lakes of North America and Europe, about 300 million years ago. It had a long body, a broad head with fan-shaped, ridged tooth plates for crushing shells, narrow pointed paired fins and a tail fringed by one continuous fin. Like living lungfish it could gulp air at the surface, which helped it survive in warm, oxygen-poor swamp water.",
+   "v": "길이 약 1미터의 폐어로, 약 3억 년 전 북아메리카와 유럽의 석탄기 후기와 페름기 전기의 늪, 강, 호수에서 흔했다. 긴 몸, 조개껍데기를 부수는 부채 모양의 골이 진 이빨판이 있는 넓은 머리, 좁고 뾰족한 쌍지느러미, 하나로 이어진 지느러미가 둘러싼 꼬리를 가졌다. 오늘날의 폐어처럼 수면에서 공기를 들이마실 수 있었고, 덕분에 따뜻하고 산소가 부족한 늪 물에서 살아남을 수 있었다."
+  },
+  {
+   "k": "A many-armed starfish about 15 cm across from the Silurian reefs of Dudley, England. Around its broad, flat disc it had thirteen tapering arms edged with rows of small plates, like a modern sun star. It crept slowly over the reef floor, preying on shellfish and other slow animals.",
+   "v": "잉글랜드 더들리의 실루리아기 암초에서 발견된 지름 약 15cm의 팔이 많은 불가사리이다. 넓고 납작한 몸판 둘레에 작은 판들이 줄지어 가장자리를 이룬 가늘어지는 팔 열세 개가 있어, 현생 햇님불가사리와 비슷했다. 암초 바닥을 천천히 기어 다니며 조개류와 다른 느린 동물을 잡아먹었다."
+  },
+  {
+   "k": "A mitrate, a strange echinoderm with no five-fold symmetry: a flattened, plated body a few centimetres long with a single jointed arm in front. It lay on the soft sea floor and used its arm to gather food. Some scientists have even argued that mitrates were early relatives of the chordates.",
+   "v": "오방사 대칭이 전혀 없는 기묘한 극피동물인 미트라타류의 하나이다. 판으로 덮인 납작한 몸은 길이가 몇 센티미터였고, 앞쪽에 관절이 있는 팔이 하나만 있었다. 부드러운 해저에 누워 그 팔로 먹이를 모았다. 미트라타류가 척삭동물의 초기 친척이었다고 주장하는 학자도 있다."
+  },
+  {
+   "k": "A monitor lizard about 1.3 m long from the Eocene of North America, a close relative of today's monitors and the first fossil lizard named from the continent. It hunted small animals and ate eggs, flicking its forked tongue to smell its way. It is the only known jawed vertebrate with four eyes: besides its two eyes it had two light-sensing eyes on top of its head.",
+   "v": "에오세 북아메리카에 살았던 몸길이 약 1.3m의 왕도마뱀으로, 오늘날 왕도마뱀의 가까운 친척이며 이 대륙에서 처음 이름 붙은 화석 도마뱀이다. 작은 동물을 사냥하고 알을 먹었으며, 갈라진 혀를 날름거려 냄새로 길을 찾았다. 눈이 넷인 유일한 유악 척추동물로, 두 눈 외에 정수리에 빛을 느끼는 눈이 두 개 더 있었다."
+  },
+  {
+   "k": "A mouse-sized multituberculate about 10 centimetres long from the Late Cretaceous deserts of Mongolia. Multituberculates were the rodents of the dinosaur age, with gnawing front teeth and cheek teeth carrying rows of little cusps for grinding seeds and plants. Kryptobaatar probably sheltered in burrows from the heat and from predators.",
+   "v": "몽골 백악기 후기 사막에 살았던 쥐만 한 크기, 길이 약 10센티미터의 다구치류이다. 다구치류는 공룡 시대의 '설치류'로, 갉는 앞니와 작은 돌기가 줄지어 난 볼니로 씨앗과 식물을 갈아 먹었다. 크립토바타르는 더위와 포식자를 피해 굴 속에 숨었을 것이다."
+  },
+  {
+   "k": "A nautiloid with a short, fat, curved shell about 12 cm long from the Silurian of Europe. The shell widened quickly to a swollen body chamber, but its opening was pinched into a narrow slit, so only the tips of its arms could reach out. It drifted slowly near the sea floor, catching small animals with its arms.",
+   "v": "짧고 뚱뚱하며 휘어진 껍데기를 가진 앵무조개류로, 껍데기 길이는 약 12cm이며 유럽의 실루리아기에서 발견되었다. 껍데기는 빠르게 넓어져 부푼 주거실이 되었지만, 입구는 좁은 틈 모양으로 오므라들어 있어 팔 끝만 밖으로 뻗을 수 있었다. 해저 근처를 천천히 떠다니며 팔로 작은 동물을 잡았다."
+  },
+  {
+   "k": "A nautilus-like cephalopod with a smooth, tightly coiled shell about 15 cm across, from the Eocene to the Miocene seas of the world. Inside, the walls between its chambers met the shell in deep, zigzag lines that gave it its name. Like the living nautilus it rose and sank by changing the gas in its shell and caught shrimp, fish and carrion with its many tentacles.",
+   "v": "에오세부터 마이오세까지 전 세계 바다에 살았던 앵무조개를 닮은 두족류로, 매끈하고 단단히 감긴 껍데기는 지름 약 15cm였다. 껍데기 안에서 방 사이의 격벽이 껍데기와 깊은 지그재그 선으로 만나는데, 이름은 여기서 왔다. 살아 있는 앵무조개처럼 껍데기 속 기체를 바꿔 뜨고 가라앉았으며, 많은 촉수로 새우, 물고기, 사체를 잡았다."
+  },
+  {
+   "k": "A palaeoniscoid, one of the early ray-finned fishes, about 15 centimetres long, from the Late Carboniferous swamps and lagoons of Ohio and Illinois, about 310 million years ago. Its slender body was covered in thick, shiny, diamond-shaped scales, and it had large eyes, a wide mouth full of small sharp teeth and an uneven tail with a long upper lobe. Early ray-finned fishes like it gave rise to almost all the fish alive today; it hunted small crustaceans and young fish.",
+   "v": "초기 조기어류인 팔라이오니스쿠스류의 하나로, 길이 약 15센티미터이며 약 3억 1000만 년 전 오하이오주와 일리노이주의 석탄기 후기 늪과 석호에 살았다. 날씬한 몸은 두껍고 광택 나는 마름모꼴 비늘로 덮여 있었고, 큰 눈, 작고 날카로운 이빨이 가득한 넓은 입, 위쪽 엽이 긴 비대칭 꼬리가 있었다. 이와 같은 초기 조기어류에서 오늘날 살아 있는 거의 모든 물고기가 생겨났으며, 작은 갑각류와 어린 물고기를 사냥했다."
+  },
+  {
+   "k": "A petalodont, an extinct relative of the ratfishes, from the Bear Gulch Limestone of Montana, about 320 million years ago. Its body was almost a round, flat disc about as deep as it was long, with huge wing-like pectoral fins, a tall fin along the back and a small mouth with petal-shaped teeth. It probably swam slowly among the reefs, steering with its broad fins and nibbling small animals off sponges and the sea floor.",
+   "v": "은상어류의 멸종한 친척인 페탈로돈트류의 하나로, 약 3억 2000만 년 전 몬태나주 베어걸치 석회암에서 발견되었다. 몸은 길이와 높이가 거의 같은 둥글고 납작한 원반에 가까웠으며, 날개 같은 거대한 가슴지느러미, 등을 따라 솟은 높은 지느러미, 꽃잎 모양 이빨이 난 작은 입이 있었다. 아마 넓은 지느러미로 방향을 잡으며 암초 사이를 천천히 헤엄쳤고, 해면과 해저에서 작은 동물을 쪼아 먹었을 것이다."
+  },
+  {
+   "k": "A plant-eating relative of crocodiles, about 2.5 metres long, from the Middle Triassic of Hunan, China, about 245 million years ago. It had no teeth at all, only a sharp horny beak (its species name, adentus, means \"toothless\"), and a tall sail of long spines along its back. Many skeletons were found together, so it probably lived in groups.",
+   "v": "중기 트라이아스기인 약 2억 4500만 년 전 중국 후난에서 발견된 길이 약 2.5미터의 초식성 악어 친척이다. 이빨이 전혀 없고 날카로운 각질 부리만 있었다(종명 adentus는 '이빨이 없는'이라는 뜻이다). 등을 따라 긴 가시들로 이루어진 높은 돛이 있었다. 많은 골격이 함께 발견되어 무리 지어 살았을 것으로 보인다."
+  },
+  {
+   "k": "A plant-eating synapsid about 1.2 metres long from the Early Permian of Texas, around 280 million years ago, a smaller relative of Cotylorhynchus. It had a tiny head with a short, overhanging snout and a huge, barrel-shaped body holding a long gut for digesting tough plants. Slow and bulky, it relied on its weight and strong clawed limbs rather than speed.",
+   "v": "약 2억 8000만 년 전 페름기 전기 텍사스에 살았던 몸길이 약 1.2미터의 초식 단궁류로, 코틸로린쿠스의 작은 친척이다. 머리는 아주 작고 짧은 주둥이가 앞으로 튀어나왔으며, 거대한 통 모양 몸에는 질긴 식물을 소화하는 긴 창자가 들어 있었다. 느리고 육중해서 속도 대신 몸무게와 발톱 달린 강한 다리에 의지했다."
+  },
+  {
+   "k": "A predatory fish about 1.5 metres long, nicknamed the sabre-toothed herring for the pair of huge fangs at the front of its jaws. It was one of the most common fish of the Late Cretaceous seas and hunted smaller fish, while itself being eaten by mosasaurs, sharks and seabirds. Despite its name it was related to modern lizardfish, not herrings.",
+   "v": "길이 약 1.5미터의 포식성 물고기로, 턱 앞쪽의 거대한 송곳니 한 쌍 때문에 '검치 청어'라는 별명이 붙었다. 백악기 후기 바다에서 가장 흔한 물고기 가운데 하나로, 더 작은 물고기를 사냥했고 자신도 모사사우루스, 상어, 바닷새에게 잡아먹혔다. 이름과 달리 청어가 아니라 오늘날의 매퉁이류와 가까웠다."
+  },
+  {
+   "k": "A predatory sea snail from the Miocene seas of the Chesapeake Bay region, a relative of the murex snails. Its rust-red shell, one of the few fossil shells that keeps its colour, bore four tall, flat ribs spiralling round the whorls. It drilled holes through the shells of clams and barnacles to eat the animal inside.",
+   "v": "마이오세 체서피크만 일대의 바다에 살던 육식성 바다고둥으로, 뿔고둥류의 친척이다. 원래 색을 간직한 몇 안 되는 화석 껍데기 가운데 하나인 녹슨 붉은색 껍데기에는 나선을 따라 높고 납작한 갈비 네 줄이 돌아갔다. 조개와 따개비 껍데기에 구멍을 뚫어 속살을 먹었다."
+  },
+  {
+   "k": "A primitive starfish relative several centimetres across, close to the common ancestor of sea stars and brittle stars. Its five broad, petal-shaped arms were stiffened by rows of rod-like plates running out from the middle of each arm like the ribs of a leaf. It lay on the sea floor and fed on detritus and organic films.",
+   "v": "지름 몇 센티미터의 원시적인 불가사리 친척으로, 불가사리와 거미불가사리의 공통 조상에 가깝다. 꽃잎 모양의 넓은 팔 다섯 개는 각 팔의 가운데에서 잎맥처럼 바깥으로 뻗은 막대 모양 판들의 줄로 지탱되었다. 해저에 누워 유기물 부스러기와 유기물 막을 먹었다."
+  },
+  {
+   "k": "A quail-sized bird from the very end of the Cretaceous in Belgium, nicknamed the Wonderchicken. It is one of the oldest modern birds known, an early relative of both chickens and ducks, with long legs for wading along the shore. Its relatives survived the asteroid that wiped out the other dinosaurs.",
+   "v": "백악기 맨 마지막 시기 벨기에에 살았던 메추라기만 한 새로, '원더치킨'이라는 별명이 있다. 알려진 가장 오래된 현생 조류 가운데 하나로, 닭과 오리 모두의 초기 친척이며 물가를 걸어 다니기 좋은 긴 다리를 가졌다. 그 친척들은 다른 공룡들을 쓸어버린 소행성 충돌에서 살아남았다."
+  },
+  {
+   "k": "A quarter-sized crab from 95 million years ago with such an odd mix of features that scientists called it the platypus of crabs. It had huge unprotected eyes, a long narrow body and flat, paddle-like legs, and it probably swam in open water like a larva that never grew up. It hunted small animals in the coastal seas of what is now Colombia.",
+   "v": "9500만 년 전에 살았던 25센트 동전만 한 게로, 특징의 조합이 너무 기묘해서 과학자들이 '게들의 오리너구리'라고 불렀다. 보호막 없는 거대한 눈, 길고 좁은 몸, 납작한 노 같은 다리를 가졌으며, 다 자라지 않는 유생처럼 탁 트인 물속을 헤엄쳤던 것으로 보인다. 오늘날 콜롬비아에 해당하는 연안 바다에서 작은 동물을 사냥했다."
+  },
+  {
+   "k": "A radiodont about 20 cm long from the Burgess Shale of Canada, a cousin of Anomalocaris with a long, pointed shell jutting forward from its head. Its front limbs carried rows of long, comb-like spines that it used to sweep through the mud and water for small animals, and flaps along its body let it swim. Its armoured head makes it hard to hurt, and its rakes give it a fair bite.",
+   "v": "캐나다 버제스 셰일에서 나온 몸길이 약 20cm의 방사치류로, 아노말로카리스의 사촌이며 머리에서 앞쪽으로 길고 뾰족한 껍데기가 튀어나와 있었다. 앞다리에는 빗처럼 긴 가시가 줄지어 있어 진흙과 물속을 훑어 작은 동물을 잡았고, 몸 옆의 지느러미로 헤엄쳤다. 갑옷을 두른 머리 덕분에 상처를 잘 입지 않으며 갈퀴 같은 다리로 꽤 강하게 공격한다."
+  },
+  {
+   "k": "A radiodont up to about 30 cm long from the Burgess Shale of Canada, whose head was hidden under a huge horseshoe-shaped shell, nicknamed after the Millennium Falcon spaceship. It cruised low over the seabed and sifted the mud with rake-like front limbs bearing rows of fine spines. Its great shield makes it very hard to harm, but it is slow and only a weak fighter.",
+   "v": "캐나다 버제스 셰일에서 나온 몸길이 최대 약 30cm의 방사치류로, 머리가 거대한 말굽 모양 껍데기 아래 숨어 있어 우주선 밀레니엄 팰컨호를 따서 별명이 붙었다. 해저 바로 위를 천천히 헤엄치며 가는 가시가 줄지어 난 갈퀴 같은 앞다리로 진흙을 걸렀다. 커다란 방패 덕분에 해치기가 매우 어렵지만 느리고 싸움에는 약하다."
+  },
+  {
+   "k": "A rat-sized early mammal about 17 cm long from the Late Jurassic of north-eastern China, about 160 million years ago. It belonged to the multituberculates, the 'rodents of the Mesozoic', named for the many cusps on their grinding teeth, and ate seeds, plants, insects and worms. Its very flexible ankles could swivel, letting it scamper over the ground, dig and climb. Multituberculates went on to thrive for over 100 million years.",
+   "v": "약 1억 6000만 년 전 중국 북동부 후기 쥐라기에 살았던 쥐만 한 초기 포유류로 몸길이는 약 17센티미터이다. '중생대의 설치류'라 불리는 다구치류에 속하며, 어금니에 돌기가 많아 이런 이름이 붙었다. 씨앗, 식물, 곤충, 지렁이를 먹었다. 매우 유연한 발목은 돌아갈 수 있어서 땅 위를 뛰어다니고 굴을 파고 나무를 오를 수 있었다. 다구치류는 이후 1억 년 넘게 번성했다."
+  },
+  {
+   "k": "A ray-finned fish about 30 centimetres long, one of the most common fossils of the Late Permian Zechstein Sea of Germany and England, around 257 million years ago. Its spindle-shaped body was armoured with shiny, diamond-shaped scales, and it had a big eye, small sharp teeth and a strongly upturned tail. It hunted small animals in a sea whose deep water was often without oxygen.",
+   "v": "약 2억 5700만 년 전 페름기 후기 독일과 잉글랜드의 체히슈타인 해에서 가장 흔한 화석 가운데 하나인, 몸길이 약 30센티미터의 조기어류이다. 방추형 몸은 반짝이는 마름모꼴 비늘로 덮여 있었고, 큰 눈과 작고 날카로운 이빨, 위로 크게 휜 꼬리를 가졌다. 깊은 물에 산소가 자주 부족했던 바다에서 작은 동물을 사냥했다."
+  },
+  {
+   "k": "A reef-building stony coral of the warm Late Jurassic seas of Europe, about 160-150 million years ago. Its bushy colonies, up to about half a metre across, were made of separate ribbed branches that forked again and again, each ending in a cup 1-2 cm wide holding a single large polyp. The polyps caught plankton with their tentacles, and algae living in their tissues fed them with sunlight, as in reef corals today.",
+   "v": "약 1억 6000만~1억 5000만 년 전 유럽 후기 쥐라기의 따뜻한 바다에서 암초를 만든 돌산호이다. 지름이 최대 약 50센티미터에 이르는 덤불 같은 군체는 거듭 갈라지는 골이 진 독립된 가지들로 이루어졌고, 각 가지 끝에는 지름 1~2센티미터의 컵이 있어 커다란 폴립 하나가 살았다. 폴립은 촉수로 플랑크톤을 잡았고, 몸속에 사는 조류가 햇빛으로 양분을 공급했다. 오늘날의 산호초 산호와 같다."
+  },
+  {
+   "k": "A relative of the trilobites, about 4 cm long, whose body was covered by just two smooth, unmineralised shields, one over the head and one over the trunk. It had long antennae and many pairs of legs with spiny inner edges, which it probably used to catch and shred small animals and carrion on the seafloor. Without a hard, chalky shell it is only moderately protected.",
+   "v": "삼엽충의 친척으로 몸길이 약 4cm이며, 몸이 머리와 몸통을 하나씩 덮는 매끄럽고 석회화되지 않은 방패 두 장으로만 덮여 있었다. 긴 더듬이와 안쪽 가장자리에 가시가 난 여러 쌍의 다리가 있어, 해저의 작은 동물과 사체를 잡아 찢는 데 썼을 것이다. 단단한 석회질 껍데기가 없어 방어력은 보통이다."
+  },
+  {
+   "k": "A rosette-shaped disc about 12 cm across from South Australia, about 555 million years old: a smooth central dome surrounded by rings of rounded lobes that grew larger toward the edge. First described as a jellyfish, it may instead have been a holdfast or a microbial colony. It is named after the geologist and polar explorer Douglas Mawson.",
+   "v": "남오스트레일리아에서 발견된 지름 약 12cm의 장미꽃 모양 원반으로, 약 5억 5500만 년 전의 것이다. 매끈한 가운데 돔을 바깥으로 갈수록 커지는 둥근 돌기들의 고리가 둘러쌌다. 처음에는 해파리로 기재되었지만, 고착부나 미생물 군체였을 수도 있다. 이름은 지질학자이자 극지 탐험가인 더글러스 모슨에서 따왔다."
+  },
+  {
+   "k": "A salamander about 23 cm long from the lakes of the Valley of Mexico that never grows up: it keeps its feathery external gills and lives in water all its life, yet breeds. It can regrow lost legs, its tail, parts of its spinal cord and even its heart. Once common, it now survives wild only in the canals of Xochimilco.",
+   "v": "멕시코 계곡의 호수에 사는 몸길이 약 23cm의 도롱뇽으로, 평생 어른이 되지 않는다. 깃털 같은 겉아가미를 평생 유지하고 일생을 물속에서 살면서도 번식한다. 잃어버린 다리, 꼬리, 척수 일부, 심지어 심장까지 재생할 수 있다. 한때 흔했지만 지금은 소치밀코의 운하에서만 야생으로 살아남아 있다."
+  },
+  {
+   "k": "A sand tiger shark about 3 m long from the Paleocene to the Oligocene seas of the world. It had long, slender, finely grooved teeth for catching slippery fish, and its teeth are among the most common shark fossils of the time. Its remains even reached the Arctic, which was warm then.",
+   "v": "팔레오세부터 올리고세까지 전 세계 바다에 살았던 몸길이 약 3m의 모래뱀상어류. 미끄러운 물고기를 잡는 가늘고 길며 잔 홈이 있는 이빨을 가졌는데, 그 이빨은 당시 가장 흔한 상어 화석 중 하나다. 그 유해는 당시 따뜻했던 북극에까지 이른다."
+  },
+  {
+   "k": "A saucer-shaped sponge up to about 10 cm across from the Silurian, especially common in Tennessee. Its skeleton was built of large star-shaped spicules of calcite, each with six rays, which cover the whole surface. It lay on the sea floor and filtered food from water drawn in through its pores.",
+   "v": "지름이 최대 약 10cm인 접시 모양의 해면으로, 실루리아기에 살았으며 특히 미국 테네시주에서 흔히 발견된다. 골격은 방해석으로 된 큰 별 모양의 골편으로 이루어졌는데, 각 골편은 여섯 개의 방사지를 가지고 표면 전체를 덮고 있었다. 해저에 놓인 채 구멍으로 빨아들인 물에서 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "A sea lily about 30 centimetres tall from the Middle Devonian reefs of Germany, about 385 million years ago. It had five broad, thick arms that closed tightly together into a cone like a cypress cone, and it opened them like a flower to catch food from the current. Its stalk anchored it among the corals and sponges of the reef.",
+   "v": "약 3억 8500만 년 전 데본기 중기 독일의 암초에 살았던 높이 약 30센티미터의 바다나리이다. 넓고 두꺼운 팔 5개를 꼭 오므리면 측백나무 열매 같은 원뿔이 되었고, 꽃처럼 펼쳐 물살에서 먹이를 잡았다. 줄기로 암초의 산호와 해면 사이에 몸을 고정했다."
+  },
+  {
+   "k": "A sea lily about 30 cm tall with a long, round stem, a rigid, cone-shaped cup of thick, ornamented plates and ten branching arms. It spread its arms like a fan in the current to catch food particles from the water. It was a common crinoid on the Late Ordovician sea floor of North America.",
+   "v": "높이 약 30센티미터의 바다나리로, 길고 둥근 줄기, 두껍고 무늬가 있는 판으로 된 단단한 원뿔형 꽃받침, 그리고 갈라지는 팔 열 개를 지녔다. 물살 속에서 팔을 부채처럼 펼쳐 물속의 먹이 알갱이를 잡았다. 북아메리카 오르도비스기 후기 해저에서 흔한 바다나리였다."
+  },
+  {
+   "k": "A sea reptile about 5 metres long from the Middle Triassic of Guizhou, China, about 245 million years ago, with an extremely long neck made of over 30 vertebrae, much longer than its body. It may have used the long neck to reach fish quietly while its body stayed far behind, then snapped them up with fang-like teeth. A fossil with an unborn young inside shows it gave birth at sea, the first such find in its branch of reptiles.",
+   "v": "중기 트라이아스기인 약 2억 4500만 년 전 중국 구이저우에서 발견된 길이 약 5미터의 해양 파충류로, 30개가 넘는 목뼈로 이루어진 극도로 긴 목은 몸통보다 훨씬 길었다. 몸통은 멀리 뒤에 둔 채 긴 목으로 조용히 물고기에게 다가간 다음, 송곳니 같은 이빨로 낚아챘을지도 모른다. 몸속에 태어나지 않은 새끼가 든 화석은 이 동물이 바다에서 새끼를 낳았음을 보여 주는데, 이는 같은 파충류 계통에서 처음 발견된 사례이다."
+  },
+  {
+   "k": "A sea snail about 4 centimetres long from the Devonian seas of North America, with a loosely coiled, cap-shaped shell covered in hollow spines. It spent its whole adult life clamped onto a crinoid, right over its anus, and lived off the crinoid's waste or stolen food. Fossils of crinoids still carrying their snail are common.",
+   "v": "데본기 북아메리카의 바다에 살았던 몸길이 약 4센티미터의 바다 고둥으로, 느슨하게 감긴 모자 모양 껍데기가 속이 빈 가시로 덮여 있었다. 다 자라면 평생 바다나리의 항문 바로 위에 달라붙어 살며 바다나리의 배설물이나 가로챈 먹이로 살았다. 고둥이 붙은 채로 남은 바다나리 화석이 흔하다."
+  },
+  {
+   "k": "A sea snail about 5 cm across from the Silurian reefs of Gotland, Sweden, and England. Its low, top-shaped shell had a thin, flat frill running round the edge of every whorl like the brim of a hat, which gives it its name, 'winged'. The frill may have kept it from sinking into soft mud and made it hard for predators to grip. It crept over the sea floor grazing on films of microbes and debris.",
+   "v": "스웨덴 고틀란드섬과 잉글랜드의 실루리아기 암초에서 발견된 지름 약 5cm의 바다 고둥이다. 낮은 팽이 모양 껍데기의 나선층마다 가장자리를 따라 모자챙 같은 얇고 납작한 주름이 둘러져 있었는데, 이 때문에 ‘날개 달린’이라는 이름이 붙었다. 이 주름은 부드러운 진흙 속으로 가라앉지 않게 해 주고 포식자가 붙잡기 어렵게 만들었을 것이다. 해저를 기어 다니며 미생물 막과 찌꺼기를 갉아 먹었다."
+  },
+  {
+   "k": "A sea urchin from the Early Carboniferous seas of North America, about 335 million years ago, and a close relative of the ancestors of all living sea urchins. Its round shell, about 5 centimetres across, was built of overlapping plates, each bearing one large knob on which sat a long, stout spine covered in small thorns. It crept slowly over the sea floor grazing on algae, its thorny spines a strong defence against predators.",
+   "v": "약 3억 3500만 년 전 북아메리카 석탄기 전기 바다에 살던 성게로, 오늘날 살아 있는 모든 성게의 조상과 가까운 친척이다. 지름 약 5센티미터의 둥근 껍데기는 서로 겹친 판으로 이루어졌고, 각 판에는 커다란 돌기가 하나씩 있어 그 위에 작은 가시로 덮인 길고 굵은 가시가 달려 있었다. 해저를 천천히 기어 다니며 조류를 뜯어 먹었고, 가시투성이 가시는 포식자를 막는 강력한 방어 수단이었다."
+  },
+  {
+   "k": "A sea-going relative of the living tuatara, about 60 cm long, from the Late Jurassic lagoons of southern Germany, about 150 million years ago. Its body became long and eel-like, with a narrow head, nostrils set far back, tiny limbs and an extremely long tail making up most of its length. It swam by waving its body from side to side and snapped up small fish.",
+   "v": "현생 투아타라의 바다 친척으로 몸길이는 약 60센티미터이며, 약 1억 5000만 년 전 독일 남부 후기 쥐라기의 석호에 살았다. 몸은 뱀장어처럼 길어졌고, 머리는 좁으며 콧구멍은 훨씬 뒤쪽에 있었고, 팔다리는 아주 작았으며, 매우 긴 꼬리가 몸길이의 대부분을 차지했다. 몸을 좌우로 물결치며 헤엄쳐 작은 물고기를 낚아챘다."
+  },
+  {
+   "k": "A sheep-sized oreodont about 1.4 m long from the late Eocene and Oligocene of North America, one of the most common fossil mammals of the Badlands of South Dakota. It had a short face, short legs with four toes, a long tail and grinding teeth for leaves and grass. Oreodonts were a purely North American group of plant-eaters that grazed in large herds.",
+   "v": "에오세 후기와 올리고세 북아메리카에 살았던 양만 한 오레오돈류로 몸길이 약 1.4m이며, 사우스다코타 배드랜드에서 가장 흔한 화석 포유류 중 하나다. 짧은 얼굴과 다리, 네 발가락, 긴 꼬리, 잎과 풀을 가는 이빨을 가졌다. 오레오돈류는 북아메리카에만 살았던 초식 동물 무리로, 큰 무리를 지어 풀을 뜯었다."
+  },
+  {
+   "k": "A sheep-sized relative of wombats and koalas from the Miocene rainforests of northern Australia. Unlike its giant ground-living cousins, it had long, strongly clawed limbs and probably climbed trees to browse leaves, much like a koala. Whole family groups have been found together, mothers with young in the pouch.",
+   "v": "오스트레일리아 북부 마이오세 열대우림에 살던 양만 한 동물로, 웜뱃과 코알라의 친척이다. 땅에 사는 거대한 친척들과 달리 길고 발톱이 강한 팔다리를 지녀, 코알라처럼 나무에 올라 잎을 뜯어 먹었을 것이다. 주머니에 새끼를 품은 어미를 포함한 가족 전체가 함께 발견되었다."
+  },
+  {
+   "k": "A shrimp-like crustacean about 6 centimetres long, one of the most common animals in the Mazon Creek fossil beds of Illinois, about 309 million years old. It was a syncarid, a crustacean without the shield that covers the front of true shrimps, so every body segment shows; it had long antennae, spiny legs and a tail fan around a spiky tip. It swarmed in the rivers and lagoons of the coal swamps scavenging for food, and its relatives still live in fresh water today.",
+   "v": "길이 약 6센티미터의 새우 비슷한 갑각류로, 약 3억 900만 년 전 일리노이주 메이즌크리크 화석층에서 가장 흔한 동물 중 하나다. 진짜 새우의 몸 앞부분을 덮는 등딱지가 없어 모든 몸마디가 드러나는 갑각류인 신카리다류에 속했으며, 긴 더듬이, 가시 돋친 다리, 뾰족한 끝을 둘러싼 꼬리부채가 있었다. 석탄 늪의 강과 석호에서 무리를 지어 먹이를 찾아 다녔고, 그 친척들은 오늘날에도 민물에 살고 있다."
+  },
+  {
+   "k": "A silvery, black-spotted fish usually 70-80 cm long that hatches in cold gravel rivers on both sides of the North Atlantic, grows up at sea and returns to spawn. Guided by smell, it finds the very river where it was born and leaps up waterfalls over 3 m high to reach its spawning grounds. Spawning males grow a hooked lower jaw.",
+   "v": "은빛 몸에 검은 점이 있는 물고기로 보통 몸길이 70~80cm이며, 북대서양 양쪽의 차가운 자갈 바닥 강에서 부화해 바다에서 자란 뒤 산란하러 돌아온다. 냄새를 따라 자신이 태어난 바로 그 강을 찾아가고, 3m가 넘는 폭포를 뛰어올라 산란장에 이른다. 산란기의 수컷은 아래턱이 갈고리처럼 휜다."
+  },
+  {
+   "k": "A slender anaspid, a jawless fish about 8 cm long from the Silurian of southern Scotland. Unlike its relatives it was almost naked: only a crest of hooked scales along its back and a row of thin, rod-like bones over the gills. It swam with a big down-turned tail in lagoons and coastal waters and sucked up small food with its jawless mouth.",
+   "v": "가느다란 결갑류(아나스피스류)로, 스코틀랜드 남부의 실루리아기에서 발견된 몸길이 약 8cm의 무악어류이다. 친척들과 달리 거의 ‘알몸’이어서, 등을 따라 늘어선 갈고리 모양 비늘의 볏과 아가미 위에 늘어선 가는 막대 모양의 뼈 한 줄만 있었다. 아래로 휜 큰 꼬리로 석호와 연안 바다를 헤엄쳤고, 턱 없는 입으로 작은 먹이를 빨아들였다."
+  },
+  {
+   "k": "A slender sea scorpion about 15 cm long, known from exceptionally preserved fossils in South Africa that even show its muscles and gills. It had short, spiny front legs to grab prey, long walking legs and a pair of big swimming paddles ending in a claw. A quick hunter, it lived in cold seas at the end of the Ordovician.",
+   "v": "몸길이 약 15센티미터의 가느다란 바다전갈로, 근육과 아가미까지 남아 있는 남아프리카의 보존 상태가 매우 뛰어난 화석으로 알려져 있다. 먹이를 붙잡는 짧고 가시 돋친 앞다리, 긴 걷는 다리, 그리고 끝에 발톱이 달린 커다란 헤엄용 노 한 쌍을 지녔다. 재빠른 사냥꾼으로, 오르도비스기 말의 차가운 바다에 살았다."
+  },
+  {
+   "k": "A slender spiny shark about 30 centimetres long from the Middle Devonian lakes of Scotland, about 390 million years ago. A sharp spine stood in front of each fin and its body was covered in tiny scales. It had no teeth and swam with its large mouth open, gulping small swimming prey, often in big shoals.",
+   "v": "약 3억 9천만 년 전 데본기 중기 스코틀랜드의 호수에 살았던 몸길이 약 30센티미터의 날씬한 극어류이다. 모든 지느러미 앞에 날카로운 가시가 서 있었고 몸은 작은 비늘로 덮여 있었다. 이빨이 없어 큰 입을 벌린 채 헤엄치며 작은 먹이를 삼켰고, 흔히 큰 무리를 지었다."
+  },
+  {
+   "k": "A slender worm several centimetres long, a cousin of the priapulid worms, whose body was divided into many fine rings studded with tiny plates. At its front was a proboscis ringed with small hooks that it could shoot out to grip the mud as it burrowed. It lived in and on the soft sea floor.",
+   "v": "몸길이 몇 센티미터의 가느다란 벌레로, 새예동물의 친척이며 몸은 작은 판들이 박힌 수많은 가는 고리로 나뉘어 있었다. 앞쪽에는 작은 갈고리가 고리 모양으로 늘어선 주둥이가 있어, 굴을 팔 때 이를 내밀어 진흙을 붙잡았다. 부드러운 해저 속과 표면에서 살았다."
+  },
+  {
+   "k": "A slender, eel-like jawless fish about 12 centimetres long from the Late Devonian of Miguasha in Quebec, about 380 million years ago. It had no armour, a long fin fold under its body and as many as 30 gill openings in a row. It fed on tiny particles and plankton and is one of the last of the anaspid-like fishes.",
+   "v": "약 3억 8천만 년 전 퀘벡 미구아샤의 데본기 후기에 살았던 몸길이 약 12센티미터의 가늘고 뱀장어 같은 무악어류이다. 갑옷이 없고 몸 아래에 긴 지느러미 주름이 있었으며, 아가미구멍이 최대 30개나 한 줄로 늘어서 있었다. 작은 입자와 플랑크톤을 먹었고, 결갑류를 닮은 물고기의 마지막 무리 가운데 하나이다."
+  },
+  {
+   "k": "A slender, long-necked theropod about 1.7 metres long from the Late Jurassic of north-western China, about 160 million years ago. Its young had teeth, but the adults lost them all and had a horny beak instead, and they swallowed stones to grind plants in the gut: a meat-eater's descendant turned plant-eater. Its arms were tiny, with stubby fingers. Its name, 'mud lizard that could not escape', comes from skeletons found trapped in ancient mud pits.",
+   "v": "약 1억 6000만 년 전 중국 북서부 후기 쥐라기에 살았던, 목이 긴 날씬한 수각류로 몸길이는 약 1.7미터이다. 어린 개체에게는 이빨이 있었지만 다 자라면 이빨이 모두 빠지고 각질 부리가 생겼으며, 돌을 삼켜 위에서 식물을 갈았다. 육식 공룡의 후손이 초식으로 돌아선 셈이다. 팔은 아주 작았고 손가락은 뭉툭했다. 이름은 '빠져나오지 못한 진흙 도마뱀'이라는 뜻으로, 고대 진흙 구덩이에 갇힌 골격에서 유래했다."
+  },
+  {
+   "k": "A slender, upside-down cone up to about 15 cm tall from Newfoundland, about 565 million years old. It stood point-down in the sediment and widened to an open top, and may have been an early sponge that drew water in through its walls and pumped it out of the top. If so, it is one of the oldest sponges large enough to see.",
+   "v": "뉴펀들랜드에서 발견된 높이 약 15cm에 이르는 가느다란 거꾸로 선 원뿔로, 약 5억 6500만 년 전에 살았다. 뾰족한 끝을 퇴적물에 박고 서서 위로 넓어지며 열린 꼭대기를 이루었고, 몸벽으로 물을 빨아들여 꼭대기로 내보내는 초기 해면이었을 수 있다. 그렇다면 맨눈으로 볼 수 있는 크기의 해면 가운데 가장 오래된 것 중 하나다."
+  },
+  {
+   "k": "A slim, fast ambush hunter of the Middle Triassic seas, about 240 million years ago, shaped much like a modern garfish or barracuda. Its long, needle-like snout was lined with sharp teeth, and its dorsal and anal fins sat far back near the tail to give a sudden burst of speed. Saurichthys was one of the most widespread fishes of the Triassic, found from China to Europe.",
+   "v": "중기 트라이아스기인 약 2억 4000만 년 전 바다에 살았던 날씬하고 빠른 매복 사냥꾼으로, 생김새가 오늘날의 동갈치나 꼬치고기와 매우 비슷했다. 바늘처럼 긴 주둥이에는 날카로운 이빨이 늘어서 있었고, 등지느러미와 뒷지느러미가 꼬리 가까이 훨씬 뒤쪽에 있어 순간적으로 속도를 낼 수 있었다. 사우리크티스는 트라이아스기에 가장 널리 퍼진 물고기 중 하나로, 중국에서 유럽까지 발견된다."
+  },
+  {
+   "k": "A slim, fast predatory fish about 60 cm long from the Late Jurassic lagoons of Europe, about 150 million years ago, shaped like a garfish. Its upper jaw extended into a long, pointed snout well past the shorter lower jaw, and its body was covered in big, shiny scales. It darted after small fish near the surface. One fossil shows it entangled with a Rhamphorhynchus pterosaur that may have tried to catch it.",
+   "v": "약 1억 5000만 년 전 유럽 후기 쥐라기 석호에 살았던, 날씬하고 빠른 포식성 물고기로 몸길이는 약 60센티미터이며 동갈치처럼 생겼다. 위턱이 길고 뾰족한 주둥이로 뻗어 짧은 아래턱보다 훨씬 앞으로 나왔고, 몸은 크고 반짝이는 비늘로 덮여 있었다. 수면 가까이에서 작은 물고기를 쫓았다. 한 화석에는 이 물고기를 잡으려 한 듯한 람포링쿠스 익룡과 뒤엉킨 모습이 남아 있다."
+  },
+  {
+   "k": "A small ammonite of the Early Jurassic seas, about 180 million years ago, with a flat shell up to about 8 cm across. Its many slowly widening whorls barely overlap, so the shell looks like a coiled snake, and it is covered in fine ribs that fork as they cross the outer edge. It swarmed in such numbers that its shells pack whole layers of rock at Whitby, where they were sold as 'snakestones' with carved heads added.",
+   "v": "약 1억 8000만 년 전 전기 쥐라기 바다에 살았던 작은 암모나이트로, 납작한 껍데기의 지름은 최대 약 8센티미터이다. 천천히 넓어지는 여러 감김이 거의 겹치지 않아 껍데기가 똬리를 튼 뱀처럼 보이며, 바깥 가장자리를 지나며 두 갈래로 갈라지는 가는 늑으로 덮여 있다. 수가 엄청나게 많아 휘트비에서는 그 껍데기가 암석층을 가득 채우고 있으며, 머리를 조각해 붙여 '뱀돌'로 팔리기도 했다."
+  },
+  {
+   "k": "A small armoured arthrodire about 30 centimetres long from Middle and Late Devonian rivers in Antarctica, about 380 million years ago. A tall, pointed plate stood up from the middle of its back like a shark fin, making it a spiky mouthful for predators. It lived near the bottom, picking up worms and small crustaceans.",
+   "v": "약 3억 8천만 년 전 데본기 중후기 남극의 강에 살았던 몸길이 약 30센티미터의 작은 갑주 절경류 판피어이다. 등 한가운데에 상어 지느러미 같은 높고 뾰족한 판이 솟아 있어 포식자에게는 가시투성이 먹이였다. 물 바닥 가까이 살며 벌레와 작은 갑각류를 주워 먹었다."
+  },
+  {
+   "k": "A small arthropod a few centimetres long from the Burgess Shale of Canada, with a rounded head shield, a broad segmented trunk and a short tail shield. Under its head it had a pair of small pincers in front of the mouth, the oldest known chelicerae, the feeding claws that spiders, scorpions and horseshoe crabs still use. A small but well-equipped predator.",
+   "v": "캐나다 버제스 셰일에서 나온 몸길이 몇 센티미터의 작은 절지동물로, 둥근 머리 방패와 넓은 마디진 몸통, 짧은 꼬리 방패를 가졌다. 머리 아래 입 앞에 작은 집게 한 쌍이 있었는데, 이는 알려진 가장 오래된 협각으로, 거미와 전갈, 투구게가 지금도 먹이를 먹을 때 쓰는 집게다. 작지만 장비를 잘 갖춘 포식자다."
+  },
+  {
+   "k": "A small arthropod about 5 cm long from the Chengjiang biota of Yunnan, named after the qilin, a chimera of Chinese legend. It mixed five eyes like Opabinia's and grasping front limbs like those of Anomalocaris with the hardened, segmented body of a true arthropod, a key link in arthropod evolution. Armed with spiny claws and keen eyes, it is a capable small hunter.",
+   "v": "중국 윈난성 청장 생물군에서 나온 몸길이 약 5cm의 작은 절지동물로, 중국 전설의 상상 속 동물 기린의 이름을 땄다. 오파비니아 같은 다섯 개의 눈과 아노말로카리스 같은 움켜쥐는 앞다리에 진짜 절지동물의 단단하고 마디진 몸을 함께 갖춘, 절지동물 진화의 중요한 연결 고리다. 가시 돋친 집게발과 예리한 눈을 갖춘 유능한 작은 사냥꾼이다."
+  },
+  {
+   "k": "A small chelicerate a few centimetres long, related to the sea scorpions, with a broad, rounded head shield, a short, wide 'buckler' of three fused segments and a narrow tail of nine segments ending in a spine. Its fossils come from ancient tidal flats in Tennessee. It walked on its legs over the shallow sea floor, hunting small animals.",
+   "v": "몸길이 몇 센티미터의 작은 협각류로, 바다전갈과 가까운 친척이다. 넓고 둥근 머리 껍데기, 세 마디가 붙어 생긴 짧고 넓은 ‘방패’, 그리고 아홉 마디로 된 가늘고 끝에 가시가 달린 꼬리를 지녔다. 화석은 테네시주의 옛 갯벌에서 나온다. 다리로 얕은 해저를 걸어 다니며 작은 동물을 사냥했다."
+  },
+  {
+   "k": "A small cup- or bag-shaped animal a few centimetres high from Namibia, about 545 million years old. Its walls were quilted into narrow tube-like chambers that zig-zagged up the sides, and it lived partly buried in the sand. It belonged to the same strange group as Ernietta and Pteridinium.",
+   "v": "나미비아에서 발견된 높이 수 cm의 작은 컵 또는 자루 모양 동물로, 약 5억 4500만 년 전에 살았다. 몸벽은 좁은 관 모양의 방들로 누벼져 옆면을 지그재그로 타고 올라갔고, 몸의 일부를 모래에 묻고 살았다. 에르니에타, 프테리디니움과 같은 기묘한 무리에 속했다."
+  },
+  {
+   "k": "A small deer-like ruminant that lived on the Miocene island of Gargano, now part of Italy. It had five horns, one long horn up the middle of the nose and a pair above each eye, and long, sabre-like upper canines like a musk deer. With no large predators on its island, it evolved into several sizes of this strange form.",
+   "v": "마이오세 가르가노섬(지금의 이탈리아)에 살던 작은 사슴 닮은 반추동물이다. 코 가운데 긴 뿔 하나와 두 눈 위에 한 쌍씩, 모두 다섯 개의 뿔이 있었고, 사향노루처럼 긴 칼 모양의 위 송곳니도 있었다. 섬에 큰 포식자가 없어서 이 기묘한 모습으로 크기가 다른 여러 종이 진화했다."
+  },
+  {
+   "k": "A small disc a few centimetres wide ringed by a starburst of long, thin, tentacle-like rays, found from Newfoundland to Russia. It was once taken for a sea anemone, but many now think it was the anchoring holdfast of a frond. Its rays spread across the mat and held it firmly in place.",
+   "v": "길고 가는 촉수 같은 방사선이 별처럼 둘러싼 폭 수 cm의 작은 원반으로, 뉴펀들랜드에서 러시아까지 발견된다. 한때 말미잘로 여겨졌지만, 지금은 많은 연구자가 엽상체의 고착부였다고 본다. 방사선은 미생물 매트 위로 퍼져 몸을 그 자리에 단단히 붙잡아 두었다."
+  },
+  {
+   "k": "A small early ray-finned fish about 20 centimetres long from the Gogo reef of Western Australia, about 380 million years ago. It was a quick, torpedo-shaped swimmer with very large eyes, shiny diamond-shaped scales and a shark-like upturned tail. Its perfectly preserved fossils show how the ancestors of nearly all of today's fishes were built.",
+   "v": "약 3억 8천만 년 전 서오스트레일리아 고고 암초에 살았던 몸길이 약 20센티미터의 초기 조기어류이다. 어뢰 모양의 빠른 헤엄꾼으로 매우 큰 눈, 반짝이는 마름모꼴 비늘, 상어처럼 위로 휜 꼬리를 가졌다. 완벽하게 보존된 화석은 오늘날 거의 모든 물고기의 조상이 어떻게 생겼는지 보여 준다."
+  },
+  {
+   "k": "A small early relative of the ichthyosaurs, about 40 centimetres long, from the Early Triassic of Anhui, China, about 248 million years ago. It had a short, toothless snout, probably for sucking in soft prey, and large flippers with flexible wrists that may have let it crawl onto the shore like a seal. It shows how the dolphin-like ichthyosaurs began, soon after the end-Permian mass extinction.",
+   "v": "전기 트라이아스기인 약 2억 4800만 년 전 중국 안후이에서 발견된 길이 약 40센티미터의 작은 어룡 초기 친척이다. 이빨 없는 짧은 주둥이는 아마도 부드러운 먹이를 빨아들이는 데 쓰였을 것이고, 손목이 유연한 큰 지느러미발로 바다표범처럼 물가로 기어 올라갈 수 있었을지도 모른다. 돌고래 같은 어룡이 페름기 말 대멸종 직후 어떻게 시작되었는지를 보여 준다."
+  },
+  {
+   "k": "A small early tetrapod about 25 centimetres long whose name means 'creature from the black lagoon', found in the rocks of an ancient volcanic lake in Scotland, about 335 million years old. It mixed features of several early tetrapod groups, with a short head, large keyhole-shaped eye openings and slim limbs, and is thought to be a small relative of the baphetids. It probably hunted insects, scorpions and other small animals around the warm lake shores.",
+   "v": "길이 약 25센티미터의 작은 초기 사지동물로, 이름은 '검은 석호에서 온 괴물'이라는 뜻이며, 약 3억 3500만 년 전 스코틀랜드의 고대 화산호 암석에서 발견되었다. 여러 초기 사지동물 무리의 특징이 섞여 있어 짧은 머리, 열쇠 구멍 모양의 큰 눈구멍, 가는 다리를 가졌으며, 바페테스류의 작은 친척으로 여겨진다. 아마 따뜻한 호숫가에서 곤충, 전갈, 다른 작은 동물을 사냥했을 것이다."
+  },
+  {
+   "k": "A small freshwater shark about 70 centimetres long from the Early Permian lakes and rivers of Europe. It had an eel-like body with a long ribbon of a dorsal fin running back to a pointed tail, and a long, straight spine sticking back from the top of its head. It hunted small fish and other little animals with its two-pronged teeth.",
+   "v": "페름기 전기 유럽의 호수와 강에 살았던 몸길이 약 70센티미터의 작은 민물 상어이다. 뱀장어 같은 몸에 뾰족한 꼬리까지 이어지는 긴 리본 모양의 등지느러미가 있었고, 머리 뒤쪽에서 길고 곧은 가시가 뒤로 뻗어 있었다. 두 갈래로 갈라진 이빨로 작은 물고기와 작은 동물을 사냥했다."
+  },
+  {
+   "k": "A small galeaspid, a jawless armoured fish a few centimetres long from the early Silurian of Zhejiang, China. It had a rounded, horseshoe-shaped bony head shield with the eyes on top and a slit-like opening on its snout. Its braincase, preserved in fine detail and studied with X-ray scans, showed how the nose and brain of early vertebrates were arranged before jaws evolved. It strained food from the mud of shallow seas.",
+   "v": "작은 갈레아스피스류로, 중국 저장성의 전기 실루리아기에서 발견된 몸길이 몇 cm의 턱 없는 갑주어이다. 둥근 말굽 모양의 뼈 머리 방패를 지녔고, 눈은 머리 위에, 주둥이에는 틈 모양의 구멍이 있었다. 매우 정밀하게 보존된 뇌머리뼈를 X선 스캔으로 연구한 결과, 턱이 진화하기 전 초기 척추동물의 코와 뇌가 어떻게 배열되어 있었는지가 밝혀졌다. 얕은 바다의 진흙에서 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "A small gliding lizard about 15 centimetres long from the Early Cretaceous forests of China. Eight very long ribs on each side held out a skin wing, which it spread to glide between trees like the flying dragons of Asia today. It caught insects in the branches.",
+   "v": "중국 백악기 전기의 숲에 살았던 길이 약 15센티미터의 작은 활공 도마뱀이다. 몸 양쪽에 각각 여덟 개의 아주 긴 갈비뼈가 피부막 날개를 펼치고 있어, 오늘날 아시아의 날도마뱀처럼 나무 사이를 활공했다. 나뭇가지 사이에서 곤충을 잡아먹었다."
+  },
+  {
+   "k": "A small heterodontosaurid dinosaur about 70 cm long from the Late Jurassic of north-eastern China, about 158 million years ago. It is famous for a crest of long, stiff bristles, up to 6 cm long, running along its back and tail. Because it belongs to the plant-eating branch of dinosaurs, far from the feathered meat-eaters, it suggests that fuzzy body coverings may have been widespread among dinosaurs. Like its relatives it had a beak and small fangs.",
+   "v": "약 1억 5800만 년 전 중국 북동부 후기 쥐라기에 살았던 몸길이 약 70센티미터의 작은 헤테로돈토사우루스류 공룡이다. 등과 꼬리를 따라 난 길이 최대 6센티미터의 길고 뻣뻣한 강모로 유명하다. 깃털 달린 육식 공룡과 멀리 떨어진 초식 공룡 계통에 속하므로, 털 같은 몸 덮개가 공룡 사이에 널리 퍼져 있었을 가능성을 보여 준다. 친척들처럼 부리와 작은 송곳니가 있었다."
+  },
+  {
+   "k": "A small land crocodile about 75 centimetres long from Late Cretaceous Madagascar, with a short, blunt, pug-nosed face. Its leaf-shaped, many-cusped teeth suggest it ate plants, very unlike any crocodile living today. Its back was covered in bony plates, and it may have dug burrows.",
+   "v": "백악기 후기 마다가스카르에 살았던 길이 약 75센티미터의 작은 육지 악어로, 짧고 뭉툭한 퍼그 같은 납작코 얼굴을 가졌다. 잎 모양에 뾰족한 돌기가 여럿인 이빨로 보아 식물을 먹었던 것으로 보이며, 오늘날의 어떤 악어와도 매우 다르다. 등은 뼈판으로 덮여 있었고, 굴을 팠을지도 모른다."
+  },
+  {
+   "k": "A small lobe-finned fish about 35 centimetres long that lived on a tropical reef in Western Australia about 380 million years ago. It had large eyes and big breathing holes on top of its head, and its front fins already contained the same bones as our upper arm and forearm. It lurked among the reef and snapped up small fish and shrimp-like prey.",
+   "v": "약 3억 8천만 년 전 서오스트레일리아의 열대 암초에 살았던 몸길이 약 35센티미터의 작은 육기어류이다. 큰 눈과 머리 위의 커다란 숨구멍을 가졌고, 앞지느러미 안에는 이미 우리의 위팔과 아래팔과 같은 뼈가 있었다. 암초 사이에 숨어 작은 물고기와 새우 같은 먹이를 낚아챘다."
+  },
+  {
+   "k": "A small marrellomorph arthropod a few centimetres across, a late cousin of the Cambrian Marrella. Its rounded head shield bore three pairs of long, forked and branching spines that gave it a lacy, star-like outline, and under it a short, many-segmented body carried feathery legs. It probably fed on detritus just above the sea floor.",
+   "v": "폭이 몇 센티미터에 불과한 작은 마렐라형 절지동물로, 캄브리아기 마렐라의 후대 친척이다. 둥근 머리 껍데기에서 끝이 갈라지고 곁가지가 난 긴 가시 세 쌍이 뻗어 나와 레이스 같은 별 모양 윤곽을 이루었고, 그 아래의 여러 마디로 된 짧은 몸에는 깃털 모양의 다리가 달려 있었다. 아마도 해저 바로 위에서 유기물 부스러기를 먹었을 것이다."
+  },
+  {
+   "k": "A small marrellomorph arthropod about 5 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago, one of the last relatives of the Cambrian Marrella. Its head shield was shaped like a six-pointed star with long spiny rays, and it had long antennae and many feathery legs. It swam just above the sea floor, sifting the mud for food.",
+   "v": "약 4억 년 전 데본기 전기 독일 훈스뤼크 바다에 살았던 폭 약 5센티미터의 작은 마렐라형 절지동물로, 캄브리아기 마렐라의 마지막 친척 가운데 하나이다. 머리 방패는 가시 돋친 긴 돌기 6개가 뻗은 육각별 모양이었고, 긴 더듬이와 깃털 같은 많은 다리를 가졌다. 해저 바로 위를 헤엄치며 진흙을 걸러 먹이를 얻었다."
+  },
+  {
+   "k": "A small nectridean amphibian about 30 centimetres long from the Late Carboniferous coal swamps of Ireland and England, about 310 million years ago. It had a newt-like body with short legs, a long, flattened swimming tail and a flat head with short horns at the back corners of the skull, an early version of the boomerang-shaped head of its later relative Diplocaulus. It lived in swamp pools and caught small invertebrates and fish.",
+   "v": "길이 약 30센티미터의 작은 넥트리드류 양서류로, 약 3억 1000만 년 전 아일랜드와 잉글랜드의 석탄기 후기 석탄 늪에 살았다. 짧은 다리가 달린 영원 같은 몸, 길고 납작한 헤엄용 꼬리, 두개골 뒤쪽 모서리에 짧은 뿔이 난 납작한 머리를 가졌는데, 이는 후대의 친척 디플로카울루스의 부메랑 모양 머리의 초기 형태였다. 늪의 웅덩이에 살며 작은 무척추동물과 물고기를 잡아먹었다."
+  },
+  {
+   "k": "A small open-water trilobite whose head was dominated by two huge, bulging eyes that gave it almost all-round vision. Instead of crawling on the bottom it swam in the upper waters, and it spread so widely that it is found on many Ordovician continents. It probably fed on tiny plankton.",
+   "v": "먼바다에 살던 작은 삼엽충으로, 머리의 대부분을 차지하는 거대하고 불룩한 두 눈 덕분에 거의 모든 방향을 볼 수 있었다. 해저를 기어 다니는 대신 위쪽 물속을 헤엄쳤고, 매우 널리 퍼져서 오르도비스기의 여러 대륙에서 발견된다. 아마도 아주 작은 플랑크톤을 먹었을 것이다."
+  },
+  {
+   "k": "A small plant-eating anomodont about 50 centimetres long from the Late Permian of Russia, around 255 million years ago, and the oldest known backboned animal adapted to climbing trees. It had long fingers and toes with a grasping first digit and a long tail that probably gripped branches, and it chopped leaves with serrated teeth. Many skeletons found together suggest it lived in groups.",
+   "v": "약 2억 5500만 년 전 페름기 후기 러시아에 살았던 몸길이 약 50센티미터의 작은 초식 이치류로, 나무 타기에 적응한 가장 오래된 척추동물로 알려져 있다. 긴 손가락과 발가락, 물건을 쥘 수 있는 첫째 손가락, 나뭇가지를 감았을 긴 꼬리를 가졌고, 톱니 같은 이빨로 잎을 잘게 썰었다. 많은 골격이 함께 발견되어 무리 지어 살았던 것으로 보인다."
+  },
+  {
+   "k": "A small radiodont from the Burgess Shale of Canada, preserved in hundreds of fossils that even keep its brain. Besides its two big stalked eyes it had a large third eye in the middle of its head, and its front limbs bore rows of long, hooked spines for seizing prey. A quick, sharp-eyed hunter, it strikes hard but has little armour.",
+   "v": "캐나다 버제스 셰일에서 나온 작은 방사치류로, 수백 점의 화석이 알려져 있고 뇌까지 보존된 것도 있다. 자루 달린 두 개의 큰 눈 외에 머리 한가운데에 커다란 세 번째 눈이 있었고, 앞다리에는 먹이를 움켜쥐는 갈고리 모양의 긴 가시가 줄지어 있었다. 빠르고 눈이 날카로운 사냥꾼으로 공격은 강하지만 갑옷은 거의 없다."
+  },
+  {
+   "k": "A small sail-backed synapsid, a distant relative of mammals, about 70 centimetres long from Late Carboniferous rocks near Garnett, Kansas, about 302 million years old. Like its later cousin Edaphosaurus it carried a tall sail on long spines along its back, studded with small knobby crossbars, but its sharp teeth show that it ate insects rather than plants. The sail may have helped it warm up in the morning sun or impress rivals.",
+   "v": "등에 돛이 달린 작은 단궁류로 포유류의 먼 친척이며, 길이 약 70센티미터로 캔자스주 가넷 근처의 약 3억 200만 년 전 석탄기 후기 암석에서 발견되었다. 후대의 사촌 에다포사우루스처럼 등을 따라 난 긴 가시 위로 높은 돛을 달았고, 돛에는 작은 혹 같은 가로대가 박혀 있었지만, 날카로운 이빨은 식물이 아니라 곤충을 먹었음을 보여 준다. 돛은 아침 햇살에 몸을 데우거나 경쟁자에게 위세를 과시하는 데 도움이 되었을지도 모른다."
+  },
+  {
+   "k": "A small sauropod about 9 metres long from mid-Cretaceous Niger with a short neck and a broad, straight-edged muzzle like a vacuum cleaner. Its mouth held over 500 slender teeth, replaced as often as every two weeks, and it held its head low to crop ferns and horsetails like a lawnmower. Its lightly built skull had walls thin enough to see light through.",
+   "v": "백악기 중기 니제르에 살았던 길이 약 9미터의 작은 용각류로, 목이 짧고 진공청소기 흡입구처럼 넓고 곧은 주둥이를 가졌다. 입에는 500개가 넘는 가느다란 이빨이 있었고, 빠르면 2주마다 새로 갈렸다. 머리를 낮게 숙이고 잔디 깎는 기계처럼 고사리와 속새를 뜯어 먹었다. 가벼운 두개골의 벽은 빛이 비칠 만큼 얇았다."
+  },
+  {
+   "k": "A small, curved tube a few centimetres long from southern China, about 550 million years old. It was built as a stack of nested funnels with flared rims, like a pile of ice-cream cones, from tough organic material that was barely mineralised. A close relative of Cloudina, it shows what tube-dwelling animals were like just before skeletons became common.",
+   "v": "중국 남부에서 발견된 길이 수 cm의 작고 휜 관으로, 약 5억 5000만 년 전에 살았다. 테두리가 벌어진 깔때기를 겹겹이 쌓은 모양으로, 아이스크림콘을 포개 놓은 듯했으며, 거의 광물화되지 않은 질긴 유기물로 만들어졌다. 클라우디나의 가까운 친척으로, 골격이 널리 퍼지기 직전 관 속에 살던 동물의 모습을 보여 준다."
+  },
+  {
+   "k": "A small, eel-shaped lungfish from the Early Permian of Texas, Oklahoma and Kansas, around 290 million years ago. It lived in ponds and streams that dried out in the hot season and survived by digging a burrow in the mud, sealing itself in and breathing air until the rains returned; some fossils are still inside their burrows. It crushed small animals with its ridged tooth plates.",
+   "v": "약 2억 9000만 년 전 페름기 전기 텍사스, 오클라호마, 캔자스에 살았던 뱀장어 모양의 작은 폐어이다. 건기에 마르는 연못과 개울에 살면서 진흙에 굴을 파고 들어가 몸을 가둔 채 공기를 마시며 비가 다시 올 때까지 버텼다. 일부 화석은 아직도 굴 안에 있다. 주름진 이빨판으로 작은 동물을 으깨 먹었다."
+  },
+  {
+   "k": "A small, flat disc about 3 cm across from the White Sea coast of Russia, about 555 million years old, built on three-fold symmetry like its relative Tribrachidium. Three grooves met at its centre, fine branching channels ran out from them, and its edge carried a fringe of slender rays. The channels may have carried water and food through its body.",
+   "v": "러시아 백해 연안에서 발견된 지름 약 3cm의 납작한 작은 원반으로, 약 5억 5500만 년 전에 살았으며, 친척인 트리브라키디움처럼 삼방사 대칭이었다. 세 개의 홈이 중심에서 만나고, 거기서 가늘게 갈라진 수로가 뻗어 나갔으며, 가장자리에는 가는 방사선이 술처럼 달려 있었다. 수로는 몸속으로 물과 먹이를 날랐을 수 있다."
+  },
+  {
+   "k": "A small, flat relative of the giant millipede Arthropleura, about 8 centimetres long, from Early and Middle Devonian swamps in Germany and North America. Its body was covered by broad tergites with side lobes, giving it the look of a low, armoured mat. It crawled through the leaf litter of the first forests, feeding on rotting plants.",
+   "v": "거대한 노래기 아르트로플레우라의 작고 납작한 친척으로, 몸길이 약 8센티미터이며 데본기 전기에서 중기 독일과 북아메리카의 습지에 살았다. 몸은 옆으로 돌출한 넓은 등판으로 덮여 있어 낮은 갑옷 매트처럼 보였다. 최초의 숲의 낙엽층을 기어 다니며 썩은 식물을 먹었다."
+  },
+  {
+   "k": "A small, flat trilobite about 3 cm long with a long thorax of fourteen narrow segments and tiny eyes. In one famous rock bed in New York its bodies were turned to golden pyrite with their legs and long antennae intact, giving one of the first clear views of a trilobite's underside. It lived on muddy, oxygen-poor sea floors, picking food particles out of the mud.",
+   "v": "몸길이 약 3센티미터의 작고 납작한 삼엽충으로, 열네 개의 좁은 마디로 된 긴 가슴과 작은 눈을 지녔다. 뉴욕주의 한 유명한 지층에서는 사체가 금빛 황철석으로 바뀌면서 다리와 긴 더듬이까지 그대로 남아, 삼엽충의 배쪽 모습을 처음으로 뚜렷하게 보여 준 사례 가운데 하나가 되었다. 산소가 부족한 진흙 해저에 살며 진흙 속에서 먹이 알갱이를 골라 먹었다."
+  },
+  {
+   "k": "A small, glassy-pink shrimp-like crustacean about 6 cm long, yet perhaps the most abundant wild animal on Earth by weight. Swarms with up to 10,000 animals in a cubic metre graze on algae in the Southern Ocean, and almost everything there, from penguins and seals to blue whales, depends on them. It glows with blue-green light organs.",
+   "v": "몸길이 약 6cm에 불과한 유리처럼 투명한 분홍색 새우 모양 갑각류지만, 무게로 따지면 아마 지구에서 가장 많은 야생동물일 것이다. 1세제곱미터에 최대 1만 마리가 모인 떼가 남극해에서 조류를 먹으며, 펭귄과 물범에서 대왕고래까지 그곳의 거의 모든 동물이 이들에 의존한다. 청록색 빛을 내는 발광기관이 있다."
+  },
+  {
+   "k": "A small, goblet-shaped animal from the Burgess Shale of Canada and Chengjiang in China: a cup on a slender stalk, ringed at the top by about eighteen stiff, petal-like plates. Its U-shaped gut, with mouth and anus both opening at the top of the cup, suggests a kinship with the tiny entoprocts of today. A defenceless little filter feeder.",
+   "v": "캐나다 버제스 셰일과 중국 청장에서 나온 술잔 모양의 작은 동물로, 가는 자루 위에 컵이 있고 그 가장자리를 약 열여덟 장의 단단한 꽃잎 같은 판이 둘러싸고 있었다. 입과 항문이 모두 컵 윗면에 열리는 U자형 소화관은 오늘날의 작은 내항동물과의 유연관계를 암시한다. 방어 수단이 없는 작은 여과 섭식자다."
+  },
+  {
+   "k": "A small, leaf-shaped swimmer a few centimetres long from the Chengjiang biota of Yunnan, China, with a row of muscle blocks along its body and gill arches at the front. Its place in the tree of life is debated, but it is often seen as an early chordate or a close relative of the ancestors of vertebrates. It filtered food from the water and has no defence but flight.",
+   "v": "중국 윈난성 청장 생물군에서 나온 몸길이 몇 센티미터의 작은 잎 모양 헤엄꾼으로, 몸을 따라 근육 마디가 줄지어 있고 앞쪽에 아가미활이 있었다. 생명의 나무에서의 위치는 논란이 있지만, 흔히 초기 척삭동물이나 척추동물 조상의 가까운 친척으로 여겨진다. 물에서 먹이를 걸러 먹었고 달아나는 것 말고는 방어 수단이 없다."
+  },
+  {
+   "k": "A small, light predator, about 60 centimetres long, from the Early Triassic of South Africa, about 245 million years ago, close to the common ancestor of crocodiles and dinosaurs. It had a narrow head with sharp, curved teeth, two rows of small bony plates down its back, a long tail and hind legs longer than its arms. It may have run on its hind legs for short bursts when chasing insects and small reptiles.",
+   "v": "전기 트라이아스기인 약 2억 4500만 년 전 남아프리카에서 발견된 길이 약 60센티미터의 작고 가벼운 포식자로, 악어와 공룡의 공통 조상에 가깝다. 좁은 머리에 날카롭고 휘어진 이빨이 있었고, 등에는 작은 골판이 두 줄로 나 있었으며, 꼬리가 길고 뒷다리가 앞다리보다 길었다. 곤충이나 작은 파충류를 쫓을 때 잠깐씩 뒷다리로 달렸을지도 모른다."
+  },
+  {
+   "k": "A small, long-legged, feathered dinosaur about a metre long from the Late Cretaceous deserts of Mongolia. Its stubby, powerful arms each ended in one big thumb claw, probably used to break open termite nests like an anteater. A fast runner with a slender head, it fed on insects.",
+   "v": "몽골의 백악기 후기 사막에 살았던 길이 약 1미터의 다리가 길고 깃털 달린 작은 공룡이다. 짧고 강한 팔 끝에는 큰 엄지 발톱이 하나씩만 있었는데, 개미핥기처럼 흰개미 둥지를 부수는 데 썼을 것이다. 가느다란 머리를 가진 빠른 달리기 선수로, 곤충을 먹었다."
+  },
+  {
+   "k": "A small, long-snouted mammal about 20 centimetres long from the Late Cretaceous of Mongolia, an early relative of placental mammals. Its long hind legs and fused shin bones suggest it hopped like an elephant shrew. It sniffed out insects among the dunes and scrub with its long, mobile nose.",
+   "v": "몽골 백악기 후기에 살았던 길이 약 20센티미터의 주둥이가 긴 작은 포유류로, 태반류 포유류의 초기 친척이다. 긴 뒷다리와 붙어 버린 정강이뼈로 보아 코끼리땃쥐처럼 깡충깡충 뛰어다녔던 것으로 보인다. 잘 움직이는 긴 코로 모래 언덕과 덤불 사이의 곤충을 냄새로 찾아냈다."
+  },
+  {
+   "k": "A small, rounded trilobite a few centimetres long from the middle Cambrian of Utah, with a broad head shield, thirteen body segments and a tiny tail shield. It lived in huge numbers on soft, oxygen-poor mud, sifting the sediment for food, and is probably the most collected trilobite in the world. Lightly armoured and harmless, it survives by sheer numbers.",
+   "v": "미국 유타주의 캄브리아기 중기 지층에서 나온 몸길이 몇 센티미터의 작고 둥근 삼엽충으로, 넓은 머리 방패와 열세 개의 몸마디, 아주 작은 꼬리 방패를 가졌다. 산소가 부족한 부드러운 진흙 위에서 엄청난 무리를 지어 살며 퇴적물을 걸러 먹었고, 아마 세계에서 가장 많이 수집된 삼엽충일 것이다. 갑옷이 얇고 무해하여 오로지 수로 살아남는다."
+  },
+  {
+   "k": "A small, shrimp-like crustacean with a long, narrow, pod-shaped shell of two thin valves pointed at both ends, a short abdomen and a forked tail. It swam and drifted in the open sea, which is why its remains are so often found among graptolites. It strained tiny food particles from the water with its leaf-like legs.",
+   "v": "작은 새우를 닮은 갑각류로, 양 끝이 뾰족한 얇은 껍데기 두 장으로 된 길고 좁은 꼬투리 모양의 갑피, 짧은 배, 두 갈래로 갈라진 꼬리를 지녔다. 먼바다에서 헤엄치거나 떠다니며 살았기 때문에 그 화석은 필석과 함께 자주 발견된다. 잎 모양의 다리로 물속의 작은 먹이 알갱이를 걸러 먹었다."
+  },
+  {
+   "k": "A small, six-sided pyramid a few centimetres tall from the White Sea coast of Russia, about 555 million years old, its faces crossed by fine ribs. It resembles the conulariids, cone-shaped relatives of jellyfish common in later seas, and may be one of the oldest of them. Its stiff, ribbed sheath protected it while tentacles at the open top caught small prey.",
+   "v": "러시아 백해 연안에서 발견된 높이 수 cm의 작은 육면 피라미드로, 약 5억 5500만 년 전에 살았으며, 각 면에 가는 가로 늑골이 있었다. 후대 바다에 흔했던 원뿔 모양의 해파리 친척인 코눌라리아류를 닮았고, 그중 가장 오래된 것일 수 있다. 단단한 늑골 덮개가 몸을 보호했고, 열린 꼭대기의 촉수로 작은 먹이를 잡았다."
+  },
+  {
+   "k": "A small, slender early relative of the sharks from the early Silurian of Chongqing, China, described in 2022. Its long body was covered in tiny shark-like scales, but its shoulders were boxed in large bony plates like those of placoderms. This mix shows that the first cartilaginous fishes still carried armour. It was a quick little hunter of tiny animals.",
+   "v": "상어의 작고 가느다란 초기 친척으로, 중국 충칭의 전기 실루리아기에서 발견되어 2022년에 기재되었다. 긴 몸은 상어 같은 작은 비늘로 덮여 있었지만, 어깨는 판피어류처럼 큰 뼈판으로 상자처럼 둘러싸여 있었다. 이러한 조합은 최초의 연골어류가 여전히 갑옷을 두르고 있었음을 보여 준다. 작은 동물을 사냥하는 날쌘 작은 사냥꾼이었다."
+  },
+  {
+   "k": "A small, slender marine reptile, about 25 centimetres long, from the Middle Triassic of Guizhou, China, about 240 million years ago, and an early relative of the plesiosaurs. It had a small head with needle-like teeth on a long neck and swam with paddle-like limbs. Some fossils hold unborn young, showing that it gave birth to live babies in the water.",
+   "v": "중기 트라이아스기인 약 2억 4000만 년 전 중국 구이저우에서 발견된 길이 약 25센티미터의 작고 날씬한 해양 파충류로, 수장룡의 초기 친척이다. 긴 목 끝에 바늘 같은 이빨이 난 작은 머리가 달려 있었고, 노 모양의 다리로 헤엄쳤다. 일부 화석에는 태어나지 않은 새끼가 들어 있어, 물속에서 새끼를 낳았음을 보여 준다."
+  },
+  {
+   "k": "A small, smooth, oval clam about 2 cm long that lived half-buried in the soft sea floor, feeding on organic matter in the mud. It is famous for the eight pairs of separate muscle scars inside its shell, like those of simpler single-shelled molluscs, a clue to how bivalves evolved.",
+   "v": "길이 약 2센티미터의 매끈한 타원형 작은 조개로, 부드러운 해저에 반쯤 묻혀 살며 진흙 속 유기물을 먹었다. 껍데기 안쪽에 서로 떨어진 근육 자국이 여덟 쌍 있는 것으로 유명한데, 이는 더 단순한 단판류 연체동물과 비슷하여 이매패류가 어떻게 진화했는지 알려 주는 단서가 된다."
+  },
+  {
+   "k": "A small, strongly swollen clam about 3 cm across from the Silurian of Europe and North Africa. Its rounded shell had prominent beaks and strong radiating ribs cut by growth lines into rows of beads. It was common in dark, muddy seas, where it may have hung on floating seaweed or other objects by threads and filtered food from the water.",
+   "v": "유럽과 북아프리카의 실루리아기에서 발견된 너비 약 3cm의 작고 매우 불룩한 조개이다. 둥근 껍데기에는 두드러진 각정과 굵은 방사륵이 있었고, 성장선이 방사륵을 끊어 구슬이 늘어선 모양을 만들었다. 어둡고 진흙이 많은 바다에서 흔했으며, 족사로 떠다니는 해조류나 다른 물체에 매달려 물속의 먹이를 걸러 먹었을 것이다."
+  },
+  {
+   "k": "A smooth, rounded trilobite about 8 cm long from the Silurian reefs of England. Its head and tail shields were so smooth and swollen that they look almost featureless, with large crescent-shaped eyes set far back. It sheltered in hollows of the reef and could roll up into a tight ball when threatened.",
+   "v": "잉글랜드의 실루리아기 암초에서 발견된 몸길이 약 8cm의 매끈하고 둥근 삼엽충이다. 머리와 꼬리 방패가 매우 매끈하고 부풀어 있어 거의 아무 특징도 없어 보이며, 커다란 초승달 모양의 눈이 뒤쪽에 자리 잡고 있었다. 암초의 움푹한 곳에 숨어 지냈고, 위협을 받으면 몸을 단단한 공 모양으로 말 수 있었다."
+  },
+  {
+   "k": "A soft, onion-shaped animal up to about 8 cm tall from South Australia, about 555 million years old. Its broad base was divided into rounded lobes and narrowed into a slim neck with an opening at the top. It is often compared with sea anemones, sitting half buried in the sand and catching small prey drifting by.",
+   "v": "남오스트레일리아에서 발견된 높이 약 8cm에 이르는 부드러운 양파 모양 동물로, 약 5억 5500만 년 전에 살았다. 넓은 밑동은 둥근 엽으로 나뉘고 위로 가늘어져 좁은 목이 되었으며, 꼭대기에 구멍이 있었다. 흔히 말미잘에 비유되며, 모래에 반쯤 묻혀 떠내려오는 작은 먹이를 잡았다."
+  },
+  {
+   "k": "A soft, sac-shaped animal up to about 15 cm tall from the Burgess Shale of Canada, with long ribs running down its body. It probably stood attached to shells or stones on the seabed and is thought to be a relative of sea anemones, among the oldest known. It catches small animals that blunder within reach but cannot move away from danger.",
+   "v": "캐나다 버제스 셰일에서 나온 높이 최대 약 15cm의 부드러운 주머니 모양 동물로, 몸을 따라 긴 늑골이 뻗어 있었다. 해저의 껍데기나 돌에 붙어 서 있었던 것으로 보이며, 말미잘의 친척으로 여겨지고 알려진 가장 오래된 것 중 하나다. 손이 닿는 곳에 잘못 들어온 작은 동물을 잡지만 위험에서 달아날 수는 없다."
+  },
+  {
+   "k": "A soft-bodied, worm-like animal on stubby legs from the Chengjiang biota of Yunnan, a relative of today's velvet worms. Above each pair of legs it wore a pair of round, net-like plates, and these little plates are found as separate microfossils all over the world. Some fossils are found clinging to the remains of disc-shaped Eldonia, as if feeding on them. Its plates protect it, but it is slow and weak.",
+   "v": "중국 윈난성 청장 생물군에서 나온, 뭉툭한 다리를 가진 부드러운 벌레 모양의 동물로 오늘날 우단벌레의 친척이다. 다리 쌍마다 그 위에 둥근 그물 모양 판이 한 쌍씩 있었는데, 이 작은 판들은 낱개의 미화석으로 전 세계에서 발견된다. 원반 모양 엘도니아의 사체에 매달린 채 발견된 화석도 있어 그것을 먹었던 것으로 보인다. 판이 몸을 지켜 주지만 느리고 약하다."
+  },
+  {
+   "k": "A solitary horn coral up to about 10 centimetres long from the Middle Devonian seas of North America, about 390 million years ago. Its cup was lined with many fine radial walls, and the outside of its horn-shaped skeleton was ringed by tiny daily growth lines. Counting them shows that a Devonian year had about 400 days, because the Earth then spun faster.",
+   "v": "약 3억 9천만 년 전 데본기 중기 북아메리카의 바다에 살았던 길이 최대 약 10센티미터의 단체 뿔산호이다. 컵 안쪽에는 가는 방사상 격벽이 많이 늘어서 있었고, 뿔 모양 골격 바깥에는 작은 하루 성장선이 고리처럼 둘러져 있었다. 이를 세어 보면 당시 지구가 더 빨리 자전했기 때문에 데본기의 1년이 약 400일이었음을 알 수 있다."
+  },
+  {
+   "k": "A spoon-shaped rangeomorph frond about 15 cm long from Mistaken Point in Newfoundland, about 565 million years old. A few large branches ran out at a slant from its midline, each split into clearly visible smaller branches. It is named after the Beothuk, the original people of Newfoundland.",
+   "v": "뉴펀들랜드의 미스테이큰 포인트에서 발견된 길이 약 15cm의 숟가락 모양 랑게오모르프류 엽상체로, 약 5억 6500만 년 전에 살았다. 몇 개의 큰 가지가 중심선에서 비스듬히 뻗었고, 각 가지는 뚜렷이 보이는 작은 가지로 나뉘었다. 이름은 뉴펀들랜드의 원주민 베오투크족에서 따왔다."
+  },
+  {
+   "k": "A squat, lizard-like reptile about 33 centimetres long from the Late Triassic of New Jersey and Connecticut, about 205 million years ago. Its broad, triangular head bore long bony spikes sticking out from the cheeks, which probably made it hard for predators to swallow. It chewed tough plants with broad teeth and belonged to the procolophonids, one of the few old reptile groups that survived the end-Permian extinction.",
+   "v": "후기 트라이아스기인 약 2억 500만 년 전 미국 뉴저지와 코네티컷에서 발견된 길이 약 33센티미터의 땅딸막한 도마뱀 같은 파충류이다. 넓은 삼각형 머리의 뺨에서 긴 뼈 가시가 튀어나와 있어 포식자가 삼키기 어려웠을 것이다. 넓은 이빨로 질긴 식물을 씹어 먹었으며, 페름기 말 멸종에서 살아남은 몇 안 되는 오래된 파충류 무리인 프로콜로폰류에 속했다."
+  },
+  {
+   "k": "A squid-like belemnite about 30 centimetres long that swam in large schools along the coasts of Late Cretaceous North America. Inside its body lay a bullet-shaped stone-hard guard, so common as a fossil that people once called them thunderbolts. It caught fish and shrimp with ten hooked arms and could escape by jetting backwards in a cloud of ink.",
+   "v": "길이 약 30센티미터의 오징어 닮은 벨렘나이트로, 백악기 후기 북아메리카 연안을 큰 무리를 지어 헤엄쳤다. 몸속에는 총알 모양의 돌처럼 단단한 기둥이 있었는데, 화석으로 아주 흔해서 사람들은 한때 이것을 벼락돌이라고 불렀다. 갈고리가 달린 열 개의 팔로 물고기와 새우를 잡았고, 위험하면 먹물을 뿜으며 뒤로 분사해 달아났다."
+  },
+  {
+   "k": "A squid-like relative of the belemnites from the Late Triassic seas of the Alps, about 215 million years ago. Inside its body sat a chambered shell sheathed in a long, slender, pointed guard scored with deep lengthwise grooves, which gives it its name. With big eyes and ten hooked arms it hunted fish and shrimp in open water.",
+   "v": "벨렘나이트와 가까운 오징어 비슷한 동물로, 후기 트라이아스기인 약 2억 1500만 년 전 알프스의 바다에 살았다. 몸속에는 여러 방으로 나뉜 껍데기가 있었고, 깊은 세로 홈이 새겨진 가늘고 길며 뾰족한 덮개가 이를 감싸고 있었는데, 이 홈에서 이름이 유래했다. 큰 눈과 갈고리가 달린 팔 10개로 탁 트인 바다에서 물고기와 새우를 사냥했다."
+  },
+  {
+   "k": "A stalkless sea lily with a round cup the size of a fist and ten slender arms up to a metre long. Unlike most of its relatives it was not rooted to the bottom but drifted or rested in huge groups in the warm inland sea of North America. It spread its feathery arms to catch tiny food from the water.",
+   "v": "줄기가 없는 바다나리로, 주먹만 한 둥근 꽃받침과 길이가 1미터에 이르는 가느다란 팔 열 개를 가졌다. 대부분의 친척과 달리 바닥에 뿌리를 내리지 않고, 북아메리카의 따뜻한 내해에서 큰 무리를 지어 떠다니거나 쉬었다. 깃털 같은 팔을 펼쳐 물속의 아주 작은 먹이를 잡았다."
+  },
+  {
+   "k": "A stout, badger-sized plant-eater about 1 metre long from the Early Jurassic of Arizona, about 185 million years ago, one of the last cynodonts that were not yet mammals. It had big, rodent-like front teeth for gnawing and broad grinding cheek teeth. One adult was found curled up with 38 tiny babies, far more than any mammal raises at once, showing that its relatives still bred like reptiles.",
+   "v": "약 1억 8500만 년 전 미국 애리조나 전기 쥐라기에 살았던, 오소리만 한 땅딸막한 초식 동물로 몸길이는 약 1미터이며, 아직 포유류가 아니었던 마지막 견치류 가운데 하나이다. 갉아 먹는 설치류 같은 큰 앞니와 넓은 어금니를 가졌다. 성체 한 마리가 아주 작은 새끼 38마리와 함께 웅크린 채 발견되었는데, 이는 어떤 포유류가 한 번에 기르는 수보다 훨씬 많아 그 친척들이 여전히 파충류처럼 번식했음을 보여 준다."
+  },
+  {
+   "k": "A strange horseshoe crab, about 8 centimetres long, that lived in rivers and lakes near today's Sydney, Australia, in the Middle Triassic, about 240 million years ago. The rear corners of its head shield grew into huge horn-like spines sweeping far back past its body, perhaps to stop it sinking into soft mud. It shows that horseshoe crabs, now only found in the sea, once spread into fresh water.",
+   "v": "길이 약 8센티미터의 기묘한 투구게로, 중기 트라이아스기인 약 2억 4000만 년 전 오늘날 오스트레일리아 시드니 근처의 강과 호수에 살았다. 머리 껍데기의 뒤쪽 모서리가 거대한 뿔 같은 가시로 자라나 몸 뒤쪽 멀리까지 뻗어 있었는데, 아마도 부드러운 진흙에 빠지지 않기 위해서였을 것이다. 지금은 바다에서만 볼 수 있는 투구게가 한때 민물로도 퍼져 나갔음을 보여 준다."
+  },
+  {
+   "k": "A strange reef-building clam, about 30 centimetres tall, whose lower shell grew into a thick, ribbed horn cemented upright on the sea floor while the upper shell sat on top like a lid. Packed side by side in their thousands, rudists like Hippurites built the great reefs of the warm Cretaceous seas in place of corals. They fed by straining food from the water through pores in the lid.",
+   "v": "높이 약 30센티미터의 기묘한 산호초를 만드는 조개로, 아래 껍데기는 두껍고 줄무늬가 있는 뿔 모양으로 자라 바다 밑바닥에 곧게 붙어 있었고 위 껍데기는 뚜껑처럼 그 위에 얹혀 있었다. 히푸리테스 같은 루디스트는 수천 개씩 빽빽이 모여 따뜻한 백악기 바다에서 산호 대신 거대한 암초를 쌓았다. 뚜껑의 구멍을 통해 물에서 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "A strange, flattened relative of the ratfishes from the Late Permian Zechstein Sea of Germany and England. With its broad body and huge, wing-like pectoral fins it looked much like a skate, and it lay on or glided over the sea floor. Its mouth held rows of overlapping crushing teeth, used to crack open shellfish such as brachiopods.",
+   "v": "페름기 후기 독일과 잉글랜드의 체히슈타인 해에 살았던, 은상어의 친척인 이상하게 납작한 물고기이다. 넓은 몸과 날개 같은 거대한 가슴지느러미로 홍어와 많이 닮았으며, 바닥에 엎드리거나 바닥 위를 미끄러지듯 헤엄쳤다. 입안에는 서로 겹친 으깨는 이빨이 여러 줄 있어 완족동물 같은 조개류를 깨뜨려 먹었다."
+  },
+  {
+   "k": "A stromatoporoid, a reef-building sponge that grew layered stony domes often more than half a metre across in Middle and Late Devonian seas. Its skeleton was built of thin layers joined by tiny pillars, with small bumps on the surface where water was drawn in. Together with corals it built the largest reefs the world has ever seen, until the Late Devonian extinction wiped them out.",
+   "v": "층공충이라 불리는 암초를 만드는 해면으로, 데본기 중후기 바다에서 흔히 지름 50센티미터가 넘는 층층이 쌓인 돌 돔을 만들었다. 골격은 작은 기둥으로 이어진 얇은 층으로 이루어졌고, 표면에는 물을 빨아들이는 작은 돌기가 있었다. 산호와 함께 지구 역사상 가장 큰 암초를 쌓았지만 데본기 후기 대멸종으로 사라졌다."
+  },
+  {
+   "k": "A tall rangeomorph up to about 35 cm high from Newfoundland, about 565 million years old. A bare stalk rose from a disc anchored in the mud and ended in a bushy crown of branching frondlets, like a candelabrum. Its high crown reached water that lower fronds could not, but the slender stalk made it fragile.",
+   "v": "뉴펀들랜드에서 발견된, 높이 약 35cm에 이르는 키 큰 랑게오모르프류로, 약 5억 6500만 년 전에 살았다. 진흙에 고정된 원반에서 맨 줄기가 솟아올라 끝에 갈라진 작은 잎들의 무성한 관을 이루어 촛대처럼 보였다. 높은 관은 낮은 엽상체가 닿지 못하는 물에 닿았지만, 가느다란 줄기 때문에 부서지기 쉬웠다."
+  },
+  {
+   "k": "A tall, narrow frond up to about 50 cm high from England and Newfoundland, about 560 million years old. A long bare stalk held the lance-shaped leaf above the seabed, anchored by a broad buried disc, and simple branches ran straight out from its midline. Its height let it reach the water above the low fronds around it.",
+   "v": "잉글랜드와 뉴펀들랜드에서 발견된, 높이 약 50cm에 이르는 길고 좁은 엽상체로, 약 5억 6000만 년 전에 살았다. 긴 맨 줄기가 창 모양의 잎을 해저 위로 들어 올렸고, 묻힌 넓은 원반이 이를 고정했으며, 단순한 가지들이 중심선에서 곧게 뻗었다. 그 높이 덕분에 주변의 낮은 엽상체 위쪽 물에 닿을 수 있었다."
+  },
+  {
+   "k": "A temnospondyl amphibian about a metre long from the coal-forest rocks of Nova Scotia, about 315 million years old, whose skeletons were found inside the hollow stumps of giant club-moss trees. It had a broad, flat head with large eyes and a notch at the back of the skull that probably held an eardrum, a stout body and strong legs. It hunted insects, millipedes and smaller animals on the forest floor.",
+   "v": "길이 약 1미터의 분추류 양서류로, 약 3억 1500만 년 전 캐나다 노바스코샤의 석탄 숲 암석에서 발견되었으며, 골격은 거대한 석송류 나무의 속이 빈 그루터기 안에서 나왔다. 큰 눈이 있는 넓고 납작한 머리, 아마 고막을 지탱했을 두개골 뒤쪽의 홈, 다부진 몸과 튼튼한 다리를 가졌다. 숲 바닥에서 곤충, 노래기, 더 작은 동물을 사냥했다."
+  },
+  {
+   "k": "A thelodont, a small jawless fish about 7 cm long from the Late Silurian of Saaremaa, Estonia, known from complete, articulated bodies. Instead of bony plates it was covered in thousands of tiny, tooth-like scales. It had a rounded head with a small mouth at the front, flap-like fins behind the gills, a tall dorsal fin and a big tail, and fed on small particles near the sea floor.",
+   "v": "텔로돈트류의 하나로, 에스토니아 사레마섬의 후기 실루리아기에서 발견된 몸길이 약 7cm의 작은 무악어류이며, 관절이 연결된 완전한 몸 화석으로 알려져 있다. 뼈판 대신 수천 개의 작은 이빨 모양 비늘로 덮여 있었다. 둥근 머리 앞쪽에 작은 입이 있었고, 아가미 뒤에는 덮개 모양의 지느러미, 높은 등지느러미와 큰 꼬리가 있었으며, 해저 근처의 작은 입자를 먹고 살았다."
+  },
+  {
+   "k": "A thick, strongly ribbed clam about 5 cm tall, taller than long, with a pointed beak at the top front. It stood upright on its edge, anchored to shells and other hard bits on the sea floor by a tuft of threads, filtering food from the water. It was one of the commonest clams of the Late Ordovician seas of North America.",
+   "v": "높이 약 5센티미터의 두껍고 굵은 방사륵이 있는 조개로, 길이보다 높이가 크고 앞쪽 위에 뾰족한 각정이 있다. 껍데기 가장자리를 아래로 하여 똑바로 섰고, 족사 다발로 해저의 조개껍데기 같은 단단한 물체에 몸을 붙인 채 물에서 먹이를 걸러 먹었다. 북아메리카 오르도비스기 후기 바다에서 가장 흔한 조개 가운데 하나였다."
+  },
+  {
+   "k": "A tiny armoured animal about a centimetre long from the Burgess Shale of Canada, with a small cap-shaped shell at the front and a coat of scales fringed by long, curving spines. It combines the spines of Wiwaxia with the shell of Halkieria, linking these puzzling animals together near the roots of the molluscs. It grazed the seabed and is hard to attack but has no weapons.",
+   "v": "캐나다 버제스 셰일에서 나온 몸길이 약 1cm의 작은 갑옷 동물로, 앞쪽에 작은 모자 모양 껍데기가 있고 몸은 비늘로 덮였으며 가장자리에 길고 휜 가시가 둘러 있었다. 위왁시아의 가시와 할키에리아의 껍데기를 함께 지녀, 이 수수께끼 같은 동물들을 연체동물의 뿌리 근처에서 이어 준다. 해저를 긁어 먹었으며 공격받기 어렵지만 무기는 없다."
+  },
+  {
+   "k": "A tiny armoured placoderm, only about 3 cm long, from the early Silurian of Chongqing, China, about 436 million years ago, described in 2023. It is one of the oldest jawed fishes known from a complete body. Its head and chest were boxed in bony plates and it had a stout spine at each shoulder. Its skull mixes features of placoderms with those of later jawed fishes.",
+   "v": "몸길이 약 3cm에 불과한 작은 갑옷 판피어류로, 약 4억 3600만 년 전 중국 충칭의 전기 실루리아기에서 발견되어 2023년에 기재되었다. 완전한 몸이 알려진 턱 있는 물고기 가운데 가장 오래된 것 중 하나이다. 머리와 가슴은 뼈판으로 상자처럼 둘러싸여 있었고, 양쪽 어깨에 굵은 가시가 하나씩 있었다. 두개골에는 판피어류의 특징과 후대 턱 있는 물고기의 특징이 섞여 있다."
+  },
+  {
+   "k": "A tiny beetle, under 2 millimetres long, from the Late Triassic of Poland, about 230 million years ago. It was found perfectly preserved inside a fossil dropping, probably from the small dinosaur relative Silesaurus, which swallowed it by accident with its food. Short, very rounded and shiny, it probably grazed on algae on wet ground at the water's edge, like its living relatives.",
+   "v": "길이 2밀리미터도 안 되는 아주 작은 딱정벌레로, 후기 트라이아스기인 약 2억 3000만 년 전 폴란드에서 발견되었다. 똥 화석 속에서 완벽하게 보존된 채 발견되었는데, 이 똥은 아마도 작은 공룡 친척인 실레사우루스의 것으로, 먹이와 함께 실수로 삼킨 것이다. 몸이 짧고 아주 둥글며 반짝였고, 살아 있는 친척들처럼 물가의 축축한 땅에서 조류를 뜯어 먹었을 것이다."
+  },
+  {
+   "k": "A tiny domed disc about 1 cm across from South Australia, about 555 million years old, with a sunken five-rayed star in the middle and a rim of short ridges. Its five-fold symmetry has led some scientists to suggest it was one of the earliest echinoderms, the group of sea stars and sea urchins. Its name comes from a giant serpent in the stories of the Adnyamathanha people.",
+   "v": "남오스트레일리아에서 발견된 지름 약 1cm의 작은 돔 모양 원반으로, 약 5억 5500만 년 전에 살았다. 가운데에 움푹 들어간 다섯 갈래 별이 있고 테두리를 짧은 융기가 둘렀다. 이 오방사 대칭 때문에 일부 과학자는 이것이 불가사리와 성게가 속한 극피동물의 가장 이른 예 중 하나라고 본다. 이름은 아드냐마타나족 이야기에 나오는 거대한 뱀에서 따왔다."
+  },
+  {
+   "k": "A tiny oval animal about a centimetre long from the White Sea coast of Russia, about 555 million years old. Its body had only a few large, sickle-shaped segments that alternated left and right of the midline instead of lining up in pairs. Like Dickinsonia it probably grazed the microbial mat, absorbing food through its underside.",
+   "v": "러시아 백해 연안에서 발견된 길이 약 1cm의 작은 타원형 동물로, 약 5억 5500만 년 전에 살았다. 몸은 몇 개의 큰 낫 모양 체절로만 이루어졌으며, 이 체절들은 짝을 이루지 않고 중심선 좌우로 엇갈려 있었다. 디킨소니아처럼 미생물 매트 위에서 배면으로 양분을 흡수했을 것이다."
+  },
+  {
+   "k": "A tiny oval body less than a centimetre long from South Australia, about 555 million years old, its surface wrinkled by irregular grooves and ridges. Nicknamed the 'raisin' for its look, it is named after the naturalist David Attenborough. What kind of animal it was, and how it lived, is still unknown.",
+   "v": "남오스트레일리아에서 발견된 길이 1cm 미만의 작은 타원형 몸으로, 약 5억 5500만 년 전의 것이며, 표면이 불규칙한 홈과 융기로 주름져 있었다. 생김새 때문에 '건포도'라는 별명이 붙었고, 이름은 박물학자 데이비드 애튼버러에서 따왔다. 어떤 동물이었는지, 어떻게 살았는지는 아직 알려지지 않았다."
+  },
+  {
+   "k": "A tiny seed shrimp, an ostracod about 5 mm long from the Silurian of England, preserved in three dimensions with all its soft parts. Its body was enclosed in a bean-shaped shell of two valves, and it rowed through the water with a pair of big, bristly antennae. It is the oldest known male animal preserved with its mating organ, which gives it its name, 'amazing swimmer with a large penis'.",
+   "v": "잉글랜드의 실루리아기에서 발견된 몸길이 약 5mm의 작은 개형충으로, 모든 연조직이 입체적으로 보존되어 있다. 몸은 두 장의 껍데기로 이루어진 콩 모양의 껍데기 속에 들어 있었고, 털이 많은 큰 더듬이 한 쌍으로 물을 저어 헤엄쳤다. 짝짓기 기관과 함께 보존된 가장 오래된 수컷 동물로 알려져 있으며, 그 이름은 ‘큰 음경을 가진 놀라운 헤엄꾼’이라는 뜻이다."
+  },
+  {
+   "k": "A tiny shield-shaped animal less than 1 cm long from South Australia, about 555 million years old. A broad, smooth head shield was followed by a few chevron-shaped segments that alternated either side of the midline. It was first mistaken for a young trilobite, but it is now grouped with Vendia and Dickinsonia.",
+   "v": "남오스트레일리아에서 발견된 길이 1cm 미만의 작은 방패 모양 동물로, 약 5억 5500만 년 전에 살았다. 넓고 매끈한 머리 방패 뒤에 중심선 좌우로 엇갈린 V자 모양 체절 몇 개가 이어졌다. 처음에는 어린 삼엽충으로 오인되었지만, 지금은 벤디아, 디킨소니아와 같은 무리로 분류된다."
+  },
+  {
+   "k": "A tiny, blind, pea-shaped arthropod under a centimetre long, with a head shield and a tail shield of almost the same size joined by just two body segments. It swarmed in the late Cambrian seas of Scandinavia, and some fossils keep its legs and even its larvae in fine detail. It could fold shut like a clam to protect itself, but it is too small to fight back.",
+   "v": "몸길이 1cm도 안 되는 눈 없는 콩 모양의 작은 절지동물로, 거의 같은 크기의 머리 방패와 꼬리 방패가 단 두 개의 몸마디로 이어져 있다. 캄브리아기 후기 스칸디나비아 바다에 떼 지어 살았고, 다리와 유생까지 정밀하게 보존된 화석도 있다. 조개처럼 몸을 닫아 자신을 지킬 수 있지만 너무 작아서 반격하지 못한다."
+  },
+  {
+   "k": "A tsetse fly about 1.5 cm long from the late Eocene lake beds of Florissant, Colorado. Like its living relatives, which today are found only in Africa, it sucked the blood of large mammals with a long, piercing proboscis, and rested with its wings folded flat over its back like scissor blades. Its fossils show that tsetse flies once lived in North America too.",
+   "v": "콜로라도주 플로리선트의 에오세 후기 호수 퇴적층에서 나온 몸길이 약 1.5cm의 체체파리. 오늘날 아프리카에만 사는 친척처럼 길고 뾰족한 주둥이로 큰 포유류의 피를 빨았고, 쉴 때는 가위 날처럼 날개를 등 위에 평평하게 겹쳤다. 그 화석은 체체파리가 한때 북아메리카에도 살았음을 보여 준다."
+  },
+  {
+   "k": "A velvet worm about 5 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old, one of very few fossils of these soft-bodied animals. It looked like a caterpillar, with a soft, ringed body, a pair of antennae and many pairs of stubby legs. It belongs to the line that leads to today's velvet worms, which hunt small animals on damp forest floors by spraying them with sticky slime.",
+   "v": "약 3억 900만 년 전 일리노이주 메이즌크리크 화석층에서 발견된 길이 약 5센티미터의 발톱벌레로, 이런 몸이 부드러운 동물의 화석으로는 매우 드문 것 중 하나다. 애벌레처럼 생겼으며, 부드러운 고리 모양 마디로 된 몸, 더듬이 한 쌍, 뭉툭한 다리 여러 쌍이 있었다. 축축한 숲 바닥에서 끈적한 점액을 뿜어 작은 동물을 사냥하는 오늘날 발톱벌레로 이어지는 계통에 속한다."
+  },
+  {
+   "k": "A vetulicolian about 10 cm long from the Burgess Shale of Canada, one of the few found outside China. Its body was in two parts, a bulbous front section and a segmented rear section, joined by a narrow waist that was often twisted. It probably fed on particles from the water or the mud, and it is soft-bodied and harmless.",
+   "v": "캐나다 버제스 셰일에서 나온 몸길이 약 10cm의 고충류로, 중국 밖에서 발견된 몇 안 되는 예 가운데 하나다. 몸은 불룩한 앞부분과 마디진 뒷부분의 두 부분으로 나뉘었고, 종종 비틀린 가는 허리로 이어져 있었다. 물이나 진흙 속 입자를 먹었던 것으로 보이며, 몸이 부드럽고 무해하다."
+  },
+  {
+   "k": "A wolf-like predator about 1.5 m long from the middle Eocene of North America and Asia. Mesonychids were hoofed mammals that took up hunting: Mesonyx had a big head with strong jaws and blunt teeth, long running legs and small hooves instead of claws. It hunted and scavenged early horses and other small mammals.",
+   "v": "에오세 중기 북아메리카와 아시아에 살았던 몸길이 약 1.5m의 늑대를 닮은 포식자. 메소닉스류는 사냥을 하게 된 유제류로, 메소닉스는 턱이 강한 큰 머리, 뭉툭한 이빨, 달리기에 알맞은 긴 다리를 가졌고 발에는 발톱 대신 작은 발굽이 있었다. 초기 말과 다른 작은 포유류를 사냥하고 사체도 먹었다."
+  },
+  {
+   "k": "A wolf-sized but heavier hunting dog of Ice Age America, about 1.7 m long and 60-70 kg, with a broad head and huge, bone-cracking teeth. Ancient DNA shows it was not a close cousin of the grey wolf but a separate lineage that split off millions of years earlier. Packs hunted horses, bison and young ground sloths and vanished with them about 13,000 years ago.",
+   "v": "빙하기 아메리카에 살던 늑대만 한 크기지만 더 무거운 사냥개로, 몸길이 약 1.7m, 몸무게 60~70kg에 넓은 머리와 뼈를 부수는 거대한 이빨을 가졌다. 고대 DNA 분석 결과 회색늑대의 가까운 친척이 아니라 수백만 년 전에 갈라진 별개의 계통임이 밝혀졌다. 무리 지어 말, 들소, 어린 땅늘보를 사냥했으며 약 1만 3천 년 전 그들과 함께 사라졌다."
+  },
+  {
+   "k": "Acantherpestes",
+   "v": "아칸테르페스테스"
+  },
+  {
+   "k": "Acanthodes",
+   "v": "아칸토데스"
+  },
+  {
+   "k": "Acanthotelson",
+   "v": "아칸토텔손"
+  },
+  {
+   "k": "Acorn worm",
+   "v": "장새류"
+  },
+  {
+   "k": "Actinostroma",
+   "v": "악티노스트로마"
+  },
+  {
+   "k": "Aglaspidid",
+   "v": "아글라스피스류"
+  },
+  {
+   "k": "Ailuravus",
+   "v": "아일루라부스"
+  },
+  {
+   "k": "Albumares",
+   "v": "알부마레스"
+  },
+  {
+   "k": "Allaeochelys",
+   "v": "알라이오켈리스"
+  },
+  {
+   "k": "Also called the Tasmanian tiger, a dog-like marsupial predator about 1.3 m long with dark stripes across its back and a stiff tail. It could open its jaws remarkably wide and carried its young in a pouch. It once lived across Australia and New Guinea; the last known thylacine died in a zoo in 1936.",
+   "v": "태즈메이니아호랑이라고도 불리는 개를 닮은 유대류 포식자로, 몸길이 약 1.3m에 등에 짙은 줄무늬가 있고 꼬리가 뻣뻣하다. 턱을 놀랄 만큼 크게 벌릴 수 있었고 새끼를 주머니에 넣어 길렀다. 한때 오스트레일리아와 뉴기니 전역에 살았지만, 마지막으로 알려진 개체는 1936년 동물원에서 죽었다."
+  },
+  {
+   "k": "Amber Giant Termite",
+   "v": "호박 거대흰개미"
+  },
+  {
+   "k": "Ambonychia",
+   "v": "암보니키아"
+  },
+  {
+   "k": "An aglaspidid, a small extinct arthropod that looks like a cross between a trilobite and a horseshoe crab, a few centimetres long. It had a smooth, semicircular head shield with long side spines, eleven body segments with spiny tips and a long, slender tail spine. It crawled over the sea floor scavenging dead animals and other scraps.",
+   "v": "삼엽충과 투구게를 섞어 놓은 듯한 모습의 멸종한 작은 절지동물인 아글라스피스류로, 몸길이는 몇 센티미터였다. 매끈한 반원형 머리 껍데기에 긴 볼가시가 있었고, 끝이 뾰족한 몸마디 열한 개와 가늘고 긴 꼬리가시를 지녔다. 해저를 기어 다니며 동물의 사체나 다른 찌꺼기를 먹었다."
+  },
+  {
+   "k": "An anteater-like mammal about 90 cm long, including its long tail, from the middle Eocene forests of Germany. It had a long, toothless snout, powerful clawed forelimbs for ripping open ant and termite nests, and a strong tail that may have gripped branches. Once thought to be an early anteater, it is now seen as a relative of the pangolins that had no scales.",
+   "v": "에오세 중기 독일의 숲에 살았던 개미핥기를 닮은 포유류로, 긴 꼬리를 포함해 몸길이 약 90cm였다. 이빨 없는 긴 주둥이, 개미와 흰개미 집을 찢어 여는 강한 발톱이 달린 앞다리가 있었고, 힘센 꼬리로 나뭇가지를 감았을지도 모른다. 한때 초기 개미핥기로 여겨졌으나 지금은 비늘 없는 천산갑의 친척으로 본다."
+  },
+  {
+   "k": "An early ape from the Early Miocene forests of East Africa, about 20 million years ago, close to the common ancestor of all living apes. About the size of a baboon, it had no tail and an ape-like skull, but walked on all fours along branches with its palms flat like a monkey. It ate mostly soft fruit.",
+   "v": "약 2000만 년 전 전기 마이오세 동아프리카의 숲에 살던 초기 유인원으로, 오늘날 모든 유인원의 공통 조상에 가깝다. 개코원숭이만 한 크기에 꼬리가 없고 두개골은 유인원을 닮았지만, 원숭이처럼 손바닥을 평평하게 짚고 네 발로 나뭇가지 위를 걸었다. 주로 부드러운 과일을 먹었다."
+  },
+  {
+   "k": "An early arthropod about 11 cm long from the Chengjiang biota of Yunnan, China, with a broad head shield, stalked eyes, a long trunk of many segments and a tapering tail. Some fossils preserve its brain and nerves, among the oldest known, and one shows an adult with several young, a possible early case of parental care. It fed on the soft seabed and has little to fight with.",
+   "v": "중국 윈난성 청장 생물군에서 나온 몸길이 약 11cm의 초기 절지동물로, 넓은 머리 방패, 자루 달린 눈, 많은 마디로 된 긴 몸통과 가늘어지는 꼬리를 가졌다. 일부 화석에는 가장 오래된 축에 드는 뇌와 신경이 보존되어 있고, 한 화석은 어른 한 마리가 새끼 여러 마리와 함께 있어 초기의 새끼 돌보기 사례일 수 있다. 부드러운 해저에서 먹이를 먹었고 싸울 수단은 거의 없다."
+  },
+  {
+   "k": "An early brittle star a few centimetres across, with a small, rounded central disc and five long, slender, flexible arms fringed with short spines. It crawled quickly over the sea floor by snaking its arms, picking up detritus and food particles. Like living brittle stars it could probably regrow lost arms.",
+   "v": "지름 몇 센티미터의 초기 거미불가사리로, 작고 둥근 중앙 원반과 짧은 가시가 테두리에 난 가늘고 유연한 긴 팔 다섯 개를 지녔다. 팔을 뱀처럼 구불거리며 해저를 재빠르게 기어 다니며 유기물 부스러기와 먹이 알갱이를 주워 먹었다. 현생 거미불가사리처럼 잃어버린 팔을 다시 자라게 할 수 있었을 것이다."
+  },
+  {
+   "k": "An early horseshoe crab relative about 10 centimetres long from the Early Devonian sea floor of the German Hunsrück, about 400 million years ago. It had a broad semicircular head shield, a segmented abdomen and a tail spine, with walking legs neatly preserved underneath. It ploughed through the mud for worms and small prey, much like a living horseshoe crab.",
+   "v": "약 4억 년 전 데본기 전기 독일 훈스뤼크의 해저에 살았던 몸길이 약 10센티미터의 초기 투구게 친척이다. 넓은 반원형 머리 껍데기, 마디진 배, 꼬리 가시를 가졌고 배 쪽의 걷는다리가 잘 보존되어 있다. 현생 투구게처럼 진흙을 헤집으며 벌레와 작은 먹이를 찾았다."
+  },
+  {
+   "k": "An early leaf-eating monkey from the Late Miocene of Europe and western Asia, a relative of today's langurs and colobus monkeys. Macaque-sized with a long tail, it was at home both in trees and on open ground, and lived in troops. It was one of the few monkeys to spread across Europe.",
+   "v": "후기 마이오세 유럽과 서아시아에 살던 초기 잎먹이 원숭이로, 오늘날 랑구르와 콜로부스원숭이의 친척이다. 마카크만 한 크기에 긴 꼬리가 있었고, 나무 위와 탁 트인 땅 모두에서 무리 지어 살았다. 유럽 전역에 퍼진 몇 안 되는 원숭이 가운데 하나였다."
+  },
+  {
+   "k": "An early long-necked plant-eater 4-6 metres long from the Early Jurassic of southern Africa, about 200-185 million years ago, a distant cousin of the giant sauropods. It walked on its hind legs and had a small head, leaf-shaped teeth and grasping hands with a huge, curved thumb claw. Its nesting grounds, with clutches of eggs holding curled-up embryos, are among the oldest known: the hatchlings walked on all fours and probably stayed near the nest.",
+   "v": "약 2억~1억 8500만 년 전 남아프리카 전기 쥐라기에 살았던 몸길이 4~6미터의 초기 목긴 초식 공룡으로, 거대한 용각류의 먼 친척이다. 뒷다리로 걸었고, 머리가 작고 이빨은 잎 모양이었으며, 물건을 쥘 수 있는 손에는 크고 굽은 엄지 발톱이 있었다. 몸을 웅크린 배아가 든 알 둥지가 발견된 번식지는 가장 오래된 것 가운데 하나이며, 새끼는 네 발로 걸었고 아마 둥지 근처에 머물렀을 것이다."
+  },
+  {
+   "k": "An early mayfly from the Early Permian of Kansas, around 280 million years ago. Unlike living mayflies, its fore and hind wings were almost the same size, and it had three long tail threads. Its young lived in fresh water feeding on plant debris, and the adults gathered in great swarms, escaping enemies by flying off rather than fighting.",
+   "v": "약 2억 8000만 년 전 페름기 전기 캔자스에 살았던 초기 하루살이이다. 오늘날의 하루살이와 달리 앞날개와 뒷날개의 크기가 거의 같았고, 긴 꼬리털이 세 개 있었다. 애벌레는 민물에서 식물 부스러기를 먹고 자랐고, 어른벌레는 큰 무리를 지어 날며 적을 만나면 싸우지 않고 날아서 도망쳤다."
+  },
+  {
+   "k": "An early rabbit from the late Eocene and Oligocene of North America, about 25 cm long and common on the spreading grasslands and open woods. Its ears and hind legs were shorter than a modern rabbit's, so it probably ran rather than leapt. Like its living relatives it ate plants and bred quickly.",
+   "v": "에오세 후기와 올리고세 북아메리카의 초기 토끼로, 몸길이 약 25cm였고 넓어지던 초원과 성긴 숲에 흔했다. 귀와 뒷다리가 현대 토끼보다 짧아 뛰어오르기보다는 달렸을 것이다. 살아 있는 친척처럼 식물을 먹고 빠르게 번식했다."
+  },
+  {
+   "k": "An early relative of crocodiles about 1 metre long from the Early Jurassic of Arizona, about 195 million years ago. Unlike its descendants it lived on dry land, running on long, upright legs, with a short, broad head and an enlarged fang in the lower jaw. Two rows of square bony plates ran down its back, and tail and belly were armoured too. It hunted lizards, small mammals and other small animals.",
+   "v": "약 1억 9500만 년 전 미국 애리조나 전기 쥐라기에 살았던 몸길이 약 1미터의 악어 초기 친척이다. 후손과 달리 마른 땅에서 살며 길고 곧은 다리로 달렸고, 머리는 짧고 넓었으며 아래턱에 큰 송곳니가 있었다. 등에는 네모난 골판이 두 줄로 나 있었고 꼬리와 배도 갑옷으로 덮여 있었다. 도마뱀, 작은 포유류 같은 작은 동물을 사냥했다."
+  },
+  {
+   "k": "An early relative of elephants from the late Eocene and early Oligocene swamp forests of Egypt, about 2.5 m long and 1.3 m tall at the shoulder. It probably had a short trunk, with a pair of short tusks in the upper jaw and flat, shovel-like lower teeth for cutting and scooping up water plants. It shows how the trunk and tusks of elephants began.",
+   "v": "에오세 후기에서 올리고세 전기에 이집트의 늪지 숲에 살았던 코끼리의 초기 친척으로, 몸길이 약 2.5m, 어깨높이 1.3m였다. 아마 짧은 코가 있었고, 위턱에는 한 쌍의 짧은 엄니, 아래턱에는 삽 같은 납작한 앞니가 있어 수생 식물을 잘라 떠냈다. 코끼리의 긴 코와 엄니가 어떻게 시작되었는지 보여 준다."
+  },
+  {
+   "k": "An early roller, a small bird about 18 cm long from the early Eocene Green River lakes of Wyoming. Like living rollers it probably watched from a perch and swooped down on large insects and small animals. Today rollers live only in the Old World, but this and other fossils show that they once lived in North America too.",
+   "v": "에오세 전기 와이오밍주 그린리버 호수에 살았던 몸길이 약 18cm의 작은 새로, 초기 파랑새류다. 살아 있는 파랑새처럼 횃대에서 지켜보다가 큰 곤충과 작은 동물에게 내리꽂혔을 것이다. 오늘날 파랑새는 구대륙에만 살지만 이 화석과 다른 화석들은 한때 북아메리카에도 살았음을 보여 준다."
+  },
+  {
+   "k": "An edrioasteroid, an extinct echinoderm that lived stuck to shells on the sea floor. Its body was a low, coin-sized disc of overlapping plates, with five food grooves curving out from the centre like a pinwheel. Tiny plates over the grooves opened so that its tube feet could catch food from the water.",
+   "v": "해저의 조개껍데기에 붙어 살던 멸종한 극피동물인 에드리오아스테로이드의 하나이다. 몸은 겹쳐진 판으로 된 동전 크기의 낮은 원반이었고, 다섯 개의 먹이 홈이 바람개비 날개처럼 휘어지며 중심에서 뻗어 나갔다. 홈을 덮은 작은 판들이 열리면 관족이 물속의 먹이를 잡았다."
+  },
+  {
+   "k": "An egg- or boat-shaped animal up to about 20 cm long from the White Sea coast of Russia, about 555 million years old. Three lengthwise vanes, each divided into stacked tube-like chambers, gave its body three-fold symmetry. It probably stood half buried in the sand, its stiff chambered body hard to damage.",
+   "v": "러시아 백해 연안에서 발견된, 길이 약 20cm에 이르는 알 또는 배 모양의 동물로, 약 5억 5500만 년 전에 살았다. 세로로 뻗은 세 개의 날개가 각각 층층이 쌓인 관 모양의 방으로 나뉘어 몸이 삼방사 대칭을 이루었다. 아마 모래에 반쯤 묻혀 서 있었으며, 단단한 방으로 나뉜 몸은 쉽게 손상되지 않았다."
+  },
+  {
+   "k": "An eocrinoid, an early stalked echinoderm, from the middle Cambrian of North America. Its small cup of plates sat on a short stalk, and from the top rose a few long feeding arms coiled in a spiral, which caught particles drifting by. Such animals were early relatives of the sea lilies and cystoids that came later. It is lightly protected and cannot fight back.",
+   "v": "초기의 자루 달린 극피동물인 에오크리노이드의 하나로, 북아메리카의 캄브리아기 중기 지층에서 나왔다. 판으로 이루어진 작은 꽃받침이 짧은 자루 위에 있었고, 꼭대기에서 나선형으로 감긴 긴 섭식 팔 몇 개가 솟아 떠다니는 알갱이를 잡았다. 이런 동물들은 나중에 나타난 바다나리와 해과류의 초기 친척이다. 방어가 약하고 반격하지 못한다."
+  },
+  {
+   "k": "An extinct banded penguin from the Late Miocene coasts of Peru and Chile, larger than its living relative the Humboldt penguin. It had a long, dagger-like bill for catching fish and probably the black breast band of its living kin. It nested on warm desert shores beside a cold, fish-rich current.",
+   "v": "후기 마이오세 페루와 칠레 해안에 살던 멸종한 줄무늬펭귄으로, 현생 친척인 훔볼트펭귄보다 컸다. 물고기를 잡는 단검 같은 긴 부리가 있었고, 현생 친척처럼 검은 가슴띠도 있었을 것이다. 차갑고 물고기가 풍부한 해류 옆의 따뜻한 사막 해안에 둥지를 틀었다."
+  },
+  {
+   "k": "An extinct giant termite found in Miocene amber from the Dominican Republic, of the most primitive living termite family. Its only surviving relative is the giant northern termite of Australia, so this family once lived across the world. Its colonies chewed through dead and living wood, digesting it with the help of microbes in their guts.",
+   "v": "도미니카 공화국의 마이오세 호박에서 발견된 멸종한 거대 흰개미로, 현존하는 가장 원시적인 흰개미 과에 속한다. 이 과에서 살아남은 종은 오스트레일리아의 다윈흰개미뿐이어서, 이 집안이 한때 전 세계에 살았음을 알 수 있다. 군체는 죽은 나무와 산 나무를 갉아 먹고 장 속 미생물의 도움으로 나무를 소화했다."
+  },
+  {
+   "k": "An extinct platypus from the Miocene of Australia, larger than the living species, with a broader bill that flared at the tip. Unlike today's platypus it kept its teeth as an adult, and it may have eaten bigger prey such as crayfish, frogs and small turtles. Like its living relative it hunted underwater by sensing the electric fields of its prey.",
+   "v": "오스트레일리아 마이오세에 살던 멸종한 오리너구리로, 현생종보다 크고 부리가 더 넓으며 끝이 넓게 퍼져 있었다. 오늘날의 오리너구리와 달리 다 자라서도 이빨이 있었고, 가재와 개구리, 작은 거북 같은 큰 먹이를 먹었을지도 모른다. 현생 친척처럼 먹이의 전기장을 감지해 물속에서 사냥했다."
+  },
+  {
+   "k": "An extinct relative of spadefoot toads, about 7 cm long, from the middle Eocene of Germany. It was a squat frog with large eyes that hunted insects and other small animals around the forest lake. Spadefoots dig into the soil with their hind feet and hide there in dry spells; fossils from Messel even preserve the skin and the outline of its body.",
+   "v": "에오세 중기 독일에 살았던 쟁기발개구리의 멸종한 친척으로 몸길이 약 7cm였다. 눈이 큰 땅딸막한 개구리로, 숲속 호숫가에서 곤충과 작은 동물을 잡아먹었다. 쟁기발개구리는 뒷발로 땅을 파고 건조한 때에는 흙 속에 숨는다. 메셀의 화석에는 피부와 몸의 윤곽까지 남아 있다."
+  },
+  {
+   "k": "An oval, flattened animal about 4 cm long from South Australia, about 555 million years old, like a broader relative of Spriggina. A crescent-shaped head shield sat at the front and many fine segments ran back on either side of the midline. It crawled over the microbial mats feeding on them, and is named after the Australian palaeontologist Mary Wade.",
+   "v": "남오스트레일리아에서 발견된 길이 약 4cm의 납작한 타원형 동물로, 약 5억 5500만 년 전에 살았으며 스프리기나의 넓적한 친척처럼 생겼다. 앞쪽에 초승달 모양의 머리 방패가 있고, 수많은 가는 체절이 중심선 양쪽으로 뒤를 향해 늘어서 있었다. 미생물 매트 위를 기어 다니며 먹었고, 이름은 오스트레일리아의 고생물학자 메리 웨이드에서 따왔다."
+  },
+  {
+   "k": "An unusual seal from the Late Miocene coast of Peru, a slender relative of the monk seals. It had a remarkably long neck and a long, narrow snout, and probably darted its head sideways to snap up fish. It still had strong limbs and may have spent much time on rocky shores.",
+   "v": "후기 마이오세 페루 해안에 살던 특이한 물범으로, 몽크물범의 날씬한 친척이다. 목이 유난히 길고 주둥이가 길고 좁아서, 머리를 옆으로 재빨리 휘둘러 물고기를 낚아챘을 것이다. 팔다리는 여전히 튼튼해 바위 해안에서 많은 시간을 보냈을지도 모른다."
+  },
+  {
+   "k": "Anetoceras",
+   "v": "아네토케라스"
+  },
+  {
+   "k": "Anfesta",
+   "v": "안페스타"
+  },
+  {
+   "k": "Antarctic Krill",
+   "v": "남극크릴"
+  },
+  {
+   "k": "Aquilonifer",
+   "v": "아퀼로니페르"
+  },
+  {
+   "k": "Archaeocidaris",
+   "v": "아르카이오키다리스"
+  },
+  {
+   "k": "Archaeolepis",
+   "v": "아르카이올레피스"
+  },
+  {
+   "k": "Archegosaurus",
+   "v": "아르케고사우루스"
+  },
+  {
+   "k": "Archimedes",
+   "v": "아르키메데스"
+  },
+  {
+   "k": "Arkarua",
+   "v": "아르카루아"
+  },
+  {
+   "k": "Askeptosaurus",
+   "v": "아스켑토사우루스"
+  },
+  {
+   "k": "Aspidella",
+   "v": "아스피델라"
+  },
+  {
+   "k": "Aspidorhynchus",
+   "v": "아스피도린쿠스"
+  },
+  {
+   "k": "Asteriornis",
+   "v": "아스테리오르니스"
+  },
+  {
+   "k": "Astraeospongium",
+   "v": "아스트라에오스폰기움"
+  },
+  {
+   "k": "Ateleaspis",
+   "v": "아텔레아스피스"
+  },
+  {
+   "k": "Atlantic Salmon",
+   "v": "대서양연어"
+  },
+  {
+   "k": "Attenborites",
+   "v": "아텐보라이테스"
+  },
+  {
+   "k": "Aturia",
+   "v": "아투리아"
+  },
+  {
+   "k": "Aulacoceras",
+   "v": "아울라코케라스"
+  },
+  {
+   "k": "Austrolimulus",
+   "v": "아우스트롤리물루스"
+  },
+  {
+   "k": "Axolotl",
+   "v": "아홀로틀"
+  },
+  {
+   "k": "Babinka",
+   "v": "바빈카"
+  },
+  {
+   "k": "Banffia",
+   "v": "밴피아"
+  },
+  {
+   "k": "Belantsea",
+   "v": "벨란트세아"
+  },
+  {
+   "k": "Belemnitella",
+   "v": "벨렘니텔라"
+  },
+  {
+   "k": "Beothukis",
+   "v": "베오투키스"
+  },
+  {
+   "k": "Biarmosuchian therapsid",
+   "v": "비아르모수쿠스류 수궁류"
+  },
+  {
+   "k": "Biarmosuchus",
+   "v": "비아르모수쿠스"
+  },
+  {
+   "k": "Blastoid",
+   "v": "해뢰류"
+  },
+  {
+   "k": "Blue Whale",
+   "v": "대왕고래"
+  },
+  {
+   "k": "Bojophlebia",
+   "v": "보요플레비아"
+  },
+  {
+   "k": "Bornean Orangutan",
+   "v": "보르네오오랑우탄"
+  },
+  {
+   "k": "Bothriocidaris",
+   "v": "보트리오키다리스"
+  },
+  {
+   "k": "Bovid",
+   "v": "소과"
+  },
+  {
+   "k": "Brachiospongia",
+   "v": "브라키오스폰기아"
+  },
+  {
+   "k": "Bradgatia",
+   "v": "브라드가티아"
+  },
+  {
+   "k": "Brontoscorpio",
+   "v": "브론토스코르피오"
+  },
+  {
+   "k": "Bumastus",
+   "v": "부마스투스"
+  },
+  {
+   "k": "Callichimaera",
+   "v": "칼리키메라"
+  },
+  {
+   "k": "Camarasaurus",
+   "v": "카마라사우루스"
+  },
+  {
+   "k": "Cambroraster",
+   "v": "캄브로라스터"
+  },
+  {
+   "k": "Campanile",
+   "v": "캄파닐레 기간테움"
+  },
+  {
+   "k": "Camptosaurus",
+   "v": "캄프토사우루스"
+  },
+  {
+   "k": "Campylocephalus",
+   "v": "캄필로케팔루스"
+  },
+  {
+   "k": "Canadaspis",
+   "v": "카나다스피스"
+  },
+  {
+   "k": "Canid",
+   "v": "개과"
+  },
+  {
+   "k": "Cardiola",
+   "v": "카르디올라"
+  },
+  {
+   "k": "Carolinites",
+   "v": "카롤리니테스"
+  },
+  {
+   "k": "Cartorhynchus",
+   "v": "카르토린쿠스"
+  },
+  {
+   "k": "Caryocaris",
+   "v": "카리오카리스"
+  },
+  {
+   "k": "Caryocrinites",
+   "v": "카리오크리니테스"
+  },
+  {
+   "k": "Casea",
+   "v": "카세아"
+  },
+  {
+   "k": "Ceratodus",
+   "v": "케라토두스"
+  },
+  {
+   "k": "Champsosaurus",
+   "v": "참프소사우루스"
+  },
+  {
+   "k": "Charniodiscus",
+   "v": "카르니오디스쿠스"
+  },
+  {
+   "k": "Chasmataspidid",
+   "v": "카스마타스피스류"
+  },
+  {
+   "k": "Chasmataspis",
+   "v": "카스마타스피스"
+  },
+  {
+   "k": "Cheiracanthus",
+   "v": "케이라칸투스"
+  },
+  {
+   "k": "Chiton",
+   "v": "군부"
+  },
+  {
+   "k": "Choristodere",
+   "v": "코리스토데라"
+  },
+  {
+   "k": "Clevosaurus",
+   "v": "클레보사우루스"
+  },
+  {
+   "k": "Cochleosaurus",
+   "v": "코클레오사우루스"
+  },
+  {
+   "k": "Coelacanth",
+   "v": "실러캔스류"
+  },
+  {
+   "k": "Columnaria",
+   "v": "콜룸나리아"
+  },
+  {
+   "k": "Colymbosathon",
+   "v": "콜림보사톤"
+  },
+  {
+   "k": "Common Hippopotamus",
+   "v": "하마"
+  },
+  {
+   "k": "Common Ostrich",
+   "v": "타조"
+  },
+  {
+   "k": "Conotubus",
+   "v": "코노투부스"
+  },
+  {
+   "k": "Constellaria",
+   "v": "콘스텔라리아"
+  },
+  {
+   "k": "Crab",
+   "v": "게"
+  },
+  {
+   "k": "Ctenorhabdotus",
+   "v": "크테노랍도투스"
+  },
+  {
+   "k": "Cupressocrinites",
+   "v": "쿠프레소크리니테스"
+  },
+  {
+   "k": "Dactylioceras",
+   "v": "닥틸리오케라스"
+  },
+  {
+   "k": "Dapedium",
+   "v": "다페디움"
+  },
+  {
+   "k": "Deinocheirus",
+   "v": "데이노케이루스"
+  },
+  {
+   "k": "Deltoblastus",
+   "v": "델토블라스투스"
+  },
+  {
+   "k": "Dendrerpeton",
+   "v": "덴드레르페톤"
+  },
+  {
+   "k": "Diadectes",
+   "v": "디아덱테스"
+  },
+  {
+   "k": "Dicynodon",
+   "v": "디키노돈"
+  },
+  {
+   "k": "Didelphodon",
+   "v": "디델포돈"
+  },
+  {
+   "k": "Dinocephalosaurus",
+   "v": "디노케팔로사우루스"
+  },
+  {
+   "k": "Dinomischus",
+   "v": "디노미스쿠스"
+  },
+  {
+   "k": "Dire Wolf",
+   "v": "다이어울프"
+  },
+  {
+   "k": "Dodo",
+   "v": "도도"
+  },
+  {
+   "k": "Dromornithid",
+   "v": "천둥새류"
+  },
+  {
+   "k": "Eagle",
+   "v": "수리"
+  },
+  {
+   "k": "Echinochiton",
+   "v": "에키노키톤"
+  },
+  {
+   "k": "Ecphora",
+   "v": "엑포라"
+  },
+  {
+   "k": "Elapid snake",
+   "v": "코브라과"
+  },
+  {
+   "k": "Elonichthys",
+   "v": "엘로닉티스"
+  },
+  {
+   "k": "Elpistostege",
+   "v": "엘피스토스테게"
+  },
+  {
+   "k": "Elrathia",
+   "v": "엘라티아"
+  },
+  {
+   "k": "Emperor Penguin",
+   "v": "황제펭귄"
+  },
+  {
+   "k": "Enchodus",
+   "v": "엔코두스"
+  },
+  {
+   "k": "Encrinus",
+   "v": "엔크리누스"
+  },
+  {
+   "k": "Eoarthropleura",
+   "v": "에오아르트로플레우라"
+  },
+  {
+   "k": "Eopelobates",
+   "v": "에오펠로바테스"
+  },
+  {
+   "k": "Eospirifer",
+   "v": "에오스피리페르"
+  },
+  {
+   "k": "Epicyon",
+   "v": "에피키온"
+  },
+  {
+   "k": "Eryon",
+   "v": "에리온"
+  },
+  {
+   "k": "Eucalyptocrinites",
+   "v": "에우칼립토크리니테스"
+  },
+  {
+   "k": "Eucritta",
+   "v": "에우크리타"
+  },
+  {
+   "k": "Euomphalopterus",
+   "v": "에우옴팔로프테루스"
+  },
+  {
+   "k": "Euparkeria",
+   "v": "유파르케리아"
+  },
+  {
+   "k": "Euphanerops",
+   "v": "에우파네롭스"
+  },
+  {
+   "k": "Eurotamandua",
+   "v": "에우로타만두아"
+  },
+  {
+   "k": "Eusarcana",
+   "v": "에우사르카나"
+  },
+  {
+   "k": "Florissant Tsetse Fly",
+   "v": "플로리선트 체체파리"
+  },
+  {
+   "k": "Furca",
+   "v": "푸르카"
+  },
+  {
+   "k": "Fuxianhuia",
+   "v": "푸시안후이아"
+  },
+  {
+   "k": "Galapagos Giant Tortoise",
+   "v": "갈라파고스땅거북"
+  },
+  {
+   "k": "Gar",
+   "v": "가아"
+  },
+  {
+   "k": "Giant Beaver",
+   "v": "거대비버"
+  },
+  {
+   "k": "Giant Pacific Octopus",
+   "v": "대문어"
+  },
+  {
+   "k": "Giant Platypus",
+   "v": "거대 오리너구리"
+  },
+  {
+   "k": "Giant Sea Biscuit",
+   "v": "거대 바다비스킷"
+  },
+  {
+   "k": "Giant Squid",
+   "v": "대왕오징어"
+  },
+  {
+   "k": "Gigantospongia",
+   "v": "기간토스폰기아"
+  },
+  {
+   "k": "Gigatitan",
+   "v": "기가티탄"
+  },
+  {
+   "k": "Glyptocrinus",
+   "v": "글립토크리누스"
+  },
+  {
+   "k": "Gnathorhiza",
+   "v": "그나토리자"
+  },
+  {
+   "k": "Gogia",
+   "v": "고기아"
+  },
+  {
+   "k": "Goniatites",
+   "v": "고니아티테스"
+  },
+  {
+   "k": "Great White Shark",
+   "v": "백상아리"
+  },
+  {
+   "k": "Green River Gar",
+   "v": "그린리버 가아"
+  },
+  {
+   "k": "Greererpeton",
+   "v": "그리러페톤"
+  },
+  {
+   "k": "Grey Wolf",
+   "v": "회색늑대"
+  },
+  {
+   "k": "Groenlandaspis",
+   "v": "그린란다스피스"
+  },
+  {
+   "k": "Gryphaea",
+   "v": "그리파이아"
+  },
+  {
+   "k": "Haast's Eagle",
+   "v": "하스트수리"
+  },
+  {
+   "k": "Hallopora",
+   "v": "할로포라"
+  },
+  {
+   "k": "Haplophrentis",
+   "v": "하플로프렌티스"
+  },
+  {
+   "k": "Harpactocarcinus",
+   "v": "하르팍토카르키누스"
+  },
+  {
+   "k": "Heals {0}% more of its HP when resting",
+   "v": "휴식 시 HP를 {0}% 더 회복"
+  },
+  {
+   "k": "Heals {0}% of its HP each turn, even after acting",
+   "v": "행동한 후에도 매 턴 HP {0}% 회복"
+  },
+  {
+   "k": "Helenodora",
+   "v": "헬레노도라"
+  },
+  {
+   "k": "Helianthaster",
+   "v": "헬리안타스테르"
+  },
+  {
+   "k": "Helicoplacus",
+   "v": "헬리코플라쿠스"
+  },
+  {
+   "k": "Heliophyllum",
+   "v": "헬리오필룸"
+  },
+  {
+   "k": "Hell Ant",
+   "v": "지옥개미"
+  },
+  {
+   "k": "Hiemalora",
+   "v": "히에말로라"
+  },
+  {
+   "k": "Hippopotamid",
+   "v": "하마과"
+  },
+  {
+   "k": "Hippurites",
+   "v": "히푸리테스"
+  },
+  {
+   "k": "Hurdia",
+   "v": "후르디아"
+  },
+  {
+   "k": "Hyolith",
+   "v": "히올리테스류"
+  },
+  {
+   "k": "Hypsognathus",
+   "v": "힙소그나투스"
+  },
+  {
+   "k": "Ianthasaurus",
+   "v": "이안타사우루스"
+  },
+  {
+   "k": "Inaria",
+   "v": "이나리아"
+  },
+  {
+   "k": "Isorophus",
+   "v": "이소로푸스"
+  },
+  {
+   "k": "Janassa",
+   "v": "야나사"
+  },
+  {
+   "k": "Jefferson's Scallop",
+   "v": "제퍼슨가리비"
+  },
+  {
+   "k": "Kannemeyeria",
+   "v": "칸네메이에리아"
+  },
+  {
+   "k": "Karaurus",
+   "v": "카라우루스"
+  },
+  {
+   "k": "Kayentatherium",
+   "v": "카옌타테리움"
+  },
+  {
+   "k": "Kenostrychus",
+   "v": "케노스트리쿠스"
+  },
+  {
+   "k": "Keraterpeton",
+   "v": "케라테르페톤"
+  },
+  {
+   "k": "King Cobra",
+   "v": "킹코브라"
+  },
+  {
+   "k": "Krill",
+   "v": "크릴"
+  },
+  {
+   "k": "Kryptobaatar",
+   "v": "크립토바타르"
+  },
+  {
+   "k": "Kubanochoerus",
+   "v": "쿠바노코에루스"
+  },
+  {
+   "k": "Kylinxia",
+   "v": "킬린시아"
+  },
+  {
+   "k": "Lagomorph",
+   "v": "토끼목"
+  },
+  {
+   "k": "Lasanius",
+   "v": "라사니우스"
+  },
+  {
+   "k": "Latzelia",
+   "v": "라첼리아"
+  },
+  {
+   "k": "Leperditia",
+   "v": "레페르디티아"
+  },
+  {
+   "k": "Lepidaster",
+   "v": "레피다스테르"
+  },
+  {
+   "k": "Leptodus",
+   "v": "렙토두스"
+  },
+  {
+   "k": "Limusaurus",
+   "v": "리무사우루스"
+  },
+  {
+   "k": "Lithornis",
+   "v": "리토르니스"
+  },
+  {
+   "k": "Lithornithid",
+   "v": "리토르니스류"
+  },
+  {
+   "k": "Lithostrotion",
+   "v": "리토스트로티온"
+  },
+  {
+   "k": "Lobster",
+   "v": "바닷가재"
+  },
+  {
+   "k": "Lotosaurus",
+   "v": "로토사우루스"
+  },
+  {
+   "k": "Lycosuchus",
+   "v": "리코수쿠스"
+  },
+  {
+   "k": "Mackenzia",
+   "v": "매켄지아"
+  },
+  {
+   "k": "Maiasaura",
+   "v": "마이아사우라"
+  },
+  {
+   "k": "Marywadea",
+   "v": "메리웨이디아"
+  },
+  {
+   "k": "Massetognathus",
+   "v": "마세토그나투스"
+  },
+  {
+   "k": "Mawsonia",
+   "v": "마우소니아"
+  },
+  {
+   "k": "Mawsonites",
+   "v": "모소니테스"
+  },
+  {
+   "k": "Mayfly",
+   "v": "하루살이류"
+  },
+  {
+   "k": "Merycoidodon",
+   "v": "메리코이도돈"
+  },
+  {
+   "k": "Mesonychid",
+   "v": "메소닉스류"
+  },
+  {
+   "k": "Mesonyx",
+   "v": "메소닉스"
+  },
+  {
+   "k": "Mesopithecus",
+   "v": "메소피테쿠스"
+  },
+  {
+   "k": "Metaxytherium",
+   "v": "메탁시테리움"
+  },
+  {
+   "k": "Micraster",
+   "v": "미크라스테르"
+  },
+  {
+   "k": "Microdictyon",
+   "v": "미크로딕티온"
+  },
+  {
+   "k": "Miguashaia",
+   "v": "미구아샤이아"
+  },
+  {
+   "k": "Mimetaster",
+   "v": "미메타스테르"
+  },
+  {
+   "k": "Mimipiscis",
+   "v": "미미피스키스"
+  },
+  {
+   "k": "Mitrocystites",
+   "v": "미트로키스티테스"
+  },
+  {
+   "k": "Mollisonia",
+   "v": "몰리소니아"
+  },
+  {
+   "k": "Mononykus",
+   "v": "모노니쿠스"
+  },
+  {
+   "k": "Multituberculate",
+   "v": "다구치목"
+  },
+  {
+   "k": "Namalia",
+   "v": "나말리아"
+  },
+  {
+   "k": "Naraoia",
+   "v": "나라오이아"
+  },
+  {
+   "k": "Nesodon",
+   "v": "네소돈"
+  },
+  {
+   "k": "Nigersaurus",
+   "v": "니제르사우루스"
+  },
+  {
+   "k": "Nimbadon",
+   "v": "님바돈"
+  },
+  {
+   "k": "Octopus",
+   "v": "문어"
+  },
+  {
+   "k": "Odontogriphus",
+   "v": "오돈토그리푸스"
+  },
+  {
+   "k": "Onchopristis",
+   "v": "온코프리스티스"
+  },
+  {
+   "k": "One of the commonest arthropods of the Burgess Shale, about 5 cm long, with its head and front body enclosed in a two-halved, clam-like shell. Below the shell were pairs of walking legs, and behind it a segmented abdomen ended in a forked tail. It walked over the seabed stirring up the mud with its spiny limbs to pick out food. Its shell gives it some protection, but it has no real weapons.",
+   "v": "버제스 셰일에서 가장 흔한 절지동물 가운데 하나로 몸길이 약 5cm이며, 머리와 몸 앞부분이 조개 같은 두 쪽짜리 껍데기에 싸여 있었다. 껍데기 아래에는 걷는 다리가 쌍으로 있었고, 뒤로는 마디진 배가 이어져 갈라진 꼬리로 끝났다. 해저를 걸으며 가시 돋친 다리로 진흙을 휘저어 먹이를 골라 먹었다. 껍데기로 어느 정도 보호받지만 진짜 무기는 없다."
+  },
+  {
+   "k": "One of the earliest ammonoids, about 10 centimetres across, from the Early Devonian seas of Germany and Morocco, about 405 million years ago. Its shell was only loosely coiled, with the whorls not touching and a hole in the middle, a step between the straight-shelled nautiloids and the tightly coiled ammonites. It drifted near the sea floor, catching small prey with its tentacles.",
+   "v": "가장 이른 암모나이트류 가운데 하나로 지름은 약 10센티미터이며, 약 4억 500만 년 전 데본기 전기 독일과 모로코의 바다에 살았다. 껍데기는 느슨하게만 감겨 있어 나선끼리 닿지 않고 가운데에 구멍이 있었는데, 곧은 껍데기의 앵무조개류와 단단히 감긴 암모나이트 사이의 중간 단계였다. 해저 근처를 떠다니며 촉수로 작은 먹이를 잡았다."
+  },
+  {
+   "k": "One of the earliest and largest rodents, from the middle Eocene forests of Germany, about 70 cm long, more than half of it a long, bushy tail. It looked much like a big squirrel and climbed in the trees. Fossils with their stomach contents show that it ate leaves.",
+   "v": "가장 이르고 큰 설치류 중 하나로, 에오세 중기 독일의 숲에 살았으며 몸길이 약 70cm 중 절반 이상이 덥수룩한 긴 꼬리였다. 큰 다람쥐와 매우 닮았고 나무를 탔다. 위 내용물이 남은 화석을 보면 나뭇잎을 먹었다."
+  },
+  {
+   "k": "One of the earliest archosauriforms, the branch that later gave rise to crocodiles, dinosaurs and birds, from the Early Triassic of South Africa, about 250 million years ago. About 1.5 metres long, it looked like a crocodile with sprawling legs and a long tail, and the tip of its upper jaw hooked down over the lower jaw. It was one of the top predators in the world that recovered after the end-Permian extinction.",
+   "v": "훗날 악어, 공룡, 조류를 낳은 계통인 지배파충형류 중 가장 이른 것 가운데 하나로, 전기 트라이아스기인 약 2억 5000만 년 전 남아프리카에서 발견되었다. 길이 약 1.5미터로, 옆으로 벌어진 다리와 긴 꼬리를 가진 악어처럼 생겼으며, 위턱 끝이 아래턱 위로 갈고리처럼 굽어 있었다. 페름기 말 멸종 이후 회복된 세계에서 최상위 포식자 중 하나였다."
+  },
+  {
+   "k": "One of the earliest coelacanths, about 45 centimetres long, from the Late Devonian estuary of Miguasha in Quebec, about 380 million years ago. It already had the fleshy, limb-like fins of its living relatives, but its tail was still lopsided like a shark's instead of the coelacanth's later three-lobed tail. Its lineage survives today in the deep-sea coelacanth.",
+   "v": "가장 이른 실러캔스 가운데 하나로 몸길이는 약 45센티미터이며, 약 3억 8천만 년 전 퀘벡 미구아샤의 데본기 후기 하구에 살았다. 이미 현생 친척처럼 살집 있고 다리 같은 지느러미를 가졌지만, 꼬리는 나중의 세 갈래 꼬리가 아니라 상어처럼 위아래가 비대칭이었다. 그 계통은 오늘날 심해의 실러캔스로 이어진다."
+  },
+  {
+   "k": "One of the earliest cynodonts, the group that gave rise to mammals, about 60 centimetres long, from the Late Permian of southern Africa and Germany, around 255 million years ago. It had a fox-like head with long canines and a long, low body, and its broadened tail bones suggest it may have swum like an otter. It may already have had some fur and a faster metabolism than earlier synapsids.",
+   "v": "나중에 포유류를 낳은 견치류 가운데 가장 이른 것 중 하나로, 약 2억 5500만 년 전 페름기 후기 아프리카 남부와 독일에 살았던 몸길이 약 60센티미터의 동물이다. 여우 같은 머리에 긴 송곳니, 길고 낮은 몸을 가졌고, 넓어진 꼬리뼈로 보아 수달처럼 헤엄쳤을 수 있다. 이미 털이 조금 있었고 이전의 단궁류보다 대사가 빨랐을지도 모른다."
+  },
+  {
+   "k": "One of the earliest rays, up to about 1.5 metres long, from the Late Jurassic lagoons of France and Germany, about 150 million years ago. It looked like a living guitarfish: a flat, spade-shaped front with the pectoral fins joined to the head, then a thick, shark-like tail with two dorsal fins. It lay half-buried in sand, sensing prey with electric receptors, and crushed shellfish and crustaceans.",
+   "v": "가장 오래된 가오리 가운데 하나로 몸길이는 최대 약 1.5미터이며, 약 1억 5000만 년 전 프랑스와 독일의 후기 쥐라기 석호에 살았다. 현생 가래상어를 닮아, 가슴지느러미가 머리와 붙은 납작한 삽 모양의 앞몸과 등지느러미 두 개가 있는 굵은 상어 같은 꼬리를 가졌다. 모래에 반쯤 묻혀 전기 감각기로 먹이를 찾아 조개와 갑각류를 부수어 먹었다."
+  },
+  {
+   "k": "One of the early modern-type stony corals, which built reefs in the warm Tethys Sea in the Late Triassic, about 210 million years ago. Its colonies were bushes of finger-thick tubes that forked again and again and grew upward side by side, each tube ending in a star-shaped cup that held a single polyp. Corals like it began the great coral reefs that still exist today.",
+   "v": "초기 현대형 돌산호 중 하나로, 후기 트라이아스기인 약 2억 1000만 년 전 따뜻한 테티스해에서 산호초를 만들었다. 군체는 손가락 굵기의 관이 계속해서 갈라지며 나란히 위로 자라는 덤불 모양이었고, 각 관의 끝에는 폴립 하나가 들어 있는 별 모양의 컵이 있었다. 이런 산호들이 오늘날까지 이어지는 거대한 산호초의 시작이 되었다."
+  },
+  {
+   "k": "One of the first fossil reptiles ever described, found in Germany in 1706, which lived along the shores of the Zechstein Sea around 257 million years ago. About 1.5 to 2 metres long, it had a lizard-like body, a long, slender neck, a small pointed head with sharp teeth and long hind legs. It was an early member of the line that led to crocodiles and dinosaurs.",
+   "v": "가장 먼저 기재된 화석 파충류 가운데 하나로, 1706년 독일에서 발견되었으며 약 2억 5700만 년 전 체히슈타인 해 연안에 살았다. 몸길이 약 1.5~2미터로 도마뱀 같은 몸, 가늘고 긴 목, 날카로운 이빨이 난 작고 뾰족한 머리, 긴 뒷다리를 가졌다. 악어와 공룡으로 이어지는 계통의 초기 구성원이다."
+  },
+  {
+   "k": "One of the first large plant-eating land animals, about 3 metres long, from the Early Permian of North America, around 290 million years ago. It had a heavy, barrel-shaped body, short, powerful sprawling legs and a short, deep head with peg-like front teeth for nipping plants and broad cheek teeth for grinding them. It was a close relative of the first reptiles and their kin, the amniotes.",
+   "v": "최초의 대형 초식 육상 동물 가운데 하나로, 약 2억 9000만 년 전 페름기 전기 북아메리카에 살았던 몸길이 약 3미터의 동물이다. 무거운 통 모양 몸, 옆으로 벌린 짧고 강한 다리, 짧고 높은 머리를 가졌으며, 앞쪽의 말뚝 같은 이빨로 식물을 뜯고 넓은 볼니로 갈아 먹었다. 최초의 파충류와 그 친척인 양막류와 가까운 동물이었다."
+  },
+  {
+   "k": "One of the first reptiles to return to the water, a slender diapsid about 25 centimetres long from Late Carboniferous rocks near Hamilton, Kansas, about 302 million years old. A close relative of Petrolacosaurus, it had a small head and slim legs but a tall, flattened tail like a paddle, which it swung from side to side to swim. It lived in a coastal estuary among fishes and crustaceans, where it probably hunted small swimming prey.",
+   "v": "물로 돌아간 최초의 파충류 중 하나로, 길이 약 25센티미터의 가냘픈 이궁류이며 캔자스주 해밀턴 근처의 약 3억 200만 년 전 석탄기 후기 암석에서 발견되었다. 페트롤라코사우루스의 가까운 친척으로, 작은 머리와 가는 다리를 가졌지만 꼬리는 노처럼 높고 납작해 좌우로 흔들며 헤엄쳤다. 물고기와 갑각류가 사는 해안 하구에 살면서 아마 헤엄치는 작은 먹이를 사냥했을 것이다."
+  },
+  {
+   "k": "One of the first spiriferid brachiopods, a lamp shell about 3 cm wide from the Silurian of Britain, Sweden and North America. Its rounded shell had short wings along the hinge, a smooth fold at the front and many fine radiating ribs. Inside, a pair of coiled supports held its feeding tentacles, a design that later spiriferids spread across the world's seas.",
+   "v": "최초의 스피리페르류 완족동물 중 하나로, 영국, 스웨덴, 북아메리카의 실루리아기에서 발견된 너비 약 3cm의 조개사돈(완족류)이다. 둥근 껍데기에는 경첩선을 따라 짧은 날개가 있었고, 앞쪽에는 매끈한 습곡과 가는 방사륵이 많이 있었다. 안쪽에는 나선형 지지대 한 쌍이 먹이를 먹는 촉수를 받치고 있었는데, 이 구조는 훗날 스피리페르류와 함께 전 세계 바다로 퍼져 나갔다."
+  },
+  {
+   "k": "One of the hell ants, an early branch of ants preserved in 99-million-year-old Burmese amber. Its scythe-shaped jaws swung upwards instead of sideways, snapping shut against a paddle-like horn on its forehead to pin its prey. Hell ants lived in colonies like modern ants but vanished with the dinosaurs.",
+   "v": "지옥개미의 하나로, 9900만 년 전 미얀마 호박 속에 보존된 개미의 초기 갈래다. 낫 모양의 큰턱은 옆이 아니라 위쪽으로 휘둘러져, 이마에 있는 노 모양의 뿔에 맞부딪치며 닫혀 먹이를 꽉 붙잡았다. 지옥개미는 현대 개미처럼 군집을 이루어 살았지만 공룡과 함께 사라졌다."
+  },
+  {
+   "k": "One of the largest invertebrates, up to about 12-13 m long including its two long feeding tentacles, which end in clubs lined with toothed suckers. It has the biggest eyes of any animal, up to 27 cm across, for seeing in the dark at 300-1,000 m depth. It was first filmed alive only in 2004; sperm whales hunt it and often carry sucker scars from the fight.",
+   "v": "가장 큰 무척추동물 중 하나로 두 개의 긴 촉완을 포함하면 몸길이가 약 12~13m에 이르며, 촉완 끝에는 이빨 달린 빨판이 늘어선 곤봉이 있다. 동물계에서 가장 큰 눈을 가졌는데 지름이 최대 27cm로, 수심 300~1,000m의 어둠 속에서 앞을 본다. 2004년에야 처음으로 살아 있는 모습이 촬영되었으며, 향유고래가 이를 사냥해 몸에 싸움으로 생긴 빨판 자국이 남곤 한다."
+  },
+  {
+   "k": "One of the largest mayfly-like insects ever, with a wingspan of about 45 centimetres, from Late Carboniferous rocks near Prague in the Czech Republic, about 310 million years old. It had two pairs of broad wings of similar size that it could not fold back over its body, a slender body and long tail filaments. It is thought to be an early relative of the mayflies, the oldest surviving branch of winged insects, and its young probably grew up in the swamp waters.",
+   "v": "날개폭이 약 45센티미터에 이르는, 역사상 가장 큰 하루살이 비슷한 곤충 중 하나로, 체코 프라하 근처의 약 3억 1000만 년 전 석탄기 후기 암석에서 발견되었다. 크기가 비슷한 넓은 날개 두 쌍은 몸 위로 뒤로 접을 수 없었고, 가느다란 몸과 긴 꼬리털이 있었다. 날개 달린 곤충 중 현존하는 가장 오래된 계통인 하루살이의 초기 친척으로 여겨지며, 애벌레는 아마 늪의 물속에서 자랐을 것이다."
+  },
+  {
+   "k": "One of the largest sea snails that ever lived, from the middle Eocene seas of the Paris Basin, with a tall, slender, spiral shell up to about 1 m long and a row of knobs winding round its many whorls. It crept slowly over sandy, sunlit sea floors grazing algae and detritus. A single relative, the bell-tower snail of Australia, survives today.",
+   "v": "역사상 가장 큰 바다 고둥 중 하나로, 에오세 중기 파리 분지의 바다에 살았으며 높고 가는 나선형 껍데기가 길이 약 1m에 이르고, 많은 나층을 따라 혹이 한 줄로 감겨 있었다. 햇빛이 드는 모래 바닥을 천천히 기어 다니며 조류와 부스러기를 먹었다. 오늘날에는 오스트레일리아의 종탑고둥 한 종만이 친척으로 살아남았다."
+  },
+  {
+   "k": "One of the largest sponges of the Permian, from the Middle Permian reefs of west Texas, around 265 million years ago. It grew as a huge, thin, plate-like disc that could be more than a metre across, held up off the reef on a short stalk, and pumped water through countless small pores to filter out food. With no organs to damage, it could survive heavy injuries and regrow.",
+   "v": "페름기에서 가장 큰 해면 가운데 하나로, 약 2억 6500만 년 전 페름기 중기 텍사스 서부의 초에 살았다. 지름이 1미터를 넘기도 하는 거대하고 얇은 접시 모양 원반으로 자라 짧은 자루로 초 위에 떠받쳐졌으며, 수많은 작은 구멍으로 물을 빨아들여 먹이를 걸러 먹었다. 다칠 기관이 없어서 큰 상처를 입어도 살아남아 다시 자랄 수 있었다."
+  },
+  {
+   "k": "One of the largest trilobites ever, reaching about 37 cm, from the middle Cambrian of Newfoundland and Wales. It had a wide head with long, backswept spines at its corners, around twenty spiny body segments and a tiny tail plate. A big hunter and scavenger of the seafloor, it is well armoured and strong for its time.",
+   "v": "역사상 가장 큰 삼엽충 가운데 하나로 몸길이가 약 37cm에 이르며, 뉴펀들랜드와 웨일스의 캄브리아기 중기 지층에서 나왔다. 넓은 머리 양 끝에 뒤로 휜 긴 가시가 있었고, 가시 돋친 몸마디가 스무 개쯤, 꼬리판은 아주 작았다. 해저의 대형 사냥꾼이자 청소동물로, 당시로서는 갑옷이 튼튼하고 힘도 셌다."
+  },
+  {
+   "k": "One of the last blastoids, extinct relatives of the sea lilies, so common in the Permian rocks of Timor that many thousands have been collected. Its small, bud-shaped cup, about 2 centimetres high, sat on a short stalk and had five petal-like food grooves fringed with fine, upright threads that strained food from the water. The blastoids died out in the end-Permian extinction.",
+   "v": "바다나리의 멸종한 친척인 해봉오리류 가운데 마지막 무리의 하나로, 티모르섬의 페름기 지층에 매우 흔해 수천 개가 채집되었다. 높이 약 2센티미터의 작은 꽃봉오리 모양 몸통이 짧은 자루 위에 있었고, 꽃잎 같은 다섯 개의 먹이 홈 가장자리에 늘어선 가는 실 같은 부속지로 물속 먹이를 걸렀다. 해봉오리류는 페름기 말 대멸종으로 사라졌다."
+  },
+  {
+   "k": "One of the last spiny sharks, about 30 centimetres long, from the Early Permian lakes of Germany. It had a slim body covered in tiny square scales, big eyes and a stout spine in front of every fin, but no teeth: it strained small animals from the water with long gill rakers. Its well-preserved skulls have helped scientists understand the early evolution of sharks.",
+   "v": "마지막 '가시상어' 가운데 하나로, 페름기 전기 독일의 호수에 살았던 몸길이 약 30센티미터의 물고기이다. 가는 몸은 작은 네모난 비늘로 덮였고 눈이 컸으며 모든 지느러미 앞에 굵은 가시가 있었지만 이빨은 없었다. 긴 아가미갈퀴로 물속의 작은 동물을 걸러 먹었다. 잘 보존된 두개골은 상어의 초기 진화를 이해하는 데 도움이 되었다."
+  },
+  {
+   "k": "One of the last trilobites, from the Early Carboniferous seas of Europe about 340 million years ago, when only a single family of these once dominant arthropods survived. It was a small, oval trilobite about 3 centimetres long with a bulging central head lobe, large crescent-shaped eyes, nine body segments and a broad, rounded tail shield. It crawled over muddy sea floors picking up food particles, and could roll up into a ball when threatened.",
+   "v": "마지막 삼엽충 중 하나로, 약 3억 4000만 년 전 유럽의 석탄기 전기 바다에 살았으며, 이때는 한때 번성했던 이 절지동물 가운데 단 하나의 과만 살아남아 있었다. 길이 약 3센티미터의 작은 타원형 삼엽충으로, 볼록 솟은 머리 중앙부, 커다란 초승달 모양의 눈, 아홉 개의 몸마디, 넓고 둥근 꼬리판을 가졌다. 진흙 해저를 기어 다니며 먹이 알갱이를 주워 먹었고, 위협을 받으면 몸을 공처럼 말 수 있었다."
+  },
+  {
+   "k": "One of the most fish-like of the early four-limbed animals, about 1.2 metres long, from the Late Devonian lagoons of Latvia some 372 million years ago. It had a broad, flat head full of sharp teeth and a fin-fringed tail; its limbs are barely known but were probably short, with many toes. It hunted fish in shallow water and rarely, if ever, came onto land.",
+   "v": "초기 네발동물 가운데 가장 물고기에 가까운 것 중 하나로, 몸길이 약 1.2미터이며 약 3억 7200만 년 전 데본기 후기 라트비아의 석호에 살았다. 날카로운 이빨이 가득한 넓고 납작한 머리와 지느러미 테두리가 있는 꼬리를 가졌으며, 다리는 거의 알려지지 않았지만 아마 짧고 발가락이 많았을 것이다. 얕은 물에서 물고기를 사냥했고 뭍으로 올라오는 일은 거의 없었다."
+  },
+  {
+   "k": "One of the most primitive osteostracans, jawless armoured fish about 20 cm long from the Silurian of Scotland and Norway. Its broad, horseshoe-shaped head shield was a mosaic of small bony tiles, with the eyes close together on top. Behind the shield it had a pair of flap-like pectoral fins, among the oldest true paired fins of any animal, the beginnings of our own arms. It grubbed for food on the sea floor.",
+   "v": "가장 원시적인 골갑류 중 하나로, 스코틀랜드와 노르웨이의 실루리아기에서 발견된 몸길이 약 20cm의 턱 없는 갑주어이다. 넓은 말굽 모양의 머리 방패는 작은 뼈 조각들이 모자이크처럼 이어져 있었고, 두 눈은 머리 위에 가까이 붙어 있었다. 방패 뒤에는 덮개 모양의 가슴지느러미 한 쌍이 있었는데, 이는 모든 동물을 통틀어 가장 오래된 진정한 쌍지느러미 중 하나이자 우리 팔의 시작이다. 해저를 뒤지며 먹이를 찾았다."
+  },
+  {
+   "k": "One of the most primitive therapsids, the group that later gave rise to mammals, from the Middle Permian of the Ural region of Russia, around 265 million years ago. About 1.5 metres long and lightly built, it had a long skull with big eyes and long canine teeth, and legs held more beneath the body than in older synapsids. It was probably an agile hunter of small and medium-sized animals.",
+   "v": "나중에 포유류를 낳은 수궁류 가운데 가장 원시적인 것 중 하나로, 약 2억 6500만 년 전 페름기 중기 러시아 우랄 지역에 살았다. 몸길이 약 1.5미터에 가볍게 생겼고, 긴 두개골에 큰 눈과 긴 송곳니가 있었으며, 다리는 더 오래된 단궁류보다 몸 아래쪽에 있었다. 작은 동물과 중간 크기 동물을 사냥한 날렵한 사냥꾼이었을 것이다."
+  },
+  {
+   "k": "One of the oldest echinoderms, from the early Cambrian of Nevada and California: a spindle-shaped animal a few centimetres long covered in plates arranged in a spiral, like a twisted pine cone. It probably stood upright with its base in the mud and caught food particles along a feeding groove that wound around its body. Its plated skin protects it, but it is helpless against a determined attacker.",
+   "v": "가장 오래된 극피동물 가운데 하나로 미국 네바다주와 캘리포니아주의 캄브리아기 전기 지층에서 나왔다. 몸길이 몇 센티미터의 방추형 동물로, 나선형으로 배열된 판에 덮여 비틀린 솔방울처럼 보였다. 아래쪽 끝을 진흙에 묻고 똑바로 서서, 몸을 감아 도는 섭식 홈을 따라 먹이 알갱이를 모았을 것이다. 판으로 된 피부가 보호해 주지만 끈질긴 공격자에게는 속수무책이다."
+  },
+  {
+   "k": "One of the oldest gliding fishes, from the Late Triassic seas of the Alps, more than 200 million years before modern flying fish. This small, silvery fish had huge wing-like pectoral fins, a second smaller pair of pelvic \"wings\" and a forked tail with a longer lower lobe. Like a flying fish, it probably sped along the surface and then glided through the air to escape predators.",
+   "v": "가장 오래된 활공 어류 중 하나로, 후기 트라이아스기 알프스의 바다에서 발견되었으며 현대의 날치보다 2억 년 이상 앞섰다. 이 작고 은빛 나는 물고기는 날개 같은 거대한 가슴지느러미, 두 번째 쌍인 더 작은 배지느러미 '날개', 그리고 아래쪽 갈래가 더 긴 갈라진 꼬리를 가졌다. 날치처럼 수면을 따라 빠르게 나아가다가 공중으로 활공하여 포식자를 피했을 것이다."
+  },
+  {
+   "k": "One of the oldest known centipedes, an early relative of today's long-legged house centipedes, from the Mazon Creek fossil beds of Illinois, about 309 million years old. About 4 centimetres long, it had a short body on fifteen pairs of very long, slender legs, long antennae and a pair of venomous fangs under its head. It ran swiftly over the forest floor and ambushed insects and other small invertebrates.",
+   "v": "알려진 가장 오래된 지네 중 하나로, 오늘날 다리가 긴 그리마의 초기 친척이며, 약 3억 900만 년 전 일리노이주 메이즌크리크 화석층에서 발견되었다. 몸길이 약 4센티미터로, 짧은 몸에 매우 길고 가는 다리 열다섯 쌍, 긴 더듬이, 머리 아래의 독니 한 쌍이 있었다. 숲 바닥을 재빠르게 달리며 곤충과 다른 작은 무척추동물을 매복해 잡았다."
+  },
+  {
+   "k": "One of the oldest known fish, a small jawless vertebrate about 12 cm long without paired fins. The front of its body was enclosed in a box of bony plates ornamented with ridges and pierced by pores, and it had tiny eyes at the very front. It swam just above the sea floor, sucking up food particles with its jawless mouth.",
+   "v": "알려진 가장 오래된 물고기 가운데 하나로, 쌍지느러미가 없는 몸길이 약 12센티미터의 작은 무악 척추동물이다. 몸 앞부분은 융기 무늬가 있고 작은 구멍이 뚫린 뼈판 상자로 싸여 있었으며, 맨 앞쪽에 작은 눈이 있었다. 해저 바로 위를 헤엄치며 턱 없는 입으로 먹이 알갱이를 빨아들였다."
+  },
+  {
+   "k": "One of the oldest known members of the human lineage, from the Late Miocene of Chad, about 7 million years ago. It was a chimpanzee-sized ape with a small brain, a huge brow ridge, a rather flat face and small canine teeth. The way its skull sat on the spine suggests it could walk upright, though it still lived among trees by lakes and forest edges.",
+   "v": "인류 계통에서 알려진 가장 오래된 구성원 가운데 하나로, 약 700만 년 전 후기 마이오세의 차드에 살았다. 침팬지만 한 유인원으로 뇌가 작고, 눈썹뼈가 매우 크며, 얼굴이 비교적 납작하고, 송곳니가 작았다. 두개골이 척추와 이어진 방식으로 보아 똑바로 서서 걸을 수 있었던 듯하지만, 여전히 호숫가와 숲 가장자리의 나무 사이에서 살았다."
+  },
+  {
+   "k": "One of the oldest known mites, under half a millimetre long, from the Rhynie chert of Scotland, about 410 million years ago. Its soft, oval body walked on eight short legs among the stems of the earliest land plants. It fed on decaying plant matter and fungi, helping recycle the first soils.",
+   "v": "알려진 가장 오래된 진드기 가운데 하나로 몸길이가 0.5밀리미터도 되지 않으며, 약 4억 1천만 년 전 스코틀랜드의 라이니 처트에서 발견된다. 부드러운 타원형 몸으로 최초의 육상 식물 줄기 사이를 짧은 다리 8개로 걸어 다녔다. 썩은 식물과 균류를 먹으며 최초의 토양을 분해하는 일을 도왔다."
+  },
+  {
+   "k": "One of the oldest known salamanders, about 19 cm long, from the Late Jurassic of Kazakhstan, about 155 million years ago. It already had the salamander body plan: a broad, flat head with a rounded snout, a long body, four short legs and a tail. Its skull was roughened with bony sculpture. It probably lived along lake shores, hunting insects and worms on land and in shallow water.",
+   "v": "가장 오래된 도롱뇽 가운데 하나로 몸길이는 약 19센티미터이며, 약 1억 5500만 년 전 카자흐스탄 후기 쥐라기에 살았다. 이미 도롱뇽의 몸 구조를 갖추어 둥근 주둥이의 넓적한 머리, 긴 몸통, 짧은 네 다리와 꼬리가 있었다. 두개골 표면은 울퉁불퉁한 뼈 무늬로 덮여 있었다. 아마 호숫가에 살면서 땅과 얕은 물에서 곤충과 지렁이를 사냥했을 것이다."
+  },
+  {
+   "k": "One of the oldest sea urchins, a small, round animal only 1 to 2 cm across, covered in short spines. Unlike living sea urchins, the zones between its five food-groove areas were just a single column of plates wide. It crept over the sea floor grazing on algae and detritus.",
+   "v": "가장 오래된 성게 가운데 하나로, 지름이 1~2센티미터에 불과한 둥근 작은 동물이며 온몸이 짧은 가시로 덮여 있었다. 현생 성게와 달리 다섯 개의 보대 사이에 있는 간보대가 판 한 줄 너비밖에 되지 않았다. 해저를 천천히 기어 다니며 조류와 유기물 부스러기를 뜯어 먹었다."
+  },
+  {
+   "k": "One of the strangest brachiopods, common on the Middle Permian reefs of Texas. Its lower valve was a flat, leaf-shaped plate cemented to the reef like an oyster and divided inside by comb-like ridges, and its thin upper valve was a lobed, fishbone-shaped lid that lifted a little so the animal could filter food from the water. Cemented down and armoured, it was hard to dislodge.",
+   "v": "가장 이상한 완족동물 가운데 하나로, 페름기 중기 텍사스의 초에 흔했다. 아래 껍데기는 굴처럼 초에 붙은 납작한 잎 모양 판으로 안쪽이 빗 모양 융기로 나뉘었고, 위 껍데기는 얇고 갈라진 생선 뼈 모양의 뚜껑으로 조금 들어 올려 물속 먹이를 걸러 먹었다. 단단히 붙어 있고 갑옷을 둘러 떼어 내기 어려웠다."
+  },
+  {
+   "k": "Onychopterella",
+   "v": "오니코프테렐라"
+  },
+  {
+   "k": "Orca",
+   "v": "범고래"
+  },
+  {
+   "k": "Oreodont",
+   "v": "오레오돈류"
+  },
+  {
+   "k": "Orthrozanclus",
+   "v": "오르트로잔클루스"
+  },
+  {
+   "k": "Ostracod",
+   "v": "개형충"
+  },
+  {
+   "k": "Ostrich",
+   "v": "타조류"
+  },
+  {
+   "k": "Owl",
+   "v": "올빼미"
+  },
+  {
+   "k": "Palaeocoma",
+   "v": "팔라이오코마"
+  },
+  {
+   "k": "Palaeoisopus",
+   "v": "팔레오이소푸스"
+  },
+  {
+   "k": "Palaeolagus",
+   "v": "팔라이올라구스"
+  },
+  {
+   "k": "Palaeoniscum",
+   "v": "팔레오니스쿰"
+  },
+  {
+   "k": "Palaeopalaemon",
+   "v": "팔레오팔라에몬"
+  },
+  {
+   "k": "Palaeophragmodictya",
+   "v": "팔레오프라그모딕티아"
+  },
+  {
+   "k": "Palaeoscolex",
+   "v": "팔라에오스콜렉스"
+  },
+  {
+   "k": "Palmatolepis",
+   "v": "팔마톨레피스"
+  },
+  {
+   "k": "Parapuzosia",
+   "v": "파라푸조시아"
+  },
+  {
+   "k": "Pentremites",
+   "v": "펜트레미테스"
+  },
+  {
+   "k": "Pezosiren",
+   "v": "페조시렌"
+  },
+  {
+   "k": "Phareodus",
+   "v": "파레오두스"
+  },
+  {
+   "k": "Phillipsia",
+   "v": "필립시아"
+  },
+  {
+   "k": "Phiomia",
+   "v": "피오미아"
+  },
+  {
+   "k": "Phlebolepis",
+   "v": "플레볼레피스"
+  },
+  {
+   "k": "Phragmoceras",
+   "v": "프라그모케라스"
+  },
+  {
+   "k": "Pig",
+   "v": "돼지"
+  },
+  {
+   "k": "Pig-nosed turtle",
+   "v": "돼지코거북"
+  },
+  {
+   "k": "Pigeon",
+   "v": "비둘기"
+  },
+  {
+   "k": "Platyceras",
+   "v": "플라티케라스"
+  },
+  {
+   "k": "Platyhystrix",
+   "v": "플라티히스트릭스"
+  },
+  {
+   "k": "Pleurosaurus",
+   "v": "플레우로사우루스"
+  },
+  {
+   "k": "Polar Bear",
+   "v": "북극곰"
+  },
+  {
+   "k": "Porophoraspis",
+   "v": "포로포라스피스"
+  },
+  {
+   "k": "Praecambridium",
+   "v": "프레캄브리디움"
+  },
+  {
+   "k": "Primobucco",
+   "v": "프리모부코"
+  },
+  {
+   "k": "Primocandelabrum",
+   "v": "프리모칸델라브룸"
+  },
+  {
+   "k": "Procolophonid",
+   "v": "프로콜로폰류"
+  },
+  {
+   "k": "Proconsul",
+   "v": "프로콘술"
+  },
+  {
+   "k": "Procynosuchus",
+   "v": "프로키노수쿠스"
+  },
+  {
+   "k": "Prodryas",
+   "v": "프로드리아스"
+  },
+  {
+   "k": "Prongdeer",
+   "v": "다섯뿔사슴"
+  },
+  {
+   "k": "Prosalirus",
+   "v": "프로살리루스"
+  },
+  {
+   "k": "Protacarus",
+   "v": "프로타카루스"
+  },
+  {
+   "k": "Protasterina",
+   "v": "프로타스테리나"
+  },
+  {
+   "k": "Protereisma",
+   "v": "프로테레이스마"
+  },
+  {
+   "k": "Proterosuchus",
+   "v": "프로테로수쿠스"
+  },
+  {
+   "k": "Protoceras",
+   "v": "프로토케라스"
+  },
+  {
+   "k": "Protoceratid",
+   "v": "프로토케라스류"
+  },
+  {
+   "k": "Protorosaurus",
+   "v": "프로토로사우루스"
+  },
+  {
+   "k": "Protosuchus",
+   "v": "프로토수쿠스"
+  },
+  {
+   "k": "Pterodaustro",
+   "v": "프테로다우스트로"
+  },
+  {
+   "k": "Pyrothere",
+   "v": "피로테리움목"
+  },
+  {
+   "k": "Pyrotherium",
+   "v": "피로테리움"
+  },
+  {
+   "k": "Rafinesquina",
+   "v": "라피네스키나"
+  },
+  {
+   "k": "Retiophyllia",
+   "v": "레티오필리아"
+  },
+  {
+   "k": "Rhabdoderma",
+   "v": "라브도데르마"
+  },
+  {
+   "k": "Rhamphosuchus",
+   "v": "람포수쿠스"
+  },
+  {
+   "k": "Rhynchocephalian",
+   "v": "옛도마뱀류"
+  },
+  {
+   "k": "Riojasaurus",
+   "v": "리오하사우루스"
+  },
+  {
+   "k": "Roller",
+   "v": "파랑새"
+  },
+  {
+   "k": "Rudist",
+   "v": "루디스트"
+  },
+  {
+   "k": "Rugosodon",
+   "v": "루고소돈"
+  },
+  {
+   "k": "Sabellidites",
+   "v": "사벨리디테스"
+  },
+  {
+   "k": "Sabre-toothed Salmon",
+   "v": "검치연어"
+  },
+  {
+   "k": "Sagenodus",
+   "v": "사게노두스"
+  },
+  {
+   "k": "Sahelanthropus",
+   "v": "사헬란트로푸스"
+  },
+  {
+   "k": "Sanajeh",
+   "v": "사나제"
+  },
+  {
+   "k": "Saniwa",
+   "v": "사니와"
+  },
+  {
+   "k": "Saurichthys",
+   "v": "사우리크티스"
+  },
+  {
+   "k": "Sauripterus",
+   "v": "사우립테루스"
+  },
+  {
+   "k": "Scallop",
+   "v": "가리비"
+  },
+  {
+   "k": "Shark-toothed Dolphin",
+   "v": "상어이빨돌고래"
+  },
+  {
+   "k": "Shenacanthus",
+   "v": "셰나칸투스"
+  },
+  {
+   "k": "Shikamaia",
+   "v": "시카마이아"
+  },
+  {
+   "k": "Shuyu",
+   "v": "슈위"
+  },
+  {
+   "k": "Silurolepis",
+   "v": "실루롤레피스"
+  },
+  {
+   "k": "Simosuchus",
+   "v": "시모수쿠스"
+  },
+  {
+   "k": "Sinotubulites",
+   "v": "시노투불리테스"
+  },
+  {
+   "k": "Snowy Owl",
+   "v": "흰올빼미"
+  },
+  {
+   "k": "Spadefoot toad",
+   "v": "쟁기발개구리"
+  },
+  {
+   "k": "Spartobranchus",
+   "v": "스파르토브랑쿠스"
+  },
+  {
+   "k": "Spathobatis",
+   "v": "스파토바티스"
+  },
+  {
+   "k": "Sphenacodon",
+   "v": "스페나코돈"
+  },
+  {
+   "k": "Spinoaequalis",
+   "v": "스피노아이쿠알리스"
+  },
+  {
+   "k": "Squid",
+   "v": "오징어"
+  },
+  {
+   "k": "Stanleycaris",
+   "v": "스탠리카리스"
+  },
+  {
+   "k": "Steppe Bison",
+   "v": "스텝들소"
+  },
+  {
+   "k": "Stirton's Thunderbird",
+   "v": "스터턴천둥새"
+  },
+  {
+   "k": "Striatolamia",
+   "v": "스트리아톨라미아"
+  },
+  {
+   "k": "Strophomenid brachiopod",
+   "v": "스트로포메나류 완족동물"
+  },
+  {
+   "k": "Suminia",
+   "v": "수미니아"
+  },
+  {
+   "k": "Swan-necked Seal",
+   "v": "백조목물범"
+  },
+  {
+   "k": "Syllipsimopodi",
+   "v": "실립시모포디"
+  },
+  {
+   "k": "Syncarid",
+   "v": "신카리다류"
+  },
+  {
+   "k": "Synthetoceras",
+   "v": "신테토케라스"
+  },
+  {
+   "k": "Taeniolabis",
+   "v": "타이니올라비스"
+  },
+  {
+   "k": "Thalattosaur",
+   "v": "탈라토사우루스류"
+  },
+  {
+   "k": "The 'Devil's toenail', an oyster 5-10 cm long from the Early Jurassic seas of Europe, about 200-190 million years ago. Its thick lower shell grew in a tight, curling hook like a giant toenail, with the small, flat upper shell sitting in it like a lid. Instead of cementing itself to rock like most oysters, it lay loose on soft mud, its curved weight keeping the opening clear while it filtered plankton.",
+   "v": "'악마의 발톱'이라 불리는 길이 5~10센티미터의 굴로, 약 2억~1억 9000만 년 전 유럽 전기 쥐라기 바다에 살았다. 두꺼운 아래 껍데기는 거대한 발톱처럼 단단히 말린 갈고리 모양으로 자랐고, 작고 납작한 위 껍데기는 뚜껑처럼 그 안에 얹혀 있었다. 대부분의 굴처럼 바위에 붙지 않고 부드러운 진흙 위에 놓여 살았으며, 굽은 껍데기의 무게로 입구를 진흙 위로 유지한 채 플랑크톤을 걸러 먹었다."
+  },
+  {
+   "k": "The 'kite-runner', a small arthropod about 1 cm long from the Silurian of England, described in 2016. It had very long antennae and a long spine on each side of every body segment. Tied to its back by long, fine threads floated ten tiny capsules, most likely its own young, towed along like kites: a form of parental care seen in no other animal.",
+   "v": "‘연 날리는 자’라고 불리는 몸길이 약 1cm의 작은 절지동물로, 잉글랜드의 실루리아기에서 발견되어 2016년에 기재되었다. 매우 긴 더듬이가 있었고, 모든 몸마디 양쪽에 긴 가시가 하나씩 있었다. 등에는 길고 가는 실로 묶인 작은 캡슐 열 개가 떠 있었는데, 이는 아마도 자기 새끼로 연처럼 끌고 다녔던 것이다. 다른 어떤 동물에서도 볼 수 없는 형태의 새끼 돌보기이다."
+  },
+  {
+   "k": "The classic 'fish-lizard' of the Early Jurassic seas of Europe, about 200-190 million years ago, made famous by Mary Anning's finds at Lyme Regis. About 2 metres long and shaped like a dolphin, it had a long, toothy snout, large eyes, broad front flippers, a fleshy dorsal fin and a crescent-shaped tail. It hunted fish and squid-like belemnites and gave birth to live young at sea.",
+   "v": "약 2억~1억 9000만 년 전 유럽 전기 쥐라기 바다의 대표적인 '물고기 도마뱀'으로, 메리 애닝이 라임 레지스에서 발견하여 유명해졌다. 몸길이 약 2미터에 돌고래처럼 생겼으며, 이빨이 늘어선 긴 주둥이, 큰 눈, 넓은 앞지느러미, 살로 된 등지느러미, 초승달 모양 꼬리지느러미가 있었다. 물고기와 오징어를 닮은 벨렘나이트를 사냥했고, 바다에서 새끼를 낳았다."
+  },
+  {
+   "k": "The classic goniatite of the Early Carboniferous seas, about 330 million years ago, so common in the limestones of Europe and North Africa that it is used to tell the age of the rocks. Its almost spherical shell, about 5 centimetres across, was tightly coiled with a tiny central navel, and the walls between its gas-filled chambers met the shell in sharp zigzag lines. It floated and jetted through warm, shallow seas, catching small animals with its tentacles.",
+   "v": "약 3억 3000만 년 전 석탄기 전기 바다에 살던 대표적인 고니아타이트로, 유럽과 북아프리카의 석회암에서 매우 흔하게 발견되어 암석의 연대를 판정하는 데 쓰인다. 지름 약 5센티미터의 거의 공 모양인 껍데기는 단단히 감겨 있고 가운데에 아주 작은 배꼽만 있었으며, 가스로 채워진 방들을 나누는 격벽은 껍데기와 날카로운 지그재그 선으로 만났다. 따뜻하고 얕은 바다를 떠다니거나 물을 뿜어 나아가며 촉수로 작은 동물을 잡았다."
+  },
+  {
+   "k": "The commonest giant plant-eater of the Late Jurassic of western North America, about 155-150 million years ago, up to 18 metres long. Compared with Diplodocus it was shorter and deeper, with a thicker neck held up at a slant, a fairly short tail and a short, boxy head with large nostrils. Its strong, spoon-shaped teeth could crop tough vegetation that other sauropods left alone. Herds of all ages seem to have travelled together.",
+   "v": "약 1억 5500만~1억 5000만 년 전 후기 쥐라기 북아메리카 서부에서 가장 흔했던 거대 초식 공룡으로, 몸길이는 최대 18미터였다. 디플로도쿠스에 비해 몸통이 짧고 깊었으며, 굵은 목을 비스듬히 들고, 꼬리는 비교적 짧았고, 머리는 짧고 네모났으며 콧구멍이 컸다. 튼튼한 숟가락 모양 이빨로 다른 용각류가 먹지 않는 질긴 식물도 뜯어 먹을 수 있었다. 모든 나이의 개체가 무리 지어 이동한 것으로 보인다."
+  },
+  {
+   "k": "The famous \"stone lily\" of the shallow Muschelkalk sea that covered Germany in the Middle Triassic, about 240 million years ago. A long stem of round, coin-like plates held up a small cup and a crown of ten thick arms, which could close into a tulip-shaped bud or open into a fan to catch food from the current. Its stem pieces are so common that whole limestone beds are built from them.",
+   "v": "중기 트라이아스기인 약 2억 4000만 년 전 독일을 덮고 있던 얕은 무셸칼크 바다에 살았던 유명한 '돌백합'이다. 둥근 동전 모양의 판으로 이루어진 긴 줄기가 작은 컵과 굵은 팔 10개로 된 왕관을 떠받쳤는데, 이 왕관은 튤립 꽃봉오리처럼 오므리거나 부채처럼 펼쳐 물살에서 먹이를 잡을 수 있었다. 줄기 조각이 워낙 흔해서 석회암층 전체가 이것으로 이루어진 곳도 있다."
+  },
+  {
+   "k": "The first dinosaur ever given a scientific name, in 1824, from Middle Jurassic rocks of England about 166 million years old. It was a heavy predator 6-7 metres long, with a long, low skull full of blade-like serrated teeth and short but very powerful arms ending in three big hooked claws. It hunted plant-eating dinosaurs along the coasts and river plains of a warm island landscape.",
+   "v": "1824년 처음으로 학명이 붙은 공룡으로, 약 1억 6600만 년 전 잉글랜드의 중기 쥐라기 암석에서 발견되었다. 몸길이 6~7미터의 육중한 포식자로, 길고 낮은 두개골에 칼날 같은 톱니 이빨이 가득했고, 짧지만 매우 강한 팔 끝에는 갈고리 모양의 큰 발톱이 세 개 있었다. 따뜻한 섬 지대의 해안과 강가 평야에서 초식 공룡을 사냥했다."
+  },
+  {
+   "k": "The great wild bison of the Ice Age mammoth steppe, from Europe across Siberia to Alaska, up to 3 m long and 2 m tall at the shoulder. It had a towering hump, a shaggy dark mane and long, curving horns, and is the bison painted on the walls of Lascaux and Altamira. Herds grazed the cold grasslands and fed wolves, lions and human hunters.",
+   "v": "빙하기 매머드 스텝에 살던 거대한 야생 들소로, 유럽에서 시베리아를 거쳐 알래스카까지 분포했으며 몸길이 3m, 어깨높이 2m에 달했다. 솟은 어깨 혹, 덥수룩한 짙은 갈기, 길게 휜 뿔을 지녔으며 라스코와 알타미라 동굴 벽화에 그려진 바로 그 들소다. 무리 지어 추운 초원에서 풀을 뜯으며 늑대, 사자, 인간 사냥꾼의 먹이가 되었다."
+  },
+  {
+   "k": "The largest ammonite ever found, with a coiled shell up to about 1.8 metres across that may have reached 2 metres or more in life. Its smooth, tightly wound shell hid a squid-like animal with big eyes and ten arms, which drifted slowly through the open sea hunting small prey. Gas-filled chambers inside the shell let it hover at any depth like a living submarine.",
+   "v": "지금까지 발견된 가장 큰 암모나이트로, 감긴 껍데기의 지름이 약 1.8미터에 이르며 살아 있을 때는 2미터가 넘었을 수도 있다. 매끈하고 촘촘히 감긴 껍데기 안에는 큰 눈과 열 개의 팔을 가진 오징어 같은 동물이 들어 있었고, 먼바다를 천천히 떠다니며 작은 먹이를 사냥했다. 껍데기 안의 기체로 찬 방들 덕분에 살아 있는 잠수함처럼 어떤 깊이에서든 떠 있을 수 있었다."
+  },
+  {
+   "k": "The largest animal that has ever lived, up to about 30 m long and 150-190 tonnes, with a heart the size of a small car. It lunges through swarms of krill with its throat pleats ballooning, filtering the water through baleen plates and swallowing up to four tonnes of krill a day. Its low calls can carry across hundreds of kilometres of ocean.",
+   "v": "지금까지 살았던 동물 중 가장 큰 동물로 몸길이 약 30m, 몸무게 150~190톤에 이르며 심장이 소형차만 하다. 목주름을 크게 부풀리며 크릴 떼 속으로 돌진해 고래수염으로 바닷물을 걸러 내고 하루에 최대 4톤의 크릴을 삼킨다. 낮은 울음소리는 바다에서 수백 km까지 전달된다."
+  },
+  {
+   "k": "The largest dog that ever lived, from the Late Miocene of North America, weighing up to about 170 kilograms. It belonged to the borophagines, \"bone-crushing dogs\" with short, deep, hyena-like jaws that cracked bones for their marrow. It hunted horses and camels and also scavenged, probably in family groups.",
+   "v": "역사상 가장 큰 개로, 후기 마이오세 북아메리카에 살았으며 몸무게가 약 170킬로그램에 달했다. '뼈를 부수는 개'로 불리는 보로파구스아과에 속했고, 하이에나처럼 짧고 깊은 턱으로 뼈를 깨뜨려 골수를 먹었다. 말과 낙타를 사냥하고 썩은 고기도 먹었으며, 아마 가족 무리로 살았을 것이다."
+  },
+  {
+   "k": "The largest dolphin, also called the killer whale, with males up to 8-9 m long and 6 tonnes and a dorsal fin up to 1.8 m tall. Orcas live in family pods led by old females, each with its own calls and hunting traditions: some eat fish, others work together to wash seals off ice floes or hunt great white sharks and whale calves. They live in every ocean, from the poles to the tropics.",
+   "v": "가장 큰 돌고래로 수컷은 몸길이 8~9m, 몸무게 6톤에 달하고 등지느러미 높이가 1.8m에 이른다. 나이 든 암컷이 이끄는 가족 무리로 살며 무리마다 고유한 소리와 사냥 전통이 있다. 물고기를 먹는 무리도 있고, 협력해 파도를 일으켜 물범을 유빙에서 떨어뜨리거나 백상아리와 고래 새끼를 사냥하는 무리도 있다. 극지방에서 열대까지 모든 바다에 산다."
+  },
+  {
+   "k": "The largest eagle known, females up to about 15 kg with a wingspan near 3 m, from the South Island of New Zealand. Its talons were as big as a tiger's claws, and it struck moa many times its own weight at high speed, gripping the pelvis and killing with a blow to the head. It vanished about 600 years ago, soon after people hunted the moa to extinction.",
+   "v": "알려진 가장 큰 수리로 암컷은 몸무게 약 15kg, 날개폭이 3m 가까이 되며 뉴질랜드 남섬에 살았다. 발톱이 호랑이 발톱만큼 컸으며, 자기보다 몇 배나 무거운 모아를 고속으로 덮쳐 골반을 움켜쥐고 머리를 내리쳐 죽였다. 약 600년 전 사람들이 모아를 멸종시킨 직후 함께 사라졌다."
+  },
+  {
+   "k": "The largest land carnivore alive, males up to 2.6 m long and 700 kg, which evolved from brown bears during the Ice Age. It hunts seals on the Arctic sea ice, waiting at their breathing holes, and can smell them from kilometres away. Thick white fur over black skin and a layer of fat keep it warm, and it swims for days between ice floes.",
+   "v": "현존하는 가장 큰 육상 육식동물로 수컷은 몸길이 2.6m, 몸무게 700kg에 이르며 빙하기에 불곰에서 진화했다. 북극 해빙 위에서 물범의 숨구멍 옆을 지키며 사냥하고, 수 km 밖의 냄새도 맡는다. 검은 피부를 덮은 두꺼운 흰 털과 지방층이 몸을 따뜻하게 지켜 주며 유빙 사이를 며칠씩 헤엄친다."
+  },
+  {
+   "k": "The largest living bird, up to 2.7 m tall and 150 kg, flightless but able to run at about 70 km/h on long two-toed legs. It has the largest eyes of any land animal and lays the biggest eggs, about 1.5 kg each. A kick from an ostrich can kill a lion; during the Ice Age ostriches also roamed the steppes of Asia.",
+   "v": "현존하는 가장 큰 새로 키 2.7m, 몸무게 150kg에 이르며, 날지 못하지만 발가락이 두 개인 긴 다리로 시속 약 70km로 달린다. 육상 동물 중 가장 큰 눈을 가졌고 개당 약 1.5kg인 가장 큰 알을 낳는다. 타조의 발차기는 사자를 죽일 수도 있으며, 빙하기에는 아시아의 초원에도 타조가 살았다."
+  },
+  {
+   "k": "The largest living penguin, about 1.2 m tall and up to 45 kg, which dives deeper than 500 m after fish, squid and krill. It breeds on the Antarctic sea ice in the middle of winter: the male keeps the single egg on his feet for two months without eating while thousands of birds huddle together against the cold.",
+   "v": "현존하는 가장 큰 펭귄으로 키 약 1.2m, 몸무게 최대 45kg이며 물고기, 오징어, 크릴을 쫓아 500m 넘게 잠수한다. 한겨울 남극 해빙 위에서 번식하는데, 수컷은 단 하나의 알을 발 위에 올려 두 달 동안 굶으며 품고, 수천 마리가 서로 몸을 붙여 추위를 견딘다."
+  },
+  {
+   "k": "The largest living tortoise, up to 1.5 m long and over 250 kg, which can live well over 100 years and survive a year without food or water. Its ancestors drifted from South America to the Galapagos Islands, where each island evolved its own form, from domed shells in wet highlands to saddle-shaped shells that let the neck reach up to cactus pads. These differences helped inspire Darwin's ideas on evolution.",
+   "v": "현존하는 가장 큰 육지거북으로 몸길이 1.5m, 몸무게 250kg이 넘으며 100년 넘게 살고 1년 동안 먹고 마시지 않고도 버틸 수 있다. 조상이 남아메리카에서 갈라파고스 제도로 떠내려왔고, 섬마다 고유한 형태로 진화했다. 습한 고지대에서는 둥근 지붕형 등딱지가, 건조한 섬에서는 목을 높이 뻗어 선인장에 닿을 수 있는 안장형 등딱지가 생겼다. 이런 차이는 다윈의 진화 사상에 영감을 주었다."
+  },
+  {
+   "k": "The largest multituberculate, a beaver-sized mammal about 80 cm long from the early Paleocene of New Mexico, living just a few hundred thousand years after the dinosaurs died out. Multituberculates were an old, rodent-like lineage unrelated to true rodents; Taeniolabis had a deep skull, big gnawing front teeth and broad grinding cheek teeth for tough plants. The group had thrived for over 100 million years before rodents replaced it.",
+   "v": "가장 큰 다구치류로, 비버만 한 몸길이 약 80cm의 포유류이며 공룡이 사라진 지 불과 수십만 년 뒤인 팔레오세 전기 뉴멕시코에 살았다. 다구치류는 설치류를 닮았지만 관련 없는 오래된 계통으로, 타이니올라비스는 높은 두개골, 갉아 먹는 큰 앞니, 질긴 식물을 가는 넓은 어금니를 가졌다. 이 무리는 1억 년 넘게 번성하다가 설치류에게 자리를 내주었다."
+  },
+  {
+   "k": "The largest octopus, usually 3-5 m across the arms and 15-50 kg, living on rocky sea floors of the North Pacific. It hunts crabs, clams and fish, drilling or crushing their shells with its beak, and can change colour and skin texture in an instant. Octopuses are among the most intelligent invertebrates: they solve puzzles, open jars and recognise individual people.",
+   "v": "가장 큰 문어로 팔을 펼친 길이가 보통 3~5m, 몸무게 15~50kg이며 북태평양의 바위투성이 해저에 산다. 게, 조개, 물고기를 사냥하고 부리로 껍데기에 구멍을 내거나 부수며, 순식간에 몸 색과 피부 질감을 바꿀 수 있다. 문어는 가장 영리한 무척추동물 중 하나로, 퍼즐을 풀고 병뚜껑을 열며 사람을 하나하나 알아본다."
+  },
+  {
+   "k": "The largest predatory fish alive, females up to about 6 m long and 2 tonnes, armed with rows of big, saw-edged triangular teeth. It ambushes seals from below at high speed, sometimes launching itself clear of the water. Warm muscles let it hunt in cold seas, and it senses prey by smell and by the faint electric fields of their bodies.",
+   "v": "현존하는 가장 큰 육식 어류로 암컷은 몸길이 약 6m, 몸무게 2톤에 이르며 톱니 모양 가장자리를 가진 커다란 삼각형 이빨이 여러 줄 나 있다. 아래에서 빠른 속도로 물범을 기습하며 때로는 몸 전체가 물 밖으로 솟구친다. 따뜻한 근육 덕분에 차가운 바다에서도 사냥하며, 냄새와 먹잇감 몸에서 나오는 미약한 전기장으로 먹이를 감지한다."
+  },
+  {
+   "k": "The largest salmon ever, up to about 2.5 metres long, from the Late Miocene and Pliocene of the North Pacific coast. It strained plankton with its many gill rakers, but spawning adults grew a pair of big tusk-like teeth that stuck out sideways from the snout, probably for fighting or digging nests. Like living Pacific salmon it swam up rivers to spawn.",
+   "v": "역사상 가장 큰 연어로 몸길이가 약 2.5미터에 이르렀으며, 후기 마이오세부터 플라이오세까지 북태평양 연안에 살았다. 수많은 아가미갈퀴로 플랑크톤을 걸러 먹었지만, 산란기의 성어는 주둥이 양옆으로 튀어나온 한 쌍의 큰 엄니 같은 이빨이 자라 싸움이나 산란터 파기에 썼을 것이다. 현생 태평양연어처럼 강을 거슬러 올라가 알을 낳았다."
+  },
+  {
+   "k": "The largest tree-living animal, a red-haired great ape whose arms span over 2 m; adult males weigh about 80 kg and grow broad cheek pads. Orangutans eat mainly fruit, use sticks and leaves as tools and build a new nest in the trees every night. A mother raises one young for about eight years, the longest childhood of any animal besides humans.",
+   "v": "나무 위에 사는 가장 큰 동물로, 팔을 펼치면 2m가 넘는 붉은 털의 대형 유인원이다. 다 자란 수컷은 몸무게가 약 80kg이며 얼굴 양옆에 넓은 볼 패드가 자란다. 주로 열매를 먹고 나뭇가지와 잎을 도구로 쓰며 매일 밤 나무 위에 새 둥지를 짓는다. 어미는 새끼 한 마리를 약 8년 동안 키우는데, 이는 인간을 제외하고 가장 긴 유년기다."
+  },
+  {
+   "k": "The largest wild dog, about 1.5 m long and 30-60 kg, spread across the northern hemisphere since the Ice Age. Wolves live in family packs that cooperate to run down deer, bison and horses many times their own weight, trotting tens of kilometres a day. Domestic dogs descend from ancient wolves.",
+   "v": "가장 큰 야생 개과 동물로 몸길이 약 1.5m, 몸무게 30~60kg이며 빙하기 이후 북반구 전역에 퍼졌다. 가족 무리를 이루어 협력해 자기보다 몇 배나 무거운 사슴, 들소, 말을 몰아 사냥하며 하루에 수십 km를 이동한다. 개는 고대의 늑대에서 유래했다."
+  },
+  {
+   "k": "The last known sea scorpion, from the Late Permian of Russia, known only from part of its large head shield; its whole group vanished in the great end-Permian extinction. A broad, heavy relative of Hibbertopterus, probably over a metre long, it walked slowly over the beds of rivers and lagoons, raking small animals out of the mud with comb-like spines on its front legs. Its thick armour made it very hard to kill.",
+   "v": "알려진 마지막 바다전갈로, 페름기 후기 러시아에서 커다란 머리 껍데기의 일부만 발견되었다. 바다전갈 무리 전체가 페름기 말 대멸종으로 사라졌다. 히베르톱테루스와 가까운 넓고 무거운 종류로 몸길이는 아마 1미터가 넘었고, 강과 석호 바닥을 천천히 걸으며 앞다리의 빗 같은 가시로 진흙 속 작은 동물을 긁어냈다. 두꺼운 갑옷 덕분에 죽이기가 매우 어려웠다."
+  },
+  {
+   "k": "The longest venomous snake, commonly 3-4 m and up to 5.8 m, from the forests of India and Southeast Asia. It eats mainly other snakes, including venomous ones, and a single bite carries enough venom to kill an elephant. When threatened it spreads a narrow hood, growls and rears up a third of its body; the female builds a nest of leaves and guards her eggs.",
+   "v": "가장 긴 독사로 보통 3~4m, 최대 5.8m에 이르며 인도와 동남아시아의 숲에 산다. 독사를 포함한 다른 뱀을 주로 먹으며, 한 번 물 때 코끼리를 죽일 만큼의 독을 주입한다. 위협을 받으면 좁고 긴 후드를 펼치고 으르렁거리며 몸의 3분의 1을 세운다. 암컷은 낙엽으로 둥지를 만들어 알을 지킨다."
+  },
+  {
+   "k": "The most scorpion-like sea scorpion, about 10-15 cm long, from the Late Silurian of New York and Ontario. It had a small head, a very broad, bulging body and a short, narrow tail held curled up over its back, ending in a curved, sting-like spike. Its two long, spiny front pairs of legs formed a trap for prey on the sea floor.",
+   "v": "가장 전갈을 닮은 바다전갈(광익류)로, 몸길이 약 10-15cm이며 미국 뉴욕주와 캐나다 온타리오주의 후기 실루리아기에서 발견되었다. 머리는 작고 몸은 매우 넓고 불룩했으며, 짧고 좁은 꼬리를 등 위로 말아 올리고 있었는데 그 끝은 휘어진 독침 같은 가시로 되어 있었다. 길고 가시가 많은 앞쪽 다리 두 쌍은 해저에서 먹이를 가두는 덫 역할을 했다."
+  },
+  {
+   "k": "The oldest known acorn worm, a slender worm several centimetres long from the Burgess Shale of Canada, with a short acorn-shaped snout, a collar and a long trunk. Unlike living acorn worms, it lived in a thin tube, sometimes branched, which links acorn worms to their tube-dwelling relatives, the pterobranchs and graptolites. It retreats into its tube when threatened.",
+   "v": "알려진 가장 오래된 장새류(도토리벌레)로, 캐나다 버제스 셰일에서 나온 몸길이 몇 센티미터의 가느다란 벌레이며 짧은 도토리 모양 주둥이와 깃, 긴 몸통을 가졌다. 현생 장새류와 달리 때로 가지를 친 가는 관 속에 살았는데, 이는 장새류를 관 속에 사는 친척인 익새류와 필석류와 이어 준다. 위협을 받으면 관 속으로 물러난다."
+  },
+  {
+   "k": "The oldest known antiarch, a small armoured placoderm from the Late Silurian of Yunnan, China. Like its later relative Bothriolepis it had a box of bony plates round its head and chest, eyes close together on top of the head and two stiff, plated arms in place of pectoral fins. Its trunk armour was low and broad with a flat back. It grubbed through soft mud on the sea floor for food.",
+   "v": "알려진 가장 오래된 갑주어류(안티아르크류)로, 중국 윈난성의 후기 실루리아기에서 발견된 작은 갑옷 판피어류이다. 후대의 친척 보트리올레피스처럼 머리와 가슴이 뼈판 상자로 둘러싸여 있었고, 두 눈은 머리 위에 가까이 붙어 있었으며, 가슴지느러미 대신 딱딱한 판으로 덮인 팔 두 개가 있었다. 몸통 갑옷은 낮고 넓었으며 등은 평평했다. 해저의 부드러운 진흙을 뒤지며 먹이를 찾았다."
+  },
+  {
+   "k": "The oldest known decapod crustacean, a small lobster-like shrimp about 6 centimetres long from the Late Devonian seas of North America, about 365 million years ago. It had a hard shell, slender claws and long antennae. It crept over the muddy sea floor, picking up small animals and carrion, the first of the line that led to shrimps, lobsters and crabs.",
+   "v": "알려진 가장 오래된 십각류 갑각류로, 몸길이 약 6센티미터의 작은 가재 같은 새우이며 약 3억 6500만 년 전 데본기 후기 북아메리카의 바다에 살았다. 단단한 껍데기, 가느다란 집게, 긴 더듬이를 가졌다. 진흙 바닥을 기어 다니며 작은 동물과 사체를 주워 먹었고, 새우와 바닷가재와 게로 이어지는 계통의 시작이었다."
+  },
+  {
+   "k": "The oldest known frog that could leap, about 5 cm long, from the Early Jurassic of Arizona, about 190 million years ago. Its long hip bones, long hind legs and fused ankle bones show that the frog's jumping build was already in place, unlike in the Triassic proto-frogs that could only crawl and swim. Like frogs today it caught insects and other small prey.",
+   "v": "뛸 수 있었던 가장 오래된 개구리로 몸길이는 약 5센티미터이며, 약 1억 9000만 년 전 미국 애리조나 전기 쥐라기에 살았다. 긴 엉덩이뼈, 긴 뒷다리, 붙은 발목뼈를 보면 개구리의 도약하는 몸 구조가 이미 갖추어졌음을 알 수 있는데, 기어 다니고 헤엄만 칠 수 있었던 트라이아스기의 원시 개구리와 다르다. 오늘날의 개구리처럼 곤충 같은 작은 먹이를 잡아먹었다."
+  },
+  {
+   "k": "The oldest known moth, from Early Jurassic rocks of Dorset in England, about 190 million years ago. It is known from wings covered in the tiny overlapping scales that give moths and butterflies their name, 'scale wings'. It was probably a tiny moth about 1 cm across with chewing jaws, feeding on pollen and spores long before flowers existed.",
+   "v": "가장 오래된 나방으로, 약 1억 9000만 년 전 잉글랜드 도싯의 전기 쥐라기 암석에서 발견되었다. 나방과 나비(인시류, '비늘 날개'라는 뜻)라는 이름의 유래가 된 작고 겹쳐진 비늘로 덮인 날개로 알려져 있다. 아마 날개를 편 길이가 약 1센티미터이고 씹는 턱을 가진 작은 나방이었으며, 꽃이 나타나기 훨씬 전부터 꽃가루와 포자를 먹었을 것이다."
+  },
+  {
+   "k": "The oldest known relative of octopuses and vampire squids, a squid-like animal about 12 centimetres long from the Bear Gulch Limestone of Montana, about 328 million years old. It had a torpedo-shaped body stiffened by an internal shell, a pair of fins and ten sucker-bearing arms, two of them longer than the rest, which it probably used to seize prey. It shows that the octopus line had already appeared about 80 million years earlier than once thought, still with ten arms rather than eight.",
+   "v": "문어와 흡혈오징어의 친척 중 알려진 가장 오래된 것으로, 약 3억 2800만 년 전 몬태나주 베어걸치 석회암에서 발견된 길이 약 12센티미터의 오징어 비슷한 동물이다. 속껍데기로 지탱되는 어뢰 모양의 몸, 지느러미 한 쌍, 빨판이 달린 팔 열 개가 있었으며, 그중 나머지보다 긴 두 개는 아마 먹이를 붙잡는 데 썼을 것이다. 문어 계통이 예전 생각보다 약 8000만 년 일찍 나타났으며, 당시에는 아직 팔이 여덟 개가 아니라 열 개였음을 보여 준다."
+  },
+  {
+   "k": "The oldest known sea cow, from the early middle Eocene of Jamaica, about 2.1 m long. Unlike manatees and dugongs it still had four legs that could carry it on land, and it lived much like a hippo, grazing sea grass and water plants in coastal lagoons and rivers. Its heavy, dense bones worked as ballast when it swam.",
+   "v": "가장 오래된 바다소로, 에오세 중기 초 자메이카에 살았고 몸길이 약 2.1m였다. 매너티나 듀공과 달리 여전히 땅 위에서 몸을 지탱할 수 있는 네 다리가 있었고, 하마처럼 해안 석호와 강에서 해초와 수초를 뜯으며 살았다. 무겁고 치밀한 뼈는 헤엄칠 때 바닥짐 역할을 했다."
+  },
+  {
+   "k": "The plant eater that gave its name to the dicynodonts, about 1.2 metres long, from the Late Permian of South Africa, around 255 million years ago. Its name means two dog teeth: it had only a pair of tusks in the upper jaw and otherwise a sharp, horny beak for cropping plants. Stout and short-tailed, it was one of the most common plant eaters of its time.",
+   "v": "디키노돈류라는 이름의 근원이 된 초식 동물로, 약 2억 5500만 년 전 페름기 후기 남아프리카에 살았던 몸길이 약 1.2미터의 동물이다. 이름은 '두 개의 송곳니'라는 뜻으로, 위턱에 엄니 한 쌍만 있고 나머지는 식물을 끊는 날카로운 각질 부리였다. 땅딸막하고 꼬리가 짧았으며 당대 가장 흔한 초식 동물 가운데 하나였다."
+  },
+  {
+   "k": "Thecosmilia",
+   "v": "테코스밀리아"
+  },
+  {
+   "k": "Thectardis",
+   "v": "텍타르디스"
+  },
+  {
+   "k": "Thoracopterus",
+   "v": "토라콥테루스"
+  },
+  {
+   "k": "Thylacine",
+   "v": "주머니늑대"
+  },
+  {
+   "k": "Tianyulong",
+   "v": "톈위룽"
+  },
+  {
+   "k": "Tremaglaspis",
+   "v": "트레마글라스피스"
+  },
+  {
+   "k": "Triamyxa",
+   "v": "트리아믹사"
+  },
+  {
+   "k": "Triarthrus",
+   "v": "트리아르트루스"
+  },
+  {
+   "k": "Trilophosaurus",
+   "v": "트릴로포사우루스"
+  },
+  {
+   "k": "Trimerus",
+   "v": "트리메루스"
+  },
+  {
+   "k": "True crab",
+   "v": "게"
+  },
+  {
+   "k": "Turinia",
+   "v": "투리니아"
+  },
+  {
+   "k": "Uintacrinus",
+   "v": "우인타크리누스"
+  },
+  {
+   "k": "Undina",
+   "v": "운디나"
+  },
+  {
+   "k": "Urbina's Penguin",
+   "v": "우르비나펭귄"
+  },
+  {
+   "k": "Vampyropod",
+   "v": "흡혈오징어류"
+  },
+  {
+   "k": "Velvet worm",
+   "v": "발톱벌레"
+  },
+  {
+   "k": "Vendia",
+   "v": "벤디아"
+  },
+  {
+   "k": "Vendoconularia",
+   "v": "벤도코눌라리아"
+  },
+  {
+   "k": "Ventastega",
+   "v": "벤타스테가"
+  },
+  {
+   "k": "Ventogyrus",
+   "v": "벤토기루스"
+  },
+  {
+   "k": "Villebrunaster",
+   "v": "빌브뤼나스테르"
+  },
+  {
+   "k": "Vulcanops",
+   "v": "불카놉스"
+  },
+  {
+   "k": "Waagenophyllum",
+   "v": "바게노필룸"
+  },
+  {
+   "k": "Wakaleo",
+   "v": "와칼레오"
+  },
+  {
+   "k": "Weinbergina",
+   "v": "바인베르기나"
+  },
+  {
+   "k": "Whiteia",
+   "v": "화이티아"
+  },
+  {
+   "k": "Xenacanthus",
+   "v": "크세나칸투스"
+  },
+  {
+   "k": "Xianglong",
+   "v": "샹룽"
+  },
+  {
+   "k": "Xiushanosteus",
+   "v": "슈산오스테우스"
+  },
+  {
+   "k": "Yunnanozoon",
+   "v": "윈나노조온"
+  },
+  {
+   "k": "Yutyrannus",
+   "v": "유티란누스"
+  },
+  {
+   "k": "Zalambdalestes",
+   "v": "잘람브달레스테스"
+  },
+  {
+   "k": "{0}% less harm from poison and infection",
+   "v": "독과 감염 피해 {0}% 감소"
+  },
+  {
+   "k": "{0}% less HP lost when it finds no food",
+   "v": "먹이가 없을 때 HP 손실 {0}% 감소"
+  },
+  {
+   "k": "{0}% less harm from disasters",
+   "v": "재해 피해 {0}% 감소"
+  },
+  {
+   "k": "{0}% less damage taken",
+   "v": "받는 피해 {0}% 감소"
+  },
+  {
+   "k": "{0}% less damage taken in your territory",
+   "v": "내 영역에서 받는 피해 {0}% 감소"
+  },
+  {
+   "k": "{0}% less damage taken with a friendly group next to it",
+   "v": "옆에 아군 무리가 있으면 받는 피해 {0}% 감소"
+  },
+  {
+   "k": "{0}% less damage back when it attacks",
+   "v": "공격 시 받는 반격 피해 {0}% 감소"
+  },
+  {
+   "k": "Counterattacks {0}% harder",
+   "v": "반격 {0}% 강화"
+  },
+  {
+   "k": "Heals {0}% of its HP when it wipes out a foe",
+   "v": "적을 전멸시키면 HP {0}% 회복"
+  },
+  {
+   "k": "{0}% more EP for wiping out a foe",
+   "v": "적을 전멸시킬 때 EP {0}% 추가"
+  },
+  {
+   "k": "Reproducing costs {0}% less EP",
+   "v": "번식 EP {0}% 감소"
+  },
+  {
+   "k": "This species' items and evolving cost {0}% less EP",
+   "v": "이 종의 형질과 진화 EP {0}% 감소"
+  },
+  {
+   "k": "Reproduces {0} turn sooner",
+   "v": "번식이 {0}턴 빨라짐"
+  },
+  {
+   "k": "Reproduces {0} turns sooner",
+   "v": "번식이 {0}턴 빨라짐"
+  },
+  {
+   "k": "Sees {0} tile further",
+   "v": "시야 {0}칸 증가"
+  },
+  {
+   "k": "Sees {0} tiles further",
+   "v": "시야 {0}칸 증가"
+  },
+  {
+   "k": "+{0} EP a turn while you have the species",
+   "v": "이 종을 보유하는 동안 매 턴 +{0} EP"
+  },
+  {
+   "k": "Eating prey doesn't end its turn",
+   "v": "포식해도 턴이 끝나지 않음"
+  },
+  {
+   "k": "Reproducing takes no action",
+   "v": "번식에 행동을 쓰지 않음"
+  },
+  {
+   "k": "Can't be held or stunned",
+   "v": "붙잡히거나 기절하지 않음"
+  },
+  {
+   "k": "Can't be swallowed whole",
+   "v": "통째로 삼켜지지 않음"
+  },
+  {
+   "k": "Can't be ambushed",
+   "v": "매복당하지 않음"
+  },
+  {
+   "k": "the {0} can still act",
+   "v": "{0}은(는) 아직 행동할 수 있다"
+  },
+  {
+   "k": "the {0} defended its home ground",
+   "v": "{0}이(가) 터전을 지켰다"
+  },
+  {
    "k": "Actions +{0}",
    "v": "행동 +{0}"
   },
@@ -309,8 +2973,8 @@
    "v": "먹이를 휘감아 조른다: 공격했으나 쓰러뜨리지 못한 그룹은 붙들려 다음 턴에 행동하지 못한다."
   },
   {
-   "k": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
-   "v": "잃은 부위가 재생한다: 매 턴 HP의 5분의 1 대신 5분의 2를 회복한다."
+   "k": "Regrows lost parts: it heals a fifth of its HP each turn instead of a tenth.",
+   "v": "잃은 부위가 재생한다: 매 턴 HP의 10분의 1 대신 5분의 1을 회복한다."
   },
   {
    "k": "Shed a limb",
@@ -22755,6 +25419,182 @@
   {
    "k": "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
    "v": "오른쪽의 종은 왼쪽의 종에서 진화합니다. 아직 갖지 않은 종에는 DNA 버튼이 있어, 당신의 무리를 그 종으로 진화시킵니다. 진화할 수 있으면 금빛으로 빛나고, 조건이 될 때까지는 회색입니다(포인터를 올리면 무엇이 부족한지 보입니다). 책 버튼은 백과를 열고, 원형 화살표는 잃어버린 종을 되살립니다. 종을 클릭하면 그 종이 무엇으로 진화할 수 있는지 볼 수 있습니다."
+  },
+  {
+   "k": "Rest (+{0}% HP)",
+   "v": "휴식 (HP +{0}%)"
+  },
+  {
+   "k": "Resting: heals {0}% HP next turn",
+   "v": "휴식 중: 다음 턴에 HP {0}% 회복"
+  },
+  {
+   "k": "Rest",
+   "v": "휴식"
+  },
+  {
+   "k": "Sit this turn out: heals {0}% of its HP next turn",
+   "v": "이번 턴은 쉬기: 다음 턴에 HP {0}% 회복"
+  },
+  {
+   "k": "Painting: {0}, {1}, public domain",
+   "v": "그림: {0}, 〈{1}〉, 퍼블릭 도메인"
+  },
+  {
+   "k": "Brontosaurus",
+   "v": "브론토사우루스"
+  },
+  {
+   "k": "Oligocene Titanotheres",
+   "v": "점신세의 티타노테리움류"
+  },
+  {
+   "k": "Pliocene Rhinoceros, Mastodonts and Oreodonts",
+   "v": "선신세의 코뿔소, 마스토돈, 오레오돈"
+  },
+  {
+   "k": "The World Before There Was Life",
+   "v": "생명이 없던 세계"
+  },
+  {
+   "k": "Reptiles That Invaded the Seas",
+   "v": "바다로 진출한 파충류"
+  },
+  {
+   "k": "Woolly Mammoths",
+   "v": "털매머드"
+  },
+  {
+   "k": "Miocene Plains Mammals",
+   "v": "중신세의 초원 포유류"
+  },
+  {
+   "k": "Late Cretaceous Dinosaurs",
+   "v": "백악기 후기의 공룡"
+  },
+  {
+   "k": "Rancho La Brea Tar Pools",
+   "v": "랜초 라브레아 타르 웅덩이"
+  },
+  {
+   "k": "Silurian Period",
+   "v": "실루리아기"
+  },
+  {
+   "k": "Ordovician Sea Life",
+   "v": "오르도비스기의 바다 생물"
+  },
+  {
+   "k": "Cave Bears",
+   "v": "동굴곰"
+  },
+  {
+   "k": "Megaloceros",
+   "v": "메갈로케로스"
+  },
+  {
+   "k": "Mammal-like Reptiles",
+   "v": "포유류형 파충류"
+  },
+  {
+   "k": "Uintatherium and Orohippus",
+   "v": "우인타테리움과 오로히푸스"
+  },
+  {
+   "k": "Archaeopteryx, Compsognathus and Rhamphorhynchus",
+   "v": "시조새, 콤프소그나투스, 람포린쿠스"
+  },
+  {
+   "k": "Palorchestes",
+   "v": "팔로르케스테스"
+  },
+  {
+   "k": "Nesting Protoceratops",
+   "v": "둥지를 지키는 프로토케라톱스"
+  },
+  {
+   "k": "Columbian Mammoth",
+   "v": "컬럼비아매머드"
+  },
+  {
+   "k": "Brontosaurus in the Swamp",
+   "v": "늪 속의 브론토사우루스"
+  },
+  {
+   "k": "Leaping Laelaps",
+   "v": "도약하는 라이라프스"
+  },
+  {
+   "k": "Dinictis and Protoceras",
+   "v": "디닉티스와 프로토케라스"
+  },
+  {
+   "k": "Hadrosaurs",
+   "v": "하드로사우루스류"
+  },
+  {
+   "k": "American Mastodon",
+   "v": "아메리카마스토돈"
+  },
+  {
+   "k": "Eobasileus",
+   "v": "에오바실레우스"
+  },
+  {
+   "k": "Painters of Font-de-Gaume",
+   "v": "퐁드곰의 화가들"
+  },
+  {
+   "k": "Stegosaurus in the Forest",
+   "v": "숲속의 스테고사우루스"
+  },
+  {
+   "k": "Eohippus",
+   "v": "에오히푸스"
+  },
+  {
+   "k": "Duria Antiquior",
+   "v": "Duria Antiquior"
+  },
+  {
+   "k": "The Country of the Iguanodon",
+   "v": "이구아노돈의 땅"
+  },
+  {
+   "k": "The Wealden Period",
+   "v": "웰던기"
+  },
+  {
+   "k": "Mosasaurus and Ichthyosaurus",
+   "v": "모사사우루스와 이크티오사우루스"
+  },
+  {
+   "k": "Sea Lilies",
+   "v": "바다나리"
+  },
+  {
+   "k": "Laugerie-Basse in the Vézère Valley",
+   "v": "베제르 계곡의 로제리바스"
+  },
+  {
+   "k": "Station",
+   "v": "주둔"
+  },
+  {
+   "k": "Stationed",
+   "v": "주둔 중"
+  },
+  {
+   "k": "Stationed: heals {0}% HP each turn it stays",
+   "v": "주둔: 머무는 동안 매 턴 HP {0}% 회복"
+  },
+  {
+   "k": "Stationed. Click to give it orders again (any order also ends it).",
+   "v": "주둔 중. 클릭하면 다시 명령할 수 있습니다(어떤 명령이든 주둔이 끝납니다)."
+  },
+  {
+   "k": "Stay here until ordered: only stationed animals heal, {0}% of their HP each turn (from the turn after they last acted).",
+   "v": "명령할 때까지 이곳에 주둔: 주둔한 동물만 회복하며, 매 턴 HP의 {0}%를 회복합니다(마지막으로 행동한 다음 턴부터)."
   }
  ]
 }

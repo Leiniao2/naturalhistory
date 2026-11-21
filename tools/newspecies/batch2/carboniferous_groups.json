@@ -1,0 +1,26 @@
+{
+  "Blastoid": {
+    "tags": "B+['Echinoderm']",
+    "path": "AMBUL + '/Echinodermata/Blastozoa/Blastoidea'"
+  },
+  "Mayfly": {
+    "tags": "ART+['Insect','Terrestrial arthropod']",
+    "path": "INSECTA + '/Pterygota/Ephemeroptera'"
+  },
+  "Syncarid": {
+    "tags": "ART+['Crustacean']",
+    "path": "PANCRUST + '/Malacostraca/Eumalacostraca/Syncarida'"
+  },
+  "Vampyropod": {
+    "tags": "B+['Mollusc','Cephalopod']",
+    "path": "CEPH + '/Neocephalopoda/Coleoidea/Vampyropoda'"
+  },
+  "Velvet worm": {
+    "tags": "B+['Ecdysozoan','Lobopodian']",
+    "path": "PANART + '/Onychophora'"
+  },
+  "Coelacanth": {
+    "tags": "JAW+['Bony fish','Lobe-finned']",
+    "path": "SARCO + '/Actinistia'"
+  }
+}

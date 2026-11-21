@@ -54,7 +54,7 @@ namespace NaturalHistory.Players
             if (grid != null)
             {
                 grid.Generated += OnMapGenerated;
-                grid.TerrainChanged += UnderView.Refresh; // the surface opens in the Cambrian
+                grid.TerrainChanged += UnderView.Refresh; // the surface opens in the Silurian
                 if (grid.IsGenerated) OnMapGenerated();
             }
             if (TurnManager.Instance != null) TurnManager.Instance.OnTurnBegin += OnTurnBegin;
@@ -112,7 +112,7 @@ namespace NaturalHistory.Players
                 while (generate.MoveNext()) yield return generate.Current;
             }
             UnderView.Set(GameOptions.StartsUnderSea(GameOptions.StartAge));
-            UnderView.Refresh(); // the layer buttons follow the Ediacaran lock
+            UnderView.Refresh(); // the layer buttons follow the lock before the Silurian
         }
 
         private static int GameStartTurn => AgeManager.Instance != null ? AgeManager.Instance.FirstTurnOf(GameOptions.StartAge) : 1;

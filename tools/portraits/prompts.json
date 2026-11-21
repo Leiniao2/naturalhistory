@@ -3755,6 +3755,1506 @@
    "id": "trucidocynodon_riograndensis",
    "name": "Trucidocynodon",
    "prompt": "Trucidocynodon (Trucidocynodon riograndensis), a cynodont therapsid, about 1.2 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A large meat-eating cynodont about 1.2 metres long from the Late Triassic of southern Brazil, about 230 million years ago; its name means 'butcher cynodont'."
+  },
+  {
+   "id": "elrathia_kingii",
+   "name": "Elrathia",
+   "prompt": "Elrathia (Elrathia kingii), a trilobite, about 3 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Cambrian. Appearance: A small, rounded trilobite a few centimetres long from the middle Cambrian of Utah, with a broad head shield, thirteen body segments and a tiny tail shield."
+  },
+  {
+   "id": "paradoxides_davidis",
+   "name": "Paradoxides",
+   "prompt": "Paradoxides (Paradoxides davidis), a trilobite, about 37 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Cambrian. Appearance: One of the largest trilobites ever, reaching about 37 cm, from the middle Cambrian of Newfoundland and Wales. It had a wide head with long, backswept spines at its corners, around twenty spiny body segments and a tiny tail plate."
+  },
+  {
+   "id": "agnostus_pisiformis",
+   "name": "Agnostus",
+   "prompt": "Agnostus (Agnostus pisiformis), a trilobite, about 8 mm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Cambrian. Appearance: A tiny, blind, pea-shaped arthropod under a centimetre long, with a head shield and a tail shield of almost the same size joined by just two body segments."
+  },
+  {
+   "id": "hurdia_victoria",
+   "name": "Hurdia",
+   "prompt": "Hurdia (Hurdia victoria), a radiodont, about 20 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Cambrian. Appearance: A radiodont about 20 cm long from the Burgess Shale of Canada, a cousin of Anomalocaris with a long, pointed shell jutting forward from its head."
+  },
+  {
+   "id": "cambroraster_falcatus",
+   "name": "Cambroraster",
+   "prompt": "Cambroraster (Cambroraster falcatus), a radiodont, about 30 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Cambrian. Appearance: A radiodont up to about 30 cm long from the Burgess Shale of Canada, whose head was hidden under a huge horseshoe-shaped shell, nicknamed after the Millennium Falcon spaceship."
+  },
+  {
+   "id": "stanleycaris_hirpex",
+   "name": "Stanleycaris",
+   "prompt": "Stanleycaris (Stanleycaris hirpex), a radiodont, about 8 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Cambrian. Appearance: A small radiodont from the Burgess Shale of Canada, preserved in hundreds of fossils that even keep its brain."
+  },
+  {
+   "id": "canadaspis_perfecta",
+   "name": "Canadaspis",
+   "prompt": "Canadaspis (Canadaspis perfecta), an arthropod, about 5 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Cambrian. Appearance: One of the commonest arthropods of the Burgess Shale, about 5 cm long, with its head and front body enclosed in a two-halved, clam-like shell. Below the shell were pairs of walking legs, and behind it a segmented abdomen ended in a forked tail."
+  },
+  {
+   "id": "naraoia_compacta",
+   "name": "Naraoia",
+   "prompt": "Naraoia (Naraoia compacta), an arthropod, about 4 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Cambrian. Appearance: A relative of the trilobites, about 4 cm long, whose body was covered by just two smooth, unmineralised shields, one over the head and one over the trunk."
+  },
+  {
+   "id": "fuxianhuia_protensa",
+   "name": "Fuxianhuia",
+   "prompt": "Fuxianhuia (Fuxianhuia protensa), an arthropod, about 11 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Cambrian. Appearance: An early arthropod about 11 cm long from the Chengjiang biota of Yunnan, China, with a broad head shield, stalked eyes, a long trunk of many segments and a tapering tail."
+  },
+  {
+   "id": "kylinxia_zhangi",
+   "name": "Kylinxia",
+   "prompt": "Kylinxia (Kylinxia zhangi), a stem arthropod, about 5 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Cambrian. Appearance: A small arthropod about 5 cm long from the Chengjiang biota of Yunnan, named after the qilin, a chimera of Chinese legend."
+  },
+  {
+   "id": "mollisonia_plenovenatrix",
+   "name": "Mollisonia",
+   "prompt": "Mollisonia (Mollisonia plenovenatrix), a stem chelicerate, about 2.5 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Cambrian. Appearance: A small arthropod a few centimetres long from the Burgess Shale of Canada, with a rounded head shield, a broad segmented trunk and a short tail shield."
+  },
+  {
+   "id": "microdictyon_sinicum",
+   "name": "Microdictyon",
+   "prompt": "Microdictyon (Microdictyon sinicum), a lobopodian, about 8 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Cambrian. Appearance: A soft-bodied, worm-like animal on stubby legs from the Chengjiang biota of Yunnan, a relative of today's velvet worms."
+  },
+  {
+   "id": "odontogriphus_omalus",
+   "name": "Odontogriphus",
+   "prompt": "Odontogriphus (Odontogriphus omalus), a stem mollusc, about 12 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Cambrian. Appearance: A flat, oval, slug-like animal up to about 12 cm long from the Burgess Shale of Canada, with no shell or armour at all."
+  },
+  {
+   "id": "orthrozanclus_reburrus",
+   "name": "Orthrozanclus",
+   "prompt": "Orthrozanclus (Orthrozanclus reburrus), a stem mollusc, about 1 cm long, in a bright shallow sea floor with vivid turquoise and teal water (microbial mats, no fish or modern plants), Cambrian. Appearance: A tiny armoured animal about a centimetre long from the Burgess Shale of Canada, with a small cap-shaped shell at the front and a coat of scales fringed by long, curving spines."
+  },
+  {
+   "id": "haplophrentis_carinatus",
+   "name": "Haplophrentis",
+   "prompt": "Haplophrentis (Haplophrentis carinatus), a hyolith, growing in place, about 3 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Cambrian. Appearance: A hyolith, a member of a vanished group of animals with a cone-shaped shell closed by a lid, from the Burgess Shale of Canada. A pair of long, curved spines stuck out from under the lid and propped it up on the seabed."
+  },
+  {
+   "id": "helicoplacus_gilberti",
+   "name": "Helicoplacus",
+   "prompt": "Helicoplacus (Helicoplacus gilberti), an echinoderm, growing in place, about 5 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Cambrian. Appearance: One of the oldest echinoderms, from the early Cambrian of Nevada and California: a spindle-shaped animal a few centimetres long covered in plates arranged in a spiral, like a twisted pine cone."
+  },
+  {
+   "id": "gogia_spiralis",
+   "name": "Gogia",
+   "prompt": "Gogia (Gogia spiralis), a cystoid, growing in place, about 5 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Cambrian. Appearance: An eocrinoid, an early stalked echinoderm, from the middle Cambrian of North America. Its small cup of plates sat on a short stalk, and from the top rose a few long feeding arms coiled in a spiral, which caught particles drifting by."
+  },
+  {
+   "id": "mackenzia_costalis",
+   "name": "Mackenzia",
+   "prompt": "Mackenzia (Mackenzia costalis), a stem anthozoan, growing in place, about 15 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Cambrian. Appearance: A soft, sac-shaped animal up to about 15 cm tall from the Burgess Shale of Canada, with long ribs running down its body. It probably stood attached to shells or stones on the seabed and is thought to be a relative of sea anemones, among the oldest known."
+  },
+  {
+   "id": "ctenorhabdotus_capulus",
+   "name": "Ctenorhabdotus",
+   "prompt": "Ctenorhabdotus (Ctenorhabdotus capulus), a stem ctenophore, floating at the surface, about 3 cm long, in a bright shallow sea floor with vivid turquoise and teal water (microbial mats, no fish or modern plants), Cambrian. Appearance: A Cambrian comb jelly from the Burgess Shale of Canada, a jelly-like drifting animal with twenty-four rows of beating comb plates instead of the eight of living comb jellies. It drifted through the water catching tiny animals, but its body is soft and fragile."
+  },
+  {
+   "id": "dinomischus_isolatus",
+   "name": "Dinomischus",
+   "prompt": "Dinomischus (Dinomischus isolatus), a problematic animal, growing in place, about 3 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Cambrian. Appearance: A small, goblet-shaped animal from the Burgess Shale of Canada and Chengjiang in China: a cup on a slender stalk, ringed at the top by about eighteen stiff, petal-like plates."
+  },
+  {
+   "id": "yunnanozoon_lividum",
+   "name": "Yunnanozoon",
+   "prompt": "Yunnanozoon (Yunnanozoon lividum), a chordate, about 4 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Cambrian. Appearance: A small, leaf-shaped swimmer a few centimetres long from the Chengjiang biota of Yunnan, China, with a row of muscle blocks along its body and gill arches at the front."
+  },
+  {
+   "id": "banffia_constricta",
+   "name": "Banffia",
+   "prompt": "Banffia (Banffia constricta), a vetulicolian, about 10 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Cambrian. Appearance: A vetulicolian about 10 cm long from the Burgess Shale of Canada, one of the few found outside China. Its body was in two parts, a bulbous front section and a segmented rear section, joined by a narrow waist that was often twisted."
+  },
+  {
+   "id": "spartobranchus_tenuis",
+   "name": "Spartobranchus",
+   "prompt": "Spartobranchus (Spartobranchus tenuis), an acorn worm, growing in place, about 10 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Cambrian. Appearance: The oldest known acorn worm, a slender worm several centimetres long from the Burgess Shale of Canada, with a short acorn-shaped snout, a collar and a long trunk."
+  },
+  {
+   "id": "goniatites_crenistria",
+   "name": "Goniatites",
+   "prompt": "Goniatites (Goniatites crenistria), an ammonite, about 5 cm long, in a bright sunlit sea with deep cobalt-blue water, Carboniferous. Appearance: The classic goniatite of the Early Carboniferous seas, about 330 million years ago, so common in the limestones of Europe and North Africa that it is used to tell the age of the rocks."
+  },
+  {
+   "id": "pentremites_pyriformis",
+   "name": "Pentremites",
+   "prompt": "Pentremites (Pentremites pyriformis), a blastoid, growing in place, about 10 cm long, in a bright sunlit sea with emerald-green water, Carboniferous. Appearance: A blastoid, one of an extinct group of stalked echinoderms related to sea lilies, and one of the most common fossils of the Early Carboniferous limestones of North America, about 335 million years ago."
+  },
+  {
+   "id": "archimedes_wortheni",
+   "name": "Archimedes",
+   "prompt": "Archimedes (Archimedes wortheni), a bryozoan, growing in place, about 15 cm long, in a bright sunlit sea with vivid turquoise and teal water, Carboniferous. Appearance: A colony of tiny moss animals named after the screw of the Greek inventor Archimedes, from the shallow Early Carboniferous seas of North America about 335 million years ago."
+  },
+  {
+   "id": "lithostrotion_vorticale",
+   "name": "Lithostrotion",
+   "prompt": "Lithostrotion (Lithostrotion vorticale), a rugose coral, growing in place, about 30 cm long, in a bright sunlit sea with emerald-green water, Carboniferous. Appearance: A colonial rugose coral that built thickets in the warm, clear Early Carboniferous seas of Europe, about 340 million years ago."
+  },
+  {
+   "id": "archaeocidaris_wortheni",
+   "name": "Archaeocidaris",
+   "prompt": "Archaeocidaris (Archaeocidaris wortheni), an echinoderm, growing in place, about 6 cm long, in a bright sunlit sea with dark indigo-blue water, Carboniferous. Appearance: A sea urchin from the Early Carboniferous seas of North America, about 335 million years ago, and a close relative of the ancestors of all living sea urchins."
+  },
+  {
+   "id": "phillipsia_gemmulifera",
+   "name": "Phillipsia",
+   "prompt": "Phillipsia (Phillipsia gemmulifera), a trilobite, about 3 cm long, in a bright sunlit sea with violet dusk-lit water, Carboniferous. Appearance: One of the last trilobites, from the Early Carboniferous seas of Europe about 340 million years ago, when only a single family of these once dominant arthropods survived."
+  },
+  {
+   "id": "bojophlebia_prokopi",
+   "name": "Bojophlebia",
+   "prompt": "Bojophlebia (Bojophlebia prokopi), a mayfly, in flight, wings spread, about 45 cm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Carboniferous. Appearance: One of the largest mayfly-like insects ever, with a wingspan of about 45 centimetres, from Late Carboniferous rocks near Prague in the Czech Republic, about 310 million years old."
+  },
+  {
+   "id": "acantherpestes_major",
+   "name": "Acantherpestes",
+   "prompt": "Acantherpestes (Acantherpestes major), a myriapod, about 30 cm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Carboniferous. Appearance: A giant spiny millipede up to about 30 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old."
+  },
+  {
+   "id": "latzelia_primordialis",
+   "name": "Latzelia",
+   "prompt": "Latzelia (Latzelia primordialis), a myriapod, about 4 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Carboniferous. Appearance: One of the oldest known centipedes, an early relative of today's long-legged house centipedes, from the Mazon Creek fossil beds of Illinois, about 309 million years old."
+  },
+  {
+   "id": "acanthotelson_stimpsoni",
+   "name": "Acanthotelson",
+   "prompt": "Acanthotelson (Acanthotelson stimpsoni), a syncarid, about 6 cm long, in a clear river or lake with teal water and green plants, Carboniferous. Appearance: A shrimp-like crustacean about 6 centimetres long, one of the most common animals in the Mazon Creek fossil beds of Illinois, about 309 million years old."
+  },
+  {
+   "id": "syllipsimopodi_bideni",
+   "name": "Syllipsimopodi",
+   "prompt": "Syllipsimopodi (Syllipsimopodi bideni), a vampyropod, about 12 cm long, in a bright sunlit sea with vivid turquoise and teal water, Carboniferous. Appearance: The oldest known relative of octopuses and vampire squids, a squid-like animal about 12 centimetres long from the Bear Gulch Limestone of Montana, about 328 million years old."
+  },
+  {
+   "id": "helenodora_inopinata",
+   "name": "Helenodora",
+   "prompt": "Helenodora (Helenodora inopinata), a velvet worm, about 5 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Carboniferous. Appearance: A velvet worm about 5 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old, one of very few fossils of these soft-bodied animals."
+  },
+  {
+   "id": "rhabdoderma_elegans",
+   "name": "Rhabdoderma",
+   "prompt": "Rhabdoderma (Rhabdoderma elegans), a coelacanth, about 30 cm long, in a clear river or lake with teal water and green plants, Carboniferous. Appearance: A coelacanth about 30 centimetres long, common in the coal-swamp waters and coastal lagoons of North America and Europe about 310 million years ago."
+  },
+  {
+   "id": "belantsea_montana",
+   "name": "Belantsea",
+   "prompt": "Belantsea (Belantsea montana), a chimaera, about 25 cm long, in a bright sunlit sea with deep cobalt-blue water, Carboniferous. Appearance: A petalodont, an extinct relative of the ratfishes, from the Bear Gulch Limestone of Montana, about 320 million years ago."
+  },
+  {
+   "id": "elonichthys_peltigerus",
+   "name": "Elonichthys",
+   "prompt": "Elonichthys (Elonichthys peltigerus), a bony fish, about 15 cm long, in a clear river or lake with teal water and green plants, Carboniferous. Appearance: A palaeoniscoid, one of the early ray-finned fishes, about 15 centimetres long, from the Late Carboniferous swamps and lagoons of Ohio and Illinois, about 310 million years ago."
+  },
+  {
+   "id": "sagenodus_inaequalis",
+   "name": "Sagenodus",
+   "prompt": "Sagenodus (Sagenodus inaequalis), a lungfish, about 1 m long, in a clear river or lake with teal water and green plants, Carboniferous. Appearance: A lungfish about a metre long, common in the Late Carboniferous and Early Permian swamps, rivers and lakes of North America and Europe, about 300 million years ago."
+  },
+  {
+   "id": "greererpeton_burkemorani",
+   "name": "Greererpeton",
+   "prompt": "Greererpeton (Greererpeton burkemorani), an early tetrapod, about 1.5 m long, in a clear river or lake with teal water and green plants, Carboniferous. Appearance: A long-bodied early tetrapod about 1.5 metres long from Early Carboniferous rocks of West Virginia, about 330 million years old."
+  },
+  {
+   "id": "dendrerpeton_acadianum",
+   "name": "Dendrerpeton",
+   "prompt": "Dendrerpeton (Dendrerpeton acadianum), a temnospondyl, about 1 m long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Carboniferous. Appearance: A temnospondyl amphibian about a metre long from the coal-forest rocks of Nova Scotia, about 315 million years old, whose skeletons were found inside the hollow stumps of giant club-moss trees."
+  },
+  {
+   "id": "eucritta_melanolimnetes",
+   "name": "Eucritta",
+   "prompt": "Eucritta (Eucritta melanolimnetes), an early tetrapod, about 25 cm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Carboniferous. Appearance: A small early tetrapod about 25 centimetres long whose name means 'creature from the black lagoon', found in the rocks of an ancient volcanic lake in Scotland, about 335 million years old."
+  },
+  {
+   "id": "keraterpeton_galvani",
+   "name": "Keraterpeton",
+   "prompt": "Keraterpeton (Keraterpeton galvani), a lepospondyl, about 30 cm long, in a clear river or lake with teal water and green plants, Carboniferous. Appearance: A small nectridean amphibian about 30 centimetres long from the Late Carboniferous coal swamps of Ireland and England, about 310 million years ago."
+  },
+  {
+   "id": "ianthasaurus_hardestiorum",
+   "name": "Ianthasaurus",
+   "prompt": "Ianthasaurus (Ianthasaurus hardestiorum), an edaphosaurid synapsid, about 70 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Carboniferous. Appearance: A small sail-backed synapsid, a distant relative of mammals, about 70 centimetres long from Late Carboniferous rocks near Garnett, Kansas, about 302 million years old."
+  },
+  {
+   "id": "spinoaequalis_schultzei",
+   "name": "Spinoaequalis",
+   "prompt": "Spinoaequalis (Spinoaequalis schultzei), an araeoscelid reptile, about 25 cm long, in a clear river or lake with teal water and green plants, Carboniferous. Appearance: One of the first reptiles to return to the water, a slender diapsid about 25 centimetres long from Late Carboniferous rocks near Hamilton, Kansas, about 302 million years old."
+  },
+  {
+   "id": "cochleosaurus_bohemicus",
+   "name": "Cochleosaurus",
+   "prompt": "Cochleosaurus (Cochleosaurus bohemicus), a temnospondyl, about 1.5 m long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Carboniferous. Appearance: A crocodile-like temnospondyl about 1.5 metres long, one of the most common large animals of the Late Carboniferous coal swamps of Bohemia in the Czech Republic, about 307 million years ago."
+  },
+  {
+   "id": "parapuzosia_seppenradensis",
+   "name": "Parapuzosia",
+   "prompt": "Parapuzosia (Parapuzosia seppenradensis), an ammonite, about 1.8 m long, in a bright sunlit sea with emerald-green water, Cretaceous. Appearance: The largest ammonite ever found, with a coiled shell up to about 1.8 metres across that may have reached 2 metres or more in life."
+  },
+  {
+   "id": "belemnitella_americana",
+   "name": "Belemnitella",
+   "prompt": "Belemnitella (Belemnitella americana), a belemnite, about 30 cm long, in a bright sunlit sea with dark indigo-blue water, Cretaceous. Appearance: A squid-like belemnite about 30 centimetres long that swam in large schools along the coasts of Late Cretaceous North America. Inside its body lay a bullet-shaped stone-hard guard, so common as a fossil that people once called them thunderbolts."
+  },
+  {
+   "id": "hippurites_radiosus",
+   "name": "Hippurites",
+   "prompt": "Hippurites (Hippurites radiosus), a rudist, growing in place, about 30 cm long, in a bright sunlit sea with violet dusk-lit water, Cretaceous. Appearance: A strange reef-building clam, about 30 centimetres tall, whose lower shell grew into a thick, ribbed horn cemented upright on the sea floor while the upper shell sat on top like a lid."
+  },
+  {
+   "id": "uintacrinus_socialis",
+   "name": "Uintacrinus",
+   "prompt": "Uintacrinus (Uintacrinus socialis), a crinoid, floating at the surface, about 1 m long, in a bright sunlit sea with vivid turquoise and teal water, Cretaceous. Appearance: A stalkless sea lily with a round cup the size of a fist and ten slender arms up to a metre long. Unlike most of its relatives it was not rooted to the bottom but drifted or rested in huge groups in the warm inland sea of North America."
+  },
+  {
+   "id": "micraster_coranguinum",
+   "name": "Micraster",
+   "prompt": "Micraster (Micraster coranguinum), an echinoderm, growing in place, about 6 cm long, in a bright sunlit sea with deep cobalt-blue water, Cretaceous. Appearance: A heart-shaped sea urchin about 6 centimetres long that lived buried in the soft chalky mud of the Late Cretaceous sea floor in Europe. A short fuzz of spines covered its shell, and a groove at the front led food-rich mud to its mouth."
+  },
+  {
+   "id": "callichimaera_perplexa",
+   "name": "Callichimaera",
+   "prompt": "Callichimaera (Callichimaera perplexa), a crab, about 3 cm long, in a bright sunlit sea with deep cobalt-blue water, Cretaceous. Appearance: A quarter-sized crab from 95 million years ago with such an odd mix of features that scientists called it the platypus of crabs."
+  },
+  {
+   "id": "haidomyrmex_cerberus",
+   "name": "Hell Ant",
+   "prompt": "Hell Ant (Haidomyrmex cerberus), an ant, about 5 mm long, in a lush emerald-green forest, Cretaceous. Appearance: One of the hell ants, an early branch of ants preserved in 99-million-year-old Burmese amber. Its scythe-shaped jaws swung upwards instead of sideways, snapping shut against a paddle-like horn on its forehead to pin its prey."
+  },
+  {
+   "id": "enchodus_petrosus",
+   "name": "Enchodus",
+   "prompt": "Enchodus (Enchodus petrosus), a bony fish, about 1.5 m long, in a bright sunlit sea with deep cobalt-blue water, Cretaceous. Appearance: A predatory fish about 1.5 metres long, nicknamed the sabre-toothed herring for the pair of huge fangs at the front of its jaws."
+  },
+  {
+   "id": "onchopristis_numidus",
+   "name": "Onchopristis",
+   "prompt": "Onchopristis (Onchopristis numidus), a ray, about 7 m long, in a clear river or lake with teal water and green plants, Cretaceous. Appearance: A giant sawfish-like ray up to about 7 metres long from the great rivers of mid-Cretaceous North Africa. Its long flat snout was lined with widely spaced, barbed teeth like harpoon points, which it swept sideways to stun and slash fish."
+  },
+  {
+   "id": "mawsonia_gigas",
+   "name": "Mawsonia",
+   "prompt": "Mawsonia (Mawsonia gigas), a lobe-finned fish, about 4 m long, in a clear river or lake with teal water and green plants, Cretaceous, the water emerald-green. Appearance: A giant coelacanth about 4 metres long, a cousin of the living coelacanth, from the rivers and lagoons of Cretaceous Brazil and Africa."
+  },
+  {
+   "id": "sanajeh_indicus",
+   "name": "Sanajeh",
+   "prompt": "Sanajeh (Sanajeh indicus), an early snake, about 3.5 m long, in open green plains under a crisp blue sky, Cretaceous. Appearance: A 3.5-metre snake from Late Cretaceous India, found fossilised coiled around a crushed sauropod egg next to a newly hatched baby."
+  },
+  {
+   "id": "xianglong_zhaoi",
+   "name": "Xianglong",
+   "prompt": "Xianglong (Xianglong zhaoi), a lizard, in flight, wings spread, about 15 cm long, in a lush emerald-green forest, Cretaceous. Appearance: A small gliding lizard about 15 centimetres long from the Early Cretaceous forests of China. Eight very long ribs on each side held out a skin wing, which it spread to glide between trees like the flying dragons of Asia today. It caught insects in the branches."
+  },
+  {
+   "id": "simosuchus_clarki",
+   "name": "Simosuchus",
+   "prompt": "Simosuchus (Simosuchus clarki), a crocodyliform, about 75 cm long, in open green plains under a crisp blue sky, Cretaceous. Appearance: A small land crocodile about 75 centimetres long from Late Cretaceous Madagascar, with a short, blunt, pug-nosed face. Its leaf-shaped, many-cusped teeth suggest it ate plants, very unlike any crocodile living today."
+  },
+  {
+   "id": "pterodaustro_guinazui",
+   "name": "Pterodaustro",
+   "prompt": "Pterodaustro (Pterodaustro guinazui), a pterosaur, in flight, wings spread, about 2.5 m long, in a lush green swamp with clear shallow water, Cretaceous. Appearance: A flamingo-like pterosaur with a 2.5-metre wingspan from Early Cretaceous Argentina. Its long, upturned lower jaw held about a thousand bristle-like teeth, which it used to sieve tiny crustaceans and algae from shallow lakes."
+  },
+  {
+   "id": "maiasaura_peeblesorum",
+   "name": "Maiasaura",
+   "prompt": "Maiasaura (Maiasaura peeblesorum), an ornithopod dinosaur, about 9 m long, in open green plains under a crisp blue sky, Cretaceous. Appearance: A 9-metre duck-billed dinosaur whose name means good mother lizard. Huge nesting colonies found in Montana show that it laid eggs in mound nests and cared for its babies until they could leave the nest."
+  },
+  {
+   "id": "yutyrannus_huali",
+   "name": "Yutyrannus",
+   "prompt": "Yutyrannus (Yutyrannus huali), a theropod dinosaur, about 9 m long, in a lush emerald-green forest, Cretaceous. Appearance: A 9-metre early tyrannosaur from the Early Cretaceous of China, the largest dinosaur known for certain to have had feathers. Its body was covered in long shaggy filaments that probably kept it warm in the cool winters of its forests."
+  },
+  {
+   "id": "mononykus_olecranus",
+   "name": "Mononykus",
+   "prompt": "Mononykus (Mononykus olecranus), a theropod dinosaur, about 1 m long, in a bright desert with blue sky, Cretaceous. Appearance: A small, long-legged, feathered dinosaur about a metre long from the Late Cretaceous deserts of Mongolia. Its stubby, powerful arms each ended in one big thumb claw, probably used to break open termite nests like an anteater."
+  },
+  {
+   "id": "deinocheirus_mirificus",
+   "name": "Deinocheirus",
+   "prompt": "Deinocheirus (Deinocheirus mirificus), a theropod dinosaur, about 11 m long, in a lush green swamp with clear shallow water, Cretaceous. Appearance: A huge, bizarre ostrich-dinosaur about 11 metres long, known for decades only from its giant arms with 2.4-metre-long clawed hands."
+  },
+  {
+   "id": "nigersaurus_taqueti",
+   "name": "Nigersaurus",
+   "prompt": "Nigersaurus (Nigersaurus taqueti), a sauropod dinosaur, about 9 m long, in open green plains under a crisp blue sky, Cretaceous. Appearance: A small sauropod about 9 metres long from mid-Cretaceous Niger with a short neck and a broad, straight-edged muzzle like a vacuum cleaner."
+  },
+  {
+   "id": "asteriornis_maastrichtensis",
+   "name": "Asteriornis",
+   "prompt": "Asteriornis (Asteriornis maastrichtensis), an early crown bird, about 35 cm long, in a lush green swamp with clear shallow water, Cretaceous. Appearance: A quail-sized bird from the very end of the Cretaceous in Belgium, nicknamed the Wonderchicken. It is one of the oldest modern birds known, an early relative of both chickens and ducks, with long legs for wading along the shore."
+  },
+  {
+   "id": "didelphodon_vorax",
+   "name": "Didelphodon",
+   "prompt": "Didelphodon (Didelphodon vorax), an early metatherian, about 60 cm long, in a lush green swamp with clear shallow water, Cretaceous. Appearance: A badger-sized relative of marsupials about 60 centimetres long including its tail, from the last days of the dinosaurs in North America."
+  },
+  {
+   "id": "zalambdalestes_lechei",
+   "name": "Zalambdalestes",
+   "prompt": "Zalambdalestes (Zalambdalestes lechei), an eutherian mammal, about 20 cm long, in a bright desert with blue sky, Cretaceous. Appearance: A small, long-snouted mammal about 20 centimetres long from the Late Cretaceous of Mongolia, an early relative of placental mammals. Its long hind legs and fused shin bones suggest it hopped like an elephant shrew."
+  },
+  {
+   "id": "kryptobaatar_dashzevegi",
+   "name": "Kryptobaatar",
+   "prompt": "Kryptobaatar (Kryptobaatar dashzevegi), a multituberculate, about 10 cm long, in a bright desert with blue sky, Cretaceous. Appearance: A mouse-sized multituberculate about 10 centimetres long from the Late Cretaceous deserts of Mongolia. Multituberculates were the rodents of the dinosaur age, with gnawing front teeth and cheek teeth carrying rows of little cusps for grinding seeds and plants."
+  },
+  {
+   "id": "champsosaurus_laramiensis",
+   "name": "Champsosaurus",
+   "prompt": "Champsosaurus (Champsosaurus laramiensis), a choristodere, about 1.5 m long, in a clear river or lake with teal water and green plants, Cretaceous. Appearance: A gharial-like reptile about 1.5 metres long with a long, narrow, toothy snout, which lived in the rivers and lakes of Late Cretaceous North America. It was not a crocodile but a choristodere, an ancient reptile group that survived the end of the dinosaurs."
+  },
+  {
+   "id": "elpistostege_watsoni",
+   "name": "Elpistostege",
+   "prompt": "Elpistostege (Elpistostege watsoni), a lobe-finned fish, about 1.57 m long, in a clear river or lake with teal water and green plants, Devonian. Appearance: A flat-headed, crocodile-like fish about 1.5 metres long from the estuaries of Late Devonian Quebec, about 380 million years ago. Its eyes sat on top of its head and it had lost the fins on its back, so it could lurk in the shallows like a crocodile."
+  },
+  {
+   "id": "ventastega_curonica",
+   "name": "Ventastega",
+   "prompt": "Ventastega (Ventastega curonica), an early tetrapod, about 1.2 m long, in a clear river or lake with teal water and green plants, Devonian. Appearance: One of the most fish-like of the early four-limbed animals, about 1.2 metres long, from the Late Devonian lagoons of Latvia some 372 million years ago. It had a broad, flat head full of sharp teeth and a fin-fringed tail;"
+  },
+  {
+   "id": "gogonasus_andrewsae",
+   "name": "Gogonasus",
+   "prompt": "Gogonasus (Gogonasus andrewsae), a lobe-finned fish, about 35 cm long, in a bright sunlit sea with violet dusk-lit water, Devonian. Appearance: A small lobe-finned fish about 35 centimetres long that lived on a tropical reef in Western Australia about 380 million years ago."
+  },
+  {
+   "id": "miguashaia_bureaui",
+   "name": "Miguashaia",
+   "prompt": "Miguashaia (Miguashaia bureaui), a coelacanth, about 45 cm long, in a bright sunlit sea with vivid turquoise and teal water, Devonian. Appearance: One of the earliest coelacanths, about 45 centimetres long, from the Late Devonian estuary of Miguasha in Quebec, about 380 million years ago."
+  },
+  {
+   "id": "sauripterus_taylori",
+   "name": "Sauripterus",
+   "prompt": "Sauripterus (Sauripterus taylori), a lobe-finned fish, about 1.8 m long, in a clear river or lake with teal water and green plants, Devonian, the water vivid turquoise and teal. Appearance: A large rhizodont, a fang-toothed lobe-finned fish probably about 1.8 metres long, from the Late Devonian rivers of Pennsylvania and New York, about 365 million years ago."
+  },
+  {
+   "id": "mimipiscis_toombsi",
+   "name": "Mimipiscis",
+   "prompt": "Mimipiscis (Mimipiscis toombsi), a bony fish, about 20 cm long, in a bright sunlit sea with vivid turquoise and teal water, Devonian. Appearance: A small early ray-finned fish about 20 centimetres long from the Gogo reef of Western Australia, about 380 million years ago. It was a quick, torpedo-shaped swimmer with very large eyes, shiny diamond-shaped scales and a shark-like upturned tail."
+  },
+  {
+   "id": "cheiracanthus_murchisoni",
+   "name": "Cheiracanthus",
+   "prompt": "Cheiracanthus (Cheiracanthus murchisoni), an acanthodian, about 30 cm long, in a clear river or lake with teal water and green plants, Devonian, the water dark indigo-blue. Appearance: A slender spiny shark about 30 centimetres long from the Middle Devonian lakes of Scotland, about 390 million years ago. A sharp spine stood in front of each fin and its body was covered in tiny scales."
+  },
+  {
+   "id": "groenlandaspis_antarcticus",
+   "name": "Groenlandaspis",
+   "prompt": "Groenlandaspis (Groenlandaspis antarcticus), a placoderm, about 30 cm long, in a clear river or lake with teal water and green plants, Devonian, the water dark indigo-blue. Appearance: A small armoured arthrodire about 30 centimetres long from Middle and Late Devonian rivers in Antarctica, about 380 million years ago. A tall, pointed plate stood up from the middle of its back like a shark fin, making it a spiky mouthful for predators."
+  },
+  {
+   "id": "turinia_pagei",
+   "name": "Turinia",
+   "prompt": "Turinia (Turinia pagei), a jawless vertebrate, about 20 cm long, in a bright sunlit sea with violet dusk-lit water, Devonian. Appearance: A flattened jawless fish about 20 centimetres long from Early Devonian Scotland, about 410 million years ago, one of the last thelodonts."
+  },
+  {
+   "id": "euphanerops_longaevus",
+   "name": "Euphanerops",
+   "prompt": "Euphanerops (Euphanerops longaevus), a jawless vertebrate, about 12 cm long, in a bright sunlit sea with vivid turquoise and teal water, Devonian. Appearance: A slender, eel-like jawless fish about 12 centimetres long from the Late Devonian of Miguasha in Quebec, about 380 million years ago. It had no armour, a long fin fold under its body and as many as 30 gill openings in a row."
+  },
+  {
+   "id": "palmatolepis_gigas",
+   "name": "Palmatolepis",
+   "prompt": "Palmatolepis (Palmatolepis gigas), a conodont, about 4 cm long, in a bright sunlit sea with dark indigo-blue water, Devonian. Appearance: A Late Devonian conodont, a small eel-like animal a few centimetres long with large eyes, known mainly from its tiny comb-like teeth."
+  },
+  {
+   "id": "palaeopalaemon_newberryi",
+   "name": "Palaeopalaemon",
+   "prompt": "Palaeopalaemon (Palaeopalaemon newberryi), a prawn, about 6 cm long, in a bright sunlit sea with violet dusk-lit water, Devonian. Appearance: The oldest known decapod crustacean, a small lobster-like shrimp about 6 centimetres long from the Late Devonian seas of North America, about 365 million years ago. It had a hard shell, slender claws and long antennae."
+  },
+  {
+   "id": "weinbergina_opitzi",
+   "name": "Weinbergina",
+   "prompt": "Weinbergina (Weinbergina opitzi), a synziphosurine, about 10 cm long, in a bright sunlit sea with violet dusk-lit water, Devonian. Appearance: An early horseshoe crab relative about 10 centimetres long from the Early Devonian sea floor of the German Hunsrück, about 400 million years ago."
+  },
+  {
+   "id": "palaeoisopus_problematicus",
+   "name": "Palaeoisopus",
+   "prompt": "Palaeoisopus (Palaeoisopus problematicus), a sea spider, about 40 cm long, in a bright sunlit sea with deep cobalt-blue water, Devonian. Appearance: A giant sea spider with a leg span of up to 40 centimetres from the Early Devonian seas of the German Hunsrück, about 400 million years ago."
+  },
+  {
+   "id": "mimetaster_hexagonalis",
+   "name": "Mimetaster",
+   "prompt": "Mimetaster (Mimetaster hexagonalis), an arthropod, about 5 cm long, in a bright sunlit sea with emerald-green water, Devonian. Appearance: A small marrellomorph arthropod about 5 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago, one of the last relatives of the Cambrian Marrella."
+  },
+  {
+   "id": "eoarthropleura_devonica",
+   "name": "Eoarthropleura",
+   "prompt": "Eoarthropleura (Eoarthropleura devonica), a myriapod, about 8 cm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Devonian. Appearance: A small, flat relative of the giant millipede Arthropleura, about 8 centimetres long, from Early and Middle Devonian swamps in Germany and North America. Its body was covered by broad tergites with side lobes, giving it the look of a low, armoured mat."
+  },
+  {
+   "id": "protacarus_crani",
+   "name": "Protacarus",
+   "prompt": "Protacarus (Protacarus crani), a mite, microscopic, about 400 micrometres, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Devonian. Appearance: One of the oldest known mites, under half a millimetre long, from the Rhynie chert of Scotland, about 410 million years ago. Its soft, oval body walked on eight short legs among the stems of the earliest land plants."
+  },
+  {
+   "id": "platyceras_dumosum",
+   "name": "Platyceras",
+   "prompt": "Platyceras (Platyceras dumosum), a sea snail, growing in place, about 4 cm long, in a bright sunlit sea with deep cobalt-blue water, Devonian. Appearance: A sea snail about 4 centimetres long from the Devonian seas of North America, with a loosely coiled, cap-shaped shell covered in hollow spines."
+  },
+  {
+   "id": "cupressocrinites_crassus",
+   "name": "Cupressocrinites",
+   "prompt": "Cupressocrinites (Cupressocrinites crassus), a crinoid, growing in place, about 30 cm long, in a bright sunlit sea with vivid turquoise and teal water, Devonian. Appearance: A sea lily about 30 centimetres tall from the Middle Devonian reefs of Germany, about 385 million years ago."
+  },
+  {
+   "id": "helianthaster_rhenanus",
+   "name": "Helianthaster",
+   "prompt": "Helianthaster (Helianthaster rhenanus), a sea star, growing in place, about 20 cm long, in a bright sunlit sea with dark indigo-blue water, Devonian. Appearance: A large sea star about 20 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago. It had a small central disc and fourteen to sixteen long, slender arms radiating like a sunburst."
+  },
+  {
+   "id": "heliophyllum_halli",
+   "name": "Heliophyllum",
+   "prompt": "Heliophyllum (Heliophyllum halli), a rugose coral, growing in place, about 10 cm long, in a bright sunlit sea with vivid turquoise and teal water, Devonian. Appearance: A solitary horn coral up to about 10 centimetres long from the Middle Devonian seas of North America, about 390 million years ago. Its cup was lined with many fine radial walls, and the outside of its horn-shaped skeleton was ringed by tiny daily growth lines."
+  },
+  {
+   "id": "actinostroma_clathratum",
+   "name": "Actinostroma",
+   "prompt": "Actinostroma (Actinostroma clathratum), a sponge, growing in place, about 60 cm long, in a bright sunlit sea with emerald-green water, Devonian. Appearance: A stromatoporoid, a reef-building sponge that grew layered stony domes often more than half a metre across in Middle and Late Devonian seas. Its skeleton was built of thin layers joined by tiny pillars, with small bumps on the surface where water was drawn in."
+  },
+  {
+   "id": "anetoceras_arduennense",
+   "name": "Anetoceras",
+   "prompt": "Anetoceras (Anetoceras arduennense), an ammonite, about 10 cm long, in a bright sunlit sea with violet dusk-lit water, Devonian. Appearance: One of the earliest ammonoids, about 10 centimetres across, from the Early Devonian seas of Germany and Morocco, about 405 million years ago."
+  },
+  {
+   "id": "bradgatia_linfordensis",
+   "name": "Bradgatia",
+   "prompt": "Bradgatia (Bradgatia linfordensis), a rangeomorph, growing in place, about 20 cm long, in a bright shallow sea floor with vivid turquoise and teal water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A bushy, cabbage-like rangeomorph up to about 20 cm across from England and Newfoundland, about 565 million years old. Many spoon-shaped frondlets fanned out from a single base, each branching again and again into smaller copies of itself."
+  },
+  {
+   "id": "primocandelabrum_hiemaloranum",
+   "name": "Primocandelabrum",
+   "prompt": "Primocandelabrum (Primocandelabrum hiemaloranum), a rangeomorph, growing in place, about 35 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A tall rangeomorph up to about 35 cm high from Newfoundland, about 565 million years old. A bare stalk rose from a disc anchored in the mud and ended in a bushy crown of branching frondlets, like a candelabrum."
+  },
+  {
+   "id": "beothukis_mistakensis",
+   "name": "Beothukis",
+   "prompt": "Beothukis (Beothukis mistakensis), a rangeomorph, growing in place, about 15 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A spoon-shaped rangeomorph frond about 15 cm long from Mistaken Point in Newfoundland, about 565 million years old. A few large branches ran out at a slant from its midline, each split into clearly visible smaller branches."
+  },
+  {
+   "id": "charniodiscus_procerus",
+   "name": "Charniodiscus",
+   "prompt": "Charniodiscus (Charniodiscus procerus), a petalonamid, growing in place, about 50 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A tall, narrow frond up to about 50 cm high from England and Newfoundland, about 560 million years old. A long bare stalk held the lance-shaped leaf above the seabed, anchored by a broad buried disc, and simple branches ran straight out from its midline."
+  },
+  {
+   "id": "ventogyrus_chistyakovi",
+   "name": "Ventogyrus",
+   "prompt": "Ventogyrus (Ventogyrus chistyakovi), a petalonamid, growing in place, about 20 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Ediacaran. Appearance: An egg- or boat-shaped animal up to about 20 cm long from the White Sea coast of Russia, about 555 million years old. Three lengthwise vanes, each divided into stacked tube-like chambers, gave its body three-fold symmetry."
+  },
+  {
+   "id": "namalia_villiersiensis",
+   "name": "Namalia",
+   "prompt": "Namalia (Namalia villiersiensis), a petalonamid, growing in place, about 6 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A small cup- or bag-shaped animal a few centimetres high from Namibia, about 545 million years old. Its walls were quilted into narrow tube-like chambers that zig-zagged up the sides, and it lived partly buried in the sand."
+  },
+  {
+   "id": "aspidella_terranovica",
+   "name": "Aspidella",
+   "prompt": "Aspidella (Aspidella terranovica), a discoidal organism, growing in place, about 5 cm long, in a bright shallow sea floor with vivid turquoise and teal water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A low disc a few centimetres across with a raised rim, a central boss and fine radial creases, found in huge numbers in Newfoundland, about 565 million years old."
+  },
+  {
+   "id": "hiemalora_stellaris",
+   "name": "Hiemalora",
+   "prompt": "Hiemalora (Hiemalora stellaris), a discoidal organism, growing in place, about 3 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A small disc a few centimetres wide ringed by a starburst of long, thin, tentacle-like rays, found from Newfoundland to Russia. It was once taken for a sea anemone, but many now think it was the anchoring holdfast of a frond."
+  },
+  {
+   "id": "mawsonites_spriggi",
+   "name": "Mawsonites",
+   "prompt": "Mawsonites (Mawsonites spriggi), a discoidal organism, growing in place, about 12 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A rosette-shaped disc about 12 cm across from South Australia, about 555 million years old: a smooth central dome surrounded by rings of rounded lobes that grew larger toward the edge."
+  },
+  {
+   "id": "albumares_brunsae",
+   "name": "Albumares",
+   "prompt": "Albumares (Albumares brunsae), a trilobozoan, growing in place, about 3 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A small, flat disc about 3 cm across from the White Sea coast of Russia, about 555 million years old, built on three-fold symmetry like its relative Tribrachidium."
+  },
+  {
+   "id": "anfesta_stankovskii",
+   "name": "Anfesta",
+   "prompt": "Anfesta (Anfesta stankovskii), a trilobozoan, growing in place, about 6 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A domed disc up to about 6 cm wide from the White Sea coast of Russia, about 555 million years old. Three broad, curved tubes crossed by fine ridges radiated from its centre, giving it the three-fold symmetry of the trilobozoans, a group with no living members."
+  },
+  {
+   "id": "arkarua_adami",
+   "name": "Arkarua",
+   "prompt": "Arkarua (Arkarua adami), an echinoderm, growing in place, about 1 cm long, in a bright shallow sea floor with vivid turquoise and teal water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A tiny domed disc about 1 cm across from South Australia, about 555 million years old, with a sunken five-rayed star in the middle and a rim of short ridges."
+  },
+  {
+   "id": "vendia_sokolovi",
+   "name": "Vendia",
+   "prompt": "Vendia (Vendia sokolovi), a proarticulate, about 1.2 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A tiny oval animal about a centimetre long from the White Sea coast of Russia, about 555 million years old. Its body had only a few large, sickle-shaped segments that alternated left and right of the midline instead of lining up in pairs."
+  },
+  {
+   "id": "marywadea_ovata",
+   "name": "Marywadea",
+   "prompt": "Marywadea (Marywadea ovata), a proarticulate, about 4 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ediacaran. Appearance: An oval, flattened animal about 4 cm long from South Australia, about 555 million years old, like a broader relative of Spriggina. A crescent-shaped head shield sat at the front and many fine segments ran back on either side of the midline."
+  },
+  {
+   "id": "praecambridium_sigillum",
+   "name": "Praecambridium",
+   "prompt": "Praecambridium (Praecambridium sigillum), a proarticulate, about 6 mm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A tiny shield-shaped animal less than 1 cm long from South Australia, about 555 million years old. A broad, smooth head shield was followed by a few chevron-shaped segments that alternated either side of the midline."
+  },
+  {
+   "id": "palaeophragmodictya_reticulata",
+   "name": "Palaeophragmodictya",
+   "prompt": "Palaeophragmodictya (Palaeophragmodictya reticulata), a sponge, growing in place, about 8 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A low, round dome a few centimetres across from South Australia, about 555 million years old, covered in a raised lattice of radiating struts crossed by rings."
+  },
+  {
+   "id": "thectardis_avalonensis",
+   "name": "Thectardis",
+   "prompt": "Thectardis (Thectardis avalonensis), a sponge, growing in place, about 15 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A slender, upside-down cone up to about 15 cm tall from Newfoundland, about 565 million years old."
+  },
+  {
+   "id": "inaria_karli",
+   "name": "Inaria",
+   "prompt": "Inaria (Inaria karli), an early cnidarian, growing in place, about 8 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A soft, onion-shaped animal up to about 8 cm tall from South Australia, about 555 million years old. Its broad base was divided into rounded lobes and narrowed into a slim neck with an opening at the top."
+  },
+  {
+   "id": "vendoconularia_triradiata",
+   "name": "Vendoconularia",
+   "prompt": "Vendoconularia (Vendoconularia triradiata), an early cnidarian, growing in place, about 3 cm long, in a bright shallow sea floor with vivid turquoise and teal water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A small, six-sided pyramid a few centimetres tall from the White Sea coast of Russia, about 555 million years old, its faces crossed by fine ribs."
+  },
+  {
+   "id": "sinotubulites_baimatuoensis",
+   "name": "Sinotubulites",
+   "prompt": "Sinotubulites (Sinotubulites baimatuoensis), a tubular animal, growing in place, about 4 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A calcified tube a few centimetres long from China, Namibia and other places, about 545 million years old."
+  },
+  {
+   "id": "conotubus_hemiannulatus",
+   "name": "Conotubus",
+   "prompt": "Conotubus (Conotubus hemiannulatus), a tubular animal, growing in place, about 3 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A small, curved tube a few centimetres long from southern China, about 550 million years old. It was built as a stack of nested funnels with flared rims, like a pile of ice-cream cones, from tough organic material that was barely mineralised."
+  },
+  {
+   "id": "sabellidites_cambriensis",
+   "name": "Sabellidites",
+   "prompt": "Sabellidites (Sabellidites cambriensis), a tubular animal, growing in place, about 5 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A long, thin, flexible tube a few centimetres long and under a millimetre wide, made of tough, finely ringed organic material, from the very end of the Ediacaran into the early Cambrian."
+  },
+  {
+   "id": "attenborites_janeae",
+   "name": "Attenborites",
+   "prompt": "Attenborites (Attenborites janeae), a problematic animal, growing in place, about 8 mm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Ediacaran. Appearance: A tiny oval body less than a centimetre long from South Australia, about 555 million years old, its surface wrinkled by irregular grooves and ridges. Nicknamed the 'raisin' for its look, it is named after the naturalist David Attenborough."
+  },
+  {
+   "id": "megalosaurus_bucklandii",
+   "name": "Megalosaurus",
+   "prompt": "Megalosaurus (Megalosaurus bucklandii), a theropod dinosaur, about 7 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: The first dinosaur ever given a scientific name, in 1824, from Middle Jurassic rocks of England about 166 million years old."
+  },
+  {
+   "id": "limusaurus_inextricabilis",
+   "name": "Limusaurus",
+   "prompt": "Limusaurus (Limusaurus inextricabilis), a theropod dinosaur, about 1.7 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: A slender, long-necked theropod about 1.7 metres long from the Late Jurassic of north-western China, about 160 million years ago."
+  },
+  {
+   "id": "camarasaurus_supremus",
+   "name": "Camarasaurus",
+   "prompt": "Camarasaurus (Camarasaurus supremus), a sauropod dinosaur, about 18 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: The commonest giant plant-eater of the Late Jurassic of western North America, about 155-150 million years ago, up to 18 metres long."
+  },
+  {
+   "id": "camptosaurus_dispar",
+   "name": "Camptosaurus",
+   "prompt": "Camptosaurus (Camptosaurus dispar), an ornithopod dinosaur, about 6 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: A bulky, beaked plant-eater 5-7 metres long from the Late Jurassic of North America, about 155-150 million years ago, an early relative of Iguanodon. It cropped low plants with a toothless horny beak and chewed them with rows of cheek teeth."
+  },
+  {
+   "id": "massospondylus_carinatus",
+   "name": "Massospondylus",
+   "prompt": "Massospondylus (Massospondylus carinatus), a sauropodomorph dinosaur, about 5 m long, in a sunny savanna under a blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: An early long-necked plant-eater 4-6 metres long from the Early Jurassic of southern Africa, about 200-185 million years ago, a distant cousin of the giant sauropods."
+  },
+  {
+   "id": "tianyulong_confuciusi",
+   "name": "Tianyulong",
+   "prompt": "Tianyulong (Tianyulong confuciusi), an early ornithischian, about 70 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: A small heterodontosaurid dinosaur about 70 cm long from the Late Jurassic of north-eastern China, about 158 million years ago. It is famous for a crest of long, stiff bristles, up to 6 cm long, running along its back and tail."
+  },
+  {
+   "id": "kayentatherium_wellesi",
+   "name": "Kayentatherium",
+   "prompt": "Kayentatherium (Kayentatherium wellesi), a cynodont therapsid, about 1 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: A stout, badger-sized plant-eater about 1 metre long from the Early Jurassic of Arizona, about 185 million years ago, one of the last cynodonts that were not yet mammals. It had big, rodent-like front teeth for gnawing and broad grinding cheek teeth."
+  },
+  {
+   "id": "rugosodon_eurasiaticus",
+   "name": "Rugosodon",
+   "prompt": "Rugosodon (Rugosodon eurasiaticus), a multituberculate, about 17 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: A rat-sized early mammal about 17 cm long from the Late Jurassic of north-eastern China, about 160 million years ago."
+  },
+  {
+   "id": "protosuchus_richardsoni",
+   "name": "Protosuchus",
+   "prompt": "Protosuchus (Protosuchus richardsoni), an early crocodylomorph, about 1 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: An early relative of crocodiles about 1 metre long from the Early Jurassic of Arizona, about 195 million years ago. Unlike its descendants it lived on dry land, running on long, upright legs, with a short, broad head and an enlarged fang in the lower jaw."
+  },
+  {
+   "id": "pleurosaurus_goldfussi",
+   "name": "Pleurosaurus",
+   "prompt": "Pleurosaurus (Pleurosaurus goldfussi), a rhynchocephalian, about 60 cm long, in a bright sunlit sea with deep cobalt-blue water, Jurassic. Appearance: A sea-going relative of the living tuatara, about 60 cm long, from the Late Jurassic lagoons of southern Germany, about 150 million years ago."
+  },
+  {
+   "id": "karaurus_sharovi",
+   "name": "Karaurus",
+   "prompt": "Karaurus (Karaurus sharovi), a salamander, about 19 cm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: One of the oldest known salamanders, about 19 cm long, from the Late Jurassic of Kazakhstan, about 155 million years ago. It already had the salamander body plan: a broad, flat head with a rounded snout, a long body, four short legs and a tail."
+  },
+  {
+   "id": "prosalirus_bitis",
+   "name": "Prosalirus",
+   "prompt": "Prosalirus (Prosalirus bitis), a proto-frog, about 5 cm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: The oldest known frog that could leap, about 5 cm long, from the Early Jurassic of Arizona, about 190 million years ago."
+  },
+  {
+   "id": "ichthyosaurus_communis",
+   "name": "Ichthyosaurus",
+   "prompt": "Ichthyosaurus (Ichthyosaurus communis), an ichthyosaur, about 2 m long, in a bright sunlit sea with deep cobalt-blue water, Jurassic. Appearance: The classic 'fish-lizard' of the Early Jurassic seas of Europe, about 200-190 million years ago, made famous by Mary Anning's finds at Lyme Regis."
+  },
+  {
+   "id": "dapedium_politum",
+   "name": "Dapedium",
+   "prompt": "Dapedium (Dapedium politum), a bony fish, about 35 cm long, in a bright sunlit sea with violet dusk-lit water, Jurassic. Appearance: A deep-bodied, almost disc-shaped fish about 35 cm long from the Early Jurassic seas of Europe, about 195 million years ago."
+  },
+  {
+   "id": "aspidorhynchus_acutirostris",
+   "name": "Aspidorhynchus",
+   "prompt": "Aspidorhynchus (Aspidorhynchus acutirostris), a bony fish, about 60 cm long, in a bright sunlit sea with dark indigo-blue water, Jurassic. Appearance: A slim, fast predatory fish about 60 cm long from the Late Jurassic lagoons of Europe, about 150 million years ago, shaped like a garfish."
+  },
+  {
+   "id": "spathobatis_bugesiacus",
+   "name": "Spathobatis",
+   "prompt": "Spathobatis (Spathobatis bugesiacus), a ray, about 1.2 m long, in a bright sunlit sea with vivid turquoise and teal water, Jurassic. Appearance: One of the earliest rays, up to about 1.5 metres long, from the Late Jurassic lagoons of France and Germany, about 150 million years ago."
+  },
+  {
+   "id": "undina_penicillata",
+   "name": "Undina",
+   "prompt": "Undina (Undina penicillata), a lobe-finned fish, about 50 cm long, in a bright sunlit sea with emerald-green water, Jurassic. Appearance: A Jurassic coelacanth about 50 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of the living Latimeria."
+  },
+  {
+   "id": "dactylioceras_commune",
+   "name": "Dactylioceras",
+   "prompt": "Dactylioceras (Dactylioceras commune), an ammonite, about 8 cm long, in a bright sunlit sea with deep cobalt-blue water, Jurassic. Appearance: A small ammonite of the Early Jurassic seas, about 180 million years ago, with a flat shell up to about 8 cm across."
+  },
+  {
+   "id": "palaeocoma_egertoni",
+   "name": "Palaeocoma",
+   "prompt": "Palaeocoma (Palaeocoma egertoni), a brittle star, about 12 cm long, in a bright sunlit sea with dark indigo-blue water, Jurassic. Appearance: A brittle star about 10-15 cm across from the Early Jurassic seas of England, about 190 million years ago. It had a rounded central disc and five long, slender, spiny arms that it rowed in snake-like strokes across the sea floor, picking up food particles."
+  },
+  {
+   "id": "gryphaea_arcuata",
+   "name": "Gryphaea",
+   "prompt": "Gryphaea (Gryphaea arcuata), an early bivalve, growing in place, about 8 cm long, in a bright sunlit sea with deep cobalt-blue water, Jurassic. Appearance: The 'Devil's toenail', an oyster 5-10 cm long from the Early Jurassic seas of Europe, about 200-190 million years ago. Its thick lower shell grew in a tight, curling hook like a giant toenail, with the small, flat upper shell sitting in it like a lid."
+  },
+  {
+   "id": "eryon_arctiformis",
+   "name": "Eryon",
+   "prompt": "Eryon (Eryon arctiformis), a lobster, about 12 cm long, in a bright sunlit sea with emerald-green water, Jurassic. Appearance: A flat, broad lobster about 10-15 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of today's blind deep-sea lobsters."
+  },
+  {
+   "id": "thecosmilia_trichotoma",
+   "name": "Thecosmilia",
+   "prompt": "Thecosmilia (Thecosmilia trichotoma), a stony coral, growing in place, about 50 cm long, in a bright sunlit sea with emerald-green water, Jurassic. Appearance: A reef-building stony coral of the warm Late Jurassic seas of Europe, about 160-150 million years ago."
+  },
+  {
+   "id": "archaeolepis_mane",
+   "name": "Archaeolepis",
+   "prompt": "Archaeolepis (Archaeolepis mane), a butterfly, in flight, about 1 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Jurassic. Appearance: The oldest known moth, from Early Jurassic rocks of Dorset in England, about 190 million years ago. It is known from wings covered in the tiny overlapping scales that give moths and butterflies their name, 'scale wings'."
+  },
+  {
+   "id": "sahelanthropus_tchadensis",
+   "name": "Sahelanthropus",
+   "prompt": "Sahelanthropus (Sahelanthropus tchadensis), a hominin, about 1.2 m long, in a lush emerald-green forest, Neogene. Appearance: One of the oldest known members of the human lineage, from the Late Miocene of Chad, about 7 million years ago. It was a chimpanzee-sized ape with a small brain, a huge brow ridge, a rather flat face and small canine teeth."
+  },
+  {
+   "id": "proconsul_africanus",
+   "name": "Proconsul",
+   "prompt": "Proconsul (Proconsul africanus), a great ape, about 70 cm long, in a lush emerald-green forest, Neogene. Appearance: An early ape from the Early Miocene forests of East Africa, about 20 million years ago, close to the common ancestor of all living apes."
+  },
+  {
+   "id": "mesopithecus_pentelicus",
+   "name": "Mesopithecus",
+   "prompt": "Mesopithecus (Mesopithecus pentelicus), a primate, about 45 cm long, in a lush emerald-green forest, Neogene. Appearance: An early leaf-eating monkey from the Late Miocene of Europe and western Asia, a relative of today's langurs and colobus monkeys. Macaque-sized with a long tail, it was at home both in trees and on open ground, and lived in troops."
+  },
+  {
+   "id": "wakaleo_vanderleueri",
+   "name": "Wakaleo",
+   "prompt": "Wakaleo (Wakaleo vanderleueri), a marsupial, about 1 m long, in a lush emerald-green forest, Neogene. Appearance: A dog-sized marsupial lion from the Miocene forests of Australia, an earlier relative of Thylacoleo. It had a short, powerful head with blade-like cheek teeth for slicing meat and strong forelimbs for gripping prey."
+  },
+  {
+   "id": "nimbadon_lavarackorum",
+   "name": "Nimbadon",
+   "prompt": "Nimbadon (Nimbadon lavarackorum), a marsupial, about 1 m long, in a lush emerald-green forest, Neogene. Appearance: A sheep-sized relative of wombats and koalas from the Miocene rainforests of northern Australia. Unlike its giant ground-living cousins, it had long, strongly clawed limbs and probably climbed trees to browse leaves, much like a koala."
+  },
+  {
+   "id": "obdurodon_dicksoni",
+   "name": "Giant Platypus",
+   "prompt": "Giant Platypus (Obdurodon dicksoni), a monotreme, about 60 cm long, in a clear river or lake with teal water and green plants, Neogene. Appearance: An extinct platypus from the Miocene of Australia, larger than the living species, with a broader bill that flared at the tip. Unlike today's platypus it kept its teeth as an adult, and it may have eaten bigger prey such as crayfish, frogs and small turtles."
+  },
+  {
+   "id": "dromornis_stirtoni",
+   "name": "Stirton's Thunderbird",
+   "prompt": "Stirton's Thunderbird (Dromornis stirtoni), a dromornithid, about 3 m long, in a sunny savanna under a blue sky, Neogene. Appearance: A giant flightless bird from the Late Miocene of central Australia, about 3 metres tall and up to 600 kilograms, among the heaviest birds ever."
+  },
+  {
+   "id": "vulcanops_jennyworthyae",
+   "name": "Vulcanops",
+   "prompt": "Vulcanops (Vulcanops jennyworthyae), a bat, in flight, about 12 cm long, in a lush emerald-green forest, Neogene. Appearance: A giant burrowing bat from the Early Miocene of New Zealand, about three times the size of an ordinary small bat."
+  },
+  {
+   "id": "synthetoceras_tricornatus",
+   "name": "Synthetoceras",
+   "prompt": "Synthetoceras (Synthetoceras tricornatus), a protoceratid, about 2 m long, in open green plains under a crisp blue sky, Neogene. Appearance: A deer-sized hoofed mammal from the Late Miocene of North America, the last and largest of the protoceratids, distant relatives of camels."
+  },
+  {
+   "id": "epicyon_haydeni",
+   "name": "Epicyon",
+   "prompt": "Epicyon (Epicyon haydeni), a canid, about 1.7 m long, in open green plains under a crisp blue sky, Neogene. Appearance: The largest dog that ever lived, from the Late Miocene of North America, weighing up to about 170 kilograms. It belonged to the borophagines, \"bone-crushing dogs\" with short, deep, hyena-like jaws that cracked bones for their marrow."
+  },
+  {
+   "id": "nesodon_imbricatus",
+   "name": "Nesodon",
+   "prompt": "Nesodon (Nesodon imbricatus), a notoungulate, about 1.8 m long, in open green plains under a crisp blue sky, Neogene. Appearance: A heavy, tapir-sized grazer from the Early Miocene of Patagonia, an early member of the toxodonts, hoofed mammals found only in South America."
+  },
+  {
+   "id": "squalodon_calvertensis",
+   "name": "Shark-toothed Dolphin",
+   "prompt": "Shark-toothed Dolphin (Squalodon calvertensis), a toothed whale, about 3 m long, in a bright sunlit sea with vivid turquoise and teal water, Neogene. Appearance: A 3-metre dolphin-like whale from the Miocene seas of the North Atlantic. Its long beak held pointed front teeth and triangular, serrated cheek teeth like a shark's, from which it gets its name."
+  },
+  {
+   "id": "metaxytherium_floridanum",
+   "name": "Metaxytherium",
+   "prompt": "Metaxytherium (Metaxytherium floridanum), a sirenian, about 3 m long, in a bright sunlit sea with violet dusk-lit water, Neogene. Appearance: A dugong relative from the Miocene shallow seas of Florida and the Caribbean, about 3 metres long. It had a fat, spindle-shaped body, paddle-like flippers and a tail fluke, and a down-turned snout with small tusks for uprooting seagrass."
+  },
+  {
+   "id": "acrophoca_longirostris",
+   "name": "Swan-necked Seal",
+   "prompt": "Swan-necked Seal (Acrophoca longirostris), a pinniped, about 1.8 m long, in a bright sunlit sea with deep cobalt-blue water, Neogene. Appearance: An unusual seal from the Late Miocene coast of Peru, a slender relative of the monk seals. It had a remarkably long neck and a long, narrow snout, and probably darted its head sideways to snap up fish."
+  },
+  {
+   "id": "oncorhynchus_rastrosus",
+   "name": "Sabre-toothed Salmon",
+   "prompt": "Sabre-toothed Salmon (Oncorhynchus rastrosus), a bony fish, about 2.2 m long, in a bright sunlit sea with deep cobalt-blue water, Neogene. Appearance: The largest salmon ever, up to about 2.5 metres long, from the Late Miocene and Pliocene of the North Pacific coast."
+  },
+  {
+   "id": "ecphora_gardnerae",
+   "name": "Ecphora",
+   "prompt": "Ecphora (Ecphora gardnerae), a sea snail, growing in place, about 10 cm long, in a bright sunlit sea with dark indigo-blue water, Neogene. Appearance: A predatory sea snail from the Miocene seas of the Chesapeake Bay region, a relative of the murex snails. Its rust-red shell, one of the few fossil shells that keeps its colour, bore four tall, flat ribs spiralling round the whorls."
+  },
+  {
+   "id": "chesapecten_jeffersonius",
+   "name": "Jefferson's Scallop",
+   "prompt": "Jefferson's Scallop (Chesapecten jeffersonius), a scallop, growing in place, about 17 cm long, in a bright sunlit sea with deep cobalt-blue water, Neogene. Appearance: A large scallop from the Pliocene seas of Virginia and North Carolina, up to about 17 centimetres across, with broad radiating ribs."
+  },
+  {
+   "id": "clypeaster_aegyptiacus",
+   "name": "Giant Sea Biscuit",
+   "prompt": "Giant Sea Biscuit (Clypeaster aegyptiacus), an echinoderm, growing in place, about 15 cm long, in a bright sunlit sea with violet dusk-lit water, Neogene. Appearance: A big, thick relative of the sand dollars from the Miocene and Pliocene seas around the Mediterranean and Red Sea."
+  },
+  {
+   "id": "mastotermes_electrodominicus",
+   "name": "Amber Giant Termite",
+   "prompt": "Amber Giant Termite (Mastotermes electrodominicus), a termite, about 1 cm long, in a lush emerald-green forest, Neogene. Appearance: An extinct giant termite found in Miocene amber from the Dominican Republic, of the most primitive living termite family. Its only surviving relative is the giant northern termite of Australia, so this family once lived across the world."
+  },
+  {
+   "id": "rhamphosuchus_crassidens",
+   "name": "Rhamphosuchus",
+   "prompt": "Rhamphosuchus (Rhamphosuchus crassidens), a crocodilian, about 9 m long, in a clear river or lake with teal water and green plants, Neogene. Appearance: A giant relative of the gharials from the Miocene rivers of India and Pakistan, perhaps 8 to 11 metres long. Its long, narrow snout was lined with many sharp teeth, but it was stouter than a living gharial's, so it may have taken larger prey as well as fish."
+  },
+  {
+   "id": "hoplitomeryx_matthei",
+   "name": "Prongdeer",
+   "prompt": "Prongdeer (Hoplitomeryx matthei), a deer, about 1 m long, in green rolling hills under a blue sky, Neogene. Appearance: A small deer-like ruminant that lived on the Miocene island of Gargano, now part of Italy. It had five horns, one long horn up the middle of the nose and a pair above each eye, and long, sabre-like upper canines like a musk deer."
+  },
+  {
+   "id": "kubanochoerus_gigas",
+   "name": "Kubanochoerus",
+   "prompt": "Kubanochoerus (Kubanochoerus gigas), a pig, about 2.2 m long, in a lush emerald-green forest, Neogene. Appearance: A giant, long-legged pig from the Middle Miocene of Eurasia, as large as a small horse and weighing perhaps 500 kilograms. It had big tusks, and males carried a single horn on the forehead, probably used in head-butting contests."
+  },
+  {
+   "id": "spheniscus_urbinai",
+   "name": "Urbina's Penguin",
+   "prompt": "Urbina's Penguin (Spheniscus urbinai), a penguin, about 90 cm long, in a bright sunlit sea with dark indigo-blue water, Neogene. Appearance: An extinct banded penguin from the Late Miocene coasts of Peru and Chile, larger than its living relative the Humboldt penguin. It had a long, dagger-like bill for catching fish and probably the black breast band of its living kin."
+  },
+  {
+   "id": "furca_mauritanica",
+   "name": "Furca",
+   "prompt": "Furca (Furca mauritanica), an arthropod, about 4 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: A small marrellomorph arthropod a few centimetres across, a late cousin of the Cambrian Marrella."
+  },
+  {
+   "id": "triarthrus_eatoni",
+   "name": "Triarthrus",
+   "prompt": "Triarthrus (Triarthrus eatoni), a trilobite, about 3 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: A small, flat trilobite about 3 cm long with a long thorax of fourteen narrow segments and tiny eyes."
+  },
+  {
+   "id": "carolinites_genacinaca",
+   "name": "Carolinites",
+   "prompt": "Carolinites (Carolinites genacinaca), a trilobite, about 3 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ordovician. Appearance: A small open-water trilobite whose head was dominated by two huge, bulging eyes that gave it almost all-round vision. Instead of crawling on the bottom it swam in the upper waters, and it spread so widely that it is found on many Ordovician continents."
+  },
+  {
+   "id": "chasmataspis_laurencii",
+   "name": "Chasmataspis",
+   "prompt": "Chasmataspis (Chasmataspis laurencii), a chasmataspidid, about 5 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: A small chelicerate a few centimetres long, related to the sea scorpions, with a broad, rounded head shield, a short, wide 'buckler' of three fused segments and a narrow tail of nine segments ending in a spine."
+  },
+  {
+   "id": "tremaglaspis_unite",
+   "name": "Tremaglaspis",
+   "prompt": "Tremaglaspis (Tremaglaspis unite), an aglaspidid, about 3 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: An aglaspidid, a small extinct arthropod that looks like a cross between a trilobite and a horseshoe crab, a few centimetres long."
+  },
+  {
+   "id": "caryocaris_wrightii",
+   "name": "Caryocaris",
+   "prompt": "Caryocaris (Caryocaris wrightii), a phyllocarid, about 3 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: A small, shrimp-like crustacean with a long, narrow, pod-shaped shell of two thin valves pointed at both ends, a short abdomen and a forked tail. It swam and drifted in the open sea, which is why its remains are so often found among graptolites."
+  },
+  {
+   "id": "brachiospongia_digitata",
+   "name": "Brachiospongia",
+   "prompt": "Brachiospongia (Brachiospongia digitata), a sponge, growing in place, about 25 cm long, in a bright shallow sea floor with vivid turquoise and teal water (microbial mats, no fish or modern plants), Ordovician. Appearance: A large glass sponge up to about 30 cm across, shaped like an upturned glove or crown: a broad central body with an opening on top and a ring of big, hollow, finger-like lobes that held it up off the muddy sea floor."
+  },
+  {
+   "id": "constellaria_florida",
+   "name": "Constellaria",
+   "prompt": "Constellaria (Constellaria florida), a bryozoan, growing in place, about 6 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Ordovician. Appearance: A bryozoan colony of countless tiny filter-feeding animals, growing as flattened, branching fronds a few centimetres tall. Its surface is dotted with regular star-shaped patches, which gave it its name, where filtered water flowed out of the colony."
+  },
+  {
+   "id": "rafinesquina_alternata",
+   "name": "Rafinesquina",
+   "prompt": "Rafinesquina (Rafinesquina alternata), a strophomenid brachiopod, growing in place, about 4 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: A brachiopod with a very thin, broad, D-shaped shell about 4 cm wide, with a long straight hinge and fine radiating ribs. Its two valves nested one inside the other, so the shell was barely thicker than a coin."
+  },
+  {
+   "id": "ambonychia_radiata",
+   "name": "Ambonychia",
+   "prompt": "Ambonychia (Ambonychia radiata), an early bivalve, growing in place, about 5 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ordovician. Appearance: A thick, strongly ribbed clam about 5 cm tall, taller than long, with a pointed beak at the top front. It stood upright on its edge, anchored to shells and other hard bits on the sea floor by a tuft of threads, filtering food from the water."
+  },
+  {
+   "id": "babinka_prima",
+   "name": "Babinka",
+   "prompt": "Babinka (Babinka prima), an early bivalve, growing in place, about 2 cm long, in a bright shallow sea floor with vivid turquoise and teal water (microbial mats, no fish or modern plants), Ordovician. Appearance: A small, smooth, oval clam about 2 cm long that lived half-buried in the soft sea floor, feeding on organic matter in the mud."
+  },
+  {
+   "id": "echinochiton_dufoei",
+   "name": "Echinochiton",
+   "prompt": "Echinochiton (Echinochiton dufoei), a chiton, growing in place, about 5 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ordovician. Appearance: A chiton a few centimetres long with a row of eight overlapping shell plates on its back, like all chitons, but with rows of long, hollow spines sticking out from them. It is the oldest chiton known from a complete specimen."
+  },
+  {
+   "id": "glyptocrinus_decadactylus",
+   "name": "Glyptocrinus",
+   "prompt": "Glyptocrinus (Glyptocrinus decadactylus), a crinoid, growing in place, about 30 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ordovician. Appearance: A sea lily about 30 cm tall with a long, round stem, a rigid, cone-shaped cup of thick, ornamented plates and ten branching arms. It spread its arms like a fan in the current to catch food particles from the water."
+  },
+  {
+   "id": "isorophus_cincinnatiensis",
+   "name": "Isorophus",
+   "prompt": "Isorophus (Isorophus cincinnatiensis), an echinoderm, growing in place, about 3 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: An edrioasteroid, an extinct echinoderm that lived stuck to shells on the sea floor. Its body was a low, coin-sized disc of overlapping plates, with five food grooves curving out from the centre like a pinwheel."
+  },
+  {
+   "id": "bothriocidaris_pahleni",
+   "name": "Bothriocidaris",
+   "prompt": "Bothriocidaris (Bothriocidaris pahleni), an echinoderm, growing in place, about 2 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: One of the oldest sea urchins, a small, round animal only 1 to 2 cm across, covered in short spines. Unlike living sea urchins, the zones between its five food-groove areas were just a single column of plates wide."
+  },
+  {
+   "id": "mitrocystites_mitra",
+   "name": "Mitrocystites",
+   "prompt": "Mitrocystites (Mitrocystites mitra), an echinoderm, growing in place, about 4 cm long, in a bright shallow sea floor with vivid turquoise and teal water (microbial mats, no fish or modern plants), Ordovician. Appearance: A mitrate, a strange echinoderm with no five-fold symmetry: a flattened, plated body a few centimetres long with a single jointed arm in front. It lay on the soft sea floor and used its arm to gather food."
+  },
+  {
+   "id": "protasterina_flexuosa",
+   "name": "Protasterina",
+   "prompt": "Protasterina (Protasterina flexuosa), a brittle star, about 5 cm long, in a bright shallow sea floor with violet dusk-lit water (microbial mats, no fish or modern plants), Ordovician. Appearance: An early brittle star a few centimetres across, with a small, rounded central disc and five long, slender, flexible arms fringed with short spines. It crawled quickly over the sea floor by snaking its arms, picking up detritus and food particles."
+  },
+  {
+   "id": "villebrunaster_thorali",
+   "name": "Villebrunaster",
+   "prompt": "Villebrunaster (Villebrunaster thorali), a sea star, growing in place, about 6 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ordovician. Appearance: A primitive starfish relative several centimetres across, close to the common ancestor of sea stars and brittle stars. Its five broad, petal-shaped arms were stiffened by rows of rod-like plates running out from the middle of each arm like the ribs of a leaf."
+  },
+  {
+   "id": "onychopterella_augusti",
+   "name": "Onychopterella",
+   "prompt": "Onychopterella (Onychopterella augusti), an eurypterid, about 15 cm long, in a bright shallow sea floor with deep cobalt-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: A slender sea scorpion about 15 cm long, known from exceptionally preserved fossils in South Africa that even show its muscles and gills. It had short, spiny front legs to grab prey, long walking legs and a pair of big swimming paddles ending in a claw."
+  },
+  {
+   "id": "columnaria_alveolata",
+   "name": "Columnaria",
+   "prompt": "Columnaria (Columnaria alveolata), a rugose coral, growing in place, about 30 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: A colonial rugose coral forming massive, cushion-shaped heads of hundreds of long, slender corallites packed so tightly that their walls were shared and six-sided, like a honeycomb. Each corallite held a small polyp that caught tiny prey with its tentacles."
+  },
+  {
+   "id": "palaeoscolex_piscatorum",
+   "name": "Palaeoscolex",
+   "prompt": "Palaeoscolex (Palaeoscolex piscatorum), a priapulid worm, about 6 cm long, in a bright shallow sea floor with emerald-green water (microbial mats, no fish or modern plants), Ordovician. Appearance: A slender worm several centimetres long, a cousin of the priapulid worms, whose body was divided into many fine rings studded with tiny plates. At its front was a proboscis ringed with small hooks that it could shoot out to grip the mud as it burrowed."
+  },
+  {
+   "id": "leperditia_fabulites",
+   "name": "Leperditia",
+   "prompt": "Leperditia (Leperditia fabulites), an ostracod, about 1.5 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: A giant among ostracods, the tiny crustaceans enclosed in a two-valved shell: its smooth, bean-shaped shell grew to about 2 cm long."
+  },
+  {
+   "id": "porophoraspis_crenulata",
+   "name": "Porophoraspis",
+   "prompt": "Porophoraspis (Porophoraspis crenulata), a jawless vertebrate, about 12 cm long, in a bright shallow sea floor with dark indigo-blue water (microbial mats, no fish or modern plants), Ordovician. Appearance: One of the oldest known fish, a small jawless vertebrate about 12 cm long without paired fins. The front of its body was enclosed in a box of bony plates ornamented with ridges and pierced by pores, and it had tiny eyes at the very front."
+  },
+  {
+   "id": "phiomia_serridens",
+   "name": "Phiomia",
+   "prompt": "Phiomia (Phiomia serridens), a proboscidean, about 2.5 m long, in a lush green swamp with clear shallow water, Paleogene. Appearance: An early relative of elephants from the late Eocene and early Oligocene swamp forests of Egypt, about 2.5 m long and 1.3 m tall at the shoulder."
+  },
+  {
+   "id": "eurotamandua_joresi",
+   "name": "Eurotamandua",
+   "prompt": "Eurotamandua (Eurotamandua joresi), a pangolin, about 90 cm long, in a lush emerald-green forest, Paleogene. Appearance: An anteater-like mammal about 90 cm long, including its long tail, from the middle Eocene forests of Germany. It had a long, toothless snout, powerful clawed forelimbs for ripping open ant and termite nests, and a strong tail that may have gripped branches."
+  },
+  {
+   "id": "ailuravus_macrurus",
+   "name": "Ailuravus",
+   "prompt": "Ailuravus (Ailuravus macrurus), a rodent, about 70 cm long, in a lush emerald-green forest, Paleogene. Appearance: One of the earliest and largest rodents, from the middle Eocene forests of Germany, about 70 cm long, more than half of it a long, bushy tail. It looked much like a big squirrel and climbed in the trees."
+  },
+  {
+   "id": "palaeolagus_haydeni",
+   "name": "Palaeolagus",
+   "prompt": "Palaeolagus (Palaeolagus haydeni), a lagomorph, about 25 cm long, in open green plains under a crisp blue sky, Paleogene. Appearance: An early rabbit from the late Eocene and Oligocene of North America, about 25 cm long and common on the spreading grasslands and open woods. Its ears and hind legs were shorter than a modern rabbit's, so it probably ran rather than leapt."
+  },
+  {
+   "id": "taeniolabis_taoensis",
+   "name": "Taeniolabis",
+   "prompt": "Taeniolabis (Taeniolabis taoensis), a multituberculate, about 80 cm long, in a lush emerald-green forest, Paleogene. Appearance: The largest multituberculate, a beaver-sized mammal about 80 cm long from the early Paleocene of New Mexico, living just a few hundred thousand years after the dinosaurs died out. Multituberculates were an old, rodent-like lineage unrelated to true rodents;"
+  },
+  {
+   "id": "pyrotherium_romeroi",
+   "name": "Pyrotherium",
+   "prompt": "Pyrotherium (Pyrotherium romeroi), a pyrothere, about 3 m long, in open green plains under a crisp blue sky, Paleogene. Appearance: A large South American hoofed mammal about 3 m long from the late Oligocene of Argentina and Bolivia."
+  },
+  {
+   "id": "mesonyx_obtusidens",
+   "name": "Mesonyx",
+   "prompt": "Mesonyx (Mesonyx obtusidens), a mesonychid, about 1.5 m long, in open green plains under a crisp blue sky, Paleogene. Appearance: A wolf-like predator about 1.5 m long from the middle Eocene of North America and Asia. Mesonychids were hoofed mammals that took up hunting: Mesonyx had a big head with strong jaws and blunt teeth, long running legs and small hooves instead of claws."
+  },
+  {
+   "id": "protoceras_celer",
+   "name": "Protoceras",
+   "prompt": "Protoceras (Protoceras celer), a protoceratid, about 1 m long, in open green plains under a crisp blue sky, Paleogene. Appearance: A deer-sized hoofed mammal about 1 m long from the early Oligocene of North America, a distant relative of camels. Males carried three pairs of short bony knobs and flanges on the head, the tallest pair on the snout, and tusk-like upper canines;"
+  },
+  {
+   "id": "merycoidodon_culbertsoni",
+   "name": "Merycoidodon",
+   "prompt": "Merycoidodon (Merycoidodon culbertsoni), an oreodont, about 1.4 m long, in open green plains under a crisp blue sky, Paleogene. Appearance: A sheep-sized oreodont about 1.4 m long from the late Eocene and Oligocene of North America, one of the most common fossil mammals of the Badlands of South Dakota."
+  },
+  {
+   "id": "pezosiren_portelli",
+   "name": "Pezosiren",
+   "prompt": "Pezosiren (Pezosiren portelli), a sirenian, about 2.1 m long, in a lush green swamp with clear shallow water, Paleogene. Appearance: The oldest known sea cow, from the early middle Eocene of Jamaica, about 2.1 m long."
+  },
+  {
+   "id": "lithornis_celetius",
+   "name": "Lithornis",
+   "prompt": "Lithornis (Lithornis celetius), a lithornithid, about 40 cm long, in open green plains under a crisp blue sky, Paleogene. Appearance: A chicken-sized bird about 40 cm long from the late Paleocene of North America, a distant relative of ostriches, emus and tinamous that could still fly."
+  },
+  {
+   "id": "primobucco_mcgrewi",
+   "name": "Primobucco",
+   "prompt": "Primobucco (Primobucco mcgrewi), a roller, in flight, wings spread, about 18 cm long, in a lush emerald-green forest, Paleogene. Appearance: An early roller, a small bird about 18 cm long from the early Eocene Green River lakes of Wyoming. Like living rollers it probably watched from a perch and swooped down on large insects and small animals."
+  },
+  {
+   "id": "saniwa_ensidens",
+   "name": "Saniwa",
+   "prompt": "Saniwa (Saniwa ensidens), a lizard, about 1.3 m long, in open green plains under a crisp blue sky, Paleogene. Appearance: A monitor lizard about 1.3 m long from the Eocene of North America, a close relative of today's monitors and the first fossil lizard named from the continent. It hunted small animals and ate eggs, flicking its forked tongue to smell its way."
+  },
+  {
+   "id": "allaeochelys_crassesculpta",
+   "name": "Allaeochelys",
+   "prompt": "Allaeochelys (Allaeochelys crassesculpta), a pig-nosed turtle, about 30 cm long, in a clear river or lake with teal water and green plants, Paleogene. Appearance: A freshwater turtle about 30 cm long from the middle Eocene lake of Messel in Germany, a relative of the pig-nosed turtle of New Guinea and Australia, with flipper-like front limbs and a fleshy snout. It ate plants, snails and other small animals."
+  },
+  {
+   "id": "eopelobates_wagneri",
+   "name": "Eopelobates",
+   "prompt": "Eopelobates (Eopelobates wagneri), a spadefoot toad, about 7 cm long, in a lush emerald-green forest, Paleogene. Appearance: An extinct relative of spadefoot toads, about 7 cm long, from the middle Eocene of Germany. It was a squat frog with large eyes that hunted insects and other small animals around the forest lake."
+  },
+  {
+   "id": "phareodus_encaustus",
+   "name": "Phareodus",
+   "prompt": "Phareodus (Phareodus encaustus), a bony fish, about 50 cm long, in a clear river or lake with teal water and green plants, Paleogene, the water deep cobalt-blue. Appearance: A bonytongue fish about 50 cm long from the early Eocene Green River lakes of Wyoming, related to the arowanas of tropical rivers today. It had a deep, flattened body, a large upturned mouth with sharp teeth and long pectoral fins."
+  },
+  {
+   "id": "atractosteus_simplex",
+   "name": "Green River Gar",
+   "prompt": "Green River Gar (Atractosteus simplex), a gar, about 1 m long, in a clear river or lake with teal water and green plants, Paleogene. Appearance: A gar about 1 m long from the early Eocene Green River lakes of Wyoming, a close relative of the alligator gar. Its long body was covered in hard, diamond-shaped scales that fitted together like armour, and its long snout held rows of needle teeth."
+  },
+  {
+   "id": "striatolamia_macrota",
+   "name": "Striatolamia",
+   "prompt": "Striatolamia (Striatolamia macrota), a mackerel shark, about 3 m long, in a bright sunlit sea with deep cobalt-blue water, Paleogene. Appearance: A sand tiger shark about 3 m long from the Paleocene to the Oligocene seas of the world. It had long, slender, finely grooved teeth for catching slippery fish, and its teeth are among the most common shark fossils of the time."
+  },
+  {
+   "id": "glossina_oligocena",
+   "name": "Florissant Tsetse Fly",
+   "prompt": "Florissant Tsetse Fly (Glossina oligocena), a fly, in flight, about 1.5 cm long, in open green plains under a crisp blue sky, Paleogene. Appearance: A tsetse fly about 1.5 cm long from the late Eocene lake beds of Florissant, Colorado."
+  },
+  {
+   "id": "prodryas_persephone",
+   "name": "Prodryas",
+   "prompt": "Prodryas (Prodryas persephone), a butterfly, in flight, about 2.5 cm long, in open green plains under a crisp blue sky, Paleogene. Appearance: A brush-footed butterfly with a wingspan of about 5 cm from the late Eocene lake beds of Florissant, Colorado, one of the finest fossil butterflies ever found."
+  },
+  {
+   "id": "harpactocarcinus_punctulatus",
+   "name": "Harpactocarcinus",
+   "prompt": "Harpactocarcinus (Harpactocarcinus punctulatus), a true crab, about 10 cm long, in a bright sunlit sea with dark indigo-blue water, Paleogene. Appearance: A crab from the Eocene seas of southern Europe, with a broad, smooth, oval shell about 10 cm wide covered in fine dots. Its strong pincers were of unequal size, the larger one able to crush shells."
+  },
+  {
+   "id": "campanile_giganteum",
+   "name": "Campanile",
+   "prompt": "Campanile (Campanile giganteum), a sea snail, growing in place, about 80 cm long, in a bright sunlit sea with violet dusk-lit water, Paleogene. Appearance: One of the largest sea snails that ever lived, from the middle Eocene seas of the Paris Basin, with a tall, slender, spiral shell up to about 1 m long and a row of knobs winding round its many whorls."
+  },
+  {
+   "id": "aturia_ziczac",
+   "name": "Aturia",
+   "prompt": "Aturia (Aturia ziczac), a nautiloid cephalopod, about 15 cm long, in a bright sunlit sea with deep cobalt-blue water, Paleogene. Appearance: A nautilus-like cephalopod with a smooth, tightly coiled shell about 15 cm across, from the Eocene to the Miocene seas of the world. Inside, the walls between its chambers met the shell in deep, zigzag lines that gave it its name."
+  },
+  {
+   "id": "archegosaurus_decheni",
+   "name": "Archegosaurus",
+   "prompt": "Archegosaurus (Archegosaurus decheni), a temnospondyl, about 1.5 m long, in a clear river or lake with teal water and green plants, Permian. Appearance: A gharial-like amphibian about 1.5 metres long from the Early Permian lakes of south-western Germany, around 295 million years ago."
+  },
+  {
+   "id": "xenacanthus_decheni",
+   "name": "Xenacanthus",
+   "prompt": "Xenacanthus (Xenacanthus decheni), a xenacanth shark, about 70 cm long, in a clear river or lake with teal water and green plants, Permian. Appearance: A small freshwater shark about 70 centimetres long from the Early Permian lakes and rivers of Europe. It had an eel-like body with a long ribbon of a dorsal fin running back to a pointed tail, and a long, straight spine sticking back from the top of its head."
+  },
+  {
+   "id": "acanthodes_bronni",
+   "name": "Acanthodes",
+   "prompt": "Acanthodes (Acanthodes bronni), an acanthodian, about 30 cm long, in a clear river or lake with teal water and green plants, Permian, the water deep cobalt-blue. Appearance: One of the last spiny sharks, about 30 centimetres long, from the Early Permian lakes of Germany."
+  },
+  {
+   "id": "gnathorhiza_serrata",
+   "name": "Gnathorhiza",
+   "prompt": "Gnathorhiza (Gnathorhiza serrata), a lungfish, about 40 cm long, in a clear river or lake with teal water and green plants, Permian. Appearance: A small, eel-shaped lungfish from the Early Permian of Texas, Oklahoma and Kansas, around 290 million years ago."
+  },
+  {
+   "id": "palaeoniscum_freieslebeni",
+   "name": "Palaeoniscum",
+   "prompt": "Palaeoniscum (Palaeoniscum freieslebeni), a bony fish, about 30 cm long, in a bright sunlit sea with emerald-green water, Permian. Appearance: A ray-finned fish about 30 centimetres long, one of the most common fossils of the Late Permian Zechstein Sea of Germany and England, around 257 million years ago."
+  },
+  {
+   "id": "janassa_bituminosa",
+   "name": "Janassa",
+   "prompt": "Janassa (Janassa bituminosa), a chimaera, about 60 cm long, in a bright sunlit sea with dark indigo-blue water, Permian. Appearance: A strange, flattened relative of the ratfishes from the Late Permian Zechstein Sea of Germany and England. With its broad body and huge, wing-like pectoral fins it looked much like a skate, and it lay on or glided over the sea floor."
+  },
+  {
+   "id": "campylocephalus_permianus",
+   "name": "Campylocephalus",
+   "prompt": "Campylocephalus (Campylocephalus permianus), an eurypterid, about 1.4 m long, in a clear river or lake with teal water and green plants, Permian. Appearance: The last known sea scorpion, from the Late Permian of Russia, known only from part of its large head shield; its whole group vanished in the great end-Permian extinction."
+  },
+  {
+   "id": "shikamaia_akasakaensis",
+   "name": "Shikamaia",
+   "prompt": "Shikamaia (Shikamaia akasakaensis), an early bivalve, growing in place, about 1 m long, in a bright sunlit sea with vivid turquoise and teal water, Permian. Appearance: A giant clam from the Middle Permian reef lagoons of Japan and the warm Tethys Ocean, around 265 million years ago, up to about a metre across."
+  },
+  {
+   "id": "leptodus_americanus",
+   "name": "Leptodus",
+   "prompt": "Leptodus (Leptodus americanus), a productid brachiopod, growing in place, about 10 cm long, in a bright sunlit sea with deep cobalt-blue water, Permian. Appearance: One of the strangest brachiopods, common on the Middle Permian reefs of Texas."
+  },
+  {
+   "id": "waagenophyllum_indicum",
+   "name": "Waagenophyllum",
+   "prompt": "Waagenophyllum (Waagenophyllum indicum), a rugose coral, growing in place, about 40 cm long, in a bright sunlit sea with deep cobalt-blue water, Permian. Appearance: A colonial horn coral that helped build the reefs of the Permian Tethys Ocean, from Asia to Europe."
+  },
+  {
+   "id": "gigantospongia_discoforma",
+   "name": "Gigantospongia",
+   "prompt": "Gigantospongia (Gigantospongia discoforma), a sponge, growing in place, about 1.5 m long, in a bright sunlit sea with violet dusk-lit water, Permian. Appearance: One of the largest sponges of the Permian, from the Middle Permian reefs of west Texas, around 265 million years ago."
+  },
+  {
+   "id": "deltoblastus_permicus",
+   "name": "Deltoblastus",
+   "prompt": "Deltoblastus (Deltoblastus permicus), an echinoderm, growing in place, about 4 cm long, in a bright sunlit sea with emerald-green water, Permian. Appearance: One of the last blastoids, extinct relatives of the sea lilies, so common in the Permian rocks of Timor that many thousands have been collected."
+  },
+  {
+   "id": "protereisma_permianum",
+   "name": "Protereisma",
+   "prompt": "Protereisma (Protereisma permianum), an early insect, in flight, about 2 cm long, in a clear river or lake with teal water and green plants, Permian. Appearance: An early mayfly from the Early Permian of Kansas, around 280 million years ago. Unlike living mayflies, its fore and hind wings were almost the same size, and it had three long tail threads."
+  },
+  {
+   "id": "diadectes_sideropelicus",
+   "name": "Diadectes",
+   "prompt": "Diadectes (Diadectes sideropelicus), a reptiliomorph, about 3 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: One of the first large plant-eating land animals, about 3 metres long, from the Early Permian of North America, around 290 million years ago."
+  },
+  {
+   "id": "sphenacodon_ferox",
+   "name": "Sphenacodon",
+   "prompt": "Sphenacodon (Sphenacodon ferox), a sphenacodont synapsid, about 3 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: A large predatory synapsid about 3 metres long from the Early Permian of New Mexico and Utah, around 295 million years ago, and a close relative of Dimetrodon."
+  },
+  {
+   "id": "casea_broilii",
+   "name": "Casea",
+   "prompt": "Casea (Casea broilii), a caseid synapsid, about 1.2 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: A plant-eating synapsid about 1.2 metres long from the Early Permian of Texas, around 280 million years ago, a smaller relative of Cotylorhynchus."
+  },
+  {
+   "id": "platyhystrix_rugosus",
+   "name": "Platyhystrix",
+   "prompt": "Platyhystrix (Platyhystrix rugosus), a temnospondyl, about 1 m long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: A land-living amphibian about 1 metre long from the Early Permian of New Mexico, Colorado and Utah, around 295 million years ago."
+  },
+  {
+   "id": "biarmosuchus_tener",
+   "name": "Biarmosuchus",
+   "prompt": "Biarmosuchus (Biarmosuchus tener), a biarmosuchian therapsid, about 1.5 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: One of the most primitive therapsids, the group that later gave rise to mammals, from the Middle Permian of the Ural region of Russia, around 265 million years ago."
+  },
+  {
+   "id": "suminia_getmanovi",
+   "name": "Suminia",
+   "prompt": "Suminia (Suminia getmanovi), a dicynodont therapsid, about 50 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: A small plant-eating anomodont about 50 centimetres long from the Late Permian of Russia, around 255 million years ago, and the oldest known backboned animal adapted to climbing trees."
+  },
+  {
+   "id": "dicynodon_lacerticeps",
+   "name": "Dicynodon",
+   "prompt": "Dicynodon (Dicynodon lacerticeps), a dicynodont therapsid, about 1.2 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: The plant eater that gave its name to the dicynodonts, about 1.2 metres long, from the Late Permian of South Africa, around 255 million years ago."
+  },
+  {
+   "id": "lycosuchus_vanderrieti",
+   "name": "Lycosuchus",
+   "prompt": "Lycosuchus (Lycosuchus vanderrieti), a therocephalian therapsid, about 2 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: A large therocephalian about 2 metres long from the Middle Permian of South Africa, around 262 million years ago, one of the top predators of its time."
+  },
+  {
+   "id": "procynosuchus_delaharpeae",
+   "name": "Procynosuchus",
+   "prompt": "Procynosuchus (Procynosuchus delaharpeae), a cynodont therapsid, about 60 cm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: One of the earliest cynodonts, the group that gave rise to mammals, about 60 centimetres long, from the Late Permian of southern Africa and Germany, around 255 million years ago."
+  },
+  {
+   "id": "protorosaurus_speneri",
+   "name": "Protorosaurus",
+   "prompt": "Protorosaurus (Protorosaurus speneri), an archosauromorph, about 1.8 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Permian. Appearance: One of the first fossil reptiles ever described, found in Germany in 1706, which lived along the shores of the Zechstein Sea around 257 million years ago."
+  },
+  {
+   "id": "canis_lupus",
+   "name": "Grey Wolf",
+   "prompt": "Grey Wolf (Canis lupus), a canid, about 1.5 m long, in a bright snowy tundra under a blue sky, Pleistocene-to-present. Appearance: The largest wild dog, about 1.5 m long and 30-60 kg, spread across the northern hemisphere since the Ice Age. Wolves live in family packs that cooperate to run down deer, bison and horses many times their own weight, trotting tens of kilometres a day."
+  },
+  {
+   "id": "aenocyon_dirus",
+   "name": "Dire Wolf",
+   "prompt": "Dire Wolf (Aenocyon dirus), a canid, about 1.7 m long, in open green plains under a crisp blue sky, Pleistocene-to-present. Appearance: A wolf-sized but heavier hunting dog of Ice Age America, about 1.7 m long and 60-70 kg, with a broad head and huge, bone-cracking teeth."
+  },
+  {
+   "id": "ursus_maritimus",
+   "name": "Polar Bear",
+   "prompt": "Polar Bear (Ursus maritimus), a bear, about 2.5 m long, in a bright snowy tundra under a blue sky, Pleistocene-to-present. Appearance: The largest land carnivore alive, males up to 2.6 m long and 700 kg, which evolved from brown bears during the Ice Age. It hunts seals on the Arctic sea ice, waiting at their breathing holes, and can smell them from kilometres away."
+  },
+  {
+   "id": "hippopotamus_amphibius",
+   "name": "Common Hippopotamus",
+   "prompt": "Common Hippopotamus (Hippopotamus amphibius), a hippopotamid, about 4 m long, in a lush green swamp with clear shallow water, Pleistocene-to-present. Appearance: A barrel-shaped giant up to 5 m long and over 3 tonnes, and the closest living relative of whales. It spends the day in rivers and lakes with only its eyes, ears and nostrils above water and comes out at night to graze."
+  },
+  {
+   "id": "bison_priscus",
+   "name": "Steppe Bison",
+   "prompt": "Steppe Bison (Bison priscus), a bovid, about 3 m long, in a wide grassy steppe under a blue sky, Pleistocene-to-present. Appearance: The great wild bison of the Ice Age mammoth steppe, from Europe across Siberia to Alaska, up to 3 m long and 2 m tall at the shoulder."
+  },
+  {
+   "id": "pongo_pygmaeus",
+   "name": "Bornean Orangutan",
+   "prompt": "Bornean Orangutan (Pongo pygmaeus), a great ape, about 1.4 m long, in a lush emerald-green forest, Pleistocene-to-present. Appearance: The largest tree-living animal, a red-haired great ape whose arms span over 2 m; adult males weigh about 80 kg and grow broad cheek pads. Orangutans eat mainly fruit, use sticks and leaves as tools and build a new nest in the trees every night."
+  },
+  {
+   "id": "thylacinus_cynocephalus",
+   "name": "Thylacine",
+   "prompt": "Thylacine (Thylacinus cynocephalus), a marsupial, about 1.3 m long, in open green plains under a crisp blue sky, Pleistocene-to-present. Appearance: Also called the Tasmanian tiger, a dog-like marsupial predator about 1.3 m long with dark stripes across its back and a stiff tail. It could open its jaws remarkably wide and carried its young in a pouch. It once lived across Australia and New Guinea;"
+  },
+  {
+   "id": "castoroides_ohioensis",
+   "name": "Giant Beaver",
+   "prompt": "Giant Beaver (Castoroides ohioensis), a rodent, about 2 m long, in a lush green swamp with clear shallow water, Pleistocene-to-present. Appearance: A beaver the size of a black bear, about 2 m long and up to 100 kg, that lived in the lakes and swamps of Ice Age North America. Its incisors were up to 15 cm long, but it probably did not fell trees or build dams: it ate soft water plants."
+  },
+  {
+   "id": "struthio_camelus",
+   "name": "Common Ostrich",
+   "prompt": "Common Ostrich (Struthio camelus), an ostrich, about 2.5 m long, in a sunny savanna under a blue sky, Pleistocene-to-present. Appearance: The largest living bird, up to 2.7 m tall and 150 kg, flightless but able to run at about 70 km/h on long two-toed legs. It has the largest eyes of any land animal and lays the biggest eggs, about 1.5 kg each. A kick from an ostrich can kill a lion;"
+  },
+  {
+   "id": "raphus_cucullatus",
+   "name": "Dodo",
+   "prompt": "Dodo (Raphus cucullatus), a pigeon, about 1 m long, in a lush emerald-green forest, Pleistocene-to-present. Appearance: A flightless giant pigeon about 1 m tall and 10-18 kg from the island of Mauritius, a close relative of the Nicobar pigeon."
+  },
+  {
+   "id": "aptenodytes_forsteri",
+   "name": "Emperor Penguin",
+   "prompt": "Emperor Penguin (Aptenodytes forsteri), a penguin, about 1.2 m long, in a bright sunlit sea with violet dusk-lit water, Pleistocene-to-present. Appearance: The largest living penguin, about 1.2 m tall and up to 45 kg, which dives deeper than 500 m after fish, squid and krill."
+  },
+  {
+   "id": "bubo_scandiacus",
+   "name": "Snowy Owl",
+   "prompt": "Snowy Owl (Bubo scandiacus), an owl, in flight, wings spread, about 65 cm long, in a bright snowy tundra under a blue sky, Pleistocene-to-present. Appearance: A large white owl of the Arctic tundra, about 65 cm long with a 1.5 m wingspan, which spread across Ice Age Europe with the cold. It hunts by day in the endless Arctic summer, mainly lemmings, and a pair may eat over a thousand in a season."
+  },
+  {
+   "id": "hieraaetus_moorei",
+   "name": "Haast's Eagle",
+   "prompt": "Haast's Eagle (Hieraaetus moorei), an eagle, in flight, wings spread, about 1.3 m long, in a lush emerald-green forest, Pleistocene-to-present. Appearance: The largest eagle known, females up to about 15 kg with a wingspan near 3 m, from the South Island of New Zealand."
+  },
+  {
+   "id": "orcinus_orca",
+   "name": "Orca",
+   "prompt": "Orca (Orcinus orca), an oceanic dolphin, about 8 m long, in a bright sunlit sea with deep cobalt-blue water, Pleistocene-to-present. Appearance: The largest dolphin, also called the killer whale, with males up to 8-9 m long and 6 tonnes and a dorsal fin up to 1.8 m tall."
+  },
+  {
+   "id": "balaenoptera_musculus",
+   "name": "Blue Whale",
+   "prompt": "Blue Whale (Balaenoptera musculus), a baleen whale, about 25 m long, in a bright sunlit sea with vivid turquoise and teal water, Pleistocene-to-present. Appearance: The largest animal that has ever lived, up to about 30 m long and 150-190 tonnes, with a heart the size of a small car."
+  },
+  {
+   "id": "carcharodon_carcharias",
+   "name": "Great White Shark",
+   "prompt": "Great White Shark (Carcharodon carcharias), a mackerel shark, about 5 m long, in a bright sunlit sea with dark indigo-blue water, Pleistocene-to-present. Appearance: The largest predatory fish alive, females up to about 6 m long and 2 tonnes, armed with rows of big, saw-edged triangular teeth. It ambushes seals from below at high speed, sometimes launching itself clear of the water."
+  },
+  {
+   "id": "salmo_salar",
+   "name": "Atlantic Salmon",
+   "prompt": "Atlantic Salmon (Salmo salar), a bony fish, about 80 cm long, in a bright sunlit sea with dark indigo-blue water, Pleistocene-to-present. Appearance: A silvery, black-spotted fish usually 70-80 cm long that hatches in cold gravel rivers on both sides of the North Atlantic, grows up at sea and returns to spawn."
+  },
+  {
+   "id": "architeuthis_dux",
+   "name": "Giant Squid",
+   "prompt": "Giant Squid (Architeuthis dux), a squid, about 12 m long, in a bright sunlit sea with dark indigo-blue water, Pleistocene-to-present. Appearance: One of the largest invertebrates, up to about 12-13 m long including its two long feeding tentacles, which end in clubs lined with toothed suckers. It has the biggest eyes of any animal, up to 27 cm across, for seeing in the dark at 300-1,000 m depth."
+  },
+  {
+   "id": "enteroctopus_dofleini",
+   "name": "Giant Pacific Octopus",
+   "prompt": "Giant Pacific Octopus (Enteroctopus dofleini), an octopus, about 4 m long, in a bright sunlit sea with deep cobalt-blue water, Pleistocene-to-present. Appearance: The largest octopus, usually 3-5 m across the arms and 15-50 kg, living on rocky sea floors of the North Pacific. It hunts crabs, clams and fish, drilling or crushing their shells with its beak, and can change colour and skin texture in an instant."
+  },
+  {
+   "id": "euphausia_superba",
+   "name": "Antarctic Krill",
+   "prompt": "Antarctic Krill (Euphausia superba), a krill, about 6 cm long, in a bright sunlit sea with emerald-green water, Pleistocene-to-present. Appearance: A small, glassy-pink shrimp-like crustacean about 6 cm long, yet perhaps the most abundant wild animal on Earth by weight."
+  },
+  {
+   "id": "ambystoma_mexicanum",
+   "name": "Axolotl",
+   "prompt": "Axolotl (Ambystoma mexicanum), a salamander, about 23 cm long, in a clear river or lake with teal water and green plants, Pleistocene-to-present. Appearance: A salamander about 23 cm long from the lakes of the Valley of Mexico that never grows up: it keeps its feathery external gills and lives in water all its life, yet breeds. It can regrow lost legs, its tail, parts of its spinal cord and even its heart."
+  },
+  {
+   "id": "ophiophagus_hannah",
+   "name": "King Cobra",
+   "prompt": "King Cobra (Ophiophagus hannah), an elapid snake, about 4 m long, in a lush emerald-green forest, Pleistocene-to-present. Appearance: The longest venomous snake, commonly 3-4 m and up to 5.8 m, from the forests of India and Southeast Asia. It eats mainly other snakes, including venomous ones, and a single bite carries enough venom to kill an elephant."
+  },
+  {
+   "id": "chelonoidis_niger",
+   "name": "Galapagos Giant Tortoise",
+   "prompt": "Galapagos Giant Tortoise (Chelonoidis niger), a tortoise, about 1.5 m long, in open green plains under a crisp blue sky, Pleistocene-to-present. Appearance: The largest living tortoise, up to 1.5 m long and over 250 kg, which can live well over 100 years and survive a year without food or water."
+  },
+  {
+   "id": "phlebolepis_elegans",
+   "name": "Phlebolepis",
+   "prompt": "Phlebolepis (Phlebolepis elegans), a jawless vertebrate, about 7 cm long, in a bright sunlit sea with dark indigo-blue water, Silurian. Appearance: A thelodont, a small jawless fish about 7 cm long from the Late Silurian of Saaremaa, Estonia, known from complete, articulated bodies. Instead of bony plates it was covered in thousands of tiny, tooth-like scales."
+  },
+  {
+   "id": "lasanius_problematicus",
+   "name": "Lasanius",
+   "prompt": "Lasanius (Lasanius problematicus), a jawless vertebrate, about 8 cm long, in a bright sunlit sea with dark indigo-blue water, Silurian. Appearance: A slender anaspid, a jawless fish about 8 cm long from the Silurian of southern Scotland. Unlike its relatives it was almost naked: only a crest of hooked scales along its back and a row of thin, rod-like bones over the gills."
+  },
+  {
+   "id": "ateleaspis_tessellata",
+   "name": "Ateleaspis",
+   "prompt": "Ateleaspis (Ateleaspis tessellata), a jawless vertebrate, about 20 cm long, in a bright sunlit sea with violet dusk-lit water, Silurian. Appearance: One of the most primitive osteostracans, jawless armoured fish about 20 cm long from the Silurian of Scotland and Norway. Its broad, horseshoe-shaped head shield was a mosaic of small bony tiles, with the eyes close together on top."
+  },
+  {
+   "id": "shuyu_zhejiangensis",
+   "name": "Shuyu",
+   "prompt": "Shuyu (Shuyu zhejiangensis), a galeaspid, about 5 cm long, in a bright sunlit sea with deep cobalt-blue water, Silurian. Appearance: A small galeaspid, a jawless armoured fish a few centimetres long from the early Silurian of Zhejiang, China. It had a rounded, horseshoe-shaped bony head shield with the eyes on top and a slit-like opening on its snout."
+  },
+  {
+   "id": "shenacanthus_vermiformis",
+   "name": "Shenacanthus",
+   "prompt": "Shenacanthus (Shenacanthus vermiformis), an acanthodian, about 5 cm long, in a bright sunlit sea with emerald-green water, Silurian. Appearance: A small, slender early relative of the sharks from the early Silurian of Chongqing, China, described in 2022. Its long body was covered in tiny shark-like scales, but its shoulders were boxed in large bony plates like those of placoderms."
+  },
+  {
+   "id": "xiushanosteus_mirabilis",
+   "name": "Xiushanosteus",
+   "prompt": "Xiushanosteus (Xiushanosteus mirabilis), a placoderm, about 3 cm long, in a bright sunlit sea with emerald-green water, Silurian. Appearance: A tiny armoured placoderm, only about 3 cm long, from the early Silurian of Chongqing, China, about 436 million years ago, described in 2023. It is one of the oldest jawed fishes known from a complete body."
+  },
+  {
+   "id": "silurolepis_platydorsalis",
+   "name": "Silurolepis",
+   "prompt": "Silurolepis (Silurolepis platydorsalis), a placoderm, about 10 cm long, in a bright sunlit sea with emerald-green water, Silurian. Appearance: The oldest known antiarch, a small armoured placoderm from the Late Silurian of Yunnan, China."
+  },
+  {
+   "id": "eusarcana_obesa",
+   "name": "Eusarcana",
+   "prompt": "Eusarcana (Eusarcana obesa), an eurypterid, about 13 cm long, in a bright sunlit sea with emerald-green water, Silurian. Appearance: The most scorpion-like sea scorpion, about 10-15 cm long, from the Late Silurian of New York and Ontario. It had a small head, a very broad, bulging body and a short, narrow tail held curled up over its back, ending in a curved, sting-like spike."
+  },
+  {
+   "id": "brontoscorpio_anglicus",
+   "name": "Brontoscorpio",
+   "prompt": "Brontoscorpio (Brontoscorpio anglicus), a scorpion, about 90 cm long, in a bright sunlit sea with vivid turquoise and teal water, Silurian. Appearance: A giant scorpion from the Late Silurian of England, estimated at about 90 cm long from a single, massive pincer finger, making it the largest scorpion that ever lived. Like other early scorpions it probably still lived in water."
+  },
+  {
+   "id": "trimerus_delphinocephalus",
+   "name": "Trimerus",
+   "prompt": "Trimerus (Trimerus delphinocephalus), a trilobite, about 18 cm long, in a bright sunlit sea with deep cobalt-blue water, Silurian. Appearance: A big, smooth trilobite up to about 20 cm long from mid-Silurian seas of North America and England. Its triangular head ended in a blunt, upturned snout, which gives it its name, 'dolphin head'."
+  },
+  {
+   "id": "bumastus_barriensis",
+   "name": "Bumastus",
+   "prompt": "Bumastus (Bumastus barriensis), a trilobite, about 8 cm long, in a bright sunlit sea with deep cobalt-blue water, Silurian. Appearance: A smooth, rounded trilobite about 8 cm long from the Silurian reefs of England. Its head and tail shields were so smooth and swollen that they look almost featureless, with large crescent-shaped eyes set far back."
+  },
+  {
+   "id": "colymbosathon_ecplecticos",
+   "name": "Colymbosathon",
+   "prompt": "Colymbosathon (Colymbosathon ecplecticos), an ostracod, about 5 mm long, in a bright sunlit sea with deep cobalt-blue water, Silurian. Appearance: A tiny seed shrimp, an ostracod about 5 mm long from the Silurian of England, preserved in three dimensions with all its soft parts. Its body was enclosed in a bean-shaped shell of two valves, and it rowed through the water with a pair of big, bristly antennae."
+  },
+  {
+   "id": "aquilonifer_spinosus",
+   "name": "Aquilonifer",
+   "prompt": "Aquilonifer (Aquilonifer spinosus), an arthropod, about 1 cm long, in a bright sunlit sea with emerald-green water, Silurian. Appearance: The 'kite-runner', a small arthropod about 1 cm long from the Silurian of England, described in 2016. It had very long antennae and a long spine on each side of every body segment."
+  },
+  {
+   "id": "phragmoceras_ventricosum",
+   "name": "Phragmoceras",
+   "prompt": "Phragmoceras (Phragmoceras ventricosum), a nautiloid cephalopod, about 12 cm long, in a bright sunlit sea with violet dusk-lit water, Silurian. Appearance: A nautiloid with a short, fat, curved shell about 12 cm long from the Silurian of Europe. The shell widened quickly to a swollen body chamber, but its opening was pinched into a narrow slit, so only the tips of its arms could reach out."
+  },
+  {
+   "id": "euomphalopterus_alatus",
+   "name": "Euomphalopterus",
+   "prompt": "Euomphalopterus (Euomphalopterus alatus), a sea snail, growing in place, about 5 cm long, in a bright sunlit sea with emerald-green water, Silurian. Appearance: A sea snail about 5 cm across from the Silurian reefs of Gotland, Sweden, and England. Its low, top-shaped shell had a thin, flat frill running round the edge of every whorl like the brim of a hat, which gives it its name, 'winged'."
+  },
+  {
+   "id": "cardiola_interrupta",
+   "name": "Cardiola",
+   "prompt": "Cardiola (Cardiola interrupta), an early bivalve, growing in place, about 3 cm long, in a bright sunlit sea with deep cobalt-blue water, Silurian. Appearance: A small, strongly swollen clam about 3 cm across from the Silurian of Europe and North Africa. Its rounded shell had prominent beaks and strong radiating ribs cut by growth lines into rows of beads."
+  },
+  {
+   "id": "eospirifer_radiatus",
+   "name": "Eospirifer",
+   "prompt": "Eospirifer (Eospirifer radiatus), a spiriferid brachiopod, growing in place, about 3 cm long, in a bright sunlit sea with dark indigo-blue water, Silurian. Appearance: One of the first spiriferid brachiopods, a lamp shell about 3 cm wide from the Silurian of Britain, Sweden and North America. Its rounded shell had short wings along the hinge, a smooth fold at the front and many fine radiating ribs."
+  },
+  {
+   "id": "eucalyptocrinites_crassus",
+   "name": "Eucalyptocrinites",
+   "prompt": "Eucalyptocrinites (Eucalyptocrinites crassus), a crinoid, growing in place, about 60 cm long, in a bright sunlit sea with emerald-green water, Silurian. Appearance: A large sea lily (crinoid) from the Silurian reefs of North America. A long stem held up a heavy cup of thick, rigid plates, and its ten arms folded upright into slots around a tall central column, forming a ribbed, bud-like crown."
+  },
+  {
+   "id": "caryocrinites_ornatus",
+   "name": "Caryocrinites",
+   "prompt": "Caryocrinites (Caryocrinites ornatus), a cystoid, growing in place, about 15 cm long, in a bright sunlit sea with dark indigo-blue water, Silurian. Appearance: A 'cystoid', an extinct stalked echinoderm from the Silurian of New York, Ontario and Britain. Its egg-shaped body, about 3-4 cm across, was built of large six-sided plates crossed by diamond-shaped pore patches used for breathing."
+  },
+  {
+   "id": "lepidaster_grayi",
+   "name": "Lepidaster",
+   "prompt": "Lepidaster (Lepidaster grayi), a sea star, growing in place, about 15 cm long, in a bright sunlit sea with deep cobalt-blue water, Silurian. Appearance: A many-armed starfish about 15 cm across from the Silurian reefs of Dudley, England. Around its broad, flat disc it had thirteen tapering arms edged with rows of small plates, like a modern sun star."
+  },
+  {
+   "id": "hallopora_elegantula",
+   "name": "Hallopora",
+   "prompt": "Hallopora (Hallopora elegantula), a bryozoan, growing in place, about 5 cm long, in a bright sunlit sea with dark indigo-blue water, Silurian. Appearance: A bryozoan, a colony of thousands of tiny filter-feeding animals living in tubes, from the Silurian of North America and Britain. The tubes were packed into slender, forking stony branches a few millimetres thick, forming small bushy thickets on the sea floor."
+  },
+  {
+   "id": "kenostrychus_clementsi",
+   "name": "Kenostrychus",
+   "prompt": "Kenostrychus (Kenostrychus clementsi), an annelid, about 3 cm long, in a bright sunlit sea with emerald-green water, Silurian. Appearance: A bristle worm a few centimetres long from the Silurian of England, preserved in three dimensions with its soft parts. Its slender body had about forty segments, each with a pair of two-branched paddles bearing fans of fine bristles."
+  },
+  {
+   "id": "astraeospongium_meniscum",
+   "name": "Astraeospongium",
+   "prompt": "Astraeospongium (Astraeospongium meniscum), a sponge, growing in place, about 8 cm long, in a bright sunlit sea with vivid turquoise and teal water, Silurian. Appearance: A saucer-shaped sponge up to about 10 cm across from the Silurian, especially common in Tennessee. Its skeleton was built of large star-shaped spicules of calcite, each with six rays, which cover the whole surface."
+  },
+  {
+   "id": "encrinus_liliiformis",
+   "name": "Encrinus",
+   "prompt": "Encrinus (Encrinus liliiformis), a crinoid, growing in place, about 60 cm long, in a bright sunlit sea with vivid turquoise and teal water, Triassic. Appearance: The famous \"stone lily\" of the shallow Muschelkalk sea that covered Germany in the Middle Triassic, about 240 million years ago."
+  },
+  {
+   "id": "retiophyllia_frechi",
+   "name": "Retiophyllia",
+   "prompt": "Retiophyllia (Retiophyllia frechi), a stony coral, growing in place, about 1 m long, in a bright sunlit sea with emerald-green water, Triassic. Appearance: One of the early modern-type stony corals, which built reefs in the warm Tethys Sea in the Late Triassic, about 210 million years ago."
+  },
+  {
+   "id": "gigatitan_vulcanicus",
+   "name": "Gigatitan",
+   "prompt": "Gigatitan (Gigatitan vulcanicus), an early insect, in flight, about 12 cm long, in a lush emerald-green forest (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A giant relative of grasshoppers and crickets from the Late Triassic lake shores of Madygen in Kyrgyzstan, about 230 million years ago, with wings spanning around 30 centimetres or more. Its long, spiny forelegs were made for grabbing other insects."
+  },
+  {
+   "id": "austrolimulus_fletcheri",
+   "name": "Austrolimulus",
+   "prompt": "Austrolimulus (Austrolimulus fletcheri), a horseshoe crab, about 8 cm long, in a clear river or lake with teal water and green plants, Triassic. Appearance: A strange horseshoe crab, about 8 centimetres long, that lived in rivers and lakes near today's Sydney, Australia, in the Middle Triassic, about 240 million years ago."
+  },
+  {
+   "id": "aulacoceras_sulcatum",
+   "name": "Aulacoceras",
+   "prompt": "Aulacoceras (Aulacoceras sulcatum), a belemnite, about 60 cm long, in a bright sunlit sea with deep cobalt-blue water, Triassic. Appearance: A squid-like relative of the belemnites from the Late Triassic seas of the Alps, about 215 million years ago. Inside its body sat a chambered shell sheathed in a long, slender, pointed guard scored with deep lengthwise grooves, which gives it its name."
+  },
+  {
+   "id": "triamyxa_coprolithica",
+   "name": "Triamyxa",
+   "prompt": "Triamyxa (Triamyxa coprolithica), an early beetle, about 2 mm long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A tiny beetle, under 2 millimetres long, from the Late Triassic of Poland, about 230 million years ago."
+  },
+  {
+   "id": "saurichthys_curionii",
+   "name": "Saurichthys",
+   "prompt": "Saurichthys (Saurichthys curionii), a bony fish, about 50 cm long, in a bright sunlit sea with violet dusk-lit water, Triassic. Appearance: A slim, fast ambush hunter of the Middle Triassic seas, about 240 million years ago, shaped much like a modern garfish or barracuda."
+  },
+  {
+   "id": "thoracopterus_magnificus",
+   "name": "Thoracopterus",
+   "prompt": "Thoracopterus (Thoracopterus magnificus), a bony fish, about 9 cm long, in a bright sunlit sea with deep cobalt-blue water, Triassic. Appearance: One of the oldest gliding fishes, from the Late Triassic seas of the Alps, more than 200 million years before modern flying fish."
+  },
+  {
+   "id": "ceratodus_sturii",
+   "name": "Ceratodus",
+   "prompt": "Ceratodus (Ceratodus sturii), a lungfish, about 1 m long, in a clear river or lake with teal water and green plants, Triassic. Appearance: A large lungfish of Triassic rivers and lakes, from the Late Triassic of Austria, about 230 million years ago."
+  },
+  {
+   "id": "whiteia_woodwardi",
+   "name": "Whiteia",
+   "prompt": "Whiteia (Whiteia woodwardi), a lobe-finned fish, about 25 cm long, in a bright sunlit sea with violet dusk-lit water, Triassic. Appearance: A coelacanth from the coastal seas of Madagascar in the Early Triassic, about 250 million years ago. It had a deep body, a large head, fleshy lobed fins that moved like legs and the three-lobed tail typical of coelacanths."
+  },
+  {
+   "id": "keichousaurus_hui",
+   "name": "Keichousaurus",
+   "prompt": "Keichousaurus (Keichousaurus hui), a sauropterygian, about 25 cm long, in a bright sunlit sea with emerald-green water, Triassic. Appearance: A small, slender marine reptile, about 25 centimetres long, from the Middle Triassic of Guizhou, China, about 240 million years ago, and an early relative of the plesiosaurs."
+  },
+  {
+   "id": "askeptosaurus_italicus",
+   "name": "Askeptosaurus",
+   "prompt": "Askeptosaurus (Askeptosaurus italicus), a thalattosaur, about 2 m long, in a bright sunlit sea with vivid turquoise and teal water, Triassic. Appearance: A long, eel-like marine reptile, about 2 metres long, from the Middle Triassic seas of the Alps between Switzerland and Italy, about 240 million years ago."
+  },
+  {
+   "id": "dinocephalosaurus_orientalis",
+   "name": "Dinocephalosaurus",
+   "prompt": "Dinocephalosaurus (Dinocephalosaurus orientalis), an archosauromorph, about 5 m long, in a bright sunlit sea with emerald-green water, Triassic. Appearance: A sea reptile about 5 metres long from the Middle Triassic of Guizhou, China, about 245 million years ago, with an extremely long neck made of over 30 vertebrae, much longer than its body."
+  },
+  {
+   "id": "cartorhynchus_lenticarpus",
+   "name": "Cartorhynchus",
+   "prompt": "Cartorhynchus (Cartorhynchus lenticarpus), an ichthyosaur, about 40 cm long, in a bright sunlit sea with deep cobalt-blue water, Triassic. Appearance: A small early relative of the ichthyosaurs, about 40 centimetres long, from the Early Triassic of Anhui, China, about 248 million years ago."
+  },
+  {
+   "id": "kannemeyeria_simocephalus",
+   "name": "Kannemeyeria",
+   "prompt": "Kannemeyeria (Kannemeyeria simocephalus), a dicynodont therapsid, about 3 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A large plant eater, about 3 metres long, from the Early to Middle Triassic of South Africa, about 245 million years ago, and a distant relative of mammals."
+  },
+  {
+   "id": "massetognathus_pascuali",
+   "name": "Massetognathus",
+   "prompt": "Massetognathus (Massetognathus pascuali), a cynodont therapsid, about 50 cm long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A cat-sized relative of mammals, about 50 centimetres long, from the Middle Triassic of Argentina, about 235 million years ago."
+  },
+  {
+   "id": "proterosuchus_fergusi",
+   "name": "Proterosuchus",
+   "prompt": "Proterosuchus (Proterosuchus fergusi), an archosauromorph, about 1.6 m long, in a lush green swamp with clear shallow water (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: One of the earliest archosauriforms, the branch that later gave rise to crocodiles, dinosaurs and birds, from the Early Triassic of South Africa, about 250 million years ago."
+  },
+  {
+   "id": "euparkeria_capensis",
+   "name": "Euparkeria",
+   "prompt": "Euparkeria (Euparkeria capensis), an archosauromorph, about 60 cm long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A small, light predator, about 60 centimetres long, from the Early Triassic of South Africa, about 245 million years ago, close to the common ancestor of crocodiles and dinosaurs."
+  },
+  {
+   "id": "trilophosaurus_buettneri",
+   "name": "Trilophosaurus",
+   "prompt": "Trilophosaurus (Trilophosaurus buettneri), an archosauromorph, about 2.5 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A lizard-like plant eater, about 2.5 metres long, from the Late Triassic of Texas, about 220 million years ago."
+  },
+  {
+   "id": "hypsognathus_fenneri",
+   "name": "Hypsognathus",
+   "prompt": "Hypsognathus (Hypsognathus fenneri), a procolophonid, about 33 cm long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A squat, lizard-like reptile about 33 centimetres long from the Late Triassic of New Jersey and Connecticut, about 205 million years ago."
+  },
+  {
+   "id": "clevosaurus_hudsoni",
+   "name": "Clevosaurus",
+   "prompt": "Clevosaurus (Clevosaurus hudsoni), a rhynchocephalian, about 30 cm long, in green rolling hills under a blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A lizard-like reptile about 30 centimetres long, an early relative of the living tuatara of New Zealand, from the Late Triassic of south-west England, about 205 million years ago."
+  },
+  {
+   "id": "lotosaurus_adentus",
+   "name": "Lotosaurus",
+   "prompt": "Lotosaurus (Lotosaurus adentus), a rauisuchian pseudosuchian, about 2.5 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A plant-eating relative of crocodiles, about 2.5 metres long, from the Middle Triassic of Hunan, China, about 245 million years ago."
+  },
+  {
+   "id": "riojasaurus_incertus",
+   "name": "Riojasaurus",
+   "prompt": "Riojasaurus (Riojasaurus incertus), a sauropodomorph dinosaur, about 6.5 m long, in open green plains under a crisp blue sky (only ferns, horsetails, cycads and conifers; no grass or flowers), Triassic. Appearance: A heavy early long-necked dinosaur, about 6.5 metres long, from the Late Triassic of La Rioja, Argentina, about 220 million years ago."
   }
  ]
 }

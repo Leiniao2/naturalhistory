@@ -58,7 +58,8 @@ namespace NaturalHistory.Progression
             {
                 var territory = TerritoryManager.Instance;
                 int centers = territory == null ? 1 : territory.Centers.Count(c => c.Owner != null && c.Owner.IsHuman);
-                return Mathf.RoundToInt(pointsPerCenter * centers * GameOptions.IncomeShare * EpCosts.Factor); // fewer on harder difficulties
+                return Mathf.RoundToInt(pointsPerCenter * centers * GameOptions.IncomeShare * EpCosts.Factor) // fewer on harder difficulties
+                     + (EvolutionManager.Instance != null ? World.TraitBonuses.Income(-1, EvolutionManager.Instance.HumanSpecies) : 0); // items that earn EP
             }
         }
 
@@ -178,15 +179,19 @@ namespace NaturalHistory.Progression
             if (!CanAcquire(tree, node))   return Loc.F("Not in the {0}'s {1}", Loc.T(Species?.commonName ?? "species"), Loc.T(tree.DisplayName).ToLowerInvariant());
             if (!tree.PrerequisitesMet(node)) return Loc.F("Requires: {0}", string.Join(", ", MissingPrerequisites(tree, node)));
             if (!AgeAllows(node))          return Loc.F("Available from the {0}", Loc.T(node.age));
-            int cost = EpCosts.Of(node.cost); // grows with the periods
+            int cost = CostOf(node); // grows with the periods
             if (EvolutionPoints < cost) return Loc.F("Needs {0} EP (you have {1})", cost, EvolutionPoints);
             return null;
         }
 
+        // An item's price for the bound species: grows with the periods (EpCosts), less with the
+        // species' items that save EP on its evolution (TraitEffects.evolveDiscount)
+        public int CostOf(TreeNodeDefinition node) => World.TraitBonuses.Discounted(EpCosts.Of(node.cost), Species);
+
         public bool TryUnlock(ProgressionTree tree, TreeNodeDefinition node)
         {
             if (UnlockBlocker(tree, node) != null) return false;
-            int cost = EpCosts.Of(node.cost);
+            int cost = CostOf(node);
             EvolutionPoints -= cost;
             tree.MarkUnlocked(node.id);
             Debug.Log($"[Progression] {Species?.commonName}: acquired {node.displayName} ({tree.DisplayName}, -{cost} EP)");

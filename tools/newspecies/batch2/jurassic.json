@@ -1,0 +1,1090 @@
+[
+  {
+    "id": "megalosaurus_bucklandii",
+    "commonName": "Megalosaurus",
+    "scientificName": "Megalosaurus bucklandii",
+    "kingdom": "Animalia",
+    "group": "Theropod dinosaur",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Plain",
+      "Wetland",
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Sauropod dinosaur",
+      "Stegosaur",
+      "Ornithopod dinosaur",
+      "Small animals"
+    ],
+    "sizeCm": 700,
+    "startingPopulation": 25,
+    "playable": true,
+    "model": "Models/Species/Megalosaurus",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.55,
+    "colonySize": 1,
+    "mapAttack": "Bite",
+    "attack": 8,
+    "defense": 4,
+    "hp": 9,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.4
+      }
+    ],
+    "description": "The first dinosaur ever given a scientific name, in 1824, from Middle Jurassic rocks of England about 166 million years old. It was a heavy predator 6-7 metres long, with a long, low skull full of blade-like serrated teeth and short but very powerful arms ending in three big hooked claws. It hunted plant-eating dinosaurs along the coasts and river plains of a warm island landscape."
+  },
+  {
+    "id": "limusaurus_inextricabilis",
+    "commonName": "Limusaurus",
+    "scientificName": "Limusaurus inextricabilis",
+    "kingdom": "Animalia",
+    "group": "Theropod dinosaur",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Plain",
+      "Wetland",
+      "Steppe"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Herbivore",
+    "sizeCm": 170,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Limusaurus",
+    "mapStyle": "Ground",
+    "mapGait": "Run",
+    "mapLegs": 1,
+    "mapHip": 0.55,
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A slender, long-necked theropod about 1.7 metres long from the Late Jurassic of north-western China, about 160 million years ago. Its young had teeth, but the adults lost them all and had a horny beak instead, and they swallowed stones to grind plants in the gut: a meat-eater's descendant turned plant-eater. Its arms were tiny, with stubby fingers. Its name, 'mud lizard that could not escape', comes from skeletons found trapped in ancient mud pits."
+  },
+  {
+    "id": "camarasaurus_supremus",
+    "commonName": "Camarasaurus",
+    "scientificName": "Camarasaurus supremus",
+    "kingdom": "Animalia",
+    "group": "Sauropod dinosaur",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Wetland"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 1800,
+    "startingPopulation": 30,
+    "playable": true,
+    "model": "Models/Species/Camarasaurus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.6,
+    "colonySize": 1,
+    "mapDefense": "Brace",
+    "attack": 4,
+    "defense": 5,
+    "hp": 14,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.5
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.2
+      }
+    ],
+    "description": "The commonest giant plant-eater of the Late Jurassic of western North America, about 155-150 million years ago, up to 18 metres long. Compared with Diplodocus it was shorter and deeper, with a thicker neck held up at a slant, a fairly short tail and a short, boxy head with large nostrils. Its strong, spoon-shaped teeth could crop tough vegetation that other sauropods left alone. Herds of all ages seem to have travelled together."
+  },
+  {
+    "id": "camptosaurus_dispar",
+    "commonName": "Camptosaurus",
+    "scientificName": "Camptosaurus dispar",
+    "kingdom": "Animalia",
+    "group": "Ornithopod dinosaur",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Plain",
+      "Wetland",
+      "Savanna"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 600,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/Camptosaurus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.65,
+    "colonySize": 2,
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 3,
+    "hp": 8,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A bulky, beaked plant-eater 5-7 metres long from the Late Jurassic of North America, about 155-150 million years ago, an early relative of Iguanodon. It cropped low plants with a toothless horny beak and chewed them with rows of cheek teeth. It could run on its hind legs but often walked on all fours, its hands bearing hoof-like fingers. Its name means 'flexible lizard'."
+  },
+  {
+    "id": "massospondylus_carinatus",
+    "commonName": "Massospondylus",
+    "scientificName": "Massospondylus carinatus",
+    "kingdom": "Animalia",
+    "group": "Sauropodomorph dinosaur",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Savanna",
+      "Steppe",
+      "Plain"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 500,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/Massospondylus",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.6,
+    "colonySize": 2,
+    "mapDefense": "Brace",
+    "attack": 3,
+    "defense": 3,
+    "hp": 8,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.6
+      },
+      {
+        "gene": "clutch_size",
+        "expression": 0.6
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "An early long-necked plant-eater 4-6 metres long from the Early Jurassic of southern Africa, about 200-185 million years ago, a distant cousin of the giant sauropods. It walked on its hind legs and had a small head, leaf-shaped teeth and grasping hands with a huge, curved thumb claw. Its nesting grounds, with clutches of eggs holding curled-up embryos, are among the oldest known: the hatchlings walked on all fours and probably stayed near the nest."
+  },
+  {
+    "id": "tianyulong_confuciusi",
+    "commonName": "Tianyulong",
+    "scientificName": "Tianyulong confuciusi",
+    "kingdom": "Animalia",
+    "group": "Early ornithischian",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Rainforest",
+      "Plain",
+      "Hill"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Herbivore",
+    "sizeCm": 70,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Tianyulong",
+    "mapStyle": "Ground",
+    "mapGait": "Run",
+    "mapLegs": 1,
+    "mapHip": 0.55,
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 2,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small heterodontosaurid dinosaur about 70 cm long from the Late Jurassic of north-eastern China, about 158 million years ago. It is famous for a crest of long, stiff bristles, up to 6 cm long, running along its back and tail. Because it belongs to the plant-eating branch of dinosaurs, far from the feathered meat-eaters, it suggests that fuzzy body coverings may have been widespread among dinosaurs. Like its relatives it had a beak and small fangs."
+  },
+  {
+    "id": "kayentatherium_wellesi",
+    "commonName": "Kayentatherium",
+    "scientificName": "Kayentatherium wellesi",
+    "kingdom": "Animalia",
+    "group": "Cynodont therapsid",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Plain",
+      "Steppe",
+      "Wetland"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 100,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Kayentatherium",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.35,
+    "colonySize": 3,
+    "mapDefense": "Hide",
+    "attack": 2,
+    "defense": 4,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.5
+      },
+      {
+        "gene": "clutch_size",
+        "expression": 0.8
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.6
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.5
+      }
+    ],
+    "description": "A stout, badger-sized plant-eater about 1 metre long from the Early Jurassic of Arizona, about 185 million years ago, one of the last cynodonts that were not yet mammals. It had big, rodent-like front teeth for gnawing and broad grinding cheek teeth. One adult was found curled up with 38 tiny babies, far more than any mammal raises at once, showing that its relatives still bred like reptiles."
+  },
+  {
+    "id": "rugosodon_eurasiaticus",
+    "commonName": "Rugosodon",
+    "scientificName": "Rugosodon eurasiaticus",
+    "kingdom": "Animalia",
+    "group": "Multituberculate",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Rainforest",
+      "Plain",
+      "Hill"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Herbivore",
+    "sizeCm": 17,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Rugosodon",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.3,
+    "colonySize": 5,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 2,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "omnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.6
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.4
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.7
+      }
+    ],
+    "description": "A rat-sized early mammal about 17 cm long from the Late Jurassic of north-eastern China, about 160 million years ago. It belonged to the multituberculates, the 'rodents of the Mesozoic', named for the many cusps on their grinding teeth, and ate seeds, plants, insects and worms. Its very flexible ankles could swivel, letting it scamper over the ground, dig and climb. Multituberculates went on to thrive for over 100 million years."
+  },
+  {
+    "id": "protosuchus_richardsoni",
+    "commonName": "Protosuchus",
+    "scientificName": "Protosuchus richardsoni",
+    "kingdom": "Animalia",
+    "group": "Early crocodylomorph",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Plain",
+      "Desert",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Protosuchus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.5,
+    "mapGait": "Run",
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "mapDefense": "Hide",
+    "attack": 4,
+    "defense": 5,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.5
+      }
+    ],
+    "description": "An early relative of crocodiles about 1 metre long from the Early Jurassic of Arizona, about 195 million years ago. Unlike its descendants it lived on dry land, running on long, upright legs, with a short, broad head and an enlarged fang in the lower jaw. Two rows of square bony plates ran down its back, and tail and belly were armoured too. It hunted lizards, small mammals and other small animals."
+  },
+  {
+    "id": "pleurosaurus_goldfussi",
+    "commonName": "Pleurosaurus",
+    "scientificName": "Pleurosaurus goldfussi",
+    "kingdom": "Animalia",
+    "group": "Rhynchocephalian",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Early teleost"
+    ],
+    "sizeCm": 60,
+    "startingPopulation": 500,
+    "playable": true,
+    "model": "Models/Species/Pleurosaurus",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapUndulate": true,
+    "mapAttack": "Bite",
+    "attack": 3,
+    "defense": 1,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A sea-going relative of the living tuatara, about 60 cm long, from the Late Jurassic lagoons of southern Germany, about 150 million years ago. Its body became long and eel-like, with a narrow head, nostrils set far back, tiny limbs and an extremely long tail making up most of its length. It swam by waving its body from side to side and snapped up small fish."
+  },
+  {
+    "id": "karaurus_sharovi",
+    "commonName": "Karaurus",
+    "scientificName": "Karaurus sharovi",
+    "kingdom": "Animalia",
+    "group": "Salamander",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Wetland",
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 19,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/Karaurus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.25,
+    "colonySize": 4,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "regeneration",
+        "expression": 0.7
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "One of the oldest known salamanders, about 19 cm long, from the Late Jurassic of Kazakhstan, about 155 million years ago. It already had the salamander body plan: a broad, flat head with a rounded snout, a long body, four short legs and a tail. Its skull was roughened with bony sculpture. It probably lived along lake shores, hunting insects and worms on land and in shallow water."
+  },
+  {
+    "id": "prosalirus_bitis",
+    "commonName": "Prosalirus",
+    "scientificName": "Prosalirus bitis",
+    "kingdom": "Animalia",
+    "group": "Proto-frog",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Wetland",
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 5,
+    "startingPopulation": 5000,
+    "playable": true,
+    "model": "Models/Species/Prosalirus",
+    "mapStyle": "Ground",
+    "mapGait": "Hop",
+    "mapLegs": 2,
+    "mapHip": 0.3,
+    "colonySize": 5,
+    "mapScale": 0.6,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.8
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      }
+    ],
+    "description": "The oldest known frog that could leap, about 5 cm long, from the Early Jurassic of Arizona, about 190 million years ago. Its long hip bones, long hind legs and fused ankle bones show that the frog's jumping build was already in place, unlike in the Triassic proto-frogs that could only crawl and swim. Like frogs today it caught insects and other small prey."
+  },
+  {
+    "id": "ichthyosaurus_communis",
+    "commonName": "Ichthyosaurus",
+    "scientificName": "Ichthyosaurus communis",
+    "kingdom": "Animalia",
+    "group": "Ichthyosaur",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Early teleost",
+      "Belemnite"
+    ],
+    "sizeCm": 200,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/Ichthyosaurus",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "attack": 5,
+    "defense": 2,
+    "hp": 6,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.85
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.8
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.4
+      }
+    ],
+    "description": "The classic 'fish-lizard' of the Early Jurassic seas of Europe, about 200-190 million years ago, made famous by Mary Anning's finds at Lyme Regis. About 2 metres long and shaped like a dolphin, it had a long, toothy snout, large eyes, broad front flippers, a fleshy dorsal fin and a crescent-shaped tail. It hunted fish and squid-like belemnites and gave birth to live young at sea."
+  },
+  {
+    "id": "dapedium_politum",
+    "commonName": "Dapedium",
+    "scientificName": "Dapedium politum",
+    "kingdom": "Animalia",
+    "group": "Bony fish",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 35,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/Dapedium",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 5,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.8
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      }
+    ],
+    "description": "A deep-bodied, almost disc-shaped fish about 35 cm long from the Early Jurassic seas of Europe, about 195 million years ago. Its body was armoured with thick, shiny, diamond-shaped scales, and its small mouth held peg-like and button-shaped teeth for crushing shellfish, sea urchins and other hard-shelled prey. It probably manoeuvred slowly around reefs and sea floors like a modern butterflyfish."
+  },
+  {
+    "id": "aspidorhynchus_acutirostris",
+    "commonName": "Aspidorhynchus",
+    "scientificName": "Aspidorhynchus acutirostris",
+    "kingdom": "Animalia",
+    "group": "Bony fish",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Early teleost"
+    ],
+    "sizeCm": 60,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Aspidorhynchus",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapAttack": "Strike",
+    "attack": 5,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.9
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      }
+    ],
+    "description": "A slim, fast predatory fish about 60 cm long from the Late Jurassic lagoons of Europe, about 150 million years ago, shaped like a garfish. Its upper jaw extended into a long, pointed snout well past the shorter lower jaw, and its body was covered in big, shiny scales. It darted after small fish near the surface. One fossil shows it entangled with a Rhamphorhynchus pterosaur that may have tried to catch it."
+  },
+  {
+    "id": "spathobatis_bugesiacus",
+    "commonName": "Spathobatis",
+    "scientificName": "Spathobatis bugesiacus",
+    "kingdom": "Animalia",
+    "group": "Ray",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Prawn",
+      "Lobster"
+    ],
+    "sizeCm": 120,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/Spathobatis",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "electroreception",
+        "expression": 0.8
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.6
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.3
+      }
+    ],
+    "description": "One of the earliest rays, up to about 1.5 metres long, from the Late Jurassic lagoons of France and Germany, about 150 million years ago. It looked like a living guitarfish: a flat, spade-shaped front with the pectoral fins joined to the head, then a thick, shark-like tail with two dorsal fins. It lay half-buried in sand, sensing prey with electric receptors, and crushed shellfish and crustaceans."
+  },
+  {
+    "id": "undina_penicillata",
+    "commonName": "Undina",
+    "scientificName": "Undina penicillata",
+    "kingdom": "Animalia",
+    "group": "Lobe-finned fish",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Early teleost"
+    ],
+    "sizeCm": 50,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Undina",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "attack": 4,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A Jurassic coelacanth about 50 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of the living Latimeria. It had fleshy, limb-like lobed fins, a big head with a wide mouth and the coelacanths' three-lobed tail with a small extra lobe in the middle. It lurked near the bottom and ambushed fish and other small animals."
+  },
+  {
+    "id": "dactylioceras_commune",
+    "commonName": "Dactylioceras",
+    "scientificName": "Dactylioceras commune",
+    "kingdom": "Animalia",
+    "group": "Ammonite",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 8,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Dactylioceras",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapBackward": true,
+    "attack": 2,
+    "defense": 3,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A small ammonite of the Early Jurassic seas, about 180 million years ago, with a flat shell up to about 8 cm across. Its many slowly widening whorls barely overlap, so the shell looks like a coiled snake, and it is covered in fine ribs that fork as they cross the outer edge. It swarmed in such numbers that its shells pack whole layers of rock at Whitby, where they were sold as 'snakestones' with carved heads added."
+  },
+  {
+    "id": "palaeocoma_egertoni",
+    "commonName": "Palaeocoma",
+    "scientificName": "Palaeocoma egertoni",
+    "kingdom": "Animalia",
+    "group": "Brittle star",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 12,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Palaeocoma",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 2,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "regeneration",
+        "expression": 0.9
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.4
+      }
+    ],
+    "description": "A brittle star about 10-15 cm across from the Early Jurassic seas of England, about 190 million years ago. It had a rounded central disc and five long, slender, spiny arms that it rowed in snake-like strokes across the sea floor, picking up food particles. Huge crowds of them lived together, and a single storm could bury thousands alive in sand, preserving them complete."
+  },
+  {
+    "id": "gryphaea_arcuata",
+    "commonName": "Gryphaea",
+    "scientificName": "Gryphaea arcuata",
+    "kingdom": "Animalia",
+    "group": "Early bivalve",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 8,
+    "startingPopulation": 5000,
+    "playable": true,
+    "model": "Models/Species/Gryphaea",
+    "mapStyle": "Fixed",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapDefense": "Tighten",
+    "attack": 1,
+    "defense": 7,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.9
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.7
+      }
+    ],
+    "description": "The 'Devil's toenail', an oyster 5-10 cm long from the Early Jurassic seas of Europe, about 200-190 million years ago. Its thick lower shell grew in a tight, curling hook like a giant toenail, with the small, flat upper shell sitting in it like a lid. Instead of cementing itself to rock like most oysters, it lay loose on soft mud, its curved weight keeping the opening clear while it filtered plankton."
+  },
+  {
+    "id": "eryon_arctiformis",
+    "commonName": "Eryon",
+    "scientificName": "Eryon arctiformis",
+    "kingdom": "Animalia",
+    "group": "Lobster",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Scavenger",
+    "sizeCm": 12,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/Eryon",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapAttack": "Snap",
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 5,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.5
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.3
+      }
+    ],
+    "description": "A flat, broad lobster about 10-15 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of today's blind deep-sea lobsters. Its wide, almost rectangular shell had saw-toothed edges, and all its walking legs ended in pincers, the first pair long and slender. It crawled over the soft lagoon floor feeding on carcasses and small animals, and its tracks are sometimes found leading to its body."
+  },
+  {
+    "id": "thecosmilia_trichotoma",
+    "commonName": "Thecosmilia",
+    "scientificName": "Thecosmilia trichotoma",
+    "kingdom": "Animalia",
+    "group": "Stony coral",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 50,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/Thecosmilia",
+    "mapStyle": "Fixed",
+    "colonySize": 2,
+    "mapScale": 0.6,
+    "attack": 1,
+    "defense": 4,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.8
+      },
+      {
+        "gene": "asexual_reproduction",
+        "expression": 0.8
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.5
+      }
+    ],
+    "description": "A reef-building stony coral of the warm Late Jurassic seas of Europe, about 160-150 million years ago. Its bushy colonies, up to about half a metre across, were made of separate ribbed branches that forked again and again, each ending in a cup 1-2 cm wide holding a single large polyp. The polyps caught plankton with their tentacles, and algae living in their tissues fed them with sunlight, as in reef corals today."
+  },
+  {
+    "id": "archaeolepis_mane",
+    "commonName": "Archaeolepis",
+    "scientificName": "Archaeolepis mane",
+    "kingdom": "Animalia",
+    "group": "Butterfly",
+    "firstAge": "Jurassic",
+    "lastAge": "Jurassic",
+    "habitats": [
+      "Rainforest",
+      "Plain",
+      "Wetland"
+    ],
+    "diet": "Herbivore",
+    "tags": [
+      "Flyer"
+    ],
+    "sizeCm": 1,
+    "startingPopulation": 20000,
+    "playable": true,
+    "model": "Models/Species/Archaeolepis",
+    "mapStyle": "Swarm",
+    "colonySize": 6,
+    "mapScale": 1.0,
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.7
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.9
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.4
+      }
+    ],
+    "description": "The oldest known moth, from Early Jurassic rocks of Dorset in England, about 190 million years ago. It is known from wings covered in the tiny overlapping scales that give moths and butterflies their name, 'scale wings'. It was probably a tiny moth about 1 cm across with chewing jaws, feeding on pollen and spores long before flowers existed."
+  }
+]

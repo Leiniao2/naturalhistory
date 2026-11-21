@@ -6,7 +6,7 @@ Merges the species staged by the per-period build agents (BRIEF.md) into the gam
 Checks: unique ids, model FBX + meta present, all 9 translations, groups known or defined.
 Then run tools/evolution/rules.py and links.py, and tools/portraits/make_prompts.py.
 
-python3 tools/newspecies/merge.py [--dry]
+python3 tools/newspecies/merge.py [--dry] [--dir <staging folder, default this one>] [--note <comment for the groups>]
 """
 
 import glob
@@ -17,6 +17,9 @@ import sys
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 HERE = os.path.dirname(os.path.abspath(__file__))
+if "--dir" in sys.argv:  # another batch's staging folder (e.g. tools/newspecies/batch2)
+    HERE = os.path.abspath(sys.argv[sys.argv.index("--dir") + 1])
+NOTE = sys.argv[sys.argv.index("--note") + 1] if "--note" in sys.argv else "added with the 200 combat-distinctive species"
 SPECIES = os.path.join(ROOT, "Assets/Resources/Data/species.json")
 LOC = os.path.join(ROOT, "Assets/Resources/Localization/{}.json")
 RULES = os.path.join(ROOT, "tools/evolution/rules.py")
@@ -109,9 +112,9 @@ def main():
     rule_lines = [f' {json.dumps(g)}:{v["tags"]},' for g, v in groups.items() if f'"{g}":' not in rules]
     phylo_lines = [f'    {json.dumps(g)}: {v["path"]},' for g, v in groups.items() if f'"{g}":' not in phylo.split("SPECIES = {")[0]]
     if rule_lines:
-        rules = insert_before_dict_end(rules, "groups = {", [" # added with the 200 combat-distinctive species"] + rule_lines)
+        rules = insert_before_dict_end(rules, "groups = {", [" # " + NOTE] + rule_lines)
     if phylo_lines:
-        phylo = insert_before_dict_end(phylo, "GROUPS = {", ["    # added with the 200 combat-distinctive species"] + phylo_lines)
+        phylo = insert_before_dict_end(phylo, "GROUPS = {", ["    # " + NOTE] + phylo_lines)
     open(RULES, "w", encoding="utf-8").write(rules)
     open(PHYLO, "w", encoding="utf-8").write(phylo)
 

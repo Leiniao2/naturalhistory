@@ -1,0 +1,1169 @@
+[
+  {
+    "id": "parapuzosia_seppenradensis",
+    "commonName": "Parapuzosia",
+    "scientificName": "Parapuzosia seppenradensis",
+    "kingdom": "Animalia",
+    "group": "Ammonite",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 180,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/Parapuzosia",
+    "mapStyle": "Swim",
+    "mapBackward": true,
+    "colonySize": 1,
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 5,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.25
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "The largest ammonite ever found, with a coiled shell up to about 1.8 metres across that may have reached 2 metres or more in life. Its smooth, tightly wound shell hid a squid-like animal with big eyes and ten arms, which drifted slowly through the open sea hunting small prey. Gas-filled chambers inside the shell let it hover at any depth like a living submarine."
+  },
+  {
+    "id": "belemnitella_americana",
+    "commonName": "Belemnitella",
+    "scientificName": "Belemnitella americana",
+    "kingdom": "Animalia",
+    "group": "Belemnite",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 30,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Belemnitella",
+    "mapStyle": "Swim",
+    "mapBackward": true,
+    "colonySize": 5,
+    "mapDefense": "Ink",
+    "attack": 3,
+    "defense": 1,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.75
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A squid-like belemnite about 30 centimetres long that swam in large schools along the coasts of Late Cretaceous North America. Inside its body lay a bullet-shaped stone-hard guard, so common as a fossil that people once called them thunderbolts. It caught fish and shrimp with ten hooked arms and could escape by jetting backwards in a cloud of ink."
+  },
+  {
+    "id": "hippurites_radiosus",
+    "commonName": "Hippurites",
+    "scientificName": "Hippurites radiosus",
+    "kingdom": "Animalia",
+    "group": "Rudist",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 30,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Hippurites",
+    "mapStyle": "Fixed",
+    "colonySize": 5,
+    "mapScale": 0.6,
+    "mapDefense": "Brace",
+    "attack": 1,
+    "defense": 6,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.85
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.7
+      }
+    ],
+    "description": "A strange reef-building clam, about 30 centimetres tall, whose lower shell grew into a thick, ribbed horn cemented upright on the sea floor while the upper shell sat on top like a lid. Packed side by side in their thousands, rudists like Hippurites built the great reefs of the warm Cretaceous seas in place of corals. They fed by straining food from the water through pores in the lid."
+  },
+  {
+    "id": "uintacrinus_socialis",
+    "commonName": "Uintacrinus",
+    "scientificName": "Uintacrinus socialis",
+    "kingdom": "Animalia",
+    "group": "Crinoid",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 100,
+    "startingPopulation": 2000,
+    "playable": true,
+    "model": "Models/Species/Uintacrinus",
+    "mapStyle": "Float",
+    "colonySize": 5,
+    "mapScale": 0.9,
+    "attack": 1,
+    "defense": 2,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A stalkless sea lily with a round cup the size of a fist and ten slender arms up to a metre long. Unlike most of its relatives it was not rooted to the bottom but drifted or rested in huge groups in the warm inland sea of North America. It spread its feathery arms to catch tiny food from the water."
+  },
+  {
+    "id": "micraster_coranguinum",
+    "commonName": "Micraster",
+    "scientificName": "Micraster coranguinum",
+    "kingdom": "Animalia",
+    "group": "Echinoderm",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "tags": [
+      "Burrower"
+    ],
+    "sizeCm": 6,
+    "startingPopulation": 8000,
+    "playable": true,
+    "model": "Models/Species/Micraster",
+    "mapStyle": "Fixed",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 4,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "burrowing",
+        "expression": 0.8
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.6
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      }
+    ],
+    "description": "A heart-shaped sea urchin about 6 centimetres long that lived buried in the soft chalky mud of the Late Cretaceous sea floor in Europe. A short fuzz of spines covered its shell, and a groove at the front led food-rich mud to its mouth. Its shape changed so steadily over time that it became a classic example of gradual evolution."
+  },
+  {
+    "id": "callichimaera_perplexa",
+    "commonName": "Callichimaera",
+    "scientificName": "Callichimaera perplexa",
+    "kingdom": "Animalia",
+    "group": "Crab",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 3,
+    "startingPopulation": 6000,
+    "playable": true,
+    "model": "Models/Species/Callichimaera",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 3,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      }
+    ],
+    "description": "A quarter-sized crab from 95 million years ago with such an odd mix of features that scientists called it the platypus of crabs. It had huge unprotected eyes, a long narrow body and flat, paddle-like legs, and it probably swam in open water like a larva that never grew up. It hunted small animals in the coastal seas of what is now Colombia."
+  },
+  {
+    "id": "haidomyrmex_cerberus",
+    "commonName": "Hell Ant",
+    "scientificName": "Haidomyrmex cerberus",
+    "kingdom": "Animalia",
+    "group": "Ant",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 0.5,
+    "startingPopulation": 100000,
+    "playable": true,
+    "model": "Models/Species/HellAnt",
+    "mapStyle": "Ground",
+    "mapLegs": 3,
+    "mapHip": 0.32,
+    "colonySize": 8,
+    "mapScale": 0.9,
+    "mapAttack": "Snap",
+    "mapDefense": "Mob",
+    "attack": 4,
+    "defense": 1,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.8
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      }
+    ],
+    "description": "One of the hell ants, an early branch of ants preserved in 99-million-year-old Burmese amber. Its scythe-shaped jaws swung upwards instead of sideways, snapping shut against a paddle-like horn on its forehead to pin its prey. Hell ants lived in colonies like modern ants but vanished with the dinosaurs."
+  },
+  {
+    "id": "enchodus_petrosus",
+    "commonName": "Enchodus",
+    "scientificName": "Enchodus petrosus",
+    "kingdom": "Animalia",
+    "group": "Bony fish",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 150,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Enchodus",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapAttack": "Bite",
+    "attack": 5,
+    "defense": 2,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A predatory fish about 1.5 metres long, nicknamed the sabre-toothed herring for the pair of huge fangs at the front of its jaws. It was one of the most common fish of the Late Cretaceous seas and hunted smaller fish, while itself being eaten by mosasaurs, sharks and seabirds. Despite its name it was related to modern lizardfish, not herrings."
+  },
+  {
+    "id": "onchopristis_numidus",
+    "commonName": "Onchopristis",
+    "scientificName": "Onchopristis numidus",
+    "kingdom": "Animalia",
+    "group": "Ray",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Lobe-finned fish",
+      "Small animals"
+    ],
+    "sizeCm": 700,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/Onchopristis",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Lash",
+    "attack": 6,
+    "defense": 3,
+    "hp": 9,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.8
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.6
+      }
+    ],
+    "description": "A giant sawfish-like ray up to about 7 metres long from the great rivers of mid-Cretaceous North Africa. Its long flat snout was lined with widely spaced, barbed teeth like harpoon points, which it swept sideways to stun and slash fish. It shared its rivers with Spinosaurus, which may have hunted it."
+  },
+  {
+    "id": "mawsonia_gigas",
+    "commonName": "Mawsonia",
+    "scientificName": "Mawsonia gigas",
+    "kingdom": "Animalia",
+    "group": "Lobe-finned fish",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "FreshWater",
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 400,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/Mawsonia",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Engulf",
+    "attack": 4,
+    "defense": 4,
+    "hp": 10,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.6
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.5
+      }
+    ],
+    "description": "A giant coelacanth about 4 metres long, a cousin of the living coelacanth, from the rivers and lagoons of Cretaceous Brazil and Africa. Its heavy body was covered in thick bony scales, and it moved its fleshy, lobed fins in pairs much like the legs of a walking animal. A slow ambush hunter, it sucked in prey with a sudden snap of its wide mouth."
+  },
+  {
+    "id": "sanajeh_indicus",
+    "commonName": "Sanajeh",
+    "scientificName": "Sanajeh indicus",
+    "kingdom": "Animalia",
+    "group": "Early snake",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Plain",
+      "Hill"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 350,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/Sanajeh",
+    "mapStyle": "Ground",
+    "mapGait": "Slither",
+    "colonySize": 1,
+    "mapScale": 0.8,
+    "mapAttack": "Strike",
+    "mapDefense": "Coil",
+    "attack": 5,
+    "defense": 2,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      }
+    ],
+    "description": "A 3.5-metre snake from Late Cretaceous India, found fossilised coiled around a crushed sauropod egg next to a newly hatched baby. It could not open its jaws as wide as modern snakes, but it was big enough to raid sauropod nesting grounds and swallow the hatchlings. Its name means ancient gape in Sanskrit."
+  },
+  {
+    "id": "xianglong_zhaoi",
+    "commonName": "Xianglong",
+    "scientificName": "Xianglong zhaoi",
+    "kingdom": "Animalia",
+    "group": "Lizard",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "tags": [
+      "Flyer"
+    ],
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 15,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Xianglong",
+    "mapStyle": "Soar",
+    "colonySize": 3,
+    "wingBeat": 0.0,
+    "wingRoot": 0.12,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.5
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.8
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.6
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      }
+    ],
+    "description": "A small gliding lizard about 15 centimetres long from the Early Cretaceous forests of China. Eight very long ribs on each side held out a skin wing, which it spread to glide between trees like the flying dragons of Asia today. It caught insects in the branches."
+  },
+  {
+    "id": "simosuchus_clarki",
+    "commonName": "Simosuchus",
+    "scientificName": "Simosuchus clarki",
+    "kingdom": "Animalia",
+    "group": "Crocodyliform",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Plain",
+      "Rainforest"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 75,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Simosuchus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.6,
+    "colonySize": 2,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 5,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.75
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.4
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small land crocodile about 75 centimetres long from Late Cretaceous Madagascar, with a short, blunt, pug-nosed face. Its leaf-shaped, many-cusped teeth suggest it ate plants, very unlike any crocodile living today. Its back was covered in bony plates, and it may have dug burrows."
+  },
+  {
+    "id": "pterodaustro_guinazui",
+    "commonName": "Pterodaustro",
+    "scientificName": "Pterodaustro guinazui",
+    "kingdom": "Animalia",
+    "group": "Pterosaur",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Wetland",
+      "FreshWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 250,
+    "startingPopulation": 500,
+    "playable": true,
+    "model": "Models/Species/Pterodaustro",
+    "mapStyle": "Soar",
+    "colonySize": 4,
+    "wingBeat": 1.5,
+    "wingRoot": 0.12,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.95
+      },
+      {
+        "gene": "flight_capability",
+        "expression": 0.75
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A flamingo-like pterosaur with a 2.5-metre wingspan from Early Cretaceous Argentina. Its long, upturned lower jaw held about a thousand bristle-like teeth, which it used to sieve tiny crustaceans and algae from shallow lakes. It lived in big flocks, and like flamingos it may have turned pink from its food."
+  },
+  {
+    "id": "maiasaura_peeblesorum",
+    "commonName": "Maiasaura",
+    "scientificName": "Maiasaura peeblesorum",
+    "kingdom": "Animalia",
+    "group": "Ornithopod dinosaur",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Plain",
+      "Hill"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 900,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/Maiasaura",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.72,
+    "colonySize": 2,
+    "mapDefense": "Mob",
+    "attack": 3,
+    "defense": 4,
+    "hp": 11,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.95
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.8
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A 9-metre duck-billed dinosaur whose name means good mother lizard. Huge nesting colonies found in Montana show that it laid eggs in mound nests and cared for its babies until they could leave the nest. It moved in big herds and fed on low plants with its broad, toothless beak and grinding cheek teeth."
+  },
+  {
+    "id": "yutyrannus_huali",
+    "commonName": "Yutyrannus",
+    "scientificName": "Yutyrannus huali",
+    "kingdom": "Animalia",
+    "group": "Theropod dinosaur",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Rainforest",
+      "Plain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Sauropod dinosaur",
+      "Ornithopod dinosaur",
+      "Ceratopsian dinosaur"
+    ],
+    "sizeCm": 900,
+    "startingPopulation": 25,
+    "playable": true,
+    "model": "Models/Species/Yutyrannus",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.66,
+    "colonySize": 1,
+    "mapAttack": "Bite",
+    "attack": 8,
+    "defense": 4,
+    "hp": 10,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "A 9-metre early tyrannosaur from the Early Cretaceous of China, the largest dinosaur known for certain to have had feathers. Its body was covered in long shaggy filaments that probably kept it warm in the cool winters of its forests. It hunted sauropods and other large plant-eaters, perhaps in groups."
+  },
+  {
+    "id": "mononykus_olecranus",
+    "commonName": "Mononykus",
+    "scientificName": "Mononykus olecranus",
+    "kingdom": "Animalia",
+    "group": "Theropod dinosaur",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Desert",
+      "Steppe"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Mononykus",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.65,
+    "mapGait": "Run",
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.85
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.5
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      }
+    ],
+    "description": "A small, long-legged, feathered dinosaur about a metre long from the Late Cretaceous deserts of Mongolia. Its stubby, powerful arms each ended in one big thumb claw, probably used to break open termite nests like an anteater. A fast runner with a slender head, it fed on insects."
+  },
+  {
+    "id": "deinocheirus_mirificus",
+    "commonName": "Deinocheirus",
+    "scientificName": "Deinocheirus mirificus",
+    "kingdom": "Animalia",
+    "group": "Theropod dinosaur",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Wetland",
+      "Plain"
+    ],
+    "diet": "Omnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "mainDiet": "Herbivore",
+    "sizeCm": 1100,
+    "startingPopulation": 30,
+    "playable": true,
+    "model": "Models/Species/Deinocheirus",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.58,
+    "colonySize": 1,
+    "mapDefense": "Rear",
+    "attack": 6,
+    "defense": 5,
+    "hp": 13,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "omnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.2
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.3
+      }
+    ],
+    "description": "A huge, bizarre ostrich-dinosaur about 11 metres long, known for decades only from its giant arms with 2.4-metre-long clawed hands. Complete skeletons later revealed a hump-backed giant with a long, toothless, duck-like bill and broad feet for walking on soft ground. It waded in rivers, eating water plants and fish."
+  },
+  {
+    "id": "nigersaurus_taqueti",
+    "commonName": "Nigersaurus",
+    "scientificName": "Nigersaurus taqueti",
+    "kingdom": "Animalia",
+    "group": "Sauropod dinosaur",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Plain",
+      "Wetland"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 900,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/Nigersaurus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.7,
+    "colonySize": 1,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 4,
+    "hp": 12,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small sauropod about 9 metres long from mid-Cretaceous Niger with a short neck and a broad, straight-edged muzzle like a vacuum cleaner. Its mouth held over 500 slender teeth, replaced as often as every two weeks, and it held its head low to crop ferns and horsetails like a lawnmower. Its lightly built skull had walls thin enough to see light through."
+  },
+  {
+    "id": "asteriornis_maastrichtensis",
+    "commonName": "Asteriornis",
+    "scientificName": "Asteriornis maastrichtensis",
+    "kingdom": "Animalia",
+    "group": "Early crown bird",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Wetland",
+      "Plain"
+    ],
+    "diet": "Omnivore",
+    "tags": [
+      "Flyer"
+    ],
+    "mainDiet": "Herbivore",
+    "sizeCm": 35,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/Asteriornis",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.6,
+    "colonySize": 3,
+    "mapScale": 0.85,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.6
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      }
+    ],
+    "description": "A quail-sized bird from the very end of the Cretaceous in Belgium, nicknamed the Wonderchicken. It is one of the oldest modern birds known, an early relative of both chickens and ducks, with long legs for wading along the shore. Its relatives survived the asteroid that wiped out the other dinosaurs."
+  },
+  {
+    "id": "didelphodon_vorax",
+    "commonName": "Didelphodon",
+    "scientificName": "Didelphodon vorax",
+    "kingdom": "Animalia",
+    "group": "Early metatherian",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Wetland",
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 60,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Didelphodon",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.55,
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "attack": 4,
+    "defense": 2,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      }
+    ],
+    "description": "A badger-sized relative of marsupials about 60 centimetres long including its tail, from the last days of the dinosaurs in North America. It had the strongest bite for its size of any known mammal, with crushing teeth able to break snail shells, bones and small turtles. It probably hunted along streams like an otter."
+  },
+  {
+    "id": "zalambdalestes_lechei",
+    "commonName": "Zalambdalestes",
+    "scientificName": "Zalambdalestes lechei",
+    "kingdom": "Animalia",
+    "group": "Eutherian mammal",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Desert",
+      "Steppe"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 20,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Zalambdalestes",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.7,
+    "mapGait": "Hop",
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.7
+      }
+    ],
+    "description": "A small, long-snouted mammal about 20 centimetres long from the Late Cretaceous of Mongolia, an early relative of placental mammals. Its long hind legs and fused shin bones suggest it hopped like an elephant shrew. It sniffed out insects among the dunes and scrub with its long, mobile nose."
+  },
+  {
+    "id": "kryptobaatar_dashzevegi",
+    "commonName": "Kryptobaatar",
+    "scientificName": "Kryptobaatar dashzevegi",
+    "kingdom": "Animalia",
+    "group": "Multituberculate",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "Desert",
+      "Steppe"
+    ],
+    "diet": "Omnivore",
+    "tags": [
+      "Burrower"
+    ],
+    "mainDiet": "Herbivore",
+    "sizeCm": 10,
+    "startingPopulation": 6000,
+    "playable": true,
+    "model": "Models/Species/Kryptobaatar",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.5,
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.8
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      }
+    ],
+    "description": "A mouse-sized multituberculate about 10 centimetres long from the Late Cretaceous deserts of Mongolia. Multituberculates were the rodents of the dinosaur age, with gnawing front teeth and cheek teeth carrying rows of little cusps for grinding seeds and plants. Kryptobaatar probably sheltered in burrows from the heat and from predators."
+  },
+  {
+    "id": "champsosaurus_laramiensis",
+    "commonName": "Champsosaurus",
+    "scientificName": "Champsosaurus laramiensis",
+    "kingdom": "Animalia",
+    "group": "Choristodere",
+    "firstAge": "Cretaceous",
+    "lastAge": "Cretaceous",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 150,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/Champsosaurus",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapUndulate": true,
+    "mapAttack": "Snap",
+    "attack": 4,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.4
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.4
+      }
+    ],
+    "description": "A gharial-like reptile about 1.5 metres long with a long, narrow, toothy snout, which lived in the rivers and lakes of Late Cretaceous North America. It was not a crocodile but a choristodere, an ancient reptile group that survived the end of the dinosaurs. It swam with its flattened tail and snapped up fish with sideways sweeps of its head."
+  }
+]

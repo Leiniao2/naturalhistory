@@ -1,0 +1,1177 @@
+[
+  {
+    "id": "canis_lupus",
+    "commonName": "Grey Wolf",
+    "scientificName": "Canis lupus",
+    "kingdom": "Animalia",
+    "group": "Canid",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Tundra",
+      "Steppe",
+      "Plain",
+      "Hill",
+      "Mountain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Deer",
+      "Bovid",
+      "Equid",
+      "Rodent",
+      "Small animals"
+    ],
+    "sizeCm": 150,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/CanisLupus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.5,
+    "colonySize": 3,
+    "mapAttack": "Bite",
+    "mapDefense": "Mob",
+    "attack": 6,
+    "defense": 3,
+    "hp": 6,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.9
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.8
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.7
+      }
+    ],
+    "description": "The largest wild dog, about 1.5 m long and 30-60 kg, spread across the northern hemisphere since the Ice Age. Wolves live in family packs that cooperate to run down deer, bison and horses many times their own weight, trotting tens of kilometres a day. Domestic dogs descend from ancient wolves."
+  },
+  {
+    "id": "aenocyon_dirus",
+    "commonName": "Dire Wolf",
+    "scientificName": "Aenocyon dirus",
+    "kingdom": "Animalia",
+    "group": "Canid",
+    "firstAge": "Quaternary",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Plain",
+      "Steppe",
+      "Savanna",
+      "Hill"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Equid",
+      "Bovid",
+      "Camelid",
+      "Deer",
+      "Ground sloth"
+    ],
+    "sizeCm": 170,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/AenocyonDirus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.47,
+    "colonySize": 3,
+    "mapAttack": "Bite",
+    "mapDefense": "Mob",
+    "attack": 7,
+    "defense": 3,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.85
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.55
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      }
+    ],
+    "description": "A wolf-sized but heavier hunting dog of Ice Age America, about 1.7 m long and 60-70 kg, with a broad head and huge, bone-cracking teeth. Ancient DNA shows it was not a close cousin of the grey wolf but a separate lineage that split off millions of years earlier. Packs hunted horses, bison and young ground sloths and vanished with them about 13,000 years ago."
+  },
+  {
+    "id": "ursus_maritimus",
+    "commonName": "Polar Bear",
+    "scientificName": "Ursus maritimus",
+    "kingdom": "Animalia",
+    "group": "Bear",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Tundra"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Pinniped",
+      "Small animals"
+    ],
+    "sizeCm": 250,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/UrsusMaritimus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.41,
+    "colonySize": 1,
+    "mapAttack": "Pounce",
+    "mapDefense": "Rear",
+    "attack": 8,
+    "defense": 5,
+    "hp": 12,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 1.0
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.7
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.85
+      }
+    ],
+    "description": "The largest land carnivore alive, males up to 2.6 m long and 700 kg, which evolved from brown bears during the Ice Age. It hunts seals on the Arctic sea ice, waiting at their breathing holes, and can smell them from kilometres away. Thick white fur over black skin and a layer of fat keep it warm, and it swims for days between ice floes."
+  },
+  {
+    "id": "hippopotamus_amphibius",
+    "commonName": "Common Hippopotamus",
+    "scientificName": "Hippopotamus amphibius",
+    "kingdom": "Animalia",
+    "group": "Hippopotamid",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Wetland",
+      "FreshWater",
+      "Savanna"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 400,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/HippopotamusAmphibius",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.16,
+    "colonySize": 2,
+    "mapAttack": "Charge",
+    "mapDefense": "Brace",
+    "attack": 7,
+    "defense": 7,
+    "hp": 14,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.7
+      }
+    ],
+    "description": "A barrel-shaped giant up to 5 m long and over 3 tonnes, and the closest living relative of whales. It spends the day in rivers and lakes with only its eyes, ears and nostrils above water and comes out at night to graze. Its huge jaws open almost 180 degrees and carry tusk-like canines, making it one of Africa's most dangerous animals; in warm Ice Age spells hippos lived as far north as Britain."
+  },
+  {
+    "id": "bison_priscus",
+    "commonName": "Steppe Bison",
+    "scientificName": "Bison priscus",
+    "kingdom": "Animalia",
+    "group": "Bovid",
+    "firstAge": "Quaternary",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Steppe",
+      "Tundra",
+      "Plain"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 300,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/BisonPriscus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.37,
+    "colonySize": 2,
+    "mapAttack": "Charge",
+    "mapDefense": "Brace",
+    "attack": 5,
+    "defense": 5,
+    "hp": 11,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.85
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.8
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "The great wild bison of the Ice Age mammoth steppe, from Europe across Siberia to Alaska, up to 3 m long and 2 m tall at the shoulder. It had a towering hump, a shaggy dark mane and long, curving horns, and is the bison painted on the walls of Lascaux and Altamira. Herds grazed the cold grasslands and fed wolves, lions and human hunters."
+  },
+  {
+    "id": "pongo_pygmaeus",
+    "commonName": "Bornean Orangutan",
+    "scientificName": "Pongo pygmaeus",
+    "kingdom": "Animalia",
+    "group": "Great ape",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 140,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/PongoPygmaeus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.39,
+    "colonySize": 1,
+    "mapDefense": "Rear",
+    "attack": 4,
+    "defense": 3,
+    "hp": 8,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "climbing",
+        "expression": 0.95
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.75
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.95
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      }
+    ],
+    "description": "The largest tree-living animal, a red-haired great ape whose arms span over 2 m; adult males weigh about 80 kg and grow broad cheek pads. Orangutans eat mainly fruit, use sticks and leaves as tools and build a new nest in the trees every night. A mother raises one young for about eight years, the longest childhood of any animal besides humans."
+  },
+  {
+    "id": "thylacinus_cynocephalus",
+    "commonName": "Thylacine",
+    "scientificName": "Thylacinus cynocephalus",
+    "kingdom": "Animalia",
+    "group": "Marsupial",
+    "firstAge": "Quaternary",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Plain",
+      "Hill",
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Marsupial",
+      "Monotreme",
+      "Small animals"
+    ],
+    "sizeCm": 130,
+    "startingPopulation": 100,
+    "playable": true,
+    "model": "Models/Species/ThylacinusCynocephalus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.47,
+    "colonySize": 1,
+    "mapAttack": "Bite",
+    "attack": 5,
+    "defense": 2,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.6
+      }
+    ],
+    "description": "Also called the Tasmanian tiger, a dog-like marsupial predator about 1.3 m long with dark stripes across its back and a stiff tail. It could open its jaws remarkably wide and carried its young in a pouch. It once lived across Australia and New Guinea; the last known thylacine died in a zoo in 1936."
+  },
+  {
+    "id": "castoroides_ohioensis",
+    "commonName": "Giant Beaver",
+    "scientificName": "Castoroides ohioensis",
+    "kingdom": "Animalia",
+    "group": "Rodent",
+    "firstAge": "Quaternary",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Wetland",
+      "FreshWater",
+      "Plain"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 200,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/CastoroidesOhioensis",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.22,
+    "colonySize": 1,
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 4,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.5
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.5
+      }
+    ],
+    "description": "A beaver the size of a black bear, about 2 m long and up to 100 kg, that lived in the lakes and swamps of Ice Age North America. Its incisors were up to 15 cm long, but it probably did not fell trees or build dams: it ate soft water plants. It died out about 10,000 years ago as the climate dried."
+  },
+  {
+    "id": "struthio_camelus",
+    "commonName": "Common Ostrich",
+    "scientificName": "Struthio camelus",
+    "kingdom": "Animalia",
+    "group": "Ostrich",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Savanna",
+      "Desert",
+      "Plain",
+      "Steppe"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 250,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/StruthioCamelus",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.44,
+    "colonySize": 3,
+    "mapAttack": "Strike",
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 3,
+    "hp": 7,
+    "moves": 4,
+    "genes": [
+      {
+        "gene": "land_speed",
+        "expression": 1.0
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.9
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.8
+      },
+      {
+        "gene": "clutch_size",
+        "expression": 0.6
+      }
+    ],
+    "description": "The largest living bird, up to 2.7 m tall and 150 kg, flightless but able to run at about 70 km/h on long two-toed legs. It has the largest eyes of any land animal and lays the biggest eggs, about 1.5 kg each. A kick from an ostrich can kill a lion; during the Ice Age ostriches also roamed the steppes of Asia."
+  },
+  {
+    "id": "raphus_cucullatus",
+    "commonName": "Dodo",
+    "scientificName": "Raphus cucullatus",
+    "kingdom": "Animalia",
+    "group": "Pigeon",
+    "firstAge": "Quaternary",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Rainforest",
+      "Plain"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 100,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/RaphusCucullatus",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.41,
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 2,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "clutch_size",
+        "expression": 0.1
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.6
+      }
+    ],
+    "description": "A flightless giant pigeon about 1 m tall and 10-18 kg from the island of Mauritius, a close relative of the Nicobar pigeon. With no predators on the island it lost the power of flight and nested on the ground, eating fallen fruit and seeds with its big hooked bill. Sailors, rats, pigs and monkeys arriving from 1598 wiped it out within a lifetime; it was last seen in 1662."
+  },
+  {
+    "id": "aptenodytes_forsteri",
+    "commonName": "Emperor Penguin",
+    "scientificName": "Aptenodytes forsteri",
+    "kingdom": "Animalia",
+    "group": "Penguin",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Krill",
+      "Squid",
+      "Bony fish"
+    ],
+    "sizeCm": 120,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/AptenodytesForsteri",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapAttack": "Snap",
+    "mapDefense": "Mob",
+    "attack": 3,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.8
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 1.0
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.95
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.8
+      }
+    ],
+    "description": "The largest living penguin, about 1.2 m tall and up to 45 kg, which dives deeper than 500 m after fish, squid and krill. It breeds on the Antarctic sea ice in the middle of winter: the male keeps the single egg on his feet for two months without eating while thousands of birds huddle together against the cold."
+  },
+  {
+    "id": "bubo_scandiacus",
+    "commonName": "Snowy Owl",
+    "scientificName": "Bubo scandiacus",
+    "kingdom": "Animalia",
+    "group": "Owl",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Tundra",
+      "Steppe",
+      "Plain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Rodent",
+      "Small animals"
+    ],
+    "sizeCm": 65,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/BuboScandiacus",
+    "mapStyle": "Soar",
+    "colonySize": 1,
+    "wingBeat": 1.5,
+    "wingRoot": 0.17,
+    "mapAttack": "Dive",
+    "attack": 4,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.85
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.95
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.95
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.7
+      }
+    ],
+    "description": "A large white owl of the Arctic tundra, about 65 cm long with a 1.5 m wingspan, which spread across Ice Age Europe with the cold. It hunts by day in the endless Arctic summer, mainly lemmings, and a pair may eat over a thousand in a season. Its plumage is white with dark bars, and its feet are thickly feathered against the cold."
+  },
+  {
+    "id": "hieraaetus_moorei",
+    "commonName": "Haast's Eagle",
+    "scientificName": "Hieraaetus moorei",
+    "kingdom": "Animalia",
+    "group": "Eagle",
+    "firstAge": "Quaternary",
+    "lastAge": "Quaternary",
+    "habitats": [
+      "Rainforest",
+      "Hill",
+      "Mountain",
+      "Plain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Moa",
+      "Small animals"
+    ],
+    "sizeCm": 130,
+    "startingPopulation": 30,
+    "playable": true,
+    "model": "Models/Species/HieraaetusMoorei",
+    "mapStyle": "Soar",
+    "colonySize": 1,
+    "wingBeat": 1.2,
+    "wingRoot": 0.12,
+    "mapAttack": "Dive",
+    "attack": 8,
+    "defense": 3,
+    "hp": 6,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.75
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.95
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.2
+      }
+    ],
+    "description": "The largest eagle known, females up to about 15 kg with a wingspan near 3 m, from the South Island of New Zealand. Its talons were as big as a tiger's claws, and it struck moa many times its own weight at high speed, gripping the pelvis and killing with a blow to the head. It vanished about 600 years ago, soon after people hunted the moa to extinction."
+  },
+  {
+    "id": "orcinus_orca",
+    "commonName": "Orca",
+    "scientificName": "Orcinus orca",
+    "kingdom": "Animalia",
+    "group": "Oceanic dolphin",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Pinniped",
+      "Penguin",
+      "Baleen whale",
+      "Bony fish",
+      "Mackerel shark",
+      "Sea turtle",
+      "Squid"
+    ],
+    "tags": [
+      "Surfacer"
+    ],
+    "sizeCm": 800,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/OrcinusOrca",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapAttack": "Ram",
+    "attack": 9,
+    "defense": 5,
+    "hp": 10,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.85
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.9
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.85
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.9
+      }
+    ],
+    "description": "The largest dolphin, also called the killer whale, with males up to 8-9 m long and 6 tonnes and a dorsal fin up to 1.8 m tall. Orcas live in family pods led by old females, each with its own calls and hunting traditions: some eat fish, others work together to wash seals off ice floes or hunt great white sharks and whale calves. They live in every ocean, from the poles to the tropics."
+  },
+  {
+    "id": "balaenoptera_musculus",
+    "commonName": "Blue Whale",
+    "scientificName": "Balaenoptera musculus",
+    "kingdom": "Animalia",
+    "group": "Baleen whale",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "tags": [
+      "Surfacer"
+    ],
+    "sizeCm": 2500,
+    "startingPopulation": 15,
+    "playable": true,
+    "model": "Models/Species/BalaenopteraMusculus",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "attack": 4,
+    "defense": 6,
+    "hp": 15,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 1.0
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.9
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.7
+      }
+    ],
+    "description": "The largest animal that has ever lived, up to about 30 m long and 150-190 tonnes, with a heart the size of a small car. It lunges through swarms of krill with its throat pleats ballooning, filtering the water through baleen plates and swallowing up to four tonnes of krill a day. Its low calls can carry across hundreds of kilometres of ocean."
+  },
+  {
+    "id": "carcharodon_carcharias",
+    "commonName": "Great White Shark",
+    "scientificName": "Carcharodon carcharias",
+    "kingdom": "Animalia",
+    "group": "Mackerel shark",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Pinniped",
+      "Bony fish",
+      "Sea turtle",
+      "Oceanic dolphin",
+      "Squid"
+    ],
+    "sizeCm": 500,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/CarcharodonCarcharias",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Bite",
+    "attack": 8,
+    "defense": 3,
+    "hp": 8,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.95
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.85
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.9
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.9
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.4
+      }
+    ],
+    "description": "The largest predatory fish alive, females up to about 6 m long and 2 tonnes, armed with rows of big, saw-edged triangular teeth. It ambushes seals from below at high speed, sometimes launching itself clear of the water. Warm muscles let it hunt in cold seas, and it senses prey by smell and by the faint electric fields of their bodies."
+  },
+  {
+    "id": "salmo_salar",
+    "commonName": "Atlantic Salmon",
+    "scientificName": "Salmo salar",
+    "kingdom": "Animalia",
+    "group": "Bony fish",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater",
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Krill",
+      "Prawn"
+    ],
+    "sizeCm": 80,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/SalmoSalar",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "attack": 2,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.8
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.9
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.7
+      },
+      {
+        "gene": "clutch_size",
+        "expression": 0.7
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.7
+      }
+    ],
+    "description": "A silvery, black-spotted fish usually 70-80 cm long that hatches in cold gravel rivers on both sides of the North Atlantic, grows up at sea and returns to spawn. Guided by smell, it finds the very river where it was born and leaps up waterfalls over 3 m high to reach its spawning grounds. Spawning males grow a hooked lower jaw."
+  },
+  {
+    "id": "architeuthis_dux",
+    "commonName": "Giant Squid",
+    "scientificName": "Architeuthis dux",
+    "kingdom": "Animalia",
+    "group": "Squid",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Squid",
+      "Small animals"
+    ],
+    "sizeCm": 1200,
+    "startingPopulation": 50,
+    "playable": true,
+    "model": "Models/Species/ArchiteuthisDux",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Lash",
+    "mapDefense": "Ink",
+    "attack": 6,
+    "defense": 2,
+    "hp": 9,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 1.0
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      }
+    ],
+    "description": "One of the largest invertebrates, up to about 12-13 m long including its two long feeding tentacles, which end in clubs lined with toothed suckers. It has the biggest eyes of any animal, up to 27 cm across, for seeing in the dark at 300-1,000 m depth. It was first filmed alive only in 2004; sperm whales hunt it and often carry sucker scars from the fight."
+  },
+  {
+    "id": "enteroctopus_dofleini",
+    "commonName": "Giant Pacific Octopus",
+    "scientificName": "Enteroctopus dofleini",
+    "kingdom": "Animalia",
+    "group": "Octopus",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "King crab",
+      "Spiny lobster",
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 400,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/EnteroctopusDofleini",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Engulf",
+    "mapDefense": "Ink",
+    "attack": 5,
+    "defense": 2,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "camouflage",
+        "expression": 0.95
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.8
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.5
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.3
+      }
+    ],
+    "description": "The largest octopus, usually 3-5 m across the arms and 15-50 kg, living on rocky sea floors of the North Pacific. It hunts crabs, clams and fish, drilling or crushing their shells with its beak, and can change colour and skin texture in an instant. Octopuses are among the most intelligent invertebrates: they solve puzzles, open jars and recognise individual people."
+  },
+  {
+    "id": "euphausia_superba",
+    "commonName": "Antarctic Krill",
+    "scientificName": "Euphausia superba",
+    "kingdom": "Animalia",
+    "group": "Krill",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 6,
+    "startingPopulation": 100000,
+    "playable": true,
+    "model": "Models/Species/EuphausiaSuperba",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 1.2,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 1.0
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.95
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.9
+      }
+    ],
+    "description": "A small, glassy-pink shrimp-like crustacean about 6 cm long, yet perhaps the most abundant wild animal on Earth by weight. Swarms with up to 10,000 animals in a cubic metre graze on algae in the Southern Ocean, and almost everything there, from penguins and seals to blue whales, depends on them. It glows with blue-green light organs."
+  },
+  {
+    "id": "ambystoma_mexicanum",
+    "commonName": "Axolotl",
+    "scientificName": "Ambystoma mexicanum",
+    "kingdom": "Animalia",
+    "group": "Salamander",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 23,
+    "startingPopulation": 2000,
+    "playable": true,
+    "model": "Models/Species/AmbystomaMexicanum",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapUndulate": true,
+    "mapAttack": "Snap",
+    "attack": 1,
+    "defense": 1,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "regeneration",
+        "expression": 1.0
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "clutch_size",
+        "expression": 0.7
+      }
+    ],
+    "description": "A salamander about 23 cm long from the lakes of the Valley of Mexico that never grows up: it keeps its feathery external gills and lives in water all its life, yet breeds. It can regrow lost legs, its tail, parts of its spinal cord and even its heart. Once common, it now survives wild only in the canals of Xochimilco."
+  },
+  {
+    "id": "ophiophagus_hannah",
+    "commonName": "King Cobra",
+    "scientificName": "Ophiophagus hannah",
+    "kingdom": "Animalia",
+    "group": "Elapid snake",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Rainforest",
+      "Hill",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Viper",
+      "Pit viper",
+      "Boa",
+      "Lizard",
+      "Elapid snake"
+    ],
+    "sizeCm": 400,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/OphiophagusHannah",
+    "mapStyle": "Ground",
+    "mapGait": "Slither",
+    "colonySize": 1,
+    "mapScale": 1.2,
+    "mapAttack": "Strike",
+    "mapDefense": "Rear",
+    "attack": 6,
+    "defense": 2,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "toxin_production",
+        "expression": 0.95
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.8
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.5
+      }
+    ],
+    "description": "The longest venomous snake, commonly 3-4 m and up to 5.8 m, from the forests of India and Southeast Asia. It eats mainly other snakes, including venomous ones, and a single bite carries enough venom to kill an elephant. When threatened it spreads a narrow hood, growls and rears up a third of its body; the female builds a nest of leaves and guards her eggs."
+  },
+  {
+    "id": "chelonoidis_niger",
+    "commonName": "Galapagos Giant Tortoise",
+    "scientificName": "Chelonoidis niger",
+    "kingdom": "Animalia",
+    "group": "Tortoise",
+    "firstAge": "Quaternary",
+    "lastAge": "",
+    "habitats": [
+      "Plain",
+      "Hill",
+      "Savanna"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 150,
+    "startingPopulation": 100,
+    "playable": true,
+    "model": "Models/Species/ChelonoidisNiger",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.3,
+    "colonySize": 1,
+    "mapDefense": "Hide",
+    "attack": 2,
+    "defense": 9,
+    "hp": 12,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.95
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.7
+      },
+      {
+        "gene": "hibernation",
+        "expression": 0.3
+      }
+    ],
+    "description": "The largest living tortoise, up to 1.5 m long and over 250 kg, which can live well over 100 years and survive a year without food or water. Its ancestors drifted from South America to the Galapagos Islands, where each island evolved its own form, from domed shells in wet highlands to saddle-shaped shells that let the neck reach up to cactus pads. These differences helped inspire Darwin's ideas on evolution."
+  }
+]

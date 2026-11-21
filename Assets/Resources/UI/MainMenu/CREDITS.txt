@@ -1,6 +1,92 @@
-Title screen paintings by Charles R. Knight (1874-1953), murals painted 1926-1930 for the Field
-Museum of Natural History, Chicago. Public domain (Wikimedia Commons):
-  early_land_plants.jpg          File:Early_Land_Plants_by_Knight.jpg
-  permian_reptiles.jpg           File:Permian_Reptiles_and_Amphibians_by_Knight.jpg
-  cretaceous_seas.jpg            File:Late_or_Upper_Cretaceous_Seas_by_Knight.jpg
-  triceratops_tyrannosaurus.jpg  File:Triceratops_and_Tyrannosaurus_by_Knight.jpg
+Title and loading screen paintings (paintings.json). All public domain, from Wikimedia Commons
+(https://commons.wikimedia.org/wiki/File:<source>). Resized to at most 2400 px wide; wealden_period cropped
+to the picture (caption and margin removed).
+
+  early_land_plants.jpg              Charles R. Knight    Early Land Plants
+      File:Early_Land_Plants_by_Knight.jpg
+  permian_reptiles.jpg               Charles R. Knight    Permian Reptiles and Amphibians
+      File:Permian_Reptiles_and_Amphibians_by_Knight.jpg
+  cretaceous_seas.jpg                Charles R. Knight    Late Cretaceous Seas
+      File:Late_or_Upper_Cretaceous_Seas_by_Knight.jpg
+  triceratops_tyrannosaurus.jpg      Charles R. Knight    Triceratops and Tyrannosaurus
+      File:Triceratops_and_Tyrannosaurus_by_Knight.jpg
+  brontosaurus_mural.jpg             Charles R. Knight    Brontosaurus
+      File:Brontosaurus_by_Knight.jpg
+  oligocene_titanotheres.jpg         Charles R. Knight    Oligocene Titanotheres
+      File:Oligocene_Titanotheres_by_Knight.jpg
+  pliocene_rhinoceros.jpg            Charles R. Knight    Pliocene Rhinoceros, Mastodonts and Oreodonts
+      File:Pliocene_Rhinoceros,_Mastodonts,_Oreodonts_by_Knight.jpg
+  world_before_life.jpg              Charles R. Knight    The World Before There Was Life
+      File:The_World_Before_There_was_Life_by_Knight.jpg
+  reptiles_invaded_seas.jpg          Charles R. Knight    Reptiles That Invaded the Seas
+      File:Reptiles_That_Invaded_The_Seas_by_Knight.jpg
+  woolly_mammoths.jpg                Charles R. Knight    Woolly Mammoths
+      File:Woolly_mammoths_by_Knight.jpg
+  miocene_plains_mammals.jpg         Charles R. Knight    Miocene Plains Mammals
+      File:Miocene_Plains_Mammals_by_Knight.jpg
+  late_cretaceous_dinosaurs.jpg      Charles R. Knight    Late Cretaceous Dinosaurs
+      File:Late_Cretaceous_Dinosaurs_by_Knight.jpg
+  rancho_la_brea.jpg                 Charles R. Knight    Rancho La Brea Tar Pools
+      File:Rancho_La_Brea_Tar_Pools_by_Knight.jpg
+  silurian_period.jpg                Charles R. Knight    Silurian Period
+      File:Silurian_Period_by_Knight.jpg
+  ordovician_sea_life.jpg            Charles R. Knight    Ordovician Sea Life
+      File:Ordovician_Sea_Life_by_Knight.jpg
+  cave_bears.jpg                     Charles R. Knight    Cave Bears
+      File:Cave_bears_by_Knight.jpg
+  megaloceros.jpg                    Charles R. Knight    Megaloceros
+      File:Megaloceros_by_Knight.jpg
+  basilosaurus.jpg                   Charles R. Knight    Basilosaurus
+      File:Basilosaurus_painting_by_Knight.jpg
+  mammal_like_reptiles.jpg           Charles R. Knight    Mammal-like Reptiles
+      File:Mammal_like_reptiles_by_Knight.jpg
+  stegosaurus_mural.jpg              Charles R. Knight    Stegosaurus
+      File:Stegosaurus_by_Knight.jpg
+  uintatherium_orohippus.jpg         Charles R. Knight    Uintatherium and Orohippus
+      File:Uintatherium_and_Orohippus_by_Knight.jpg
+  archaeopteryx_compsognathus.jpg    Charles R. Knight    Archaeopteryx, Compsognathus and Rhamphorhynchus
+      File:Archaeopteryx,_Compsognathus_and_Rhamphorhynchus_by_Knight.jpg
+  dinornis.jpg                       Charles R. Knight    Moa
+      File:Dinornis_by_Knight.jpg
+  palorchestes.jpg                   Charles R. Knight    Palorchestes
+      File:Palorchestes_as_a_giant_kangaroo.jpg
+  nesting_protoceratops.jpg          Charles R. Knight    Nesting Protoceratops
+      File:Nesting_Protoceratops.jpg
+  columbian_mammoth.jpg              Charles R. Knight    Columbian Mammoth
+      File:Columbian_mammoth.jpg
+  brontosaurus_swamp.jpg             Charles R. Knight    Brontosaurus in the Swamp
+      File:Pasta-Brontosaurus.jpg
+  leaping_laelaps.jpg                Charles R. Knight    Leaping Laelaps
+      File:Laelaps-Charles_Knight-1897.jpg
+  dinictis_protoceras.jpg            Charles R. Knight    Dinictis and Protoceras
+      File:Dinictis_and_Protoceras,_Charles_R._Knight_1904.jpg
+  allosaurus.jpg                     Charles R. Knight    Allosaurus
+      File:Allosaurus4.jpg
+  hadrosaurs.jpg                     Charles R. Knight    Hadrosaurs
+      File:Knight_hadrosaurs.jpg
+  american_mastodon.jpg              Charles R. Knight    American Mastodon
+      File:American_mastodon_at_Field_Museum.jpg
+  eobasileus.jpg                     Charles R. Knight    Eobasileus
+      File:Eobasileus.jpg
+  font_de_gaume.jpg                  Charles R. Knight    Painters of Font-de-Gaume
+      File:Font-de-Gaume.jpg
+  stegosaurus_forest.jpg             Charles R. Knight    Stegosaurus in the Forest
+      File:Stego.jpg
+  eohippus.jpg                       Charles R. Knight    Eohippus
+      File:Eohippus.jpg
+  duria_antiquior.jpg                Henry De la Beche    Duria Antiquior
+      File:Duria_Antiquior.jpg
+  country_of_the_iguanodon.jpg       John Martin          The Country of the Iguanodon
+      File:John_Martin_-_The_country_of_the_Iguanodon_-_Google_Art_Project.jpg
+  wealden_period.jpg                 Joseph Kuwasseg      The Wealden Period
+      File:Joseph_Kuwasseg,_Landschap_met_iguanodonten_uit_het_vroege_krijt.jpg
+  mosasaurus_ichthyosaurus.jpg       Heinrich Harder      Mosasaurus and Ichthyosaurus
+      File:Mosasaurus_ichthyosaurus.jpg
+  pteranodon.jpg                     Heinrich Harder      Pteranodon
+      File:Pterano.jpg
+  rhamphorhynchus.jpg                Heinrich Harder      Rhamphorhynchus
+      File:Rhamphor.jpg
+  sea_lilies.jpg                     Heinrich Harder      Sea Lilies
+      File:Seelilien.jpg
+  laugerie_basse.jpg                 Heinrich Harder      Laugerie-Basse in the Vézère Valley
+      File:Laugerie_basse_im_Vézère-Tal.png

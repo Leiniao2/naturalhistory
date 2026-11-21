@@ -1,0 +1,22 @@
+{
+  "Dromornithid": {
+    "tags": "BIRD",
+    "path": "AVES + '/Neognathae/Galloanserae/Anseriformes/Dromornithidae'"
+  },
+  "Protoceratid": {
+    "tags": "PLAC+['Ungulate']",
+    "path": "ARTIO + '/Tylopoda/Protoceratidae'"
+  },
+  "Canid": {
+    "tags": "PLAC+['Carnivoran']",
+    "path": "CANI + '/Canidae'"
+  },
+  "Pig": {
+    "tags": "PLAC+['Ungulate']",
+    "path": "ARTIO + '/Suina/Suidae'"
+  },
+  "Scallop": {
+    "tags": "B+['Mollusc','Bivalve']",
+    "path": "MOLL + '/Conchifera/Bivalvia/Pectinidae'"
+  }
+}

@@ -56,6 +56,8 @@ namespace NaturalHistory.World
 
         public event Action<ColonyGroup> Arrived;            // finished a move or an attack and settled in
         public static event Action<ColonyGroup, HexCell> AttackStarted; // the attacker and the tile it strikes
+        public static event Action<ColonyGroup, HexCell> Travelled;     // a move finished: the group and the tile it left (Discoveries)
+        private HexCell tripFrom; // where the current move set out from
         public event Action<ColonyGroup, HexCell> Struck;    // reached the border of the tile it attacks
 
         public class Member
@@ -184,19 +186,36 @@ namespace NaturalHistory.World
         // anywhere but mountains: only mountain species (habitat "Mountain") go onto a mountain tile.
         // Fliers fly lower than the peaks and would pass through them, so a mountain on the way
         // stops them where they are.
-        public bool CanEnter(HexCell cell)
+        public bool CanEnter(HexCell cell) => CanEnter(Definition, Style, cell);
+
+        // Whether a group of `def` moving in `style` can go onto `cell`
+        public static bool CanEnter(SpeciesDefinition def, ColonyStyle style, HexCell cell)
         {
             if (cell == null || cell.Terrain == null) return false;
-            if (Niches.InSoil(Definition) && UnderView.Blocks(cell.Under)) return false; // the walls of the underground maze
-            if (Definition != null && !UnderView.FitsBelow(Definition, cell)) return false; // seabed animals keep to the seabed
-            if (cell.IsMountain && !SpeciesColonies.LivesOnMountains(Definition)) return false; // only mountain species go up to the summit
-            return Style switch
+            if (!cell.Terrain.IsWater && !UnderView.LandOpen) return false; // before the Silurian all life is in the water
+            // the walls of the underground maze: no way through for soil animals, nor for microbes in the land's soil
+            if ((Niches.InSoil(def) || (style == ColonyStyle.Drift && !cell.Terrain.IsWater)) && UnderView.Blocks(cell.Under)) return false;
+            if (def != null && !UnderView.FitsBelow(def, cell)) return false; // seabed animals keep to the seabed
+            if (cell.IsMountain && !SpeciesColonies.LivesOnMountains(def)) return false; // only mountain species go up to the summit
+            return style switch
             {
                 ColonyStyle.Ground => !cell.Terrain.IsWater,
-                ColonyStyle.Swim or ColonyStyle.Float or ColonyStyle.Drift => cell.Terrain.IsWater,
+                ColonyStyle.Swim or ColonyStyle.Float => cell.Terrain.IsWater,
+                // microbes drift in water, and on land live in the soil and damp ground their habitats list
+                ColonyStyle.Drift => cell.Terrain.IsWater || SpeciesColonies.FitsHabitat(def, cell),
                 ColonyStyle.Soar or ColonyStyle.Swarm => true,
                 _ => false,
             };
+        }
+
+        // Whether a new group of `def` can be put on `cell`: its habitat, and somewhere it can move
+        // (or, for colonies fixed in place, just its habitat). Every placement goes through this, so
+        // a group never appears where it couldn't move: founders, gifts, births, young, revivals.
+        public static bool CanPlace(SpeciesDefinition def, HexCell cell)
+        {
+            if (def == null || !SpeciesColonies.FitsHabitat(def, cell)) return false;
+            if (!System.Enum.TryParse(def.mapStyle, true, out ColonyStyle style)) style = ColonyStyle.Drift;
+            return style == ColonyStyle.Fixed ? UnderView.FitsBelow(def, cell) : CanEnter(def, style, cell);
         }
 
         // Somewhere the group can settle: it can get there and finds food there or next door (see FoodWeb).
@@ -223,6 +242,7 @@ namespace NaturalHistory.World
             }
             if (!CanLiveAt(prev)) return false; // passing through is fine, but it has to eat where it stops
             SpendActions(path.Count); // an action per tile
+            tripFrom = Cell;
 
             var t = new Trip { destination = prev };
             t.legs.Add(MakeLeg(points, TravelSpeed()));
@@ -371,9 +391,13 @@ namespace NaturalHistory.World
                 }
                 if (tt >= trip.marchEnd + SettleTime)
                 {
+                    bool moved = trip.strikeTarget == null && tripFrom != null && tripFrom != Cell;
+                    var from = tripFrom;
+                    tripFrom = null;
                     trip = null;
                     w = 0f;
                     Arrived?.Invoke(this);
+                    if (moved) Travelled?.Invoke(this, from);
                 }
             }
 

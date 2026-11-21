@@ -20,17 +20,19 @@ namespace NaturalHistory.Progression
     //  - food (a plant, or an animal your nearest group can eat): that group raises young for free
     //  - a second wind: every group of yours gets an extra action this turn
     //  - fertile ground: your groups nearby can reproduce again at once
-    // What is in sight when a game begins counts as known already (everything seen in its first
-    // moments, BaselineSeconds, while the founders and territory appear). Animals of a species you
-    // have bring nothing; the first wild group you ever meet, of whatever species, brings a
+    // Only a move of one of your groups discovers things, and only in the tiles the move brought into
+    // its sight, in the layers it can see (OnTravelled, Scan): what is around you when a game begins
+    // or at the start of a turn brings nothing, and what is in sight when a game begins counts as
+    // known already (everything seen in its first moments, BaselineSeconds, while the founders and
+    // territory appear: Baseline), so moving there later brings nothing either. Animals of a species you have bring nothing; the first wild group you ever meet, of whatever species, brings a
     // "first encounter" card instead of a new-species one. Off in Safari Mode. Saved.
     public class Discoveries : MonoBehaviour
     {
         public static Discoveries Instance { get; private set; }
 
         public const int Nearby = 3; // tiles: "your groups nearby"
-        private const float BaselineSeconds = 2f; // seen this soon after the game begins: known already
         private const string FirstWildKey = "wild:first";
+        private const float BaselineSeconds = 2f; // seen this soon after the game begins: known already
 
         public enum Kind { Terrain, Plant, Animal }
 
@@ -41,14 +43,15 @@ namespace NaturalHistory.Progression
             public string species; // an animal's species id
             public Texture picture;
             public HexCell cell;
+            public MapLayer layer; // the layer it is in (the view switches there to show it)
         }
 
         public event Action<Discovery> Found;
 
         private readonly HashSet<string> known = new();
-        private bool pending, baselineDue = true;
-        private float baselineUntil = -1f;
         private System.Random rng = new();
+        private bool baselineDue = true;
+        private float baselineUntil = -1f;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Bootstrap()
@@ -61,13 +64,13 @@ namespace NaturalHistory.Progression
 
         private void Start()
         {
-            FogOfWar.Changed += Request;
+            ColonyGroup.Travelled += OnTravelled;
             if (HexGrid.Instance != null) HexGrid.Instance.Generated += OnNewMap;
         }
 
         private void OnDestroy()
         {
-            FogOfWar.Changed -= Request;
+            ColonyGroup.Travelled -= OnTravelled;
             if (HexGrid.Instance != null) HexGrid.Instance.Generated -= OnNewMap;
             if (Instance == this) Instance = null;
         }
@@ -82,18 +85,50 @@ namespace NaturalHistory.Progression
             baselineUntil = -1f;
         }
 
-        private void Request() => pending = true;
-
+        // The opening: what is in sight (in either layer) once your founders are there, and for a
+        // moment after while the rest appears, is known already, with no cards
         private void LateUpdate()
         {
-            // while the opening's baseline lasts, keep looking as the founders and territory appear
-            if (baselineUntil >= 0f && Time.unscaledTime < baselineUntil) pending = true;
-            if (!pending) return;
-            pending = false;
-            Scan();
+            if (baselineDue || Time.unscaledTime < baselineUntil) Baseline();
         }
 
-        // ---------- Save ----------
+        private void Baseline()
+        {
+            var grid = HexGrid.Instance;
+            var colonies = SpeciesColonies.Instance;
+            var human = Human;
+            if (grid == null || !grid.IsGenerated || colonies == null || human == null || !FogOfWar.Active) return;
+            if (!colonies.Groups.Any(g => g != null && g.Owner == human)) return; // before the game has begun
+            if (baselineDue) { baselineDue = false; baselineUntil = Time.unscaledTime + BaselineSeconds; }
+            for (int r = 0; r < grid.Height; r++)
+            for (int q = 0; q < grid.Width; q++)
+            {
+                var cell = grid.GetCell(q, r);
+                if (cell?.Terrain == null || !FogOfWar.IsVisible(cell)) continue;
+                known.Add("terrain:" + cell.Terrain.kind);
+                known.Add("feature:" + cell.Feature);
+                known.Add("under:" + cell.UnderFeature);
+                if (grid.ShowsStromatoliteFloor(cell)) known.Add("floor:stromatolites");
+                foreach (var p in cell.Plants.Concat(cell.UnderPlants))
+                    if (p != null) known.Add("plant:" + p.id);
+                foreach (var g in colonies.GroupsAt(cell))
+                    if (g?.Definition != null && g.Owner != human) known.Add("species:" + g.Definition.id);
+            }
+        }
+
+        // Only a move of one of your groups discovers anything, and only in the tiles the move brought
+        // into its sight (not at the start of a turn, nor what others see)
+        private void OnTravelled(ColonyGroup g, HexCell from)
+        {
+            var human = Human;
+            var grid = HexGrid.Instance;
+            if (g == null || g.Owner != human || human == null || g.Cell == null || from == null || grid == null || SpeciesColonies.SafariMode) return;
+            if (baselineDue || Time.unscaledTime < baselineUntil) return; // still the opening
+            int bonus = Abilities.VisionBonus(g);
+            var before = new HashSet<HexCell>(grid.GetCellsInRange(from, FogOfWar.Vision(g.Definition, from, !g.CanMove) + bonus));
+            var fresh = grid.GetCellsInRange(g.Cell, FogOfWar.Vision(g)).Where(c => c != null && !before.Contains(c)).ToList();
+            if (fresh.Count > 0) Scan(g, fresh);
+        }
 
         public List<string> Capture() => known.ToList();
 
@@ -101,7 +136,7 @@ namespace NaturalHistory.Progression
         {
             known.Clear();
             if (saved != null) known.UnionWith(saved);
-            baselineDue = saved == null; // an older save: what is in sight now counts as known
+            baselineDue = saved == null || saved.Count == 0; // an older save: what is in sight now counts as known
             baselineUntil = -1f;
             lastSeed = HexGrid.Instance != null ? HexGrid.Instance.WorldSeed : 0;
         }
@@ -110,53 +145,73 @@ namespace NaturalHistory.Progression
 
         private static Player Human => PlayerManager.Instance != null ? PlayerManager.Instance.Human : null;
 
-        private void Scan()
+        // What `mover` sees in `cells` that is new to you. What it can see depends on where it lives:
+        // the surface's ground, landforms, plants and animals only from the surface or the sky, the
+        // seabed's and underground's only from there (from the seabed you can't see a mesa on the
+        // shore); open water from both. If something is found in another layer than the one on view,
+        // the view switches to it and the camera goes there.
+        private void Scan(ColonyGroup mover, List<HexCell> cells)
         {
             var grid = HexGrid.Instance;
             var colonies = SpeciesColonies.Instance;
             var human = Human;
-            if (grid == null || !grid.IsGenerated || colonies == null || human == null || !FogOfWar.Active || SpeciesColonies.SafariMode) return;
-            if (!colonies.Groups.Any(g => g != null && g.Owner == human)) return; // before the game has begun
-            if (baselineDue) { baselineDue = false; baselineUntil = Time.unscaledTime + BaselineSeconds; }
-            bool baseline = Time.unscaledTime < baselineUntil;
+            if (grid == null || !grid.IsGenerated || colonies == null || human == null) return;
+            var moverLayer = Niches.LayerOf(mover.Niche);
+            bool seesSurface = moverLayer != MapLayer.Under || Niches.IsFlyer(mover.Definition) || Niches.IsSurfacer(mover.Definition);
+            bool seesUnder   = moverLayer == MapLayer.Under || Niches.IsBurrower(mover.Definition);
 
             var found = new List<Discovery>();
-            void See(Kind kind, string key, HexCell cell, Func<Discovery> make)
+            void See(Kind kind, string key, HexCell cell, MapLayer layer, Func<Discovery> make)
             {
-                if (!known.Add(key) || baseline) return;
+                if (!known.Add(key)) return;
                 var d = make();
                 if (d == null) return;
-                d.kind = kind; d.key = key; d.cell = cell;
+                d.kind = kind; d.key = key; d.cell = cell; d.layer = layer;
                 found.Add(d);
             }
 
-            for (int r = 0; r < grid.Height; r++)
-            for (int q = 0; q < grid.Width; q++)
+            foreach (var cell in cells)
             {
-                var cell = grid.GetCell(q, r);
-                if (cell?.Terrain == null || !FogOfWar.IsVisible(cell)) continue;
+                if (cell?.Terrain == null) continue;
                 var kind = cell.Terrain.kind;
-                if (Grounds.Terrains.ContainsKey(kind)) See(Kind.Terrain, "terrain:" + kind, cell, () => Grounds.Card(kind));
-                if (Grounds.Features.ContainsKey(cell.Feature)) See(Kind.Terrain, "feature:" + cell.Feature, cell, () => Grounds.Card(cell.Feature));
-                if (Grounds.UnderFeatures.ContainsKey(cell.UnderFeature)) See(Kind.Terrain, "under:" + cell.UnderFeature, cell, () => Grounds.Card(cell.UnderFeature));
-                if (grid.ShowsStromatoliteFloor(cell)) See(Kind.Terrain, "floor:stromatolites", cell, Grounds.StromatoliteCard);
-                foreach (var p in cell.Plants.Concat(cell.UnderPlants))
-                    if (p != null && !UnderView.IsFloor(p)) See(Kind.Plant, "plant:" + p.id, cell, () => PlantCard(p));
+                bool surface = seesSurface || cell.IsWater; // open water is seen from below as well
+                var terrainLayer = seesSurface ? MapLayer.Surface : MapLayer.Under;
+                if (surface && Grounds.Terrains.ContainsKey(kind)) See(Kind.Terrain, "terrain:" + kind, cell, terrainLayer, () => Grounds.Card(kind));
+                if (seesSurface && Grounds.Features.ContainsKey(cell.Feature)) See(Kind.Terrain, "feature:" + cell.Feature, cell, MapLayer.Surface, () => Grounds.Card(cell.Feature));
+                if (seesUnder && Grounds.UnderFeatures.ContainsKey(cell.UnderFeature)) See(Kind.Terrain, "under:" + cell.UnderFeature, cell, MapLayer.Under, () => Grounds.Card(cell.UnderFeature));
+                if (seesUnder && grid.ShowsStromatoliteFloor(cell)) See(Kind.Terrain, "floor:stromatolites", cell, MapLayer.Under, Grounds.StromatoliteCard);
+                if (seesSurface)
+                    foreach (var p in cell.Plants)
+                        if (p != null && !UnderView.IsFloor(p)) See(Kind.Plant, "plant:" + p.id, cell, MapLayer.Surface, () => PlantCard(p));
+                if (seesUnder)
+                    foreach (var p in cell.UnderPlants)
+                        if (p != null && !UnderView.IsFloor(p)) See(Kind.Plant, "plant:" + p.id, cell, MapLayer.Under, () => PlantCard(p));
                 foreach (var g in colonies.GroupsAt(cell))
                 {
-                    if (g?.Definition == null || g.Owner == human || !FogOfWar.Reveals(g)) continue;
+                    if (g?.Definition == null || g.Owner == human) continue;
+                    var layer = Niches.LayerOf(g.Niche);
+                    if (layer == MapLayer.Under ? !seesUnder : !seesSurface) continue; // in a layer it can't see
                     var def = g.Definition;
                     string key = "species:" + def.id;
                     if (g.Owner == null && !known.Contains(FirstWildKey))
                     {
                         // the first wild group ever met: a card for the meeting itself, whatever the species
                         known.Add(key);
-                        See(Kind.Animal, FirstWildKey, cell, () => FirstWildCard(def));
+                        See(Kind.Animal, FirstWildKey, cell, layer, () => FirstWildCard(def));
                         continue;
                     }
                     if (Owns(human, def.id)) { known.Add(key); continue; } // a species of yours is no discovery
-                    See(Kind.Animal, key, cell, () => AnimalCard(def));
+                    See(Kind.Animal, key, cell, layer, () => AnimalCard(def));
                 }
+            }
+            if (found.Count == 0) return;
+
+            // something in another layer: show that layer, and go to it
+            var elsewhere = found.FirstOrDefault(d => d.layer != UnderView.Layer);
+            if (elsewhere != null)
+            {
+                UnderView.Set(elsewhere.layer);
+                CameraController.Main?.GlideTo(elsewhere.cell.transform.position, 0.6f);
             }
             foreach (var d in found)
             {
@@ -310,7 +365,7 @@ namespace NaturalHistory.Progression
             var grid = HexGrid.Instance;
             var cells = new List<HexCell> { by.Cell };
             cells.AddRange(grid.GetNeighbors(by.Cell));
-            var cell = cells.FirstOrDefault(c => c != null && SpeciesColonies.FitsHabitat(def, c)
+            var cell = cells.FirstOrDefault(c => c != null && ColonyGroup.CanPlace(def, c) // where it can move
                 && colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, colonies, null));
             if (cell == null) return null;
             var group = colonies.SpawnColony(def, cell, owner, Environment.TickCount);

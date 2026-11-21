@@ -77,8 +77,8 @@
       ],
       "unlocksGenes": [],
       "description": "Nerves bundled into cords along the body.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.1
       }
     },
     {
@@ -94,8 +94,8 @@
       ],
       "unlocksGenes": [],
       "description": "Nerve tissue gathers at the front, next to the senses.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "evolveDiscount": 0.05
       }
     },
     {
@@ -111,8 +111,8 @@
       ],
       "unlocksGenes": [],
       "description": "Clusters of neurons in each segment that process signals locally.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.1
       }
     },
     {
@@ -130,8 +130,8 @@
         "chemoreception"
       ],
       "description": "Smell and taste: detecting dissolved chemicals.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.25
       }
     },
     {
@@ -149,8 +149,8 @@
         "vision_acuity"
       ],
       "description": "Hundreds of lenses, each seeing a pixel: the eyes of trilobites and insects.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "vision": 1
       }
     },
     {
@@ -167,7 +167,7 @@
       "unlocksGenes": [],
       "description": "A hollow nerve cord along the back: the chordate spinal cord.",
       "bonus": {
-        "attack": 1
+        "hp": 2
       }
     },
     {
@@ -183,8 +183,8 @@
       ],
       "unlocksGenes": [],
       "description": "A lens focuses an image on the retina (vertebrates, cephalopods).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "vision": 1
       }
     },
     {
@@ -200,8 +200,8 @@
       ],
       "unlocksGenes": [],
       "description": "Forebrain, midbrain and hindbrain, each with its own jobs.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "evolveDiscount": 0.05
       }
     },
     {
@@ -217,8 +217,8 @@
       ],
       "unlocksGenes": [],
       "description": "Extra-wide nerve fibres for lightning-fast escapes (squid).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.25
       }
     },
     {
@@ -236,8 +236,8 @@
         "lateral_line"
       ],
       "description": "Senses water movement along the flanks.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -253,8 +253,8 @@
       ],
       "unlocksGenes": [],
       "description": "Insulated nerves carry signals far faster; first seen in jawed fish.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterBoost": 0.2
       }
     },
     {
@@ -270,8 +270,8 @@
       ],
       "unlocksGenes": [],
       "description": "Coordinates movement and balance (jawed vertebrates).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.15
       }
     },
     {
@@ -289,8 +289,8 @@
         "electroreception"
       ],
       "description": "Sense the faint electric fields of hidden prey.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -306,8 +306,8 @@
       ],
       "unlocksGenes": [],
       "description": "A forebrain roof that combines the senses: the ancestor of the cortex.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "evolveDiscount": 0.05
       }
     },
     {
@@ -323,8 +323,8 @@
       ],
       "unlocksGenes": [],
       "description": "Membranes that pick up sound in air.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -340,8 +340,8 @@
       ],
       "unlocksGenes": [],
       "description": "More brain per kilo of body (early mammals and birds).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "evolveDiscount": 0.1
       }
     },
     {
@@ -357,8 +357,8 @@
       ],
       "unlocksGenes": [],
       "description": "Six-layered cortex for flexible behaviour (mammals).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "evolveDiscount": 0.1
       }
     },
     {
@@ -376,8 +376,8 @@
         "echolocation"
       ],
       "description": "Hearing returning echoes of your own calls (bats, toothed whales).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "freeHunt": true
       }
     },
     {
@@ -393,8 +393,8 @@
       ],
       "unlocksGenes": [],
       "description": "Planning and self-control (great apes).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "evolveDiscount": 0.1
       }
     },
     {
@@ -422,8 +422,8 @@
       ],
       "unlocksGenes": [],
       "description": "A muscular tube that squeezes blood along.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.03
       }
     },
     {
@@ -439,8 +439,8 @@
       ],
       "unlocksGenes": [],
       "description": "Blood bathes the organs directly (arthropods, most molluscs).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.15
       }
     },
     {
@@ -473,8 +473,8 @@
       ],
       "unlocksGenes": [],
       "description": "Copper-based blue blood that carries oxygen.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -490,8 +490,8 @@
       ],
       "unlocksGenes": [],
       "description": "Iron-based red pigment that carries oxygen.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -524,8 +524,8 @@
       ],
       "unlocksGenes": [],
       "description": "An atrium and a ventricle (fish).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -541,8 +541,8 @@
       ],
       "unlocksGenes": [],
       "description": "Extra hearts pump blood through the gills (cephalopods).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.03
       }
     },
     {
@@ -558,8 +558,8 @@
       ],
       "unlocksGenes": [],
       "description": "Vessels one cell thick bring oxygen right up to every tissue.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -575,8 +575,8 @@
       ],
       "unlocksGenes": [],
       "description": "Clotting proteins seal a wound before too much blood is lost.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.05
       }
     },
     {
@@ -592,8 +592,8 @@
       ],
       "unlocksGenes": [],
       "description": "Blood from the gut passes through the liver before reaching the body.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.25
       }
     },
     {
@@ -609,8 +609,8 @@
       ],
       "unlocksGenes": [],
       "description": "Two atria keep lung blood and body blood partly apart (amphibians).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -626,8 +626,8 @@
       ],
       "unlocksGenes": [],
       "description": "The heart muscle gets a blood supply of its own, so it can work harder.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.03
       }
     },
     {
@@ -643,8 +643,8 @@
       ],
       "unlocksGenes": [],
       "description": "Extra pumps push blood into the wings, legs and antennae (insects).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -694,8 +694,8 @@
       ],
       "unlocksGenes": [],
       "description": "Outgoing warm blood heats returning cold blood in flippers and legs.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.25
       }
     },
     {
@@ -711,8 +711,8 @@
       ],
       "unlocksGenes": [],
       "description": "On long dives the heart slows and blood goes to the brain (whales, seals).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.25
       }
     },
     {
@@ -728,8 +728,8 @@
       ],
       "unlocksGenes": [],
       "description": "Muscles packed with oxygen-storing myoglobin.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.03
       }
     },
     {
@@ -757,8 +757,8 @@
       ],
       "unlocksGenes": [],
       "description": "Feathery surfaces for taking oxygen from water.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.03
       }
     },
     {
@@ -774,8 +774,8 @@
       ],
       "unlocksGenes": [],
       "description": "Slits in the throat that let water flow out past the gills.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -791,8 +791,8 @@
       ],
       "unlocksGenes": [],
       "description": "Stacked gill plates (horseshoe crabs, sea scorpions).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.03
       }
     },
     {
@@ -825,8 +825,8 @@
       ],
       "unlocksGenes": [],
       "description": "Air tubes run straight to the tissues (insects, millipedes).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -842,8 +842,8 @@
       ],
       "unlocksGenes": [],
       "description": "Closable openings to the tracheae that save water.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -859,8 +859,8 @@
       ],
       "unlocksGenes": [],
       "description": "Air-breathing gill plates (scorpions, spiders).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -876,8 +876,8 @@
       ],
       "unlocksGenes": [],
       "description": "A bony flap that pumps water over the gills.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.03
       }
     },
     {
@@ -895,8 +895,8 @@
         "cold_tolerance"
       ],
       "description": "Air sacs off the gut let fish gulp air in stagnant water.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -912,8 +912,8 @@
       ],
       "unlocksGenes": [],
       "description": "The lung becomes a gas float for buoyancy (ray-finned fish).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -929,8 +929,8 @@
       ],
       "unlocksGenes": [],
       "description": "Gulping air in with the floor of the mouth (amphibians).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.03
       }
     },
     {
@@ -946,8 +946,8 @@
       ],
       "unlocksGenes": [],
       "description": "A valve that guards the airway; later the voice box.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -980,8 +980,8 @@
       ],
       "unlocksGenes": [],
       "description": "A muscle sheet for powerful breathing (synapsids).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.05
       }
     },
     {
@@ -997,8 +997,8 @@
       ],
       "unlocksGenes": [],
       "description": "Scrolled nose bones that warm and moisten the air (warm-blooded animals).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -1014,8 +1014,8 @@
       ],
       "unlocksGenes": [],
       "description": "Air flows one way through the lungs (dinosaurs, birds).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.05
       }
     },
     {
@@ -1031,8 +1031,8 @@
       ],
       "unlocksGenes": [],
       "description": "Breathing from a film of air held under water (water beetles).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -1048,8 +1048,8 @@
       ],
       "unlocksGenes": [],
       "description": "The twin voice box of birds.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -1065,8 +1065,8 @@
       ],
       "unlocksGenes": [],
       "description": "A folded chamber above the gills for breathing air (gouramis).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.25
       }
     },
     {
@@ -1094,8 +1094,8 @@
       ],
       "unlocksGenes": [],
       "description": "A mouth at one end and an anus at the other.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.15
       }
     },
     {
@@ -1113,8 +1113,8 @@
         "filter_feeding"
       ],
       "description": "Mucus nets or gill rakers strain food from water.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.25
       }
     },
     {
@@ -1130,8 +1130,8 @@
       ],
       "unlocksGenes": [],
       "description": "A rasping tongue-ribbon (molluscs).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.15
       }
     },
     {
@@ -1148,7 +1148,7 @@
       "unlocksGenes": [],
       "description": "Biting jaws of arthropods.",
       "bonus": {
-        "hp": 2
+        "attack": 1
       }
     },
     {
@@ -1160,15 +1160,14 @@
       "cost": 12,
       "age": "Silurian",
       "prerequisites": [
-        "filter_apparatus",
-        "gill_arches"
+        "filter_apparatus"
       ],
       "unlocksGenes": [
         "carnivory"
       ],
       "description": "Hinged jaws made from gill arches, so prey can be grabbed.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "freeHunt": true
       }
     },
     {
@@ -1184,8 +1183,8 @@
       ],
       "unlocksGenes": [],
       "description": "A muscular stomach that grinds food.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -1201,8 +1200,9 @@
       ],
       "unlocksGenes": [],
       "description": "An acidic stomach digests large prey (jawed vertebrates).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "killHeal": 0.15,
+        "poisonResist": 0.15
       }
     },
     {
@@ -1219,7 +1219,7 @@
       "unlocksGenes": [],
       "description": "Hard teeth for gripping and cutting.",
       "bonus": {
-        "hp": 2
+        "attack": 1
       }
     },
     {
@@ -1235,8 +1235,8 @@
       ],
       "unlocksGenes": [],
       "description": "A corkscrew intestine packs in more surface (sharks).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "killHeal": 0.1
       }
     },
     {
@@ -1252,8 +1252,8 @@
       ],
       "unlocksGenes": [],
       "description": "Lost teeth are replaced all through life (sharks, reptiles).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "counterResist": 0.15
       }
     },
     {
@@ -1271,8 +1271,8 @@
         "herbivory"
       ],
       "description": "Microbes in an enlarged gut break down plant fibre.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.25
       }
     },
     {
@@ -1288,8 +1288,8 @@
       ],
       "unlocksGenes": [],
       "description": "Incisors, canines and molars for different jobs.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "killHeal": 0.1
       }
     },
     {
@@ -1305,8 +1305,8 @@
       ],
       "unlocksGenes": [],
       "description": "Glands that make venom, delivered by fangs, stings or grooved teeth (scorpions, centipedes, snakes).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.25
       }
     },
     {
@@ -1322,8 +1322,8 @@
       ],
       "unlocksGenes": [],
       "description": "A bony roof to the mouth: breathe while chewing.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.15
       }
     },
     {
@@ -1339,8 +1339,8 @@
       ],
       "unlocksGenes": [],
       "description": "Swallowed stones grind food (sauropods, birds).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -1356,8 +1356,8 @@
       ],
       "unlocksGenes": [],
       "description": "A toothless keratin beak (turtles, birds, ceratopsians).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "killHeal": 0.1
       }
     },
     {
@@ -1373,8 +1373,8 @@
       ],
       "unlocksGenes": [],
       "description": "Molars that both slice and crush (mammals).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.15
       }
     },
     {
@@ -1390,8 +1390,8 @@
       ],
       "unlocksGenes": [],
       "description": "Hundreds of stacked teeth grind tough plants (hadrosaurs).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.25
       }
     },
     {
@@ -1407,8 +1407,8 @@
       ],
       "unlocksGenes": [],
       "description": "A many-chambered stomach for chewing the cud (ruminants).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.3
       }
     },
     {
@@ -1436,8 +1436,8 @@
       ],
       "unlocksGenes": [],
       "description": "Body fluids as salty as the sea, so there is no water balance to fight for (most marine invertebrates).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -1453,8 +1453,8 @@
       ],
       "unlocksGenes": [],
       "description": "Paired tubules in each segment filter the body fluid (worms).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -1470,8 +1470,8 @@
       ],
       "unlocksGenes": [],
       "description": "Beating cilia draw fluid into fine tubules (flatworms).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -1487,8 +1487,8 @@
       ],
       "unlocksGenes": [],
       "description": "Toxic ammonia is flushed away with plenty of water: cheap in the sea.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "heal": 0.03
       }
     },
     {
@@ -1504,8 +1504,8 @@
       ],
       "unlocksGenes": [],
       "description": "Kidney-like glands at the base of the antennae (crustaceans).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -1521,8 +1521,8 @@
       ],
       "unlocksGenes": [],
       "description": "The first vertebrate kidney: a few tubules just behind the head.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -1538,8 +1538,8 @@
       ],
       "unlocksGenes": [],
       "description": "Kidneys filter waste out of the blood.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -1555,8 +1555,8 @@
       ],
       "unlocksGenes": [],
       "description": "Tubules pull waste out of the body fluid into the gut (insects, spiders).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -1572,8 +1572,8 @@
       ],
       "unlocksGenes": [],
       "description": "Cells in the gills pump salt in or out, for life in fresh or salt water.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -1589,8 +1589,8 @@
       ],
       "unlocksGenes": [],
       "description": "A liver that breaks down poisons and worn-out blood for disposal.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.35
       }
     },
     {
@@ -1606,8 +1606,8 @@
       ],
       "unlocksGenes": [],
       "description": "Stores urine and lets water be taken back (tetrapods).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -1623,8 +1623,8 @@
       ],
       "unlocksGenes": [],
       "description": "Ammonia is turned into urea, which is less toxic and needs less water (amphibians, sharks).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -1640,8 +1640,8 @@
       ],
       "unlocksGenes": [],
       "description": "A gland that pumps out excess salt (sharks).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -1657,8 +1657,9 @@
       ],
       "unlocksGenes": [],
       "description": "Almost every drop of water is recovered from the waste (desert beetles).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.2,
+        "starveResist": 0.1
       }
     },
     {
@@ -1674,8 +1675,8 @@
       ],
       "unlocksGenes": [],
       "description": "Water-saving solid waste (reptiles, birds, insects).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -1691,8 +1692,8 @@
       ],
       "unlocksGenes": [],
       "description": "A compact kidney with many more filtering units (amniotes).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -1708,8 +1709,8 @@
       ],
       "unlocksGenes": [],
       "description": "Glands that get rid of excess salt (marine reptiles, seabirds).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -1725,8 +1726,8 @@
       ],
       "unlocksGenes": [],
       "description": "Concentrated urine saves water (mammals, birds).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -1744,8 +1745,8 @@
         "heat_tolerance"
       ],
       "description": "Kidneys so efficient the animal never needs to drink (kangaroo rats).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.3
       }
     },
     {
@@ -1773,8 +1774,8 @@
       ],
       "unlocksGenes": [],
       "description": "Nerve cells that release hormones.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.03
       }
     },
     {
@@ -1790,8 +1791,8 @@
       ],
       "unlocksGenes": [],
       "description": "Hormones that control growth and the use of sugar.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -1807,8 +1808,8 @@
       ],
       "unlocksGenes": [],
       "description": "Ecdysone decides when an arthropod moults.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -1824,8 +1825,8 @@
       ],
       "unlocksGenes": [],
       "description": "The master gland under the brain.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.25
       }
     },
     {
@@ -1841,8 +1842,8 @@
       ],
       "unlocksGenes": [],
       "description": "Melatonin keeps track of day length and season.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -1860,8 +1861,8 @@
         "cold_tolerance"
       ],
       "description": "Proteins that stop ice crystals forming in the blood.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.3
       }
     },
     {
@@ -1877,8 +1878,8 @@
       ],
       "unlocksGenes": [],
       "description": "Iodine hormones set the metabolic rate.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.03
       }
     },
     {
@@ -1894,8 +1895,8 @@
       ],
       "unlocksGenes": [],
       "description": "Adrenaline and cortisol: the fight-or-flight response.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "holdImmune": true
       }
     },
     {
@@ -1911,8 +1912,8 @@
       ],
       "unlocksGenes": [],
       "description": "Testosterone and oestrogen shape adult bodies.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.25
       }
     },
     {
@@ -1928,8 +1929,8 @@
       ],
       "unlocksGenes": [],
       "description": "Keeps insects as larvae until it is time to change.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -1945,8 +1946,8 @@
       ],
       "unlocksGenes": [],
       "description": "A thyroid surge turns tadpoles into frogs.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "evolveDiscount": 0.1
       }
     },
     {
@@ -1964,8 +1965,9 @@
         "heat_tolerance"
       ],
       "description": "Sleeping through droughts, like lungfish in mud cocoons.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.3,
+        "starveResist": 0.3
       }
     },
     {
@@ -1982,7 +1984,7 @@
       "unlocksGenes": [],
       "description": "Faster cells for sustained activity (therapsids).",
       "bonus": {
-        "hp": 2
+        "moves": 1
       }
     },
     {
@@ -1998,8 +2000,8 @@
       ],
       "unlocksGenes": [],
       "description": "The hormone behind brooding and milk.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.25
       }
     },
     {
@@ -2019,6 +2021,9 @@
       "description": "Warm-blooded: body heat comes from metabolism.",
       "bonus": {
         "hp": 2
+      },
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -2034,8 +2039,8 @@
       ],
       "unlocksGenes": [],
       "description": "A daily drop in body temperature to save energy.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.3
       }
     },
     {
@@ -2051,8 +2056,8 @@
       ],
       "unlocksGenes": [],
       "description": "Fat that burns to make heat.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -2068,8 +2073,8 @@
       ],
       "unlocksGenes": [],
       "description": "The hormone of pair bonds and mother–young attachment.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "friendGuard": 0.15
       }
     },
     {
@@ -2087,8 +2092,8 @@
         "hibernation"
       ],
       "description": "Weeks-long deep torpor through the winter.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.4
       }
     },
     {
@@ -2120,8 +2125,8 @@
         "asexual_reproduction"
       ],
       "description": "Growing copies of yourself.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "freeBreed": true
       }
     },
     {
@@ -2137,8 +2142,8 @@
       ],
       "unlocksGenes": [],
       "description": "Drifting young that spread far.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.25
       }
     },
     {
@@ -2156,8 +2161,8 @@
         "clutch_size"
       ],
       "description": "Bigger eggs with stored food.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2175,8 +2180,8 @@
         "regeneration"
       ],
       "description": "Regrowing lost body parts.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.1
       }
     },
     {
@@ -2192,8 +2197,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sperm is delivered inside the female.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedCooldown": 1
       }
     },
     {
@@ -2209,8 +2214,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sperm packets left for the female to pick up.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2226,8 +2231,8 @@
       ],
       "unlocksGenes": [],
       "description": "Females reproduce without males.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedCooldown": 1
       }
     },
     {
@@ -2243,8 +2248,8 @@
       ],
       "unlocksGenes": [],
       "description": "Fin organs for mating (sharks, placoderms).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2260,8 +2265,8 @@
       ],
       "unlocksGenes": [],
       "description": "Tough capsules that protect the embryo (mermaid's purses).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2277,8 +2282,8 @@
       ],
       "unlocksGenes": [],
       "description": "Tadpoles: amphibian young grow up in the water.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2294,8 +2299,8 @@
       ],
       "unlocksGenes": [],
       "description": "Young develop inside the mother (placoderms, ichthyosaurs).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.25
       }
     },
     {
@@ -2307,15 +2312,15 @@
       "cost": 14,
       "age": "Carboniferous",
       "prerequisites": [
-        "internal_fertilisation",
-        "lungs"
+        "internal_fertilisation"
       ],
       "unlocksGenes": [
         "clutch_size"
       ],
       "description": "An egg with its own membranes and water supply, so it can be laid on land.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.25,
+        "disasterResist": 0.1
       }
     },
     {
@@ -2331,8 +2336,9 @@
       ],
       "unlocksGenes": [],
       "description": "Larva, pupa and adult (beetles, flies, butterflies).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "evolveDiscount": 0.1,
+        "starveResist": 0.1
       }
     },
     {
@@ -2348,8 +2354,8 @@
       ],
       "unlocksGenes": [],
       "description": "Nest temperature decides the sex of the young (crocodiles, turtles).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -2365,8 +2371,8 @@
       ],
       "unlocksGenes": [],
       "description": "Calcified shells (dinosaurs, birds).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2382,8 +2388,8 @@
       ],
       "unlocksGenes": [],
       "description": "Milk for the young.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.25
       }
     },
     {
@@ -2399,8 +2405,8 @@
       ],
       "unlocksGenes": [],
       "description": "The embryo is fed through the womb wall.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedCooldown": 1
       }
     },
     {
@@ -2416,8 +2422,8 @@
       ],
       "unlocksGenes": [],
       "description": "Tiny newborns finish growing in a pouch (marsupials).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "freeBreed": true
       }
     },
     {
@@ -2433,8 +2439,8 @@
       ],
       "unlocksGenes": [],
       "description": "Slow growth gives time for a bigger brain to develop.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "evolveDiscount": 0.15
       }
     },
     {
@@ -2465,8 +2471,8 @@
       ],
       "unlocksGenes": [],
       "description": "Long and circular muscles for crawling, wriggling and burrowing.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.1
       }
     },
     {
@@ -2482,8 +2488,8 @@
       ],
       "unlocksGenes": [],
       "description": "The body is built from repeated segments that can specialise independently.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "evolveDiscount": 0.1
       }
     },
     {
@@ -2500,7 +2506,7 @@
       "unlocksGenes": [],
       "description": "A fluid-filled cavity that cushions the organs and works as a hydrostatic skeleton.",
       "bonus": {
-        "attack": 1
+        "hp": 2
       }
     },
     {
@@ -2519,7 +2525,7 @@
       ],
       "description": "A hard outer cuticle that protects the body and anchors the muscles.",
       "bonus": {
-        "attack": 1
+        "defense": 1
       }
     },
     {
@@ -2538,8 +2544,8 @@
         "land_speed"
       ],
       "description": "Hinged legs inside the exoskeleton: the arthropod toolkit.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterBoost": 0.15
       }
     },
     {
@@ -2558,7 +2564,7 @@
       ],
       "description": "A stiff, flexible rod along the back: the first chordate skeleton.",
       "bonus": {
-        "attack": 1
+        "hp": 2
       }
     },
     {
@@ -2575,8 +2581,8 @@
       ],
       "unlocksGenes": [],
       "description": "Zig-zag muscle blocks that bend the body from side to side: fish-style swimming.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.15
       }
     },
     {
@@ -2593,7 +2599,7 @@
       "unlocksGenes": [],
       "description": "Blocks of cartilage or bone protect the nerve cord and stiffen the back.",
       "bonus": {
-        "attack": 1
+        "hp": 2
       }
     },
     {
@@ -2628,8 +2634,8 @@
         "electroreception"
       ],
       "description": "Fins on both sides give steering, braking and lift.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.15
       }
     },
     {
@@ -2646,7 +2652,7 @@
       "unlocksGenes": [],
       "description": "Bone that replaces cartilage: the inner skeleton of bony fish and their descendants.",
       "bonus": {
-        "attack": 1
+        "hp": 2
       }
     },
     {
@@ -2675,15 +2681,14 @@
       "cost": 19,
       "age": "Devonian",
       "prerequisites": [
-        "paired_fins",
-        "jaws"
+        "paired_fins"
       ],
       "unlocksGenes": [
         "climbing"
       ],
       "description": "Fleshy fins with a bony core, the starting point for legs.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "evolveDiscount": 0.1
       }
     },
     {
@@ -2699,8 +2704,8 @@
       ],
       "unlocksGenes": [],
       "description": "Fingers and toes at the end of the limb (Acanthostega had eight).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.1
       }
     },
     {
@@ -2717,7 +2722,7 @@
       "unlocksGenes": [],
       "description": "Shoulder and hip girdles strong enough to carry the body out of water.",
       "bonus": {
-        "attack": 1
+        "hp": 2
       }
     },
     {
@@ -2753,8 +2758,8 @@
       ],
       "unlocksGenes": [],
       "description": "Legs held under the body for efficient running and breathing.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "fieldHeal": 0.05
       }
     },
     {
@@ -2770,8 +2775,8 @@
       ],
       "unlocksGenes": [],
       "description": "Air-filled bones are light and strong (dinosaurs, pterosaurs, birds).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.1
       }
     },
     {
@@ -2784,8 +2789,7 @@
       "age": "Jurassic",
       "prerequisites": [
         "upright_stance",
-        "hollow_bones",
-        "feathers"
+        "hollow_bones"
       ],
       "unlocksGenes": [],
       "description": "Arms lined with flight feathers, as on Archaeopteryx.",
@@ -2818,8 +2822,8 @@
       ],
       "unlocksGenes": [],
       "description": "Small proteins that punch holes in bacteria.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -2835,8 +2839,8 @@
       ],
       "unlocksGenes": [],
       "description": "Receptors that recognise molecules common to many microbes.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -2852,8 +2856,8 @@
       ],
       "unlocksGenes": [],
       "description": "Parasites too big to swallow are walled off inside a capsule of cells.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -2869,8 +2873,8 @@
       ],
       "unlocksGenes": [],
       "description": "Blood proteins that tag invaders and burst them open.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2886,8 +2890,8 @@
       ],
       "unlocksGenes": [],
       "description": "Invaders are smothered in melanin (insects, crustaceans).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -2903,8 +2907,8 @@
       ],
       "unlocksGenes": [],
       "description": "Heat, swelling and a rush of defender cells to a wound.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2920,8 +2924,8 @@
       ],
       "unlocksGenes": [],
       "description": "An adaptive immune system of its own, built from different genes (lampreys, hagfish).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -2937,8 +2941,8 @@
       ],
       "unlocksGenes": [],
       "description": "Lymphocytes reshuffle their genes to recognise almost any invader (jawed vertebrates).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.2
       }
     },
     {
@@ -2954,8 +2958,8 @@
       ],
       "unlocksGenes": [],
       "description": "Y-shaped proteins that lock on to one particular invader.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -2971,8 +2975,8 @@
       ],
       "unlocksGenes": [],
       "description": "A gland where T cells learn to tell self from foreign.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2988,8 +2992,8 @@
       ],
       "unlocksGenes": [],
       "description": "Molecules that show fragments of invaders to T cells.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -3005,8 +3009,8 @@
       ],
       "unlocksGenes": [],
       "description": "Filters the blood and stores immune cells.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "fieldHeal": 0.03
       }
     },
     {
@@ -3022,8 +3026,8 @@
       ],
       "unlocksGenes": [],
       "description": "Vessels that return fluid and carry immune cells.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -3039,8 +3043,8 @@
       ],
       "unlocksGenes": [],
       "description": "A second infection is beaten faster than the first.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.2
       }
     },
     {
@@ -3056,8 +3060,8 @@
       ],
       "unlocksGenes": [],
       "description": "Blood and immune cells are made inside the bones (tetrapods).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -3073,8 +3077,8 @@
       ],
       "unlocksGenes": [],
       "description": "Raising body temperature to slow down pathogens.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -3090,8 +3094,8 @@
       ],
       "unlocksGenes": [],
       "description": "Mothers pass their protection on through the egg or milk.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -3107,8 +3111,8 @@
       ],
       "unlocksGenes": [],
       "description": "Filter stations where immune cells meet invaders (mammals).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "fieldHeal": 0.03
       }
     },
     {
@@ -3124,8 +3128,8 @@
       ],
       "unlocksGenes": [],
       "description": "Antibodies are fine-tuned to fit their target better and better (mammals).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -3153,8 +3157,8 @@
       ],
       "unlocksGenes": [],
       "description": "Slippery slime that protects the skin and eases movement.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "holdImmune": true
       }
     },
     {
@@ -3187,8 +3191,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sharp projections deter predators (Wiwaxia, Hallucigenia).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "swallowImmune": true
       }
     },
     {
@@ -3206,8 +3210,8 @@
         "camouflage"
       ],
       "description": "Pigment cells that can change colour.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -3242,8 +3246,8 @@
       ],
       "unlocksGenes": [],
       "description": "Tiny tooth-like scales that cut drag (sharks).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "counterResist": 0.1
       }
     },
     {
@@ -3259,8 +3263,8 @@
       ],
       "unlocksGenes": [],
       "description": "Making light with a chemical reaction.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "killEp": 0.25
       }
     },
     {
@@ -3276,8 +3280,8 @@
       ],
       "unlocksGenes": [],
       "description": "A wax layer stops the body drying out on land.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -3295,8 +3299,8 @@
         "toxin_production"
       ],
       "description": "Skin glands that make poison (amphibians).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "poisonResist": 0.2
       }
     },
     {
@@ -3314,6 +3318,9 @@
       "description": "Dry, waterproof scales (reptiles).",
       "bonus": {
         "defense": 1
+      },
+      "effects": {
+        "disasterResist": 0.1
       }
     },
     {
@@ -3347,8 +3354,8 @@
       ],
       "unlocksGenes": [],
       "description": "Fuzzy filaments for insulation.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -3366,8 +3373,8 @@
         "parental_care"
       ],
       "description": "Insulating hair and skin glands (mammals).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -3385,8 +3392,8 @@
         "endothermy"
       ],
       "description": "Vaned feathers for warmth, display and flight.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -3402,8 +3409,8 @@
       ],
       "unlocksGenes": [],
       "description": "Iridescent colour from microscopic structure instead of pigment.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -3420,7 +3427,7 @@
       "unlocksGenes": [],
       "description": "Keratin-sheathed bony horns (ceratopsians, later antelopes and cattle).",
       "bonus": {
-        "defense": 1
+        "attack": 1
       }
     },
     {
@@ -3436,8 +3443,8 @@
       ],
       "unlocksGenes": [],
       "description": "Cooling by evaporation.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -3453,8 +3460,9 @@
       ],
       "unlocksGenes": [],
       "description": "A thick fat layer insulates in cold seas.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "starveResist": 0.3,
+        "disasterResist": 0.15
       }
     },
     {
@@ -3470,8 +3478,8 @@
       ],
       "unlocksGenes": [],
       "description": "Hairs hardened into spines (porcupines, hedgehogs).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "swallowImmune": true
       }
     },
     {
@@ -3489,8 +3497,8 @@
         "toxin_production"
       ],
       "description": "Bright colours that advertise poison.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "swallowImmune": true
       }
     },
     {
@@ -3506,8 +3514,8 @@
       ],
       "unlocksGenes": [],
       "description": "Dark above and pale below, so the body looks flat.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -3523,8 +3531,8 @@
       ],
       "unlocksGenes": [],
       "description": "A cloud of ink covers the escape (cephalopods).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -3540,8 +3548,8 @@
       ],
       "unlocksGenes": [],
       "description": "Spraying irritants (bombardier beetles, later skunks).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "counterBoost": 0.2
       }
     },
     {
@@ -3557,8 +3565,8 @@
       ],
       "unlocksGenes": [],
       "description": "Harmless species copying dangerous ones.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "swallowImmune": true
       }
     },
     {
@@ -3574,8 +3582,8 @@
       ],
       "unlocksGenes": [],
       "description": "Clubs and spikes swung at attackers (stegosaurs, ankylosaurs).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterBoost": 0.25
       }
     },
     {
@@ -3591,8 +3599,8 @@
       ],
       "unlocksGenes": [],
       "description": "Both sexes in one body (snails, worms).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedCooldown": 1
       }
     },
     {
@@ -3608,8 +3616,8 @@
       ],
       "unlocksGenes": [],
       "description": "Clones joined into one colony (corals, graptolites).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "friendGuard": 0.2
       }
     },
     {
@@ -3625,8 +3633,8 @@
       ],
       "unlocksGenes": [],
       "description": "Leaping and gliding between trees.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.2
       }
     },
     {
@@ -3642,8 +3650,8 @@
       ],
       "unlocksGenes": [],
       "description": "Development pauses until conditions improve.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.25
       }
     },
     {
@@ -3659,8 +3667,8 @@
       "cost": 21,
       "tier": 6,
       "row": 0,
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterBoost": 0.25
       }
     }
   ]

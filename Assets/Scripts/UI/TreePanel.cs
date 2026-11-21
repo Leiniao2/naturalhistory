@@ -136,7 +136,7 @@ namespace NaturalHistory.UI
                 {
                     NodeState.Unlocked    => Loc.T("Acquired"),
                     NodeState.Unavailable => Loc.T("Not for this species"),
-                    _                     => Loc.F("{0} EP · {1}", EpCosts.Of(node.cost), Loc.T(node.age)),
+                    _                     => Loc.F("{0} EP · {1}", Progression.CostOf(node), Loc.T(node.age)),
                 };
                 view.Q<Label>(className: "trait-node-bonus").text = BonusText(node);
                 if (view.Q<Button>(className: "zoology-icon") is { } acquire)
@@ -225,10 +225,6 @@ namespace NaturalHistory.UI
                 text.Add(new Label(Loc.T(node.displayName)) { pickingMode = PickingMode.Ignore }.WithClass("node-name"));
                 text.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("node-cost"));
                 text.Add(new Label { pickingMode = PickingMode.Ignore }.WithClass("trait-node-bonus"));
-                var external = node.prerequisites.Select(tree.Get).Where(p => p != null && p.branch != node.branch).ToList();
-                if (external.Count > 0)
-                    text.Add(new Label(Loc.F("Needs {0}", string.Join(", ", external.Select(p => Loc.T(p.displayName))))) { pickingMode = PickingMode.Ignore }
-                        .WithClass("node-external"));
                 view.Add(text);
 
                 var captured = node;
@@ -300,27 +296,31 @@ namespace NaturalHistory.UI
             }
         }
 
-        // "+1 Attack", the item's bonus for the species whose trees these are (era factor included)
-        private string BonusText(TreeNodeDefinition node)
+        // What the item does for the species whose trees these are: its effects ("Heals 5% more of
+        // its HP when resting", World.TraitBonuses.EffectLines), then any flat stats ("Attack +1",
+        // era factor included)
+        private string BonusText(TreeNodeDefinition node, string separator = "  ·  ")
         {
+            var parts = World.TraitBonuses.EffectLines(node.effects);
             var b = World.TraitBonuses.Scaled(node, Progression.Species);
-            if (b == null) return "";
-            var parts = new List<string>();
-            if (b.attack  != 0) parts.Add(Loc.F("Attack +{0}", b.attack));
-            if (b.defense != 0) parts.Add(Loc.F("Defense +{0}", b.defense));
-            if (b.hp      != 0) parts.Add(Loc.F("HP +{0}", b.hp));
-            if (b.moves   != 0) parts.Add(Loc.F("Actions +{0}", b.moves));
-            return string.Join("  ", parts);
+            if (b != null)
+            {
+                if (b.attack  != 0) parts.Add(Loc.F("Attack +{0}", b.attack));
+                if (b.defense != 0) parts.Add(Loc.F("Defense +{0}", b.defense));
+                if (b.hp      != 0) parts.Add(Loc.F("HP +{0}", b.hp));
+                if (b.moves   != 0) parts.Add(Loc.F("Actions +{0}", b.moves));
+            }
+            return string.Join(separator, parts);
         }
 
         // What the item is, gives, costs and still needs, ticked off
         private string AcquireTip(TreeNodeDefinition node)
         {
             var lines = new List<string> { Loc.T(node.displayName), Loc.T(node.description) };
-            var bonus = BonusText(node);
-            if (bonus != "") lines.Add(Loc.F("Your groups of it: {0}", bonus));
+            var bonus = BonusText(node, "\n   ");
+            if (bonus != "") lines.Add(Loc.F("Your groups of it: {0}", "\n   " + bonus));
             lines.Add("");
-            int cost = EpCosts.Of(node.cost);
+            int cost = Progression.CostOf(node);
             lines.Add((Progression.EvolutionPoints >= cost ? "✓  " : "✗  ") + Loc.F("Needs {0} EP (you have {1})", cost, Progression.EvolutionPoints));
             var blocker = Progression.UnlockBlocker(tree, node);
             if (blocker != null && Progression.EvolutionPoints >= cost) lines.Add("✗  " + blocker);
@@ -364,7 +364,7 @@ namespace NaturalHistory.UI
                 .Select(id => Loc.T(GameDataLoader.GetGene(id)?.displayName ?? id))
                 .ToList();
             var blocker = Progression.UnlockBlocker(tree, selected);
-            var meta = Loc.F("{0}  ·  Cost {1} EP  ·  From the {2}", Loc.T(tree.BranchName(selected.branch)), EpCosts.Of(selected.cost), Loc.T(selected.age));
+            var meta = Loc.F("{0}  ·  Cost {1} EP  ·  From the {2}", Loc.T(tree.BranchName(selected.branch)), Progression.CostOf(selected), Loc.T(selected.age));
             var bonusText = BonusText(selected);
             if (bonusText != "") meta += "  ·  " + bonusText;
             if (genes.Count > 0) meta += "  ·  " + Loc.F("Unlocks genes: {0}", string.Join(", ", genes));

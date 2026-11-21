@@ -1,0 +1,986 @@
+[
+ {
+  "id": "elrathia_kingii",
+  "commonName": "Elrathia",
+  "scientificName": "Elrathia kingii",
+  "kingdom": "Animalia",
+  "group": "Trilobite",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 3,
+  "startingPopulation": 1500,
+  "playable": true,
+  "model": "Models/Species/Elrathia",
+  "mapStyle": "Swim",
+  "colonySize": 5,
+  "mapScale": 0.5,
+  "mapDefense": "Tighten",
+  "attack": 2,
+  "defense": 4,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.8
+   },
+   {
+    "gene": "decomposition",
+    "expression": 0.4
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.3
+   }
+  ],
+  "description": "A small, rounded trilobite a few centimetres long from the middle Cambrian of Utah, with a broad head shield, thirteen body segments and a tiny tail shield. It lived in huge numbers on soft, oxygen-poor mud, sifting the sediment for food, and is probably the most collected trilobite in the world. Lightly armoured and harmless, it survives by sheer numbers."
+ },
+ {
+  "id": "paradoxides_davidis",
+  "commonName": "Paradoxides",
+  "scientificName": "Paradoxides davidis",
+  "kingdom": "Animalia",
+  "group": "Trilobite",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Annelid",
+   "Priapulid worm"
+  ],
+  "sizeCm": 37,
+  "startingPopulation": 150,
+  "playable": true,
+  "model": "Models/Species/Paradoxides",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapScale": 0.7,
+  "mapAttack": "Charge",
+  "mapDefense": "Brace",
+  "attack": 5,
+  "defense": 5,
+  "hp": 9,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.2
+   }
+  ],
+  "description": "One of the largest trilobites ever, reaching about 37 cm, from the middle Cambrian of Newfoundland and Wales. It had a wide head with long, backswept spines at its corners, around twenty spiny body segments and a tiny tail plate. A big hunter and scavenger of the seafloor, it is well armoured and strong for its time."
+ },
+ {
+  "id": "agnostus_pisiformis",
+  "commonName": "Agnostus",
+  "scientificName": "Agnostus pisiformis",
+  "kingdom": "Animalia",
+  "group": "Trilobite",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 0.8,
+  "startingPopulation": 5000,
+  "playable": true,
+  "model": "Models/Species/Agnostus",
+  "mapStyle": "Swim",
+  "colonySize": 6,
+  "mapScale": 0.4,
+  "mapDefense": "Tighten",
+  "attack": 1,
+  "defense": 4,
+  "hp": 3,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.9
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.4
+   }
+  ],
+  "description": "A tiny, blind, pea-shaped arthropod under a centimetre long, with a head shield and a tail shield of almost the same size joined by just two body segments. It swarmed in the late Cambrian seas of Scandinavia, and some fossils keep its legs and even its larvae in fine detail. It could fold shut like a clam to protect itself, but it is too small to fight back."
+ },
+ {
+  "id": "hurdia_victoria",
+  "commonName": "Hurdia",
+  "scientificName": "Hurdia victoria",
+  "kingdom": "Animalia",
+  "group": "Radiodont",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Annelid",
+   "Priapulid worm"
+  ],
+  "sizeCm": 20,
+  "startingPopulation": 120,
+  "playable": true,
+  "model": "Models/Species/Hurdia",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapScale": 0.65,
+  "mapAttack": "Strike",
+  "mapDefense": "Brace",
+  "attack": 4,
+  "defense": 5,
+  "hp": 9,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.5
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.4
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "A radiodont about 20 cm long from the Burgess Shale of Canada, a cousin of Anomalocaris with a long, pointed shell jutting forward from its head. Its front limbs carried rows of long, comb-like spines that it used to sweep through the mud and water for small animals, and flaps along its body let it swim. Its armoured head makes it hard to hurt, and its rakes give it a fair bite."
+ },
+ {
+  "id": "cambroraster_falcatus",
+  "commonName": "Cambroraster",
+  "scientificName": "Cambroraster falcatus",
+  "kingdom": "Animalia",
+  "group": "Radiodont",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 30,
+  "startingPopulation": 100,
+  "playable": true,
+  "model": "Models/Species/Cambroraster",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapScale": 0.65,
+  "mapAttack": "Ram",
+  "mapDefense": "Brace",
+  "attack": 3,
+  "defense": 7,
+  "hp": 10,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.8
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.4
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.5
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.2
+   }
+  ],
+  "description": "A radiodont up to about 30 cm long from the Burgess Shale of Canada, whose head was hidden under a huge horseshoe-shaped shell, nicknamed after the Millennium Falcon spaceship. It cruised low over the seabed and sifted the mud with rake-like front limbs bearing rows of fine spines. Its great shield makes it very hard to harm, but it is slow and only a weak fighter."
+ },
+ {
+  "id": "stanleycaris_hirpex",
+  "commonName": "Stanleycaris",
+  "scientificName": "Stanleycaris hirpex",
+  "kingdom": "Animalia",
+  "group": "Radiodont",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Arthropod",
+   "Small animals"
+  ],
+  "sizeCm": 8,
+  "startingPopulation": 250,
+  "playable": true,
+  "model": "Models/Species/Stanleycaris",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.55,
+  "mapAttack": "Snap",
+  "mapDefense": "Scatter",
+  "attack": 6,
+  "defense": 2,
+  "hp": 4,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.8
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.6
+   }
+  ],
+  "description": "A small radiodont from the Burgess Shale of Canada, preserved in hundreds of fossils that even keep its brain. Besides its two big stalked eyes it had a large third eye in the middle of its head, and its front limbs bore rows of long, hooked spines for seizing prey. A quick, sharp-eyed hunter, it strikes hard but has little armour."
+ },
+ {
+  "id": "canadaspis_perfecta",
+  "commonName": "Canadaspis",
+  "scientificName": "Canadaspis perfecta",
+  "kingdom": "Animalia",
+  "group": "Arthropod",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 5,
+  "startingPopulation": 700,
+  "playable": true,
+  "model": "Models/Species/Canadaspis",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "mapDefense": "Hide",
+  "attack": 2,
+  "defense": 4,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   },
+   {
+    "gene": "decomposition",
+    "expression": 0.4
+   }
+  ],
+  "description": "One of the commonest arthropods of the Burgess Shale, about 5 cm long, with its head and front body enclosed in a two-halved, clam-like shell. Below the shell were pairs of walking legs, and behind it a segmented abdomen ended in a forked tail. It walked over the seabed stirring up the mud with its spiny limbs to pick out food. Its shell gives it some protection, but it has no real weapons."
+ },
+ {
+  "id": "naraoia_compacta",
+  "commonName": "Naraoia",
+  "scientificName": "Naraoia compacta",
+  "kingdom": "Animalia",
+  "group": "Arthropod",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Annelid"
+  ],
+  "sizeCm": 4,
+  "startingPopulation": 500,
+  "playable": true,
+  "model": "Models/Species/Naraoia",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "mapAttack": "Bite",
+  "mapDefense": "Hide",
+  "attack": 3,
+  "defense": 4,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.5
+   }
+  ],
+  "description": "A relative of the trilobites, about 4 cm long, whose body was covered by just two smooth, unmineralised shields, one over the head and one over the trunk. It had long antennae and many pairs of legs with spiny inner edges, which it probably used to catch and shred small animals and carrion on the seafloor. Without a hard, chalky shell it is only moderately protected."
+ },
+ {
+  "id": "fuxianhuia_protensa",
+  "commonName": "Fuxianhuia",
+  "scientificName": "Fuxianhuia protensa",
+  "kingdom": "Animalia",
+  "group": "Arthropod",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 11,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Fuxianhuia",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.55,
+  "mapDefense": "Scatter",
+  "attack": 2,
+  "defense": 3,
+  "hp": 6,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "parental_care",
+    "expression": 0.5
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.4
+   },
+   {
+    "gene": "decomposition",
+    "expression": 0.4
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.3
+   }
+  ],
+  "description": "An early arthropod about 11 cm long from the Chengjiang biota of Yunnan, China, with a broad head shield, stalked eyes, a long trunk of many segments and a tapering tail. Some fossils preserve its brain and nerves, among the oldest known, and one shows an adult with several young, a possible early case of parental care. It fed on the soft seabed and has little to fight with."
+ },
+ {
+  "id": "kylinxia_zhangi",
+  "commonName": "Kylinxia",
+  "scientificName": "Kylinxia zhangi",
+  "kingdom": "Animalia",
+  "group": "Stem arthropod",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 5,
+  "startingPopulation": 200,
+  "playable": true,
+  "model": "Models/Species/Kylinxia",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.5,
+  "mapAttack": "Snap",
+  "mapDefense": "Scatter",
+  "attack": 5,
+  "defense": 3,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.7
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.3
+   }
+  ],
+  "description": "A small arthropod about 5 cm long from the Chengjiang biota of Yunnan, named after the qilin, a chimera of Chinese legend. It mixed five eyes like Opabinia's and grasping front limbs like those of Anomalocaris with the hardened, segmented body of a true arthropod, a key link in arthropod evolution. Armed with spiny claws and keen eyes, it is a capable small hunter."
+ },
+ {
+  "id": "mollisonia_plenovenatrix",
+  "commonName": "Mollisonia",
+  "scientificName": "Mollisonia plenovenatrix",
+  "kingdom": "Animalia",
+  "group": "Stem chelicerate",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 2.5,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Mollisonia",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.45,
+  "mapAttack": "Bite",
+  "mapDefense": "Hide",
+  "attack": 4,
+  "defense": 3,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   }
+  ],
+  "description": "A small arthropod a few centimetres long from the Burgess Shale of Canada, with a rounded head shield, a broad segmented trunk and a short tail shield. Under its head it had a pair of small pincers in front of the mouth, the oldest known chelicerae, the feeding claws that spiders, scorpions and horseshoe crabs still use. A small but well-equipped predator."
+ },
+ {
+  "id": "microdictyon_sinicum",
+  "commonName": "Microdictyon",
+  "scientificName": "Microdictyon sinicum",
+  "kingdom": "Animalia",
+  "group": "Lobopodian",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Scavenger",
+  "sizeCm": 8,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Microdictyon",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "mapDefense": "Brace",
+  "attack": 2,
+  "defense": 5,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.5
+   },
+   {
+    "gene": "climbing",
+    "expression": 0.3
+   }
+  ],
+  "description": "A soft-bodied, worm-like animal on stubby legs from the Chengjiang biota of Yunnan, a relative of today's velvet worms. Above each pair of legs it wore a pair of round, net-like plates, and these little plates are found as separate microfossils all over the world. Some fossils are found clinging to the remains of disc-shaped Eldonia, as if feeding on them. Its plates protect it, but it is slow and weak."
+ },
+ {
+  "id": "odontogriphus_omalus",
+  "commonName": "Odontogriphus",
+  "scientificName": "Odontogriphus omalus",
+  "kingdom": "Animalia",
+  "group": "Stem mollusc",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 12,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Odontogriphus",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.55,
+  "mapDefense": "Hide",
+  "attack": 1,
+  "defense": 2,
+  "hp": 7,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.3
+   }
+  ],
+  "description": "A flat, oval, slug-like animal up to about 12 cm long from the Burgess Shale of Canada, with no shell or armour at all. Under its head it had a toothed feeding ribbon like the radula of snails, which it used to scrape microbial mats off the seabed, so it is seen as a very early relative of the molluscs. Soft and unprotected, it relies on its size and numbers."
+ },
+ {
+  "id": "orthrozanclus_reburrus",
+  "commonName": "Orthrozanclus",
+  "scientificName": "Orthrozanclus reburrus",
+  "kingdom": "Animalia",
+  "group": "Stem mollusc",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 1,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Orthrozanclus",
+  "mapStyle": "Swim",
+  "colonySize": 5,
+  "mapScale": 0.4,
+  "mapDefense": "Tighten",
+  "attack": 1,
+  "defense": 6,
+  "hp": 3,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.8
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A tiny armoured animal about a centimetre long from the Burgess Shale of Canada, with a small cap-shaped shell at the front and a coat of scales fringed by long, curving spines. It combines the spines of Wiwaxia with the shell of Halkieria, linking these puzzling animals together near the roots of the molluscs. It grazed the seabed and is hard to attack but has no weapons."
+ },
+ {
+  "id": "haplophrentis_carinatus",
+  "commonName": "Haplophrentis",
+  "scientificName": "Haplophrentis carinatus",
+  "kingdom": "Animalia",
+  "group": "Hyolith",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 3,
+  "startingPopulation": 1200,
+  "playable": true,
+  "model": "Models/Species/Haplophrentis",
+  "mapStyle": "Fixed",
+  "colonySize": 5,
+  "mapScale": 0.45,
+  "mapDefense": "Hide",
+  "attack": 1,
+  "defense": 5,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.7
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A hyolith, a member of a vanished group of animals with a cone-shaped shell closed by a lid, from the Burgess Shale of Canada. A pair of long, curved spines stuck out from under the lid and propped it up on the seabed. Fossils with soft parts show it fed with a ring of tentacles, like brachiopods, which settled a long debate about what hyoliths were. It can shut itself in its shell but cannot fight."
+ },
+ {
+  "id": "helicoplacus_gilberti",
+  "commonName": "Helicoplacus",
+  "scientificName": "Helicoplacus gilberti",
+  "kingdom": "Animalia",
+  "group": "Echinoderm",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 5,
+  "startingPopulation": 800,
+  "playable": true,
+  "model": "Models/Species/Helicoplacus",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "mapDefense": "Tighten",
+  "attack": 1,
+  "defense": 5,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.7
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.5
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.3
+   }
+  ],
+  "description": "One of the oldest echinoderms, from the early Cambrian of Nevada and California: a spindle-shaped animal a few centimetres long covered in plates arranged in a spiral, like a twisted pine cone. It probably stood upright with its base in the mud and caught food particles along a feeding groove that wound around its body. Its plated skin protects it, but it is helpless against a determined attacker."
+ },
+ {
+  "id": "gogia_spiralis",
+  "commonName": "Gogia",
+  "scientificName": "Gogia spiralis",
+  "kingdom": "Animalia",
+  "group": "Cystoid",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 5,
+  "startingPopulation": 800,
+  "playable": true,
+  "model": "Models/Species/Gogia",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "attack": 1,
+  "defense": 4,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.4
+   }
+  ],
+  "description": "An eocrinoid, an early stalked echinoderm, from the middle Cambrian of North America. Its small cup of plates sat on a short stalk, and from the top rose a few long feeding arms coiled in a spiral, which caught particles drifting by. Such animals were early relatives of the sea lilies and cystoids that came later. It is lightly protected and cannot fight back."
+ },
+ {
+  "id": "mackenzia_costalis",
+  "commonName": "Mackenzia",
+  "scientificName": "Mackenzia costalis",
+  "kingdom": "Animalia",
+  "group": "Stem anthozoan",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 15,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Mackenzia",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.55,
+  "mapAttack": "Sting",
+  "mapDefense": "Hide",
+  "attack": 3,
+  "defense": 3,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "toxin_production",
+    "expression": 0.5
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.5
+   }
+  ],
+  "description": "A soft, sac-shaped animal up to about 15 cm tall from the Burgess Shale of Canada, with long ribs running down its body. It probably stood attached to shells or stones on the seabed and is thought to be a relative of sea anemones, among the oldest known. It catches small animals that blunder within reach but cannot move away from danger."
+ },
+ {
+  "id": "ctenorhabdotus_capulus",
+  "commonName": "Ctenorhabdotus",
+  "scientificName": "Ctenorhabdotus capulus",
+  "kingdom": "Animalia",
+  "group": "Stem ctenophore",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 3,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Ctenorhabdotus",
+  "mapStyle": "Float",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "mapAttack": "Engulf",
+  "mapDefense": "Scatter",
+  "attack": 2,
+  "defense": 1,
+  "hp": 3,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   }
+  ],
+  "description": "A Cambrian comb jelly from the Burgess Shale of Canada, a jelly-like drifting animal with twenty-four rows of beating comb plates instead of the eight of living comb jellies. It drifted through the water catching tiny animals, but its body is soft and fragile."
+ },
+ {
+  "id": "dinomischus_isolatus",
+  "commonName": "Dinomischus",
+  "scientificName": "Dinomischus isolatus",
+  "kingdom": "Animalia",
+  "group": "Problematic animal",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 3,
+  "startingPopulation": 500,
+  "playable": true,
+  "model": "Models/Species/Dinomischus",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.45,
+  "attack": 1,
+  "defense": 2,
+  "hp": 3,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.8
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.3
+   }
+  ],
+  "description": "A small, goblet-shaped animal from the Burgess Shale of Canada and Chengjiang in China: a cup on a slender stalk, ringed at the top by about eighteen stiff, petal-like plates. Its U-shaped gut, with mouth and anus both opening at the top of the cup, suggests a kinship with the tiny entoprocts of today. A defenceless little filter feeder."
+ },
+ {
+  "id": "yunnanozoon_lividum",
+  "commonName": "Yunnanozoon",
+  "scientificName": "Yunnanozoon lividum",
+  "kingdom": "Animalia",
+  "group": "Chordate",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 4,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Yunnanozoon",
+  "mapStyle": "Swim",
+  "mapUndulate": true,
+  "colonySize": 5,
+  "mapScale": 0.45,
+  "mapDefense": "Scatter",
+  "attack": 1,
+  "defense": 1,
+  "hp": 3,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.7
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small, leaf-shaped swimmer a few centimetres long from the Chengjiang biota of Yunnan, China, with a row of muscle blocks along its body and gill arches at the front. Its place in the tree of life is debated, but it is often seen as an early chordate or a close relative of the ancestors of vertebrates. It filtered food from the water and has no defence but flight."
+ },
+ {
+  "id": "banffia_constricta",
+  "commonName": "Banffia",
+  "scientificName": "Banffia constricta",
+  "kingdom": "Animalia",
+  "group": "Vetulicolian",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 10,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Banffia",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapScale": 0.5,
+  "mapDefense": "Scatter",
+  "attack": 1,
+  "defense": 2,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.6
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.4
+   },
+   {
+    "gene": "decomposition",
+    "expression": 0.3
+   }
+  ],
+  "description": "A vetulicolian about 10 cm long from the Burgess Shale of Canada, one of the few found outside China. Its body was in two parts, a bulbous front section and a segmented rear section, joined by a narrow waist that was often twisted. It probably fed on particles from the water or the mud, and it is soft-bodied and harmless."
+ },
+ {
+  "id": "spartobranchus_tenuis",
+  "commonName": "Spartobranchus",
+  "scientificName": "Spartobranchus tenuis",
+  "kingdom": "Animalia",
+  "group": "Acorn worm",
+  "firstAge": "Cambrian",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "tags": [
+   "Burrower"
+  ],
+  "sizeCm": 10,
+  "startingPopulation": 700,
+  "playable": true,
+  "model": "Models/Species/Spartobranchus",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "mapDefense": "Hide",
+  "attack": 1,
+  "defense": 3,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.6
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.5
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.5
+   }
+  ],
+  "description": "The oldest known acorn worm, a slender worm several centimetres long from the Burgess Shale of Canada, with a short acorn-shaped snout, a collar and a long trunk. Unlike living acorn worms, it lived in a thin tube, sometimes branched, which links acorn worms to their tube-dwelling relatives, the pterobranchs and graptolites. It retreats into its tube when threatened."
+ }
+]

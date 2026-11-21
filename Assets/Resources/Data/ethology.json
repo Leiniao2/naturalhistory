@@ -81,8 +81,8 @@
         "decomposition"
       ],
       "description": "Feeding on the dead.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.25
       }
     },
     {
@@ -113,13 +113,12 @@
       "cost": 8,
       "age": "Ediacaran",
       "prerequisites": [
-        "active_predation",
-        "hiding"
+        "active_predation"
       ],
       "unlocksGenes": [],
       "description": "Waiting hidden and striking at passing prey.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "killHeal": 0.15
       }
     },
     {
@@ -135,8 +134,8 @@
       ],
       "unlocksGenes": [],
       "description": "Moving on when a food patch runs low.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.15
       }
     },
     {
@@ -171,8 +170,8 @@
         "herbivory"
       ],
       "description": "Eating land plants.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -188,8 +187,8 @@
       ],
       "unlocksGenes": [],
       "description": "Webs and trip-lines of silk.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "freeHunt": true
       }
     },
     {
@@ -208,8 +207,8 @@
         "omnivory"
       ],
       "description": "Eating whatever is available.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.3
       }
     },
     {
@@ -225,8 +224,8 @@
       ],
       "unlocksGenes": [],
       "description": "Creeping up on prey unseen.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "freeHunt": true
       }
     },
     {
@@ -238,13 +237,12 @@
       "cost": 19,
       "age": "Jurassic",
       "prerequisites": [
-        "stalking",
-        "territoriality"
+        "stalking"
       ],
       "unlocksGenes": [],
       "description": "Hunting together to take bigger prey.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "killEp": 0.25
       }
     },
     {
@@ -262,8 +260,8 @@
         "nectar_feeding"
       ],
       "description": "Drinking nectar and carrying pollen between flowers.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.15
       }
     },
     {
@@ -279,8 +277,8 @@
       ],
       "unlocksGenes": [],
       "description": "Eating fruit and spreading the seeds.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -296,8 +294,8 @@
       ],
       "unlocksGenes": [],
       "description": "Hiding food for later (squirrels, jays).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.35
       }
     },
     {
@@ -313,8 +311,9 @@
       ],
       "unlocksGenes": [],
       "description": "Growing fungus gardens for food (leafcutter ants, termites).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.3,
+        "income": 1
       }
     },
     {
@@ -330,8 +329,8 @@
       ],
       "unlocksGenes": [],
       "description": "Grazing the new grasslands in herds.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.25
       }
     },
     {
@@ -347,8 +346,9 @@
       ],
       "unlocksGenes": [],
       "description": "Using objects as tools.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "evolveDiscount": 0.1,
+        "killEp": 0.25
       }
     },
     {
@@ -364,8 +364,8 @@
       ],
       "unlocksGenes": [],
       "description": "Running prey to exhaustion (humans).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.25
       }
     },
     {
@@ -395,8 +395,8 @@
         "camouflage"
       ],
       "description": "Keeping still in cover.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -414,8 +414,8 @@
         "burrowing"
       ],
       "description": "Digging into the sediment to escape.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -431,8 +431,8 @@
       ],
       "unlocksGenes": [],
       "description": "Curling into an armoured ball (trilobites, pill bugs).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "swallowImmune": true
       }
     },
     {
@@ -448,8 +448,8 @@
       ],
       "unlocksGenes": [],
       "description": "Dropping a limb or tail to escape.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -465,8 +465,8 @@
       ],
       "unlocksGenes": [],
       "description": "Staying motionless so predators lose interest.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -482,8 +482,8 @@
       ],
       "unlocksGenes": [],
       "description": "A lightning-fast flick of the body away from danger (fish).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -499,8 +499,8 @@
       ],
       "unlocksGenes": [],
       "description": "Going limp until the predator gives up.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "swallowImmune": true
       }
     },
     {
@@ -516,8 +516,8 @@
       ],
       "unlocksGenes": [],
       "description": "Flashing fake eyes to startle attackers.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -533,8 +533,8 @@
       ],
       "unlocksGenes": [],
       "description": "Many eyes: some watch while others feed.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -550,8 +550,9 @@
       ],
       "unlocksGenes": [],
       "description": "Ganging up to drive a predator away.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.15,
+        "counterBoost": 0.15
       }
     },
     {
@@ -567,8 +568,8 @@
       ],
       "unlocksGenes": [],
       "description": "Faking a broken wing to lure predators from the nest.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -584,8 +585,8 @@
       ],
       "unlocksGenes": [],
       "description": "Leaping high to show predators you are too fit to chase.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "guard": 0.15
       }
     },
     {
@@ -597,13 +598,12 @@
       "cost": 9,
       "age": "Ordovician",
       "prerequisites": [
-        "hiding",
-        "schooling"
+        "hiding"
       ],
       "unlocksGenes": [],
       "description": "Pushing into the middle of the group so others are on the outside.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.2
       }
     },
     {
@@ -631,8 +631,8 @@
       ],
       "unlocksGenes": [],
       "description": "Spawning together on a cue from the moon or temperature.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedCooldown": 1
       }
     },
     {
@@ -648,8 +648,8 @@
       ],
       "unlocksGenes": [],
       "description": "Laying eggs in safe places.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -665,8 +665,8 @@
       ],
       "unlocksGenes": [],
       "description": "Staying close to a mate to keep rivals away.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -682,8 +682,8 @@
       ],
       "unlocksGenes": [],
       "description": "Staying with the eggs to drive off egg-eaters.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "homeGuard": 0.15
       }
     },
     {
@@ -699,8 +699,8 @@
       ],
       "unlocksGenes": [],
       "description": "Rival males compete after mating, inside the female.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -716,8 +716,8 @@
       ],
       "unlocksGenes": [],
       "description": "Rituals that persuade a mate.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -733,8 +733,8 @@
       ],
       "unlocksGenes": [],
       "description": "Offering food to a mate.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -750,8 +750,8 @@
       ],
       "unlocksGenes": [],
       "description": "Females choose the best-looking or best-sounding male.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "evolveDiscount": 0.1
       }
     },
     {
@@ -767,8 +767,8 @@
       ],
       "unlocksGenes": [],
       "description": "Elaborate dances performed for a mate.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -784,8 +784,8 @@
       ],
       "unlocksGenes": [],
       "description": "Bringing food to the young.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -801,8 +801,8 @@
       ],
       "unlocksGenes": [],
       "description": "Staying with one partner for a season or for life.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedCooldown": 1
       }
     },
     {
@@ -818,8 +818,9 @@
       ],
       "unlocksGenes": [],
       "description": "Males display side by side while females choose.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "evolveDiscount": 0.05,
+        "breedDiscount": 0.1
       }
     },
     {
@@ -835,8 +836,8 @@
       ],
       "unlocksGenes": [],
       "description": "Both parents raise the young.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.25
       }
     },
     {
@@ -852,8 +853,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sheltering eggs and fry in the mouth (cichlids).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -869,8 +870,8 @@
       ],
       "unlocksGenes": [],
       "description": "Aunts, siblings and others help raise the young.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedCooldown": 1
       }
     },
     {
@@ -882,13 +883,12 @@
       "cost": 22,
       "age": "Neogene",
       "prerequisites": [
-        "feeding_young",
-        "incubation"
+        "feeding_young"
       ],
       "unlocksGenes": [],
       "description": "Tricking others into raising your chicks (cuckoos).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "freeBreed": true
       }
     },
     {
@@ -904,8 +904,8 @@
       ],
       "unlocksGenes": [],
       "description": "Showing the young how to do things on purpose.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "evolveDiscount": 0.15
       }
     },
     {
@@ -935,8 +935,8 @@
         "group_defense"
       ],
       "description": "Swimming in coordinated groups for safety.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.15
       }
     },
     {
@@ -952,8 +952,8 @@
       ],
       "unlocksGenes": [],
       "description": "Telling relatives from strangers by smell or sight.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.1
       }
     },
     {
@@ -969,8 +969,8 @@
       ],
       "unlocksGenes": [],
       "description": "Parents and young stay together.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.15
       }
     },
     {
@@ -986,8 +986,8 @@
       ],
       "unlocksGenes": [],
       "description": "Moving and feeding in herds (dinosaurs).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.15
       }
     },
     {
@@ -1003,8 +1003,9 @@
       ],
       "unlocksGenes": [],
       "description": "Sterile workers serve a breeding queen (termites, ants).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "income": 1,
+        "breedCooldown": 1
       }
     },
     {
@@ -1020,8 +1021,8 @@
       ],
       "unlocksGenes": [],
       "description": "Soldiers, workers and nurses, each built for its job.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "counterBoost": 0.2
       }
     },
     {
@@ -1033,13 +1034,12 @@
       "cost": 19,
       "age": "Paleogene",
       "prerequisites": [
-        "herding",
-        "territoriality"
+        "herding"
       ],
       "unlocksGenes": [],
       "description": "A pecking order settles who gets what.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -1055,8 +1055,8 @@
       ],
       "unlocksGenes": [],
       "description": "Helpers raise young that are not their own.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.25
       }
     },
     {
@@ -1072,8 +1072,8 @@
       ],
       "unlocksGenes": [],
       "description": "Young gathered together in nurseries.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -1089,8 +1089,8 @@
       ],
       "unlocksGenes": [],
       "description": "Cleaning each other to build bonds.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -1106,8 +1106,8 @@
       ],
       "unlocksGenes": [],
       "description": "A colony acting as one body (army ants).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "income": 1
       }
     },
     {
@@ -1123,8 +1123,8 @@
       ],
       "unlocksGenes": [],
       "description": "Allies band together to rise in rank.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.15
       }
     },
     {
@@ -1140,8 +1140,8 @@
       ],
       "unlocksGenes": [],
       "description": "Groups split and merge day by day (chimpanzees, elephants).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -1157,8 +1157,8 @@
       ],
       "unlocksGenes": [],
       "description": "Helping those who help you (vampire bats sharing blood).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "starveResist": 0.25
       }
     },
     {
@@ -1174,8 +1174,8 @@
       ],
       "unlocksGenes": [],
       "description": "Different species forage together for safety.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -1191,8 +1191,8 @@
       ],
       "unlocksGenes": [],
       "description": "Old females lead the group with remembered knowledge.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.25
       }
     },
     {
@@ -1208,8 +1208,8 @@
       ],
       "unlocksGenes": [],
       "description": "Behaviour passed down the generations (whale songs, chimp tool kits).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "evolveDiscount": 0.1
       }
     },
     {
@@ -1226,8 +1226,8 @@
       ],
       "unlocksGenes": [],
       "description": "Cooperation among many unrelated individuals.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "income": 1
       }
     },
     {
@@ -1255,8 +1255,8 @@
       ],
       "unlocksGenes": [],
       "description": "Backing off from a stronger rival before getting hurt.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.2
       }
     },
     {
@@ -1272,8 +1272,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sessile animals fight for space by overgrowing or stinging their neighbours (corals).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "homeGuard": 0.15
       }
     },
     {
@@ -1289,8 +1289,8 @@
       ],
       "unlocksGenes": [],
       "description": "Spreading fins, gaping or rearing up to look bigger instead of fighting.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -1306,8 +1306,8 @@
       ],
       "unlocksGenes": [],
       "description": "Showing that you give up, so the winner stops attacking.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -1340,8 +1340,8 @@
       ],
       "unlocksGenes": [],
       "description": "Claiming and defending an area.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "homeGuard": 0.25
       }
     },
     {
@@ -1357,8 +1357,8 @@
       ],
       "unlocksGenes": [],
       "description": "Contests with rules: pushing and wrestling that rarely cause injury.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.2
       }
     },
     {
@@ -1374,8 +1374,8 @@
       ],
       "unlocksGenes": [],
       "description": "Judging a rival's strength before deciding whether to fight.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "counterResist": 0.15
       }
     },
     {
@@ -1391,8 +1391,8 @@
       ],
       "unlocksGenes": [],
       "description": "Winning makes an animal bolder; losing makes it cautious.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "killHeal": 0.2
       }
     },
     {
@@ -1425,8 +1425,8 @@
       ],
       "unlocksGenes": [],
       "description": "Known neighbours are tolerated; fights are saved for strangers.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "homeGuard": 0.15
       }
     },
     {
@@ -1460,7 +1460,7 @@
       "unlocksGenes": [],
       "description": "The strongest chick kills its nestmates (eagles, boobies).",
       "bonus": {
-        "attack": 1
+        "hp": 2
       }
     },
     {
@@ -1476,8 +1476,8 @@
       ],
       "unlocksGenes": [],
       "description": "Robbing other animals of their catch (skuas).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "starveResist": 0.2
       }
     },
     {
@@ -1493,8 +1493,8 @@
       ],
       "unlocksGenes": [],
       "description": "One male defends a group of females.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "breedCooldown": 1
       }
     },
     {
@@ -1510,8 +1510,8 @@
       ],
       "unlocksGenes": [],
       "description": "A male taking over a group kills his rival's young (lions).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "killEp": 0.25
       }
     },
     {
@@ -1544,8 +1544,8 @@
       ],
       "unlocksGenes": [],
       "description": "A short, intense mating season.",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -1557,13 +1557,13 @@
       "cost": 18,
       "age": "Neogene",
       "prerequisites": [
-        "territoriality",
-        "coalitions"
+        "territoriality"
       ],
       "unlocksGenes": [],
       "description": "Groups patrol and raid the edges of their range (chimpanzees, wolves).",
-      "bonus": {
-        "attack": 1
+      "effects": {
+        "homeGuard": 0.2,
+        "vision": 1
       }
     },
     {
@@ -1591,8 +1591,8 @@
       ],
       "unlocksGenes": [],
       "description": "Chemical messages to your own species.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -1608,8 +1608,8 @@
       ],
       "unlocksGenes": [],
       "description": "Tapping signals through the ground or a web.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -1625,8 +1625,8 @@
       ],
       "unlocksGenes": [],
       "description": "Changing or showing colours to send messages.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -1642,8 +1642,8 @@
       ],
       "unlocksGenes": [],
       "description": "Flashing light codes (deep-sea fish, later fireflies).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -1659,8 +1659,8 @@
       ],
       "unlocksGenes": [],
       "description": "Rubbing body parts together to chirp.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.1
       }
     },
     {
@@ -1676,8 +1676,8 @@
       ],
       "unlocksGenes": [],
       "description": "Showing size and colour to settle disputes without fighting.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -1693,8 +1693,8 @@
       ],
       "unlocksGenes": [],
       "description": "Marking territory with scent.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "homeGuard": 0.15
       }
     },
     {
@@ -1710,8 +1710,8 @@
       ],
       "unlocksGenes": [],
       "description": "Calls made with the voice.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.1
       }
     },
     {
@@ -1727,8 +1727,8 @@
       ],
       "unlocksGenes": [],
       "description": "Warning the group that a predator is near.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -1744,8 +1744,8 @@
       ],
       "unlocksGenes": [],
       "description": "Talking with electric pulses (weakly electric fish).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.1
       }
     },
     {
@@ -1761,8 +1761,8 @@
       ],
       "unlocksGenes": [],
       "description": "Dancing the direction of food to the hive (honeybees).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "starveResist": 0.25
       }
     },
     {
@@ -1778,8 +1778,9 @@
       ],
       "unlocksGenes": [],
       "description": "Songs copied from adults (songbirds).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "evolveDiscount": 0.05,
+        "breedDiscount": 0.1
       }
     },
     {
@@ -1795,8 +1796,8 @@
       ],
       "unlocksGenes": [],
       "description": "Faces that show mood (mammals).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.1
       }
     },
     {
@@ -1812,8 +1813,8 @@
       ],
       "unlocksGenes": [],
       "description": "Pairs singing together in time.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -1829,8 +1830,9 @@
       ],
       "unlocksGenes": [],
       "description": "Different alarms for eagle, snake and leopard (vervet monkeys).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "ambushImmune": true,
+        "vision": 1
       }
     },
     {
@@ -1846,8 +1848,8 @@
       ],
       "unlocksGenes": [],
       "description": "Calls too low for us to hear that carry for kilometres (elephants).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "vision": 1
       }
     },
     {
@@ -1863,8 +1865,8 @@
       ],
       "unlocksGenes": [],
       "description": "Long songs that change from year to year.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -1880,8 +1882,8 @@
       ],
       "unlocksGenes": [],
       "description": "Meaningful hand and body movements (great apes).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "evolveDiscount": 0.05
       }
     },
     {
@@ -1898,8 +1900,9 @@
       ],
       "unlocksGenes": [],
       "description": "Open-ended symbolic speech.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "evolveDiscount": 0.2,
+        "income": 1
       }
     },
     {
@@ -1927,8 +1930,8 @@
       ],
       "unlocksGenes": [],
       "description": "Moving toward or away from light.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.1
       }
     },
     {
@@ -1944,8 +1947,8 @@
       ],
       "unlocksGenes": [],
       "description": "Staying in and returning to a familiar area.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "homeGuard": 0.1
       }
     },
     {
@@ -1961,8 +1964,8 @@
       ],
       "unlocksGenes": [],
       "description": "Rising at night and sinking by day (plankton).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -1978,8 +1981,8 @@
       ],
       "unlocksGenes": [],
       "description": "Holding position against flowing water.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.1
       }
     },
     {
@@ -1995,8 +1998,8 @@
       ],
       "unlocksGenes": [],
       "description": "Short trips out of the water onto land.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.1
       }
     },
     {
@@ -2031,8 +2034,8 @@
       ],
       "unlocksGenes": [],
       "description": "Navigating by the sun's position.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "vision": 1
       }
     },
     {
@@ -2066,7 +2069,7 @@
       "unlocksGenes": [],
       "description": "Drifting on the wind on silk threads (spiders).",
       "bonus": {
-        "hp": 2
+        "moves": 1
       }
     },
     {
@@ -2082,8 +2085,8 @@
       ],
       "unlocksGenes": [],
       "description": "Learning landmarks to find the way home.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "vision": 1
       }
     },
     {
@@ -2099,8 +2102,8 @@
       ],
       "unlocksGenes": [],
       "description": "Returning to the place of birth to breed (salmon, turtles).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2116,8 +2119,8 @@
       ],
       "unlocksGenes": [],
       "description": "Steering by the Earth's magnetic field.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "vision": 1
       }
     },
     {
@@ -2133,8 +2136,8 @@
       ],
       "unlocksGenes": [],
       "description": "Counting steps and turns to head straight home (ants).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.15
       }
     },
     {
@@ -2150,8 +2153,8 @@
       ],
       "unlocksGenes": [],
       "description": "Steering by the stars (migrating birds).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "vision": 1
       }
     },
     {
@@ -2184,8 +2187,8 @@
       ],
       "unlocksGenes": [],
       "description": "Crossing oceans on floating vegetation (monkeys to South America).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -2218,8 +2221,8 @@
       ],
       "unlocksGenes": [],
       "description": "Up the mountain in summer, down in winter.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -2247,8 +2250,8 @@
       ],
       "unlocksGenes": [],
       "description": "Building a protective tube to live in.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "homeGuard": 0.15
       }
     },
     {
@@ -2266,8 +2269,9 @@
         "burrowing"
       ],
       "description": "Digging tunnels in the sediment.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.2,
+        "homeGuard": 0.1
       }
     },
     {
@@ -2283,8 +2287,8 @@
       ],
       "unlocksGenes": [],
       "description": "Building reefs together (archaeocyathids, later corals).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "homeGuard": 0.2
       }
     },
     {
@@ -2300,8 +2304,8 @@
       ],
       "unlocksGenes": [],
       "description": "Drilling homes into rock and wood.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "homeGuard": 0.15
       }
     },
     {
@@ -2317,8 +2321,8 @@
       ],
       "unlocksGenes": [],
       "description": "Raising young underground.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2334,8 +2338,8 @@
       ],
       "unlocksGenes": [],
       "description": "Spinning silk retreats and cocoons.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -2347,15 +2351,14 @@
       "cost": 16,
       "age": "Triassic",
       "prerequisites": [
-        "burrow_nests",
-        "egg_sites"
+        "burrow_nests"
       ],
       "unlocksGenes": [
         "parental_care"
       ],
       "description": "Building a nest for eggs and young.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2371,8 +2374,8 @@
       ],
       "unlocksGenes": [],
       "description": "Fighting off nest raiders.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "homeGuard": 0.2
       }
     },
     {
@@ -2388,8 +2391,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sealed cells stocked with food for the larvae (wasps).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.25
       }
     },
     {
@@ -2405,8 +2408,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sitting on the eggs to keep them warm.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedCooldown": 1
       }
     },
     {
@@ -2422,8 +2425,8 @@
       ],
       "unlocksGenes": [],
       "description": "Nesting in large, defended colonies.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "friendGuard": 0.15
       }
     },
     {
@@ -2439,8 +2442,8 @@
       ],
       "unlocksGenes": [],
       "description": "Weaving nests from plant fibres.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -2456,8 +2459,8 @@
       ],
       "unlocksGenes": [],
       "description": "Nests plastered together from pellets of mud (swallows, potter wasps).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -2473,8 +2476,8 @@
       ],
       "unlocksGenes": [],
       "description": "Chewed wood pulp shaped into hanging combs (paper wasps).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "homeGuard": 0.15
       }
     },
     {
@@ -2490,8 +2493,9 @@
       ],
       "unlocksGenes": [],
       "description": "Climate-controlled mound cities.",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "disasterResist": 0.3,
+        "income": 1
       }
     },
     {
@@ -2507,8 +2511,8 @@
       ],
       "unlocksGenes": [],
       "description": "Building combs of hexagonal wax cells (bees).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "starveResist": 0.25
       }
     },
     {
@@ -2524,8 +2528,8 @@
       ],
       "unlocksGenes": [],
       "description": "Floating rafts of mucus bubbles that hold the eggs (gouramis, bettas).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.15
       }
     },
     {
@@ -2541,8 +2545,8 @@
       ],
       "unlocksGenes": [],
       "description": "Decorated display structures (bowerbirds).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "breedDiscount": 0.2
       }
     },
     {
@@ -2558,8 +2562,9 @@
       ],
       "unlocksGenes": [],
       "description": "Engineering ponds with dams (beavers).",
-      "bonus": {
-        "defense": 1
+      "effects": {
+        "homeGuard": 0.15,
+        "income": 1
       }
     },
     {
@@ -2587,8 +2592,8 @@
       ],
       "unlocksGenes": [],
       "description": "Hiding away while a new cuticle hardens.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2604,8 +2609,8 @@
       ],
       "unlocksGenes": [],
       "description": "Warming up in the sun before becoming active.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.03
       }
     },
     {
@@ -2621,8 +2626,8 @@
       ],
       "unlocksGenes": [],
       "description": "Moving into shade or burrows to avoid overheating.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -2638,8 +2643,8 @@
       ],
       "unlocksGenes": [],
       "description": "Cleaning antennae and legs with special combs (insects).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -2655,8 +2660,8 @@
       ],
       "unlocksGenes": [],
       "description": "Scratching itchy skin with a hind foot.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -2672,8 +2677,8 @@
       ],
       "unlocksGenes": [],
       "description": "Rubbing against rocks and trees to scrape off parasites.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -2689,8 +2694,8 @@
       ],
       "unlocksGenes": [],
       "description": "Rubbing off the old skin, sometimes in one piece (snakes, lizards).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2706,8 +2711,9 @@
       ],
       "unlocksGenes": [],
       "description": "Coating the skin with mud to cool off and keep insects away.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.1,
+        "poisonResist": 0.1
       }
     },
     {
@@ -2723,8 +2729,8 @@
       ],
       "unlocksGenes": [],
       "description": "Licking wounds clean: saliva kills bacteria.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.1
       }
     },
     {
@@ -2740,8 +2746,8 @@
       ],
       "unlocksGenes": [],
       "description": "Cooling off by breathing fast.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.15
       }
     },
     {
@@ -2757,8 +2763,8 @@
       ],
       "unlocksGenes": [],
       "description": "Straightening and oiling feathers with the beak.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2774,8 +2780,8 @@
       ],
       "unlocksGenes": [],
       "description": "Pressing together to keep warm (penguins, mice).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "disasterResist": 0.2
       }
     },
     {
@@ -2791,8 +2797,9 @@
       ],
       "unlocksGenes": [],
       "description": "Cleaner fish and shrimp service visiting 'clients'.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.15,
+        "heal": 0.05
       }
     },
     {
@@ -2808,8 +2815,8 @@
       ],
       "unlocksGenes": [],
       "description": "Rolling in dust to remove excess oil and parasites.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -2825,8 +2832,8 @@
       ],
       "unlocksGenes": [],
       "description": "Splashing in water to clean feathers or fur.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2842,8 +2849,8 @@
       ],
       "unlocksGenes": [],
       "description": "Carrying waste and dead nestmates out of the nest (bees, birds).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -2859,8 +2866,8 @@
       ],
       "unlocksGenes": [],
       "description": "Rubbing ants into the feathers for their formic acid.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -2876,8 +2883,8 @@
       ],
       "unlocksGenes": [],
       "description": "Using fixed dung sites away from food and young.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.1
       }
     },
     {
@@ -2893,8 +2900,8 @@
       ],
       "unlocksGenes": [],
       "description": "Eating bitter plants or clay to fight parasites and toxins (chimpanzees, parrots).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.35
       }
     },
     {
@@ -2922,8 +2929,8 @@
       ],
       "unlocksGenes": [],
       "description": "An internal clock sets the times for activity and rest.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2939,8 +2946,8 @@
       ],
       "unlocksGenes": [],
       "description": "Resting in crevices or burrows out of sight.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2956,8 +2963,8 @@
       ],
       "unlocksGenes": [],
       "description": "Deep, reversible rest with the senses turned down.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -2973,8 +2980,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sleeping inside a bubble of mucus (parrotfish, lungfish).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "poisonResist": 0.15
       }
     },
     {
@@ -2990,8 +2997,8 @@
       ],
       "unlocksGenes": [],
       "description": "Slow-wave sleep that restores the brain.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.1
       }
     },
     {
@@ -3007,8 +3014,8 @@
       ],
       "unlocksGenes": [],
       "description": "Active only at night (early mammals).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -3024,8 +3031,8 @@
       ],
       "unlocksGenes": [],
       "description": "Resting high off the ground, out of reach of predators.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -3041,8 +3048,8 @@
       ],
       "unlocksGenes": [],
       "description": "REM sleep that consolidates memories (mammals, birds).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "evolveDiscount": 0.05
       }
     },
     {
@@ -3058,8 +3065,8 @@
       ],
       "unlocksGenes": [],
       "description": "One half of the brain sleeps while the other keeps watch (dolphins, ducks).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -3075,8 +3082,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sleeping together in large numbers.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "friendGuard": 0.1
       }
     },
     {
@@ -3092,8 +3099,8 @@
       ],
       "unlocksGenes": [],
       "description": "Resting upside down, ready to drop into flight (bats).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -3109,8 +3116,8 @@
       ],
       "unlocksGenes": [],
       "description": "Active in twilight, between the day and night shifts of predators.",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "guard": 0.1
       }
     },
     {
@@ -3126,8 +3133,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sheltering in a den through the cold months (bears).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "starveResist": 0.3
       }
     },
     {
@@ -3143,8 +3150,8 @@
       ],
       "unlocksGenes": [],
       "description": "Building a fresh bed in the trees every night (great apes).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     },
     {
@@ -3160,8 +3167,8 @@
       ],
       "unlocksGenes": [],
       "description": "Sleeping in flight (swifts, frigatebirds).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "fieldHeal": 0.05
       }
     },
     {
@@ -3173,13 +3180,12 @@
       "cost": 22,
       "age": "Neogene",
       "prerequisites": [
-        "communal_roosts",
-        "group_vigilance"
+        "communal_roosts"
       ],
       "unlocksGenes": [],
       "description": "One keeps watch while the rest sleep or feed (meerkats).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "ambushImmune": true
       }
     },
     {
@@ -3195,8 +3201,8 @@
       ],
       "unlocksGenes": [],
       "description": "Floating together, holding on to each other or to kelp (sea otters).",
-      "bonus": {
-        "hp": 2
+      "effects": {
+        "heal": 0.05
       }
     }
   ]

@@ -1,0 +1,10 @@
+{
+  "Hyolith": {
+    "tags": "B+['Brachiopod']",
+    "path": "LOPHO + '/Lophophorata/Hyolitha'"
+  },
+  "Acorn worm": {
+    "tags": "B+['Hemichordate','Worm']",
+    "path": "AMBUL + '/Hemichordata/Enteropneusta'"
+  }
+}

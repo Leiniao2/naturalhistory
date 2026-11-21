@@ -23,12 +23,13 @@ namespace NaturalHistory.UI
         private bool periodsCollapsed; // the period column folded to a thin strip, for a wider list
         private readonly ListView list;
         private readonly TextField search;
-        private readonly Label count, nameLabel, scientificLabel, statsLabel, descriptionLabel;
+        private readonly Label count, nameLabel, scientificLabel, statsLabel, combatLabel, ownedLabel, descriptionLabel;
         private readonly List<SpeciesDefinition> shown = new();
         private List<SpeciesDefinition> all;
         private SpeciesDefinition current;
 
         public event Action<string> OpenTree; // the Evolution Tree from this species
+        public event Action<string, bool> OpenTraits; // its Functions (true) or Behaviors tree
 
         public bool IsOpen => !overlay.ClassListContains("hidden");
 
@@ -44,10 +45,18 @@ namespace NaturalHistory.UI
             nameLabel        = root.Q<Label>("encyclopedia-name");
             scientificLabel  = root.Q<Label>("encyclopedia-scientific");
             statsLabel       = root.Q<Label>("encyclopedia-stats");
+            combatLabel      = root.Q<Label>("encyclopedia-combat");
+            ownedLabel       = root.Q<Label>("encyclopedia-owned");
             descriptionLabel = root.Q<Label>("encyclopedia-description");
 
             root.Q<Button>("encyclopedia-close-button").clicked += Close;
             root.Q<Button>("encyclopedia-tree-button").clicked += () => { if (current != null) OpenTree?.Invoke(current.id); };
+            root.Q<Button>("encyclopedia-functions-button").clicked += () => { if (current != null) OpenTraits?.Invoke(current.id, true); };
+            root.Q<Button>("encyclopedia-behaviors-button").clicked += () => { if (current != null) OpenTraits?.Invoke(current.id, false); };
+            // in the trees' colours, with their icons
+            ThemedButtons.Apply(root.Q<Button>("encyclopedia-tree-button"), ThemedButtons.Theme.Evolution, null, UiIcons.Tree);
+            ThemedButtons.Apply(root.Q<Button>("encyclopedia-functions-button"), ThemedButtons.Theme.Functions);
+            ThemedButtons.Apply(root.Q<Button>("encyclopedia-behaviors-button"), ThemedButtons.Theme.Behaviors);
 
             list.fixedItemHeight = 58f;
             list.selectionType   = SelectionType.Single;
@@ -201,7 +210,7 @@ namespace NaturalHistory.UI
             relatives.Clear();
             if (def == null)
             {
-                nameLabel.text = scientificLabel.text = statsLabel.text = descriptionLabel.text = "";
+                nameLabel.text = scientificLabel.text = statsLabel.text = combatLabel.text = ownedLabel.text = descriptionLabel.text = "";
                 painting.style.backgroundImage = new StyleBackground(StyleKeyword.None);
                 return;
             }
@@ -217,13 +226,16 @@ namespace NaturalHistory.UI
             if (def.sizeCm > 0f) lines.Add(Loc.F("Size: {0}", AnimalPanel.FormatSize(def.sizeCm)));
             if (def.habitats is { Count: > 0 })
                 lines.Add(Loc.F("Habitats: {0}", string.Join(", ", def.habitats.Select(AnimalPanel.HabitatName))));
+            statsLabel.text = string.Join("\n", lines);
+            // the fight in larger type, then (a line's space below) how many you have
             var stats = World.CombatStats.Of(def);
-            lines.Add(Loc.F("HP {0}  ·  Attack {1}  ·  Defense {2}  ·  Actions {3}", stats.hp, stats.attack, stats.defense, stats.moves));
-            var copies = EvolutionManager.Instance?.CopiesOf(Players.PlayerManager.Instance?.Human).Count(c => c.species == def.id) ?? 0;
-            if (copies > 0) lines.Add(Loc.F(copies == 1 ? "You have {0} copy" : "You have {0} copies", copies));
+            var combat = new List<string> { Loc.F("HP {0}  ·  Attack {1}  ·  Defense {2}  ·  Actions {3}", stats.hp, stats.attack, stats.defense, stats.moves) };
             var abilities = World.Abilities.Describe(def, EvolutionManager.Instance != null && EvolutionManager.Instance.HumanOwns(def.id));
-            if (abilities.Length > 0) lines.Add(abilities);
-            statsLabel.text       = string.Join("\n", lines);
+            if (abilities.Length > 0) combat.Add(abilities);
+            combatLabel.text = string.Join("\n", combat);
+            var copies = EvolutionManager.Instance?.CopiesOf(Players.PlayerManager.Instance?.Human).Count(c => c.species == def.id) ?? 0;
+            ownedLabel.text = copies > 0 ? Loc.F(copies == 1 ? "You have {0} copy" : "You have {0} copies", copies) : "";
+            ownedLabel.style.display = copies > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             descriptionLabel.text = Loc.T(def.description);
 
             AddRelatives(Loc.T("Evolves from"), EvolutionData.To(def.id).Select(l => l.from));

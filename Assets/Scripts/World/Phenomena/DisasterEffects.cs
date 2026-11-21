@@ -82,7 +82,7 @@ namespace NaturalHistory.World
             bool changed = false;
             foreach (var g in groups)
             {
-                float dealt = g.MaxHp * LossFor(kind, g);
+                float dealt = g.MaxHp * LossFor(kind, g) * (1f - TraitBonuses.Effects(g).disasterResist); // its items may soften it
                 g.Hp -= dealt;
                 bool human = g.Owner != null && g.Owner.IsHuman;
                 if (human) humanLost++;

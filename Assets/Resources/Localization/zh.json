@@ -1,6 +1,2670 @@
 {
  "entries": [
   {
+   "k": "A 'cystoid', an extinct stalked echinoderm from the Silurian of New York, Ontario and Britain. Its egg-shaped body, about 3-4 cm across, was built of large six-sided plates crossed by diamond-shaped pore patches used for breathing. A ring of long, thin arms around the mouth on top gathered food from the water.",
+   "v": "一种“海林檎”，已灭绝的有柄棘皮动物，生活于志留纪，发现于美国纽约州、加拿大安大略省和英国。它卵形的身体直径约3-4厘米，由大块六边形骨板构成，骨板上横跨着用于呼吸的菱形孔区。顶部口周围的一圈细长的腕从水中收集食物。"
+  },
+  {
+   "k": "A 3-metre dolphin-like whale from the Miocene seas of the North Atlantic. Its long beak held pointed front teeth and triangular, serrated cheek teeth like a shark's, from which it gets its name. It caught fish and squid and could probably already find them by echolocation.",
+   "v": "北大西洋中新世海洋中一种长约3米、形似海豚的鲸。它长长的吻部前端长着尖利的门齿，后面是像鲨鱼一样带锯齿的三角形颊齿，因此得名。它捕食鱼类和乌贼，可能已经能用回声定位寻找猎物。"
+  },
+  {
+   "k": "A 3.5-metre snake from Late Cretaceous India, found fossilised coiled around a crushed sauropod egg next to a newly hatched baby. It could not open its jaws as wide as modern snakes, but it was big enough to raid sauropod nesting grounds and swallow the hatchlings. Its name means ancient gape in Sanskrit.",
+   "v": "一种生活在晚白垩世印度、长3.5米的蛇，人们发现它的化石盘绕在一枚被压碎的蜥脚类恐龙蛋周围，旁边还有一只刚孵化的幼龙。它的嘴不能像现代蛇那样张得很大，但体形足以袭击蜥脚类的筑巢地，吞食幼龙。它的名字在梵语中意为“古老的张口”。"
+  },
+  {
+   "k": "A 9-metre duck-billed dinosaur whose name means good mother lizard. Huge nesting colonies found in Montana show that it laid eggs in mound nests and cared for its babies until they could leave the nest. It moved in big herds and fed on low plants with its broad, toothless beak and grinding cheek teeth.",
+   "v": "一种9米长的鸭嘴龙，名字意为“好妈妈蜥蜴”。在美国蒙大拿州发现的大型筑巢群落表明，它们在土堆巢中产蛋，并照顾幼崽直到它们能离开巢穴。它们组成庞大的群体迁移，用宽阔无齿的喙和研磨用的颊齿取食低矮的植物。"
+  },
+  {
+   "k": "A 9-metre early tyrannosaur from the Early Cretaceous of China, the largest dinosaur known for certain to have had feathers. Its body was covered in long shaggy filaments that probably kept it warm in the cool winters of its forests. It hunted sauropods and other large plant-eaters, perhaps in groups.",
+   "v": "一种生活在中国早白垩世、长9米的早期暴龙类，是已知确定长有羽毛的最大恐龙。它身上覆盖着长而蓬乱的丝状羽毛，可能用来在森林寒冷的冬季保暖。它捕食蜥脚类和其他大型植食恐龙，或许还会成群狩猎。"
+  },
+  {
+   "k": "A Cambrian comb jelly from the Burgess Shale of Canada, a jelly-like drifting animal with twenty-four rows of beating comb plates instead of the eight of living comb jellies. It drifted through the water catching tiny animals, but its body is soft and fragile.",
+   "v": "一种寒武纪的栉水母，来自加拿大的伯吉斯页岩，是一种果冻状的漂浮动物，身上有二十四列摆动的栉板，而现生栉水母只有八列。它在水中漂流，捕食微小的动物，但身体柔软脆弱。"
+  },
+  {
+   "k": "A Jurassic coelacanth about 50 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of the living Latimeria. It had fleshy, limb-like lobed fins, a big head with a wide mouth and the coelacanths' three-lobed tail with a small extra lobe in the middle. It lurked near the bottom and ambushed fish and other small animals.",
+   "v": "一种体长约50厘米的侏罗纪腔棘鱼，生活在约1.5亿年前德国南部的晚侏罗世潟湖中，是现生拉蒂迈鱼的亲戚。它有肉质、像四肢一样的叶状鳍，大头宽嘴，以及腔棘鱼特有的三叶形尾鳍，中间还有一个小小的附加叶。它潜伏在水底附近，伏击鱼类和其他小动物。"
+  },
+  {
+   "k": "A Late Devonian conodont, a small eel-like animal a few centimetres long with large eyes, known mainly from its tiny comb-like teeth. Its broad, palm-shaped tooth plates are so common and changed so quickly that they are used to date Late Devonian rocks worldwide. It swarmed in the open sea, catching small prey, and the genus died out in the crises at the end of the Devonian.",
+   "v": "一种晚泥盆世的牙形动物，是一种只有几厘米长、眼睛很大、形似鳗鱼的小动物，主要靠它细小的梳状牙齿为人所知。它宽阔的掌形齿片数量极多、变化极快，被用来为全世界的晚泥盆世岩石定年。它成群游弋于开阔海洋中捕食小猎物，这个属在泥盆纪末的危机中灭绝。"
+  },
+  {
+   "k": "A badger-sized relative of marsupials about 60 centimetres long including its tail, from the last days of the dinosaurs in North America. It had the strongest bite for its size of any known mammal, with crushing teeth able to break snail shells, bones and small turtles. It probably hunted along streams like an otter.",
+   "v": "一种獾一般大小的有袋类亲戚，连尾巴长约60厘米，生活在北美洲恐龙时代的最后时期。按体形比例，它是已知咬合力最强的哺乳动物，碾压型的牙齿能咬碎蜗牛壳、骨头和小海龟。它很可能像水獭一样沿着溪流捕猎。"
+  },
+  {
+   "k": "A barrel-shaped giant up to 5 m long and over 3 tonnes, and the closest living relative of whales. It spends the day in rivers and lakes with only its eyes, ears and nostrils above water and comes out at night to graze. Its huge jaws open almost 180 degrees and carry tusk-like canines, making it one of Africa's most dangerous animals; in warm Ice Age spells hippos lived as far north as Britain.",
+   "v": "一种桶状身躯的巨兽，体长可达5米，体重超过3吨，是鲸类现存最近的亲戚。它白天待在河湖中，只露出眼睛、耳朵和鼻孔，夜间上岸吃草。巨大的嘴能张开近180度，长着獠牙般的犬齿，是非洲最危险的动物之一；在冰期的温暖时段，河马曾生活到英国。"
+  },
+  {
+   "k": "A beaver the size of a black bear, about 2 m long and up to 100 kg, that lived in the lakes and swamps of Ice Age North America. Its incisors were up to 15 cm long, but it probably did not fell trees or build dams: it ate soft water plants. It died out about 10,000 years ago as the climate dried.",
+   "v": "一种黑熊大小的河狸，体长约2米，体重可达100公斤，生活在冰期北美的湖泊和沼泽中。它的门齿长达15厘米，但很可能并不伐树或筑坝，而是以柔软的水生植物为食。约1万年前，随着气候变干，它灭绝了。"
+  },
+  {
+   "k": "A big, smooth trilobite up to about 20 cm long from mid-Silurian seas of North America and England. Its triangular head ended in a blunt, upturned snout, which gives it its name, 'dolphin head'. Its eyes were small and its shell was broad and smooth, with a pointed tail shield. It ploughed through soft mud, feeding on buried scraps.",
+   "v": "一种大型、光滑的三叶虫，体长可达约20厘米，生活于志留纪中期北美和英格兰的海洋中。它三角形的头部末端是一个钝圆、上翘的吻部，因此其种名意为“海豚头”。它的眼睛很小，背壳宽阔光滑，尾甲尖锐。它在松软的泥中犁行，以埋藏的碎屑为食。"
+  },
+  {
+   "k": "A big, thick relative of the sand dollars from the Miocene and Pliocene seas around the Mediterranean and Red Sea. Its heavy, high-domed test, up to 15 centimetres across, was covered in a felt of tiny spines and marked on top with a five-petalled flower of breathing tube feet. It lived half-buried in sand, picking food particles from the sediment.",
+   "v": "地中海和红海一带中新世至上新世海洋中的一种大型厚实的海胆，是沙钱的亲戚。它沉重的高拱形外壳直径可达15厘米，表面覆盖着绒毛般的细小棘刺，顶部有一朵由呼吸管足组成的五瓣花纹。它半埋在沙中生活，从沉积物中拣食食物颗粒。"
+  },
+  {
+   "k": "A blastoid, one of an extinct group of stalked echinoderms related to sea lilies, and one of the most common fossils of the Early Carboniferous limestones of North America, about 335 million years ago. Its pear-shaped, five-sided cup, only 2 to 3 centimetres long, sat on a short stem and bore five petal-shaped food grooves fringed with fine, thread-like arms. It drew water in through slits along the grooves, filtering out food and breathing at the same time.",
+   "v": "一种海蕾，属于一类已灭绝、与海百合有亲缘关系的有柄棘皮动物，也是约3.35亿年前北美早石炭世石灰岩中最常见的化石之一。它梨形的五边形萼部仅长2至3厘米，立在一根短茎上，带有五条花瓣状的食物沟，沟边镶着细丝般的腕。它通过沟旁的裂缝吸入海水，同时滤食和呼吸。"
+  },
+  {
+   "k": "A bonytongue fish about 50 cm long from the early Eocene Green River lakes of Wyoming, related to the arowanas of tropical rivers today. It had a deep, flattened body, a large upturned mouth with sharp teeth and long pectoral fins. It hunted smaller fish such as Knightia near the surface.",
+   "v": "一种骨舌鱼，体长约50厘米，生活在始新世早期怀俄明州的绿河湖中，是今天热带河流中龙鱼的亲戚。它身体侧扁而高，嘴大而上翘，长着锋利的牙齿，胸鳍很长。它在水面附近捕食骨鳞鱼等小鱼。"
+  },
+  {
+   "k": "A brachiopod with a very thin, broad, D-shaped shell about 4 cm wide, with a long straight hinge and fine radiating ribs. Its two valves nested one inside the other, so the shell was barely thicker than a coin. It lay loose on soft mud, its wide, flat shell keeping it from sinking, and filtered food from the water.",
+   "v": "一种腕足动物，外壳非常薄而宽，呈D字形，宽约4厘米，铰合线长而直，表面有细密的放射肋。它的两片壳瓣一片嵌在另一片里，所以整个外壳几乎不比一枚硬币厚。它松散地躺在软泥上，宽而扁的外壳使它不会陷入泥中，并从水中滤取食物。"
+  },
+  {
+   "k": "A bristle worm a few centimetres long from the Silurian of England, preserved in three dimensions with its soft parts. Its slender body had about forty segments, each with a pair of two-branched paddles bearing fans of fine bristles. It crawled and swam over and through the sea floor, rowing with its paddles.",
+   "v": "一种体长几厘米的多毛虫，生活于志留纪，发现于英格兰，以三维形式保存了软体部分。它细长的身体约有四十个体节，每节都有一对双分支的桨状附肢，上面长着扇形的细刚毛。它在海底表面和沉积物中爬行与游动，用桨状附肢划水。"
+  },
+  {
+   "k": "A brittle star about 10-15 cm across from the Early Jurassic seas of England, about 190 million years ago. It had a rounded central disc and five long, slender, spiny arms that it rowed in snake-like strokes across the sea floor, picking up food particles. Huge crowds of them lived together, and a single storm could bury thousands alive in sand, preserving them complete.",
+   "v": "一种直径约10至15厘米的蛇尾，生活在约1.9亿年前的英格兰早侏罗世海洋中。它有圆形的中央体盘和五条细长多刺的腕，像蛇一样划动着在海底爬行，拾取食物颗粒。它们成群大量聚居，一场风暴就可能把成千上万只活埋在沙中，使它们完整地保存下来。"
+  },
+  {
+   "k": "A brush-footed butterfly with a wingspan of about 5 cm from the late Eocene lake beds of Florissant, Colorado, one of the finest fossil butterflies ever found. Even the pattern of its wings survives: dark brown with pale spots and small eyespots near the edge of the hind wings. As an adult it drank nectar from flowers.",
+   "v": "一种蛱蝶，翼展约5厘米，发现于科罗拉多州弗洛里森特的始新世晚期湖床，是迄今发现的最精美的蝴蝶化石之一。连翅膀上的花纹都保存了下来：深褐色，带有浅色斑点，后翅边缘附近有小眼斑。成虫吸食花蜜。"
+  },
+  {
+   "k": "A bryozoan colony of countless tiny filter-feeding animals, growing as flattened, branching fronds a few centimetres tall. Its surface is dotted with regular star-shaped patches, which gave it its name, where filtered water flowed out of the colony. It was common in the shallow seas of what is now the Cincinnati region.",
+   "v": "一种苔藓虫群体，由无数微小的滤食个体组成，长成几厘米高的扁平分枝叶状体。群体表面规则地点缀着星形斑块，这就是它名字的由来；过滤后的水从这些斑块流出群体。它在今天辛辛那提一带的浅海中十分常见。"
+  },
+  {
+   "k": "A bryozoan, a colony of thousands of tiny filter-feeding animals living in tubes, from the Silurian of North America and Britain. The tubes were packed into slender, forking stony branches a few millimetres thick, forming small bushy thickets on the sea floor. The colony grew by budding new members at the tips of its branches.",
+   "v": "一种苔藓动物，由成千上万只生活在管中的微小滤食动物组成的群体，生活于志留纪的北美和英国。这些管紧密排列成纤细、分叉的石质枝条，粗仅几毫米，在海底形成小型灌丛。群体通过在枝条顶端出芽产生新成员来生长。"
+  },
+  {
+   "k": "A bulky, beaked plant-eater 5-7 metres long from the Late Jurassic of North America, about 155-150 million years ago, an early relative of Iguanodon. It cropped low plants with a toothless horny beak and chewed them with rows of cheek teeth. It could run on its hind legs but often walked on all fours, its hands bearing hoof-like fingers. Its name means 'flexible lizard'.",
+   "v": "一种体长5至7米、长着喙的粗壮植食恐龙，生活在约1.55亿至1.5亿年前的北美晚侏罗世，是禽龙的早期亲戚。它用没有牙齿的角质喙啃食低矮植物，再用成排的颊齿咀嚼。它能用后腿奔跑，但常常四足行走，手上长着蹄状的指头。它的名字意为“弯曲的蜥蜴”。"
+  },
+  {
+   "k": "A bushy, cabbage-like rangeomorph up to about 20 cm across from England and Newfoundland, about 565 million years old. Many spoon-shaped frondlets fanned out from a single base, each branching again and again into smaller copies of itself. Its overlapping leaves soak up damage and regrow, but it cannot strike back.",
+   "v": "一种呈灌丛状、形似卷心菜的蕨叶形类生物，宽可达约20厘米，发现于英格兰和纽芬兰，生活在约5.65亿年前。许多勺形小叶从同一个基部向四周展开，每片小叶都一再分枝成更小的自身复制品。它层层叠叠的叶片能吸收伤害并重新长出，但它无法反击。"
+  },
+  {
+   "k": "A calcified tube a few centimetres long from China, Namibia and other places, about 545 million years old. Its wall was built of many thin, wrinkled layers nested one inside the next, and it lived beside Cloudina in some of the first reefs built by animals with skeletons. Its mineral tube made it hard to crush, an early defence against the first predators.",
+   "v": "一种长几厘米的钙质管，发现于中国、纳米比亚等地，生活在约5.45亿年前。它的管壁由许多层薄而起皱的层套叠而成，与克劳德管虫一起生活在最早由带骨骼动物建造的礁中。矿质管壁使它很难被压碎，是对最早的捕食者的一种早期防御。"
+  },
+  {
+   "k": "A cat-sized relative of mammals, about 50 centimetres long, from the Middle Triassic of Argentina, about 235 million years ago. Unlike most earlier cynodonts it ate plants, grinding them with broad, ridged cheek teeth, and it had a short, deep head and strong jaw muscles. Many skeletons have been found together, so it may have lived in groups.",
+   "v": "一种猫般大小的哺乳动物亲戚，体长约50厘米，来自约2.35亿年前阿根廷的中三叠世。与大多数更早的犬齿兽不同，它以植物为食，用宽阔、带棱脊的颊齿研磨植物；它的头部短而高，颌部肌肉强健。人们发现了许多聚集在一起的骨架，因此它可能是群居的。"
+  },
+  {
+   "k": "A chicken-sized bird about 40 cm long from the late Paleocene of North America, a distant relative of ostriches, emus and tinamous that could still fly. It had a long, slightly down-curved beak with sensitive pits at the tip, which it probed into soft ground for worms and insects, much as kiwis do today. Its kin show that the flightless giant birds descend from flying ancestors.",
+   "v": "一种鸡般大小的鸟，体长约40厘米，生活在古新世晚期的北美洲，是鸵鸟、鸸鹋和䳍的远亲，但仍会飞。它的喙长而微微下弯，尖端有敏感的小孔，能像今天的几维鸟一样插进软土里寻找蠕虫和昆虫。它的亲戚表明，那些不会飞的巨鸟是从会飞的祖先进化来的。"
+  },
+  {
+   "k": "A chiton a few centimetres long with a row of eight overlapping shell plates on its back, like all chitons, but with rows of long, hollow spines sticking out from them. It is the oldest chiton known from a complete specimen. It crept over the sea floor on its muscular foot, scraping algae from surfaces with its rasping tongue, while its spines kept predators at bay.",
+   "v": "一种长几厘米的石鳖，像所有石鳖一样背上有一列八块相互叠覆的壳板，但壳板上伸出一排排长而中空的棘刺。它是已知最古老的完整石鳖标本。它用肌肉发达的足在海底缓慢爬行，用齿舌刮食表面的藻类，棘刺则让捕食者无从下口。"
+  },
+  {
+   "k": "A coelacanth about 30 centimetres long, common in the coal-swamp waters and coastal lagoons of North America and Europe about 310 million years ago. It already had the shape that survives today in the living coelacanth: a stout body, fleshy lobed fins on stalks and a three-lobed tail with a small tuft in the middle. Fossils of tiny young still carrying yolk sacs show how it grew up, and it hunted small fish and shrimps.",
+   "v": "一种长约30厘米的腔棘鱼，约3.1亿年前常见于北美和欧洲的煤沼水域与沿海潟湖。它已经具备了现生腔棘鱼延续至今的体形：身体粗壮，有带柄的肉质叶状鳍，以及中间带一小簇鳍条的三叶形尾鳍。一些仍带着卵黄囊的幼鱼化石揭示了它的成长过程；它捕食小鱼和小虾。"
+  },
+  {
+   "k": "A coelacanth from the coastal seas of Madagascar in the Early Triassic, about 250 million years ago. It had a deep body, a large head, fleshy lobed fins that moved like legs and the three-lobed tail typical of coelacanths. Its relatives survived to the present day: the living coelacanth was thought extinct until one was caught off South Africa in 1938.",
+   "v": "一种腔棘鱼，生活在约2.5亿年前早三叠世马达加斯加的近岸海域。它身体高，头部大，长着能像腿一样摆动的肉质叶状鳍，以及腔棘鱼典型的三叶形尾。它的亲戚一直存活至今：现存的腔棘鱼曾被认为早已灭绝，直到1938年在南非近海捕获了一条。"
+  },
+  {
+   "k": "A colonial horn coral that helped build the reefs of the Permian Tethys Ocean, from Asia to Europe. Its colonies were bushes of many slender, branching tubes a few millimetres thick growing up side by side, each topped by a cup with radiating ridges from which a small polyp caught food with its tentacles. Like all horn corals it disappeared in the end-Permian extinction.",
+   "v": "一种群体四射珊瑚，曾帮助建造从亚洲到欧洲的二叠纪特提斯洋生物礁。它的群体像灌木，由许多几毫米粗、细长分枝的管子并排向上生长而成，每根管子顶端有一个带放射状隔壁的杯，小小的珊瑚虫从中伸出触手捕食。和所有四射珊瑚一样，它在二叠纪末大灭绝中消失了。"
+  },
+  {
+   "k": "A colonial rugose coral forming massive, cushion-shaped heads of hundreds of long, slender corallites packed so tightly that their walls were shared and six-sided, like a honeycomb. Each corallite held a small polyp that caught tiny prey with its tentacles. Its sturdy colonies helped to build early reefs.",
+   "v": "一种群体四射珊瑚，形成块状、坐垫形的珊瑚头，由数百个细长的珊瑚单体紧密排列而成，单体之间共用六边形的壁，就像蜂巢一样。每个珊瑚单体里住着一个小水螅体，用触手捕捉微小的猎物。它坚固的群体帮助建造了早期的礁体。"
+  },
+  {
+   "k": "A colonial rugose coral that built thickets in the warm, clear Early Carboniferous seas of Europe, about 340 million years ago. Its colonies were bundles of slender stony tubes, each less than a centimetre wide and home to one polyp, growing up side by side and branching into clumps tens of centimetres across. The polyps caught plankton with their stinging tentacles, and the fossil colonies are among the most familiar fossils of Carboniferous limestones.",
+   "v": "一种群体四射珊瑚，约3.4亿年前在欧洲温暖清澈的早石炭世海洋中形成珊瑚丛。它的群体由一束束细长的石质管组成，每根管宽不到1厘米，容纳一只珊瑚虫；这些管子并排向上生长并分枝，形成宽达几十厘米的团块。珊瑚虫用带刺细胞的触手捕捉浮游生物，其群体化石是石炭纪石灰岩中最常见的化石之一。"
+  },
+  {
+   "k": "A colony of tiny moss animals named after the screw of the Greek inventor Archimedes, from the shallow Early Carboniferous seas of North America about 335 million years ago. The colony grew a thick, corkscrew-shaped central axis up to about 20 centimetres tall, from which lacy, net-like fronds spiralled outwards like a spiral staircase. Thousands of tiny animals lived in the mesh and strained food from the water with rings of tentacles, and their stony screws pack some limestones.",
+   "v": "一种由微小苔藓动物组成的群体，因形似古希腊发明家阿基米德的螺旋而得名，生活在约3.35亿年前北美早石炭世的浅海中。群体中央长出一根粗壮的螺旋状中轴，高可达约20厘米，花边般的网状叶片像旋转楼梯一样从中轴盘旋向外伸展。成千上万的小动物生活在网眼中，用触手环从水中滤取食物，它们石质的螺旋体在某些石灰岩中密密堆积。"
+  },
+  {
+   "k": "A crab from the Eocene seas of southern Europe, with a broad, smooth, oval shell about 10 cm wide covered in fine dots. Its strong pincers were of unequal size, the larger one able to crush shells. It lived on the warm, shallow sea floor, eating clams, snails, worms and dead animals, and its fossils are common in the limestones of northern Italy.",
+   "v": "一种生活在始新世南欧海洋中的蟹，宽阔光滑的椭圆形甲壳宽约10厘米，布满细小的斑点。它强壮的螯大小不一，较大的那只能夹碎贝壳。它生活在温暖的浅海海底，吃蛤蜊、螺类、蠕虫和动物尸体，它的化石在意大利北部的石灰岩中很常见。"
+  },
+  {
+   "k": "A crocodile-like temnospondyl about 1.5 metres long, one of the most common large animals of the Late Carboniferous coal swamps of Bohemia in the Czech Republic, about 307 million years ago. Its long, flat skull ended at the back in a pair of short, horn-like points, and its jaws were lined with sharp teeth. It lurked at the edges of swamp lakes like a crocodile, catching fish and smaller amphibians.",
+   "v": "一种形似鳄鱼的离片椎类，长约1.5米，是约3.07亿年前捷克波希米亚晚石炭世煤沼中最常见的大型动物之一。它扁长的头骨后端有一对短短的角状突起，颌部排列着锋利的牙齿。它像鳄鱼一样潜伏在沼泽湖泊边缘，捕捉鱼类和较小的两栖动物。"
+  },
+  {
+   "k": "A deep-bodied, almost disc-shaped fish about 35 cm long from the Early Jurassic seas of Europe, about 195 million years ago. Its body was armoured with thick, shiny, diamond-shaped scales, and its small mouth held peg-like and button-shaped teeth for crushing shellfish, sea urchins and other hard-shelled prey. It probably manoeuvred slowly around reefs and sea floors like a modern butterflyfish.",
+   "v": "一种身体高、近乎圆盘状的鱼，体长约35厘米，生活在约1.95亿年前的欧洲早侏罗世海洋中。它全身覆盖着厚而发亮的菱形鳞片，小嘴里长着钉状和纽扣状的牙齿，用来压碎贝类、海胆和其他带硬壳的猎物。它很可能像今天的蝴蝶鱼一样，在礁石和海底周围缓慢灵活地游动。"
+  },
+  {
+   "k": "A deer-sized hoofed mammal about 1 m long from the early Oligocene of North America, a distant relative of camels. Males carried three pairs of short bony knobs and flanges on the head, the tallest pair on the snout, and tusk-like upper canines; females were hornless. Males probably used them to display and fight over mates in the woodlands where they browsed.",
+   "v": "一种鹿般大小的有蹄哺乳动物，体长约1米，生活在渐新世早期的北美洲，是骆驼的远亲。雄性头上长着三对短短的骨质角突和骨板，最高的一对长在吻部，上犬齿如獠牙；雌性没有角。雄性可能用它们炫耀和争夺配偶，在林地中吃嫩叶。"
+  },
+  {
+   "k": "A deer-sized hoofed mammal from the Late Miocene of North America, the last and largest of the protoceratids, distant relatives of camels. Males had a pair of horns behind the eyes and a long nose horn that forked into a Y at the tip, probably used for display and sparring. It grazed and browsed in herds on open plains.",
+   "v": "北美洲晚中新世一种鹿大小的有蹄哺乳动物，是原角鹿科最后也是最大的成员，与骆驼是远亲。雄性眼后长着一对角，鼻上还有一根长角，末端分叉成Y形，可能用于炫耀和争斗。它们成群在开阔平原上吃草和嫩叶。"
+  },
+  {
+   "k": "A dog-sized marsupial lion from the Miocene forests of Australia, an earlier relative of Thylacoleo. It had a short, powerful head with blade-like cheek teeth for slicing meat and strong forelimbs for gripping prey. It probably climbed well and ambushed smaller marsupials from cover.",
+   "v": "澳大利亚中新世森林中一种狗大小的袋狮，是袋狮属（Thylacoleo）的早期亲戚。它头部短而有力，刀片状的颊齿用来切肉，强壮的前肢用来抓握猎物。它可能善于攀爬，躲在隐蔽处伏击较小的有袋类。"
+  },
+  {
+   "k": "A domed disc up to about 6 cm wide from the White Sea coast of Russia, about 555 million years old. Three broad, curved tubes crossed by fine ridges radiated from its centre, giving it the three-fold symmetry of the trilobozoans, a group with no living members. It lay on the seabed, probably feeding on particles in the water.",
+   "v": "一种隆起的圆盘，宽可达约6厘米，发现于俄罗斯白海沿岸，生活在约5.55亿年前。三条宽阔弯曲、横布细脊的管从中心辐射而出，使它具有三分动物的三辐对称；这一类群如今已没有现存成员。它躺在海底，可能以水中的颗粒为食。"
+  },
+  {
+   "k": "A dugong relative from the Miocene shallow seas of Florida and the Caribbean, about 3 metres long. It had a fat, spindle-shaped body, paddle-like flippers and a tail fluke, and a down-turned snout with small tusks for uprooting seagrass. Slow and peaceful, it relied on its size and thick bones for protection.",
+   "v": "佛罗里达和加勒比地区中新世浅海中的一种儒艮亲戚，长约3米。它身体肥胖呈纺锤形，有桨状鳍肢和尾鳍，下弯的吻部长着小獠牙，用来拔起海草。它行动缓慢、性情温和，依靠庞大的体形和厚重的骨骼保护自己。"
+  },
+  {
+   "k": "A flamingo-like pterosaur with a 2.5-metre wingspan from Early Cretaceous Argentina. Its long, upturned lower jaw held about a thousand bristle-like teeth, which it used to sieve tiny crustaceans and algae from shallow lakes. It lived in big flocks, and like flamingos it may have turned pink from its food.",
+   "v": "一种生活在阿根廷早白垩世、翼展2.5米、外形似火烈鸟的翼龙。它又长又向上弯曲的下颌上长着大约一千颗刷毛般的牙齿，用来从浅湖中滤食微小的甲壳动物和藻类。它成大群生活，可能也像火烈鸟一样因食物而变成粉红色。"
+  },
+  {
+   "k": "A flat, broad lobster about 10-15 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of today's blind deep-sea lobsters. Its wide, almost rectangular shell had saw-toothed edges, and all its walking legs ended in pincers, the first pair long and slender. It crawled over the soft lagoon floor feeding on carcasses and small animals, and its tracks are sometimes found leading to its body.",
+   "v": "一种扁平宽阔的龙虾，体长约10至15厘米，生活在约1.5亿年前德国南部的晚侏罗世潟湖中，是现今深海盲龙虾的亲戚。它宽阔、近乎长方形的甲壳边缘呈锯齿状，所有步足末端都长着螯，第一对又长又细。它在柔软的潟湖底爬行，以动物尸体和小动物为食，有时还能发现通向它身体的爬行足迹。"
+  },
+  {
+   "k": "A flat, oval, slug-like animal up to about 12 cm long from the Burgess Shale of Canada, with no shell or armour at all. Under its head it had a toothed feeding ribbon like the radula of snails, which it used to scrape microbial mats off the seabed, so it is seen as a very early relative of the molluscs. Soft and unprotected, it relies on its size and numbers.",
+   "v": "一种扁平、椭圆形、像蛞蝓的动物，体长可达约 12 厘米，来自加拿大的伯吉斯页岩，完全没有外壳或铠甲。它头部下方有一条类似蜗牛齿舌的带齿取食带，用来刮食海底的微生物席，因此被视为软体动物非常早期的亲戚。它柔软而缺乏保护，只能依靠体型和数量。"
+  },
+  {
+   "k": "A flat-headed, crocodile-like fish about 1.5 metres long from the estuaries of Late Devonian Quebec, about 380 million years ago. Its eyes sat on top of its head and it had lost the fins on its back, so it could lurk in the shallows like a crocodile. Its pectoral fin held rows of small finger bones: the oldest known digits, still wrapped in a fish's fin.",
+   "v": "一种头部扁平、形似鳄鱼的鱼，体长约1.5米，生活在约3.8亿年前晚泥盆世魁北克的河口。它的眼睛长在头顶，背上的鳍已经消失，可以像鳄鱼一样潜伏在浅水中。它的胸鳍里有一排排细小的指骨：这是已知最古老的手指，仍然包裹在鱼鳍之中。"
+  },
+  {
+   "k": "A flattened jawless fish about 20 centimetres long from Early Devonian Scotland, about 410 million years ago, one of the last thelodonts. Instead of solid armour its body was covered in thousands of tiny tooth-like scales, and broad flaps stuck out behind its head. It glided over the bottom, sucking up mud and small food particles.",
+   "v": "一种身体扁平的无颌鱼，体长约20厘米，约4.1亿年前生活在早泥盆世的苏格兰，是最后的腔鳞鱼之一。它没有坚固的骨甲，而是全身覆盖着成千上万枚细小的齿状鳞片，头后伸出宽阔的肉瓣。它贴着水底滑行，吸食淤泥和细小的食物颗粒。"
+  },
+  {
+   "k": "A flightless giant pigeon about 1 m tall and 10-18 kg from the island of Mauritius, a close relative of the Nicobar pigeon. With no predators on the island it lost the power of flight and nested on the ground, eating fallen fruit and seeds with its big hooked bill. Sailors, rats, pigs and monkeys arriving from 1598 wiped it out within a lifetime; it was last seen in 1662.",
+   "v": "一种不会飞的巨型鸽子，身高约1米，体重10-18公斤，来自毛里求斯岛，是尼科巴鸠的近亲。岛上没有天敌，它失去了飞行能力，在地面筑巢，用硕大的钩状喙啄食落果和种子。从1598年起登岛的水手、老鼠、猪和猴子在一代人之内就让它灭绝了，最后一次目击是在1662年。"
+  },
+  {
+   "k": "A freshwater turtle about 30 cm long from the middle Eocene lake of Messel in Germany, a relative of the pig-nosed turtle of New Guinea and Australia, with flipper-like front limbs and a fleshy snout. It ate plants, snails and other small animals. Several pairs were found joined together: they had sunk into the poisonous deep water of the lake while mating, the only fossil vertebrates known to have died in the act.",
+   "v": "一种淡水龟，体长约30厘米，生活在始新世中期德国的麦塞尔湖，是新几内亚和澳大利亚的猪鼻龟（两爪鳖）的亲戚，前肢如鳍，有肉质的吻部。它吃植物、螺类和其他小动物。人们发现了好几对连在一起的化石：它们在交配时沉入了湖底有毒的深水，是已知唯一死于交配之中的脊椎动物化石。"
+  },
+  {
+   "k": "A gar about 1 m long from the early Eocene Green River lakes of Wyoming, a close relative of the alligator gar. Its long body was covered in hard, diamond-shaped scales that fitted together like armour, and its long snout held rows of needle teeth. It lay still among the water plants and seized passing fish with a sudden sideways snap.",
+   "v": "一种雀鳝，体长约1米，生活在始新世早期怀俄明州的绿河湖中，是鳄雀鳝的近亲。它修长的身体覆盖着坚硬的菱形鳞片，彼此嵌合如盔甲，长长的吻部排满针状牙齿。它静静地潜伏在水草间，突然向侧面一咬，抓住游过的鱼。"
+  },
+  {
+   "k": "A gharial-like amphibian about 1.5 metres long from the Early Permian lakes of south-western Germany, around 295 million years ago. Its long, narrow snout was lined with sharp teeth for snapping up fish, and it swam with its long, flattened tail, holding its small legs against its body. Hundreds of fossils, from tiny larvae to adults, show how it grew up.",
+   "v": "一种外形像长吻鳄的两栖动物，体长约1.5米，生活在约2.95亿年前二叠纪早期德国西南部的湖泊中。它长而窄的吻部排满尖牙，用来咬住鱼类；游泳时靠又长又扁的尾巴推进，细小的四肢贴在身体两侧。从幼小的幼体到成年个体的数百件化石，记录了它的成长过程。"
+  },
+  {
+   "k": "A gharial-like reptile about 1.5 metres long with a long, narrow, toothy snout, which lived in the rivers and lakes of Late Cretaceous North America. It was not a crocodile but a choristodere, an ancient reptile group that survived the end of the dinosaurs. It swam with its flattened tail and snapped up fish with sideways sweeps of its head.",
+   "v": "一种长约1.5米、形似长吻鳄的爬行动物，吻部又长又窄、布满牙齿，生活在晚白垩世北美洲的河流和湖泊中。它不是鳄鱼，而是离龙类——一个熬过了恐龙灭绝的古老爬行动物类群。它用扁平的尾巴游泳，靠头部的侧向扫动捕捉鱼类。"
+  },
+  {
+   "k": "A giant among ostracods, the tiny crustaceans enclosed in a two-valved shell: its smooth, bean-shaped shell grew to about 2 cm long. It had a small eye spot near the front of each valve and crawled over shallow, often salty sea floors on short legs that poked out from under the shell. It fed on detritus and small particles.",
+   "v": "介形虫中的巨人。介形虫是包裹在双瓣壳中的微小甲壳动物，而它光滑的豆形外壳可长到约2厘米。它每片壳瓣的前部有一个小眼点，用从壳下伸出的短足在浅水、常常偏咸的海底爬行，以碎屑和小颗粒为食。"
+  },
+  {
+   "k": "A giant burrowing bat from the Early Miocene of New Zealand, about three times the size of an ordinary small bat. Like New Zealand's living burrowing bats it foraged on the forest floor as well as in the air, eating insects, spiders and probably fruit and nectar. Its relatives also lived in Australia, a sign of the old forest links between the two lands.",
+   "v": "新西兰早中新世的一种巨型穴居蝙蝠，体形约为普通小型蝙蝠的三倍。和新西兰现生的短尾蝠一样，它既在空中也在林地上觅食，吃昆虫、蜘蛛，可能还吃果实和花蜜。它的亲戚也曾生活在澳大利亚，说明两地的森林曾有古老的联系。"
+  },
+  {
+   "k": "A giant clam from the Middle Permian reef lagoons of Japan and the warm Tethys Ocean, around 265 million years ago, up to about a metre across. Its thick central shell was drawn out on both sides into huge, thin, flat wings, so it lay on the sea floor like a boomerang and did not sink into the soft lime mud. Like modern giant clams it may have kept sun-loving algae in its tissues.",
+   "v": "一种巨型双壳类，生活在约2.65亿年前二叠纪中期日本及温暖特提斯洋的礁湖中，宽可达约1米。它厚实的中央壳向两侧延伸成巨大、薄而平的翼，像一个回旋镖躺在海底，不会陷进松软的石灰泥里。它也许像现代砗磲一样，在组织中共生着喜光的藻类。"
+  },
+  {
+   "k": "A giant coelacanth about 4 metres long, a cousin of the living coelacanth, from the rivers and lagoons of Cretaceous Brazil and Africa. Its heavy body was covered in thick bony scales, and it moved its fleshy, lobed fins in pairs much like the legs of a walking animal. A slow ambush hunter, it sucked in prey with a sudden snap of its wide mouth.",
+   "v": "一种长约4米的巨型腔棘鱼，是现生腔棘鱼的近亲，生活在白垩纪巴西和非洲的河流与潟湖中。它沉重的身体覆盖着厚厚的骨质鳞片，成对的肉质叶状鳍摆动的方式很像行走动物的四肢。它是一种行动缓慢的伏击型猎手，宽大的嘴一张一合，便将猎物吸入口中。"
+  },
+  {
+   "k": "A giant flightless bird from the Late Miocene of central Australia, about 3 metres tall and up to 600 kilograms, among the heaviest birds ever. Despite its huge, deep beak it was a distant relative of ducks and geese, and it most likely ate tough leaves, fruit and seeds. Its legs were stout and its wings tiny, so it walked rather than ran.",
+   "v": "澳大利亚中部晚中新世的一种巨型不会飞的鸟，身高约3米，体重可达600千克，是史上最重的鸟类之一。尽管长着巨大而厚实的喙，它却是鸭和鹅的远亲，很可能以坚韧的树叶、果实和种子为食。它腿脚粗壮、翅膀极小，善于行走而非奔跑。"
+  },
+  {
+   "k": "A giant relative of grasshoppers and crickets from the Late Triassic lake shores of Madygen in Kyrgyzstan, about 230 million years ago, with wings spanning around 30 centimetres or more. Its long, spiny forelegs were made for grabbing other insects. A ribbed patch on each forewing was probably rubbed to make loud calls or flashed as a display, making it an early example of insect song.",
+   "v": "蝗虫和蟋蟀的巨型亲戚，生活在约2.3亿年前晚三叠世吉尔吉斯斯坦马迪根的湖岸，翼展约30厘米或更大。它长而多刺的前足专用来捕捉其他昆虫。每片前翅上有一块带肋纹的区域，可能通过摩擦发出响亮的鸣声，或用来展示炫耀，是昆虫鸣唱的早期实例。"
+  },
+  {
+   "k": "A giant relative of the gharials from the Miocene rivers of India and Pakistan, perhaps 8 to 11 metres long. Its long, narrow snout was lined with many sharp teeth, but it was stouter than a living gharial's, so it may have taken larger prey as well as fish. It was one of the largest crocodilians that ever lived.",
+   "v": "印度和巴基斯坦中新世河流中一种巨型的长吻鳄亲戚，体长可能达8到11米。它细长的吻部布满尖牙，但比现生长吻鳄更粗壮，因此除了鱼，可能还捕食更大的猎物。它是史上最大的鳄类之一。"
+  },
+  {
+   "k": "A giant sawfish-like ray up to about 7 metres long from the great rivers of mid-Cretaceous North Africa. Its long flat snout was lined with widely spaced, barbed teeth like harpoon points, which it swept sideways to stun and slash fish. It shared its rivers with Spinosaurus, which may have hunted it.",
+   "v": "一种巨大的似锯鳐的鳐类，体长可达约7米，生活在白垩纪中期北非的大河中。它扁长的吻部两侧排列着间距很宽、像鱼叉尖一样带倒钩的牙齿，它左右挥动吻部来击晕和划伤鱼类。它与棘龙共享河流，棘龙可能会捕食它。"
+  },
+  {
+   "k": "A giant scorpion from the Late Silurian of England, estimated at about 90 cm long from a single, massive pincer finger, making it the largest scorpion that ever lived. Like other early scorpions it probably still lived in water. With its huge pincers and stinging tail it could tackle fish and other large prey.",
+   "v": "一种巨型蝎子，生活于晚志留世，发现于英格兰。根据一根巨大的螯指化石估计，它体长约90厘米，是有史以来最大的蝎子。和其他早期蝎子一样，它可能仍生活在水中。凭借巨大的螯和带刺的尾巴，它能对付鱼类和其他大型猎物。"
+  },
+  {
+   "k": "A giant sea spider with a leg span of up to 40 centimetres from the Early Devonian seas of the German Hunsrück, about 400 million years ago. Its thin body carried a long sucking proboscis, and its front legs were flattened into paddles, so it could probably swim. It fed on soft-bodied animals such as sea anemones and crinoids by sucking out their tissues.",
+   "v": "一种巨型海蜘蛛，足展可达40厘米，约4亿年前生活在早泥盆世德国洪斯吕克的海洋中。它纤细的身体前端有一根长长的吸吻，前足扁平如桨，大概能够游泳。它以海葵和海百合等软体动物为食，吸食它们的组织。"
+  },
+  {
+   "k": "A giant spiny millipede up to about 30 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old. Each of its body rings carried a pair of long, forked spines pointing up and out, making it one of the spikiest animals of the coal forests. It crawled through the leaf litter on many pairs of short legs, feeding on rotting plant matter, while its spines kept amphibian predators at bay.",
+   "v": "一种巨大的多刺马陆，体长可达约30厘米，发现于美国伊利诺伊州约3.09亿年前的马宗溪化石层。它的每个体环上都长着一对向上向外伸出的分叉长刺，使它成为煤炭森林中刺最多的动物之一。它用许多对短腿在落叶层中爬行，以腐烂的植物为食，身上的刺让两栖类掠食者不敢靠近。"
+  },
+  {
+   "k": "A giant, long-legged pig from the Middle Miocene of Eurasia, as large as a small horse and weighing perhaps 500 kilograms. It had big tusks, and males carried a single horn on the forehead, probably used in head-butting contests. It rooted and browsed in forests and wet woodlands.",
+   "v": "欧亚大陆中中新世的一种长腿巨猪，体形如小马，体重可能达500千克。它长着大獠牙，雄性额头上还有一只角，可能用于顶撞争斗。它在森林和湿润林地中拱土觅食、啃食嫩叶。"
+  },
+  {
+   "k": "A heart-shaped sea urchin about 6 centimetres long that lived buried in the soft chalky mud of the Late Cretaceous sea floor in Europe. A short fuzz of spines covered its shell, and a groove at the front led food-rich mud to its mouth. Its shape changed so steadily over time that it became a classic example of gradual evolution.",
+   "v": "一种长约6厘米的心形海胆，生活在晚白垩世欧洲海底柔软的白垩泥中，身体埋在泥里。壳上覆盖着一层短而细密的棘刺，前端的一道沟槽把富含食物的泥送进口中。它的形态随时间稳步缓慢地变化，因此成为渐进进化的经典例子。"
+  },
+  {
+   "k": "A heavy early long-necked dinosaur, about 6.5 metres long, from the Late Triassic of La Rioja, Argentina, about 220 million years ago. Unlike its two-legged relative Plateosaurus, it walked on all four stout legs, carrying a bulky body, a long neck and a small head with leaf-shaped teeth for stripping plants. Hollow spaces in its backbone kept its weight down, a trick later used by the giant sauropods.",
+   "v": "一种身体笨重的早期长颈恐龙，体长约6.5米，来自约2.2亿年前阿根廷拉里奥哈的晚三叠世。与用两条腿行走的亲戚板龙不同，它用四条粗壮的腿行走，支撑着庞大的身体、长长的脖子和一个小脑袋，头上长着叶状牙齿，用来捋食植物。脊椎中的空腔减轻了它的体重，后来巨大的蜥脚类恐龙也采用了这一窍门。"
+  },
+  {
+   "k": "A heavy, tapir-sized grazer from the Early Miocene of Patagonia, an early member of the toxodonts, hoofed mammals found only in South America. It had a barrel-shaped body on short legs and a big head with chisel-like front teeth and ever-growing cheek teeth for chewing tough plants. Many skeletons, from calves to adults, are known.",
+   "v": "巴塔哥尼亚早中新世一种沉重的、貘大小的食草动物，是箭齿兽类的早期成员，这类有蹄哺乳动物只生活在南美洲。它身体呈桶状，四肢短小，大头上长着凿子般的门齿和终生生长的颊齿，用来咀嚼坚韧的植物。人们已发现从幼崽到成体的许多骨架。"
+  },
+  {
+   "k": "A huge, bizarre ostrich-dinosaur about 11 metres long, known for decades only from its giant arms with 2.4-metre-long clawed hands. Complete skeletons later revealed a hump-backed giant with a long, toothless, duck-like bill and broad feet for walking on soft ground. It waded in rivers, eating water plants and fish.",
+   "v": "一种长约11米、形态奇特的巨型似鸟龙类，几十年来人们只知道它那长着2.4米长带爪巨手的前肢。后来发现的完整骨架显示，它是一个背上有隆起的巨兽，长着长而无齿、像鸭嘴一样的喙，宽大的脚适合在松软的地面上行走。它在河中涉水，吃水生植物和鱼类。"
+  },
+  {
+   "k": "A hyolith, a member of a vanished group of animals with a cone-shaped shell closed by a lid, from the Burgess Shale of Canada. A pair of long, curved spines stuck out from under the lid and propped it up on the seabed. Fossils with soft parts show it fed with a ring of tentacles, like brachiopods, which settled a long debate about what hyoliths were. It can shut itself in its shell but cannot fight.",
+   "v": "一种软舌螺，属于一个已经灭绝的动物类群，有一个用盖子封闭的锥形壳，来自加拿大的伯吉斯页岩。一对弯曲的长刺从盖子下伸出，把它撑在海底。保存软体的化石显示它用一圈触手取食，与腕足动物相似，从而解决了关于软舌螺归属的长期争论。它能缩进壳里自保，但不会战斗。"
+  },
+  {
+   "k": "A land-living amphibian about 1 metre long from the Early Permian of New Mexico, Colorado and Utah, around 295 million years ago. It carried a tall sail on its back made of long spines covered in rough bumps, a little like that of Dimetrodon, and had a broad head and sturdy legs. The sail may have helped it warm up in the sun or impress rivals.",
+   "v": "一种陆生两栖动物，体长约1米，生活在约2.95亿年前二叠纪早期的新墨西哥、科罗拉多和犹他。它背上有一面高帆，由布满粗糙瘤突的长棘组成，有点像异齿龙的背帆；它头部宽大，四肢粗壮。这面帆可能帮助它晒太阳取暖，或用来向对手炫耀。"
+  },
+  {
+   "k": "A large South American hoofed mammal about 3 m long from the late Oligocene of Argentina and Bolivia. It looked strikingly like an elephant, with pillar-like legs, probably a short trunk and forward-pointing tusks in both jaws, but it belonged to a native South American lineage and evolved these features on its own. Its name, 'fire beast', comes from the volcanic ash beds where it was found.",
+   "v": "一种大型南美有蹄哺乳动物，体长约3米，生活在渐新世晚期的阿根廷和玻利维亚。它的样子和大象惊人地相似：柱状的腿，可能有短短的象鼻，上下颌都有向前伸的獠牙，但它属于南美本土的一支，这些特征是独立进化出来的。它的名字意为“火之兽”，因为它发现于火山灰地层中。"
+  },
+  {
+   "k": "A large glass sponge up to about 30 cm across, shaped like an upturned glove or crown: a broad central body with an opening on top and a ring of big, hollow, finger-like lobes that held it up off the muddy sea floor. Its thin wall was a lattice of fused glassy spicules, through which it pumped water to filter out food.",
+   "v": "一种大型玻璃海绵，直径可达约30厘米，形状像一只翻过来的手套或一顶王冠：宽阔的中央体顶部有一个开口，周围一圈巨大、中空的指状突起把身体撑离泥质海底。它薄薄的体壁由愈合的玻璃质骨针构成网格，它通过体壁泵水，从中滤取食物。"
+  },
+  {
+   "k": "A large lungfish of Triassic rivers and lakes, from the Late Triassic of Austria, about 230 million years ago. It had a long, heavy body with big round scales, fleshy paddle-like fins and a fin fringe running round the tail, much like the living Australian lungfish. Its fan-shaped, ridged tooth plates crushed snails, crayfish and plants, and it could gulp air when the water became warm and stale.",
+   "v": "三叠纪河流和湖泊中的一种大型肺鱼，来自约2.3亿年前奥地利的晚三叠世。它身体长而粗重，覆盖着大而圆的鳞片，长着肉质的桨状鳍，尾部周围环绕着一圈鳍褶，很像现存的澳洲肺鱼。它扇形、带棱脊的齿板能压碎螺类、小龙虾和植物；当水变得温暖而浑浊时，它还能吞咽空气。"
+  },
+  {
+   "k": "A large plant eater, about 3 metres long, from the Early to Middle Triassic of South Africa, about 245 million years ago, and a distant relative of mammals. It had a barrel-shaped body, sturdy legs, a long, high snout ending in a horny beak and a pair of short tusks. It sheared tough plants with its beak and was one of the biggest land animals of its time.",
+   "v": "一种体长约3米的大型植食动物，来自约2.45亿年前南非的早至中三叠世，是哺乳动物的远亲。它身体呈桶状，四肢粗壮，长而高的吻部末端是角质喙，还有一对短獠牙。它用喙切断坚韧的植物，是当时体型最大的陆地动物之一。"
+  },
+  {
+   "k": "A large predatory synapsid about 3 metres long from the Early Permian of New Mexico and Utah, around 295 million years ago, and a close relative of Dimetrodon. It had the same deep skull with long, stabbing canine teeth, but instead of a tall sail only a low crest of spines along its back. It was a top predator of its time, hunting other large four-legged animals.",
+   "v": "一种大型掠食性合弓动物，体长约3米，生活在约2.95亿年前二叠纪早期的新墨西哥和犹他，是异齿龙的近亲。它有同样高深的头骨和长长的刺击型犬齿，但背上没有高帆，只有一道低矮的棘刺脊。它是当时的顶级掠食者，捕食其他大型四足动物。"
+  },
+  {
+   "k": "A large rhizodont, a fang-toothed lobe-finned fish probably about 1.8 metres long, from the Late Devonian rivers of Pennsylvania and New York, about 365 million years ago. Its huge pectoral fins were stiffened by eight finger-like bones, an independent experiment in building a limb. It lay in wait in the river and lunged at passing fish.",
+   "v": "一种大型根齿鱼，是长着獠牙的肉鳍鱼，体长可能约1.8米，生活在约3.65亿年前晚泥盆世宾夕法尼亚和纽约的河流中。它巨大的胸鳍由八根似手指的骨头支撑，是演化出肢体的一次独立尝试。它埋伏在河中，猛扑经过的鱼。"
+  },
+  {
+   "k": "A large scallop from the Pliocene seas of Virginia and North Carolina, up to about 17 centimetres across, with broad radiating ribs. Like living scallops it lay on the sea floor filtering food from the water, watched with a row of small eyes along its mantle, and could clap its valves to swim away from danger. It was the first fossil from North America ever illustrated.",
+   "v": "弗吉尼亚和北卡罗来纳上新世海洋中的一种大型扇贝，直径可达约17厘米，壳上有宽阔的放射肋。和现生扇贝一样，它躺在海底滤食，用外套膜边缘的一排小眼睛观察周围，遇险时能开合双壳游走。它是北美洲第一种被绘图记录的化石。"
+  },
+  {
+   "k": "A large sea lily (crinoid) from the Silurian reefs of North America. A long stem held up a heavy cup of thick, rigid plates, and its ten arms folded upright into slots around a tall central column, forming a ribbed, bud-like crown. When feeding, the arms opened out into a filter that caught food from the current.",
+   "v": "一种大型海百合，生活于北美的志留纪礁石中。长长的茎支撑着由厚实坚硬的骨板构成的沉重萼部，十条腕向上收拢，嵌入围绕高大中央柱的槽中，形成一个有棱纹的花苞状冠部。摄食时，它的腕会展开形成滤网，从水流中捕获食物。"
+  },
+  {
+   "k": "A large sea star about 20 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago. It had a small central disc and fourteen to sixteen long, slender arms radiating like a sunburst. It crept over the muddy sea floor hunting small animals.",
+   "v": "一种直径约20厘米的大型海星，约4亿年前生活在早泥盆世德国的洪斯吕克海。它有一个小小的中央盘和十四到十六条细长的腕，像太阳光芒一样向四周伸展。它在泥泞的海底爬行，捕食小动物。"
+  },
+  {
+   "k": "A large therocephalian about 2 metres long from the Middle Permian of South Africa, around 262 million years ago, one of the top predators of its time. Its name means wolf crocodile: it had a long, wolf-like body and a long snout with two pairs of long canine teeth side by side, a new tooth growing in beside the old one. It hunted the big plant eaters of its world.",
+   "v": "一种大型兽头类，体长约2米，生活在约2.62亿年前二叠纪中期的南非，是当时的顶级掠食者之一。它的名字意为“狼鳄”：身体修长如狼，长吻中并排生着两对长犬齿，新牙在旧牙旁边长出。它捕食那个世界里的大型植食动物。"
+  },
+  {
+   "k": "A large white owl of the Arctic tundra, about 65 cm long with a 1.5 m wingspan, which spread across Ice Age Europe with the cold. It hunts by day in the endless Arctic summer, mainly lemmings, and a pair may eat over a thousand in a season. Its plumage is white with dark bars, and its feet are thickly feathered against the cold.",
+   "v": "北极苔原上的一种大型白色猫头鹰，体长约65厘米，翼展1.5米，冰期时随严寒扩散到整个欧洲。在北极永昼的夏季它白天捕猎，主要吃旅鼠，一对雪鸮一个季节能吃掉一千多只。它的羽毛白色带深色横斑，脚上覆盖着厚厚的羽毛以抵御寒冷。"
+  },
+  {
+   "k": "A lizard-like plant eater, about 2.5 metres long, from the Late Triassic of Texas, about 220 million years ago. Its short, deep skull had a toothless beak at the front and wide cheek teeth with three cutting crests, which give it its name and sliced up tough plants. Strong claws on its feet may have helped it dig for roots or climb.",
+   "v": "一种外形似蜥蜴的植食动物，体长约2.5米，来自约2.2亿年前美国得克萨斯州的晚三叠世。它短而高的头骨前端是无齿的喙，后面是宽大的颊齿，每颗带有三道切割棱脊，这正是其名称的由来，能切碎坚韧的植物。脚上强壮的爪子可能帮助它挖掘根茎或攀爬。"
+  },
+  {
+   "k": "A lizard-like reptile about 30 centimetres long, an early relative of the living tuatara of New Zealand, from the Late Triassic of south-west England, about 205 million years ago. Its teeth were fused to the jawbones and worn into sharp blades for slicing insects and perhaps plants. Thousands of its bones have been found in old cave and crack fillings of limestone islands.",
+   "v": "一种外形似蜥蜴的爬行动物，体长约30厘米，是新西兰现存楔齿蜥的早期亲戚，来自约2.05亿年前英格兰西南部的晚三叠世。它的牙齿与颌骨融合在一起，磨损成锋利的刀刃，用来切割昆虫，也许还有植物。在石灰岩岛屿古老的洞穴和裂隙填充物中，已发现了数以千计的它的骨骼。"
+  },
+  {
+   "k": "A long, eel-like marine reptile, about 2 metres long, from the Middle Triassic seas of the Alps between Switzerland and Italy, about 240 million years ago. It had a narrow, pointed snout full of small teeth, big eyes and short limbs, and swam by waving its very long, flattened tail. It belonged to the thalattosaurs, a group of sea reptiles found only in the Triassic.",
+   "v": "一种身体修长、形似鳗鱼的海生爬行动物，体长约2米，生活在约2.4亿年前中三叠世瑞士与意大利之间阿尔卑斯地区的海洋中。它有狭窄而尖的吻部，布满小牙，眼睛很大，四肢短小，靠摆动极长而扁平的尾巴游泳。它属于海龙类，这是一类仅见于三叠纪的海生爬行动物。"
+  },
+  {
+   "k": "A long, thin, flexible tube a few centimetres long and under a millimetre wide, made of tough, finely ringed organic material, from the very end of the Ediacaran into the early Cambrian. Its wall structure suggests it was built by a worm related to modern beard worms, which would make it one of the oldest known annelids. The tube sheltered the soft worm inside.",
+   "v": "一种细长柔韧的管子，长几厘米、宽不到1毫米，由坚韧且有细环纹的有机物构成，从埃迪卡拉纪末期延续到寒武纪早期。管壁的结构表明它由一种与现代须腕动物有亲缘关系的蠕虫建造，这将使它成为已知最古老的环节动物之一。管子保护着里面柔软的蠕虫。"
+  },
+  {
+   "k": "A long-bodied early tetrapod about 1.5 metres long from Early Carboniferous rocks of West Virginia, about 330 million years old. It had a flat, broad head marked with the grooves of a lateral-line system for sensing movement in the water, small legs and an eel-like body with about 40 vertebrae in front of the hips. It lived almost entirely in water, swimming with side-to-side waves of its body and snapping up fish.",
+   "v": "一种身体修长的早期四足动物，长约1.5米，发现于美国西弗吉尼亚州约3.3亿年前的早石炭世岩层。它的头部宽而扁，上面有侧线系统留下的沟纹，用来感知水中的动静；它四肢短小，身体像鳗鱼，臀部前方约有40节脊椎。它几乎完全生活在水中，靠身体左右摆动的波浪游泳，捕食鱼类。"
+  },
+  {
+   "k": "A low disc a few centimetres across with a raised rim, a central boss and fine radial creases, found in huge numbers in Newfoundland, about 565 million years old. Described in 1872, it was the first Ediacaran fossil ever named, long before anyone accepted that large organisms lived so early. Most of these discs were probably the buried anchors of fronds.",
+   "v": "一种低矮的圆盘，直径几厘米，有隆起的边缘、中央突起和细密的放射状褶纹，在纽芬兰大量发现，生活在约5.65亿年前。它于1872年被描述，是第一个被命名的埃迪卡拉化石，当时还没有人相信大型生物出现得这么早。这些圆盘大多可能是叶状体埋在泥中的固着器。"
+  },
+  {
+   "k": "A low, round dome a few centimetres across from South Australia, about 555 million years old, covered in a raised lattice of radiating struts crossed by rings. The net-like pattern resembles the skeleton of glass sponges, so it is often considered one of the oldest sponges. It sat on the seabed filtering food from the water.",
+   "v": "一种低矮的圆形穹顶，直径几厘米，发现于南澳大利亚，生活在约5.55亿年前，表面覆盖着由放射状支柱和环纹交织成的凸起网格。这种网状图案很像玻璃海绵的骨架，因此它常被视为最古老的海绵之一。它固着在海底，从水中滤食。"
+  },
+  {
+   "k": "A lungfish about a metre long, common in the Late Carboniferous and Early Permian swamps, rivers and lakes of North America and Europe, about 300 million years ago. It had a long body, a broad head with fan-shaped, ridged tooth plates for crushing shells, narrow pointed paired fins and a tail fringed by one continuous fin. Like living lungfish it could gulp air at the surface, which helped it survive in warm, oxygen-poor swamp water.",
+   "v": "一种长约1米的肺鱼，约3亿年前常见于北美和欧洲晚石炭世和早二叠世的沼泽、河流和湖泊。它身体修长，宽阔的头部长着扇形、带脊的齿板，用来压碎贝壳，成对的鳍窄而尖，尾部由一道连续的鳍环绕。和现生肺鱼一样，它能浮到水面吞咽空气，这帮助它在温暖缺氧的沼泽水中生存。"
+  },
+  {
+   "k": "A many-armed starfish about 15 cm across from the Silurian reefs of Dudley, England. Around its broad, flat disc it had thirteen tapering arms edged with rows of small plates, like a modern sun star. It crept slowly over the reef floor, preying on shellfish and other slow animals.",
+   "v": "一种多腕海星，直径约15厘米，生活于英格兰达德利的志留纪礁石中。它宽阔扁平的体盘周围有十三条逐渐变细的腕，腕缘排列着成行的小骨板，就像现代的太阳海星。它在礁石海底缓慢爬行，捕食贝类和其他行动迟缓的动物。"
+  },
+  {
+   "k": "A mitrate, a strange echinoderm with no five-fold symmetry: a flattened, plated body a few centimetres long with a single jointed arm in front. It lay on the soft sea floor and used its arm to gather food. Some scientists have even argued that mitrates were early relatives of the chordates.",
+   "v": "一种海果类（锥海果），是一种奇特的棘皮动物，完全没有五辐对称：扁平、披着骨板的身体长几厘米，前端有一条带关节的单臂。它躺在柔软的海底，用这条臂收集食物。有些科学家甚至认为锥海果类是脊索动物的早期亲戚。"
+  },
+  {
+   "k": "A monitor lizard about 1.3 m long from the Eocene of North America, a close relative of today's monitors and the first fossil lizard named from the continent. It hunted small animals and ate eggs, flicking its forked tongue to smell its way. It is the only known jawed vertebrate with four eyes: besides its two eyes it had two light-sensing eyes on top of its head.",
+   "v": "一种巨蜥，体长约1.3米，生活在始新世的北美洲，是今天巨蜥的近亲，也是这块大陆上第一种被命名的化石蜥蜴。它捕食小动物、吃蛋，用分叉的舌头嗅探方向。它是已知唯一有四只眼睛的有颌脊椎动物：除了两只眼睛，头顶上还有两只感光的眼。"
+  },
+  {
+   "k": "A mouse-sized multituberculate about 10 centimetres long from the Late Cretaceous deserts of Mongolia. Multituberculates were the rodents of the dinosaur age, with gnawing front teeth and cheek teeth carrying rows of little cusps for grinding seeds and plants. Kryptobaatar probably sheltered in burrows from the heat and from predators.",
+   "v": "一种生活在蒙古晚白垩世沙漠中、老鼠大小的多瘤齿兽，长约10厘米。多瘤齿兽是恐龙时代的“啮齿动物”，长着用于啃咬的门齿，颊齿上排列着一排排小尖突，用来研磨种子和植物。隐兽很可能躲在洞穴里避暑和躲避天敌。"
+  },
+  {
+   "k": "A nautiloid with a short, fat, curved shell about 12 cm long from the Silurian of Europe. The shell widened quickly to a swollen body chamber, but its opening was pinched into a narrow slit, so only the tips of its arms could reach out. It drifted slowly near the sea floor, catching small animals with its arms.",
+   "v": "一种鹦鹉螺类，壳短而粗、弯曲，长约12厘米，生活于志留纪的欧洲。它的壳迅速变宽，形成膨大的住室，但壳口却收窄成一条细缝，只有腕的尖端能伸出来。它在海底附近缓慢漂游，用腕捕捉小型动物。"
+  },
+  {
+   "k": "A nautilus-like cephalopod with a smooth, tightly coiled shell about 15 cm across, from the Eocene to the Miocene seas of the world. Inside, the walls between its chambers met the shell in deep, zigzag lines that gave it its name. Like the living nautilus it rose and sank by changing the gas in its shell and caught shrimp, fish and carrion with its many tentacles.",
+   "v": "一种形似鹦鹉螺的头足动物，光滑而紧密盘卷的壳直径约15厘米，生活在始新世至中新世的世界各地海洋中。在壳内，各气室之间的隔壁与外壳相交成深深的之字形缝合线，它的名字由此而来。和现生的鹦鹉螺一样，它靠改变壳中的气体来升降，用众多触手捕捉虾、鱼和腐肉。"
+  },
+  {
+   "k": "A palaeoniscoid, one of the early ray-finned fishes, about 15 centimetres long, from the Late Carboniferous swamps and lagoons of Ohio and Illinois, about 310 million years ago. Its slender body was covered in thick, shiny, diamond-shaped scales, and it had large eyes, a wide mouth full of small sharp teeth and an uneven tail with a long upper lobe. Early ray-finned fishes like it gave rise to almost all the fish alive today; it hunted small crustaceans and young fish.",
+   "v": "一种古鳕类，属于早期辐鳍鱼，长约15厘米，生活在约3.1亿年前美国俄亥俄州和伊利诺伊州的晚石炭世沼泽和潟湖中。它细长的身体覆盖着厚实而有光泽的菱形鳞片，有大眼睛、长满细小尖牙的宽嘴，以及上叶较长的歪形尾。像它这样的早期辐鳍鱼进化出了今天几乎所有的鱼类；它捕食小型甲壳动物和幼鱼。"
+  },
+  {
+   "k": "A petalodont, an extinct relative of the ratfishes, from the Bear Gulch Limestone of Montana, about 320 million years ago. Its body was almost a round, flat disc about as deep as it was long, with huge wing-like pectoral fins, a tall fin along the back and a small mouth with petal-shaped teeth. It probably swam slowly among the reefs, steering with its broad fins and nibbling small animals off sponges and the sea floor.",
+   "v": "一种瓣齿鲨类，是银鲛已灭绝的亲属，发现于美国蒙大拿州的熊峡石灰岩，生活在约3.2亿年前。它的身体几乎是一个圆而扁的圆盘，高度与长度相当，有一对巨大的翼状胸鳍、一道沿背部高耸的背鳍，以及长着花瓣状牙齿的小嘴。它可能在礁石间缓慢游动，用宽阔的鳍掌控方向，从海绵和海底啄食小动物。"
+  },
+  {
+   "k": "A plant-eating relative of crocodiles, about 2.5 metres long, from the Middle Triassic of Hunan, China, about 245 million years ago. It had no teeth at all, only a sharp horny beak (its species name, adentus, means \"toothless\"), and a tall sail of long spines along its back. Many skeletons were found together, so it probably lived in groups.",
+   "v": "一种植食性的鳄类亲戚，体长约2.5米，来自约2.45亿年前中国湖南的中三叠世。它完全没有牙齿，只有锋利的角质喙（其种名adentus意为“无齿”），背上还有一道由长棘构成的高帆。人们发现了许多聚集在一起的骨架，因此它很可能是群居的。"
+  },
+  {
+   "k": "A plant-eating synapsid about 1.2 metres long from the Early Permian of Texas, around 280 million years ago, a smaller relative of Cotylorhynchus. It had a tiny head with a short, overhanging snout and a huge, barrel-shaped body holding a long gut for digesting tough plants. Slow and bulky, it relied on its weight and strong clawed limbs rather than speed.",
+   "v": "一种植食性合弓动物，体长约1.2米，生活在约2.8亿年前二叠纪早期的得克萨斯，是杯鼻龙较小的亲戚。它的头极小，吻部短而前突，身体却是巨大的桶形，容纳着消化坚韧植物的长肠。它行动缓慢、身体笨重，依靠体重和有力的带爪四肢而不是速度保护自己。"
+  },
+  {
+   "k": "A predatory fish about 1.5 metres long, nicknamed the sabre-toothed herring for the pair of huge fangs at the front of its jaws. It was one of the most common fish of the Late Cretaceous seas and hunted smaller fish, while itself being eaten by mosasaurs, sharks and seabirds. Despite its name it was related to modern lizardfish, not herrings.",
+   "v": "一种长约1.5米的掠食性鱼类，因颚前端一对巨大的獠牙而得名“剑齿鲱”。它是晚白垩世海洋中最常见的鱼类之一，捕食较小的鱼，自己也被沧龙、鲨鱼和海鸟吃掉。尽管名字如此，它的近亲其实是现代的狗母鱼，而不是鲱鱼。"
+  },
+  {
+   "k": "A predatory sea snail from the Miocene seas of the Chesapeake Bay region, a relative of the murex snails. Its rust-red shell, one of the few fossil shells that keeps its colour, bore four tall, flat ribs spiralling round the whorls. It drilled holes through the shells of clams and barnacles to eat the animal inside.",
+   "v": "切萨皮克湾一带中新世海洋中的一种肉食性海螺，是骨螺的亲戚。它锈红色的壳是少数保留原色的化石贝壳之一，壳上有四条高而扁平的螺旋肋。它会在蛤蜊和藤壶的壳上钻孔，吃掉里面的软体。"
+  },
+  {
+   "k": "A primitive starfish relative several centimetres across, close to the common ancestor of sea stars and brittle stars. Its five broad, petal-shaped arms were stiffened by rows of rod-like plates running out from the middle of each arm like the ribs of a leaf. It lay on the sea floor and fed on detritus and organic films.",
+   "v": "一种原始的海星类亲戚，直径几厘米，接近海星和蛇尾的共同祖先。它五条宽阔的花瓣状腕由一排排杆状骨板支撑，这些骨板从每条腕的中线向外伸展，就像叶片的叶脉。它躺在海底，以碎屑和有机质薄膜为食。"
+  },
+  {
+   "k": "A quail-sized bird from the very end of the Cretaceous in Belgium, nicknamed the Wonderchicken. It is one of the oldest modern birds known, an early relative of both chickens and ducks, with long legs for wading along the shore. Its relatives survived the asteroid that wiped out the other dinosaurs.",
+   "v": "一种生活在白垩纪末期比利时、鹌鹑大小的鸟，绰号“奇迹鸡”。它是已知最古老的现代鸟类之一，是鸡和鸭共同的早期亲戚，长着适合在岸边涉水的长腿。它的亲族在那次消灭了其他恐龙的小行星撞击中幸存了下来。"
+  },
+  {
+   "k": "A quarter-sized crab from 95 million years ago with such an odd mix of features that scientists called it the platypus of crabs. It had huge unprotected eyes, a long narrow body and flat, paddle-like legs, and it probably swam in open water like a larva that never grew up. It hunted small animals in the coastal seas of what is now Colombia.",
+   "v": "一种生活在9500万年前、只有25美分硬币大小的螃蟹，其特征组合极为古怪，被科学家称为“螃蟹中的鸭嘴兽”。它长着没有保护的巨大眼睛、狭长的身体和扁平的桨状足，很可能像一只永远长不大的幼体那样在开阔水域中游泳。它在今哥伦比亚一带的沿海捕食小动物。"
+  },
+  {
+   "k": "A radiodont about 20 cm long from the Burgess Shale of Canada, a cousin of Anomalocaris with a long, pointed shell jutting forward from its head. Its front limbs carried rows of long, comb-like spines that it used to sweep through the mud and water for small animals, and flaps along its body let it swim. Its armoured head makes it hard to hurt, and its rakes give it a fair bite.",
+   "v": "一种体长约 20 厘米的放射齿目动物，来自加拿大的伯吉斯页岩，是奇虾的近亲，头部有一块向前突出的尖长甲壳。它的前附肢上长着一排排梳子般的长刺，用来在泥中和水里扫捕小动物，身体两侧的叶片让它能够游泳。带甲的头部让它很难受伤，耙状的附肢也颇具杀伤力。"
+  },
+  {
+   "k": "A radiodont up to about 30 cm long from the Burgess Shale of Canada, whose head was hidden under a huge horseshoe-shaped shell, nicknamed after the Millennium Falcon spaceship. It cruised low over the seabed and sifted the mud with rake-like front limbs bearing rows of fine spines. Its great shield makes it very hard to harm, but it is slow and only a weak fighter.",
+   "v": "一种体长可达约 30 厘米的放射齿目动物，来自加拿大的伯吉斯页岩，头部藏在一块巨大的马蹄形甲壳下，因形似电影中的“千年隼号”飞船而得名。它贴着海底缓缓游动，用长着细密刺列的耙状前附肢筛滤泥沙。巨大的甲盾让它极难被伤害，但它行动迟缓，战斗力很弱。"
+  },
+  {
+   "k": "A rat-sized early mammal about 17 cm long from the Late Jurassic of north-eastern China, about 160 million years ago. It belonged to the multituberculates, the 'rodents of the Mesozoic', named for the many cusps on their grinding teeth, and ate seeds, plants, insects and worms. Its very flexible ankles could swivel, letting it scamper over the ground, dig and climb. Multituberculates went on to thrive for over 100 million years.",
+   "v": "一种大小如鼠的早期哺乳动物，体长约17厘米，生活在约1.6亿年前的中国东北晚侏罗世。它属于多瘤齿兽，即“中生代的啮齿动物”，因研磨齿上有许多齿尖而得名，以种子、植物、昆虫和蠕虫为食。它极其灵活的踝关节可以旋转，使它能在地面奔跑、挖掘和攀爬。多瘤齿兽此后繁盛了一亿多年。"
+  },
+  {
+   "k": "A ray-finned fish about 30 centimetres long, one of the most common fossils of the Late Permian Zechstein Sea of Germany and England, around 257 million years ago. Its spindle-shaped body was armoured with shiny, diamond-shaped scales, and it had a big eye, small sharp teeth and a strongly upturned tail. It hunted small animals in a sea whose deep water was often without oxygen.",
+   "v": "一种辐鳍鱼，体长约30厘米，是约2.57亿年前二叠纪晚期德国和英格兰蔡希斯坦海最常见的化石之一。它纺锤形的身体披着闪亮的菱形鳞片，眼睛很大，牙齿小而尖，尾巴强烈上翘。它在一片深层海水常常缺氧的海洋中捕食小动物。"
+  },
+  {
+   "k": "A reef-building stony coral of the warm Late Jurassic seas of Europe, about 160-150 million years ago. Its bushy colonies, up to about half a metre across, were made of separate ribbed branches that forked again and again, each ending in a cup 1-2 cm wide holding a single large polyp. The polyps caught plankton with their tentacles, and algae living in their tissues fed them with sunlight, as in reef corals today.",
+   "v": "欧洲晚侏罗世温暖海洋中的一种造礁石珊瑚，生活在约1.6亿至1.5亿年前。它丛状的群体直径可达约半米，由一根根分离的、带棱的枝条组成，枝条反复分叉，每根末端是一个直径1至2厘米的杯，里面住着一只大型珊瑚虫。珊瑚虫用触手捕捉浮游生物，体内共生的藻类则借助阳光为它们提供养分，和今天的造礁珊瑚一样。"
+  },
+  {
+   "k": "A relative of the trilobites, about 4 cm long, whose body was covered by just two smooth, unmineralised shields, one over the head and one over the trunk. It had long antennae and many pairs of legs with spiny inner edges, which it probably used to catch and shred small animals and carrion on the seafloor. Without a hard, chalky shell it is only moderately protected.",
+   "v": "一种三叶虫的近亲，体长约 4 厘米，身体只覆盖着两块光滑、未矿化的背甲，一块盖住头部，一块盖住躯干。它有长长的触角和许多对内缘带刺的足，可能用来捕捉和撕碎海底的小动物和腐肉。由于没有坚硬的钙质外壳，它的防护只能算一般。"
+  },
+  {
+   "k": "A rosette-shaped disc about 12 cm across from South Australia, about 555 million years old: a smooth central dome surrounded by rings of rounded lobes that grew larger toward the edge. First described as a jellyfish, it may instead have been a holdfast or a microbial colony. It is named after the geologist and polar explorer Douglas Mawson.",
+   "v": "一种玫瑰花形的圆盘，直径约12厘米，发现于南澳大利亚，生活在约5.55亿年前：光滑的中央圆顶周围环绕着一圈圈圆形瓣片，越靠外缘越大。它最初被描述为水母，但也可能是固着器或微生物群落。它的名字来自地质学家、极地探险家道格拉斯·莫森。"
+  },
+  {
+   "k": "A salamander about 23 cm long from the lakes of the Valley of Mexico that never grows up: it keeps its feathery external gills and lives in water all its life, yet breeds. It can regrow lost legs, its tail, parts of its spinal cord and even its heart. Once common, it now survives wild only in the canals of Xochimilco.",
+   "v": "一种体长约23厘米的蝾螈，来自墨西哥谷地的湖泊，永远“长不大”：它终生保留羽毛状的外鳃，一生都生活在水中，却能繁殖。它能再生失去的腿、尾巴、部分脊髓甚至心脏。它曾经很常见，如今野生个体只残存于霍奇米尔科的运河中。"
+  },
+  {
+   "k": "A sand tiger shark about 3 m long from the Paleocene to the Oligocene seas of the world. It had long, slender, finely grooved teeth for catching slippery fish, and its teeth are among the most common shark fossils of the time. Its remains even reached the Arctic, which was warm then.",
+   "v": "一种沙虎鲨，体长约3米，生活在古新世至渐新世的世界各地海洋中。它的牙齿细长，带有细纹，适合抓住滑溜的鱼，是那个时代最常见的鲨鱼化石之一。它的遗骸甚至到达了当时温暖的北极。"
+  },
+  {
+   "k": "A saucer-shaped sponge up to about 10 cm across from the Silurian, especially common in Tennessee. Its skeleton was built of large star-shaped spicules of calcite, each with six rays, which cover the whole surface. It lay on the sea floor and filtered food from water drawn in through its pores.",
+   "v": "一种碟形海绵，直径可达约10厘米，生活于志留纪，在美国田纳西州尤为常见。它的骨骼由大型星状方解石骨针构成，每根骨针有六条辐射，覆盖整个表面。它平躺在海底，通过孔隙吸入海水并从中滤食。"
+  },
+  {
+   "k": "A sea lily about 30 centimetres tall from the Middle Devonian reefs of Germany, about 385 million years ago. It had five broad, thick arms that closed tightly together into a cone like a cypress cone, and it opened them like a flower to catch food from the current. Its stalk anchored it among the corals and sponges of the reef.",
+   "v": "一种高约30厘米的海百合，约3.85亿年前生活在中泥盆世德国的礁石上。它有五条宽厚的腕，能紧紧合拢成像柏树球果一样的锥形，张开时像花朵一样从水流中捕捉食物。它的茎把它固定在礁石的珊瑚和海绵之间。"
+  },
+  {
+   "k": "A sea lily about 30 cm tall with a long, round stem, a rigid, cone-shaped cup of thick, ornamented plates and ten branching arms. It spread its arms like a fan in the current to catch food particles from the water. It was a common crinoid on the Late Ordovician sea floor of North America.",
+   "v": "一种高约30厘米的海百合，有一根细长的圆柱形茎，由厚实而带纹饰的骨板构成坚硬的圆锥形萼，还有十条分枝的腕。它在水流中把腕像扇子一样张开，捕捉水中的食物颗粒。它是北美奥陶纪晚期海底常见的海百合。"
+  },
+  {
+   "k": "A sea reptile about 5 metres long from the Middle Triassic of Guizhou, China, about 245 million years ago, with an extremely long neck made of over 30 vertebrae, much longer than its body. It may have used the long neck to reach fish quietly while its body stayed far behind, then snapped them up with fang-like teeth. A fossil with an unborn young inside shows it gave birth at sea, the first such find in its branch of reptiles.",
+   "v": "一种体长约5米的海生爬行动物，来自约2.45亿年前中国贵州的中三叠世，脖子极长，由30多节颈椎组成，远比身体还长。它也许利用长脖子悄悄接近鱼群，而身体远远留在后方，再用獠牙般的牙齿将鱼一口咬住。一件体内含有未出生幼崽的化石表明它在海中产仔，这是它所属的爬行动物分支中首次此类发现。"
+  },
+  {
+   "k": "A sea snail about 4 centimetres long from the Devonian seas of North America, with a loosely coiled, cap-shaped shell covered in hollow spines. It spent its whole adult life clamped onto a crinoid, right over its anus, and lived off the crinoid's waste or stolen food. Fossils of crinoids still carrying their snail are common.",
+   "v": "一种体长约4厘米的海螺，生活在泥盆纪北美的海洋中，松卷的帽形外壳上布满中空的刺。它成年后一生都牢牢附着在海百合身上，正好位于其肛门上方，靠海百合的排泄物或偷来的食物为生。至今仍常见背着螺的海百合化石。"
+  },
+  {
+   "k": "A sea snail about 5 cm across from the Silurian reefs of Gotland, Sweden, and England. Its low, top-shaped shell had a thin, flat frill running round the edge of every whorl like the brim of a hat, which gives it its name, 'winged'. The frill may have kept it from sinking into soft mud and made it hard for predators to grip. It crept over the sea floor grazing on films of microbes and debris.",
+   "v": "一种海螺，宽约5厘米，生活于瑞典哥得兰岛和英格兰的志留纪礁石中。它低矮的陀螺形外壳上，每一圈螺层的边缘都有一圈薄而平的褶边，就像帽檐一样，因此其名意为“有翼的”。这圈褶边可能防止它陷入软泥，并让捕食者难以抓住它。它在海底缓慢爬行，啃食微生物膜和碎屑。"
+  },
+  {
+   "k": "A sea urchin from the Early Carboniferous seas of North America, about 335 million years ago, and a close relative of the ancestors of all living sea urchins. Its round shell, about 5 centimetres across, was built of overlapping plates, each bearing one large knob on which sat a long, stout spine covered in small thorns. It crept slowly over the sea floor grazing on algae, its thorny spines a strong defence against predators.",
+   "v": "一种来自约3.35亿年前北美早石炭世海洋的海胆，与所有现生海胆的祖先关系密切。它圆形的壳直径约5厘米，由相互叠覆的骨板构成，每块骨板上有一个大瘤，瘤上长着一根粗长、布满小刺的棘。它在海底缓慢爬行，啃食藻类，多刺的长棘是抵御掠食者的有力防线。"
+  },
+  {
+   "k": "A sea-going relative of the living tuatara, about 60 cm long, from the Late Jurassic lagoons of southern Germany, about 150 million years ago. Its body became long and eel-like, with a narrow head, nostrils set far back, tiny limbs and an extremely long tail making up most of its length. It swam by waving its body from side to side and snapped up small fish.",
+   "v": "现生喙头蜥（楔齿蜥）的一种海生亲戚，体长约60厘米，生活在约1.5亿年前德国南部的晚侏罗世潟湖中。它的身体变得像鳗鱼一样细长，头部狭窄，鼻孔位置很靠后，四肢微小，极长的尾巴占了体长的大部分。它左右摆动身体游泳，捕食小鱼。"
+  },
+  {
+   "k": "A sheep-sized oreodont about 1.4 m long from the late Eocene and Oligocene of North America, one of the most common fossil mammals of the Badlands of South Dakota. It had a short face, short legs with four toes, a long tail and grinding teeth for leaves and grass. Oreodonts were a purely North American group of plant-eaters that grazed in large herds.",
+   "v": "一种绵羊大小的岳齿兽，体长约1.4米，生活在始新世晚期和渐新世的北美洲，是南达科他州恶地中最常见的化石哺乳动物之一。它脸短腿短，每只脚有四趾，尾巴很长，牙齿适合研磨树叶和草。岳齿兽是北美洲特有的植食动物，成大群吃草。"
+  },
+  {
+   "k": "A sheep-sized relative of wombats and koalas from the Miocene rainforests of northern Australia. Unlike its giant ground-living cousins, it had long, strongly clawed limbs and probably climbed trees to browse leaves, much like a koala. Whole family groups have been found together, mothers with young in the pouch.",
+   "v": "澳大利亚北部中新世雨林中一种绵羊大小的动物，是袋熊和树袋熊的亲戚。与它在地面生活的巨型近亲不同，它四肢修长、爪子强健，可能像树袋熊一样爬树吃树叶。人们曾发现整个家族的化石聚在一起，包括育儿袋中带着幼崽的母兽。"
+  },
+  {
+   "k": "A shrimp-like crustacean about 6 centimetres long, one of the most common animals in the Mazon Creek fossil beds of Illinois, about 309 million years old. It was a syncarid, a crustacean without the shield that covers the front of true shrimps, so every body segment shows; it had long antennae, spiny legs and a tail fan around a spiky tip. It swarmed in the rivers and lagoons of the coal swamps scavenging for food, and its relatives still live in fresh water today.",
+   "v": "一种长约6厘米、形似虾的甲壳动物，是美国伊利诺伊州约3.09亿年前马宗溪化石层中最常见的动物之一。它属于合虾类——这类甲壳动物没有真虾那样覆盖身体前部的头胸甲，因此每个体节都清晰可见；它有长长的触角、多刺的足，以及围绕着尖刺状末端的尾扇。它成群生活在煤沼的河流和潟湖中，以腐食为生，它的亲属至今仍生活在淡水中。"
+  },
+  {
+   "k": "A silvery, black-spotted fish usually 70-80 cm long that hatches in cold gravel rivers on both sides of the North Atlantic, grows up at sea and returns to spawn. Guided by smell, it finds the very river where it was born and leaps up waterfalls over 3 m high to reach its spawning grounds. Spawning males grow a hooked lower jaw.",
+   "v": "一种银色带黑斑的鱼，通常长70-80厘米，在北大西洋两岸寒冷的砾石河中孵化，在海中长大后再回河产卵。它凭嗅觉找到自己出生的那条河，跃上3米多高的瀑布到达产卵场。产卵期的雄鱼会长出钩状的下颌。"
+  },
+  {
+   "k": "A slender anaspid, a jawless fish about 8 cm long from the Silurian of southern Scotland. Unlike its relatives it was almost naked: only a crest of hooked scales along its back and a row of thin, rod-like bones over the gills. It swam with a big down-turned tail in lagoons and coastal waters and sucked up small food with its jawless mouth.",
+   "v": "一种身体细长的缺甲鱼类，体长约8厘米的无颌鱼，生活于志留纪，发现于苏格兰南部。与它的亲属不同，它几乎是“裸”的：只有背部一列钩状鳞片形成的脊，以及鳃部上方一排细杆状的骨头。它在潟湖和沿海水域中靠下弯的大尾巴游动，用无颌的嘴吸食小型食物。"
+  },
+  {
+   "k": "A slender sea scorpion about 15 cm long, known from exceptionally preserved fossils in South Africa that even show its muscles and gills. It had short, spiny front legs to grab prey, long walking legs and a pair of big swimming paddles ending in a claw. A quick hunter, it lived in cold seas at the end of the Ordovician.",
+   "v": "一种体形纤细的板足鲎（海蝎），长约15厘米，因南非保存极为精美、甚至能看到肌肉和鳃的化石而闻名。它有用来抓捕猎物的短而多刺的前肢、长长的步足和一对末端带爪的大型游泳桨肢。它是敏捷的猎手，生活在奥陶纪末期的寒冷海洋中。"
+  },
+  {
+   "k": "A slender spiny shark about 30 centimetres long from the Middle Devonian lakes of Scotland, about 390 million years ago. A sharp spine stood in front of each fin and its body was covered in tiny scales. It had no teeth and swam with its large mouth open, gulping small swimming prey, often in big shoals.",
+   "v": "一种体长约30厘米的细长棘鱼，约3.9亿年前生活在中泥盆世苏格兰的湖泊中。每个鳍前都竖着一根尖刺，身体覆盖着细小的鳞片。它没有牙齿，张着大嘴游动，吞食小型游动猎物，常常成大群活动。"
+  },
+  {
+   "k": "A slender worm several centimetres long, a cousin of the priapulid worms, whose body was divided into many fine rings studded with tiny plates. At its front was a proboscis ringed with small hooks that it could shoot out to grip the mud as it burrowed. It lived in and on the soft sea floor.",
+   "v": "一种长几厘米的细长蠕虫，是鳃曳动物的近亲，身体分成许多细小的环节，上面布满微小的骨片。它的前端有一个环生小钩的吻，钻穴时可以迅速伸出抓住泥土。它生活在柔软的海底之中和表面。"
+  },
+  {
+   "k": "A slender, eel-like jawless fish about 12 centimetres long from the Late Devonian of Miguasha in Quebec, about 380 million years ago. It had no armour, a long fin fold under its body and as many as 30 gill openings in a row. It fed on tiny particles and plankton and is one of the last of the anaspid-like fishes.",
+   "v": "一种细长如鳗的无颌鱼，体长约12厘米，约3.8亿年前生活在晚泥盆世魁北克的米瓜沙。它没有骨甲，身体下方有一条长长的鳍褶，一排多达30个鳃孔。它以微小颗粒和浮游生物为食，是最后的似缺甲鱼类之一。"
+  },
+  {
+   "k": "A slender, long-necked theropod about 1.7 metres long from the Late Jurassic of north-western China, about 160 million years ago. Its young had teeth, but the adults lost them all and had a horny beak instead, and they swallowed stones to grind plants in the gut: a meat-eater's descendant turned plant-eater. Its arms were tiny, with stubby fingers. Its name, 'mud lizard that could not escape', comes from skeletons found trapped in ancient mud pits.",
+   "v": "一种身体纤细、脖子修长的兽脚类恐龙，体长约1.7米，生活在约1.6亿年前的中国西北部晚侏罗世。幼年个体有牙齿，成年后牙齿全部脱落，换成角质喙，并吞下石子在胃中研磨植物：这是由肉食者后代转变而来的植食者。它的前肢极小，手指短粗。它的名字意为“无法逃脱的泥潭蜥蜴”，因为骨骼发现于远古泥坑中。"
+  },
+  {
+   "k": "A slender, upside-down cone up to about 15 cm tall from Newfoundland, about 565 million years old. It stood point-down in the sediment and widened to an open top, and may have been an early sponge that drew water in through its walls and pumped it out of the top. If so, it is one of the oldest sponges large enough to see.",
+   "v": "一种细长的倒圆锥，高可达约15厘米，发现于纽芬兰，生活在约5.65亿年前。它尖端朝下插在沉积物中，向上逐渐变宽，顶端开口；它可能是一种早期海绵，通过体壁吸入水流，再从顶端排出。如果真是如此，它就是已知最古老的肉眼可见的海绵之一。"
+  },
+  {
+   "k": "A slim, fast ambush hunter of the Middle Triassic seas, about 240 million years ago, shaped much like a modern garfish or barracuda. Its long, needle-like snout was lined with sharp teeth, and its dorsal and anal fins sat far back near the tail to give a sudden burst of speed. Saurichthys was one of the most widespread fishes of the Triassic, found from China to Europe.",
+   "v": "中三叠世约2.4亿年前海洋中一种身体细长、迅捷的伏击型猎手，外形很像现代的颌针鱼或金梭鱼。它长长的针状吻部排列着锋利的牙齿，背鳍和臀鳍远远靠后、接近尾部，能带来突然的爆发速度。龙鱼是三叠纪分布最广的鱼类之一，从中国到欧洲都有发现。"
+  },
+  {
+   "k": "A slim, fast predatory fish about 60 cm long from the Late Jurassic lagoons of Europe, about 150 million years ago, shaped like a garfish. Its upper jaw extended into a long, pointed snout well past the shorter lower jaw, and its body was covered in big, shiny scales. It darted after small fish near the surface. One fossil shows it entangled with a Rhamphorhynchus pterosaur that may have tried to catch it.",
+   "v": "一种身体修长、行动迅速的掠食性鱼类，体长约60厘米，生活在约1.5亿年前的欧洲晚侏罗世潟湖中，外形像颌针鱼。它的上颌延伸成一根尖长的吻，远远超出较短的下颌，身体覆盖着大而发亮的鳞片。它在水面附近追捕小鱼。有一件化石显示它与一只喙嘴翼龙缠在一起，那只翼龙可能曾试图捕捉它。"
+  },
+  {
+   "k": "A small ammonite of the Early Jurassic seas, about 180 million years ago, with a flat shell up to about 8 cm across. Its many slowly widening whorls barely overlap, so the shell looks like a coiled snake, and it is covered in fine ribs that fork as they cross the outer edge. It swarmed in such numbers that its shells pack whole layers of rock at Whitby, where they were sold as 'snakestones' with carved heads added.",
+   "v": "早侏罗世海洋中的一种小型菊石，生活在约1.8亿年前，扁平的壳直径可达约8厘米。它许多圈缓慢增宽的螺环几乎互不重叠，使壳看起来像一条盘绕的蛇，壳面布满细密的肋，肋在越过外缘时分叉。它数量极多，其壳在惠特比堆满整层岩石，人们曾给它们雕上蛇头，当作“蛇石”出售。"
+  },
+  {
+   "k": "A small armoured arthrodire about 30 centimetres long from Middle and Late Devonian rivers in Antarctica, about 380 million years ago. A tall, pointed plate stood up from the middle of its back like a shark fin, making it a spiky mouthful for predators. It lived near the bottom, picking up worms and small crustaceans.",
+   "v": "一种体长约30厘米的小型披甲节甲鱼，约3.8亿年前生活在中、晚泥盆世南极洲的河流中。背中央竖起一块高而尖的骨板，像鲨鱼的背鳍，让捕食者难以下口。它生活在水底，捡食蠕虫和小型甲壳动物。"
+  },
+  {
+   "k": "A small arthropod a few centimetres long from the Burgess Shale of Canada, with a rounded head shield, a broad segmented trunk and a short tail shield. Under its head it had a pair of small pincers in front of the mouth, the oldest known chelicerae, the feeding claws that spiders, scorpions and horseshoe crabs still use. A small but well-equipped predator.",
+   "v": "一种体长仅几厘米的小型节肢动物，来自加拿大的伯吉斯页岩，有圆形头甲、宽阔分节的躯干和短短的尾甲。它头部下方口前有一对小钳子，是已知最古老的螯肢，蜘蛛、蝎子和鲎至今仍用这种取食的螯来进食。它体型虽小，却是装备精良的掠食者。"
+  },
+  {
+   "k": "A small arthropod about 5 cm long from the Chengjiang biota of Yunnan, named after the qilin, a chimera of Chinese legend. It mixed five eyes like Opabinia's and grasping front limbs like those of Anomalocaris with the hardened, segmented body of a true arthropod, a key link in arthropod evolution. Armed with spiny claws and keen eyes, it is a capable small hunter.",
+   "v": "一种体长约 5 厘米的小型节肢动物，来自中国云南的澄江生物群，以中国传说中的瑞兽麒麟命名。它兼具欧巴宾海蝎般的五只眼睛、奇虾般的抓握前肢，以及真节肢动物坚硬分节的身体，是节肢动物进化中的关键环节。凭借带刺的爪和敏锐的眼睛，它是一种能干的小型猎手。"
+  },
+  {
+   "k": "A small chelicerate a few centimetres long, related to the sea scorpions, with a broad, rounded head shield, a short, wide 'buckler' of three fused segments and a narrow tail of nine segments ending in a spine. Its fossils come from ancient tidal flats in Tennessee. It walked on its legs over the shallow sea floor, hunting small animals.",
+   "v": "一种长仅几厘米的小型螯肢动物，与板足鲎（海蝎）有亲缘关系：头甲宽而圆，其后是由三个愈合体节构成的短而宽的“盾板”，再往后是由九节组成、末端带刺的细长尾部。它的化石出自田纳西州的古代潮坪。它用附肢在浅海海底行走，捕食小型动物。"
+  },
+  {
+   "k": "A small cup- or bag-shaped animal a few centimetres high from Namibia, about 545 million years old. Its walls were quilted into narrow tube-like chambers that zig-zagged up the sides, and it lived partly buried in the sand. It belonged to the same strange group as Ernietta and Pteridinium.",
+   "v": "一种杯形或袋形的小型动物，高几厘米，发现于纳米比亚，生活在约5.45亿年前。它的体壁被缝成狭窄的管状小室，沿体侧呈之字形向上排列，部分身体埋在沙中生活。它与恩尼埃塔虫和蕨叶虫同属一个奇特的类群。"
+  },
+  {
+   "k": "A small deer-like ruminant that lived on the Miocene island of Gargano, now part of Italy. It had five horns, one long horn up the middle of the nose and a pair above each eye, and long, sabre-like upper canines like a musk deer. With no large predators on its island, it evolved into several sizes of this strange form.",
+   "v": "生活在中新世加尔加诺岛（今属意大利）上的一种小型似鹿反刍动物。它长着五只角：鼻子正中一只长角，每只眼睛上方各一对，还有像麝一样的长长剑状上犬齿。由于岛上没有大型捕食者，它演化出了多种体形大小的奇特形态。"
+  },
+  {
+   "k": "A small disc a few centimetres wide ringed by a starburst of long, thin, tentacle-like rays, found from Newfoundland to Russia. It was once taken for a sea anemone, but many now think it was the anchoring holdfast of a frond. Its rays spread across the mat and held it firmly in place.",
+   "v": "一种宽几厘米的小圆盘，周围环绕着星芒般细长的触手状辐条，从纽芬兰到俄罗斯都有发现。它曾被当作海葵，但现在许多人认为它是某种叶状体的固着器。它的辐条在微生物席上铺开，把它牢牢固定在原地。"
+  },
+  {
+   "k": "A small early ray-finned fish about 20 centimetres long from the Gogo reef of Western Australia, about 380 million years ago. It was a quick, torpedo-shaped swimmer with very large eyes, shiny diamond-shaped scales and a shark-like upturned tail. Its perfectly preserved fossils show how the ancestors of nearly all of today's fishes were built.",
+   "v": "一种体长约20厘米的早期辐鳍鱼，约3.8亿年前生活在西澳大利亚的戈戈礁。它游得快，身体呈鱼雷形，眼睛很大，有闪亮的菱形鳞片和像鲨鱼一样上翘的尾巴。它保存完美的化石展示了今天几乎所有鱼类祖先的身体构造。"
+  },
+  {
+   "k": "A small early relative of the ichthyosaurs, about 40 centimetres long, from the Early Triassic of Anhui, China, about 248 million years ago. It had a short, toothless snout, probably for sucking in soft prey, and large flippers with flexible wrists that may have let it crawl onto the shore like a seal. It shows how the dolphin-like ichthyosaurs began, soon after the end-Permian mass extinction.",
+   "v": "鱼龙的一种小型早期亲戚，体长约40厘米，来自约2.48亿年前中国安徽的早三叠世。它的吻部短而无齿，可能用来吸食柔软的猎物；它有大型鳍状肢和灵活的腕部，也许能像海豹一样爬上岸。它展示了外形似海豚的鱼龙是如何在二叠纪末大灭绝后不久起源的。"
+  },
+  {
+   "k": "A small early tetrapod about 25 centimetres long whose name means 'creature from the black lagoon', found in the rocks of an ancient volcanic lake in Scotland, about 335 million years old. It mixed features of several early tetrapod groups, with a short head, large keyhole-shaped eye openings and slim limbs, and is thought to be a small relative of the baphetids. It probably hunted insects, scorpions and other small animals around the warm lake shores.",
+   "v": "一种长约25厘米的小型早期四足动物，名字意为“黑湖妖”，发现于苏格兰一处古火山湖的岩层中，距今约3.35亿年。它融合了几个早期四足动物类群的特征，头部短，有一对钥匙孔形的大眼眶和纤细的四肢，被认为是斜眼螈类的一个小型亲属。它可能在温暖的湖岸边捕食昆虫、蝎子和其他小动物。"
+  },
+  {
+   "k": "A small freshwater shark about 70 centimetres long from the Early Permian lakes and rivers of Europe. It had an eel-like body with a long ribbon of a dorsal fin running back to a pointed tail, and a long, straight spine sticking back from the top of its head. It hunted small fish and other little animals with its two-pronged teeth.",
+   "v": "一种小型淡水鲨鱼，体长约70厘米，生活在二叠纪早期欧洲的湖泊和河流中。它身体像鳗鱼，一条长带状的背鳍一直延伸到尖尾，头顶后方伸出一根又长又直的棘刺。它用双叉状的牙齿捕食小鱼和其他小动物。"
+  },
+  {
+   "k": "A small galeaspid, a jawless armoured fish a few centimetres long from the early Silurian of Zhejiang, China. It had a rounded, horseshoe-shaped bony head shield with the eyes on top and a slit-like opening on its snout. Its braincase, preserved in fine detail and studied with X-ray scans, showed how the nose and brain of early vertebrates were arranged before jaws evolved. It strained food from the mud of shallow seas.",
+   "v": "一种小型盔甲鱼类，体长仅几厘米的无颌甲胄鱼，生活于早志留世，发现于中国浙江。它有圆钝的马蹄形骨质头甲，两眼位于头顶，吻部有一个裂缝状开口。它的脑颅保存得极为精细，经X射线扫描研究，揭示了颌出现之前早期脊椎动物的鼻和脑是如何排列的。它从浅海的泥中滤食。"
+  },
+  {
+   "k": "A small gliding lizard about 15 centimetres long from the Early Cretaceous forests of China. Eight very long ribs on each side held out a skin wing, which it spread to glide between trees like the flying dragons of Asia today. It caught insects in the branches.",
+   "v": "一种生活在中国早白垩世森林中的小型滑翔蜥蜴，长约15厘米。身体两侧各有八根极长的肋骨撑起一张皮膜翼，它展开翼膜在树木之间滑翔，就像今天亚洲的飞蜥一样。它在枝叶间捕食昆虫。"
+  },
+  {
+   "k": "A small heterodontosaurid dinosaur about 70 cm long from the Late Jurassic of north-eastern China, about 158 million years ago. It is famous for a crest of long, stiff bristles, up to 6 cm long, running along its back and tail. Because it belongs to the plant-eating branch of dinosaurs, far from the feathered meat-eaters, it suggests that fuzzy body coverings may have been widespread among dinosaurs. Like its relatives it had a beak and small fangs.",
+   "v": "一种体长约70厘米的小型异齿龙类恐龙，生活在约1.58亿年前的中国东北晚侏罗世。它以背部和尾巴上一列长达6厘米的又长又硬的鬃毛而闻名。由于它属于恐龙中的植食类群，与长羽毛的肉食恐龙相距甚远，这表明毛状体表覆盖物可能在恐龙中十分普遍。和它的亲戚一样，它有喙和小小的獠牙。"
+  },
+  {
+   "k": "A small land crocodile about 75 centimetres long from Late Cretaceous Madagascar, with a short, blunt, pug-nosed face. Its leaf-shaped, many-cusped teeth suggest it ate plants, very unlike any crocodile living today. Its back was covered in bony plates, and it may have dug burrows.",
+   "v": "一种生活在晚白垩世马达加斯加的小型陆生鳄类，长约75厘米，脸短而钝，像狮子狗一样扁鼻。它叶片状、多尖的牙齿表明它以植物为食，与今天任何鳄鱼都截然不同。它背上覆盖着骨板，可能还会挖掘洞穴。"
+  },
+  {
+   "k": "A small lobe-finned fish about 35 centimetres long that lived on a tropical reef in Western Australia about 380 million years ago. It had large eyes and big breathing holes on top of its head, and its front fins already contained the same bones as our upper arm and forearm. It lurked among the reef and snapped up small fish and shrimp-like prey.",
+   "v": "一种体长约35厘米的小型肉鳍鱼，约3.8亿年前生活在西澳大利亚的热带礁石上。它眼睛很大，头顶有大大的呼吸孔，前鳍里已经有了与我们的上臂和前臂相同的骨头。它潜伏在礁石间，捕食小鱼和虾类等小猎物。"
+  },
+  {
+   "k": "A small marrellomorph arthropod a few centimetres across, a late cousin of the Cambrian Marrella. Its rounded head shield bore three pairs of long, forked and branching spines that gave it a lacy, star-like outline, and under it a short, many-segmented body carried feathery legs. It probably fed on detritus just above the sea floor.",
+   "v": "一种宽仅几厘米的小型马尔三叶形节肢动物，是寒武纪马尔虫的晚期近亲。它圆形的头甲上长着三对细长、末端分叉且带有侧枝的棘刺，使它的轮廓像一片镂空的星形花边；头甲下方是由许多小体节组成的短小身体，长着羽状附肢。它很可能在紧贴海底的水层中以碎屑为食。"
+  },
+  {
+   "k": "A small marrellomorph arthropod about 5 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago, one of the last relatives of the Cambrian Marrella. Its head shield was shaped like a six-pointed star with long spiny rays, and it had long antennae and many feathery legs. It swam just above the sea floor, sifting the mud for food.",
+   "v": "一种小型马尔三叶形虫类节肢动物，宽约5厘米，约4亿年前生活在早泥盆世德国的洪斯吕克海，是寒武纪马尔虫最后的亲戚之一。它的头甲呈六角星形，伸出长长的带刺辐条，还有长触角和许多羽状的腿。它在海底上方游动，筛滤泥中的食物。"
+  },
+  {
+   "k": "A small nectridean amphibian about 30 centimetres long from the Late Carboniferous coal swamps of Ireland and England, about 310 million years ago. It had a newt-like body with short legs, a long, flattened swimming tail and a flat head with short horns at the back corners of the skull, an early version of the boomerang-shaped head of its later relative Diplocaulus. It lived in swamp pools and caught small invertebrates and fish.",
+   "v": "一种小型游螈类两栖动物，长约30厘米，生活在约3.1亿年前爱尔兰和英格兰的晚石炭世煤沼中。它身体像蝾螈，四肢短，有一条扁长的游泳尾巴，扁平的头部在头骨后角长着短角，这是其后来的亲戚笠头螈那回旋镖形头部的早期版本。它生活在沼泽水塘中，捕食小型无脊椎动物和鱼类。"
+  },
+  {
+   "k": "A small open-water trilobite whose head was dominated by two huge, bulging eyes that gave it almost all-round vision. Instead of crawling on the bottom it swam in the upper waters, and it spread so widely that it is found on many Ordovician continents. It probably fed on tiny plankton.",
+   "v": "一种生活在开阔水域的小型三叶虫，头部几乎被两只巨大而凸出的眼睛占满，使它拥有近乎全方位的视野。它不在海底爬行，而是在上层水域中游泳，分布极广，在奥陶纪的许多大陆上都有发现。它很可能以微小的浮游生物为食。"
+  },
+  {
+   "k": "A small plant-eating anomodont about 50 centimetres long from the Late Permian of Russia, around 255 million years ago, and the oldest known backboned animal adapted to climbing trees. It had long fingers and toes with a grasping first digit and a long tail that probably gripped branches, and it chopped leaves with serrated teeth. Many skeletons found together suggest it lived in groups.",
+   "v": "一种小型植食性异齿类，体长约50厘米，生活在约2.55亿年前二叠纪晚期的俄罗斯，是已知最早适应爬树的脊椎动物。它的手指和脚趾很长，第一指能抓握，长尾巴可能能缠住树枝；它用带锯齿的牙齿切碎树叶。许多骨骼被一起发现，说明它们可能群居。"
+  },
+  {
+   "k": "A small radiodont from the Burgess Shale of Canada, preserved in hundreds of fossils that even keep its brain. Besides its two big stalked eyes it had a large third eye in the middle of its head, and its front limbs bore rows of long, hooked spines for seizing prey. A quick, sharp-eyed hunter, it strikes hard but has little armour.",
+   "v": "一种小型放射齿目动物，来自加拿大的伯吉斯页岩，留下了数百件化石，有的甚至保存了大脑。除了两只带柄的大眼睛外，它头部中央还有一只大大的第三只眼，前附肢上长着成排带钩的长刺，用来抓捕猎物。它是一种敏捷、目光锐利的猎手，攻击凶猛，但几乎没有铠甲。"
+  },
+  {
+   "k": "A small sail-backed synapsid, a distant relative of mammals, about 70 centimetres long from Late Carboniferous rocks near Garnett, Kansas, about 302 million years old. Like its later cousin Edaphosaurus it carried a tall sail on long spines along its back, studded with small knobby crossbars, but its sharp teeth show that it ate insects rather than plants. The sail may have helped it warm up in the morning sun or impress rivals.",
+   "v": "一种小型背帆合弓类，是哺乳动物的远亲，长约70厘米，发现于美国堪萨斯州加尼特附近约3.02亿年前的晚石炭世岩层。和它后来的近亲基龙一样，它背上的长棘撑起一面高高的帆，帆上点缀着小小的瘤状横枝，但它锋利的牙齿表明它吃的是昆虫而不是植物。这面帆可能帮助它在早晨的阳光下取暖，或用来震慑对手。"
+  },
+  {
+   "k": "A small sauropod about 9 metres long from mid-Cretaceous Niger with a short neck and a broad, straight-edged muzzle like a vacuum cleaner. Its mouth held over 500 slender teeth, replaced as often as every two weeks, and it held its head low to crop ferns and horsetails like a lawnmower. Its lightly built skull had walls thin enough to see light through.",
+   "v": "一种生活在白垩纪中期尼日尔、长约9米的小型蜥脚类恐龙，脖子较短，嘴巴宽阔平直，像吸尘器的吸头。它嘴里有500多颗细长的牙齿，最快每两周就更换一次；它把头低垂，像割草机一样啃食蕨类和木贼。它轻巧的头骨骨壁薄得可以透光。"
+  },
+  {
+   "k": "A small, curved tube a few centimetres long from southern China, about 550 million years old. It was built as a stack of nested funnels with flared rims, like a pile of ice-cream cones, from tough organic material that was barely mineralised. A close relative of Cloudina, it shows what tube-dwelling animals were like just before skeletons became common.",
+   "v": "一种弯曲的小管，长几厘米，发现于中国南方，生活在约5.5亿年前。它由一个个边缘外翻的漏斗层层套叠而成，像一摞冰淇淋蛋筒，材质是几乎没有矿化的坚韧有机物。作为克劳德管虫的近亲，它展示了骨骼普及之前管栖动物的样子。"
+  },
+  {
+   "k": "A small, eel-shaped lungfish from the Early Permian of Texas, Oklahoma and Kansas, around 290 million years ago. It lived in ponds and streams that dried out in the hot season and survived by digging a burrow in the mud, sealing itself in and breathing air until the rains returned; some fossils are still inside their burrows. It crushed small animals with its ridged tooth plates.",
+   "v": "一种体形像鳗鱼的小型肺鱼，生活在约2.9亿年前二叠纪早期的得克萨斯、俄克拉何马和堪萨斯。它栖息在旱季会干涸的池塘和溪流中，靠在泥里挖洞、把自己封在洞中呼吸空气熬到雨季归来而生存；有些化石至今仍在洞穴里。它用带棱的齿板压碎小动物。"
+  },
+  {
+   "k": "A small, flat disc about 3 cm across from the White Sea coast of Russia, about 555 million years old, built on three-fold symmetry like its relative Tribrachidium. Three grooves met at its centre, fine branching channels ran out from them, and its edge carried a fringe of slender rays. The channels may have carried water and food through its body.",
+   "v": "一种扁平的小圆盘，直径约3厘米，发现于俄罗斯白海沿岸，生活在约5.55亿年前，和它的亲戚三臂虫一样呈三辐对称。三条沟在中心交汇，细小的分枝沟道从中伸出，边缘有一圈纤细的辐条。这些沟道可能在体内输送水和食物。"
+  },
+  {
+   "k": "A small, flat relative of the giant millipede Arthropleura, about 8 centimetres long, from Early and Middle Devonian swamps in Germany and North America. Its body was covered by broad tergites with side lobes, giving it the look of a low, armoured mat. It crawled through the leaf litter of the first forests, feeding on rotting plants.",
+   "v": "巨型节胸蜈蚣的一种小型扁平亲戚，体长约8厘米，生活在早、中泥盆世德国和北美的沼泽中。它的身体覆盖着带侧叶的宽大背板，看上去像一块低矮的装甲垫。它在最早森林的落叶层中爬行，以腐烂的植物为食。"
+  },
+  {
+   "k": "A small, flat trilobite about 3 cm long with a long thorax of fourteen narrow segments and tiny eyes. In one famous rock bed in New York its bodies were turned to golden pyrite with their legs and long antennae intact, giving one of the first clear views of a trilobite's underside. It lived on muddy, oxygen-poor sea floors, picking food particles out of the mud.",
+   "v": "一种长约3厘米的扁平小型三叶虫，胸部很长，由十四个窄体节组成，眼睛很小。在纽约一处著名的岩层中，它的遗体被金黄色的黄铁矿置换，附肢和长触角都完整保存下来，是人们最早清楚看到三叶虫腹面样貌的例子之一。它生活在缺氧的泥质海底，从淤泥中拣食食物颗粒。"
+  },
+  {
+   "k": "A small, glassy-pink shrimp-like crustacean about 6 cm long, yet perhaps the most abundant wild animal on Earth by weight. Swarms with up to 10,000 animals in a cubic metre graze on algae in the Southern Ocean, and almost everything there, from penguins and seals to blue whales, depends on them. It glows with blue-green light organs.",
+   "v": "一种小型、玻璃般透明的粉色似虾甲壳动物，体长仅约6厘米，但按总重量计可能是地球上数量最多的野生动物。每立方米多达一万只的磷虾群在南大洋中啃食藻类，从企鹅、海豹到蓝鲸，那里几乎所有动物都依赖它们生存。它身上有发出蓝绿色光的发光器。"
+  },
+  {
+   "k": "A small, goblet-shaped animal from the Burgess Shale of Canada and Chengjiang in China: a cup on a slender stalk, ringed at the top by about eighteen stiff, petal-like plates. Its U-shaped gut, with mouth and anus both opening at the top of the cup, suggests a kinship with the tiny entoprocts of today. A defenceless little filter feeder.",
+   "v": "一种高脚杯状的小型动物，来自加拿大的伯吉斯页岩和中国的澄江：细长的柄上托着一个杯子，杯口环绕着约十八片坚硬的花瓣状薄片。它的消化道呈 U 形，口和肛门都开在杯顶，暗示它与今天微小的内肛动物有亲缘关系。它是一种毫无防御能力的小型滤食者。"
+  },
+  {
+   "k": "A small, leaf-shaped swimmer a few centimetres long from the Chengjiang biota of Yunnan, China, with a row of muscle blocks along its body and gill arches at the front. Its place in the tree of life is debated, but it is often seen as an early chordate or a close relative of the ancestors of vertebrates. It filtered food from the water and has no defence but flight.",
+   "v": "一种体长几厘米的小型叶状游泳动物，来自中国云南的澄江生物群，身体上有一列肌节，前部有鳃弓。它在生命之树中的位置存在争议，但常被视为早期脊索动物，或脊椎动物祖先的近亲。它从水中滤食，除了逃跑别无防御手段。"
+  },
+  {
+   "k": "A small, light predator, about 60 centimetres long, from the Early Triassic of South Africa, about 245 million years ago, close to the common ancestor of crocodiles and dinosaurs. It had a narrow head with sharp, curved teeth, two rows of small bony plates down its back, a long tail and hind legs longer than its arms. It may have run on its hind legs for short bursts when chasing insects and small reptiles.",
+   "v": "一种小型轻巧的掠食者，体长约60厘米，来自约2.45亿年前南非的早三叠世，与鳄类和恐龙的共同祖先十分接近。它头部狭窄，长着锋利弯曲的牙齿，背部有两列小骨板，尾巴很长，后肢比前肢长。在追逐昆虫和小型爬行动物时，它也许能用后肢短距离冲刺奔跑。"
+  },
+  {
+   "k": "A small, long-legged, feathered dinosaur about a metre long from the Late Cretaceous deserts of Mongolia. Its stubby, powerful arms each ended in one big thumb claw, probably used to break open termite nests like an anteater. A fast runner with a slender head, it fed on insects.",
+   "v": "一种生活在蒙古晚白垩世沙漠中、长约1米、腿长而有羽毛的小型恐龙。它短粗有力的前肢末端各只有一根大拇指爪，很可能像食蚁兽一样用来扒开白蚁巢。它奔跑迅速，头部细长，以昆虫为食。"
+  },
+  {
+   "k": "A small, long-snouted mammal about 20 centimetres long from the Late Cretaceous of Mongolia, an early relative of placental mammals. Its long hind legs and fused shin bones suggest it hopped like an elephant shrew. It sniffed out insects among the dunes and scrub with its long, mobile nose.",
+   "v": "一种生活在蒙古晚白垩世、长约20厘米、吻部细长的小型哺乳动物，是有胎盘类哺乳动物的早期亲戚。它后腿很长，胫骨愈合，表明它可能像象鼩一样跳跃前进。它用灵活的长鼻子在沙丘和灌丛间嗅寻昆虫。"
+  },
+  {
+   "k": "A small, rounded trilobite a few centimetres long from the middle Cambrian of Utah, with a broad head shield, thirteen body segments and a tiny tail shield. It lived in huge numbers on soft, oxygen-poor mud, sifting the sediment for food, and is probably the most collected trilobite in the world. Lightly armoured and harmless, it survives by sheer numbers.",
+   "v": "一种体长仅几厘米的小型圆形三叶虫，来自美国犹他州的寒武纪中期地层，头甲宽阔，身体有十三个体节，尾甲很小。它成群生活在松软、缺氧的泥底上，筛滤沉积物取食，可能是世界上被收藏最多的三叶虫。它铠甲单薄、毫无攻击性，全靠数量取胜。"
+  },
+  {
+   "k": "A small, shrimp-like crustacean with a long, narrow, pod-shaped shell of two thin valves pointed at both ends, a short abdomen and a forked tail. It swam and drifted in the open sea, which is why its remains are so often found among graptolites. It strained tiny food particles from the water with its leaf-like legs.",
+   "v": "一种形似小虾的甲壳动物，长而窄的豆荚形外壳由两片两端尖细的薄壳瓣组成，腹部短小，尾部分叉。它在开阔海域中游泳和漂浮，因此其遗骸常与笔石一同被发现。它用叶片状的附肢从水中滤取微小的食物颗粒。"
+  },
+  {
+   "k": "A small, six-sided pyramid a few centimetres tall from the White Sea coast of Russia, about 555 million years old, its faces crossed by fine ribs. It resembles the conulariids, cone-shaped relatives of jellyfish common in later seas, and may be one of the oldest of them. Its stiff, ribbed sheath protected it while tentacles at the open top caught small prey.",
+   "v": "一种高几厘米的六面小金字塔，发现于俄罗斯白海沿岸，生活在约5.55亿年前，各面布满细横肋。它很像锥石类，即后来海洋中常见的锥形水母亲戚，可能是这一类群最古老的成员之一。坚硬带肋的外鞘保护着它，顶端开口处的触手则捕捉小型猎物。"
+  },
+  {
+   "k": "A small, slender early relative of the sharks from the early Silurian of Chongqing, China, described in 2022. Its long body was covered in tiny shark-like scales, but its shoulders were boxed in large bony plates like those of placoderms. This mix shows that the first cartilaginous fishes still carried armour. It was a quick little hunter of tiny animals.",
+   "v": "一种小而细长的鲨鱼早期近亲，生活于早志留世，发现于中国重庆，于2022年命名。它修长的身体覆盖着细小的鲨鱼样鳞片，肩部却像盾皮鱼一样被大块骨板包裹。这种特征组合表明最早的软骨鱼类仍然披着铠甲。它是一种敏捷的小型猎手，捕食微小的动物。"
+  },
+  {
+   "k": "A small, slender marine reptile, about 25 centimetres long, from the Middle Triassic of Guizhou, China, about 240 million years ago, and an early relative of the plesiosaurs. It had a small head with needle-like teeth on a long neck and swam with paddle-like limbs. Some fossils hold unborn young, showing that it gave birth to live babies in the water.",
+   "v": "一种小而纤细的海生爬行动物，体长约25厘米，来自约2.4亿年前中国贵州的中三叠世，是蛇颈龙的早期亲戚。它长长的脖子上顶着一个小脑袋，长有针状牙齿，用桨状的四肢游泳。一些化石中保存着未出生的幼崽，表明它在水中直接产下活的幼仔。"
+  },
+  {
+   "k": "A small, smooth, oval clam about 2 cm long that lived half-buried in the soft sea floor, feeding on organic matter in the mud. It is famous for the eight pairs of separate muscle scars inside its shell, like those of simpler single-shelled molluscs, a clue to how bivalves evolved.",
+   "v": "一种长约2厘米的光滑椭圆形小蛤，半埋在柔软的海底，以泥中的有机物为食。它以壳内八对彼此分离的肌痕而闻名，这与更原始的单壳软体动物相似，为揭示双壳类如何演化提供了线索。"
+  },
+  {
+   "k": "A small, strongly swollen clam about 3 cm across from the Silurian of Europe and North Africa. Its rounded shell had prominent beaks and strong radiating ribs cut by growth lines into rows of beads. It was common in dark, muddy seas, where it may have hung on floating seaweed or other objects by threads and filtered food from the water.",
+   "v": "一种小型、强烈鼓胀的蛤类，宽约3厘米，生活于志留纪的欧洲和北非。它圆形的外壳有突出的壳喙和粗壮的放射肋，生长线将这些肋切割成一排排珠粒。它常见于黑暗、泥质的海洋中，可能用足丝悬挂在漂浮的海藻或其他物体上，从水中滤食。"
+  },
+  {
+   "k": "A smooth, rounded trilobite about 8 cm long from the Silurian reefs of England. Its head and tail shields were so smooth and swollen that they look almost featureless, with large crescent-shaped eyes set far back. It sheltered in hollows of the reef and could roll up into a tight ball when threatened.",
+   "v": "一种光滑、圆润的三叶虫，体长约8厘米，生活于英格兰的志留纪礁石中。它的头甲和尾甲光滑而鼓胀，看上去几乎没有任何纹饰，一对巨大的新月形眼睛位置靠后。它躲藏在礁石的洞穴中，遇到威胁时能紧紧卷成一个球。"
+  },
+  {
+   "k": "A soft, onion-shaped animal up to about 8 cm tall from South Australia, about 555 million years old. Its broad base was divided into rounded lobes and narrowed into a slim neck with an opening at the top. It is often compared with sea anemones, sitting half buried in the sand and catching small prey drifting by.",
+   "v": "一种柔软的洋葱形动物，高可达约8厘米，发现于南澳大利亚，生活在约5.55亿年前。宽阔的基部分成几个圆瓣，向上收窄成细长的颈部，顶端有一个开口。它常被比作海葵，半埋在沙中，捕捉漂过的小型猎物。"
+  },
+  {
+   "k": "A soft, sac-shaped animal up to about 15 cm tall from the Burgess Shale of Canada, with long ribs running down its body. It probably stood attached to shells or stones on the seabed and is thought to be a relative of sea anemones, among the oldest known. It catches small animals that blunder within reach but cannot move away from danger.",
+   "v": "一种柔软的囊状动物，高可达约 15 厘米，来自加拿大的伯吉斯页岩，身体上有纵向延伸的长肋。它大概附着在海底的贝壳或石块上直立生活，被认为是海葵的亲戚，属于已知最古老的一批。它能捕捉误入触手范围的小动物，但无法躲避危险。"
+  },
+  {
+   "k": "A soft-bodied, worm-like animal on stubby legs from the Chengjiang biota of Yunnan, a relative of today's velvet worms. Above each pair of legs it wore a pair of round, net-like plates, and these little plates are found as separate microfossils all over the world. Some fossils are found clinging to the remains of disc-shaped Eldonia, as if feeding on them. Its plates protect it, but it is slow and weak.",
+   "v": "一种来自中国云南澄江生物群、长着短粗足的软体蠕虫状动物，是现代栉蚕的亲戚。它每对足上方都长着一对圆形网状骨片，这些小骨片作为微体化石在世界各地都有发现。有些化石被发现附着在盘状的伊尔东体残骸上，像是在取食它们。骨片能保护它，但它行动缓慢、力量弱小。"
+  },
+  {
+   "k": "A solitary horn coral up to about 10 centimetres long from the Middle Devonian seas of North America, about 390 million years ago. Its cup was lined with many fine radial walls, and the outside of its horn-shaped skeleton was ringed by tiny daily growth lines. Counting them shows that a Devonian year had about 400 days, because the Earth then spun faster.",
+   "v": "一种单体角珊瑚，长可达约10厘米，约3.9亿年前生活在中泥盆世北美的海洋中。它的杯口内排列着许多细密的放射状隔壁，角状骨骼外面环绕着细小的每日生长纹。数一数这些纹路就会发现，泥盆纪的一年约有400天，因为当时地球自转得更快。"
+  },
+  {
+   "k": "A spoon-shaped rangeomorph frond about 15 cm long from Mistaken Point in Newfoundland, about 565 million years old. A few large branches ran out at a slant from its midline, each split into clearly visible smaller branches. It is named after the Beothuk, the original people of Newfoundland.",
+   "v": "一种勺形的蕨叶形类叶状体，长约15厘米，发现于纽芬兰的米斯塔肯角，生活在约5.65亿年前。几条粗大的分枝从中线斜向伸出，每条又分成清晰可见的小分枝。它的名字来自纽芬兰的原住民贝奥图克人。"
+  },
+  {
+   "k": "A squat, lizard-like reptile about 33 centimetres long from the Late Triassic of New Jersey and Connecticut, about 205 million years ago. Its broad, triangular head bore long bony spikes sticking out from the cheeks, which probably made it hard for predators to swallow. It chewed tough plants with broad teeth and belonged to the procolophonids, one of the few old reptile groups that survived the end-Permian extinction.",
+   "v": "一种矮胖、似蜥蜴的爬行动物，体长约33厘米，来自约2.05亿年前美国新泽西州和康涅狄格州的晚三叠世。它宽阔的三角形头部两颊伸出长长的骨刺，很可能让捕食者难以吞咽。它用宽大的牙齿咀嚼坚韧的植物，属于前棱蜥类——少数熬过二叠纪末灭绝事件的古老爬行动物类群之一。"
+  },
+  {
+   "k": "A squid-like belemnite about 30 centimetres long that swam in large schools along the coasts of Late Cretaceous North America. Inside its body lay a bullet-shaped stone-hard guard, so common as a fossil that people once called them thunderbolts. It caught fish and shrimp with ten hooked arms and could escape by jetting backwards in a cloud of ink.",
+   "v": "一种长约30厘米、外形似鱿鱼的箭石，成群结队地游弋在晚白垩世北美洲的沿海。它体内有一根子弹形、坚硬如石的鞘，作为化石极为常见，人们曾称之为“雷石”。它用十条带钩的腕捕食鱼虾，遇险时会喷出墨汁并向后急速喷射逃走。"
+  },
+  {
+   "k": "A squid-like relative of the belemnites from the Late Triassic seas of the Alps, about 215 million years ago. Inside its body sat a chambered shell sheathed in a long, slender, pointed guard scored with deep lengthwise grooves, which gives it its name. With big eyes and ten hooked arms it hunted fish and shrimp in open water.",
+   "v": "箭石的类鱿鱼亲戚，生活在约2.15亿年前晚三叠世阿尔卑斯地区的海洋中。它体内有一个分隔成多个气室的壳，外面包裹着细长而尖的鞘，鞘上刻有深深的纵沟，其名称即由此而来。它有一双大眼睛和十条带钩的腕，在开阔水域中捕食鱼虾。"
+  },
+  {
+   "k": "A stalkless sea lily with a round cup the size of a fist and ten slender arms up to a metre long. Unlike most of its relatives it was not rooted to the bottom but drifted or rested in huge groups in the warm inland sea of North America. It spread its feathery arms to catch tiny food from the water.",
+   "v": "一种无柄海百合，萼部圆如拳头，十条细长的腕可长达1米。与大多数亲戚不同，它并不扎根于海底，而是成群结队地漂浮或栖息在北美洲温暖的内陆海中。它张开羽毛般的腕，从水中捕捉微小的食物。"
+  },
+  {
+   "k": "A stout, badger-sized plant-eater about 1 metre long from the Early Jurassic of Arizona, about 185 million years ago, one of the last cynodonts that were not yet mammals. It had big, rodent-like front teeth for gnawing and broad grinding cheek teeth. One adult was found curled up with 38 tiny babies, far more than any mammal raises at once, showing that its relatives still bred like reptiles.",
+   "v": "一种体型粗壮、大小如獾的植食动物，体长约1米，生活在约1.85亿年前的美国亚利桑那早侏罗世，是最后一批尚未成为哺乳动物的犬齿兽之一。它有像啮齿动物一样用来啃咬的大门齿和宽阔的研磨颊齿。曾发现一只成体与38只幼崽蜷缩在一起，数量远超任何哺乳动物一次养育的后代，说明它的亲戚仍像爬行动物一样繁殖。"
+  },
+  {
+   "k": "A strange horseshoe crab, about 8 centimetres long, that lived in rivers and lakes near today's Sydney, Australia, in the Middle Triassic, about 240 million years ago. The rear corners of its head shield grew into huge horn-like spines sweeping far back past its body, perhaps to stop it sinking into soft mud. It shows that horseshoe crabs, now only found in the sea, once spread into fresh water.",
+   "v": "一种奇特的鲎，体长约8厘米，生活在约2.4亿年前中三叠世今澳大利亚悉尼附近的河流与湖泊中。它头甲的后角延伸成巨大的角状长刺，远远向后伸过身体，或许是为了防止陷入软泥。它表明，如今只生活在海里的鲎，曾经扩散到淡水中。"
+  },
+  {
+   "k": "A strange reef-building clam, about 30 centimetres tall, whose lower shell grew into a thick, ribbed horn cemented upright on the sea floor while the upper shell sat on top like a lid. Packed side by side in their thousands, rudists like Hippurites built the great reefs of the warm Cretaceous seas in place of corals. They fed by straining food from the water through pores in the lid.",
+   "v": "一种奇特的造礁蛤类，高约30厘米，下壳长成厚实而带肋的角状，直立固着在海底，上壳则像盖子一样盖在顶端。厚壳蛤类如马尾蛤成千上万地紧挨在一起，在温暖的白垩纪海洋中取代珊瑚建起了巨大的礁体。它们通过盖子上的小孔从水中滤食食物。"
+  },
+  {
+   "k": "A strange, flattened relative of the ratfishes from the Late Permian Zechstein Sea of Germany and England. With its broad body and huge, wing-like pectoral fins it looked much like a skate, and it lay on or glided over the sea floor. Its mouth held rows of overlapping crushing teeth, used to crack open shellfish such as brachiopods.",
+   "v": "一种奇特的扁平鱼类，是银鲛的亲戚，生活在二叠纪晚期德国和英格兰的蔡希斯坦海。它身体宽阔，胸鳍巨大如翼，看起来很像鳐鱼，常伏在海底或贴着海底滑行。它口中排着一排排相互叠覆的压碎型牙齿，用来咬开腕足动物等带壳动物。"
+  },
+  {
+   "k": "A stromatoporoid, a reef-building sponge that grew layered stony domes often more than half a metre across in Middle and Late Devonian seas. Its skeleton was built of thin layers joined by tiny pillars, with small bumps on the surface where water was drawn in. Together with corals it built the largest reefs the world has ever seen, until the Late Devonian extinction wiped them out.",
+   "v": "一种层孔虫，是一种造礁海绵，在中、晚泥盆世的海洋中长成层层叠叠的石质穹丘，直径常超过半米。它的骨骼由细小支柱连接的薄层构成，表面有吸水用的小突起。它与珊瑚一起建造了地球史上最大的礁体，直到晚泥盆世大灭绝将它们摧毁。"
+  },
+  {
+   "k": "A tall rangeomorph up to about 35 cm high from Newfoundland, about 565 million years old. A bare stalk rose from a disc anchored in the mud and ended in a bushy crown of branching frondlets, like a candelabrum. Its high crown reached water that lower fronds could not, but the slender stalk made it fragile.",
+   "v": "一种高大的蕨叶形类生物，高可达约35厘米，发现于纽芬兰，生活在约5.65亿年前。一根光秃的柄从固着在泥中的圆盘上升起，顶端是一丛分枝小叶组成的茂密冠部，形似烛台。高高的冠部能接触到低矮叶状体够不到的水流，但纤细的柄使它很脆弱。"
+  },
+  {
+   "k": "A tall, narrow frond up to about 50 cm high from England and Newfoundland, about 560 million years old. A long bare stalk held the lance-shaped leaf above the seabed, anchored by a broad buried disc, and simple branches ran straight out from its midline. Its height let it reach the water above the low fronds around it.",
+   "v": "一种高而窄的叶状体，高可达约50厘米，发现于英格兰和纽芬兰，生活在约5.6亿年前。长长的光秃柄把矛形叶片托离海底，下方由埋在泥中的宽大圆盘固定，简单的分枝从中线笔直伸出。它的高度让它能触及周围低矮叶状体之上的水流。"
+  },
+  {
+   "k": "A temnospondyl amphibian about a metre long from the coal-forest rocks of Nova Scotia, about 315 million years old, whose skeletons were found inside the hollow stumps of giant club-moss trees. It had a broad, flat head with large eyes and a notch at the back of the skull that probably held an eardrum, a stout body and strong legs. It hunted insects, millipedes and smaller animals on the forest floor.",
+   "v": "一种离片椎类两栖动物，长约1米，发现于加拿大新斯科舍省约3.15亿年前的煤炭森林岩层，其骨骼是在巨大石松树的空心树桩里找到的。它的头部宽而扁，有一双大眼睛，头骨后部有一个缺口，可能用来容纳鼓膜；它身体粗壮，四肢强健。它在森林地面上捕食昆虫、马陆和较小的动物。"
+  },
+  {
+   "k": "A thelodont, a small jawless fish about 7 cm long from the Late Silurian of Saaremaa, Estonia, known from complete, articulated bodies. Instead of bony plates it was covered in thousands of tiny, tooth-like scales. It had a rounded head with a small mouth at the front, flap-like fins behind the gills, a tall dorsal fin and a big tail, and fed on small particles near the sea floor.",
+   "v": "一种花鳞鱼类，体长约7厘米的小型无颌鱼，生活于晚志留世，发现于爱沙尼亚萨雷马岛，已知有完整、关节相连的身体化石。它身上没有骨板，而是覆盖着成千上万枚细小的齿状鳞片。它头部圆钝，嘴小且位于前端，鳃后有一对片状鳍，还有高耸的背鳍和宽大的尾巴，以海底附近的细小颗粒为食。"
+  },
+  {
+   "k": "A thick, strongly ribbed clam about 5 cm tall, taller than long, with a pointed beak at the top front. It stood upright on its edge, anchored to shells and other hard bits on the sea floor by a tuft of threads, filtering food from the water. It was one of the commonest clams of the Late Ordovician seas of North America.",
+   "v": "一种外壳厚实、放射肋粗壮的蛤类，高约5厘米，高大于长，前上方有一个尖尖的壳顶。它以壳缘直立，用一簇足丝固着在海底的贝壳和其他硬物上，从水中滤取食物。它是北美奥陶纪晚期海洋中最常见的蛤类之一。"
+  },
+  {
+   "k": "A tiny armoured animal about a centimetre long from the Burgess Shale of Canada, with a small cap-shaped shell at the front and a coat of scales fringed by long, curving spines. It combines the spines of Wiwaxia with the shell of Halkieria, linking these puzzling animals together near the roots of the molluscs. It grazed the seabed and is hard to attack but has no weapons.",
+   "v": "一种体长约一厘米的小型带甲动物，来自加拿大的伯吉斯页岩，前端有一个小小的帽状壳，身上覆盖鳞片，边缘环绕着长长的弯刺。它兼有威瓦亚虫的刺和哈氏虫的壳，把这些令人费解的动物联系在一起，位于软体动物的根部附近。它在海底啃食，很难被攻击，但没有任何武器。"
+  },
+  {
+   "k": "A tiny armoured placoderm, only about 3 cm long, from the early Silurian of Chongqing, China, about 436 million years ago, described in 2023. It is one of the oldest jawed fishes known from a complete body. Its head and chest were boxed in bony plates and it had a stout spine at each shoulder. Its skull mixes features of placoderms with those of later jawed fishes.",
+   "v": "一种微小的盾皮鱼，体长仅约3厘米，生活于约4.36亿年前的早志留世，发现于中国重庆，于2023年命名。它是已知最古老的具有完整身体化石的有颌鱼类之一。它的头部和胸部被骨板包裹，每侧肩部各有一根粗壮的棘刺。它的头骨兼具盾皮鱼和后来有颌鱼类的特征。"
+  },
+  {
+   "k": "A tiny beetle, under 2 millimetres long, from the Late Triassic of Poland, about 230 million years ago. It was found perfectly preserved inside a fossil dropping, probably from the small dinosaur relative Silesaurus, which swallowed it by accident with its food. Short, very rounded and shiny, it probably grazed on algae on wet ground at the water's edge, like its living relatives.",
+   "v": "一种体长不到2毫米的微小甲虫，来自约2.3亿年前波兰的晚三叠世。它被完好地保存在一块粪便化石中，这块粪化石可能来自小型恐龙近亲西里龙，它在进食时意外吞下了这只甲虫。它身体短小、非常圆润且有光泽，可能像现存的近亲一样，在水边潮湿的地面上啃食藻类。"
+  },
+  {
+   "k": "A tiny domed disc about 1 cm across from South Australia, about 555 million years old, with a sunken five-rayed star in the middle and a rim of short ridges. Its five-fold symmetry has led some scientists to suggest it was one of the earliest echinoderms, the group of sea stars and sea urchins. Its name comes from a giant serpent in the stories of the Adnyamathanha people.",
+   "v": "一种直径约1厘米的小型隆起圆盘，发现于南澳大利亚，生活在约5.55亿年前，中央有一个凹陷的五角星，边缘环绕着短脊。它的五辐对称使一些科学家认为它可能是最早的棘皮动物之一，也就是海星和海胆所属的类群。它的名字来自阿德尼亚马塔纳人传说中的一条巨蛇。"
+  },
+  {
+   "k": "A tiny oval animal about a centimetre long from the White Sea coast of Russia, about 555 million years old. Its body had only a few large, sickle-shaped segments that alternated left and right of the midline instead of lining up in pairs. Like Dickinsonia it probably grazed the microbial mat, absorbing food through its underside.",
+   "v": "一种长约1厘米的小型椭圆形动物，发现于俄罗斯白海沿岸，生活在约5.55亿年前。它的身体只有几节宽大的镰刀形体节，在中线两侧左右交错，而不是成对排列。它可能像狄更逊虫一样在微生物席上取食，通过腹面吸收养分。"
+  },
+  {
+   "k": "A tiny oval body less than a centimetre long from South Australia, about 555 million years old, its surface wrinkled by irregular grooves and ridges. Nicknamed the 'raisin' for its look, it is named after the naturalist David Attenborough. What kind of animal it was, and how it lived, is still unknown.",
+   "v": "一种长不到1厘米的小型椭圆形身体，发现于南澳大利亚，生活在约5.55亿年前，表面布满不规则的沟和脊。它因外形被昵称为“葡萄干”，名字来自博物学家大卫·艾登堡。它究竟是什么动物、如何生活，至今仍是未解之谜。"
+  },
+  {
+   "k": "A tiny seed shrimp, an ostracod about 5 mm long from the Silurian of England, preserved in three dimensions with all its soft parts. Its body was enclosed in a bean-shaped shell of two valves, and it rowed through the water with a pair of big, bristly antennae. It is the oldest known male animal preserved with its mating organ, which gives it its name, 'amazing swimmer with a large penis'.",
+   "v": "一种微小的介形虫，体长约5毫米，生活于志留纪，发现于英格兰，以三维形式保存了全部软体部分。它的身体包裹在由两片壳瓣组成的豆形外壳中，靠一对多毛的大触角在水中划行。它是已知最古老的保存有交配器官的雄性动物，其学名意为“拥有大阴茎的惊人游泳者”。"
+  },
+  {
+   "k": "A tiny shield-shaped animal less than 1 cm long from South Australia, about 555 million years old. A broad, smooth head shield was followed by a few chevron-shaped segments that alternated either side of the midline. It was first mistaken for a young trilobite, but it is now grouped with Vendia and Dickinsonia.",
+   "v": "一种长不到1厘米的小型盾形动物，发现于南澳大利亚，生活在约5.55亿年前。宽阔光滑的头盾后面是几节人字形体节，在中线两侧交错排列。它最初被误认为幼年三叶虫，现在则与文德虫和狄更逊虫归为一类。"
+  },
+  {
+   "k": "A tiny, blind, pea-shaped arthropod under a centimetre long, with a head shield and a tail shield of almost the same size joined by just two body segments. It swarmed in the late Cambrian seas of Scandinavia, and some fossils keep its legs and even its larvae in fine detail. It could fold shut like a clam to protect itself, but it is too small to fight back.",
+   "v": "一种体长不到一厘米、没有眼睛的豌豆状小型节肢动物，头甲和尾甲几乎一样大，中间只由两个体节相连。它在寒武纪晚期的斯堪的纳维亚海中成群出没，一些化石连它的足甚至幼体都保存得十分精细。它能像蛤蜊一样合拢来保护自己，但体型太小，无力反击。"
+  },
+  {
+   "k": "A tsetse fly about 1.5 cm long from the late Eocene lake beds of Florissant, Colorado. Like its living relatives, which today are found only in Africa, it sucked the blood of large mammals with a long, piercing proboscis, and rested with its wings folded flat over its back like scissor blades. Its fossils show that tsetse flies once lived in North America too.",
+   "v": "一种采采蝇，体长约1.5厘米，发现于科罗拉多州弗洛里森特的始新世晚期湖床。和今天只分布在非洲的亲戚一样，它用细长的刺吸式口器吸食大型哺乳动物的血，休息时双翅像剪刀一样平叠在背上。它的化石表明，采采蝇也曾生活在北美洲。"
+  },
+  {
+   "k": "A velvet worm about 5 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old, one of very few fossils of these soft-bodied animals. It looked like a caterpillar, with a soft, ringed body, a pair of antennae and many pairs of stubby legs. It belongs to the line that leads to today's velvet worms, which hunt small animals on damp forest floors by spraying them with sticky slime.",
+   "v": "一种长约5厘米的栉蚕（有爪动物），发现于美国伊利诺伊州约3.09亿年前的马宗溪化石层，是这类软体动物极少数的化石之一。它看起来像一条毛毛虫，身体柔软并分成一圈圈环节，有一对触角和许多对短粗的腿。它属于通向现代栉蚕的进化支系，现代栉蚕在潮湿的森林地面上喷射黏液来捕捉小动物。"
+  },
+  {
+   "k": "A vetulicolian about 10 cm long from the Burgess Shale of Canada, one of the few found outside China. Its body was in two parts, a bulbous front section and a segmented rear section, joined by a narrow waist that was often twisted. It probably fed on particles from the water or the mud, and it is soft-bodied and harmless.",
+   "v": "一种体长约 10 厘米的古虫动物，来自加拿大的伯吉斯页岩，是少数在中国以外发现的古虫动物之一。它的身体分为两部分：膨大的前段和分节的后段，中间由一个常常扭转的细腰相连。它大概以水中或泥中的颗粒为食，身体柔软，毫无威胁。"
+  },
+  {
+   "k": "A wolf-like predator about 1.5 m long from the middle Eocene of North America and Asia. Mesonychids were hoofed mammals that took up hunting: Mesonyx had a big head with strong jaws and blunt teeth, long running legs and small hooves instead of claws. It hunted and scavenged early horses and other small mammals.",
+   "v": "一种形似狼的捕食者，体长约1.5米，生活在始新世中期的北美洲和亚洲。中爪兽类是走上捕猎之路的有蹄哺乳动物：中爪兽头大颌强，牙齿粗钝，腿长善跑，脚上长着小蹄子而不是爪子。它捕食早期的马和其他小型哺乳动物，也吃腐肉。"
+  },
+  {
+   "k": "A wolf-sized but heavier hunting dog of Ice Age America, about 1.7 m long and 60-70 kg, with a broad head and huge, bone-cracking teeth. Ancient DNA shows it was not a close cousin of the grey wolf but a separate lineage that split off millions of years earlier. Packs hunted horses, bison and young ground sloths and vanished with them about 13,000 years ago.",
+   "v": "冰期美洲的一种狼般大小但更粗壮的猎犬，体长约1.7米，体重60-70公斤，头部宽阔，牙齿巨大，能咬碎骨头。古DNA显示它并非灰狼的近亲，而是数百万年前就已分化的独立支系。恐狼成群猎杀马、野牛和幼年地懒，约1.3万年前随它们一同消失。"
+  },
+  {
+   "k": "Acantherpestes",
+   "v": "棘行马陆"
+  },
+  {
+   "k": "Acanthodes",
+   "v": "棘鱼"
+  },
+  {
+   "k": "Acanthotelson",
+   "v": "棘尾合虾"
+  },
+  {
+   "k": "Acorn worm",
+   "v": "柱头虫"
+  },
+  {
+   "k": "Actinostroma",
+   "v": "放射层孔虫"
+  },
+  {
+   "k": "Aglaspidid",
+   "v": "光盾虫类"
+  },
+  {
+   "k": "Ailuravus",
+   "v": "巨尾猫鼠"
+  },
+  {
+   "k": "Albumares",
+   "v": "白海三分虫"
+  },
+  {
+   "k": "Allaeochelys",
+   "v": "麦塞尔两爪鳖"
+  },
+  {
+   "k": "Also called the Tasmanian tiger, a dog-like marsupial predator about 1.3 m long with dark stripes across its back and a stiff tail. It could open its jaws remarkably wide and carried its young in a pouch. It once lived across Australia and New Guinea; the last known thylacine died in a zoo in 1936.",
+   "v": "又称塔斯马尼亚虎，一种外形似狗的有袋类捕食者，体长约1.3米，背部有深色横纹，尾巴僵直。它的嘴能张得特别大，用育儿袋携带幼崽。袋狼曾遍布澳大利亚和新几内亚，已知的最后一只于1936年死于动物园。"
+  },
+  {
+   "k": "Amber Giant Termite",
+   "v": "琥珀巨白蚁"
+  },
+  {
+   "k": "Ambonychia",
+   "v": "安邦蛤"
+  },
+  {
+   "k": "An aglaspidid, a small extinct arthropod that looks like a cross between a trilobite and a horseshoe crab, a few centimetres long. It had a smooth, semicircular head shield with long side spines, eleven body segments with spiny tips and a long, slender tail spine. It crawled over the sea floor scavenging dead animals and other scraps.",
+   "v": "一种光盾虫类，属于已灭绝的小型节肢动物，长几厘米，外形像三叶虫和鲎的混合体。它有光滑的半圆形头甲和长长的颊刺，十一个体节的末端带刺，还有一根细长的尾刺。它在海底爬行，以动物尸体和其他残渣为食。"
+  },
+  {
+   "k": "An anteater-like mammal about 90 cm long, including its long tail, from the middle Eocene forests of Germany. It had a long, toothless snout, powerful clawed forelimbs for ripping open ant and termite nests, and a strong tail that may have gripped branches. Once thought to be an early anteater, it is now seen as a relative of the pangolins that had no scales.",
+   "v": "一种形似食蚁兽的哺乳动物，连同长尾约90厘米，生活在始新世中期德国的森林中。它的吻部细长无齿，前肢强壮有利爪，可以扒开蚂蚁和白蚁的巢穴，有力的尾巴也许能缠握树枝。它曾被认为是早期的食蚁兽，现在则被视为没有鳞片的穿山甲近亲。"
+  },
+  {
+   "k": "An early ape from the Early Miocene forests of East Africa, about 20 million years ago, close to the common ancestor of all living apes. About the size of a baboon, it had no tail and an ape-like skull, but walked on all fours along branches with its palms flat like a monkey. It ate mostly soft fruit.",
+   "v": "东非早中新世森林中的一种早期猿类，生活在约2000万年前，接近所有现生猿类的共同祖先。它体形与狒狒相当，没有尾巴，头骨似猿，却像猴子一样手掌平放、四肢着地在树枝上行走。它主要以柔软的果实为食。"
+  },
+  {
+   "k": "An early arthropod about 11 cm long from the Chengjiang biota of Yunnan, China, with a broad head shield, stalked eyes, a long trunk of many segments and a tapering tail. Some fossils preserve its brain and nerves, among the oldest known, and one shows an adult with several young, a possible early case of parental care. It fed on the soft seabed and has little to fight with.",
+   "v": "一种体长约 11 厘米的早期节肢动物，来自中国云南的澄江生物群，有宽阔的头甲、带柄的眼睛、由许多体节组成的长躯干和逐渐变细的尾部。一些化石保存了它的大脑和神经，属于已知最古老的之一；还有一件化石显示一只成体身边带着几只幼体，可能是早期亲代照顾的例子。它在松软的海底取食，几乎没有战斗能力。"
+  },
+  {
+   "k": "An early brittle star a few centimetres across, with a small, rounded central disc and five long, slender, flexible arms fringed with short spines. It crawled quickly over the sea floor by snaking its arms, picking up detritus and food particles. Like living brittle stars it could probably regrow lost arms.",
+   "v": "一种早期蛇尾，直径几厘米，中央体盘小而圆，五条细长柔韧的腕边缘长着短棘。它通过蛇行般摆动腕在海底快速爬行，拾取碎屑和食物颗粒。和现生蛇尾一样，它很可能能够再生失去的腕。"
+  },
+  {
+   "k": "An early horseshoe crab relative about 10 centimetres long from the Early Devonian sea floor of the German Hunsrück, about 400 million years ago. It had a broad semicircular head shield, a segmented abdomen and a tail spine, with walking legs neatly preserved underneath. It ploughed through the mud for worms and small prey, much like a living horseshoe crab.",
+   "v": "一种早期鲎类亲戚，体长约10厘米，约4亿年前生活在早泥盆世德国洪斯吕克的海底。它有宽大的半圆形头甲、分节的腹部和尾剑，腹面的步足保存得十分完整。它像现生的鲎一样在泥中翻找蠕虫和小猎物。"
+  },
+  {
+   "k": "An early leaf-eating monkey from the Late Miocene of Europe and western Asia, a relative of today's langurs and colobus monkeys. Macaque-sized with a long tail, it was at home both in trees and on open ground, and lived in troops. It was one of the few monkeys to spread across Europe.",
+   "v": "欧洲和西亚晚中新世一种早期食叶猴，是今天叶猴和疣猴的亲戚。它与猕猴大小相近，长着长尾巴，既能在树上生活，也能在开阔地面活动，成群生活。它是少数曾遍布欧洲的猴类之一。"
+  },
+  {
+   "k": "An early long-necked plant-eater 4-6 metres long from the Early Jurassic of southern Africa, about 200-185 million years ago, a distant cousin of the giant sauropods. It walked on its hind legs and had a small head, leaf-shaped teeth and grasping hands with a huge, curved thumb claw. Its nesting grounds, with clutches of eggs holding curled-up embryos, are among the oldest known: the hatchlings walked on all fours and probably stayed near the nest.",
+   "v": "一种体长4至6米的早期长颈植食恐龙，生活在约2亿至1.85亿年前的南部非洲早侏罗世，是巨型蜥脚类的远亲。它用后腿行走，头小，牙齿呈叶片状，能抓握的手上长着一只巨大的弯曲拇指爪。它的筑巢地点是已知最古老的之一，一窝窝蛋中保存着蜷缩的胚胎：幼崽四足行走，很可能留在巢边。"
+  },
+  {
+   "k": "An early mayfly from the Early Permian of Kansas, around 280 million years ago. Unlike living mayflies, its fore and hind wings were almost the same size, and it had three long tail threads. Its young lived in fresh water feeding on plant debris, and the adults gathered in great swarms, escaping enemies by flying off rather than fighting.",
+   "v": "一种早期蜉蝣，生活在约2.8亿年前二叠纪早期的堪萨斯。与现代蜉蝣不同，它的前后翅几乎一样大，尾部有三根长尾丝。它的幼虫生活在淡水中，以植物碎屑为食；成虫成群飞舞，遇到天敌时飞走而不是战斗。"
+  },
+  {
+   "k": "An early rabbit from the late Eocene and Oligocene of North America, about 25 cm long and common on the spreading grasslands and open woods. Its ears and hind legs were shorter than a modern rabbit's, so it probably ran rather than leapt. Like its living relatives it ate plants and bred quickly.",
+   "v": "一种早期的兔子，生活在始新世晚期和渐新世的北美洲，体长约25厘米，在不断扩展的草原和疏林中十分常见。它的耳朵和后腿比现代兔子短，所以大概是奔跑而不是跳跃。和现生的亲戚一样，它吃植物，繁殖很快。"
+  },
+  {
+   "k": "An early relative of crocodiles about 1 metre long from the Early Jurassic of Arizona, about 195 million years ago. Unlike its descendants it lived on dry land, running on long, upright legs, with a short, broad head and an enlarged fang in the lower jaw. Two rows of square bony plates ran down its back, and tail and belly were armoured too. It hunted lizards, small mammals and other small animals.",
+   "v": "一种体长约1米的鳄类早期亲戚，生活在约1.95亿年前的美国亚利桑那早侏罗世。与它的后代不同，它生活在干燥的陆地上，用修长直立的四肢奔跑，头短而宽，下颌有一颗增大的獠牙。背上有两列方形骨板，尾巴和腹部也披着甲。它捕食蜥蜴、小型哺乳动物和其他小动物。"
+  },
+  {
+   "k": "An early relative of elephants from the late Eocene and early Oligocene swamp forests of Egypt, about 2.5 m long and 1.3 m tall at the shoulder. It probably had a short trunk, with a pair of short tusks in the upper jaw and flat, shovel-like lower teeth for cutting and scooping up water plants. It shows how the trunk and tusks of elephants began.",
+   "v": "大象的早期近亲，生活在始新世晚期至渐新世早期埃及的沼泽森林中，体长约2.5米，肩高1.3米。它可能有一条短短的象鼻，上颌长着一对短獠牙，下颌的门齿扁平如铲，用来切割和铲取水生植物。它展示了大象的长鼻和獠牙是如何开始进化的。"
+  },
+  {
+   "k": "An early roller, a small bird about 18 cm long from the early Eocene Green River lakes of Wyoming. Like living rollers it probably watched from a perch and swooped down on large insects and small animals. Today rollers live only in the Old World, but this and other fossils show that they once lived in North America too.",
+   "v": "一种早期的佛法僧，体长约18厘米的小鸟，生活在始新世早期怀俄明州的绿河湖畔。它大概像现生的佛法僧一样，在枝头守望，再俯冲下来捕捉大昆虫和小动物。如今佛法僧只生活在旧大陆，但它和其他化石表明，北美洲也曾有过佛法僧。"
+  },
+  {
+   "k": "An edrioasteroid, an extinct echinoderm that lived stuck to shells on the sea floor. Its body was a low, coin-sized disc of overlapping plates, with five food grooves curving out from the centre like a pinwheel. Tiny plates over the grooves opened so that its tube feet could catch food from the water.",
+   "v": "一种海座星类，属于已灭绝的棘皮动物，附着在海底的贝壳上生活。它的身体是一个由叠覆骨板组成的低矮圆盘，大小如硬币，五条食物沟像风车叶片一样从中心弯曲伸出。覆盖在食物沟上的小骨板可以打开，让管足从水中捕捉食物。"
+  },
+  {
+   "k": "An egg- or boat-shaped animal up to about 20 cm long from the White Sea coast of Russia, about 555 million years old. Three lengthwise vanes, each divided into stacked tube-like chambers, gave its body three-fold symmetry. It probably stood half buried in the sand, its stiff chambered body hard to damage.",
+   "v": "一种呈卵形或船形的动物，长可达约20厘米，发现于俄罗斯白海沿岸，生活在约5.55亿年前。三片纵向的叶瓣各自分成一节节管状小室，使身体呈三辐对称。它可能半埋在沙中直立，坚硬的分室身体不易受损。"
+  },
+  {
+   "k": "An eocrinoid, an early stalked echinoderm, from the middle Cambrian of North America. Its small cup of plates sat on a short stalk, and from the top rose a few long feeding arms coiled in a spiral, which caught particles drifting by. Such animals were early relatives of the sea lilies and cystoids that came later. It is lightly protected and cannot fight back.",
+   "v": "一种始海百合，即早期带柄的棘皮动物，来自北美的寒武纪中期地层。它由骨板组成的小萼坐落在短柄上，顶端伸出几条盘成螺旋的长取食腕，捕捉漂过的颗粒。这类动物是后来出现的海百合和海林檎的早期亲戚。它防护薄弱，无力反击。"
+  },
+  {
+   "k": "An extinct banded penguin from the Late Miocene coasts of Peru and Chile, larger than its living relative the Humboldt penguin. It had a long, dagger-like bill for catching fish and probably the black breast band of its living kin. It nested on warm desert shores beside a cold, fish-rich current.",
+   "v": "秘鲁和智利海岸晚中新世的一种已灭绝环企鹅，比它的现生亲戚洪堡企鹅更大。它长着匕首般的长喙用来捕鱼，可能也有现生近亲那样的黑色胸带。它在温暖的沙漠海岸筑巢，旁边是寒冷而多鱼的洋流。"
+  },
+  {
+   "k": "An extinct giant termite found in Miocene amber from the Dominican Republic, of the most primitive living termite family. Its only surviving relative is the giant northern termite of Australia, so this family once lived across the world. Its colonies chewed through dead and living wood, digesting it with the help of microbes in their guts.",
+   "v": "一种已灭绝的巨型白蚁，发现于多米尼加共和国的中新世琥珀中，属于现存最原始的白蚁科。这一科唯一存活的成员是澳大利亚的达尔文澳白蚁，可见这一家族曾遍布世界。它的蚁群啃食枯木和活树，靠肠道中的微生物帮助消化木头。"
+  },
+  {
+   "k": "An extinct platypus from the Miocene of Australia, larger than the living species, with a broader bill that flared at the tip. Unlike today's platypus it kept its teeth as an adult, and it may have eaten bigger prey such as crayfish, frogs and small turtles. Like its living relative it hunted underwater by sensing the electric fields of its prey.",
+   "v": "澳大利亚中新世一种已灭绝的鸭嘴兽，比现生种更大，喙更宽，末端向外展开。与今天的鸭嘴兽不同，它成年后仍保留牙齿，可能捕食小龙虾、蛙类和小海龟等较大的猎物。和现生亲戚一样，它在水下靠感知猎物的电场来捕猎。"
+  },
+  {
+   "k": "An extinct relative of spadefoot toads, about 7 cm long, from the middle Eocene of Germany. It was a squat frog with large eyes that hunted insects and other small animals around the forest lake. Spadefoots dig into the soil with their hind feet and hide there in dry spells; fossils from Messel even preserve the skin and the outline of its body.",
+   "v": "锄足蟾的一种已灭绝亲戚，体长约7厘米，生活在始新世中期的德国。它是一种矮胖的蛙，眼睛很大，在森林湖边捕食昆虫和其他小动物。锄足蟾用后脚挖土，在干旱时躲进土里；麦塞尔的化石甚至保存了它的皮肤和身体轮廓。"
+  },
+  {
+   "k": "An oval, flattened animal about 4 cm long from South Australia, about 555 million years old, like a broader relative of Spriggina. A crescent-shaped head shield sat at the front and many fine segments ran back on either side of the midline. It crawled over the microbial mats feeding on them, and is named after the Australian palaeontologist Mary Wade.",
+   "v": "一种扁平的椭圆形动物，长约4厘米，发现于南澳大利亚，生活在约5.55亿年前，像是斯普里格蠕虫的一个较宽的亲戚。前端有一块新月形头盾，许多细小的体节沿中线两侧向后排列。它在微生物席上爬行取食，名字来自澳大利亚古生物学家玛丽·韦德。"
+  },
+  {
+   "k": "An unusual seal from the Late Miocene coast of Peru, a slender relative of the monk seals. It had a remarkably long neck and a long, narrow snout, and probably darted its head sideways to snap up fish. It still had strong limbs and may have spent much time on rocky shores.",
+   "v": "秘鲁海岸晚中新世一种奇特的海豹，是僧海豹的纤细亲戚。它的脖子格外长，吻部又长又窄，可能会向侧面猛地甩头咬住鱼。它的四肢仍很强壮，或许常在岩石海岸上活动。"
+  },
+  {
+   "k": "Anetoceras",
+   "v": "阿内托菊石"
+  },
+  {
+   "k": "Anfesta",
+   "v": "安费斯塔虫"
+  },
+  {
+   "k": "Antarctic Krill",
+   "v": "南极磷虾"
+  },
+  {
+   "k": "Aquilonifer",
+   "v": "风筝虫"
+  },
+  {
+   "k": "Archaeocidaris",
+   "v": "古海胆"
+  },
+  {
+   "k": "Archaeolepis",
+   "v": "古鳞蛾"
+  },
+  {
+   "k": "Archegosaurus",
+   "v": "古蜥螈"
+  },
+  {
+   "k": "Archimedes",
+   "v": "阿基米德苔藓虫"
+  },
+  {
+   "k": "Arkarua",
+   "v": "阿卡鲁阿虫"
+  },
+  {
+   "k": "Askeptosaurus",
+   "v": "阿斯克普托龙"
+  },
+  {
+   "k": "Aspidella",
+   "v": "盾盘虫"
+  },
+  {
+   "k": "Aspidorhynchus",
+   "v": "剑鼻鱼"
+  },
+  {
+   "k": "Asteriornis",
+   "v": "阿斯忒里鸟"
+  },
+  {
+   "k": "Astraeospongium",
+   "v": "星海绵"
+  },
+  {
+   "k": "Ateleaspis",
+   "v": "缺甲鱼"
+  },
+  {
+   "k": "Atlantic Salmon",
+   "v": "大西洋鲑"
+  },
+  {
+   "k": "Attenborites",
+   "v": "艾登堡虫"
+  },
+  {
+   "k": "Aturia",
+   "v": "阿图鹦鹉螺"
+  },
+  {
+   "k": "Aulacoceras",
+   "v": "沟鞘箭石"
+  },
+  {
+   "k": "Austrolimulus",
+   "v": "南鲎"
+  },
+  {
+   "k": "Axolotl",
+   "v": "墨西哥钝口螈"
+  },
+  {
+   "k": "Babinka",
+   "v": "巴宾卡蛤"
+  },
+  {
+   "k": "Banffia",
+   "v": "班夫虫"
+  },
+  {
+   "k": "Belantsea",
+   "v": "贝兰齐鱼"
+  },
+  {
+   "k": "Belemnitella",
+   "v": "小箭石"
+  },
+  {
+   "k": "Beothukis",
+   "v": "贝奥图克虫"
+  },
+  {
+   "k": "Biarmosuchian therapsid",
+   "v": "彼亚莫鳄类"
+  },
+  {
+   "k": "Biarmosuchus",
+   "v": "彼亚莫鳄"
+  },
+  {
+   "k": "Blastoid",
+   "v": "海蕾"
+  },
+  {
+   "k": "Blue Whale",
+   "v": "蓝鲸"
+  },
+  {
+   "k": "Bojophlebia",
+   "v": "波约蜉"
+  },
+  {
+   "k": "Bornean Orangutan",
+   "v": "婆罗洲猩猩"
+  },
+  {
+   "k": "Bothriocidaris",
+   "v": "坑棘海胆"
+  },
+  {
+   "k": "Bovid",
+   "v": "牛科动物"
+  },
+  {
+   "k": "Brachiospongia",
+   "v": "腕海绵"
+  },
+  {
+   "k": "Bradgatia",
+   "v": "布拉德盖特虫"
+  },
+  {
+   "k": "Brontoscorpio",
+   "v": "雷蝎"
+  },
+  {
+   "k": "Bumastus",
+   "v": "布马斯虫"
+  },
+  {
+   "k": "Callichimaera",
+   "v": "奇美拉蟹"
+  },
+  {
+   "k": "Camarasaurus",
+   "v": "圆顶龙"
+  },
+  {
+   "k": "Cambroraster",
+   "v": "寒武耙虫"
+  },
+  {
+   "k": "Campanile",
+   "v": "巨钟螺"
+  },
+  {
+   "k": "Camptosaurus",
+   "v": "弯龙"
+  },
+  {
+   "k": "Campylocephalus",
+   "v": "弯头板足鲎"
+  },
+  {
+   "k": "Canadaspis",
+   "v": "加拿大盾虾"
+  },
+  {
+   "k": "Canid",
+   "v": "犬科动物"
+  },
+  {
+   "k": "Cardiola",
+   "v": "心蛤"
+  },
+  {
+   "k": "Carolinites",
+   "v": "卡罗林虫"
+  },
+  {
+   "k": "Cartorhynchus",
+   "v": "短吻龙"
+  },
+  {
+   "k": "Caryocaris",
+   "v": "核虾"
+  },
+  {
+   "k": "Caryocrinites",
+   "v": "核海林檎"
+  },
+  {
+   "k": "Casea",
+   "v": "卡色龙"
+  },
+  {
+   "k": "Ceratodus",
+   "v": "角齿鱼"
+  },
+  {
+   "k": "Champsosaurus",
+   "v": "鳄龙"
+  },
+  {
+   "k": "Charniodiscus",
+   "v": "查尼盘虫"
+  },
+  {
+   "k": "Chasmataspidid",
+   "v": "裂盾鲎类"
+  },
+  {
+   "k": "Chasmataspis",
+   "v": "裂盾鲎"
+  },
+  {
+   "k": "Cheiracanthus",
+   "v": "手棘鱼"
+  },
+  {
+   "k": "Chiton",
+   "v": "石鳖"
+  },
+  {
+   "k": "Choristodere",
+   "v": "离龙"
+  },
+  {
+   "k": "Clevosaurus",
+   "v": "克利夫蜥"
+  },
+  {
+   "k": "Cochleosaurus",
+   "v": "匙蜥"
+  },
+  {
+   "k": "Coelacanth",
+   "v": "腔棘鱼"
+  },
+  {
+   "k": "Columnaria",
+   "v": "柱珊瑚"
+  },
+  {
+   "k": "Colymbosathon",
+   "v": "科林博萨顿虫"
+  },
+  {
+   "k": "Common Hippopotamus",
+   "v": "河马"
+  },
+  {
+   "k": "Common Ostrich",
+   "v": "非洲鸵鸟"
+  },
+  {
+   "k": "Conotubus",
+   "v": "锥管虫"
+  },
+  {
+   "k": "Constellaria",
+   "v": "星苔藓虫"
+  },
+  {
+   "k": "Crab",
+   "v": "蟹"
+  },
+  {
+   "k": "Ctenorhabdotus",
+   "v": "栉棒栉水母"
+  },
+  {
+   "k": "Cupressocrinites",
+   "v": "柏海百合"
+  },
+  {
+   "k": "Dactylioceras",
+   "v": "指菊石"
+  },
+  {
+   "k": "Dapedium",
+   "v": "圆鳞鱼"
+  },
+  {
+   "k": "Deinocheirus",
+   "v": "恐手龙"
+  },
+  {
+   "k": "Deltoblastus",
+   "v": "三角海蕾"
+  },
+  {
+   "k": "Dendrerpeton",
+   "v": "树螈"
+  },
+  {
+   "k": "Diadectes",
+   "v": "锯齿龙"
+  },
+  {
+   "k": "Dicynodon",
+   "v": "二齿兽"
+  },
+  {
+   "k": "Didelphodon",
+   "v": "负鼠齿兽"
+  },
+  {
+   "k": "Dinocephalosaurus",
+   "v": "恐头龙"
+  },
+  {
+   "k": "Dinomischus",
+   "v": "迪诺米斯虫"
+  },
+  {
+   "k": "Dire Wolf",
+   "v": "恐狼"
+  },
+  {
+   "k": "Dodo",
+   "v": "渡渡鸟"
+  },
+  {
+   "k": "Dromornithid",
+   "v": "雷鸟"
+  },
+  {
+   "k": "Eagle",
+   "v": "鹰"
+  },
+  {
+   "k": "Echinochiton",
+   "v": "棘石鳖"
+  },
+  {
+   "k": "Ecphora",
+   "v": "艾克佛螺"
+  },
+  {
+   "k": "Elapid snake",
+   "v": "眼镜蛇科"
+  },
+  {
+   "k": "Elonichthys",
+   "v": "埃隆鱼"
+  },
+  {
+   "k": "Elpistostege",
+   "v": "希望螈"
+  },
+  {
+   "k": "Elrathia",
+   "v": "埃尔拉西虫"
+  },
+  {
+   "k": "Emperor Penguin",
+   "v": "帝企鹅"
+  },
+  {
+   "k": "Enchodus",
+   "v": "矛齿鱼"
+  },
+  {
+   "k": "Encrinus",
+   "v": "恩克里努斯海百合"
+  },
+  {
+   "k": "Eoarthropleura",
+   "v": "始节胸蜈蚣"
+  },
+  {
+   "k": "Eopelobates",
+   "v": "始锄足蟾"
+  },
+  {
+   "k": "Eospirifer",
+   "v": "始石燕"
+  },
+  {
+   "k": "Epicyon",
+   "v": "上犬"
+  },
+  {
+   "k": "Eryon",
+   "v": "埃里昂虾"
+  },
+  {
+   "k": "Eucalyptocrinites",
+   "v": "桉海百合"
+  },
+  {
+   "k": "Eucritta",
+   "v": "真怪螈"
+  },
+  {
+   "k": "Euomphalopterus",
+   "v": "翼脐螺"
+  },
+  {
+   "k": "Euparkeria",
+   "v": "古鳄"
+  },
+  {
+   "k": "Euphanerops",
+   "v": "真显鱼"
+  },
+  {
+   "k": "Eurotamandua",
+   "v": "欧洲食蚁兽"
+  },
+  {
+   "k": "Eusarcana",
+   "v": "真肉鲎"
+  },
+  {
+   "k": "Florissant Tsetse Fly",
+   "v": "弗洛里森特采采蝇"
+  },
+  {
+   "k": "Furca",
+   "v": "叉虫"
+  },
+  {
+   "k": "Fuxianhuia",
+   "v": "抚仙湖虫"
+  },
+  {
+   "k": "Galapagos Giant Tortoise",
+   "v": "加拉帕戈斯象龟"
+  },
+  {
+   "k": "Gar",
+   "v": "雀鳝"
+  },
+  {
+   "k": "Giant Beaver",
+   "v": "巨河狸"
+  },
+  {
+   "k": "Giant Pacific Octopus",
+   "v": "北太平洋巨型章鱼"
+  },
+  {
+   "k": "Giant Platypus",
+   "v": "巨鸭嘴兽"
+  },
+  {
+   "k": "Giant Sea Biscuit",
+   "v": "巨型饼海胆"
+  },
+  {
+   "k": "Giant Squid",
+   "v": "大王乌贼"
+  },
+  {
+   "k": "Gigantospongia",
+   "v": "巨盘海绵"
+  },
+  {
+   "k": "Gigatitan",
+   "v": "巨泰坦虫"
+  },
+  {
+   "k": "Glyptocrinus",
+   "v": "雕海百合"
+  },
+  {
+   "k": "Gnathorhiza",
+   "v": "颌根肺鱼"
+  },
+  {
+   "k": "Gogia",
+   "v": "戈吉亚始海百合"
+  },
+  {
+   "k": "Goniatites",
+   "v": "棱角菊石"
+  },
+  {
+   "k": "Great White Shark",
+   "v": "大白鲨"
+  },
+  {
+   "k": "Green River Gar",
+   "v": "绿河雀鳝"
+  },
+  {
+   "k": "Greererpeton",
+   "v": "格里尔螈"
+  },
+  {
+   "k": "Grey Wolf",
+   "v": "灰狼"
+  },
+  {
+   "k": "Groenlandaspis",
+   "v": "格陵兰盾鱼"
+  },
+  {
+   "k": "Gryphaea",
+   "v": "卷嘴蛎"
+  },
+  {
+   "k": "Haast's Eagle",
+   "v": "哈斯特鹰"
+  },
+  {
+   "k": "Hallopora",
+   "v": "霍尔苔藓虫"
+  },
+  {
+   "k": "Haplophrentis",
+   "v": "哈普罗软舌螺"
+  },
+  {
+   "k": "Harpactocarcinus",
+   "v": "点斑掠蟹"
+  },
+  {
+   "k": "Heals {0}% more of its HP when resting",
+   "v": "休息时多回复 {0}% 生命"
+  },
+  {
+   "k": "Heals {0}% of its HP each turn, even after acting",
+   "v": "每回合回复 {0}% 生命，行动后也会"
+  },
+  {
+   "k": "Helenodora",
+   "v": "海伦栉蚕"
+  },
+  {
+   "k": "Helianthaster",
+   "v": "日海星"
+  },
+  {
+   "k": "Helicoplacus",
+   "v": "旋板虫"
+  },
+  {
+   "k": "Heliophyllum",
+   "v": "日射珊瑚"
+  },
+  {
+   "k": "Hell Ant",
+   "v": "地狱蚁"
+  },
+  {
+   "k": "Hiemalora",
+   "v": "冬缘盘虫"
+  },
+  {
+   "k": "Hippopotamid",
+   "v": "河马科"
+  },
+  {
+   "k": "Hippurites",
+   "v": "马尾蛤"
+  },
+  {
+   "k": "Hurdia",
+   "v": "赫德虫"
+  },
+  {
+   "k": "Hyolith",
+   "v": "软舌螺"
+  },
+  {
+   "k": "Hypsognathus",
+   "v": "高颌蜥"
+  },
+  {
+   "k": "Ianthasaurus",
+   "v": "伊安塔蜥"
+  },
+  {
+   "k": "Inaria",
+   "v": "伊纳里亚虫"
+  },
+  {
+   "k": "Isorophus",
+   "v": "等顶海座星"
+  },
+  {
+   "k": "Janassa",
+   "v": "亚纳萨鱼"
+  },
+  {
+   "k": "Jefferson's Scallop",
+   "v": "杰斐逊扇贝"
+  },
+  {
+   "k": "Kannemeyeria",
+   "v": "肯氏兽"
+  },
+  {
+   "k": "Karaurus",
+   "v": "卡拉蝾螈"
+  },
+  {
+   "k": "Kayentatherium",
+   "v": "卡岩塔兽"
+  },
+  {
+   "k": "Kenostrychus",
+   "v": "凯诺多毛虫"
+  },
+  {
+   "k": "Keraterpeton",
+   "v": "角螈"
+  },
+  {
+   "k": "King Cobra",
+   "v": "眼镜王蛇"
+  },
+  {
+   "k": "Krill",
+   "v": "磷虾"
+  },
+  {
+   "k": "Kryptobaatar",
+   "v": "隐兽"
+  },
+  {
+   "k": "Kubanochoerus",
+   "v": "库班猪"
+  },
+  {
+   "k": "Kylinxia",
+   "v": "麒麟虾"
+  },
+  {
+   "k": "Lagomorph",
+   "v": "兔形类"
+  },
+  {
+   "k": "Lasanius",
+   "v": "拉萨尼鱼"
+  },
+  {
+   "k": "Latzelia",
+   "v": "拉氏蜈蚣"
+  },
+  {
+   "k": "Leperditia",
+   "v": "豆石介"
+  },
+  {
+   "k": "Lepidaster",
+   "v": "鳞海星"
+  },
+  {
+   "k": "Leptodus",
+   "v": "蕉叶贝"
+  },
+  {
+   "k": "Limusaurus",
+   "v": "泥潭龙"
+  },
+  {
+   "k": "Lithornis",
+   "v": "石鸟"
+  },
+  {
+   "k": "Lithornithid",
+   "v": "石鸟类"
+  },
+  {
+   "k": "Lithostrotion",
+   "v": "石柱珊瑚"
+  },
+  {
+   "k": "Lobster",
+   "v": "龙虾"
+  },
+  {
+   "k": "Lotosaurus",
+   "v": "芙蓉龙"
+  },
+  {
+   "k": "Lycosuchus",
+   "v": "狼鳄"
+  },
+  {
+   "k": "Mackenzia",
+   "v": "麦肯齐虫"
+  },
+  {
+   "k": "Maiasaura",
+   "v": "慈母龙"
+  },
+  {
+   "k": "Marywadea",
+   "v": "玛丽韦德虫"
+  },
+  {
+   "k": "Massetognathus",
+   "v": "咀颌兽"
+  },
+  {
+   "k": "Mawsonia",
+   "v": "莫森氏鱼"
+  },
+  {
+   "k": "Mawsonites",
+   "v": "莫森水母"
+  },
+  {
+   "k": "Mayfly",
+   "v": "蜉蝣"
+  },
+  {
+   "k": "Merycoidodon",
+   "v": "岳齿兽"
+  },
+  {
+   "k": "Mesonychid",
+   "v": "中爪兽"
+  },
+  {
+   "k": "Mesonyx",
+   "v": "中爪兽"
+  },
+  {
+   "k": "Mesopithecus",
+   "v": "中猴"
+  },
+  {
+   "k": "Metaxytherium",
+   "v": "中海牛"
+  },
+  {
+   "k": "Micraster",
+   "v": "小星海胆"
+  },
+  {
+   "k": "Microdictyon",
+   "v": "微网虫"
+  },
+  {
+   "k": "Miguashaia",
+   "v": "米瓜沙鱼"
+  },
+  {
+   "k": "Mimetaster",
+   "v": "拟星虫"
+  },
+  {
+   "k": "Mimipiscis",
+   "v": "米米鱼"
+  },
+  {
+   "k": "Mitrocystites",
+   "v": "冠囊海果"
+  },
+  {
+   "k": "Mollisonia",
+   "v": "莫利森虫"
+  },
+  {
+   "k": "Mononykus",
+   "v": "单爪龙"
+  },
+  {
+   "k": "Multituberculate",
+   "v": "多瘤齿兽"
+  },
+  {
+   "k": "Namalia",
+   "v": "纳马虫"
+  },
+  {
+   "k": "Naraoia",
+   "v": "纳罗虫"
+  },
+  {
+   "k": "Nesodon",
+   "v": "岛齿兽"
+  },
+  {
+   "k": "Nigersaurus",
+   "v": "尼日尔龙"
+  },
+  {
+   "k": "Nimbadon",
+   "v": "宁巴袋熊"
+  },
+  {
+   "k": "Octopus",
+   "v": "章鱼"
+  },
+  {
+   "k": "Odontogriphus",
+   "v": "齿谜虫"
+  },
+  {
+   "k": "Onchopristis",
+   "v": "钩锯鳐"
+  },
+  {
+   "k": "One of the commonest arthropods of the Burgess Shale, about 5 cm long, with its head and front body enclosed in a two-halved, clam-like shell. Below the shell were pairs of walking legs, and behind it a segmented abdomen ended in a forked tail. It walked over the seabed stirring up the mud with its spiny limbs to pick out food. Its shell gives it some protection, but it has no real weapons.",
+   "v": "伯吉斯页岩中最常见的节肢动物之一，体长约 5 厘米，头部和身体前段包裹在一对蛤壳般的双瓣甲壳中。甲壳下有成对的步足，甲壳后伸出一段分节的腹部，末端是分叉的尾。它在海底行走，用带刺的附肢搅动泥沙寻找食物。甲壳为它提供了一些保护，但它没有真正的武器。"
+  },
+  {
+   "k": "One of the earliest ammonoids, about 10 centimetres across, from the Early Devonian seas of Germany and Morocco, about 405 million years ago. Its shell was only loosely coiled, with the whorls not touching and a hole in the middle, a step between the straight-shelled nautiloids and the tightly coiled ammonites. It drifted near the sea floor, catching small prey with its tentacles.",
+   "v": "最早的菊石之一，直径约10厘米，约4.05亿年前生活在早泥盆世德国和摩洛哥的海洋中。它的壳只是松散地盘卷，各圈互不接触，中间留有空洞，是介于直壳鹦鹉螺类和紧密盘卷的菊石之间的一步。它在海底附近漂游，用触手捕捉小猎物。"
+  },
+  {
+   "k": "One of the earliest and largest rodents, from the middle Eocene forests of Germany, about 70 cm long, more than half of it a long, bushy tail. It looked much like a big squirrel and climbed in the trees. Fossils with their stomach contents show that it ate leaves.",
+   "v": "最早也最大的啮齿动物之一，生活在始新世中期德国的森林中，体长约70厘米，一半以上是蓬松的长尾巴。它的样子很像一只大松鼠，在树上攀爬。保存了胃内容物的化石表明它以树叶为食。"
+  },
+  {
+   "k": "One of the earliest archosauriforms, the branch that later gave rise to crocodiles, dinosaurs and birds, from the Early Triassic of South Africa, about 250 million years ago. About 1.5 metres long, it looked like a crocodile with sprawling legs and a long tail, and the tip of its upper jaw hooked down over the lower jaw. It was one of the top predators in the world that recovered after the end-Permian extinction.",
+   "v": "最早的主龙形类之一（这一分支后来演化出了鳄类、恐龙和鸟类），来自约2.5亿年前南非的早三叠世。它体长约1.5米，外形像一条鳄鱼，四肢向两侧伸展，尾巴很长，上颌前端向下弯钩，盖过下颌。它是二叠纪末灭绝事件后复苏的世界中的顶级掠食者之一。"
+  },
+  {
+   "k": "One of the earliest coelacanths, about 45 centimetres long, from the Late Devonian estuary of Miguasha in Quebec, about 380 million years ago. It already had the fleshy, limb-like fins of its living relatives, but its tail was still lopsided like a shark's instead of the coelacanth's later three-lobed tail. Its lineage survives today in the deep-sea coelacanth.",
+   "v": "最早的腔棘鱼之一，体长约45厘米，生活在约3.8亿年前魁北克米瓜沙的晚泥盆世河口。它已经长有现生亲戚那样肉质、似肢的鳍，但尾巴仍像鲨鱼一样上下不对称，而不是后来腔棘鱼的三叶形尾。它的家族一直延续到今天的深海腔棘鱼。"
+  },
+  {
+   "k": "One of the earliest cynodonts, the group that gave rise to mammals, about 60 centimetres long, from the Late Permian of southern Africa and Germany, around 255 million years ago. It had a fox-like head with long canines and a long, low body, and its broadened tail bones suggest it may have swum like an otter. It may already have had some fur and a faster metabolism than earlier synapsids.",
+   "v": "最早的犬齿兽类之一——犬齿兽类后来进化出了哺乳动物；它体长约60厘米，生活在约2.55亿年前二叠纪晚期的非洲南部和德国。它头部像狐狸，犬齿很长，身体长而低矮，加宽的尾椎表明它可能像水獭一样游泳。它也许已经长有一些毛发，新陈代谢比更早的合弓动物更快。"
+  },
+  {
+   "k": "One of the earliest rays, up to about 1.5 metres long, from the Late Jurassic lagoons of France and Germany, about 150 million years ago. It looked like a living guitarfish: a flat, spade-shaped front with the pectoral fins joined to the head, then a thick, shark-like tail with two dorsal fins. It lay half-buried in sand, sensing prey with electric receptors, and crushed shellfish and crustaceans.",
+   "v": "最早的鳐类之一，体长可达约1.5米，生活在约1.5亿年前法国和德国的晚侏罗世潟湖中。它的样子像现生的犁头鳐：前部扁平呈铲形，胸鳍与头部相连，后部是粗壮的、像鲨鱼一样的尾部，带有两个背鳍。它半埋在沙中，用电感受器探测猎物，压碎贝类和甲壳动物。"
+  },
+  {
+   "k": "One of the early modern-type stony corals, which built reefs in the warm Tethys Sea in the Late Triassic, about 210 million years ago. Its colonies were bushes of finger-thick tubes that forked again and again and grew upward side by side, each tube ending in a star-shaped cup that held a single polyp. Corals like it began the great coral reefs that still exist today.",
+   "v": "早期现代型石珊瑚之一，晚三叠世约2.1亿年前在温暖的特提斯海中建造珊瑚礁。它的群体像灌木丛，由手指粗细的管状枝不断分叉、并排向上生长而成，每根管的末端是一个星形的杯，内住一只珊瑚虫。正是像它这样的珊瑚，开启了延续至今的大型珊瑚礁。"
+  },
+  {
+   "k": "One of the first fossil reptiles ever described, found in Germany in 1706, which lived along the shores of the Zechstein Sea around 257 million years ago. About 1.5 to 2 metres long, it had a lizard-like body, a long, slender neck, a small pointed head with sharp teeth and long hind legs. It was an early member of the line that led to crocodiles and dinosaurs.",
+   "v": "最早被描述的化石爬行动物之一，1706年在德国发现，约2.57亿年前生活在蔡希斯坦海沿岸。它体长约1.5至2米，身体像蜥蜴，脖子细长，头小而尖、长着锋利的牙齿，后腿很长。它是通向鳄类和恐龙那一支系的早期成员。"
+  },
+  {
+   "k": "One of the first large plant-eating land animals, about 3 metres long, from the Early Permian of North America, around 290 million years ago. It had a heavy, barrel-shaped body, short, powerful sprawling legs and a short, deep head with peg-like front teeth for nipping plants and broad cheek teeth for grinding them. It was a close relative of the first reptiles and their kin, the amniotes.",
+   "v": "最早的大型植食性陆地动物之一，体长约3米，生活在约2.9亿年前二叠纪早期的北美洲。它身体沉重呈桶状，四肢短而有力、向两侧伸展，头短而高，前部有钉状牙齿用于啃咬植物，宽大的颊齿用于研磨。它是最早的爬行动物及其亲族——羊膜动物的近亲。"
+  },
+  {
+   "k": "One of the first reptiles to return to the water, a slender diapsid about 25 centimetres long from Late Carboniferous rocks near Hamilton, Kansas, about 302 million years old. A close relative of Petrolacosaurus, it had a small head and slim legs but a tall, flattened tail like a paddle, which it swung from side to side to swim. It lived in a coastal estuary among fishes and crustaceans, where it probably hunted small swimming prey.",
+   "v": "最早重返水中的爬行动物之一，一种身体纤细的双孔类，长约25厘米，发现于美国堪萨斯州汉密尔顿附近约3.02亿年前的晚石炭世岩层。它是油页岩蜥的近亲，头小腿细，却有一条高而侧扁、像桨一样的尾巴，靠左右摆动尾巴来游泳。它生活在一处沿海河口，与鱼类和甲壳动物为伍，可能捕食小型游泳猎物。"
+  },
+  {
+   "k": "One of the first spiriferid brachiopods, a lamp shell about 3 cm wide from the Silurian of Britain, Sweden and North America. Its rounded shell had short wings along the hinge, a smooth fold at the front and many fine radiating ribs. Inside, a pair of coiled supports held its feeding tentacles, a design that later spiriferids spread across the world's seas.",
+   "v": "最早的石燕贝类腕足动物之一，宽约3厘米，生活于志留纪的英国、瑞典和北美。它圆形的外壳沿铰合线有短短的“翼”，前部有平滑的褶，以及许多细密的放射肋。壳内有一对螺旋状的腕螺支撑着它的摄食触手，这种结构后来随着石燕贝类遍布世界各地的海洋。"
+  },
+  {
+   "k": "One of the hell ants, an early branch of ants preserved in 99-million-year-old Burmese amber. Its scythe-shaped jaws swung upwards instead of sideways, snapping shut against a paddle-like horn on its forehead to pin its prey. Hell ants lived in colonies like modern ants but vanished with the dinosaurs.",
+   "v": "地狱蚁之一，是保存在9900万年前缅甸琥珀中的一支早期蚂蚁。它镰刀状的颚向上而不是向两侧挥动，猛地合拢，抵在额头上一个桨状的角上，把猎物钳住。地狱蚁像现代蚂蚁一样过着群居生活，但与恐龙一同消失了。"
+  },
+  {
+   "k": "One of the largest invertebrates, up to about 12-13 m long including its two long feeding tentacles, which end in clubs lined with toothed suckers. It has the biggest eyes of any animal, up to 27 cm across, for seeing in the dark at 300-1,000 m depth. It was first filmed alive only in 2004; sperm whales hunt it and often carry sucker scars from the fight.",
+   "v": "最大的无脊椎动物之一，连同两条长长的捕食触腕在内体长可达约12-13米，触腕末端是长满带齿吸盘的触腕穗。它拥有动物界最大的眼睛，直径可达27厘米，用来在300-1000米深的黑暗中视物。直到2004年人们才首次拍到活体；抹香鲸捕食它，身上常留有搏斗时的吸盘疤痕。"
+  },
+  {
+   "k": "One of the largest mayfly-like insects ever, with a wingspan of about 45 centimetres, from Late Carboniferous rocks near Prague in the Czech Republic, about 310 million years old. It had two pairs of broad wings of similar size that it could not fold back over its body, a slender body and long tail filaments. It is thought to be an early relative of the mayflies, the oldest surviving branch of winged insects, and its young probably grew up in the swamp waters.",
+   "v": "有史以来最大的类蜉蝣昆虫之一，翼展约45厘米，发现于捷克布拉格附近约3.1亿年前的晚石炭世岩层中。它有两对大小相近的宽阔翅膀，无法向后折叠到身体上，身体细长，并有长长的尾丝。它被认为是蜉蝣的早期亲属——蜉蝣是现存最古老的有翅昆虫类群，它的幼虫可能在沼泽水中长大。"
+  },
+  {
+   "k": "One of the largest sea snails that ever lived, from the middle Eocene seas of the Paris Basin, with a tall, slender, spiral shell up to about 1 m long and a row of knobs winding round its many whorls. It crept slowly over sandy, sunlit sea floors grazing algae and detritus. A single relative, the bell-tower snail of Australia, survives today.",
+   "v": "有史以来最大的海螺之一，生活在始新世中期巴黎盆地的海洋中，高而细长的螺旋形壳可达约1米长，一排瘤突环绕着它众多的螺层。它在阳光充足的沙质海底缓缓爬行，啃食藻类和碎屑。今天只有一个亲戚——澳大利亚的钟楼螺——还存活着。"
+  },
+  {
+   "k": "One of the largest sponges of the Permian, from the Middle Permian reefs of west Texas, around 265 million years ago. It grew as a huge, thin, plate-like disc that could be more than a metre across, held up off the reef on a short stalk, and pumped water through countless small pores to filter out food. With no organs to damage, it could survive heavy injuries and regrow.",
+   "v": "二叠纪最大的海绵之一，生活在约2.65亿年前二叠纪中期得克萨斯西部的生物礁上。它长成一个巨大、薄而平的圆盘，直径可超过1米，由短柄撑离礁面，通过无数小孔泵水滤食。它没有可以受损的器官，能在重伤后存活并重新长出来。"
+  },
+  {
+   "k": "One of the largest trilobites ever, reaching about 37 cm, from the middle Cambrian of Newfoundland and Wales. It had a wide head with long, backswept spines at its corners, around twenty spiny body segments and a tiny tail plate. A big hunter and scavenger of the seafloor, it is well armoured and strong for its time.",
+   "v": "有史以来最大的三叶虫之一，体长可达约 37 厘米，来自纽芬兰和威尔士的寒武纪中期地层。它的头部宽阔，两角长着向后弯的长刺，身体有约二十个带刺的体节，尾板很小。作为海底的大型猎手和食腐者，它铠甲坚固，在当时算得上强壮。"
+  },
+  {
+   "k": "One of the last blastoids, extinct relatives of the sea lilies, so common in the Permian rocks of Timor that many thousands have been collected. Its small, bud-shaped cup, about 2 centimetres high, sat on a short stalk and had five petal-like food grooves fringed with fine, upright threads that strained food from the water. The blastoids died out in the end-Permian extinction.",
+   "v": "最后的海蕾之一，海蕾是海百合已灭绝的亲戚；它在帝汶岛的二叠纪岩层中极其常见，已采集到成千上万个。它小小的花苞状萼高约2厘米，立在短柄上，有五条花瓣状的食物沟，沟边排列着细细的直立丝状附肢，从水中滤取食物。海蕾在二叠纪末大灭绝中灭绝。"
+  },
+  {
+   "k": "One of the last spiny sharks, about 30 centimetres long, from the Early Permian lakes of Germany. It had a slim body covered in tiny square scales, big eyes and a stout spine in front of every fin, but no teeth: it strained small animals from the water with long gill rakers. Its well-preserved skulls have helped scientists understand the early evolution of sharks.",
+   "v": "最后的“棘鲨”之一，体长约30厘米，生活在二叠纪早期德国的湖泊中。它身体修长，覆盖着细小的方形鳞片，眼睛很大，每个鳍前都有一根粗壮的棘刺，但没有牙齿：它用长长的鳃耙从水中滤食小动物。保存完好的头骨帮助科学家了解了鲨鱼的早期进化。"
+  },
+  {
+   "k": "One of the last trilobites, from the Early Carboniferous seas of Europe about 340 million years ago, when only a single family of these once dominant arthropods survived. It was a small, oval trilobite about 3 centimetres long with a bulging central head lobe, large crescent-shaped eyes, nine body segments and a broad, rounded tail shield. It crawled over muddy sea floors picking up food particles, and could roll up into a ball when threatened.",
+   "v": "最后的三叶虫之一，生活在约3.4亿年前欧洲的早石炭世海洋中，当时这类曾经称霸的节肢动物只剩下一个科幸存。它是一种小型椭圆形三叶虫，长约3厘米，头部中央隆起，有一对新月形大眼睛、九个胸节和一个宽圆的尾甲。它在泥质海底爬行拾取食物颗粒，遇到威胁时能蜷成一团。"
+  },
+  {
+   "k": "One of the most fish-like of the early four-limbed animals, about 1.2 metres long, from the Late Devonian lagoons of Latvia some 372 million years ago. It had a broad, flat head full of sharp teeth and a fin-fringed tail; its limbs are barely known but were probably short, with many toes. It hunted fish in shallow water and rarely, if ever, came onto land.",
+   "v": "最像鱼的早期四足动物之一，体长约1.2米，生活在约3.72亿年前晚泥盆世拉脱维亚的潟湖中。它有宽而扁、长满利齿的头和带鳍条的尾巴；它的四肢几乎不为人知，但可能短而多趾。它在浅水中捕鱼，即使上岸也极少。"
+  },
+  {
+   "k": "One of the most primitive osteostracans, jawless armoured fish about 20 cm long from the Silurian of Scotland and Norway. Its broad, horseshoe-shaped head shield was a mosaic of small bony tiles, with the eyes close together on top. Behind the shield it had a pair of flap-like pectoral fins, among the oldest true paired fins of any animal, the beginnings of our own arms. It grubbed for food on the sea floor.",
+   "v": "最原始的骨甲鱼类之一，体长约20厘米的无颌甲胄鱼，生活于志留纪，发现于苏格兰和挪威。它宽阔的马蹄形头甲由许多细小的骨片镶嵌而成，两眼紧靠在头顶。头甲后方有一对片状胸鳍，属于所有动物中最古老的真正偶鳍之一，也是我们手臂的雏形。它在海底翻找食物。"
+  },
+  {
+   "k": "One of the most primitive therapsids, the group that later gave rise to mammals, from the Middle Permian of the Ural region of Russia, around 265 million years ago. About 1.5 metres long and lightly built, it had a long skull with big eyes and long canine teeth, and legs held more beneath the body than in older synapsids. It was probably an agile hunter of small and medium-sized animals.",
+   "v": "最原始的兽孔类之一——兽孔类后来进化出了哺乳动物；它生活在约2.65亿年前二叠纪中期俄罗斯乌拉尔地区。它体长约1.5米，体态轻盈，头骨长，眼睛大，犬齿长，四肢比更古老的合弓动物更靠近身体下方。它可能是一种敏捷的猎手，捕食中小型动物。"
+  },
+  {
+   "k": "One of the oldest echinoderms, from the early Cambrian of Nevada and California: a spindle-shaped animal a few centimetres long covered in plates arranged in a spiral, like a twisted pine cone. It probably stood upright with its base in the mud and caught food particles along a feeding groove that wound around its body. Its plated skin protects it, but it is helpless against a determined attacker.",
+   "v": "已知最古老的棘皮动物之一，来自美国内华达州和加利福尼亚州的寒武纪早期地层：一种长几厘米的纺锤形动物，体表覆盖着呈螺旋排列的骨板，像一颗扭曲的松果。它大概直立生活，下端插在泥里，沿着绕身体盘旋的取食沟收集食物颗粒。带骨板的皮肤能保护它，但面对执意进攻的敌人它束手无策。"
+  },
+  {
+   "k": "One of the oldest gliding fishes, from the Late Triassic seas of the Alps, more than 200 million years before modern flying fish. This small, silvery fish had huge wing-like pectoral fins, a second smaller pair of pelvic \"wings\" and a forked tail with a longer lower lobe. Like a flying fish, it probably sped along the surface and then glided through the air to escape predators.",
+   "v": "最古老的滑翔鱼类之一，来自晚三叠世阿尔卑斯地区的海洋，比现代飞鱼早了2亿多年。这种银色小鱼有一对巨大的翼状胸鳍、第二对较小的腹鳍“翅膀”，以及下叶较长的叉形尾。它可能像飞鱼一样，先沿水面高速冲刺，然后在空中滑翔以躲避捕食者。"
+  },
+  {
+   "k": "One of the oldest known centipedes, an early relative of today's long-legged house centipedes, from the Mazon Creek fossil beds of Illinois, about 309 million years old. About 4 centimetres long, it had a short body on fifteen pairs of very long, slender legs, long antennae and a pair of venomous fangs under its head. It ran swiftly over the forest floor and ambushed insects and other small invertebrates.",
+   "v": "已知最古老的蜈蚣之一，是今天长腿的蚰蜒的早期亲属，发现于美国伊利诺伊州约3.09亿年前的马宗溪化石层。它体长约4厘米，短短的身体下长着十五对又长又细的腿，还有长长的触角，头部下方有一对毒颚。它在森林地面上快速奔跑，伏击昆虫和其他小型无脊椎动物。"
+  },
+  {
+   "k": "One of the oldest known fish, a small jawless vertebrate about 12 cm long without paired fins. The front of its body was enclosed in a box of bony plates ornamented with ridges and pierced by pores, and it had tiny eyes at the very front. It swam just above the sea floor, sucking up food particles with its jawless mouth.",
+   "v": "已知最古老的鱼类之一，一种长约12厘米、没有成对鳍的小型无颌脊椎动物。它身体前部被一个骨板构成的盒子包裹，骨板上有脊状纹饰并布满小孔，眼睛很小，位于身体最前端。它在紧贴海底的水层中游动，用没有颌的嘴吸食食物颗粒。"
+  },
+  {
+   "k": "One of the oldest known members of the human lineage, from the Late Miocene of Chad, about 7 million years ago. It was a chimpanzee-sized ape with a small brain, a huge brow ridge, a rather flat face and small canine teeth. The way its skull sat on the spine suggests it could walk upright, though it still lived among trees by lakes and forest edges.",
+   "v": "已知最古老的人类支系成员之一，生活在约700万年前晚中新世的乍得。它是一种黑猩猩大小的猿，脑容量小，眉骨极为粗大，面部较扁平，犬齿很小。从头骨与脊柱的连接方式看，它可能已能直立行走，但仍生活在湖边和森林边缘的树林中。"
+  },
+  {
+   "k": "One of the oldest known mites, under half a millimetre long, from the Rhynie chert of Scotland, about 410 million years ago. Its soft, oval body walked on eight short legs among the stems of the earliest land plants. It fed on decaying plant matter and fungi, helping recycle the first soils.",
+   "v": "已知最古老的螨之一，体长不到半毫米，约4.1亿年前生活在苏格兰的莱尼燧石层。它柔软的椭圆形身体靠八条短腿在最早的陆地植物茎秆间行走。它以腐烂的植物和真菌为食，帮助分解最早的土壤。"
+  },
+  {
+   "k": "One of the oldest known salamanders, about 19 cm long, from the Late Jurassic of Kazakhstan, about 155 million years ago. It already had the salamander body plan: a broad, flat head with a rounded snout, a long body, four short legs and a tail. Its skull was roughened with bony sculpture. It probably lived along lake shores, hunting insects and worms on land and in shallow water.",
+   "v": "已知最古老的蝾螈之一，体长约19厘米，生活在约1.55亿年前的哈萨克斯坦晚侏罗世。它已具备蝾螈的体形：宽扁的头部和圆钝的吻部、长长的身体、四条短腿和一条尾巴。它的头骨表面布满粗糙的骨质纹饰。它很可能生活在湖岸边，在陆地和浅水中捕食昆虫和蠕虫。"
+  },
+  {
+   "k": "One of the oldest sea urchins, a small, round animal only 1 to 2 cm across, covered in short spines. Unlike living sea urchins, the zones between its five food-groove areas were just a single column of plates wide. It crept over the sea floor grazing on algae and detritus.",
+   "v": "最古老的海胆之一，一种直径仅1到2厘米的圆形小动物，全身覆盖短棘。与现生海胆不同，它五个步带区之间的间步带只有一列骨板宽。它在海底缓慢爬行，啃食藻类和碎屑。"
+  },
+  {
+   "k": "One of the strangest brachiopods, common on the Middle Permian reefs of Texas. Its lower valve was a flat, leaf-shaped plate cemented to the reef like an oyster and divided inside by comb-like ridges, and its thin upper valve was a lobed, fishbone-shaped lid that lifted a little so the animal could filter food from the water. Cemented down and armoured, it was hard to dislodge.",
+   "v": "最奇特的腕足动物之一，常见于二叠纪中期得克萨斯的生物礁上。它的下壳是一块扁平的叶状板，像牡蛎一样固着在礁体上，内部由梳状隆脊分隔；上壳是一块薄薄的、分叶的鱼骨状盖子，微微抬起让动物从水中滤食。它牢牢固着又有坚甲保护，很难被撬下来。"
+  },
+  {
+   "k": "Onychopterella",
+   "v": "爪翼鲎"
+  },
+  {
+   "k": "Orca",
+   "v": "虎鲸"
+  },
+  {
+   "k": "Oreodont",
+   "v": "岳齿兽"
+  },
+  {
+   "k": "Orthrozanclus",
+   "v": "奥斯罗赞克虫"
+  },
+  {
+   "k": "Ostracod",
+   "v": "介形虫"
+  },
+  {
+   "k": "Ostrich",
+   "v": "鸵鸟"
+  },
+  {
+   "k": "Owl",
+   "v": "鸮"
+  },
+  {
+   "k": "Palaeocoma",
+   "v": "古蛇尾"
+  },
+  {
+   "k": "Palaeoisopus",
+   "v": "古等足海蛛"
+  },
+  {
+   "k": "Palaeolagus",
+   "v": "古兔"
+  },
+  {
+   "k": "Palaeoniscum",
+   "v": "古鳕"
+  },
+  {
+   "k": "Palaeopalaemon",
+   "v": "古长臂虾"
+  },
+  {
+   "k": "Palaeophragmodictya",
+   "v": "古网格海绵"
+  },
+  {
+   "k": "Palaeoscolex",
+   "v": "古蠕虫"
+  },
+  {
+   "k": "Palmatolepis",
+   "v": "掌鳞刺"
+  },
+  {
+   "k": "Parapuzosia",
+   "v": "帕拉普佐斯菊石"
+  },
+  {
+   "k": "Pentremites",
+   "v": "五角海蕾"
+  },
+  {
+   "k": "Pezosiren",
+   "v": "佩氏海牛"
+  },
+  {
+   "k": "Phareodus",
+   "v": "法老鱼"
+  },
+  {
+   "k": "Phillipsia",
+   "v": "菲利普虫"
+  },
+  {
+   "k": "Phiomia",
+   "v": "始乳齿象"
+  },
+  {
+   "k": "Phlebolepis",
+   "v": "脉鳞鱼"
+  },
+  {
+   "k": "Phragmoceras",
+   "v": "隔角石"
+  },
+  {
+   "k": "Pig",
+   "v": "猪"
+  },
+  {
+   "k": "Pig-nosed turtle",
+   "v": "两爪鳖"
+  },
+  {
+   "k": "Pigeon",
+   "v": "鸠鸽"
+  },
+  {
+   "k": "Platyceras",
+   "v": "平角螺"
+  },
+  {
+   "k": "Platyhystrix",
+   "v": "扁刺螈"
+  },
+  {
+   "k": "Pleurosaurus",
+   "v": "侧蜥"
+  },
+  {
+   "k": "Polar Bear",
+   "v": "北极熊"
+  },
+  {
+   "k": "Porophoraspis",
+   "v": "孔盾鱼"
+  },
+  {
+   "k": "Praecambridium",
+   "v": "前寒武虫"
+  },
+  {
+   "k": "Primobucco",
+   "v": "始须鴷"
+  },
+  {
+   "k": "Primocandelabrum",
+   "v": "原烛台虫"
+  },
+  {
+   "k": "Procolophonid",
+   "v": "前棱蜥类"
+  },
+  {
+   "k": "Proconsul",
+   "v": "原康修尔猿"
+  },
+  {
+   "k": "Procynosuchus",
+   "v": "原犬鳄"
+  },
+  {
+   "k": "Prodryas",
+   "v": "原蛱蝶"
+  },
+  {
+   "k": "Prongdeer",
+   "v": "五角鹿"
+  },
+  {
+   "k": "Prosalirus",
+   "v": "原跃蛙"
+  },
+  {
+   "k": "Protacarus",
+   "v": "原螨"
+  },
+  {
+   "k": "Protasterina",
+   "v": "原星蛇尾"
+  },
+  {
+   "k": "Protereisma",
+   "v": "原蜉蝣"
+  },
+  {
+   "k": "Proterosuchus",
+   "v": "原鳄"
+  },
+  {
+   "k": "Protoceras",
+   "v": "原角鹿"
+  },
+  {
+   "k": "Protoceratid",
+   "v": "原角鹿类"
+  },
+  {
+   "k": "Protorosaurus",
+   "v": "原龙"
+  },
+  {
+   "k": "Protosuchus",
+   "v": "原鳄"
+  },
+  {
+   "k": "Pterodaustro",
+   "v": "南方翼龙"
+  },
+  {
+   "k": "Pyrothere",
+   "v": "火兽"
+  },
+  {
+   "k": "Pyrotherium",
+   "v": "火兽"
+  },
+  {
+   "k": "Rafinesquina",
+   "v": "拉芬贝"
+  },
+  {
+   "k": "Retiophyllia",
+   "v": "网叶珊瑚"
+  },
+  {
+   "k": "Rhabdoderma",
+   "v": "棒鳞腔棘鱼"
+  },
+  {
+   "k": "Rhamphosuchus",
+   "v": "喙鳄"
+  },
+  {
+   "k": "Rhynchocephalian",
+   "v": "喙头类"
+  },
+  {
+   "k": "Riojasaurus",
+   "v": "里奥哈龙"
+  },
+  {
+   "k": "Roller",
+   "v": "佛法僧"
+  },
+  {
+   "k": "Rudist",
+   "v": "厚壳蛤"
+  },
+  {
+   "k": "Rugosodon",
+   "v": "皱纹齿兽"
+  },
+  {
+   "k": "Sabellidites",
+   "v": "似帚毛虫"
+  },
+  {
+   "k": "Sabre-toothed Salmon",
+   "v": "剑齿鲑"
+  },
+  {
+   "k": "Sagenodus",
+   "v": "网齿肺鱼"
+  },
+  {
+   "k": "Sahelanthropus",
+   "v": "沙赫人"
+  },
+  {
+   "k": "Sanajeh",
+   "v": "萨纳杰蛇"
+  },
+  {
+   "k": "Saniwa",
+   "v": "萨尼瓦蜥"
+  },
+  {
+   "k": "Saurichthys",
+   "v": "龙鱼"
+  },
+  {
+   "k": "Sauripterus",
+   "v": "蜥鳍鱼"
+  },
+  {
+   "k": "Scallop",
+   "v": "扇贝"
+  },
+  {
+   "k": "Shark-toothed Dolphin",
+   "v": "鲨齿鲸"
+  },
+  {
+   "k": "Shenacanthus",
+   "v": "神棘鱼"
+  },
+  {
+   "k": "Shikamaia",
+   "v": "鹿间蛤"
+  },
+  {
+   "k": "Shuyu",
+   "v": "曙鱼"
+  },
+  {
+   "k": "Silurolepis",
+   "v": "志留鱼"
+  },
+  {
+   "k": "Simosuchus",
+   "v": "狮鼻鳄"
+  },
+  {
+   "k": "Sinotubulites",
+   "v": "中华管壳"
+  },
+  {
+   "k": "Snowy Owl",
+   "v": "雪鸮"
+  },
+  {
+   "k": "Spadefoot toad",
+   "v": "锄足蟾"
+  },
+  {
+   "k": "Spartobranchus",
+   "v": "斯巴托鳃虫"
+  },
+  {
+   "k": "Spathobatis",
+   "v": "匙鳐"
+  },
+  {
+   "k": "Sphenacodon",
+   "v": "楔齿龙"
+  },
+  {
+   "k": "Spinoaequalis",
+   "v": "等棘蜥"
+  },
+  {
+   "k": "Squid",
+   "v": "枪乌贼"
+  },
+  {
+   "k": "Stanleycaris",
+   "v": "斯坦利虾"
+  },
+  {
+   "k": "Steppe Bison",
+   "v": "草原野牛"
+  },
+  {
+   "k": "Stirton's Thunderbird",
+   "v": "史氏雷鸟"
+  },
+  {
+   "k": "Striatolamia",
+   "v": "纹齿锥齿鲨"
+  },
+  {
+   "k": "Strophomenid brachiopod",
+   "v": "扭月贝类腕足动物"
+  },
+  {
+   "k": "Suminia",
+   "v": "苏米尼亚兽"
+  },
+  {
+   "k": "Swan-necked Seal",
+   "v": "天鹅颈海豹"
+  },
+  {
+   "k": "Syllipsimopodi",
+   "v": "西利普西莫波迪蛸"
+  },
+  {
+   "k": "Syncarid",
+   "v": "合虾"
+  },
+  {
+   "k": "Synthetoceras",
+   "v": "合角鹿"
+  },
+  {
+   "k": "Taeniolabis",
+   "v": "带齿兽"
+  },
+  {
+   "k": "Thalattosaur",
+   "v": "海龙类"
+  },
+  {
+   "k": "The 'Devil's toenail', an oyster 5-10 cm long from the Early Jurassic seas of Europe, about 200-190 million years ago. Its thick lower shell grew in a tight, curling hook like a giant toenail, with the small, flat upper shell sitting in it like a lid. Instead of cementing itself to rock like most oysters, it lay loose on soft mud, its curved weight keeping the opening clear while it filtered plankton.",
+   "v": "人称“魔鬼的趾甲”，一种体长5至10厘米的牡蛎，生活在约2亿至1.9亿年前的欧洲早侏罗世海洋中。它厚实的下壳卷曲成紧密的钩状，像一只巨大的趾甲，小而平的上壳像盖子一样嵌在其中。它不像大多数牡蛎那样固着在岩石上，而是松散地躺在软泥上，弯曲的重量使开口保持在泥面之上，以便滤食浮游生物。"
+  },
+  {
+   "k": "The 'kite-runner', a small arthropod about 1 cm long from the Silurian of England, described in 2016. It had very long antennae and a long spine on each side of every body segment. Tied to its back by long, fine threads floated ten tiny capsules, most likely its own young, towed along like kites: a form of parental care seen in no other animal.",
+   "v": "“放风筝者”，一种体长约1厘米的小型节肢动物，生活于志留纪，发现于英格兰，于2016年命名。它有很长的触角，每个体节两侧各有一根长刺。它的背上用细长的丝线系着十个漂浮的微小囊状物，很可能是它自己的幼体，像风筝一样被拖着走：这是一种在其他任何动物身上都未见过的亲代抚育方式。"
+  },
+  {
+   "k": "The classic 'fish-lizard' of the Early Jurassic seas of Europe, about 200-190 million years ago, made famous by Mary Anning's finds at Lyme Regis. About 2 metres long and shaped like a dolphin, it had a long, toothy snout, large eyes, broad front flippers, a fleshy dorsal fin and a crescent-shaped tail. It hunted fish and squid-like belemnites and gave birth to live young at sea.",
+   "v": "欧洲早侏罗世海洋中经典的“鱼蜥蜴”，生活在约2亿至1.9亿年前，因玛丽·安宁在莱姆里杰斯的发现而闻名。它体长约2米，外形像海豚，长着布满牙齿的长吻、大眼睛、宽阔的前鳍、肉质背鳍和新月形尾鳍。它捕食鱼类和像乌贼的箭石，并在海中直接产下幼崽。"
+  },
+  {
+   "k": "The classic goniatite of the Early Carboniferous seas, about 330 million years ago, so common in the limestones of Europe and North Africa that it is used to tell the age of the rocks. Its almost spherical shell, about 5 centimetres across, was tightly coiled with a tiny central navel, and the walls between its gas-filled chambers met the shell in sharp zigzag lines. It floated and jetted through warm, shallow seas, catching small animals with its tentacles.",
+   "v": "早石炭世海洋中典型的棱角菊石，生活在约3.3亿年前，在欧洲和北非的石灰岩中极为常见，被用来确定岩层的年代。它近乎球形的壳直径约5厘米，盘卷紧密，中央只有一个小小的脐部；分隔其充气腔室的隔壁与外壳相交成尖锐的锯齿状线条。它在温暖的浅海中漂浮并喷水前进，用触手捕捉小动物。"
+  },
+  {
+   "k": "The commonest giant plant-eater of the Late Jurassic of western North America, about 155-150 million years ago, up to 18 metres long. Compared with Diplodocus it was shorter and deeper, with a thicker neck held up at a slant, a fairly short tail and a short, boxy head with large nostrils. Its strong, spoon-shaped teeth could crop tough vegetation that other sauropods left alone. Herds of all ages seem to have travelled together.",
+   "v": "晚侏罗世北美西部最常见的巨型植食动物，生活在约1.55亿至1.5亿年前，体长可达18米。与梁龙相比，它身体更短更深，粗壮的脖子斜向上举，尾巴较短，头部短而方，鼻孔很大。它结实的勺状牙齿能啃食其他蜥脚类不吃的坚韧植物。各年龄段的个体似乎结群一起迁徙。"
+  },
+  {
+   "k": "The famous \"stone lily\" of the shallow Muschelkalk sea that covered Germany in the Middle Triassic, about 240 million years ago. A long stem of round, coin-like plates held up a small cup and a crown of ten thick arms, which could close into a tulip-shaped bud or open into a fan to catch food from the current. Its stem pieces are so common that whole limestone beds are built from them.",
+   "v": "中三叠世约2.4亿年前，覆盖德国的浅水壳灰岩海中著名的“石百合”。由圆形、硬币状骨板叠成的长茎托起一个小小的萼部和由十条粗壮腕组成的冠部；冠部可以合拢成郁金香形的花苞，也可以展开成扇形，从水流中捕捉食物。它的茎节极为常见，整层整层的石灰岩都由它们构成。"
+  },
+  {
+   "k": "The first dinosaur ever given a scientific name, in 1824, from Middle Jurassic rocks of England about 166 million years old. It was a heavy predator 6-7 metres long, with a long, low skull full of blade-like serrated teeth and short but very powerful arms ending in three big hooked claws. It hunted plant-eating dinosaurs along the coasts and river plains of a warm island landscape.",
+   "v": "1824年第一种获得学名的恐龙，发现于英格兰约1.66亿年前的中侏罗世岩层。它是一种体长6至7米的粗壮掠食者，长而低的头骨中布满刀刃般带锯齿的牙齿，前肢短而极其有力，末端长着三只弯钩状的大爪。它在温暖岛屿地带的海岸和河流平原上捕食植食性恐龙。"
+  },
+  {
+   "k": "The great wild bison of the Ice Age mammoth steppe, from Europe across Siberia to Alaska, up to 3 m long and 2 m tall at the shoulder. It had a towering hump, a shaggy dark mane and long, curving horns, and is the bison painted on the walls of Lascaux and Altamira. Herds grazed the cold grasslands and fed wolves, lions and human hunters.",
+   "v": "冰期猛犸草原上的大型野牛，分布于欧洲经西伯利亚至阿拉斯加，体长可达3米，肩高2米。它有高耸的肩峰、蓬乱的深色鬃毛和弯曲的长角，正是拉斯科和阿尔塔米拉洞穴壁画上的野牛。牛群在寒冷草原上吃草，养活了狼、狮子和人类猎人。"
+  },
+  {
+   "k": "The largest ammonite ever found, with a coiled shell up to about 1.8 metres across that may have reached 2 metres or more in life. Its smooth, tightly wound shell hid a squid-like animal with big eyes and ten arms, which drifted slowly through the open sea hunting small prey. Gas-filled chambers inside the shell let it hover at any depth like a living submarine.",
+   "v": "已知最大的菊石，盘卷的外壳直径可达约1.8米，生前或许超过2米。光滑而紧密盘绕的壳内藏着一只类似鱿鱼的动物，长着大眼睛和十条腕，在开阔海域缓缓漂游，捕食小型猎物。壳内充满气体的气室让它能像一艘活潜艇一样悬停在任意深度。"
+  },
+  {
+   "k": "The largest animal that has ever lived, up to about 30 m long and 150-190 tonnes, with a heart the size of a small car. It lunges through swarms of krill with its throat pleats ballooning, filtering the water through baleen plates and swallowing up to four tonnes of krill a day. Its low calls can carry across hundreds of kilometres of ocean.",
+   "v": "有史以来最大的动物，体长可达约30米，体重150-190吨，心脏有一辆小汽车那么大。它张开鼓胀的喉褶冲进磷虾群，用鲸须板滤出海水，一天能吞下多达4吨磷虾。它低沉的叫声能在海洋中传播数百公里。"
+  },
+  {
+   "k": "The largest dog that ever lived, from the Late Miocene of North America, weighing up to about 170 kilograms. It belonged to the borophagines, \"bone-crushing dogs\" with short, deep, hyena-like jaws that cracked bones for their marrow. It hunted horses and camels and also scavenged, probably in family groups.",
+   "v": "史上最大的犬科动物，生活在北美洲晚中新世，体重可达约170千克。它属于“碎骨犬”类，颌部短而深，像鬣狗一样能咬碎骨头吸食骨髓。它猎杀马和骆驼，也食腐，可能以家族群体活动。"
+  },
+  {
+   "k": "The largest dolphin, also called the killer whale, with males up to 8-9 m long and 6 tonnes and a dorsal fin up to 1.8 m tall. Orcas live in family pods led by old females, each with its own calls and hunting traditions: some eat fish, others work together to wash seals off ice floes or hunt great white sharks and whale calves. They live in every ocean, from the poles to the tropics.",
+   "v": "最大的海豚，又称杀人鲸，雄性体长可达8-9米、体重6吨，背鳍高达1.8米。虎鲸以由年长雌性带领的家族群生活，每个群体都有自己的叫声和狩猎传统：有的吃鱼，有的合作把海豹从浮冰上冲下来，或猎杀大白鲨和鲸的幼崽。它们生活在从两极到热带的所有海洋中。"
+  },
+  {
+   "k": "The largest eagle known, females up to about 15 kg with a wingspan near 3 m, from the South Island of New Zealand. Its talons were as big as a tiger's claws, and it struck moa many times its own weight at high speed, gripping the pelvis and killing with a blow to the head. It vanished about 600 years ago, soon after people hunted the moa to extinction.",
+   "v": "已知最大的鹰，雌性体重约15公斤，翼展近3米，生活在新西兰南岛。它的爪子和老虎的爪子一样大，能高速俯冲袭击体重是自己数倍的恐鸟，抓住骨盆，再一击毙其头部。约600年前，人类把恐鸟猎杀殆尽后不久，它也随之消失。"
+  },
+  {
+   "k": "The largest land carnivore alive, males up to 2.6 m long and 700 kg, which evolved from brown bears during the Ice Age. It hunts seals on the Arctic sea ice, waiting at their breathing holes, and can smell them from kilometres away. Thick white fur over black skin and a layer of fat keep it warm, and it swims for days between ice floes.",
+   "v": "现存最大的陆生食肉动物，雄性体长可达2.6米、体重700公斤，在冰期由棕熊演化而来。它在北极海冰上猎捕海豹，守在它们的呼吸孔旁，能在数公里外嗅到猎物。白色厚毛下是黑色皮肤，加上一层脂肪为它保暖，它能在浮冰之间连续游泳数日。"
+  },
+  {
+   "k": "The largest living bird, up to 2.7 m tall and 150 kg, flightless but able to run at about 70 km/h on long two-toed legs. It has the largest eyes of any land animal and lays the biggest eggs, about 1.5 kg each. A kick from an ostrich can kill a lion; during the Ice Age ostriches also roamed the steppes of Asia.",
+   "v": "现存最大的鸟类，身高可达2.7米、体重150公斤，不会飞，但靠两趾长腿能以约每小时70公里的速度奔跑。它拥有陆生动物中最大的眼睛，产下最大的蛋，每枚约1.5公斤。鸵鸟一脚就能踢死狮子；冰期时鸵鸟也漫游在亚洲的草原上。"
+  },
+  {
+   "k": "The largest living penguin, about 1.2 m tall and up to 45 kg, which dives deeper than 500 m after fish, squid and krill. It breeds on the Antarctic sea ice in the middle of winter: the male keeps the single egg on his feet for two months without eating while thousands of birds huddle together against the cold.",
+   "v": "现存最大的企鹅，身高约1.2米，体重可达45公斤，可潜到500米以下捕食鱼类、乌贼和磷虾。它在隆冬时节于南极海冰上繁殖：雄鸟把唯一的蛋放在脚上孵两个月，期间不吃东西，成千上万只企鹅挤在一起抵御严寒。"
+  },
+  {
+   "k": "The largest living tortoise, up to 1.5 m long and over 250 kg, which can live well over 100 years and survive a year without food or water. Its ancestors drifted from South America to the Galapagos Islands, where each island evolved its own form, from domed shells in wet highlands to saddle-shaped shells that let the neck reach up to cactus pads. These differences helped inspire Darwin's ideas on evolution.",
+   "v": "现存最大的陆龟，体长可达1.5米、体重超过250公斤，寿命远超100年，能一年不吃不喝而存活。它的祖先从南美洲漂流到加拉帕戈斯群岛，每个岛屿演化出各自的类型：湿润高地上的是圆顶形背甲，干旱岛屿上的则是马鞍形背甲，让脖子能伸高够到仙人掌。这些差异启发了达尔文的进化思想。"
+  },
+  {
+   "k": "The largest multituberculate, a beaver-sized mammal about 80 cm long from the early Paleocene of New Mexico, living just a few hundred thousand years after the dinosaurs died out. Multituberculates were an old, rodent-like lineage unrelated to true rodents; Taeniolabis had a deep skull, big gnawing front teeth and broad grinding cheek teeth for tough plants. The group had thrived for over 100 million years before rodents replaced it.",
+   "v": "最大的多瘤齿兽，体型如河狸，长约80厘米，生活在古新世早期的新墨西哥，距恐龙灭绝仅几十万年。多瘤齿兽是一支古老的、形似啮齿类但与真正的啮齿类无关的哺乳动物；带齿兽头骨很高，有大大的啃咬门齿和宽阔的研磨颊齿，能吃坚韧的植物。这一类群繁盛了一亿多年，最后被啮齿类取代。"
+  },
+  {
+   "k": "The largest octopus, usually 3-5 m across the arms and 15-50 kg, living on rocky sea floors of the North Pacific. It hunts crabs, clams and fish, drilling or crushing their shells with its beak, and can change colour and skin texture in an instant. Octopuses are among the most intelligent invertebrates: they solve puzzles, open jars and recognise individual people.",
+   "v": "最大的章鱼，腕展通常3-5米，体重15-50公斤，生活在北太平洋的岩石海底。它捕食螃蟹、蛤蜊和鱼，用喙钻穿或咬碎它们的外壳，能在一瞬间改变体色和皮肤质感。章鱼是最聪明的无脊椎动物之一：会解谜题、拧开瓶盖，还能认出不同的人。"
+  },
+  {
+   "k": "The largest predatory fish alive, females up to about 6 m long and 2 tonnes, armed with rows of big, saw-edged triangular teeth. It ambushes seals from below at high speed, sometimes launching itself clear of the water. Warm muscles let it hunt in cold seas, and it senses prey by smell and by the faint electric fields of their bodies.",
+   "v": "现存最大的掠食性鱼类，雌性体长可达约6米、体重2吨，口中有一排排带锯齿的大三角形牙齿。它从下方高速伏击海豹，有时会整个身体跃出水面。温暖的肌肉让它能在冷水中捕猎，它靠嗅觉和猎物身体发出的微弱电场来感知猎物。"
+  },
+  {
+   "k": "The largest salmon ever, up to about 2.5 metres long, from the Late Miocene and Pliocene of the North Pacific coast. It strained plankton with its many gill rakers, but spawning adults grew a pair of big tusk-like teeth that stuck out sideways from the snout, probably for fighting or digging nests. Like living Pacific salmon it swam up rivers to spawn.",
+   "v": "史上最大的鲑鱼，体长可达约2.5米，生活在北太平洋沿岸的晚中新世至上新世。它用众多鳃耙滤食浮游生物，但产卵期的成鱼会长出一对从吻部向两侧伸出的大獠牙，可能用于打斗或挖巢。和现生太平洋鲑鱼一样，它会洄游到河流中产卵。"
+  },
+  {
+   "k": "The largest tree-living animal, a red-haired great ape whose arms span over 2 m; adult males weigh about 80 kg and grow broad cheek pads. Orangutans eat mainly fruit, use sticks and leaves as tools and build a new nest in the trees every night. A mother raises one young for about eight years, the longest childhood of any animal besides humans.",
+   "v": "最大的树栖动物，一种红毛大猿，双臂展开超过2米；成年雄性体重约80公斤，脸侧长出宽大的颊垫。猩猩主要吃果实，会用树枝和树叶当工具，每晚都在树上搭建新窝。母亲独自抚养一个幼崽约八年，这是除人类以外最长的童年。"
+  },
+  {
+   "k": "The largest wild dog, about 1.5 m long and 30-60 kg, spread across the northern hemisphere since the Ice Age. Wolves live in family packs that cooperate to run down deer, bison and horses many times their own weight, trotting tens of kilometres a day. Domestic dogs descend from ancient wolves.",
+   "v": "现存最大的野生犬科动物，体长约1.5米，体重30-60公斤，自冰期以来遍布北半球。狼以家族群生活，合作追捕体重是自身数倍的鹿、野牛和马，每天可小跑数十公里。家犬就是由远古的狼驯化而来。"
+  },
+  {
+   "k": "The last known sea scorpion, from the Late Permian of Russia, known only from part of its large head shield; its whole group vanished in the great end-Permian extinction. A broad, heavy relative of Hibbertopterus, probably over a metre long, it walked slowly over the beds of rivers and lagoons, raking small animals out of the mud with comb-like spines on its front legs. Its thick armour made it very hard to kill.",
+   "v": "已知最后的板足鲎（海蝎），生活在二叠纪晚期的俄罗斯，只发现了它大型头甲的一部分；整个类群在二叠纪末大灭绝中消失。它是巨型板足鲎的宽大笨重的亲戚，体长可能超过1米，在河流和潟湖底部缓慢爬行，用前肢上梳子般的刺把小动物从泥里耙出来。厚重的甲壳使它很难被杀死。"
+  },
+  {
+   "k": "The longest venomous snake, commonly 3-4 m and up to 5.8 m, from the forests of India and Southeast Asia. It eats mainly other snakes, including venomous ones, and a single bite carries enough venom to kill an elephant. When threatened it spreads a narrow hood, growls and rears up a third of its body; the female builds a nest of leaves and guards her eggs.",
+   "v": "最长的毒蛇，一般长3-4米，最长可达5.8米，分布于印度和东南亚的森林中。它主要以其他蛇类为食，包括毒蛇，一次咬伤注入的毒液足以杀死一头大象。受到威胁时，它会张开狭长的颈部，发出低吼，并竖起身体的三分之一；雌蛇会用落叶筑巢并守护蛇卵。"
+  },
+  {
+   "k": "The most scorpion-like sea scorpion, about 10-15 cm long, from the Late Silurian of New York and Ontario. It had a small head, a very broad, bulging body and a short, narrow tail held curled up over its back, ending in a curved, sting-like spike. Its two long, spiny front pairs of legs formed a trap for prey on the sea floor.",
+   "v": "最像蝎子的板足鲎，体长约10-15厘米，生活于晚志留世，发现于美国纽约州和加拿大安大略省。它头部小，身体非常宽阔隆起，短而窄的尾部向上卷曲在背上，末端是一根弯曲的、像毒刺一样的尖刺。它两对长而多刺的前足构成了在海底捕捉猎物的陷阱。"
+  },
+  {
+   "k": "The oldest known acorn worm, a slender worm several centimetres long from the Burgess Shale of Canada, with a short acorn-shaped snout, a collar and a long trunk. Unlike living acorn worms, it lived in a thin tube, sometimes branched, which links acorn worms to their tube-dwelling relatives, the pterobranchs and graptolites. It retreats into its tube when threatened.",
+   "v": "已知最古老的柱头虫，一种几厘米长的细长蠕虫，来自加拿大的伯吉斯页岩，有短短的橡果状吻、领部和长长的躯干。与现生柱头虫不同，它生活在一根细管中，管子有时还会分枝，这把柱头虫与它们住在管中的亲戚——羽鳃类和笔石——联系了起来。受到威胁时，它会缩回管中。"
+  },
+  {
+   "k": "The oldest known antiarch, a small armoured placoderm from the Late Silurian of Yunnan, China. Like its later relative Bothriolepis it had a box of bony plates round its head and chest, eyes close together on top of the head and two stiff, plated arms in place of pectoral fins. Its trunk armour was low and broad with a flat back. It grubbed through soft mud on the sea floor for food.",
+   "v": "已知最古老的胴甲鱼，一种小型盾皮鱼，生活于晚志留世，发现于中国云南。与后来的近亲沟鳞鱼一样，它的头部和胸部由骨板构成的“盒子”包裹，两眼紧靠在头顶，用两条坚硬、披甲的“手臂”代替胸鳍。它的躯甲低而宽，背部平坦。它在海底松软的泥中翻找食物。"
+  },
+  {
+   "k": "The oldest known decapod crustacean, a small lobster-like shrimp about 6 centimetres long from the Late Devonian seas of North America, about 365 million years ago. It had a hard shell, slender claws and long antennae. It crept over the muddy sea floor, picking up small animals and carrion, the first of the line that led to shrimps, lobsters and crabs.",
+   "v": "已知最古老的十足目甲壳动物，一种体长约6厘米、形似小龙虾的虾，约3.65亿年前生活在晚泥盆世北美的海洋中。它有坚硬的外壳、细长的螯和长长的触角。它在泥泞的海底爬行，捡食小动物和腐肉，是通向虾、龙虾和螃蟹这一支系的开端。"
+  },
+  {
+   "k": "The oldest known frog that could leap, about 5 cm long, from the Early Jurassic of Arizona, about 190 million years ago. Its long hip bones, long hind legs and fused ankle bones show that the frog's jumping build was already in place, unlike in the Triassic proto-frogs that could only crawl and swim. Like frogs today it caught insects and other small prey.",
+   "v": "已知最古老的能跳跃的蛙类，体长约5厘米，生活在约1.9亿年前的美国亚利桑那早侏罗世。它长长的髋骨、长长的后腿和愈合的踝骨表明，蛙类的跳跃体形当时已经形成，而三叠纪的原蛙只能爬行和游泳。和今天的蛙一样，它捕食昆虫和其他小型猎物。"
+  },
+  {
+   "k": "The oldest known moth, from Early Jurassic rocks of Dorset in England, about 190 million years ago. It is known from wings covered in the tiny overlapping scales that give moths and butterflies their name, 'scale wings'. It was probably a tiny moth about 1 cm across with chewing jaws, feeding on pollen and spores long before flowers existed.",
+   "v": "已知最古老的蛾类，发现于英格兰多塞特约1.9亿年前的早侏罗世岩层。它的翅膀上覆盖着细小的、相互重叠的鳞片，蛾和蝴蝶（鳞翅目，意为“鳞片翅膀”）正是因此得名。它可能是一种翅展约1厘米、有咀嚼式口器的小蛾，在开花植物出现之前很久就以花粉和孢子为食。"
+  },
+  {
+   "k": "The oldest known relative of octopuses and vampire squids, a squid-like animal about 12 centimetres long from the Bear Gulch Limestone of Montana, about 328 million years old. It had a torpedo-shaped body stiffened by an internal shell, a pair of fins and ten sucker-bearing arms, two of them longer than the rest, which it probably used to seize prey. It shows that the octopus line had already appeared about 80 million years earlier than once thought, still with ten arms rather than eight.",
+   "v": "已知最古老的章鱼和幽灵蛸（吸血鬼乌贼）的亲属，一种形似鱿鱼的动物，长约12厘米，发现于美国蒙大拿州约3.28亿年前的熊峡石灰岩。它的身体呈鱼雷形，由内壳支撑，有一对鳍和十条带吸盘的腕，其中两条比其余的更长，可能用来捕捉猎物。它表明章鱼一系的出现比过去认为的早了约8000万年，而且当时仍有十条腕而不是八条。"
+  },
+  {
+   "k": "The oldest known sea cow, from the early middle Eocene of Jamaica, about 2.1 m long. Unlike manatees and dugongs it still had four legs that could carry it on land, and it lived much like a hippo, grazing sea grass and water plants in coastal lagoons and rivers. Its heavy, dense bones worked as ballast when it swam.",
+   "v": "已知最古老的海牛，生活在始新世中期早段的牙买加，体长约2.1米。与儒艮和海牛不同，它仍有四条能在陆地上行走的腿，生活方式很像河马，在沿海潟湖和河流中吃海草和水生植物。它沉重致密的骨骼在游泳时起压舱物的作用。"
+  },
+  {
+   "k": "The plant eater that gave its name to the dicynodonts, about 1.2 metres long, from the Late Permian of South Africa, around 255 million years ago. Its name means two dog teeth: it had only a pair of tusks in the upper jaw and otherwise a sharp, horny beak for cropping plants. Stout and short-tailed, it was one of the most common plant eaters of its time.",
+   "v": "二齿兽类因它而得名，体长约1.2米，生活在约2.55亿年前二叠纪晚期的南非。它的名字意为“两颗犬齿”：上颌只有一对獠牙，其余是锋利的角质喙，用来切断植物。它身体粗壮、尾巴短，是当时最常见的植食动物之一。"
+  },
+  {
+   "k": "Thecosmilia",
+   "v": "鞘珊瑚"
+  },
+  {
+   "k": "Thectardis",
+   "v": "锥海绵"
+  },
+  {
+   "k": "Thoracopterus",
+   "v": "胸翼鱼"
+  },
+  {
+   "k": "Thylacine",
+   "v": "袋狼"
+  },
+  {
+   "k": "Tianyulong",
+   "v": "天宇龙"
+  },
+  {
+   "k": "Tremaglaspis",
+   "v": "孔光盾虫"
+  },
+  {
+   "k": "Triamyxa",
+   "v": "三叠藻食甲虫"
+  },
+  {
+   "k": "Triarthrus",
+   "v": "三节虫"
+  },
+  {
+   "k": "Trilophosaurus",
+   "v": "三棱龙"
+  },
+  {
+   "k": "Trimerus",
+   "v": "三分虫"
+  },
+  {
+   "k": "True crab",
+   "v": "短尾蟹"
+  },
+  {
+   "k": "Turinia",
+   "v": "图里尼鱼"
+  },
+  {
+   "k": "Uintacrinus",
+   "v": "尤因他海百合"
+  },
+  {
+   "k": "Undina",
+   "v": "翁迪纳鱼"
+  },
+  {
+   "k": "Urbina's Penguin",
+   "v": "乌氏企鹅"
+  },
+  {
+   "k": "Vampyropod",
+   "v": "幽灵蛸类"
+  },
+  {
+   "k": "Velvet worm",
+   "v": "栉蚕"
+  },
+  {
+   "k": "Vendia",
+   "v": "文德虫"
+  },
+  {
+   "k": "Vendoconularia",
+   "v": "文德锥石"
+  },
+  {
+   "k": "Ventastega",
+   "v": "文塔螈"
+  },
+  {
+   "k": "Ventogyrus",
+   "v": "风旋虫"
+  },
+  {
+   "k": "Villebrunaster",
+   "v": "维勒布伦海星"
+  },
+  {
+   "k": "Vulcanops",
+   "v": "火山蝠"
+  },
+  {
+   "k": "Waagenophyllum",
+   "v": "卫根珊瑚"
+  },
+  {
+   "k": "Wakaleo",
+   "v": "瓦卡袋狮"
+  },
+  {
+   "k": "Weinbergina",
+   "v": "温伯格鲎"
+  },
+  {
+   "k": "Whiteia",
+   "v": "怀特腔棘鱼"
+  },
+  {
+   "k": "Xenacanthus",
+   "v": "异刺鲨"
+  },
+  {
+   "k": "Xianglong",
+   "v": "翔龙"
+  },
+  {
+   "k": "Xiushanosteus",
+   "v": "秀山鱼"
+  },
+  {
+   "k": "Yunnanozoon",
+   "v": "云南虫"
+  },
+  {
+   "k": "Yutyrannus",
+   "v": "羽王龙"
+  },
+  {
+   "k": "Zalambdalestes",
+   "v": "重褶齿猬"
+  },
+  {
+   "k": "{0}% less harm from poison and infection",
+   "v": "中毒和感染伤害减少 {0}%"
+  },
+  {
+   "k": "{0}% less HP lost when it finds no food",
+   "v": "找不到食物时生命损失减少 {0}%"
+  },
+  {
+   "k": "{0}% less harm from disasters",
+   "v": "灾害伤害减少 {0}%"
+  },
+  {
+   "k": "{0}% less damage taken",
+   "v": "受到伤害减少 {0}%"
+  },
+  {
+   "k": "{0}% less damage taken in your territory",
+   "v": "在你的领地内受到伤害减少 {0}%"
+  },
+  {
+   "k": "{0}% less damage taken with a friendly group next to it",
+   "v": "相邻有友方群体时受到伤害减少 {0}%"
+  },
+  {
+   "k": "{0}% less damage back when it attacks",
+   "v": "进攻时受到的反击伤害减少 {0}%"
+  },
+  {
+   "k": "Counterattacks {0}% harder",
+   "v": "反击伤害提高 {0}%"
+  },
+  {
+   "k": "Heals {0}% of its HP when it wipes out a foe",
+   "v": "消灭敌人时回复 {0}% 生命"
+  },
+  {
+   "k": "{0}% more EP for wiping out a foe",
+   "v": "消灭敌人获得的 EP 增加 {0}%"
+  },
+  {
+   "k": "Reproducing costs {0}% less EP",
+   "v": "繁殖消耗的 EP 减少 {0}%"
+  },
+  {
+   "k": "This species' items and evolving cost {0}% less EP",
+   "v": "该物种的性状和进化消耗的 EP 减少 {0}%"
+  },
+  {
+   "k": "Reproduces {0} turn sooner",
+   "v": "繁殖冷却缩短 {0} 回合"
+  },
+  {
+   "k": "Reproduces {0} turns sooner",
+   "v": "繁殖冷却缩短 {0} 回合"
+  },
+  {
+   "k": "Sees {0} tile further",
+   "v": "视野增加 {0} 格"
+  },
+  {
+   "k": "Sees {0} tiles further",
+   "v": "视野增加 {0} 格"
+  },
+  {
+   "k": "+{0} EP a turn while you have the species",
+   "v": "拥有该物种时每回合 +{0} EP"
+  },
+  {
+   "k": "Eating prey doesn't end its turn",
+   "v": "捕食不会结束回合"
+  },
+  {
+   "k": "Reproducing takes no action",
+   "v": "繁殖不消耗行动"
+  },
+  {
+   "k": "Can't be held or stunned",
+   "v": "不会被缠住或击晕"
+  },
+  {
+   "k": "Can't be swallowed whole",
+   "v": "不会被整个吞下"
+  },
+  {
+   "k": "Can't be ambushed",
+   "v": "不会被伏击"
+  },
+  {
+   "k": "the {0} can still act",
+   "v": "{0}仍可行动"
+  },
+  {
+   "k": "the {0} defended its home ground",
+   "v": "{0}守住了自己的家园"
+  },
+  {
    "k": "Actions +{0}",
    "v": "行动 +{0}"
   },
@@ -309,8 +2973,8 @@
    "v": "盘绕并勒紧猎物：被攻击但未被击杀的群体会被缠住，下回合无法行动。"
   },
   {
-   "k": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
-   "v": "再生断肢：每回合恢复五分之二生命值，而不是五分之一。"
+   "k": "Regrows lost parts: it heals a fifth of its HP each turn instead of a tenth.",
+   "v": "再生断肢：每回合恢复五分之一生命值，而不是十分之一。"
   },
   {
    "k": "Shed a limb",
@@ -22979,6 +25643,182 @@
   {
    "k": "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
    "v": "右边的物种由左边的物种进化而来。你还没有的物种上有一个 DNA 按钮，点它就能把你的一群动物进化成这个物种：可以进化时它会发出金光，条件不够时是灰色的（鼠标指向它可以看到还缺什么）。书本按钮打开这个物种的百科；环形箭头可以让你失去的物种重生。点击一个物种，可以看它能进化成什么。"
+  },
+  {
+   "k": "Rest (+{0}% HP)",
+   "v": "休息（+{0}% 生命）"
+  },
+  {
+   "k": "Resting: heals {0}% HP next turn",
+   "v": "休息中：下回合恢复 {0}% 生命值"
+  },
+  {
+   "k": "Rest",
+   "v": "休息"
+  },
+  {
+   "k": "Sit this turn out: heals {0}% of its HP next turn",
+   "v": "本回合轮空：下回合恢复 {0}% 生命值"
+  },
+  {
+   "k": "Painting: {0}, {1}, public domain",
+   "v": "画作：{0}《{1}》，公有领域"
+  },
+  {
+   "k": "Brontosaurus",
+   "v": "雷龙"
+  },
+  {
+   "k": "Oligocene Titanotheres",
+   "v": "渐新世雷兽"
+  },
+  {
+   "k": "Pliocene Rhinoceros, Mastodonts and Oreodonts",
+   "v": "上新世的犀牛、乳齿象与坚齿兽"
+  },
+  {
+   "k": "The World Before There Was Life",
+   "v": "生命诞生之前的世界"
+  },
+  {
+   "k": "Reptiles That Invaded the Seas",
+   "v": "入侵海洋的爬行动物"
+  },
+  {
+   "k": "Woolly Mammoths",
+   "v": "长毛猛犸象"
+  },
+  {
+   "k": "Miocene Plains Mammals",
+   "v": "中新世平原哺乳动物"
+  },
+  {
+   "k": "Late Cretaceous Dinosaurs",
+   "v": "晚白垩世恐龙"
+  },
+  {
+   "k": "Rancho La Brea Tar Pools",
+   "v": "拉布雷亚沥青坑"
+  },
+  {
+   "k": "Silurian Period",
+   "v": "志留纪"
+  },
+  {
+   "k": "Ordovician Sea Life",
+   "v": "奥陶纪海洋生物"
+  },
+  {
+   "k": "Cave Bears",
+   "v": "洞熊"
+  },
+  {
+   "k": "Megaloceros",
+   "v": "大角鹿"
+  },
+  {
+   "k": "Mammal-like Reptiles",
+   "v": "似哺乳类爬行动物"
+  },
+  {
+   "k": "Uintatherium and Orohippus",
+   "v": "尤因它兽与山马"
+  },
+  {
+   "k": "Archaeopteryx, Compsognathus and Rhamphorhynchus",
+   "v": "始祖鸟、美颌龙与喙嘴翼龙"
+  },
+  {
+   "k": "Palorchestes",
+   "v": "袋貘"
+  },
+  {
+   "k": "Nesting Protoceratops",
+   "v": "筑巢的原角龙"
+  },
+  {
+   "k": "Columbian Mammoth",
+   "v": "哥伦比亚猛犸象"
+  },
+  {
+   "k": "Brontosaurus in the Swamp",
+   "v": "沼泽中的雷龙"
+  },
+  {
+   "k": "Leaping Laelaps",
+   "v": "跃起的伤龙"
+  },
+  {
+   "k": "Dinictis and Protoceras",
+   "v": "剑齿虎与原角鹿"
+  },
+  {
+   "k": "Hadrosaurs",
+   "v": "鸭嘴龙类"
+  },
+  {
+   "k": "American Mastodon",
+   "v": "美洲乳齿象"
+  },
+  {
+   "k": "Eobasileus",
+   "v": "Eobasileus"
+  },
+  {
+   "k": "Painters of Font-de-Gaume",
+   "v": "丰德戈姆洞穴的画家"
+  },
+  {
+   "k": "Stegosaurus in the Forest",
+   "v": "森林中的剑龙"
+  },
+  {
+   "k": "Eohippus",
+   "v": "始祖马"
+  },
+  {
+   "k": "Duria Antiquior",
+   "v": "Duria Antiquior"
+  },
+  {
+   "k": "The Country of the Iguanodon",
+   "v": "禽龙之地"
+  },
+  {
+   "k": "The Wealden Period",
+   "v": "威尔德纪"
+  },
+  {
+   "k": "Mosasaurus and Ichthyosaurus",
+   "v": "沧龙与鱼龙"
+  },
+  {
+   "k": "Sea Lilies",
+   "v": "海百合"
+  },
+  {
+   "k": "Laugerie-Basse in the Vézère Valley",
+   "v": "韦泽尔河谷中的拉热里-巴斯"
+  },
+  {
+   "k": "Station",
+   "v": "停驻"
+  },
+  {
+   "k": "Stationed",
+   "v": "停驻中"
+  },
+  {
+   "k": "Stationed: heals {0}% HP each turn it stays",
+   "v": "已停驻：停留期间每回合恢复 {0}% 生命值"
+  },
+  {
+   "k": "Stationed. Click to give it orders again (any order also ends it).",
+   "v": "停驻中。点击即可重新下达命令（下达任何命令也会结束停驻）。"
+  },
+  {
+   "k": "Stay here until ordered: only stationed animals heal, {0}% of their HP each turn (from the turn after they last acted).",
+   "v": "原地停驻，直到下达新命令：只有停驻的动物才会回血，每回合恢复 {0}% 生命值（从最后一次行动的下一回合开始）。"
   }
  ]
 }

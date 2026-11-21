@@ -6,30 +6,21 @@ using UnityEngine.UIElements;
 
 namespace NaturalHistory.UI
 {
-    // The title screen the game opens on, like Civilization's or Humankind's: one of Charles R.
-    // Knight's prehistoric murals (Resources/UI/MainMenu, public domain) fills the screen and slowly
-    // pans across, darkened on the left behind the title and the same menu as the pause menu.
+    // The title screen the game opens on, like Civilization's or Humankind's: one of the public-domain
+    // paleoart paintings (MenuArt: Knight, Harder, De la Beche...) fills the screen and slowly pans
+    // across, darkened on the left behind the title and the same menu as the pause menu.
     // The HUD is hidden while it shows; New Game, Load Game and the Encyclopedia open over it
     // (GameMenus wires the buttons). The map behind it is not shown, and no map input gets through.
     public class MainMenu
     {
         private const float PanSeconds = 90f; // one sweep across the painting and back
 
-        // Painting, its title and where it hangs, for the credit line
-        private static readonly (string file, string title)[] Paintings =
-        {
-            ("early_land_plants",         "Early Land Plants"),
-            ("permian_reptiles",          "Permian Reptiles and Amphibians"),
-            ("cretaceous_seas",           "Late Cretaceous Seas"),
-            ("triceratops_tyrannosaurus", "Triceratops and Tyrannosaurus"),
-        };
-
         private readonly VisualElement root, menu, art;
         private readonly Label credit;
         private readonly Button continueButton;
         private readonly List<(VisualElement element, StyleEnum<DisplayStyle> display)> hiddenHud = new();
         private Texture2D painting;
-        private string paintingTitle;
+        private MenuArt.Painting paintingInfo;
         private float shownAt;
 
         public bool IsOpen => menu != null && !menu.ClassListContains("hidden");
@@ -61,7 +52,7 @@ namespace NaturalHistory.UI
         public void Show()
         {
             if (menu == null) return;
-            if (painting == null) PickPainting();
+            if (!IsOpen) PickPainting(); // a new one each time the title screen comes up
             // Everything but the overlays (new game, load, encyclopedia...) steps aside
             hiddenHud.Clear();
             foreach (var child in menu.parent.Children()) // GameMenus.uxml's root: the HUD and the overlays
@@ -100,20 +91,22 @@ namespace NaturalHistory.UI
         {
             if (menu == null) return;
             continueButton.SetEnabled(InGame || LatestSlot() >= 0);
-            credit.text = paintingTitle == null ? "" :
-                Loc.F("Painting: Charles R. Knight, {0} (Field Museum, 1926–1930), public domain", Loc.T(paintingTitle));
+            credit.text = paintingInfo != null ? paintingInfo.Credit : "";
         }
 
         private void PickPainting()
         {
-            var (file, title) = Paintings[Random.Range(0, Paintings.Length)];
-            painting = Resources.Load<Texture2D>($"UI/MainMenu/{file}");
-            paintingTitle = painting != null ? title : null;
-            if (painting != null) art.style.backgroundImage = new StyleBackground(painting);
+            var next = MenuArt.Next();
+            var tex = next?.Load();
+            if (tex == null) return; // keep the one showing
+            painting = tex;
+            paintingInfo = next;
+            art.style.backgroundImage = new StyleBackground(painting);
         }
 
         // Called every frame by GameMenus: the painting covers the screen at its own proportions and
-        // pans slowly from one end to the other and back, easing at the ends
+        // pans slowly from one end to the other and back, easing at the ends: across a wide mural,
+        // up and down one squarer than the screen
         public void Update()
         {
             if (!IsOpen || painting == null) return;
@@ -126,7 +119,7 @@ namespace NaturalHistory.UI
             art.style.width  = artW;
             art.style.height = artH;
             art.style.left   = -(artW - w) * along;
-            art.style.top    = -(artH - h) * 0.5f;
+            art.style.top    = -(artH - h) * along;
         }
 
         // Dark on the left, behind the title and menu, clearing toward the middle of the painting

@@ -72,6 +72,7 @@ namespace NaturalHistory.Territory
             if (GameDataLoader.Species == null) GameDataLoader.Initialize();
 
             grid.Generated += RequestRebuild;
+            grid.Generated += () => focusDue = true;
             if (colonies != null) colonies.ColoniesPlaced += RequestRebuild;
             if (playerManager != null) playerManager.PlayersChanged += RequestRebuild;
             Loc.Changed += RequestRebuild;
@@ -128,6 +129,24 @@ namespace NaturalHistory.Territory
                 EnsureColony(player, core);
             }
             RecomputeTerritory();
+            if (focusDue) FocusOnYours();
+        }
+
+        // ---------- The opening view ----------
+
+        // A new map (a new game or a loaded one): once your animals are on it, the camera goes to the
+        // first of them and the view shows the layer it lives in
+        private bool focusDue;
+
+        private void FocusOnYours()
+        {
+            var human = playerManager.Players.FirstOrDefault(p => p.IsHuman);
+            var g = colonies != null && human != null ? colonies.Groups.FirstOrDefault(x => x != null && x.Cell != null && x.Owner == human) : null;
+            if (g == null) return; // not placed yet: the next rebuild tries again
+            focusDue = false;
+            var layer = Niches.LayerOf(g.Niche);
+            if (UnderView.Layer != layer) UnderView.Set(layer);
+            CameraController.Main?.CenterOn(g.Cell.transform.position);
         }
 
         // ---------- Colonies ----------
@@ -174,7 +193,7 @@ namespace NaturalHistory.Territory
             {
                 if (cell == null) continue;
                 // a species fits if it can live here and its niche on the tile is free
-                var fits = alive.Where(d => SpeciesColonies.FitsHabitat(d, cell) && colonies.GroupAt(cell, Niches.Of(d, cell)) == null &&
+                var fits = alive.Where(d => ColonyGroup.CanPlace(d, cell) && colonies.GroupAt(cell, Niches.Of(d, cell)) == null &&
                                             FoodWeb.HasFood(d, cell, colonies, null)).ToList();
                 if (fits.Count == 0) continue;
 
@@ -210,15 +229,20 @@ namespace NaturalHistory.Territory
         // a tile, so on different tiles where they share a niche). False if none of them could be placed.
         public static readonly string[] Starters = { "thecamonas_trahens", "telonema_subtile", "malawimonas_jakobiformis" };
 
+        // A game starting after the Ediacaran gives each player three animals of the period that
+        // stand for the trunk and great branches of the evolution tree instead (KeyStarters). Only
+        // at the very start: a player whose species have no living kin in a later period gets one
+        // species as before (EnsureColony), not three.
         private bool FoundStarters(Player player, List<HexCell> cells, System.Random rng)
         {
             var evolution = EvolutionManager.Instance;
+            var ids = grid.DisplayedAge > GeologicalAge.Ediacaran && AtGameStart(player) ? KeyStarters(cells, rng) : Starters.ToList();
             ColonyGroup first = null;
-            foreach (var id in Starters)
+            foreach (var id in ids)
             {
                 var def = GameDataLoader.GetSpecies(id);
                 if (def == null || !colonies.IsAliveNow(def)) continue;
-                var cell = cells.FirstOrDefault(c => c != null && SpeciesColonies.FitsHabitat(def, c) &&
+                var cell = cells.FirstOrDefault(c => c != null && ColonyGroup.CanPlace(def, c) &&
                                                      colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, colonies, null));
                 if (cell == null) continue;
                 var group = colonies.SpawnColony(def, cell, player, rng.Next());
@@ -232,6 +256,74 @@ namespace NaturalHistory.Territory
                 lastColonySpecies[player.Index] = def.id;
             }
             return first != null;
+        }
+
+        // The first turn of a new game (not a later period, nor a game loaded later on), and the
+        // player has nothing yet
+        private bool AtGameStart(Player player)
+        {
+            var turns = TurnManager.Instance;
+            var ages = AgeManager.Instance;
+            if (turns == null || ages == null || grid.DisplayedAge != GameOptions.StartAge) return false;
+            if (EvolutionManager.Instance != null && EvolutionManager.Instance.HasCopies(player)) return false;
+            return turns.CurrentTurn <= ages.FirstTurnOf(GameOptions.StartAge);
+        }
+
+        // How many species descend from each one in the evolution tree (EvolutionData links)
+        private static Dictionary<string, HashSet<string>> descendants;
+        private static HashSet<string> DescendantsOf(string id)
+        {
+            descendants ??= new Dictionary<string, HashSet<string>>();
+            if (descendants.TryGetValue(id, out var set)) return set;
+            set = new HashSet<string>();
+            descendants[id] = set; // (guards against loops in the data)
+            foreach (var link in EvolutionData.From(id))
+                if (link.to != id && set.Add(link.to)) set.UnionWith(DescendantsOf(link.to));
+            return set;
+        }
+
+        // Three animals of the period that stand for the evolution tree's trunk and its important
+        // branching points: those with the most descendants still to evolve (and the most direct
+        // branches), from different groups
+        // and not ancestor and descendant of one another, picked at random weighted by how much
+        // of the tree lies ahead of them. Each must be able to live on the habitat center's core.
+        // In a seabed start (before the Devonian) seafloor and sea species come first, so they
+        // show in the under view the game opens on.
+        private List<string> KeyStarters(List<HexCell> cells, System.Random rng)
+        {
+            bool seabed = GameOptions.StartsUnderSea(grid.DisplayedAge);
+            bool Fits(SpeciesDefinition d) => cells.Any(c => c != null && ColonyGroup.CanPlace(d, c) &&
+                                                         colonies.GroupAt(c, Niches.Of(d, c)) == null && FoodWeb.HasFood(d, c, colonies, null));
+            // animals of the period (first seen in it or the two before; not microbes, which every
+            // period still has), that branch on into others
+            int age = (int)grid.DisplayedAge;
+            bool Recent(SpeciesDefinition d) => Enum.TryParse(d.firstAge, true, out GeologicalAge first) && (int)first >= age - 2;
+            int Weight(SpeciesDefinition d) => DescendantsOf(d.id).Count + 3 * EvolutionData.From(d.id).Count();
+            var pool = GameDataLoader.Species
+                .Where(d => d.playable && d.sizeCm >= 0.1f && Recent(d) && SpeciesColonies.CanTravel(d) && colonies.IsAliveNow(d) &&
+                            EvolutionData.From(d.id).Any())
+                .OrderByDescending(Weight)
+                .Where(Fits)
+                .Take(14)
+                .ToList();
+            if (seabed)
+            {
+                var under = pool.Where(d => cells.Any(c => c != null && Niches.LayerOf(Niches.Of(d, c)) == MapLayer.Under)).ToList();
+                if (under.Count >= 3) pool = under;
+            }
+            var picked = new List<SpeciesDefinition>();
+            while (picked.Count < 3 && pool.Count > 0)
+            {
+                float total = pool.Sum(d => Mathf.Sqrt(Weight(d)));
+                float roll = (float)rng.NextDouble() * total;
+                var pick = pool[pool.Count - 1];
+                foreach (var d in pool) { roll -= Mathf.Sqrt(Weight(d)); if (roll <= 0f) { pick = d; break; } }
+                picked.Add(pick);
+                // the next ones from other groups and other lines of descent
+                pool = pool.Where(d => d != pick && d.group != pick.group &&
+                                       !DescendantsOf(pick.id).Contains(d.id) && !DescendantsOf(d.id).Contains(pick.id)).ToList();
+            }
+            return picked.Select(d => d.id).ToList();
         }
 
         private void Watch(ColonyGroup group)

@@ -1,0 +1,965 @@
+[
+  {
+    "id": "furca_mauritanica",
+    "commonName": "Furca",
+    "scientificName": "Furca mauritanica",
+    "kingdom": "Animalia",
+    "group": "Arthropod",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 4,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/FurcaMauritanica",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A small marrellomorph arthropod a few centimetres across, a late cousin of the Cambrian Marrella. Its rounded head shield bore three pairs of long, forked and branching spines that gave it a lacy, star-like outline, and under it a short, many-segmented body carried feathery legs. It probably fed on detritus just above the sea floor."
+  },
+  {
+    "id": "triarthrus_eatoni",
+    "commonName": "Triarthrus",
+    "scientificName": "Triarthrus eatoni",
+    "kingdom": "Animalia",
+    "group": "Trilobite",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 3,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/TriarthrusEatoni",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.55,
+    "attack": 2,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.7
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.2
+      }
+    ],
+    "description": "A small, flat trilobite about 3 cm long with a long thorax of fourteen narrow segments and tiny eyes. In one famous rock bed in New York its bodies were turned to golden pyrite with their legs and long antennae intact, giving one of the first clear views of a trilobite's underside. It lived on muddy, oxygen-poor sea floors, picking food particles out of the mud."
+  },
+  {
+    "id": "carolinites_genacinaca",
+    "commonName": "Carolinites",
+    "scientificName": "Carolinites genacinaca",
+    "kingdom": "Animalia",
+    "group": "Trilobite",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 3,
+    "startingPopulation": 1200,
+    "playable": true,
+    "model": "Models/Species/CarolinitesGenacinaca",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "vision_acuity",
+        "expression": 0.95
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.4
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.3
+      }
+    ],
+    "description": "A small open-water trilobite whose head was dominated by two huge, bulging eyes that gave it almost all-round vision. Instead of crawling on the bottom it swam in the upper waters, and it spread so widely that it is found on many Ordovician continents. It probably fed on tiny plankton."
+  },
+  {
+    "id": "chasmataspis_laurencii",
+    "commonName": "Chasmataspis",
+    "scientificName": "Chasmataspis laurencii",
+    "kingdom": "Animalia",
+    "group": "Chasmataspidid",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 5,
+    "startingPopulation": 500,
+    "playable": true,
+    "model": "Models/Species/ChasmataspisLaurencii",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.55,
+    "mapAttack": "Strike",
+    "attack": 4,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small chelicerate a few centimetres long, related to the sea scorpions, with a broad, rounded head shield, a short, wide 'buckler' of three fused segments and a narrow tail of nine segments ending in a spine. Its fossils come from ancient tidal flats in Tennessee. It walked on its legs over the shallow sea floor, hunting small animals."
+  },
+  {
+    "id": "tremaglaspis_unite",
+    "commonName": "Tremaglaspis",
+    "scientificName": "Tremaglaspis unite",
+    "kingdom": "Animalia",
+    "group": "Aglaspidid",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Scavenger",
+    "sizeCm": 3,
+    "startingPopulation": 700,
+    "playable": true,
+    "model": "Models/Species/TremaglaspisUnite",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.55,
+    "attack": 3,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.4
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.3
+      }
+    ],
+    "description": "An aglaspidid, a small extinct arthropod that looks like a cross between a trilobite and a horseshoe crab, a few centimetres long. It had a smooth, semicircular head shield with long side spines, eleven body segments with spiny tips and a long, slender tail spine. It crawled over the sea floor scavenging dead animals and other scraps."
+  },
+  {
+    "id": "caryocaris_wrightii",
+    "commonName": "Caryocaris",
+    "scientificName": "Caryocaris wrightii",
+    "kingdom": "Animalia",
+    "group": "Phyllocarid",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 3,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/CaryocarisWrightii",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.7
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small, shrimp-like crustacean with a long, narrow, pod-shaped shell of two thin valves pointed at both ends, a short abdomen and a forked tail. It swam and drifted in the open sea, which is why its remains are so often found among graptolites. It strained tiny food particles from the water with its leaf-like legs."
+  },
+  {
+    "id": "brachiospongia_digitata",
+    "commonName": "Brachiospongia",
+    "scientificName": "Brachiospongia digitata",
+    "kingdom": "Animalia",
+    "group": "Sponge",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 25,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/BrachiospongiaDigitata",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.9,
+    "attack": 1,
+    "defense": 3,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.95
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.6
+      },
+      {
+        "gene": "asexual_reproduction",
+        "expression": 0.4
+      }
+    ],
+    "description": "A large glass sponge up to about 30 cm across, shaped like an upturned glove or crown: a broad central body with an opening on top and a ring of big, hollow, finger-like lobes that held it up off the muddy sea floor. Its thin wall was a lattice of fused glassy spicules, through which it pumped water to filter out food."
+  },
+  {
+    "id": "constellaria_florida",
+    "commonName": "Constellaria",
+    "scientificName": "Constellaria florida",
+    "kingdom": "Animalia",
+    "group": "Bryozoan",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 6,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/ConstellariaFlorida",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.8,
+    "attack": 1,
+    "defense": 3,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.9
+      },
+      {
+        "gene": "asexual_reproduction",
+        "expression": 0.8
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.5
+      }
+    ],
+    "description": "A bryozoan colony of countless tiny filter-feeding animals, growing as flattened, branching fronds a few centimetres tall. Its surface is dotted with regular star-shaped patches, which gave it its name, where filtered water flowed out of the colony. It was common in the shallow seas of what is now the Cincinnati region."
+  },
+  {
+    "id": "rafinesquina_alternata",
+    "commonName": "Rafinesquina",
+    "scientificName": "Rafinesquina alternata",
+    "kingdom": "Animalia",
+    "group": "Strophomenid brachiopod",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 4,
+    "startingPopulation": 2000,
+    "playable": true,
+    "model": "Models/Species/RafinesquinaAlternata",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.9,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 5,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A brachiopod with a very thin, broad, D-shaped shell about 4 cm wide, with a long straight hinge and fine radiating ribs. Its two valves nested one inside the other, so the shell was barely thicker than a coin. It lay loose on soft mud, its wide, flat shell keeping it from sinking, and filtered food from the water."
+  },
+  {
+    "id": "ambonychia_radiata",
+    "commonName": "Ambonychia",
+    "scientificName": "Ambonychia radiata",
+    "kingdom": "Animalia",
+    "group": "Early bivalve",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 5,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/AmbonychiaRadiata",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.8,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 5,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A thick, strongly ribbed clam about 5 cm tall, taller than long, with a pointed beak at the top front. It stood upright on its edge, anchored to shells and other hard bits on the sea floor by a tuft of threads, filtering food from the water. It was one of the commonest clams of the Late Ordovician seas of North America."
+  },
+  {
+    "id": "babinka_prima",
+    "commonName": "Babinka",
+    "scientificName": "Babinka prima",
+    "kingdom": "Animalia",
+    "group": "Early bivalve",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "tags": [
+      "Burrower"
+    ],
+    "sizeCm": 2,
+    "startingPopulation": 2000,
+    "playable": true,
+    "model": "Models/Species/BabinkaPrima",
+    "mapStyle": "Fixed",
+    "colonySize": 4,
+    "mapScale": 0.6,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 4,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "burrowing",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A small, smooth, oval clam about 2 cm long that lived half-buried in the soft sea floor, feeding on organic matter in the mud. It is famous for the eight pairs of separate muscle scars inside its shell, like those of simpler single-shelled molluscs, a clue to how bivalves evolved."
+  },
+  {
+    "id": "echinochiton_dufoei",
+    "commonName": "Echinochiton",
+    "scientificName": "Echinochiton dufoei",
+    "kingdom": "Animalia",
+    "group": "Chiton",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 5,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/EchinochitonDufoei",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 6,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.85
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.3
+      }
+    ],
+    "description": "A chiton a few centimetres long with a row of eight overlapping shell plates on its back, like all chitons, but with rows of long, hollow spines sticking out from them. It is the oldest chiton known from a complete specimen. It crept over the sea floor on its muscular foot, scraping algae from surfaces with its rasping tongue, while its spines kept predators at bay."
+  },
+  {
+    "id": "glyptocrinus_decadactylus",
+    "commonName": "Glyptocrinus",
+    "scientificName": "Glyptocrinus decadactylus",
+    "kingdom": "Animalia",
+    "group": "Crinoid",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 30,
+    "startingPopulation": 1000,
+    "playable": true,
+    "model": "Models/Species/GlyptocrinusDecadactylus",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.9,
+    "attack": 1,
+    "defense": 3,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.9
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A sea lily about 30 cm tall with a long, round stem, a rigid, cone-shaped cup of thick, ornamented plates and ten branching arms. It spread its arms like a fan in the current to catch food particles from the water. It was a common crinoid on the Late Ordovician sea floor of North America."
+  },
+  {
+    "id": "isorophus_cincinnatiensis",
+    "commonName": "Isorophus",
+    "scientificName": "Isorophus cincinnatiensis",
+    "kingdom": "Animalia",
+    "group": "Echinoderm",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 3,
+    "startingPopulation": 1200,
+    "playable": true,
+    "model": "Models/Species/IsorophusCincinnatiensis",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "attack": 1,
+    "defense": 4,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.85
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.4
+      }
+    ],
+    "description": "An edrioasteroid, an extinct echinoderm that lived stuck to shells on the sea floor. Its body was a low, coin-sized disc of overlapping plates, with five food grooves curving out from the centre like a pinwheel. Tiny plates over the grooves opened so that its tube feet could catch food from the water."
+  },
+  {
+    "id": "bothriocidaris_pahleni",
+    "commonName": "Bothriocidaris",
+    "scientificName": "Bothriocidaris pahleni",
+    "kingdom": "Animalia",
+    "group": "Echinoderm",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 2,
+    "startingPopulation": 1200,
+    "playable": true,
+    "model": "Models/Species/BothriocidarisPahleni",
+    "mapStyle": "Fixed",
+    "colonySize": 4,
+    "mapScale": 0.6,
+    "mapDefense": "Brace",
+    "attack": 1,
+    "defense": 4,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.4
+      }
+    ],
+    "description": "One of the oldest sea urchins, a small, round animal only 1 to 2 cm across, covered in short spines. Unlike living sea urchins, the zones between its five food-groove areas were just a single column of plates wide. It crept over the sea floor grazing on algae and detritus."
+  },
+  {
+    "id": "mitrocystites_mitra",
+    "commonName": "Mitrocystites",
+    "scientificName": "Mitrocystites mitra",
+    "kingdom": "Animalia",
+    "group": "Echinoderm",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 4,
+    "startingPopulation": 1000,
+    "playable": true,
+    "model": "Models/Species/MitrocystitesMitra",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "attack": 1,
+    "defense": 4,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.4
+      }
+    ],
+    "description": "A mitrate, a strange echinoderm with no five-fold symmetry: a flattened, plated body a few centimetres long with a single jointed arm in front. It lay on the soft sea floor and used its arm to gather food. Some scientists have even argued that mitrates were early relatives of the chordates."
+  },
+  {
+    "id": "protasterina_flexuosa",
+    "commonName": "Protasterina",
+    "scientificName": "Protasterina flexuosa",
+    "kingdom": "Animalia",
+    "group": "Brittle star",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 5,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/ProtasterinaFlexuosa",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.5,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 2,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "regeneration",
+        "expression": 0.85
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      }
+    ],
+    "description": "An early brittle star a few centimetres across, with a small, rounded central disc and five long, slender, flexible arms fringed with short spines. It crawled quickly over the sea floor by snaking its arms, picking up detritus and food particles. Like living brittle stars it could probably regrow lost arms."
+  },
+  {
+    "id": "villebrunaster_thorali",
+    "commonName": "Villebrunaster",
+    "scientificName": "Villebrunaster thorali",
+    "kingdom": "Animalia",
+    "group": "Sea star",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 6,
+    "startingPopulation": 700,
+    "playable": true,
+    "model": "Models/Species/VillebrunasterThorali",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "attack": 2,
+    "defense": 3,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "regeneration",
+        "expression": 0.8
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.5
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      }
+    ],
+    "description": "A primitive starfish relative several centimetres across, close to the common ancestor of sea stars and brittle stars. Its five broad, petal-shaped arms were stiffened by rows of rod-like plates running out from the middle of each arm like the ribs of a leaf. It lay on the sea floor and fed on detritus and organic films."
+  },
+  {
+    "id": "onychopterella_augusti",
+    "commonName": "Onychopterella",
+    "scientificName": "Onychopterella augusti",
+    "kingdom": "Animalia",
+    "group": "Eurypterid",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Trilobite",
+      "Small animals"
+    ],
+    "sizeCm": 15,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/OnychopterellaAugusti",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.65,
+    "mapAttack": "Strike",
+    "attack": 6,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "cold_tolerance",
+        "expression": 0.5
+      }
+    ],
+    "description": "A slender sea scorpion about 15 cm long, known from exceptionally preserved fossils in South Africa that even show its muscles and gills. It had short, spiny front legs to grab prey, long walking legs and a pair of big swimming paddles ending in a claw. A quick hunter, it lived in cold seas at the end of the Ordovician."
+  },
+  {
+    "id": "columnaria_alveolata",
+    "commonName": "Columnaria",
+    "scientificName": "Columnaria alveolata",
+    "kingdom": "Animalia",
+    "group": "Rugose coral",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 30,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/ColumnariaAlveolata",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.5,
+    "attack": 1,
+    "defense": 6,
+    "hp": 10,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.8
+      },
+      {
+        "gene": "asexual_reproduction",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.8
+      }
+    ],
+    "description": "A colonial rugose coral forming massive, cushion-shaped heads of hundreds of long, slender corallites packed so tightly that their walls were shared and six-sided, like a honeycomb. Each corallite held a small polyp that caught tiny prey with its tentacles. Its sturdy colonies helped to build early reefs."
+  },
+  {
+    "id": "palaeoscolex_piscatorum",
+    "commonName": "Palaeoscolex",
+    "scientificName": "Palaeoscolex piscatorum",
+    "kingdom": "Animalia",
+    "group": "Priapulid worm",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "tags": [
+      "Burrower"
+    ],
+    "sizeCm": 6,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/PalaeoscolexPiscatorum",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapUndulate": true,
+    "attack": 2,
+    "defense": 3,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "burrowing",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.5
+      }
+    ],
+    "description": "A slender worm several centimetres long, a cousin of the priapulid worms, whose body was divided into many fine rings studded with tiny plates. At its front was a proboscis ringed with small hooks that it could shoot out to grip the mud as it burrowed. It lived in and on the soft sea floor."
+  },
+  {
+    "id": "leperditia_fabulites",
+    "commonName": "Leperditia",
+    "scientificName": "Leperditia fabulites",
+    "kingdom": "Animalia",
+    "group": "Ostracod",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 1.5,
+    "startingPopulation": 2000,
+    "playable": true,
+    "model": "Models/Species/LeperditiaFabulites",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.45,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 4,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.7
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.4
+      }
+    ],
+    "description": "A giant among ostracods, the tiny crustaceans enclosed in a two-valved shell: its smooth, bean-shaped shell grew to about 2 cm long. It had a small eye spot near the front of each valve and crawled over shallow, often salty sea floors on short legs that poked out from under the shell. It fed on detritus and small particles."
+  },
+  {
+    "id": "porophoraspis_crenulata",
+    "commonName": "Porophoraspis",
+    "scientificName": "Porophoraspis crenulata",
+    "kingdom": "Animalia",
+    "group": "Jawless vertebrate",
+    "firstAge": "Ordovician",
+    "lastAge": "Ordovician",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 12,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/PorophoraspisCrenulata",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.6,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 4,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "filter_feeding",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.4
+      }
+    ],
+    "description": "One of the oldest known fish, a small jawless vertebrate about 12 cm long without paired fins. The front of its body was enclosed in a box of bony plates ornamented with ridges and pierced by pores, and it had tiny eyes at the very front. It swam just above the sea floor, sucking up food particles with its jawless mouth."
+  }
+]

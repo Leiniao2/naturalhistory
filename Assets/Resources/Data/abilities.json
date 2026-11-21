@@ -244,7 +244,7 @@
   {
    "id": "regeneration",
    "name": "Regeneration",
-   "description": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
+   "description": "Regrows lost parts: it heals a fifth of its HP each turn instead of a tenth.",
    "unlockFunctions": [
     "regeneration_node"
    ],

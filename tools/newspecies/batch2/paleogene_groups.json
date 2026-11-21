@@ -1,0 +1,14 @@
+{
+  "Lagomorph": {"tags": "PLAC", "path": "EUARCH + '/Glires/Lagomorpha'"},
+  "Multituberculate": {"tags": "MAM", "path": "MAMMALIA + '/Theriimorpha/Allotheria/Multituberculata'"},
+  "Pyrothere": {"tags": "PLAC+['Ungulate']", "path": "UNGUL + '/Meridiungulata/Pyrotheria'"},
+  "Mesonychid": {"tags": "PLAC+['Ungulate']", "path": "UNGUL + '/Mesonychia'"},
+  "Protoceratid": {"tags": "PLAC+['Ungulate']", "path": "ARTIO + '/Tylopoda/Protoceratidae'"},
+  "Oreodont": {"tags": "PLAC+['Ungulate']", "path": "ARTIO + '/Tylopoda/Oreodonta'"},
+  "Lithornithid": {"tags": "BIRD", "path": "AVES + '/Palaeognathae/Lithornithidae'"},
+  "Roller": {"tags": "BIRD", "path": "NEOAVES + '/Telluraves/Afroaves/Coraciimorphae/Coraciiformes/Coracioidea'"},
+  "Pig-nosed turtle": {"tags": "REP+['Turtle']", "path": "NEODIAPSIDA + '/Sauria/Pantestudines/Testudines/Cryptodira/Trionychia/Carettochelyidae'"},
+  "Spadefoot toad": {"tags": "TET+['Amphibian']", "path": "AMPHIBIA + '/Temnospondyli/Lissamphibia/Anura/Pelobatoidea'"},
+  "Gar": {"tags": "JAW+['Bony fish']", "path": "ACTINO + '/Neopterygii/Holostei/Ginglymodi/Lepisosteidae'"},
+  "True crab": {"tags": "ART+['Crustacean']", "path": "PANCRUST + '/Malacostraca/Eumalacostraca/Decapoda/Brachyura'"}
+}

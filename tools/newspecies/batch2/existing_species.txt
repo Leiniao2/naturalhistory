@@ -1,0 +1,778 @@
+# 751 species already in the game, by first period: id | scientific name | common name | group | diet | size | map style
+
+## Ediacaran (46)
+actinophrys_sol | Actinophrys sol | Sun Animalcule | Heliozoan | Carnivore | 0.005cm | Drift
+amoeba | Amoeba proteus | Amoeba | Amoebozoan | Omnivore | 0.07cm | Float
+andiva_ivantsovi | Andiva ivantsovi | Andiva | Proarticulate | Detritivore | 8cm | Swim
+arborea_arborea | Arborea arborea | Arborea | Petalonamid | Filter feeder | 25cm | Fixed
+arcella_vulgaris | Arcella vulgaris | Arcella | Testate amoeba | Omnivore | 0.01cm | Drift
+auroralumina_attenboroughii | Auroralumina attenboroughii | Auroralumina | Early cnidarian | Carnivore | 20cm | Fixed
+charnia_masoni | Charnia masoni | Charnia | Rangeomorph | Filter feeder | 30cm | Fixed
+choanoflagellate | Salpingoeca rosetta | Choanoflagellate | Choanoflagellate | Filter feeder | 0.002cm | Drift
+cloudina_carinata | Cloudina carinata | Ridged Cloudina | Tubular animal | Filter feeder | 1cm | Fixed
+cloudina_hartmannae | Cloudina hartmannae | Cloudina | Tubular animal | Filter feeder | 1cm | Fixed
+cloudina_riemkeae | Cloudina riemkeae | Slender Cloudina | Tubular animal | Filter feeder | 0.5cm | Fixed
+coronacollina_acula | Coronacollina acula | Coronacollina | Sponge | Filter feeder | 2cm | Fixed
+corumbella_werneri | Corumbella werneri | Corumbella | Early cnidarian | Filter feeder | 8cm | Fixed
+cyclomedusa_davidi | Cyclomedusa davidi | Cyclomedusa | Discoidal organism | Filter feeder | 10cm | Fixed
+dickinsonia_costata | Dickinsonia costata | Dickinsonia | Proarticulate | Detritivore | 30cm | Swim
+dickinsonia_menneri | Dickinsonia menneri | White Sea Dickinsonia | Proarticulate | Detritivore | 3cm | Swim
+dickinsonia_tenuis | Dickinsonia tenuis | Slender Dickinsonia | Proarticulate | Detritivore | 8cm | Swim
+eoandromeda_octobrachiata | Eoandromeda octobrachiata | Eoandromeda | Stem ctenophore | Filter feeder | 4cm | Fixed
+eocyathispongia_qiania | Eocyathispongia qiania | Eocyathispongia | Sponge | Filter feeder | 0.12cm | Fixed
+eoporpita_medusa | Eoporpita medusa | Eoporpita | Early cnidarian | Carnivore | 8cm | Float
+ernietta_plateauensis | Ernietta plateauensis | Ernietta | Petalonamid | Filter feeder | 8cm | Fixed
+euglena_gracilis | Euglena gracilis | Euglena | Euglenid | Omnivore | 0.005cm | Drift
+fractofusus_misrai | Fractofusus misrai | Fractofusus | Rangeomorph | Filter feeder | 15cm | Fixed
+funisia_dorothea | Funisia dorothea | Funisia | Tubular animal | Filter feeder | 30cm | Fixed
+haootia_quadriformis | Haootia quadriformis | Haootia | Early cnidarian | Carnivore | 6cm | Fixed
+ikaria_wariootia | Ikaria wariootia | Ikaria | Early bilaterian | Detritivore | 0.5cm | Swim
+kimberella_quadrata | Kimberella quadrata | Kimberella | Stem mollusc | Herbivore | 10cm | Swim
+malawimonas_jakobiformis | Malawimonas jakobiformis | Malawimonas | Malawimonad | Detritivore | 0.001cm | Drift
+naegleria_gruberi | Naegleria gruberi | Naegleria | Heterolobosean | Detritivore | 0.002cm | Drift
+namacalathus_hermanastes | Namacalathus hermanastes | Namacalathus | Tubular animal | Filter feeder | 2.5cm | Fixed
+namapoikia_rietoogensis | Namapoikia rietoogensis | Namapoikia | Sponge | Filter feeder | 100cm | Fixed
+obamus_coronatus | Obamus coronatus | Obamus | Problematic animal | Detritivore | 1.5cm | Fixed
+paramecium | Paramecium caudatum | Paramecium | Ciliate | Filter feeder | 0.025cm | Drift
+parvancorina_minchami | Parvancorina minchami | Parvancorina | Parvancorinomorph | Detritivore | 2cm | Swim
+parvancorina_sagitta | Parvancorina sagitta | Arrow Parvancorina | Parvancorinomorph | Detritivore | 1.5cm | Swim
+pteridinium_simplex | Pteridinium simplex | Pteridinium | Petalonamid | Filter feeder | 12cm | Fixed
+rangea_schneiderhoehni | Rangea schneiderhoehni | Rangea | Rangeomorph | Filter feeder | 15cm | Fixed
+selenidium_pendula | Selenidium pendula | Selenidium | Gregarine | Parasite | 0.02cm | Drift
+spriggina_floundersi | Spriggina floundersi | Spriggina | Proarticulate | Detritivore | 3cm | Swim
+swartpuntia_germsi | Swartpuntia germsi | Swartpuntia | Petalonamid | Filter feeder | 15cm | Fixed
+telonema_subtile | Telonema subtile | Telonema | Telonemid | Carnivore | 0.001cm | Drift
+thecamonas_trahens | Thecamonas trahens | Thecamonas | Apusomonad | Detritivore | 0.001cm | Drift
+tribrachidium_heraldicum | Tribrachidium heraldicum | Tribrachidium | Trilobozoan | Filter feeder | 3cm | Fixed
+uncus_dzaugisi | Uncus dzaugisi | Uncus | Early bilaterian | Detritivore | 5cm | Swim
+yilingia_spiciformis | Yilingia spiciformis | Yilingia | Early bilaterian | Detritivore | 27cm | Swim
+yorgia_waggoneri | Yorgia waggoneri | Yorgia | Proarticulate | Detritivore | 25cm | Swim
+
+## Cambrian (67)
+ammodiscus_incertus | Ammodiscus incertus | Ammodiscus | Foraminifer | Filter feeder | 0.1cm | Drift
+amplectobelua_symbrachiata | Amplectobelua symbrachiata | Amplectobelua | Radiodont | Carnivore | 40cm | Swim
+anomalocaris | Anomalocaris canadensis | Anomalocaris | Radiodont | Carnivore | 38cm | Swim
+antarcticocyathus_webersi | Antarcticocyathus webersi | Antarcticocyathus | Sponge | Filter feeder | 3cm | Fixed
+aysheaia_pedunculata | Aysheaia pedunculata | Aysheaia | Lobopodian | Carnivore | 4cm | Swim
+burgessochaeta_setigera | Burgessochaeta setigera | Burgessochaeta | Annelid | Detritivore | 4cm | Swim
+cambroctoconus_kyrgyzstanicus | Cambroctoconus kyrgyzstanicus | Kyrgyz Cambroctoconus | Coralomorph | Filter feeder | 1cm | Fixed
+cambroctoconus_orientalis | Cambroctoconus orientalis | Cambroctoconus | Coralomorph | Filter feeder | 2cm | Fixed
+capinatator_praetermissus | Capinatator praetermissus | Capinatator | Arrow worm | Carnivore | 10cm | Swim
+chancelloria_eros | Chancelloria eros | Chancelloria | Problematic animal | Filter feeder | 10cm | Fixed
+choia_carteri | Choia carteri | Carter's Choia Sponge | Demosponge | Filter feeder | 5cm | Fixed
+choia_hindei | Choia hindei | Hinde's Choia Sponge | Demosponge | Filter feeder | 6cm | Fixed
+collinsium_ciliosum | Collinsium ciliosum | Collinsium | Lobopodian | Filter feeder | 8.5cm | Swim
+coscinocyathus_dianthus | Coscinocyathus dianthus | Coscinocyathus | Archaeocyath | Filter feeder | 4cm | Fixed
+cothonion_sympomatum | Cothonion sympomatum | Cothonion | Coralomorph | Carnivore | 2cm | Fixed
+diagoniella_cyathiformis | Diagoniella cyathiformis | Cup Diagoniella | Sponge | Filter feeder | 8cm | Fixed
+echidnina_runnegari | Echidnina runnegari | Echidnina | Radiolarian | Filter feeder | 0.02cm | Drift
+eldonia_ludwigi | Eldonia ludwigi | Eldonia | Eldonid | Filter feeder | 8cm | Swim
+ethmophyllum_whitneyi | Ethmophyllum whitneyi | Ethmophyllum | Archaeocyath | Filter feeder | 8cm | Fixed
+facivermis_yunnanicus | Facivermis yunnanicus | Facivermis | Lobopodian | Filter feeder | 7cm | Fixed
+fordilla_troyensis | Fordilla troyensis | Fordilla | Early bivalve | Filter feeder | 0.4cm | Fixed
+haikouichthys | Haikouichthys ercaicunensis | Haikouichthys | Jawless vertebrate | Filter feeder | 2.5cm | Swim
+halkieria_evangelista | Halkieria evangelista | Halkieria | Stem mollusc | Herbivore | 8cm | Swim
+hallucigenia | Hallucigenia sparsa | Hallucigenia | Lobopodian | Detritivore | 2.5cm | Swim
+hazelia_crateria | Hazelia crateria | Crater Hazelia | Demosponge | Filter feeder | 8cm | Fixed
+hazelia_palmata | Hazelia palmata | Palm Hazelia | Demosponge | Filter feeder | 12cm | Fixed
+isoxys_auritus | Isoxys auritus | Isoxys | Arthropod | Carnivore | 3cm | Swim
+kerygmachela_kierkegaardi | Kerygmachela kierkegaardi | Kerygmachela | Stem arthropod | Carnivore | 17cm | Swim
+leanchoilia_superlata | Leanchoilia superlata | Leanchoilia | Arthropod | Carnivore | 5cm | Swim
+leptomitus_zitteli | Leptomitus zitteli | Leptomitus | Sponge | Filter feeder | 10cm | Fixed
+lingulella_chengjiangensis | Lingulella chengjiangensis | Chengjiang Lingulella | Lingulid brachiopod | Filter feeder | 1cm | Fixed
+lyrarapax_unguispinus | Lyrarapax unguispinus | Lyrarapax | Radiodont | Carnivore | 6cm | Swim
+marrella_splendens | Marrella splendens | Marrella | Arthropod | Detritivore | 2cm | Swim
+metaldetes_taylori | Metaldetes taylori | Metaldetes | Archaeocyath | Filter feeder | 5cm | Fixed
+metaspriggina_walcotti | Metaspriggina walcotti | Metaspriggina | Jawless vertebrate | Filter feeder | 6cm | Swim
+moorowipora_chamberensis | Moorowipora chamberensis | Moorowipora | Coral | Filter feeder | 30cm | Fixed
+myllokunmingia_fengjiaoa | Myllokunmingia fengjiaoa | Myllokunmingia | Jawless vertebrate | Filter feeder | 2.8cm | Swim
+nailiana_elegans | Nailiana elegans | Nailiana | Stem anthozoan | Carnivore | 3cm | Fixed
+nectocaris_pteryx | Nectocaris pteryx | Nectocaris | Problematic animal | Carnivore | 5cm | Swim
+olenoides_serratus | Olenoides serratus | Olenoides | Trilobite | Carnivore | 8cm | Swim
+opabinia | Opabinia regalis | Opabinia | Stem arthropod | Carnivore | 7cm | Swim
+ottoia_prolifica | Ottoia prolifica | Ottoia | Priapulid worm | Carnivore | 8cm | Swim
+pambdelurion_whiteleggei | Pambdelurion whiteleggei | Pambdelurion | Stem arthropod | Carnivore | 50cm | Swim
+physalia_physalis | Physalia physalis | Portuguese Man o' War | Siphonophore | Carnivore | 25cm | Float
+pikaia | Pikaia gracilens | Pikaia | Chordate | Filter feeder | 4cm | Swim
+plectronoceras_cambrense | Plectronoceras cambrense | Plectronoceras | Early cephalopod | Carnivore | 1cm | Swim
+protopharetra_polymorpha | Protopharetra polymorpha | Protopharetra | Archaeocyath | Filter feeder | 6cm | Fixed
+protospongia_fenestrata | Protospongia fenestrata | Windowed Protospongia | Sponge | Filter feeder | 3cm | Fixed
+protospongia_hicksi | Protospongia hicksi | Burgess Protospongia | Sponge | Filter feeder | 5cm | Fixed
+redlichia | Redlichia | Redlichia | Trilobite | Carnivore | 10cm | Swim
+sanctacaris_uniformis | Sanctacaris uniformis | Sanctacaris | Stem chelicerate | Carnivore | 9cm | Swim
+selkirkia_columbia | Selkirkia columbia | Selkirkia | Priapulid worm | Carnivore | 7cm | Fixed
+sidneyia_inexpectans | Sidneyia inexpectans | Sidneyia | Arthropod | Carnivore | 13cm | Swim
+siphusauctum_gregarium | Siphusauctum gregarium | Siphusauctum | Problematic animal | Filter feeder | 20cm | Fixed
+takakkawia_lineata | Takakkawia lineata | Takakkawia | Sponge | Filter feeder | 4cm | Fixed
+titanokorys_gainesi | Titanokorys gainesi | Titanokorys | Radiodont | Carnivore | 50cm | Swim
+tokummia_katalepsis | Tokummia katalepsis | Tokummia | Arthropod | Carnivore | 10cm | Swim
+trilobite | Trilobita | Trilobite | Arthropod | Detritivore | 5cm | 
+triticispongia_diagonata | Triticispongia diagonata | Wheat-grain Sponge | Sponge | Filter feeder | 2cm | Fixed
+vauxia_gracilenta | Vauxia gracilenta | Slender Vauxia | Sponge | Filter feeder | 8cm | Fixed
+vauxia_pregracilenta | Vauxia pregracilenta | Chengjiang Vauxia | Sponge | Filter feeder | 5cm | Fixed
+vetulicola_cuneata | Vetulicola cuneata | Vetulicola | Vetulicolian | Filter feeder | 9cm | Swim
+waptia_fieldensis | Waptia fieldensis | Waptia | Arthropod | Carnivore | 6cm | Swim
+wiwaxia_corrugata | Wiwaxia corrugata | Wiwaxia | Stem mollusc | Herbivore | 3cm | Swim
+xianguangia_sinica | Xianguangia sinica | Xianguangia | Stem ctenophore | Filter feeder | 5cm | Fixed
+yunnanoascus_haikouensis | Yunnanoascus haikouensis | Yunnanoascus | Jellyfish | Carnivore | 2cm | Drift
+zhongjianichthys_rostratus | Zhongjianichthys rostratus | Zhongjianichthys | Jawless vertebrate | Filter feeder | 3cm | Swim
+
+## Ordovician (49)
+actinoceras_bigsbyi | Actinoceras bigsbyi | Actinoceras | Nautiloid cephalopod | Carnivore | 100cm | Swim
+aegirocassis_benmoulai | Aegirocassis benmoulai | Aegirocassis | Radiodont | Filter feeder | 200cm | Swim
+ampyx_priscus | Ampyx priscus | Ampyx | Trilobite | Detritivore | 3cm | Swim
+arandaspis_prionotolepis | Arandaspis prionotolepis | Arandaspis | Jawless vertebrate | Filter feeder | 15cm | Swim
+asaphus_kowalewskii | Asaphus kowalewskii | Stalk-eyed Asaphus | Trilobite | Detritivore | 10cm | Swim
+astraspis_desiderata | Astraspis desiderata | Astraspis | Jawless vertebrate | Filter feeder | 14cm | Swim
+boedaspis_ensifer | Boedaspis ensifer | Boedaspis | Trilobite | Detritivore | 6cm | Swim
+bumastoides_milleri | Bumastoides milleri | Bumastoides | Trilobite | Detritivore | 4cm | Swim
+cameroceras | Cameroceras trentonense | Cameroceras | Nautiloid cephalopod | Carnivore | 300cm | Swim
+ceraurus_pleurexanthemus | Ceraurus pleurexanthemus | Ceraurus | Trilobite | Carnivore | 4cm | Swim
+conularia_trentonensis | Conularia trentonensis | Conularia | Jellyfish | Carnivore | 8cm | Fixed
+cyclonema_bilix | Cyclonema bilix | Cyclonema | Sea snail | Detritivore | 2cm | Fixed
+dictyonema_flabelliforme | Rhabdinopora flabelliformis | Dictyonema | Graptolite | Filter feeder | 3cm | Drift
+didymograptellus_eobifidus | Didymograptellus eobifidus | Tuning-fork Graptolite | Graptolite | Filter feeder | 3cm | Drift
+echinognathus_clevelandi | Echinognathus clevelandi | Echinognathus | Eurypterid | Carnivore | 45cm | Swim
+echinosphaerites_aurantium | Echinosphaerites aurantium | Echinosphaerites | Cystoid | Filter feeder | 3cm | Fixed
+endoceras_giganteum | Endoceras giganteum | Endoceras | Nautiloid cephalopod | Carnivore | 570cm | Swim
+eriptychius_americanus | Eriptychius americanus | Eriptychius | Jawless vertebrate | Filter feeder | 18cm | Swim
+flexicalymene_meeki | Flexicalymene meeki | Flexicalymene | Trilobite | Detritivore | 4cm | Swim
+gonioceras_anceps | Gonioceras anceps | Gonioceras | Nautiloid cephalopod | Carnivore | 50cm | Swim
+grewingkia_canadensis | Grewingkia canadensis | Grewingkia | Rugose coral | Filter feeder | 10cm | Fixed
+hudsonaster_incomptus | Hudsonaster incomptus | Hudsonaster | Sea star | Carnivore | 3cm | Fixed
+hungioides_bohemicus | Hungioides bohemicus | Hungioides | Trilobite | Detritivore | 50cm | Swim
+iocrinus_subcrassus | Iocrinus subcrassus | Iocrinus | Crinoid | Filter feeder | 15cm | Fixed
+iowagnathus_grandis | Iowagnathus grandis | Iowagnathus | Conodont | Carnivore | 50cm | Swim
+isotelus_gigas | Isotelus gigas | Trenton Isotelus | Trilobite | Carnivore | 22cm | Swim
+isotelus_maximus | Isotelus maximus | Ohio Isotelus | Trilobite | Carnivore | 30cm | Swim
+isotelus_rex | Isotelus rex | Isotelus Rex | Trilobite | Carnivore | 70cm | Swim
+lituites_lituus | Lituites lituus | Lituites | Nautiloid cephalopod | Carnivore | 30cm | Swim
+lunataspis_aurora | Lunataspis aurora | Lunataspis | Horseshoe crab | Carnivore | 4cm | Swim
+maclurites_magnus | Maclurites magnus | Maclurites | Sea snail | Herbivore | 8cm | Fixed
+megalograptus_ohioensis | Megalograptus ohioensis | Megalograptus | Eurypterid | Carnivore | 70cm | Swim
+orthoceras_regulare | Orthoceras regulare | Orthoceras | Nautiloid cephalopod | Carnivore | 20cm | Swim
+panderodus_gracilis | Panderodus gracilis | Panderodus | Conodont | Carnivore | 4cm | Swim
+parabarrandia_crassa | Parabarrandia crassa | Parabarrandia | Trilobite | Carnivore | 9cm | Swim
+pentecopterus_decorahensis | Pentecopterus decorahensis | Pentecopterus | Eurypterid | Carnivore | 170cm | Swim
+platystrophia_ponderosa | Platystrophia ponderosa | Platystrophia | Orthide brachiopod | Filter feeder | 4cm | Fixed
+pleurocystites_squamosus | Pleurocystites squamosus | Pleurocystites | Cystoid | Detritivore | 3cm | Fixed
+plumulites_bengtsoni | Plumulites bengtsoni | Plumulites | Annelid | Detritivore | 3cm | Swim
+prasopora_simulatrix | Prasopora simulatrix | Prasopora | Bryozoan | Filter feeder | 4cm | Fixed
+promissum_pulchrum | Promissum pulchrum | Promissum | Conodont | Carnivore | 40cm | Swim
+proterovaginoceras_incognitum | Proterovaginoceras incognitum | Proterovaginoceras | Nautiloid cephalopod | Carnivore | 120cm | Swim
+protospongia_novaki | Protospongia novaki | Bohemian Protospongia | Sponge | Filter feeder | 2cm | Fixed
+sacabambaspis_janvieri | Sacabambaspis janvieri | Sacabambaspis | Jawless vertebrate | Filter feeder | 30cm | Swim
+selenopeltis_buchii | Selenopeltis buchii | Selenopeltis | Trilobite | Detritivore | 10cm | Swim
+streptelasma_corniculum | Streptelasma corniculum | Horn Coral | Rugose coral | Filter feeder | 5cm | Fixed
+tetragraptus_approximatus | Tetragraptus approximatus | Tetragraptus | Graptolite | Filter feeder | 4cm | Drift
+trinucleus_fimbriatus | Trinucleus fimbriatus | Fringed Trinucleus | Trilobite | Detritivore | 3cm | Swim
+trinucleus_seticornis | Trinucleus seticornis | Bristle-horned Trinucleus | Trilobite | Detritivore | 2cm | Swim
+
+## Silurian (45)
+acutiramus_macrophthalmus | Acutiramus macrophthalmus | Acutiramus | Eurypterid | Carnivore | 200cm | Swim
+andreolepis_hedei | Andreolepis hedei | Andreolepis | Bony fish | Carnivore | 10cm | Swim
+arctinurus_boltoni | Arctinurus boltoni | Arctinurus | Trilobite | Detritivore | 18cm | Swim
+birkenia_elegans | Birkenia elegans | Birkenia | Jawless vertebrate | Detritivore | 10cm | Swim
+bunodes_lunula | Bunodes lunula | Bunodes | Synziphosurine | Carnivore | 4cm | Swim
+calymene_blumenbachii | Calymene blumenbachii | Dudley Bug | Trilobite | Detritivore | 6cm | Swim
+carcinosoma_newlini | Carcinosoma newlini | Carcinosoma | Eurypterid | Carnivore | 90cm | Swim
+ceratiocaris_papilio | Ceratiocaris papilio | Ceratiocaris | Phyllocarid | Scavenger | 20cm | Swim
+crotalocrinites_rugosus | Crotalocrinites rugosus | Crotalocrinites | Echinoderm | Filter feeder | 50cm | Fixed
+dalmanites_limulurus | Dalmanites limulurus | Dalmanites | Trilobite | Carnivore | 6cm | Swim
+dawsonoceras_annulatum | Dawsonoceras annulatum | Dawsonoceras | Nautiloid cephalopod | Carnivore | 40cm | Swim
+deiphon_forbesi | Deiphon forbesi | Deiphon | Trilobite | Carnivore | 3cm | Swim
+encrinurus_punctatus | Encrinurus punctatus | Strawberry-headed Trilobite | Trilobite | Detritivore | 5cm | Swim
+entelognathus_primordialis | Entelognathus primordialis | Entelognathus | Placoderm | Carnivore | 20cm | Swim
+eosteus_chongqingensis | Eosteus chongqingensis | Eosteus | Bony fish | Carnivore | 3cm | Swim
+erettopterus_bilobus | Erettopterus bilobus | Erettopterus | Eurypterid | Carnivore | 70cm | Swim
+eurypterus_remipes | Eurypterus remipes | Eurypterus | Eurypterid | Carnivore | 20cm | Swim
+fanjingshania_renovata | Fanjingshania renovata | Fanjingshania | Acanthodian | Carnivore | 3cm | Swim
+favosites_gothlandicus | Favosites gothlandicus | Honeycomb Coral | Tabulate coral | Filter feeder | 15cm | Fixed
+goniophyllum_pyramidale | Goniophyllum pyramidale | Goniophyllum | Rugose coral | Filter feeder | 4cm | Fixed
+guiyu_oneiros | Guiyu oneiros | Guiyu | Lobe-finned fish | Carnivore | 33cm | Swim
+haliestes_dasos | Haliestes dasos | Haliestes | Sea spider | Carnivore | 1cm | Swim
+halysites_catenularia | Halysites catenularia | Chain Coral | Tabulate coral | Filter feeder | 20cm | Fixed
+halysites_priscus | Halysites priscus | Estonian Chain Coral | Tabulate coral | Filter feeder | 8cm | Fixed
+jamoytius_kerwoodi | Jamoytius kerwoodi | Jamoytius | Jawless vertebrate | Filter feeder | 17cm | Swim
+kampecaris_obanensis | Kampecaris obanensis | Kampecaris | Myriapod | Detritivore | 2cm | Ground
+loganellia_scotica | Loganellia scotica | Loganellia | Jawless vertebrate | Detritivore | 12cm | Swim
+megamastax_amblyodus | Megamastax amblyodus | Megamastax | Lobe-finned fish | Carnivore | 100cm | Swim
+mixopterus_kiaeri | Mixopterus kiaeri | Mixopterus | Eurypterid | Carnivore | 75cm | Swim
+monograptus_priodon | Monograptus priodon | Monograptus | Graptolite | Filter feeder | 10cm | Drift
+offacolus_kingi | Offacolus kingi | Offacolus | Synziphosurine | Carnivore | 0.5cm | Swim
+palaeotarbus_jerami | Palaeotarbus jerami | Palaeotarbus | Trigonotarbid | Carnivore | 0.4cm | Ground
+parioscorpio_venator | Parioscorpio venator | Parioscorpio | Scorpion | Carnivore | 2.5cm | Swim
+pentamerus_oblongus | Pentamerus oblongus | Pentamerus | Pentamerid brachiopod | Filter feeder | 8cm | Fixed
+pharyngolepis_oblongus | Pharyngolepis oblongus | Pharyngolepis | Jawless vertebrate | Detritivore | 12cm | Swim
+pneumodesmus_newmani | Pneumodesmus newmani | Pneumodesmus | Myriapod | Detritivore | 2cm | Ground
+poleumita_discors | Poleumita discors | Poleumita | Sea snail | Detritivore | 5cm | Ground
+proscorpius_osborni | Proscorpius osborni | Proscorpius | Scorpion | Carnivore | 4cm | Swim
+psarolepis_romeri | Psarolepis romeri | Psarolepis | Lobe-finned fish | Carnivore | 25cm | Swim
+pterygotus_anglicus | Pterygotus anglicus | Pterygotus | Eurypterid | Carnivore | 160cm | Swim
+qilinyu_rostrata | Qilinyu rostrata | Qilinyu | Placoderm | Carnivore | 20cm | Swim
+scyphocrinites_elegans | Scyphocrinites elegans | Scyphocrinites | Crinoid | Filter feeder | 200cm | Float
+slimonia_acuminata | Slimonia acuminata | Slimonia | Eurypterid | Carnivore | 100cm | Swim
+tremataspis_mammillata | Tremataspis mammillata | Tremataspis | Jawless vertebrate | Detritivore | 8cm | Swim
+yongdongaspis_littoralis | Yongdongaspis littoralis | Yongdongaspis | Galeaspid | Filter feeder | 5cm | Swim
+
+## Devonian (50)
+acanthostega_gunnari | Acanthostega gunnari | Acanthostega | Early tetrapod | Carnivore | 60cm | Swim
+agoniatites_vanuxemi | Agoniatites vanuxemi | Agoniatites | Ammonite | Carnivore | 12cm | Swim
+antarctilamna_prisca | Antarctilamna prisca | Antarctilamna | Xenacanth shark | Carnivore | 100cm | Swim
+attercopus_fimbriunguis | Attercopus fimbriunguis | Attercopus | Uraraneid | Carnivore | 0.5cm | Ground
+bactrites_gracilis | Bactrites gracilis | Bactrites | Bactritid | Carnivore | 10cm | Swim
+bothriolepis_canadensis | Bothriolepis canadensis | Bothriolepis | Placoderm | Detritivore | 40cm | Swim
+cephalaspis_lyelli | Cephalaspis lyelli | Cephalaspis | Jawless vertebrate | Detritivore | 22cm | Swim
+cheirolepis_trailli | Cheirolepis trailli | Cheirolepis | Bony fish | Carnivore | 40cm | Swim
+cladoselache_fyleri | Cladoselache fyleri | Cladoselache | Cladoselachian shark | Carnivore | 150cm | Swim
+climatius_reticulatus | Climatius reticulatus | Climatius | Acanthodian | Carnivore | 7.5cm | Swim
+coccosteus_cuspidatus | Coccosteus cuspidatus | Coccosteus | Placoderm | Carnivore | 40cm | Swim
+devonobius_delta | Devonobius delta | Devonobius | Myriapod | Carnivore | 1cm | Ground
+dicranurus_monstrosus | Dicranurus monstrosus | Dicranurus | Trilobite | Detritivore | 6cm | Swim
+dictyostelium_discoideum | Dictyostelium discoideum | Dictyostelium | Social amoeba | Detritivore | 0.2cm | Fixed
+dipterus_valenciennesi | Dipterus valenciennesi | Dipterus | Lungfish | Carnivore | 35cm | Swim
+drepanaspis_gemuendenensis | Drepanaspis gemuendenensis | Drepanaspis | Jawless vertebrate | Detritivore | 35cm | Swim
+dunkleosteus_terrelli | Dunkleosteus terrelli | Dunkleosteus | Placoderm | Carnivore | 400cm | Swim
+eophalangium_sheari | Eophalangium sheari | Eophalangium | Harvestman | Omnivore | 0.5cm | Ground
+eusthenopteron_foordi | Eusthenopteron foordi | Eusthenopteron | Lobe-finned fish | Carnivore | 120cm | Swim
+furcaster_palaeozoicus | Furcaster palaeozoicus | Furcaster | Brittle star | Detritivore | 10cm | Swim
+gemuendina_stuertzi | Gemuendina stuertzi | Gemuendina | Placoderm | Carnivore | 30cm | Swim
+griphognathus_whitei | Griphognathus whitei | Griphognathus | Lungfish | Carnivore | 50cm | Swim
+holoptychius_nobilissimus | Holoptychius nobilissimus | Holoptychius | Lobe-finned fish | Carnivore | 100cm | Swim
+hyneria_lindae | Hyneria lindae | Hyneria | Lobe-finned fish | Carnivore | 300cm | Swim
+ichthyostega | Ichthyostega stensioei | Ichthyostega | Early tetrapod | Carnivore | 150cm | Ground
+jaekelopterus_rhenaniae | Jaekelopterus rhenaniae | Jaekelopterus | Eurypterid | Carnivore | 250cm | Swim
+mandageria_fairfaxi | Mandageria fairfaxi | Mandageria | Lobe-finned fish | Carnivore | 160cm | Swim
+manticoceras_sinuosum | Manticoceras sinuosum | Manticoceras | Ammonite | Carnivore | 15cm | Swim
+materpiscis_attenboroughi | Materpiscis attenboroughi | Materpiscis | Placoderm | Carnivore | 25cm | Swim
+mcnamaraspis_kaprios | Mcnamaraspis kaprios | Mcnamaraspis | Placoderm | Carnivore | 25cm | Swim
+mucrospirifer_mucronatus | Mucrospirifer mucronatus | Mucrospirifer | Spiriferid brachiopod | Filter feeder | 5cm | Fixed
+onychodus_jandemarrai | Onychodus jandemarrai | Onychodus | Lobe-finned fish | Carnivore | 100cm | Swim
+palaeocharinus_rhyniensis | Palaeocharinus rhyniensis | Palaeocharinus | Trigonotarbid | Carnivore | 0.4cm | Ground
+palaeospondylus_australis | Palaeospondylus australis | Australian Palaeospondylus | Palaeospondylid | Filter feeder | 4cm | Swim
+palaeospondylus_gunni | Palaeospondylus gunni | Palaeospondylus | Palaeospondylid | Filter feeder | 5cm | Swim
+panderichthys_rhombolepis | Panderichthys rhombolepis | Panderichthys | Lobe-finned fish | Carnivore | 110cm | Swim
+phacops_latifrons | Phacops latifrons | Phacops | Trilobite | Carnivore | 5cm | Swim
+protospongia_rhenana | Protospongia rhenana | Hunsrück Protospongia | Sponge | Filter feeder | 4cm | Fixed
+pteraspis_rostrata | Pteraspis rostrata | Pteraspis | Jawless vertebrate | Filter feeder | 20cm | Swim
+rhyniella_praecursor | Rhyniella praecursor | Rhyniella | Springtail | Detritivore | 0.15cm | Ground
+rhyniognatha_hirsti | Rhyniognatha hirsti | Rhyniognatha | Early insect | Herbivore | 0.3cm | Ground
+schinderhannes_bartelsi | Schinderhannes bartelsi | Schinderhannes | Radiodont | Carnivore | 10cm | Swim
+stylonurus_powriensis | Stylonurus powriensis | Stylonurus | Eurypterid | Carnivore | 150cm | Swim
+terataspis_grandis | Terataspis grandis | Terataspis | Trilobite | Carnivore | 60cm | Swim
+tiktaalik_roseae | Tiktaalik roseae | Tiktaalik | Lobe-finned fish | Carnivore | 275cm | Ground
+titanichthys_agassizi | Titanichthys agassizi | Titanichthys | Placoderm | Filter feeder | 600cm | Swim
+tulerpeton_curtum | Tulerpeton curtum | Tulerpeton | Early tetrapod | Carnivore | 100cm | Ground
+tungsenia_paradoxa | Tungsenia paradoxa | Tungsenia | Lobe-finned fish | Carnivore | 18cm | Swim
+waeringoscorpio_hefteri | Waeringoscorpio hefteri | Waeringoscorpio | Scorpion | Carnivore | 4cm | Swim
+walliserops_trifurcatus | Walliserops trifurcatus | Walliserops | Trilobite | Carnivore | 8cm | Swim
+
+## Carboniferous (49)
+akmonistion_zangerli | Akmonistion zangerli | Akmonistion | Symmoriiform shark | Carnivore | 65cm | Swim
+amphibamus_grandiceps | Amphibamus grandiceps | Amphibamus | Temnospondyl | Carnivore | 12cm | Ground
+anthracoblattina_ensifera | Anthracoblattina ensifera | Sword-bearing Roachoid | Roachoid | Omnivore | 5cm | Ground
+anthracodromeus_longipes | Anthracodromeus longipes | Anthracodromeus | Early reptile | Carnivore | 20cm | Ground
+anthracosaurus_russelli | Anthracosaurus russelli | Anthracosaurus | Embolomere | Carnivore | 300cm | Swim
+archaeothyris_florensis | Archaeothyris florensis | Archaeothyris | Ophiacodontid synapsid | Carnivore | 50cm | Ground
+archimylacris_acadica | Archimylacris acadica | Archimylacris | Roachoid | Omnivore | 3.5cm | Ground
+archimylacris_eggintoni | Archimylacris eggintoni | Coseley Roachoid | Roachoid | Omnivore | 3.5cm | Ground
+arthropleura_armata | Arthropleura armata | Arthropleura | Myriapod | Herbivore | 200cm | Ground
+arthropleura_cristata | Arthropleura cristata | Crested Arthropleura | Myriapod | Herbivore | 40cm | Ground
+brachydectes_newberryi | Brachydectes newberryi | Brachydectes | Lepospondyl | Carnivore | 30cm | Ground
+bransonella_tridentata | Bransonella tridentata | Bransonella | Xenacanth shark | Carnivore | 50cm | Swim
+crassigyrinus_scoticus | Crassigyrinus scoticus | Crassigyrinus | Early tetrapod | Carnivore | 200cm | Swim
+desmatodon_hesperis | Desmatodon hesperis | Desmatodon | Reptiliomorph | Herbivore | 150cm | Ground
+echinochimaera_meltoni | Echinochimaera meltoni | Echinochimaera | Chimaera | Carnivore | 15cm | Swim
+edestus_heinrichi | Edestus heinrichi | Edestus | Eugeneodont | Carnivore | 670cm | Swim
+eogyrinus_attheyi | Eogyrinus attheyi | Eogyrinus | Embolomere | Carnivore | 450cm | Swim
+eophrynus_prestvicii | Eophrynus prestvicii | Eophrynus | Trigonotarbid | Carnivore | 2cm | Ground
+essexella_asherae | Essexella asherae | Essexella | Jellyfish | Carnivore | 12cm | Drift
+euproops_danae | Euproops danae | Euproops | Horseshoe crab | Carnivore | 4cm | Swim
+falcatus_falcatus | Falcatus falcatus | Falcatus | Symmoriiform shark | Carnivore | 30cm | Swim
+fusulina_cylindrica | Fusulina cylindrica | Fusulina | Foraminifer | Filter feeder | 0.5cm | Drift
+gigantoproductus_giganteus | Gigantoproductus giganteus | Gigantoproductus | Productid brachiopod | Filter feeder | 30cm | Fixed
+gigantoscorpio_willsi | Gigantoscorpio willsi | Gigantoscorpio | Scorpion | Carnivore | 30cm | Ground
+hibbertopterus_scouleri | Hibbertopterus scouleri | Hibbertopterus | Eurypterid | Carnivore | 170cm | Ground
+hylonomus_lyelli | Hylonomus lyelli | Hylonomus | Early reptile | Carnivore | 20cm | Ground
+iniopteryx_rushlaui | Iniopteryx rushlaui | Iniopteryx | Chimaera | Carnivore | 40cm | Swim
+mazothairos_enormis | Mazothairos enormis | Mazothairos | Palaeodictyopteran | Herbivore | 55cm | Soar
+megalocephalus_pachycephalus | Megalocephalus pachycephalus | Megalocephalus | Early tetrapod | Carnivore | 180cm | Ground
+meganeura_monyi | Meganeura monyi | Meganeura | Griffinfly | Carnivore | 70cm | Soar
+megarachne_servinei | Megarachne servinei | Megarachne | Eurypterid | Carnivore | 54cm | Swim
+mischoptera_nigra | Mischoptera nigra | Mischoptera | Megasecopteran | Herbivore | 18cm | Swarm
+namurotypus_sippeli | Namurotypus sippeli | Namurotypus | Griffinfly | Carnivore | 32cm | Soar
+orthacanthus_compressus | Orthacanthus compressus | Orthacanthus | Xenacanth shark | Carnivore | 300cm | Swim
+pederpes_finneyae | Pederpes finneyae | Pederpes | Early tetrapod | Carnivore | 100cm | Ground
+petrolacosaurus_kansensis | Petrolacosaurus kansensis | Petrolacosaurus | Araeoscelid reptile | Carnivore | 40cm | Ground
+phlegethontia_longissima | Phlegethontia longissima | Phlegethontia | Lepospondyl | Carnivore | 70cm | Ground
+physarum_polycephalum | Physarum polycephalum | Physarum | Plasmodial slime mould | Detritivore | 15cm | Fixed
+platycrinites_laevis | Platycrinites laevis | Platycrinites | Crinoid | Filter feeder | 60cm | Fixed
+progonoblattina_clarkii | Progonoblattina clarkii | Progonoblattina | Roachoid | Omnivore | 5.5cm | Ground
+proterogyrinus_scheelei | Proterogyrinus scheelei | Proterogyrinus | Embolomere | Carnivore | 150cm | Ground
+pulmonoscorpius_kirktonensis | Pulmonoscorpius kirktonensis | Pulmonoscorpius | Scorpion | Carnivore | 70cm | Ground
+rhizodus_hibberti | Rhizodus hibberti | Rhizodus | Lobe-finned fish | Carnivore | 700cm | Swim
+stenodictya_lobata | Stenodictya lobata | Stenodictya | Palaeodictyopteran | Herbivore | 12cm | Swarm
+stethacanthus_altonensis | Stethacanthus altonensis | Stethacanthus | Symmoriiform shark | Carnivore | 90cm | Swim
+sysciophlebia_praepilata | Sysciophlebia praepilata | Sysciophlebia | Roachoid | Omnivore | 2.5cm | Ground
+tullimonstrum_gregarium | Tullimonstrum gregarium | Tully Monster | Problematic animal | Carnivore | 35cm | Swim
+westlothiana_lizziae | Westlothiana lizziae | Westlothiana | Reptiliomorph | Carnivore | 20cm | Ground
+weygoldtina_anglica | Weygoldtina anglica | Weygoldtina | Whip spider | Carnivore | 1.5cm | Ground
+
+## Permian (47)
+anteosaurus_magnificus | Anteosaurus magnificus | Anteosaurus | Dinocephalian therapsid | Carnivore | 550cm | Ground
+aulacephalodon_bainii | Aulacephalodon bainii | Aulacephalodon | Dicynodont therapsid | Herbivore | 200cm | Ground
+bunostegos_akokanensis | Bunostegos akokanensis | Bunostegos | Pareiasaur | Herbivore | 200cm | Ground
+cacops_aspidephorus | Cacops aspidephorus | Cacops | Temnospondyl | Carnivore | 40cm | Ground
+captorhinus_aguti | Captorhinus aguti | Captorhinus | Early reptile | Omnivore | 25cm | Ground
+cistecephalus_microrhinus | Cistecephalus microrhinus | Cistecephalus | Dicynodont therapsid | Omnivore | 30cm | Ground
+coelurosauravus_jaekeli | Coelurosauravus jaekeli | Coelurosauravus | Weigeltisaurid | Carnivore | 40cm | Soar
+cotylorhynchus_romeri | Cotylorhynchus romeri | Cotylorhynchus | Caseid synapsid | Herbivore | 400cm | Ground
+diictodon_feliceps | Diictodon feliceps | Diictodon | Dicynodont therapsid | Herbivore | 45cm | Ground
+dimetrodon_borealis | Dimetrodon borealis | Northern Dimetrodon | Sphenacodont synapsid | Carnivore | 185cm | Ground
+dimetrodon_grandis | Dimetrodon grandis | Dimetrodon | Sphenacodont synapsid | Carnivore | 300cm | Ground
+diplocaulus_magnicornis | Diplocaulus magnicornis | Diplocaulus | Lepospondyl | Carnivore | 100cm | Swim
+dunbaria_fasciipennis | Dunbaria fasciipennis | Dunbaria | Palaeodictyopteran | Herbivore | 2cm | Swarm
+edaphosaurus_pogonias | Edaphosaurus pogonias | Edaphosaurus | Edaphosaurid synapsid | Herbivore | 300cm | Ground
+elginia_mirabilis | Elginia mirabilis | Elginia | Pareiasaur | Herbivore | 60cm | Ground
+eryops_megacephalus | Eryops megacephalus | Eryops | Temnospondyl | Carnivore | 200cm | Ground
+estemmenosuchus_mirabilis | Estemmenosuchus mirabilis | Wonderful Estemmenosuchus | Dinocephalian therapsid | Herbivore | 250cm | Ground
+estemmenosuchus_uralensis | Estemmenosuchus uralensis | Estemmenosuchus | Dinocephalian therapsid | Herbivore | 300cm | Ground
+euchambersia_mirabilis | Euchambersia mirabilis | Euchambersia | Therocephalian therapsid | Carnivore | 45cm | Ground
+eudibamus_cursoris | Eudibamus cursoris | Eudibamus | Early reptile | Herbivore | 25cm | Ground
+glaurung_schneideri | Glaurung schneideri | Glaurung | Weigeltisaurid | Carnivore | 40cm | Soar
+gorgonops_torvus | Gorgonops torvus | Gorgonops | Gorgonopsian therapsid | Carnivore | 200cm | Ground
+helicoprion_bessonovi | Helicoprion bessonovi | Helicoprion | Eugeneodont | Carnivore | 500cm | Swim
+hovasaurus_boulei | Hovasaurus boulei | Hovasaurus | Early reptile | Carnivore | 60cm | Swim
+inostrancevia_alexandri | Inostrancevia alexandri | Inostrancevia | Gorgonopsian therapsid | Carnivore | 350cm | Ground
+inostrancevia_latifrons | Inostrancevia latifrons | Broad-headed Inostrancevia | Gorgonopsian therapsid | Carnivore | 390cm | Ground
+lycaenops_ornatus | Lycaenops ornatus | Lycaenops | Gorgonopsian therapsid | Carnivore | 100cm | Ground
+lystrosaurus_murrayi | Lystrosaurus murrayi | Lystrosaurus | Dicynodont therapsid | Herbivore | 100cm | Ground
+meganeuropsis_permiana | Meganeuropsis permiana | Meganeuropsis | Griffinfly | Carnivore | 71cm | Soar
+mesosaurus_tenuidens | Mesosaurus tenuidens | Mesosaurus | Mesosaur | Carnivore | 100cm | Swim
+moschops_capensis | Moschops capensis | Moschops | Dinocephalian therapsid | Herbivore | 270cm | Ground
+ophiacodon_retroversus | Ophiacodon retroversus | Ophiacodon | Ophiacodontid synapsid | Carnivore | 200cm | Ground
+perrinites_hilli | Perrinites hilli | Perrinites | Ammonite | Carnivore | 10cm | Swim
+prionosuchus_plummeri | Prionosuchus plummeri | Prionosuchus | Temnospondyl | Carnivore | 600cm | Swim
+rubidgea_atrox | Rubidgea atrox | Rubidgea | Gorgonopsian therapsid | Carnivore | 300cm | Ground
+sarcoprion_edax | Sarcoprion edax | Sarcoprion | Eugeneodont | Carnivore | 300cm | Swim
+schwagerina_crassitectoria | Schwagerina crassitectoria | Thick-walled Schwagerina | Foraminifer | Filter feeder | 0.9cm | Drift
+schwagerina_guembeli | Schwagerina guembeli | Gümbel's Schwagerina | Foraminifer | Filter feeder | 0.6cm | Drift
+schwagerina_hawkinsi | Schwagerina hawkinsi | Hawkins' Schwagerina | Foraminifer | Filter feeder | 1cm | Drift
+schwagerina_hessensis | Schwagerina hessensis | Hess Schwagerina | Foraminifer | Filter feeder | 0.8cm | Drift
+scutosaurus_karpinskii | Scutosaurus karpinskii | Scutosaurus | Pareiasaur | Herbivore | 250cm | Ground
+secodontosaurus_obtusidens | Secodontosaurus obtusidens | Secodontosaurus | Sphenacodont synapsid | Carnivore | 200cm | Ground
+seymouria_baylorensis | Seymouria baylorensis | Seymouria | Seymouriamorph | Carnivore | 60cm | Ground
+tapinocephalus_atherstonei | Tapinocephalus atherstonei | Tapinocephalus | Dinocephalian therapsid | Herbivore | 300cm | Ground
+titanophoneus_potens | Titanophoneus potens | Titanophoneus | Dinocephalian therapsid | Carnivore | 250cm | Ground
+tshekardocoleus_magnus | Tshekardocoleus magnus | Tshekardocoleus | Early beetle | Omnivore | 1.5cm | Ground
+varanops_brevirostris | Varanops brevirostris | Varanops | Varanopid synapsid | Carnivore | 120cm | Ground
+
+## Triassic (50)
+atopodentatus_unicus | Atopodentatus unicus | Atopodentatus | Sauropterygian | Herbivore | 300cm | Swim
+austriadactylus_cristatus | Austriadactylus cristatus | Austriadactylus | Pterosaur | Carnivore | 120cm | Soar
+ceratites_nodosus | Ceratites nodosus | Ceratites | Ammonite | Carnivore | 10cm | Swim
+coelophysis_bauri | Coelophysis bauri | Coelophysis | Theropod dinosaur | Carnivore | 300cm | Ground
+cyamodus_hildegardis | Cyamodus hildegardis | Cyamodus | Placodont | Carnivore | 130cm | Swim
+cymbospondylus_youngorum | Cymbospondylus youngorum | Giant Cymbospondylus | Ichthyosaur | Carnivore | 1700cm | Swim
+cynognathus_crateronotus | Cynognathus crateronotus | Cynognathus | Cynodont therapsid | Carnivore | 120cm | Ground
+desmatosuchus_spurensis | Desmatosuchus spurensis | Desmatosuchus | Aetosaur | Herbivore | 450cm | Ground
+drepanosaurus_unguicaudatus | Drepanosaurus unguicaudatus | Drepanosaurus | Drepanosaur | Carnivore | 50cm | Ground
+effigia_okeeffeae | Effigia okeeffeae | Effigia | Shuvosaurid pseudosuchian | Herbivore | 250cm | Ground
+eoraptor_lunensis | Eoraptor lunensis | Eoraptor | Early dinosaur | Omnivore | 100cm | Ground
+erythrosuchus_africanus | Erythrosuchus africanus | Erythrosuchus | Archosauromorph | Carnivore | 480cm | Ground
+eudimorphodon_ranzii | Eudimorphodon ranzii | Eudimorphodon | Pterosaur | Carnivore | 100cm | Soar
+gerrothorax_pulcherrimus | Gerrothorax pulcherrimus | Gerrothorax | Temnospondyl | Carnivore | 100cm | Swim
+henodus_chelyops | Henodus chelyops | Henodus | Placodont | Herbivore | 100cm | Swim
+herrerasaurus_ischigualastensis | Herrerasaurus ischigualastensis | Herrerasaurus | Early dinosaur | Carnivore | 500cm | Ground
+hupehsuchus_nanchangensis | Hupehsuchus nanchangensis | Hupehsuchus | Ichthyosaur | Filter feeder | 100cm | Swim
+hyperodapedon_gordoni | Hyperodapedon gordoni | Hyperodapedon | Rhynchosaur | Herbivore | 130cm | Ground
+icarosaurus_siefkeri | Icarosaurus siefkeri | Icarosaurus | Kuehneosaurid | Carnivore | 20cm | Soar
+lagerpeton_chanarensis | Lagerpeton chanarensis | Lagerpeton | Lagerpetid | Carnivore | 70cm | Ground
+liliensternus_liliensterni | Liliensternus liliensterni | Liliensternus | Theropod dinosaur | Carnivore | 515cm | Ground
+lisowicia_bojani | Lisowicia bojani | Lisowicia | Dicynodont therapsid | Herbivore | 450cm | Ground
+longisquama_insignis | Longisquama insignis | Longisquama | Archosauromorph | Carnivore | 25cm | Ground
+mastodonsaurus_giganteus | Mastodonsaurus giganteus | Mastodonsaurus | Temnospondyl | Carnivore | 500cm | Swim
+megachirella_wachtleri | Megachirella wachtleri | Megachirella | Squamate | Carnivore | 20cm | Ground
+metoposaurus_krasiejowensis | Metoposaurus krasiejowensis | Metoposaurus | Temnospondyl | Carnivore | 200cm | Swim
+mixosaurus_cornalianus | Mixosaurus cornalianus | Mixosaurus | Ichthyosaur | Carnivore | 100cm | Swim
+morganucodon_watsoni | Morganucodon watsoni | Morganucodon | Early mammaliaform | Carnivore | 10cm | Ground
+noctiluca_scintillans | Noctiluca scintillans | Sea Sparkle | Dinoflagellate | Filter feeder | 0.08cm | Float
+nothosaurus_mirabilis | Nothosaurus mirabilis | Nothosaurus | Nothosaur | Carnivore | 350cm | Swim
+odontochelys_semitestacea | Odontochelys semitestacea | Odontochelys | Stem turtle | Carnivore | 40cm | Swim
+placerias_hesternus | Placerias hesternus | Placerias | Dicynodont therapsid | Herbivore | 350cm | Ground
+placodus_gigas | Placodus gigas | Placodus | Placodont | Carnivore | 200cm | Swim
+plateosaurus_engelhardti | Plateosaurus engelhardti | Plateosaurus | Sauropodomorph dinosaur | Herbivore | 800cm | Ground
+postosuchus_kirkpatricki | Postosuchus kirkpatricki | Postosuchus | Rauisuchian pseudosuchian | Carnivore | 450cm | Ground
+proganochelys_quenstedti | Proganochelys quenstedti | Proganochelys | Stem turtle | Omnivore | 100cm | Ground
+saurosuchus_galilei | Saurosuchus galilei | Saurosuchus | Rauisuchian pseudosuchian | Carnivore | 650cm | Ground
+sharovipteryx_mirabilis | Sharovipteryx mirabilis | Sharovipteryx | Archosauromorph | Carnivore | 25cm | Swarm
+shonisaurus_popularis | Shonisaurus popularis | Shonisaurus | Ichthyosaur | Carnivore | 1500cm | Swim
+shonisaurus_sikanniensis | Shonisaurus sikanniensis | Sikanni Giant Ichthyosaur | Ichthyosaur | Carnivore | 2100cm | Swim
+silesaurus_opolensis | Silesaurus opolensis | Silesaurus | Early ornithischian | Omnivore | 230cm | Ground
+smilosuchus_gregorii | Smilosuchus gregorii | Smilosuchus | Phytosaur | Carnivore | 700cm | Ground
+smok_wawelski | Smok wawelski | Smok | Rauisuchian pseudosuchian | Carnivore | 550cm | Ground
+tanystropheus_hydroides | Tanystropheus hydroides | Tanystropheus | Archosauromorph | Carnivore | 550cm | Swim
+terrestrisuchus_gracilis | Terrestrisuchus gracilis | Terrestrisuchus | Early crocodylomorph | Carnivore | 90cm | Ground
+thalattoarchon_saurophagis | Thalattoarchon saurophagis | Thalattoarchon | Ichthyosaur | Carnivore | 860cm | Swim
+thrinaxodon_liorhinus | Thrinaxodon liorhinus | Thrinaxodon | Cynodont therapsid | Carnivore | 45cm | Ground
+triadobatrachus_massinoti | Triadobatrachus massinoti | Triadobatrachus | Proto-frog | Carnivore | 10cm | Ground
+trucidocynodon_riograndensis | Trucidocynodon riograndensis | Trucidocynodon | Cynodont therapsid | Carnivore | 120cm | Ground
+typothorax_coccinarum | Typothorax coccinarum | Typothorax | Aetosaur | Herbivore | 350cm | Ground
+
+## Jurassic (55)
+aeger_tipularius | Aeger tipularius | Aeger | Prawn | Carnivore | 15cm | Swim
+allosaurus_fragilis | Allosaurus fragilis | Allosaurus | Theropod dinosaur | Carnivore | 850cm | Ground
+anchiornis_huxleyi | Anchiornis huxleyi | Anchiornis | Avialan | Carnivore | 40cm | Soar
+anurognathus_ammoni | Anurognathus ammoni | Anurognathus | Pterosaur | Carnivore | 35cm | Soar
+archaeopteryx_lithographica | Archaeopteryx lithographica | Archaeopteryx | Avialan | Carnivore | 50cm | Soar
+asteroceras | Asteroceras obtusum | Asteroceras | Ammonite | Carnivore | 20cm | Swim
+brachiosaurus | Brachiosaurus altithorax | Brachiosaurus | Sauropod dinosaur | Herbivore | 2200cm | Ground
+castorocauda_lutrasimilis | Castorocauda lutrasimilis | Castorocauda | Early mammaliaform | Carnivore | 45cm | Ground
+ceratosaurus_nasicornis | Ceratosaurus nasicornis | Ceratosaurus | Theropod dinosaur | Carnivore | 600cm | Ground
+compsognathus_longipes | Compsognathus longipes | Compsognathus | Theropod dinosaur | Carnivore | 100cm | Ground
+cryptoclidus_eurymerus | Cryptoclidus eurymerus | Cryptoclidus | Plesiosaur | Carnivore | 400cm | Swim
+dakosaurus_maximus | Dakosaurus maximus | Dakosaurus | Thalattosuchian | Carnivore | 450cm | Swim
+darwinopterus_modularis | Darwinopterus modularis | Darwinopterus | Pterosaur | Carnivore | 90cm | Soar
+dilophosaurus_wetherilli | Dilophosaurus wetherilli | Dilophosaurus | Theropod dinosaur | Carnivore | 700cm | Ground
+dimorphodon_macronyx | Dimorphodon macronyx | Dimorphodon | Pterosaur | Carnivore | 145cm | Soar
+diplodocus_carnegii | Diplodocus carnegii | Diplodocus | Sauropod dinosaur | Herbivore | 2500cm | Ground
+docofossor_brachydactylus | Docofossor brachydactylus | Docofossor | Early mammaliaform | Carnivore | 9cm | Ground
+dryosaurus_altus | Dryosaurus altus | Dryosaurus | Ornithopod dinosaur | Herbivore | 300cm | Ground
+gargoyleosaurus_parkpinorum | Gargoyleosaurus parkpinorum | Gargoyleosaurus | Ankylosaur | Herbivore | 350cm | Ground
+gigantspinosaurus_sichuanensis | Gigantspinosaurus sichuanensis | Gigantspinosaurus | Stegosaur | Herbivore | 420cm | Ground
+guanlong_wucaii | Guanlong wucaii | Guanlong | Theropod dinosaur | Carnivore | 300cm | Ground
+heterodontosaurus_tucki | Heterodontosaurus tucki | Heterodontosaurus | Early ornithischian | Omnivore | 120cm | Ground
+hildoceras_bifrons | Hildoceras bifrons | Hildoceras | Ammonite | Carnivore | 10cm | Swim
+hybodus_hauffianus | Hybodus hauffianus | Hybodus | Hybodont shark | Carnivore | 200cm | Swim
+ischyodus_egertoni | Ischyodus egertoni | Ischyodus | Chimaera | Carnivore | 150cm | Swim
+juramaia_sinensis | Juramaia sinensis | Juramaia | Eutherian mammal | Carnivore | 10cm | Ground
+kalligramma_haeckeli | Kalligramma haeckeli | Kalligramma | Lacewing | Herbivore | 24cm | Swarm
+kayentachelys_aprix | Kayentachelys aprix | Kayentachelys | Stem turtle | Omnivore | 30cm | Ground
+kentrosaurus_aethiopicus | Kentrosaurus aethiopicus | Kentrosaurus | Stegosaur | Herbivore | 450cm | Ground
+leedsichthys_problematicus | Leedsichthys problematicus | Leedsichthys | Pachycormid | Filter feeder | 1200cm | Swim
+lepidotes_gigas | Lepidotes gigas | Lepidotes | Bony fish | Carnivore | 100cm | Swim
+leptolepis_coryphaenoides | Leptolepis coryphaenoides | Leptolepis | Early teleost | Filter feeder | 15cm | Swim
+lesothosaurus_diagnosticus | Lesothosaurus diagnosticus | Lesothosaurus | Early ornithischian | Herbivore | 100cm | Ground
+liopleurodon_ferox | Liopleurodon ferox | Liopleurodon | Plesiosaur | Carnivore | 650cm | Swim
+machimosaurus_hugii | Machimosaurus hugii | Machimosaurus | Thalattosuchian | Carnivore | 700cm | Ground
+mamenchisaurus_hochuanensis | Mamenchisaurus hochuanensis | Mamenchisaurus | Sauropod dinosaur | Herbivore | 2200cm | Ground
+mesolimulus_walchi | Mesolimulus walchi | Mesolimulus | Horseshoe crab | Omnivore | 15cm | Swim
+metriorhynchus_superciliosus | Metriorhynchus superciliosus | Metriorhynchus | Thalattosuchian | Carnivore | 300cm | Swim
+nephila_jurassica | Nephila jurassica | Nephila jurassica | Orb-weaver spider | Carnivore | 2.5cm | Fixed
+ophthalmosaurus_icenicus | Ophthalmosaurus icenicus | Ophthalmosaurus | Ichthyosaur | Carnivore | 450cm | Swim
+pentacrinites_fossilis | Pentacrinites fossilis | Pentacrinites | Echinoderm | Filter feeder | 60cm | Float
+plesiosaurus_dolichodeirus | Plesiosaurus dolichodeirus | Plesiosaurus | Plesiosaur | Carnivore | 330cm | Swim
+pliosaurus_funkei | Pliosaurus funkei | Pliosaurus | Plesiosaur | Carnivore | 1100cm | Swim
+pseudopulex_jurassicus | Pseudopulex jurassicus | Pseudopulex | Flea | Parasite | 2cm | Ground
+pterodactylus_antiquus | Pterodactylus antiquus | Pterodactylus | Pterosaur | Carnivore | 100cm | Soar
+rhamphorhynchus_muensteri | Rhamphorhynchus muensteri | Rhamphorhynchus | Pterosaur | Carnivore | 120cm | Soar
+scelidosaurus_harrisonii | Scelidosaurus harrisonii | Scelidosaurus | Thyreophoran dinosaur | Herbivore | 400cm | Ground
+shunosaurus_lii | Shunosaurus lii | Shunosaurus | Sauropod dinosaur | Herbivore | 950cm | Ground
+stegosaurus_stenops | Stegosaurus stenops | Stegosaurus | Stegosaur | Herbivore | 900cm | Ground
+supersaurus_vivianae | Supersaurus vivianae | Supersaurus | Sauropod dinosaur | Herbivore | 3300cm | Ground
+temnodontosaurus_platyodon | Temnodontosaurus platyodon | Temnodontosaurus | Ichthyosaur | Carnivore | 900cm | Swim
+torvosaurus_tanneri | Torvosaurus tanneri | Torvosaurus | Theropod dinosaur | Carnivore | 1000cm | Ground
+volaticotherium_antiquum | Volaticotherium antiquum | Volaticotherium | Eutriconodont mammal | Carnivore | 30cm | Soar
+wyoteuthis_linsterorum | Wyoteuthis linsterorum | Wyoteuthis | Belemnite | Carnivore | 40cm | Swim
+yi_qi | Yi qi | Yi qi | Theropod dinosaur | Carnivore | 40cm | Soar
+
+## Cretaceous (65)
+ankylosaurus_magniventris | Ankylosaurus magniventris | Ankylosaurus | Ankylosaur | Herbivore | 700cm | Ground
+archelon_ischyros | Archelon ischyros | Archelon | Sea turtle | Carnivore | 460cm | Swim
+argentinosaurus_huinculensis | Argentinosaurus huinculensis | Argentinosaurus | Sauropod dinosaur | Herbivore | 3200cm | Ground
+baculites_compressus | Baculites compressus | Baculites | Heteromorph ammonite | Carnivore | 60cm | Swim
+baryonyx_walkeri | Baryonyx walkeri | Baryonyx | Theropod dinosaur | Carnivore | 900cm | Ground
+beelzebufo_ampinga | Beelzebufo ampinga | Beelzebufo | Horned frog | Carnivore | 40cm | Ground
+borealopelta_markmitchelli | Borealopelta markmitchelli | Borealopelta | Ankylosaur | Herbivore | 550cm | Ground
+carnotaurus_sastrei | Carnotaurus sastrei | Carnotaurus | Theropod dinosaur | Carnivore | 780cm | Ground
+citipati_osmolskae | Citipati osmolskae | Citipati | Theropod dinosaur | Omnivore | 290cm | Ground
+confuciusornis_sanctus | Confuciusornis sanctus | Confuciusornis | Avialan | Omnivore | 30cm | Soar
+cretoxyrhina_mantelli | Cretoxyrhina mantelli | Cretoxyrhina | Mackerel shark | Carnivore | 750cm | Swim
+deinonychus_antirrhopus | Deinonychus antirrhopus | Deinonychus | Theropod dinosaur | Carnivore | 340cm | Ground
+deinosuchus_riograndensis | Deinosuchus riograndensis | Deinosuchus | Crocodilian | Carnivore | 1000cm | Ground
+dolichorhynchops_osborni | Dolichorhynchops osborni | Dolichorhynchops | Plesiosaur | Carnivore | 450cm | Swim
+edmontosaurus_regalis | Edmontosaurus regalis | Edmontosaurus | Ornithopod dinosaur | Herbivore | 1100cm | Ground
+elasmosaurus_platyurus | Elasmosaurus platyurus | Elasmosaurus | Plesiosaur | Carnivore | 1030cm | Swim
+euoplocephalus_tutus | Euoplocephalus tutus | Euoplocephalus | Ankylosaur | Herbivore | 550cm | Ground
+gallimimus_bullatus | Gallimimus bullatus | Gallimimus | Theropod dinosaur | Omnivore | 600cm | Ground
+giganotosaurus_carolinii | Giganotosaurus carolinii | Giganotosaurus | Theropod dinosaur | Carnivore | 1250cm | Ground
+halszkaraptor_escuilliei | Halszkaraptor escuilliei | Halszkaraptor | Theropod dinosaur | Carnivore | 60cm | Ground
+hatzegopteryx_thambema | Hatzegopteryx thambema | Hatzegopteryx | Pterosaur | Carnivore | 1100cm | Soar
+hesperornis_regalis | Hesperornis regalis | Hesperornis | Avialan | Carnivore | 160cm | Swim
+ichthyornis_dispar | Ichthyornis dispar | Ichthyornis | Avialan | Carnivore | 30cm | Soar
+iguanodon_bernissartensis | Iguanodon bernissartensis | Iguanodon | Ornithopod dinosaur | Herbivore | 1000cm | Ground
+kaprosuchus_saharicus | Kaprosuchus saharicus | Kaprosuchus | Crocodyliform | Carnivore | 600cm | Ground
+kronosaurus_queenslandicus | Kronosaurus queenslandicus | Kronosaurus | Plesiosaur | Carnivore | 1000cm | Swim
+leaellynasaura_amicagraphica | Leaellynasaura amicagraphica | Leaellynasaura | Ornithopod dinosaur | Herbivore | 200cm | Ground
+majungasaurus_crenatissimus | Majungasaurus crenatissimus | Majungasaurus | Theropod dinosaur | Carnivore | 700cm | Ground
+melittosphex_burmensis | Melittosphex burmensis | Melittosphex | Early bee | Herbivore | 0.3cm | Swarm
+microraptor_gui | Microraptor gui | Microraptor | Theropod dinosaur | Carnivore | 80cm | Soar
+mosasaurus_hoffmannii | Mosasaurus hoffmannii | Mosasaurus | Mosasaur | Carnivore | 1200cm | Swim
+mosquito | Culicidae | Mosquito | Fly | Omnivore | 0.5cm | Swarm
+najash_rionegrina | Najash rionegrina | Najash | Early snake | Carnivore | 200cm | Ground
+nipponites_mirabilis | Nipponites mirabilis | Nipponites | Heteromorph ammonite | Carnivore | 10cm | Swim
+oryctodromeus_cubicularis | Oryctodromeus cubicularis | Oryctodromeus | Ornithopod dinosaur | Herbivore | 210cm | Ground
+pachycephalosaurus_wyomingensis | Pachycephalosaurus wyomingensis | Pachycephalosaurus | Pachycephalosaur | Herbivore | 450cm | Ground
+parasaurolophus_walkeri | Parasaurolophus walkeri | Parasaurolophus | Ornithopod dinosaur | Herbivore | 950cm | Ground
+patagotitan_mayorum | Patagotitan mayorum | Patagotitan | Sauropod dinosaur | Herbivore | 3700cm | Ground
+prognathodon_saturator | Prognathodon saturator | Prognathodon | Mosasaur | Carnivore | 1200cm | Swim
+protoceratops_andrewsi | Protoceratops andrewsi | Protoceratops | Ceratopsian dinosaur | Herbivore | 180cm | Ground
+protostega_gigas | Protostega gigas | Protostega | Sea turtle | Carnivore | 300cm | Swim
+psittacosaurus_mongoliensis | Psittacosaurus mongoliensis | Psittacosaurus | Ceratopsian dinosaur | Herbivore | 200cm | Ground
+pteranodon_longiceps | Pteranodon longiceps | Pteranodon | Pterosaur | Carnivore | 600cm | Soar
+quetzalcoatlus | Quetzalcoatlus northropi | Quetzalcoatlus | Pterosaur | Carnivore | 1000cm | Soar
+repenomamus_giganticus | Repenomamus giganticus | Repenomamus | Gobiconodont mammal | Carnivore | 100cm | Ground
+rhinconichthys_taylori | Rhinconichthys taylori | Rhinconichthys | Pachycormid | Filter feeder | 250cm | Swim
+saltasaurus_loricatus | Saltasaurus loricatus | Saltasaurus | Sauropod dinosaur | Herbivore | 1200cm | Ground
+sarcosuchus_imperator | Sarcosuchus imperator | Sarcosuchus | Crocodyliform | Carnivore | 940cm | Ground
+shantungosaurus_giganteus | Shantungosaurus giganteus | Shantungosaurus | Ornithopod dinosaur | Herbivore | 1500cm | Ground
+sinodelphys_szalayi | Sinodelphys szalayi | Sinodelphys | Early metatherian | Carnivore | 15cm | Ground
+sinosauropteryx_prima | Sinosauropteryx prima | Sinosauropteryx | Theropod dinosaur | Carnivore | 100cm | Ground
+spinosaurus_aegyptiacus | Spinosaurus aegyptiacus | Spinosaurus | Theropod dinosaur | Carnivore | 1400cm | Ground
+squalicorax_falcatus | Squalicorax falcatus | Squalicorax | Mackerel shark | Scavenger | 250cm | Swim
+styracosaurus_albertensis | Styracosaurus albertensis | Styracosaurus | Ceratopsian dinosaur | Herbivore | 550cm | Ground
+tarbosaurus_bataar | Tarbosaurus bataar | Tarbosaurus | Theropod dinosaur | Carnivore | 1000cm | Ground
+therizinosaurus_cheloniformis | Therizinosaurus cheloniformis | Therizinosaurus | Theropod dinosaur | Herbivore | 950cm | Ground
+triceratops_horridus | Triceratops horridus | Triceratops | Ceratopsian dinosaur | Herbivore | 850cm | Ground
+tropeognathus_mesembrinus | Tropeognathus mesembrinus | Tropeognathus | Pterosaur | Carnivore | 820cm | Soar
+tylosaurus_proriger | Tylosaurus proriger | Tylosaurus | Mosasaur | Carnivore | 1300cm | Swim
+tyrannosaurus_rex | Tyrannosaurus rex | Tyrannosaurus rex | Theropod dinosaur | Carnivore | 1230cm | Ground
+utahraptor_ostrommaysi | Utahraptor ostrommaysi | Utahraptor | Theropod dinosaur | Carnivore | 600cm | Ground
+vegavis_iaai | Vegavis iaai | Vegavis | Early crown bird | Carnivore | 60cm | Float
+velociraptor_mongoliensis | Velociraptor mongoliensis | Velociraptor | Theropod dinosaur | Carnivore | 200cm | Ground
+water_bear | Tardigrada | Water Bear | Tardigrade | Omnivore | 0.05cm | Drift
+xiphactinus_audax | Xiphactinus audax | Xiphactinus | Bony fish | Carnivore | 550cm | Swim
+
+## Paleogene (53)
+aegyptopithecus_zeuxis | Aegyptopithecus zeuxis | Aegyptopithecus | Primate | Herbivore | 60cm | Ground
+ambulocetus_natans | Ambulocetus natans | Ambulocetus | Archaeocete whale | Carnivore | 300cm | Ground
+andrewsarchus_mongoliensis | Andrewsarchus mongoliensis | Andrewsarchus | Andrewsarchid | Omnivore | 350cm | Ground
+anthropornis_nordenskjoeldi | Anthropornis nordenskjoeldi | Anthropornis | Penguin | Carnivore | 170cm | Swim
+archaeotherium_mortoni | Archaeotherium mortoni | Archaeotherium | Entelodont | Omnivore | 200cm | Ground
+arsinoitherium_zitteli | Arsinoitherium zitteli | Arsinoitherium | Embrithopod | Herbivore | 300cm | Ground
+barylambda_faberi | Barylambda faberi | Barylambda | Pantodont | Herbivore | 250cm | Ground
+basilosaurus_cetoides | Basilosaurus cetoides | Basilosaurus | Archaeocete whale | Carnivore | 1700cm | Swim
+boverisuchus_magnifrontis | Boverisuchus magnifrontis | Boverisuchus | Crocodilian | Carnivore | 300cm | Ground
+carbonemys_cofrinii | Carbonemys cofrinii | Carbonemys | Side-necked turtle | Carnivore | 230cm | Swim
+chelotriton_paradoxus | Chelotriton paradoxus | Chelotriton | Salamander | Carnivore | 18cm | Ground
+coryphodon_eocaenus | Coryphodon eocaenus | Coryphodon | Pantodont | Herbivore | 225cm | Ground
+daeodon_shoshonensis | Daeodon shoshonensis | Daeodon | Entelodont | Omnivore | 360cm | Ground
+darwinius_masillae | Darwinius masillae | Darwinius | Primate | Herbivore | 58cm | Ground
+dasornis_emuinus | Dasornis emuinus | Dasornis | Pelagornithid | Carnivore | 120cm | Soar
+dorudon_atrox | Dorudon atrox | Dorudon | Archaeocete whale | Carnivore | 500cm | Swim
+embolotherium_andrewsi | Embolotherium andrewsi | Embolotherium | Brontothere | Herbivore | 450cm | Ground
+eohippus_angustidens | Eohippus angustidens | Dawn Horse | Equid | Herbivore | 60cm | Ground
+epoicotherium_unicum | Epoicotherium unicum | Epoicotherium | Palaeanodont | Carnivore | 20cm | Ground
+gastornis_giganteus | Gastornis giganteus | Gastornis | Gastornithid | Herbivore | 200cm | Ground
+gigantophis_garstini | Gigantophis garstini | Gigantophis | Madtsoiid snake | Carnivore | 900cm | Ground
+hoplophoneus_primaevus | Hoplophoneus primaevus | Hoplophoneus | Nimravid | Carnivore | 120cm | Ground
+hyaenodon_horridus | Hyaenodon horridus | Hyaenodon | Hyaenodont | Carnivore | 150cm | Ground
+hyracodon_nebraskensis | Hyracodon nebraskensis | Hyracodon | Rhinocerotoid | Herbivore | 150cm | Ground
+icaronycteris_index | Icaronycteris index | Icaronycteris | Bat | Carnivore | 14cm | Swarm
+indohyus_indirae | Indohyus indirae | Indohyus | Raoellid | Herbivore | 40cm | Ground
+knightia_eocaena | Knightia eocaena | Knightia | Bony fish | Filter feeder | 15cm | Swim
+kumimanu_biceae | Kumimanu biceae | Kumimanu | Penguin | Carnivore | 170cm | Swim
+leptictidium_nasutum | Leptictidium nasutum | Leptictidium | Leptictid | Carnivore | 75cm | Ground
+megacerops_coloradensis | Megacerops coloradensis | Megacerops | Brontothere | Herbivore | 500cm | Ground
+mesohippus_bairdi | Mesohippus bairdi | Mesohippus | Equid | Herbivore | 120cm | Ground
+miacis_parvivorus | Miacis parvivorus | Miacis | Miacid | Carnivore | 30cm | Ground
+moeritherium_lyonsi | Moeritherium lyonsi | Moeritherium | Proboscidean | Herbivore | 200cm | Ground
+nummulites_gizehensis | Nummulites gizehensis | Nummulites | Foraminifer | Filter feeder | 3cm | Fixed
+pakicetus_attocki | Pakicetus attocki | Pakicetus | Archaeocete whale | Carnivore | 150cm | Ground
+palaeochiropteryx_tupaiodon | Palaeochiropteryx tupaiodon | Palaeochiropteryx | Bat | Carnivore | 9cm | Swarm
+palaeophis_colossaeus | Palaeophis colossaeus | Palaeophis | Early snake | Carnivore | 800cm | Swim
+palaeorhincodon_wardi | Palaeorhincodon wardi | Palaeorhincodon | Carpet shark | Carnivore | 120cm | Swim
+paraceratherium_transouralicum | Paraceratherium transouralicum | Paraceratherium | Rhinocerotoid | Herbivore | 750cm | Ground
+perucetus_colossus | Perucetus colossus | Perucetus | Archaeocete whale | Carnivore | 1800cm | Swim
+phenacodus_primaevus | Phenacodus primaevus | Phenacodus | Condylarth | Herbivore | 150cm | Ground
+physornis_fortis | Physornis fortis | Physornis | Terror bird | Carnivore | 230cm | Ground
+plesiadapis_tricuspidens | Plesiadapis tricuspidens | Plesiadapis | Plesiadapiform | Herbivore | 60cm | Ground
+presbyornis_pervetus | Presbyornis pervetus | Presbyornis | Waterfowl | Filter feeder | 100cm | Ground
+protungulatum_donnae | Protungulatum donnae | Protungulatum | Early placental | Omnivore | 28cm | Ground
+purgatorius_unio | Purgatorius unio | Purgatorius | Plesiadapiform | Omnivore | 15cm | Ground
+rodhocetus_kasranii | Rodhocetus kasranii | Rodhocetus | Archaeocete whale | Carnivore | 300cm | Swim
+sarkastodon_mongoliensis | Sarkastodon mongoliensis | Sarkastodon | Oxyaenid | Carnivore | 300cm | Ground
+titanoboa_cerrejonensis | Titanoboa cerrejonensis | Titanoboa | Boa | Carnivore | 1300cm | Ground
+titanomyrma_gigantea | Titanomyrma gigantea | Titanomyrma | Ant | Omnivore | 5cm | Ground
+titanonarke_molini | Titanonarke molini | Titanonarke | Ray | Carnivore | 50cm | Swim
+uintatherium_anceps | Uintatherium anceps | Uintatherium | Dinocerate | Herbivore | 400cm | Ground
+urtinotherium_incisivum | Urtinotherium incisivum | Urtinotherium | Rhinocerotoid | Herbivore | 700cm | Ground
+
+## Neogene (49)
+acinonyx_pardinensis | Acinonyx pardinensis | Giant Cheetah | Big cat | Carnivore | 180cm | Ground
+aepycamelus_giraffinus | Aepycamelus giraffinus | Aepycamelus | Camelid | Herbivore | 330cm | Ground
+allodesmus_kernensis | Allodesmus kernensis | Allodesmus | Pinniped | Carnivore | 250cm | Swim
+amphicyon_ingens | Amphicyon ingens | Giant Bear-dog | Bear dog | Carnivore | 250cm | Ground
+andrias_matthewi | Andrias matthewi | Matthew's Giant Salamander | Salamander | Carnivore | 230cm | Swim
+ardipithecus_ramidus | Ardipithecus ramidus | Ardipithecus | Hominin | Omnivore | 120cm | Ground
+argentavis_magnificens | Argentavis magnificens | Argentavis | Teratorn | Carnivore | 200cm | Soar
+australopithecus_afarensis | Australopithecus afarensis | Lucy's Species | Hominin | Omnivore | 120cm | Ground
+barbourofelis_fricki | Barbourofelis fricki | Barbourofelis | Nimravid | Carnivore | 190cm | Ground
+carcharodon_hastalis | Carcharodon hastalis | Broad-toothed Mako | Mackerel shark | Carnivore | 600cm | Swim
+ceratogaulus_hatcheri | Ceratogaulus hatcheri | Horned Gopher | Rodent | Herbivore | 30cm | Ground
+chalicotherium_grande | Chalicotherium grande | Chalicotherium | Chalicothere | Herbivore | 300cm | Ground
+deinogalerix_koenigswaldi | Deinogalerix koenigswaldi | Giant Moonrat | Gymnure | Carnivore | 60cm | Ground
+deinotherium_giganteum | Deinotherium giganteum | Deinotherium | Proboscidean | Herbivore | 700cm | Ground
+desmostylus_hesperus | Desmostylus hesperus | Desmostylus | Desmostylian | Herbivore | 280cm | Ground
+dinocrocuta_gigantea | Dinocrocuta gigantea | Dinocrocuta | Percrocutid | Carnivore | 200cm | Ground
+enhydriodon_dikikae | Enhydriodon dikikae | Enhydriodon | Mustelid | Carnivore | 200cm | Ground
+globigerina_bulloides | Globigerina bulloides | Globigerina | Foraminifer | Filter feeder | 0.05cm | Drift
+glyptotherium_texanum | Glyptotherium texanum | Glyptotherium | Glyptodont | Herbivore | 250cm | Ground
+gomphotherium_angustidens | Gomphotherium angustidens | Gomphotherium | Proboscidean | Herbivore | 600cm | Ground
+hipparion_mediterraneum | Hipparion mediterraneum | Hipparion | Equid | Herbivore | 170cm | Ground
+josephoartigasia_monesi | Josephoartigasia monesi | Josephoartigasia | Rodent | Herbivore | 300cm | Ground
+kelenken_guillermoi | Kelenken guillermoi | Kelenken | Terror bird | Carnivore | 300cm | Ground
+laophis_crotaloides | Laophis crotaloides | Laophis | Viper | Carnivore | 300cm | Ground
+livyatan_melvillei | Livyatan melvillei | Livyatan | Toothed whale | Carnivore | 1500cm | Swim
+machairodus_aphanistus | Machairodus aphanistus | Machairodus | Sabre-toothed cat | Carnivore | 200cm | Ground
+megalochelys_atlas | Megalochelys atlas | Atlas Tortoise | Tortoise | Herbivore | 250cm | Ground
+megapiranha_paranensis | Megapiranha paranensis | Megapiranha | Bony fish | Carnivore | 80cm | Swim
+merychippus_insignis | Merychippus insignis | Merychippus | Equid | Herbivore | 150cm | Ground
+mourasuchus_arendsi | Mourasuchus arendsi | Mourasuchus | Crocodilian | Filter feeder | 900cm | Ground
+neivamyrmex_ectopus | Neivamyrmex ectopus | Amber Army Ant | Ant | Carnivore | 0.4cm | Ground
+odobenocetops_peruvianus | Odobenocetops peruvianus | Walrus Whale | Toothed whale | Carnivore | 350cm | Swim
+otodus_megalodon | Otodus megalodon | Megalodon | Mackerel shark | Carnivore | 1600cm | Swim
+pachycrocuta_brevirostris | Pachycrocuta brevirostris | Giant Short-faced Hyena | Hyena | Carnivore | 170cm | Ground
+pelagornis_chilensis | Pelagornis chilensis | Bony-toothed Bird | Pelagornithid | Carnivore | 150cm | Soar
+peltephilus_ferox | Peltephilus ferox | Horned Armadillo | Armadillo | Omnivore | 110cm | Ground
+phorusrhacos_longissimus | Phorusrhacos longissimus | Phorusrhacos | Terror bird | Carnivore | 250cm | Ground
+platybelodon_grangeri | Platybelodon grangeri | Platybelodon | Proboscidean | Herbivore | 600cm | Ground
+purussaurus_brasiliensis | Purussaurus brasiliensis | Purussaurus | Crocodilian | Carnivore | 1050cm | Ground
+samotherium_boissieri | Samotherium boissieri | Samotherium | Giraffid | Herbivore | 350cm | Ground
+simbakubwa_kutokaafrika | Simbakubwa kutokaafrika | Simbakubwa | Hyaenodont | Carnivore | 280cm | Ground
+sivapithecus_indicus | Sivapithecus indicus | Sivapithecus | Great ape | Herbivore | 90cm | Ground
+sivatherium_giganteum | Sivatherium giganteum | Sivatherium | Giraffid | Herbivore | 400cm | Ground
+smilodon_gracilis | Smilodon gracilis | Smilodon gracilis | Sabre-toothed cat | Carnivore | 160cm | Ground
+stupendemys_geographicus | Stupendemys geographicus | Stupendemys | Side-necked turtle | Omnivore | 300cm | Swim
+teleoceras_major | Teleoceras major | Teleoceras | Rhinocerotoid | Herbivore | 400cm | Ground
+thalassocnus_natans | Thalassocnus natans | Aquatic Sloth | Ground sloth | Herbivore | 250cm | Ground
+thoatherium_minusculum | Thoatherium minusculum | Thoatherium | Litoptern | Herbivore | 70cm | Ground
+thylacosmilus_atrox | Thylacosmilus atrox | Thylacosmilus | Sparassodont | Carnivore | 160cm | Ground
+
+## Quaternary (126)
+african_elephant | Loxodonta africana | African Bush Elephant | Proboscidean | Herbivore | 650cm | Ground
+amblyomma_americanum | Amblyomma americanum | Lone Star Tick | Hard tick | Parasite | 0.4cm | Fixed
+american_alligator | Alligator mississippiensis | American Alligator | Crocodilian | Carnivore | 400cm | Ground
+american_avocet | Recurvirostra americana | American Avocet | Shorebird | Carnivore | 45cm | Ground
+american_manatee | Trichechus manatus | American Manatee | Sirenian | Herbivore | 350cm | Swim
+anthopleura_sola | Anthopleura sola | Sunburst Anemone | Sea anemone | Carnivore | 25cm | Fixed
+antilocapra_americana | Antilocapra americana | Pronghorn | Pronghorn | Herbivore | 140cm | Ground
+apis_mellifera | Apis mellifera | Western Honey Bee | Bee | Herbivore | 1.2cm | Swarm
+ara_macao | Ara macao | Scarlet Macaw | Parrot | Herbivore | 85cm | Soar
+arachnocampa_luminosa | Arachnocampa luminosa | New Zealand Glowworm | Fly | Carnivore | 3cm | Fixed
+arctodus_simus | Arctodus simus | Giant Short-faced Bear | Bear | Omnivore | 300cm | Ground
+atta_cephalotes | Atta cephalotes | Leafcutter Ant | Ant | Herbivore | 0.8cm | Ground
+bradypus_tridactylus | Bradypus tridactylus | Pale-throated Three-toed Sloth | Tree sloth | Herbivore | 55cm | Ground
+brain_coral | Diploria labyrinthiformis | Brain Coral | Stony coral | Filter feeder | 120cm | Fixed
+brown_rat | Rattus norvegicus | Brown Rat | Rodent | Omnivore | 40cm | Ground
+california_condor | Gymnogyps californianus | California Condor | New World vulture | Scavenger | 120cm | Soar
+cane_toad | Rhinella marina | Cane Toad | True toad | Carnivore | 15cm | Ground
+cathedral_termite | Nasutitermes triodiae | Cathedral Termite | Termite | Detritivore | 0.5cm | Fixed
+chamaeleo_calyptratus | Chamaeleo calyptratus | Veiled Chameleon | Chameleon | Carnivore | 50cm | Fixed
+cheilopogon_pinnatibarbatus | Cheilopogon pinnatibarbatus | Bennett's Flying Fish | Flying fish | Carnivore | 40cm | Swim
+chironex_fleckeri | Chironex fleckeri | Australian Box Jellyfish | Jellyfish | Carnivore | 30cm | Drift
+choloepus_didactylus | Choloepus didactylus | Linnaeus's Two-toed Sloth | Tree sloth | Herbivore | 65cm | Ground
+chrysochus_chinensis | Chrysochus chinensis | Chrysochus Leaf Beetle | Beetle | Herbivore | 1.2cm | Fixed
+chrysopa_pallens | Chrysopa pallens | Green Lacewing | Lacewing | Carnivore | 1.5cm | Swarm
+coelodonta_antiquitatis | Coelodonta antiquitatis | Woolly Rhinoceros | Rhinocerotoid | Herbivore | 380cm | Ground
+common_kingfisher | Alcedo atthis | Common Kingfisher | Kingfisher | Carnivore | 16cm | Fixed
+conus_geographus | Conus geographus | Geography Cone | Sea snail | Carnivore | 13cm | Fixed
+crotalus_mitchellii | Crotalus mitchellii | Speckled Rattlesnake | Pit viper | Carnivore | 100cm | Ground
+ctenocephalides_canis | Ctenocephalides canis | Dog Flea | Flea | Parasite | 0.3cm | Ground
+ctenocephalides_felis | Ctenocephalides felis | Cat Flea | Flea | Parasite | 0.25cm | Ground
+delphinus_delphis | Delphinus delphis | Short-beaked Common Dolphin | Oceanic dolphin | Carnivore | 200cm | Swim
+demodex_folliculorum | Demodex folliculorum | Hair Follicle Mite | Mite | Parasite | 0.03cm | Drift
+dermatophagoides_farinae | Dermatophagoides farinae | American House Dust Mite | Mite | Detritivore | 0.035cm | Ground
+desmodus_rotundus | Desmodus rotundus | Common Vampire Bat | Bat | Carnivore | 9cm | Swarm
+dinornis_robustus | Dinornis robustus | South Island Giant Moa | Moa | Herbivore | 300cm | Ground
+diprotodon_optatum | Diprotodon optatum | Diprotodon | Marsupial | Herbivore | 330cm | Ground
+doedicurus_clavicaudatus | Doedicurus clavicaudatus | Doedicurus | Glyptodont | Herbivore | 360cm | Ground
+echinococcus_granulosus | Echinococcus granulosus | Dog Tapeworm | Tapeworm | Parasite | 0.5cm | Drift
+elasmotherium_sibiricum | Elasmotherium sibiricum | Siberian Unicorn | Rhinocerotoid | Herbivore | 500cm | Ground
+electrophorus_electricus | Electrophorus electricus | Electric Eel | Knifefish | Carnivore | 200cm | Swim
+entamoeba_histolytica | Entamoeba histolytica | Entamoeba | Archamoeba | Parasite | 0.003cm | Drift
+equus_quagga | Equus quagga | Plains Zebra | Equid | Herbivore | 240cm | Ground
+eschrichtius_robustus | Eschrichtius robustus | Grey Whale | Baleen whale | Filter feeder | 1400cm | Swim
+giant_otter | Pteronura brasiliensis | Giant Otter | Mustelid | Carnivore | 170cm | Ground
+giant_panda | Ailuropoda melanoleuca | Giant Panda | Bear | Herbivore | 160cm | Ground
+giardia_duodenalis | Giardia duodenalis | Giardia | Diplomonad | Parasite | 0.0015cm | Drift
+glyptodon_clavipes | Glyptodon clavipes | Glyptodon | Glyptodont | Herbivore | 330cm | Ground
+green_iguana | Iguana iguana | Green Iguana | Lizard | Herbivore | 150cm | Ground
+green_sea_turtle | Chelonia mydas | Green Sea Turtle | Sea turtle | Herbivore | 110cm | Swim
+haemadipsa_japonica | Haemadipsa japonica | Japanese Mountain Leech | Leech | Parasite | 2.5cm | Ground
+haemaphysalis_longicornis | Haemaphysalis longicornis | Asian Longhorned Tick | Hard tick | Parasite | 0.3cm | Fixed
+haliaeetus_leucocephalus | Haliaeetus leucocephalus | Bald Eagle | Sea eagle | Carnivore | 90cm | Soar
+haliotis_discus | Haliotis discus | Japanese Abalone | Abalone | Herbivore | 15cm | Fixed
+haliotis_midae | Haliotis midae | Perlemoen Abalone | Abalone | Herbivore | 20cm | Fixed
+hirudo_nipponia | Hirudo nipponia | Asian Medicinal Leech | Leech | Parasite | 5cm | Swim
+homo_neanderthalensis | Homo neanderthalensis | Neanderthal | Hominin | Omnivore | 165cm | Ground
+ixodes_scapularis | Ixodes scapularis | Blacklegged Tick | Hard tick | Parasite | 0.3cm | Fixed
+jaguar | Panthera onca | Jaguar | Big cat | Carnivore | 185cm | Ground
+joro_spider | Trichonephila clavata | Joro Spider | Orb-weaver spider | Carnivore | 2.5cm | Fixed
+leptotrombidium_deliense | Leptotrombidium deliense | Scrub Typhus Chigger | Mite | Parasite | 0.02cm | Ground
+linepithema_humile | Linepithema humile | Argentine Ant | Ant | Omnivore | 0.27cm | Ground
+lingula_anatina | Lingula anatina | Lingula | Lingulid brachiopod | Filter feeder | 5cm | Fixed
+lion | Panthera leo | Lion | Big cat | Carnivore | 200cm | Ground
+lissachatina_fulica | Lissachatina fulica | Giant African Snail | Land snail | Herbivore | 20cm | Ground
+lumbricus_terrestris | Lumbricus terrestris | Common Earthworm | Annelid | Detritivore | 20cm | Fixed
+maasai_giraffe | Giraffa tippelskirchi | Maasai Giraffe | Giraffid | Herbivore | 420cm | Ground
+macrauchenia_patachonica | Macrauchenia patachonica | Macrauchenia | Litoptern | Herbivore | 300cm | Ground
+mandarin_duck | Aix galericulata | Mandarin Duck | Waterfowl | Omnivore | 45cm | Float
+megaloceros_giganteus | Megaloceros giganteus | Irish Elk | Deer | Herbivore | 300cm | Ground
+megatherium_americanum | Megatherium americanum | Giant Ground Sloth | Ground sloth | Herbivore | 600cm | Ground
+megatherium_tarijense | Megatherium tarijense | Tarija Ground Sloth | Ground sloth | Herbivore | 400cm | Ground
+mellivora_capensis | Mellivora capensis | Honey Badger | Mustelid | Omnivore | 75cm | Ground
+metallura_tyrianthina | Metallura tyrianthina | Tyrian Metaltail | Hummingbird | Herbivore | 11cm | Swarm
+mobula_alfredi | Mobula alfredi | Reef Manta Ray | Ray | Filter feeder | 400cm | Swim
+mola_mola | Mola mola | Ocean Sunfish | Bony fish | Carnivore | 180cm | Swim
+monarch_butterfly | Danaus plexippus | Monarch Butterfly | Butterfly | Herbivore | 5cm | Swarm
+monomorium_pharaonis | Monomorium pharaonis | Pharaoh Ant | Ant | Omnivore | 0.2cm | Ground
+moorish_idol | Zanclus cornutus | Moorish Idol | Reef fish | Omnivore | 22cm | Swim
+myocastor_coypus | Myocastor coypus | Coypu | Rodent | Herbivore | 90cm | Ground
+olive_baboon | Papio anubis | Olive Baboon | Primate | Omnivore | 80cm | Ground
+ornate_butterflyfish | Chaetodon ornatissimus | Ornate Butterflyfish | Reef fish | Carnivore | 18cm | Swim
+ornithonyssus_bacoti | Ornithonyssus bacoti | Tropical Rat Mite | Mite | Parasite | 0.1cm | Ground
+otodectes_cynotis | Otodectes cynotis | Ear Mite | Mite | Parasite | 0.04cm | Ground
+ozobranchus_margoi | Ozobranchus margoi | Sea Turtle Leech | Leech | Parasite | 1cm | Swim
+pan_troglodytes | Pan troglodytes | Chimpanzee | Great ape | Omnivore | 85cm | Ground
+pelecanus_onocrotalus | Pelecanus onocrotalus | Great White Pelican | Pelican | Carnivore | 160cm | Float
+phoenicopterus_roseus | Phoenicopterus roseus | Greater Flamingo | Flamingo | Filter feeder | 130cm | Ground
+photinus_carolinus | Photinus carolinus | Synchronous Firefly | Beetle | Carnivore | 1.2cm | Swarm
+phytoseiulus_persimilis | Phytoseiulus persimilis | Predatory Mite | Mite | Carnivore | 0.05cm | Fixed
+plasmodium_falciparum | Plasmodium falciparum | Malaria Parasite | Haemosporidian | Parasite | 0.001cm | Drift
+platypus | Ornithorhynchus anatinus | Platypus | Monotreme | Carnivore | 45cm | Ground
+purple_sea_urchin | Strongylocentrotus purpuratus | Purple Sea Urchin | Echinoderm | Herbivore | 10cm | Fixed
+red_eyed_tree_frog | Agalychnis callidryas | Red-eyed Tree Frog | Tree frog | Carnivore | 7cm | Ground
+red_kangaroo | Osphranter rufus | Red Kangaroo | Marsupial | Herbivore | 140cm | Ground
+red_king_crab | Paralithodes camtschaticus | Red King Crab | King crab | Omnivore | 120cm | Swim
+seven_spot_ladybird | Coccinella septempunctata | Seven-spot Ladybird | Beetle | Carnivore | 0.7cm | Fixed
+smilodon_populator | Smilodon populator | Smilodon populator | Sabre-toothed cat | Carnivore | 210cm | Ground
+smutsia_gigantea | Smutsia gigantea | Giant Pangolin | Pangolin | Carnivore | 150cm | Ground
+solenopsis_invicta | Solenopsis invicta | Red Imported Fire Ant | Ant | Omnivore | 0.4cm | Ground
+spirometra_mansoni | Spirometra mansoni | Spirometra | Tapeworm | Parasite | 60cm | Drift
+staghorn_coral | Acropora cervicornis | Staghorn Coral | Stony coral | Filter feeder | 200cm | Fixed
+sunbittern | Eurypyga helias | Sunbittern | Eurypygiform bird | Carnivore | 46cm | Ground
+superb_lyrebird | Menura novaehollandiae | Superb Lyrebird | Songbird | Carnivore | 90cm | Ground
+table_coral | Acropora hyacinthus | Table Coral | Stony coral | Filter feeder | 150cm | Fixed
+taenia_saginata | Taenia saginata | Beef Tapeworm | Tapeworm | Parasite | 600cm | Drift
+taenia_solium | Taenia solium | Pork Tapeworm | Tapeworm | Parasite | 300cm | Drift
+tapinoma_melanocephalum | Tapinoma melanocephalum | Ghost Ant | Ant | Omnivore | 0.15cm | Ground
+tedania_ignis | Tedania ignis | Fire Sponge | Demosponge | Filter feeder | 30cm | Fixed
+tetranychus_urticae | Tetranychus urticae | Two-spotted Spider Mite | Mite | Herbivore | 0.05cm | Fixed
+thylacoleo_carnifex | Thylacoleo carnifex | Marsupial Lion | Marsupial | Carnivore | 150cm | Ground
+toxodon_platensis | Toxodon platensis | Toxodon | Notoungulate | Herbivore | 270cm | Ground
+trichomonas_gallinae | Trichomonas gallinae | Pigeon Trichomonad | Parabasalid | Parasite | 0.001cm | Drift
+trichonympha_campanula | Trichonympha campanula | Bell Trichonympha | Parabasalid | Parasite | 0.03cm | Drift
+trichonympha_collaris | Trichonympha collaris | Collared Trichonympha | Parabasalid | Parasite | 0.02cm | Drift
+tridacna_crocea | Tridacna crocea | Crocus Clam | Giant clam | Filter feeder | 15cm | Fixed
+tridacna_gigas | Tridacna gigas | Giant Clam | Giant clam | Filter feeder | 100cm | Fixed
+tridacna_maxima | Tridacna maxima | Small Giant Clam | Giant clam | Filter feeder | 25cm | Fixed
+tridacna_tevoroa | Tridacna tevoroa | Devil Clam | Giant clam | Filter feeder | 40cm | Fixed
+trypanosoma_brucei | Trypanosoma brucei | Trypanosome | Kinetoplastid | Parasite | 0.003cm | Drift
+varanus_komodoensis | Varanus komodoensis | Komodo Dragon | Lizard | Carnivore | 280cm | Ground
+wandering_albatross | Diomedea exulans | Wandering Albatross | Seabird | Carnivore | 120cm | Soar
+western_rock_lobster | Panulirus cygnus | Western Rock Lobster | Spiny lobster | Omnivore | 40cm | Swim
+white_tailed_deer | Odocoileus virginianus | White-tailed Deer | Deer | Herbivore | 180cm | Ground
+whitmania_pigra | Whitmania pigra | Whitmania Leech | Leech | Carnivore | 10cm | Swim
+woolly_mammoth | Mammuthus primigenius | Woolly Mammoth | Proboscidean | Herbivore | 550cm | Ground
+xenopsylla_cheopis | Xenopsylla cheopis | Oriental Rat Flea | Flea | Parasite | 0.25cm | Ground

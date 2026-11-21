@@ -185,7 +185,10 @@ namespace NaturalHistory.World
         public static int VisionBonus(ColonyGroup g) =>
             (Has(g, Echolocation) || Has(g, Electroreception) || Has(g, KeenEyes)) ? 1 : 0;
 
-        public static int ReproduceCooldown(ColonyGroup g, int normal) => Has(g, Prolific) ? normal - 1 : normal;
+        // Turns between births: one fewer for prolific breeders, and fewer with the species' items
+        // (TraitEffects.breedCooldown), but at least one
+        public static int ReproduceCooldown(ColonyGroup g, int normal) =>
+            Mathf.Max(1, (Has(g, Prolific) ? normal - 1 : normal) - TraitBonuses.Effects(g).breedCooldown);
 
         public static string Status(ColonyGroup g)
         {

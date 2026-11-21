@@ -1,0 +1,1076 @@
+[
+  {
+    "id": "elpistostege_watsoni",
+    "commonName": "Elpistostege",
+    "scientificName": "Elpistostege watsoni",
+    "kingdom": "Animalia",
+    "group": "Lobe-finned fish",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "FreshWater",
+      "SaltWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish",
+      "Jawless vertebrate"
+    ],
+    "sizeCm": 157,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/Elpistostege",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapAttack": "Snap",
+    "attack": 6,
+    "defense": 3,
+    "hp": 8,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.45
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.65
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.6
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.15
+      }
+    ],
+    "description": "A flat-headed, crocodile-like fish about 1.5 metres long from the estuaries of Late Devonian Quebec, about 380 million years ago. Its eyes sat on top of its head and it had lost the fins on its back, so it could lurk in the shallows like a crocodile. Its pectoral fin held rows of small finger bones: the oldest known digits, still wrapped in a fish's fin."
+  },
+  {
+    "id": "ventastega_curonica",
+    "commonName": "Ventastega",
+    "scientificName": "Ventastega curonica",
+    "kingdom": "Animalia",
+    "group": "Early tetrapod",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish",
+      "Jawless vertebrate"
+    ],
+    "sizeCm": 120,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/Ventastega",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "attack": 6,
+    "defense": 3,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.75
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.55
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.2
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "One of the most fish-like of the early four-limbed animals, about 1.2 metres long, from the Late Devonian lagoons of Latvia some 372 million years ago. It had a broad, flat head full of sharp teeth and a fin-fringed tail; its limbs are barely known but were probably short, with many toes. It hunted fish in shallow water and rarely, if ever, came onto land."
+  },
+  {
+    "id": "gogonasus_andrewsae",
+    "commonName": "Gogonasus",
+    "scientificName": "Gogonasus andrewsae",
+    "kingdom": "Animalia",
+    "group": "Lobe-finned fish",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 35,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/Gogonasus",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.7,
+    "mapAttack": "Snap",
+    "attack": 5,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.75
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.5
+      }
+    ],
+    "description": "A small lobe-finned fish about 35 centimetres long that lived on a tropical reef in Western Australia about 380 million years ago. It had large eyes and big breathing holes on top of its head, and its front fins already contained the same bones as our upper arm and forearm. It lurked among the reef and snapped up small fish and shrimp-like prey."
+  },
+  {
+    "id": "miguashaia_bureaui",
+    "commonName": "Miguashaia",
+    "scientificName": "Miguashaia bureaui",
+    "kingdom": "Animalia",
+    "group": "Coelacanth",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater",
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 45,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/Miguashaia",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.75,
+    "mapAttack": "Bite",
+    "attack": 4,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.65
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.55
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.6
+      }
+    ],
+    "description": "One of the earliest coelacanths, about 45 centimetres long, from the Late Devonian estuary of Miguasha in Quebec, about 380 million years ago. It already had the fleshy, limb-like fins of its living relatives, but its tail was still lopsided like a shark's instead of the coelacanth's later three-lobed tail. Its lineage survives today in the deep-sea coelacanth."
+  },
+  {
+    "id": "sauripterus_taylori",
+    "commonName": "Sauripterus",
+    "scientificName": "Sauripterus taylori",
+    "kingdom": "Animalia",
+    "group": "Lobe-finned fish",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish",
+      "Lobe-finned fish",
+      "Placoderm",
+      "Acanthodian"
+    ],
+    "sizeCm": 180,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/Sauripterus",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Strike",
+    "attack": 8,
+    "defense": 3,
+    "hp": 9,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.45
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.6
+      }
+    ],
+    "description": "A large rhizodont, a fang-toothed lobe-finned fish probably about 1.8 metres long, from the Late Devonian rivers of Pennsylvania and New York, about 365 million years ago. Its huge pectoral fins were stiffened by eight finger-like bones, an independent experiment in building a limb. It lay in wait in the river and lunged at passing fish."
+  },
+  {
+    "id": "mimipiscis_toombsi",
+    "commonName": "Mimipiscis",
+    "scientificName": "Mimipiscis toombsi",
+    "kingdom": "Animalia",
+    "group": "Bony fish",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 20,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Mimipiscis",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.55,
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.75
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.55
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.55
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      }
+    ],
+    "description": "A small early ray-finned fish about 20 centimetres long from the Gogo reef of Western Australia, about 380 million years ago. It was a quick, torpedo-shaped swimmer with very large eyes, shiny diamond-shaped scales and a shark-like upturned tail. Its perfectly preserved fossils show how the ancestors of nearly all of today's fishes were built."
+  },
+  {
+    "id": "cheiracanthus_murchisoni",
+    "commonName": "Cheiracanthus",
+    "scientificName": "Cheiracanthus murchisoni",
+    "kingdom": "Animalia",
+    "group": "Acanthodian",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 30,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/Cheiracanthus",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.55,
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 3,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.35
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.55
+      },
+      {
+        "gene": "filter_feeding",
+        "expression": 0.45
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.55
+      }
+    ],
+    "description": "A slender spiny shark about 30 centimetres long from the Middle Devonian lakes of Scotland, about 390 million years ago. A sharp spine stood in front of each fin and its body was covered in tiny scales. It had no teeth and swam with its large mouth open, gulping small swimming prey, often in big shoals."
+  },
+  {
+    "id": "groenlandaspis_antarcticus",
+    "commonName": "Groenlandaspis",
+    "scientificName": "Groenlandaspis antarcticus",
+    "kingdom": "Animalia",
+    "group": "Placoderm",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 30,
+    "startingPopulation": 250,
+    "playable": true,
+    "model": "Models/Species/Groenlandaspis",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.65,
+    "mapDefense": "Brace",
+    "attack": 3,
+    "defense": 6,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.85
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small armoured arthrodire about 30 centimetres long from Middle and Late Devonian rivers in Antarctica, about 380 million years ago. A tall, pointed plate stood up from the middle of its back like a shark fin, making it a spiky mouthful for predators. It lived near the bottom, picking up worms and small crustaceans."
+  },
+  {
+    "id": "turinia_pagei",
+    "commonName": "Turinia",
+    "scientificName": "Turinia pagei",
+    "kingdom": "Animalia",
+    "group": "Jawless vertebrate",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater",
+      "FreshWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 20,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Turinia",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.6,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 3,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.45
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.6
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.5
+      }
+    ],
+    "description": "A flattened jawless fish about 20 centimetres long from Early Devonian Scotland, about 410 million years ago, one of the last thelodonts. Instead of solid armour its body was covered in thousands of tiny tooth-like scales, and broad flaps stuck out behind its head. It glided over the bottom, sucking up mud and small food particles."
+  },
+  {
+    "id": "euphanerops_longaevus",
+    "commonName": "Euphanerops",
+    "scientificName": "Euphanerops longaevus",
+    "kingdom": "Animalia",
+    "group": "Jawless vertebrate",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater",
+      "FreshWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 12,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/Euphanerops",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapUndulate": true,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.55
+      },
+      {
+        "gene": "filter_feeding",
+        "expression": 0.45
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.45
+      }
+    ],
+    "description": "A slender, eel-like jawless fish about 12 centimetres long from the Late Devonian of Miguasha in Quebec, about 380 million years ago. It had no armour, a long fin fold under its body and as many as 30 gill openings in a row. It fed on tiny particles and plankton and is one of the last of the anaspid-like fishes."
+  },
+  {
+    "id": "palmatolepis_gigas",
+    "commonName": "Palmatolepis",
+    "scientificName": "Palmatolepis gigas",
+    "kingdom": "Animalia",
+    "group": "Conodont",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 4,
+    "startingPopulation": 2000,
+    "playable": true,
+    "model": "Models/Species/Palmatolepis",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.45,
+    "mapUndulate": true,
+    "mapAttack": "Bite",
+    "attack": 3,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.65
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.75
+      }
+    ],
+    "description": "A Late Devonian conodont, a small eel-like animal a few centimetres long with large eyes, known mainly from its tiny comb-like teeth. Its broad, palm-shaped tooth plates are so common and changed so quickly that they are used to date Late Devonian rocks worldwide. It swarmed in the open sea, catching small prey, and the genus died out in the crises at the end of the Devonian."
+  },
+  {
+    "id": "palaeopalaemon_newberryi",
+    "commonName": "Palaeopalaemon",
+    "scientificName": "Palaeopalaemon newberryi",
+    "kingdom": "Animalia",
+    "group": "Prawn",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 6,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/Palaeopalaemon",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.6,
+    "mapAttack": "Snap",
+    "attack": 3,
+    "defense": 4,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.55
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.55
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "The oldest known decapod crustacean, a small lobster-like shrimp about 6 centimetres long from the Late Devonian seas of North America, about 365 million years ago. It had a hard shell, slender claws and long antennae. It crept over the muddy sea floor, picking up small animals and carrion, the first of the line that led to shrimps, lobsters and crabs."
+  },
+  {
+    "id": "weinbergina_opitzi",
+    "commonName": "Weinbergina",
+    "scientificName": "Weinbergina opitzi",
+    "kingdom": "Animalia",
+    "group": "Synziphosurine",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "tags": [
+      "Burrower"
+    ],
+    "sizeCm": 10,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Weinbergina",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.6,
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 6,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.75
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.55
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.55
+      }
+    ],
+    "description": "An early horseshoe crab relative about 10 centimetres long from the Early Devonian sea floor of the German Hunsrück, about 400 million years ago. It had a broad semicircular head shield, a segmented abdomen and a tail spine, with walking legs neatly preserved underneath. It ploughed through the mud for worms and small prey, much like a living horseshoe crab."
+  },
+  {
+    "id": "palaeoisopus_problematicus",
+    "commonName": "Palaeoisopus",
+    "scientificName": "Palaeoisopus problematicus",
+    "kingdom": "Animalia",
+    "group": "Sea spider",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Crinoid"
+    ],
+    "sizeCm": 40,
+    "startingPopulation": 500,
+    "playable": true,
+    "model": "Models/Species/Palaeoisopus",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.8,
+    "attack": 3,
+    "defense": 2,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.65
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.55
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.4
+      }
+    ],
+    "description": "A giant sea spider with a leg span of up to 40 centimetres from the Early Devonian seas of the German Hunsrück, about 400 million years ago. Its thin body carried a long sucking proboscis, and its front legs were flattened into paddles, so it could probably swim. It fed on soft-bodied animals such as sea anemones and crinoids by sucking out their tissues."
+  },
+  {
+    "id": "mimetaster_hexagonalis",
+    "commonName": "Mimetaster",
+    "scientificName": "Mimetaster hexagonalis",
+    "kingdom": "Animalia",
+    "group": "Arthropod",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 5,
+    "startingPopulation": 1000,
+    "playable": true,
+    "model": "Models/Species/Mimetaster",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 4,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.45
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.45
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A small marrellomorph arthropod about 5 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago, one of the last relatives of the Cambrian Marrella. Its head shield was shaped like a six-pointed star with long spiny rays, and it had long antennae and many feathery legs. It swam just above the sea floor, sifting the mud for food."
+  },
+  {
+    "id": "eoarthropleura_devonica",
+    "commonName": "Eoarthropleura",
+    "scientificName": "Eoarthropleura devonica",
+    "kingdom": "Animalia",
+    "group": "Myriapod",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "Wetland",
+      "Plain"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 8,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/Eoarthropleura",
+    "mapStyle": "Ground",
+    "colonySize": 3,
+    "mapDefense": "Hide",
+    "mapLegs": 8,
+    "mapHip": 0.33,
+    "attack": 2,
+    "defense": 5,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.65
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.7
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.35
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      }
+    ],
+    "description": "A small, flat relative of the giant millipede Arthropleura, about 8 centimetres long, from Early and Middle Devonian swamps in Germany and North America. Its body was covered by broad tergites with side lobes, giving it the look of a low, armoured mat. It crawled through the leaf litter of the first forests, feeding on rotting plants."
+  },
+  {
+    "id": "protacarus_crani",
+    "commonName": "Protacarus",
+    "scientificName": "Protacarus crani",
+    "kingdom": "Animalia",
+    "group": "Mite",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "Wetland",
+      "Plain"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 0.04,
+    "startingPopulation": 50000,
+    "playable": true,
+    "model": "Models/Species/Protacarus",
+    "mapStyle": "Ground",
+    "colonySize": 5,
+    "mapLegs": 4,
+    "mapHip": 0.34,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "decomposition",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.85
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.55
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.4
+      }
+    ],
+    "description": "One of the oldest known mites, under half a millimetre long, from the Rhynie chert of Scotland, about 410 million years ago. Its soft, oval body walked on eight short legs among the stems of the earliest land plants. It fed on decaying plant matter and fungi, helping recycle the first soils."
+  },
+  {
+    "id": "platyceras_dumosum",
+    "commonName": "Platyceras",
+    "scientificName": "Platyceras dumosum",
+    "kingdom": "Animalia",
+    "group": "Sea snail",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Parasite",
+    "hosts": [
+      "Crinoid"
+    ],
+    "sizeCm": 4,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/Platyceras",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.55,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 5,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.65
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A sea snail about 4 centimetres long from the Devonian seas of North America, with a loosely coiled, cap-shaped shell covered in hollow spines. It spent its whole adult life clamped onto a crinoid, right over its anus, and lived off the crinoid's waste or stolen food. Fossils of crinoids still carrying their snail are common."
+  },
+  {
+    "id": "cupressocrinites_crassus",
+    "commonName": "Cupressocrinites",
+    "scientificName": "Cupressocrinites crassus",
+    "kingdom": "Animalia",
+    "group": "Crinoid",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 30,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/Cupressocrinites",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.9,
+    "mapDefense": "Tighten",
+    "attack": 1,
+    "defense": 5,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.85
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.5
+      }
+    ],
+    "description": "A sea lily about 30 centimetres tall from the Middle Devonian reefs of Germany, about 385 million years ago. It had five broad, thick arms that closed tightly together into a cone like a cypress cone, and it opened them like a flower to catch food from the current. Its stalk anchored it among the corals and sponges of the reef."
+  },
+  {
+    "id": "helianthaster_rhenanus",
+    "commonName": "Helianthaster",
+    "scientificName": "Helianthaster rhenanus",
+    "kingdom": "Animalia",
+    "group": "Sea star",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 20,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Helianthaster",
+    "mapStyle": "Fixed",
+    "colonySize": 2,
+    "mapScale": 0.7,
+    "attack": 3,
+    "defense": 3,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.8
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.55
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      }
+    ],
+    "description": "A large sea star about 20 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago. It had a small central disc and fourteen to sixteen long, slender arms radiating like a sunburst. It crept over the muddy sea floor hunting small animals."
+  },
+  {
+    "id": "heliophyllum_halli",
+    "commonName": "Heliophyllum",
+    "scientificName": "Heliophyllum halli",
+    "kingdom": "Animalia",
+    "group": "Rugose coral",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 10,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Heliophyllum",
+    "mapStyle": "Fixed",
+    "colonySize": 4,
+    "mapScale": 0.4,
+    "attack": 2,
+    "defense": 4,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.75
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.55
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.4
+      }
+    ],
+    "description": "A solitary horn coral up to about 10 centimetres long from the Middle Devonian seas of North America, about 390 million years ago. Its cup was lined with many fine radial walls, and the outside of its horn-shaped skeleton was ringed by tiny daily growth lines. Counting them shows that a Devonian year had about 400 days, because the Earth then spun faster."
+  },
+  {
+    "id": "actinostroma_clathratum",
+    "commonName": "Actinostroma",
+    "scientificName": "Actinostroma clathratum",
+    "kingdom": "Animalia",
+    "group": "Sponge",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 60,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/Actinostroma",
+    "mapStyle": "Fixed",
+    "colonySize": 1,
+    "mapScale": 0.7,
+    "mapDefense": "Brace",
+    "attack": 1,
+    "defense": 6,
+    "hp": 13,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.8
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.3
+      }
+    ],
+    "description": "A stromatoporoid, a reef-building sponge that grew layered stony domes often more than half a metre across in Middle and Late Devonian seas. Its skeleton was built of thin layers joined by tiny pillars, with small bumps on the surface where water was drawn in. Together with corals it built the largest reefs the world has ever seen, until the Late Devonian extinction wiped them out."
+  },
+  {
+    "id": "anetoceras_arduennense",
+    "commonName": "Anetoceras",
+    "scientificName": "Anetoceras arduennense",
+    "kingdom": "Animalia",
+    "group": "Ammonite",
+    "firstAge": "Devonian",
+    "lastAge": "Devonian",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 10,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/Anetoceras",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapBackward": true,
+    "attack": 2,
+    "defense": 3,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.55
+      }
+    ],
+    "description": "One of the earliest ammonoids, about 10 centimetres across, from the Early Devonian seas of Germany and Morocco, about 405 million years ago. Its shell was only loosely coiled, with the whorls not touching and a hole in the middle, a step between the straight-shelled nautiloids and the tightly coiled ammonites. It drifted near the sea floor, catching small prey with its tentacles."
+  }
+]

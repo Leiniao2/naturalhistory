@@ -1,0 +1,268 @@
+{
+ "paintings": [
+  {
+   "file": "early_land_plants",
+   "title": "Early Land Plants",
+   "artist": "Charles R. Knight",
+   "source": "Early_Land_Plants_by_Knight.jpg"
+  },
+  {
+   "file": "permian_reptiles",
+   "title": "Permian Reptiles and Amphibians",
+   "artist": "Charles R. Knight",
+   "source": "Permian_Reptiles_and_Amphibians_by_Knight.jpg"
+  },
+  {
+   "file": "cretaceous_seas",
+   "title": "Late Cretaceous Seas",
+   "artist": "Charles R. Knight",
+   "source": "Late_or_Upper_Cretaceous_Seas_by_Knight.jpg"
+  },
+  {
+   "file": "triceratops_tyrannosaurus",
+   "title": "Triceratops and Tyrannosaurus",
+   "artist": "Charles R. Knight",
+   "source": "Triceratops_and_Tyrannosaurus_by_Knight.jpg"
+  },
+  {
+   "file": "brontosaurus_mural",
+   "title": "Brontosaurus",
+   "artist": "Charles R. Knight",
+   "source": "Brontosaurus_by_Knight.jpg"
+  },
+  {
+   "file": "oligocene_titanotheres",
+   "title": "Oligocene Titanotheres",
+   "artist": "Charles R. Knight",
+   "source": "Oligocene_Titanotheres_by_Knight.jpg"
+  },
+  {
+   "file": "pliocene_rhinoceros",
+   "title": "Pliocene Rhinoceros, Mastodonts and Oreodonts",
+   "artist": "Charles R. Knight",
+   "source": "Pliocene_Rhinoceros,_Mastodonts,_Oreodonts_by_Knight.jpg"
+  },
+  {
+   "file": "world_before_life",
+   "title": "The World Before There Was Life",
+   "artist": "Charles R. Knight",
+   "source": "The_World_Before_There_was_Life_by_Knight.jpg"
+  },
+  {
+   "file": "reptiles_invaded_seas",
+   "title": "Reptiles That Invaded the Seas",
+   "artist": "Charles R. Knight",
+   "source": "Reptiles_That_Invaded_The_Seas_by_Knight.jpg"
+  },
+  {
+   "file": "woolly_mammoths",
+   "title": "Woolly Mammoths",
+   "artist": "Charles R. Knight",
+   "source": "Woolly_mammoths_by_Knight.jpg"
+  },
+  {
+   "file": "miocene_plains_mammals",
+   "title": "Miocene Plains Mammals",
+   "artist": "Charles R. Knight",
+   "source": "Miocene_Plains_Mammals_by_Knight.jpg"
+  },
+  {
+   "file": "late_cretaceous_dinosaurs",
+   "title": "Late Cretaceous Dinosaurs",
+   "artist": "Charles R. Knight",
+   "source": "Late_Cretaceous_Dinosaurs_by_Knight.jpg"
+  },
+  {
+   "file": "rancho_la_brea",
+   "title": "Rancho La Brea Tar Pools",
+   "artist": "Charles R. Knight",
+   "source": "Rancho_La_Brea_Tar_Pools_by_Knight.jpg"
+  },
+  {
+   "file": "silurian_period",
+   "title": "Silurian Period",
+   "artist": "Charles R. Knight",
+   "source": "Silurian_Period_by_Knight.jpg"
+  },
+  {
+   "file": "ordovician_sea_life",
+   "title": "Ordovician Sea Life",
+   "artist": "Charles R. Knight",
+   "source": "Ordovician_Sea_Life_by_Knight.jpg"
+  },
+  {
+   "file": "cave_bears",
+   "title": "Cave Bears",
+   "artist": "Charles R. Knight",
+   "source": "Cave_bears_by_Knight.jpg"
+  },
+  {
+   "file": "megaloceros",
+   "title": "Megaloceros",
+   "artist": "Charles R. Knight",
+   "source": "Megaloceros_by_Knight.jpg"
+  },
+  {
+   "file": "basilosaurus",
+   "title": "Basilosaurus",
+   "artist": "Charles R. Knight",
+   "source": "Basilosaurus_painting_by_Knight.jpg"
+  },
+  {
+   "file": "mammal_like_reptiles",
+   "title": "Mammal-like Reptiles",
+   "artist": "Charles R. Knight",
+   "source": "Mammal_like_reptiles_by_Knight.jpg"
+  },
+  {
+   "file": "stegosaurus_mural",
+   "title": "Stegosaurus",
+   "artist": "Charles R. Knight",
+   "source": "Stegosaurus_by_Knight.jpg"
+  },
+  {
+   "file": "uintatherium_orohippus",
+   "title": "Uintatherium and Orohippus",
+   "artist": "Charles R. Knight",
+   "source": "Uintatherium_and_Orohippus_by_Knight.jpg"
+  },
+  {
+   "file": "archaeopteryx_compsognathus",
+   "title": "Archaeopteryx, Compsognathus and Rhamphorhynchus",
+   "artist": "Charles R. Knight",
+   "source": "Archaeopteryx,_Compsognathus_and_Rhamphorhynchus_by_Knight.jpg"
+  },
+  {
+   "file": "dinornis",
+   "title": "Moa",
+   "artist": "Charles R. Knight",
+   "source": "Dinornis_by_Knight.jpg"
+  },
+  {
+   "file": "palorchestes",
+   "title": "Palorchestes",
+   "artist": "Charles R. Knight",
+   "source": "Palorchestes_as_a_giant_kangaroo.jpg"
+  },
+  {
+   "file": "nesting_protoceratops",
+   "title": "Nesting Protoceratops",
+   "artist": "Charles R. Knight",
+   "source": "Nesting_Protoceratops.jpg"
+  },
+  {
+   "file": "columbian_mammoth",
+   "title": "Columbian Mammoth",
+   "artist": "Charles R. Knight",
+   "source": "Columbian_mammoth.jpg"
+  },
+  {
+   "file": "brontosaurus_swamp",
+   "title": "Brontosaurus in the Swamp",
+   "artist": "Charles R. Knight",
+   "source": "Pasta-Brontosaurus.jpg"
+  },
+  {
+   "file": "leaping_laelaps",
+   "title": "Leaping Laelaps",
+   "artist": "Charles R. Knight",
+   "source": "Laelaps-Charles_Knight-1897.jpg"
+  },
+  {
+   "file": "dinictis_protoceras",
+   "title": "Dinictis and Protoceras",
+   "artist": "Charles R. Knight",
+   "source": "Dinictis_and_Protoceras,_Charles_R._Knight_1904.jpg"
+  },
+  {
+   "file": "allosaurus",
+   "title": "Allosaurus",
+   "artist": "Charles R. Knight",
+   "source": "Allosaurus4.jpg"
+  },
+  {
+   "file": "hadrosaurs",
+   "title": "Hadrosaurs",
+   "artist": "Charles R. Knight",
+   "source": "Knight_hadrosaurs.jpg"
+  },
+  {
+   "file": "american_mastodon",
+   "title": "American Mastodon",
+   "artist": "Charles R. Knight",
+   "source": "American_mastodon_at_Field_Museum.jpg"
+  },
+  {
+   "file": "eobasileus",
+   "title": "Eobasileus",
+   "artist": "Charles R. Knight",
+   "source": "Eobasileus.jpg"
+  },
+  {
+   "file": "font_de_gaume",
+   "title": "Painters of Font-de-Gaume",
+   "artist": "Charles R. Knight",
+   "source": "Font-de-Gaume.jpg"
+  },
+  {
+   "file": "stegosaurus_forest",
+   "title": "Stegosaurus in the Forest",
+   "artist": "Charles R. Knight",
+   "source": "Stego.jpg"
+  },
+  {
+   "file": "eohippus",
+   "title": "Eohippus",
+   "artist": "Charles R. Knight",
+   "source": "Eohippus.jpg"
+  },
+  {
+   "file": "duria_antiquior",
+   "title": "Duria Antiquior",
+   "artist": "Henry De la Beche",
+   "source": "Duria_Antiquior.jpg"
+  },
+  {
+   "file": "country_of_the_iguanodon",
+   "title": "The Country of the Iguanodon",
+   "artist": "John Martin",
+   "source": "John_Martin_-_The_country_of_the_Iguanodon_-_Google_Art_Project.jpg"
+  },
+  {
+   "file": "wealden_period",
+   "title": "The Wealden Period",
+   "artist": "Joseph Kuwasseg",
+   "source": "Joseph_Kuwasseg,_Landschap_met_iguanodonten_uit_het_vroege_krijt.jpg"
+  },
+  {
+   "file": "mosasaurus_ichthyosaurus",
+   "title": "Mosasaurus and Ichthyosaurus",
+   "artist": "Heinrich Harder",
+   "source": "Mosasaurus_ichthyosaurus.jpg"
+  },
+  {
+   "file": "pteranodon",
+   "title": "Pteranodon",
+   "artist": "Heinrich Harder",
+   "source": "Pterano.jpg"
+  },
+  {
+   "file": "rhamphorhynchus",
+   "title": "Rhamphorhynchus",
+   "artist": "Heinrich Harder",
+   "source": "Rhamphor.jpg"
+  },
+  {
+   "file": "sea_lilies",
+   "title": "Sea Lilies",
+   "artist": "Heinrich Harder",
+   "source": "Seelilien.jpg"
+  },
+  {
+   "file": "laugerie_basse",
+   "title": "Laugerie-Basse in the Vézère Valley",
+   "artist": "Heinrich Harder",
+   "source": "Laugerie_basse_im_Vézère-Tal.png"
+  }
+ ]
+}

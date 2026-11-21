@@ -1,0 +1,46 @@
+{
+  "Canid": {
+    "tags": "PLAC+['Carnivoran']",
+    "path": "CANI + '/Canidae'"
+  },
+  "Hippopotamid": {
+    "tags": "PLAC+['Ungulate']",
+    "path": "ARTIO + '/Whippomorpha/Hippopotamidae'"
+  },
+  "Bovid": {
+    "tags": "PLAC+['Ungulate']",
+    "path": "ARTIO + '/Ruminantia/Bovidae'"
+  },
+  "Ostrich": {
+    "tags": "BIRD",
+    "path": "AVES + '/Palaeognathae/Struthioniformes'"
+  },
+  "Pigeon": {
+    "tags": "BIRD",
+    "path": "NEOAVES + '/Columbaves/Columbimorphae'"
+  },
+  "Owl": {
+    "tags": "BIRD",
+    "path": "NEOAVES + '/Telluraves/Afroaves/Strigiformes'"
+  },
+  "Eagle": {
+    "tags": "BIRD",
+    "path": "NEOAVES + '/Telluraves/Afroaves/Accipitriformes'"
+  },
+  "Squid": {
+    "tags": "B+['Mollusc','Cephalopod']",
+    "path": "CEPH + '/Neocephalopoda/Coleoidea/Decapodiformes'"
+  },
+  "Octopus": {
+    "tags": "B+['Mollusc','Cephalopod']",
+    "path": "CEPH + '/Neocephalopoda/Coleoidea/Vampyropoda/Octopoda'"
+  },
+  "Krill": {
+    "tags": "ART+['Crustacean']",
+    "path": "PANCRUST + '/Malacostraca/Euphausiacea'"
+  },
+  "Elapid snake": {
+    "tags": "REP+['Squamate']",
+    "path": "LEPIDO + '/Toxicofera/Serpentes/Elapidae'"
+  }
+}

@@ -34,8 +34,9 @@ namespace NaturalHistory.World
         public static bool Sky => Layer == MapLayer.Sky;
         public static event Action Changed;
 
-        // Life goes ashore from the Cambrian: before it (the Ediacaran) there is nothing on land or in
-        // the air, and only the layer under sea level can be shown
+        // Life goes ashore in the Silurian (the first land arthropods): before it there is nothing on
+        // land or in the air, and only the layer under sea level can be shown (it shows the sea
+        // surface's floaters too, see InLayer)
         public static bool SurfaceOpen
         {
             get
@@ -43,12 +44,15 @@ namespace NaturalHistory.World
                 var grid = HexGrid.Instance;
                 var age = grid != null && grid.IsGenerated ? grid.DisplayedAge
                         : AgeManager.Instance != null ? AgeManager.Instance.CurrentAge : GeologicalAge.Quaternary;
-                return age >= GeologicalAge.Cambrian;
+                return age >= GeologicalAge.Silurian;
             }
         }
         private static bool wasOpen = true;
 
-        // Re-applies the Ediacaran lock after the map shows another period
+        // Whether anything can live on land tiles yet: from when the surface opens
+        public static bool LandOpen => SurfaceOpen;
+
+        // Re-applies the lock (before the Silurian) after the map shows another period
         public static void Refresh()
         {
             bool open = SurfaceOpen;
@@ -81,7 +85,8 @@ namespace NaturalHistory.World
             return layer switch
             {
                 MapLayer.Surface => home == MapLayer.Surface || (g.Cell.IsWater && Niches.IsSurfacer(def)),
-                MapLayer.Under   => home == MapLayer.Under || (!g.Cell.IsWater && Niches.IsBurrower(def)),
+                MapLayer.Under   => home == MapLayer.Under || (!g.Cell.IsWater && Niches.IsBurrower(def))
+                                    || (g.Cell.IsWater && !SurfaceOpen), // the floaters too while the surface can't be shown
                 _                => home == MapLayer.Sky || Niches.IsFlyer(def),
             };
         }

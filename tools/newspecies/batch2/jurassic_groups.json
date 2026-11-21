@@ -1,0 +1,5 @@
+{
+  "Multituberculate": {"tags": "MAM", "path": "MAMMALIA + '/Theriimorpha/Allotheria/Multituberculata'"},
+  "Rhynchocephalian": {"tags": "REP", "path": "NEODIAPSIDA + '/Sauria/Lepidosauromorpha/Rhynchocephalia'"},
+  "Lobster": {"tags": "ART+['Crustacean']", "path": "PANCRUST + '/Malacostraca/Decapoda'"}
+}

@@ -293,14 +293,6 @@
     color: rgb(240, 210, 110);
 }
 
-.node-external {
-    font-size: 11px;
-    color: rgb(230, 170, 110);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .tree-header {
     flex-direction: row;
     align-items: center;
@@ -1963,6 +1955,22 @@
     font-size: 17px;
     color: rgb(222, 218, 200);
     white-space: normal;
+    margin-bottom: 10px;
+}
+
+/* HP, attack, defense, actions and the abilities: larger than the facts above */
+.encyclopedia-combat {
+    font-size: 21px;
+    color: rgb(240, 234, 214);
+    white-space: normal;
+    margin-bottom: 16px;
+}
+
+/* "You have n copies": a line's space below the abilities */
+.encyclopedia-owned {
+    font-size: 17px;
+    color: rgb(222, 218, 200);
+    margin-top: 6px;
     margin-bottom: 16px;
 }
 
@@ -2409,18 +2417,11 @@
     white-space: normal;
 }
 
-/* Loading screen: browsing the species, and Continue once ready (LoadingScreen) */
+/* Loading screen: Continue once ready (LoadingScreen) */
 .loading-actions {
     flex-direction: row;
     align-items: center;
     margin-top: 14px;
-}
-
-.loading-nav {
-    min-width: 160px;
-    height: 42px;
-    margin-right: 10px;
-    font-size: 18px;
 }
 
 .loading-continue {
@@ -2668,9 +2669,12 @@
 .trait-node .node-cost { font-size: 13px; white-space: normal; }
 
 .trait-node-bonus {
-    font-size: 13px;
+    font-size: 12px;
     -unity-font-style: bold;
     color: rgb(150, 220, 140);
+    white-space: normal;   /* an item's effects can take two lines */
+    max-height: 32px;
+    overflow: hidden;
 }
 
 .trait-node .zoology-icon {
@@ -2705,3 +2709,39 @@
 .theme-evolution .zoology-node:hover { border-color: rgb(210, 245, 200); }
 .theme-evolution .zoology-node.owned { background-color: rgb(46, 110, 60); border-color: rgb(125, 205, 125); }
 .theme-evolution .zoology-node.ready { background-color: rgb(72, 122, 50); border-color: rgb(195, 232, 110); }
+
+/* ---------- The three trees' buttons in their colours (ThemedButtons) ----------
+   Functions blue, Behaviors purple, Evolution green, wherever they are (HUD, the animal's card, the
+   Encyclopedia); the glow while something can be done there is drawn in code. */
+
+.themed-button.theme-btn-functions,
+.themed-button.theme-btn-behaviors,
+.themed-button.theme-btn-evolution {
+    background-image: none;
+    color: rgb(245, 245, 240);
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    -unity-slice-left: 0;
+    -unity-slice-right: 0;
+    -unity-slice-top: 0;
+    -unity-slice-bottom: 0;
+}
+
+.themed-button.theme-btn-functions { background-color: rgb(38, 86, 160); }
+.themed-button.theme-btn-functions:hover { background-color: rgb(54, 110, 195); }
+.themed-button.theme-btn-behaviors { background-color: rgb(100, 56, 150); }
+.themed-button.theme-btn-behaviors:hover { background-color: rgb(126, 74, 185); }
+.themed-button.theme-btn-evolution { background-color: rgb(40, 112, 60); }
+.themed-button.theme-btn-evolution:hover { background-color: rgb(54, 140, 76); }
+.themed-button:disabled { opacity: 0.45; }
+
+.encyclopedia-tree-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.encyclopedia-tree-buttons > .encyclopedia-tree-button {
+    margin: 0 8px 4px 0; /* the HUD's spacing */
+}

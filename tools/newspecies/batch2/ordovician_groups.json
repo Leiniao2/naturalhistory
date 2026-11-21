@@ -1,0 +1,22 @@
+{
+  "Strophomenid brachiopod": {
+    "tags": "B+['Brachiopod']",
+    "path": "LOPHO + '/Lophophorata/Brachiopoda'"
+  },
+  "Chasmataspidid": {
+    "tags": "ART+['Chelicerate','Marine arthropod']",
+    "path": "CHELI + '/Euchelicerata/Chasmataspidida'"
+  },
+  "Aglaspidid": {
+    "tags": "ART+['Marine arthropod']",
+    "path": "EUART + '/Artiopoda/Aglaspidida'"
+  },
+  "Ostracod": {
+    "tags": "ART+['Crustacean']",
+    "path": "PANCRUST + '/Oligostraca/Ostracoda'"
+  },
+  "Chiton": {
+    "tags": "B+['Mollusc']",
+    "path": "MOLL + '/Aculifera/Polyplacophora'"
+  }
+}

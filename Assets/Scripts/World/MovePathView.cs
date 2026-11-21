@@ -11,7 +11,9 @@ namespace NaturalHistory.World
     // reach can be pointed at too (MoveRange.FarPath, MoveOrders): the arrow goes on, paler, with a
     // gold marker where each turn ends. With nothing pointed at, a group under orders shows the
     // way it is going. Drawn over everything (Shaders/MoveOverlay), at the height of the layer on
-    // view (surface, seabed, sky).
+    // view (surface, seabed, sky). When a tile is to be chosen instead (where the young of a
+    // reproducing group go, SpeciesColonies.ChooseTile), each tile on offer gets a blue dashed
+    // ring, turning slowly (ShowPlaces).
     public class MovePathView : MonoBehaviour
     {
         private static MovePathView instance;
@@ -23,6 +25,7 @@ namespace NaturalHistory.World
         private static readonly Color Shadow       = new(0f, 0f, 0f, 0.45f);
         private static readonly Color FarColor     = new(0.78f, 0.88f, 1f, 0.9f);   // beyond this turn
         private static readonly Color TurnEndColor = new(1f, 0.82f, 0.3f, 1f);     // where a turn ends
+        private static readonly Color PlaceColor   = new(0.32f, 0.62f, 1f, 0.95f);  // a tile on offer
         private const float Lift = 0.04f; // above the tile surface
 
         private MoveRange range;
@@ -34,6 +37,7 @@ namespace NaturalHistory.World
         private MeshRenderer outlineRenderer, pathRenderer;
         private TextMesh label;
         private Transform badge;
+        private List<HexCell> places; // tiles on offer (ShowPlaces)
 
         public static void Show(MoveRange range)
         {
@@ -44,9 +48,20 @@ namespace NaturalHistory.World
             instance.Refresh();
         }
 
+        // Blue dashed rings on the tiles a player can choose among
+        public static void ShowPlaces(IEnumerable<HexCell> cells)
+        {
+            if (instance == null) instance = new GameObject("MovePathView").AddComponent<MovePathView>();
+            instance.range = null;
+            instance.hovered = null;
+            instance.places = new List<HexCell>(cells);
+            instance.Refresh();
+        }
+
         public static void Hide()
         {
             if (instance == null) return;
+            instance.places = null;
             instance.range = null;
             instance.hovered = null;
             instance.Refresh();
@@ -123,6 +138,7 @@ namespace NaturalHistory.World
 
         private void LateUpdate()
         {
+            if (places != null) { BuildPlaces(); return; } // the rings turn
             if (range == null) return;
             if (range.Group == null || range.Group.Cell == null || range.Group.IsBusy) { Hide(); return; }
             var cam = Camera.main;
@@ -143,6 +159,7 @@ namespace NaturalHistory.World
             outlineMesh.Clear();
             pathMesh.Clear();
             badge.gameObject.SetActive(false);
+            if (places != null) { BuildPlaces(); return; }
             if (range == null || range.Group == null || range.Group.Cell == null) return;
             var start = range.Group.Cell;
             builtAtX = start.transform.position.x;
@@ -216,6 +233,49 @@ namespace NaturalHistory.World
                 }
             outlineMesh.SetVertices(v); outlineMesh.SetColors(c); outlineMesh.SetTriangles(t, 0);
             outlineMesh.RecalculateBounds();
+        }
+
+        private void BuildPlaces()
+        {
+            outlineMesh.Clear();
+            var v = new List<Vector3>(); var c = new List<Color>(); var t = new List<int>();
+            const int dashes = 12;
+            float spin = Time.unscaledTime * 0.35f, step = Mathf.PI * 2f / dashes;
+            foreach (var cell in places)
+            {
+                if (cell == null) continue;
+                radius = CellRadius(cell);
+                var centre = cell.transform.position; centre.y = Height(cell);
+                float r = radius * 0.62f, w = radius * 0.06f;
+                for (int d = 0; d < dashes; d++)
+                {
+                    float a0 = spin + d * step, a1 = a0 + step * 0.55f;
+                    AddArc(v, c, t, centre, r, w * 2f, a0, a1, Shadow); // a dark edge, so it reads on any ground
+                    AddArc(v, c, t, centre, r, w, a0, a1, PlaceColor);
+                }
+            }
+            outlineMesh.SetVertices(v); outlineMesh.SetColors(c); outlineMesh.SetTriangles(t, 0);
+            outlineMesh.RecalculateBounds();
+        }
+
+        // A flat band `width` wide along a circle of radius r, from angle a0 to a1
+        private static void AddArc(List<Vector3> v, List<Color> c, List<int> t, Vector3 centre, float r, float width, float a0, float a1, Color color)
+        {
+            const int n = 4;
+            int start = v.Count;
+            for (int i = 0; i <= n; i++)
+            {
+                float a = Mathf.Lerp(a0, a1, i / (float)n);
+                var d = new Vector3(Mathf.Cos(a), 0f, Mathf.Sin(a));
+                v.Add(centre + d * (r + width * 0.5f)); c.Add(color);
+                v.Add(centre + d * (r - width * 0.5f)); c.Add(color);
+                if (i > 0)
+                {
+                    int k = start + i * 2;
+                    t.Add(k - 2); t.Add(k - 1); t.Add(k);
+                    t.Add(k - 1); t.Add(k + 1); t.Add(k);
+                }
+            }
         }
 
         // Neighbour directions of a pointy-top hex: east, then every 60°

@@ -20,6 +20,7 @@ namespace NaturalHistory.World
         [SerializeField] private float zoomSpeed = 4f;
         [SerializeField] private float minHeight = 4f;
         [SerializeField] private float maxHeight = 70f;
+        [SerializeField] private float unitViewHeight = 8f; // how close FocusUnit comes: a few tiles round the animal
 
         [Header("Follow")]
         [SerializeField] private float followSharpness = 8f; // higher = catches up faster
@@ -75,6 +76,23 @@ namespace NaturalHistory.World
             following  = false;
             glideFrom  = transform.position;
             glideTo    = transform.position + new Vector3(point.x - center.x, 0f, point.z - center.z);
+            glideStart = Time.unscaledTime;
+            glideTime  = Mathf.Max(0.01f, seconds);
+            gliding    = true;
+        }
+
+        // Glide to an animal and down to unitViewHeight (UnitCycle: the animal whose turn it is), or
+        // just over to it if the view is already that close. Stops following.
+        public void FocusUnit(Vector3 point, float seconds = 0.45f)
+        {
+            var fwd = transform.forward;
+            if (fwd.y > -0.01f || !TryGroundPoint(ScreenCenter, out var center)) { CenterOn(point); return; }
+            var grid = HexGrid.Instance;
+            if (grid != null) point.x -= Mathf.Round((point.x - center.x) / grid.WrapWidth) * grid.WrapWidth;
+            float height = Mathf.Clamp(Mathf.Min(transform.position.y, point.y + unitViewHeight), minHeight, maxHeight);
+            following  = false;
+            glideFrom  = transform.position;
+            glideTo    = point - fwd * ((height - point.y) / -fwd.y);
             glideStart = Time.unscaledTime;
             glideTime  = Mathf.Max(0.01f, seconds);
             gliding    = true;

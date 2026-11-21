@@ -93,7 +93,38 @@ namespace NaturalHistory.Data
         public List<string> prerequisites;
         public List<string> unlocksGenes; // gene ids from genes.json
         public string description;
-        public TraitBonus bonus;          // what the player's groups of a species with it gain (World/TraitBonuses)
+        public TraitBonus bonus;          // flat stats the player's groups of a species with it gain (World/TraitBonuses); few items have one
+        public TraitEffects effects;      // what else it does for them (World/TraitBonuses.Effects); most items have one
+    }
+
+    // What a Functions / Behaviors item does for its species' groups beyond flat stats
+    // (tools/trees/bonuses.py, chosen from what the item is). Fractions add up over the species'
+    // items, to the caps in TraitBonuses.Effects; flags count once.
+    [Serializable]
+    public class TraitEffects
+    {
+        public float heal;            // more of the max HP healed when resting
+        public float fieldHeal;       // healed each turn even after acting
+        public float poisonResist;    // less HP lost to poison and infection
+        public float starveResist;    // less HP lost with no food
+        public float disasterResist;  // less HP lost to disasters
+        public float guard;           // less damage taken
+        public float homeGuard;       // less damage taken in its player's territory
+        public float friendGuard;     // less damage taken with a friendly group next to it
+        public float counterResist;   // less damage taken back when attacking
+        public float counterBoost;    // harder counterattacks
+        public float killHeal;        // HP (of its max) back when it wipes out a foe
+        public float killEp;          // more EP for wiping out a foe
+        public float breedDiscount;   // less EP to reproduce
+        public float evolveDiscount;  // less EP for the species' items and for evolving it
+        public int breedCooldown;     // turns fewer between births
+        public int vision;            // tiles further it sees
+        public int income;            // EP a turn while the player has the species
+        public bool freeHunt;         // eating prey doesn't end its turn
+        public bool freeBreed;        // reproducing takes no action
+        public bool holdImmune;       // can't be held or stunned
+        public bool swallowImmune;    // can't be swallowed whole
+        public bool ambushImmune;     // can't be ambushed
     }
 
     // A Functions / Behaviors item's stat bonus (tools/trees/bonuses.py): added to CombatStats

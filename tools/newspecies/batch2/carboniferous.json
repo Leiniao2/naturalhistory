@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "goniatites_crenistria",
+    "commonName": "Goniatites",
+    "scientificName": "Goniatites crenistria",
+    "kingdom": "Animalia",
+    "group": "Ammonite",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 5,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Goniatites",
+    "mapStyle": "Swim",
+    "mapBackward": true,
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 4,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "The classic goniatite of the Early Carboniferous seas, about 330 million years ago, so common in the limestones of Europe and North Africa that it is used to tell the age of the rocks. Its almost spherical shell, about 5 centimetres across, was tightly coiled with a tiny central navel, and the walls between its gas-filled chambers met the shell in sharp zigzag lines. It floated and jetted through warm, shallow seas, catching small animals with its tentacles."
+  },
+  {
+    "id": "pentremites_pyriformis",
+    "commonName": "Pentremites",
+    "scientificName": "Pentremites pyriformis",
+    "kingdom": "Animalia",
+    "group": "Blastoid",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 10,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Pentremites",
+    "mapStyle": "Fixed",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "attack": 1,
+    "defense": 5,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.85
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A blastoid, one of an extinct group of stalked echinoderms related to sea lilies, and one of the most common fossils of the Early Carboniferous limestones of North America, about 335 million years ago. Its pear-shaped, five-sided cup, only 2 to 3 centimetres long, sat on a short stem and bore five petal-shaped food grooves fringed with fine, thread-like arms. It drew water in through slits along the grooves, filtering out food and breathing at the same time."
+  },
+  {
+    "id": "archimedes_wortheni",
+    "commonName": "Archimedes",
+    "scientificName": "Archimedes wortheni",
+    "kingdom": "Animalia",
+    "group": "Bryozoan",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 15,
+    "startingPopulation": 2000,
+    "playable": true,
+    "model": "Models/Species/Archimedes",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "attack": 1,
+    "defense": 4,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.85
+      },
+      {
+        "gene": "asexual_reproduction",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.4
+      }
+    ],
+    "description": "A colony of tiny moss animals named after the screw of the Greek inventor Archimedes, from the shallow Early Carboniferous seas of North America about 335 million years ago. The colony grew a thick, corkscrew-shaped central axis up to about 20 centimetres tall, from which lacy, net-like fronds spiralled outwards like a spiral staircase. Thousands of tiny animals lived in the mesh and strained food from the water with rings of tentacles, and their stony screws pack some limestones."
+  },
+  {
+    "id": "lithostrotion_vorticale",
+    "commonName": "Lithostrotion",
+    "scientificName": "Lithostrotion vorticale",
+    "kingdom": "Animalia",
+    "group": "Rugose coral",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 30,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/Lithostrotion",
+    "mapStyle": "Fixed",
+    "colonySize": 3,
+    "mapScale": 0.7,
+    "attack": 2,
+    "defense": 7,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.7
+      },
+      {
+        "gene": "asexual_reproduction",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.3
+      }
+    ],
+    "description": "A colonial rugose coral that built thickets in the warm, clear Early Carboniferous seas of Europe, about 340 million years ago. Its colonies were bundles of slender stony tubes, each less than a centimetre wide and home to one polyp, growing up side by side and branching into clumps tens of centimetres across. The polyps caught plankton with their stinging tentacles, and the fossil colonies are among the most familiar fossils of Carboniferous limestones."
+  },
+  {
+    "id": "archaeocidaris_wortheni",
+    "commonName": "Archaeocidaris",
+    "scientificName": "Archaeocidaris wortheni",
+    "kingdom": "Animalia",
+    "group": "Echinoderm",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 6,
+    "startingPopulation": 2500,
+    "playable": true,
+    "model": "Models/Species/Archaeocidaris",
+    "mapStyle": "Fixed",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 5,
+    "hp": 5,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.5
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A sea urchin from the Early Carboniferous seas of North America, about 335 million years ago, and a close relative of the ancestors of all living sea urchins. Its round shell, about 5 centimetres across, was built of overlapping plates, each bearing one large knob on which sat a long, stout spine covered in small thorns. It crept slowly over the sea floor grazing on algae, its thorny spines a strong defence against predators."
+  },
+  {
+    "id": "phillipsia_gemmulifera",
+    "commonName": "Phillipsia",
+    "scientificName": "Phillipsia gemmulifera",
+    "kingdom": "Animalia",
+    "group": "Trilobite",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 3,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Phillipsia",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapDefense": "Hide",
+    "attack": 2,
+    "defense": 4,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.4
+      }
+    ],
+    "description": "One of the last trilobites, from the Early Carboniferous seas of Europe about 340 million years ago, when only a single family of these once dominant arthropods survived. It was a small, oval trilobite about 3 centimetres long with a bulging central head lobe, large crescent-shaped eyes, nine body segments and a broad, rounded tail shield. It crawled over muddy sea floors picking up food particles, and could roll up into a ball when threatened."
+  },
+  {
+    "id": "bojophlebia_prokopi",
+    "commonName": "Bojophlebia",
+    "scientificName": "Bojophlebia prokopi",
+    "kingdom": "Animalia",
+    "group": "Mayfly",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "Wetland",
+      "Rainforest"
+    ],
+    "diet": "Herbivore",
+    "tags": [
+      "Flyer"
+    ],
+    "sizeCm": 45,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Bojophlebia",
+    "mapStyle": "Soar",
+    "colonySize": 2,
+    "wingBeat": 4,
+    "wingRoot": 0.06,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 1,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.8
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.7
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "One of the largest mayfly-like insects ever, with a wingspan of about 45 centimetres, from Late Carboniferous rocks near Prague in the Czech Republic, about 310 million years old. It had two pairs of broad wings of similar size that it could not fold back over its body, a slender body and long tail filaments. It is thought to be an early relative of the mayflies, the oldest surviving branch of winged insects, and its young probably grew up in the swamp waters."
+  },
+  {
+    "id": "acantherpestes_major",
+    "commonName": "Acantherpestes",
+    "scientificName": "Acantherpestes major",
+    "kingdom": "Animalia",
+    "group": "Myriapod",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "Wetland",
+      "Rainforest"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 30,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/Acantherpestes",
+    "mapStyle": "Ground",
+    "mapLegs": 10,
+    "mapHip": 0.27,
+    "mapDefense": "Coil",
+    "colonySize": 2,
+    "attack": 2,
+    "defense": 5,
+    "hp": 6,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.8
+      },
+      {
+        "gene": "decomposition",
+        "expression": 0.7
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.4
+      }
+    ],
+    "description": "A giant spiny millipede up to about 30 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old. Each of its body rings carried a pair of long, forked spines pointing up and out, making it one of the spikiest animals of the coal forests. It crawled through the leaf litter on many pairs of short legs, feeding on rotting plant matter, while its spines kept amphibian predators at bay."
+  },
+  {
+    "id": "latzelia_primordialis",
+    "commonName": "Latzelia",
+    "scientificName": "Latzelia primordialis",
+    "kingdom": "Animalia",
+    "group": "Myriapod",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "Rainforest",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Roachoid"
+    ],
+    "sizeCm": 4,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Latzelia",
+    "mapStyle": "Ground",
+    "mapLegs": 8,
+    "mapHip": 0.3,
+    "mapGait": "Run",
+    "mapAttack": "Bite",
+    "mapDefense": "Scatter",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "attack": 5,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.8
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "One of the oldest known centipedes, an early relative of today's long-legged house centipedes, from the Mazon Creek fossil beds of Illinois, about 309 million years old. About 4 centimetres long, it had a short body on fifteen pairs of very long, slender legs, long antennae and a pair of venomous fangs under its head. It ran swiftly over the forest floor and ambushed insects and other small invertebrates."
+  },
+  {
+    "id": "acanthotelson_stimpsoni",
+    "commonName": "Acanthotelson",
+    "scientificName": "Acanthotelson stimpsoni",
+    "kingdom": "Animalia",
+    "group": "Syncarid",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Scavenger",
+    "sizeCm": 6,
+    "startingPopulation": 6000,
+    "playable": true,
+    "model": "Models/Species/Acanthotelson",
+    "mapStyle": "Swim",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.8
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.5
+      }
+    ],
+    "description": "A shrimp-like crustacean about 6 centimetres long, one of the most common animals in the Mazon Creek fossil beds of Illinois, about 309 million years old. It was a syncarid, a crustacean without the shield that covers the front of true shrimps, so every body segment shows; it had long antennae, spiny legs and a tail fan around a spiky tip. It swarmed in the rivers and lagoons of the coal swamps scavenging for food, and its relatives still live in fresh water today."
+  },
+  {
+    "id": "syllipsimopodi_bideni",
+    "commonName": "Syllipsimopodi",
+    "scientificName": "Syllipsimopodi bideni",
+    "kingdom": "Animalia",
+    "group": "Vampyropod",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 12,
+    "startingPopulation": 1000,
+    "playable": true,
+    "model": "Models/Species/Syllipsimopodi",
+    "mapStyle": "Swim",
+    "mapBackward": true,
+    "colonySize": 3,
+    "mapDefense": "Ink",
+    "attack": 4,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      }
+    ],
+    "description": "The oldest known relative of octopuses and vampire squids, a squid-like animal about 12 centimetres long from the Bear Gulch Limestone of Montana, about 328 million years old. It had a torpedo-shaped body stiffened by an internal shell, a pair of fins and ten sucker-bearing arms, two of them longer than the rest, which it probably used to seize prey. It shows that the octopus line had already appeared about 80 million years earlier than once thought, still with ten arms rather than eight."
+  },
+  {
+    "id": "helenodora_inopinata",
+    "commonName": "Helenodora",
+    "scientificName": "Helenodora inopinata",
+    "kingdom": "Animalia",
+    "group": "Velvet worm",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "Rainforest",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 5,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Helenodora",
+    "mapStyle": "Ground",
+    "mapLegs": 8,
+    "mapHip": 0.2,
+    "mapDefense": "Hide",
+    "colonySize": 3,
+    "mapScale": 0.5,
+    "attack": 3,
+    "defense": 1,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.4
+      }
+    ],
+    "description": "A velvet worm about 5 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old, one of very few fossils of these soft-bodied animals. It looked like a caterpillar, with a soft, ringed body, a pair of antennae and many pairs of stubby legs. It belongs to the line that leads to today's velvet worms, which hunt small animals on damp forest floors by spraying them with sticky slime."
+  },
+  {
+    "id": "rhabdoderma_elegans",
+    "commonName": "Rhabdoderma",
+    "scientificName": "Rhabdoderma elegans",
+    "kingdom": "Animalia",
+    "group": "Coelacanth",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "FreshWater",
+      "SaltWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "acanthotelson_stimpsoni"
+    ],
+    "sizeCm": 30,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Rhabdoderma",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapScale": 0.7,
+    "attack": 4,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.6
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A coelacanth about 30 centimetres long, common in the coal-swamp waters and coastal lagoons of North America and Europe about 310 million years ago. It already had the shape that survives today in the living coelacanth: a stout body, fleshy lobed fins on stalks and a three-lobed tail with a small tuft in the middle. Fossils of tiny young still carrying yolk sacs show how it grew up, and it hunted small fish and shrimps."
+  },
+  {
+    "id": "belantsea_montana",
+    "commonName": "Belantsea",
+    "scientificName": "Belantsea montana",
+    "kingdom": "Animalia",
+    "group": "Chimaera",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Sponge",
+      "Bryozoan"
+    ],
+    "sizeCm": 25,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Belantsea",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.4
+      }
+    ],
+    "description": "A petalodont, an extinct relative of the ratfishes, from the Bear Gulch Limestone of Montana, about 320 million years ago. Its body was almost a round, flat disc about as deep as it was long, with huge wing-like pectoral fins, a tall fin along the back and a small mouth with petal-shaped teeth. It probably swam slowly among the reefs, steering with its broad fins and nibbling small animals off sponges and the sea floor."
+  },
+  {
+    "id": "elonichthys_peltigerus",
+    "commonName": "Elonichthys",
+    "scientificName": "Elonichthys peltigerus",
+    "kingdom": "Animalia",
+    "group": "Bony fish",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "acanthotelson_stimpsoni"
+    ],
+    "sizeCm": 15,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/Elonichthys",
+    "mapStyle": "Swim",
+    "colonySize": 4,
+    "mapScale": 0.5,
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 3,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      }
+    ],
+    "description": "A palaeoniscoid, one of the early ray-finned fishes, about 15 centimetres long, from the Late Carboniferous swamps and lagoons of Ohio and Illinois, about 310 million years ago. Its slender body was covered in thick, shiny, diamond-shaped scales, and it had large eyes, a wide mouth full of small sharp teeth and an uneven tail with a long upper lobe. Early ray-finned fishes like it gave rise to almost all the fish alive today; it hunted small crustaceans and young fish."
+  },
+  {
+    "id": "sagenodus_inaequalis",
+    "commonName": "Sagenodus",
+    "scientificName": "Sagenodus inaequalis",
+    "kingdom": "Animalia",
+    "group": "Lungfish",
+    "firstAge": "Carboniferous",
+    "lastAge": "Permian",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "euproops_danae",
+      "acanthotelson_stimpsoni"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Sagenodus",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapDefense": "Hide",
+    "attack": 5,
+    "defense": 4,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      }
+    ],
+    "description": "A lungfish about a metre long, common in the Late Carboniferous and Early Permian swamps, rivers and lakes of North America and Europe, about 300 million years ago. It had a long body, a broad head with fan-shaped, ridged tooth plates for crushing shells, narrow pointed paired fins and a tail fringed by one continuous fin. Like living lungfish it could gulp air at the surface, which helped it survive in warm, oxygen-poor swamp water."
+  },
+  {
+    "id": "greererpeton_burkemorani",
+    "commonName": "Greererpeton",
+    "scientificName": "Greererpeton burkemorani",
+    "kingdom": "Animalia",
+    "group": "Early tetrapod",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish"
+    ],
+    "sizeCm": 150,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/Greererpeton",
+    "mapStyle": "Swim",
+    "mapUndulate": true,
+    "mapAttack": "Bite",
+    "colonySize": 2,
+    "attack": 5,
+    "defense": 3,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "A long-bodied early tetrapod about 1.5 metres long from Early Carboniferous rocks of West Virginia, about 330 million years old. It had a flat, broad head marked with the grooves of a lateral-line system for sensing movement in the water, small legs and an eel-like body with about 40 vertebrae in front of the hips. It lived almost entirely in water, swimming with side-to-side waves of its body and snapping up fish."
+  },
+  {
+    "id": "dendrerpeton_acadianum",
+    "commonName": "Dendrerpeton",
+    "scientificName": "Dendrerpeton acadianum",
+    "kingdom": "Animalia",
+    "group": "Temnospondyl",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "Wetland",
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Roachoid",
+      "Myriapod"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/Dendrerpeton",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.4,
+    "colonySize": 2,
+    "attack": 5,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A temnospondyl amphibian about a metre long from the coal-forest rocks of Nova Scotia, about 315 million years old, whose skeletons were found inside the hollow stumps of giant club-moss trees. It had a broad, flat head with large eyes and a notch at the back of the skull that probably held an eardrum, a stout body and strong legs. It hunted insects, millipedes and smaller animals on the forest floor."
+  },
+  {
+    "id": "eucritta_melanolimnetes",
+    "commonName": "Eucritta",
+    "scientificName": "Eucritta melanolimnetes",
+    "kingdom": "Animalia",
+    "group": "Early tetrapod",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "Wetland",
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 25,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/Eucritta",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.4,
+    "mapDefense": "Scatter",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "attack": 4,
+    "defense": 2,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small early tetrapod about 25 centimetres long whose name means 'creature from the black lagoon', found in the rocks of an ancient volcanic lake in Scotland, about 335 million years old. It mixed features of several early tetrapod groups, with a short head, large keyhole-shaped eye openings and slim limbs, and is thought to be a small relative of the baphetids. It probably hunted insects, scorpions and other small animals around the warm lake shores."
+  },
+  {
+    "id": "keraterpeton_galvani",
+    "commonName": "Keraterpeton",
+    "scientificName": "Keraterpeton galvani",
+    "kingdom": "Animalia",
+    "group": "Lepospondyl",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 30,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/Keraterpeton",
+    "mapStyle": "Swim",
+    "mapUndulate": true,
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "attack": 3,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.5
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "A small nectridean amphibian about 30 centimetres long from the Late Carboniferous coal swamps of Ireland and England, about 310 million years ago. It had a newt-like body with short legs, a long, flattened swimming tail and a flat head with short horns at the back corners of the skull, an early version of the boomerang-shaped head of its later relative Diplocaulus. It lived in swamp pools and caught small invertebrates and fish."
+  },
+  {
+    "id": "ianthasaurus_hardestiorum",
+    "commonName": "Ianthasaurus",
+    "scientificName": "Ianthasaurus hardestiorum",
+    "kingdom": "Animalia",
+    "group": "Edaphosaurid synapsid",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "Rainforest",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Roachoid"
+    ],
+    "sizeCm": 70,
+    "startingPopulation": 500,
+    "playable": true,
+    "model": "Models/Species/Ianthasaurus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.3,
+    "mapDefense": "Scatter",
+    "colonySize": 2,
+    "mapScale": 0.6,
+    "attack": 4,
+    "defense": 2,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.5
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A small sail-backed synapsid, a distant relative of mammals, about 70 centimetres long from Late Carboniferous rocks near Garnett, Kansas, about 302 million years old. Like its later cousin Edaphosaurus it carried a tall sail on long spines along its back, studded with small knobby crossbars, but its sharp teeth show that it ate insects rather than plants. The sail may have helped it warm up in the morning sun or impress rivals."
+  },
+  {
+    "id": "spinoaequalis_schultzei",
+    "commonName": "Spinoaequalis",
+    "scientificName": "Spinoaequalis schultzei",
+    "kingdom": "Animalia",
+    "group": "Araeoscelid reptile",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 25,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/Spinoaequalis",
+    "mapStyle": "Swim",
+    "mapUndulate": true,
+    "mapDefense": "Scatter",
+    "colonySize": 3,
+    "mapScale": 0.6,
+    "attack": 3,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.3
+      }
+    ],
+    "description": "One of the first reptiles to return to the water, a slender diapsid about 25 centimetres long from Late Carboniferous rocks near Hamilton, Kansas, about 302 million years old. A close relative of Petrolacosaurus, it had a small head and slim legs but a tall, flattened tail like a paddle, which it swung from side to side to swim. It lived in a coastal estuary among fishes and crustaceans, where it probably hunted small swimming prey."
+  },
+  {
+    "id": "cochleosaurus_bohemicus",
+    "commonName": "Cochleosaurus",
+    "scientificName": "Cochleosaurus bohemicus",
+    "kingdom": "Animalia",
+    "group": "Temnospondyl",
+    "firstAge": "Carboniferous",
+    "lastAge": "Carboniferous",
+    "habitats": [
+      "Wetland",
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Bony fish",
+      "Lepospondyl"
+    ],
+    "sizeCm": 150,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/Cochleosaurus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.4,
+    "mapAttack": "Bite",
+    "colonySize": 1,
+    "attack": 6,
+    "defense": 4,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.4
+      }
+    ],
+    "description": "A crocodile-like temnospondyl about 1.5 metres long, one of the most common large animals of the Late Carboniferous coal swamps of Bohemia in the Czech Republic, about 307 million years ago. Its long, flat skull ended at the back in a pair of short, horn-like points, and its jaws were lined with sharp teeth. It lurked at the edges of swamp lakes like a crocodile, catching fish and smaller amphibians."
+  }
+]

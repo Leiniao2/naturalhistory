@@ -9,14 +9,14 @@ namespace NaturalHistory.UI
     //  - evolve: a DNA double helix (evolving)
     //  - functions / behaviors: the two trait trees
     //  - reproduce: a cell dividing in two
-    //  - evolution-tree: a branching tree (the Evolution Tree)
+    //  - the Evolution Tree uses the evolve icon too (a DNA double helix)
     // Until an image is there, a plain white shape drawn here stands in (signed distances,
     // antialiased over about a pixel), so the buttons always show something.
     public static class UiIcons
     {
         private const int Size = 64;
 
-        private static Texture2D book, revive, upgrade, functions, behaviors, reproduce, evolve, tree;
+        private static Texture2D book, revive, upgrade, functions, behaviors, reproduce, evolve;
         public static Texture2D Book      => book      ??= Load("encyclopedia") ?? Draw("IconBook", BookShape);
         public static Texture2D Revive    => revive    ??= Load("revive") ?? Draw("IconRevive", ReviveShape);
         public static Texture2D Upgrade   => upgrade   ??= Load("evolve") ?? Draw("IconUpgrade", UpgradeShape);
@@ -24,7 +24,7 @@ namespace NaturalHistory.UI
         public static Texture2D Behaviors => behaviors ??= Load("behaviors");
         public static Texture2D Reproduce => reproduce ??= Load("reproduce");
         public static Texture2D Evolve    => evolve    ??= Load("evolve"); // the painting only (no stand-in)
-        public static Texture2D Tree      => tree      ??= Load("evolution-tree");
+        public static Texture2D Tree      => Evolve;
 
         // Whether the painted image exists (a drawn stand-in is white: tint it; a painting isn't)
         public static bool Painted(Texture2D icon) => icon != null && !icon.name.StartsWith("Icon");

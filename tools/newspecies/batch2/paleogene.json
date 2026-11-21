@@ -1,0 +1,1145 @@
+[
+  {
+    "id": "phiomia_serridens",
+    "commonName": "Phiomia",
+    "scientificName": "Phiomia serridens",
+    "kingdom": "Animalia",
+    "group": "Proboscidean",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Wetland",
+      "Rainforest"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 250,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/PhiomiaSerridens",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.38,
+    "colonySize": 2,
+    "mapAttack": "Charge",
+    "mapDefense": "Rear",
+    "attack": 3,
+    "defense": 4,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.6
+      }
+    ],
+    "description": "An early relative of elephants from the late Eocene and early Oligocene swamp forests of Egypt, about 2.5 m long and 1.3 m tall at the shoulder. It probably had a short trunk, with a pair of short tusks in the upper jaw and flat, shovel-like lower teeth for cutting and scooping up water plants. It shows how the trunk and tusks of elephants began."
+  },
+  {
+    "id": "eurotamandua_joresi",
+    "commonName": "Eurotamandua",
+    "scientificName": "Eurotamandua joresi",
+    "kingdom": "Animalia",
+    "group": "Pangolin",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Ant",
+      "Termite",
+      "Small animals"
+    ],
+    "sizeCm": 90,
+    "startingPopulation": 500,
+    "playable": true,
+    "model": "Models/Species/EurotamanduaJoresi",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.25,
+    "colonySize": 2,
+    "mapAttack": "Strike",
+    "mapDefense": "Rear",
+    "attack": 2,
+    "defense": 4,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.6
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.2
+      }
+    ],
+    "description": "An anteater-like mammal about 90 cm long, including its long tail, from the middle Eocene forests of Germany. It had a long, toothless snout, powerful clawed forelimbs for ripping open ant and termite nests, and a strong tail that may have gripped branches. Once thought to be an early anteater, it is now seen as a relative of the pangolins that had no scales."
+  },
+  {
+    "id": "ailuravus_macrurus",
+    "commonName": "Ailuravus",
+    "scientificName": "Ailuravus macrurus",
+    "kingdom": "Animalia",
+    "group": "Rodent",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 70,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/AiluravusMacrurus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.2,
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "One of the earliest and largest rodents, from the middle Eocene forests of Germany, about 70 cm long, more than half of it a long, bushy tail. It looked much like a big squirrel and climbed in the trees. Fossils with their stomach contents show that it ate leaves."
+  },
+  {
+    "id": "palaeolagus_haydeni",
+    "commonName": "Palaeolagus",
+    "scientificName": "Palaeolagus haydeni",
+    "kingdom": "Animalia",
+    "group": "Lagomorph",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Steppe",
+      "Savanna"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 25,
+    "startingPopulation": 4000,
+    "playable": true,
+    "model": "Models/Species/PalaeolagusHaydeni",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.25,
+    "colonySize": 4,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.85
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.4
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "An early rabbit from the late Eocene and Oligocene of North America, about 25 cm long and common on the spreading grasslands and open woods. Its ears and hind legs were shorter than a modern rabbit's, so it probably ran rather than leapt. Like its living relatives it ate plants and bred quickly."
+  },
+  {
+    "id": "taeniolabis_taoensis",
+    "commonName": "Taeniolabis",
+    "scientificName": "Taeniolabis taoensis",
+    "kingdom": "Animalia",
+    "group": "Multituberculate",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Rainforest",
+      "Plain"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 80,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/TaeniolabisTaoensis",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.18,
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "mapDefense": "Brace",
+    "attack": 3,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      }
+    ],
+    "description": "The largest multituberculate, a beaver-sized mammal about 80 cm long from the early Paleocene of New Mexico, living just a few hundred thousand years after the dinosaurs died out. Multituberculates were an old, rodent-like lineage unrelated to true rodents; Taeniolabis had a deep skull, big gnawing front teeth and broad grinding cheek teeth for tough plants. The group had thrived for over 100 million years before rodents replaced it."
+  },
+  {
+    "id": "pyrotherium_romeroi",
+    "commonName": "Pyrotherium",
+    "scientificName": "Pyrotherium romeroi",
+    "kingdom": "Animalia",
+    "group": "Pyrothere",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Wetland"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 300,
+    "startingPopulation": 25,
+    "playable": true,
+    "model": "Models/Species/PyrotheriumRomeroi",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.32,
+    "colonySize": 1,
+    "mapAttack": "Charge",
+    "mapDefense": "Brace",
+    "attack": 4,
+    "defense": 6,
+    "hp": 12,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.4
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.4
+      }
+    ],
+    "description": "A large South American hoofed mammal about 3 m long from the late Oligocene of Argentina and Bolivia. It looked strikingly like an elephant, with pillar-like legs, probably a short trunk and forward-pointing tusks in both jaws, but it belonged to a native South American lineage and evolved these features on its own. Its name, 'fire beast', comes from the volcanic ash beds where it was found."
+  },
+  {
+    "id": "mesonyx_obtusidens",
+    "commonName": "Mesonyx",
+    "scientificName": "Mesonyx obtusidens",
+    "kingdom": "Animalia",
+    "group": "Mesonychid",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Hill",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Equid",
+      "Condylarth",
+      "Rodent",
+      "Small animals"
+    ],
+    "sizeCm": 150,
+    "startingPopulation": 50,
+    "playable": true,
+    "model": "Models/Species/MesonyxObtusidens",
+    "mapStyle": "Ground",
+    "mapGait": "Run",
+    "mapLegs": 2,
+    "mapHip": 0.4,
+    "colonySize": 2,
+    "mapAttack": "Bite",
+    "attack": 6,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A wolf-like predator about 1.5 m long from the middle Eocene of North America and Asia. Mesonychids were hoofed mammals that took up hunting: Mesonyx had a big head with strong jaws and blunt teeth, long running legs and small hooves instead of claws. It hunted and scavenged early horses and other small mammals."
+  },
+  {
+    "id": "protoceras_celer",
+    "commonName": "Protoceras",
+    "scientificName": "Protoceras celer",
+    "kingdom": "Animalia",
+    "group": "Protoceratid",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Rainforest"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 100,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/ProtocerasCeler",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.43,
+    "colonySize": 3,
+    "mapAttack": "Ram",
+    "mapDefense": "Scatter",
+    "attack": 3,
+    "defense": 2,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.4
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      }
+    ],
+    "description": "A deer-sized hoofed mammal about 1 m long from the early Oligocene of North America, a distant relative of camels. Males carried three pairs of short bony knobs and flanges on the head, the tallest pair on the snout, and tusk-like upper canines; females were hornless. Males probably used them to display and fight over mates in the woodlands where they browsed."
+  },
+  {
+    "id": "merycoidodon_culbertsoni",
+    "commonName": "Merycoidodon",
+    "scientificName": "Merycoidodon culbertsoni",
+    "kingdom": "Animalia",
+    "group": "Oreodont",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Steppe"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 140,
+    "startingPopulation": 900,
+    "playable": true,
+    "model": "Models/Species/MerycoidodonCulbertsoni",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.29,
+    "colonySize": 4,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.7
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.5
+      }
+    ],
+    "description": "A sheep-sized oreodont about 1.4 m long from the late Eocene and Oligocene of North America, one of the most common fossil mammals of the Badlands of South Dakota. It had a short face, short legs with four toes, a long tail and grinding teeth for leaves and grass. Oreodonts were a purely North American group of plant-eaters that grazed in large herds."
+  },
+  {
+    "id": "pezosiren_portelli",
+    "commonName": "Pezosiren",
+    "scientificName": "Pezosiren portelli",
+    "kingdom": "Animalia",
+    "group": "Sirenian",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Wetland",
+      "FreshWater"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 210,
+    "startingPopulation": 120,
+    "playable": true,
+    "model": "Models/Species/PezosirenPortelli",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.32,
+    "colonySize": 2,
+    "mapDefense": "Brace",
+    "attack": 2,
+    "defense": 4,
+    "hp": 8,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.3
+      }
+    ],
+    "description": "The oldest known sea cow, from the early middle Eocene of Jamaica, about 2.1 m long. Unlike manatees and dugongs it still had four legs that could carry it on land, and it lived much like a hippo, grazing sea grass and water plants in coastal lagoons and rivers. Its heavy, dense bones worked as ballast when it swam."
+  },
+  {
+    "id": "lithornis_celetius",
+    "commonName": "Lithornis",
+    "scientificName": "Lithornis celetius",
+    "kingdom": "Animalia",
+    "group": "Lithornithid",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Rainforest",
+      "Wetland"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Carnivore",
+    "tags": [
+      "Flyer"
+    ],
+    "sizeCm": 40,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/LithornisCeletius",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.42,
+    "colonySize": 3,
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 1,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.5
+      }
+    ],
+    "description": "A chicken-sized bird about 40 cm long from the late Paleocene of North America, a distant relative of ostriches, emus and tinamous that could still fly. It had a long, slightly down-curved beak with sensitive pits at the tip, which it probed into soft ground for worms and insects, much as kiwis do today. Its kin show that the flightless giant birds descend from flying ancestors."
+  },
+  {
+    "id": "primobucco_mcgrewi",
+    "commonName": "Primobucco",
+    "scientificName": "Primobucco mcgrewi",
+    "kingdom": "Animalia",
+    "group": "Roller",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Rainforest",
+      "FreshWater",
+      "Plain"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "tags": [
+      "Flyer"
+    ],
+    "sizeCm": 18,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/PrimobuccoMcgrewi",
+    "mapStyle": "Soar",
+    "colonySize": 2,
+    "wingBeat": 4,
+    "wingRoot": 0.12,
+    "mapAttack": "Dive",
+    "mapDefense": "Scatter",
+    "attack": 2,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.8
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.4
+      }
+    ],
+    "description": "An early roller, a small bird about 18 cm long from the early Eocene Green River lakes of Wyoming. Like living rollers it probably watched from a perch and swooped down on large insects and small animals. Today rollers live only in the Old World, but this and other fossils show that they once lived in North America too."
+  },
+  {
+    "id": "saniwa_ensidens",
+    "commonName": "Saniwa",
+    "scientificName": "Saniwa ensidens",
+    "kingdom": "Animalia",
+    "group": "Lizard",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Rainforest",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals",
+      "Rodent",
+      "Spadefoot toad"
+    ],
+    "sizeCm": 130,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/SaniwaEnsidens",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.26,
+    "colonySize": 1,
+    "mapAttack": "Bite",
+    "attack": 4,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.8
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.7
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "A monitor lizard about 1.3 m long from the Eocene of North America, a close relative of today's monitors and the first fossil lizard named from the continent. It hunted small animals and ate eggs, flicking its forked tongue to smell its way. It is the only known jawed vertebrate with four eyes: besides its two eyes it had two light-sensing eyes on top of its head."
+  },
+  {
+    "id": "allaeochelys_crassesculpta",
+    "commonName": "Allaeochelys",
+    "scientificName": "Allaeochelys crassesculpta",
+    "kingdom": "Animalia",
+    "group": "Pig-nosed turtle",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Herbivore",
+    "tags": [
+      "Surfacer"
+    ],
+    "sizeCm": 30,
+    "startingPopulation": 800,
+    "playable": true,
+    "model": "Models/Species/AllaeochelysCrassesculpta",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapAttack": "Snap",
+    "mapDefense": "Hide",
+    "attack": 2,
+    "defense": 7,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.8
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      }
+    ],
+    "description": "A freshwater turtle about 30 cm long from the middle Eocene lake of Messel in Germany, a relative of the pig-nosed turtle of New Guinea and Australia, with flipper-like front limbs and a fleshy snout. It ate plants, snails and other small animals. Several pairs were found joined together: they had sunk into the poisonous deep water of the lake while mating, the only fossil vertebrates known to have died in the act."
+  },
+  {
+    "id": "eopelobates_wagneri",
+    "commonName": "Eopelobates",
+    "scientificName": "Eopelobates wagneri",
+    "kingdom": "Animalia",
+    "group": "Spadefoot toad",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Rainforest",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "tags": [
+      "Burrower"
+    ],
+    "sizeCm": 7,
+    "startingPopulation": 8000,
+    "playable": true,
+    "model": "Models/Species/EopelobatesWagneri",
+    "mapStyle": "Ground",
+    "mapGait": "Hop",
+    "mapHip": 0.38,
+    "colonySize": 3,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 2,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "burrowing",
+        "expression": 0.7
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.8
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.3
+      }
+    ],
+    "description": "An extinct relative of spadefoot toads, about 7 cm long, from the middle Eocene of Germany. It was a squat frog with large eyes that hunted insects and other small animals around the forest lake. Spadefoots dig into the soil with their hind feet and hide there in dry spells; fossils from Messel even preserve the skin and the outline of its body."
+  },
+  {
+    "id": "phareodus_encaustus",
+    "commonName": "Phareodus",
+    "scientificName": "Phareodus encaustus",
+    "kingdom": "Animalia",
+    "group": "Bony fish",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "FreshWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 50,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/PhareodusEncaustus",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapScale": 0.7,
+    "mapAttack": "Bite",
+    "mapDefense": "Scatter",
+    "attack": 5,
+    "defense": 2,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.6
+      }
+    ],
+    "description": "A bonytongue fish about 50 cm long from the early Eocene Green River lakes of Wyoming, related to the arowanas of tropical rivers today. It had a deep, flattened body, a large upturned mouth with sharp teeth and long pectoral fins. It hunted smaller fish such as Knightia near the surface."
+  },
+  {
+    "id": "atractosteus_simplex",
+    "commonName": "Green River Gar",
+    "scientificName": "Atractosteus simplex",
+    "kingdom": "Animalia",
+    "group": "Gar",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/AtractosteusSimplex",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Strike",
+    "mapDefense": "Brace",
+    "attack": 6,
+    "defense": 5,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "A gar about 1 m long from the early Eocene Green River lakes of Wyoming, a close relative of the alligator gar. Its long body was covered in hard, diamond-shaped scales that fitted together like armour, and its long snout held rows of needle teeth. It lay still among the water plants and seized passing fish with a sudden sideways snap."
+  },
+  {
+    "id": "striatolamia_macrota",
+    "commonName": "Striatolamia",
+    "scientificName": "Striatolamia macrota",
+    "kingdom": "Animalia",
+    "group": "Mackerel shark",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Ray",
+      "Nautiloid cephalopod",
+      "Small animals"
+    ],
+    "sizeCm": 300,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/StriatolamiaMacrota",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "mapAttack": "Bite",
+    "attack": 7,
+    "defense": 3,
+    "hp": 8,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      }
+    ],
+    "description": "A sand tiger shark about 3 m long from the Paleocene to the Oligocene seas of the world. It had long, slender, finely grooved teeth for catching slippery fish, and its teeth are among the most common shark fossils of the time. Its remains even reached the Arctic, which was warm then."
+  },
+  {
+    "id": "glossina_oligocena",
+    "commonName": "Florissant Tsetse Fly",
+    "scientificName": "Glossina oligocena",
+    "kingdom": "Animalia",
+    "group": "Fly",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Hill",
+      "Wetland"
+    ],
+    "diet": "Parasite",
+    "hosts": [
+      "Brontothere",
+      "Rhinocerotoid",
+      "Equid",
+      "Oreodont",
+      "Entelodont",
+      "Camelid"
+    ],
+    "sizeCm": 1.5,
+    "startingPopulation": 20000,
+    "playable": true,
+    "model": "Models/Species/GlossinaOligocena",
+    "mapStyle": "Swarm",
+    "colonySize": 6,
+    "mapScale": 1.3,
+    "wingBeat": 15,
+    "wingRoot": 0.12,
+    "mapAttack": "Sting",
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.8
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.6
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.6
+      }
+    ],
+    "description": "A tsetse fly about 1.5 cm long from the late Eocene lake beds of Florissant, Colorado. Like its living relatives, which today are found only in Africa, it sucked the blood of large mammals with a long, piercing proboscis, and rested with its wings folded flat over its back like scissor blades. Its fossils show that tsetse flies once lived in North America too."
+  },
+  {
+    "id": "prodryas_persephone",
+    "commonName": "Prodryas",
+    "scientificName": "Prodryas persephone",
+    "kingdom": "Animalia",
+    "group": "Butterfly",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "Plain",
+      "Hill",
+      "Rainforest"
+    ],
+    "diet": "Herbivore",
+    "tags": [
+      "Pollinator"
+    ],
+    "sizeCm": 2.5,
+    "startingPopulation": 15000,
+    "playable": true,
+    "model": "Models/Species/ProdryasPersephone",
+    "mapStyle": "Swarm",
+    "colonySize": 6,
+    "mapScale": 1.2,
+    "wingBeat": 3,
+    "wingRoot": 0.12,
+    "mapDefense": "Scatter",
+    "attack": 1,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.8
+      },
+      {
+        "gene": "nectar_feeding",
+        "expression": 0.8
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.4
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.7
+      }
+    ],
+    "description": "A brush-footed butterfly with a wingspan of about 5 cm from the late Eocene lake beds of Florissant, Colorado, one of the finest fossil butterflies ever found. Even the pattern of its wings survives: dark brown with pale spots and small eyespots near the edge of the hind wings. As an adult it drank nectar from flowers."
+  },
+  {
+    "id": "harpactocarcinus_punctulatus",
+    "commonName": "Harpactocarcinus",
+    "scientificName": "Harpactocarcinus punctulatus",
+    "kingdom": "Animalia",
+    "group": "True crab",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Carnivore",
+    "sizeCm": 10,
+    "startingPopulation": 4000,
+    "playable": true,
+    "model": "Models/Species/HarpactocarcinusPunctulatus",
+    "mapStyle": "Swim",
+    "colonySize": 3,
+    "mapAttack": "Snap",
+    "mapDefense": "Brace",
+    "attack": 3,
+    "defense": 6,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.8
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "A crab from the Eocene seas of southern Europe, with a broad, smooth, oval shell about 10 cm wide covered in fine dots. Its strong pincers were of unequal size, the larger one able to crush shells. It lived on the warm, shallow sea floor, eating clams, snails, worms and dead animals, and its fossils are common in the limestones of northern Italy."
+  },
+  {
+    "id": "campanile_giganteum",
+    "commonName": "Campanile",
+    "scientificName": "Campanile giganteum",
+    "kingdom": "Animalia",
+    "group": "Sea snail",
+    "firstAge": "Paleogene",
+    "lastAge": "Paleogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 80,
+    "startingPopulation": 2000,
+    "playable": true,
+    "model": "Models/Species/CampanileGiganteum",
+    "mapStyle": "Fixed",
+    "colonySize": 2,
+    "mapScale": 0.8,
+    "mapDefense": "Hide",
+    "attack": 1,
+    "defense": 8,
+    "hp": 7,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.9
+      },
+      {
+        "gene": "herbivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.4
+      }
+    ],
+    "description": "One of the largest sea snails that ever lived, from the middle Eocene seas of the Paris Basin, with a tall, slender, spiral shell up to about 1 m long and a row of knobs winding round its many whorls. It crept slowly over sandy, sunlit sea floors grazing algae and detritus. A single relative, the bell-tower snail of Australia, survives today."
+  },
+  {
+    "id": "aturia_ziczac",
+    "commonName": "Aturia",
+    "scientificName": "Aturia ziczac",
+    "kingdom": "Animalia",
+    "group": "Nautiloid cephalopod",
+    "firstAge": "Paleogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Prawn",
+      "Small animals"
+    ],
+    "sizeCm": 15,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/AturiaZiczac",
+    "mapStyle": "Swim",
+    "colonySize": 2,
+    "mapScale": 0.8,
+    "mapBackward": true,
+    "mapAttack": "Strike",
+    "mapDefense": "Hide",
+    "attack": 3,
+    "defense": 4,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.6
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.6
+      }
+    ],
+    "description": "A nautilus-like cephalopod with a smooth, tightly coiled shell about 15 cm across, from the Eocene to the Miocene seas of the world. Inside, the walls between its chambers met the shell in deep, zigzag lines that gave it its name. Like the living nautilus it rose and sank by changing the gas in its shell and caught shrimp, fish and carrion with its many tentacles."
+  }
+]

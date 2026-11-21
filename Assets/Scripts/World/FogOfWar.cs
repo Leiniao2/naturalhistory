@@ -106,7 +106,7 @@ namespace NaturalHistory.World
             return v;
         }
 
-        public static int Vision(ColonyGroup g) => g == null ? DefaultVision : Vision(g.Definition, g.Cell, !g.CanMove) + Abilities.VisionBonus(g);
+        public static int Vision(ColonyGroup g) => g == null ? DefaultVision : Vision(g.Definition, g.Cell, !g.CanMove) + Abilities.VisionBonus(g) + TraitBonuses.Effects(g).vision;
 
         // ---------- Update ----------
 

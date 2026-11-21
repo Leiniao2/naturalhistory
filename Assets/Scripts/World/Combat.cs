@@ -25,7 +25,8 @@ namespace NaturalHistory.World
     {
         public const float MaxSizeRatio = 10f;
 
-        public static event Action<string, HexCell> Reported; // what happened, for the toast
+        public static event Action<string, HexCell> Reported; // what happened, for the toast (fights the human player's animals are in)
+        public static event Action Fought;                     // any fight or loss (health changed)
 
         private static float Size(ColonyGroup g) => Mathf.Max(g?.Definition?.sizeCm ?? 1f, 0.0001f);
 
@@ -91,16 +92,20 @@ namespace NaturalHistory.World
         //    trampling hurts a second group; touching a poisonous, stinging, spiny or spraying defender
         //    hurts the attacker back
         //  - an ambush (not on the vigilant) gets no counterattack; a tail weapon doubles it
-        // Swarms and blood feeders can take on animals of any bigger size.
+        // Swarms and blood feeders can take on animals of any bigger size. The groups' Functions and
+        // Behaviors items (TraitBonuses.Effects) add: less damage taken (anyway, at home, among
+        // friends), softer or harder counterattacks, no swallowing whole or ambush, healing and more
+        // EP on a kill, and eating prey without ending the turn.
         public static void Strike(ColonyGroup attacker, HexCell cell)
         {
             var defender = Defender(attacker, cell);
             if (attacker == null || defender == null) return;
             string A = Loc.T(attacker.Definition.commonName), D = Loc.T(defender.Definition.commonName);
+            bool mine = (attacker.Owner != null && attacker.Owner.IsHuman) || (defender.Owner != null && defender.Owner.IsHuman); // others' fights: no message
             bool overwhelm = !SizesMatch(attacker, defender) && Overwhelms(attacker, defender);
             if (!SizesMatch(attacker, defender) && !overwhelm)
             {
-                Report(Loc.F("{0} and {1} are too different in size to fight", A, D), cell);
+                Report(Loc.F("{0} and {1} are too different in size to fight", A, D), cell, mine);
                 return;
             }
             var notes = new List<string>();
@@ -114,7 +119,8 @@ namespace NaturalHistory.World
                     float gained = Mathf.Max(0f, defender.Hp);
                     attacker.Hp = Mathf.Min(attacker.MaxHp, attacker.Hp + gained);
                     Destroy(defender);
-                    Report(Loc.F("{0} ate the {1} (+{2} HP)", A, D, Hp(gained)) + Notes(notes) + Reward(attacker, defender), cell);
+                    if (TraitBonuses.Effects(attacker).freeHunt) { attacker.RefundHuntActions(); notes.Add(Loc.F("the {0} can still act", A)); }
+                    Report(Loc.F("{0} ate the {1} (+{2} HP)", A, D, Hp(gained)) + Notes(notes) + Reward(attacker, defender), cell, mine);
                     return;
                 }
                 notes.Add(Loc.F("the {0} couldn't swallow it whole", A));
@@ -140,6 +146,13 @@ namespace NaturalHistory.World
             }
             if (crush && (Abilities.Has(defender, Abilities.ShellRetreat) || Abilities.Has(defender, Abilities.RollUp)))
                 notes.Add(Loc.F("the {0} bit straight through", A));
+            // the defender's items (TraitBonuses.Effects): less damage anyway, at home, or among friends
+            var shield = TraitBonuses.Effects(defender);
+            guard *= 1f - shield.guard;
+            if (shield.homeGuard > 0f && defender.Owner != null && TerritoryManager.Instance != null
+                && TerritoryManager.Instance.OwnerOf(defender.Cell) == defender.Owner)
+            { guard *= 1f - shield.homeGuard; notes.Add(Loc.F("the {0} defended its home ground", D)); }
+            if (shield.friendGuard > 0f && FriendNear(defender, defender.Cell, attacker)) guard *= 1f - shield.friendGuard;
             dealt *= Mathf.Max(0.25f, guard);
 
             defender.Hp -= dealt;
@@ -172,9 +185,10 @@ namespace NaturalHistory.World
             {
                 Destroy(defender);
                 attacker.Hp -= hurt;
+                KillHeal(attacker);
                 string won = Loc.F("{0} attacked the {1} ({2} damage) and wiped it out", A, D, Hp(dealt)) + Reward(attacker, defender);
                 if (attacker.Hp <= 0f) { Destroy(attacker); notes.Add(Loc.F("the {0} died of its wounds", A)); }
-                Report(won + Notes(notes), cell);
+                Report(won + Notes(notes), cell, mine);
                 return;
             }
 
@@ -187,24 +201,27 @@ namespace NaturalHistory.World
             else if (Abilities.Has(attacker, Abilities.Constriction)) { defender.Hold(); notes.Add(Loc.F("the {0} is held in its coils and loses its next turn", D)); }
 
             bool ambush = Abilities.Has(attacker, Abilities.Ambush) && !attacker.ActedThisTurn;
-            if (ambush && Abilities.Has(defender, Abilities.Vigilance)) { ambush = false; notes.Add(Loc.F("the {0} saw the ambush coming", D)); }
-            float back = ambush ? 0f : BackDamage(defender, attacker) * (Abilities.Has(defender, Abilities.TailWeapon) ? 2f : 1f);
+            if (ambush && (Abilities.Has(defender, Abilities.Vigilance) || TraitBonuses.Effects(defender).ambushImmune)) { ambush = false; notes.Add(Loc.F("the {0} saw the ambush coming", D)); }
+            float back = ambush ? 0f : BackDamage(defender, attacker) * (Abilities.Has(defender, Abilities.TailWeapon) ? 2f : 1f)
+                                       * (1f + TraitBonuses.Effects(defender).counterBoost) * (1f - TraitBonuses.Effects(attacker).counterResist);
             if (ambush) notes.Add(Loc.T("an ambush: no counterattack"));
             else if (Abilities.Has(defender, Abilities.TailWeapon)) notes.Add(Loc.F("the {0} swung its tail", D));
             attacker.Hp -= back + hurt;
             if (attacker.Hp <= 0f)
             {
                 Destroy(attacker);
-                Report(Loc.F("{0} attacked the {1} ({2} damage) but was wiped out by its counterattack", A, D, Hp(dealt)) + Notes(notes) + Reward(defender, attacker), cell);
+                KillHeal(defender);
+                Report(Loc.F("{0} attacked the {1} ({2} damage) but was wiped out by its counterattack", A, D, Hp(dealt)) + Notes(notes) + Reward(defender, attacker), cell, mine);
                 return;
             }
-            Report(Loc.F("{0} attacked the {1}: {2} damage, {3} back", A, D, Hp(dealt), Hp(back + hurt)) + Notes(notes), cell);
+            Report(Loc.F("{0} attacked the {1}: {2} damage, {3} back", A, D, Hp(dealt), Hp(back + hurt)) + Notes(notes), cell, mine);
         }
 
         // Spiny, rolled-up, shelled or ink-hidden prey can't be eaten in one go: it is fought instead.
         // A crushing bite gets through all but ink.
+        // Items can make it unswallowable too (TraitEffects.swallowImmune: spines, quills, warning colours...).
         private static bool Unswallowable(ColonyGroup g, bool crush) =>
-            Abilities.Has(g, Abilities.InkCloud) ||
+            Abilities.Has(g, Abilities.InkCloud) || TraitBonuses.Effects(g).swallowImmune ||
             (!crush && (Abilities.Has(g, Abilities.Spines) || Abilities.Has(g, Abilities.RollUp) || Abilities.Has(g, Abilities.ShellRetreat)));
 
         // Venom or a poisonous bite: a fifth of the victim's HP a turn for 2 turns
@@ -244,6 +261,13 @@ namespace NaturalHistory.World
             notes.Add(Loc.F("the {0} was trampled to death", O) + Reward(attacker, other));
         }
 
+        // A winner's items may heal it (TraitEffects.killHeal)
+        private static void KillHeal(ColonyGroup winner)
+        {
+            float share = TraitBonuses.Effects(winner).killHeal;
+            if (share > 0f && winner.Hp > 0f) winner.Hp = Mathf.Min(winner.MaxHp, winner.Hp + share * winner.MaxHp);
+        }
+
         private static string Notes(List<string> notes) => notes.Count == 0 ? "" : " — " + string.Join("; ", notes);
 
         // A player earns EP when one of their groups wipes out a foreign one: more for a stronger foe
@@ -254,21 +278,26 @@ namespace NaturalHistory.World
             var progression = Progression.ProgressionManager.Instance;
             if (winner.Owner != null && !winner.Owner.IsHuman && loser.Owner != winner.Owner) // AI players earn the same
             {
-                Players.AiPlayers.Instance?.AddPoints(winner.Owner.Index, Progression.ProgressionManager.KillRewardFor(loser));
+                Players.AiPlayers.Instance?.AddPoints(winner.Owner.Index, KillReward(winner, loser));
                 return "";
             }
             if (progression == null || winner.Owner == null || !winner.Owner.IsHuman || loser.Owner == winner.Owner) return "";
-            int ep = Progression.ProgressionManager.KillRewardFor(loser);
+            int ep = KillReward(winner, loser);
             progression.AddPoints(ep);
             return Loc.F(" (+{0} EP)", ep);
         }
 
+        // More with the winner's items (TraitEffects.killEp)
+        private static int KillReward(ColonyGroup winner, ColonyGroup loser) =>
+            Mathf.RoundToInt(Progression.ProgressionManager.KillRewardFor(loser) * (1f + TraitBonuses.Effects(winner).killEp));
+
         private static string Hp(float v) => v.ToString(v < 10f ? "0.#" : "0");
 
-        private static void Report(string message, HexCell cell)
+        private static void Report(string message, HexCell cell, bool shown = true)
         {
             Debug.Log($"[Combat] {message}");
-            Reported?.Invoke(message, cell);
+            Fought?.Invoke();
+            if (shown) Reported?.Invoke(message, cell);
         }
 
         private static void Destroy(ColonyGroup g)

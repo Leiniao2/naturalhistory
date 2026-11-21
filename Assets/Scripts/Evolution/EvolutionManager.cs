@@ -135,6 +135,9 @@ namespace NaturalHistory.Evolution
         // on turn 5 (sooner with bonus EP, later if some go on Functions and Behaviors).
         public const int EvolveCost = 36; // EP in the Ediacaran; EvolveCostNow grows with the periods (EpCosts)
         public static int EvolveCostNow => EpCosts.Of(EvolveCost);
+        // What evolving a copy of `from` costs its player: less with the species' items (TraitEffects.evolveDiscount)
+        public static int EvolveCostFor(OwnedCopy copy, string from) =>
+            TraitBonuses.Discounted(EvolveCostNow, GameDataLoader.GetSpecies(from), copy != null ? copy.player : -1);
         // Only the human player has EP; other players' copies evolve without paying
         private static bool PaysEP(OwnedCopy copy) => copy == null || (Human != null && copy.player == Human.Index);
 
@@ -293,7 +296,7 @@ namespace NaturalHistory.Evolution
         private int Seed(int player, int index) => (HexGrid.Instance != null ? HexGrid.Instance.WorldSeed : 0) ^ (player * 7919) ^ (index * 104729);
 
         private static bool IsFree(SpeciesDefinition def, HexCell cell) =>
-            cell != null && SpeciesColonies.FitsHabitat(def, cell) && SpeciesColonies.Instance.GroupAt(cell, Niches.Of(def, cell)) == null; // its niche there is free
+            cell != null && ColonyGroup.CanPlace(def, cell) && SpeciesColonies.Instance.GroupAt(cell, Niches.Of(def, cell)) == null; // where it can move, its niche there free
 
         // Nearest free habitat tile within `radius` steps of `from` (including `from`)
         private const int RespawnReach = 8; // tiles: how far a copy may be moved if its tile no longer suits it
@@ -390,7 +393,37 @@ namespace NaturalHistory.Evolution
         public HexCell ReproduceCell(OwnedCopy copy) => ReproduceCells(copy).FirstOrDefault();
 
         public bool CanAffordReproduce(OwnedCopy copy) =>
-            !(PaysEP(copy) || IsAi(copy)) || PointsFor(copy) >= ReproduceCost;
+            !(PaysEP(copy) || IsAi(copy)) || PointsFor(copy) >= ReproduceCostFor(copy);
+
+        // The species' items can make births cheaper (TraitEffects.breedDiscount): the share saved
+        // builds up over the births, so at 25% off every fourth one is free
+        private readonly Dictionary<(int player, string species), float> breedSaved = new();
+        private static TraitEffects BreedEffects(OwnedCopy copy) =>
+            copy == null ? new TraitEffects() : TraitBonuses.Effects(GameDataLoader.GetSpecies(copy.species), copy.player);
+
+        // Whether reproducing takes the copy no action (TraitEffects.freeBreed)
+        public bool BreedsFree(OwnedCopy copy) => BreedEffects(copy).freeBreed;
+
+        public int ReproduceCostFor(OwnedCopy copy)
+        {
+            float off = BreedEffects(copy).breedDiscount;
+            if (copy == null || off <= 0f) return ReproduceCost;
+            breedSaved.TryGetValue((copy.player, copy.species), out float saved);
+            return Mathf.Max(0, Mathf.CeilToInt(ReproduceCost * (1f - off) - saved - 0.0001f));
+        }
+
+        private void PayForBirth(OwnedCopy copy)
+        {
+            int cost = ReproduceCostFor(copy);
+            float off = BreedEffects(copy).breedDiscount;
+            if (off > 0f)
+            {
+                var key = (copy.player, copy.species);
+                breedSaved.TryGetValue(key, out float saved);
+                breedSaved[key] = saved + cost - ReproduceCost * (1f - off);
+            }
+            Spend(copy, cost);
+        }
 
         // at: the tile the player chose for the young (one of ReproduceCells), or null for the first
         public bool Reproduce(OwnedCopy copy, out string message, HexCell at = null)
@@ -399,10 +432,11 @@ namespace NaturalHistory.Evolution
             if (copy?.group == null) { message = Loc.T("Nothing selected"); return false; }
             int wait = TurnsUntilReproduce(copy);
             if (wait > 0) { message = Loc.F(wait == 1 ? "Can reproduce again in {0} turn" : "Can reproduce again in {0} turns", wait); return false; }
-            if (!copy.group.HasActions()) { message = Loc.T("No actions left this turn"); return false; }
+            bool freeBreed = BreedEffects(copy).freeBreed; // the species' items: reproducing takes no action
+            if (!freeBreed && !copy.group.HasActions()) { message = Loc.T("No actions left this turn"); return false; }
             if (!CanAffordReproduce(copy))
             {
-                message = Loc.F("Needs {0} EP (you have {1})", ReproduceCost, PointsFor(copy));
+                message = Loc.F("Needs {0} EP (you have {1})", ReproduceCostFor(copy), PointsFor(copy));
                 return false;
             }
             var def  = GameDataLoader.GetSpecies(copy.species);
@@ -413,8 +447,8 @@ namespace NaturalHistory.Evolution
             var group = SpeciesColonies.Instance.SpawnColony(def, cell, owner, Seed(copy.player, copies.Count + 1) ^ CurrentTurn);
             if (group == null) { message = Loc.T("Couldn't place the young"); return false; }
             copy.lastBred = CurrentTurn;
-            copy.group.SpendActions(1);
-            Spend(copy, ReproduceCost);
+            copy.group.SpendActions(freeBreed ? 0 : 1);
+            PayForBirth(copy);
             group.BornTurn = CurrentTurn;
             var young = new OwnedCopy { player = copy.player, species = copy.species, group = group, cell = cell, lastBred = CurrentTurn, bornTurn = CurrentTurn };
             copies.Add(young);
@@ -461,7 +495,8 @@ namespace NaturalHistory.Evolution
             if (PaysEP(copy) || IsAi(copy))
             {
                 int ep = PointsFor(copy);
-                list.Add(new Requirement(Loc.F("Needs {0} EP (you have {1})", EvolveCostNow, ep), ep >= EvolveCostNow));
+                int cost = EvolveCostFor(copy, link.from);
+                list.Add(new Requirement(Loc.F("Needs {0} EP (you have {1})", cost, ep), ep >= cost));
             }
             if (copy != null && copy.JustBorn)
                 list.Add(new Requirement(Loc.T("New this turn: it can act from the next turn"), false));
@@ -478,7 +513,7 @@ namespace NaturalHistory.Evolution
         {
             var cell = copy?.group != null ? copy.group.Cell : null;
             if (cell == null || target == null) return null;
-            if (SpeciesColonies.FitsHabitat(target, cell)) return cell;
+            if (ColonyGroup.CanPlace(target, cell)) return cell; // where the new species can move
             return HexGrid.Instance.GetNeighbors(cell).FirstOrDefault(c => IsFree(target, c));
         }
 
@@ -510,7 +545,7 @@ namespace NaturalHistory.Evolution
             to.functions.UnionWith(link.grantFunctions);
             to.behaviors.UnionWith(link.grantBehaviors);
 
-            Spend(copy, EvolveCostNow);
+            Spend(copy, EvolveCostFor(copy, link.from));
             EvolvedBy(copy.player).Add(link.Key);
             copy.species  = link.to;
             copy.group    = group;
@@ -555,7 +590,7 @@ namespace NaturalHistory.Evolution
                 var (col, row) = cell != null ? cell.Coordinates.ToOffsetCoordinates() : (-1, -1);
                 var combat = c.group != null ? c.group.CombatNow : c.combat;
                 return new CopySave { player = c.player, species = c.species, col = col, row = row, lastBred = c.lastBred, bornTurn = c.group != null ? c.group.BornTurn : c.bornTurn,
-                                      hp = combat?.hp ?? -1f, actionsLeft = combat?.actionsLeft ?? -1, attacksLeft = combat?.attacksLeft ?? -1, combatTurn = combat?.turn ?? -1 };
+                                      hp = combat?.hp ?? -1f, actionsLeft = combat?.actionsLeft ?? -1, attacksLeft = combat?.attacksLeft ?? -1, combatTurn = combat?.turn ?? -1, acted = combat?.acted ?? false, stationed = combat?.stationed ?? false };
             }).ToList();
             // "player:from>to"
             data.evolved = evolved.SelectMany(kv => kv.Value.Select(key => $"{kv.Key}:{key}")).ToList();
@@ -604,7 +639,7 @@ namespace NaturalHistory.Evolution
             }
             foreach (var c in data.copies ?? new List<CopySave>())
                 copies.Add(new OwnedCopy { player = c.player, species = c.species, cell = HexGrid.Instance?.GetCell(c.col, c.row), lastBred = c.lastBred, bornTurn = c.bornTurn,
-                                           combat = c.hp >= 0f ? new CombatState { hp = c.hp, actionsLeft = c.actionsLeft, attacksLeft = c.attacksLeft, turn = c.combatTurn } : null });
+                                           combat = c.hp >= 0f ? new CombatState { hp = c.hp, actionsLeft = c.actionsLeft, attacksLeft = c.attacksLeft, turn = c.combatTurn, acted = c.acted, stationed = c.stationed } : null });
             // saves from before players had their own: the human's
             foreach (var e in data.evolved ?? new List<string>())
             {
@@ -658,5 +693,7 @@ namespace NaturalHistory.Evolution
         public int actionsLeft = -1;
         public int attacksLeft = -1;
         public int combatTurn = -1;     // the turn actionsLeft / attacksLeft are for
+        public bool acted;              // it moved, attacked or reproduced in that turn: no healing at the next
+        public bool stationed;          // staying put until ordered (heals)
     }
 }

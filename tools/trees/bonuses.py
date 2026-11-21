@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Gives every Functions (morphology.json) and Behaviors (ethology.json) item a stat bonus that
-the player's groups of a species get once the species has it (World/TraitBonuses.cs):
+"""Gives every Functions (morphology.json) and Behaviors (ethology.json) item what it does for the
+player's groups of a species once the species has it (World/TraitBonuses.cs), chosen from what the
+item is:
 
-    "bonus": {"attack": 1} / {"defense": 1} / {"hp": 2} / {"moves": 1}
+    "effects": {"poisonResist": 0.35}       most items (see TraitEffects in Data/DataModels.cs)
+    "bonus":   {"attack": 1}                a few: flat stats (+1 attack / +1 defence / +2 HP / +1 action)
 
-What an item gives follows its branch: senses, hunting and fighting add attack; armour, the immune
-system, hiding and group defence add defence; organs that keep the body running, breeding and rest
-add HP; a few ways of getting about (fins, legs, wings, long migrations) add an action a turn.
-The free root items (cost 0, every species starts with them) give nothing. In game the bonus is
-multiplied by the species' era factor like its base stats (CombatStats.Era).
+Flat stats are kept for the items that plainly are a weapon, armour, a bigger body or a new way of
+getting about (FLAT); the rest do something of their own: a liver breaks down poisons, a rumen gets
+by on poor food, a pouch or budding makes young without stopping, a bigger brain makes evolving
+cheaper, territoriality fights harder at home, alarm calls can't be ambushed, termite mounds earn
+EP... The free root items (cost 0, every species starts with them) give nothing.
 
 Edits the two JSON files in place (they are hand-tuned, so build_trees.py isn't re-run); safe to
 run again.   python3 tools/trees/bonuses.py
@@ -21,38 +23,418 @@ DATA = Path(__file__).resolve().parents[2] / "Assets" / "Resources" / "Data"
 
 AMOUNT = {"attack": 1, "defense": 1, "hp": 2, "moves": 1}
 
-BRANCH = {
-    "morphology": {
-        "nervous": "attack", "circulatory": "hp", "respiratory": "hp", "digestive": "hp",
-        "excretory": "defense", "endocrine": "hp", "reproductive": "hp", "locomotor": "attack",
-        "immune": "defense", "integument": "defense",
-    },
-    "ethology": {
-        "foraging": "attack", "antipredator": "defense", "reproductive": "hp", "social": "defense",
-        "agonistic": "attack", "communication": "defense", "migration": "hp", "nest_building": "defense",
-        "maintenance": "hp", "resting": "hp",
-    },
+# weapons, armour, bigger bodies and new ways of getting about
+FLAT = {
+    # Functions
+    "mandibles": "attack", "teeth": "attack", "horns": "attack",
+    "exoskeleton": "defense", "chitin_cuticle": "defense", "dermal_armour": "defense",
+    "keratin_scales": "defense", "osteoderms": "defense",
+    "dorsal_nerve_cord": "hp", "closed_circulation": "hp", "red_blood_cells": "hp",
+    "four_chambered_heart": "hp", "high_blood_pressure": "hp", "gill_arches": "hp",
+    "rib_breathing": "hp", "coelom": "hp", "notochord": "hp", "vertebral_column": "hp",
+    "endochondral_bone": "hp", "weight_bearing_girdles": "hp", "endothermy_node": "hp",
+    "tail_fin": "moves", "terrestrial_legs": "moves", "insect_wings": "moves",
+    "feathered_wings": "moves", "raised_metabolism": "moves",
+    # Behaviors
+    "active_predation": "attack", "pursuit_hunting": "attack", "claw_duels": "attack",
+    "male_combat": "attack", "head_butting": "attack", "antler_tournaments": "attack",
+    "siblicide": "hp",
+    "seasonal_migration": "moves", "mass_dispersal": "moves", "ballooning": "moves",
+    "ocean_migration": "moves", "nomadic_herds": "moves",
 }
 
-# a tile further a turn: the big steps in getting about
-MOVES = {"tail_fin", "terrestrial_legs", "insect_wings", "feathered_wings",
-         "seasonal_migration", "mass_dispersal", "ocean_migration", "nomadic_herds"}
+# What each item does (TraitEffects): fractions add up over a species' items (to the caps in
+# TraitBonuses), flags (True) count once
+EFFECTS = {
+    # ---------- Functions ----------
+    # nervous: brains make evolving cheaper, senses see further or can't be surprised, fast nerves help in fights
+    "nerve_cords": {"counterResist": 0.1},
+    "cephalisation": {"evolveDiscount": 0.05},
+    "ganglia": {"counterResist": 0.1},
+    "chemoreceptors": {"starveResist": 0.25},
+    "compound_eyes": {"vision": 1},
+    "camera_eyes": {"vision": 1},
+    "three_part_brain": {"evolveDiscount": 0.05},
+    "giant_axons": {"counterResist": 0.25},
+    "lateral_line_organ": {"ambushImmune": True},
+    "myelin": {"counterBoost": 0.2},
+    "cerebellum": {"counterResist": 0.15},
+    "electroreceptors": {"starveResist": 0.2},
+    "pallium": {"evolveDiscount": 0.05},
+    "eardrums": {"ambushImmune": True},
+    "large_brain": {"evolveDiscount": 0.1},
+    "neocortex": {"evolveDiscount": 0.1},
+    "echolocating_ears": {"freeHunt": True},
+    "prefrontal_cortex": {"evolveDiscount": 0.1},
+    "electric_organs": {"counterBoost": 0.25},
+    # circulatory: healing and stamina
+    "pulsing_vessel": {"heal": 0.03},
+    "open_circulation": {"starveResist": 0.15},
+    "haemocyanin": {"disasterResist": 0.15},
+    "haemoglobin": {"heal": 0.05},
+    "two_chambered_heart": {"heal": 0.05},
+    "three_hearts": {"fieldHeal": 0.03},
+    "capillaries": {"heal": 0.05},
+    "blood_clotting": {"fieldHeal": 0.05},
+    "hepatic_portal": {"poisonResist": 0.25},
+    "three_chambered_heart": {"heal": 0.05},
+    "coronary_arteries": {"fieldHeal": 0.03},
+    "accessory_hearts": {"heal": 0.05},
+    "countercurrent_exchange": {"disasterResist": 0.25},
+    "diving_reflex": {"disasterResist": 0.25},
+    "myoglobin_stores": {"fieldHeal": 0.03},
+    # respiratory: healing, and lasting out droughts, foul water and cold
+    "gills": {"heal": 0.03},
+    "pharyngeal_slits": {"starveResist": 0.2},
+    "book_gills": {"heal": 0.03},
+    "tracheae": {"heal": 0.05},
+    "spiracles": {"disasterResist": 0.2},
+    "book_lungs": {"heal": 0.05},
+    "gill_cover": {"fieldHeal": 0.03},
+    "lungs": {"disasterResist": 0.2},
+    "swim_bladder": {"starveResist": 0.2},
+    "throat_pumping": {"heal": 0.03},
+    "larynx": {"poisonResist": 0.15},
+    "diaphragm": {"fieldHeal": 0.05},
+    "turbinates": {"disasterResist": 0.2},
+    "air_sacs": {"fieldHeal": 0.05},
+    "plastron_gill": {"disasterResist": 0.2},
+    "syrinx": {"ambushImmune": True},
+    "labyrinth_organ": {"disasterResist": 0.25},
+    # digestive: getting by on poor food, eating on the move, healing on a kill
+    "through_gut": {"starveResist": 0.15},
+    "filter_apparatus": {"starveResist": 0.25},
+    "radula": {"starveResist": 0.15},
+    "jaws": {"freeHunt": True},
+    "gizzard": {"starveResist": 0.2},
+    "acid_stomach": {"killHeal": 0.15, "poisonResist": 0.15},
+    "spiral_valve": {"killHeal": 0.1},
+    "tooth_replacement": {"counterResist": 0.15},
+    "hindgut_fermentation": {"starveResist": 0.25},
+    "differentiated_teeth": {"killHeal": 0.1},
+    "venom_glands": {"poisonResist": 0.25},
+    "secondary_palate": {"starveResist": 0.15},
+    "gastroliths": {"starveResist": 0.2},
+    "beak": {"killHeal": 0.1},
+    "cusped_molars": {"starveResist": 0.15},
+    "dental_batteries": {"starveResist": 0.25},
+    "rumen": {"starveResist": 0.3},
+    # excretory: poisons and the water and salt balance (droughts, floods, sea changes)
+    "osmoconformity": {"disasterResist": 0.15},
+    "nephridia": {"poisonResist": 0.1},
+    "flame_cells": {"poisonResist": 0.1},
+    "ammonia_excretion": {"heal": 0.03},
+    "antennal_glands": {"poisonResist": 0.1},
+    "pronephros": {"poisonResist": 0.1},
+    "glomerular_kidney": {"poisonResist": 0.15},
+    "malpighian_tubules": {"poisonResist": 0.15},
+    "gill_salt_cells": {"disasterResist": 0.2},
+    "detox_liver": {"poisonResist": 0.35},
+    "urinary_bladder": {"disasterResist": 0.15},
+    "urea_cycle": {"poisonResist": 0.15},
+    "rectal_gland": {"disasterResist": 0.15},
+    "water_saving_rectum": {"disasterResist": 0.2, "starveResist": 0.1},
+    "uric_acid": {"disasterResist": 0.15},
+    "metanephros": {"poisonResist": 0.15},
+    "salt_glands": {"disasterResist": 0.2},
+    "loop_of_henle": {"disasterResist": 0.2},
+    "desert_kidneys": {"disasterResist": 0.3},
+    # endocrine: breeding, seasons, sleeping through hard times, fight or flight
+    "neurosecretory_cells": {"heal": 0.03},
+    "insulin_signalling": {"starveResist": 0.2},
+    "moulting_hormone": {"heal": 0.05},
+    "pituitary": {"breedDiscount": 0.25},
+    "pineal_clock": {"disasterResist": 0.15},
+    "antifreeze_proteins": {"disasterResist": 0.3},
+    "thyroid": {"fieldHeal": 0.03},
+    "stress_hormones": {"holdImmune": True},
+    "sex_hormones": {"breedDiscount": 0.25},
+    "juvenile_hormone": {"breedDiscount": 0.2},
+    "metamorphosis_hormones": {"evolveDiscount": 0.1},
+    "aestivation": {"disasterResist": 0.3, "starveResist": 0.3},
+    "prolactin": {"breedDiscount": 0.25},
+    "endothermy_node": {"disasterResist": 0.2},
+    "torpor": {"starveResist": 0.3},
+    "brown_fat": {"disasterResist": 0.2},
+    "oxytocin_bonding": {"friendGuard": 0.15},
+    "hibernation_node": {"starveResist": 0.4},
+    "diapause": {"disasterResist": 0.25},
+    # reproductive: cheaper, quicker or effortless young
+    "budding": {"freeBreed": True},
+    "planktonic_larvae": {"breedDiscount": 0.25},
+    "yolky_eggs": {"breedDiscount": 0.2},
+    "regeneration_node": {"heal": 0.1},
+    "internal_fertilisation": {"breedCooldown": 1},
+    "spermatophores": {"breedDiscount": 0.2},
+    "parthenogenesis": {"breedCooldown": 1},
+    "claspers": {"breedDiscount": 0.2},
+    "egg_cases": {"breedDiscount": 0.2},
+    "aquatic_larvae": {"breedDiscount": 0.2},
+    "live_birth": {"breedDiscount": 0.25},
+    "amniotic_egg": {"breedDiscount": 0.25, "disasterResist": 0.1},
+    "complete_metamorphosis": {"evolveDiscount": 0.1, "starveResist": 0.1},
+    "temperature_sex": {"breedDiscount": 0.15},
+    "hard_eggshell": {"breedDiscount": 0.2},
+    "mammary_glands": {"breedDiscount": 0.25},
+    "placenta": {"breedCooldown": 1},
+    "pouch": {"freeBreed": True},
+    "long_childhood": {"evolveDiscount": 0.15},
+    "hermaphroditism": {"breedCooldown": 1},
+    "colonial_living": {"friendGuard": 0.2},
+    # locomotor: dodging and getting away, a body plan that evolves easily
+    "muscle_bands": {"counterResist": 0.1},
+    "segmentation": {"evolveDiscount": 0.1},
+    "jointed_limbs": {"counterBoost": 0.15},
+    "myomeres": {"counterResist": 0.15},
+    "paired_fins": {"counterResist": 0.15},
+    "lobe_fins": {"evolveDiscount": 0.1},
+    "digits": {"counterResist": 0.1},
+    "upright_stance": {"fieldHeal": 0.05},
+    "hollow_bones": {"starveResist": 0.1},
+    "tail_weapons": {"counterBoost": 0.25},
+    "gliding": {"counterResist": 0.2},
+    # immune: poison and infection, healing, protection passed to the young
+    "antimicrobial_peptides": {"poisonResist": 0.15},
+    "pattern_receptors": {"poisonResist": 0.1},
+    "encapsulation": {"poisonResist": 0.15},
+    "complement": {"heal": 0.05},
+    "melanisation": {"poisonResist": 0.15},
+    "inflammation": {"heal": 0.05},
+    "variable_receptors": {"poisonResist": 0.15},
+    "adaptive_immunity": {"poisonResist": 0.2},
+    "antibodies": {"poisonResist": 0.15},
+    "thymus": {"heal": 0.05},
+    "mhc": {"breedDiscount": 0.15},
+    "spleen": {"fieldHeal": 0.03},
+    "lymphatic_system": {"heal": 0.05},
+    "immune_memory": {"poisonResist": 0.2},
+    "bone_marrow": {"heal": 0.05},
+    "fever": {"poisonResist": 0.15},
+    "maternal_antibodies": {"breedDiscount": 0.2},
+    "lymph_nodes": {"fieldHeal": 0.03},
+    "germinal_centres": {"poisonResist": 0.15},
+    # integument: hiding, deterring, weather
+    "mucus_coat": {"holdImmune": True},
+    "spines": {"swallowImmune": True},
+    "chromatophores": {"guard": 0.1},
+    "placoid_scales": {"counterResist": 0.1},
+    "bioluminescence": {"killEp": 0.25},
+    "waterproof_cuticle": {"disasterResist": 0.2},
+    "toxic_skin": {"poisonResist": 0.2},
+    "keratin_scales": {"disasterResist": 0.1},
+    "protofeathers": {"disasterResist": 0.15},
+    "fur_and_glands": {"disasterResist": 0.2},
+    "feathers": {"disasterResist": 0.15},
+    "structural_colour": {"breedDiscount": 0.15},
+    "sweat_glands": {"disasterResist": 0.15},
+    "blubber": {"starveResist": 0.3, "disasterResist": 0.15},
+    "quills": {"swallowImmune": True},
+    "warning_colours": {"swallowImmune": True},
+    "countershading": {"guard": 0.1},
+    "ink_cloud": {"guard": 0.1},
+    "chemical_spray": {"counterBoost": 0.2},
+    "mimicry": {"swallowImmune": True},
+
+    # ---------- Behaviors ----------
+    # foraging
+    "scavenging": {"starveResist": 0.25},
+    "ambush_hunting": {"killHeal": 0.15},
+    "patch_foraging": {"starveResist": 0.15},
+    "plant_feeding": {"starveResist": 0.2},
+    "silk_traps": {"freeHunt": True},
+    "omnivory_node": {"starveResist": 0.3},
+    "stalking": {"freeHunt": True},
+    "pack_hunting": {"killEp": 0.25},
+    "nectar_feeding_node": {"starveResist": 0.15},
+    "fruit_eating": {"starveResist": 0.2},
+    "food_caching": {"starveResist": 0.35},
+    "fungus_farming": {"starveResist": 0.3, "income": 1},
+    "grass_grazing": {"starveResist": 0.25},
+    "tool_use": {"evolveDiscount": 0.1, "killEp": 0.25},
+    "persistence_hunting": {"counterResist": 0.25},
+    # antipredator
+    "hiding": {"guard": 0.1},
+    "burrowing_escape": {"disasterResist": 0.2},
+    "rolling_up": {"swallowImmune": True},
+    "autotomy": {"heal": 0.05},
+    "freezing": {"guard": 0.1},
+    "startle_escape": {"ambushImmune": True},
+    "playing_dead": {"swallowImmune": True},
+    "eyespot_display": {"guard": 0.1},
+    "group_vigilance": {"ambushImmune": True},
+    "mobbing": {"friendGuard": 0.15, "counterBoost": 0.15},
+    "distraction_display": {"breedDiscount": 0.2},
+    "stotting": {"guard": 0.15},
+    "selfish_herd": {"friendGuard": 0.2},
+    # reproductive
+    "synchronised_spawning": {"breedCooldown": 1},
+    "egg_sites": {"breedDiscount": 0.2},
+    "mate_guarding": {"breedDiscount": 0.15},
+    "egg_guarding": {"homeGuard": 0.15},
+    "sperm_competition": {"breedDiscount": 0.15},
+    "courtship": {"breedDiscount": 0.15},
+    "nuptial_gifts": {"breedDiscount": 0.2},
+    "female_choice": {"evolveDiscount": 0.1},
+    "courtship_dance": {"breedDiscount": 0.15},
+    "feeding_young": {"breedDiscount": 0.2},
+    "pair_bonds": {"breedCooldown": 1},
+    "leks": {"evolveDiscount": 0.05, "breedDiscount": 0.1},
+    "biparental_care": {"breedDiscount": 0.25},
+    "mouthbrooding": {"breedDiscount": 0.2},
+    "alloparenting": {"breedCooldown": 1},
+    "brood_parasitism": {"freeBreed": True},
+    "teaching": {"evolveDiscount": 0.15},
+    # social
+    "schooling": {"friendGuard": 0.15},
+    "kin_recognition": {"friendGuard": 0.1},
+    "family_groups": {"friendGuard": 0.15},
+    "herding": {"friendGuard": 0.15},
+    "eusociality": {"income": 1, "breedCooldown": 1},
+    "castes": {"counterBoost": 0.2},
+    "social_hierarchy": {"heal": 0.05},
+    "cooperative_breeding": {"breedDiscount": 0.25},
+    "creches": {"breedDiscount": 0.2},
+    "social_grooming": {"heal": 0.05},
+    "superorganism": {"income": 1},
+    "coalitions": {"friendGuard": 0.15},
+    "fission_fusion": {"starveResist": 0.2},
+    "reciprocal_altruism": {"starveResist": 0.25},
+    "mixed_species_flocks": {"ambushImmune": True},
+    "matriarchs": {"disasterResist": 0.25},
+    "traditions": {"evolveDiscount": 0.1},
+    "large_societies": {"income": 1},
+    # agonistic
+    "retreat": {"counterResist": 0.2},
+    "overgrowth_fights": {"homeGuard": 0.15},
+    "threat_display": {"guard": 0.1},
+    "submission": {"guard": 0.1},
+    "territoriality": {"homeGuard": 0.25},
+    "ritualised_fighting": {"counterResist": 0.2},
+    "rival_assessment": {"counterResist": 0.15},
+    "winner_effect": {"killHeal": 0.2},
+    "dear_enemy": {"homeGuard": 0.15},
+    "food_stealing": {"starveResist": 0.2},
+    "harems": {"breedCooldown": 1},
+    "infanticide": {"killEp": 0.25},
+    "rutting_season": {"breedDiscount": 0.2},
+    "border_patrols": {"homeGuard": 0.2, "vision": 1},
+    # communication
+    "pheromones": {"breedDiscount": 0.15},
+    "substrate_vibration": {"ambushImmune": True},
+    "colour_signals": {"breedDiscount": 0.15},
+    "light_signals": {"breedDiscount": 0.15},
+    "stridulation": {"breedDiscount": 0.1},
+    "display_postures": {"guard": 0.1},
+    "scent_marking": {"homeGuard": 0.15},
+    "vocal_communication": {"friendGuard": 0.1},
+    "alarm_calls": {"ambushImmune": True},
+    "electric_signals": {"friendGuard": 0.1},
+    "waggle_dance": {"starveResist": 0.25},
+    "learned_song": {"evolveDiscount": 0.05, "breedDiscount": 0.1},
+    "facial_expressions": {"friendGuard": 0.1},
+    "duets": {"breedDiscount": 0.15},
+    "referential_calls": {"ambushImmune": True, "vision": 1},
+    "infrasound": {"vision": 1},
+    "whale_song": {"breedDiscount": 0.15},
+    "gestures": {"evolveDiscount": 0.05},
+    "language": {"evolveDiscount": 0.2, "income": 1},
+    # migration
+    "light_following": {"starveResist": 0.1},
+    "home_range": {"homeGuard": 0.1},
+    "vertical_migration": {"guard": 0.1},
+    "facing_current": {"starveResist": 0.1},
+    "land_excursions": {"disasterResist": 0.1},
+    "sun_compass": {"vision": 1},
+    "landmark_maps": {"vision": 1},
+    "natal_homing": {"breedDiscount": 0.2},
+    "magnetic_navigation": {"vision": 1},
+    "path_integration": {"starveResist": 0.15},
+    "star_navigation": {"vision": 1},
+    "rafting": {"disasterResist": 0.2},
+    "altitudinal_migration": {"disasterResist": 0.2},
+    # nest building
+    "tube_building": {"homeGuard": 0.15},
+    "burrow_systems": {"disasterResist": 0.2, "homeGuard": 0.1},
+    "reef_building": {"homeGuard": 0.2},
+    "rock_boring": {"homeGuard": 0.15},
+    "burrow_nests": {"breedDiscount": 0.2},
+    "silk_shelters": {"disasterResist": 0.15},
+    "nesting": {"breedDiscount": 0.2},
+    "nest_defence": {"homeGuard": 0.2},
+    "provisioned_cells": {"breedDiscount": 0.25},
+    "incubation": {"breedCooldown": 1},
+    "colonial_nesting": {"friendGuard": 0.15},
+    "woven_nests": {"breedDiscount": 0.15},
+    "mud_nests": {"breedDiscount": 0.15},
+    "paper_nests": {"homeGuard": 0.15},
+    "termite_mounds": {"disasterResist": 0.3, "income": 1},
+    "wax_combs": {"starveResist": 0.25},
+    "bubble_nests": {"breedDiscount": 0.15},
+    "bowers": {"breedDiscount": 0.2},
+    "dam_building": {"homeGuard": 0.15, "income": 1},
+    # maintenance: healing, parasites and poisons, heat and cold
+    "moulting_behaviour": {"heal": 0.05},
+    "basking": {"fieldHeal": 0.03},
+    "shade_seeking": {"disasterResist": 0.15},
+    "antenna_grooming": {"poisonResist": 0.1},
+    "scratching": {"poisonResist": 0.1},
+    "skin_rubbing": {"poisonResist": 0.1},
+    "skin_shedding": {"heal": 0.05},
+    "mud_wallowing": {"disasterResist": 0.1, "poisonResist": 0.1},
+    "wound_licking": {"heal": 0.1},
+    "panting": {"disasterResist": 0.15},
+    "preening": {"heal": 0.05},
+    "huddling": {"disasterResist": 0.2},
+    "cleaning_stations": {"poisonResist": 0.15, "heal": 0.05},
+    "dust_bathing": {"poisonResist": 0.1},
+    "bathing": {"heal": 0.05},
+    "nest_sanitation": {"poisonResist": 0.15},
+    "anting": {"poisonResist": 0.15},
+    "latrines": {"poisonResist": 0.1},
+    "self_medication": {"poisonResist": 0.35},
+    # resting: healing, safe sleep
+    "daily_rhythm": {"heal": 0.05},
+    "shelter_resting": {"heal": 0.05},
+    "sleep": {"heal": 0.05},
+    "mucus_cocoon": {"poisonResist": 0.15},
+    "deep_sleep": {"heal": 0.1},
+    "nocturnal_refuge": {"guard": 0.1},
+    "roosting": {"heal": 0.05},
+    "dreaming_sleep": {"evolveDiscount": 0.05},
+    "half_brain_sleep": {"ambushImmune": True},
+    "communal_roosts": {"friendGuard": 0.1},
+    "hanging_roost": {"heal": 0.05},
+    "crepuscular_activity": {"guard": 0.1},
+    "winter_dens": {"starveResist": 0.3},
+    "sleeping_nests": {"heal": 0.05},
+    "sleeping_on_the_wing": {"fieldHeal": 0.05},
+    "sentinels": {"ambushImmune": True},
+    "rafting_rest": {"heal": 0.05},
+}
 
 
 def main():
     for tree in ("morphology", "ethology"):
         path = DATA / f"{tree}.json"
         data = json.loads(path.read_text(encoding="utf-8"))
-        counts = {}
+        flat = effects = 0
+        missing = []
         for n in data["nodes"]:
+            n.pop("bonus", None)
+            n.pop("effects", None)
             if not n["prerequisites"] or n["cost"] == 0:
-                n.pop("bonus", None)
                 continue
-            stat = "moves" if n["id"] in MOVES else BRANCH[tree][n["branch"]]
-            n["bonus"] = {stat: AMOUNT[stat]}
-            counts[stat] = counts.get(stat, 0) + 1
+            if n["id"] in FLAT:
+                stat = FLAT[n["id"]]
+                n["bonus"] = {stat: AMOUNT[stat]}
+                flat += 1
+            if n["id"] in EFFECTS:
+                n["effects"] = EFFECTS[n["id"]]
+                effects += 1
+            if n["id"] not in FLAT and n["id"] not in EFFECTS:
+                missing.append(n["id"])
         path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        print(tree, counts)
+        print(tree, "effects:", effects, "flat stats:", flat, "nothing:", missing)
 
 
 if __name__ == "__main__":

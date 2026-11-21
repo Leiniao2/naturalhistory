@@ -32,7 +32,7 @@ namespace NaturalHistory.UI
             statsLabel       = root.Q<Label>("animal-stats");
             descriptionLabel = root.Q<Label>("animal-description");
             Loc.Changed += () => dirty = true;
-            Combat.Reported += (_, _) => dirty = true; // HP changed
+            Combat.Fought += () => dirty = true; // HP changed
         }
 
         // Polled every frame: follows CellSelector's selection and the groups on that tile

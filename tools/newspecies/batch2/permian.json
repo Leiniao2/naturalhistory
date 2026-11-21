@@ -1,0 +1,1085 @@
+[
+ {
+  "id": "archegosaurus_decheni",
+  "commonName": "Archegosaurus",
+  "scientificName": "Archegosaurus decheni",
+  "kingdom": "Animalia",
+  "group": "Temnospondyl",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Bony fish",
+   "Acanthodian",
+   "Lungfish",
+   "Small animals"
+  ],
+  "sizeCm": 150,
+  "startingPopulation": 120,
+  "playable": true,
+  "model": "Models/Species/Archegosaurus",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapUndulate": true,
+  "mapAttack": "Snap",
+  "attack": 6,
+  "defense": 3,
+  "hp": 7,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.6
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.6
+   },
+   {
+    "gene": "parental_care",
+    "expression": 0.2
+   }
+  ],
+  "description": "A gharial-like amphibian about 1.5 metres long from the Early Permian lakes of south-western Germany, around 295 million years ago. Its long, narrow snout was lined with sharp teeth for snapping up fish, and it swam with its long, flattened tail, holding its small legs against its body. Hundreds of fossils, from tiny larvae to adults, show how it grew up."
+ },
+ {
+  "id": "xenacanthus_decheni",
+  "commonName": "Xenacanthus",
+  "scientificName": "Xenacanthus decheni",
+  "kingdom": "Animalia",
+  "group": "Xenacanth shark",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Bony fish",
+   "Acanthodian",
+   "Lungfish"
+  ],
+  "sizeCm": 70,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Xenacanthus",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapUndulate": true,
+  "mapAttack": "Bite",
+  "attack": 5,
+  "defense": 3,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.55
+   },
+   {
+    "gene": "electroreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.6
+   }
+  ],
+  "description": "A small freshwater shark about 70 centimetres long from the Early Permian lakes and rivers of Europe. It had an eel-like body with a long ribbon of a dorsal fin running back to a pointed tail, and a long, straight spine sticking back from the top of its head. It hunted small fish and other little animals with its two-pronged teeth."
+ },
+ {
+  "id": "acanthodes_bronni",
+  "commonName": "Acanthodes",
+  "scientificName": "Acanthodes bronni",
+  "kingdom": "Animalia",
+  "group": "Acanthodian",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "FreshWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 30,
+  "startingPopulation": 2000,
+  "playable": true,
+  "model": "Models/Species/Acanthodes",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapDefense": "Scatter",
+  "attack": 1,
+  "defense": 3,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.8
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.5
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the last spiny sharks, about 30 centimetres long, from the Early Permian lakes of Germany. It had a slim body covered in tiny square scales, big eyes and a stout spine in front of every fin, but no teeth: it strained small animals from the water with long gill rakers. Its well-preserved skulls have helped scientists understand the early evolution of sharks."
+ },
+ {
+  "id": "gnathorhiza_serrata",
+  "commonName": "Gnathorhiza",
+  "scientificName": "Gnathorhiza serrata",
+  "kingdom": "Animalia",
+  "group": "Lungfish",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "tags": [
+   "Burrower"
+  ],
+  "sizeCm": 40,
+  "startingPopulation": 800,
+  "playable": true,
+  "model": "Models/Species/Gnathorhiza",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapDefense": "Hide",
+  "attack": 3,
+  "defense": 3,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "burrowing",
+    "expression": 0.8
+   },
+   {
+    "gene": "hibernation",
+    "expression": 0.75
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.7
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small, eel-shaped lungfish from the Early Permian of Texas, Oklahoma and Kansas, around 290 million years ago. It lived in ponds and streams that dried out in the hot season and survived by digging a burrow in the mud, sealing itself in and breathing air until the rains returned; some fossils are still inside their burrows. It crushed small animals with its ridged tooth plates."
+ },
+ {
+  "id": "palaeoniscum_freieslebeni",
+  "commonName": "Palaeoniscum",
+  "scientificName": "Palaeoniscum freieslebeni",
+  "kingdom": "Animalia",
+  "group": "Bony fish",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 30,
+  "startingPopulation": 3000,
+  "playable": true,
+  "model": "Models/Species/Palaeoniscum",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "mapDefense": "Scatter",
+  "attack": 3,
+  "defense": 2,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.45
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.5
+   }
+  ],
+  "description": "A ray-finned fish about 30 centimetres long, one of the most common fossils of the Late Permian Zechstein Sea of Germany and England, around 257 million years ago. Its spindle-shaped body was armoured with shiny, diamond-shaped scales, and it had a big eye, small sharp teeth and a strongly upturned tail. It hunted small animals in a sea whose deep water was often without oxygen."
+ },
+ {
+  "id": "janassa_bituminosa",
+  "commonName": "Janassa",
+  "scientificName": "Janassa bituminosa",
+  "kingdom": "Animalia",
+  "group": "Chimaera",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Productid brachiopod",
+   "Small animals"
+  ],
+  "sizeCm": 60,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Janassa",
+  "mapStyle": "Swim",
+  "colonySize": 2,
+  "mapAttack": "Bite",
+  "mapDefense": "Hide",
+  "attack": 4,
+  "defense": 4,
+  "hp": 6,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.6
+   },
+   {
+    "gene": "electroreception",
+    "expression": 0.5
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.35
+   }
+  ],
+  "description": "A strange, flattened relative of the ratfishes from the Late Permian Zechstein Sea of Germany and England. With its broad body and huge, wing-like pectoral fins it looked much like a skate, and it lay on or glided over the sea floor. Its mouth held rows of overlapping crushing teeth, used to crack open shellfish such as brachiopods."
+ },
+ {
+  "id": "campylocephalus_permianus",
+  "commonName": "Campylocephalus",
+  "scientificName": "Campylocephalus permianus",
+  "kingdom": "Animalia",
+  "group": "Eurypterid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 140,
+  "startingPopulation": 60,
+  "playable": true,
+  "model": "Models/Species/Campylocephalus",
+  "mapStyle": "Swim",
+  "colonySize": 1,
+  "mapDefense": "Brace",
+  "attack": 3,
+  "defense": 7,
+  "hp": 11,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.85
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   },
+   {
+    "gene": "filter_feeding",
+    "expression": 0.3
+   }
+  ],
+  "description": "The last known sea scorpion, from the Late Permian of Russia, known only from part of its large head shield; its whole group vanished in the great end-Permian extinction. A broad, heavy relative of Hibbertopterus, probably over a metre long, it walked slowly over the beds of rivers and lagoons, raking small animals out of the mud with comb-like spines on its front legs. Its thick armour made it very hard to kill."
+ },
+ {
+  "id": "shikamaia_akasakaensis",
+  "commonName": "Shikamaia",
+  "scientificName": "Shikamaia akasakaensis",
+  "kingdom": "Animalia",
+  "group": "Early bivalve",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 100,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Shikamaia",
+  "mapStyle": "Fixed",
+  "colonySize": 2,
+  "mapScale": 1.0,
+  "mapDefense": "Tighten",
+  "attack": 1,
+  "defense": 8,
+  "hp": 10,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.85
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.6
+   }
+  ],
+  "description": "A giant clam from the Middle Permian reef lagoons of Japan and the warm Tethys Ocean, around 265 million years ago, up to about a metre across. Its thick central shell was drawn out on both sides into huge, thin, flat wings, so it lay on the sea floor like a boomerang and did not sink into the soft lime mud. Like modern giant clams it may have kept sun-loving algae in its tissues."
+ },
+ {
+  "id": "leptodus_americanus",
+  "commonName": "Leptodus",
+  "scientificName": "Leptodus americanus",
+  "kingdom": "Animalia",
+  "group": "Productid brachiopod",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 10,
+  "startingPopulation": 1500,
+  "playable": true,
+  "model": "Models/Species/Leptodus",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.8,
+  "mapDefense": "Tighten",
+  "attack": 1,
+  "defense": 7,
+  "hp": 7,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.75
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the strangest brachiopods, common on the Middle Permian reefs of Texas. Its lower valve was a flat, leaf-shaped plate cemented to the reef like an oyster and divided inside by comb-like ridges, and its thin upper valve was a lobed, fishbone-shaped lid that lifted a little so the animal could filter food from the water. Cemented down and armoured, it was hard to dislodge."
+ },
+ {
+  "id": "waagenophyllum_indicum",
+  "commonName": "Waagenophyllum",
+  "scientificName": "Waagenophyllum indicum",
+  "kingdom": "Animalia",
+  "group": "Rugose coral",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 40,
+  "startingPopulation": 800,
+  "playable": true,
+  "model": "Models/Species/Waagenophyllum",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.8,
+  "attack": 2,
+  "defense": 6,
+  "hp": 9,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.7
+   },
+   {
+    "gene": "filter_feeding",
+    "expression": 0.6
+   },
+   {
+    "gene": "asexual_reproduction",
+    "expression": 0.7
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.5
+   }
+  ],
+  "description": "A colonial horn coral that helped build the reefs of the Permian Tethys Ocean, from Asia to Europe. Its colonies were bushes of many slender, branching tubes a few millimetres thick growing up side by side, each topped by a cup with radiating ridges from which a small polyp caught food with its tentacles. Like all horn corals it disappeared in the end-Permian extinction."
+ },
+ {
+  "id": "gigantospongia_discoforma",
+  "commonName": "Gigantospongia",
+  "scientificName": "Gigantospongia discoforma",
+  "kingdom": "Animalia",
+  "group": "Sponge",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 150,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Gigantospongia",
+  "mapStyle": "Fixed",
+  "colonySize": 2,
+  "mapScale": 1.1,
+  "attack": 1,
+  "defense": 3,
+  "hp": 12,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.9
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.7
+   },
+   {
+    "gene": "asexual_reproduction",
+    "expression": 0.4
+   }
+  ],
+  "description": "One of the largest sponges of the Permian, from the Middle Permian reefs of west Texas, around 265 million years ago. It grew as a huge, thin, plate-like disc that could be more than a metre across, held up off the reef on a short stalk, and pumped water through countless small pores to filter out food. With no organs to damage, it could survive heavy injuries and regrow."
+ },
+ {
+  "id": "deltoblastus_permicus",
+  "commonName": "Deltoblastus",
+  "scientificName": "Deltoblastus permicus",
+  "kingdom": "Animalia",
+  "group": "Echinoderm",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 4,
+  "startingPopulation": 3000,
+  "playable": true,
+  "model": "Models/Species/Deltoblastus",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.7,
+  "attack": 1,
+  "defense": 3,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.85
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the last blastoids, extinct relatives of the sea lilies, so common in the Permian rocks of Timor that many thousands have been collected. Its small, bud-shaped cup, about 2 centimetres high, sat on a short stalk and had five petal-like food grooves fringed with fine, upright threads that strained food from the water. The blastoids died out in the end-Permian extinction."
+ },
+ {
+  "id": "protereisma_permianum",
+  "commonName": "Protereisma",
+  "scientificName": "Protereisma permianum",
+  "kingdom": "Animalia",
+  "group": "Early insect",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "FreshWater",
+   "Wetland",
+   "Rainforest"
+  ],
+  "diet": "Detritivore",
+  "tags": [
+   "Flyer"
+  ],
+  "sizeCm": 2,
+  "startingPopulation": 6000,
+  "playable": true,
+  "model": "Models/Species/Protereisma",
+  "mapStyle": "Swarm",
+  "colonySize": 4,
+  "mapScale": 1.2,
+  "wingBeat": 7,
+  "wingRoot": 0.05,
+  "mapDefense": "Scatter",
+  "attack": 1,
+  "defense": 1,
+  "hp": 3,
+  "moves": 4,
+  "genes": [
+   {
+    "gene": "flight_capability",
+    "expression": 0.8
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.85
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.3
+   },
+   {
+    "gene": "decomposition",
+    "expression": 0.5
+   }
+  ],
+  "description": "An early mayfly from the Early Permian of Kansas, around 280 million years ago. Unlike living mayflies, its fore and hind wings were almost the same size, and it had three long tail threads. Its young lived in fresh water feeding on plant debris, and the adults gathered in great swarms, escaping enemies by flying off rather than fighting."
+ },
+ {
+  "id": "diadectes_sideropelicus",
+  "commonName": "Diadectes",
+  "scientificName": "Diadectes sideropelicus",
+  "kingdom": "Animalia",
+  "group": "Reptiliomorph",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Hill",
+   "Wetland"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 300,
+  "startingPopulation": 150,
+  "playable": true,
+  "model": "Models/Species/Diadectes",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.4,
+  "colonySize": 2,
+  "mapDefense": "Brace",
+  "attack": 3,
+  "defense": 5,
+  "hp": 10,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.2
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the first large plant-eating land animals, about 3 metres long, from the Early Permian of North America, around 290 million years ago. It had a heavy, barrel-shaped body, short, powerful sprawling legs and a short, deep head with peg-like front teeth for nipping plants and broad cheek teeth for grinding them. It was a close relative of the first reptiles and their kin, the amniotes."
+ },
+ {
+  "id": "sphenacodon_ferox",
+  "commonName": "Sphenacodon",
+  "scientificName": "Sphenacodon ferox",
+  "kingdom": "Animalia",
+  "group": "Sphenacodont synapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Hill"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Reptiliomorph",
+   "Early reptile",
+   "Temnospondyl",
+   "Caseid synapsid",
+   "Edaphosaurid synapsid"
+  ],
+  "sizeCm": 300,
+  "startingPopulation": 50,
+  "playable": true,
+  "model": "Models/Species/Sphenacodon",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.45,
+  "colonySize": 1,
+  "mapAttack": "Bite",
+  "attack": 7,
+  "defense": 3,
+  "hp": 8,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.5
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "A large predatory synapsid about 3 metres long from the Early Permian of New Mexico and Utah, around 295 million years ago, and a close relative of Dimetrodon. It had the same deep skull with long, stabbing canine teeth, but instead of a tall sail only a low crest of spines along its back. It was a top predator of its time, hunting other large four-legged animals."
+ },
+ {
+  "id": "casea_broilii",
+  "commonName": "Casea",
+  "scientificName": "Casea broilii",
+  "kingdom": "Animalia",
+  "group": "Caseid synapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Hill"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 120,
+  "startingPopulation": 200,
+  "playable": true,
+  "model": "Models/Species/Casea",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.35,
+  "colonySize": 2,
+  "mapDefense": "Brace",
+  "attack": 2,
+  "defense": 4,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.2
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.3
+   }
+  ],
+  "description": "A plant-eating synapsid about 1.2 metres long from the Early Permian of Texas, around 280 million years ago, a smaller relative of Cotylorhynchus. It had a tiny head with a short, overhanging snout and a huge, barrel-shaped body holding a long gut for digesting tough plants. Slow and bulky, it relied on its weight and strong clawed limbs rather than speed."
+ },
+ {
+  "id": "platyhystrix_rugosus",
+  "commonName": "Platyhystrix",
+  "scientificName": "Platyhystrix rugosus",
+  "kingdom": "Animalia",
+  "group": "Temnospondyl",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Wetland",
+   "Plain"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Early insect"
+  ],
+  "sizeCm": 100,
+  "startingPopulation": 200,
+  "playable": true,
+  "model": "Models/Species/Platyhystrix",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.35,
+  "colonySize": 2,
+  "mapDefense": "Rear",
+  "attack": 4,
+  "defense": 4,
+  "hp": 6,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.55
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.35
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   }
+  ],
+  "description": "A land-living amphibian about 1 metre long from the Early Permian of New Mexico, Colorado and Utah, around 295 million years ago. It carried a tall sail on its back made of long spines covered in rough bumps, a little like that of Dimetrodon, and had a broad head and sturdy legs. The sail may have helped it warm up in the sun or impress rivals."
+ },
+ {
+  "id": "biarmosuchus_tener",
+  "commonName": "Biarmosuchus",
+  "scientificName": "Biarmosuchus tener",
+  "kingdom": "Animalia",
+  "group": "Biarmosuchian therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Hill",
+   "Rainforest"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Dicynodont therapsid",
+   "Early reptile",
+   "Seymouriamorph"
+  ],
+  "sizeCm": 150,
+  "startingPopulation": 80,
+  "playable": true,
+  "model": "Models/Species/Biarmosuchus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.5,
+  "colonySize": 1,
+  "mapAttack": "Bite",
+  "attack": 6,
+  "defense": 3,
+  "hp": 6,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   },
+   {
+    "gene": "endothermy",
+    "expression": 0.2
+   }
+  ],
+  "description": "One of the most primitive therapsids, the group that later gave rise to mammals, from the Middle Permian of the Ural region of Russia, around 265 million years ago. About 1.5 metres long and lightly built, it had a long skull with big eyes and long canine teeth, and legs held more beneath the body than in older synapsids. It was probably an agile hunter of small and medium-sized animals."
+ },
+ {
+  "id": "suminia_getmanovi",
+  "commonName": "Suminia",
+  "scientificName": "Suminia getmanovi",
+  "kingdom": "Animalia",
+  "group": "Dicynodont therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Rainforest"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 50,
+  "startingPopulation": 800,
+  "playable": true,
+  "model": "Models/Species/Suminia",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.45,
+  "colonySize": 3,
+  "mapDefense": "Hide",
+  "attack": 1,
+  "defense": 2,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "climbing",
+    "expression": 0.9
+   },
+   {
+    "gene": "herbivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.5
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small plant-eating anomodont about 50 centimetres long from the Late Permian of Russia, around 255 million years ago, and the oldest known backboned animal adapted to climbing trees. It had long fingers and toes with a grasping first digit and a long tail that probably gripped branches, and it chopped leaves with serrated teeth. Many skeletons found together suggest it lived in groups."
+ },
+ {
+  "id": "dicynodon_lacerticeps",
+  "commonName": "Dicynodon",
+  "scientificName": "Dicynodon lacerticeps",
+  "kingdom": "Animalia",
+  "group": "Dicynodont therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Wetland"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 120,
+  "startingPopulation": 500,
+  "playable": true,
+  "model": "Models/Species/Dicynodon",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.4,
+  "colonySize": 3,
+  "mapDefense": "Brace",
+  "attack": 3,
+  "defense": 4,
+  "hp": 7,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.4
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.5
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "The plant eater that gave its name to the dicynodonts, about 1.2 metres long, from the Late Permian of South Africa, around 255 million years ago. Its name means two dog teeth: it had only a pair of tusks in the upper jaw and otherwise a sharp, horny beak for cropping plants. Stout and short-tailed, it was one of the most common plant eaters of its time."
+ },
+ {
+  "id": "lycosuchus_vanderrieti",
+  "commonName": "Lycosuchus",
+  "scientificName": "Lycosuchus vanderrieti",
+  "kingdom": "Animalia",
+  "group": "Therocephalian therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Hill"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Dicynodont therapsid",
+   "Dinocephalian therapsid",
+   "Pareiasaur",
+   "Small animals"
+  ],
+  "sizeCm": 200,
+  "startingPopulation": 40,
+  "playable": true,
+  "model": "Models/Species/Lycosuchus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.5,
+  "colonySize": 1,
+  "mapAttack": "Bite",
+  "attack": 8,
+  "defense": 3,
+  "hp": 7,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   },
+   {
+    "gene": "endothermy",
+    "expression": 0.25
+   }
+  ],
+  "description": "A large therocephalian about 2 metres long from the Middle Permian of South Africa, around 262 million years ago, one of the top predators of its time. Its name means wolf crocodile: it had a long, wolf-like body and a long snout with two pairs of long canine teeth side by side, a new tooth growing in beside the old one. It hunted the big plant eaters of its world."
+ },
+ {
+  "id": "procynosuchus_delaharpeae",
+  "commonName": "Procynosuchus",
+  "scientificName": "Procynosuchus delaharpeae",
+  "kingdom": "Animalia",
+  "group": "Cynodont therapsid",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Wetland",
+   "Plain"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Bony fish",
+   "Early insect"
+  ],
+  "sizeCm": 60,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Procynosuchus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.4,
+  "colonySize": 2,
+  "mapAttack": "Bite",
+  "attack": 4,
+  "defense": 2,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.75
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.45
+   },
+   {
+    "gene": "endothermy",
+    "expression": 0.4
+   },
+   {
+    "gene": "parental_care",
+    "expression": 0.4
+   }
+  ],
+  "description": "One of the earliest cynodonts, the group that gave rise to mammals, about 60 centimetres long, from the Late Permian of southern Africa and Germany, around 255 million years ago. It had a fox-like head with long canines and a long, low body, and its broadened tail bones suggest it may have swum like an otter. It may already have had some fur and a faster metabolism than earlier synapsids."
+ },
+ {
+  "id": "protorosaurus_speneri",
+  "commonName": "Protorosaurus",
+  "scientificName": "Protorosaurus speneri",
+  "kingdom": "Animalia",
+  "group": "Archosauromorph",
+  "firstAge": "Permian",
+  "lastAge": "Permian",
+  "habitats": [
+   "Plain",
+   "Desert"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals",
+   "Early insect",
+   "Early reptile"
+  ],
+  "sizeCm": 180,
+  "startingPopulation": 150,
+  "playable": true,
+  "model": "Models/Species/Protorosaurus",
+  "mapStyle": "Ground",
+  "mapLegs": 2,
+  "mapHip": 0.45,
+  "colonySize": 2,
+  "mapAttack": "Bite",
+  "attack": 5,
+  "defense": 2,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.75
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.55
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the first fossil reptiles ever described, found in Germany in 1706, which lived along the shores of the Zechstein Sea around 257 million years ago. About 1.5 to 2 metres long, it had a lizard-like body, a long, slender neck, a small pointed head with sharp teeth and long hind legs. It was an early member of the line that led to crocodiles and dinosaurs."
+ }
+]

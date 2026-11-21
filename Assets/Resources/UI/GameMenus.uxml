@@ -297,7 +297,14 @@
                                 <ui:Label name="encyclopedia-name" class="encyclopedia-name" text="" />
                                 <ui:Label name="encyclopedia-scientific" class="encyclopedia-scientific" text="" />
                                 <ui:Label name="encyclopedia-stats" class="encyclopedia-stats" text="" />
-                                <ui:Button name="encyclopedia-tree-button" class="hud-button encyclopedia-tree-button" text="Evolution Tree" />
+                                <ui:Label name="encyclopedia-combat" class="encyclopedia-combat" text="" />
+                                <ui:Label name="encyclopedia-owned" class="encyclopedia-owned" text="" />
+                                <!-- in the HUD's order: Functions, Behaviors, Evolution Tree -->
+                                <ui:VisualElement class="encyclopedia-tree-buttons">
+                                    <ui:Button name="encyclopedia-functions-button" class="hud-button encyclopedia-tree-button" text="Functions" />
+                                    <ui:Button name="encyclopedia-behaviors-button" class="hud-button encyclopedia-tree-button" text="Behaviors" />
+                                    <ui:Button name="encyclopedia-tree-button" class="hud-button encyclopedia-tree-button" text="Evolution Tree" />
+                                </ui:VisualElement>
                             </ui:VisualElement>
                         </ui:VisualElement>
                         <ui:Label name="encyclopedia-description" class="encyclopedia-description" text="" />
@@ -341,10 +348,8 @@
                         <ui:Label name="loading-species-text" class="loading-species-text" text="" picking-mode="Ignore" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <!-- browse the species; Continue once the world is ready (LoadingScreen) -->
+                <!-- Continue once the world is ready (LoadingScreen) -->
                 <ui:VisualElement class="loading-actions">
-                    <ui:Button name="loading-prev" class="slot-button loading-nav" text="◀ Previous" />
-                    <ui:Button name="loading-next" class="slot-button loading-nav" text="Next ▶" />
                     <ui:VisualElement class="spacer" />
                     <ui:Button name="loading-continue" class="menu-button loading-continue hidden" text="Continue" />
                 </ui:VisualElement>

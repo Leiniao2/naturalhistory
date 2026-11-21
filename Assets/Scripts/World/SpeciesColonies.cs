@@ -191,7 +191,7 @@ namespace NaturalHistory.World
         private int clickFrame = -1;
 
         // Choosing a tile for something (where the young of a reproducing group go): the tiles on
-        // offer are marked, a click on one of them chooses it, any other click cancels
+        // offer are ringed in blue dashes (MovePathView.ShowPlaces), a click on one of them chooses it, any other click cancels
         private readonly List<HexCell> offered = new();
         private System.Action<HexCell> onChosen;
         public bool IsChoosingTile => onChosen != null;
@@ -206,17 +206,14 @@ namespace NaturalHistory.World
             MovePathView.Hide();
             selected = keep;
             foreach (var c in tiles)
-            {
-                if (c == null) continue;
-                offered.Add(c);
-                c.SetGroupTarget(HexCell.GroupTarget.Move);
-            }
+                if (c != null) offered.Add(c);
             onChosen = offered.Count > 0 ? chosen : null;
+            if (onChosen != null) MovePathView.ShowPlaces(offered);
         }
 
         private void EndChoosing()
         {
-            foreach (var c in offered) if (c != null) c.SetGroupTarget(HexCell.GroupTarget.None);
+            if (offered.Count > 0) MovePathView.Hide();
             offered.Clear();
             onChosen = null;
         }
@@ -505,6 +502,7 @@ namespace NaturalHistory.World
         // Same habitat test as wild placement: the tile's terrain or its present-day biome is listed.
         public static bool FitsHabitat(SpeciesDefinition def, HexCell cell) =>
             cell != null && cell.Terrain != null && def.habitats != null && (!cell.IsMountain || LivesOnMountains(def)) &&
+            (cell.Terrain.IsWater || UnderView.LandOpen) && // before the Silurian nothing lives on land
             UnderView.FitsBelow(def, cell) && // no way into solid bedrock; seabed animals on a seabed
             (def.habitats.Contains(cell.Terrain.kind.ToString()) || def.habitats.Contains(cell.Biome.ToString()));
 
@@ -586,7 +584,7 @@ namespace NaturalHistory.World
                 var cell = grid.GetCell(q, r);
                 if (cell == null || cell.Terrain == null || (cell.IsMountain && !LivesOnMountains(def))) continue;
                 if (!def.habitats.Contains(cell.Terrain.kind.ToString()) && !def.habitats.Contains(cell.Biome.ToString())) continue;
-                if (!UnderView.FitsBelow(def, cell)) continue;
+                if (!UnderView.FitsBelow(def, cell) || !ColonyGroup.CanPlace(def, cell)) continue; // where it can move
                 if (!FoodWeb.HasFood(def, cell, this, null)) continue;
                 cells.Add((cell, q, r));
             }

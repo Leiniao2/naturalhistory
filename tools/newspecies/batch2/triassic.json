@@ -1,0 +1,1089 @@
+[
+ {
+  "id": "encrinus_liliiformis",
+  "commonName": "Encrinus",
+  "scientificName": "Encrinus liliiformis",
+  "kingdom": "Animalia",
+  "group": "Crinoid",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 60,
+  "startingPopulation": 1500,
+  "playable": true,
+  "model": "Models/Species/Encrinus",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.9,
+  "attack": 1,
+  "defense": 3,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.85
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.5
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "The famous \"stone lily\" of the shallow Muschelkalk sea that covered Germany in the Middle Triassic, about 240 million years ago. A long stem of round, coin-like plates held up a small cup and a crown of ten thick arms, which could close into a tulip-shaped bud or open into a fan to catch food from the current. Its stem pieces are so common that whole limestone beds are built from them."
+ },
+ {
+  "id": "retiophyllia_frechi",
+  "commonName": "Retiophyllia",
+  "scientificName": "Retiophyllia frechi",
+  "kingdom": "Animalia",
+  "group": "Stony coral",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 100,
+  "startingPopulation": 500,
+  "playable": true,
+  "model": "Models/Species/Retiophyllia",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.45,
+  "attack": 1,
+  "defense": 4,
+  "hp": 10,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.7
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   },
+   {
+    "gene": "asexual_reproduction",
+    "expression": 0.6
+   }
+  ],
+  "description": "One of the early modern-type stony corals, which built reefs in the warm Tethys Sea in the Late Triassic, about 210 million years ago. Its colonies were bushes of finger-thick tubes that forked again and again and grew upward side by side, each tube ending in a star-shaped cup that held a single polyp. Corals like it began the great coral reefs that still exist today."
+ },
+ {
+  "id": "gigatitan_vulcanicus",
+  "commonName": "Gigatitan",
+  "scientificName": "Gigatitan vulcanicus",
+  "kingdom": "Animalia",
+  "group": "Early insect",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Rainforest",
+   "Wetland",
+   "Plain"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "tags": [
+   "Flyer"
+  ],
+  "sizeCm": 12,
+  "startingPopulation": 1500,
+  "playable": true,
+  "model": "Models/Species/Gigatitan",
+  "mapStyle": "Swarm",
+  "wingBeat": 5,
+  "wingRoot": 0.06,
+  "colonySize": 3,
+  "mapScale": 1.2,
+  "attack": 3,
+  "defense": 2,
+  "hp": 4,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "flight_capability",
+    "expression": 0.6
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.75
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A giant relative of grasshoppers and crickets from the Late Triassic lake shores of Madygen in Kyrgyzstan, about 230 million years ago, with wings spanning around 30 centimetres or more. Its long, spiny forelegs were made for grabbing other insects. A ribbed patch on each forewing was probably rubbed to make loud calls or flashed as a display, making it an early example of insect song."
+ },
+ {
+  "id": "austrolimulus_fletcheri",
+  "commonName": "Austrolimulus",
+  "scientificName": "Austrolimulus fletcheri",
+  "kingdom": "Animalia",
+  "group": "Horseshoe crab",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 8,
+  "startingPopulation": 3000,
+  "playable": true,
+  "model": "Models/Species/Austrolimulus",
+  "mapStyle": "Swim",
+  "mapDefense": "Brace",
+  "colonySize": 3,
+  "mapScale": 0.8,
+  "attack": 2,
+  "defense": 5,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.7
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.6
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A strange horseshoe crab, about 8 centimetres long, that lived in rivers and lakes near today's Sydney, Australia, in the Middle Triassic, about 240 million years ago. The rear corners of its head shield grew into huge horn-like spines sweeping far back past its body, perhaps to stop it sinking into soft mud. It shows that horseshoe crabs, now only found in the sea, once spread into fresh water."
+ },
+ {
+  "id": "aulacoceras_sulcatum",
+  "commonName": "Aulacoceras",
+  "scientificName": "Aulacoceras sulcatum",
+  "kingdom": "Animalia",
+  "group": "Belemnite",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 60,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Aulacoceras",
+  "mapStyle": "Swim",
+  "mapAttack": "Snap",
+  "mapDefense": "Ink",
+  "colonySize": 4,
+  "attack": 5,
+  "defense": 2,
+  "hp": 6,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.7
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.75
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.7
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.4
+   }
+  ],
+  "description": "A squid-like relative of the belemnites from the Late Triassic seas of the Alps, about 215 million years ago. Inside its body sat a chambered shell sheathed in a long, slender, pointed guard scored with deep lengthwise grooves, which gives it its name. With big eyes and ten hooked arms it hunted fish and shrimp in open water."
+ },
+ {
+  "id": "triamyxa_coprolithica",
+  "commonName": "Triamyxa",
+  "scientificName": "Triamyxa coprolithica",
+  "kingdom": "Animalia",
+  "group": "Early beetle",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Wetland",
+   "Rainforest"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 0.15,
+  "startingPopulation": 40000,
+  "playable": true,
+  "model": "Models/Species/Triamyxa",
+  "mapStyle": "Ground",
+  "mapDefense": "Hide",
+  "mapLegs": 3,
+  "mapHip": 0.16,
+  "colonySize": 5,
+  "mapScale": 1.2,
+  "attack": 1,
+  "defense": 2,
+  "hp": 3,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.4
+   }
+  ],
+  "description": "A tiny beetle, under 2 millimetres long, from the Late Triassic of Poland, about 230 million years ago. It was found perfectly preserved inside a fossil dropping, probably from the small dinosaur relative Silesaurus, which swallowed it by accident with its food. Short, very rounded and shiny, it probably grazed on algae on wet ground at the water's edge, like its living relatives."
+ },
+ {
+  "id": "saurichthys_curionii",
+  "commonName": "Saurichthys",
+  "scientificName": "Saurichthys curionii",
+  "kingdom": "Animalia",
+  "group": "Bony fish",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 50,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Saurichthys",
+  "mapStyle": "Swim",
+  "mapAttack": "Strike",
+  "colonySize": 3,
+  "attack": 6,
+  "defense": 2,
+  "hp": 4,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.8
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.7
+   },
+   {
+    "gene": "lateral_line",
+    "expression": 0.6
+   }
+  ],
+  "description": "A slim, fast ambush hunter of the Middle Triassic seas, about 240 million years ago, shaped much like a modern garfish or barracuda. Its long, needle-like snout was lined with sharp teeth, and its dorsal and anal fins sat far back near the tail to give a sudden burst of speed. Saurichthys was one of the most widespread fishes of the Triassic, found from China to Europe."
+ },
+ {
+  "id": "thoracopterus_magnificus",
+  "commonName": "Thoracopterus",
+  "scientificName": "Thoracopterus magnificus",
+  "kingdom": "Animalia",
+  "group": "Bony fish",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "tags": [
+   "Surfacer"
+  ],
+  "sizeCm": 9,
+  "startingPopulation": 3000,
+  "playable": true,
+  "model": "Models/Species/Thoracopterus",
+  "mapStyle": "Swim",
+  "mapDefense": "Scatter",
+  "colonySize": 6,
+  "mapScale": 0.8,
+  "attack": 2,
+  "defense": 1,
+  "hp": 4,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.8
+   },
+   {
+    "gene": "flight_capability",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.7
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the oldest gliding fishes, from the Late Triassic seas of the Alps, more than 200 million years before modern flying fish. This small, silvery fish had huge wing-like pectoral fins, a second smaller pair of pelvic \"wings\" and a forked tail with a longer lower lobe. Like a flying fish, it probably sped along the surface and then glided through the air to escape predators."
+ },
+ {
+  "id": "ceratodus_sturii",
+  "commonName": "Ceratodus",
+  "scientificName": "Ceratodus sturii",
+  "kingdom": "Animalia",
+  "group": "Lungfish",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "FreshWater",
+   "Wetland"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "tags": [
+   "Surfacer"
+  ],
+  "sizeCm": 100,
+  "startingPopulation": 150,
+  "playable": true,
+  "model": "Models/Species/Ceratodus",
+  "mapStyle": "Swim",
+  "mapDefense": "Hide",
+  "colonySize": 2,
+  "attack": 4,
+  "defense": 4,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.6
+   },
+   {
+    "gene": "hibernation",
+    "expression": 0.4
+   }
+  ],
+  "description": "A large lungfish of Triassic rivers and lakes, from the Late Triassic of Austria, about 230 million years ago. It had a long, heavy body with big round scales, fleshy paddle-like fins and a fin fringe running round the tail, much like the living Australian lungfish. Its fan-shaped, ridged tooth plates crushed snails, crayfish and plants, and it could gulp air when the water became warm and stale."
+ },
+ {
+  "id": "whiteia_woodwardi",
+  "commonName": "Whiteia",
+  "scientificName": "Whiteia woodwardi",
+  "kingdom": "Animalia",
+  "group": "Lobe-finned fish",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 25,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Whiteia",
+  "mapStyle": "Swim",
+  "colonySize": 3,
+  "attack": 4,
+  "defense": 3,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.5
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "electroreception",
+    "expression": 0.5
+   }
+  ],
+  "description": "A coelacanth from the coastal seas of Madagascar in the Early Triassic, about 250 million years ago. It had a deep body, a large head, fleshy lobed fins that moved like legs and the three-lobed tail typical of coelacanths. Its relatives survived to the present day: the living coelacanth was thought extinct until one was caught off South Africa in 1938."
+ },
+ {
+  "id": "keichousaurus_hui",
+  "commonName": "Keichousaurus",
+  "scientificName": "Keichousaurus hui",
+  "kingdom": "Animalia",
+  "group": "Sauropterygian",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 25,
+  "startingPopulation": 2000,
+  "playable": true,
+  "model": "Models/Species/Keichousaurus",
+  "mapStyle": "Swim",
+  "mapUndulate": true,
+  "mapDefense": "Scatter",
+  "colonySize": 5,
+  "attack": 3,
+  "defense": 1,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.6
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.7
+   },
+   {
+    "gene": "parental_care",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   }
+  ],
+  "description": "A small, slender marine reptile, about 25 centimetres long, from the Middle Triassic of Guizhou, China, about 240 million years ago, and an early relative of the plesiosaurs. It had a small head with needle-like teeth on a long neck and swam with paddle-like limbs. Some fossils hold unborn young, showing that it gave birth to live babies in the water."
+ },
+ {
+  "id": "askeptosaurus_italicus",
+  "commonName": "Askeptosaurus",
+  "scientificName": "Askeptosaurus italicus",
+  "kingdom": "Animalia",
+  "group": "Thalattosaur",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 200,
+  "startingPopulation": 100,
+  "playable": true,
+  "model": "Models/Species/Askeptosaurus",
+  "mapStyle": "Swim",
+  "mapUndulate": true,
+  "mapAttack": "Snap",
+  "colonySize": 2,
+  "attack": 5,
+  "defense": 2,
+  "hp": 7,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.7
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.7
+   }
+  ],
+  "description": "A long, eel-like marine reptile, about 2 metres long, from the Middle Triassic seas of the Alps between Switzerland and Italy, about 240 million years ago. It had a narrow, pointed snout full of small teeth, big eyes and short limbs, and swam by waving its very long, flattened tail. It belonged to the thalattosaurs, a group of sea reptiles found only in the Triassic."
+ },
+ {
+  "id": "dinocephalosaurus_orientalis",
+  "commonName": "Dinocephalosaurus",
+  "scientificName": "Dinocephalosaurus orientalis",
+  "kingdom": "Animalia",
+  "group": "Archosauromorph",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 500,
+  "startingPopulation": 40,
+  "playable": true,
+  "model": "Models/Species/Dinocephalosaurus",
+  "mapStyle": "Swim",
+  "mapUndulate": true,
+  "mapAttack": "Strike",
+  "colonySize": 1,
+  "attack": 6,
+  "defense": 2,
+  "hp": 8,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.5
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "parental_care",
+    "expression": 0.5
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.5
+   }
+  ],
+  "description": "A sea reptile about 5 metres long from the Middle Triassic of Guizhou, China, about 245 million years ago, with an extremely long neck made of over 30 vertebrae, much longer than its body. It may have used the long neck to reach fish quietly while its body stayed far behind, then snapped them up with fang-like teeth. A fossil with an unborn young inside shows it gave birth at sea, the first such find in its branch of reptiles."
+ },
+ {
+  "id": "cartorhynchus_lenticarpus",
+  "commonName": "Cartorhynchus",
+  "scientificName": "Cartorhynchus lenticarpus",
+  "kingdom": "Animalia",
+  "group": "Ichthyosaur",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 40,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Cartorhynchus",
+  "mapStyle": "Swim",
+  "mapDefense": "Scatter",
+  "colonySize": 4,
+  "attack": 2,
+  "defense": 2,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "swimming_speed",
+    "expression": 0.5
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.2
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small early relative of the ichthyosaurs, about 40 centimetres long, from the Early Triassic of Anhui, China, about 248 million years ago. It had a short, toothless snout, probably for sucking in soft prey, and large flippers with flexible wrists that may have let it crawl onto the shore like a seal. It shows how the dolphin-like ichthyosaurs began, soon after the end-Permian mass extinction."
+ },
+ {
+  "id": "kannemeyeria_simocephalus",
+  "commonName": "Kannemeyeria",
+  "scientificName": "Kannemeyeria simocephalus",
+  "kingdom": "Animalia",
+  "group": "Dicynodont therapsid",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Plain",
+   "Steppe",
+   "Savanna"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 300,
+  "startingPopulation": 60,
+  "playable": true,
+  "model": "Models/Species/Kannemeyeria",
+  "mapStyle": "Ground",
+  "mapAttack": "Ram",
+  "mapDefense": "Brace",
+  "mapLegs": 2,
+  "mapHip": 0.5,
+  "colonySize": 2,
+  "attack": 4,
+  "defense": 4,
+  "hp": 13,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.5
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.3
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.3
+   }
+  ],
+  "description": "A large plant eater, about 3 metres long, from the Early to Middle Triassic of South Africa, about 245 million years ago, and a distant relative of mammals. It had a barrel-shaped body, sturdy legs, a long, high snout ending in a horny beak and a pair of short tusks. It sheared tough plants with its beak and was one of the biggest land animals of its time."
+ },
+ {
+  "id": "massetognathus_pascuali",
+  "commonName": "Massetognathus",
+  "scientificName": "Massetognathus pascuali",
+  "kingdom": "Animalia",
+  "group": "Cynodont therapsid",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Wetland"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 50,
+  "startingPopulation": 900,
+  "playable": true,
+  "model": "Models/Species/Massetognathus",
+  "mapStyle": "Ground",
+  "mapDefense": "Scatter",
+  "mapLegs": 2,
+  "mapHip": 0.62,
+  "colonySize": 4,
+  "attack": 2,
+  "defense": 2,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "endothermy",
+    "expression": 0.5
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   }
+  ],
+  "description": "A cat-sized relative of mammals, about 50 centimetres long, from the Middle Triassic of Argentina, about 235 million years ago. Unlike most earlier cynodonts it ate plants, grinding them with broad, ridged cheek teeth, and it had a short, deep head and strong jaw muscles. Many skeletons have been found together, so it may have lived in groups."
+ },
+ {
+  "id": "proterosuchus_fergusi",
+  "commonName": "Proterosuchus",
+  "scientificName": "Proterosuchus fergusi",
+  "kingdom": "Animalia",
+  "group": "Archosauromorph",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Wetland",
+   "Plain"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 160,
+  "startingPopulation": 120,
+  "playable": true,
+  "model": "Models/Species/Proterosuchus",
+  "mapStyle": "Ground",
+  "mapAttack": "Bite",
+  "mapLegs": 2,
+  "mapHip": 0.62,
+  "colonySize": 2,
+  "attack": 6,
+  "defense": 3,
+  "hp": 6,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.4
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.4
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "One of the earliest archosauriforms, the branch that later gave rise to crocodiles, dinosaurs and birds, from the Early Triassic of South Africa, about 250 million years ago. About 1.5 metres long, it looked like a crocodile with sprawling legs and a long tail, and the tip of its upper jaw hooked down over the lower jaw. It was one of the top predators in the world that recovered after the end-Permian extinction."
+ },
+ {
+  "id": "euparkeria_capensis",
+  "commonName": "Euparkeria",
+  "scientificName": "Euparkeria capensis",
+  "kingdom": "Animalia",
+  "group": "Archosauromorph",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Plain",
+   "Steppe",
+   "Hill"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 60,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Euparkeria",
+  "mapStyle": "Ground",
+  "mapGait": "Run",
+  "mapAttack": "Pounce",
+  "mapLegs": 2,
+  "mapHip": 0.75,
+  "colonySize": 3,
+  "attack": 5,
+  "defense": 2,
+  "hp": 4,
+  "moves": 3,
+  "genes": [
+   {
+    "gene": "land_speed",
+    "expression": 0.7
+   },
+   {
+    "gene": "carnivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.3
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   }
+  ],
+  "description": "A small, light predator, about 60 centimetres long, from the Early Triassic of South Africa, about 245 million years ago, close to the common ancestor of crocodiles and dinosaurs. It had a narrow head with sharp, curved teeth, two rows of small bony plates down its back, a long tail and hind legs longer than its arms. It may have run on its hind legs for short bursts when chasing insects and small reptiles."
+ },
+ {
+  "id": "trilophosaurus_buettneri",
+  "commonName": "Trilophosaurus",
+  "scientificName": "Trilophosaurus buettneri",
+  "kingdom": "Animalia",
+  "group": "Archosauromorph",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Rainforest"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 250,
+  "startingPopulation": 200,
+  "playable": true,
+  "model": "Models/Species/Trilophosaurus",
+  "mapStyle": "Ground",
+  "mapDefense": "Brace",
+  "mapLegs": 2,
+  "mapHip": 0.57,
+  "colonySize": 3,
+  "attack": 3,
+  "defense": 3,
+  "hp": 9,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "climbing",
+    "expression": 0.4
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.4
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "A lizard-like plant eater, about 2.5 metres long, from the Late Triassic of Texas, about 220 million years ago. Its short, deep skull had a toothless beak at the front and wide cheek teeth with three cutting crests, which give it its name and sliced up tough plants. Strong claws on its feet may have helped it dig for roots or climb."
+ },
+ {
+  "id": "hypsognathus_fenneri",
+  "commonName": "Hypsognathus",
+  "scientificName": "Hypsognathus fenneri",
+  "kingdom": "Animalia",
+  "group": "Procolophonid",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Plain",
+   "Steppe",
+   "Wetland"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 33,
+  "startingPopulation": 1200,
+  "playable": true,
+  "model": "Models/Species/Hypsognathus",
+  "mapStyle": "Ground",
+  "mapDefense": "Brace",
+  "mapLegs": 2,
+  "mapHip": 0.55,
+  "colonySize": 3,
+  "attack": 2,
+  "defense": 5,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.8
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.6
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.5
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.5
+   }
+  ],
+  "description": "A squat, lizard-like reptile about 33 centimetres long from the Late Triassic of New Jersey and Connecticut, about 205 million years ago. Its broad, triangular head bore long bony spikes sticking out from the cheeks, which probably made it hard for predators to swallow. It chewed tough plants with broad teeth and belonged to the procolophonids, one of the few old reptile groups that survived the end-Permian extinction."
+ },
+ {
+  "id": "clevosaurus_hudsoni",
+  "commonName": "Clevosaurus",
+  "scientificName": "Clevosaurus hudsoni",
+  "kingdom": "Animalia",
+  "group": "Rhynchocephalian",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Hill",
+   "Plain"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 30,
+  "startingPopulation": 2000,
+  "playable": true,
+  "model": "Models/Species/Clevosaurus",
+  "mapStyle": "Ground",
+  "mapDefense": "Hide",
+  "mapLegs": 2,
+  "mapHip": 0.54,
+  "colonySize": 4,
+  "attack": 3,
+  "defense": 2,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.6
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.6
+   },
+   {
+    "gene": "vision_acuity",
+    "expression": 0.6
+   },
+   {
+    "gene": "climbing",
+    "expression": 0.4
+   }
+  ],
+  "description": "A lizard-like reptile about 30 centimetres long, an early relative of the living tuatara of New Zealand, from the Late Triassic of south-west England, about 205 million years ago. Its teeth were fused to the jawbones and worn into sharp blades for slicing insects and perhaps plants. Thousands of its bones have been found in old cave and crack fillings of limestone islands."
+ },
+ {
+  "id": "lotosaurus_adentus",
+  "commonName": "Lotosaurus",
+  "scientificName": "Lotosaurus adentus",
+  "kingdom": "Animalia",
+  "group": "Rauisuchian pseudosuchian",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Plain",
+   "Savanna",
+   "Wetland"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 250,
+  "startingPopulation": 120,
+  "playable": true,
+  "model": "Models/Species/Lotosaurus",
+  "mapStyle": "Ground",
+  "mapDefense": "Rear",
+  "mapLegs": 2,
+  "mapHip": 0.59,
+  "colonySize": 3,
+  "attack": 3,
+  "defense": 3,
+  "hp": 9,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.85
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.5
+   },
+   {
+    "gene": "heat_tolerance",
+    "expression": 0.6
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.4
+   }
+  ],
+  "description": "A plant-eating relative of crocodiles, about 2.5 metres long, from the Middle Triassic of Hunan, China, about 245 million years ago. It had no teeth at all, only a sharp horny beak (its species name, adentus, means \"toothless\"), and a tall sail of long spines along its back. Many skeletons were found together, so it probably lived in groups."
+ },
+ {
+  "id": "riojasaurus_incertus",
+  "commonName": "Riojasaurus",
+  "scientificName": "Riojasaurus incertus",
+  "kingdom": "Animalia",
+  "group": "Sauropodomorph dinosaur",
+  "firstAge": "Triassic",
+  "lastAge": "Triassic",
+  "habitats": [
+   "Plain",
+   "Steppe",
+   "Savanna"
+  ],
+  "diet": "Herbivore",
+  "sizeCm": 650,
+  "startingPopulation": 50,
+  "playable": true,
+  "model": "Models/Species/Riojasaurus",
+  "mapStyle": "Ground",
+  "mapDefense": "Mob",
+  "mapLegs": 2,
+  "mapHip": 0.6,
+  "colonySize": 2,
+  "attack": 4,
+  "defense": 4,
+  "hp": 14,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "herbivory",
+    "expression": 0.9
+   },
+   {
+    "gene": "group_defense",
+    "expression": 0.6
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.3
+   },
+   {
+    "gene": "land_speed",
+    "expression": 0.3
+   }
+  ],
+  "description": "A heavy early long-necked dinosaur, about 6.5 metres long, from the Late Triassic of La Rioja, Argentina, about 220 million years ago. Unlike its two-legged relative Plateosaurus, it walked on all four stout legs, carrying a bulky body, a long neck and a small head with leaf-shaped teeth for stripping plants. Hollow spaces in its backbone kept its weight down, a trick later used by the giant sauropods."
+ }
+]

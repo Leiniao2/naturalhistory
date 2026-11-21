@@ -127,6 +127,11 @@ namespace NaturalHistory.UI
             zoologyPanel.Message += ShowToast;
             zoologyPanel.OpenEncyclopedia += id => { CloseSidePanels(); encyclopedia.Open(id); };
             encyclopedia.OpenTree         += id => { CloseSidePanels(); zoologyPanel.Open(start: id); };
+            encyclopedia.OpenTraits       += (id, functions) =>
+            {
+                EvolutionManager.Instance?.Focus(id); // the trees show this species
+                ToggleTree(functions ? Progression?.Morphology : Progression?.Ethology);
+            };
             NaturalEvents.Announced += OnPhenomenon;
             Combat.Reported += OnPhenomenon;
             // the title screen goes first, so the new period's panel can show over the new game
@@ -138,9 +143,10 @@ namespace NaturalHistory.UI
 
             root.Q<Button>("morphology-button").clicked += () => ToggleTree(Progression?.Morphology);
             root.Q<Button>("ethology-button").clicked   += () => ToggleTree(Progression?.Ethology);
-            UiIcons.Decorate(root.Q<Button>("morphology-button"), UiIcons.Functions);
-            UiIcons.Decorate(root.Q<Button>("ethology-button"), UiIcons.Behaviors);
-            UiIcons.Decorate(root.Q<Button>("zoology-button"), UiIcons.Tree);
+            // the three trees' buttons in their colours, glowing while there is something to do there
+            ThemedButtons.Apply(root.Q<Button>("morphology-button"), ThemedButtons.Theme.Functions, () => ThemedButtons.TraitsReady(Progression?.Morphology));
+            ThemedButtons.Apply(root.Q<Button>("ethology-button"), ThemedButtons.Theme.Behaviors, () => ThemedButtons.TraitsReady(Progression?.Ethology));
+            ThemedButtons.Apply(root.Q<Button>("zoology-button"), ThemedButtons.Theme.Evolution, () => ThemedButtons.EvolutionReady(ThemedButtons.HumanCopies), UiIcons.Tree);
             root.Q<Button>("zoology-button").clicked    += ToggleZoology;
             layerButtons = new[]
             {
@@ -236,7 +242,7 @@ namespace NaturalHistory.UI
             {
                 button.text = Loc.T(layer switch { MapLayer.Sky => "Sky", MapLayer.Under => "Underground", _ => "Surface" });
                 button.EnableInClassList("selected", layer == UnderView.Layer);
-                button.SetEnabled(layer == MapLayer.Under || UnderView.SurfaceOpen); // Ediacaran: under only
+                button.SetEnabled(layer == MapLayer.Under || UnderView.SurfaceOpen); // before the Silurian: under only
             }
         }
 

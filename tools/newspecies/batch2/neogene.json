@@ -1,0 +1,1037 @@
+[
+  {
+    "id": "sahelanthropus_tchadensis",
+    "commonName": "Sahelanthropus",
+    "scientificName": "Sahelanthropus tchadensis",
+    "kingdom": "Animalia",
+    "group": "Hominin",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Rainforest",
+      "Savanna",
+      "Wetland"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Herbivore",
+    "sizeCm": 120,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/SahelanthropusTchadensis",
+    "mapStyle": "Ground",
+    "mapLegs": 1,
+    "mapHip": 0.46,
+    "colonySize": 3,
+    "attack": 3,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "omnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.7
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.8
+      }
+    ],
+    "description": "One of the oldest known members of the human lineage, from the Late Miocene of Chad, about 7 million years ago. It was a chimpanzee-sized ape with a small brain, a huge brow ridge, a rather flat face and small canine teeth. The way its skull sat on the spine suggests it could walk upright, though it still lived among trees by lakes and forest edges."
+  },
+  {
+    "id": "proconsul_africanus",
+    "commonName": "Proconsul",
+    "scientificName": "Proconsul africanus",
+    "kingdom": "Animalia",
+    "group": "Great ape",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 70,
+    "startingPopulation": 200,
+    "playable": true,
+    "model": "Models/Species/ProconsulAfricanus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.49,
+    "colonySize": 2,
+    "attack": 2,
+    "defense": 2,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.85
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.7
+      }
+    ],
+    "description": "An early ape from the Early Miocene forests of East Africa, about 20 million years ago, close to the common ancestor of all living apes. About the size of a baboon, it had no tail and an ape-like skull, but walked on all fours along branches with its palms flat like a monkey. It ate mostly soft fruit."
+  },
+  {
+    "id": "mesopithecus_pentelicus",
+    "commonName": "Mesopithecus",
+    "scientificName": "Mesopithecus pentelicus",
+    "kingdom": "Animalia",
+    "group": "Primate",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Rainforest",
+      "Savanna",
+      "Hill"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 45,
+    "startingPopulation": 600,
+    "playable": true,
+    "model": "Models/Species/MesopithecusPentelicus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.54,
+    "colonySize": 4,
+    "attack": 2,
+    "defense": 1,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.8
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.5
+      }
+    ],
+    "description": "An early leaf-eating monkey from the Late Miocene of Europe and western Asia, a relative of today's langurs and colobus monkeys. Macaque-sized with a long tail, it was at home both in trees and on open ground, and lived in troops. It was one of the few monkeys to spread across Europe."
+  },
+  {
+    "id": "wakaleo_vanderleueri",
+    "commonName": "Wakaleo",
+    "scientificName": "Wakaleo vanderleueri",
+    "kingdom": "Animalia",
+    "group": "Marsupial",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Rainforest",
+      "Hill"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Marsupial",
+      "Small animals"
+    ],
+    "sizeCm": 100,
+    "startingPopulation": 60,
+    "playable": true,
+    "model": "Models/Species/WakaleoVanderleueri",
+    "mapStyle": "Ground",
+    "mapAttack": "Pounce",
+    "mapLegs": 2,
+    "mapHip": 0.44,
+    "colonySize": 1,
+    "attack": 6,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.7
+      },
+      {
+        "gene": "camouflage",
+        "expression": 0.5
+      }
+    ],
+    "description": "A dog-sized marsupial lion from the Miocene forests of Australia, an earlier relative of Thylacoleo. It had a short, powerful head with blade-like cheek teeth for slicing meat and strong forelimbs for gripping prey. It probably climbed well and ambushed smaller marsupials from cover."
+  },
+  {
+    "id": "nimbadon_lavarackorum",
+    "commonName": "Nimbadon",
+    "scientificName": "Nimbadon lavarackorum",
+    "kingdom": "Animalia",
+    "group": "Marsupial",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 100,
+    "startingPopulation": 120,
+    "playable": true,
+    "model": "Models/Species/NimbadonLavarackorum",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.33,
+    "colonySize": 2,
+    "attack": 2,
+    "defense": 3,
+    "hp": 7,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.7
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.6
+      }
+    ],
+    "description": "A sheep-sized relative of wombats and koalas from the Miocene rainforests of northern Australia. Unlike its giant ground-living cousins, it had long, strongly clawed limbs and probably climbed trees to browse leaves, much like a koala. Whole family groups have been found together, mothers with young in the pouch."
+  },
+  {
+    "id": "obdurodon_dicksoni",
+    "commonName": "Giant Platypus",
+    "scientificName": "Obdurodon dicksoni",
+    "kingdom": "Animalia",
+    "group": "Monotreme",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Small animals"
+    ],
+    "sizeCm": 60,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/ObdurodonDicksoni",
+    "mapStyle": "Ground",
+    "colonySize": 2,
+    "attack": 3,
+    "defense": 2,
+    "hp": 4,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.65
+      },
+      {
+        "gene": "electroreception",
+        "expression": 0.9
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.4
+      },
+      {
+        "gene": "toxin_production",
+        "expression": 0.4
+      }
+    ],
+    "description": "An extinct platypus from the Miocene of Australia, larger than the living species, with a broader bill that flared at the tip. Unlike today's platypus it kept its teeth as an adult, and it may have eaten bigger prey such as crayfish, frogs and small turtles. Like its living relative it hunted underwater by sensing the electric fields of its prey."
+  },
+  {
+    "id": "dromornis_stirtoni",
+    "commonName": "Stirton's Thunderbird",
+    "scientificName": "Dromornis stirtoni",
+    "kingdom": "Animalia",
+    "group": "Dromornithid",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Savanna",
+      "Plain",
+      "Wetland"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 300,
+    "startingPopulation": 40,
+    "playable": true,
+    "model": "Models/Species/DromornisStirtoni",
+    "mapStyle": "Ground",
+    "mapAttack": "Charge",
+    "mapLegs": 1,
+    "mapHip": 0.46,
+    "colonySize": 1,
+    "attack": 4,
+    "defense": 4,
+    "hp": 11,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.5
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.5
+      }
+    ],
+    "description": "A giant flightless bird from the Late Miocene of central Australia, about 3 metres tall and up to 600 kilograms, among the heaviest birds ever. Despite its huge, deep beak it was a distant relative of ducks and geese, and it most likely ate tough leaves, fruit and seeds. Its legs were stout and its wings tiny, so it walked rather than ran."
+  },
+  {
+    "id": "vulcanops_jennyworthyae",
+    "commonName": "Vulcanops",
+    "scientificName": "Vulcanops jennyworthyae",
+    "kingdom": "Animalia",
+    "group": "Bat",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Carnivore",
+    "sizeCm": 12,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/VulcanopsJennyworthyae",
+    "mapStyle": "Swarm",
+    "colonySize": 6,
+    "mapScale": 0.75,
+    "wingBeat": 7,
+    "wingRoot": 0.12,
+    "attack": 2,
+    "defense": 1,
+    "hp": 3,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "flight_capability",
+        "expression": 0.7
+      },
+      {
+        "gene": "omnivory",
+        "expression": 0.7
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.5
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.5
+      }
+    ],
+    "description": "A giant burrowing bat from the Early Miocene of New Zealand, about three times the size of an ordinary small bat. Like New Zealand's living burrowing bats it foraged on the forest floor as well as in the air, eating insects, spiders and probably fruit and nectar. Its relatives also lived in Australia, a sign of the old forest links between the two lands."
+  },
+  {
+    "id": "synthetoceras_tricornatus",
+    "commonName": "Synthetoceras",
+    "scientificName": "Synthetoceras tricornatus",
+    "kingdom": "Animalia",
+    "group": "Protoceratid",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Plain",
+      "Savanna"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 200,
+    "startingPopulation": 150,
+    "playable": true,
+    "model": "Models/Species/SynthetocerasTricornatus",
+    "mapStyle": "Ground",
+    "mapAttack": "Ram",
+    "mapLegs": 2,
+    "mapHip": 0.53,
+    "colonySize": 3,
+    "attack": 3,
+    "defense": 3,
+    "hp": 6,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.6
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      }
+    ],
+    "description": "A deer-sized hoofed mammal from the Late Miocene of North America, the last and largest of the protoceratids, distant relatives of camels. Males had a pair of horns behind the eyes and a long nose horn that forked into a Y at the tip, probably used for display and sparring. It grazed and browsed in herds on open plains."
+  },
+  {
+    "id": "epicyon_haydeni",
+    "commonName": "Epicyon",
+    "scientificName": "Epicyon haydeni",
+    "kingdom": "Animalia",
+    "group": "Canid",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Steppe"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Equid",
+      "Camelid",
+      "Small animals"
+    ],
+    "sizeCm": 170,
+    "startingPopulation": 50,
+    "playable": true,
+    "model": "Models/Species/EpicyonHaydeni",
+    "mapStyle": "Ground",
+    "mapAttack": "Bite",
+    "mapLegs": 2,
+    "mapHip": 0.44,
+    "colonySize": 2,
+    "attack": 7,
+    "defense": 4,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.6
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.5
+      }
+    ],
+    "description": "The largest dog that ever lived, from the Late Miocene of North America, weighing up to about 170 kilograms. It belonged to the borophagines, \"bone-crushing dogs\" with short, deep, hyena-like jaws that cracked bones for their marrow. It hunted horses and camels and also scavenged, probably in family groups."
+  },
+  {
+    "id": "nesodon_imbricatus",
+    "commonName": "Nesodon",
+    "scientificName": "Nesodon imbricatus",
+    "kingdom": "Animalia",
+    "group": "Notoungulate",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Plain",
+      "Savanna",
+      "Steppe"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 180,
+    "startingPopulation": 120,
+    "playable": true,
+    "model": "Models/Species/NesodonImbricatus",
+    "mapStyle": "Ground",
+    "mapLegs": 2,
+    "mapHip": 0.37,
+    "colonySize": 2,
+    "attack": 3,
+    "defense": 4,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.4
+      }
+    ],
+    "description": "A heavy, tapir-sized grazer from the Early Miocene of Patagonia, an early member of the toxodonts, hoofed mammals found only in South America. It had a barrel-shaped body on short legs and a big head with chisel-like front teeth and ever-growing cheek teeth for chewing tough plants. Many skeletons, from calves to adults, are known."
+  },
+  {
+    "id": "squalodon_calvertensis",
+    "commonName": "Shark-toothed Dolphin",
+    "scientificName": "Squalodon calvertensis",
+    "kingdom": "Animalia",
+    "group": "Toothed whale",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 300,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/SqualodonCalvertensis",
+    "mapStyle": "Swim",
+    "mapAttack": "Snap",
+    "colonySize": 2,
+    "attack": 5,
+    "defense": 3,
+    "hp": 7,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.85
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.7
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.4
+      }
+    ],
+    "description": "A 3-metre dolphin-like whale from the Miocene seas of the North Atlantic. Its long beak held pointed front teeth and triangular, serrated cheek teeth like a shark's, from which it gets its name. It caught fish and squid and could probably already find them by echolocation."
+  },
+  {
+    "id": "metaxytherium_floridanum",
+    "commonName": "Metaxytherium",
+    "scientificName": "Metaxytherium floridanum",
+    "kingdom": "Animalia",
+    "group": "Sirenian",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 300,
+    "startingPopulation": 120,
+    "playable": true,
+    "model": "Models/Species/MetaxytheriumFloridanum",
+    "mapStyle": "Swim",
+    "colonySize": 1,
+    "attack": 1,
+    "defense": 3,
+    "hp": 9,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.6
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.7
+      }
+    ],
+    "description": "A dugong relative from the Miocene shallow seas of Florida and the Caribbean, about 3 metres long. It had a fat, spindle-shaped body, paddle-like flippers and a tail fluke, and a down-turned snout with small tusks for uprooting seagrass. Slow and peaceful, it relied on its size and thick bones for protection."
+  },
+  {
+    "id": "acrophoca_longirostris",
+    "commonName": "Swan-necked Seal",
+    "scientificName": "Acrophoca longirostris",
+    "kingdom": "Animalia",
+    "group": "Pinniped",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 180,
+    "startingPopulation": 100,
+    "playable": true,
+    "model": "Models/Species/AcrophocaLongirostris",
+    "mapStyle": "Swim",
+    "mapAttack": "Snap",
+    "colonySize": 2,
+    "attack": 4,
+    "defense": 2,
+    "hp": 6,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.85
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.7
+      },
+      {
+        "gene": "endothermy",
+        "expression": 0.7
+      }
+    ],
+    "description": "An unusual seal from the Late Miocene coast of Peru, a slender relative of the monk seals. It had a remarkably long neck and a long, narrow snout, and probably darted its head sideways to snap up fish. It still had strong limbs and may have spent much time on rocky shores."
+  },
+  {
+    "id": "oncorhynchus_rastrosus",
+    "commonName": "Sabre-toothed Salmon",
+    "scientificName": "Oncorhynchus rastrosus",
+    "kingdom": "Animalia",
+    "group": "Bony fish",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater",
+      "FreshWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 220,
+    "startingPopulation": 400,
+    "playable": true,
+    "model": "Models/Species/OncorhynchusRastrosus",
+    "mapStyle": "Swim",
+    "mapAttack": "Ram",
+    "colonySize": 3,
+    "attack": 3,
+    "defense": 3,
+    "hp": 7,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.8
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.7
+      },
+      {
+        "gene": "lateral_line",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.6
+      }
+    ],
+    "description": "The largest salmon ever, up to about 2.5 metres long, from the Late Miocene and Pliocene of the North Pacific coast. It strained plankton with its many gill rakers, but spawning adults grew a pair of big tusk-like teeth that stuck out sideways from the snout, probably for fighting or digging nests. Like living Pacific salmon it swam up rivers to spawn."
+  },
+  {
+    "id": "ecphora_gardnerae",
+    "commonName": "Ecphora",
+    "scientificName": "Ecphora gardnerae",
+    "kingdom": "Animalia",
+    "group": "Sea snail",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Scallop",
+      "Small animals"
+    ],
+    "sizeCm": 10,
+    "startingPopulation": 1500,
+    "playable": true,
+    "model": "Models/Species/EcphoraGardnerae",
+    "mapStyle": "Fixed",
+    "mapDefense": "Hide",
+    "colonySize": 3,
+    "mapScale": 0.7,
+    "attack": 2,
+    "defense": 5,
+    "hp": 3,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      }
+    ],
+    "description": "A predatory sea snail from the Miocene seas of the Chesapeake Bay region, a relative of the murex snails. Its rust-red shell, one of the few fossil shells that keeps its colour, bore four tall, flat ribs spiralling round the whorls. It drilled holes through the shells of clams and barnacles to eat the animal inside."
+  },
+  {
+    "id": "chesapecten_jeffersonius",
+    "commonName": "Jefferson's Scallop",
+    "scientificName": "Chesapecten jeffersonius",
+    "kingdom": "Animalia",
+    "group": "Scallop",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Filter feeder",
+    "sizeCm": 17,
+    "startingPopulation": 3000,
+    "playable": true,
+    "model": "Models/Species/ChesapectenJeffersonius",
+    "mapStyle": "Fixed",
+    "mapDefense": "Hide",
+    "colonySize": 3,
+    "mapScale": 0.55,
+    "attack": 1,
+    "defense": 5,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "filter_feeding",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "vision_acuity",
+        "expression": 0.5
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.3
+      }
+    ],
+    "description": "A large scallop from the Pliocene seas of Virginia and North Carolina, up to about 17 centimetres across, with broad radiating ribs. Like living scallops it lay on the sea floor filtering food from the water, watched with a row of small eyes along its mantle, and could clap its valves to swim away from danger. It was the first fossil from North America ever illustrated."
+  },
+  {
+    "id": "clypeaster_aegyptiacus",
+    "commonName": "Giant Sea Biscuit",
+    "scientificName": "Clypeaster aegyptiacus",
+    "kingdom": "Animalia",
+    "group": "Echinoderm",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 15,
+    "startingPopulation": 5000,
+    "playable": true,
+    "model": "Models/Species/ClypeasterAegyptiacus",
+    "mapStyle": "Fixed",
+    "colonySize": 5,
+    "mapScale": 0.5,
+    "attack": 1,
+    "defense": 5,
+    "hp": 4,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "burrowing",
+        "expression": 0.6
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.7
+      },
+      {
+        "gene": "regeneration",
+        "expression": 0.4
+      }
+    ],
+    "description": "A big, thick relative of the sand dollars from the Miocene and Pliocene seas around the Mediterranean and Red Sea. Its heavy, high-domed test, up to 15 centimetres across, was covered in a felt of tiny spines and marked on top with a five-petalled flower of breathing tube feet. It lived half-buried in sand, picking food particles from the sediment."
+  },
+  {
+    "id": "mastotermes_electrodominicus",
+    "commonName": "Amber Giant Termite",
+    "scientificName": "Mastotermes electrodominicus",
+    "kingdom": "Animalia",
+    "group": "Termite",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Rainforest"
+    ],
+    "diet": "Detritivore",
+    "sizeCm": 1,
+    "startingPopulation": 300000,
+    "playable": true,
+    "model": "Models/Species/MastotermesElectrodominicus",
+    "mapStyle": "Ground",
+    "mapDefense": "Mob",
+    "mapLegs": 3,
+    "mapHip": 0.36,
+    "colonySize": 8,
+    "mapScale": 0.9,
+    "attack": 1,
+    "defense": 2,
+    "hp": 3,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "decomposition",
+        "expression": 0.9
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.8
+      },
+      {
+        "gene": "reproduction_rate",
+        "expression": 0.9
+      },
+      {
+        "gene": "chemoreception",
+        "expression": 0.7
+      }
+    ],
+    "description": "An extinct giant termite found in Miocene amber from the Dominican Republic, of the most primitive living termite family. Its only surviving relative is the giant northern termite of Australia, so this family once lived across the world. Its colonies chewed through dead and living wood, digesting it with the help of microbes in their guts."
+  },
+  {
+    "id": "rhamphosuchus_crassidens",
+    "commonName": "Rhamphosuchus",
+    "scientificName": "Rhamphosuchus crassidens",
+    "kingdom": "Animalia",
+    "group": "Crocodilian",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "FreshWater",
+      "Wetland"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 900,
+    "startingPopulation": 15,
+    "playable": true,
+    "model": "Models/Species/RhamphosuchusCrassidens",
+    "mapStyle": "Ground",
+    "mapAttack": "Snap",
+    "mapLegs": 2,
+    "mapHip": 0.4,
+    "colonySize": 1,
+    "attack": 7,
+    "defense": 6,
+    "hp": 12,
+    "moves": 1,
+    "genes": [
+      {
+        "gene": "carnivory",
+        "expression": 0.9
+      },
+      {
+        "gene": "armor_thickness",
+        "expression": 0.7
+      },
+      {
+        "gene": "swimming_speed",
+        "expression": 0.6
+      }
+    ],
+    "description": "A giant relative of the gharials from the Miocene rivers of India and Pakistan, perhaps 8 to 11 metres long. Its long, narrow snout was lined with many sharp teeth, but it was stouter than a living gharial's, so it may have taken larger prey as well as fish. It was one of the largest crocodilians that ever lived."
+  },
+  {
+    "id": "hoplitomeryx_matthei",
+    "commonName": "Prongdeer",
+    "scientificName": "Hoplitomeryx matthei",
+    "kingdom": "Animalia",
+    "group": "Deer",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Hill",
+      "Plain"
+    ],
+    "diet": "Herbivore",
+    "sizeCm": 100,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/HoplitomeryxMatthei",
+    "mapStyle": "Ground",
+    "mapAttack": "Ram",
+    "mapLegs": 2,
+    "mapHip": 0.48,
+    "colonySize": 3,
+    "attack": 3,
+    "defense": 3,
+    "hp": 5,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "herbivory",
+        "expression": 0.85
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.5
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      },
+      {
+        "gene": "climbing",
+        "expression": 0.4
+      }
+    ],
+    "description": "A small deer-like ruminant that lived on the Miocene island of Gargano, now part of Italy. It had five horns, one long horn up the middle of the nose and a pair above each eye, and long, sabre-like upper canines like a musk deer. With no large predators on its island, it evolved into several sizes of this strange form."
+  },
+  {
+    "id": "kubanochoerus_gigas",
+    "commonName": "Kubanochoerus",
+    "scientificName": "Kubanochoerus gigas",
+    "kingdom": "Animalia",
+    "group": "Pig",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "Rainforest",
+      "Plain",
+      "Wetland"
+    ],
+    "diet": "Omnivore",
+    "mainDiet": "Herbivore",
+    "sizeCm": 220,
+    "startingPopulation": 80,
+    "playable": true,
+    "model": "Models/Species/KubanochoerusGigas",
+    "mapStyle": "Ground",
+    "mapAttack": "Ram",
+    "mapLegs": 2,
+    "mapHip": 0.48,
+    "colonySize": 2,
+    "attack": 5,
+    "defense": 5,
+    "hp": 9,
+    "moves": 2,
+    "genes": [
+      {
+        "gene": "omnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "group_defense",
+        "expression": 0.5
+      },
+      {
+        "gene": "land_speed",
+        "expression": 0.4
+      }
+    ],
+    "description": "A giant, long-legged pig from the Middle Miocene of Eurasia, as large as a small horse and weighing perhaps 500 kilograms. It had big tusks, and males carried a single horn on the forehead, probably used in head-butting contests. It rooted and browsed in forests and wet woodlands."
+  },
+  {
+    "id": "spheniscus_urbinai",
+    "commonName": "Urbina's Penguin",
+    "scientificName": "Spheniscus urbinai",
+    "kingdom": "Animalia",
+    "group": "Penguin",
+    "firstAge": "Neogene",
+    "lastAge": "Neogene",
+    "habitats": [
+      "SaltWater"
+    ],
+    "diet": "Carnivore",
+    "prey": [
+      "Bony fish",
+      "Small animals"
+    ],
+    "sizeCm": 90,
+    "startingPopulation": 300,
+    "playable": true,
+    "model": "Models/Species/SpheniscusUrbinai",
+    "mapStyle": "Swim",
+    "mapAttack": "Snap",
+    "mapDefense": "Scatter",
+    "colonySize": 3,
+    "attack": 3,
+    "defense": 2,
+    "hp": 4,
+    "moves": 3,
+    "genes": [
+      {
+        "gene": "swimming_speed",
+        "expression": 0.75
+      },
+      {
+        "gene": "carnivory",
+        "expression": 0.8
+      },
+      {
+        "gene": "parental_care",
+        "expression": 0.7
+      },
+      {
+        "gene": "heat_tolerance",
+        "expression": 0.4
+      }
+    ],
+    "description": "An extinct banded penguin from the Late Miocene coasts of Peru and Chile, larger than its living relative the Humboldt penguin. It had a long, dagger-like bill for catching fish and probably the black breast band of its living kin. It nested on warm desert shores beside a cold, fish-rich current."
+  }
+]

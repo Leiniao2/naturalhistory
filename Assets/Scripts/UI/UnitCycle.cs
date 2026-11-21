@@ -50,6 +50,7 @@ namespace NaturalHistory.UI
         {
             if (g == null || g.Cell == null || g.Owner == null || !g.Owner.IsHuman) return false;
             if (g.JustBorn || !g.CanAttack || g.ActionsLeft <= 0 || skipped.Contains(g) || MoveOrders.Has(g)) return false; // under orders: on its way
+            if (g.Stationed) return false; // staying put until given an order
             return HasOrders(g);
         }
 
@@ -104,7 +105,7 @@ namespace NaturalHistory.UI
             focus = g;
             focusWasPending = true;
             focusMoved = false;
-            if (moveCamera && CameraController.Main != null) CameraController.Main.CenterOn(g.transform.position);
+            if (moveCamera && CameraController.Main != null) CameraController.Main.FocusUnit(g.transform.position); // close up on it, not the whole world
         }
 
         private void Recount()

@@ -14,19 +14,22 @@ namespace NaturalHistory.World
         public int poisonTurns, heldTurns;
         public float poisonPerTurn;
         public bool limbShed;
+        public bool acted; // moved, attacked or reproduced in that turn: no healing at the next
+        public bool stationed; // staying put until ordered (the only state that heals)
     }
 
     // A group's combat state for the turn (see CombatStats, Combat): its hit points, and how many
     // actions (CombatStats.moves: a tile moved, an attack, reproducing) and attacks (one) it has
-    // left. Each turn (Combat.BeginTurn) the actions come back and it heals a fifth of its HP, or,
-    // with no food on its tile or next to it, loses a quarter (Diets) and may starve. Abilities
+    // left. Each turn (Combat.BeginTurn) the actions come back and, if it is stationed (Stationed)
+    // and took none the turn before, it heals a tenth of its HP, or, with no food on its tile or next
+    // to it, loses a quarter (Diets) and may starve. Abilities
     // (Abilities, Combat) add: poison, which takes HP each turn instead of healing; being held or
     // stunned, which costs the next turn's actions; regeneration, which heals twice as fast.
     // Only groups the player orders are held to their actions: their own, or any in Safari Mode;
     // wild groups moved by the game (WildBirths, migrations) aren't.
     public partial class ColonyGroup
     {
-        public const float HealPerTurn = 0.2f; // of the maximum HP
+        public const float HealPerTurn = 0.1f; // of the maximum HP (twice that with Regeneration)
 
         // The species' stats plus what its owner's Functions and Behaviors items add (TraitBonuses),
         // worked out again when those change or the group changes hands; HP it gains comes on top
@@ -70,6 +73,10 @@ namespace NaturalHistory.World
         public int HeldTurns { get; private set; }
         public bool LimbShed { get; set; }       // Abilities.Autotomy used up
         public bool ActedThisTurn { get; private set; } // moved or reproduced (Abilities.Ambush)
+        public bool FoughtThisTurn { get; private set; } // attacked
+        // Stationed: staying put until given an order (the Station button). Only a stationed group
+        // that didn't act the turn before heals; any action (a move, an attack, young) ends it.
+        public bool Stationed { get; set; }
 
         // Poisoned: loses perTurn HP at the start of each of the next `turns` turns (the stronger dose wins)
         public void Poison(float perTurn, int turns)
@@ -79,7 +86,10 @@ namespace NaturalHistory.World
         }
 
         // Held (a web, coils) or stunned: no actions next turn
-        public void Hold() => HeldTurns = Mathf.Max(HeldTurns, 1);
+        public void Hold()
+        {
+            if (!TraitBonuses.Effects(this).holdImmune) HeldTurns = Mathf.Max(HeldTurns, 1);
+        }
 
         private bool Ordered => Owner != null || SpeciesColonies.SafariMode;
 
@@ -101,6 +111,8 @@ namespace NaturalHistory.World
         {
             hp = Hp, actionsLeft = ActionsLeft, attacksLeft = AttacksLeft, turn = actionsTurn,
             poisonTurns = PoisonTurns, poisonPerTurn = PoisonPerTurn, heldTurns = HeldTurns, limbShed = LimbShed,
+            acted = ActedThisTurn || FoughtThisTurn,
+            stationed = Stationed,
         };
 
         // Back to a state taken earlier (null: as new). Taken in an earlier turn: the turns since
@@ -111,11 +123,13 @@ namespace NaturalHistory.World
             Hp = Mathf.Clamp(state.hp, 0.1f, MaxHp);
             PoisonTurns = state.poisonTurns; PoisonPerTurn = state.poisonPerTurn;
             HeldTurns = state.heldTurns; LimbShed = state.limbShed;
+            Stationed = state.stationed;
             if (state.turn == CurrentTurn)
             {
                 ActionsLeft = Mathf.Clamp(state.actionsLeft, 0, MaxActions);
                 AttacksLeft = Mathf.Clamp(state.attacksLeft, 0, 1);
                 actionsTurn = CurrentTurn;
+                ActedThisTurn = state.acted; // so a rebuild of the map doesn't let it heal after acting
             }
             else
             {
@@ -132,20 +146,33 @@ namespace NaturalHistory.World
         {
             if (actionsTurn == CurrentTurn) return;
             actionsTurn = CurrentTurn;
+            // only a stationed group that sat the last turn out (no move, attack or young) heals
+            bool rested = Stationed && !ActedThisTurn && !FoughtThisTurn;
             ActionsLeft = MaxActions;
             AttacksLeft = 1;
             ActedThisTurn = false;
+            FoughtThisTurn = false;
             if (HeldTurns > 0) { HeldTurns--; ActionsLeft = 0; AttacksLeft = 0; }
-            float heal = HealPerTurn * (Abilities.Has(this, Abilities.Regeneration) ? 2f : 1f);
+            // items (TraitBonuses.Effects) heal more at rest, heal a little anyway, and soften hunger and poison
+            var effects = TraitBonuses.Effects(this);
+            float heal = (rested ? (HealPerTurn + effects.heal) * (Abilities.Has(this, Abilities.Regeneration) ? 2f : 1f) : 0f) + effects.fieldHeal;
             // hungry: dormancy sleeps it off, blubber halves the loss
             if (!fed && !Abilities.Has(this, Abilities.Dormancy))
-                Hp -= MaxHp * Diets.StarveLoss * (Abilities.Has(this, Abilities.Blubber) ? 0.5f : 1f);
+                Hp -= MaxHp * Diets.StarveLoss * (Abilities.Has(this, Abilities.Blubber) ? 0.5f : 1f) * (1f - effects.starveResist);
             else if (PoisonTurns == 0) Hp = Mathf.Min(MaxHp, Hp + MaxHp * heal);
             if (PoisonTurns > 0)
             {
-                Hp -= PoisonPerTurn;
+                Hp -= PoisonPerTurn * (1f - effects.poisonResist);
                 if (--PoisonTurns == 0) PoisonPerTurn = 0f;
             }
+        }
+
+        // Eating prey with TraitEffects.freeHunt: the actions it had before the attack come back
+        // (not the attack: one a turn still)
+        private int actionsBeforeAttack;
+        public void RefundHuntActions()
+        {
+            if (Ordered) ActionsLeft = Mathf.Max(ActionsLeft, actionsBeforeAttack);
         }
 
         // Extra actions this turn (a discovery's second wind, Progression/Discoveries)
@@ -158,12 +185,16 @@ namespace NaturalHistory.World
         public void SpendActions(int n)
         {
             ActedThisTurn = true;
+            Stationed = false;
             if (Ordered) ActionsLeft = Mathf.Max(0, ActionsLeft - n);
         }
 
         // An attack ends the group's turn
         private void SpendAttack()
         {
+            FoughtThisTurn = true;
+            Stationed = false;
+            actionsBeforeAttack = ActionsLeft;
             if (!Ordered) return;
             AttacksLeft = 0;
             ActionsLeft = 0;

@@ -1,0 +1,14 @@
+{
+ "Thalattosaur": {
+  "tags": "REP+['Marine reptile']",
+  "path": "NEODIAPSIDA + '/Thalattosauria'"
+ },
+ "Procolophonid": {
+  "tags": "REP+['Basal amniote']",
+  "path": "SAUROPSIDA + '/Parareptilia/Procolophonoidea'"
+ },
+ "Rhynchocephalian": {
+  "tags": "REP",
+  "path": "NEODIAPSIDA + '/Sauria/Lepidosauromorpha/Rhynchocephalia'"
+ }
+}

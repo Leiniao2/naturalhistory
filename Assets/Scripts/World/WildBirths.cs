@@ -159,7 +159,7 @@ namespace NaturalHistory.World
 
         public bool CanBeBornAt(SpeciesDefinition def, HexCell cell)
         {
-            if (!SpeciesColonies.FitsHabitat(def, cell)) return false;
+            if (!ColonyGroup.CanPlace(def, cell)) return false; // its habitat, where it can move
             var niche = Niches.Of(def, cell);
             if (EarlyPeriod && (!cell.IsWater || Niches.LayerOf(niche) != MapLayer.Under)) return false;
             return colonies.GroupAt(cell, niche) == null && FoodWeb.HasFood(def, cell, colonies, null);
@@ -278,7 +278,7 @@ namespace NaturalHistory.World
                 var def = GameDataLoader.GetSpecies(species);
                 if (def == null || string.IsNullOrEmpty(def.model) || !colonies.IsAliveNow(def)) continue;
                 var cell = grid.GetCell(col, row);
-                if (cell == null || !SpeciesColonies.FitsHabitat(def, cell) || colonies.GroupAt(cell, Niches.Of(def, cell)) != null)
+                if (cell == null || !ColonyGroup.CanPlace(def, cell) || colonies.GroupAt(cell, Niches.Of(def, cell)) != null)
                 {
                     var cells = FarCells(def);
                     if (cells.Count == 0) continue;

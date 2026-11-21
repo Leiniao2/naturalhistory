@@ -39,6 +39,9 @@ namespace NaturalHistory.World
         public void Refresh(Func<Vector2, float> extraRain)
         {
             if (grid == null || storm == null || !Prepare(cellSize)) return;
+            // the map being rebuilt at another size (HexGrid.GenerateSteps): wait for SkyLayer to hand in new arrays
+            if (!grid.IsGenerated || blizzard == null || storm.GetLength(0) != grid.Width || storm.GetLength(1) != grid.Height
+                || blizzard.GetLength(0) != grid.Width || blizzard.GetLength(1) != grid.Height) return;
             var wanted = new Dictionary<HexCell, (float strength, bool snowing)>();
             for (int r = 0; r < grid.Height; r++)
             for (int q = 0; q < grid.Width; q++)

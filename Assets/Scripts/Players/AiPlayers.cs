@@ -175,7 +175,9 @@ namespace NaturalHistory.Players
             var progression = ProgressionManager.Instance;
             var territory = TerritoryManager.Instance;
             int centers = territory == null ? 1 : territory.Centers.Count(c => c.Owner == p);
-            return Mathf.RoundToInt((progression != null ? progression.PointsPerCenter : 5) * centers * EpCosts.Factor); // grows with the periods, as for the human
+            var evolution = EvolutionManager.Instance;
+            int items = evolution != null ? TraitBonuses.Income(p.Index, evolution.CopiesOf(p).Select(c => c.species)) : 0; // items that earn EP
+            return Mathf.RoundToInt((progression != null ? progression.PointsPerCenter : 5) * centers * EpCosts.Factor) + items; // grows with the periods, as for the human
         }
 
         private static FactionPersonality Personality(Player p) => p.Faction?.personality ?? new FactionPersonality();
@@ -243,7 +245,7 @@ namespace NaturalHistory.Players
             if (Enum.TryParse(node.age, true, out GeologicalAge from) && from > age) return false;
             foreach (var pre in node.prerequisites ?? new List<string>())
                 if (!BuyWithPrerequisites(player, def, traits, tree, tree.Get(pre), isFunction, age, depth + 1)) return false;
-            int cost = EpCosts.Of(node.cost); // grows with the periods, as for the human
+            int cost = TraitBonuses.Discounted(EpCosts.Of(node.cost), def, player.Index); // grows with the periods, as for the human
             if (Points(player.Index) < cost) return false;
             Spend(player.Index, cost);
             owned.Add(node.id);
@@ -422,7 +424,7 @@ namespace NaturalHistory.Players
             var births = WildBirths.Instance;
             var cells = HexGrid.Instance.GetNeighbors(g.Cell)
                 .Where(c => births != null ? births.CanBeBornAt(def, c)
-                                           : SpeciesColonies.FitsHabitat(def, c) && Colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, Colonies, null))
+                                           : ColonyGroup.CanPlace(def, c) && Colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, Colonies, null))
                 .ToList();
             if (cells.Count == 0) return false;
             var young = Colonies.SpawnColony(def, cells[rng.Next(cells.Count)], null, rng.Next());

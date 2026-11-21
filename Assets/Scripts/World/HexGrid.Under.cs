@@ -356,9 +356,6 @@ namespace NaturalHistory.World
 
             var rng = new System.Random(WorldSeed ^ 0x5EABED);
             var plants = new PlantPlanner(DisplayedAge, WorldSeed, cellSize, WrapWidth, Track);
-            var bedrock = new Mesh[8];
-            for (int i = 0; i < bedrock.Length; i++) bedrock[i] = Track(CreateBedrockMesh(rng));
-            Mesh Pick(Mesh[] pool) => pool[rng.Next(pool.Length)];
             // Water-plant beds vary a little across the map, but every seabed and lakebed tile is covered
             var bedOffset = new Vector3((float)rng.NextDouble(), (float)rng.NextDouble(), (float)rng.NextDouble()) * 1000f;
             float BedDensity(HexCell c)
@@ -374,7 +371,8 @@ namespace NaturalHistory.World
             {
                 if (cell.Terrain == null) continue;
                 if (!cell.IsWater && WaterBed(cell.Under)) continue; // underground lakes: open dark water, nothing growing
-                Mesh mesh = cell.Under == UnderKind.Bedrock ? Pick(bedrock)
+                bool rock = cell.Under == UnderKind.Bedrock;
+                Mesh mesh = rock ? Track(CreateBedrockMesh(cell, EdgeNeighbors(cell))) // one granite mass (see CreateBedrockMesh)
                           : cell.IsWater && cell.Under == UnderKind.Cave && cell.UnderFeature == UnderFeature.None ? Track(MapFeatureMeshes.CreateSeaCave(rng, cellSize)) // a sea cave
                           : cell.UnderFeature switch
                 {
@@ -392,12 +390,13 @@ namespace NaturalHistory.World
                 if (!Application.isPlaying) go.hideFlags = HideFlags.DontSave;
                 go.transform.SetParent(cell.transform, false);
                 go.transform.localPosition = Vector3.up * UnderSurface(cell); // on the seabed, below sea level
-                go.transform.localRotation = Quaternion.Euler(0f, 60f * rng.Next(6), 0f); // hex-filling: keep edges aligned
+                go.transform.localRotation = rock ? Quaternion.identity // sampled in map space: must not turn
+                                           : Quaternion.Euler(0f, 60f * rng.Next(6), 0f); // hex-filling: keep edges aligned
                 go.AddComponent<MeshFilter>().sharedMesh = mesh;
                 bool water = cell.Under is UnderKind.Seabed or UnderKind.Lakebed && cell.UnderFeature == UnderFeature.None;
                 var rend = go.AddComponent<MeshRenderer>();
-                rend.sharedMaterial = water ? SwayMaterial() : featureMaterial;
-                FitPropsToSeabed(cell, rend); // follow the floor's slope across the tile
+                rend.sharedMaterial = rock ? BedrockMaterial() : water ? SwayMaterial() : featureMaterial;
+                if (!rock) FitPropsToSeabed(cell, rend); // follow the floor's slope across the tile (the plateau under the rock is flat)
                 if (cell.UnderFeature == UnderFeature.Geothermal && Application.isPlaying && MapFeatureMeshes.TryGetSteamVents(mesh, out var seeps))
                     go.AddComponent<GeothermalSteam>().Init(cellSize, WorldSeed ^ cell.Coordinates.GetHashCode(), seeps, -1, underwater: true);
                 go.SetActive(false);
@@ -418,65 +417,146 @@ namespace NaturalHistory.World
             return swayMaterial;
         }
 
-        // A block of solid rock filling the hex: a jagged, faceted top standing well above the
-        // tunnels around it, with walls going down into the ground, so the bedrock reads as the
-        // walls of the maze. Faceted (own vertices per face) dark grey with lighter crests.
-        private Mesh CreateBedrockMesh(System.Random rng)
-        {
-            float R(float min, float max) => min + (float)rng.NextDouble() * (max - min);
-            float corner = cellSize * TileRadius, apo = corner * 0.8660254f;
-            var top = new Vector3[12];   // outer ring: corner i at 2i, edge midpoint at 2i + 1
-            var inner = new Vector3[6];
-            for (int j = 0; j < 12; j++)
-            {
-                float a = Mathf.Deg2Rad * 30f * j;
-                float rad = (j % 2 == 0 ? corner : apo) * R(0.97f, 1f);
-                top[j] = new Vector3(Mathf.Sin(a) * rad, cellSize * R(0.13f, 0.2f), Mathf.Cos(a) * rad);
-            }
-            for (int i = 0; i < 6; i++)
-            {
-                float a = Mathf.Deg2Rad * (60f * i + R(-12f, 12f));
-                float rad = corner * R(0.4f, 0.6f);
-                inner[i] = new Vector3(Mathf.Sin(a) * rad, cellSize * R(0.2f, 0.3f), Mathf.Cos(a) * rad);
-            }
-            var centre = new Vector3(R(-0.05f, 0.05f) * cellSize, cellSize * R(0.26f, 0.34f), R(-0.05f, 0.05f) * cellSize);
-            float bottom = -cellSize * 0.2f;
+        // Solid bedrock as one mass of rock rather than hex blocks: each bedrock tile's piece fills
+        // the whole hex (no groove), and its top, strata and skin are all sampled in map space, so
+        // neighbouring pieces meet seamlessly. Only where the rock meets an open tile does it show a
+        // wall, and that edge wanders in and out instead of running along the hex side. The top is
+        // broad, gently terraced sheets; the walls step out a little band by band. The look comes
+        // from real rock textures (RockMass.shader): granite, limestone, basalt and sandstone, each
+        // covering its own broad regions and blending into the next (weights in the vertex colour).
+        private const int BedrockRings = 4, BedrockBands = 4;
+        private static readonly string[] BedrockSkins = { "CliffGranite", "CliffLimestone", "CliffBasalt", "CliffSandstone" };
+        private Material bedrockMaterial;
 
-            var verts = new List<Vector3>(); var colors = new List<Color>(); var tris = new List<int>();
-            void Face(Vector3 a, Vector3 b, Vector3 c, Color col)
+        private Material BedrockMaterial()
+        {
+            if (bedrockMaterial != null) return bedrockMaterial;
+            var shader = Resources.Load<Shader>("Shaders/RockMass") ?? Shader.Find("NaturalHistory/RockMass");
+            if (shader == null) return featureMaterial;
+            bedrockMaterial = new Material(shader) { name = "Bedrock", hideFlags = HideFlags.DontSave };
+            string[] slots = { "_SkinA", "_SkinB", "_SkinC", "_SkinD" };
+            for (int i = 0; i < slots.Length; i++)
             {
-                int k = verts.Count;
-                verts.Add(a); verts.Add(b); verts.Add(c);
-                colors.Add(col); colors.Add(col); colors.Add(col);
-                tris.Add(k); tris.Add(k + 1); tris.Add(k + 2);
+                var tex = Resources.Load<Texture2D>("TerrainSurfaces/" + BedrockSkins[i]);
+                if (tex != null) bedrockMaterial.SetTexture(slots[i], tex);
             }
-            Color Rock(float y) // higher is lighter: crests catch the light
+            bedrockMaterial.SetFloat("_Tiling", 0.45f / cellSize);
+            return bedrockMaterial;
+        }
+
+        private Mesh CreateBedrockMesh(HexCell cell, HexCell[] edgeNeighbors)
+        {
+            float corner = cellSize, apo = corner * 0.8660254f;
+            var here = cell.Coordinates.ToWorldPosition(cellSize);
+            float Noise(Vector3 local, float freq, float shift)
             {
-                float v = Mathf.Lerp(0.26f, 0.42f, Mathf.InverseLerp(0.1f, 0.34f, y / cellSize)) * R(0.92f, 1.08f);
-                return new Color(v, v * 0.97f, v * 0.93f);
+                var p = OnMapLoop(new Vector2(here.x + local.x, here.z + local.z)) * (freq / cellSize)
+                      + new Vector3(shift, shift * 0.37f, shift * 1.91f) + Vector3.one * (WorldSeed % 911);
+                return PerlinNoise3D.Sample(p.x, p.y, p.z);
             }
-            for (int i = 0; i < 6; i++)
+            // Height of the top: broad sheets, softly stepped, with a finer roughness on them
+            float Top(Vector3 local)
             {
-                int n = (i + 1) % 6;
-                Vector3 a = inner[i], b = top[2 * i], c = top[2 * i + 1], d = top[(2 * i + 2) % 12];
-                Face(centre, a, inner[n], Rock((centre.y + a.y + inner[n].y) / 3f));
-                Face(a, b, c, Rock((a.y + b.y + c.y) / 3f));
-                Face(a, c, inner[n], Rock((a.y + c.y + inner[n].y) / 3f));
-                Face(inner[n], c, d, Rock((inner[n].y + c.y + d.y) / 3f));
+                float q = (0.5f + 0.7f * Noise(local, 0.5f, 11f)) * 2.5f;
+                float step = Mathf.Floor(q) + Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(0.55f, 1f, q - Mathf.Floor(q)));
+                return cellSize * (0.16f + 0.06f * Mathf.Clamp(step, 0f, 3f) + 0.02f * Noise(local, 2.2f, 23f));
             }
-            for (int j = 0; j < 12; j++)
+            Vector3 TopNormal(Vector3 local)
             {
-                Vector3 t0 = top[j], t1 = top[(j + 1) % 12];
-                Vector3 b0 = new(t0.x, bottom, t0.z), b1 = new(t1.x, bottom, t1.z);
-                var wall = Rock(0f) * 0.85f;
-                Face(t0, b0, t1, wall);
-                Face(t1, b0, b1, wall);
+                float e = cellSize * 0.04f;
+                float dx = Top(local + new Vector3(e, 0f, 0f)) - Top(local - new Vector3(e, 0f, 0f));
+                float dz = Top(local + new Vector3(0f, 0f, e)) - Top(local - new Vector3(0f, 0f, e));
+                return new Vector3(-dx, 2f * e, -dz).normalized;
             }
+            // Which rock: four broad regional fields, the strongest dominating, blended at the edges
+            Color Skin(Vector3 local)
+            {
+                var w = new Vector4(Noise(local, 0.07f, 101f), Noise(local, 0.07f, 211f), Noise(local, 0.07f, 307f), Noise(local, 0.07f, 401f));
+                for (int i = 0; i < 4; i++) w[i] = Mathf.Exp(9f * w[i]);
+                float sum = w.x + w.y + w.z + w.w;
+                return new Color(w.x / sum, w.y / sum, w.z / sum, w.w / sum);
+            }
+            bool Open(int e) => edgeNeighbors[e] != null && edgeNeighbors[e].Terrain != null && edgeNeighbors[e].Under != UnderKind.Bedrock;
+            var cornerDir = new Vector3[6];
+            for (int i = 0; i < 6; i++) cornerDir[i] = new Vector3(Mathf.Sin(Mathf.Deg2Rad * 60f * i), 0f, Mathf.Cos(Mathf.Deg2Rad * 60f * i));
+            Vector3 EdgeNormal(int e) => new(Mathf.Sin(Mathf.Deg2Rad * (60f * e + 30f)), 0f, Mathf.Cos(Mathf.Deg2Rad * (60f * e + 30f)));
+
+            // Point b of ring a in sector s (between corners s and s + 1); on an open edge the rim
+            // wanders in and out, never at the corners (shared with the neighbouring pieces)
+            Vector3 Point(int s, int a, int b)
+            {
+                if (a == 0) return Vector3.zero;
+                var p = Vector3.Lerp(cornerDir[s], cornerDir[(s + 1) % 6], b / (float)a) * (corner * a / BedrockRings);
+                if (a == BedrockRings && b > 0 && b < a && Open(s))
+                    p += EdgeNormal(s) * (apo * Mathf.Lerp(-0.16f, 0.1f, 0.5f + 0.8f * Noise(p, 1.7f, 41f)) * Mathf.Sin(Mathf.PI * b / a));
+                return p;
+            }
+
+            var verts = new List<Vector3>(); var normals = new List<Vector3>(); var colors = new List<Color>();
+            var uv0 = new List<Vector2>(); var uv1 = new List<Vector2>(); var tris = new List<int>();
+            int Vertex(Vector3 p, Vector3 n)
+            {
+                verts.Add(p); normals.Add(n); colors.Add(Skin(p));
+                uv0.Add(new Vector2(here.x + p.x, here.z + p.z)); // map position: the skin runs on across tiles
+                uv1.Add(new Vector2(p.y, 0f));
+                return verts.Count - 1;
+            }
+
+            // The top: each sector a triangular grid sharing its vertices, smooth
+            var top = new Dictionary<(int, int, int), int>();
+            int TopVertex(int s, int a, int b)
+            {
+                // the same point seen from the next sector: ring a's last point of sector s is the first of s + 1
+                if (a == 0) { s = 0; b = 0; }
+                else if (b == a) { s = (s + 1) % 6; b = 0; }
+                if (top.TryGetValue((s, a, b), out int i)) return i;
+                var p = Point(s, a, b);
+                p.y = Top(p);
+                return top[(s, a, b)] = Vertex(p, TopNormal(p));
+            }
+            for (int s = 0; s < 6; s++)
+                for (int a = 0; a < BedrockRings; a++)
+                    for (int b = 0; b <= a; b++)
+                    {
+                        int i0 = TopVertex(s, a, b), i1 = TopVertex(s, a + 1, b), i2 = TopVertex(s, a + 1, b + 1);
+                        tris.Add(i0); tris.Add(i1); tris.Add(i2);
+                        if (b < a) { int i3 = TopVertex(s, a, b + 1); tris.Add(i0); tris.Add(i2); tris.Add(i3); }
+                    }
+
+            // Walls where the rock meets an open tile: bands, each a little proud of the one above
+            float bottom = -cellSize * 0.2f;
+            Vector3 Level(int s, int b, int k)
+            {
+                var p = Point(s, BedrockRings, b);
+                float h = Top(p);
+                if (k == BedrockBands) return new Vector3(p.x, h, p.z);
+                float t = k / (float)BedrockBands;
+                float y = Mathf.Lerp(bottom, h, t) + (k > 0 ? 0.015f * cellSize * Noise(p, 3f, 71f + k) : 0f);
+                float ledge = k > 0 ? apo * 0.03f * (BedrockBands - k) * (0.6f + 0.4f * Noise(p, 2f, 83f + k)) * Mathf.Sin(Mathf.PI * b / BedrockRings) : 0f;
+                return new Vector3(p.x, y, p.z) + EdgeNormal(s) * ledge;
+            }
+            void Quad(Vector3 t0, Vector3 t1, Vector3 b0, Vector3 b1)
+            {
+                var n = Vector3.Cross(b0 - t0, t1 - t0).normalized;
+                int i0 = Vertex(t0, n), i1 = Vertex(b0, n), i2 = Vertex(t1, n), i3 = Vertex(b1, n);
+                tris.Add(i0); tris.Add(i1); tris.Add(i2);
+                tris.Add(i2); tris.Add(i1); tris.Add(i3);
+            }
+            for (int s = 0; s < 6; s++)
+            {
+                if (!Open(s)) continue;
+                for (int b = 0; b < BedrockRings; b++)
+                    for (int k = 0; k < BedrockBands; k++)
+                        Quad(Level(s, b, k + 1), Level(s, b + 1, k + 1), Level(s, b, k), Level(s, b + 1, k));
+            }
+
             var mesh = new Mesh { name = "Bedrock" };
             mesh.SetVertices(verts);
+            mesh.SetNormals(normals);
             mesh.SetColors(colors);
+            mesh.SetUVs(0, uv0);
+            mesh.SetUVs(1, uv1);
             mesh.SetTriangles(tris, 0);
-            mesh.RecalculateNormals();
             mesh.RecalculateBounds();
             return mesh;
         }

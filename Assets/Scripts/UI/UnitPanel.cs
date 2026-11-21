@@ -17,7 +17,8 @@ namespace NaturalHistory.UI
     {
         private readonly VisualElement panel, portrait;
         private readonly Label nameLabel, detailLabel;
-        private readonly Button reproduceButton, evolveButton, skipButton;
+        private readonly Button reproduceButton, evolveButton, skipButton, restButton;
+        private readonly Label restTip;
 
         public OwnedCopy Copy { get; private set; }
 
@@ -39,13 +40,49 @@ namespace NaturalHistory.UI
 
             root.Q<Button>("unit-functions").clicked += () => ShowTree(ProgressionManager.Instance?.Morphology);
             root.Q<Button>("unit-behaviors").clicked += () => ShowTree(ProgressionManager.Instance?.Ethology);
-            UiIcons.Decorate(root.Q<Button>("unit-functions"), UiIcons.Functions);
-            UiIcons.Decorate(root.Q<Button>("unit-behaviors"), UiIcons.Behaviors);
+            // in the trees' colours, glowing while this animal's species has something to acquire or become
+            bool Focused() => Copy != null && ProgressionManager.Instance?.Species?.id == Copy.species;
+            ThemedButtons.Apply(root.Q<Button>("unit-functions"), ThemedButtons.Theme.Functions, () => Focused() && ThemedButtons.TraitsReady(ProgressionManager.Instance.Morphology));
+            ThemedButtons.Apply(root.Q<Button>("unit-behaviors"), ThemedButtons.Theme.Behaviors, () => Focused() && ThemedButtons.TraitsReady(ProgressionManager.Instance.Ethology));
+            ThemedButtons.Apply(root.Q<Button>("unit-evolve"), ThemedButtons.Theme.Evolution, () => Copy != null && ThemedButtons.EvolutionReady(new[] { Copy }));
             UiIcons.Decorate(root.Q<Button>("unit-reproduce"), UiIcons.Reproduce);
-            UiIcons.Decorate(root.Q<Button>("unit-evolve"), UiIcons.Evolve);
             reproduceButton.clicked += OnReproduce;
             evolveButton.clicked    += () => { if (Copy != null) OpenEvolve?.Invoke(Copy); };
             skipButton.clicked      += () => { if (Copy?.group != null) UnitCycle.Instance?.Skip(Copy.group); };
+            // Station: stay put until given an order, which is the only way to heal
+            // (ColonyGroup.Stationed, BeginTurn); clicked again, it is ready for orders again
+            restButton = new Button(() =>
+            {
+                var g = Copy?.group;
+                if (g == null) return;
+                g.Stationed = !g.Stationed;
+                if (g.Stationed)
+                {
+                    Message?.Invoke(Loc.F("Stationed: heals {0}% HP each turn it stays", Mathf.RoundToInt(HealShare(g) * 100f)));
+                    UnitCycle.Instance?.Skip(g); // on to the next animal awaiting orders
+                }
+                Refresh();
+            }) { name = "unit-station" };
+            restButton.AddToClassList("unit-button");
+            skipButton.parent.Insert(skipButton.parent.IndexOf(skipButton) + 1, restButton);
+            // what staying does, under the pointer (UI Toolkit's own tooltips only show in the Editor)
+            restTip = new Label { pickingMode = PickingMode.Ignore };
+            restTip.AddToClassList("zoology-tip");
+            restTip.AddToClassList("hidden");
+            root.Add(restTip);
+            restButton.RegisterCallback<PointerEnterEvent>(e =>
+            {
+                var g = Copy?.group;
+                if (g == null) return;
+                restTip.text = g.Stationed
+                    ? Loc.T("Stationed. Click to give it orders again (any order also ends it).")
+                    : Loc.F("Stay here until ordered: only stationed animals heal, {0}% of their HP each turn (from the turn after they last acted).", Mathf.RoundToInt(HealShare(g) * 100f));
+                restTip.RemoveFromClassList("hidden");
+                restTip.BringToFront();
+                PlaceTip(root, e.position);
+            });
+            restButton.RegisterCallback<PointerMoveEvent>(e => PlaceTip(root, e.position));
+            restButton.RegisterCallback<PointerLeaveEvent>(_ => restTip.AddToClassList("hidden"));
         }
 
         // Polled every frame: follows the group selected on the map
@@ -92,11 +129,30 @@ namespace NaturalHistory.UI
             detailLabel.text = $"{def.scientificName}  ·  {copies}\n{combat}\n{breed}  ·  {evolve}"
                              + (abilities.Length > 0 ? "\n" + Loc.F("Abilities: {0}", abilities) : "");
 
-            reproduceButton.SetEnabled(wait == 0 && Copy.group.HasActions() && Evolution.ReproduceCell(Copy) != null && Evolution.CanAffordReproduce(Copy));
+            reproduceButton.SetEnabled(wait == 0 && (Copy.group.HasActions() || Evolution.BreedsFree(Copy)) && Evolution.ReproduceCell(Copy) != null && Evolution.CanAffordReproduce(Copy));
             evolveButton.EnableInClassList("ready", ready > 0);
             evolveButton.SetEnabled(total > 0);
             skipButton.SetEnabled(UnitCycle.Instance != null && UnitCycle.Instance.Awaits(Copy.group));
+            var group = Copy.group;
+            // Station / its undoing, for your own groups
+            restButton.style.display = group.Owner != null && group.Owner.IsHuman ? DisplayStyle.Flex : DisplayStyle.None;
+            restButton.text = group.Stationed ? Loc.T("Stationed") : Loc.T("Station");
+            restButton.EnableInClassList("selected", group.Stationed);
         }
+
+        // The tip above the pointer, kept inside the screen
+        private void PlaceTip(VisualElement root, Vector2 pointer)
+        {
+            var area = root.worldBound;
+            var size = restTip.layout.size;
+            float x = pointer.x + 16f, y = pointer.y - (float.IsNaN(size.y) ? 40f : size.y) - 12f;
+            if (!float.IsNaN(size.x) && x + size.x > area.xMax - 8f) x = pointer.x - size.x - 16f;
+            restTip.style.left = x - area.xMin;
+            restTip.style.top  = Mathf.Max(0f, y - area.yMin);
+        }
+
+        private static float HealShare(ColonyGroup g) =>
+            ColonyGroup.HealPerTurn * (Abilities.Has(g, Abilities.Regeneration) ? 2f : 1f);
 
         private void ShowTree(ProgressionTree tree)
         {

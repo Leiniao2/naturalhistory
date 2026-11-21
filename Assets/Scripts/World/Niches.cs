@@ -111,6 +111,7 @@ namespace NaturalHistory.World
                 case MapLayer.Under when cell.IsWater:
                     yield return Niche.Plankton; yield return Niche.FilterFeeder; yield return Niche.Predator; yield return Niche.Benthic;
                     if (GrazersOn(cell)) yield return Niche.Grazer;
+                    if (!UnderView.SurfaceOpen) yield return Niche.SeaSurface; // the surface can't be shown yet
                     break;
                 case MapLayer.Under:
                     yield return Niche.Underground; break;

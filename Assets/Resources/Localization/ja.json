@@ -1,6 +1,2670 @@
 {
  "entries": [
   {
+   "k": "A 'cystoid', an extinct stalked echinoderm from the Silurian of New York, Ontario and Britain. Its egg-shaped body, about 3-4 cm across, was built of large six-sided plates crossed by diamond-shaped pore patches used for breathing. A ring of long, thin arms around the mouth on top gathered food from the water.",
+   "v": "「シストイド(ウミリンゴ類)」と呼ばれる絶滅した有柄棘皮動物で、アメリカのニューヨーク州、カナダのオンタリオ州、イギリスのシルル紀から知られる。直径約3-4cmの卵形の体は大きな六角形の板でできており、板をまたいで呼吸に使われるひし形の孔の集まりがあった。上部の口のまわりに並ぶ長く細い腕で、水中から餌を集めていた。"
+  },
+  {
+   "k": "A 3-metre dolphin-like whale from the Miocene seas of the North Atlantic. Its long beak held pointed front teeth and triangular, serrated cheek teeth like a shark's, from which it gets its name. It caught fish and squid and could probably already find them by echolocation.",
+   "v": "中新世の北大西洋にいた体長3メートルのイルカに似たクジラ。長い吻には尖った前歯と、サメのようなぎざぎざの三角形の頬歯が並び、それが名前の由来となった。魚やイカを捕らえ、すでにエコーロケーションで獲物を探せたと考えられる。"
+  },
+  {
+   "k": "A 3.5-metre snake from Late Cretaceous India, found fossilised coiled around a crushed sauropod egg next to a newly hatched baby. It could not open its jaws as wide as modern snakes, but it was big enough to raid sauropod nesting grounds and swallow the hatchlings. Its name means ancient gape in Sanskrit.",
+   "v": "白亜紀後期のインドにいた全長3.5メートルのヘビで、つぶれた竜脚類の卵に巻きつき、かえったばかりの赤ちゃんのそばで化石になって見つかった。現代のヘビほど大きく口を開けられなかったが、竜脚類の営巣地を襲ってひなを丸のみにするには十分な大きさだった。名前はサンスクリット語で「古代の大口」を意味する。"
+  },
+  {
+   "k": "A 9-metre duck-billed dinosaur whose name means good mother lizard. Huge nesting colonies found in Montana show that it laid eggs in mound nests and cared for its babies until they could leave the nest. It moved in big herds and fed on low plants with its broad, toothless beak and grinding cheek teeth.",
+   "v": "全長9メートルのカモノハシ竜で、名前は「よい母親トカゲ」という意味。モンタナで見つかった大きな営巣地から、土を盛った巣に卵を産み、子どもが巣立てるようになるまで世話をしていたことがわかっている。大きな群れで移動し、幅広い歯のないくちばしとすりつぶす頬歯で低い植物を食べた。"
+  },
+  {
+   "k": "A 9-metre early tyrannosaur from the Early Cretaceous of China, the largest dinosaur known for certain to have had feathers. Its body was covered in long shaggy filaments that probably kept it warm in the cool winters of its forests. It hunted sauropods and other large plant-eaters, perhaps in groups.",
+   "v": "中国の白亜紀前期にいた全長9メートルの初期のティラノサウルス類で、羽毛があったことが確かな恐竜としては最大。体は長くもじゃもじゃした繊維状の羽毛におおわれ、森の寒い冬に体を温めていたのだろう。竜脚類やほかの大型の植物食恐竜を、もしかすると群れで狩っていた。"
+  },
+  {
+   "k": "A Cambrian comb jelly from the Burgess Shale of Canada, a jelly-like drifting animal with twenty-four rows of beating comb plates instead of the eight of living comb jellies. It drifted through the water catching tiny animals, but its body is soft and fragile.",
+   "v": "カナダのバージェス頁岩から見つかるカンブリア紀のクシクラゲで、ゼリー状の漂う動物。現生のクシクラゲの8列に対し、24列の櫛板が並んで波打っていた。水中を漂って小さな動物を捕らえたが、体は柔らかくもろい。"
+  },
+  {
+   "k": "A Jurassic coelacanth about 50 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of the living Latimeria. It had fleshy, limb-like lobed fins, a big head with a wide mouth and the coelacanths' three-lobed tail with a small extra lobe in the middle. It lurked near the bottom and ambushed fish and other small animals.",
+   "v": "ドイツ南部の後期ジュラ紀、約1億5000万年前の潟湖にすんだ全長約50センチのシーラカンスで、現生のラティメリアの親戚。肉質で手足のような肉鰭、口の大きな大きな頭、そして中央に小さな余分の葉がある、シーラカンス特有の三つに分かれた尾びれをもっていた。海底近くに潜み、魚などの小動物を待ち伏せした。"
+  },
+  {
+   "k": "A Late Devonian conodont, a small eel-like animal a few centimetres long with large eyes, known mainly from its tiny comb-like teeth. Its broad, palm-shaped tooth plates are so common and changed so quickly that they are used to date Late Devonian rocks worldwide. It swarmed in the open sea, catching small prey, and the genus died out in the crises at the end of the Devonian.",
+   "v": "デボン紀後期のコノドントで、大きな目を持つ体長数センチのウナギのような小動物。主に小さなくし状の歯で知られている。幅広い手のひら形の歯の板はとても多く、急速に形を変えたため、世界中のデボン紀後期の岩石の年代決定に使われている。外洋で群れをなして小さな獲物を捕らえ、この属はデボン紀末の危機で絶滅した。"
+  },
+  {
+   "k": "A badger-sized relative of marsupials about 60 centimetres long including its tail, from the last days of the dinosaurs in North America. It had the strongest bite for its size of any known mammal, with crushing teeth able to break snail shells, bones and small turtles. It probably hunted along streams like an otter.",
+   "v": "アナグマほどの大きさの有袋類の親戚で、尾を含めて体長約60センチ。北アメリカで恐竜時代の最後の時期に生きていた。体の大きさの割には知られている哺乳類で最も強くかむ力を持ち、すりつぶす歯でカタツムリの殻や骨、小さなカメまでかみ砕けた。カワウソのように小川沿いで狩りをしていたらしい。"
+  },
+  {
+   "k": "A barrel-shaped giant up to 5 m long and over 3 tonnes, and the closest living relative of whales. It spends the day in rivers and lakes with only its eyes, ears and nostrils above water and comes out at night to graze. Its huge jaws open almost 180 degrees and carry tusk-like canines, making it one of Africa's most dangerous animals; in warm Ice Age spells hippos lived as far north as Britain.",
+   "v": "体長5m、体重3トンを超えるたる形の巨獣で、クジラに最も近い現生の親類。昼は川や湖で目と耳と鼻孔だけを水面に出して過ごし、夜に上陸して草を食べる。ほぼ180度開く巨大なあごに牙のような犬歯をもち、アフリカで最も危険な動物の一つ。氷河期の温暖な時期にはイギリスにまで住んでいた。"
+  },
+  {
+   "k": "A beaver the size of a black bear, about 2 m long and up to 100 kg, that lived in the lakes and swamps of Ice Age North America. Its incisors were up to 15 cm long, but it probably did not fell trees or build dams: it ate soft water plants. It died out about 10,000 years ago as the climate dried.",
+   "v": "アメリカクロクマほどの大きさのビーバーで、体長約2m、体重100kgに達し、氷河期の北アメリカの湖や沼地にすんでいた。門歯は長さ15cmにもなったが、木を倒したりダムを作ったりはせず、柔らかい水草を食べていたらしい。約1万年前、気候の乾燥とともに絶滅した。"
+  },
+  {
+   "k": "A big, smooth trilobite up to about 20 cm long from mid-Silurian seas of North America and England. Its triangular head ended in a blunt, upturned snout, which gives it its name, 'dolphin head'. Its eyes were small and its shell was broad and smooth, with a pointed tail shield. It ploughed through soft mud, feeding on buried scraps.",
+   "v": "全長約20cmに達する大型で滑らかな三葉虫で、北アメリカとイングランドのシルル紀中期の海から知られる。三角形の頭は先端が鈍く反り上がった吻になっており、これが種名の「イルカの頭」の由来である。目は小さく、殻は幅広く滑らかで、尾板は尖っていた。柔らかい泥の中を掘り進み、埋もれた有機物のかけらを食べていた。"
+  },
+  {
+   "k": "A big, thick relative of the sand dollars from the Miocene and Pliocene seas around the Mediterranean and Red Sea. Its heavy, high-domed test, up to 15 centimetres across, was covered in a felt of tiny spines and marked on top with a five-petalled flower of breathing tube feet. It lived half-buried in sand, picking food particles from the sediment.",
+   "v": "中新世から鮮新世の地中海と紅海周辺の海にいた、スカシカシパンの仲間の大きく分厚いウニ。直径15センチメートルに達する重く高いドーム形の殻は細かいとげの毛皮におおわれ、上面には呼吸用の管足が描く五弁の花模様があった。砂に半分もぐって暮らし、堆積物から餌の粒を拾って食べた。"
+  },
+  {
+   "k": "A blastoid, one of an extinct group of stalked echinoderms related to sea lilies, and one of the most common fossils of the Early Carboniferous limestones of North America, about 335 million years ago. Its pear-shaped, five-sided cup, only 2 to 3 centimetres long, sat on a short stem and bore five petal-shaped food grooves fringed with fine, thread-like arms. It drew water in through slits along the grooves, filtering out food and breathing at the same time.",
+   "v": "ウミユリに近縁な、柄をもつ絶滅した棘皮動物のグループであるウミツボミの一種で、約3億3500万年前の北アメリカの石炭紀前期の石灰岩で最もよく見つかる化石の一つ。長さわずか2〜3センチメートルの洋ナシ形で五角形の萼は短い茎の上にあり、細い糸のような腕に縁取られた花びら形の食物溝を5本もっていた。溝に沿った切れ目から水を吸い込み、食物をこし取ると同時に呼吸も行っていた。"
+  },
+  {
+   "k": "A bonytongue fish about 50 cm long from the early Eocene Green River lakes of Wyoming, related to the arowanas of tropical rivers today. It had a deep, flattened body, a large upturned mouth with sharp teeth and long pectoral fins. It hunted smaller fish such as Knightia near the surface.",
+   "v": "始新世前期のワイオミング州グリーンリバー湖群にすんでいた体長約50cmのアロワナの仲間（オステオグロッスム類）で、今日の熱帯の川のアロワナの親戚。平たく体高のある体、鋭い歯のある大きく上向きの口、長い胸びれをもっていた。水面近くでナイティアのような小魚を狩った。"
+  },
+  {
+   "k": "A brachiopod with a very thin, broad, D-shaped shell about 4 cm wide, with a long straight hinge and fine radiating ribs. Its two valves nested one inside the other, so the shell was barely thicker than a coin. It lay loose on soft mud, its wide, flat shell keeping it from sinking, and filtered food from the water.",
+   "v": "幅約4センチの、非常に薄く幅広いD字形の殻をもつ腕足動物で、長くまっすぐな蝶番と細かい放射肋がある。2枚の殻が入れ子のように重なっていたため、殻全体の厚みは硬貨ほどしかなかった。やわらかい泥の上にそのまま横たわり、広く平たい殻のおかげで沈み込まずに、水中から餌をこし取っていた。"
+  },
+  {
+   "k": "A bristle worm a few centimetres long from the Silurian of England, preserved in three dimensions with its soft parts. Its slender body had about forty segments, each with a pair of two-branched paddles bearing fans of fine bristles. It crawled and swam over and through the sea floor, rowing with its paddles.",
+   "v": "イングランドのシルル紀から知られる体長数cmの多毛類(ゴカイの仲間)で、軟体部が立体的に保存されている。細長い体には約40の体節があり、各体節には細かな剛毛の束を備えた二叉のパドル状の付属肢が一対ずつあった。パドルで水をこぎながら、海底の上や中をはったり泳いだりしていた。"
+  },
+  {
+   "k": "A brittle star about 10-15 cm across from the Early Jurassic seas of England, about 190 million years ago. It had a rounded central disc and five long, slender, spiny arms that it rowed in snake-like strokes across the sea floor, picking up food particles. Huge crowds of them lived together, and a single storm could bury thousands alive in sand, preserving them complete.",
+   "v": "イングランドの前期ジュラ紀、約1億9000万年前の海にすんだ、直径約10〜15センチのクモヒトデ。丸い中央の盤と、とげのある細長い5本の腕をもち、腕をヘビのようにくねらせて海底を進み、食べ物の粒を拾った。大群で暮らしており、一度の嵐で何千匹もが生きたまま砂に埋もれ、完全な姿で保存された。"
+  },
+  {
+   "k": "A brush-footed butterfly with a wingspan of about 5 cm from the late Eocene lake beds of Florissant, Colorado, one of the finest fossil butterflies ever found. Even the pattern of its wings survives: dark brown with pale spots and small eyespots near the edge of the hind wings. As an adult it drank nectar from flowers.",
+   "v": "コロラド州フロリサントの始新世後期の湖成層から見つかった、翅を広げて約5cmのタテハチョウの仲間で、これまでに見つかった最も見事なチョウの化石の一つ。翅の模様まで残っていて、こげ茶色に淡い斑点があり、後ろ翅の縁近くに小さな目玉模様があった。成虫は花の蜜を吸った。"
+  },
+  {
+   "k": "A bryozoan colony of countless tiny filter-feeding animals, growing as flattened, branching fronds a few centimetres tall. Its surface is dotted with regular star-shaped patches, which gave it its name, where filtered water flowed out of the colony. It was common in the shallow seas of what is now the Cincinnati region.",
+   "v": "無数の小さなろ過食性の個虫からなるコケムシの群体で、高さ数センチの平たく枝分かれした葉状に成長した。表面には規則的に星形の斑紋が散らばっており、これが名前の由来で、ろ過した水はそこから群体の外へ流れ出ていた。現在のシンシナティ周辺の浅い海でよく見られた。"
+  },
+  {
+   "k": "A bryozoan, a colony of thousands of tiny filter-feeding animals living in tubes, from the Silurian of North America and Britain. The tubes were packed into slender, forking stony branches a few millimetres thick, forming small bushy thickets on the sea floor. The colony grew by budding new members at the tips of its branches.",
+   "v": "コケムシの一種で、管の中に住む何千もの小さなろ過食性の動物からなる群体。北アメリカとイギリスのシルル紀から知られる。管は太さ数mmの細く枝分かれした石灰質の枝にぎっしり詰まっており、海底に小さな茂みを作っていた。群体は枝の先端で新しい個体を出芽させて成長した。"
+  },
+  {
+   "k": "A bulky, beaked plant-eater 5-7 metres long from the Late Jurassic of North America, about 155-150 million years ago, an early relative of Iguanodon. It cropped low plants with a toothless horny beak and chewed them with rows of cheek teeth. It could run on its hind legs but often walked on all fours, its hands bearing hoof-like fingers. Its name means 'flexible lizard'.",
+   "v": "北アメリカの後期ジュラ紀、約1億5500万〜1億5000万年前の、くちばしをもつがっしりした植物食恐竜で、全長5〜7メートル。イグアノドンの初期の親戚である。歯のない角質のくちばしで低い植物を摘み取り、並んだ頬歯でかみ砕いた。後ろ脚で走ることもできたが、しばしば四足で歩き、手にはひづめ状の指があった。名前は「曲がるトカゲ」を意味する。"
+  },
+  {
+   "k": "A bushy, cabbage-like rangeomorph up to about 20 cm across from England and Newfoundland, about 565 million years old. Many spoon-shaped frondlets fanned out from a single base, each branching again and again into smaller copies of itself. Its overlapping leaves soak up damage and regrow, but it cannot strike back.",
+   "v": "イングランドとニューファンドランドで見つかった、差し渡し約20cmに達する茂みのようなキャベツ形のランゲオモルフ類で、約5億6500万年前に生きていた。一つの基部から多数のスプーン形の小葉が四方に広がり、それぞれが自分の小さな複製へと何度も枝分かれしていた。重なり合う葉はダメージを吸収して再生するが、反撃する手段はない。"
+  },
+  {
+   "k": "A calcified tube a few centimetres long from China, Namibia and other places, about 545 million years old. Its wall was built of many thin, wrinkled layers nested one inside the next, and it lived beside Cloudina in some of the first reefs built by animals with skeletons. Its mineral tube made it hard to crush, an early defence against the first predators.",
+   "v": "中国やナミビアなどで見つかった、長さ数cmの石灰質の管で、約5億4500万年前に生きていた。管壁は入れ子になった多数の薄くしわの寄った層でできており、骨格を持つ動物が築いた最初の礁でクラウディナと並んで暮らしていた。鉱物の管は押しつぶされにくく、最初の捕食者に対する初期の防御だった。"
+  },
+  {
+   "k": "A cat-sized relative of mammals, about 50 centimetres long, from the Middle Triassic of Argentina, about 235 million years ago. Unlike most earlier cynodonts it ate plants, grinding them with broad, ridged cheek teeth, and it had a short, deep head and strong jaw muscles. Many skeletons have been found together, so it may have lived in groups.",
+   "v": "中期三畳紀、約2億3500万年前のアルゼンチンから見つかった、体長約50センチメートル、ネコほどの大きさの哺乳類の親戚。それ以前の多くのキノドン類と違って植物を食べ、幅広くうねのある頬歯ですりつぶした。頭は短く高さがあり、あごの筋肉は強かった。多くの骨格がまとまって見つかっていることから、群れで暮らしていたのかもしれない。"
+  },
+  {
+   "k": "A chicken-sized bird about 40 cm long from the late Paleocene of North America, a distant relative of ostriches, emus and tinamous that could still fly. It had a long, slightly down-curved beak with sensitive pits at the tip, which it probed into soft ground for worms and insects, much as kiwis do today. Its kin show that the flightless giant birds descend from flying ancestors.",
+   "v": "暁新世後期の北アメリカにすんでいたニワトリほどの大きさ、体長約40cmの鳥で、ダチョウやエミュー、シギダチョウの遠い親戚だが、まだ飛ぶことができた。先端に敏感な小穴のある、長くわずかに下に曲がったくちばしを、今日のキーウィのように柔らかい地面に差し込んでミミズや昆虫を探した。その仲間は、飛べない巨鳥たちが飛ぶ祖先から生まれたことを示している。"
+  },
+  {
+   "k": "A chiton a few centimetres long with a row of eight overlapping shell plates on its back, like all chitons, but with rows of long, hollow spines sticking out from them. It is the oldest chiton known from a complete specimen. It crept over the sea floor on its muscular foot, scraping algae from surfaces with its rasping tongue, while its spines kept predators at bay.",
+   "v": "体長数センチのヒザラガイで、ほかのヒザラガイと同じく背中に8枚の殻板が重なって並ぶが、そこから長く中空の棘が何列も突き出していた。完全な標本が知られている最古のヒザラガイである。筋肉質の足で海底をゆっくりはい、歯舌で表面の藻類をかき取って食べ、棘で捕食者を寄せつけなかった。"
+  },
+  {
+   "k": "A coelacanth about 30 centimetres long, common in the coal-swamp waters and coastal lagoons of North America and Europe about 310 million years ago. It already had the shape that survives today in the living coelacanth: a stout body, fleshy lobed fins on stalks and a three-lobed tail with a small tuft in the middle. Fossils of tiny young still carrying yolk sacs show how it grew up, and it hunted small fish and shrimps.",
+   "v": "体長約30センチメートルのシーラカンスで、約3億1000万年前の北アメリカとヨーロッパの石炭湿地の水域や沿岸の潟によく見られた。すでに現生のシーラカンスに受け継がれている体形をもち、がっしりした体、柄のある肉質の葉状のひれ、中央に小さな房のある3つに分かれた尾びれをそなえていた。まだ卵黄嚢を付けた小さな幼魚の化石から成長の様子がわかっており、小魚やエビを捕らえていた。"
+  },
+  {
+   "k": "A coelacanth from the coastal seas of Madagascar in the Early Triassic, about 250 million years ago. It had a deep body, a large head, fleshy lobed fins that moved like legs and the three-lobed tail typical of coelacanths. Its relatives survived to the present day: the living coelacanth was thought extinct until one was caught off South Africa in 1938.",
+   "v": "前期三畳紀、約2億5000万年前のマダガスカルの沿岸の海にすんでいたシーラカンス。体高があり、頭は大きく、脚のように動く肉質の葉状のひれと、シーラカンスに特有の三つに分かれた尾を持っていた。その仲間は現在まで生き残っている。現生のシーラカンスは絶滅したと考えられていたが、1938年に南アフリカ沖で1匹が捕獲された。"
+  },
+  {
+   "k": "A colonial horn coral that helped build the reefs of the Permian Tethys Ocean, from Asia to Europe. Its colonies were bushes of many slender, branching tubes a few millimetres thick growing up side by side, each topped by a cup with radiating ridges from which a small polyp caught food with its tentacles. Like all horn corals it disappeared in the end-Permian extinction.",
+   "v": "アジアからヨーロッパまで、ペルム紀のテチス海の礁づくりに加わった群体性の四放サンゴ。群体は太さ数ミリの細く枝分かれした管が並んで立ち上がる茂みで、各管の先には放射状のひだのある杯があり、小さなポリプが触手で餌を捕らえた。すべての四放サンゴと同じく、ペルム紀末の大量絶滅で姿を消した。"
+  },
+  {
+   "k": "A colonial rugose coral forming massive, cushion-shaped heads of hundreds of long, slender corallites packed so tightly that their walls were shared and six-sided, like a honeycomb. Each corallite held a small polyp that caught tiny prey with its tentacles. Its sturdy colonies helped to build early reefs.",
+   "v": "群体性の四放サンゴで、何百もの細長い個体が密に詰まって壁を共有し、ハチの巣のような六角形になった、どっしりとしたクッション状の塊をつくった。個体の一つ一つには小さなポリプがすみ、触手で微小な獲物を捕らえていた。その頑丈な群体は初期の礁づくりに役立った。"
+  },
+  {
+   "k": "A colonial rugose coral that built thickets in the warm, clear Early Carboniferous seas of Europe, about 340 million years ago. Its colonies were bundles of slender stony tubes, each less than a centimetre wide and home to one polyp, growing up side by side and branching into clumps tens of centimetres across. The polyps caught plankton with their stinging tentacles, and the fossil colonies are among the most familiar fossils of Carboniferous limestones.",
+   "v": "約3億4000万年前、ヨーロッパの暖かく澄んだ石炭紀前期の海で茂みをつくっていた群体性の四放サンゴ。群体は細長い石質の管の束で、各管は幅1センチメートル未満で1匹のポリプが入っており、並んで上へ伸びながら枝分かれして、差し渡し数十センチメートルの塊になった。ポリプは刺胞をもつ触手でプランクトンを捕らえ、その群体化石は石炭紀の石灰岩で最もなじみ深い化石の一つである。"
+  },
+  {
+   "k": "A colony of tiny moss animals named after the screw of the Greek inventor Archimedes, from the shallow Early Carboniferous seas of North America about 335 million years ago. The colony grew a thick, corkscrew-shaped central axis up to about 20 centimetres tall, from which lacy, net-like fronds spiralled outwards like a spiral staircase. Thousands of tiny animals lived in the mesh and strained food from the water with rings of tentacles, and their stony screws pack some limestones.",
+   "v": "ギリシャの発明家アルキメデスのらせんにちなんで名づけられた小さなコケムシの群体で、約3億3500万年前の北アメリカの石炭紀前期の浅い海にすんでいた。群体は高さ最大約20センチメートルの太いコルク抜き形の中軸を伸ばし、そこからレースのような網状の葉状体がらせん階段のように外側へ渦を巻いて広がっていた。網目には何千もの小さな動物がすみ、触手の輪で水中から食物をこし取っており、その石のらせんは一部の石灰岩にぎっしり詰まっている。"
+  },
+  {
+   "k": "A crab from the Eocene seas of southern Europe, with a broad, smooth, oval shell about 10 cm wide covered in fine dots. Its strong pincers were of unequal size, the larger one able to crush shells. It lived on the warm, shallow sea floor, eating clams, snails, worms and dead animals, and its fossils are common in the limestones of northern Italy.",
+   "v": "始新世の南ヨーロッパの海にすんでいたカニで、幅約10cmの広くなめらかな楕円形の甲羅に細かい点が散らばっていた。強いはさみは左右の大きさが違い、大きい方は貝殻を砕くことができた。暖かく浅い海底で二枚貝、巻貝、ゴカイや死骸を食べ、その化石は北イタリアの石灰岩によく見つかる。"
+  },
+  {
+   "k": "A crocodile-like temnospondyl about 1.5 metres long, one of the most common large animals of the Late Carboniferous coal swamps of Bohemia in the Czech Republic, about 307 million years ago. Its long, flat skull ended at the back in a pair of short, horn-like points, and its jaws were lined with sharp teeth. It lurked at the edges of swamp lakes like a crocodile, catching fish and smaller amphibians.",
+   "v": "ワニに似た分椎類で体長約1.5メートル、約3億700万年前のチェコ・ボヘミア地方の石炭紀後期の石炭湿地で最もよく見られた大型動物の一つ。長く平たい頭骨の後端には短い角のような1対の突起があり、あごには鋭い歯が並んでいた。ワニのように湿地の湖のほとりに潜み、魚や小型の両生類を捕らえていた。"
+  },
+  {
+   "k": "A deep-bodied, almost disc-shaped fish about 35 cm long from the Early Jurassic seas of Europe, about 195 million years ago. Its body was armoured with thick, shiny, diamond-shaped scales, and its small mouth held peg-like and button-shaped teeth for crushing shellfish, sea urchins and other hard-shelled prey. It probably manoeuvred slowly around reefs and sea floors like a modern butterflyfish.",
+   "v": "ヨーロッパの前期ジュラ紀、約1億9500万年前の海にすんだ、体高が高くほとんど円盤形の魚で、全長約35センチ。全身が厚く光沢のあるひし形のうろこで覆われ、小さな口には杭状やボタン状の歯があり、貝やウニなど硬い殻をもつ獲物をかみ砕いた。現在のチョウチョウウオのように、岩礁や海底のまわりをゆっくりと巧みに泳いでいたと考えられる。"
+  },
+  {
+   "k": "A deer-sized hoofed mammal about 1 m long from the early Oligocene of North America, a distant relative of camels. Males carried three pairs of short bony knobs and flanges on the head, the tallest pair on the snout, and tusk-like upper canines; females were hornless. Males probably used them to display and fight over mates in the woodlands where they browsed.",
+   "v": "漸新世前期の北アメリカにすんでいた、シカほどの大きさの体長約1mの有蹄類で、ラクダの遠い親戚。オスは頭に三対の短い骨のこぶと板をもち、いちばん高い一対は鼻先にあり、上の犬歯は牙のようだった。メスには角がなかった。オスは林で若葉を食べながら、それらで誇示し、メスをめぐって争ったのだろう。"
+  },
+  {
+   "k": "A deer-sized hoofed mammal from the Late Miocene of North America, the last and largest of the protoceratids, distant relatives of camels. Males had a pair of horns behind the eyes and a long nose horn that forked into a Y at the tip, probably used for display and sparring. It grazed and browsed in herds on open plains.",
+   "v": "後期中新世の北アメリカにいたシカほどの大きさの有蹄類で、ラクダの遠い親戚であるプロトケラス科の最後で最大の種。オスは目の後ろに一対の角と、先端がY字に分かれた長い鼻の角を持ち、誇示や角突き合いに使ったらしい。開けた平原で群れをなして草や葉を食べた。"
+  },
+  {
+   "k": "A dog-sized marsupial lion from the Miocene forests of Australia, an earlier relative of Thylacoleo. It had a short, powerful head with blade-like cheek teeth for slicing meat and strong forelimbs for gripping prey. It probably climbed well and ambushed smaller marsupials from cover.",
+   "v": "オーストラリアの中新世の森にいた犬ほどの大きさのフクロライオンで、ティラコレオの先輩にあたる。短く力強い頭には肉を切り裂く刃のような頬歯があり、獲物をつかむ強い前肢を持っていた。木登りが得意で、物陰から小型の有袋類を待ち伏せしたと考えられる。"
+  },
+  {
+   "k": "A domed disc up to about 6 cm wide from the White Sea coast of Russia, about 555 million years old. Three broad, curved tubes crossed by fine ridges radiated from its centre, giving it the three-fold symmetry of the trilobozoans, a group with no living members. It lay on the seabed, probably feeding on particles in the water.",
+   "v": "ロシア白海沿岸で見つかった、幅約6cmに達するドーム形の円盤で、約5億5500万年前に生きていた。細かな隆起が横切る3本の幅広く湾曲した管が中心から放射状に伸び、現生の仲間がいない三放射動物類に特有の三放射相称をなしていた。海底に横たわり、おそらく水中の粒子を食べていた。"
+  },
+  {
+   "k": "A dugong relative from the Miocene shallow seas of Florida and the Caribbean, about 3 metres long. It had a fat, spindle-shaped body, paddle-like flippers and a tail fluke, and a down-turned snout with small tusks for uprooting seagrass. Slow and peaceful, it relied on its size and thick bones for protection.",
+   "v": "中新世のフロリダとカリブ海の浅い海にいたジュゴンの仲間で、体長約3メートル。太った紡錘形の体、パドルのようなひれ、尾びれを持ち、下に曲がった鼻先の小さな牙で海草を掘り起こした。動きは遅くおだやかで、大きな体と厚い骨で身を守った。"
+  },
+  {
+   "k": "A flamingo-like pterosaur with a 2.5-metre wingspan from Early Cretaceous Argentina. Its long, upturned lower jaw held about a thousand bristle-like teeth, which it used to sieve tiny crustaceans and algae from shallow lakes. It lived in big flocks, and like flamingos it may have turned pink from its food.",
+   "v": "アルゼンチンの白亜紀前期にいた、翼開長2.5メートルのフラミンゴのような翼竜。長く上に反り返った下あごには、ブラシの毛のような歯がおよそ1000本並び、浅い湖から小さな甲殻類や藻をこしとって食べた。大きな群れで暮らし、フラミンゴのように食べ物のせいでピンク色になっていたかもしれない。"
+  },
+  {
+   "k": "A flat, broad lobster about 10-15 cm long from the Late Jurassic lagoons of southern Germany, about 150 million years ago, a relative of today's blind deep-sea lobsters. Its wide, almost rectangular shell had saw-toothed edges, and all its walking legs ended in pincers, the first pair long and slender. It crawled over the soft lagoon floor feeding on carcasses and small animals, and its tracks are sometimes found leading to its body.",
+   "v": "ドイツ南部の後期ジュラ紀、約1億5000万年前の潟湖にすんだ、長さ約10〜15センチの平たく幅広いロブスターで、現在の深海にすむ目のないロブスターの親戚。幅広くほぼ長方形の殻の縁はのこぎり状で、歩脚はすべて先がはさみになり、第1脚は長く細かった。柔らかい潟湖の底を這い回って死骸や小動物を食べ、その足跡が本体まで続いて見つかることもある。"
+  },
+  {
+   "k": "A flat, oval, slug-like animal up to about 12 cm long from the Burgess Shale of Canada, with no shell or armour at all. Under its head it had a toothed feeding ribbon like the radula of snails, which it used to scrape microbial mats off the seabed, so it is seen as a very early relative of the molluscs. Soft and unprotected, it relies on its size and numbers.",
+   "v": "カナダのバージェス頁岩から見つかる、体長最大約12センチの平たい楕円形のナメクジのような動物で、殻も装甲もまったくない。頭の下にはカタツムリの歯舌に似た歯のある摂食帯があり、海底の微生物マットを削り取っていた。そのため軟体動物のごく初期の親戚と考えられている。柔らかく無防備で、体の大きさと数に頼る。"
+  },
+  {
+   "k": "A flat-headed, crocodile-like fish about 1.5 metres long from the estuaries of Late Devonian Quebec, about 380 million years ago. Its eyes sat on top of its head and it had lost the fins on its back, so it could lurk in the shallows like a crocodile. Its pectoral fin held rows of small finger bones: the oldest known digits, still wrapped in a fish's fin.",
+   "v": "約3億8000万年前、デボン紀後期のケベックの河口にすんでいた、頭の平たいワニのような魚で、体長は約1.5メートル。目は頭の上にあり、背中のひれは失われていたので、ワニのように浅瀬に潜んで待ち伏せできた。胸びれには小さな指の骨が並んでいた。魚のひれに包まれたままの、知られている限り最古の指である。"
+  },
+  {
+   "k": "A flattened jawless fish about 20 centimetres long from Early Devonian Scotland, about 410 million years ago, one of the last thelodonts. Instead of solid armour its body was covered in thousands of tiny tooth-like scales, and broad flaps stuck out behind its head. It glided over the bottom, sucking up mud and small food particles.",
+   "v": "約4億1000万年前、デボン紀前期のスコットランドにすんでいた体長約20センチの平たい無顎類で、最後のテロドゥス類の一つ。硬いよろいの代わりに、体は何千もの小さな歯のようなうろこで覆われ、頭の後ろから幅広いひれ状の張り出しが突き出ていた。水底をすべるように進み、泥や小さな食べ物の粒を吸い込んだ。"
+  },
+  {
+   "k": "A flightless giant pigeon about 1 m tall and 10-18 kg from the island of Mauritius, a close relative of the Nicobar pigeon. With no predators on the island it lost the power of flight and nested on the ground, eating fallen fruit and seeds with its big hooked bill. Sailors, rats, pigs and monkeys arriving from 1598 wiped it out within a lifetime; it was last seen in 1662.",
+   "v": "モーリシャス島にすんでいた飛べない巨大なハトで、身長約1m、体重10〜18kg。ミノバトの近縁である。島に天敵がいなかったため飛ぶ力を失い、地上に巣を作って、大きなかぎ形のくちばしで落ちた果実や種子を食べた。1598年から上陸した船乗りやネズミ、ブタ、サルによって一世代のうちに滅ぼされ、最後の目撃は1662年だった。"
+  },
+  {
+   "k": "A freshwater turtle about 30 cm long from the middle Eocene lake of Messel in Germany, a relative of the pig-nosed turtle of New Guinea and Australia, with flipper-like front limbs and a fleshy snout. It ate plants, snails and other small animals. Several pairs were found joined together: they had sunk into the poisonous deep water of the lake while mating, the only fossil vertebrates known to have died in the act.",
+   "v": "始新世中期のドイツのメッセル湖にすんでいた体長約30cmの淡水ガメで、ニューギニアとオーストラリアのスッポンモドキの親戚。ひれのような前肢と肉質の吻をもっていた。植物や巻貝などの小動物を食べた。つながったままのペアがいくつも見つかっていて、交尾中に湖の有毒な深みへ沈んだもので、交尾中に死んだことがわかる唯一の脊椎動物化石である。"
+  },
+  {
+   "k": "A gar about 1 m long from the early Eocene Green River lakes of Wyoming, a close relative of the alligator gar. Its long body was covered in hard, diamond-shaped scales that fitted together like armour, and its long snout held rows of needle teeth. It lay still among the water plants and seized passing fish with a sudden sideways snap.",
+   "v": "始新世前期のワイオミング州グリーンリバー湖群にすんでいた体長約1mのガーで、アリゲーターガーの近縁種。長い体は鎧のように組み合った硬いひし形のうろこで覆われ、長い吻には針のような歯が並んでいた。水草の間でじっと待ち、通りかかる魚を横向きにすばやくかみついて捕らえた。"
+  },
+  {
+   "k": "A gharial-like amphibian about 1.5 metres long from the Early Permian lakes of south-western Germany, around 295 million years ago. Its long, narrow snout was lined with sharp teeth for snapping up fish, and it swam with its long, flattened tail, holding its small legs against its body. Hundreds of fossils, from tiny larvae to adults, show how it grew up.",
+   "v": "約2億9500万年前、ペルム紀前期のドイツ南西部の湖にすんでいた、体長約1.5メートルのガビアルに似た両生類。細長い吻には鋭い歯が並び、魚をすばやくくわえた。長く平たい尾で泳ぎ、小さな脚は体に沿わせていた。小さな幼生から成体まで数百の化石が見つかっており、成長の様子がわかっている。"
+  },
+  {
+   "k": "A gharial-like reptile about 1.5 metres long with a long, narrow, toothy snout, which lived in the rivers and lakes of Late Cretaceous North America. It was not a crocodile but a choristodere, an ancient reptile group that survived the end of the dinosaurs. It swam with its flattened tail and snapped up fish with sideways sweeps of its head.",
+   "v": "全長約1.5メートルのガビアルに似た爬虫類で、長く細い歯だらけの口先を持ち、白亜紀後期の北アメリカの川や湖にすんでいた。ワニではなく、恐竜の絶滅を生き延びた古い爬虫類のグループ、コリストデラ類の一員。平たい尾で泳ぎ、頭を横に振って魚をとらえた。"
+  },
+  {
+   "k": "A giant among ostracods, the tiny crustaceans enclosed in a two-valved shell: its smooth, bean-shaped shell grew to about 2 cm long. It had a small eye spot near the front of each valve and crawled over shallow, often salty sea floors on short legs that poked out from under the shell. It fed on detritus and small particles.",
+   "v": "2枚の殻に包まれた小さな甲殻類である貝形虫の中の巨人で、なめらかな豆形の殻は長さ約2センチにもなった。それぞれの殻の前方に小さな眼点があり、殻の下からのぞく短い脚で、浅く塩分の濃いことも多い海底をはい回っていた。デトリタスや小さな粒を食べていた。"
+  },
+  {
+   "k": "A giant burrowing bat from the Early Miocene of New Zealand, about three times the size of an ordinary small bat. Like New Zealand's living burrowing bats it foraged on the forest floor as well as in the air, eating insects, spiders and probably fruit and nectar. Its relatives also lived in Australia, a sign of the old forest links between the two lands.",
+   "v": "前期中新世のニュージーランドにいた巨大なコウモリで、普通の小型コウモリの約3倍の大きさ。ニュージーランドに現生するツギホコウモリのように、空中だけでなく林床でも餌を探し、昆虫やクモ、おそらく果実や花蜜も食べた。その仲間はオーストラリアにもいて、両地の森が古くつながっていたことを示している。"
+  },
+  {
+   "k": "A giant clam from the Middle Permian reef lagoons of Japan and the warm Tethys Ocean, around 265 million years ago, up to about a metre across. Its thick central shell was drawn out on both sides into huge, thin, flat wings, so it lay on the sea floor like a boomerang and did not sink into the soft lime mud. Like modern giant clams it may have kept sun-loving algae in its tissues.",
+   "v": "約2億6500万年前、ペルム紀中期の日本と温暖なテチス海の礁湖にすんでいた、幅約1メートルにもなる巨大な二枚貝。厚い中央部の殻が両側に巨大で薄く平らな翼のように伸び、ブーメランのように海底に横たわって柔らかい石灰泥に沈まなかった。現生のシャコガイのように、体内に光を好む藻類を共生させていたかもしれない。"
+  },
+  {
+   "k": "A giant coelacanth about 4 metres long, a cousin of the living coelacanth, from the rivers and lagoons of Cretaceous Brazil and Africa. Its heavy body was covered in thick bony scales, and it moved its fleshy, lobed fins in pairs much like the legs of a walking animal. A slow ambush hunter, it sucked in prey with a sudden snap of its wide mouth.",
+   "v": "全長約4メートルの巨大なシーラカンスで、現生のシーラカンスの親戚。白亜紀のブラジルとアフリカの川や潟にすんでいた。重い体は厚い骨質のうろこにおおわれ、肉質の葉のようなひれを、歩く動物の脚のように左右交互に動かした。ゆっくりした待ち伏せ型のハンターで、大きな口を一気に開いて獲物を吸い込んだ。"
+  },
+  {
+   "k": "A giant flightless bird from the Late Miocene of central Australia, about 3 metres tall and up to 600 kilograms, among the heaviest birds ever. Despite its huge, deep beak it was a distant relative of ducks and geese, and it most likely ate tough leaves, fruit and seeds. Its legs were stout and its wings tiny, so it walked rather than ran.",
+   "v": "後期中新世のオーストラリア中部にいた巨大な飛べない鳥で、身長約3メートル、体重は最大600キログラムに達し、史上最も重い鳥の一つ。巨大で分厚いくちばしを持つが、カモやガチョウの遠い親戚で、硬い葉や果実、種子を食べていたらしい。脚は太く翼はごく小さく、走るより歩く鳥だった。"
+  },
+  {
+   "k": "A giant relative of grasshoppers and crickets from the Late Triassic lake shores of Madygen in Kyrgyzstan, about 230 million years ago, with wings spanning around 30 centimetres or more. Its long, spiny forelegs were made for grabbing other insects. A ribbed patch on each forewing was probably rubbed to make loud calls or flashed as a display, making it an early example of insect song.",
+   "v": "バッタやコオロギの巨大な親戚で、後期三畳紀、約2億3000万年前のキルギスのマディゲンの湖岸にすみ、翅を広げると約30センチメートル以上になった。長くとげのある前脚は、ほかの昆虫を捕まえるためのものだった。各前翅にある筋状の部分は、こすり合わせて大きな鳴き声を出したり、ディスプレイとして見せたりするのに使われたと考えられ、昆虫の鳴き声の初期の例となっている。"
+  },
+  {
+   "k": "A giant relative of the gharials from the Miocene rivers of India and Pakistan, perhaps 8 to 11 metres long. Its long, narrow snout was lined with many sharp teeth, but it was stouter than a living gharial's, so it may have taken larger prey as well as fish. It was one of the largest crocodilians that ever lived.",
+   "v": "中新世のインドとパキスタンの川にいたガビアルの巨大な親戚で、体長8～11メートルに達したかもしれない。細長い吻には多くの鋭い歯が並んでいたが、現生のガビアルより太く、魚だけでなく大きな獲物も捕らえたらしい。史上最大級のワニの一つである。"
+  },
+  {
+   "k": "A giant sawfish-like ray up to about 7 metres long from the great rivers of mid-Cretaceous North Africa. Its long flat snout was lined with widely spaced, barbed teeth like harpoon points, which it swept sideways to stun and slash fish. It shared its rivers with Spinosaurus, which may have hunted it.",
+   "v": "全長約7メートルにもなる巨大なノコギリエイに似たエイで、白亜紀中ごろの北アフリカの大河にすんでいた。長く平たい吻には、銛の先のような返しのある歯が間隔を広くあけて並び、それを横に振って魚を気絶させたり切りつけたりした。同じ川にはスピノサウルスがすみ、この魚を狩っていたのかもしれない。"
+  },
+  {
+   "k": "A giant scorpion from the Late Silurian of England, estimated at about 90 cm long from a single, massive pincer finger, making it the largest scorpion that ever lived. Like other early scorpions it probably still lived in water. With its huge pincers and stinging tail it could tackle fish and other large prey.",
+   "v": "イングランドの後期シルル紀から知られる巨大なサソリ。巨大なはさみの指の化石1つから全長約90cmと推定され、史上最大のサソリとされる。ほかの初期のサソリと同様、おそらくまだ水中で暮らしていた。巨大なはさみと毒針のある尾で、魚やほかの大きな獲物にも立ち向かうことができた。"
+  },
+  {
+   "k": "A giant sea spider with a leg span of up to 40 centimetres from the Early Devonian seas of the German Hunsrück, about 400 million years ago. Its thin body carried a long sucking proboscis, and its front legs were flattened into paddles, so it could probably swim. It fed on soft-bodied animals such as sea anemones and crinoids by sucking out their tissues.",
+   "v": "脚を広げると最大40センチになる巨大なウミグモで、約4億年前、デボン紀前期のドイツ・フンスリュックの海にすんでいた。細い体には長い吸い込み用の吻があり、前脚はかいのように平たくなっていたので、おそらく泳ぐことができた。イソギンチャクやウミユリなど柔らかい動物の組織を吸って食べた。"
+  },
+  {
+   "k": "A giant spiny millipede up to about 30 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old. Each of its body rings carried a pair of long, forked spines pointing up and out, making it one of the spikiest animals of the coal forests. It crawled through the leaf litter on many pairs of short legs, feeding on rotting plant matter, while its spines kept amphibian predators at bay.",
+   "v": "体長最大約30センチメートルの巨大なトゲだらけのヤスデで、約3億900万年前のイリノイ州のマゾン・クリーク化石層から見つかった。各体節には上向き・外向きに伸びる二又の長いトゲが1対ずつあり、石炭林で最もトゲの多い動物の一つだった。たくさんの短い脚で落ち葉の中をはい回って腐った植物を食べ、トゲで両生類の捕食者を寄せつけなかった。"
+  },
+  {
+   "k": "A giant, long-legged pig from the Middle Miocene of Eurasia, as large as a small horse and weighing perhaps 500 kilograms. It had big tusks, and males carried a single horn on the forehead, probably used in head-butting contests. It rooted and browsed in forests and wet woodlands.",
+   "v": "中期中新世のユーラシアにいた脚の長い巨大なイノシシで、小型のウマほどの大きさ、体重はおそらく500キログラムに達した。大きな牙を持ち、オスは額に1本の角があって頭突きの争いに使ったらしい。森や湿った林で土を掘り返し、葉を食べた。"
+  },
+  {
+   "k": "A heart-shaped sea urchin about 6 centimetres long that lived buried in the soft chalky mud of the Late Cretaceous sea floor in Europe. A short fuzz of spines covered its shell, and a groove at the front led food-rich mud to its mouth. Its shape changed so steadily over time that it became a classic example of gradual evolution.",
+   "v": "体長約6センチのハート形のウニで、白亜紀後期のヨーロッパの海底で、やわらかい白亜の泥に埋まって暮らしていた。殻は短い細かなとげにおおわれ、前にある溝が栄養たっぷりの泥を口へ運んだ。形が時代とともに少しずつ着実に変わったため、ゆるやかな進化の典型的な例になった。"
+  },
+  {
+   "k": "A heavy early long-necked dinosaur, about 6.5 metres long, from the Late Triassic of La Rioja, Argentina, about 220 million years ago. Unlike its two-legged relative Plateosaurus, it walked on all four stout legs, carrying a bulky body, a long neck and a small head with leaf-shaped teeth for stripping plants. Hollow spaces in its backbone kept its weight down, a trick later used by the giant sauropods.",
+   "v": "後期三畳紀、約2億2000万年前のアルゼンチン・ラ・リオハから見つかった、体長約6.5メートルのがっしりした初期の首の長い恐竜。二足歩行の親戚プラテオサウルスと違い、太い4本の脚で歩き、大きな胴体、長い首、そして植物をしごき取るための木の葉形の歯を持つ小さな頭を支えていた。背骨の中の空洞が体重を軽くしており、この仕組みはのちに巨大な竜脚類にも使われた。"
+  },
+  {
+   "k": "A heavy, tapir-sized grazer from the Early Miocene of Patagonia, an early member of the toxodonts, hoofed mammals found only in South America. It had a barrel-shaped body on short legs and a big head with chisel-like front teeth and ever-growing cheek teeth for chewing tough plants. Many skeletons, from calves to adults, are known.",
+   "v": "前期中新世のパタゴニアにいた、バクほどの大きさの重い草食動物で、南アメリカにしかいなかった有蹄類トクソドンの初期の仲間。短い脚の上に樽形の体を持ち、大きな頭にはのみのような前歯と、硬い植物をかむための一生伸び続ける頬歯があった。子どもから大人まで多くの骨格が知られている。"
+  },
+  {
+   "k": "A huge, bizarre ostrich-dinosaur about 11 metres long, known for decades only from its giant arms with 2.4-metre-long clawed hands. Complete skeletons later revealed a hump-backed giant with a long, toothless, duck-like bill and broad feet for walking on soft ground. It waded in rivers, eating water plants and fish.",
+   "v": "全長約11メートルの巨大で奇妙なダチョウ恐竜で、何十年もの間、長さ2.4メートルのかぎ爪のある手を持つ巨大な腕だけが知られていた。のちに見つかった完全な骨格から、背中にこぶのある巨体に、長く歯のないカモのようなくちばしと、やわらかい地面を歩くための幅広い足を持っていたことがわかった。川を歩いて渡り、水草や魚を食べていた。"
+  },
+  {
+   "k": "A hyolith, a member of a vanished group of animals with a cone-shaped shell closed by a lid, from the Burgess Shale of Canada. A pair of long, curved spines stuck out from under the lid and propped it up on the seabed. Fossils with soft parts show it fed with a ring of tentacles, like brachiopods, which settled a long debate about what hyoliths were. It can shut itself in its shell but cannot fight.",
+   "v": "ヒオリテス類の一種で、ふたで閉じる円錐形の殻をもつ絶滅した動物群に属し、カナダのバージェス頁岩から見つかる。ふたの下から1対の長く曲がったとげが突き出し、殻を海底で支えていた。軟体部の残る化石から、腕足動物のように触手の輪で餌をとっていたことがわかり、ヒオリテス類の正体をめぐる長い論争に決着がついた。殻に閉じこもれるが戦えない。"
+  },
+  {
+   "k": "A land-living amphibian about 1 metre long from the Early Permian of New Mexico, Colorado and Utah, around 295 million years ago. It carried a tall sail on its back made of long spines covered in rough bumps, a little like that of Dimetrodon, and had a broad head and sturdy legs. The sail may have helped it warm up in the sun or impress rivals.",
+   "v": "約2億9500万年前、ペルム紀前期のニューメキシコ、コロラド、ユタにいた体長約1メートルの陸生両生類。背中にはでこぼこのこぶに覆われた長いとげでできた高い帆があり、少しディメトロドンに似ていた。頭は幅広く、脚はがっしりしていた。帆は日光で体を温めたり、ライバルに見せつけたりするのに役立ったのかもしれない。"
+  },
+  {
+   "k": "A large South American hoofed mammal about 3 m long from the late Oligocene of Argentina and Bolivia. It looked strikingly like an elephant, with pillar-like legs, probably a short trunk and forward-pointing tusks in both jaws, but it belonged to a native South American lineage and evolved these features on its own. Its name, 'fire beast', comes from the volcanic ash beds where it was found.",
+   "v": "漸新世後期のアルゼンチンとボリビアにすんでいた体長約3mの大型の南米の有蹄類。柱のような脚、おそらく短い鼻、上下のあごに前向きの牙をもち、驚くほどゾウに似ていたが、南米固有の系統に属し、これらの特徴を独自に進化させた。名前は「火の獣」の意味で、火山灰の地層から見つかったことに由来する。"
+  },
+  {
+   "k": "A large glass sponge up to about 30 cm across, shaped like an upturned glove or crown: a broad central body with an opening on top and a ring of big, hollow, finger-like lobes that held it up off the muddy sea floor. Its thin wall was a lattice of fused glassy spicules, through which it pumped water to filter out food.",
+   "v": "差し渡し約30センチに達する大型のガラス海綿で、裏返した手袋や王冠のような形をしていた。幅広い中央部の上面に開口部があり、そのまわりを囲む大きな中空の指状の突起が、体を泥の海底から持ち上げていた。薄い体壁は癒合したガラス質の骨片の格子でできており、そこに水を通して餌をこし取っていた。"
+  },
+  {
+   "k": "A large lungfish of Triassic rivers and lakes, from the Late Triassic of Austria, about 230 million years ago. It had a long, heavy body with big round scales, fleshy paddle-like fins and a fin fringe running round the tail, much like the living Australian lungfish. Its fan-shaped, ridged tooth plates crushed snails, crayfish and plants, and it could gulp air when the water became warm and stale.",
+   "v": "三畳紀の川や湖にすんだ大型の肺魚で、後期三畳紀、約2億3000万年前のオーストリアから見つかった。長く重い体は大きな丸いうろこに覆われ、肉質のパドルのようなひれを持ち、尾のまわりにはひれのふちどりがあって、現生のオーストラリアハイギョによく似ていた。扇形でうねのある歯板で巻貝やザリガニ、植物をすりつぶし、水が温かくよどむと空気を飲み込むことができた。"
+  },
+  {
+   "k": "A large plant eater, about 3 metres long, from the Early to Middle Triassic of South Africa, about 245 million years ago, and a distant relative of mammals. It had a barrel-shaped body, sturdy legs, a long, high snout ending in a horny beak and a pair of short tusks. It sheared tough plants with its beak and was one of the biggest land animals of its time.",
+   "v": "前期から中期三畳紀、約2億4500万年前の南アフリカから見つかった体長約3メートルの大型植物食動物で、哺乳類の遠い親戚。樽のような胴体、がっしりした脚、角質のくちばしで終わる長く高い吻、そして1対の短い牙を持っていた。くちばしで硬い植物を刈り取り、当時最大級の陸上動物の一つだった。"
+  },
+  {
+   "k": "A large predatory synapsid about 3 metres long from the Early Permian of New Mexico and Utah, around 295 million years ago, and a close relative of Dimetrodon. It had the same deep skull with long, stabbing canine teeth, but instead of a tall sail only a low crest of spines along its back. It was a top predator of its time, hunting other large four-legged animals.",
+   "v": "約2億9500万年前、ペルム紀前期のニューメキシコとユタにいた体長約3メートルの大型肉食単弓類で、ディメトロドンの近縁。同じように高い頭骨と突き刺す長い犬歯をもっていたが、背中には高い帆の代わりに低いとげの列があるだけだった。当時の頂点捕食者で、ほかの大型四足動物を狩った。"
+  },
+  {
+   "k": "A large rhizodont, a fang-toothed lobe-finned fish probably about 1.8 metres long, from the Late Devonian rivers of Pennsylvania and New York, about 365 million years ago. Its huge pectoral fins were stiffened by eight finger-like bones, an independent experiment in building a limb. It lay in wait in the river and lunged at passing fish.",
+   "v": "大型のリゾドゥス類で、牙の生えた肉鰭類。体長はおそらく約1.8メートルで、約3億6500万年前、デボン紀後期のペンシルベニアとニューヨークの川にすんでいた。巨大な胸びれは8本の指のような骨で支えられており、脚をつくる独自の試みだった。川で待ち伏せし、通りかかる魚に襲いかかった。"
+  },
+  {
+   "k": "A large scallop from the Pliocene seas of Virginia and North Carolina, up to about 17 centimetres across, with broad radiating ribs. Like living scallops it lay on the sea floor filtering food from the water, watched with a row of small eyes along its mantle, and could clap its valves to swim away from danger. It was the first fossil from North America ever illustrated.",
+   "v": "鮮新世のバージニアとノースカロライナの海にいた大型のホタテガイで、殻の幅は約17センチメートルに達し、太い放射肋があった。現生のホタテと同じく海底で水中の餌をこし取り、外套膜の縁に並ぶ小さな目で周りを見張り、危険が迫ると殻を打ち合わせて泳いで逃げた。北アメリカで初めて図に描かれた化石である。"
+  },
+  {
+   "k": "A large sea lily (crinoid) from the Silurian reefs of North America. A long stem held up a heavy cup of thick, rigid plates, and its ten arms folded upright into slots around a tall central column, forming a ribbed, bud-like crown. When feeding, the arms opened out into a filter that caught food from the current.",
+   "v": "北アメリカのシルル紀の礁から知られる大型のウミユリ。長い茎が厚く硬い板でできた重い萼を支え、10本の腕は高い中央の柱を囲む溝に直立して折りたたまれ、筋の入ったつぼみのような冠を形作っていた。餌を食べるときは腕を広げてフィルターとし、水流から餌を捕らえた。"
+  },
+  {
+   "k": "A large sea star about 20 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago. It had a small central disc and fourteen to sixteen long, slender arms radiating like a sunburst. It crept over the muddy sea floor hunting small animals.",
+   "v": "約4億年前、デボン紀前期のドイツ・フンスリュックの海にすんでいた差し渡し約20センチの大きなヒトデ。小さな中央盤から14〜16本の細長い腕が太陽の光のように伸びていた。泥の海底をはい回り、小さな動物を狩った。"
+  },
+  {
+   "k": "A large therocephalian about 2 metres long from the Middle Permian of South Africa, around 262 million years ago, one of the top predators of its time. Its name means wolf crocodile: it had a long, wolf-like body and a long snout with two pairs of long canine teeth side by side, a new tooth growing in beside the old one. It hunted the big plant eaters of its world.",
+   "v": "約2億6200万年前、ペルム紀中期の南アフリカにいた体長約2メートルの大型テロケファルス類で、当時の頂点捕食者の一つ。名前は「オオカミのワニ」の意味。オオカミのような長い体と長い吻をもち、長い犬歯が2対並んでいた。古い歯の横で新しい歯が生えてきたのである。その世界の大型植物食動物を狩った。"
+  },
+  {
+   "k": "A large white owl of the Arctic tundra, about 65 cm long with a 1.5 m wingspan, which spread across Ice Age Europe with the cold. It hunts by day in the endless Arctic summer, mainly lemmings, and a pair may eat over a thousand in a season. Its plumage is white with dark bars, and its feet are thickly feathered against the cold.",
+   "v": "北極のツンドラにすむ大型の白いフクロウで、体長約65cm、翼開長1.5m。氷河期には寒さとともにヨーロッパ中に広がった。白夜の北極の夏には昼間に狩りをし、主にレミングを食べ、1つがいがひと夏に1000匹以上を食べることもある。羽毛は白地に黒っぽい横じまがあり、足は寒さに備えて厚い羽毛に覆われる。"
+  },
+  {
+   "k": "A lizard-like plant eater, about 2.5 metres long, from the Late Triassic of Texas, about 220 million years ago. Its short, deep skull had a toothless beak at the front and wide cheek teeth with three cutting crests, which give it its name and sliced up tough plants. Strong claws on its feet may have helped it dig for roots or climb.",
+   "v": "後期三畳紀、約2億2000万年前のテキサスから見つかった、体長約2.5メートルのトカゲのような植物食動物。短く高い頭骨の前端には歯のないくちばしがあり、奥には3本の切断用の稜をもつ幅広い頬歯が並んでいた。この稜が名前の由来で、硬い植物を切り刻んだ。足の強いかぎ爪は、根を掘ったり木に登ったりするのに役立ったのかもしれない。"
+  },
+  {
+   "k": "A lizard-like reptile about 30 centimetres long, an early relative of the living tuatara of New Zealand, from the Late Triassic of south-west England, about 205 million years ago. Its teeth were fused to the jawbones and worn into sharp blades for slicing insects and perhaps plants. Thousands of its bones have been found in old cave and crack fillings of limestone islands.",
+   "v": "体長約30センチメートルのトカゲのような爬虫類で、ニュージーランドに現生するムカシトカゲの初期の親戚。後期三畳紀、約2億500万年前のイングランド南西部から見つかった。歯はあごの骨と癒合し、すり減って鋭い刃となり、昆虫や、おそらく植物も切り裂いた。石灰岩の島々にあった古い洞窟や割れ目を埋めた堆積物から、何千もの骨が見つかっている。"
+  },
+  {
+   "k": "A long, eel-like marine reptile, about 2 metres long, from the Middle Triassic seas of the Alps between Switzerland and Italy, about 240 million years ago. It had a narrow, pointed snout full of small teeth, big eyes and short limbs, and swam by waving its very long, flattened tail. It belonged to the thalattosaurs, a group of sea reptiles found only in the Triassic.",
+   "v": "体長約2メートルのウナギのような細長い海生爬虫類で、中期三畳紀、約2億4000万年前のスイスとイタリアにまたがるアルプスの海にすんでいた。小さな歯が並ぶ細くとがった吻、大きな目、短い四肢を持ち、とても長く平たい尾を波打たせて泳いだ。三畳紀にしか見られない海生爬虫類のグループ、タラットサウルス類の一員である。"
+  },
+  {
+   "k": "A long, thin, flexible tube a few centimetres long and under a millimetre wide, made of tough, finely ringed organic material, from the very end of the Ediacaran into the early Cambrian. Its wall structure suggests it was built by a worm related to modern beard worms, which would make it one of the oldest known annelids. The tube sheltered the soft worm inside.",
+   "v": "長さ数cm、幅1mm未満の細長くしなやかな管で、細かな環のある丈夫な有機物でできており、エディアカラ紀の最末期からカンブリア紀前期にかけて見つかる。管壁の構造から、現生のヒゲムシ類に近い虫が作ったと考えられ、それが正しければ知られている最古の環形動物の一つとなる。管は中の柔らかい虫を守っていた。"
+  },
+  {
+   "k": "A long-bodied early tetrapod about 1.5 metres long from Early Carboniferous rocks of West Virginia, about 330 million years old. It had a flat, broad head marked with the grooves of a lateral-line system for sensing movement in the water, small legs and an eel-like body with about 40 vertebrae in front of the hips. It lived almost entirely in water, swimming with side-to-side waves of its body and snapping up fish.",
+   "v": "体長約1.5メートルの胴の長い初期の四肢動物で、約3億3000万年前のウェストバージニア州の石炭紀前期の地層から見つかった。平たく幅広い頭には水中の動きを感じ取る側線系の溝が刻まれ、小さな脚と、腰より前に約40個の椎骨が並ぶウナギのような体をもっていた。ほぼ一生を水中で過ごし、体を左右にくねらせて泳ぎ、魚をぱくりと捕らえていた。"
+  },
+  {
+   "k": "A low disc a few centimetres across with a raised rim, a central boss and fine radial creases, found in huge numbers in Newfoundland, about 565 million years old. Described in 1872, it was the first Ediacaran fossil ever named, long before anyone accepted that large organisms lived so early. Most of these discs were probably the buried anchors of fronds.",
+   "v": "盛り上がった縁、中央の突起、細かな放射状のしわを持つ、差し渡し数cmの低い円盤で、ニューファンドランドで大量に見つかり、約5億6500万年前のものだ。1872年に記載され、大型の生物がこれほど昔に生きていたと誰も認めていなかった時代に、最初に命名されたエディアカラの化石となった。これらの円盤の多くは、葉状体の埋もれた固着部だったと考えられる。"
+  },
+  {
+   "k": "A low, round dome a few centimetres across from South Australia, about 555 million years old, covered in a raised lattice of radiating struts crossed by rings. The net-like pattern resembles the skeleton of glass sponges, so it is often considered one of the oldest sponges. It sat on the seabed filtering food from the water.",
+   "v": "南オーストラリアで見つかった、差し渡し数cmの低く丸いドームで、約5億5500万年前に生きていた。表面は放射状の支柱と輪が交差する盛り上がった格子で覆われていた。この網目模様がガラス海綿の骨格に似ているため、最古の海綿の一つとされることが多い。海底に座って水中から餌を濾し取っていた。"
+  },
+  {
+   "k": "A lungfish about a metre long, common in the Late Carboniferous and Early Permian swamps, rivers and lakes of North America and Europe, about 300 million years ago. It had a long body, a broad head with fan-shaped, ridged tooth plates for crushing shells, narrow pointed paired fins and a tail fringed by one continuous fin. Like living lungfish it could gulp air at the surface, which helped it survive in warm, oxygen-poor swamp water.",
+   "v": "体長約1メートルの肺魚で、約3億年前の北アメリカとヨーロッパの石炭紀後期からペルム紀前期の湿地、川、湖によく見られた。長い体、貝殻をかみ砕くための扇形で畝のある歯板をもつ幅広い頭、細くとがった対びれ、そして一続きのひれに縁取られた尾をもっていた。現生の肺魚と同じく水面で空気を飲み込むことができ、それが暖かく酸素の乏しい湿地の水で生き延びる助けになった。"
+  },
+  {
+   "k": "A many-armed starfish about 15 cm across from the Silurian reefs of Dudley, England. Around its broad, flat disc it had thirteen tapering arms edged with rows of small plates, like a modern sun star. It crept slowly over the reef floor, preying on shellfish and other slow animals.",
+   "v": "イングランドのダドリーのシルル紀の礁から知られる、直径約15cmの多腕のヒトデ。幅広く平らな盤のまわりに、小さな板の列で縁取られた先細りの腕が13本あり、現生のニチリンヒトデに似ていた。礁の海底をゆっくりはい回り、貝類やほかの動きの遅い動物を捕食していた。"
+  },
+  {
+   "k": "A mitrate, a strange echinoderm with no five-fold symmetry: a flattened, plated body a few centimetres long with a single jointed arm in front. It lay on the soft sea floor and used its arm to gather food. Some scientists have even argued that mitrates were early relatives of the chordates.",
+   "v": "ミトラータ類の一種で、五放射相称をまったくもたない奇妙な棘皮動物。板におおわれた平たい体は長さ数センチで、前端に関節のある腕が1本だけあった。やわらかい海底に横たわり、その腕で餌を集めていた。ミトラータ類は脊索動物の初期の親戚だったと主張する研究者さえいる。"
+  },
+  {
+   "k": "A monitor lizard about 1.3 m long from the Eocene of North America, a close relative of today's monitors and the first fossil lizard named from the continent. It hunted small animals and ate eggs, flicking its forked tongue to smell its way. It is the only known jawed vertebrate with four eyes: besides its two eyes it had two light-sensing eyes on top of its head.",
+   "v": "始新世の北アメリカにすんでいた体長約1.3mのオオトカゲで、現生のオオトカゲの近縁種であり、この大陸で最初に命名された化石トカゲ。小動物を狩り、卵を食べ、二股の舌を出し入れしてにおいをたどった。知られている唯一の四つの目をもつ顎口類で、二つの目のほかに頭の上に光を感じる目が二つあった。"
+  },
+  {
+   "k": "A mouse-sized multituberculate about 10 centimetres long from the Late Cretaceous deserts of Mongolia. Multituberculates were the rodents of the dinosaur age, with gnawing front teeth and cheek teeth carrying rows of little cusps for grinding seeds and plants. Kryptobaatar probably sheltered in burrows from the heat and from predators.",
+   "v": "モンゴルの白亜紀後期の砂漠にいた、ネズミほどの大きさで体長約10センチの多丘歯類。多丘歯類は恐竜時代の「齧歯類」で、かじるための前歯と、小さな突起が列になって並んだ頬歯で種子や植物をすりつぶした。クリプトバータルは暑さや捕食者を避けて巣穴に隠れていたらしい。"
+  },
+  {
+   "k": "A nautiloid with a short, fat, curved shell about 12 cm long from the Silurian of Europe. The shell widened quickly to a swollen body chamber, but its opening was pinched into a narrow slit, so only the tips of its arms could reach out. It drifted slowly near the sea floor, catching small animals with its arms.",
+   "v": "短く太い湾曲した殻を持つオウムガイ類で、殻の長さは約12cm、ヨーロッパのシルル紀から知られる。殻は急速に広がって膨らんだ住房となるが、その開口部は細いスリット状にすぼまっており、腕の先端しか外に出せなかった。海底近くをゆっくり漂いながら、腕で小さな動物を捕らえていた。"
+  },
+  {
+   "k": "A nautilus-like cephalopod with a smooth, tightly coiled shell about 15 cm across, from the Eocene to the Miocene seas of the world. Inside, the walls between its chambers met the shell in deep, zigzag lines that gave it its name. Like the living nautilus it rose and sank by changing the gas in its shell and caught shrimp, fish and carrion with its many tentacles.",
+   "v": "始新世から中新世の世界中の海にすんでいた、オウムガイに似た頭足類で、なめらかで固く巻いた殻は直径約15cm。殻の内部では、部屋の間の隔壁が殻と深いジグザグの線で交わり、それが名前の由来になった。現生のオウムガイのように殻の中のガスを変えて浮き沈みし、たくさんの触手でエビや魚、死肉を捕らえた。"
+  },
+  {
+   "k": "A palaeoniscoid, one of the early ray-finned fishes, about 15 centimetres long, from the Late Carboniferous swamps and lagoons of Ohio and Illinois, about 310 million years ago. Its slender body was covered in thick, shiny, diamond-shaped scales, and it had large eyes, a wide mouth full of small sharp teeth and an uneven tail with a long upper lobe. Early ray-finned fishes like it gave rise to almost all the fish alive today; it hunted small crustaceans and young fish.",
+   "v": "初期の条鰭類であるパレオニスクス類の一種で、体長約15センチメートル、約3億1000万年前のオハイオ州とイリノイ州の石炭紀後期の湿地や潟にすんでいた。細長い体は厚く光沢のあるひし形のうろこに覆われ、大きな目、小さく鋭い歯が並ぶ大きな口、上葉が長い不相称な尾びれをもっていた。このような初期の条鰭類から現在生きているほぼすべての魚が生まれた。小さな甲殻類や幼魚を捕らえていた。"
+  },
+  {
+   "k": "A petalodont, an extinct relative of the ratfishes, from the Bear Gulch Limestone of Montana, about 320 million years ago. Its body was almost a round, flat disc about as deep as it was long, with huge wing-like pectoral fins, a tall fin along the back and a small mouth with petal-shaped teeth. It probably swam slowly among the reefs, steering with its broad fins and nibbling small animals off sponges and the sea floor.",
+   "v": "ギンザメ類の絶滅した親戚であるペタロドゥス類の一種で、約3億2000万年前のモンタナ州のベアガルチ石灰岩から見つかった。体は長さと高さがほぼ同じの、ほぼ丸く平たい円盤形で、翼のような巨大な胸びれ、背中に沿った高いひれ、花びら形の歯が並ぶ小さな口をもっていた。おそらく礁の間をゆっくり泳ぎ、幅広いひれで向きを変えながら、海綿や海底から小動物をついばんでいた。"
+  },
+  {
+   "k": "A plant-eating relative of crocodiles, about 2.5 metres long, from the Middle Triassic of Hunan, China, about 245 million years ago. It had no teeth at all, only a sharp horny beak (its species name, adentus, means \"toothless\"), and a tall sail of long spines along its back. Many skeletons were found together, so it probably lived in groups.",
+   "v": "中期三畳紀、約2億4500万年前の中国・湖南から見つかった、体長約2.5メートルの植物食のワニの親戚。歯がまったくなく、鋭い角質のくちばしだけを持っていた（種小名adentusは「歯のない」という意味）。背中には長いとげが並んだ高い帆があった。多くの骨格がまとまって見つかっていることから、群れで暮らしていたと考えられる。"
+  },
+  {
+   "k": "A plant-eating synapsid about 1.2 metres long from the Early Permian of Texas, around 280 million years ago, a smaller relative of Cotylorhynchus. It had a tiny head with a short, overhanging snout and a huge, barrel-shaped body holding a long gut for digesting tough plants. Slow and bulky, it relied on its weight and strong clawed limbs rather than speed.",
+   "v": "約2億8000万年前、ペルム紀前期のテキサスにいた体長約1.2メートルの植物食単弓類で、コティロリンクスの小型の親戚。頭はとても小さく、短い吻が前に突き出し、巨大な樽形の体には固い植物を消化する長い腸が収まっていた。動きは遅くずんぐりしており、速さではなく体重と爪のある強い脚で身を守った。"
+  },
+  {
+   "k": "A predatory fish about 1.5 metres long, nicknamed the sabre-toothed herring for the pair of huge fangs at the front of its jaws. It was one of the most common fish of the Late Cretaceous seas and hunted smaller fish, while itself being eaten by mosasaurs, sharks and seabirds. Despite its name it was related to modern lizardfish, not herrings.",
+   "v": "体長約1.5メートルの捕食性の魚で、あごの先にある一対の巨大な牙から「サーベルタイガー・ニシン」とあだ名される。白亜紀後期の海で最もありふれた魚のひとつで、小さな魚を狩る一方、自らもモササウルスやサメ、海鳥に食べられた。名前とは裏腹に、ニシンではなく現代のエソのなかまに近い。"
+  },
+  {
+   "k": "A predatory sea snail from the Miocene seas of the Chesapeake Bay region, a relative of the murex snails. Its rust-red shell, one of the few fossil shells that keeps its colour, bore four tall, flat ribs spiralling round the whorls. It drilled holes through the shells of clams and barnacles to eat the animal inside.",
+   "v": "中新世のチェサピーク湾周辺の海にいた肉食の巻貝で、アッキガイの仲間。さび色の殻は元の色を残す数少ない化石の貝殻の一つで、渦巻きに沿って高く平たい4本の肋が走っていた。二枚貝やフジツボの殻に穴をあけて中身を食べた。"
+  },
+  {
+   "k": "A primitive starfish relative several centimetres across, close to the common ancestor of sea stars and brittle stars. Its five broad, petal-shaped arms were stiffened by rows of rod-like plates running out from the middle of each arm like the ribs of a leaf. It lay on the sea floor and fed on detritus and organic films.",
+   "v": "差し渡し数センチの原始的なヒトデの仲間で、ヒトデとクモヒトデの共通祖先に近い。花びらのような5本の幅広い腕は、各腕の中央から葉脈のように外へのびる棒状の板の列で支えられていた。海底に横たわり、デトリタスや有機物の膜を食べていた。"
+  },
+  {
+   "k": "A quail-sized bird from the very end of the Cretaceous in Belgium, nicknamed the Wonderchicken. It is one of the oldest modern birds known, an early relative of both chickens and ducks, with long legs for wading along the shore. Its relatives survived the asteroid that wiped out the other dinosaurs.",
+   "v": "白亜紀の最末期のベルギーにいたウズラほどの大きさの鳥で、「ワンダーチキン」とあだ名される。知られている中で最も古い現代型の鳥のひとつで、ニワトリとカモの両方の初期の親戚にあたり、岸辺を歩くための長い脚を持っていた。その仲間は、ほかの恐竜を滅ぼした小惑星衝突を生き延びた。"
+  },
+  {
+   "k": "A quarter-sized crab from 95 million years ago with such an odd mix of features that scientists called it the platypus of crabs. It had huge unprotected eyes, a long narrow body and flat, paddle-like legs, and it probably swam in open water like a larva that never grew up. It hunted small animals in the coastal seas of what is now Colombia.",
+   "v": "9500万年前の、25セント硬貨ほどの大きさのカニで、あまりに奇妙な特徴の組み合わせから、科学者に「カニのカモノハシ」と呼ばれた。守るもののない巨大な目、細長い体、平たいオールのような脚を持ち、大人にならない幼生のように開けた水中を泳いでいたらしい。今のコロンビアにあたる沿岸の海で小さな動物を狩った。"
+  },
+  {
+   "k": "A radiodont about 20 cm long from the Burgess Shale of Canada, a cousin of Anomalocaris with a long, pointed shell jutting forward from its head. Its front limbs carried rows of long, comb-like spines that it used to sweep through the mud and water for small animals, and flaps along its body let it swim. Its armoured head makes it hard to hurt, and its rakes give it a fair bite.",
+   "v": "カナダのバージェス頁岩から見つかる体長約20センチのラジオドンタ類で、アノマロカリスの仲間。頭から前方に長くとがった甲羅が突き出していた。前部付属肢には櫛のような長いとげが並び、泥や水中をかいて小動物を捕らえ、体側のひれで泳いだ。装甲のある頭のため傷つきにくく、熊手のような付属肢でそれなりの攻撃力もある。"
+  },
+  {
+   "k": "A radiodont up to about 30 cm long from the Burgess Shale of Canada, whose head was hidden under a huge horseshoe-shaped shell, nicknamed after the Millennium Falcon spaceship. It cruised low over the seabed and sifted the mud with rake-like front limbs bearing rows of fine spines. Its great shield makes it very hard to harm, but it is slow and only a weak fighter.",
+   "v": "カナダのバージェス頁岩から見つかる体長最大約30センチのラジオドンタ類。頭部は巨大な馬蹄形の甲羅に覆われ、映画の宇宙船ミレニアム・ファルコン号にちなむあだ名がある。海底すれすれを泳ぎ、細かいとげの並ぶ熊手状の前部付属肢で泥をふるった。大きな甲羅のため非常に傷つきにくいが、動きは遅く戦う力は弱い。"
+  },
+  {
+   "k": "A rat-sized early mammal about 17 cm long from the Late Jurassic of north-eastern China, about 160 million years ago. It belonged to the multituberculates, the 'rodents of the Mesozoic', named for the many cusps on their grinding teeth, and ate seeds, plants, insects and worms. Its very flexible ankles could swivel, letting it scamper over the ground, dig and climb. Multituberculates went on to thrive for over 100 million years.",
+   "v": "中国北東部の後期ジュラ紀、約1億6000万年前の、ネズミほどの大きさの初期哺乳類で、全長約17センチ。「中生代のげっ歯類」と呼ばれる多丘歯類に属し、すりつぶす歯にたくさんの咬頭があることからこの名がある。種子、植物、昆虫、ミミズを食べた。非常に柔軟な足首は回転でき、地面を走り回ったり、穴を掘ったり、木に登ったりできた。多丘歯類はその後1億年以上も栄えた。"
+  },
+  {
+   "k": "A ray-finned fish about 30 centimetres long, one of the most common fossils of the Late Permian Zechstein Sea of Germany and England, around 257 million years ago. Its spindle-shaped body was armoured with shiny, diamond-shaped scales, and it had a big eye, small sharp teeth and a strongly upturned tail. It hunted small animals in a sea whose deep water was often without oxygen.",
+   "v": "約2億5700万年前、ペルム紀後期のドイツとイングランドのツェヒシュタイン海で最もよく見つかる化石の一つである、体長約30センチの条鰭類。紡錘形の体は光沢のあるひし形のうろこで覆われ、大きな目、小さく鋭い歯、強く上に反った尾をもっていた。深い水がしばしば酸素不足になる海で小動物を狩った。"
+  },
+  {
+   "k": "A reef-building stony coral of the warm Late Jurassic seas of Europe, about 160-150 million years ago. Its bushy colonies, up to about half a metre across, were made of separate ribbed branches that forked again and again, each ending in a cup 1-2 cm wide holding a single large polyp. The polyps caught plankton with their tentacles, and algae living in their tissues fed them with sunlight, as in reef corals today.",
+   "v": "ヨーロッパの後期ジュラ紀、約1億6000万〜1億5000万年前の温かい海の礁をつくったイシサンゴ。最大で直径約50センチになる茂みのような群体は、何度も枝分かれするうねのある独立した枝からなり、各枝の先には直径1〜2センチの杯があって大きなポリプが1つすんでいた。ポリプは触手でプランクトンを捕らえ、体内にすむ藻類が日光を使って栄養を与えた。今日の造礁サンゴと同じである。"
+  },
+  {
+   "k": "A relative of the trilobites, about 4 cm long, whose body was covered by just two smooth, unmineralised shields, one over the head and one over the trunk. It had long antennae and many pairs of legs with spiny inner edges, which it probably used to catch and shred small animals and carrion on the seafloor. Without a hard, chalky shell it is only moderately protected.",
+   "v": "三葉虫の近縁で体長約4センチ。体は頭部と胴部を覆う、石灰化していない滑らかな2枚の背甲だけでできていた。長い触角と、内側にとげの並ぶ多数の脚をもち、海底の小動物や死骸を捕まえて引き裂いていたと考えられる。硬い石灰質の殻がないため、守りはほどほどである。"
+  },
+  {
+   "k": "A rosette-shaped disc about 12 cm across from South Australia, about 555 million years old: a smooth central dome surrounded by rings of rounded lobes that grew larger toward the edge. First described as a jellyfish, it may instead have been a holdfast or a microbial colony. It is named after the geologist and polar explorer Douglas Mawson.",
+   "v": "南オーストラリアで見つかった、差し渡し約12cmのロゼット形の円盤で、約5億5500万年前のもの。滑らかな中央のドームを、外側ほど大きくなる丸い突起の輪が取り囲んでいた。最初はクラゲとして記載されたが、固着部や微生物の群体だった可能性もある。名前は地質学者で極地探検家のダグラス・モーソンにちなむ。"
+  },
+  {
+   "k": "A salamander about 23 cm long from the lakes of the Valley of Mexico that never grows up: it keeps its feathery external gills and lives in water all its life, yet breeds. It can regrow lost legs, its tail, parts of its spinal cord and even its heart. Once common, it now survives wild only in the canals of Xochimilco.",
+   "v": "メキシコ盆地の湖にすむ体長約23cmのサンショウウオで、大人にならない。羽毛のような外えらを一生もち続け、一生を水中で過ごしながら繁殖する。失った脚や尾、脊髄の一部、さらには心臓まで再生できる。かつてはありふれていたが、今では野生のものはソチミルコの運河にしか残っていない。"
+  },
+  {
+   "k": "A sand tiger shark about 3 m long from the Paleocene to the Oligocene seas of the world. It had long, slender, finely grooved teeth for catching slippery fish, and its teeth are among the most common shark fossils of the time. Its remains even reached the Arctic, which was warm then.",
+   "v": "暁新世から漸新世の世界中の海にすんでいた体長約3mのシロワニの仲間。滑りやすい魚を捕らえるための細長く細かい溝のある歯をもち、その歯は当時最もよく見つかるサメの化石の一つ。その化石は当時温暖だった北極圏にまで達している。"
+  },
+  {
+   "k": "A saucer-shaped sponge up to about 10 cm across from the Silurian, especially common in Tennessee. Its skeleton was built of large star-shaped spicules of calcite, each with six rays, which cover the whole surface. It lay on the sea floor and filtered food from water drawn in through its pores.",
+   "v": "直径約10cmに達する皿形の海綿で、シルル紀のもの、特にアメリカのテネシー州で多く見られる。骨格は方解石でできた大きな星形の骨針で構成され、それぞれ6本の放射を持ち、表面全体を覆っていた。海底に横たわり、小孔から取り込んだ水から餌をこし取っていた。"
+  },
+  {
+   "k": "A sea lily about 30 centimetres tall from the Middle Devonian reefs of Germany, about 385 million years ago. It had five broad, thick arms that closed tightly together into a cone like a cypress cone, and it opened them like a flower to catch food from the current. Its stalk anchored it among the corals and sponges of the reef.",
+   "v": "約3億8500万年前、デボン紀中期のドイツの礁にすんでいた高さ約30センチのウミユリ。5本の幅広く太い腕をぴったり閉じると、イトスギの球果のような円錐形になり、花のように開いて流れから食べ物を捕らえた。茎で礁のサンゴや海綿の間に体を固定していた。"
+  },
+  {
+   "k": "A sea lily about 30 cm tall with a long, round stem, a rigid, cone-shaped cup of thick, ornamented plates and ten branching arms. It spread its arms like a fan in the current to catch food particles from the water. It was a common crinoid on the Late Ordovician sea floor of North America.",
+   "v": "高さ約30センチのウミユリで、長く丸い茎、厚く装飾のある板でできた硬い円錐形の萼、そして10本の枝分かれする腕をもつ。流れの中で腕を扇のように広げ、水中の餌の粒を捕らえていた。北アメリカのオルドビス紀後期の海底でよく見られたウミユリである。"
+  },
+  {
+   "k": "A sea reptile about 5 metres long from the Middle Triassic of Guizhou, China, about 245 million years ago, with an extremely long neck made of over 30 vertebrae, much longer than its body. It may have used the long neck to reach fish quietly while its body stayed far behind, then snapped them up with fang-like teeth. A fossil with an unborn young inside shows it gave birth at sea, the first such find in its branch of reptiles.",
+   "v": "中期三畳紀、約2億4500万年前の中国・貴州から見つかった体長約5メートルの海生爬虫類で、30個以上の椎骨からなる極めて長い首は胴体よりずっと長かった。長い首を使い、胴体をはるか後ろに残したまま静かに魚に近づき、牙のような歯でくわえ取ったのかもしれない。体内に胎児を宿した化石から、海中で子を産んでいたことがわかり、これは同じ系統の爬虫類で初めての発見だった。"
+  },
+  {
+   "k": "A sea snail about 4 centimetres long from the Devonian seas of North America, with a loosely coiled, cap-shaped shell covered in hollow spines. It spent its whole adult life clamped onto a crinoid, right over its anus, and lived off the crinoid's waste or stolen food. Fossils of crinoids still carrying their snail are common.",
+   "v": "デボン紀の北アメリカの海にすんでいた体長約4センチの巻貝で、ゆるく巻いた帽子形の殻は中空のとげで覆われていた。おとなになると一生ウミユリの体の、ちょうど肛門の上にしがみついて暮らし、ウミユリの排泄物や横取りした食べ物で生きていた。巻貝をつけたままのウミユリの化石はよく見つかる。"
+  },
+  {
+   "k": "A sea snail about 5 cm across from the Silurian reefs of Gotland, Sweden, and England. Its low, top-shaped shell had a thin, flat frill running round the edge of every whorl like the brim of a hat, which gives it its name, 'winged'. The frill may have kept it from sinking into soft mud and made it hard for predators to grip. It crept over the sea floor grazing on films of microbes and debris.",
+   "v": "スウェーデンのゴットランド島とイングランドのシルル紀の礁から知られる、直径約5cmの巻貝。低いコマ形の殻の各巻きの縁には、帽子のつばのような薄く平らなひだが巡っており、これが「翼のある」という名前の由来である。このひだは柔らかい泥に沈み込むのを防ぎ、捕食者がつかみにくくしていたのかもしれない。海底をはい回り、微生物の膜や有機物のかけらを食べていた。"
+  },
+  {
+   "k": "A sea urchin from the Early Carboniferous seas of North America, about 335 million years ago, and a close relative of the ancestors of all living sea urchins. Its round shell, about 5 centimetres across, was built of overlapping plates, each bearing one large knob on which sat a long, stout spine covered in small thorns. It crept slowly over the sea floor grazing on algae, its thorny spines a strong defence against predators.",
+   "v": "約3億3500万年前の北アメリカの石炭紀前期の海にすんでいたウニで、現生のすべてのウニの祖先に近い仲間。直径約5センチメートルの丸い殻は重なり合う板でできており、各板には大きなこぶが一つあり、その上に小さなとげに覆われた長く太いトゲが付いていた。海底をゆっくりはい回って藻類を食べ、とげだらけのトゲは捕食者に対する強力な防御となった。"
+  },
+  {
+   "k": "A sea-going relative of the living tuatara, about 60 cm long, from the Late Jurassic lagoons of southern Germany, about 150 million years ago. Its body became long and eel-like, with a narrow head, nostrils set far back, tiny limbs and an extremely long tail making up most of its length. It swam by waving its body from side to side and snapped up small fish.",
+   "v": "現生のムカシトカゲの海生の親戚で、全長約60センチ。ドイツ南部の後期ジュラ紀、約1億5000万年前の潟湖にすんでいた。体はウナギのように長くなり、頭は細く、鼻孔はずっと後ろにあり、手足は小さく、非常に長い尾が全長の大部分を占めた。体を左右にくねらせて泳ぎ、小魚を捕らえた。"
+  },
+  {
+   "k": "A sheep-sized oreodont about 1.4 m long from the late Eocene and Oligocene of North America, one of the most common fossil mammals of the Badlands of South Dakota. It had a short face, short legs with four toes, a long tail and grinding teeth for leaves and grass. Oreodonts were a purely North American group of plant-eaters that grazed in large herds.",
+   "v": "始新世後期から漸新世の北アメリカにすんでいたヒツジほどの大きさのオレオドン類で、体長約1.4m。サウスダコタのバッドランドで最もよく見つかる化石哺乳類の一つ。短い顔と脚、四本指の足、長い尾、葉や草をすりつぶす歯をもっていた。オレオドン類は北アメリカだけにいた植物食のグループで、大きな群れで草を食べた。"
+  },
+  {
+   "k": "A sheep-sized relative of wombats and koalas from the Miocene rainforests of northern Australia. Unlike its giant ground-living cousins, it had long, strongly clawed limbs and probably climbed trees to browse leaves, much like a koala. Whole family groups have been found together, mothers with young in the pouch.",
+   "v": "オーストラリア北部の中新世の熱帯雨林にいた、ヒツジほどの大きさのウォンバットやコアラの仲間。地上で暮らす巨大な親戚とは違い、長く強いかぎ爪のある四肢を持ち、コアラのように木に登って葉を食べていたらしい。袋に子を入れた母親を含む家族全体が一緒に見つかっている。"
+  },
+  {
+   "k": "A shrimp-like crustacean about 6 centimetres long, one of the most common animals in the Mazon Creek fossil beds of Illinois, about 309 million years old. It was a syncarid, a crustacean without the shield that covers the front of true shrimps, so every body segment shows; it had long antennae, spiny legs and a tail fan around a spiky tip. It swarmed in the rivers and lagoons of the coal swamps scavenging for food, and its relatives still live in fresh water today.",
+   "v": "体長約6センチメートルのエビに似た甲殻類で、約3億900万年前のイリノイ州のマゾン・クリーク化石層で最もよく見られる動物の一つ。ムカシエビ類に属し、本物のエビの体の前部を覆う甲羅がないため、すべての体節が見えている。長い触角、トゲのある脚、とがった先端を囲む尾扇をもっていた。石炭湿地の川や潟に群れをなして食べ物をあさっており、その仲間は今も淡水にすんでいる。"
+  },
+  {
+   "k": "A silvery, black-spotted fish usually 70-80 cm long that hatches in cold gravel rivers on both sides of the North Atlantic, grows up at sea and returns to spawn. Guided by smell, it finds the very river where it was born and leaps up waterfalls over 3 m high to reach its spawning grounds. Spawning males grow a hooked lower jaw.",
+   "v": "銀色の体に黒い斑点のある魚で、ふつう体長70〜80cm。北大西洋の両岸の冷たい砂利底の川で生まれ、海で成長してから産卵のために戻ってくる。においを頼りに自分が生まれた川を見つけ、高さ3mを超える滝を跳び越えて産卵場にたどり着く。産卵期のオスは下あごがかぎ形に曲がる。"
+  },
+  {
+   "k": "A slender anaspid, a jawless fish about 8 cm long from the Silurian of southern Scotland. Unlike its relatives it was almost naked: only a crest of hooked scales along its back and a row of thin, rod-like bones over the gills. It swam with a big down-turned tail in lagoons and coastal waters and sucked up small food with its jawless mouth.",
+   "v": "細長い体の欠甲類で、スコットランド南部のシルル紀から知られる全長約8cmの無顎類。近縁種と違ってほとんど「裸」で、背中に沿って並ぶ鉤状の鱗の稜と、鰓の上に並ぶ細い棒状の骨があるだけだった。下向きに曲がった大きな尾で潟湖や沿岸の水域を泳ぎ、顎のない口で小さな餌を吸い込んでいた。"
+  },
+  {
+   "k": "A slender sea scorpion about 15 cm long, known from exceptionally preserved fossils in South Africa that even show its muscles and gills. It had short, spiny front legs to grab prey, long walking legs and a pair of big swimming paddles ending in a claw. A quick hunter, it lived in cold seas at the end of the Ordovician.",
+   "v": "体長約15センチの細身のウミサソリで、筋肉やえらまで残る南アフリカの保存状態の極めて良い化石で知られる。獲物をつかむための棘のある短い前脚、長い歩脚、そして先端に爪のある大きな遊泳用のパドルを1対もっていた。すばやい狩人で、オルドビス紀末の冷たい海に暮らしていた。"
+  },
+  {
+   "k": "A slender spiny shark about 30 centimetres long from the Middle Devonian lakes of Scotland, about 390 million years ago. A sharp spine stood in front of each fin and its body was covered in tiny scales. It had no teeth and swam with its large mouth open, gulping small swimming prey, often in big shoals.",
+   "v": "約3億9000万年前、デボン紀中期のスコットランドの湖にすんでいた体長約30センチのほっそりした棘魚類。どのひれの前にも鋭いとげが立ち、体は小さなうろこで覆われていた。歯はなく、大きな口を開けて泳ぎながら小さな獲物を飲み込み、しばしば大きな群れをつくった。"
+  },
+  {
+   "k": "A slender worm several centimetres long, a cousin of the priapulid worms, whose body was divided into many fine rings studded with tiny plates. At its front was a proboscis ringed with small hooks that it could shoot out to grip the mud as it burrowed. It lived in and on the soft sea floor.",
+   "v": "体長数センチの細長い蠕虫で、鰓曳動物の親戚にあたる。体は多数の細かな環に分かれ、そこに小さな板がちりばめられていた。前端には小さな鉤が輪状に並ぶ吻があり、穴を掘るときにはそれを突き出して泥をつかんだ。やわらかい海底の中や表面で暮らしていた。"
+  },
+  {
+   "k": "A slender, eel-like jawless fish about 12 centimetres long from the Late Devonian of Miguasha in Quebec, about 380 million years ago. It had no armour, a long fin fold under its body and as many as 30 gill openings in a row. It fed on tiny particles and plankton and is one of the last of the anaspid-like fishes.",
+   "v": "約3億8000万年前、ケベックのミグアシャのデボン紀後期にすんでいた体長約12センチのほっそりしたウナギのような無顎類。よろいはなく、体の下に長いひれのひだがあり、最大30個のえら孔が一列に並んでいた。小さな粒子やプランクトンを食べ、欠甲類に似た魚の最後の一つである。"
+  },
+  {
+   "k": "A slender, long-necked theropod about 1.7 metres long from the Late Jurassic of north-western China, about 160 million years ago. Its young had teeth, but the adults lost them all and had a horny beak instead, and they swallowed stones to grind plants in the gut: a meat-eater's descendant turned plant-eater. Its arms were tiny, with stubby fingers. Its name, 'mud lizard that could not escape', comes from skeletons found trapped in ancient mud pits.",
+   "v": "中国北西部の後期ジュラ紀、約1億6000万年前の、首の長いほっそりした獣脚類で、全長約1.7メートル。幼体には歯があったが、成体になると歯をすべて失って角質のくちばしに変わり、石を飲み込んで胃の中で植物をすりつぶした。肉食恐竜の子孫が植物食に転じた例である。腕はごく小さく、指は短かった。名前は「逃げられなかった泥のトカゲ」を意味し、太古の泥穴にはまった骨格から名づけられた。"
+  },
+  {
+   "k": "A slender, upside-down cone up to about 15 cm tall from Newfoundland, about 565 million years old. It stood point-down in the sediment and widened to an open top, and may have been an early sponge that drew water in through its walls and pumped it out of the top. If so, it is one of the oldest sponges large enough to see.",
+   "v": "ニューファンドランドで見つかった、高さ約15cmに達する細長い逆円錐で、約5億6500万年前に生きていた。とがった先を下にして堆積物に立ち、上に向かって広がって開いた口になっていた。体壁から水を取り込んで上端から送り出す初期の海綿だった可能性がある。もしそうなら、肉眼で見える大きさの海綿として最古級である。"
+  },
+  {
+   "k": "A slim, fast ambush hunter of the Middle Triassic seas, about 240 million years ago, shaped much like a modern garfish or barracuda. Its long, needle-like snout was lined with sharp teeth, and its dorsal and anal fins sat far back near the tail to give a sudden burst of speed. Saurichthys was one of the most widespread fishes of the Triassic, found from China to Europe.",
+   "v": "中期三畳紀、約2億4000万年前の海にいた、細身ですばやい待ち伏せ型の狩人で、現代のダツやカマスによく似た姿をしていた。針のように長い吻には鋭い歯が並び、背びれと尻びれは尾の近くのずっと後ろにあって、一気に加速できた。サウリクチスは三畳紀に最も広く分布した魚の一つで、中国からヨーロッパまで見つかっている。"
+  },
+  {
+   "k": "A slim, fast predatory fish about 60 cm long from the Late Jurassic lagoons of Europe, about 150 million years ago, shaped like a garfish. Its upper jaw extended into a long, pointed snout well past the shorter lower jaw, and its body was covered in big, shiny scales. It darted after small fish near the surface. One fossil shows it entangled with a Rhamphorhynchus pterosaur that may have tried to catch it.",
+   "v": "ヨーロッパの後期ジュラ紀、約1億5000万年前の潟湖にすんだ、細長く素早い捕食魚で、全長約60センチ。ダツのような姿をしていた。上あごは長くとがった吻となって短い下あごよりはるかに突き出し、体は大きく光沢のあるうろこで覆われていた。水面近くで小魚を追った。ある化石には、それを捕らえようとしたらしいランフォリンクスという翼竜と絡み合った姿が残っている。"
+  },
+  {
+   "k": "A small ammonite of the Early Jurassic seas, about 180 million years ago, with a flat shell up to about 8 cm across. Its many slowly widening whorls barely overlap, so the shell looks like a coiled snake, and it is covered in fine ribs that fork as they cross the outer edge. It swarmed in such numbers that its shells pack whole layers of rock at Whitby, where they were sold as 'snakestones' with carved heads added.",
+   "v": "前期ジュラ紀、約1億8000万年前の海にすんだ小型のアンモナイトで、平たい殻は直径最大約8センチ。ゆっくり太くなる多くの巻きがほとんど重ならないため、殻はとぐろを巻いたヘビのように見え、外縁を越えるところで二股に分かれる細い肋で覆われていた。非常に数が多く、ウィトビーではその殻が岩の層を埋め尽くしており、頭を彫り足して「ヘビ石」として売られた。"
+  },
+  {
+   "k": "A small armoured arthrodire about 30 centimetres long from Middle and Late Devonian rivers in Antarctica, about 380 million years ago. A tall, pointed plate stood up from the middle of its back like a shark fin, making it a spiky mouthful for predators. It lived near the bottom, picking up worms and small crustaceans.",
+   "v": "約3億8000万年前、デボン紀中期から後期の南極の川にすんでいた体長約30センチの小型の装甲節頸類。背中の中央からサメの背びれのような高くとがった板が立ち、捕食者にとってとげだらけの獲物だった。水底で暮らし、ゴカイや小さな甲殻類を拾って食べた。"
+  },
+  {
+   "k": "A small arthropod a few centimetres long from the Burgess Shale of Canada, with a rounded head shield, a broad segmented trunk and a short tail shield. Under its head it had a pair of small pincers in front of the mouth, the oldest known chelicerae, the feeding claws that spiders, scorpions and horseshoe crabs still use. A small but well-equipped predator.",
+   "v": "カナダのバージェス頁岩から見つかる体長数センチの小さな節足動物で、丸い頭部の甲、幅広い分節した胴、短い尾部の甲をもつ。頭の下、口の前に小さなはさみが1対あり、これは知られる限り最古の鋏角で、クモやサソリ、カブトガニが今も餌をとるのに使うはさみである。小さいが装備の整った捕食者である。"
+  },
+  {
+   "k": "A small arthropod about 5 cm long from the Chengjiang biota of Yunnan, named after the qilin, a chimera of Chinese legend. It mixed five eyes like Opabinia's and grasping front limbs like those of Anomalocaris with the hardened, segmented body of a true arthropod, a key link in arthropod evolution. Armed with spiny claws and keen eyes, it is a capable small hunter.",
+   "v": "中国雲南省の澄江動物群から見つかる体長約5センチの小さな節足動物で、中国の伝説の霊獣・麒麟にちなんで名づけられた。オパビニアのような5つの目とアノマロカリスのようなつかむ前脚に、真の節足動物の硬く分節した体を兼ね備え、節足動物の進化の重要なつなぎ目とされる。とげのある爪と鋭い目をもつ、有能な小型の狩人である。"
+  },
+  {
+   "k": "A small chelicerate a few centimetres long, related to the sea scorpions, with a broad, rounded head shield, a short, wide 'buckler' of three fused segments and a narrow tail of nine segments ending in a spine. Its fossils come from ancient tidal flats in Tennessee. It walked on its legs over the shallow sea floor, hunting small animals.",
+   "v": "体長数センチの小さな鋏角類で、ウミサソリの仲間に近い。幅広く丸い頭部の殻、3つの体節が癒合した短く幅広い「盾」、そして9節からなり先端に棘のある細い尾をもっていた。化石はテネシー州の古い干潟から見つかっている。浅い海底を脚で歩き回り、小さな動物を捕らえていた。"
+  },
+  {
+   "k": "A small cup- or bag-shaped animal a few centimetres high from Namibia, about 545 million years old. Its walls were quilted into narrow tube-like chambers that zig-zagged up the sides, and it lived partly buried in the sand. It belonged to the same strange group as Ernietta and Pteridinium.",
+   "v": "ナミビアで見つかった、高さ数cmの杯形または袋形の小さな動物で、約5億4500万年前に生きていた。体壁は細い管状の小室にキルトのように仕切られ、それが側面をジグザグに上っており、体の一部を砂に埋めて暮らしていた。エルニエッタやプテリディニウムと同じ奇妙なグループに属する。"
+  },
+  {
+   "k": "A small deer-like ruminant that lived on the Miocene island of Gargano, now part of Italy. It had five horns, one long horn up the middle of the nose and a pair above each eye, and long, sabre-like upper canines like a musk deer. With no large predators on its island, it evolved into several sizes of this strange form.",
+   "v": "中新世のガルガーノ島（現在のイタリアの一部）にいた小型のシカに似た反芻動物。鼻の中央に1本の長い角、両目の上に1対ずつの角という5本の角を持ち、ジャコウジカのような長いサーベル状の上の犬歯もあった。島に大型の捕食者がいなかったため、この奇妙な姿のまま大きさの異なる何種類にも進化した。"
+  },
+  {
+   "k": "A small disc a few centimetres wide ringed by a starburst of long, thin, tentacle-like rays, found from Newfoundland to Russia. It was once taken for a sea anemone, but many now think it was the anchoring holdfast of a frond. Its rays spread across the mat and held it firmly in place.",
+   "v": "細長い触手のような放射線に星形に囲まれた、幅数cmの小さな円盤で、ニューファンドランドからロシアまで見つかっている。かつてはイソギンチャクと考えられたが、現在では多くの研究者が葉状体の固着部だったとみている。放射線は微生物マットの上に広がり、体をしっかりその場に固定した。"
+  },
+  {
+   "k": "A small early ray-finned fish about 20 centimetres long from the Gogo reef of Western Australia, about 380 million years ago. It was a quick, torpedo-shaped swimmer with very large eyes, shiny diamond-shaped scales and a shark-like upturned tail. Its perfectly preserved fossils show how the ancestors of nearly all of today's fishes were built.",
+   "v": "約3億8000万年前、西オーストラリアのゴーゴー礁にすんでいた体長約20センチの初期の条鰭類。魚雷形の素早い泳ぎ手で、とても大きな目、輝くひし形のうろこ、サメのように上に反った尾を持っていた。完全な状態で保存された化石は、今日のほぼすべての魚の祖先の体のつくりを教えてくれる。"
+  },
+  {
+   "k": "A small early relative of the ichthyosaurs, about 40 centimetres long, from the Early Triassic of Anhui, China, about 248 million years ago. It had a short, toothless snout, probably for sucking in soft prey, and large flippers with flexible wrists that may have let it crawl onto the shore like a seal. It shows how the dolphin-like ichthyosaurs began, soon after the end-Permian mass extinction.",
+   "v": "前期三畳紀、約2億4800万年前の中国・安徽から見つかった、体長約40センチメートルの魚竜の小さな初期の親戚。短く歯のない吻は、柔らかい獲物を吸い込むためのものだったと考えられる。手首のしなやかな大きなひれ足で、アザラシのように岸へはい上がれたのかもしれない。イルカのような魚竜が、ペルム紀末の大量絶滅の直後にどのように始まったのかを示している。"
+  },
+  {
+   "k": "A small early tetrapod about 25 centimetres long whose name means 'creature from the black lagoon', found in the rocks of an ancient volcanic lake in Scotland, about 335 million years old. It mixed features of several early tetrapod groups, with a short head, large keyhole-shaped eye openings and slim limbs, and is thought to be a small relative of the baphetids. It probably hunted insects, scorpions and other small animals around the warm lake shores.",
+   "v": "体長約25センチメートルの小さな初期の四肢動物で、名前は「黒い礁湖から来た生き物」を意味し、約3億3500万年前のスコットランドの古代の火山湖の地層から見つかった。いくつかの初期四肢動物グループの特徴をあわせもち、短い頭、鍵穴形の大きな眼窩、細い四肢をもち、バフェテス類の小さな親戚と考えられている。おそらく暖かい湖岸で昆虫やサソリなどの小動物を狩っていた。"
+  },
+  {
+   "k": "A small freshwater shark about 70 centimetres long from the Early Permian lakes and rivers of Europe. It had an eel-like body with a long ribbon of a dorsal fin running back to a pointed tail, and a long, straight spine sticking back from the top of its head. It hunted small fish and other little animals with its two-pronged teeth.",
+   "v": "ペルム紀前期のヨーロッパの湖や川にすんでいた、体長約70センチの小型の淡水ザメ。ウナギのような体に、とがった尾まで続く長いリボン状の背びれがあり、頭の後ろから長くまっすぐなとげが突き出ていた。二叉の歯で小魚などの小動物を捕らえた。"
+  },
+  {
+   "k": "A small galeaspid, a jawless armoured fish a few centimetres long from the early Silurian of Zhejiang, China. It had a rounded, horseshoe-shaped bony head shield with the eyes on top and a slit-like opening on its snout. Its braincase, preserved in fine detail and studied with X-ray scans, showed how the nose and brain of early vertebrates were arranged before jaws evolved. It strained food from the mud of shallow seas.",
+   "v": "小型のガレアスピス類で、中国浙江省の前期シルル紀から知られる、全長数cmの無顎の甲冑魚。丸い馬蹄形の骨質の頭甲を持ち、目は頭の上に、吻部にはスリット状の開口があった。非常に精細に保存された脳函はX線スキャンで研究され、顎が進化する前の初期脊椎動物の鼻と脳がどのように配置されていたかを明らかにした。浅い海の泥から餌をこし取っていた。"
+  },
+  {
+   "k": "A small gliding lizard about 15 centimetres long from the Early Cretaceous forests of China. Eight very long ribs on each side held out a skin wing, which it spread to glide between trees like the flying dragons of Asia today. It caught insects in the branches.",
+   "v": "中国の白亜紀前期の森にいた体長約15センチの小さな滑空トカゲ。体の両側でそれぞれ8本のとても長い肋骨が皮膜の翼を張り、それを広げて、今日のアジアのトビトカゲのように木から木へ滑空した。枝の間で昆虫を捕らえた。"
+  },
+  {
+   "k": "A small heterodontosaurid dinosaur about 70 cm long from the Late Jurassic of north-eastern China, about 158 million years ago. It is famous for a crest of long, stiff bristles, up to 6 cm long, running along its back and tail. Because it belongs to the plant-eating branch of dinosaurs, far from the feathered meat-eaters, it suggests that fuzzy body coverings may have been widespread among dinosaurs. Like its relatives it had a beak and small fangs.",
+   "v": "中国北東部の後期ジュラ紀、約1億5800万年前の、全長約70センチの小型ヘテロドントサウルス類。背中と尾に沿って並ぶ長さ最大6センチの長く硬い剛毛で有名である。羽毛をもつ肉食恐竜から遠く離れた植物食の系統に属するため、毛のような体表の覆いは恐竜に広く見られた可能性を示している。親戚と同じく、くちばしと小さな牙をもっていた。"
+  },
+  {
+   "k": "A small land crocodile about 75 centimetres long from Late Cretaceous Madagascar, with a short, blunt, pug-nosed face. Its leaf-shaped, many-cusped teeth suggest it ate plants, very unlike any crocodile living today. Its back was covered in bony plates, and it may have dug burrows.",
+   "v": "白亜紀後期のマダガスカルにいた体長約75センチの小さな陸生のワニで、短く丸い、パグのような鼻ぺちゃの顔をしていた。木の葉の形でいくつもとがりのある歯から、植物を食べていたと考えられ、今のどのワニともまったく違う。背中は骨の板でおおわれ、巣穴を掘っていたかもしれない。"
+  },
+  {
+   "k": "A small lobe-finned fish about 35 centimetres long that lived on a tropical reef in Western Australia about 380 million years ago. It had large eyes and big breathing holes on top of its head, and its front fins already contained the same bones as our upper arm and forearm. It lurked among the reef and snapped up small fish and shrimp-like prey.",
+   "v": "約3億8000万年前、西オーストラリアの熱帯の礁にすんでいた体長約35センチの小型の肉鰭類。大きな目と頭の上の大きな呼吸孔を持ち、前びれにはすでに私たちの上腕と前腕と同じ骨があった。礁の間に潜み、小魚やエビのような小さな獲物をすばやく捕らえた。"
+  },
+  {
+   "k": "A small marrellomorph arthropod a few centimetres across, a late cousin of the Cambrian Marrella. Its rounded head shield bore three pairs of long, forked and branching spines that gave it a lacy, star-like outline, and under it a short, many-segmented body carried feathery legs. It probably fed on detritus just above the sea floor.",
+   "v": "幅わずか数センチの小さなマレロモルフ類の節足動物で、カンブリア紀のマレラの後の時代の近縁種。丸い頭部の殻からは、先が二股に分かれ側枝をもつ長い棘が3対のびており、レースのような星形の輪郭をしていた。その下には多くの小さな体節からなる短い胴があり、羽毛状の脚がついていた。おそらく海底のすぐ上でデトリタスを食べていた。"
+  },
+  {
+   "k": "A small marrellomorph arthropod about 5 centimetres across from the Early Devonian Hunsrück sea of Germany, about 400 million years ago, one of the last relatives of the Cambrian Marrella. Its head shield was shaped like a six-pointed star with long spiny rays, and it had long antennae and many feathery legs. It swam just above the sea floor, sifting the mud for food.",
+   "v": "約4億年前、デボン紀前期のドイツ・フンスリュックの海にすんでいた幅約5センチの小さなマレロモルフ類の節足動物で、カンブリア紀のマレラの最後の親類の一つ。頭の甲はとげのある長い6本の突起を持つ六芒星の形で、長い触角と羽のような多くの脚を持っていた。海底のすぐ上を泳ぎ、泥をふるって食べ物を集めた。"
+  },
+  {
+   "k": "A small nectridean amphibian about 30 centimetres long from the Late Carboniferous coal swamps of Ireland and England, about 310 million years ago. It had a newt-like body with short legs, a long, flattened swimming tail and a flat head with short horns at the back corners of the skull, an early version of the boomerang-shaped head of its later relative Diplocaulus. It lived in swamp pools and caught small invertebrates and fish.",
+   "v": "体長約30センチメートルの小型のネクトリド類の両生類で、約3億1000万年前のアイルランドとイングランドの石炭紀後期の石炭湿地にすんでいた。イモリのような体に短い脚、長く平たい遊泳用の尾をもち、平たい頭の頭骨後方の角には短い角があった。これは後の親戚ディプロカウルスのブーメラン形の頭の初期版といえる。湿地の池にすみ、小さな無脊椎動物や魚を捕らえていた。"
+  },
+  {
+   "k": "A small open-water trilobite whose head was dominated by two huge, bulging eyes that gave it almost all-round vision. Instead of crawling on the bottom it swam in the upper waters, and it spread so widely that it is found on many Ordovician continents. It probably fed on tiny plankton.",
+   "v": "外洋にすむ小さな三葉虫で、頭部の大部分を2つの巨大な膨らんだ眼が占め、ほぼ全方位を見渡すことができた。海底をはうのではなく上層の水中を泳いでおり、非常に広く分布したため、オルドビス紀の多くの大陸から見つかっている。おそらく微小なプランクトンを食べていた。"
+  },
+  {
+   "k": "A small plant-eating anomodont about 50 centimetres long from the Late Permian of Russia, around 255 million years ago, and the oldest known backboned animal adapted to climbing trees. It had long fingers and toes with a grasping first digit and a long tail that probably gripped branches, and it chopped leaves with serrated teeth. Many skeletons found together suggest it lived in groups.",
+   "v": "約2億5500万年前、ペルム紀後期のロシアにいた体長約50センチの小型植物食異歯類で、木登りに適応した最古の脊椎動物として知られる。長い手足の指と物をつかめる第一指、枝をつかんだと思われる長い尾をもち、ぎざぎざの歯で葉を切り刻んだ。多くの骨格が一緒に見つかっており、群れで暮らしていたらしい。"
+  },
+  {
+   "k": "A small radiodont from the Burgess Shale of Canada, preserved in hundreds of fossils that even keep its brain. Besides its two big stalked eyes it had a large third eye in the middle of its head, and its front limbs bore rows of long, hooked spines for seizing prey. A quick, sharp-eyed hunter, it strikes hard but has little armour.",
+   "v": "カナダのバージェス頁岩から見つかる小型のラジオドンタ類で、数百の化石が知られ、脳まで保存されたものもある。柄のある2つの大きな目に加え、頭の中央に大きな第三の目をもち、前部付属肢には獲物をつかむための鉤状の長いとげが並んでいた。素早く目の鋭い狩人で攻撃は強いが、装甲はほとんどない。"
+  },
+  {
+   "k": "A small sail-backed synapsid, a distant relative of mammals, about 70 centimetres long from Late Carboniferous rocks near Garnett, Kansas, about 302 million years old. Like its later cousin Edaphosaurus it carried a tall sail on long spines along its back, studded with small knobby crossbars, but its sharp teeth show that it ate insects rather than plants. The sail may have helped it warm up in the morning sun or impress rivals.",
+   "v": "背に帆をもつ小型の単弓類で、哺乳類の遠い親戚。体長約70センチメートルで、カンザス州ガーネット近郊の約3億200万年前の石炭紀後期の地層から見つかった。後の親戚エダフォサウルスと同じく、背中の長い棘に支えられた高い帆をもち、帆には小さなこぶ状の横枝が並んでいたが、鋭い歯から植物ではなく昆虫を食べていたことがわかる。帆は朝日を浴びて体を温めたり、ライバルを威嚇したりするのに役立ったのかもしれない。"
+  },
+  {
+   "k": "A small sauropod about 9 metres long from mid-Cretaceous Niger with a short neck and a broad, straight-edged muzzle like a vacuum cleaner. Its mouth held over 500 slender teeth, replaced as often as every two weeks, and it held its head low to crop ferns and horsetails like a lawnmower. Its lightly built skull had walls thin enough to see light through.",
+   "v": "白亜紀中ごろのニジェールにいた全長約9メートルの小型の竜脚類で、首が短く、掃除機の吸い口のような幅広くまっすぐな口先をしていた。口には500本以上の細い歯が並び、早いものは2週間ごとに生え替わった。頭を低く下げ、芝刈り機のようにシダやトクサを刈り取って食べた。軽い頭骨の壁は光が透けるほど薄かった。"
+  },
+  {
+   "k": "A small, curved tube a few centimetres long from southern China, about 550 million years old. It was built as a stack of nested funnels with flared rims, like a pile of ice-cream cones, from tough organic material that was barely mineralised. A close relative of Cloudina, it shows what tube-dwelling animals were like just before skeletons became common.",
+   "v": "中国南部で見つかった、長さ数cmの小さく曲がった管で、約5億5000万年前に生きていた。縁の広がった漏斗をいくつも重ねた、アイスクリームのコーンを積み重ねたような形で、ほとんど鉱物化していない丈夫な有機物でできていた。クラウディナの近縁で、骨格が広まる直前の管にすむ動物の姿を示している。"
+  },
+  {
+   "k": "A small, eel-shaped lungfish from the Early Permian of Texas, Oklahoma and Kansas, around 290 million years ago. It lived in ponds and streams that dried out in the hot season and survived by digging a burrow in the mud, sealing itself in and breathing air until the rains returned; some fossils are still inside their burrows. It crushed small animals with its ridged tooth plates.",
+   "v": "約2億9000万年前、ペルム紀前期のテキサス、オクラホマ、カンザスにすんでいたウナギ形の小さな肺魚。乾季に干上がる池や小川にすみ、泥に巣穴を掘ってこもり、雨が戻るまで空気を吸って生き延びた。巣穴の中に残ったままの化石もある。うねのある歯板で小動物をかみ砕いた。"
+  },
+  {
+   "k": "A small, flat disc about 3 cm across from the White Sea coast of Russia, about 555 million years old, built on three-fold symmetry like its relative Tribrachidium. Three grooves met at its centre, fine branching channels ran out from them, and its edge carried a fringe of slender rays. The channels may have carried water and food through its body.",
+   "v": "ロシア白海沿岸で見つかった、差し渡し約3cmの平たい小さな円盤で、約5億5500万年前に生きていた。近縁のトリブラキディウムと同じく三放射相称だった。中心で3本の溝が交わり、そこから細かく枝分かれした水路が伸び、縁には細い放射線の房があった。水路は体内に水と餌を運んでいたのかもしれない。"
+  },
+  {
+   "k": "A small, flat relative of the giant millipede Arthropleura, about 8 centimetres long, from Early and Middle Devonian swamps in Germany and North America. Its body was covered by broad tergites with side lobes, giving it the look of a low, armoured mat. It crawled through the leaf litter of the first forests, feeding on rotting plants.",
+   "v": "巨大なヤスデ、アースロプレウラの小型で平たい親類で、体長は約8センチ。デボン紀前期から中期のドイツと北アメリカの湿地にすんでいた。体は側葉のある幅広い背板で覆われ、低いよろいのマットのように見えた。最初の森の落ち葉の中をはい回り、腐った植物を食べた。"
+  },
+  {
+   "k": "A small, flat trilobite about 3 cm long with a long thorax of fourteen narrow segments and tiny eyes. In one famous rock bed in New York its bodies were turned to golden pyrite with their legs and long antennae intact, giving one of the first clear views of a trilobite's underside. It lived on muddy, oxygen-poor sea floors, picking food particles out of the mud.",
+   "v": "体長約3センチの小さく平たい三葉虫で、14の細い体節からなる長い胸部と小さな眼をもつ。ニューヨーク州の有名な地層では、遺骸が金色の黄鉄鉱に置き換わり、脚や長い触角まで残っていたため、三葉虫の腹側の姿を初めてはっきり示した例のひとつとなった。酸素の乏しい泥の海底に暮らし、泥の中から餌の粒を拾って食べていた。"
+  },
+  {
+   "k": "A small, glassy-pink shrimp-like crustacean about 6 cm long, yet perhaps the most abundant wild animal on Earth by weight. Swarms with up to 10,000 animals in a cubic metre graze on algae in the Southern Ocean, and almost everything there, from penguins and seals to blue whales, depends on them. It glows with blue-green light organs.",
+   "v": "体長わずか約6cmの、ガラスのように透き通ったピンク色のエビに似た甲殻類だが、重さでいえばおそらく地球上で最も多い野生動物。1立方メートルに最大1万匹もの群れで南極海の藻類を食べ、ペンギンやアザラシからシロナガスクジラまで、そこにすむほとんどの動物がこれに頼って生きている。青緑色に光る発光器をもつ。"
+  },
+  {
+   "k": "A small, goblet-shaped animal from the Burgess Shale of Canada and Chengjiang in China: a cup on a slender stalk, ringed at the top by about eighteen stiff, petal-like plates. Its U-shaped gut, with mouth and anus both opening at the top of the cup, suggests a kinship with the tiny entoprocts of today. A defenceless little filter feeder.",
+   "v": "カナダのバージェス頁岩と中国の澄江から見つかる、杯のような形の小さな動物。細い柄の上に杯がのり、その縁を約18枚の硬い花びらのような板が取り巻いていた。口と肛門がともに杯の上面に開くU字形の消化管から、現生の小さな内肛動物との類縁が示唆されている。無防備な小さな濾過食者である。"
+  },
+  {
+   "k": "A small, leaf-shaped swimmer a few centimetres long from the Chengjiang biota of Yunnan, China, with a row of muscle blocks along its body and gill arches at the front. Its place in the tree of life is debated, but it is often seen as an early chordate or a close relative of the ancestors of vertebrates. It filtered food from the water and has no defence but flight.",
+   "v": "中国雲南省の澄江動物群から見つかる、体長数センチの葉のような形の小さな遊泳動物で、体に沿って並ぶ筋節と前部の鰓弓をもつ。生命の樹の中での位置は議論があるが、初期の脊索動物、あるいは脊椎動物の祖先の近縁と見られることが多い。水中の餌をこしとって食べ、逃げる以外の防御手段はない。"
+  },
+  {
+   "k": "A small, light predator, about 60 centimetres long, from the Early Triassic of South Africa, about 245 million years ago, close to the common ancestor of crocodiles and dinosaurs. It had a narrow head with sharp, curved teeth, two rows of small bony plates down its back, a long tail and hind legs longer than its arms. It may have run on its hind legs for short bursts when chasing insects and small reptiles.",
+   "v": "前期三畳紀、約2億4500万年前の南アフリカから見つかった、体長約60センチメートルの小型で身軽な捕食者で、ワニと恐竜の共通祖先に近い存在。細い頭に鋭く曲がった歯を持ち、背中には小さな骨の板が2列に並び、長い尾と、前脚より長い後ろ脚を持っていた。昆虫や小さな爬虫類を追うとき、短い間なら後ろ脚で走ったのかもしれない。"
+  },
+  {
+   "k": "A small, long-legged, feathered dinosaur about a metre long from the Late Cretaceous deserts of Mongolia. Its stubby, powerful arms each ended in one big thumb claw, probably used to break open termite nests like an anteater. A fast runner with a slender head, it fed on insects.",
+   "v": "モンゴルの白亜紀後期の砂漠にいた、体長約1メートルの足の長い羽毛恐竜。短くがっしりした力強い腕の先には大きな親指の爪が1本ずつしかなく、アリクイのようにシロアリの巣を壊すのに使ったのだろう。ほっそりした頭の足の速い走者で、昆虫を食べていた。"
+  },
+  {
+   "k": "A small, long-snouted mammal about 20 centimetres long from the Late Cretaceous of Mongolia, an early relative of placental mammals. Its long hind legs and fused shin bones suggest it hopped like an elephant shrew. It sniffed out insects among the dunes and scrub with its long, mobile nose.",
+   "v": "モンゴルの白亜紀後期にいた体長約20センチの、鼻先の長い小さな哺乳類で、有胎盤類の初期の親戚。長い後ろ脚とくっついたすねの骨から、ハネジネズミのように跳ねて動いていたと考えられる。よく動く長い鼻で、砂丘や茂みの間の昆虫をかぎ出した。"
+  },
+  {
+   "k": "A small, rounded trilobite a few centimetres long from the middle Cambrian of Utah, with a broad head shield, thirteen body segments and a tiny tail shield. It lived in huge numbers on soft, oxygen-poor mud, sifting the sediment for food, and is probably the most collected trilobite in the world. Lightly armoured and harmless, it survives by sheer numbers.",
+   "v": "アメリカ・ユタ州のカンブリア紀中期から見つかる、体長数センチの小さく丸い三葉虫。幅広い頭部、13の胸節、ごく小さな尾部をもつ。酸素の乏しい柔らかい泥の上に大群で暮らし、堆積物をふるって餌をとっていた。世界で最も多く収集されている三葉虫と言われる。装甲は薄く無害で、数の多さで生き延びる。"
+  },
+  {
+   "k": "A small, shrimp-like crustacean with a long, narrow, pod-shaped shell of two thin valves pointed at both ends, a short abdomen and a forked tail. It swam and drifted in the open sea, which is why its remains are so often found among graptolites. It strained tiny food particles from the water with its leaf-like legs.",
+   "v": "小さなエビに似た甲殻類で、両端がとがった2枚の薄い殻からなる細長いさや形の甲羅、短い腹部、二股に分かれた尾をもっていた。外洋を泳いだり漂ったりして暮らしていたため、その化石はよくフデイシと一緒に見つかる。葉のような脚で水中から微小な餌の粒をこし取っていた。"
+  },
+  {
+   "k": "A small, six-sided pyramid a few centimetres tall from the White Sea coast of Russia, about 555 million years old, its faces crossed by fine ribs. It resembles the conulariids, cone-shaped relatives of jellyfish common in later seas, and may be one of the oldest of them. Its stiff, ribbed sheath protected it while tentacles at the open top caught small prey.",
+   "v": "ロシア白海沿岸で見つかった、高さ数cmの小さな六面のピラミッドで、約5億5500万年前に生きていた。各面には細い横じわが走っていた。後の海でよく見られたクラゲの仲間である円錐形のコヌラリア類に似ており、その最古の一つかもしれない。硬い肋のある鞘で身を守り、開いた上端の触手で小さな獲物を捕らえた。"
+  },
+  {
+   "k": "A small, slender early relative of the sharks from the early Silurian of Chongqing, China, described in 2022. Its long body was covered in tiny shark-like scales, but its shoulders were boxed in large bony plates like those of placoderms. This mix shows that the first cartilaginous fishes still carried armour. It was a quick little hunter of tiny animals.",
+   "v": "サメの初期の近縁にあたる小さく細長い魚で、中国重慶市の前期シルル紀から知られ、2022年に記載された。長い体はサメのような小さな鱗で覆われていたが、肩は板皮類のように大きな骨板で箱状に囲まれていた。この組み合わせは、最初の軟骨魚類がまだ鎧をまとっていたことを示している。小さな動物を素早く狩る小さなハンターだった。"
+  },
+  {
+   "k": "A small, slender marine reptile, about 25 centimetres long, from the Middle Triassic of Guizhou, China, about 240 million years ago, and an early relative of the plesiosaurs. It had a small head with needle-like teeth on a long neck and swam with paddle-like limbs. Some fossils hold unborn young, showing that it gave birth to live babies in the water.",
+   "v": "中期三畳紀、約2億4000万年前の中国・貴州から見つかった、体長約25センチメートルの小さくほっそりした海生爬虫類で、首長竜の初期の親戚。長い首の先に針のような歯の生えた小さな頭があり、パドル状の四肢で泳いだ。胎児が残る化石もあり、水中で子どもを産んでいたことがわかる。"
+  },
+  {
+   "k": "A small, smooth, oval clam about 2 cm long that lived half-buried in the soft sea floor, feeding on organic matter in the mud. It is famous for the eight pairs of separate muscle scars inside its shell, like those of simpler single-shelled molluscs, a clue to how bivalves evolved.",
+   "v": "長さ約2センチの、なめらかな楕円形の小さな二枚貝で、やわらかい海底に半分埋もれて暮らし、泥の中の有機物を食べていた。殻の内側に8対の独立した筋肉の痕があることで有名で、これはより単純な単殻の軟体動物に似ており、二枚貝がどのように進化したかを示す手がかりとなっている。"
+  },
+  {
+   "k": "A small, strongly swollen clam about 3 cm across from the Silurian of Europe and North Africa. Its rounded shell had prominent beaks and strong radiating ribs cut by growth lines into rows of beads. It was common in dark, muddy seas, where it may have hung on floating seaweed or other objects by threads and filtered food from the water.",
+   "v": "ヨーロッパと北アフリカのシルル紀から知られる、幅約3cmの小さく強く膨らんだ二枚貝。丸い殻には目立つ殻頂と強い放射肋があり、肋は成長線で区切られて数珠状の列になっていた。暗く泥の多い海に多く見られ、足糸で浮遊する海藻などにぶら下がり、水中から餌をこし取っていたのかもしれない。"
+  },
+  {
+   "k": "A smooth, rounded trilobite about 8 cm long from the Silurian reefs of England. Its head and tail shields were so smooth and swollen that they look almost featureless, with large crescent-shaped eyes set far back. It sheltered in hollows of the reef and could roll up into a tight ball when threatened.",
+   "v": "イングランドのシルル紀の礁から知られる、全長約8cmの滑らかで丸みを帯びた三葉虫。頭と尾の甲は非常に滑らかで膨らんでおり、ほとんど特徴がないように見え、大きな三日月形の目が後ろの方についていた。礁のくぼみに身を隠し、危険を感じると体をきつく丸めてボール状になることができた。"
+  },
+  {
+   "k": "A soft, onion-shaped animal up to about 8 cm tall from South Australia, about 555 million years old. Its broad base was divided into rounded lobes and narrowed into a slim neck with an opening at the top. It is often compared with sea anemones, sitting half buried in the sand and catching small prey drifting by.",
+   "v": "南オーストラリアで見つかった、高さ約8cmに達するタマネギ形の柔らかい動物で、約5億5500万年前に生きていた。幅広い基部は丸い房に分かれ、上に向かって細い首になり、先端に開口部があった。よくイソギンチャクにたとえられ、砂に半ば埋もれて、流れてくる小さな獲物を捕らえていた。"
+  },
+  {
+   "k": "A soft, sac-shaped animal up to about 15 cm tall from the Burgess Shale of Canada, with long ribs running down its body. It probably stood attached to shells or stones on the seabed and is thought to be a relative of sea anemones, among the oldest known. It catches small animals that blunder within reach but cannot move away from danger.",
+   "v": "カナダのバージェス頁岩から見つかる、高さ最大約15センチの柔らかい袋状の動物で、体に沿って長い肋が走る。海底の貝殻や石に付着して立っていたと考えられ、イソギンチャクの仲間とされ、知られる中で最古級のものの一つである。手の届く範囲に迷い込んだ小動物を捕らえるが、危険から逃げることはできない。"
+  },
+  {
+   "k": "A soft-bodied, worm-like animal on stubby legs from the Chengjiang biota of Yunnan, a relative of today's velvet worms. Above each pair of legs it wore a pair of round, net-like plates, and these little plates are found as separate microfossils all over the world. Some fossils are found clinging to the remains of disc-shaped Eldonia, as if feeding on them. Its plates protect it, but it is slow and weak.",
+   "v": "中国雲南省の澄江動物群から見つかる、短い脚をもつ柔らかい虫のような動物で、現生のカギムシの仲間。各脚の上に丸い網目状の板を1対ずつもち、この小さな板はばらばらの微化石として世界中で見つかっている。円盤状のエルドニアの遺骸にしがみついた化石もあり、それを食べていたようだ。板で守られているが、動きは遅く力も弱い。"
+  },
+  {
+   "k": "A solitary horn coral up to about 10 centimetres long from the Middle Devonian seas of North America, about 390 million years ago. Its cup was lined with many fine radial walls, and the outside of its horn-shaped skeleton was ringed by tiny daily growth lines. Counting them shows that a Devonian year had about 400 days, because the Earth then spun faster.",
+   "v": "約3億9000万年前、デボン紀中期の北アメリカの海にすんでいた長さ最大約10センチの単体の角状サンゴ。杯の内側には細かい放射状の隔壁がたくさん並び、角形の骨格の外側には小さな日ごとの成長線が輪のように刻まれていた。それを数えると、当時は地球の自転が速かったため、デボン紀の1年は約400日だったことがわかる。"
+  },
+  {
+   "k": "A spoon-shaped rangeomorph frond about 15 cm long from Mistaken Point in Newfoundland, about 565 million years old. A few large branches ran out at a slant from its midline, each split into clearly visible smaller branches. It is named after the Beothuk, the original people of Newfoundland.",
+   "v": "ニューファンドランドのミステイクン・ポイントで見つかった、長さ約15cmのスプーン形のランゲオモルフ類の葉状体で、約5億6500万年前に生きていた。正中線から数本の大きな枝が斜めに伸び、それぞれがはっきり見える小枝に分かれていた。名前はニューファンドランドの先住民ベオサック族にちなむ。"
+  },
+  {
+   "k": "A squat, lizard-like reptile about 33 centimetres long from the Late Triassic of New Jersey and Connecticut, about 205 million years ago. Its broad, triangular head bore long bony spikes sticking out from the cheeks, which probably made it hard for predators to swallow. It chewed tough plants with broad teeth and belonged to the procolophonids, one of the few old reptile groups that survived the end-Permian extinction.",
+   "v": "後期三畳紀、約2億500万年前のニュージャージーとコネチカットから見つかった、体長約33センチメートルのずんぐりしたトカゲのような爬虫類。幅広い三角形の頭には頬から長い骨のとげが突き出しており、捕食者に飲み込まれにくくしていたと考えられる。幅広い歯で硬い植物をかみ砕き、ペルム紀末の絶滅を生き延びた数少ない古い爬虫類グループの一つ、プロコロフォン類に属していた。"
+  },
+  {
+   "k": "A squid-like belemnite about 30 centimetres long that swam in large schools along the coasts of Late Cretaceous North America. Inside its body lay a bullet-shaped stone-hard guard, so common as a fossil that people once called them thunderbolts. It caught fish and shrimp with ten hooked arms and could escape by jetting backwards in a cloud of ink.",
+   "v": "体長約30センチのイカに似たベレムナイトで、白亜紀後期の北アメリカ沿岸を大きな群れで泳いでいた。体内には弾丸の形をした石のように硬い鞘があり、化石としてとても多く見つかるため、かつては雷石と呼ばれた。かぎ爪のついた10本の腕で魚やエビを捕らえ、危険が迫ると墨を吐いて後ろ向きに噴射して逃げた。"
+  },
+  {
+   "k": "A squid-like relative of the belemnites from the Late Triassic seas of the Alps, about 215 million years ago. Inside its body sat a chambered shell sheathed in a long, slender, pointed guard scored with deep lengthwise grooves, which gives it its name. With big eyes and ten hooked arms it hunted fish and shrimp in open water.",
+   "v": "ベレムナイトに近縁なイカに似た動物で、後期三畳紀、約2億1500万年前のアルプスの海にすんでいた。体内には部屋に仕切られた殻があり、それを深い縦溝が刻まれた細長くとがった鞘が包んでいた。この溝が名前の由来である。大きな目と、かぎのついた10本の腕で、開けた海で魚やエビを狩った。"
+  },
+  {
+   "k": "A stalkless sea lily with a round cup the size of a fist and ten slender arms up to a metre long. Unlike most of its relatives it was not rooted to the bottom but drifted or rested in huge groups in the warm inland sea of North America. It spread its feathery arms to catch tiny food from the water.",
+   "v": "茎のないウミユリで、こぶしほどの丸いがくと、長さ1メートルにもなる10本の細い腕を持っていた。多くの仲間と違って海底に根を下ろさず、北アメリカの暖かい内海で大きな群れになって漂ったり休んだりしていた。羽毛のような腕を広げて、水中の小さな食べ物をとらえた。"
+  },
+  {
+   "k": "A stout, badger-sized plant-eater about 1 metre long from the Early Jurassic of Arizona, about 185 million years ago, one of the last cynodonts that were not yet mammals. It had big, rodent-like front teeth for gnawing and broad grinding cheek teeth. One adult was found curled up with 38 tiny babies, far more than any mammal raises at once, showing that its relatives still bred like reptiles.",
+   "v": "アメリカ・アリゾナの前期ジュラ紀、約1億8500万年前の、アナグマほどの大きさのずんぐりした植物食動物で、全長約1メートル。まだ哺乳類ではなかった最後のキノドン類のひとつである。かじるための齧歯類のような大きな前歯と、幅の広いすりつぶし用の頬歯をもっていた。成体1頭が38匹の小さな子と丸まった状態で見つかっており、哺乳類が一度に育てる数をはるかに超えることから、その仲間がまだ爬虫類のように繁殖していたことがわかる。"
+  },
+  {
+   "k": "A strange horseshoe crab, about 8 centimetres long, that lived in rivers and lakes near today's Sydney, Australia, in the Middle Triassic, about 240 million years ago. The rear corners of its head shield grew into huge horn-like spines sweeping far back past its body, perhaps to stop it sinking into soft mud. It shows that horseshoe crabs, now only found in the sea, once spread into fresh water.",
+   "v": "体長約8センチメートルの奇妙なカブトガニで、中期三畳紀、約2億4000万年前に現在のオーストラリア・シドニー付近の川や湖にすんでいた。頭部の甲羅の後ろの角は巨大な角のようなとげとなって体のはるか後ろまで伸びており、柔らかい泥に沈み込まないためだったのかもしれない。今では海にしかいないカブトガニが、かつて淡水にも進出していたことを示している。"
+  },
+  {
+   "k": "A strange reef-building clam, about 30 centimetres tall, whose lower shell grew into a thick, ribbed horn cemented upright on the sea floor while the upper shell sat on top like a lid. Packed side by side in their thousands, rudists like Hippurites built the great reefs of the warm Cretaceous seas in place of corals. They fed by straining food from the water through pores in the lid.",
+   "v": "高さ約30センチの奇妙な礁をつくる二枚貝で、下の殻は分厚く筋の入った角のような形に育って海底に直立して固着し、上の殻はふたのようにその上にのっていた。ヒップリテスのような厚歯二枚貝（ルディスト）は何千と並んで密集し、温暖な白亜紀の海でサンゴに代わって大きな礁を築いた。ふたにある小さな穴から水をこして食べ物をとった。"
+  },
+  {
+   "k": "A strange, flattened relative of the ratfishes from the Late Permian Zechstein Sea of Germany and England. With its broad body and huge, wing-like pectoral fins it looked much like a skate, and it lay on or glided over the sea floor. Its mouth held rows of overlapping crushing teeth, used to crack open shellfish such as brachiopods.",
+   "v": "ペルム紀後期のドイツとイングランドのツェヒシュタイン海にすんでいた、ギンザメの仲間の奇妙な平たい魚。幅広い体と翼のような大きな胸びれでエイによく似ており、海底に伏せたり海底すれすれを滑空したりした。口には重なり合ったすりつぶし型の歯が何列も並び、腕足動物などの貝をかみ割った。"
+  },
+  {
+   "k": "A stromatoporoid, a reef-building sponge that grew layered stony domes often more than half a metre across in Middle and Late Devonian seas. Its skeleton was built of thin layers joined by tiny pillars, with small bumps on the surface where water was drawn in. Together with corals it built the largest reefs the world has ever seen, until the Late Devonian extinction wiped them out.",
+   "v": "層孔虫と呼ばれる礁をつくる海綿で、デボン紀中期から後期の海で、しばしば差し渡し50センチを超える層状の石のドームを築いた。骨格は小さな柱で結ばれた薄い層からなり、表面には水を吸い込む小さなこぶがあった。サンゴとともに地球史上最大の礁を築いたが、デボン紀後期の大量絶滅で姿を消した。"
+  },
+  {
+   "k": "A tall rangeomorph up to about 35 cm high from Newfoundland, about 565 million years old. A bare stalk rose from a disc anchored in the mud and ended in a bushy crown of branching frondlets, like a candelabrum. Its high crown reached water that lower fronds could not, but the slender stalk made it fragile.",
+   "v": "ニューファンドランドで見つかった、高さ約35cmに達する背の高いランゲオモルフ類で、約5億6500万年前に生きていた。泥に固定された円盤から裸の柄が伸び、その先端に枝分かれした小葉のふさふさした冠が付いて、燭台のような形をしていた。高い冠は低い葉状体が届かない水に達したが、細い柄のため壊れやすかった。"
+  },
+  {
+   "k": "A tall, narrow frond up to about 50 cm high from England and Newfoundland, about 560 million years old. A long bare stalk held the lance-shaped leaf above the seabed, anchored by a broad buried disc, and simple branches ran straight out from its midline. Its height let it reach the water above the low fronds around it.",
+   "v": "イングランドとニューファンドランドで見つかった、高さ約50cmに達する細長い葉状体で、約5億6000万年前に生きていた。長い裸の柄が槍形の葉を海底から持ち上げ、埋もれた幅広い円盤で固定され、単純な枝が正中線からまっすぐ伸びていた。その高さによって、周囲の低い葉状体より上の水に届いた。"
+  },
+  {
+   "k": "A temnospondyl amphibian about a metre long from the coal-forest rocks of Nova Scotia, about 315 million years old, whose skeletons were found inside the hollow stumps of giant club-moss trees. It had a broad, flat head with large eyes and a notch at the back of the skull that probably held an eardrum, a stout body and strong legs. It hunted insects, millipedes and smaller animals on the forest floor.",
+   "v": "体長約1メートルの分椎類の両生類で、約3億1500万年前のカナダ・ノバスコシア州の石炭林の地層から見つかり、その骨格は巨大なヒカゲノカズラ類の木の空洞になった切り株の中から発見された。大きな目のある平たく幅広い頭をもち、頭骨の後ろには鼓膜があったと思われる切れ込みがあり、がっしりした体と丈夫な脚をもっていた。林床で昆虫やヤスデ、より小さな動物を狩っていた。"
+  },
+  {
+   "k": "A thelodont, a small jawless fish about 7 cm long from the Late Silurian of Saaremaa, Estonia, known from complete, articulated bodies. Instead of bony plates it was covered in thousands of tiny, tooth-like scales. It had a rounded head with a small mouth at the front, flap-like fins behind the gills, a tall dorsal fin and a big tail, and fed on small particles near the sea floor.",
+   "v": "テロドゥス類の一種で、エストニアのサーレマー島の後期シルル紀から知られる、全長約7cmの小さな無顎類。完全な関節のつながった全身化石が見つかっている。骨の板の代わりに、何千もの小さな歯のような鱗で覆われていた。丸い頭の前端に小さな口があり、鰓の後ろにひれ状のひれ、高い背びれと大きな尾びれを持ち、海底近くの細かな粒子を食べていた。"
+  },
+  {
+   "k": "A thick, strongly ribbed clam about 5 cm tall, taller than long, with a pointed beak at the top front. It stood upright on its edge, anchored to shells and other hard bits on the sea floor by a tuft of threads, filtering food from the water. It was one of the commonest clams of the Late Ordovician seas of North America.",
+   "v": "高さ約5センチの、厚く強い肋をもつ二枚貝で、長さより高さがあり、前上方にとがった殻頂がある。殻の縁を下にして直立し、足糸の房で海底の貝殻などの硬いものに体を固定して、水中から餌をこし取っていた。北アメリカのオルドビス紀後期の海で最もありふれた二枚貝のひとつだった。"
+  },
+  {
+   "k": "A tiny armoured animal about a centimetre long from the Burgess Shale of Canada, with a small cap-shaped shell at the front and a coat of scales fringed by long, curving spines. It combines the spines of Wiwaxia with the shell of Halkieria, linking these puzzling animals together near the roots of the molluscs. It grazed the seabed and is hard to attack but has no weapons.",
+   "v": "カナダのバージェス頁岩から見つかる体長約1センチの小さな装甲動物で、前端に小さな帽子形の殻があり、体は鱗に覆われ、周りに長く曲がったとげが並んでいた。ウィワクシアのとげとハルキエリアの殻をあわせもち、これらの謎めいた動物を軟体動物の根元近くで結びつける。海底で餌を削り取り、攻撃されにくいが武器はない。"
+  },
+  {
+   "k": "A tiny armoured placoderm, only about 3 cm long, from the early Silurian of Chongqing, China, about 436 million years ago, described in 2023. It is one of the oldest jawed fishes known from a complete body. Its head and chest were boxed in bony plates and it had a stout spine at each shoulder. Its skull mixes features of placoderms with those of later jawed fishes.",
+   "v": "全長わずか約3cmの小さな甲冑をまとった板皮類で、約4億3600万年前の中国重慶市の前期シルル紀から知られ、2023年に記載された。全身が完全に保存された有顎魚類としては最古のものの一つである。頭と胸は骨板で箱状に囲まれ、両肩にそれぞれ頑丈な棘があった。その頭骨には、板皮類の特徴と後の有顎魚類の特徴が混在している。"
+  },
+  {
+   "k": "A tiny beetle, under 2 millimetres long, from the Late Triassic of Poland, about 230 million years ago. It was found perfectly preserved inside a fossil dropping, probably from the small dinosaur relative Silesaurus, which swallowed it by accident with its food. Short, very rounded and shiny, it probably grazed on algae on wet ground at the water's edge, like its living relatives.",
+   "v": "体長2ミリメートル未満の小さな甲虫で、後期三畳紀、約2億3000万年前のポーランドから見つかった。糞の化石の中に完璧な状態で保存されており、その糞はおそらく小型の恐竜の親戚シレサウルスのもので、餌と一緒に誤って飲み込まれたのだろう。短くとても丸みを帯びたつやのある体で、現生の近縁種と同じように、水辺の湿った地面で藻類を食べていたと考えられる。"
+  },
+  {
+   "k": "A tiny domed disc about 1 cm across from South Australia, about 555 million years old, with a sunken five-rayed star in the middle and a rim of short ridges. Its five-fold symmetry has led some scientists to suggest it was one of the earliest echinoderms, the group of sea stars and sea urchins. Its name comes from a giant serpent in the stories of the Adnyamathanha people.",
+   "v": "南オーストラリアで見つかった、差し渡し約1cmの小さなドーム形の円盤で、約5億5500万年前に生きていた。中央にくぼんだ五芒星があり、縁を短い隆起が取り巻いていた。その五放射相称から、ヒトデやウニの仲間である棘皮動物の最古の一つだったとする研究者もいる。名前はアドニャマサナ族の伝承に登場する巨大な蛇に由来する。"
+  },
+  {
+   "k": "A tiny oval animal about a centimetre long from the White Sea coast of Russia, about 555 million years old. Its body had only a few large, sickle-shaped segments that alternated left and right of the midline instead of lining up in pairs. Like Dickinsonia it probably grazed the microbial mat, absorbing food through its underside.",
+   "v": "ロシア白海沿岸で見つかった、長さ約1cmの小さな楕円形の動物で、約5億5500万年前に生きていた。体はわずか数個の大きな鎌形の体節からなり、それらは対にならず正中線の左右で互い違いに並んでいた。ディッキンソニアと同じく、微生物マットの上で腹面から栄養を吸収していたと考えられる。"
+  },
+  {
+   "k": "A tiny oval body less than a centimetre long from South Australia, about 555 million years old, its surface wrinkled by irregular grooves and ridges. Nicknamed the 'raisin' for its look, it is named after the naturalist David Attenborough. What kind of animal it was, and how it lived, is still unknown.",
+   "v": "南オーストラリアで見つかった、長さ1cm未満の小さな楕円形の体で、約5億5500万年前のもの。表面は不規則な溝と隆起でしわが寄っていた。その見た目から「レーズン」というあだ名が付き、名前は博物学者デイビッド・アッテンボローにちなむ。どんな動物で、どのように暮らしていたのかは今も分かっていない。"
+  },
+  {
+   "k": "A tiny seed shrimp, an ostracod about 5 mm long from the Silurian of England, preserved in three dimensions with all its soft parts. Its body was enclosed in a bean-shaped shell of two valves, and it rowed through the water with a pair of big, bristly antennae. It is the oldest known male animal preserved with its mating organ, which gives it its name, 'amazing swimmer with a large penis'.",
+   "v": "イングランドのシルル紀から知られる、全長約5mmの小さな貝形虫。すべての軟体部が立体的に保存されている。体は2枚の殻からなる豆形の殻に包まれ、一対の大きな剛毛の生えた触角で水をこいで泳いだ。交尾器とともに保存された最古のオスの動物として知られ、その学名は「大きなペニスを持つ驚くべき泳ぎ手」を意味する。"
+  },
+  {
+   "k": "A tiny shield-shaped animal less than 1 cm long from South Australia, about 555 million years old. A broad, smooth head shield was followed by a few chevron-shaped segments that alternated either side of the midline. It was first mistaken for a young trilobite, but it is now grouped with Vendia and Dickinsonia.",
+   "v": "南オーストラリアで見つかった、長さ1cm未満の小さな盾形の動物で、約5億5500万年前に生きていた。幅広く滑らかな頭部の盾の後ろに、正中線の左右で互い違いになったV字形の体節が数個続いていた。最初は三葉虫の幼生と誤解されたが、現在ではヴェンディアやディッキンソニアと同じグループに入れられている。"
+  },
+  {
+   "k": "A tiny, blind, pea-shaped arthropod under a centimetre long, with a head shield and a tail shield of almost the same size joined by just two body segments. It swarmed in the late Cambrian seas of Scandinavia, and some fossils keep its legs and even its larvae in fine detail. It could fold shut like a clam to protect itself, but it is too small to fight back.",
+   "v": "体長1センチ足らずの、目のない豆のような小さな節足動物で、ほぼ同じ大きさの頭部と尾部がわずか2つの胸節でつながっている。カンブリア紀後期のスカンディナヴィアの海に群れをなして暮らし、脚や幼生まで精細に保存された化石もある。二枚貝のように体を閉じて身を守れるが、小さすぎて反撃はできない。"
+  },
+  {
+   "k": "A tsetse fly about 1.5 cm long from the late Eocene lake beds of Florissant, Colorado. Like its living relatives, which today are found only in Africa, it sucked the blood of large mammals with a long, piercing proboscis, and rested with its wings folded flat over its back like scissor blades. Its fossils show that tsetse flies once lived in North America too.",
+   "v": "コロラド州フロリサントの始新世後期の湖成層から見つかった体長約1.5cmのツェツェバエ。今日アフリカにしかいない親戚と同じく、長く鋭い口吻で大型哺乳類の血を吸い、休むときははさみの刃のように翅を背中に平たく重ねた。その化石は、ツェツェバエがかつて北アメリカにもいたことを示している。"
+  },
+  {
+   "k": "A velvet worm about 5 centimetres long from the Mazon Creek fossil beds of Illinois, about 309 million years old, one of very few fossils of these soft-bodied animals. It looked like a caterpillar, with a soft, ringed body, a pair of antennae and many pairs of stubby legs. It belongs to the line that leads to today's velvet worms, which hunt small animals on damp forest floors by spraying them with sticky slime.",
+   "v": "約3億900万年前のイリノイ州のマゾン・クリーク化石層から見つかった体長約5センチメートルのカギムシで、こうした柔らかい体の動物の化石としてはきわめて珍しいものの一つ。イモムシのような姿で、柔らかい環状の体、1対の触角、たくさんのずんぐりした脚をもっていた。湿った林床で小動物にねばねばした粘液を吹きかけて狩りをする現在のカギムシへとつながる系統に属している。"
+  },
+  {
+   "k": "A vetulicolian about 10 cm long from the Burgess Shale of Canada, one of the few found outside China. Its body was in two parts, a bulbous front section and a segmented rear section, joined by a narrow waist that was often twisted. It probably fed on particles from the water or the mud, and it is soft-bodied and harmless.",
+   "v": "カナダのバージェス頁岩から見つかる体長約10センチの古虫動物で、中国以外で見つかった数少ない例の一つ。体はふくらんだ前部と体節のある後部の2つに分かれ、しばしばねじれた細いくびれでつながっていた。水中や泥の中の粒子を食べていたらしく、体は柔らかく無害である。"
+  },
+  {
+   "k": "A wolf-like predator about 1.5 m long from the middle Eocene of North America and Asia. Mesonychids were hoofed mammals that took up hunting: Mesonyx had a big head with strong jaws and blunt teeth, long running legs and small hooves instead of claws. It hunted and scavenged early horses and other small mammals.",
+   "v": "始新世中期の北アメリカとアジアにすんでいた、体長約1.5mのオオカミに似た捕食者。メソニクス類は狩りをするようになった有蹄類で、メソニクスは強いあごをもつ大きな頭、先の丸い歯、走るための長い脚をもち、足先には爪ではなく小さなひづめがあった。初期のウマなどの小型哺乳類を狩り、死肉もあさった。"
+  },
+  {
+   "k": "A wolf-sized but heavier hunting dog of Ice Age America, about 1.7 m long and 60-70 kg, with a broad head and huge, bone-cracking teeth. Ancient DNA shows it was not a close cousin of the grey wolf but a separate lineage that split off millions of years earlier. Packs hunted horses, bison and young ground sloths and vanished with them about 13,000 years ago.",
+   "v": "氷河期のアメリカにいたオオカミほどの大きさで、より重い狩猟犬。体長約1.7m、体重60〜70kgで、幅広い頭と骨をかみ砕く巨大な歯をもつ。古代DNAから、ハイイロオオカミの近縁ではなく、数百万年前に分かれた別の系統だとわかった。群れでウマやバイソン、若い地上性ナマケモノを狩り、約1万3000年前にそれらとともに姿を消した。"
+  },
+  {
+   "k": "Acantherpestes",
+   "v": "アカンテルペステス"
+  },
+  {
+   "k": "Acanthodes",
+   "v": "アカントーデス"
+  },
+  {
+   "k": "Acanthotelson",
+   "v": "アカントテルソン"
+  },
+  {
+   "k": "Acorn worm",
+   "v": "ギボシムシ"
+  },
+  {
+   "k": "Actinostroma",
+   "v": "アクチノストロマ"
+  },
+  {
+   "k": "Aglaspidid",
+   "v": "アグラスピス類"
+  },
+  {
+   "k": "Ailuravus",
+   "v": "アイルラブス"
+  },
+  {
+   "k": "Albumares",
+   "v": "アルブマレス"
+  },
+  {
+   "k": "Allaeochelys",
+   "v": "アラエオケリス"
+  },
+  {
+   "k": "Also called the Tasmanian tiger, a dog-like marsupial predator about 1.3 m long with dark stripes across its back and a stiff tail. It could open its jaws remarkably wide and carried its young in a pouch. It once lived across Australia and New Guinea; the last known thylacine died in a zoo in 1936.",
+   "v": "タスマニアタイガーとも呼ばれる、イヌに似た有袋類の捕食者で、体長約1.3m。背中に黒っぽいしま模様があり、尾はまっすぐでかたい。あごを驚くほど大きく開けることができ、子どもを袋で育てた。かつてオーストラリアとニューギニア全域にいたが、最後の1頭は1936年に動物園で死んだ。"
+  },
+  {
+   "k": "Amber Giant Termite",
+   "v": "コハクオオシロアリ"
+  },
+  {
+   "k": "Ambonychia",
+   "v": "アンボニキア"
+  },
+  {
+   "k": "An aglaspidid, a small extinct arthropod that looks like a cross between a trilobite and a horseshoe crab, a few centimetres long. It had a smooth, semicircular head shield with long side spines, eleven body segments with spiny tips and a long, slender tail spine. It crawled over the sea floor scavenging dead animals and other scraps.",
+   "v": "アグラスピス類の一種で、三葉虫とカブトガニを合わせたような姿をした、体長数センチの絶滅した小型節足動物。なめらかな半円形の頭部の殻に長い頬棘があり、先端がとがった11の体節と細長い尾棘をもっていた。海底をはい回り、動物の死骸などをあさって食べていた。"
+  },
+  {
+   "k": "An anteater-like mammal about 90 cm long, including its long tail, from the middle Eocene forests of Germany. It had a long, toothless snout, powerful clawed forelimbs for ripping open ant and termite nests, and a strong tail that may have gripped branches. Once thought to be an early anteater, it is now seen as a relative of the pangolins that had no scales.",
+   "v": "始新世中期のドイツの森にすんでいた、アリクイに似た哺乳類で、長い尾を含めて体長約90cm。歯のない長い吻、アリやシロアリの巣を引き裂くための強い爪のある前肢をもち、力強い尾で枝をつかんだのかもしれない。かつては初期のアリクイと考えられたが、今ではうろこのないセンザンコウの親戚とみなされている。"
+  },
+  {
+   "k": "An early ape from the Early Miocene forests of East Africa, about 20 million years ago, close to the common ancestor of all living apes. About the size of a baboon, it had no tail and an ape-like skull, but walked on all fours along branches with its palms flat like a monkey. It ate mostly soft fruit.",
+   "v": "約2000万年前、前期中新世の東アフリカの森にいた初期の類人猿で、現生のすべての類人猿の共通祖先に近い。ヒヒほどの大きさで尾がなく、頭骨は類人猿的だったが、サルのように手のひらを平らにつけて枝の上を四足で歩いた。主に柔らかい果実を食べていた。"
+  },
+  {
+   "k": "An early arthropod about 11 cm long from the Chengjiang biota of Yunnan, China, with a broad head shield, stalked eyes, a long trunk of many segments and a tapering tail. Some fossils preserve its brain and nerves, among the oldest known, and one shows an adult with several young, a possible early case of parental care. It fed on the soft seabed and has little to fight with.",
+   "v": "中国雲南省の澄江動物群から見つかる体長約11センチの初期の節足動物で、幅広い頭部の甲、柄のある目、多くの体節からなる長い胴、先細りの尾をもつ。脳と神経が保存された化石は最古級のもので、成体が数匹の幼体と一緒にいる化石は、初期の子育ての例かもしれない。柔らかい海底で餌をとり、戦う手段はほとんどない。"
+  },
+  {
+   "k": "An early brittle star a few centimetres across, with a small, rounded central disc and five long, slender, flexible arms fringed with short spines. It crawled quickly over the sea floor by snaking its arms, picking up detritus and food particles. Like living brittle stars it could probably regrow lost arms.",
+   "v": "差し渡し数センチの初期のクモヒトデで、小さく丸い中央の盤と、短い棘に縁どられた5本の細長くしなやかな腕をもつ。腕をくねらせて海底をすばやくはい回り、デトリタスや餌の粒を拾って食べた。現生のクモヒトデと同じく、失った腕を再生できたと考えられる。"
+  },
+  {
+   "k": "An early horseshoe crab relative about 10 centimetres long from the Early Devonian sea floor of the German Hunsrück, about 400 million years ago. It had a broad semicircular head shield, a segmented abdomen and a tail spine, with walking legs neatly preserved underneath. It ploughed through the mud for worms and small prey, much like a living horseshoe crab.",
+   "v": "約4億年前、デボン紀前期のドイツ・フンスリュックの海底にすんでいた、体長約10センチのカブトガニの初期の親類。幅広い半円形の頭の甲、体節のある腹部、尾剣を持ち、腹側には歩脚がきれいに保存されている。現生のカブトガニのように泥をかき分けて、ゴカイや小さな獲物を探した。"
+  },
+  {
+   "k": "An early leaf-eating monkey from the Late Miocene of Europe and western Asia, a relative of today's langurs and colobus monkeys. Macaque-sized with a long tail, it was at home both in trees and on open ground, and lived in troops. It was one of the few monkeys to spread across Europe.",
+   "v": "後期中新世のヨーロッパと西アジアにいた初期の葉食性のサルで、現在のラングールやコロブスの仲間。マカクほどの大きさで長い尾を持ち、樹上でも開けた地上でも暮らし、群れで生活した。ヨーロッパ中に広がった数少ないサルの一つである。"
+  },
+  {
+   "k": "An early long-necked plant-eater 4-6 metres long from the Early Jurassic of southern Africa, about 200-185 million years ago, a distant cousin of the giant sauropods. It walked on its hind legs and had a small head, leaf-shaped teeth and grasping hands with a huge, curved thumb claw. Its nesting grounds, with clutches of eggs holding curled-up embryos, are among the oldest known: the hatchlings walked on all fours and probably stayed near the nest.",
+   "v": "南部アフリカの前期ジュラ紀、約2億〜1億8500万年前の、全長4〜6メートルの初期の首長植物食恐竜で、巨大な竜脚類の遠い親戚。後ろ脚で歩き、頭は小さく、葉の形の歯をもち、物をつかめる手には巨大な曲がった親指の爪があった。丸まった胚を含む卵の巣が見つかった営巣地は最古級のもので、孵化した子は四足で歩き、巣の近くにとどまっていたと考えられる。"
+  },
+  {
+   "k": "An early mayfly from the Early Permian of Kansas, around 280 million years ago. Unlike living mayflies, its fore and hind wings were almost the same size, and it had three long tail threads. Its young lived in fresh water feeding on plant debris, and the adults gathered in great swarms, escaping enemies by flying off rather than fighting.",
+   "v": "約2億8000万年前、ペルム紀前期のカンザスにいた初期のカゲロウ。現生のカゲロウと違って前後のはねがほぼ同じ大きさで、3本の長い尾毛をもっていた。幼虫は淡水で植物のくずを食べて育ち、成虫は大群で飛び、敵からは戦わずに飛んで逃げた。"
+  },
+  {
+   "k": "An early rabbit from the late Eocene and Oligocene of North America, about 25 cm long and common on the spreading grasslands and open woods. Its ears and hind legs were shorter than a modern rabbit's, so it probably ran rather than leapt. Like its living relatives it ate plants and bred quickly.",
+   "v": "始新世後期から漸新世の北アメリカにすんでいた初期のウサギで、体長約25cm。広がりつつあった草原や疎林に多く見られた。耳と後ろ脚は現代のウサギより短く、跳ねるより走っていたと考えられる。現生の親戚と同じく植物を食べ、すばやく繁殖した。"
+  },
+  {
+   "k": "An early relative of crocodiles about 1 metre long from the Early Jurassic of Arizona, about 195 million years ago. Unlike its descendants it lived on dry land, running on long, upright legs, with a short, broad head and an enlarged fang in the lower jaw. Two rows of square bony plates ran down its back, and tail and belly were armoured too. It hunted lizards, small mammals and other small animals.",
+   "v": "アメリカ・アリゾナの前期ジュラ紀、約1億9500万年前の、全長約1メートルのワニの初期の親戚。子孫とは違って乾いた陸上で暮らし、長くまっすぐな脚で走った。頭は短く幅広く、下あごには大きな牙があった。背中には四角い骨板が2列に並び、尾と腹も装甲で覆われていた。トカゲや小型の哺乳類などの小動物を狩った。"
+  },
+  {
+   "k": "An early relative of elephants from the late Eocene and early Oligocene swamp forests of Egypt, about 2.5 m long and 1.3 m tall at the shoulder. It probably had a short trunk, with a pair of short tusks in the upper jaw and flat, shovel-like lower teeth for cutting and scooping up water plants. It shows how the trunk and tusks of elephants began.",
+   "v": "始新世後期から漸新世前期のエジプトの沼沢林にすんでいたゾウの初期の親戚で、体長約2.5m、肩高1.3m。おそらく短い鼻をもち、上あごに一対の短い牙、下あごにはシャベルのような平たい切歯があり、水草を切り取ってすくい上げた。ゾウの長い鼻と牙がどのように始まったかを示している。"
+  },
+  {
+   "k": "An early roller, a small bird about 18 cm long from the early Eocene Green River lakes of Wyoming. Like living rollers it probably watched from a perch and swooped down on large insects and small animals. Today rollers live only in the Old World, but this and other fossils show that they once lived in North America too.",
+   "v": "始新世前期のワイオミング州グリーンリバー湖群にすんでいた体長約18cmの小鳥で、初期のブッポウソウの仲間。現生のブッポウソウのように止まり木から見張り、大きな昆虫や小動物に舞い降りたのだろう。今日ブッポウソウは旧世界にしかいないが、これらの化石はかつて北アメリカにもいたことを示している。"
+  },
+  {
+   "k": "An edrioasteroid, an extinct echinoderm that lived stuck to shells on the sea floor. Its body was a low, coin-sized disc of overlapping plates, with five food grooves curving out from the centre like a pinwheel. Tiny plates over the grooves opened so that its tube feet could catch food from the water.",
+   "v": "座ヒトデ類の一種で、海底の貝殻に貼りついて暮らした絶滅した棘皮動物。体は重なり合う板でできた硬貨ほどの大きさの低い円盤で、5本の食溝が中心から風車の羽根のように曲がりながらのびていた。食溝をおおう小さな板が開くと、管足が水中の餌を捕らえた。"
+  },
+  {
+   "k": "An egg- or boat-shaped animal up to about 20 cm long from the White Sea coast of Russia, about 555 million years old. Three lengthwise vanes, each divided into stacked tube-like chambers, gave its body three-fold symmetry. It probably stood half buried in the sand, its stiff chambered body hard to damage.",
+   "v": "ロシア白海沿岸で見つかった、長さ約20cmに達する卵形または舟形の動物で、約5億5500万年前に生きていた。縦に走る3枚の羽根がそれぞれ積み重なった管状の小室に分かれ、体は三放射相称だった。おそらく砂に半ば埋もれて立っており、硬い小室状の体は傷つきにくかった。"
+  },
+  {
+   "k": "An eocrinoid, an early stalked echinoderm, from the middle Cambrian of North America. Its small cup of plates sat on a short stalk, and from the top rose a few long feeding arms coiled in a spiral, which caught particles drifting by. Such animals were early relatives of the sea lilies and cystoids that came later. It is lightly protected and cannot fight back.",
+   "v": "初期の柄をもつ棘皮動物であるエオクリノイド類の一種で、北アメリカのカンブリア紀中期から見つかる。板でできた小さな萼が短い柄の上にのり、上から数本の長い摂食腕がらせん状に巻いて伸び、漂ってくる粒をとらえた。こうした動物は、のちに現れるウミユリやウミリンゴの初期の親戚である。守りは薄く、反撃できない。"
+  },
+  {
+   "k": "An extinct banded penguin from the Late Miocene coasts of Peru and Chile, larger than its living relative the Humboldt penguin. It had a long, dagger-like bill for catching fish and probably the black breast band of its living kin. It nested on warm desert shores beside a cold, fish-rich current.",
+   "v": "後期中新世のペルーとチリの海岸にいた絶滅したフンボルトペンギン属のペンギンで、現生の親戚フンボルトペンギンより大きかった。魚を捕らえるための長く短剣のようなくちばしを持ち、現生の仲間のような黒い胸帯もあったらしい。冷たく魚の豊富な海流に面した暖かい砂漠の海岸で営巣した。"
+  },
+  {
+   "k": "An extinct giant termite found in Miocene amber from the Dominican Republic, of the most primitive living termite family. Its only surviving relative is the giant northern termite of Australia, so this family once lived across the world. Its colonies chewed through dead and living wood, digesting it with the help of microbes in their guts.",
+   "v": "ドミニカ共和国の中新世のコハクから見つかった絶滅した大型シロアリで、現生で最も原始的なシロアリの科に属する。この科で唯一生き残っているのはオーストラリアのムカシシロアリだけで、かつては世界中にいたことがわかる。コロニーは枯れ木も生木もかじり、腸内の微生物の助けで木を消化した。"
+  },
+  {
+   "k": "An extinct platypus from the Miocene of Australia, larger than the living species, with a broader bill that flared at the tip. Unlike today's platypus it kept its teeth as an adult, and it may have eaten bigger prey such as crayfish, frogs and small turtles. Like its living relative it hunted underwater by sensing the electric fields of its prey.",
+   "v": "オーストラリアの中新世にいた絶滅したカモノハシで、現生種より大きく、くちばしは幅広く先端が広がっていた。現在のカモノハシと違って成体になっても歯を持ち、ザリガニやカエル、小さなカメなど大きめの獲物を食べていたかもしれない。現生の仲間と同じく、獲物の電場を感じ取って水中で狩りをした。"
+  },
+  {
+   "k": "An extinct relative of spadefoot toads, about 7 cm long, from the middle Eocene of Germany. It was a squat frog with large eyes that hunted insects and other small animals around the forest lake. Spadefoots dig into the soil with their hind feet and hide there in dry spells; fossils from Messel even preserve the skin and the outline of its body.",
+   "v": "始新世中期のドイツにすんでいた、スキアシガエルの絶滅した親戚で、体長約7cm。大きな目をもつずんぐりしたカエルで、森の湖のほとりで昆虫などの小動物を狩った。スキアシガエルは後ろ足で土を掘り、乾いた時期には土の中に隠れる。メッセルの化石には皮膚や体の輪郭まで残っている。"
+  },
+  {
+   "k": "An oval, flattened animal about 4 cm long from South Australia, about 555 million years old, like a broader relative of Spriggina. A crescent-shaped head shield sat at the front and many fine segments ran back on either side of the midline. It crawled over the microbial mats feeding on them, and is named after the Australian palaeontologist Mary Wade.",
+   "v": "南オーストラリアで見つかった、長さ約4cmの平たい楕円形の動物で、約5億5500万年前に生きていた。スプリッギナの幅広い親戚のような姿をしている。前端に三日月形の頭部の盾があり、多数の細かな体節が正中線の両側に後ろへ並んでいた。微生物マットの上を這って食べ、名前はオーストラリアの古生物学者メアリー・ウェイドにちなむ。"
+  },
+  {
+   "k": "An unusual seal from the Late Miocene coast of Peru, a slender relative of the monk seals. It had a remarkably long neck and a long, narrow snout, and probably darted its head sideways to snap up fish. It still had strong limbs and may have spent much time on rocky shores.",
+   "v": "後期中新世のペルー沿岸にいた変わったアザラシで、モンクアザラシのほっそりした親戚。非常に長い首と細長い鼻先を持ち、頭を横にすばやく振って魚をくわえたらしい。手足はまだ丈夫で、岩の多い海岸で長い時間を過ごしたかもしれない。"
+  },
+  {
+   "k": "Anetoceras",
+   "v": "アネトセラス"
+  },
+  {
+   "k": "Anfesta",
+   "v": "アンフェスタ"
+  },
+  {
+   "k": "Antarctic Krill",
+   "v": "ナンキョクオキアミ"
+  },
+  {
+   "k": "Aquilonifer",
+   "v": "アクイロニファー"
+  },
+  {
+   "k": "Archaeocidaris",
+   "v": "アルカエオシダリス"
+  },
+  {
+   "k": "Archaeolepis",
+   "v": "アルカエオレピス"
+  },
+  {
+   "k": "Archegosaurus",
+   "v": "アルケゴサウルス"
+  },
+  {
+   "k": "Archimedes",
+   "v": "アルキメデス"
+  },
+  {
+   "k": "Arkarua",
+   "v": "アルカルア"
+  },
+  {
+   "k": "Askeptosaurus",
+   "v": "アスケプトサウルス"
+  },
+  {
+   "k": "Aspidella",
+   "v": "アスピデラ"
+  },
+  {
+   "k": "Aspidorhynchus",
+   "v": "アスピドリンクス"
+  },
+  {
+   "k": "Asteriornis",
+   "v": "アステリオルニス"
+  },
+  {
+   "k": "Astraeospongium",
+   "v": "アストラエオスポンギウム"
+  },
+  {
+   "k": "Ateleaspis",
+   "v": "アテレアスピス"
+  },
+  {
+   "k": "Atlantic Salmon",
+   "v": "タイセイヨウサケ"
+  },
+  {
+   "k": "Attenborites",
+   "v": "アッテンボライテス"
+  },
+  {
+   "k": "Aturia",
+   "v": "アトゥリア"
+  },
+  {
+   "k": "Aulacoceras",
+   "v": "アウラコケラス"
+  },
+  {
+   "k": "Austrolimulus",
+   "v": "アウストロリムルス"
+  },
+  {
+   "k": "Axolotl",
+   "v": "メキシコサラマンダー"
+  },
+  {
+   "k": "Babinka",
+   "v": "バビンカ"
+  },
+  {
+   "k": "Banffia",
+   "v": "バンフィア"
+  },
+  {
+   "k": "Belantsea",
+   "v": "ベラントセア"
+  },
+  {
+   "k": "Belemnitella",
+   "v": "ベレムニテラ"
+  },
+  {
+   "k": "Beothukis",
+   "v": "ベオスキス"
+  },
+  {
+   "k": "Biarmosuchian therapsid",
+   "v": "ビアルモスクス類"
+  },
+  {
+   "k": "Biarmosuchus",
+   "v": "ビアルモスクス"
+  },
+  {
+   "k": "Blastoid",
+   "v": "ウミツボミ類"
+  },
+  {
+   "k": "Blue Whale",
+   "v": "シロナガスクジラ"
+  },
+  {
+   "k": "Bojophlebia",
+   "v": "ボヨフレビア"
+  },
+  {
+   "k": "Bornean Orangutan",
+   "v": "ボルネオオランウータン"
+  },
+  {
+   "k": "Bothriocidaris",
+   "v": "ボスリオキダリス"
+  },
+  {
+   "k": "Bovid",
+   "v": "ウシ科"
+  },
+  {
+   "k": "Brachiospongia",
+   "v": "ブラキオスポンギア"
+  },
+  {
+   "k": "Bradgatia",
+   "v": "ブラドガティア"
+  },
+  {
+   "k": "Brontoscorpio",
+   "v": "ブロントスコルピオ"
+  },
+  {
+   "k": "Bumastus",
+   "v": "ブマストゥス"
+  },
+  {
+   "k": "Callichimaera",
+   "v": "カリキメラ"
+  },
+  {
+   "k": "Camarasaurus",
+   "v": "カマラサウルス"
+  },
+  {
+   "k": "Cambroraster",
+   "v": "カンブロラスター"
+  },
+  {
+   "k": "Campanile",
+   "v": "カンパニレ・ギガンテウム"
+  },
+  {
+   "k": "Camptosaurus",
+   "v": "カンプトサウルス"
+  },
+  {
+   "k": "Campylocephalus",
+   "v": "カンピロケファルス"
+  },
+  {
+   "k": "Canadaspis",
+   "v": "カナダスピス"
+  },
+  {
+   "k": "Canid",
+   "v": "イヌ科"
+  },
+  {
+   "k": "Cardiola",
+   "v": "カルディオラ"
+  },
+  {
+   "k": "Carolinites",
+   "v": "カロリニテス"
+  },
+  {
+   "k": "Cartorhynchus",
+   "v": "カルトリンクス"
+  },
+  {
+   "k": "Caryocaris",
+   "v": "カリオカリス"
+  },
+  {
+   "k": "Caryocrinites",
+   "v": "カリオクリニテス"
+  },
+  {
+   "k": "Casea",
+   "v": "カセア"
+  },
+  {
+   "k": "Ceratodus",
+   "v": "ケラトドゥス"
+  },
+  {
+   "k": "Champsosaurus",
+   "v": "チャンプソサウルス"
+  },
+  {
+   "k": "Charniodiscus",
+   "v": "カルニオディスクス"
+  },
+  {
+   "k": "Chasmataspidid",
+   "v": "カスマタスピス類"
+  },
+  {
+   "k": "Chasmataspis",
+   "v": "カスマタスピス"
+  },
+  {
+   "k": "Cheiracanthus",
+   "v": "ケイラカントゥス"
+  },
+  {
+   "k": "Chiton",
+   "v": "ヒザラガイ"
+  },
+  {
+   "k": "Choristodere",
+   "v": "コリストデラ類"
+  },
+  {
+   "k": "Clevosaurus",
+   "v": "クレヴォサウルス"
+  },
+  {
+   "k": "Cochleosaurus",
+   "v": "コクレオサウルス"
+  },
+  {
+   "k": "Coelacanth",
+   "v": "シーラカンス類"
+  },
+  {
+   "k": "Columnaria",
+   "v": "コルムナリア"
+  },
+  {
+   "k": "Colymbosathon",
+   "v": "コリンボサトン"
+  },
+  {
+   "k": "Common Hippopotamus",
+   "v": "カバ"
+  },
+  {
+   "k": "Common Ostrich",
+   "v": "ダチョウ"
+  },
+  {
+   "k": "Conotubus",
+   "v": "コノツブス"
+  },
+  {
+   "k": "Constellaria",
+   "v": "コンステラリア"
+  },
+  {
+   "k": "Crab",
+   "v": "カニ"
+  },
+  {
+   "k": "Ctenorhabdotus",
+   "v": "クテノラブドトゥス"
+  },
+  {
+   "k": "Cupressocrinites",
+   "v": "クプレッソクリニテス"
+  },
+  {
+   "k": "Dactylioceras",
+   "v": "ダクチリオセラス"
+  },
+  {
+   "k": "Dapedium",
+   "v": "ダペディウム"
+  },
+  {
+   "k": "Deinocheirus",
+   "v": "デイノケイルス"
+  },
+  {
+   "k": "Deltoblastus",
+   "v": "デルトブラストゥス"
+  },
+  {
+   "k": "Dendrerpeton",
+   "v": "デンドレルペトン"
+  },
+  {
+   "k": "Diadectes",
+   "v": "ディアデクテス"
+  },
+  {
+   "k": "Dicynodon",
+   "v": "ディキノドン"
+  },
+  {
+   "k": "Didelphodon",
+   "v": "ディデルフォドン"
+  },
+  {
+   "k": "Dinocephalosaurus",
+   "v": "ディノケファロサウルス"
+  },
+  {
+   "k": "Dinomischus",
+   "v": "ディノミスクス"
+  },
+  {
+   "k": "Dire Wolf",
+   "v": "ダイアウルフ"
+  },
+  {
+   "k": "Dodo",
+   "v": "ドードー"
+  },
+  {
+   "k": "Dromornithid",
+   "v": "ドロモルニス類"
+  },
+  {
+   "k": "Eagle",
+   "v": "ワシ"
+  },
+  {
+   "k": "Echinochiton",
+   "v": "エキノキトン"
+  },
+  {
+   "k": "Ecphora",
+   "v": "エクフォラ"
+  },
+  {
+   "k": "Elapid snake",
+   "v": "コブラ科"
+  },
+  {
+   "k": "Elonichthys",
+   "v": "エロニクティス"
+  },
+  {
+   "k": "Elpistostege",
+   "v": "エルピストステゲ"
+  },
+  {
+   "k": "Elrathia",
+   "v": "エルラシア"
+  },
+  {
+   "k": "Emperor Penguin",
+   "v": "コウテイペンギン"
+  },
+  {
+   "k": "Enchodus",
+   "v": "エンコドゥス"
+  },
+  {
+   "k": "Encrinus",
+   "v": "エンクリヌス"
+  },
+  {
+   "k": "Eoarthropleura",
+   "v": "エオアースロプレウラ"
+  },
+  {
+   "k": "Eopelobates",
+   "v": "エオペロバテス"
+  },
+  {
+   "k": "Eospirifer",
+   "v": "エオスピリファー"
+  },
+  {
+   "k": "Epicyon",
+   "v": "エピキオン"
+  },
+  {
+   "k": "Eryon",
+   "v": "エリオン"
+  },
+  {
+   "k": "Eucalyptocrinites",
+   "v": "エウカリプトクリニテス"
+  },
+  {
+   "k": "Eucritta",
+   "v": "エウクリッタ"
+  },
+  {
+   "k": "Euomphalopterus",
+   "v": "エウオンファロプテルス"
+  },
+  {
+   "k": "Euparkeria",
+   "v": "ユーパルケリア"
+  },
+  {
+   "k": "Euphanerops",
+   "v": "エウファネロプス"
+  },
+  {
+   "k": "Eurotamandua",
+   "v": "ユーロタマンドゥア"
+  },
+  {
+   "k": "Eusarcana",
+   "v": "エウサルカナ"
+  },
+  {
+   "k": "Florissant Tsetse Fly",
+   "v": "フロリサントのツェツェバエ"
+  },
+  {
+   "k": "Furca",
+   "v": "フルカ"
+  },
+  {
+   "k": "Fuxianhuia",
+   "v": "フキシアンフイア"
+  },
+  {
+   "k": "Galapagos Giant Tortoise",
+   "v": "ガラパゴスゾウガメ"
+  },
+  {
+   "k": "Gar",
+   "v": "ガー"
+  },
+  {
+   "k": "Giant Beaver",
+   "v": "ジャイアントビーバー"
+  },
+  {
+   "k": "Giant Pacific Octopus",
+   "v": "ミズダコ"
+  },
+  {
+   "k": "Giant Platypus",
+   "v": "巨大カモノハシ"
+  },
+  {
+   "k": "Giant Sea Biscuit",
+   "v": "巨大タコノマクラ"
+  },
+  {
+   "k": "Giant Squid",
+   "v": "ダイオウイカ"
+  },
+  {
+   "k": "Gigantospongia",
+   "v": "ギガントスポンギア"
+  },
+  {
+   "k": "Gigatitan",
+   "v": "ギガティタン"
+  },
+  {
+   "k": "Glyptocrinus",
+   "v": "グリプトクリヌス"
+  },
+  {
+   "k": "Gnathorhiza",
+   "v": "グナソリーザ"
+  },
+  {
+   "k": "Gogia",
+   "v": "ゴギア"
+  },
+  {
+   "k": "Goniatites",
+   "v": "ゴニアティテス"
+  },
+  {
+   "k": "Great White Shark",
+   "v": "ホホジロザメ"
+  },
+  {
+   "k": "Green River Gar",
+   "v": "グリーンリバー・ガー"
+  },
+  {
+   "k": "Greererpeton",
+   "v": "グリーラーペトン"
+  },
+  {
+   "k": "Grey Wolf",
+   "v": "ハイイロオオカミ"
+  },
+  {
+   "k": "Groenlandaspis",
+   "v": "グロエンランダスピス"
+  },
+  {
+   "k": "Gryphaea",
+   "v": "グリファエア"
+  },
+  {
+   "k": "Haast's Eagle",
+   "v": "ハルパゴルニスワシ"
+  },
+  {
+   "k": "Hallopora",
+   "v": "ハロポラ"
+  },
+  {
+   "k": "Haplophrentis",
+   "v": "ハプロフレンティス"
+  },
+  {
+   "k": "Harpactocarcinus",
+   "v": "ハルパクトカルキヌス"
+  },
+  {
+   "k": "Heals {0}% more of its HP when resting",
+   "v": "休息時のHP回復が {0}% 増える"
+  },
+  {
+   "k": "Heals {0}% of its HP each turn, even after acting",
+   "v": "行動した後も毎ターンHPを {0}% 回復"
+  },
+  {
+   "k": "Helenodora",
+   "v": "ヘレノドラ"
+  },
+  {
+   "k": "Helianthaster",
+   "v": "ヘリアンタステル"
+  },
+  {
+   "k": "Helicoplacus",
+   "v": "ヘリコプラクス"
+  },
+  {
+   "k": "Heliophyllum",
+   "v": "ヘリオフィルム"
+  },
+  {
+   "k": "Hell Ant",
+   "v": "ヘルアント"
+  },
+  {
+   "k": "Hiemalora",
+   "v": "ヒエマロラ"
+  },
+  {
+   "k": "Hippopotamid",
+   "v": "カバ科"
+  },
+  {
+   "k": "Hippurites",
+   "v": "ヒップリテス"
+  },
+  {
+   "k": "Hurdia",
+   "v": "フルディア"
+  },
+  {
+   "k": "Hyolith",
+   "v": "ヒオリテス類"
+  },
+  {
+   "k": "Hypsognathus",
+   "v": "ヒプソグナトゥス"
+  },
+  {
+   "k": "Ianthasaurus",
+   "v": "イアンササウルス"
+  },
+  {
+   "k": "Inaria",
+   "v": "イナリア"
+  },
+  {
+   "k": "Isorophus",
+   "v": "イソロフス"
+  },
+  {
+   "k": "Janassa",
+   "v": "ヤナッサ"
+  },
+  {
+   "k": "Jefferson's Scallop",
+   "v": "ジェファーソンホタテ"
+  },
+  {
+   "k": "Kannemeyeria",
+   "v": "カンネメエリア"
+  },
+  {
+   "k": "Karaurus",
+   "v": "カラウルス"
+  },
+  {
+   "k": "Kayentatherium",
+   "v": "カイエンタテリウム"
+  },
+  {
+   "k": "Kenostrychus",
+   "v": "ケノストリクス"
+  },
+  {
+   "k": "Keraterpeton",
+   "v": "ケラテルペトン"
+  },
+  {
+   "k": "King Cobra",
+   "v": "キングコブラ"
+  },
+  {
+   "k": "Krill",
+   "v": "オキアミ"
+  },
+  {
+   "k": "Kryptobaatar",
+   "v": "クリプトバータル"
+  },
+  {
+   "k": "Kubanochoerus",
+   "v": "クバノコエルス"
+  },
+  {
+   "k": "Kylinxia",
+   "v": "キリンシア"
+  },
+  {
+   "k": "Lagomorph",
+   "v": "ウサギ形類"
+  },
+  {
+   "k": "Lasanius",
+   "v": "ラサニウス"
+  },
+  {
+   "k": "Latzelia",
+   "v": "ラツェリア"
+  },
+  {
+   "k": "Leperditia",
+   "v": "レペルディティア"
+  },
+  {
+   "k": "Lepidaster",
+   "v": "レピダステル"
+  },
+  {
+   "k": "Leptodus",
+   "v": "レプトドゥス"
+  },
+  {
+   "k": "Limusaurus",
+   "v": "リムサウルス"
+  },
+  {
+   "k": "Lithornis",
+   "v": "リソルニス"
+  },
+  {
+   "k": "Lithornithid",
+   "v": "リソルニス類"
+  },
+  {
+   "k": "Lithostrotion",
+   "v": "リソストロティオン"
+  },
+  {
+   "k": "Lobster",
+   "v": "ロブスター"
+  },
+  {
+   "k": "Lotosaurus",
+   "v": "ロトサウルス"
+  },
+  {
+   "k": "Lycosuchus",
+   "v": "リコスクス"
+  },
+  {
+   "k": "Mackenzia",
+   "v": "マッケンジア"
+  },
+  {
+   "k": "Maiasaura",
+   "v": "マイアサウラ"
+  },
+  {
+   "k": "Marywadea",
+   "v": "マリーワデア"
+  },
+  {
+   "k": "Massetognathus",
+   "v": "マッセトグナトゥス"
+  },
+  {
+   "k": "Mawsonia",
+   "v": "マウソニア"
+  },
+  {
+   "k": "Mawsonites",
+   "v": "マウソニテス"
+  },
+  {
+   "k": "Mayfly",
+   "v": "カゲロウ類"
+  },
+  {
+   "k": "Merycoidodon",
+   "v": "メリコイドドン"
+  },
+  {
+   "k": "Mesonychid",
+   "v": "メソニクス類"
+  },
+  {
+   "k": "Mesonyx",
+   "v": "メソニクス"
+  },
+  {
+   "k": "Mesopithecus",
+   "v": "メソピテクス"
+  },
+  {
+   "k": "Metaxytherium",
+   "v": "メタキシテリウム"
+  },
+  {
+   "k": "Micraster",
+   "v": "ミクラスター"
+  },
+  {
+   "k": "Microdictyon",
+   "v": "ミクロディクティオン"
+  },
+  {
+   "k": "Miguashaia",
+   "v": "ミグアシャイア"
+  },
+  {
+   "k": "Mimetaster",
+   "v": "ミメタステル"
+  },
+  {
+   "k": "Mimipiscis",
+   "v": "ミミピスキス"
+  },
+  {
+   "k": "Mitrocystites",
+   "v": "ミトロキスティテス"
+  },
+  {
+   "k": "Mollisonia",
+   "v": "モリソニア"
+  },
+  {
+   "k": "Mononykus",
+   "v": "モノニクス"
+  },
+  {
+   "k": "Multituberculate",
+   "v": "多丘歯類"
+  },
+  {
+   "k": "Namalia",
+   "v": "ナマリア"
+  },
+  {
+   "k": "Naraoia",
+   "v": "ナラオイア"
+  },
+  {
+   "k": "Nesodon",
+   "v": "ネソドン"
+  },
+  {
+   "k": "Nigersaurus",
+   "v": "ニジェールサウルス"
+  },
+  {
+   "k": "Nimbadon",
+   "v": "ニンバドン"
+  },
+  {
+   "k": "Octopus",
+   "v": "タコ"
+  },
+  {
+   "k": "Odontogriphus",
+   "v": "オドントグリフス"
+  },
+  {
+   "k": "Onchopristis",
+   "v": "オンコプリスティス"
+  },
+  {
+   "k": "One of the commonest arthropods of the Burgess Shale, about 5 cm long, with its head and front body enclosed in a two-halved, clam-like shell. Below the shell were pairs of walking legs, and behind it a segmented abdomen ended in a forked tail. It walked over the seabed stirring up the mud with its spiny limbs to pick out food. Its shell gives it some protection, but it has no real weapons.",
+   "v": "バージェス頁岩で最も多い節足動物の一つで、体長約5センチ。頭と体の前半が二枚貝のような2枚の殻に包まれていた。殻の下には対になった歩脚があり、後ろには体節のある腹部が伸びて二又の尾で終わる。海底を歩き、とげのある脚で泥をかき回して餌を探した。殻である程度守られるが、武器らしいものはない。"
+  },
+  {
+   "k": "One of the earliest ammonoids, about 10 centimetres across, from the Early Devonian seas of Germany and Morocco, about 405 million years ago. Its shell was only loosely coiled, with the whorls not touching and a hole in the middle, a step between the straight-shelled nautiloids and the tightly coiled ammonites. It drifted near the sea floor, catching small prey with its tentacles.",
+   "v": "最も初期のアンモノイドの一つで、直径約10センチ。約4億500万年前、デボン紀前期のドイツとモロッコの海にすんでいた。殻はゆるく巻いているだけで、巻きどうしが接せず中央に穴があいており、まっすぐな殻のオウムガイ類と固く巻いたアンモナイトの中間段階だった。海底近くを漂い、触手で小さな獲物を捕らえた。"
+  },
+  {
+   "k": "One of the earliest and largest rodents, from the middle Eocene forests of Germany, about 70 cm long, more than half of it a long, bushy tail. It looked much like a big squirrel and climbed in the trees. Fossils with their stomach contents show that it ate leaves.",
+   "v": "最も初期で最大級の齧歯類の一つで、始新世中期のドイツの森にすみ、体長約70cm、その半分以上がふさふさした長い尾だった。大きなリスによく似ていて、木に登って暮らした。胃の内容物が残った化石から、葉を食べていたことがわかっている。"
+  },
+  {
+   "k": "One of the earliest archosauriforms, the branch that later gave rise to crocodiles, dinosaurs and birds, from the Early Triassic of South Africa, about 250 million years ago. About 1.5 metres long, it looked like a crocodile with sprawling legs and a long tail, and the tip of its upper jaw hooked down over the lower jaw. It was one of the top predators in the world that recovered after the end-Permian extinction.",
+   "v": "のちにワニ、恐竜、鳥類を生み出した系統である主竜形類のなかでも最初期のものの一つで、前期三畳紀、約2億5000万年前の南アフリカから見つかった。体長約1.5メートルで、横に張り出した脚と長い尾を持つワニのような姿をしており、上あごの先端は下あごにかぶさるように下向きに曲がっていた。ペルム紀末の絶滅から回復した世界で、頂点捕食者の一つだった。"
+  },
+  {
+   "k": "One of the earliest coelacanths, about 45 centimetres long, from the Late Devonian estuary of Miguasha in Quebec, about 380 million years ago. It already had the fleshy, limb-like fins of its living relatives, but its tail was still lopsided like a shark's instead of the coelacanth's later three-lobed tail. Its lineage survives today in the deep-sea coelacanth.",
+   "v": "最も初期のシーラカンスの一つで、体長は約45センチ。約3億8000万年前、ケベックのミグアシャのデボン紀後期の河口にすんでいた。すでに現生の仲間と同じ肉質で脚のようなひれを持っていたが、尾はのちのシーラカンスの三つに分かれた尾ではなく、サメのように上下非対称だった。その系統は今日の深海のシーラカンスまで続いている。"
+  },
+  {
+   "k": "One of the earliest cynodonts, the group that gave rise to mammals, about 60 centimetres long, from the Late Permian of southern Africa and Germany, around 255 million years ago. It had a fox-like head with long canines and a long, low body, and its broadened tail bones suggest it may have swum like an otter. It may already have had some fur and a faster metabolism than earlier synapsids.",
+   "v": "のちに哺乳類を生んだキノドン類の最初期のものの一つで、約2億5500万年前、ペルム紀後期のアフリカ南部とドイツにいた体長約60センチの動物。キツネのような頭に長い犬歯、長く低い体をもち、幅の広い尾の骨から、カワウソのように泳いだ可能性がある。すでにいくらかの毛と、それ以前の単弓類より速い代謝をもっていたかもしれない。"
+  },
+  {
+   "k": "One of the earliest rays, up to about 1.5 metres long, from the Late Jurassic lagoons of France and Germany, about 150 million years ago. It looked like a living guitarfish: a flat, spade-shaped front with the pectoral fins joined to the head, then a thick, shark-like tail with two dorsal fins. It lay half-buried in sand, sensing prey with electric receptors, and crushed shellfish and crustaceans.",
+   "v": "最古のエイ類のひとつで、全長は最大約1.5メートル。フランスとドイツの後期ジュラ紀、約1億5000万年前の潟湖にすんでいた。現生のサカタザメに似て、胸びれが頭と一体になった平たいスコップ形の前半身と、2つの背びれをもつ太いサメのような尾部をもっていた。砂に半分埋もれ、電気受容器で獲物を探り、貝や甲殻類をかみ砕いた。"
+  },
+  {
+   "k": "One of the early modern-type stony corals, which built reefs in the warm Tethys Sea in the Late Triassic, about 210 million years ago. Its colonies were bushes of finger-thick tubes that forked again and again and grew upward side by side, each tube ending in a star-shaped cup that held a single polyp. Corals like it began the great coral reefs that still exist today.",
+   "v": "初期の現代型イシサンゴの一つで、後期三畳紀、約2億1000万年前に暖かいテチス海で礁をつくった。群体は指ほどの太さの管が何度も枝分かれしながら並んで上へと伸びる茂みのような形で、各管の先端には1匹のポリプが入る星形の杯があった。このようなサンゴが、今も存在する大サンゴ礁の始まりとなった。"
+  },
+  {
+   "k": "One of the first fossil reptiles ever described, found in Germany in 1706, which lived along the shores of the Zechstein Sea around 257 million years ago. About 1.5 to 2 metres long, it had a lizard-like body, a long, slender neck, a small pointed head with sharp teeth and long hind legs. It was an early member of the line that led to crocodiles and dinosaurs.",
+   "v": "最初に記載された化石爬虫類の一つで、1706年にドイツで見つかり、約2億5700万年前にツェヒシュタイン海の岸辺にすんでいた。体長約1.5〜2メートルで、トカゲのような体、細長い首、鋭い歯のある小さくとがった頭、長い後ろ脚をもっていた。ワニや恐竜へとつながる系統の初期のメンバーである。"
+  },
+  {
+   "k": "One of the first large plant-eating land animals, about 3 metres long, from the Early Permian of North America, around 290 million years ago. It had a heavy, barrel-shaped body, short, powerful sprawling legs and a short, deep head with peg-like front teeth for nipping plants and broad cheek teeth for grinding them. It was a close relative of the first reptiles and their kin, the amniotes.",
+   "v": "約2億9000万年前、ペルム紀前期の北アメリカにいた体長約3メートルの、最初期の大型植物食陸上動物の一つ。重い樽形の体、短く力強い横に張り出した脚、短く高い頭をもち、前の杭のような歯で植物をかみ取り、幅広い頬歯ですりつぶした。最初の爬虫類とその仲間である有羊膜類に近い動物だった。"
+  },
+  {
+   "k": "One of the first reptiles to return to the water, a slender diapsid about 25 centimetres long from Late Carboniferous rocks near Hamilton, Kansas, about 302 million years old. A close relative of Petrolacosaurus, it had a small head and slim legs but a tall, flattened tail like a paddle, which it swung from side to side to swim. It lived in a coastal estuary among fishes and crustaceans, where it probably hunted small swimming prey.",
+   "v": "水中に戻った最初の爬虫類の一つで、体長約25センチメートルのほっそりした双弓類。カンザス州ハミルトン近郊の約3億200万年前の石炭紀後期の地層から見つかった。ペトロラコサウルスに近縁で、小さな頭と細い脚をもつが、尾は高く平たいパドルのようで、それを左右に振って泳いだ。魚や甲殻類とともに沿岸の河口にすみ、おそらく泳ぎ回る小さな獲物を狩っていた。"
+  },
+  {
+   "k": "One of the first spiriferid brachiopods, a lamp shell about 3 cm wide from the Silurian of Britain, Sweden and North America. Its rounded shell had short wings along the hinge, a smooth fold at the front and many fine radiating ribs. Inside, a pair of coiled supports held its feeding tentacles, a design that later spiriferids spread across the world's seas.",
+   "v": "最初期のスピリファー類腕足動物の一つで、イギリス、スウェーデン、北アメリカのシルル紀から知られる幅約3cmのシャミセンガイの仲間(腕足類)。丸い殻は蝶番に沿って短い翼を持ち、前方には滑らかな褶曲と多数の細かい放射肋があった。内部では一対のらせん状の支持構造が摂食用の触手を支えており、この構造は後にスピリファー類とともに世界中の海に広がった。"
+  },
+  {
+   "k": "One of the hell ants, an early branch of ants preserved in 99-million-year-old Burmese amber. Its scythe-shaped jaws swung upwards instead of sideways, snapping shut against a paddle-like horn on its forehead to pin its prey. Hell ants lived in colonies like modern ants but vanished with the dinosaurs.",
+   "v": "ヘルアント（地獄アリ）の一種で、9900万年前のミャンマーの琥珀に保存された、アリの初期の系統。鎌のような大あごは横ではなく上向きに振り上げられ、額にあるパドル状の角に向かってばちんと閉じて獲物をはさみ止めた。現代のアリのように集団で暮らしていたが、恐竜とともに姿を消した。"
+  },
+  {
+   "k": "One of the largest invertebrates, up to about 12-13 m long including its two long feeding tentacles, which end in clubs lined with toothed suckers. It has the biggest eyes of any animal, up to 27 cm across, for seeing in the dark at 300-1,000 m depth. It was first filmed alive only in 2004; sperm whales hunt it and often carry sucker scars from the fight.",
+   "v": "最大級の無脊椎動物で、2本の長い触腕を含めると体長は約12〜13mに達し、触腕の先には歯のある吸盤が並ぶ腕がある。動物界で最大の目をもち、直径は最大27cmで、水深300〜1000mの暗闇で物を見る。生きた姿が初めて撮影されたのは2004年。マッコウクジラが捕食し、その体には戦いでついた吸盤の跡がよく残っている。"
+  },
+  {
+   "k": "One of the largest mayfly-like insects ever, with a wingspan of about 45 centimetres, from Late Carboniferous rocks near Prague in the Czech Republic, about 310 million years old. It had two pairs of broad wings of similar size that it could not fold back over its body, a slender body and long tail filaments. It is thought to be an early relative of the mayflies, the oldest surviving branch of winged insects, and its young probably grew up in the swamp waters.",
+   "v": "翼開長約45センチメートルという史上最大級のカゲロウに似た昆虫で、チェコのプラハ近郊にある約3億1000万年前の石炭紀後期の地層から見つかった。ほぼ同じ大きさの幅広い2対の翅は体の上に後ろへ折りたたむことができず、細い体と長い尾毛をもっていた。現存する有翅昆虫の最古の系統であるカゲロウの初期の親戚と考えられており、幼虫はおそらく湿地の水中で育った。"
+  },
+  {
+   "k": "One of the largest sea snails that ever lived, from the middle Eocene seas of the Paris Basin, with a tall, slender, spiral shell up to about 1 m long and a row of knobs winding round its many whorls. It crept slowly over sandy, sunlit sea floors grazing algae and detritus. A single relative, the bell-tower snail of Australia, survives today.",
+   "v": "史上最大級の巻貝の一つで、始新世中期のパリ盆地の海にすみ、高くほっそりしたらせん形の殻は長さ約1mに達し、たくさんの巻きにこぶの列がらせん状に巡っていた。日の当たる砂地の海底をゆっくりはい回り、藻類や堆積物を食べた。今日ではオーストラリアのカンパニレ（鐘楼貝）ただ一種の親戚が生き残っている。"
+  },
+  {
+   "k": "One of the largest sponges of the Permian, from the Middle Permian reefs of west Texas, around 265 million years ago. It grew as a huge, thin, plate-like disc that could be more than a metre across, held up off the reef on a short stalk, and pumped water through countless small pores to filter out food. With no organs to damage, it could survive heavy injuries and regrow.",
+   "v": "ペルム紀最大級の海綿の一つで、約2億6500万年前、ペルム紀中期のテキサス西部の礁にすんでいた。直径1メートルを超えることもある巨大で薄い皿状の円盤に育ち、短い柄で礁から持ち上げられ、無数の小さな穴から水をくみ込んで餌をこし取った。傷つく器官がないので、大きなけがをしても生き延びて再生できた。"
+  },
+  {
+   "k": "One of the largest trilobites ever, reaching about 37 cm, from the middle Cambrian of Newfoundland and Wales. It had a wide head with long, backswept spines at its corners, around twenty spiny body segments and a tiny tail plate. A big hunter and scavenger of the seafloor, it is well armoured and strong for its time.",
+   "v": "史上最大級の三葉虫で、体長は約37センチに達し、ニューファンドランドとウェールズのカンブリア紀中期から見つかる。幅広い頭の両端に後ろへ伸びる長いとげがあり、約20のとげのある胸節と小さな尾板をもっていた。海底の大型の狩人であり腐肉食者でもあり、当時としては装甲が厚く力も強い。"
+  },
+  {
+   "k": "One of the last blastoids, extinct relatives of the sea lilies, so common in the Permian rocks of Timor that many thousands have been collected. Its small, bud-shaped cup, about 2 centimetres high, sat on a short stalk and had five petal-like food grooves fringed with fine, upright threads that strained food from the water. The blastoids died out in the end-Permian extinction.",
+   "v": "ウミユリの絶滅した親戚であるウミツボミの最後の一つで、ティモール島のペルム紀の地層にきわめて多く、何千個も採集されている。高さ約2センチの小さなつぼみ形の萼は短い柄の上にあり、花びらのような5本の食物溝の縁に細い直立した糸が並び、水中から餌をこし取った。ウミツボミはペルム紀末の大量絶滅で絶滅した。"
+  },
+  {
+   "k": "One of the last spiny sharks, about 30 centimetres long, from the Early Permian lakes of Germany. It had a slim body covered in tiny square scales, big eyes and a stout spine in front of every fin, but no teeth: it strained small animals from the water with long gill rakers. Its well-preserved skulls have helped scientists understand the early evolution of sharks.",
+   "v": "最後の「棘魚類」の一つで、ペルム紀前期のドイツの湖にすんでいた体長約30センチの魚。細い体は小さな四角いうろこに覆われ、目が大きく、すべてのひれの前に太いとげがあったが、歯はなかった。長い鰓耙で水中の小動物をこし取って食べた。保存のよい頭骨は、サメの初期進化の解明に役立っている。"
+  },
+  {
+   "k": "One of the last trilobites, from the Early Carboniferous seas of Europe about 340 million years ago, when only a single family of these once dominant arthropods survived. It was a small, oval trilobite about 3 centimetres long with a bulging central head lobe, large crescent-shaped eyes, nine body segments and a broad, rounded tail shield. It crawled over muddy sea floors picking up food particles, and could roll up into a ball when threatened.",
+   "v": "最後の三葉虫の一つで、約3億4000万年前のヨーロッパの石炭紀前期の海にすんでいた。当時、かつて繁栄したこの節足動物のうち生き残っていたのはただ一つの科だけだった。体長約3センチメートルの小さな楕円形の三葉虫で、膨らんだ頭部中央、三日月形の大きな眼、9つの胸節、そして幅広く丸い尾板をもっていた。泥の海底をはい回って食物の粒を拾い、危険が迫ると体を丸めることができた。"
+  },
+  {
+   "k": "One of the most fish-like of the early four-limbed animals, about 1.2 metres long, from the Late Devonian lagoons of Latvia some 372 million years ago. It had a broad, flat head full of sharp teeth and a fin-fringed tail; its limbs are barely known but were probably short, with many toes. It hunted fish in shallow water and rarely, if ever, came onto land.",
+   "v": "初期の四肢動物の中でも特に魚に近いものの一つで、体長は約1.2メートル。約3億7200万年前、デボン紀後期のラトビアの潟湖にすんでいた。鋭い歯が並ぶ幅広く平たい頭と、ひれのふちどりのある尾を持っていた。四肢はほとんどわかっていないが、おそらく短く指が多かった。浅い水中で魚を狩り、陸に上がることはほとんどなかった。"
+  },
+  {
+   "k": "One of the most primitive osteostracans, jawless armoured fish about 20 cm long from the Silurian of Scotland and Norway. Its broad, horseshoe-shaped head shield was a mosaic of small bony tiles, with the eyes close together on top. Behind the shield it had a pair of flap-like pectoral fins, among the oldest true paired fins of any animal, the beginnings of our own arms. It grubbed for food on the sea floor.",
+   "v": "最も原始的な骨甲類の一つで、スコットランドとノルウェーのシルル紀から知られる全長約20cmの無顎の甲冑魚。幅広い馬蹄形の頭甲は小さな骨片のモザイクでできており、両目は頭の上に寄り合っていた。頭甲の後ろには一対のひれ状の胸びれがあり、これはあらゆる動物の中で最も古い真の対びれの一つで、私たちの腕の始まりでもある。海底を掘り返して餌を探していた。"
+  },
+  {
+   "k": "One of the most primitive therapsids, the group that later gave rise to mammals, from the Middle Permian of the Ural region of Russia, around 265 million years ago. About 1.5 metres long and lightly built, it had a long skull with big eyes and long canine teeth, and legs held more beneath the body than in older synapsids. It was probably an agile hunter of small and medium-sized animals.",
+   "v": "のちに哺乳類を生んだ獣弓類のなかで最も原始的なものの一つで、約2億6500万年前、ペルム紀中期のロシアのウラル地方にいた。体長約1.5メートルできゃしゃな体つきで、長い頭骨に大きな目と長い犬歯があり、脚は古い単弓類より体の下に寄っていた。小型から中型の動物を狩る素早いハンターだったと考えられる。"
+  },
+  {
+   "k": "One of the oldest echinoderms, from the early Cambrian of Nevada and California: a spindle-shaped animal a few centimetres long covered in plates arranged in a spiral, like a twisted pine cone. It probably stood upright with its base in the mud and caught food particles along a feeding groove that wound around its body. Its plated skin protects it, but it is helpless against a determined attacker.",
+   "v": "最古級の棘皮動物の一つで、アメリカ・ネヴァダ州とカリフォルニア州のカンブリア紀前期から見つかる。体長数センチの紡錘形で、らせん状に並んだ板に覆われ、ねじれた松かさのようだった。下端を泥に埋めて直立し、体を巻くように走る摂食溝で餌の粒を集めていたと考えられる。板の皮膚で守られているが、しつこい攻撃にはなすすべがない。"
+  },
+  {
+   "k": "One of the oldest gliding fishes, from the Late Triassic seas of the Alps, more than 200 million years before modern flying fish. This small, silvery fish had huge wing-like pectoral fins, a second smaller pair of pelvic \"wings\" and a forked tail with a longer lower lobe. Like a flying fish, it probably sped along the surface and then glided through the air to escape predators.",
+   "v": "最古の滑空する魚の一つで、後期三畳紀のアルプスの海から見つかっており、現代のトビウオより2億年以上も前に現れた。この小さな銀色の魚は、翼のような巨大な胸びれと、2対目のより小さな腹びれの「翼」、そして下側が長い二股の尾びれを持っていた。トビウオのように水面を高速で進み、空中を滑空して捕食者から逃れたと考えられる。"
+  },
+  {
+   "k": "One of the oldest known centipedes, an early relative of today's long-legged house centipedes, from the Mazon Creek fossil beds of Illinois, about 309 million years old. About 4 centimetres long, it had a short body on fifteen pairs of very long, slender legs, long antennae and a pair of venomous fangs under its head. It ran swiftly over the forest floor and ambushed insects and other small invertebrates.",
+   "v": "知られている最古のムカデの一つで、現在の脚の長いゲジの初期の親戚。約3億900万年前のイリノイ州のマゾン・クリーク化石層から見つかった。体長約4センチメートルで、短い胴体に非常に長く細い15対の脚、長い触角、頭の下に1対の毒牙をもっていた。森の地面をすばやく走り回り、昆虫やほかの小さな無脊椎動物を待ち伏せして捕らえた。"
+  },
+  {
+   "k": "One of the oldest known fish, a small jawless vertebrate about 12 cm long without paired fins. The front of its body was enclosed in a box of bony plates ornamented with ridges and pierced by pores, and it had tiny eyes at the very front. It swam just above the sea floor, sucking up food particles with its jawless mouth.",
+   "v": "知られている最古の魚のひとつで、対になったひれをもたない体長約12センチの小さな無顎類の脊椎動物。体の前半は、隆起の模様があり小孔のあいた骨の板の箱に包まれ、ごく前端に小さな眼があった。海底のすぐ上を泳ぎ、顎のない口で餌の粒を吸い込んでいた。"
+  },
+  {
+   "k": "One of the oldest known members of the human lineage, from the Late Miocene of Chad, about 7 million years ago. It was a chimpanzee-sized ape with a small brain, a huge brow ridge, a rather flat face and small canine teeth. The way its skull sat on the spine suggests it could walk upright, though it still lived among trees by lakes and forest edges.",
+   "v": "人類の系統で知られる最古のメンバーの一つで、約700万年前、後期中新世のチャドに生きていた。チンパンジーほどの大きさの類人猿で、脳は小さく、眉の隆起が非常に大きく、顔はやや平らで、犬歯は小さかった。頭骨と脊椎のつながり方から直立歩行ができたと考えられるが、まだ湖畔や森の縁の木々の間で暮らしていた。"
+  },
+  {
+   "k": "One of the oldest known mites, under half a millimetre long, from the Rhynie chert of Scotland, about 410 million years ago. Its soft, oval body walked on eight short legs among the stems of the earliest land plants. It fed on decaying plant matter and fungi, helping recycle the first soils.",
+   "v": "知られている限り最古のダニの一つで、体長は0.5ミリ未満。約4億1000万年前のスコットランドのライニーチャートから見つかっている。柔らかい楕円形の体で、最初の陸上植物の茎の間を8本の短い脚で歩いた。腐った植物や菌類を食べ、最初の土壌の分解を助けた。"
+  },
+  {
+   "k": "One of the oldest known salamanders, about 19 cm long, from the Late Jurassic of Kazakhstan, about 155 million years ago. It already had the salamander body plan: a broad, flat head with a rounded snout, a long body, four short legs and a tail. Its skull was roughened with bony sculpture. It probably lived along lake shores, hunting insects and worms on land and in shallow water.",
+   "v": "知られている最古のサンショウウオのひとつで、全長約19センチ。カザフスタンの後期ジュラ紀、約1億5500万年前に生きていた。すでにサンショウウオの体のつくりをもち、丸い鼻先の平たく幅広い頭、長い胴、4本の短い脚、尾があった。頭骨の表面はざらざらした骨の模様で覆われていた。湖岸で暮らし、陸上や浅瀬で昆虫やミミズを狩っていたと考えられる。"
+  },
+  {
+   "k": "One of the oldest sea urchins, a small, round animal only 1 to 2 cm across, covered in short spines. Unlike living sea urchins, the zones between its five food-groove areas were just a single column of plates wide. It crept over the sea floor grazing on algae and detritus.",
+   "v": "最古のウニのひとつで、直径わずか1〜2センチの丸い小さな動物で、全身が短い棘におおわれていた。現生のウニとは異なり、5つの歩帯の間にある間歩帯は板1列分の幅しかなかった。海底をゆっくりはい、藻類やデトリタスを食べていた。"
+  },
+  {
+   "k": "One of the strangest brachiopods, common on the Middle Permian reefs of Texas. Its lower valve was a flat, leaf-shaped plate cemented to the reef like an oyster and divided inside by comb-like ridges, and its thin upper valve was a lobed, fishbone-shaped lid that lifted a little so the animal could filter food from the water. Cemented down and armoured, it was hard to dislodge.",
+   "v": "最も奇妙な腕足動物の一つで、ペルム紀中期のテキサスの礁にたくさんいた。下の殻はカキのように礁に固着した平たい葉形の板で、内側はくし状の隆起で仕切られていた。上の殻は薄く切れ込んだ魚の骨のような形のふたで、少し持ち上げて水中から餌をこし取った。固着して装甲に守られ、引きはがすのは難しかった。"
+  },
+  {
+   "k": "Onychopterella",
+   "v": "オニコプテレラ"
+  },
+  {
+   "k": "Orca",
+   "v": "シャチ"
+  },
+  {
+   "k": "Oreodont",
+   "v": "オレオドン類"
+  },
+  {
+   "k": "Orthrozanclus",
+   "v": "オルスロザンクルス"
+  },
+  {
+   "k": "Ostracod",
+   "v": "貝形虫"
+  },
+  {
+   "k": "Ostrich",
+   "v": "ダチョウ類"
+  },
+  {
+   "k": "Owl",
+   "v": "フクロウ"
+  },
+  {
+   "k": "Palaeocoma",
+   "v": "パレオコマ"
+  },
+  {
+   "k": "Palaeoisopus",
+   "v": "パレオイソプス"
+  },
+  {
+   "k": "Palaeolagus",
+   "v": "パレオラグス"
+  },
+  {
+   "k": "Palaeoniscum",
+   "v": "パレオニスクム"
+  },
+  {
+   "k": "Palaeopalaemon",
+   "v": "パレオパレモン"
+  },
+  {
+   "k": "Palaeophragmodictya",
+   "v": "パレオフラグモディクティア"
+  },
+  {
+   "k": "Palaeoscolex",
+   "v": "パレオスコレックス"
+  },
+  {
+   "k": "Palmatolepis",
+   "v": "パルマトレピス"
+  },
+  {
+   "k": "Parapuzosia",
+   "v": "パラプゾシア"
+  },
+  {
+   "k": "Pentremites",
+   "v": "ペントレマイテス"
+  },
+  {
+   "k": "Pezosiren",
+   "v": "ペゾシーレン"
+  },
+  {
+   "k": "Phareodus",
+   "v": "ファレオドゥス"
+  },
+  {
+   "k": "Phillipsia",
+   "v": "フィリップシア"
+  },
+  {
+   "k": "Phiomia",
+   "v": "フィオミア"
+  },
+  {
+   "k": "Phlebolepis",
+   "v": "フレボレピス"
+  },
+  {
+   "k": "Phragmoceras",
+   "v": "フラグモセラス"
+  },
+  {
+   "k": "Pig",
+   "v": "ブタ"
+  },
+  {
+   "k": "Pig-nosed turtle",
+   "v": "スッポンモドキ"
+  },
+  {
+   "k": "Pigeon",
+   "v": "ハト"
+  },
+  {
+   "k": "Platyceras",
+   "v": "プラティケラス"
+  },
+  {
+   "k": "Platyhystrix",
+   "v": "プラティヒストリクス"
+  },
+  {
+   "k": "Pleurosaurus",
+   "v": "プレウロサウルス"
+  },
+  {
+   "k": "Polar Bear",
+   "v": "ホッキョクグマ"
+  },
+  {
+   "k": "Porophoraspis",
+   "v": "ポロフォラスピス"
+  },
+  {
+   "k": "Praecambridium",
+   "v": "プレカンブリディウム"
+  },
+  {
+   "k": "Primobucco",
+   "v": "プリモブッコ"
+  },
+  {
+   "k": "Primocandelabrum",
+   "v": "プリモカンデラブルム"
+  },
+  {
+   "k": "Procolophonid",
+   "v": "プロコロフォン類"
+  },
+  {
+   "k": "Proconsul",
+   "v": "プロコンスル"
+  },
+  {
+   "k": "Procynosuchus",
+   "v": "プロキノスクス"
+  },
+  {
+   "k": "Prodryas",
+   "v": "プロドリアス"
+  },
+  {
+   "k": "Prongdeer",
+   "v": "ホプリトメリクス"
+  },
+  {
+   "k": "Prosalirus",
+   "v": "プロサリルス"
+  },
+  {
+   "k": "Protacarus",
+   "v": "プロタカルス"
+  },
+  {
+   "k": "Protasterina",
+   "v": "プロタステリナ"
+  },
+  {
+   "k": "Protereisma",
+   "v": "プロテレイスマ"
+  },
+  {
+   "k": "Proterosuchus",
+   "v": "プロテロスクス"
+  },
+  {
+   "k": "Protoceras",
+   "v": "プロトケラス"
+  },
+  {
+   "k": "Protoceratid",
+   "v": "プロトケラス類"
+  },
+  {
+   "k": "Protorosaurus",
+   "v": "プロトロサウルス"
+  },
+  {
+   "k": "Protosuchus",
+   "v": "プロトスクス"
+  },
+  {
+   "k": "Pterodaustro",
+   "v": "プテロダウストロ"
+  },
+  {
+   "k": "Pyrothere",
+   "v": "火獣類"
+  },
+  {
+   "k": "Pyrotherium",
+   "v": "ピロテリウム"
+  },
+  {
+   "k": "Rafinesquina",
+   "v": "ラフィネスキナ"
+  },
+  {
+   "k": "Retiophyllia",
+   "v": "レティオフィリア"
+  },
+  {
+   "k": "Rhabdoderma",
+   "v": "ラブドデルマ"
+  },
+  {
+   "k": "Rhamphosuchus",
+   "v": "ランフォスクス"
+  },
+  {
+   "k": "Rhynchocephalian",
+   "v": "ムカシトカゲ類"
+  },
+  {
+   "k": "Riojasaurus",
+   "v": "リオハサウルス"
+  },
+  {
+   "k": "Roller",
+   "v": "ブッポウソウ"
+  },
+  {
+   "k": "Rudist",
+   "v": "厚歯二枚貝"
+  },
+  {
+   "k": "Rugosodon",
+   "v": "ルゴソドン"
+  },
+  {
+   "k": "Sabellidites",
+   "v": "サベリディテス"
+  },
+  {
+   "k": "Sabre-toothed Salmon",
+   "v": "サーベルタイガーサーモン"
+  },
+  {
+   "k": "Sagenodus",
+   "v": "サゲノドゥス"
+  },
+  {
+   "k": "Sahelanthropus",
+   "v": "サヘラントロプス"
+  },
+  {
+   "k": "Sanajeh",
+   "v": "サナジェ"
+  },
+  {
+   "k": "Saniwa",
+   "v": "サニワ"
+  },
+  {
+   "k": "Saurichthys",
+   "v": "サウリクチス"
+  },
+  {
+   "k": "Sauripterus",
+   "v": "サウリプテルス"
+  },
+  {
+   "k": "Scallop",
+   "v": "ホタテガイ"
+  },
+  {
+   "k": "Shark-toothed Dolphin",
+   "v": "スクアロドン"
+  },
+  {
+   "k": "Shenacanthus",
+   "v": "シェナカントゥス"
+  },
+  {
+   "k": "Shikamaia",
+   "v": "シカマイア"
+  },
+  {
+   "k": "Shuyu",
+   "v": "シュウユ"
+  },
+  {
+   "k": "Silurolepis",
+   "v": "シルロレピス"
+  },
+  {
+   "k": "Simosuchus",
+   "v": "シモスクス"
+  },
+  {
+   "k": "Sinotubulites",
+   "v": "シノツブリテス"
+  },
+  {
+   "k": "Snowy Owl",
+   "v": "シロフクロウ"
+  },
+  {
+   "k": "Spadefoot toad",
+   "v": "スキアシガエル"
+  },
+  {
+   "k": "Spartobranchus",
+   "v": "スパルトブランクス"
+  },
+  {
+   "k": "Spathobatis",
+   "v": "スパトバティス"
+  },
+  {
+   "k": "Sphenacodon",
+   "v": "スフェナコドン"
+  },
+  {
+   "k": "Spinoaequalis",
+   "v": "スピノアエクアリス"
+  },
+  {
+   "k": "Squid",
+   "v": "イカ"
+  },
+  {
+   "k": "Stanleycaris",
+   "v": "スタンレイカリス"
+  },
+  {
+   "k": "Steppe Bison",
+   "v": "ステップバイソン"
+  },
+  {
+   "k": "Stirton's Thunderbird",
+   "v": "スタートンサンダーバード"
+  },
+  {
+   "k": "Striatolamia",
+   "v": "ストリアトラミア"
+  },
+  {
+   "k": "Strophomenid brachiopod",
+   "v": "ストロフォメナ類の腕足動物"
+  },
+  {
+   "k": "Suminia",
+   "v": "スミニア"
+  },
+  {
+   "k": "Swan-necked Seal",
+   "v": "アクロフォカ"
+  },
+  {
+   "k": "Syllipsimopodi",
+   "v": "シリプシモポディ"
+  },
+  {
+   "k": "Syncarid",
+   "v": "ムカシエビ類"
+  },
+  {
+   "k": "Synthetoceras",
+   "v": "シンテトケラス"
+  },
+  {
+   "k": "Taeniolabis",
+   "v": "タエニオラビス"
+  },
+  {
+   "k": "Thalattosaur",
+   "v": "タラットサウルス類"
+  },
+  {
+   "k": "The 'Devil's toenail', an oyster 5-10 cm long from the Early Jurassic seas of Europe, about 200-190 million years ago. Its thick lower shell grew in a tight, curling hook like a giant toenail, with the small, flat upper shell sitting in it like a lid. Instead of cementing itself to rock like most oysters, it lay loose on soft mud, its curved weight keeping the opening clear while it filtered plankton.",
+   "v": "「悪魔の足の爪」と呼ばれる長さ5〜10センチのカキで、ヨーロッパの前期ジュラ紀、約2億〜1億9000万年前の海にすんだ。厚い下側の殻は巨大な足の爪のようにきつく巻いた鉤形に育ち、小さく平らな上側の殻がふたのようにその中に収まっていた。多くのカキのように岩に固着せず、柔らかい泥の上に転がって暮らし、曲がった殻の重みで口を泥から離したままプランクトンをこし取った。"
+  },
+  {
+   "k": "The 'kite-runner', a small arthropod about 1 cm long from the Silurian of England, described in 2016. It had very long antennae and a long spine on each side of every body segment. Tied to its back by long, fine threads floated ten tiny capsules, most likely its own young, towed along like kites: a form of parental care seen in no other animal.",
+   "v": "「凧揚げをする者」と呼ばれる全長約1cmの小さな節足動物で、イングランドのシルル紀から知られ、2016年に記載された。非常に長い触角を持ち、体節ごとに両側へ長い棘が伸びていた。背中には長く細い糸で結ばれた10個の小さなカプセルが浮かんでおり、これはおそらく自分の子どもで、凧のように引き連れられていた。ほかのどの動物にも見られない子育ての形である。"
+  },
+  {
+   "k": "The classic 'fish-lizard' of the Early Jurassic seas of Europe, about 200-190 million years ago, made famous by Mary Anning's finds at Lyme Regis. About 2 metres long and shaped like a dolphin, it had a long, toothy snout, large eyes, broad front flippers, a fleshy dorsal fin and a crescent-shaped tail. It hunted fish and squid-like belemnites and gave birth to live young at sea.",
+   "v": "ヨーロッパの前期ジュラ紀、約2億〜1億9000万年前の海にすんだ典型的な「魚トカゲ」で、メアリー・アニングがライム・レジスで発見したことで有名。全長約2メートルでイルカのような姿をしており、歯の並んだ長い吻、大きな目、幅広い前ひれ、肉質の背びれ、三日月形の尾びれをもっていた。魚やイカに似たベレムナイトを狩り、海の中で子を産んだ。"
+  },
+  {
+   "k": "The classic goniatite of the Early Carboniferous seas, about 330 million years ago, so common in the limestones of Europe and North Africa that it is used to tell the age of the rocks. Its almost spherical shell, about 5 centimetres across, was tightly coiled with a tiny central navel, and the walls between its gas-filled chambers met the shell in sharp zigzag lines. It floated and jetted through warm, shallow seas, catching small animals with its tentacles.",
+   "v": "約3億3000万年前の石炭紀前期の海にすんでいた典型的なゴニアタイトで、ヨーロッパや北アフリカの石灰岩にきわめて多く見つかるため、地層の年代を決めるのに使われている。直径約5センチメートルのほぼ球形の殻は固く巻き、中央には小さなへそがあるだけで、ガスで満たされた気室を仕切る隔壁は殻と鋭いジグザグの線で接していた。暖かく浅い海を漂い、水を噴射して進みながら、触手で小動物を捕らえていた。"
+  },
+  {
+   "k": "The commonest giant plant-eater of the Late Jurassic of western North America, about 155-150 million years ago, up to 18 metres long. Compared with Diplodocus it was shorter and deeper, with a thicker neck held up at a slant, a fairly short tail and a short, boxy head with large nostrils. Its strong, spoon-shaped teeth could crop tough vegetation that other sauropods left alone. Herds of all ages seem to have travelled together.",
+   "v": "後期ジュラ紀、約1億5500万〜1億5000万年前の北アメリカ西部で最も普通だった巨大植物食恐竜で、全長は最大18メートル。ディプロドクスに比べて胴は短く深く、太い首を斜めに掲げ、尾はやや短く、頭は短い箱型で鼻孔が大きかった。丈夫なスプーン状の歯で、ほかの竜脚類が食べない硬い植物もかじり取ることができた。あらゆる年齢の個体が群れで移動していたらしい。"
+  },
+  {
+   "k": "The famous \"stone lily\" of the shallow Muschelkalk sea that covered Germany in the Middle Triassic, about 240 million years ago. A long stem of round, coin-like plates held up a small cup and a crown of ten thick arms, which could close into a tulip-shaped bud or open into a fan to catch food from the current. Its stem pieces are so common that whole limestone beds are built from them.",
+   "v": "中期三畳紀、約2億4000万年前にドイツを覆っていた浅いムッシェルカルク海にすんでいた、有名な「石のユリ」。丸いコインのような板が積み重なった長い茎が、小さな萼と10本の太い腕からなる冠を支えていた。冠はチューリップのつぼみのように閉じることも、扇のように開いて水流から餌を捕らえることもできた。茎の破片は非常にありふれていて、石灰岩の地層がまるごとそれでできているほどだ。"
+  },
+  {
+   "k": "The first dinosaur ever given a scientific name, in 1824, from Middle Jurassic rocks of England about 166 million years old. It was a heavy predator 6-7 metres long, with a long, low skull full of blade-like serrated teeth and short but very powerful arms ending in three big hooked claws. It hunted plant-eating dinosaurs along the coasts and river plains of a warm island landscape.",
+   "v": "1824年、最初に学名がつけられた恐竜で、イングランドの約1億6600万年前の中期ジュラ紀の地層から見つかった。全長6〜7メートルのがっしりした捕食者で、長く低い頭骨には刃のような鋸歯状の歯が並び、短いが非常に力強い腕の先には大きな鉤爪が3本あった。温暖な島々の海岸や河川の平野で植物食恐竜を狩っていた。"
+  },
+  {
+   "k": "The great wild bison of the Ice Age mammoth steppe, from Europe across Siberia to Alaska, up to 3 m long and 2 m tall at the shoulder. It had a towering hump, a shaggy dark mane and long, curving horns, and is the bison painted on the walls of Lascaux and Altamira. Herds grazed the cold grasslands and fed wolves, lions and human hunters.",
+   "v": "氷河期のマンモス・ステップにすんだ大型の野生バイソンで、ヨーロッパからシベリアを経てアラスカまで分布し、体長3m、肩高2mに達した。高い肩のこぶ、もじゃもじゃの黒っぽいたてがみ、長く曲がった角をもち、ラスコーやアルタミラの洞窟壁画に描かれたバイソンである。群れで寒い草原の草を食べ、オオカミやライオン、人間の狩人の獲物となった。"
+  },
+  {
+   "k": "The largest ammonite ever found, with a coiled shell up to about 1.8 metres across that may have reached 2 metres or more in life. Its smooth, tightly wound shell hid a squid-like animal with big eyes and ten arms, which drifted slowly through the open sea hunting small prey. Gas-filled chambers inside the shell let it hover at any depth like a living submarine.",
+   "v": "これまでに見つかった最大のアンモナイトで、巻いた殻は直径約1.8メートル、生きていた時は2メートル以上あったかもしれない。なめらかできつく巻いた殻の中には、大きな目と10本の腕を持つイカに似た動物が収まり、外洋をゆっくり漂いながら小さな獲物を狩った。殻の中のガスで満たされた部屋のおかげで、生きた潜水艦のようにどの深さにもとどまることができた。"
+  },
+  {
+   "k": "The largest animal that has ever lived, up to about 30 m long and 150-190 tonnes, with a heart the size of a small car. It lunges through swarms of krill with its throat pleats ballooning, filtering the water through baleen plates and swallowing up to four tonnes of krill a day. Its low calls can carry across hundreds of kilometres of ocean.",
+   "v": "史上最大の動物で、体長約30m、体重150〜190トンに達し、心臓は小型車ほどの大きさがある。のどのひだを大きくふくらませてオキアミの群れに突進し、ひげ板で海水をこし取って、1日に最大4トンものオキアミを飲みこむ。低い鳴き声は海の中を数百kmも伝わる。"
+  },
+  {
+   "k": "The largest dog that ever lived, from the Late Miocene of North America, weighing up to about 170 kilograms. It belonged to the borophagines, \"bone-crushing dogs\" with short, deep, hyena-like jaws that cracked bones for their marrow. It hunted horses and camels and also scavenged, probably in family groups.",
+   "v": "史上最大のイヌ科動物で、後期中新世の北アメリカに生き、体重は約170キログラムに達した。「骨を砕くイヌ」と呼ばれるボロファグス亜科に属し、ハイエナのように短く深いあごで骨を割って骨髄を食べた。ウマやラクダを狩り、死肉もあさり、家族の群れで暮らしていたらしい。"
+  },
+  {
+   "k": "The largest dolphin, also called the killer whale, with males up to 8-9 m long and 6 tonnes and a dorsal fin up to 1.8 m tall. Orcas live in family pods led by old females, each with its own calls and hunting traditions: some eat fish, others work together to wash seals off ice floes or hunt great white sharks and whale calves. They live in every ocean, from the poles to the tropics.",
+   "v": "最大のイルカで、オスは体長8〜9m、体重6トンに達し、背びれは高さ1.8mにもなる。年長のメスが率いる家族の群れで暮らし、群れごとに独自の鳴き声と狩りの伝統をもつ。魚を食べる群れもあれば、協力して波でアザラシを流氷から落としたり、ホホジロザメやクジラの子を狩る群れもある。極地から熱帯まであらゆる海にすむ。"
+  },
+  {
+   "k": "The largest eagle known, females up to about 15 kg with a wingspan near 3 m, from the South Island of New Zealand. Its talons were as big as a tiger's claws, and it struck moa many times its own weight at high speed, gripping the pelvis and killing with a blow to the head. It vanished about 600 years ago, soon after people hunted the moa to extinction.",
+   "v": "知られている中で最大のワシで、メスは体重約15kg、翼開長は3m近く、ニュージーランド南島にすんでいた。かぎづめはトラのつめほども大きく、自分の何倍も重いモアに高速で襲いかかり、骨盤をつかんで頭への一撃で殺した。約600年前、人間がモアを狩りつくした直後に姿を消した。"
+  },
+  {
+   "k": "The largest land carnivore alive, males up to 2.6 m long and 700 kg, which evolved from brown bears during the Ice Age. It hunts seals on the Arctic sea ice, waiting at their breathing holes, and can smell them from kilometres away. Thick white fur over black skin and a layer of fat keep it warm, and it swims for days between ice floes.",
+   "v": "現生最大の陸上肉食動物で、オスは体長2.6m、体重700kgに達する。氷河期にヒグマから進化した。北極の海氷の上でアザラシの呼吸穴のそばで待ち伏せして狩り、数km先の獲物のにおいをかぎつける。黒い皮膚を覆う白く厚い毛と脂肪の層で体を保ち、流氷の間を何日も泳ぎ続けられる。"
+  },
+  {
+   "k": "The largest living bird, up to 2.7 m tall and 150 kg, flightless but able to run at about 70 km/h on long two-toed legs. It has the largest eyes of any land animal and lays the biggest eggs, about 1.5 kg each. A kick from an ostrich can kill a lion; during the Ice Age ostriches also roamed the steppes of Asia.",
+   "v": "現生最大の鳥で、身長2.7m、体重150kgに達する。飛べないが、2本指の長い脚で時速約70kmで走る。陸上動物で最大の目をもち、1個約1.5kgという最大の卵を産む。ダチョウのけりはライオンを殺すこともある。氷河期にはアジアのステップにもダチョウがいた。"
+  },
+  {
+   "k": "The largest living penguin, about 1.2 m tall and up to 45 kg, which dives deeper than 500 m after fish, squid and krill. It breeds on the Antarctic sea ice in the middle of winter: the male keeps the single egg on his feet for two months without eating while thousands of birds huddle together against the cold.",
+   "v": "現生最大のペンギンで、身長約1.2m、体重は45kgに達し、魚やイカ、オキアミを追って500mより深く潜る。真冬の南極の海氷の上で繁殖し、オスはただ1個の卵を足の上に乗せて2か月間何も食べずに温め、何千羽もが身を寄せ合って寒さに耐える。"
+  },
+  {
+   "k": "The largest living tortoise, up to 1.5 m long and over 250 kg, which can live well over 100 years and survive a year without food or water. Its ancestors drifted from South America to the Galapagos Islands, where each island evolved its own form, from domed shells in wet highlands to saddle-shaped shells that let the neck reach up to cactus pads. These differences helped inspire Darwin's ideas on evolution.",
+   "v": "現生最大のリクガメで、体長1.5m、体重250kgを超え、100年以上生き、1年間飲まず食わずでも生きられる。祖先は南アメリカからガラパゴス諸島へ流れ着き、島ごとに独自の形に進化した。湿った高地ではドーム形の甲羅、乾いた島では首を高く伸ばしてサボテンに届く鞍形の甲羅になった。この違いはダーウィンの進化の考えに影響を与えた。"
+  },
+  {
+   "k": "The largest multituberculate, a beaver-sized mammal about 80 cm long from the early Paleocene of New Mexico, living just a few hundred thousand years after the dinosaurs died out. Multituberculates were an old, rodent-like lineage unrelated to true rodents; Taeniolabis had a deep skull, big gnawing front teeth and broad grinding cheek teeth for tough plants. The group had thrived for over 100 million years before rodents replaced it.",
+   "v": "最大の多丘歯類で、ビーバーほどの大きさ、体長約80cm。恐竜の絶滅からわずか数十万年後の暁新世前期のニューメキシコにすんでいた。多丘歯類は齧歯類に似ているが無関係の古い系統で、タエニオラビスは高い頭骨、大きなかじるための前歯、硬い植物をすりつぶす幅広い頬歯をもっていた。このグループは1億年以上栄えた末に齧歯類に取って代わられた。"
+  },
+  {
+   "k": "The largest octopus, usually 3-5 m across the arms and 15-50 kg, living on rocky sea floors of the North Pacific. It hunts crabs, clams and fish, drilling or crushing their shells with its beak, and can change colour and skin texture in an instant. Octopuses are among the most intelligent invertebrates: they solve puzzles, open jars and recognise individual people.",
+   "v": "最大のタコで、腕を広げるとふつう3〜5m、体重15〜50kgになり、北太平洋の岩の多い海底にすむ。カニや貝、魚を狩り、くちばしで殻に穴をあけたりかみ砕いたりし、一瞬で体の色や皮膚の質感を変えられる。タコは最も賢い無脊椎動物の一つで、パズルを解き、びんのふたを開け、人を一人ひとり見分ける。"
+  },
+  {
+   "k": "The largest predatory fish alive, females up to about 6 m long and 2 tonnes, armed with rows of big, saw-edged triangular teeth. It ambushes seals from below at high speed, sometimes launching itself clear of the water. Warm muscles let it hunt in cold seas, and it senses prey by smell and by the faint electric fields of their bodies.",
+   "v": "現生最大の肉食魚で、メスは体長約6m、体重2トンに達し、のこぎり状のふちをもつ大きな三角形の歯が何列も並ぶ。アザラシに下から高速で襲いかかり、ときには体ごと水面から飛び出す。温かい筋肉のおかげで冷たい海でも狩りができ、においと獲物の体が出すかすかな電場で獲物を感じ取る。"
+  },
+  {
+   "k": "The largest salmon ever, up to about 2.5 metres long, from the Late Miocene and Pliocene of the North Pacific coast. It strained plankton with its many gill rakers, but spawning adults grew a pair of big tusk-like teeth that stuck out sideways from the snout, probably for fighting or digging nests. Like living Pacific salmon it swam up rivers to spawn.",
+   "v": "史上最大のサケで、体長は約2.5メートルに達し、後期中新世から鮮新世の北太平洋沿岸にいた。多数の鰓耙でプランクトンをこし取って食べたが、産卵期の成魚は鼻先から横に突き出す一対の大きな牙を生やし、闘争や産卵床掘りに使ったらしい。現生の太平洋のサケと同じく、川を遡って産卵した。"
+  },
+  {
+   "k": "The largest tree-living animal, a red-haired great ape whose arms span over 2 m; adult males weigh about 80 kg and grow broad cheek pads. Orangutans eat mainly fruit, use sticks and leaves as tools and build a new nest in the trees every night. A mother raises one young for about eight years, the longest childhood of any animal besides humans.",
+   "v": "樹上で暮らす最大の動物で、両腕を広げると2mを超える赤毛の類人猿。成熟したオスは体重約80kgで、顔の両側に幅広いほおだこが発達する。主に果実を食べ、枝や葉を道具に使い、毎晩木の上に新しい寝床を作る。母親は1頭の子を約8年かけて育て、これは人間以外で最も長い子ども時代である。"
+  },
+  {
+   "k": "The largest wild dog, about 1.5 m long and 30-60 kg, spread across the northern hemisphere since the Ice Age. Wolves live in family packs that cooperate to run down deer, bison and horses many times their own weight, trotting tens of kilometres a day. Domestic dogs descend from ancient wolves.",
+   "v": "最大の野生のイヌ科動物で、体長約1.5m、体重30〜60kg。氷河期から北半球一帯に広がった。家族の群れで暮らし、協力して自分の何倍も重いシカやバイソン、ウマを追いつめ、1日に数十kmを走る。イヌは古代のオオカミから生まれた。"
+  },
+  {
+   "k": "The last known sea scorpion, from the Late Permian of Russia, known only from part of its large head shield; its whole group vanished in the great end-Permian extinction. A broad, heavy relative of Hibbertopterus, probably over a metre long, it walked slowly over the beds of rivers and lagoons, raking small animals out of the mud with comb-like spines on its front legs. Its thick armour made it very hard to kill.",
+   "v": "知られている最後のウミサソリで、ペルム紀後期のロシアから大きな頭甲の一部だけが見つかっている。ウミサソリのなかまはペルム紀末の大量絶滅で姿を消した。ヒベルトプテルスに近い幅広く重い種類で、体長はおそらく1メートルを超え、川や潟の底をゆっくり歩き、前脚のくし状のとげで泥から小動物をかき出した。厚い装甲のため、倒すのは非常に難しかった。"
+  },
+  {
+   "k": "The longest venomous snake, commonly 3-4 m and up to 5.8 m, from the forests of India and Southeast Asia. It eats mainly other snakes, including venomous ones, and a single bite carries enough venom to kill an elephant. When threatened it spreads a narrow hood, growls and rears up a third of its body; the female builds a nest of leaves and guards her eggs.",
+   "v": "最も長い毒ヘビで、ふつう3〜4m、最大5.8mになり、インドと東南アジアの森にすむ。主にほかのヘビを食べ、毒ヘビも襲う。1回かむだけでゾウを殺せるほどの毒を注入する。おどされると細長いフードを広げ、うなり声をあげて体の3分の1を持ち上げる。メスは落ち葉で巣を作り、卵を守る。"
+  },
+  {
+   "k": "The most scorpion-like sea scorpion, about 10-15 cm long, from the Late Silurian of New York and Ontario. It had a small head, a very broad, bulging body and a short, narrow tail held curled up over its back, ending in a curved, sting-like spike. Its two long, spiny front pairs of legs formed a trap for prey on the sea floor.",
+   "v": "最もサソリに似たウミサソリで、全長約10-15cm、アメリカのニューヨーク州とカナダのオンタリオ州の後期シルル紀から知られる。頭は小さく、体は非常に幅広く膨らんでおり、短く細い尾を背中の上に巻き上げ、その先端は湾曲した毒針のような棘になっていた。長く棘の多い前方の2対の脚で、海底で獲物を捕らえる罠を作っていた。"
+  },
+  {
+   "k": "The oldest known acorn worm, a slender worm several centimetres long from the Burgess Shale of Canada, with a short acorn-shaped snout, a collar and a long trunk. Unlike living acorn worms, it lived in a thin tube, sometimes branched, which links acorn worms to their tube-dwelling relatives, the pterobranchs and graptolites. It retreats into its tube when threatened.",
+   "v": "知られる限り最古のギボシムシで、カナダのバージェス頁岩から見つかる体長数センチの細長い虫。短いどんぐり形の吻、襟、長い胴をもつ。現生のギボシムシと違い、ときに枝分かれする細い管の中に住んでおり、ギボシムシと管に住む親戚である翼鰓類やフデイシを結びつけている。脅かされると管の中に引っこむ。"
+  },
+  {
+   "k": "The oldest known antiarch, a small armoured placoderm from the Late Silurian of Yunnan, China. Like its later relative Bothriolepis it had a box of bony plates round its head and chest, eyes close together on top of the head and two stiff, plated arms in place of pectoral fins. Its trunk armour was low and broad with a flat back. It grubbed through soft mud on the sea floor for food.",
+   "v": "知られている中で最古の胴甲類で、中国雲南省の後期シルル紀から知られる小型の甲冑をまとった板皮類。後の近縁種ボスリオレピスと同様に、頭と胸は骨板の箱で覆われ、両目は頭の上に寄り合い、胸びれの代わりに硬い装甲の腕を2本持っていた。胴の装甲は低く幅広く、背中は平らだった。海底の柔らかい泥を掘り返して餌を探していた。"
+  },
+  {
+   "k": "The oldest known decapod crustacean, a small lobster-like shrimp about 6 centimetres long from the Late Devonian seas of North America, about 365 million years ago. It had a hard shell, slender claws and long antennae. It crept over the muddy sea floor, picking up small animals and carrion, the first of the line that led to shrimps, lobsters and crabs.",
+   "v": "知られている限り最古の十脚類の甲殻類で、体長約6センチの小さなザリガニのようなエビ。約3億6500万年前、デボン紀後期の北アメリカの海にすんでいた。硬い殻、細いはさみ、長い触角を持っていた。泥の海底をはい回って小動物や死骸を拾って食べ、エビ、ロブスター、カニへと続く系統の始まりとなった。"
+  },
+  {
+   "k": "The oldest known frog that could leap, about 5 cm long, from the Early Jurassic of Arizona, about 190 million years ago. Its long hip bones, long hind legs and fused ankle bones show that the frog's jumping build was already in place, unlike in the Triassic proto-frogs that could only crawl and swim. Like frogs today it caught insects and other small prey.",
+   "v": "知られている最古の跳躍できるカエルで、体長約5センチ。アメリカ・アリゾナの前期ジュラ紀、約1億9000万年前に生きていた。長い腰の骨、長い後ろ脚、癒合した足首の骨から、カエルの跳躍する体のつくりがすでに完成していたことがわかる。這うことと泳ぐことしかできなかった三畳紀の原始的なカエルとは違う。現在のカエルと同じく、昆虫などの小さな獲物を捕らえた。"
+  },
+  {
+   "k": "The oldest known moth, from Early Jurassic rocks of Dorset in England, about 190 million years ago. It is known from wings covered in the tiny overlapping scales that give moths and butterflies their name, 'scale wings'. It was probably a tiny moth about 1 cm across with chewing jaws, feeding on pollen and spores long before flowers existed.",
+   "v": "知られている最古のガで、イングランド・ドーセットの約1億9000万年前の前期ジュラ紀の地層から見つかった。ガやチョウ（鱗翅目、「うろこの翅」の意）の名の由来である小さな重なり合ったうろこに覆われた翅で知られる。おそらく翅を広げて約1センチの、かむあごをもつ小さなガで、花が現れるはるか前に花粉や胞子を食べていた。"
+  },
+  {
+   "k": "The oldest known relative of octopuses and vampire squids, a squid-like animal about 12 centimetres long from the Bear Gulch Limestone of Montana, about 328 million years old. It had a torpedo-shaped body stiffened by an internal shell, a pair of fins and ten sucker-bearing arms, two of them longer than the rest, which it probably used to seize prey. It shows that the octopus line had already appeared about 80 million years earlier than once thought, still with ten arms rather than eight.",
+   "v": "タコやコウモリダコの仲間として知られている最古のもので、約3億2800万年前のモンタナ州のベアガルチ石灰岩から見つかった、体長約12センチメートルのイカに似た動物。内殻で支えられた魚雷形の体、1対のひれ、吸盤のある10本の腕をもち、そのうち他より長い2本はおそらく獲物をつかむのに使われた。タコの系統がこれまで考えられていたより約8000万年も早く現れ、しかもまだ8本ではなく10本の腕をもっていたことを示している。"
+  },
+  {
+   "k": "The oldest known sea cow, from the early middle Eocene of Jamaica, about 2.1 m long. Unlike manatees and dugongs it still had four legs that could carry it on land, and it lived much like a hippo, grazing sea grass and water plants in coastal lagoons and rivers. Its heavy, dense bones worked as ballast when it swam.",
+   "v": "知られている最古の海牛で、始新世中期初めのジャマイカにすみ、体長約2.1m。マナティーやジュゴンと違って陸上で体を支えられる四本の脚がまだあり、カバのように沿岸の潟や川で海草や水草を食べて暮らした。重く緻密な骨は泳ぐときにバラストの役目をした。"
+  },
+  {
+   "k": "The plant eater that gave its name to the dicynodonts, about 1.2 metres long, from the Late Permian of South Africa, around 255 million years ago. Its name means two dog teeth: it had only a pair of tusks in the upper jaw and otherwise a sharp, horny beak for cropping plants. Stout and short-tailed, it was one of the most common plant eaters of its time.",
+   "v": "ディキノドン類の名のもとになった植物食動物で、約2億5500万年前、ペルム紀後期の南アフリカにいた体長約1.2メートルの動物。名前は「2本の犬歯」という意味で、上あごに1対の牙があるほかは、植物をかみ切る鋭い角質のくちばしをもっていた。ずんぐりした短い尾の体で、当時最もありふれた植物食動物の一つだった。"
+  },
+  {
+   "k": "Thecosmilia",
+   "v": "テコスミリア"
+  },
+  {
+   "k": "Thectardis",
+   "v": "テクタルディス"
+  },
+  {
+   "k": "Thoracopterus",
+   "v": "トラコプテルス"
+  },
+  {
+   "k": "Thylacine",
+   "v": "フクロオオカミ"
+  },
+  {
+   "k": "Tianyulong",
+   "v": "ティエンユーロン"
+  },
+  {
+   "k": "Tremaglaspis",
+   "v": "トレマグラスピス"
+  },
+  {
+   "k": "Triamyxa",
+   "v": "トリアミクサ"
+  },
+  {
+   "k": "Triarthrus",
+   "v": "トリアルトルス"
+  },
+  {
+   "k": "Trilophosaurus",
+   "v": "トリロフォサウルス"
+  },
+  {
+   "k": "Trimerus",
+   "v": "トリメルス"
+  },
+  {
+   "k": "True crab",
+   "v": "カニ"
+  },
+  {
+   "k": "Turinia",
+   "v": "ツリニア"
+  },
+  {
+   "k": "Uintacrinus",
+   "v": "ウインタクリヌス"
+  },
+  {
+   "k": "Undina",
+   "v": "ウンディナ"
+  },
+  {
+   "k": "Urbina's Penguin",
+   "v": "ウルビナペンギン"
+  },
+  {
+   "k": "Vampyropod",
+   "v": "コウモリダコ類"
+  },
+  {
+   "k": "Velvet worm",
+   "v": "カギムシ"
+  },
+  {
+   "k": "Vendia",
+   "v": "ヴェンディア"
+  },
+  {
+   "k": "Vendoconularia",
+   "v": "ヴェンドコヌラリア"
+  },
+  {
+   "k": "Ventastega",
+   "v": "ヴェンタステガ"
+  },
+  {
+   "k": "Ventogyrus",
+   "v": "ヴェントギルス"
+  },
+  {
+   "k": "Villebrunaster",
+   "v": "ヴィレブルナステル"
+  },
+  {
+   "k": "Vulcanops",
+   "v": "ウルカノプス"
+  },
+  {
+   "k": "Waagenophyllum",
+   "v": "ワーゲノフィルム"
+  },
+  {
+   "k": "Wakaleo",
+   "v": "ワカレオ"
+  },
+  {
+   "k": "Weinbergina",
+   "v": "ヴァインベルギナ"
+  },
+  {
+   "k": "Whiteia",
+   "v": "ホワイティア"
+  },
+  {
+   "k": "Xenacanthus",
+   "v": "クセナカントゥス"
+  },
+  {
+   "k": "Xianglong",
+   "v": "シャンロン"
+  },
+  {
+   "k": "Xiushanosteus",
+   "v": "シウシャノステウス"
+  },
+  {
+   "k": "Yunnanozoon",
+   "v": "ユンナノズーン"
+  },
+  {
+   "k": "Yutyrannus",
+   "v": "ユティラヌス"
+  },
+  {
+   "k": "Zalambdalestes",
+   "v": "ザランブダレステス"
+  },
+  {
+   "k": "{0}% less harm from poison and infection",
+   "v": "毒と感染のダメージが {0}% 減る"
+  },
+  {
+   "k": "{0}% less HP lost when it finds no food",
+   "v": "食物がない時のHP減少が {0}% 減る"
+  },
+  {
+   "k": "{0}% less harm from disasters",
+   "v": "災害のダメージが {0}% 減る"
+  },
+  {
+   "k": "{0}% less damage taken",
+   "v": "受けるダメージが {0}% 減る"
+  },
+  {
+   "k": "{0}% less damage taken in your territory",
+   "v": "自分の縄張りで受けるダメージが {0}% 減る"
+  },
+  {
+   "k": "{0}% less damage taken with a friendly group next to it",
+   "v": "隣に味方の群れがいると受けるダメージが {0}% 減る"
+  },
+  {
+   "k": "{0}% less damage back when it attacks",
+   "v": "攻撃時の反撃ダメージが {0}% 減る"
+  },
+  {
+   "k": "Counterattacks {0}% harder",
+   "v": "反撃が {0}% 強くなる"
+  },
+  {
+   "k": "Heals {0}% of its HP when it wipes out a foe",
+   "v": "敵を全滅させるとHPを {0}% 回復"
+  },
+  {
+   "k": "{0}% more EP for wiping out a foe",
+   "v": "敵を全滅させた時のEPが {0}% 増える"
+  },
+  {
+   "k": "Reproducing costs {0}% less EP",
+   "v": "繁殖のEPが {0}% 安くなる"
+  },
+  {
+   "k": "This species' items and evolving cost {0}% less EP",
+   "v": "この種の形質と進化のEPが {0}% 安くなる"
+  },
+  {
+   "k": "Reproduces {0} turn sooner",
+   "v": "繁殖が {0} ターン早くなる"
+  },
+  {
+   "k": "Reproduces {0} turns sooner",
+   "v": "繁殖が {0} ターン早くなる"
+  },
+  {
+   "k": "Sees {0} tile further",
+   "v": "視界が {0} マス広がる"
+  },
+  {
+   "k": "Sees {0} tiles further",
+   "v": "視界が {0} マス広がる"
+  },
+  {
+   "k": "+{0} EP a turn while you have the species",
+   "v": "この種がいる間、毎ターン +{0} EP"
+  },
+  {
+   "k": "Eating prey doesn't end its turn",
+   "v": "捕食してもターンが終わらない"
+  },
+  {
+   "k": "Reproducing takes no action",
+   "v": "繁殖に行動を使わない"
+  },
+  {
+   "k": "Can't be held or stunned",
+   "v": "拘束・気絶しない"
+  },
+  {
+   "k": "Can't be swallowed whole",
+   "v": "丸呑みにされない"
+  },
+  {
+   "k": "Can't be ambushed",
+   "v": "待ち伏せされない"
+  },
+  {
+   "k": "the {0} can still act",
+   "v": "{0}はまだ行動できる"
+  },
+  {
+   "k": "the {0} defended its home ground",
+   "v": "{0}は縄張りを守った"
+  },
+  {
    "k": "Actions +{0}",
    "v": "行動 +{0}"
   },
@@ -309,8 +2973,8 @@
    "v": "獲物に巻きついて締め上げる：攻撃して倒せなかったグループは拘束され、次のターン行動できない。"
   },
   {
-   "k": "Regrows lost parts: it heals two fifths of its HP each turn instead of a fifth.",
-   "v": "失った部位が再生する：毎ターン、HPの5分の1ではなく5分の2を回復する。"
+   "k": "Regrows lost parts: it heals a fifth of its HP each turn instead of a tenth.",
+   "v": "失った部位が再生する：毎ターン、HPの10分の1ではなく5分の1を回復する。"
   },
   {
    "k": "Shed a limb",
@@ -22755,6 +25419,182 @@
   {
    "k": "Species on the right evolve from those on their left. The DNA button on a species you don't have yet evolves one of your animals into it: it glows gold when you can, and stays grey until you can (point at it to see what is missing). The book opens the species' encyclopedia entry; the circular arrow brings back a species you have lost. Click a species to see what it can become.",
    "v": "右側の種は、その左側の種から進化します。まだ持っていない種には DNA ボタンがあり、あなたの群れをその種へ進化させます。進化できるときは金色に光り、条件がそろうまでは灰色です（ポインターを合わせると足りないものが分かります）。本のボタンは図鑑を開き、円形の矢印は失った種を復活させます。種をクリックすると、その種が何に進化できるかが分かります。"
+  },
+  {
+   "k": "Rest (+{0}% HP)",
+   "v": "休む（HP +{0}%）"
+  },
+  {
+   "k": "Resting: heals {0}% HP next turn",
+   "v": "休息中：次のターンにHPを{0}%回復"
+  },
+  {
+   "k": "Rest",
+   "v": "休む"
+  },
+  {
+   "k": "Sit this turn out: heals {0}% of its HP next turn",
+   "v": "このターンは休む：次のターンにHPを{0}%回復"
+  },
+  {
+   "k": "Painting: {0}, {1}, public domain",
+   "v": "絵画：{0}『{1}』、パブリックドメイン"
+  },
+  {
+   "k": "Brontosaurus",
+   "v": "ブロントサウルス"
+  },
+  {
+   "k": "Oligocene Titanotheres",
+   "v": "漸新世のティタノテリウム類"
+  },
+  {
+   "k": "Pliocene Rhinoceros, Mastodonts and Oreodonts",
+   "v": "鮮新世のサイ、マストドン、オレオドン"
+  },
+  {
+   "k": "The World Before There Was Life",
+   "v": "生命誕生以前の世界"
+  },
+  {
+   "k": "Reptiles That Invaded the Seas",
+   "v": "海へ進出した爬虫類"
+  },
+  {
+   "k": "Woolly Mammoths",
+   "v": "ケナガマンモス"
+  },
+  {
+   "k": "Miocene Plains Mammals",
+   "v": "中新世の平原の哺乳類"
+  },
+  {
+   "k": "Late Cretaceous Dinosaurs",
+   "v": "後期白亜紀の恐竜"
+  },
+  {
+   "k": "Rancho La Brea Tar Pools",
+   "v": "ランチョ・ラ・ブレアのタールピット"
+  },
+  {
+   "k": "Silurian Period",
+   "v": "シルル紀"
+  },
+  {
+   "k": "Ordovician Sea Life",
+   "v": "オルドビス紀の海の生物"
+  },
+  {
+   "k": "Cave Bears",
+   "v": "ホラアナグマ"
+  },
+  {
+   "k": "Megaloceros",
+   "v": "メガロケロス"
+  },
+  {
+   "k": "Mammal-like Reptiles",
+   "v": "哺乳類型爬虫類"
+  },
+  {
+   "k": "Uintatherium and Orohippus",
+   "v": "ウインタテリウムとオロヒップス"
+  },
+  {
+   "k": "Archaeopteryx, Compsognathus and Rhamphorhynchus",
+   "v": "始祖鳥、コンプソグナトゥス、ランフォリンクス"
+  },
+  {
+   "k": "Palorchestes",
+   "v": "パロルケステス"
+  },
+  {
+   "k": "Nesting Protoceratops",
+   "v": "巣を守るプロトケラトプス"
+  },
+  {
+   "k": "Columbian Mammoth",
+   "v": "コロンビアマンモス"
+  },
+  {
+   "k": "Brontosaurus in the Swamp",
+   "v": "沼地のブロントサウルス"
+  },
+  {
+   "k": "Leaping Laelaps",
+   "v": "跳びかかるライラプス"
+  },
+  {
+   "k": "Dinictis and Protoceras",
+   "v": "ディニクティスとプロトケラス"
+  },
+  {
+   "k": "Hadrosaurs",
+   "v": "ハドロサウルス類"
+  },
+  {
+   "k": "American Mastodon",
+   "v": "アメリカマストドン"
+  },
+  {
+   "k": "Eobasileus",
+   "v": "エオバシレウス"
+  },
+  {
+   "k": "Painters of Font-de-Gaume",
+   "v": "フォン・ド・ゴームの画家たち"
+  },
+  {
+   "k": "Stegosaurus in the Forest",
+   "v": "森のステゴサウルス"
+  },
+  {
+   "k": "Eohippus",
+   "v": "エオヒップス"
+  },
+  {
+   "k": "Duria Antiquior",
+   "v": "Duria Antiquior"
+  },
+  {
+   "k": "The Country of the Iguanodon",
+   "v": "イグアノドンの国"
+  },
+  {
+   "k": "The Wealden Period",
+   "v": "ウィールド期"
+  },
+  {
+   "k": "Mosasaurus and Ichthyosaurus",
+   "v": "モササウルスとイクチオサウルス"
+  },
+  {
+   "k": "Sea Lilies",
+   "v": "ウミユリ"
+  },
+  {
+   "k": "Laugerie-Basse in the Vézère Valley",
+   "v": "ヴェゼール渓谷のロージュリー＝バス"
+  },
+  {
+   "k": "Station",
+   "v": "待機"
+  },
+  {
+   "k": "Stationed",
+   "v": "待機中"
+  },
+  {
+   "k": "Stationed: heals {0}% HP each turn it stays",
+   "v": "待機：とどまる間、毎ターンHPを{0}%回復"
+  },
+  {
+   "k": "Stationed. Click to give it orders again (any order also ends it).",
+   "v": "待機中。クリックすると再び命令できます（どんな命令でも待機は終わります）。"
+  },
+  {
+   "k": "Stay here until ordered: only stationed animals heal, {0}% of their HP each turn (from the turn after they last acted).",
+   "v": "命令があるまでここで待機：待機中の動物だけが回復し、毎ターンHPの{0}%を回復します（最後に行動した次のターンから）。"
   }
  ]
 }

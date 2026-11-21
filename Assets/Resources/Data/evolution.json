@@ -280,6 +280,166 @@
    "description": "Frond-shaped Ediacaran organisms, among the first large animals."
   },
   {
+   "from": "swartpuntia_germsi",
+   "to": "charniodiscus_procerus",
+   "functions": [
+    "regeneration_node",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Frond-shaped Ediacaran organisms, among the first large animals."
+  },
+  {
+   "from": "swartpuntia_germsi",
+   "to": "ventogyrus_chistyakovi",
+   "functions": [
+    "filter_apparatus",
+    "spines"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Frond-shaped Ediacaran organisms, among the first large animals."
+  },
+  {
+   "from": "swartpuntia_germsi",
+   "to": "namalia_villiersiensis",
+   "functions": [
+    "filter_apparatus",
+    "broadcast_spawning"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Frond-shaped Ediacaran organisms, among the first large animals."
+  },
+  {
+   "from": "dickinsonia_costata",
+   "to": "aspidella_terranovica",
+   "functions": [
+    "broadcast_spawning",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "burrowing_escape"
+   ],
+   "grantFunctions": [
+    "budding"
+   ],
+   "grantBehaviors": [
+    "reef_building"
+   ],
+   "description": "Animals with true tissues, nerves and muscles."
+  },
+  {
+   "from": "dickinsonia_costata",
+   "to": "hiemalora_stellaris",
+   "functions": [
+    "filter_apparatus",
+    "broadcast_spawning"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [
+    "budding"
+   ],
+   "grantBehaviors": [
+    "reef_building"
+   ],
+   "description": "Animals with true tissues, nerves and muscles."
+  },
+  {
+   "from": "dickinsonia_costata",
+   "to": "mawsonites_spriggi",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [
+    "budding"
+   ],
+   "grantBehaviors": [
+    "reef_building"
+   ],
+   "description": "Animals with true tissues, nerves and muscles."
+  },
+  {
+   "from": "dickinsonia_costata",
+   "to": "albumares_brunsae",
+   "functions": [
+    "filter_apparatus",
+    "broadcast_spawning"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [
+    "budding"
+   ],
+   "grantBehaviors": [
+    "reef_building"
+   ],
+   "description": "Animals with true tissues, nerves and muscles."
+  },
+  {
+   "from": "dickinsonia_costata",
+   "to": "anfesta_stankovskii",
+   "functions": [
+    "filter_apparatus",
+    "broadcast_spawning"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [
+    "budding"
+   ],
+   "grantBehaviors": [
+    "reef_building"
+   ],
+   "description": "Animals with true tissues, nerves and muscles."
+  },
+  {
+   "from": "eocyathispongia_qiania",
+   "to": "palaeophragmodictya_reticulata",
+   "functions": [
+    "budding",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed."
+  },
+  {
+   "from": "eocyathispongia_qiania",
+   "to": "thectardis_avalonensis",
+   "functions": [
+    "broadcast_spawning",
+    "budding"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed."
+  },
+  {
    "from": "ikaria_wariootia",
    "to": "spriggina_floundersi",
    "functions": [
@@ -500,6 +660,146 @@
    "description": "Bilaterians have a front and a back, a left and a right side, and a gut."
   },
   {
+   "from": "charnia_masoni",
+   "to": "bradgatia_linfordensis",
+   "functions": [
+    "budding",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rangeomorphs grew as fractal fronds on the deep sea floor."
+  },
+  {
+   "from": "charnia_masoni",
+   "to": "primocandelabrum_hiemaloranum",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rangeomorphs grew as fractal fronds on the deep sea floor."
+  },
+  {
+   "from": "charnia_masoni",
+   "to": "beothukis_mistakensis",
+   "functions": [
+    "budding",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rangeomorphs grew as fractal fronds on the deep sea floor."
+  },
+  {
+   "from": "spriggina_floundersi",
+   "to": "vendia_sokolovi",
+   "functions": [
+    "jointed_limbs",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bilaterians have a front and a back, a left and a right side, and a gut."
+  },
+  {
+   "from": "spriggina_floundersi",
+   "to": "marywadea_ovata",
+   "functions": [
+    "compound_eyes",
+    "jointed_limbs"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bilaterians have a front and a back, a left and a right side, and a gut."
+  },
+  {
+   "from": "spriggina_floundersi",
+   "to": "praecambridium_sigillum",
+   "functions": [
+    "exoskeleton",
+    "jointed_limbs"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bilaterians have a front and a back, a left and a right side, and a gut."
+  },
+  {
+   "from": "cloudina_hartmannae",
+   "to": "sinotubulites_baimatuoensis",
+   "functions": [
+    "haemoglobin",
+    "closed_circulation"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cloudina built some of the first mineral skeletons, stacked cones of calcite."
+  },
+  {
+   "from": "cloudina_hartmannae",
+   "to": "conotubus_hemiannulatus",
+   "functions": [
+    "haemoglobin",
+    "closed_circulation"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cloudina built some of the first mineral skeletons, stacked cones of calcite."
+  },
+  {
+   "from": "cloudina_hartmannae",
+   "to": "sabellidites_cambriensis",
+   "functions": [
+    "haemoglobin",
+    "closed_circulation"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cloudina built some of the first mineral skeletons, stacked cones of calcite."
+  },
+  {
+   "from": "spriggina_floundersi",
+   "to": "attenborites_janeae",
+   "functions": [
+    "broadcast_spawning",
+    "ganglia"
+   ],
+   "behaviors": [
+    "scavenging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bilaterians have a front and a back, a left and a right side, and a gut."
+  },
+  {
    "from": "dickinsonia_costata",
    "to": "auroralumina_attenboroughii",
    "functions": [
@@ -558,6 +858,50 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Medusozoans swim as jellyfish for part of their lives."
+  },
+  {
+   "from": "auroralumina_attenboroughii",
+   "to": "inaria_karli",
+   "functions": [
+    "regeneration_node",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Medusozoans swim as jellyfish for part of their lives."
+  },
+  {
+   "from": "auroralumina_attenboroughii",
+   "to": "vendoconularia_triradiata",
+   "functions": [
+    "regeneration_node",
+    "colonial_living"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Medusozoans swim as jellyfish for part of their lives."
+  },
+  {
+   "from": "spriggina_floundersi",
+   "to": "arkarua_adami",
+   "functions": [
+    "broadcast_spawning",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [
+    "gills"
+   ],
+   "grantBehaviors": [],
+   "description": "Deuterostomes form the anus first in the embryo: the line of echinoderms and chordates."
   },
   {
    "from": "spriggina_floundersi",
@@ -731,6 +1075,20 @@
    "description": "Comb jellies swim with rows of beating combs of cilia."
   },
   {
+   "from": "xianguangia_sinica",
+   "to": "ctenorhabdotus_capulus",
+   "functions": [
+    "broadcast_spawning",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "active_predation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Comb jellies swim with rows of beating combs of cilia."
+  },
+  {
    "from": "antarcticocyathus_webersi",
    "to": "metaldetes_taylori",
    "functions": [
@@ -880,6 +1238,20 @@
    "description": "Bilaterians have a front and a back, a left and a right side, and a gut."
   },
   {
+   "from": "chancelloria_eros",
+   "to": "dinomischus_isolatus",
+   "functions": [
+    "broadcast_spawning",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bilaterians have a front and a back, a left and a right side, and a gut."
+  },
+  {
    "from": "dickinsonia_costata",
    "to": "cothonion_sympomatum",
    "functions": [
@@ -962,6 +1334,34 @@
    "grantFunctions": [
     "dorsal_nerve_cord"
    ],
+   "grantBehaviors": [],
+   "description": "Deuterostomes form the anus first in the embryo: the line of echinoderms and chordates."
+  },
+  {
+   "from": "cothonion_sympomatum",
+   "to": "mackenzia_costalis",
+   "functions": [
+    "regeneration_node",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Anthozoans are polyps all their lives: anemones and corals."
+  },
+  {
+   "from": "vetulicola_cuneata",
+   "to": "banffia_constricta",
+   "functions": [
+    "filter_apparatus",
+    "dorsal_nerve_cord"
+   ],
+   "behaviors": [
+    "scavenging"
+   ],
+   "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Deuterostomes form the anus first in the embryo: the line of echinoderms and chordates."
   },
@@ -1055,6 +1455,20 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Ecdysozoans moult their cuticle as they grow."
+  },
+  {
+   "from": "pikaia",
+   "to": "yunnanozoon_lividum",
+   "functions": [
+    "broadcast_spawning",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Chordates have a stiffening rod, the notochord, along the back."
   },
   {
    "from": "ottoia_prolifica",
@@ -1172,6 +1586,48 @@
   },
   {
    "from": "hallucigenia",
+   "to": "microdictyon_sinicum",
+   "functions": [
+    "exoskeleton",
+    "jointed_limbs"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Panarthropods walk on paired legs."
+  },
+  {
+   "from": "arkarua_adami",
+   "to": "helicoplacus_gilberti",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
+   "from": "helicoplacus_gilberti",
+   "to": "gogia_spiralis",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
+   "from": "hallucigenia",
    "to": "opabinia",
    "functions": [
     "compound_eyes",
@@ -1273,6 +1729,66 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Molluscs scrape food with a radula."
+  },
+  {
+   "from": "opabinia",
+   "to": "kylinxia_zhangi",
+   "functions": [
+    "compound_eyes",
+    "exoskeleton"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Arthropods have jointed legs."
+  },
+  {
+   "from": "wiwaxia_corrugata",
+   "to": "odontogriphus_omalus",
+   "functions": [
+    "haemocyanin",
+    "radula"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Molluscs scrape food with a radula."
+  },
+  {
+   "from": "wiwaxia_corrugata",
+   "to": "orthrozanclus_reburrus",
+   "functions": [
+    "haemocyanin",
+    "open_circulation"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Molluscs scrape food with a radula."
+  },
+  {
+   "from": "eldonia_ludwigi",
+   "to": "spartobranchus_tenuis",
+   "functions": [
+    "gills",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "burrow_systems"
+   ],
+   "grantFunctions": [
+    "haemoglobin"
+   ],
+   "grantBehaviors": [
+    "reef_building"
+   ],
+   "description": "Graptolites were colonial hemichordates drifting in the plankton."
   },
   {
    "from": "opabinia",
@@ -1391,6 +1907,104 @@
    "description": "True arthropods, with a hard exoskeleton."
   },
   {
+   "from": "anomalocaris",
+   "to": "hurdia_victoria",
+   "functions": [
+    "exoskeleton",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "rolling_up"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Radiodonts were the first top predators."
+  },
+  {
+   "from": "anomalocaris",
+   "to": "cambroraster_falcatus",
+   "functions": [
+    "exoskeleton",
+    "jointed_limbs"
+   ],
+   "behaviors": [
+    "rolling_up"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Radiodonts were the first top predators."
+  },
+  {
+   "from": "anomalocaris",
+   "to": "stanleycaris_hirpex",
+   "functions": [
+    "compound_eyes",
+    "haemocyanin"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Radiodonts were the first top predators."
+  },
+  {
+   "from": "marrella_splendens",
+   "to": "canadaspis_perfecta",
+   "functions": [
+    "exoskeleton",
+    "jointed_limbs"
+   ],
+   "behaviors": [
+    "rolling_up"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "True arthropods, with a hard exoskeleton."
+  },
+  {
+   "from": "marrella_splendens",
+   "to": "naraoia_compacta",
+   "functions": [
+    "exoskeleton",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "True arthropods, with a hard exoskeleton."
+  },
+  {
+   "from": "marrella_splendens",
+   "to": "fuxianhuia_protensa",
+   "functions": [
+    "compound_eyes",
+    "haemocyanin"
+   ],
+   "behaviors": [
+    "rolling_up"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "True arthropods, with a hard exoskeleton."
+  },
+  {
+   "from": "lingulella_chengjiangensis",
+   "to": "haplophrentis_carinatus",
+   "functions": [
+    "filter_apparatus",
+    "broadcast_spawning"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Brachiopods and bryozoans filter with a crown of tentacles."
+  },
+  {
    "from": "wiwaxia_corrugata",
    "to": "plectronoceras_cambrense",
    "functions": [
@@ -1469,6 +2083,20 @@
    "description": "Great-appendage arthropods."
   },
   {
+   "from": "sanctacaris_uniformis",
+   "to": "mollisonia_plenovenatrix",
+   "functions": [
+    "exoskeleton",
+    "jointed_limbs"
+   ],
+   "behaviors": [
+    "rolling_up"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Chelicerates have pincer-like mouthparts."
+  },
+  {
    "from": "sidneyia_inexpectans",
    "to": "redlichia",
    "functions": [
@@ -1511,6 +2139,48 @@
    "description": "Trilobites armoured themselves in calcite."
   },
   {
+   "from": "redlichia",
+   "to": "elrathia_kingii",
+   "functions": [
+    "exoskeleton",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "rolling_up"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Trilobites armoured themselves in calcite."
+  },
+  {
+   "from": "redlichia",
+   "to": "paradoxides_davidis",
+   "functions": [
+    "jointed_limbs",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "rolling_up"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Trilobites armoured themselves in calcite."
+  },
+  {
+   "from": "redlichia",
+   "to": "agnostus_pisiformis",
+   "functions": [
+    "exoskeleton",
+    "haemocyanin"
+   ],
+   "behaviors": [
+    "rolling_up"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Trilobites armoured themselves in calcite."
+  },
+  {
    "from": "antarcticocyathus_webersi",
    "to": "protospongia_novaki",
    "functions": [
@@ -1519,6 +2189,20 @@
    ],
    "behaviors": [
     "settling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed."
+  },
+  {
+   "from": "protospongia_novaki",
+   "to": "brachiospongia_digitata",
+   "functions": [
+    "regeneration_node",
+    "budding"
+   ],
+   "behaviors": [
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -1537,6 +2221,20 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Medusozoans swim as jellyfish for part of their lives."
+  },
+  {
+   "from": "ottoia_prolifica",
+   "to": "palaeoscolex_piscatorum",
+   "functions": [
+    "giant_axons",
+    "capillaries"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ecdysozoans moult their cuticle as they grow."
   },
   {
    "from": "eldonia_ludwigi",
@@ -1580,14 +2278,14 @@
    "description": "Rugose corals grew as horn-shaped cups."
   },
   {
-   "from": "eldonia_ludwigi",
+   "from": "helicoplacus_gilberti",
    "to": "echinosphaerites_aurantium",
    "functions": [
-    "filter_apparatus",
-    "spines"
+    "broadcast_spawning",
+    "filter_apparatus"
    ],
    "behaviors": [
-    "settling"
+    "autotomy"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -1646,6 +2344,76 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Rugose corals grew as horn-shaped cups."
+  },
+  {
+   "from": "echinosphaerites_aurantium",
+   "to": "isorophus_cincinnatiensis",
+   "functions": [
+    "regeneration_node",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
+   "from": "echinosphaerites_aurantium",
+   "to": "bothriocidaris_pahleni",
+   "functions": [
+    "regeneration_node",
+    "gills"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
+   "from": "echinosphaerites_aurantium",
+   "to": "mitrocystites_mitra",
+   "functions": [
+    "chemoreceptors",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
+   "from": "streptelasma_corniculum",
+   "to": "columnaria_alveolata",
+   "functions": [
+    "budding",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rugose corals grew as horn-shaped cups."
+  },
+  {
+   "from": "eriptychius_americanus",
+   "to": "porophoraspis_crenulata",
+   "functions": [
+    "lateral_line_organ",
+    "two_chambered_heart"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Vertebrates: a skull, eyes and a backbone around the nerve cord."
   },
   {
    "from": "eriptychius_americanus",
@@ -1790,6 +2558,48 @@
    "description": "Annelids are segmented worms."
   },
   {
+   "from": "prasopora_simulatrix",
+   "to": "constellaria_florida",
+   "functions": [
+    "regeneration_node",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Brachiopods and bryozoans filter with a crown of tentacles."
+  },
+  {
+   "from": "iocrinus_subcrassus",
+   "to": "glyptocrinus_decadactylus",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea lilies filter the water with feathery arms on a stalk."
+  },
+  {
+   "from": "hudsonaster_incomptus",
+   "to": "villebrunaster_thorali",
+   "functions": [
+    "regeneration_node",
+    "gills"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Free-living echinoderms such as sea stars crawl mouth-down on the sea floor."
+  },
+  {
    "from": "anomalocaris",
    "to": "aegirocassis_benmoulai",
    "functions": [
@@ -1816,6 +2626,48 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Brachiopods have two shells."
+  },
+  {
+   "from": "marrella_splendens",
+   "to": "furca_mauritanica",
+   "functions": [
+    "exoskeleton",
+    "jointed_limbs"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "True arthropods, with a hard exoskeleton."
+  },
+  {
+   "from": "platystrophia_ponderosa",
+   "to": "rafinesquina_alternata",
+   "functions": [
+    "filter_apparatus",
+    "broadcast_spawning"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Brachiopods have two shells."
+  },
+  {
+   "from": "hudsonaster_incomptus",
+   "to": "protasterina_flexuosa",
+   "functions": [
+    "regeneration_node",
+    "chemoreceptors"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Free-living echinoderms such as sea stars crawl mouth-down on the sea floor."
   },
   {
    "from": "plectronoceras_cambrense",
@@ -1898,7 +2750,7 @@
     "three_hearts"
    ],
    "behaviors": [
-    "schooling"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -1912,7 +2764,7 @@
     "three_hearts"
    ],
    "behaviors": [
-    "schooling"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -1926,7 +2778,7 @@
     "camera_eyes"
    ],
    "behaviors": [
-    "schooling"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -1945,6 +2797,48 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Snails and slugs."
+  },
+  {
+   "from": "fordilla_troyensis",
+   "to": "ambonychia_radiata",
+   "functions": [
+    "haemocyanin",
+    "open_circulation"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bivalves."
+  },
+  {
+   "from": "ambonychia_radiata",
+   "to": "babinka_prima",
+   "functions": [
+    "haemocyanin",
+    "open_circulation"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bivalves."
+  },
+  {
+   "from": "wiwaxia_corrugata",
+   "to": "echinochiton_dufoei",
+   "functions": [
+    "haemocyanin",
+    "radula"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Molluscs scrape food with a radula."
   },
   {
    "from": "redlichia",
@@ -2088,7 +2982,7 @@
    "to": "parabarrandia_crassa",
    "functions": [
     "compound_eyes",
-    "antennal_glands"
+    "giant_axons"
    ],
    "behaviors": [
     "autotomy"
@@ -2138,6 +3032,48 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Trilobites armoured themselves in calcite."
+  },
+  {
+   "from": "isotelus_maximus",
+   "to": "triarthrus_eatoni",
+   "functions": [
+    "exoskeleton",
+    "giant_axons"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Trilobites armoured themselves in calcite."
+  },
+  {
+   "from": "isotelus_maximus",
+   "to": "carolinites_genacinaca",
+   "functions": [
+    "compound_eyes",
+    "exoskeleton"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Trilobites armoured themselves in calcite."
+  },
+  {
+   "from": "sidneyia_inexpectans",
+   "to": "tremaglaspis_unite",
+   "functions": [
+    "exoskeleton",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Trilobites and their relatives."
   },
   {
    "from": "sanctacaris_uniformis",
@@ -2198,6 +3134,80 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Sea scorpions."
+  },
+  {
+   "from": "sanctacaris_uniformis",
+   "to": "chasmataspis_laurencii",
+   "functions": [
+    "exoskeleton",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "rolling_up"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Euchelicerates."
+  },
+  {
+   "from": "megalograptus_ohioensis",
+   "to": "onychopterella_augusti",
+   "functions": [
+    "compound_eyes",
+    "haemocyanin"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea scorpions."
+  },
+  {
+   "from": "waptia_fieldensis",
+   "to": "caryocaris_wrightii",
+   "functions": [
+    "antennal_glands",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [
+    "chromatophores"
+   ],
+   "grantBehaviors": [],
+   "description": "Crabs, lobsters and prawns."
+  },
+  {
+   "from": "waptia_fieldensis",
+   "to": "leperditia_fabulites",
+   "functions": [
+    "antennal_glands",
+    "exoskeleton"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [
+    "chromatophores"
+   ],
+   "grantBehaviors": [],
+   "description": "Crustaceans and insects."
+  },
+  {
+   "from": "protospongia_novaki",
+   "to": "astraeospongium_meniscum",
+   "functions": [
+    "regeneration_node",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed."
   },
   {
    "from": "moorowipora_chamberensis",
@@ -2311,6 +3321,62 @@
   },
   {
    "from": "tremataspis_mammillata",
+   "to": "phlebolepis_elegans",
+   "functions": [
+    "lateral_line_organ",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Vertebrates: a skull, eyes and a backbone around the nerve cord."
+  },
+  {
+   "from": "tremataspis_mammillata",
+   "to": "lasanius_problematicus",
+   "functions": [
+    "lateral_line_organ",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Vertebrates: a skull, eyes and a backbone around the nerve cord."
+  },
+  {
+   "from": "tremataspis_mammillata",
+   "to": "ateleaspis_tessellata",
+   "functions": [
+    "lateral_line_organ",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Vertebrates: a skull, eyes and a backbone around the nerve cord."
+  },
+  {
+   "from": "crotalocrinites_rugosus",
+   "to": "caryocrinites_ornatus",
+   "functions": [
+    "broadcast_spawning",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
+   "from": "tremataspis_mammillata",
    "to": "yongdongaspis_littoralis",
    "functions": [
     "lateral_line_organ",
@@ -2380,6 +3446,76 @@
    "description": "Sea lilies filter the water with feathery arms on a stalk."
   },
   {
+   "from": "yongdongaspis_littoralis",
+   "to": "shuyu_zhejiangensis",
+   "functions": [
+    "lateral_line_organ",
+    "spiral_valve"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Galeaspids were jawless fish with a bony head shield."
+  },
+  {
+   "from": "scyphocrinites_elegans",
+   "to": "eucalyptocrinites_crassus",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea lilies filter the water with feathery arms on a stalk."
+  },
+  {
+   "from": "hudsonaster_incomptus",
+   "to": "lepidaster_grayi",
+   "functions": [
+    "regeneration_node",
+    "chemoreceptors"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Free-living echinoderms such as sea stars crawl mouth-down on the sea floor."
+  },
+  {
+   "from": "prasopora_simulatrix",
+   "to": "hallopora_elegantula",
+   "functions": [
+    "filter_apparatus",
+    "broadcast_spawning"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Brachiopods and bryozoans filter with a crown of tentacles."
+  },
+  {
+   "from": "plumulites_bengtsoni",
+   "to": "kenostrychus_clementsi",
+   "functions": [
+    "haemoglobin",
+    "capillaries"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Annelids are segmented worms."
+  },
+  {
    "from": "tremataspis_mammillata",
    "to": "entelognathus_primordialis",
    "functions": [
@@ -2415,6 +3551,62 @@
    ],
    "behaviors": [
     "aggregation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Brachiopods have two shells."
+  },
+  {
+   "from": "tremataspis_mammillata",
+   "to": "xiushanosteus_mirabilis",
+   "functions": [
+    "paired_fins",
+    "spiral_valve"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Jaws evolved from gill arches, opening up new ways of feeding."
+  },
+  {
+   "from": "xiushanosteus_mirabilis",
+   "to": "silurolepis_platydorsalis",
+   "functions": [
+    "paired_fins",
+    "spiral_valve"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Placoderms were armoured jawed fish, the first giant predators."
+  },
+  {
+   "from": "furca_mauritanica",
+   "to": "aquilonifer_spinosus",
+   "functions": [
+    "blood_clotting",
+    "exoskeleton"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "True arthropods, with a hard exoskeleton."
+  },
+  {
+   "from": "pentamerus_oblongus",
+   "to": "eospirifer_radiatus",
+   "functions": [
+    "filter_apparatus",
+    "broadcast_spawning"
+   ],
+   "behaviors": [
+    "foraging"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -2458,7 +3650,7 @@
     "acid_stomach"
    ],
    "behaviors": [
-    "schooling"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -2477,6 +3669,62 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Snails and slugs."
+  },
+  {
+   "from": "fanjingshania_renovata",
+   "to": "shenacanthus_vermiformis",
+   "functions": [
+    "lateral_line_organ",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cartilaginous fish keep replacing their teeth all their lives."
+  },
+  {
+   "from": "dawsonoceras_annulatum",
+   "to": "phragmoceras_ventricosum",
+   "functions": [
+    "acid_stomach",
+    "camera_eyes"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cephalopods swim with jet propulsion."
+  },
+  {
+   "from": "poleumita_discors",
+   "to": "euomphalopterus_alatus",
+   "functions": [
+    "haemocyanin",
+    "radula"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Snails and slugs."
+  },
+  {
+   "from": "ambonychia_radiata",
+   "to": "cardiola_interrupta",
+   "functions": [
+    "haemocyanin",
+    "radula"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bivalves."
   },
   {
    "from": "eosteus_chongqingensis",
@@ -2553,17 +3801,17 @@
    "description": "Sea spiders."
   },
   {
-   "from": "marrella_splendens",
+   "from": "aquilonifer_spinosus",
    "to": "kampecaris_obanensis",
    "functions": [
-    "terrestrial_legs",
-    "waterproof_cuticle"
+    "exoskeleton",
+    "blood_clotting"
    ],
    "behaviors": [
-    "land_excursions"
+    "tube_building"
    ],
    "grantFunctions": [
-    "tracheae"
+    "venom_glands"
    ],
    "grantBehaviors": [],
    "description": "Mandibulates chew with mandibles."
@@ -2681,6 +3929,34 @@
    "description": "Myriapods were among the first animals on land."
   },
   {
+   "from": "calymene_blumenbachii",
+   "to": "trimerus_delphinocephalus",
+   "functions": [
+    "exoskeleton",
+    "blood_clotting"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Trilobites armoured themselves in calcite."
+  },
+  {
+   "from": "calymene_blumenbachii",
+   "to": "bumastus_barriensis",
+   "functions": [
+    "compound_eyes",
+    "exoskeleton"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Trilobites armoured themselves in calcite."
+  },
+  {
    "from": "megalograptus_ohioensis",
    "to": "eurypterus_remipes",
    "functions": [
@@ -2757,7 +4033,7 @@
    "to": "pterygotus_anglicus",
    "functions": [
     "compound_eyes",
-    "exoskeleton"
+    "blood_clotting"
    ],
    "behaviors": [
     "claw_duels"
@@ -2771,7 +4047,7 @@
    "to": "carcinosoma_newlini",
    "functions": [
     "exoskeleton",
-    "book_lungs"
+    "blood_clotting"
    ],
    "behaviors": [
     "claw_duels"
@@ -2785,7 +4061,7 @@
    "to": "erettopterus_bilobus",
    "functions": [
     "compound_eyes",
-    "book_lungs"
+    "blood_clotting"
    ],
    "behaviors": [
     "claw_duels"
@@ -2799,7 +4075,35 @@
    "to": "parioscorpio_venator",
    "functions": [
     "compound_eyes",
+    "blood_clotting"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Arachnids came onto land."
+  },
+  {
+   "from": "eurypterus_remipes",
+   "to": "eusarcana_obesa",
+   "functions": [
+    "compound_eyes",
     "exoskeleton"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea scorpions."
+  },
+  {
+   "from": "proscorpius_osborni",
+   "to": "brontoscorpio_anglicus",
+   "functions": [
+    "exoskeleton",
+    "compound_eyes"
    ],
    "behaviors": [
     "claw_duels"
@@ -2823,20 +4127,32 @@
    "description": "Spiders and their kin breathe with book lungs."
   },
   {
-   "from": "waptia_fieldensis",
+   "from": "caryocaris_wrightii",
    "to": "ceratiocaris_papilio",
    "functions": [
-    "antennal_glands",
+    "blood_clotting",
+    "terrestrial_legs"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Crabs, lobsters and prawns."
+  },
+  {
+   "from": "leperditia_fabulites",
+   "to": "colymbosathon_ecplecticos",
+   "functions": [
+    "compound_eyes",
     "blood_clotting"
    ],
    "behaviors": [
     "claw_duels"
    ],
-   "grantFunctions": [
-    "chromatophores"
-   ],
+   "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Crabs, lobsters and prawns."
+   "description": "Crustaceans and insects."
   },
   {
    "from": "guiyu_oneiros",
@@ -2876,17 +4192,74 @@
    "description": "Amoebae crawl and feed by flowing out arms of cytoplasm."
   },
   {
-   "from": "protospongia_novaki",
+   "from": "astraeospongium_meniscum",
    "to": "protospongia_rhenana",
    "functions": [
-    "spines"
+    "filter_apparatus",
+    "budding"
    ],
    "behaviors": [
-    "settling"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed."
+  },
+  {
+   "from": "protospongia_rhenana",
+   "to": "actinostroma_clathratum",
+   "functions": [
+    "broadcast_spawning",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed."
+  },
+  {
+   "from": "tremataspis_mammillata",
+   "to": "turinia_pagei",
+   "functions": [
+    "chromatophores",
+    "lateral_line_organ"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Vertebrates: a skull, eyes and a backbone around the nerve cord."
+  },
+  {
+   "from": "turinia_pagei",
+   "to": "euphanerops_longaevus",
+   "functions": [
+    "lateral_line_organ",
+    "lobe_fins"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Vertebrates: a skull, eyes and a backbone around the nerve cord."
+  },
+  {
+   "from": "goniophyllum_pyramidale",
+   "to": "heliophyllum_halli",
+   "functions": [
+    "venom_glands",
+    "budding"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rugose corals grew as horn-shaped cups."
   },
   {
    "from": "sacabambaspis_janvieri",
@@ -2916,7 +4289,7 @@
    "description": "Armoured jawless fish with bony shields."
   },
   {
-   "from": "tremataspis_mammillata",
+   "from": "turinia_pagei",
    "to": "cephalaspis_lyelli",
    "functions": [
     "lateral_line_organ",
@@ -2930,18 +4303,60 @@
    "description": "Osteostracans had a horseshoe-shaped head shield and paired fins."
   },
   {
-   "from": "tremataspis_mammillata",
-   "to": "dunkleosteus_terrelli",
+   "from": "promissum_pulchrum",
+   "to": "palmatolepis_gigas",
    "functions": [
     "lobe_fins",
-    "paired_fins"
+    "spiral_valve"
    ],
    "behaviors": [
     "schooling"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Jaws evolved from gill arches, opening up new ways of feeding."
+   "description": "Conodonts were eel-like vertebrates with comb-like teeth."
+  },
+  {
+   "from": "scyphocrinites_elegans",
+   "to": "cupressocrinites_crassus",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea lilies filter the water with feathery arms on a stalk."
+  },
+  {
+   "from": "lepidaster_grayi",
+   "to": "helianthaster_rhenanus",
+   "functions": [
+    "regeneration_node",
+    "chemoreceptors"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Free-living echinoderms such as sea stars crawl mouth-down on the sea floor."
+  },
+  {
+   "from": "xiushanosteus_mirabilis",
+   "to": "dunkleosteus_terrelli",
+   "functions": [
+    "lobe_fins",
+    "throat_pumping"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Placoderms were armoured jawed fish, the first giant predators."
   },
   {
    "from": "pentamerus_oblongus",
@@ -3059,11 +4474,11 @@
    "description": "Radiodonts were the first top predators."
   },
   {
-   "from": "hudsonaster_incomptus",
+   "from": "protasterina_flexuosa",
    "to": "furcaster_palaeozoicus",
    "functions": [
-    "regeneration_node",
-    "broadcast_spawning"
+    "broadcast_spawning",
+    "regeneration_node"
    ],
    "behaviors": [
     "autotomy"
@@ -3071,6 +4486,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Free-living echinoderms such as sea stars crawl mouth-down on the sea floor."
+  },
+  {
+   "from": "dunkleosteus_terrelli",
+   "to": "groenlandaspis_antarcticus",
+   "functions": [
+    "lobe_fins",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Placoderms were armoured jawed fish, the first giant predators."
+  },
+  {
+   "from": "aquilonifer_spinosus",
+   "to": "mimetaster_hexagonalis",
+   "functions": [
+    "exoskeleton",
+    "blood_clotting"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "True arthropods, with a hard exoskeleton."
   },
   {
    "from": "climatius_reticulatus",
@@ -3089,6 +4532,34 @@
    "description": "Cartilaginous fish keep replacing their teeth all their lives."
   },
   {
+   "from": "cladoselache_fyleri",
+   "to": "cheiracanthus_murchisoni",
+   "functions": [
+    "lobe_fins",
+    "swim_bladder"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cartilaginous fish keep replacing their teeth all their lives."
+  },
+  {
+   "from": "poleumita_discors",
+   "to": "platyceras_dumosum",
+   "functions": [
+    "egg_cases",
+    "haemocyanin"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Snails and slugs."
+  },
+  {
    "from": "dawsonoceras_annulatum",
    "to": "bactrites_gracilis",
    "functions": [
@@ -3096,7 +4567,7 @@
     "camera_eyes"
    ],
    "behaviors": [
-    "schooling"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3226,6 +4697,104 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Trilobites armoured themselves in calcite."
+  },
+  {
+   "from": "onychodus_jandemarrai",
+   "to": "elpistostege_watsoni",
+   "functions": [
+    "lateral_line_organ",
+    "digits"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lobe-finned fish have fleshy fins on bones."
+  },
+  {
+   "from": "onychodus_jandemarrai",
+   "to": "gogonasus_andrewsae",
+   "functions": [
+    "lateral_line_organ",
+    "digits"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lobe-finned fish have fleshy fins on bones."
+  },
+  {
+   "from": "onychodus_jandemarrai",
+   "to": "sauripterus_taylori",
+   "functions": [
+    "lateral_line_organ",
+    "digits"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lobe-finned fish have fleshy fins on bones."
+  },
+  {
+   "from": "cheirolepis_trailli",
+   "to": "mimipiscis_toombsi",
+   "functions": [
+    "lobe_fins",
+    "spiral_valve"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
+   "from": "offacolus_kingi",
+   "to": "weinbergina_opitzi",
+   "functions": [
+    "exoskeleton",
+    "blood_clotting"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Euchelicerates."
+  },
+  {
+   "from": "haliestes_dasos",
+   "to": "palaeoisopus_problematicus",
+   "functions": [
+    "blood_clotting",
+    "book_lungs"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea spiders."
+  },
+  {
+   "from": "devonobius_delta",
+   "to": "eoarthropleura_devonica",
+   "functions": [
+    "exoskeleton",
+    "aquatic_larvae"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Myriapods were among the first animals on land."
   },
   {
    "from": "eurypterus_remipes",
@@ -3366,7 +4935,7 @@
     "camera_eyes"
    ],
    "behaviors": [
-    "schooling"
+    "reef_building"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -3399,6 +4968,50 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Arachnids came onto land."
+  },
+  {
+   "from": "onychodus_jandemarrai",
+   "to": "miguashaia_bureaui",
+   "functions": [
+    "lateral_line_organ",
+    "digits"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lobe-finned fish have fleshy fins on bones."
+  },
+  {
+   "from": "waptia_fieldensis",
+   "to": "palaeopalaemon_newberryi",
+   "functions": [
+    "antennal_glands",
+    "exoskeleton"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [
+    "chromatophores"
+   ],
+   "grantBehaviors": [],
+   "description": "Crabs, lobsters and prawns."
+  },
+  {
+   "from": "agoniatites_vanuxemi",
+   "to": "anetoceras_arduennense",
+   "functions": [
+    "camera_eyes",
+    "acid_stomach"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ammonites coiled their shells."
   },
   {
    "from": "tungsenia_paradoxa",
@@ -3487,6 +5100,20 @@
    "description": "Arachnids came onto land."
   },
   {
+   "from": "waeringoscorpio_hefteri",
+   "to": "protacarus_crani",
+   "functions": [
+    "blood_clotting",
+    "terrestrial_legs"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Mites and ticks."
+  },
+  {
    "from": "panderichthys_rhombolepis",
    "to": "tiktaalik_roseae",
    "functions": [
@@ -3549,6 +5176,20 @@
    "description": "Tetrapods: four limbs with digits."
   },
   {
+   "from": "ichthyostega",
+   "to": "ventastega_curonica",
+   "functions": [
+    "lateral_line_organ",
+    "throat_pumping"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Tetrapods: four limbs with digits."
+  },
+  {
    "from": "thecamonas_trahens",
    "to": "physarum_polycephalum",
    "functions": [],
@@ -3595,11 +5236,39 @@
    "description": "Medusozoans swim as jellyfish for part of their lives."
   },
   {
-   "from": "scyphocrinites_elegans",
+   "from": "heliophyllum_halli",
+   "to": "lithostrotion_vorticale",
+   "functions": [
+    "budding",
+    "venom_glands"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rugose corals grew as horn-shaped cups."
+  },
+  {
+   "from": "crotalocrinites_rugosus",
+   "to": "archaeocidaris_wortheni",
+   "functions": [
+    "broadcast_spawning",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
+   "from": "cupressocrinites_crassus",
    "to": "platycrinites_laevis",
    "functions": [
     "regeneration_node",
-    "filter_apparatus"
+    "broadcast_spawning"
    ],
    "behaviors": [
     "autotomy"
@@ -3607,6 +5276,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Sea lilies filter the water with feathery arms on a stalk."
+  },
+  {
+   "from": "hallopora_elegantula",
+   "to": "archimedes_wortheni",
+   "functions": [
+    "regeneration_node",
+    "filter_apparatus"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Brachiopods and bryozoans filter with a crown of tentacles."
+  },
+  {
+   "from": "hallucigenia",
+   "to": "helenodora_inopinata",
+   "functions": [
+    "jointed_limbs",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "tube_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Panarthropods walk on paired legs."
   },
   {
    "from": "mucrospirifer_mucronatus",
@@ -3621,6 +5318,20 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Brachiopods have two shells."
+  },
+  {
+   "from": "archaeocidaris_wortheni",
+   "to": "pentremites_pyriformis",
+   "functions": [
+    "filter_apparatus",
+    "gills"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
   },
   {
    "from": "cladoselache_fyleri",
@@ -3764,6 +5475,76 @@
    "description": "Chimaeras and their kin have tooth plates that grind shellfish."
   },
   {
+   "from": "phacops_latifrons",
+   "to": "phillipsia_gemmulifera",
+   "functions": [
+    "exoskeleton",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Trilobites armoured themselves in calcite."
+  },
+  {
+   "from": "arthropleura_armata",
+   "to": "acantherpestes_major",
+   "functions": [
+    "insect_wings",
+    "metamorphosis_hormones"
+   ],
+   "behaviors": [
+    "stridulation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Myriapods were among the first animals on land."
+  },
+  {
+   "from": "arthropleura_armata",
+   "to": "latzelia_primordialis",
+   "functions": [
+    "jointed_limbs",
+    "insect_wings"
+   ],
+   "behaviors": [
+    "stridulation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Myriapods were among the first animals on land."
+  },
+  {
+   "from": "edestus_heinrichi",
+   "to": "belantsea_montana",
+   "functions": [
+    "paired_fins",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Chimaeras and their kin have tooth plates that grind shellfish."
+  },
+  {
+   "from": "cheirolepis_trailli",
+   "to": "elonichthys_peltigerus",
+   "functions": [
+    "lobe_fins",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
    "from": "waeringoscorpio_hefteri",
    "to": "pulmonoscorpius_kirktonensis",
    "functions": [
@@ -3836,6 +5617,48 @@
    "description": "Sea scorpions."
   },
   {
+   "from": "agoniatites_vanuxemi",
+   "to": "goniatites_crenistria",
+   "functions": [
+    "acid_stomach",
+    "camera_eyes"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ammonites coiled their shells."
+  },
+  {
+   "from": "miguashaia_bureaui",
+   "to": "rhabdoderma_elegans",
+   "functions": [
+    "paired_fins",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lobe-finned fish have fleshy fins on bones."
+  },
+  {
+   "from": "holoptychius_nobilissimus",
+   "to": "sagenodus_inaequalis",
+   "functions": [
+    "digits",
+    "bone_marrow"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lungfish breathe air with real lungs."
+  },
+  {
    "from": "tungsenia_paradoxa",
    "to": "rhizodus_hibberti",
    "functions": [
@@ -3878,6 +5701,20 @@
    "description": "Spiders and their kin breathe with book lungs."
   },
   {
+   "from": "bactrites_gracilis",
+   "to": "syllipsimopodi_bideni",
+   "functions": [
+    "chromatophores",
+    "acid_stomach"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Coleoids hid the shell inside the body."
+  },
+  {
    "from": "rhyniognatha_hirsti",
    "to": "mazothairos_enormis",
    "functions": [
@@ -3918,6 +5755,20 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Winged insects: the first animals to fly."
+  },
+  {
+   "from": "palaeopalaemon_newberryi",
+   "to": "acanthotelson_stimpsoni",
+   "functions": [
+    "blood_clotting",
+    "terrestrial_legs"
+   ],
+   "behaviors": [
+    "stridulation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Crabs, lobsters and prawns."
   },
   {
    "from": "mazothairos_enormis",
@@ -3992,6 +5843,48 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Dragonflies and griffinflies."
+  },
+  {
+   "from": "mazothairos_enormis",
+   "to": "bojophlebia_prokopi",
+   "functions": [
+    "insect_wings",
+    "compound_eyes"
+   ],
+   "behaviors": [
+    "stridulation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Winged insects: the first animals to fly."
+  },
+  {
+   "from": "crassigyrinus_scoticus",
+   "to": "greererpeton_burkemorani",
+   "functions": [
+    "lateral_line_organ",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Tetrapods: four limbs with digits."
+  },
+  {
+   "from": "crassigyrinus_scoticus",
+   "to": "eucritta_melanolimnetes",
+   "functions": [
+    "chromatophores",
+    "throat_pumping"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Tetrapods: four limbs with digits."
   },
   {
    "from": "mazothairos_enormis",
@@ -4164,6 +6057,48 @@
    "description": "Lepospondyls were small, often oddly shaped early tetrapods."
   },
   {
+   "from": "phlegethontia_longissima",
+   "to": "keraterpeton_galvani",
+   "functions": [
+    "chromatophores",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lepospondyls were small, often oddly shaped early tetrapods."
+  },
+  {
+   "from": "crassigyrinus_scoticus",
+   "to": "dendrerpeton_acadianum",
+   "functions": [
+    "chromatophores",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "The amphibian line, laying their eggs in water."
+  },
+  {
+   "from": "dendrerpeton_acadianum",
+   "to": "cochleosaurus_bohemicus",
+   "functions": [
+    "throat_pumping",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Temnospondyls were the most varied early amphibians."
+  },
+  {
    "from": "eogyrinus_attheyi",
    "to": "archaeothyris_florensis",
    "functions": [
@@ -4180,20 +6115,18 @@
    "description": "The amniotic egg freed vertebrates from the water."
   },
   {
-   "from": "crassigyrinus_scoticus",
+   "from": "dendrerpeton_acadianum",
    "to": "amphibamus_grandiceps",
    "functions": [
-    "aquatic_larvae",
+    "chromatophores",
     "throat_pumping"
    ],
    "behaviors": [
-    "egg_sites"
+    "autotomy"
    ],
-   "grantFunctions": [
-    "metamorphosis_hormones"
-   ],
+   "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "The amphibian line, laying their eggs in water."
+   "description": "Modern amphibians breathe partly through their skin."
   },
   {
    "from": "eogyrinus_attheyi",
@@ -4226,6 +6159,20 @@
    "description": "True reptiles."
   },
   {
+   "from": "archaeothyris_florensis",
+   "to": "ianthasaurus_hardestiorum",
+   "functions": [
+    "digits",
+    "rib_breathing"
+   ],
+   "behaviors": [
+    "active_predation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Eupelycosaurs include the sail-backed synapsids."
+  },
+  {
    "from": "hylonomus_lyelli",
    "to": "petrolacosaurus_kansensis",
    "functions": [
@@ -4238,6 +6185,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Diapsids have two openings behind the eye."
+  },
+  {
+   "from": "petrolacosaurus_kansensis",
+   "to": "spinoaequalis_schultzei",
+   "functions": [
+    "three_chambered_heart",
+    "live_birth"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Diapsids have two openings behind the eye."
+  },
+  {
+   "from": "protospongia_rhenana",
+   "to": "gigantospongia_discoforma",
+   "functions": [
+    "budding",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sponges pump water through their bodies and strain it with collar cells, much as their single-celled ancestors fed."
   },
   {
    "from": "fusulina_cylindrica",
@@ -4276,6 +6251,76 @@
    "description": "Fusulinids built spindle-shaped shells of many chambers, the size of grains of wheat."
   },
   {
+   "from": "lithostrotion_vorticale",
+   "to": "waagenophyllum_indicum",
+   "functions": [
+    "budding",
+    "venom_glands"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rugose corals grew as horn-shaped cups."
+  },
+  {
+   "from": "archaeocidaris_wortheni",
+   "to": "deltoblastus_permicus",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
+   "from": "gigantoproductus_giganteus",
+   "to": "leptodus_americanus",
+   "functions": [
+    "filter_apparatus",
+    "aestivation"
+   ],
+   "behaviors": [
+    "foraging"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Brachiopods have two shells."
+  },
+  {
+   "from": "akmonistion_zangerli",
+   "to": "acanthodes_bronni",
+   "functions": [
+    "lobe_fins",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cartilaginous fish keep replacing their teeth all their lives."
+  },
+  {
+   "from": "cardiola_interrupta",
+   "to": "shikamaia_akasakaensis",
+   "functions": [
+    "haemocyanin",
+    "radula"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bivalves."
+  },
+  {
    "from": "edestus_heinrichi",
    "to": "helicoprion_bessonovi",
    "functions": [
@@ -4304,18 +6349,102 @@
    "description": "Chimaeras and their kin have tooth plates that grind shellfish."
   },
   {
-   "from": "agoniatites_vanuxemi",
-   "to": "perrinites_hilli",
+   "from": "bransonella_tridentata",
+   "to": "xenacanthus_decheni",
    "functions": [
-    "camera_eyes",
-    "haemocyanin"
+    "lateral_line_organ",
+    "electroreceptors"
    ],
    "behaviors": [
-    "vertical_migration"
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sharks and rays."
+  },
+  {
+   "from": "elonichthys_peltigerus",
+   "to": "palaeoniscum_freieslebeni",
+   "functions": [
+    "lobe_fins",
+    "throat_pumping"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
+   "from": "helicoprion_bessonovi",
+   "to": "janassa_bituminosa",
+   "functions": [
+    "chromatophores",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Chimaeras and their kin have tooth plates that grind shellfish."
+  },
+  {
+   "from": "goniatites_crenistria",
+   "to": "perrinites_hilli",
+   "functions": [
+    "acid_stomach",
+    "camera_eyes"
+   ],
+   "behaviors": [
+    "stalking"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Ammonites coiled their shells."
+  },
+  {
+   "from": "sagenodus_inaequalis",
+   "to": "gnathorhiza_serrata",
+   "functions": [
+    "digits",
+    "bone_marrow"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lungfish breathe air with real lungs."
+  },
+  {
+   "from": "megarachne_servinei",
+   "to": "campylocephalus_permianus",
+   "functions": [
+    "exoskeleton",
+    "blood_clotting"
+   ],
+   "behaviors": [
+    "ballooning"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea scorpions."
+  },
+  {
+   "from": "rhyniognatha_hirsti",
+   "to": "protereisma_permianum",
+   "functions": [
+    "insect_wings",
+    "hindgut_fermentation"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Insects."
   },
   {
    "from": "mazothairos_enormis",
@@ -4376,6 +6505,20 @@
    "description": "Lepospondyls were small, often oddly shaped early tetrapods."
   },
   {
+   "from": "seymouria_baylorensis",
+   "to": "diadectes_sideropelicus",
+   "functions": [
+    "digits",
+    "aestivation"
+   ],
+   "behaviors": [
+    "plant_feeding"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "The line of tetrapods leading to amniotes."
+  },
+  {
    "from": "dunbaria_fasciipennis",
    "to": "tshekardocoleus_magnus",
    "functions": [
@@ -4390,19 +6533,17 @@
    "description": "Neopterans can fold their wings."
   },
   {
-   "from": "amphibamus_grandiceps",
+   "from": "dendrerpeton_acadianum",
    "to": "eryops_megacephalus",
    "functions": [
-    "teeth",
-    "rib_breathing"
+    "lateral_line_organ",
+    "electroreceptors"
    ],
    "behaviors": [
-    "ambush_hunting"
+    "skin_shedding"
    ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "basking"
-   ],
+   "grantBehaviors": [],
    "description": "Temnospondyls were the most varied early amphibians."
   },
   {
@@ -4425,6 +6566,34 @@
    "functions": [
     "electroreceptors",
     "throat_pumping"
+   ],
+   "behaviors": [
+    "skin_shedding"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Temnospondyls were the most varied early amphibians."
+  },
+  {
+   "from": "eryops_megacephalus",
+   "to": "archegosaurus_decheni",
+   "functions": [
+    "lateral_line_organ",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "skin_shedding"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Temnospondyls were the most varied early amphibians."
+  },
+  {
+   "from": "eryops_megacephalus",
+   "to": "platyhystrix_rugosus",
+   "functions": [
+    "throat_pumping",
+    "electroreceptors"
    ],
    "behaviors": [
     "skin_shedding"
@@ -4462,19 +6631,17 @@
    "description": "Synapsids, with one opening behind the eye, are the line of mammals."
   },
   {
-   "from": "ophiacodon_retroversus",
+   "from": "ianthasaurus_hardestiorum",
    "to": "edaphosaurus_pogonias",
    "functions": [
-    "differentiated_teeth",
-    "hindgut_fermentation"
+    "diaphragm",
+    "differentiated_teeth"
    ],
    "behaviors": [
     "plant_feeding"
    ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "basking"
-   ],
+   "grantBehaviors": [],
    "description": "Eupelycosaurs include the sail-backed synapsids."
   },
   {
@@ -4590,6 +6757,20 @@
    "description": "True reptiles."
   },
   {
+   "from": "cotylorhynchus_romeri",
+   "to": "casea_broilii",
+   "functions": [
+    "diaphragm",
+    "differentiated_teeth"
+   ],
+   "behaviors": [
+    "burrow_systems"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Caseids were bulky plant-eating synapsids with tiny heads."
+  },
+  {
    "from": "edaphosaurus_pogonias",
    "to": "dimetrodon_grandis",
    "functions": [
@@ -4622,6 +6803,20 @@
   {
    "from": "dimetrodon_grandis",
    "to": "secodontosaurus_obtusidens",
+   "functions": [
+    "diaphragm",
+    "differentiated_teeth"
+   ],
+   "behaviors": [
+    "active_predation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sphenacodonts had teeth of different shapes, an early step toward mammals."
+  },
+  {
+   "from": "dimetrodon_grandis",
+   "to": "sphenacodon_ferox",
    "functions": [
     "diaphragm",
     "differentiated_teeth"
@@ -4881,8 +7076,92 @@
    "description": "Dicynodonts cropped plants with a horny beak and two tusks."
   },
   {
+   "from": "dimetrodon_grandis",
+   "to": "biarmosuchus_tener",
+   "functions": [
+    "diaphragm",
+    "differentiated_teeth"
+   ],
+   "behaviors": [
+    "active_predation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Therapsids walked with their legs more under the body."
+  },
+  {
+   "from": "lystrosaurus_murrayi",
+   "to": "suminia_getmanovi",
+   "functions": [
+    "diaphragm",
+    "differentiated_teeth"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Dicynodonts cropped plants with a horny beak and two tusks."
+  },
+  {
+   "from": "lystrosaurus_murrayi",
+   "to": "dicynodon_lacerticeps",
+   "functions": [
+    "diaphragm",
+    "differentiated_teeth"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Dicynodonts cropped plants with a horny beak and two tusks."
+  },
+  {
+   "from": "dimetrodon_grandis",
+   "to": "procynosuchus_delaharpeae",
+   "functions": [
+    "diaphragm",
+    "differentiated_teeth"
+   ],
+   "behaviors": [
+    "active_predation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Therapsids walked with their legs more under the body."
+  },
+  {
+   "from": "coelurosauravus_jaekeli",
+   "to": "protorosaurus_speneri",
+   "functions": [
+    "three_chambered_heart",
+    "temperature_sex"
+   ],
+   "behaviors": [
+    "skin_shedding"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lizards, crocodiles, turtles, dinosaurs and birds."
+  },
+  {
    "from": "inostrancevia_alexandri",
    "to": "euchambersia_mirabilis",
+   "functions": [
+    "diaphragm",
+    "differentiated_teeth"
+   ],
+   "behaviors": [
+    "active_predation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Theriodonts were the sabre-toothed predators of the Permian."
+  },
+  {
+   "from": "euchambersia_mirabilis",
+   "to": "lycosuchus_vanderrieti",
    "functions": [
     "diaphragm",
     "differentiated_teeth"
@@ -4904,6 +7183,76 @@
    "description": "Ciliates, foraminifera, diatoms and their kin form a great branch of the eukaryotes, far from the animals."
   },
   {
+   "from": "moorowipora_chamberensis",
+   "to": "retiophyllia_frechi",
+   "functions": [
+    "budding",
+    "venom_glands"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Modern stony corals, with algae living in their tissues."
+  },
+  {
+   "from": "platycrinites_laevis",
+   "to": "encrinus_liliiformis",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea lilies filter the water with feathery arms on a stalk."
+  },
+  {
+   "from": "palaeoniscum_freieslebeni",
+   "to": "saurichthys_curionii",
+   "functions": [
+    "lateral_line_organ",
+    "lobe_fins"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
+   "from": "saurichthys_curionii",
+   "to": "thoracopterus_magnificus",
+   "functions": [
+    "lobe_fins",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
+   "from": "onychodus_jandemarrai",
+   "to": "whiteia_woodwardi",
+   "functions": [
+    "electroreceptors",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lobe-finned fish have fleshy fins on bones."
+  },
+  {
    "from": "perrinites_hilli",
    "to": "ceratites_nodosus",
    "functions": [
@@ -4916,6 +7265,62 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Ammonites coiled their shells."
+  },
+  {
+   "from": "euproops_danae",
+   "to": "austrolimulus_fletcheri",
+   "functions": [
+    "exoskeleton",
+    "blood_clotting"
+   ],
+   "behaviors": [
+    "ballooning"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Horseshoe crabs."
+  },
+  {
+   "from": "bactrites_gracilis",
+   "to": "aulacoceras_sulcatum",
+   "functions": [
+    "chromatophores",
+    "large_brain"
+   ],
+   "behaviors": [
+    "stalking"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Coleoids hid the shell inside the body."
+  },
+  {
+   "from": "gnathorhiza_serrata",
+   "to": "ceratodus_sturii",
+   "functions": [
+    "digits",
+    "bone_marrow"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lungfish breathe air with real lungs."
+  },
+  {
+   "from": "protereisma_permianum",
+   "to": "gigatitan_vulcanicus",
+   "functions": [
+    "compound_eyes",
+    "insect_wings"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Insects."
   },
   {
    "from": "eryops_megacephalus",
@@ -4960,6 +7365,20 @@
    "description": "Temnospondyls were the most varied early amphibians."
   },
   {
+   "from": "tshekardocoleus_magnus",
+   "to": "triamyxa_coprolithica",
+   "functions": [
+    "hindgut_fermentation",
+    "insect_wings"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Beetles."
+  },
+  {
    "from": "amphibamus_grandiceps",
    "to": "triadobatrachus_massinoti",
    "functions": [
@@ -4974,6 +7393,20 @@
    ],
    "grantBehaviors": [],
    "description": "Frogs and toads leap on long hind legs."
+  },
+  {
+   "from": "scutosaurus_karpinskii",
+   "to": "hypsognathus_fenneri",
+   "functions": [
+    "air_sacs",
+    "diaphragm"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Parareptiles, an early branch of reptiles."
   },
   {
    "from": "coelurosauravus_jaekeli",
@@ -5004,20 +7437,18 @@
    "description": "Ichthyosaurs became dolphin-shaped reptiles of the open sea."
   },
   {
-   "from": "dimetrodon_grandis",
+   "from": "procynosuchus_delaharpeae",
    "to": "cynognathus_crateronotus",
    "functions": [
-    "secondary_palate",
-    "endothermy_node"
+    "endothermy_node",
+    "diaphragm"
    ],
    "behaviors": [
-    "stalking"
+    "active_predation"
    ],
-   "grantFunctions": [
-    "fur_and_glands"
-   ],
+   "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Therapsids walked with their legs more under the body."
+   "description": "Cynodonts had a secondary palate and were probably warm-blooded."
   },
   {
    "from": "lystrosaurus_murrayi",
@@ -5146,6 +7577,62 @@
    "description": "Cynodonts had a secondary palate and were probably warm-blooded."
   },
   {
+   "from": "coelurosauravus_jaekeli",
+   "to": "askeptosaurus_italicus",
+   "functions": [
+    "three_chambered_heart",
+    "salt_glands"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Neodiapsids include all living reptiles."
+  },
+  {
+   "from": "shonisaurus_popularis",
+   "to": "cartorhynchus_lenticarpus",
+   "functions": [
+    "temperature_sex",
+    "three_chambered_heart"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ichthyosaurs became dolphin-shaped reptiles of the open sea."
+  },
+  {
+   "from": "placerias_hesternus",
+   "to": "kannemeyeria_simocephalus",
+   "functions": [
+    "diaphragm",
+    "differentiated_teeth"
+   ],
+   "behaviors": [
+    "plant_feeding"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Dicynodonts cropped plants with a horny beak and two tusks."
+  },
+  {
+   "from": "cynognathus_crateronotus",
+   "to": "massetognathus_pascuali",
+   "functions": [
+    "endothermy_node",
+    "diaphragm"
+   ],
+   "behaviors": [
+    "plant_feeding"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cynodonts had a secondary palate and were probably warm-blooded."
+  },
+  {
    "from": "cynognathus_crateronotus",
    "to": "morganucodon_watsoni",
    "functions": [
@@ -5178,20 +7665,18 @@
    "description": "Lizards, crocodiles, turtles, dinosaurs and birds."
   },
   {
-   "from": "coelurosauravus_jaekeli",
+   "from": "protorosaurus_speneri",
    "to": "longisquama_insignis",
    "functions": [
-    "protofeathers",
-    "keratin_scales"
+    "chromatophores",
+    "salt_glands"
    ],
    "behaviors": [
-    "display_postures"
+    "courtship_dance"
    ],
-   "grantFunctions": [
-    "gliding"
-   ],
+   "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Lizards, crocodiles, turtles, dinosaurs and birds."
+   "description": "Archosauromorphs: the line of crocodiles, dinosaurs and birds."
   },
   {
    "from": "longisquama_insignis",
@@ -5307,6 +7792,76 @@
    "description": "Turtles grew a shell from their ribs."
   },
   {
+   "from": "placodus_gigas",
+   "to": "keichousaurus_hui",
+   "functions": [
+    "salt_glands",
+    "temperature_sex"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sauropterygians returned to the sea with paddle-like limbs."
+  },
+  {
+   "from": "longisquama_insignis",
+   "to": "dinocephalosaurus_orientalis",
+   "functions": [
+    "salt_glands",
+    "temperature_sex"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Archosauromorphs: the line of crocodiles, dinosaurs and birds."
+  },
+  {
+   "from": "longisquama_insignis",
+   "to": "proterosuchus_fergusi",
+   "functions": [
+    "chromatophores",
+    "three_chambered_heart"
+   ],
+   "behaviors": [
+    "mud_wallowing"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Archosauromorphs: the line of crocodiles, dinosaurs and birds."
+  },
+  {
+   "from": "longisquama_insignis",
+   "to": "euparkeria_capensis",
+   "functions": [
+    "temperature_sex",
+    "salt_glands"
+   ],
+   "behaviors": [
+    "mud_wallowing"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Archosauromorphs: the line of crocodiles, dinosaurs and birds."
+  },
+  {
+   "from": "longisquama_insignis",
+   "to": "trilophosaurus_buettneri",
+   "functions": [
+    "three_chambered_heart",
+    "salt_glands"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Archosauromorphs: the line of crocodiles, dinosaurs and birds."
+  },
+  {
    "from": "coelurosauravus_jaekeli",
    "to": "megachirella_wachtleri",
    "functions": [
@@ -5361,6 +7916,20 @@
    ],
    "behaviors": [
     "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lizards and snakes and their kin."
+  },
+  {
+   "from": "megachirella_wachtleri",
+   "to": "clevosaurus_hudsoni",
+   "functions": [
+    "temperature_sex",
+    "salt_glands"
+   ],
+   "behaviors": [
+    "mud_wallowing"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5479,6 +8048,20 @@
    ],
    "behaviors": [
     "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Loricatans were the big predators of the Triassic."
+  },
+  {
+   "from": "postosuchus_kirkpatricki",
+   "to": "lotosaurus_adentus",
+   "functions": [
+    "air_sacs",
+    "endothermy_node"
+   ],
+   "behaviors": [
+    "mud_wallowing"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5618,30 +8201,84 @@
    "description": "Theropods were the hunting dinosaurs."
   },
   {
-   "from": "crotalocrinites_rugosus",
+   "from": "plateosaurus_engelhardti",
+   "to": "riojasaurus_incertus",
+   "functions": [
+    "air_sacs",
+    "hollow_bones"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sauropodomorphs had long necks."
+  },
+  {
+   "from": "deltoblastus_permicus",
    "to": "pentacrinites_fossilis",
    "functions": [
     "filter_apparatus",
     "regeneration_node"
    ],
    "behaviors": [
-    "facing_current"
+    "autotomy"
    ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "rafting"
-   ],
+   "grantBehaviors": [],
    "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
   },
   {
-   "from": "bransonella_tridentata",
-   "to": "hybodus_hauffianus",
+   "from": "retiophyllia_frechi",
+   "to": "thecosmilia_trichotoma",
    "functions": [
-    "tooth_replacement",
-    "claspers"
+    "budding",
+    "venom_glands"
    ],
    "behaviors": [
-    "foraging"
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Modern stony corals, with algae living in their tissues."
+  },
+  {
+   "from": "furcaster_palaeozoicus",
+   "to": "palaeocoma_egertoni",
+   "functions": [
+    "regeneration_node",
+    "chemoreceptors"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Free-living echinoderms such as sea stars crawl mouth-down on the sea floor."
+  },
+  {
+   "from": "shikamaia_akasakaensis",
+   "to": "gryphaea_arcuata",
+   "functions": [
+    "haemocyanin",
+    "open_circulation"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bivalves."
+  },
+  {
+   "from": "xenacanthus_decheni",
+   "to": "hybodus_hauffianus",
+   "functions": [
+    "electroreceptors",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "eyespot_display"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -5662,19 +8299,58 @@
    "description": "Chimaeras and their kin have tooth plates that grind shellfish."
   },
   {
-   "from": "bactrites_gracilis",
-   "to": "wyoteuthis_linsterorum",
+   "from": "saurichthys_curionii",
+   "to": "dapedium_politum",
    "functions": [
-    "camera_eyes",
-    "chromatophores"
+    "lobe_fins",
+    "throat_pumping"
    ],
    "behaviors": [
     "schooling"
    ],
-   "grantFunctions": [
-    "large_brain",
-    "ink_cloud"
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
+   "from": "dapedium_politum",
+   "to": "aspidorhynchus_acutirostris",
+   "functions": [
+    "lobe_fins",
+    "throat_pumping"
    ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
+   "from": "whiteia_woodwardi",
+   "to": "undina_penicillata",
+   "functions": [
+    "digits",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lobe-finned fish have fleshy fins on bones."
+  },
+  {
+   "from": "aulacoceras_sulcatum",
+   "to": "wyoteuthis_linsterorum",
+   "functions": [
+    "chromatophores",
+    "large_brain"
+   ],
+   "behaviors": [
+    "stalking"
+   ],
+   "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Coleoids hid the shell inside the body."
   },
@@ -5707,78 +8383,116 @@
    "description": "Ammonites coiled their shells."
   },
   {
-   "from": "euproops_danae",
+   "from": "austrolimulus_fletcheri",
    "to": "mesolimulus_walchi",
    "functions": [
-    "book_gills",
-    "exoskeleton"
+    "exoskeleton",
+    "blood_clotting"
    ],
    "behaviors": [
-    "synchronised_spawning"
+    "ballooning"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Horseshoe crabs."
   },
   {
-   "from": "waptia_fieldensis",
+   "from": "palaeopalaemon_newberryi",
    "to": "aeger_tipularius",
    "functions": [
-    "antennal_glands",
-    "compound_eyes"
+    "blood_clotting",
+    "terrestrial_legs"
    ],
    "behaviors": [
-    "startle_escape"
+    "claw_duels"
    ],
-   "grantFunctions": [
-    "chromatophores"
-   ],
+   "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Crabs, lobsters and prawns."
   },
   {
-   "from": "cheirolepis_trailli",
+   "from": "asteroceras",
+   "to": "dactylioceras_commune",
+   "functions": [
+    "large_brain",
+    "beak"
+   ],
+   "behaviors": [
+    "stalking"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ammonites coiled their shells."
+  },
+  {
+   "from": "dapedium_politum",
    "to": "leedsichthys_problematicus",
    "functions": [
-    "filter_apparatus",
-    "swim_bladder"
+    "lateral_line_organ",
+    "lobe_fins"
    ],
    "behaviors": [
-    "vertical_migration"
+    "eyespot_display"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Neopterygians have a more flexible jaw."
   },
   {
-   "from": "cheirolepis_trailli",
+   "from": "dapedium_politum",
    "to": "lepidotes_gigas",
    "functions": [
-    "swim_bladder",
-    "teeth"
+    "lateral_line_organ",
+    "lobe_fins"
    ],
    "behaviors": [
-    "foraging"
+    "eyespot_display"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Neopterygians have a more flexible jaw."
   },
   {
-   "from": "cheirolepis_trailli",
+   "from": "dapedium_politum",
    "to": "leptolepis_coryphaenoides",
    "functions": [
-    "swim_bladder",
-    "gill_cover"
+    "lateral_line_organ",
+    "lobe_fins"
    ],
    "behaviors": [
     "schooling"
    ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "vertical_migration"
-   ],
+   "grantBehaviors": [],
    "description": "Neopterygians have a more flexible jaw."
+  },
+  {
+   "from": "hybodus_hauffianus",
+   "to": "spathobatis_bugesiacus",
+   "functions": [
+    "chromatophores",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Modern sharks and rays."
+  },
+  {
+   "from": "aeger_tipularius",
+   "to": "eryon_arctiformis",
+   "functions": [
+    "exoskeleton",
+    "blood_clotting"
+   ],
+   "behaviors": [
+    "stridulation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Crabs, lobsters and prawns."
   },
   {
    "from": "weygoldtina_anglica",
@@ -5797,21 +8511,17 @@
    "description": "Spiders spin silk."
   },
   {
-   "from": "tshekardocoleus_magnus",
+   "from": "triamyxa_coprolithica",
    "to": "kalligramma_haeckeli",
    "functions": [
-    "complete_metamorphosis",
-    "insect_wings"
+    "insect_wings",
+    "uric_acid"
    ],
    "behaviors": [
-    "active_predation"
-   ],
-   "grantFunctions": [
-    "structural_colour"
-   ],
-   "grantBehaviors": [
     "eyespot_display"
    ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
    "description": "Lacewings."
   },
   {
@@ -5827,6 +8537,48 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Flies and fleas."
+  },
+  {
+   "from": "kalligramma_haeckeli",
+   "to": "archaeolepis_mane",
+   "functions": [
+    "hindgut_fermentation",
+    "insect_wings"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Butterflies and moths."
+  },
+  {
+   "from": "amphibamus_grandiceps",
+   "to": "karaurus_sharovi",
+   "functions": [
+    "chromatophores",
+    "throat_pumping"
+   ],
+   "behaviors": [
+    "skin_shedding"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Modern amphibians breathe partly through their skin."
+  },
+  {
+   "from": "triadobatrachus_massinoti",
+   "to": "prosalirus_bitis",
+   "functions": [
+    "chromatophores",
+    "throat_pumping"
+   ],
+   "behaviors": [
+    "skin_shedding"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Frogs and toads leap on long hind legs."
   },
   {
    "from": "shonisaurus_popularis",
@@ -5847,6 +8599,34 @@
    "to": "temnodontosaurus_platyodon",
    "functions": [
     "temperature_sex",
+    "salt_glands"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ichthyosaurs became dolphin-shaped reptiles of the open sea."
+  },
+  {
+   "from": "cynognathus_crateronotus",
+   "to": "kayentatherium_wellesi",
+   "functions": [
+    "fur_and_glands",
+    "endothermy_node"
+   ],
+   "behaviors": [
+    "plant_feeding"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cynodonts had a secondary palate and were probably warm-blooded."
+  },
+  {
+   "from": "ophthalmosaurus_icenicus",
+   "to": "ichthyosaurus_communis",
+   "functions": [
+    "three_chambered_heart",
     "salt_glands"
    ],
    "behaviors": [
@@ -5897,6 +8677,20 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Mammaliaforms had the mammalian jaw joint and ear."
+  },
+  {
+   "from": "clevosaurus_hudsoni",
+   "to": "pleurosaurus_goldfussi",
+   "functions": [
+    "three_chambered_heart",
+    "salt_glands"
+   ],
+   "behaviors": [
+    "mud_wallowing"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lizards and snakes and their kin."
   },
   {
    "from": "nothosaurus_mirabilis",
@@ -5982,6 +8776,20 @@
    ],
    "grantBehaviors": [],
    "description": "Therian mammals give birth to live young."
+  },
+  {
+   "from": "volaticotherium_antiquum",
+   "to": "rugosodon_eurasiaticus",
+   "functions": [
+    "endothermy_node",
+    "neocortex"
+   ],
+   "behaviors": [
+    "dreaming_sleep"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Mammals that went on to give birth to live young."
   },
   {
    "from": "eudimorphodon_ranzii",
@@ -6082,6 +8890,20 @@
    "description": "Pterosaurs flew on wings of skin."
   },
   {
+   "from": "metriorhynchus_superciliosus",
+   "to": "protosuchus_richardsoni",
+   "functions": [
+    "air_sacs",
+    "endothermy_node"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Crocodylomorphs."
+  },
+  {
    "from": "rhamphorhynchus_muensteri",
    "to": "pterodactylus_antiquus",
    "functions": [
@@ -6125,6 +8947,20 @@
   },
   {
    "from": "lesothosaurus_diagnosticus",
+   "to": "tianyulong_confuciusi",
+   "functions": [
+    "endothermy_node",
+    "air_sacs"
+   ],
+   "behaviors": [
+    "mud_wallowing"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ornithischians were plant-eaters with a beak."
+  },
+  {
+   "from": "lesothosaurus_diagnosticus",
    "to": "scelidosaurus_harrisonii",
    "functions": [
     "osteoderms",
@@ -6152,6 +8988,48 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Theropods were the hunting dinosaurs."
+  },
+  {
+   "from": "torvosaurus_tanneri",
+   "to": "megalosaurus_bucklandii",
+   "functions": [
+    "feathered_wings",
+    "air_sacs"
+   ],
+   "behaviors": [
+    "mud_wallowing"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Theropods were the hunting dinosaurs."
+  },
+  {
+   "from": "torvosaurus_tanneri",
+   "to": "limusaurus_inextricabilis",
+   "functions": [
+    "feathered_wings",
+    "air_sacs"
+   ],
+   "behaviors": [
+    "mud_wallowing"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Theropods were the hunting dinosaurs."
+  },
+  {
+   "from": "plateosaurus_engelhardti",
+   "to": "massospondylus_carinatus",
+   "functions": [
+    "air_sacs",
+    "beak"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sauropodomorphs had long necks."
   },
   {
    "from": "torvosaurus_tanneri",
@@ -6196,14 +9074,14 @@
    "description": "Stegosaurs carried plates and spikes."
   },
   {
-   "from": "plateosaurus_engelhardti",
+   "from": "massospondylus_carinatus",
    "to": "mamenchisaurus_hochuanensis",
    "functions": [
     "air_sacs",
-    "gastroliths"
+    "beak"
    ],
    "behaviors": [
-    "herding"
+    "mud_wallowing"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -6278,6 +9156,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Neornithischians."
+  },
+  {
+   "from": "mamenchisaurus_hochuanensis",
+   "to": "camarasaurus_supremus",
+   "functions": [
+    "air_sacs",
+    "endothermy_node"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sauropods were the largest land animals ever."
+  },
+  {
+   "from": "dryosaurus_altus",
+   "to": "camptosaurus_dispar",
+   "functions": [
+    "air_sacs",
+    "beak"
+   ],
+   "behaviors": [
+    "mud_wallowing"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ornithopods chewed plants with batteries of teeth."
   },
   {
    "from": "mamenchisaurus_hochuanensis",
@@ -6427,6 +9333,20 @@
    "description": "Neornithischians."
   },
   {
+   "from": "pentacrinites_fossilis",
+   "to": "micraster_coranguinum",
+   "functions": [
+    "bilateral_body",
+    "chemoreceptors"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
    "from": "hallucigenia",
    "to": "water_bear",
    "functions": [
@@ -6440,6 +9360,48 @@
     "mucus_cocoon"
    ],
    "description": "Tardigrades survive drying out, freezing and even space."
+  },
+  {
+   "from": "encrinus_liliiformis",
+   "to": "uintacrinus_socialis",
+   "functions": [
+    "filter_apparatus",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea lilies filter the water with feathery arms on a stalk."
+  },
+  {
+   "from": "dapedium_politum",
+   "to": "enchodus_petrosus",
+   "functions": [
+    "lobe_fins",
+    "electric_organs"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
+   "from": "undina_penicillata",
+   "to": "mawsonia_gigas",
+   "functions": [
+    "lateral_line_organ",
+    "digits"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lobe-finned fish have fleshy fins on bones."
   },
   {
    "from": "asteroceras",
@@ -6467,6 +9429,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Ammonites coiled their shells."
+  },
+  {
+   "from": "nipponites_mirabilis",
+   "to": "parapuzosia_seppenradensis",
+   "functions": [
+    "large_brain",
+    "beak"
+   ],
+   "behaviors": [
+    "stalking"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ammonites coiled their shells."
+  },
+  {
+   "from": "wyoteuthis_linsterorum",
+   "to": "belemnitella_americana",
+   "functions": [
+    "chromatophores",
+    "large_brain"
+   ],
+   "behaviors": [
+    "stalking"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Coleoids hid the shell inside the body."
   },
   {
    "from": "leedsichthys_problematicus",
@@ -6513,6 +9503,20 @@
    "description": "Galeomorph sharks include the great hunters of the open sea."
   },
   {
+   "from": "spathobatis_bugesiacus",
+   "to": "onchopristis_numidus",
+   "functions": [
+    "lateral_line_organ",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rays flattened out to live on and above the sea floor."
+  },
+  {
    "from": "leptolepis_coryphaenoides",
    "to": "xiphactinus_audax",
    "functions": [
@@ -6527,6 +9531,34 @@
     "ambush_hunting"
    ],
    "description": "Ichthyodectiforms were big predatory teleosts."
+  },
+  {
+   "from": "gryphaea_arcuata",
+   "to": "hippurites_radiosus",
+   "functions": [
+    "haemocyanin",
+    "open_circulation"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bivalves."
+  },
+  {
+   "from": "eryon_arctiformis",
+   "to": "callichimaera_perplexa",
+   "functions": [
+    "compound_eyes",
+    "blood_clotting"
+   ],
+   "behaviors": [
+    "claw_duels"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Crabs, lobsters and prawns."
   },
   {
    "from": "kalligramma_haeckeli",
@@ -6559,7 +9591,21 @@
    "description": "Flies have two wings."
   },
   {
-   "from": "triadobatrachus_massinoti",
+   "from": "melittosphex_burmensis",
+   "to": "haidomyrmex_cerberus",
+   "functions": [
+    "jointed_limbs",
+    "hindgut_fermentation"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Stinging Hymenoptera: wasps, bees and ants."
+  },
+  {
+   "from": "prosalirus_bitis",
    "to": "beelzebufo_ampinga",
    "functions": [
     "chromatophores",
@@ -6571,6 +9617,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Frogs and toads leap on long hind legs."
+  },
+  {
+   "from": "coelurosauravus_jaekeli",
+   "to": "champsosaurus_laramiensis",
+   "functions": [
+    "three_chambered_heart",
+    "temperature_sex"
+   ],
+   "behaviors": [
+    "half_brain_sleep"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Lizards, crocodiles, turtles, dinosaurs and birds."
+  },
+  {
+   "from": "megachirella_wachtleri",
+   "to": "xianglong_zhaoi",
+   "functions": [
+    "chromatophores",
+    "temperature_sex"
+   ],
+   "behaviors": [
+    "half_brain_sleep"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Squamates shed their scaly skin."
   },
   {
    "from": "plesiosaurus_dolichodeirus",
@@ -6587,14 +9661,14 @@
    "description": "Plesiosaurs flew through the water on four flippers."
   },
   {
-   "from": "megachirella_wachtleri",
+   "from": "xianglong_zhaoi",
    "to": "mosasaurus_hoffmannii",
    "functions": [
-    "salt_glands",
-    "live_birth"
+    "temperature_sex",
+    "salt_glands"
    ],
    "behaviors": [
-    "pursuit_hunting"
+    "incubation"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -6715,6 +9789,20 @@
    "description": "Snakes lost their legs."
   },
   {
+   "from": "najash_rionegrina",
+   "to": "sanajeh_indicus",
+   "functions": [
+    "chromatophores",
+    "temperature_sex"
+   ],
+   "behaviors": [
+    "incubation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Snakes lost their legs."
+  },
+  {
    "from": "repenomamus_giganticus",
    "to": "sinodelphys_szalayi",
    "functions": [
@@ -6729,8 +9817,64 @@
    "description": "Therian mammals give birth to live young."
   },
   {
+   "from": "sinodelphys_szalayi",
+   "to": "didelphodon_vorax",
+   "functions": [
+    "fur_and_glands",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "leks"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Metatherians, the marsupial line, give birth to tiny young."
+  },
+  {
+   "from": "juramaia_sinensis",
+   "to": "zalambdalestes_lechei",
+   "functions": [
+    "germinal_centres",
+    "neocortex"
+   ],
+   "behaviors": [
+    "mobbing"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Eutherians: the line of placental mammals."
+  },
+  {
+   "from": "rugosodon_eurasiaticus",
+   "to": "kryptobaatar_dashzevegi",
+   "functions": [
+    "neocortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "dreaming_sleep"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Mammals that went on to give birth to live young."
+  },
+  {
    "from": "rhamphorhynchus_muensteri",
    "to": "hatzegopteryx_thambema",
+   "functions": [
+    "beak",
+    "air_sacs"
+   ],
+   "behaviors": [
+    "roosting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Pterosaurs flew on wings of skin."
+  },
+  {
+   "from": "hatzegopteryx_thambema",
+   "to": "pterodaustro_guinazui",
    "functions": [
     "beak",
     "air_sacs"
@@ -6814,6 +9958,20 @@
   },
   {
    "from": "sarcosuchus_imperator",
+   "to": "simosuchus_clarki",
+   "functions": [
+    "air_sacs",
+    "hollow_bones"
+   ],
+   "behaviors": [
+    "half_brain_sleep"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Crocodyliforms."
+  },
+  {
+   "from": "sarcosuchus_imperator",
    "to": "deinosuchus_riograndensis",
    "functions": [
     "osteoderms",
@@ -6864,7 +10022,7 @@
     "syrinx"
    ],
    "behaviors": [
-    "distraction_display"
+    "incubation"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -6892,7 +10050,7 @@
     "syrinx"
    ],
    "behaviors": [
-    "leks"
+    "head_butting"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -6901,6 +10059,48 @@
   {
    "from": "tarbosaurus_bataar",
    "to": "halszkaraptor_escuilliei",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "head_butting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Theropods were the hunting dinosaurs."
+  },
+  {
+   "from": "tarbosaurus_bataar",
+   "to": "yutyrannus_huali",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "head_butting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Theropods were the hunting dinosaurs."
+  },
+  {
+   "from": "tarbosaurus_bataar",
+   "to": "mononykus_olecranus",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "incubation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Theropods were the hunting dinosaurs."
+  },
+  {
+   "from": "tarbosaurus_bataar",
+   "to": "deinocheirus_mirificus",
    "functions": [
     "feathered_wings",
     "syrinx"
@@ -7067,6 +10267,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Ornithopods chewed plants with batteries of teeth."
+  },
+  {
+   "from": "iguanodon_bernissartensis",
+   "to": "maiasaura_peeblesorum",
+   "functions": [
+    "air_sacs",
+    "dental_batteries"
+   ],
+   "behaviors": [
+    "head_butting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ornithopods chewed plants with batteries of teeth."
+  },
+  {
+   "from": "patagotitan_mayorum",
+   "to": "nigersaurus_taqueti",
+   "functions": [
+    "air_sacs",
+    "dental_batteries"
+   ],
+   "behaviors": [
+    "head_butting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sauropods were the largest land animals ever."
   },
   {
    "from": "psittacosaurus_mongoliensis",
@@ -7350,14 +10578,28 @@
    "description": "Birds are living dinosaurs."
   },
   {
-   "from": "juramaia_sinensis",
-   "to": "protungulatum_donnae",
+   "from": "vegavis_iaai",
+   "to": "asteriornis_maastrichtensis",
    "functions": [
-    "placenta",
-    "cusped_molars"
+    "feathered_wings",
+    "syrinx"
    ],
    "behaviors": [
-    "omnivory_node"
+    "distraction_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Neognaths are almost all living birds."
+  },
+  {
+   "from": "zalambdalestes_lechei",
+   "to": "protungulatum_donnae",
+   "functions": [
+    "endothermy_node",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "alloparenting"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -7437,6 +10679,48 @@
    "description": "Rotaliids build chalky shells of many chambers coiled in a spiral, some with algae inside."
   },
   {
+   "from": "platyceras_dumosum",
+   "to": "campanile_giganteum",
+   "functions": [
+    "egg_cases",
+    "haemocyanin"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Snails and slugs."
+  },
+  {
+   "from": "dawsonoceras_annulatum",
+   "to": "aturia_ziczac",
+   "functions": [
+    "large_brain",
+    "beak"
+   ],
+   "behaviors": [
+    "stalking"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cephalopods swim with jet propulsion."
+  },
+  {
+   "from": "enchodus_petrosus",
+   "to": "phareodus_encaustus",
+   "functions": [
+    "lateral_line_organ",
+    "electric_organs"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
    "from": "cretoxyrhina_mantelli",
    "to": "palaeorhincodon_wardi",
    "functions": [
@@ -7451,10 +10735,24 @@
    "description": "Galeomorph sharks include the great hunters of the open sea."
   },
   {
-   "from": "hybodus_hauffianus",
+   "from": "onchopristis_numidus",
    "to": "titanonarke_molini",
    "functions": [
     "chromatophores",
+    "electroreceptors"
+   ],
+   "behaviors": [
+    "bubble_nests"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rays flattened out to live on and above the sea floor."
+  },
+  {
+   "from": "palaeorhincodon_wardi",
+   "to": "striatolamia_macrota",
+   "functions": [
+    "electroreceptors",
     "paired_fins"
    ],
    "behaviors": [
@@ -7462,7 +10760,7 @@
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Modern sharks and rays."
+   "description": "Galeomorph sharks include the great hunters of the open sea."
   },
   {
    "from": "leptolepis_coryphaenoides",
@@ -7481,21 +10779,77 @@
    "description": "Herrings and their kin."
   },
   {
-   "from": "melittosphex_burmensis",
+   "from": "lepidotes_gigas",
+   "to": "atractosteus_simplex",
+   "functions": [
+    "chromatophores",
+    "electric_organs"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Gars and their kin, covered in shiny, heavy scales."
+  },
+  {
+   "from": "aeger_tipularius",
+   "to": "harpactocarcinus_punctulatus",
+   "functions": [
+    "exoskeleton",
+    "blood_clotting"
+   ],
+   "behaviors": [
+    "stridulation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Crabs, lobsters and prawns."
+  },
+  {
+   "from": "archaeolepis_mane",
+   "to": "prodryas_persephone",
+   "functions": [
+    "insect_wings",
+    "hindgut_fermentation"
+   ],
+   "behaviors": [
+    "nectar_feeding_node"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Butterflies and moths."
+  },
+  {
+   "from": "haidomyrmex_cerberus",
    "to": "titanomyrma_gigantea",
    "functions": [
     "insect_wings",
     "uric_acid"
    ],
    "behaviors": [
-    "paper_nests"
+    "eyespot_display"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Stinging Hymenoptera: wasps, bees and ants."
   },
   {
-   "from": "amphibamus_grandiceps",
+   "from": "mosquito",
+   "to": "glossina_oligocena",
+   "functions": [
+    "compound_eyes",
+    "insect_wings"
+   ],
+   "behaviors": [
+    "nesting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Flies have two wings."
+  },
+  {
+   "from": "karaurus_sharovi",
    "to": "chelotriton_paradoxus",
    "functions": [
     "toxic_skin",
@@ -7507,6 +10861,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Modern amphibians breathe partly through their skin."
+  },
+  {
+   "from": "prosalirus_bitis",
+   "to": "eopelobates_wagneri",
+   "functions": [
+    "toxic_skin",
+    "chromatophores"
+   ],
+   "behaviors": [
+    "bubble_nests"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Frogs and toads leap on long hind legs."
+  },
+  {
+   "from": "xianglong_zhaoi",
+   "to": "saniwa_ensidens",
+   "functions": [
+    "salt_glands",
+    "three_chambered_heart"
+   ],
+   "behaviors": [
+    "head_butting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Squamates shed their scaly skin."
   },
   {
    "from": "kayentachelys_aprix",
@@ -7567,18 +10949,46 @@
    "description": "Snakes lost their legs."
   },
   {
-   "from": "juramaia_sinensis",
+   "from": "zalambdalestes_lechei",
    "to": "leptictidium_nasutum",
    "functions": [
-    "placenta",
-    "cusped_molars"
+    "germinal_centres",
+    "neocortex"
    ],
    "behaviors": [
-    "foraging"
+    "infanticide"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Eutherians: the line of placental mammals."
+  },
+  {
+   "from": "kryptobaatar_dashzevegi",
+   "to": "taeniolabis_taoensis",
+   "functions": [
+    "neocortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "alloparenting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Mammals that went on to give birth to live young."
+  },
+  {
+   "from": "archelon_ischyros",
+   "to": "allaeochelys_crassesculpta",
+   "functions": [
+    "beak",
+    "hard_eggshell"
+   ],
+   "behaviors": [
+    "head_butting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cryptodires pull their head straight back into the shell."
   },
   {
    "from": "protungulatum_donnae",
@@ -7729,6 +11139,64 @@
    "description": "Early primate relatives with grasping hands."
   },
   {
+   "from": "moeritherium_lyonsi",
+   "to": "phiomia_serridens",
+   "functions": [
+    "fur_and_glands",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Proboscideans: a trunk and tusks."
+  },
+  {
+   "from": "purgatorius_unio",
+   "to": "ailuravus_macrurus",
+   "functions": [
+    "germinal_centres",
+    "neocortex"
+   ],
+   "behaviors": [
+    "infanticide"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [
+    "eusociality"
+   ],
+   "description": "Rodents and rabbits have ever-growing incisors."
+  },
+  {
+   "from": "ailuravus_macrurus",
+   "to": "palaeolagus_haydeni",
+   "functions": [
+    "neocortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "infanticide"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rodents and rabbits have ever-growing incisors."
+  },
+  {
+   "from": "arsinoitherium_zitteli",
+   "to": "pezosiren_portelli",
+   "functions": [
+    "neocortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "alloparenting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea cows went back to the water and graze on seagrass."
+  },
+  {
    "from": "phenacodus_primaevus",
    "to": "archaeotherium_mortoni",
    "functions": [
@@ -7794,8 +11262,8 @@
    "from": "hyaenodon_horridus",
    "to": "sarkastodon_mongoliensis",
    "functions": [
-    "germinal_centres",
-    "neocortex"
+    "neocortex",
+    "germinal_centres"
    ],
    "behaviors": [
     "infanticide"
@@ -7817,6 +11285,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Ferae: meat-eaters with shearing teeth."
+  },
+  {
+   "from": "hyaenodon_horridus",
+   "to": "eurotamandua_joresi",
+   "functions": [
+    "neocortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "infanticide"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ferae: meat-eaters with shearing teeth."
+  },
+  {
+   "from": "phenacodus_primaevus",
+   "to": "mesonyx_obtusidens",
+   "functions": [
+    "germinal_centres",
+    "neocortex"
+   ],
+   "behaviors": [
+    "infanticide"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Hoofed mammals."
   },
   {
    "from": "phenacodus_primaevus",
@@ -7889,6 +11385,20 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Rhinos and tapirs."
+  },
+  {
+   "from": "phenacodus_primaevus",
+   "to": "pyrotherium_romeroi",
+   "functions": [
+    "germinal_centres",
+    "neocortex"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "South American hoofed mammals, distant relatives of horses."
   },
   {
    "from": "megacerops_coloradensis",
@@ -7997,6 +11507,34 @@
    "description": "Whales evolved from hoofed mammals that returned to the sea."
   },
   {
+   "from": "archaeotherium_mortoni",
+   "to": "protoceras_celer",
+   "functions": [
+    "germinal_centres",
+    "neocortex"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Camels."
+  },
+  {
+   "from": "archaeotherium_mortoni",
+   "to": "merycoidodon_culbertsoni",
+   "functions": [
+    "germinal_centres",
+    "neocortex"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Camels."
+  },
+  {
    "from": "pakicetus_attocki",
    "to": "basilosaurus_cetoides",
    "functions": [
@@ -8071,6 +11609,20 @@
    "description": "Fowl and waterfowl."
   },
   {
+   "from": "confuciusornis_sanctus",
+   "to": "lithornis_celetius",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "alloparenting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Birds are living dinosaurs."
+  },
+  {
    "from": "gastornis_giganteus",
    "to": "presbyornis_pervetus",
    "functions": [
@@ -8129,6 +11681,20 @@
    "description": "Waterbirds such as penguins, albatrosses and pelicans."
   },
   {
+   "from": "physornis_fortis",
+   "to": "primobucco_mcgrewi",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "alloparenting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Birds of prey and their kin."
+  },
+  {
    "from": "aegyptopithecus_zeuxis",
    "to": "ardipithecus_ramidus",
    "functions": [
@@ -8150,6 +11716,62 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Planktonic foraminifera drift in the open sea with spiny, balloon-chambered shells."
+  },
+  {
+   "from": "micraster_coranguinum",
+   "to": "clypeaster_aegyptiacus",
+   "functions": [
+    "broadcast_spawning",
+    "regeneration_node"
+   ],
+   "behaviors": [
+    "autotomy"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Echinoderms grow a skeleton of calcite plates and move on hydraulic tube feet."
+  },
+  {
+   "from": "campanile_giganteum",
+   "to": "ecphora_gardnerae",
+   "functions": [
+    "egg_cases",
+    "haemocyanin"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Snails and slugs."
+  },
+  {
+   "from": "phareodus_encaustus",
+   "to": "oncorhynchus_rastrosus",
+   "functions": [
+    "lateral_line_organ",
+    "electric_organs"
+   ],
+   "behaviors": [
+    "brood_parasitism"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
+   "from": "gryphaea_arcuata",
+   "to": "chesapecten_jeffersonius",
+   "functions": [
+    "haemocyanin",
+    "radula"
+   ],
+   "behaviors": [
+    "reef_building"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bivalves."
   },
   {
    "from": "palaeorhincodon_wardi",
@@ -8194,6 +11816,20 @@
    "description": "Otophysans hear with a chain of bones linking the swim bladder to the ear."
   },
   {
+   "from": "archimylacris_acadica",
+   "to": "mastotermes_electrodominicus",
+   "functions": [
+    "hindgut_fermentation",
+    "uric_acid"
+   ],
+   "behaviors": [
+    "paper_nests"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Termites are social cockroaches."
+  },
+  {
    "from": "titanomyrma_gigantea",
    "to": "neivamyrmex_ectopus",
    "functions": [
@@ -8234,6 +11870,22 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Side-necked turtles fold the neck sideways."
+  },
+  {
+   "from": "castorocauda_lutrasimilis",
+   "to": "obdurodon_dicksoni",
+   "functions": [
+    "prefrontal_cortex",
+    "neocortex"
+   ],
+   "behaviors": [
+    "matriarchs"
+   ],
+   "grantFunctions": [
+    "electroreceptors"
+   ],
+   "grantBehaviors": [],
+   "description": "Mammals nurse their young with milk."
   },
   {
    "from": "archelon_ischyros",
@@ -8280,6 +11932,34 @@
    "description": "Vipers, with long folding fangs."
   },
   {
+   "from": "thylacosmilus_atrox",
+   "to": "wakaleo_vanderleueri",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "matriarchs"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Marsupials raise their young in a pouch."
+  },
+  {
+   "from": "wakaleo_vanderleueri",
+   "to": "nimbadon_lavarackorum",
+   "functions": [
+    "fur_and_glands",
+    "prefrontal_cortex"
+   ],
+   "behaviors": [
+    "teaching"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Marsupials raise their young in a pouch."
+  },
+  {
    "from": "boverisuchus_magnifrontis",
    "to": "purussaurus_brasiliensis",
    "functions": [
@@ -8302,6 +11982,20 @@
    ],
    "behaviors": [
     "incubation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Crocodilians."
+  },
+  {
+   "from": "purussaurus_brasiliensis",
+   "to": "rhamphosuchus_crassidens",
+   "functions": [
+    "air_sacs",
+    "hollow_bones"
+   ],
+   "behaviors": [
+    "half_brain_sleep"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -8392,20 +12086,18 @@
    "description": "Proboscideans: a trunk and tusks."
   },
   {
-   "from": "purgatorius_unio",
+   "from": "ailuravus_macrurus",
    "to": "ceratogaulus_hatcheri",
    "functions": [
-    "cusped_molars",
-    "horns"
+    "prefrontal_cortex",
+    "neocortex"
    ],
    "behaviors": [
-    "burrow_systems"
+    "eusociality"
    ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "food_caching"
-   ],
-   "description": "Rodents and rabbits have ever-growing incisors."
+   "grantBehaviors": [],
+   "description": "Rodents gnaw with ever-growing incisors."
   },
   {
    "from": "hyaenodon_horridus",
@@ -8429,11 +12121,39 @@
     "neocortex"
    ],
    "behaviors": [
-    "schooling"
+    "eusociality"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Rodents gnaw with ever-growing incisors."
+  },
+  {
+   "from": "icaronycteris_index",
+   "to": "vulcanops_jennyworthyae",
+   "functions": [
+    "prefrontal_cortex",
+    "neocortex"
+   ],
+   "behaviors": [
+    "nectar_feeding_node"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bats are the only mammals that truly fly."
+  },
+  {
+   "from": "pezosiren_portelli",
+   "to": "metaxytherium_floridanum",
+   "functions": [
+    "fur_and_glands",
+    "desert_kidneys"
+   ],
+   "behaviors": [
+    "teaching"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Sea cows went back to the water and graze on seagrass."
   },
   {
    "from": "deinotherium_giganteum",
@@ -8488,6 +12208,34 @@
    ],
    "behaviors": [
     "matriarchs"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "South American hoofed mammals, distant relatives of horses."
+  },
+  {
+   "from": "darwinius_masillae",
+   "to": "mesopithecus_pentelicus",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Primates: grasping hands, forward-facing eyes and big brains."
+  },
+  {
+   "from": "thoatherium_minusculum",
+   "to": "nesodon_imbricatus",
+   "functions": [
+    "desert_kidneys",
+    "prefrontal_cortex"
+   ],
+   "behaviors": [
+    "schooling"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -8566,6 +12314,20 @@
    "description": "Ruminants chew the cud and ferment grass in a stomach of four chambers."
   },
   {
+   "from": "sivatherium_giganteum",
+   "to": "hoplitomeryx_matthei",
+   "functions": [
+    "prefrontal_cortex",
+    "neocortex"
+   ],
+   "behaviors": [
+    "matriarchs"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ruminants chew the cud and ferment grass in a stomach of four chambers."
+  },
+  {
    "from": "barbourofelis_fricki",
    "to": "amphicyon_ingens",
    "functions": [
@@ -8592,6 +12354,34 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Carnivorans."
+  },
+  {
+   "from": "protoceras_celer",
+   "to": "synthetoceras_tricornatus",
+   "functions": [
+    "prefrontal_cortex",
+    "neocortex"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Camels."
+  },
+  {
+   "from": "archaeotherium_mortoni",
+   "to": "kubanochoerus_gigas",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Even-toed ungulates walk on two toes."
   },
   {
    "from": "dinocrocuta_gigantea",
@@ -8708,6 +12498,34 @@
    "description": "Dogs, bears and their kin."
   },
   {
+   "from": "amphicyon_ingens",
+   "to": "epicyon_haydeni",
+   "functions": [
+    "prefrontal_cortex",
+    "neocortex"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Dogs, bears and their kin."
+  },
+  {
+   "from": "allodesmus_kernensis",
+   "to": "acrophoca_longirostris",
+   "functions": [
+    "endothermy_node",
+    "prefrontal_cortex"
+   ],
+   "behaviors": [
+    "matriarchs"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Dogs, bears and their kin."
+  },
+  {
    "from": "aegyptopithecus_zeuxis",
    "to": "sivapithecus_indicus",
    "functions": [
@@ -8722,6 +12540,34 @@
     "sleeping_nests"
    ],
    "description": "Apes have no tail and big brains."
+  },
+  {
+   "from": "sivapithecus_indicus",
+   "to": "proconsul_africanus",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "duets"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Apes have no tail and big brains."
+  },
+  {
+   "from": "pakicetus_attocki",
+   "to": "squalodon_calvertensis",
+   "functions": [
+    "endothermy_node",
+    "prefrontal_cortex"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Modern whales."
   },
   {
    "from": "ardipithecus_ramidus",
@@ -8766,6 +12612,20 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Toothed whales hunt by echolocation."
+  },
+  {
+   "from": "australopithecus_afarensis",
+   "to": "sahelanthropus_tchadensis",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "duets"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Hominins walk upright on two legs."
   },
   {
    "from": "gastornis_giganteus",
@@ -8824,6 +12684,34 @@
     "scavenging"
    ],
    "description": "Birds of prey and their kin."
+  },
+  {
+   "from": "presbyornis_pervetus",
+   "to": "dromornis_stirtoni",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "teaching"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ducks, geese and swans."
+  },
+  {
+   "from": "kumimanu_biceae",
+   "to": "spheniscus_urbinai",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "teaching"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Waterbirds such as penguins, albatrosses and pelicans."
   },
   {
    "from": "thecamonas_trahens",
@@ -8917,7 +12805,7 @@
    "description": "Medusozoans swim as jellyfish for part of their lives."
   },
   {
-   "from": "moorowipora_chamberensis",
+   "from": "thecosmilia_trichotoma",
    "to": "table_coral",
    "functions": [
     "budding",
@@ -8959,14 +12847,14 @@
    "description": "Modern stony corals, with algae living in their tissues."
   },
   {
-   "from": "pentacrinites_fossilis",
+   "from": "clypeaster_aegyptiacus",
    "to": "purple_sea_urchin",
    "functions": [
-    "spines",
+    "regeneration_node",
     "broadcast_spawning"
    ],
    "behaviors": [
-    "plant_feeding"
+    "autotomy"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -9037,11 +12925,11 @@
    "description": "Flatworms."
   },
   {
-   "from": "plumulites_bengtsoni",
+   "from": "kenostrychus_clementsi",
    "to": "lumbricus_terrestris",
    "functions": [
-    "haemoglobin",
-    "giant_axons"
+    "giant_axons",
+    "capillaries"
    ],
    "behaviors": [
     "reef_building"
@@ -9106,21 +12994,21 @@
    "description": "Earthworms and leeches."
   },
   {
-   "from": "gigantoproductus_giganteus",
+   "from": "leptodus_americanus",
    "to": "lingula_anatina",
    "functions": [
     "aestivation",
     "bilateral_body"
    ],
    "behaviors": [
-    "burrowing_escape"
+    "burrow_systems"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Brachiopods have two shells."
   },
   {
-   "from": "poleumita_discors",
+   "from": "ecphora_gardnerae",
    "to": "lissachatina_fulica",
    "functions": [
     "egg_cases",
@@ -9162,19 +13050,17 @@
    "description": "Snails and slugs."
   },
   {
-   "from": "fordilla_troyensis",
+   "from": "gryphaea_arcuata",
    "to": "tridacna_gigas",
    "functions": [
-    "filter_apparatus",
-    "planktonic_larvae"
+    "haemocyanin",
+    "radula"
    ],
    "behaviors": [
-    "settling"
-   ],
-   "grantFunctions": [],
-   "grantBehaviors": [
     "reef_building"
    ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
    "description": "Bivalves."
   },
   {
@@ -9234,6 +13120,20 @@
    "description": "Snails and slugs."
   },
   {
+   "from": "oncorhynchus_rastrosus",
+   "to": "salmo_salar",
+   "functions": [
+    "lungs",
+    "antifreeze_proteins"
+   ],
+   "behaviors": [
+    "eyespot_display"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ray-finned fish took over the waters of the world."
+  },
+  {
    "from": "aeger_tipularius",
    "to": "red_king_crab",
    "functions": [
@@ -9276,14 +13176,14 @@
    "description": "Rays flattened out to live on and above the sea floor."
   },
   {
-   "from": "pulmonoscorpius_kirktonensis",
+   "from": "protacarus_crani",
    "to": "dermatophagoides_farinae",
    "functions": [
-    "chitin_cuticle",
-    "malpighian_tubules"
+    "blood_clotting",
+    "terrestrial_legs"
    ],
    "behaviors": [
-    "scavenging"
+    "ballooning"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -9372,6 +13272,48 @@
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Mites and ticks."
+  },
+  {
+   "from": "otodus_megalodon",
+   "to": "carcharodon_carcharias",
+   "functions": [
+    "electroreceptors",
+    "paired_fins"
+   ],
+   "behaviors": [
+    "brood_parasitism"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Galeomorph sharks include the great hunters of the open sea."
+  },
+  {
+   "from": "belemnitella_americana",
+   "to": "architeuthis_dux",
+   "functions": [
+    "chromatophores",
+    "large_brain"
+   ],
+   "behaviors": [
+    "stalking"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Coleoids hid the shell inside the body."
+  },
+  {
+   "from": "red_king_crab",
+   "to": "euphausia_superba",
+   "functions": [
+    "blood_clotting",
+    "terrestrial_legs"
+   ],
+   "behaviors": [
+    "courtship_dance"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Crabs, lobsters and prawns."
   },
   {
    "from": "nephila_jurassica",
@@ -9512,49 +13454,59 @@
    "description": "Ticks feed on blood."
   },
   {
-   "from": "archimylacris_acadica",
+   "from": "syllipsimopodi_bideni",
+   "to": "enteroctopus_dofleini",
+   "functions": [
+    "chromatophores",
+    "large_brain"
+   ],
+   "behaviors": [
+    "tool_use"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Coleoids hid the shell inside the body."
+  },
+  {
+   "from": "mastotermes_electrodominicus",
    "to": "cathedral_termite",
    "functions": [
     "hindgut_fermentation",
-    "juvenile_hormone",
-    "colonial_living"
+    "insect_wings"
    ],
-   "behaviors": [],
+   "behaviors": [
+    "large_societies"
+   ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "termite_mounds"
-   ],
+   "grantBehaviors": [],
    "description": "Termites are social cockroaches."
   },
   {
-   "from": "melittosphex_burmensis",
+   "from": "prodryas_persephone",
    "to": "monarch_butterfly",
    "functions": [
     "toxic_skin",
-    "complete_metamorphosis"
+    "antifreeze_proteins"
    ],
    "behaviors": [
-    "seasonal_migration"
+    "nectar_feeding_node"
    ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "sun_compass"
-   ],
+   "grantBehaviors": [],
    "description": "Butterflies and moths."
   },
   {
-   "from": "tshekardocoleus_magnus",
+   "from": "triamyxa_coprolithica",
    "to": "seven_spot_ladybird",
    "functions": [
-    "complete_metamorphosis",
-    "toxic_skin",
-    "warning_colours"
+    "insect_wings",
+    "toxic_skin"
    ],
-   "behaviors": [],
+   "behaviors": [
+    "large_societies"
+   ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "playing_dead"
-   ],
+   "grantBehaviors": [],
    "description": "Beetles."
   },
   {
@@ -9656,14 +13608,14 @@
    "description": "Stinging Hymenoptera: wasps, bees and ants."
   },
   {
-   "from": "mosquito",
+   "from": "glossina_oligocena",
    "to": "arachnocampa_luminosa",
    "functions": [
-    "bioluminescence",
-    "complete_metamorphosis"
+    "antifreeze_proteins",
+    "insect_wings"
    ],
    "behaviors": [
-    "light_signals"
+    "large_societies"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -9739,18 +13691,16 @@
    "description": "Stinging Hymenoptera: wasps, bees and ants."
   },
   {
-   "from": "triadobatrachus_massinoti",
+   "from": "prosalirus_bitis",
    "to": "cane_toad",
    "functions": [
     "toxic_skin",
-    "metamorphosis_hormones"
+    "electroreceptors"
    ],
    "behaviors": [
-    "synchronised_spawning"
+    "bubble_nests"
    ],
-   "grantFunctions": [
-    "warning_colours"
-   ],
+   "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Frogs and toads leap on long hind legs."
   },
@@ -9771,35 +13721,45 @@
    "description": "Frogs and toads leap on long hind legs."
   },
   {
-   "from": "castorocauda_lutrasimilis",
-   "to": "platypus",
+   "from": "andrias_matthewi",
+   "to": "ambystoma_mexicanum",
    "functions": [
-    "mammary_glands",
-    "fur_and_glands"
-   ],
-   "behaviors": [
-    "burrow_nests"
-   ],
-   "grantFunctions": [
+    "throat_pumping",
     "electroreceptors"
    ],
-   "grantBehaviors": [],
-   "description": "Mammals nurse their young with milk."
-  },
-  {
-   "from": "megachirella_wachtleri",
-   "to": "green_iguana",
-   "functions": [
-    "hindgut_fermentation",
-    "chromatophores"
-   ],
    "behaviors": [
-    "basking"
+    "bubble_nests"
    ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "head_butting"
+   "grantBehaviors": [],
+   "description": "Modern amphibians breathe partly through their skin."
+  },
+  {
+   "from": "obdurodon_dicksoni",
+   "to": "platypus",
+   "functions": [
+    "electroreceptors",
+    "beak"
    ],
+   "behaviors": [
+    "traditions"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Monotremes still lay eggs."
+  },
+  {
+   "from": "saniwa_ensidens",
+   "to": "green_iguana",
+   "functions": [
+    "chromatophores",
+    "salt_glands"
+   ],
+   "behaviors": [
+    "incubation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
    "description": "Iguanians."
   },
   {
@@ -9845,6 +13805,20 @@
    "description": "Squamates with venom glands: snakes, monitors and mosasaurs."
   },
   {
+   "from": "megalochelys_atlas",
+   "to": "chelonoidis_niger",
+   "functions": [
+    "beak",
+    "hard_eggshell"
+   ],
+   "behaviors": [
+    "incubation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Cryptodires pull their head straight back into the shell."
+  },
+  {
    "from": "laophis_crotaloides",
    "to": "crotalus_mitchellii",
    "functions": [
@@ -9859,14 +13833,28 @@
    "description": "Vipers, with long folding fangs."
   },
   {
-   "from": "thylacosmilus_atrox",
-   "to": "red_kangaroo",
+   "from": "titanoboa_cerrejonensis",
+   "to": "ophiophagus_hannah",
    "functions": [
-    "pouch",
-    "hindgut_fermentation"
+    "three_chambered_heart",
+    "salt_glands"
    ],
    "behaviors": [
-    "herding"
+    "incubation"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Snakes lost their legs."
+  },
+  {
+   "from": "wakaleo_vanderleueri",
+   "to": "red_kangaroo",
+   "functions": [
+    "desert_kidneys",
+    "fur_and_glands"
+   ],
+   "behaviors": [
+    "traditions"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -9895,6 +13883,20 @@
    ],
    "behaviors": [
     "ambush_hunting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Marsupials raise their young in a pouch."
+  },
+  {
+   "from": "red_kangaroo",
+   "to": "thylacinus_cynocephalus",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "traditions"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -9999,31 +14001,31 @@
    "description": "Armadillos and glyptodonts are covered in bony armour."
   },
   {
-   "from": "desmostylus_hesperus",
+   "from": "metaxytherium_floridanum",
    "to": "american_manatee",
    "functions": [
-    "diving_reflex",
-    "hindgut_fermentation"
+    "desert_kidneys",
+    "prefrontal_cortex"
    ],
    "behaviors": [
-    "plant_feeding"
+    "traditions"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
    "description": "Sea cows went back to the water and graze on seagrass."
   },
   {
-   "from": "icaronycteris_index",
+   "from": "vulcanops_jennyworthyae",
    "to": "desmodus_rotundus",
    "functions": [
-    "echolocating_ears",
-    "torpor"
+    "prefrontal_cortex",
+    "germinal_centres"
    ],
-   "behaviors": [],
+   "behaviors": [
+    "schooling"
+   ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "reciprocal_altruism"
-   ],
+   "grantBehaviors": [],
    "description": "Bats are the only mammals that truly fly."
   },
   {
@@ -10049,6 +14051,20 @@
    ],
    "behaviors": [
     "burrow_systems"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Rodents gnaw with ever-growing incisors."
+  },
+  {
+   "from": "brown_rat",
+   "to": "castoroides_ohioensis",
+   "functions": [
+    "fur_and_glands",
+    "prefrontal_cortex"
+   ],
+   "behaviors": [
+    "eusociality"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -10083,7 +14099,7 @@
    "description": "South American hoofed mammals, distant relatives of horses."
   },
   {
-   "from": "simbakubwa_kutokaafrika",
+   "from": "eurotamandua_joresi",
    "to": "smutsia_gigantea",
    "functions": [
     "prefrontal_cortex",
@@ -10214,6 +14230,34 @@
    "description": "Ruminants chew the cud and ferment grass in a stomach of four chambers."
   },
   {
+   "from": "indohyus_indirae",
+   "to": "hippopotamus_amphibius",
+   "functions": [
+    "desert_kidneys",
+    "prefrontal_cortex"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Hippos and whales are each other's closest relatives."
+  },
+  {
+   "from": "white_tailed_deer",
+   "to": "bison_priscus",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Ruminants chew the cud and ferment grass in a stomach of four chambers."
+  },
+  {
    "from": "amphicyon_ingens",
    "to": "giant_panda",
    "functions": [
@@ -10327,6 +14371,48 @@
    "description": "Weasels, otters and their kin."
   },
   {
+   "from": "epicyon_haydeni",
+   "to": "canis_lupus",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Dogs, bears and their kin."
+  },
+  {
+   "from": "canis_lupus",
+   "to": "aenocyon_dirus",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Dogs, bears and their kin."
+  },
+  {
+   "from": "giant_panda",
+   "to": "ursus_maritimus",
+   "functions": [
+    "prefrontal_cortex",
+    "germinal_centres"
+   ],
+   "behaviors": [
+    "traditions"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Bears."
+  },
+  {
    "from": "aegyptopithecus_zeuxis",
    "to": "olive_baboon",
    "functions": [
@@ -10359,6 +14445,48 @@
    "description": "Apes have no tail and big brains."
   },
   {
+   "from": "pan_troglodytes",
+   "to": "pongo_pygmaeus",
+   "functions": [
+    "fur_and_glands",
+    "prefrontal_cortex"
+   ],
+   "behaviors": [
+    "large_societies"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Apes have no tail and big brains."
+  },
+  {
+   "from": "squalodon_calvertensis",
+   "to": "orcinus_orca",
+   "functions": [
+    "fur_and_glands",
+    "endothermy_node"
+   ],
+   "behaviors": [
+    "schooling"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Toothed whales hunt by echolocation."
+  },
+  {
+   "from": "pakicetus_attocki",
+   "to": "balaenoptera_musculus",
+   "functions": [
+    "endothermy_node",
+    "fur_and_glands"
+   ],
+   "behaviors": [
+    "traditions"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Modern whales."
+  },
+  {
    "from": "livyatan_melvillei",
    "to": "delphinus_delphis",
    "functions": [
@@ -10389,18 +14517,18 @@
    "description": "Modern whales."
   },
   {
-   "from": "confuciusornis_sanctus",
+   "from": "lithornis_celetius",
    "to": "dinornis_robustus",
    "functions": [
-    "gastroliths",
-    "raised_metabolism"
+    "feathered_wings",
+    "syrinx"
    ],
    "behaviors": [
-    "plant_feeding"
+    "traditions"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
-   "description": "Birds are living dinosaurs."
+   "description": "Palaeognaths: ostriches, emus and moas."
   },
   {
    "from": "australopithecus_afarensis",
@@ -10419,6 +14547,20 @@
    "description": "Our own genus, with big brains and stone tools."
   },
   {
+   "from": "dinornis_robustus",
+   "to": "struthio_camelus",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "traditions"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Palaeognaths: ostriches, emus and moas."
+  },
+  {
    "from": "vegavis_iaai",
    "to": "american_avocet",
    "functions": [
@@ -10435,19 +14577,17 @@
    "description": "Neoaves, the great radiation of birds after the dinosaurs died out."
   },
   {
-   "from": "kumimanu_biceae",
+   "from": "spheniscus_urbinai",
    "to": "sunbittern",
    "functions": [
-    "structural_colour",
-    "feathers"
+    "chromatophores",
+    "feathered_wings"
    ],
    "behaviors": [
-    "eyespot_display"
+    "traditions"
    ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "distraction_display"
-   ],
+   "grantBehaviors": [],
    "description": "Waterbirds."
   },
   {
@@ -10497,19 +14637,17 @@
    "description": "Neoaves, the great radiation of birds after the dinosaurs died out."
   },
   {
-   "from": "kumimanu_biceae",
+   "from": "spheniscus_urbinai",
    "to": "wandering_albatross",
    "functions": [
-    "salt_glands",
-    "hollow_bones"
+    "feathered_wings",
+    "syrinx"
    ],
    "behaviors": [
-    "ocean_migration"
+    "traditions"
    ],
    "grantFunctions": [],
-   "grantBehaviors": [
-    "sleeping_on_the_wing"
-   ],
+   "grantBehaviors": [],
    "description": "Waterbirds such as penguins, albatrosses and pelicans."
   },
   {
@@ -10551,6 +14689,34 @@
    ],
    "behaviors": [
     "colonial_nesting"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Waterbirds such as penguins, albatrosses and pelicans."
+  },
+  {
+   "from": "vegavis_iaai",
+   "to": "raphus_cucullatus",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "traditions"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Neoaves, the great radiation of birds after the dinosaurs died out."
+  },
+  {
+   "from": "wandering_albatross",
+   "to": "aptenodytes_forsteri",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "traditions"
    ],
    "grantFunctions": [],
    "grantBehaviors": [],
@@ -10602,6 +14768,34 @@
     "traditions"
    ],
    "description": "Parrots: long-lived, clever, crack nuts with a strong beak."
+  },
+  {
+   "from": "california_condor",
+   "to": "bubo_scandiacus",
+   "functions": [
+    "chromatophores",
+    "feathered_wings"
+   ],
+   "behaviors": [
+    "traditions"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Birds of prey and their kin."
+  },
+  {
+   "from": "california_condor",
+   "to": "hieraaetus_moorei",
+   "functions": [
+    "feathered_wings",
+    "syrinx"
+   ],
+   "behaviors": [
+    "traditions"
+   ],
+   "grantFunctions": [],
+   "grantBehaviors": [],
+   "description": "Birds of prey and their kin."
   }
  ]
 }

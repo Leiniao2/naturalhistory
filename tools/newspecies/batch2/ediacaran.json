@@ -1,0 +1,926 @@
+[
+ {
+  "id": "bradgatia_linfordensis",
+  "commonName": "Bradgatia",
+  "scientificName": "Bradgatia linfordensis",
+  "kingdom": "Animalia",
+  "group": "Rangeomorph",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 20,
+  "startingPopulation": 350,
+  "playable": true,
+  "model": "Models/Species/Bradgatia",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.5,
+  "mapDefense": "Tighten",
+  "attack": 1,
+  "defense": 2,
+  "hp": 9,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.5
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.5
+   },
+   {
+    "gene": "asexual_reproduction",
+    "expression": 0.4
+   }
+  ],
+  "description": "A bushy, cabbage-like rangeomorph up to about 20 cm across from England and Newfoundland, about 565 million years old. Many spoon-shaped frondlets fanned out from a single base, each branching again and again into smaller copies of itself. Its overlapping leaves soak up damage and regrow, but it cannot strike back."
+ },
+ {
+  "id": "primocandelabrum_hiemaloranum",
+  "commonName": "Primocandelabrum",
+  "scientificName": "Primocandelabrum hiemaloranum",
+  "kingdom": "Animalia",
+  "group": "Rangeomorph",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 35,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Primocandelabrum",
+  "mapStyle": "Fixed",
+  "colonySize": 2,
+  "mapScale": 0.55,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 1,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.3
+   }
+  ],
+  "description": "A tall rangeomorph up to about 35 cm high from Newfoundland, about 565 million years old. A bare stalk rose from a disc anchored in the mud and ended in a bushy crown of branching frondlets, like a candelabrum. Its high crown reached water that lower fronds could not, but the slender stalk made it fragile."
+ },
+ {
+  "id": "beothukis_mistakensis",
+  "commonName": "Beothukis",
+  "scientificName": "Beothukis mistakensis",
+  "kingdom": "Animalia",
+  "group": "Rangeomorph",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 15,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Beothukis",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.45,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 2,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   },
+   {
+    "gene": "asexual_reproduction",
+    "expression": 0.4
+   }
+  ],
+  "description": "A spoon-shaped rangeomorph frond about 15 cm long from Mistaken Point in Newfoundland, about 565 million years old. A few large branches ran out at a slant from its midline, each split into clearly visible smaller branches. It is named after the Beothuk, the original people of Newfoundland."
+ },
+ {
+  "id": "charniodiscus_procerus",
+  "commonName": "Charniodiscus",
+  "scientificName": "Charniodiscus procerus",
+  "kingdom": "Animalia",
+  "group": "Petalonamid",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 50,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Charniodiscus",
+  "mapStyle": "Fixed",
+  "colonySize": 2,
+  "mapScale": 0.55,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 2,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.6
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.3
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.3
+   }
+  ],
+  "description": "A tall, narrow frond up to about 50 cm high from England and Newfoundland, about 560 million years old. A long bare stalk held the lance-shaped leaf above the seabed, anchored by a broad buried disc, and simple branches ran straight out from its midline. Its height let it reach the water above the low fronds around it."
+ },
+ {
+  "id": "ventogyrus_chistyakovi",
+  "commonName": "Ventogyrus",
+  "scientificName": "Ventogyrus chistyakovi",
+  "kingdom": "Animalia",
+  "group": "Petalonamid",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 20,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Ventogyrus",
+  "mapStyle": "Fixed",
+  "colonySize": 2,
+  "mapScale": 0.5,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 4,
+  "hp": 8,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.5
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.3
+   }
+  ],
+  "description": "An egg- or boat-shaped animal up to about 20 cm long from the White Sea coast of Russia, about 555 million years old. Three lengthwise vanes, each divided into stacked tube-like chambers, gave its body three-fold symmetry. It probably stood half buried in the sand, its stiff chambered body hard to damage."
+ },
+ {
+  "id": "namalia_villiersiensis",
+  "commonName": "Namalia",
+  "scientificName": "Namalia villiersiensis",
+  "kingdom": "Animalia",
+  "group": "Petalonamid",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 6,
+  "startingPopulation": 450,
+  "playable": true,
+  "model": "Models/Species/Namalia",
+  "mapStyle": "Fixed",
+  "colonySize": 4,
+  "mapScale": 0.45,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 3,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.5
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.3
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small cup- or bag-shaped animal a few centimetres high from Namibia, about 545 million years old. Its walls were quilted into narrow tube-like chambers that zig-zagged up the sides, and it lived partly buried in the sand. It belonged to the same strange group as Ernietta and Pteridinium."
+ },
+ {
+  "id": "aspidella_terranovica",
+  "commonName": "Aspidella",
+  "scientificName": "Aspidella terranovica",
+  "kingdom": "Animalia",
+  "group": "Discoidal organism",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 5,
+  "startingPopulation": 650,
+  "playable": true,
+  "model": "Models/Species/Aspidella",
+  "mapStyle": "Fixed",
+  "colonySize": 5,
+  "mapScale": 0.45,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 3,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.3
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.7
+   },
+   {
+    "gene": "burrowing",
+    "expression": 0.3
+   }
+  ],
+  "description": "A low disc a few centimetres across with a raised rim, a central boss and fine radial creases, found in huge numbers in Newfoundland, about 565 million years old. Described in 1872, it was the first Ediacaran fossil ever named, long before anyone accepted that large organisms lived so early. Most of these discs were probably the buried anchors of fronds."
+ },
+ {
+  "id": "hiemalora_stellaris",
+  "commonName": "Hiemalora",
+  "scientificName": "Hiemalora stellaris",
+  "kingdom": "Animalia",
+  "group": "Discoidal organism",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 3,
+  "startingPopulation": 450,
+  "playable": true,
+  "model": "Models/Species/Hiemalora",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.45,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 2,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.3
+   }
+  ],
+  "description": "A small disc a few centimetres wide ringed by a starburst of long, thin, tentacle-like rays, found from Newfoundland to Russia. It was once taken for a sea anemone, but many now think it was the anchoring holdfast of a frond. Its rays spread across the mat and held it firmly in place."
+ },
+ {
+  "id": "mawsonites_spriggi",
+  "commonName": "Mawsonites",
+  "scientificName": "Mawsonites spriggi",
+  "kingdom": "Animalia",
+  "group": "Discoidal organism",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 12,
+  "startingPopulation": 350,
+  "playable": true,
+  "model": "Models/Species/Mawsonites",
+  "mapStyle": "Fixed",
+  "colonySize": 2,
+  "mapScale": 0.55,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 3,
+  "hp": 7,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.3
+   }
+  ],
+  "description": "A rosette-shaped disc about 12 cm across from South Australia, about 555 million years old: a smooth central dome surrounded by rings of rounded lobes that grew larger toward the edge. First described as a jellyfish, it may instead have been a holdfast or a microbial colony. It is named after the geologist and polar explorer Douglas Mawson."
+ },
+ {
+  "id": "albumares_brunsae",
+  "commonName": "Albumares",
+  "scientificName": "Albumares brunsae",
+  "kingdom": "Animalia",
+  "group": "Trilobozoan",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 3,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Albumares",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.45,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 2,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.6
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small, flat disc about 3 cm across from the White Sea coast of Russia, about 555 million years old, built on three-fold symmetry like its relative Tribrachidium. Three grooves met at its centre, fine branching channels ran out from them, and its edge carried a fringe of slender rays. The channels may have carried water and food through its body."
+ },
+ {
+  "id": "anfesta_stankovskii",
+  "commonName": "Anfesta",
+  "scientificName": "Anfesta stankovskii",
+  "kingdom": "Animalia",
+  "group": "Trilobozoan",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 6,
+  "startingPopulation": 350,
+  "playable": true,
+  "model": "Models/Species/Anfesta",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.5,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 3,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.5
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.3
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "A domed disc up to about 6 cm wide from the White Sea coast of Russia, about 555 million years old. Three broad, curved tubes crossed by fine ridges radiated from its centre, giving it the three-fold symmetry of the trilobozoans, a group with no living members. It lay on the seabed, probably feeding on particles in the water."
+ },
+ {
+  "id": "arkarua_adami",
+  "commonName": "Arkarua",
+  "scientificName": "Arkarua adami",
+  "kingdom": "Animalia",
+  "group": "Echinoderm",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 1,
+  "startingPopulation": 650,
+  "playable": true,
+  "model": "Models/Species/Arkarua",
+  "mapStyle": "Fixed",
+  "colonySize": 5,
+  "mapScale": 0.4,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 3,
+  "hp": 4,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.4
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   }
+  ],
+  "description": "A tiny domed disc about 1 cm across from South Australia, about 555 million years old, with a sunken five-rayed star in the middle and a rim of short ridges. Its five-fold symmetry has led some scientists to suggest it was one of the earliest echinoderms, the group of sea stars and sea urchins. Its name comes from a giant serpent in the stories of the Adnyamathanha people."
+ },
+ {
+  "id": "vendia_sokolovi",
+  "commonName": "Vendia",
+  "scientificName": "Vendia sokolovi",
+  "kingdom": "Animalia",
+  "group": "Proarticulate",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 1.2,
+  "startingPopulation": 600,
+  "playable": true,
+  "model": "Models/Species/Vendia",
+  "mapStyle": "Swim",
+  "colonySize": 5,
+  "mapScale": 0.4,
+  "mapDefense": "Scatter",
+  "attack": 1,
+  "defense": 1,
+  "hp": 4,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "decomposition",
+    "expression": 0.5
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.3
+   }
+  ],
+  "description": "A tiny oval animal about a centimetre long from the White Sea coast of Russia, about 555 million years old. Its body had only a few large, sickle-shaped segments that alternated left and right of the midline instead of lining up in pairs. Like Dickinsonia it probably grazed the microbial mat, absorbing food through its underside."
+ },
+ {
+  "id": "marywadea_ovata",
+  "commonName": "Marywadea",
+  "scientificName": "Marywadea ovata",
+  "kingdom": "Animalia",
+  "group": "Proarticulate",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 4,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Marywadea",
+  "mapStyle": "Swim",
+  "colonySize": 4,
+  "mapScale": 0.5,
+  "mapDefense": "Scatter",
+  "attack": 2,
+  "defense": 2,
+  "hp": 5,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "decomposition",
+    "expression": 0.5
+   },
+   {
+    "gene": "swimming_speed",
+    "expression": 0.4
+   },
+   {
+    "gene": "chemoreception",
+    "expression": 0.4
+   }
+  ],
+  "description": "An oval, flattened animal about 4 cm long from South Australia, about 555 million years old, like a broader relative of Spriggina. A crescent-shaped head shield sat at the front and many fine segments ran back on either side of the midline. It crawled over the microbial mats feeding on them, and is named after the Australian palaeontologist Mary Wade."
+ },
+ {
+  "id": "praecambridium_sigillum",
+  "commonName": "Praecambridium",
+  "scientificName": "Praecambridium sigillum",
+  "kingdom": "Animalia",
+  "group": "Proarticulate",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 0.6,
+  "startingPopulation": 700,
+  "playable": true,
+  "model": "Models/Species/Praecambridium",
+  "mapStyle": "Swim",
+  "colonySize": 6,
+  "mapScale": 0.35,
+  "mapDefense": "Scatter",
+  "attack": 1,
+  "defense": 2,
+  "hp": 3,
+  "moves": 2,
+  "genes": [
+   {
+    "gene": "decomposition",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.7
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.2
+   }
+  ],
+  "description": "A tiny shield-shaped animal less than 1 cm long from South Australia, about 555 million years old. A broad, smooth head shield was followed by a few chevron-shaped segments that alternated either side of the midline. It was first mistaken for a young trilobite, but it is now grouped with Vendia and Dickinsonia."
+ },
+ {
+  "id": "palaeophragmodictya_reticulata",
+  "commonName": "Palaeophragmodictya",
+  "scientificName": "Palaeophragmodictya reticulata",
+  "kingdom": "Animalia",
+  "group": "Sponge",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 8,
+  "startingPopulation": 350,
+  "playable": true,
+  "model": "Models/Species/Palaeophragmodictya",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.45,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 4,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.7
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.4
+   }
+  ],
+  "description": "A low, round dome a few centimetres across from South Australia, about 555 million years old, covered in a raised lattice of radiating struts crossed by rings. The net-like pattern resembles the skeleton of glass sponges, so it is often considered one of the oldest sponges. It sat on the seabed filtering food from the water."
+ },
+ {
+  "id": "thectardis_avalonensis",
+  "commonName": "Thectardis",
+  "scientificName": "Thectardis avalonensis",
+  "kingdom": "Animalia",
+  "group": "Sponge",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 15,
+  "startingPopulation": 350,
+  "playable": true,
+  "model": "Models/Species/Thectardis",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.5,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 2,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.7
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.3
+   }
+  ],
+  "description": "A slender, upside-down cone up to about 15 cm tall from Newfoundland, about 565 million years old. It stood point-down in the sediment and widened to an open top, and may have been an early sponge that drew water in through its walls and pumped it out of the top. If so, it is one of the oldest sponges large enough to see."
+ },
+ {
+  "id": "inaria_karli",
+  "commonName": "Inaria",
+  "scientificName": "Inaria karli",
+  "kingdom": "Animalia",
+  "group": "Early cnidarian",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 8,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Inaria",
+  "mapStyle": "Fixed",
+  "colonySize": 2,
+  "mapScale": 0.5,
+  "mapAttack": "Lash",
+  "mapDefense": "Tighten",
+  "attack": 3,
+  "defense": 2,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.5
+   },
+   {
+    "gene": "toxin_production",
+    "expression": 0.4
+   },
+   {
+    "gene": "regeneration",
+    "expression": 0.4
+   }
+  ],
+  "description": "A soft, onion-shaped animal up to about 8 cm tall from South Australia, about 555 million years old. Its broad base was divided into rounded lobes and narrowed into a slim neck with an opening at the top. It is often compared with sea anemones, sitting half buried in the sand and catching small prey drifting by."
+ },
+ {
+  "id": "vendoconularia_triradiata",
+  "commonName": "Vendoconularia",
+  "scientificName": "Vendoconularia triradiata",
+  "kingdom": "Animalia",
+  "group": "Early cnidarian",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Carnivore",
+  "prey": [
+   "Small animals"
+  ],
+  "sizeCm": 3,
+  "startingPopulation": 300,
+  "playable": true,
+  "model": "Models/Species/Vendoconularia",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.45,
+  "mapAttack": "Lash",
+  "mapDefense": "Tighten",
+  "attack": 3,
+  "defense": 4,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "carnivory",
+    "expression": 0.4
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.5
+   },
+   {
+    "gene": "toxin_production",
+    "expression": 0.3
+   }
+  ],
+  "description": "A small, six-sided pyramid a few centimetres tall from the White Sea coast of Russia, about 555 million years old, its faces crossed by fine ribs. It resembles the conulariids, cone-shaped relatives of jellyfish common in later seas, and may be one of the oldest of them. Its stiff, ribbed sheath protected it while tentacles at the open top caught small prey."
+ },
+ {
+  "id": "sinotubulites_baimatuoensis",
+  "commonName": "Sinotubulites",
+  "scientificName": "Sinotubulites baimatuoensis",
+  "kingdom": "Animalia",
+  "group": "Tubular animal",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 4,
+  "startingPopulation": 400,
+  "playable": true,
+  "model": "Models/Species/Sinotubulites",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.45,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 5,
+  "hp": 6,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.5
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.7
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.4
+   }
+  ],
+  "description": "A calcified tube a few centimetres long from China, Namibia and other places, about 545 million years old. Its wall was built of many thin, wrinkled layers nested one inside the next, and it lived beside Cloudina in some of the first reefs built by animals with skeletons. Its mineral tube made it hard to crush, an early defence against the first predators."
+ },
+ {
+  "id": "conotubus_hemiannulatus",
+  "commonName": "Conotubus",
+  "scientificName": "Conotubus hemiannulatus",
+  "kingdom": "Animalia",
+  "group": "Tubular animal",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Filter feeder",
+  "sizeCm": 3,
+  "startingPopulation": 450,
+  "playable": true,
+  "model": "Models/Species/Conotubus",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.45,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 3,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "filter_feeding",
+    "expression": 0.5
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.5
+   }
+  ],
+  "description": "A small, curved tube a few centimetres long from southern China, about 550 million years old. It was built as a stack of nested funnels with flared rims, like a pile of ice-cream cones, from tough organic material that was barely mineralised. A close relative of Cloudina, it shows what tube-dwelling animals were like just before skeletons became common."
+ },
+ {
+  "id": "sabellidites_cambriensis",
+  "commonName": "Sabellidites",
+  "scientificName": "Sabellidites cambriensis",
+  "kingdom": "Animalia",
+  "group": "Tubular animal",
+  "firstAge": "Ediacaran",
+  "lastAge": "Cambrian",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 5,
+  "startingPopulation": 500,
+  "playable": true,
+  "model": "Models/Species/Sabellidites",
+  "mapStyle": "Fixed",
+  "colonySize": 3,
+  "mapScale": 0.45,
+  "mapDefense": "Hide",
+  "attack": 1,
+  "defense": 3,
+  "hp": 5,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "decomposition",
+    "expression": 0.4
+   },
+   {
+    "gene": "armor_thickness",
+    "expression": 0.3
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   }
+  ],
+  "description": "A long, thin, flexible tube a few centimetres long and under a millimetre wide, made of tough, finely ringed organic material, from the very end of the Ediacaran into the early Cambrian. Its wall structure suggests it was built by a worm related to modern beard worms, which would make it one of the oldest known annelids. The tube sheltered the soft worm inside."
+ },
+ {
+  "id": "attenborites_janeae",
+  "commonName": "Attenborites",
+  "scientificName": "Attenborites janeae",
+  "kingdom": "Animalia",
+  "group": "Problematic animal",
+  "firstAge": "Ediacaran",
+  "lastAge": "Ediacaran",
+  "habitats": [
+   "SaltWater"
+  ],
+  "diet": "Detritivore",
+  "sizeCm": 0.8,
+  "startingPopulation": 700,
+  "playable": true,
+  "model": "Models/Species/Attenborites",
+  "mapStyle": "Fixed",
+  "colonySize": 5,
+  "mapScale": 0.4,
+  "mapDefense": "Brace",
+  "attack": 1,
+  "defense": 2,
+  "hp": 3,
+  "moves": 1,
+  "genes": [
+   {
+    "gene": "decomposition",
+    "expression": 0.4
+   },
+   {
+    "gene": "reproduction_rate",
+    "expression": 0.6
+   },
+   {
+    "gene": "camouflage",
+    "expression": 0.3
+   }
+  ],
+  "description": "A tiny oval body less than a centimetre long from South Australia, about 555 million years old, its surface wrinkled by irregular grooves and ridges. Nicknamed the 'raisin' for its look, it is named after the naturalist David Attenborough. What kind of animal it was, and how it lived, is still unknown."
+ }
+]
