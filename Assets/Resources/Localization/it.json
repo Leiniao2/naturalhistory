@@ -25595,6 +25595,58 @@
   {
    "k": "Stay here until ordered: only stationed animals heal, {0}% of their HP each turn (from the turn after they last acted).",
    "v": "Restare qui fino al prossimo ordine: solo gli animali in stazione guariscono, il {0}% dei PF ogni turno (dal turno dopo l'ultima azione)."
+  },
+  {
+   "k": "Attack",
+   "v": "Attacco"
+  },
+  {
+   "k": "Defense",
+   "v": "Difesa"
+  },
+  {
+   "k": "HP",
+   "v": "PV"
+  },
+  {
+   "k": "Eats it whole (+{0} HP)",
+   "v": "Lo inghiotte intero (+{0} PV)"
+  },
+  {
+   "k": "Expected: the foe is eaten",
+   "v": "Previsto: l'avversario viene divorato"
+  },
+  {
+   "k": "Expected damage dealt: {0} ({1} → {2} HP)",
+   "v": "Danno inflitto previsto: {0} (avversario {1} → {2} PV)"
+  },
+  {
+   "k": "Expected damage taken: {0} ({1} → {2} HP)",
+   "v": "Danno subito previsto: {0} ({1} → {2} PV)"
+  },
+  {
+   "k": "An ambush: no counterattack",
+   "v": "Un agguato: nessun contrattacco"
+  },
+  {
+   "k": "Expected: both are wiped out",
+   "v": "Previsto: entrambi vengono annientati"
+  },
+  {
+   "k": "Expected: the foe is wiped out",
+   "v": "Previsto: l'avversario viene annientato"
+  },
+  {
+   "k": "Expected: your animal dies of the counterattack",
+   "v": "Previsto: il tuo animale muore per il contrattacco"
+  },
+  {
+   "k": "Expected: both survive",
+   "v": "Previsto: entrambi sopravvivono"
+  },
+  {
+   "k": "can't reproduce: {0}",
+   "v": "non può riprodursi: {0}"
   }
  ]
 }

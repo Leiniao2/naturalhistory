@@ -50,7 +50,8 @@ namespace NaturalHistory.UI
                 ageLabel.text  = Loc.T(ages.IsPresentDay ? "Present day" : ages.CurrentAgeData.displayName);
                 dateLabel.text = ages.IsPresentDay
                     ? Loc.F("0 Ma · Turn {0}", ages.CurrentTurn)
-                    : Loc.F("{0} · Turn {1} / {2}", FormatMa(ages.MillionYearsAgo), ages.CurrentTurn, ages.TotalTurns);
+                    : Loc.F("{0} · Turn {1} / {2}", FormatMa(ages.MillionYearsAgo), // the turn within this period, of its turns
+                            ages.CurrentTurn - ages.FirstTurnOf(ages.CurrentAge) + 1, ages.TurnsInAge);
                 endTurnButton.SetEnabled(!ages.IsPresentDay);
             }
 

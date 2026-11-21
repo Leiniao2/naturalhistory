@@ -92,8 +92,14 @@ namespace NaturalHistory.UI
         public void Next()
         {
             advanceAt = -1f;
-            if (pending.Count == 0) return;
             var current = Colonies != null ? Colonies.Selected : null;
+            if (pending.Count == 0)
+            {
+                // none left: let go of one that needs no orders (stationed, skipped), so it doesn't
+                // stay picked into the next turn as if it had come up
+                if (current != null && !Awaits(current)) { Colonies.Deselect(); focus = null; }
+                return;
+            }
             int at = current != null ? pending.IndexOf(current) : -1;
             Pick(pending[(at + 1) % pending.Count], true);
         }
@@ -155,7 +161,7 @@ namespace NaturalHistory.UI
                 advanceAt = -1f;
                 focus = null;
                 Recount();
-                if (pending.Count > 0) Next();
+                Next(); // or, with none awaiting orders, let go of the one picked
             }
 
             endTurnButton.text = pending.Count > 0 ? Loc.F("Next animal ({0})", pending.Count) : Loc.T("Next Turn");

@@ -25595,6 +25595,58 @@
   {
    "k": "Stay here until ordered: only stationed animals heal, {0}% of their HP each turn (from the turn after they last acted).",
    "v": "Rester ici jusqu'au prochain ordre : seuls les animaux stationnés se soignent, {0} % de leurs PV par tour (à partir du tour suivant leur dernière action)."
+  },
+  {
+   "k": "Attack",
+   "v": "Attaque"
+  },
+  {
+   "k": "Defense",
+   "v": "Défense"
+  },
+  {
+   "k": "HP",
+   "v": "PV"
+  },
+  {
+   "k": "Eats it whole (+{0} HP)",
+   "v": "L'avale tout entier (+{0} PV)"
+  },
+  {
+   "k": "Expected: the foe is eaten",
+   "v": "Prévu : l'adversaire est dévoré"
+  },
+  {
+   "k": "Expected damage dealt: {0} ({1} → {2} HP)",
+   "v": "Dégâts infligés prévus : {0} (adversaire {1} → {2} PV)"
+  },
+  {
+   "k": "Expected damage taken: {0} ({1} → {2} HP)",
+   "v": "Dégâts subis prévus : {0} ({1} → {2} PV)"
+  },
+  {
+   "k": "An ambush: no counterattack",
+   "v": "Une embuscade : pas de riposte"
+  },
+  {
+   "k": "Expected: both are wiped out",
+   "v": "Prévu : les deux sont anéantis"
+  },
+  {
+   "k": "Expected: the foe is wiped out",
+   "v": "Prévu : l'adversaire est anéanti"
+  },
+  {
+   "k": "Expected: your animal dies of the counterattack",
+   "v": "Prévu : ton animal meurt de la riposte"
+  },
+  {
+   "k": "Expected: both survive",
+   "v": "Prévu : les deux survivent"
+  },
+  {
+   "k": "can't reproduce: {0}",
+   "v": "ne peut pas se reproduire : {0}"
   }
  ]
 }

@@ -58,6 +58,11 @@ namespace NaturalHistory.World
             instance.Refresh();
         }
 
+        // The foe's tile under the pointer, while a group's range is on show (UI/AttackPreview)
+        public static HexCell HoveredTarget =>
+            instance != null && instance.range != null && instance.hovered != null && instance.range.AttackFrom.ContainsKey(instance.hovered) ? instance.hovered : null;
+        public static MoveRange Range => instance != null ? instance.range : null;
+
         public static void Hide()
         {
             if (instance == null) return;

@@ -882,7 +882,7 @@
   },
   {
    "k": "Amber Giant Termite",
-   "v": "호박 거대흰개미"
+   "v": "호박거대흰개미"
   },
   {
    "k": "Ambonychia",
@@ -1138,11 +1138,11 @@
   },
   {
    "k": "Cambroraster",
-   "v": "캄브로라스터"
+   "v": "캄브로라스테르"
   },
   {
    "k": "Campanile",
-   "v": "캄파닐레 기간테움"
+   "v": "캄파닐레"
   },
   {
    "k": "Camptosaurus",
@@ -1190,7 +1190,7 @@
   },
   {
    "k": "Champsosaurus",
-   "v": "참프소사우루스"
+   "v": "캄프소사우루스"
   },
   {
    "k": "Charniodiscus",
@@ -1306,7 +1306,7 @@
   },
   {
    "k": "Dire Wolf",
-   "v": "다이어울프"
+   "v": "다이어늑대"
   },
   {
    "k": "Dodo",
@@ -1390,7 +1390,7 @@
   },
   {
    "k": "Euparkeria",
-   "v": "유파르케리아"
+   "v": "에우파르케리아"
   },
   {
    "k": "Euphanerops",
@@ -1414,7 +1414,7 @@
   },
   {
    "k": "Fuxianhuia",
-   "v": "푸시안후이아"
+   "v": "푸셴후이아"
   },
   {
    "k": "Galapagos Giant Tortoise",
@@ -1434,11 +1434,11 @@
   },
   {
    "k": "Giant Platypus",
-   "v": "거대 오리너구리"
+   "v": "거대오리너구리"
   },
   {
    "k": "Giant Sea Biscuit",
-   "v": "거대 바다비스킷"
+   "v": "거대바다비스킷"
   },
   {
    "k": "Giant Squid",
@@ -1474,7 +1474,7 @@
   },
   {
    "k": "Green River Gar",
-   "v": "그린리버 가아"
+   "v": "그린리버가아"
   },
   {
    "k": "Greererpeton",
@@ -1974,7 +1974,7 @@
   },
   {
    "k": "Palaeoscolex",
-   "v": "팔라에오스콜렉스"
+   "v": "팔레오스콜렉스"
   },
   {
    "k": "Palmatolepis",
@@ -5482,7 +5482,7 @@
   },
   {
    "k": "American House Dust Mite",
-   "v": "아메리카집먼지진드기"
+   "v": "큰다리먼지진드기"
   },
   {
    "k": "American Manatee",
@@ -5730,7 +5730,7 @@
   },
   {
    "k": "Andrewsarchus",
-   "v": "안드레우사르쿠스"
+   "v": "앤드루사르쿠스"
   },
   {
    "k": "Aneurophyton",
@@ -5886,7 +5886,7 @@
   },
   {
    "k": "Aquatic Sloth",
-   "v": "수생 나무늘보"
+   "v": "수생땅늘보"
   },
   {
    "k": "Araeoscelid reptile",
@@ -6110,7 +6110,7 @@
   },
   {
    "k": "Asian Medicinal Leech",
-   "v": "아시아의료용거머리"
+   "v": "참거머리"
   },
   {
    "k": "Assessing Rivals",
@@ -6386,7 +6386,7 @@
   },
   {
    "k": "Beelzebufo",
-   "v": "베엘제부포"
+   "v": "벨제부포"
   },
   {
    "k": "Bees: a sting, a hive and the waggle dance.",
@@ -6430,7 +6430,7 @@
   },
   {
    "k": "Bell Trichonympha",
-   "v": "종 트리코님파"
+   "v": "종 모양 트리코님파"
   },
   {
    "k": "Below today's (est. 10–15%)",
@@ -7418,7 +7418,7 @@
   },
   {
    "k": "Chrysochus Leaf Beetle",
-   "v": "크리소쿠스 잎벌레"
+   "v": "중국청람색잎벌레"
   },
   {
    "k": "Ciliate",
@@ -7646,7 +7646,7 @@
   },
   {
    "k": "Collared Trichonympha",
-   "v": "깃 트리코님파"
+   "v": "목깃 트리코님파"
   },
   {
    "k": "Collinsium",
@@ -7734,7 +7734,7 @@
   },
   {
    "k": "Confuciusornis",
-   "v": "콘푸키우소르니스"
+   "v": "공자새"
   },
   {
    "k": "Conifer, ginkgo and cycad woodland",
@@ -8050,7 +8050,7 @@
   },
   {
    "k": "Cyclonema",
-   "v": "시클로네마"
+   "v": "키클로네마"
   },
   {
    "k": "Cyclostigma",
@@ -8142,7 +8142,7 @@
   },
   {
    "k": "Darwinius",
-   "v": "다위니우스"
+   "v": "다르위니우스"
   },
   {
    "k": "Darwinopterus",
@@ -9950,7 +9950,7 @@
   },
   {
    "k": "Giant Bear-dog",
-   "v": "거대 곰개"
+   "v": "거대곰개"
   },
   {
    "k": "Giant Cheetah",
@@ -9966,7 +9966,7 @@
   },
   {
    "k": "Giant Moonrat",
-   "v": "거대 털고슴도치"
+   "v": "거대털고슴도치"
   },
   {
    "k": "Giant Otter",
@@ -9974,7 +9974,7 @@
   },
   {
    "k": "Giant Panda",
-   "v": "자이언트판다"
+   "v": "대왕판다"
   },
   {
    "k": "Giant Pangolin",
@@ -9986,7 +9986,7 @@
   },
   {
    "k": "Giant Short-faced Hyena",
-   "v": "파키크로쿠타"
+   "v": "거대짧은얼굴하이에나"
   },
   {
    "k": "Giant arthropods: Meganeura dragonflies (~70 cm wingspan), Arthropleura millipedes",
@@ -10062,7 +10062,7 @@
   },
   {
    "k": "Giardia",
-   "v": "지아르디아"
+   "v": "람블편모충"
   },
   {
    "k": "Giganotosaurus",
@@ -10078,7 +10078,7 @@
   },
   {
    "k": "Gigantoproductus",
-   "v": "기간토프로덕투스"
+   "v": "기간토프로둑투스"
   },
   {
    "k": "Gigantopteris",
@@ -10574,7 +10574,7 @@
   },
   {
    "k": "Haikouichthys",
-   "v": "하이코우익티스"
+   "v": "하이코우이크티스"
   },
   {
    "k": "Hair Follicle Mite",
@@ -10662,7 +10662,7 @@
   },
   {
    "k": "Hatzegopteryx",
-   "v": "하체그프테릭스"
+   "v": "하체고프테릭스"
   },
   {
    "k": "Hausmannia",
@@ -11118,7 +11118,7 @@
   },
   {
    "k": "Hyaenodon",
-   "v": "히아에노돈"
+   "v": "히에노돈"
   },
   {
    "k": "Hyaenodont",
@@ -11226,7 +11226,7 @@
   },
   {
    "k": "Ichthyosaurus",
-   "v": "익티오사우루스"
+   "v": "이크티오사우루스"
   },
   {
    "k": "Ichthyostega",
@@ -11510,7 +11510,7 @@
   },
   {
    "k": "Joro Spider",
-   "v": "조로거미"
+   "v": "무당거미"
   },
   {
    "k": "Josephoartigasia",
@@ -11542,7 +11542,7 @@
   },
   {
    "k": "Juramaia",
-   "v": "쥐라마이아"
+   "v": "주라마이아"
   },
   {
    "k": "Jurassic",
@@ -11630,7 +11630,7 @@
   },
   {
    "k": "Keichousaurus",
-   "v": "케이쵸우사우루스"
+   "v": "케이초우사우루스"
   },
   {
    "k": "Kelenken",
@@ -12022,7 +12022,7 @@
   },
   {
    "k": "Leaellynasaura",
-   "v": "레엘리나사우라"
+   "v": "리엘리나사우라"
   },
   {
    "k": "Leafcutter Ant",
@@ -12198,7 +12198,7 @@
   },
   {
    "k": "Lisowicia",
-   "v": "리소비키아"
+   "v": "리소비치아"
   },
   {
    "k": "Lithocodium",
@@ -15466,7 +15466,7 @@
   },
   {
    "k": "Purussaurus",
-   "v": "푸루사우루스"
+   "v": "푸루스사우루스"
   },
   {
    "k": "Pushing into the middle of the group so others are on the outside.",
@@ -16274,7 +16274,7 @@
   },
   {
    "k": "Schinderhannes",
-   "v": "쉰더한네스"
+   "v": "신더하네스"
   },
   {
    "k": "Schizolepis",
@@ -16314,7 +16314,7 @@
   },
   {
    "k": "Scrub Typhus Chigger",
-   "v": "쯔쯔가무시털진드기"
+   "v": "대잎털진드기"
   },
   {
    "k": "Scutosaurus",
@@ -16462,7 +16462,7 @@
   },
   {
    "k": "Selkirkia",
-   "v": "셀커키아"
+   "v": "셀키르키아"
   },
   {
    "k": "Senftenbergia",
@@ -16542,7 +16542,7 @@
   },
   {
    "k": "Shantungosaurus",
-   "v": "산퉁고사우루스"
+   "v": "샨퉁고사우루스"
   },
   {
    "k": "Shark Bay",
@@ -17414,7 +17414,7 @@
   },
   {
    "k": "Sunburst Anemone",
-   "v": "선버스트말미잘"
+   "v": "햇살말미잘"
   },
   {
    "k": "Sunburst lichen",
@@ -18670,7 +18670,7 @@
   },
   {
    "k": "Tully Monster",
-   "v": "털리 몬스터"
+   "v": "툴리몬스터"
   },
   {
    "k": "Tundra",
@@ -18746,7 +18746,7 @@
   },
   {
    "k": "Tyrian Metaltail",
-   "v": "티리안메탈테일"
+   "v": "자줏빛금속꼬리벌새"
   },
   {
    "k": "Uintatherium",
@@ -18870,7 +18870,7 @@
   },
   {
    "k": "Veiled Chameleon",
-   "v": "베일드카멜레온"
+   "v": "예멘카멜레온"
   },
   {
    "k": "Veiled lady",
@@ -19290,7 +19290,7 @@
   },
   {
    "k": "Whitmania Leech",
-   "v": "휘트마니아거머리"
+   "v": "말거머리"
   },
   {
    "k": "Wielandiella",
@@ -19426,7 +19426,7 @@
   },
   {
    "k": "Xiphactinus",
-   "v": "시팍티누스"
+   "v": "크시팍티누스"
   },
   {
    "k": "Xishuangbanna",
@@ -19462,7 +19462,7 @@
   },
   {
    "k": "Yi qi",
-   "v": "이 치"
+   "v": "이치"
   },
   {
    "k": "Yilingia",
@@ -19542,7 +19542,7 @@
   },
   {
    "k": "Zhongjianichthys",
-   "v": "중젠익티스"
+   "v": "중젠이크티스"
   },
   {
    "k": "Zhoukoudian",
@@ -21278,7 +21278,7 @@
   },
   {
    "k": "Sword-bearing Roachoid",
-   "v": "칼잡이 원시바퀴"
+   "v": "칼 찬 원시바퀴"
   },
   {
    "k": "Tshekardocoleus",
@@ -21310,7 +21310,7 @@
   },
   {
    "k": "Ridged Cloudina",
-   "v": "능선 클라우디나"
+   "v": "용골 클라우디나"
   },
   {
    "k": "Namacalathus",
@@ -21334,7 +21334,7 @@
   },
   {
    "k": "Palm Hazelia",
-   "v": "야자 하젤리아"
+   "v": "손바닥 하젤리아"
   },
   {
    "k": "Crater Hazelia",
@@ -21402,7 +21402,7 @@
   },
   {
    "k": "Pale-throated Three-toed Sloth",
-   "v": "갈색목세발가락나무늘보"
+   "v": "흰목세발가락나무늘보"
   },
   {
    "k": "Linnaeus's Two-toed Sloth",
@@ -21506,7 +21506,7 @@
   },
   {
    "k": "Charnia",
-   "v": "차르니아"
+   "v": "카르니아"
   },
   {
    "k": "Tribrachidium",
@@ -21522,7 +21522,7 @@
   },
   {
    "k": "Antarcticocyathus",
-   "v": "남극키아투스"
+   "v": "안타르크티코키아투스"
   },
   {
    "k": "Cothonion",
@@ -21530,11 +21530,11 @@
   },
   {
    "k": "Slender Vauxia",
-   "v": "가는 보키아"
+   "v": "가는 바욱시아"
   },
   {
    "k": "Chengjiang Vauxia",
-   "v": "청장 보키아"
+   "v": "청장 바욱시아"
   },
   {
    "k": "Leptomitus",
@@ -21554,11 +21554,11 @@
   },
   {
    "k": "Windowed Protospongia",
-   "v": "창 프로토스폰기아"
+   "v": "창문 프로토스폰기아"
   },
   {
    "k": "Burgess Protospongia",
-   "v": "버지스 프로토스폰기아"
+   "v": "버제스 프로토스폰기아"
   },
   {
    "k": "Bohemian Protospongia",
@@ -25595,6 +25595,414 @@
   {
    "k": "Stay here until ordered: only stationed animals heal, {0}% of their HP each turn (from the turn after they last acted).",
    "v": "명령할 때까지 이곳에 주둔: 주둔한 동물만 회복하며, 매 턴 HP의 {0}%를 회복합니다(마지막으로 행동한 다음 턴부터)."
+  },
+  {
+   "k": "A flat, ribbed oval, usually a few centimetres to about 20 cm long (the giant 1.4 m specimens are usually placed in Dickinsonia rex), that grazed microbial mats; fat molecules in its fossils show it was an animal.",
+   "v": "갈빗살 같은 주름이 있는 납작한 타원형 동물로, 보통 길이가 몇 센티미터에서 약 20cm이며(1.4m에 이르는 거대한 표본은 보통 디킨소니아 렉스로 분류된다), 미생물 매트를 갉아 먹었다. 화석에 남은 지방 분자는 이것이 동물이었음을 보여 준다."
+  },
+  {
+   "k": "A broad, quilted Ediacaran animal that left trails of feeding marks on the mats.",
+   "v": "누빈 듯한 무늬가 있는 넓적한 에디아카라기 동물로, 미생물 매트 위에 먹이 활동 흔적을 줄지어 남겼다."
+  },
+  {
+   "k": "A small segmented animal with a horseshoe-shaped head, once thought to be an early arthropod.",
+   "v": "말굽 모양 머리를 지닌 작은 체절 동물로, 한때 초기 절지동물로 여겨졌다."
+  },
+  {
+   "k": "A slug-like animal that scraped microbial mats with a toothed proboscis; perhaps an early relative of molluscs.",
+   "v": "이빨 달린 주둥이로 미생물 매트를 긁어 먹던 민달팽이 같은 동물로, 연체동물의 초기 친척이었을지도 모른다."
+  },
+  {
+   "k": "A deep-sea frond anchored by a disc; the first Precambrian fossil recognised, found in Charnwood Forest.",
+   "v": "원반으로 바닥에 고정된 심해의 엽상체로, 처음으로 인정된 선캄브리아 시대 화석이며 찬우드 숲에서 발견되었다."
+  },
+  {
+   "k": "A disc with three curved arms: a body plan found in no living animal.",
+   "v": "휘어진 팔 세 개가 달린 원반으로, 현생 동물 어디에서도 볼 수 없는 몸 구조를 지녔다."
+  },
+  {
+   "k": "Stacked cone-in-cone tubes: one of the first animals with a mineral skeleton and the first reef builder.",
+   "v": "원뿔이 원뿔 속에 겹겹이 포개진 관 모양 생물로, 광물 골격을 지닌 최초의 동물 중 하나이자 최초의 암초 형성자다."
+  },
+  {
+   "k": "A pale, comb-less flea about 2.5 millimetres long that lives mainly on rats, especially in warm climates, and bites people when its hosts die. It is the main carrier of the plague bacterium Yersinia pestis, which blocks its gut so that it regurgitates bacteria into each new bite, and it also spreads murine typhus. Like all fleas it is wingless, flattened from side to side and jumps with its long hind legs.",
+   "v": "몸길이 약 2.5밀리미터의 빗살(즐치)이 없는 연한 빛깔의 벼룩으로, 특히 따뜻한 지역에서 주로 쥐에 기생하며 숙주가 죽으면 사람을 문다. 페스트균(Yersinia pestis)의 주요 매개체로, 이 세균이 벼룩의 소화관을 막아 새로 물 때마다 세균을 역류시켜 옮기게 된다. 발진열도 퍼뜨린다. 다른 벼룩처럼 날개가 없고 몸이 좌우로 납작하며 긴 뒷다리로 뛰어오른다."
+  },
+  {
+   "k": "The commonest flea of both cats and dogs worldwide, a dark reddish-brown insect two to three millimetres long with a comb of spines under the head and another behind it, and a long, sloping forehead. Adults stay on the host and feed on blood, while the larvae live in bedding and carpets, eating debris and adult flea droppings. It can jump over a hundred times its own length and carries the cat-scratch bacterium and the dog tapeworm.",
+   "v": "전 세계 고양이와 개 모두에서 가장 흔한 벼룩으로, 몸길이 2~3밀리미터의 짙은 적갈색 곤충이다. 머리 아래와 그 뒤쪽에 각각 가시로 된 빗살이 한 줄씩 있고, 이마가 길게 비스듬히 경사져 있다. 성충은 숙주 몸에 머물며 피를 빨고, 애벌레는 잠자리 깔개나 카펫 속에서 부스러기와 성충의 배설물을 먹고 산다. 제 몸길이의 100배가 넘는 거리를 뛸 수 있으며, 묘소병(고양이 할큄병)을 일으키는 세균과 개조충을 옮긴다."
+  },
+  {
+   "k": "A close relative of the cat flea that lives on dogs, foxes and wolves and sometimes on cats and people, though in most places it is now rarer on dogs than the cat flea. It has the same two combs of spines but a shorter, more rounded head, and the first spine of the comb under the head is clearly shorter than the second. It too can carry the dog tapeworm.",
+   "v": "고양이벼룩의 가까운 친척으로 개, 여우, 늑대에 기생하며 때로는 고양이와 사람에게도 붙는다. 다만 오늘날 대부분 지역에서는 개에서도 고양이벼룩보다 드물다. 고양이벼룩과 같은 두 줄의 가시 빗살을 지녔지만 머리가 더 짧고 둥글며, 머리 아래 빗살의 첫 번째 가시가 두 번째 가시보다 뚜렷이 짧다. 이 벼룩도 개조충을 옮길 수 있다."
+  },
+  {
+   "k": "A large sea snail of the rocky coasts of Japan, Korea and northern China that clamps onto rocks with its broad muscular foot and grazes on kelp and drifting seaweed. Water flows out through the row of open holes along its flattened, ear-shaped shell. Its meat and pearly shell have been prized for centuries, gathered by Japan's ama free divers, and its northern form, H. discus hannai, is one of the most widely farmed abalones.",
+   "v": "일본, 한국, 중국 북부의 암석 해안에 사는 대형 바다 고둥으로, 넓은 근육질 발로 바위에 단단히 달라붙어 다시마와 떠다니는 해조류를 뜯어 먹는다. 납작한 귀 모양 껍데기를 따라 줄지어 난 구멍으로 물이 빠져나간다. 살과 진주빛 껍데기는 수 세기 동안 귀하게 여겨졌으며 일본의 해녀인 아마가 채취해 왔다. 북방형인 H. discus hannai(참전복)는 가장 널리 양식되는 전복 중 하나다."
+  },
+  {
+   "k": "South Africa's largest abalone, known locally as perlemoen, which lives on rocky shores and in kelp beds and feeds mostly on drift kelp and other seaweed. Its thick, ridged shell can reach about 20 cm, and young perlemoen shelter under the spines of sea urchins. Prized in East Asian markets, it is heavily poached by organised syndicates, and wild stocks have fallen so far that the legal fishery was closed for a time; most perlemoen sold today is farmed.",
+   "v": "남아프리카에서 가장 큰 전복으로, 현지에서는 페를레문이라 불린다. 암석 해안과 켈프 숲에 살며 주로 떠밀려 온 켈프와 다른 해조류를 먹는다. 두껍고 골이 진 껍데기는 약 20cm까지 자라며, 어린 개체는 성게 가시 밑에 숨어 지낸다. 동아시아 시장에서 귀하게 여겨져 조직적인 밀렵단에 의해 심하게 남획되었고, 야생 자원이 크게 줄어 한때 합법 어업이 금지되기도 했다. 오늘날 팔리는 것은 대부분 양식산이다."
+  },
+  {
+   "k": "The largest living bivalve, which can grow over a metre long and weigh more than 200 kg, found on shallow reefs and lagoons of the western Pacific and eastern Indian Ocean. It lies hinge-down with its golden-brown mantle spread to the sun: besides filtering plankton, it farms photosynthetic algae (zooxanthellae) in its mantle that supply much of its food. Once settled it never moves again, and overharvesting for its meat and shell has wiped it out from many reefs, so it is listed as vulnerable.",
+   "v": "현생 이매패류 가운데 가장 큰 종으로, 길이 1미터 이상, 무게 200kg 이상까지 자라며 서태평양과 동인도양의 얕은 암초와 석호에 산다. 경첩을 아래로 한 채 황갈색 외투막을 햇빛 쪽으로 펼치고 누워 있는데, 플랑크톤을 걸러 먹을 뿐 아니라 외투막 속에서 광합성 조류(공생조류)를 길러 먹이의 상당 부분을 얻는다. 한번 자리를 잡으면 다시는 움직이지 않으며, 살과 껍데기를 노린 남획으로 많은 암초에서 사라져 취약종으로 지정되어 있다."
+  },
+  {
+   "k": "The most widespread giant clam, found on reefs from the Red Sea and East Africa to Polynesia. It grows to about 20-30 cm and often sits partly sunk into the reef rock, its elongate, scaly shell hidden under a brilliant blue, green or patterned mantle that spreads over the shell's edges. Like other giant clams it filters plankton but gets much of its food from the photosynthetic zooxanthellae it farms in its mantle.",
+   "v": "가장 널리 분포하는 대왕조개로, 홍해와 동아프리카에서 폴리네시아에 이르는 암초에서 발견된다. 약 20~30cm까지 자라며 흔히 암초 암석에 몸을 반쯤 묻고 지낸다. 길쭉하고 비늘 같은 껍데기는 그 가장자리 너머까지 펼쳐지는 선명한 파란색, 초록색 또는 무늬 있는 외투막에 가려진다. 다른 대왕조개처럼 플랑크톤을 걸러 먹지만, 먹이의 상당 부분은 외투막에서 기르는 광합성 공생조류에서 얻는다."
+  },
+  {
+   "k": "A rare giant clam of deep, dimly lit reef slopes around Tonga and Fiji, living deeper than most of its relatives. It has a relatively thin shell and a dull brownish mantle, yet still relies on photosynthetic zooxanthellae in its mantle as well as filtering plankton. It was described as a new species only in 1991, and some researchers now treat it as the same species as T. mbalavuana, first named from fossils.",
+   "v": "통가와 피지 주변의 깊고 어두운 암초 비탈에 사는 희귀한 대왕조개로, 대부분의 친척보다 깊은 곳에 산다. 껍데기가 비교적 얇고 외투막은 칙칙한 갈색이지만, 여전히 외투막 속 광합성 공생조류에 의존하면서 플랑크톤도 걸러 먹는다. 1991년에야 신종으로 기재되었으며, 일부 연구자는 화석으로 처음 명명된 T. mbalavuana와 같은 종으로 본다."
+  },
+  {
+   "k": "The smallest giant clam, rarely more than 15 cm long, which bores into coral heads on shallow Indo-Pacific reefs until only its brilliant blue, purple or orange mantle shows at the surface. Sunk in the rock, it is safe from most predators while the zooxanthellae in its mantle soak up the sunlight and it filters plankton from the water. It can grow in dense patches on reef flats and is popular in the aquarium trade.",
+   "v": "가장 작은 대왕조개로, 길이가 15cm를 넘는 일이 드물다. 인도태평양 얕은 암초의 산호 덩어리를 파고들어 선명한 파란색, 보라색 또는 주황색 외투막만 표면에 드러낸다. 암석 속에 박혀 있어 대부분의 포식자로부터 안전하며, 외투막의 공생조류가 햇빛을 흡수하는 동안 물속의 플랑크톤을 걸러 먹는다. 암초 평탄면에 빽빽한 무리를 이루어 자라기도 하며, 수족관 거래에서 인기가 높다."
+  },
+  {
+   "k": "A fusulinid, one of the giant single-celled foraminifers of late Palaeozoic seas: a living cell inside a spindle-shaped, chambered calcite shell a few millimetres long, coiled around its long axis like a rice grain. It lived in warm, shallow late Carboniferous seas about 310 million years ago, in such numbers that its shells make up whole beds of limestone. It probably gathered food with thread-like pseudopods and, like large forams today, may have hosted algae in its cell.",
+   "v": "고생대 후기 바다에 살던 거대한 단세포 유공충인 방추충의 하나다. 길이 몇 밀리미터의 방추형 방해석 껍데기 속에 살아 있는 세포가 들어 있었고, 껍데기는 여러 방으로 나뉘어 쌀알처럼 긴 축을 중심으로 감겨 있었다. 약 3억 1000만 년 전 석탄기 후기의 따뜻하고 얕은 바다에 살았는데, 그 수가 워낙 많아 껍데기만으로 석회암층 전체가 이루어지기도 한다. 아마 실 같은 위족으로 먹이를 모았을 것이며, 오늘날의 대형 유공충처럼 세포 안에 조류를 공생시켰을 수도 있다."
+  },
+  {
+   "k": "A large embolomere, a long-bodied relative of early tetrapods, from Late Carboniferous coal-swamp deposits of northern England about 310 million years old. It grew to perhaps four and a half metres, with a long, low skull lined with sharp teeth, small limbs and a long, deep, flattened tail. It probably lived much like a crocodile or a giant eel, swimming with side-to-side waves of its body and ambushing fish and smaller tetrapods in the swamp waters.",
+   "v": "몸이 긴 초기 네발동물의 친척인 대형 엠볼로머류로, 약 3억 1000만 년 전 잉글랜드 북부의 석탄기 후기 석탄 늪 퇴적층에서 발견되었다. 몸길이는 4.5미터 정도까지 자랐을 것으로 보이며, 날카로운 이빨이 늘어선 길고 낮은 두개골, 작은 다리, 길고 높으며 납작한 꼬리를 지녔다. 아마 악어나 거대한 뱀장어처럼 살면서 몸을 좌우로 물결치며 헤엄쳤고, 늪 물속에서 물고기와 더 작은 네발동물을 매복해 잡았을 것이다."
+  },
+  {
+   "k": "A roachoid, an early cockroach relative, from the Late Carboniferous coal measures of the English Midlands, preserved in ironstone nodules at Coseley near Dudley. Its holotype has been digitally reconstructed in three dimensions with X-ray micro-tomography, showing the broad shield-like pronotum over the head, the leathery forewings folded flat over the back and the spiny legs. Like other roachoids it probably foraged through the leaf litter of the coal swamp forests.",
+   "v": "초기 바퀴벌레 친척인 원시바퀴류로, 잉글랜드 미들랜즈의 석탄기 후기 석탄층에서 나왔으며 더들리 인근 코슬리의 철광석 단괴 속에 보존되어 있다. 완모식표본은 X선 마이크로 단층촬영으로 3차원 디지털 복원되었는데, 머리를 덮는 넓은 방패 모양 앞가슴등판, 등 위에 납작하게 접힌 가죽질 앞날개, 가시 돋친 다리가 드러났다. 다른 원시바퀴류처럼 석탄림의 낙엽층을 뒤지며 먹이를 찾았을 것이다."
+  },
+  {
+   "k": "A large roachoid of the Late Carboniferous, known from fossil forewings found in Europe and North America. Its long forewings were densely veined, with many vein branches running out to the wing margin, and it was among the bigger cockroach relatives of the coal forests.",
+   "v": "석탄기 후기의 대형 원시바퀴류로, 유럽과 북아메리카에서 발견된 앞날개 화석으로 알려져 있다. 긴 앞날개에는 시맥이 빽빽했고 많은 시맥 가지가 날개 가장자리까지 뻗어 있었으며, 석탄림의 바퀴벌레 친척 가운데 큰 편에 속했다."
+  },
+  {
+   "k": "A roachoid of the family Spiloblattinidae from the latest Carboniferous of Commentry in central France, known from its forewings. Spiloblattinids had bold light-and-dark colour patterns on their forewings, and because these patterns changed from species to species through time they are used to date and correlate rocks of the Late Carboniferous and Early Permian.",
+   "v": "스필로블라티나과에 속하는 원시바퀴류로, 프랑스 중부 코망트리의 석탄기 최후기 지층에서 앞날개로 알려져 있다. 스필로블라티나과는 앞날개에 뚜렷한 명암 무늬가 있었는데, 이 무늬가 시간에 따라 종마다 달라졌기 때문에 석탄기 후기와 페름기 전기 암석의 연대를 정하고 대비하는 데 쓰인다."
+  },
+  {
+   "k": "A Late Carboniferous roachoid from France with long, narrow, densely veined forewings. Its name means 'sword-bearer': when Charles Brongniart described it in 1889 he noted the long external ovipositor of the female. Unlike modern cockroaches, which carry their eggs in a capsule, early roachoids like this one probably used their ovipositors to lay eggs one by one into soil or plant tissue.",
+   "v": "프랑스의 석탄기 후기 원시바퀴류로, 길고 좁으며 시맥이 빽빽한 앞날개를 지녔다. 이름은 '칼을 지닌 자'라는 뜻으로, 1889년 샤를 브롱니아르가 이 종을 기재하면서 암컷의 길게 드러난 산란관에 주목했기 때문이다. 알을 알집에 넣어 지니고 다니는 현대 바퀴벌레와 달리, 이 종과 같은 초기 원시바퀴류는 산란관으로 흙이나 식물 조직 속에 알을 하나씩 낳았을 것이다."
+  },
+  {
+   "k": "An Eocene shark, about 56-34 million years ago, known only from its small teeth found in shallow-sea deposits of Europe and other regions. Its name links it to the whale shark, but it is now placed among the carpet sharks (Orectolobiformes), so its body is reconstructed here after living bottom-dwelling relatives such as nurse sharks, with nasal barbels and two dorsal fins set far back. It probably hunted small fish and invertebrates near the sea floor.",
+   "v": "약 5600만~3400만 년 전 에오세의 상어로, 유럽 등지의 얕은 바다 퇴적층에서 발견된 작은 이빨로만 알려져 있다. 이름은 고래상어와 연관되어 있지만 지금은 수염상어목(Orectolobiformes)으로 분류되므로, 여기서는 너스상어 같은 바닥 생활을 하는 현생 친척을 본떠 코수염과 뒤쪽에 자리한 두 개의 등지느러미를 가진 모습으로 복원했다. 아마 해저 근처에서 작은 물고기와 무척추동물을 사냥했을 것이다."
+  },
+  {
+   "k": "A narrow, elongated species of Dickinsonia from the Ediacara Hills of South Australia, with very many fine segments packed either side of its midline. Like its broader relatives it was a flat, soft-bodied animal that lay on the microbial mats of the shallow Ediacaran seafloor and probably fed on them through its underside.",
+   "v": "남오스트레일리아 에디아카라 구릉에서 발견된 가늘고 긴 디킨소니아 종으로, 정중선 양쪽에 아주 많은 가는 체절이 빽빽하게 늘어서 있다. 더 넓적한 친척들처럼 몸이 납작하고 부드러운 동물로, 얕은 에디아카라기 해저의 미생물 매트 위에 누워 아마 배 쪽 면으로 매트를 먹었을 것이다."
+  },
+  {
+   "k": "A small, broad Dickinsonia from the White Sea coast of Russia, usually only a few centimetres long, with fewer and wider segments than its larger relatives. It is found on the same fossil-rich bedding surfaces as Yorgia and Kimberella, where it lived flat on the microbial mats that covered the seafloor.",
+   "v": "러시아 백해 연안에서 발견된 작고 넓적한 디킨소니아로, 보통 길이가 몇 센티미터에 불과하며 더 큰 친척보다 체절 수가 적고 폭이 넓다. 요르기아, 킴베렐라와 같은 화석이 풍부한 층리면에서 발견되며, 해저를 덮은 미생물 매트 위에 납작하게 붙어 살았다."
+  },
+  {
+   "k": "A small shield-shaped animal, up to about 2.5 cm long, with a raised anchor-shaped ridge on its back. First found in the Ediacara Hills of South Australia and also known from the White Sea coast of Russia. Fossils are often aligned in the same direction, as if facing into a current.",
+   "v": "길이 최대 약 2.5cm의 작은 방패 모양 동물로, 등에 닻 모양으로 솟은 융기가 있다. 남오스트레일리아 에디아카라 구릉에서 처음 발견되었고 러시아 백해 연안에서도 알려져 있다. 화석은 마치 물살을 마주 보듯 같은 방향으로 정렬된 경우가 많다."
+  },
+  {
+   "k": "A narrower species of Parvancorina described from Ediacaran rocks on the White Sea coast of Russia; its name means 'arrow'. Like its Australian relative it bore a raised anchor-shaped ridge on its back.",
+   "v": "러시아 백해 연안의 에디아카라기 암석에서 기재된 더 가느다란 파르반코리나 종으로, 이름은 '화살'이라는 뜻이다. 오스트레일리아의 친척처럼 등에 닻 모양으로 솟은 융기가 있었다."
+  },
+  {
+   "k": "A small, slender Cloudina from the Nama Group of Namibia, its tubes only about a millimetre wide. Like its larger relative it built its tube as a stack of nested calcite funnels, making it one of the first animals with a mineralised skeleton. Some Cloudina tubes carry small bore holes, possibly among the earliest evidence of predation.",
+   "v": "나미비아 나마층군에서 발견된 작고 가느다란 클라우디나로, 관의 폭이 약 1밀리미터에 불과하다. 더 큰 친척처럼 방해석 깔때기를 겹겹이 포개어 관을 만들었으며, 광물화된 골격을 지닌 최초의 동물 중 하나다. 일부 클라우디나 관에는 작은 구멍이 뚫려 있는데, 이는 포식의 가장 오래된 증거 중 하나일 수 있다."
+  },
+  {
+   "k": "A Cloudina from the latest Ediacaran of Spain whose stacked funnel-shaped collars bear longitudinal ridges, giving the tube a fluted, spiny look. These ornamented tubes are among the oldest mineralised animal skeletons known.",
+   "v": "스페인의 에디아카라기 최후기 지층에서 발견된 클라우디나로, 겹겹이 쌓인 깔때기 모양 고리에 세로 융기가 있어 관이 홈이 파이고 가시 돋친 모습을 띤다. 이렇게 장식된 관은 알려진 가장 오래된 광물화 동물 골격 가운데 하나다."
+  },
+  {
+   "k": "A small calcified goblet on a slender stalk: a hollow cup with an opening on top and usually six round windows around its sides. First described from the Nama Group of Namibia, it grew alongside Cloudina in some of the earliest skeletal reefs. What kind of animal it was is still debated; some studies suggest a lophotrochozoan, a relative of brachiopods and bryozoans.",
+   "v": "가느다란 자루 위에 얹힌 작은 석회질 술잔 모양 생물로, 위쪽이 열린 속 빈 컵 옆면에 보통 여섯 개의 둥근 창이 나 있다. 나미비아 나마층군에서 처음 기재되었으며, 가장 이른 골격 암초 몇 곳에서 클라우디나와 함께 자랐다. 어떤 동물이었는지는 아직 논쟁 중이며, 일부 연구는 완족동물과 태형동물의 친척인 촉수담륜동물이었다고 본다."
+  },
+  {
+   "k": "A frond from the Nama Group of Namibia and the namesake of the rangeomorphs. It is reconstructed with six vanes arranged around a central axis, each built of branches that repeat the same pattern at smaller and smaller scales. How it fed is uncertain; absorbing nutrients dissolved in seawater is one leading idea.",
+   "v": "나미비아 나마층군에서 발견된 엽상체로, 랑게오모르프류라는 이름의 유래가 된 생물이다. 중심축 둘레에 여섯 장의 날개판이 배열된 모습으로 복원되며, 각 날개판은 같은 무늬가 점점 더 작은 규모로 되풀이되는 가지들로 이루어져 있다. 어떻게 먹이를 얻었는지는 불확실하며, 바닷물에 녹은 영양분을 흡수했다는 것이 유력한 견해 중 하나다."
+  },
+  {
+   "k": "A broad, leaf-like frond from the very end of the Ediacaran, first found in the Nama Group of southern Namibia. It had three or more petal-like vanes quilted into tube-like units, held up on a long stalk. It was one of the last Ediacaran fronds, and how it fed is uncertain.",
+   "v": "에디아카라기 맨 끝 무렵의 넓은 잎 모양 엽상체로, 나미비아 남부의 나마층군에서 처음 발견되었다. 꽃잎 같은 날개판이 세 장 이상 있었고, 각 날개판은 관 모양 단위로 누빈 듯이 나뉘어 있었으며, 긴 자루로 받쳐져 있었다. 마지막 에디아카라기 엽상체 중 하나였으며, 어떻게 먹이를 얻었는지는 불확실하다."
+  },
+  {
+   "k": "A flat disc with a central boss and many concentric rings, one of the most common Ediacaran fossils worldwide. It was first described from South Australia as a jellyfish, but it is now usually read as the buried holdfast of a frond or a microbial colony, so whether it fed by itself at all is unknown.",
+   "v": "가운데에 돌기가 있고 많은 동심원 고리가 둘러싼 납작한 원반으로, 전 세계에서 가장 흔한 에디아카라기 화석 중 하나다. 처음에는 남오스트레일리아에서 해파리로 기재되었지만, 지금은 보통 엽상체의 묻힌 부착기나 미생물 군체로 해석되므로 스스로 먹이를 먹었는지조차 알 수 없다."
+  },
+  {
+   "k": "A tiny fossil, little more than a millimetre across, described in 2015 from the roughly 600-million-year-old Doushantuo Formation of Guizhou, China. It is made of three hollow tubes on a shared base, the largest opening into a wide funnel, and its cell-level preservation looks like a sponge's. If it was a sponge it filtered food from the water, but its identity is still debated.",
+   "v": "폭이 1밀리미터를 겨우 넘는 아주 작은 화석으로, 2015년 중국 구이저우성의 약 6억 년 전 더우산퉈층에서 기재되었다. 하나의 공통 기부 위에 속 빈 관 세 개가 붙어 있고, 가장 큰 관은 넓은 깔때기로 열려 있으며, 세포 수준으로 보존된 구조가 해면동물과 닮았다. 해면이었다면 물속에서 먹이를 걸러 먹었겠지만, 정체는 아직 논쟁 중이다."
+  },
+  {
+   "k": "An archaeocyath, one of the reef-building sponges of the early Cambrian, known from the archaeocyath limestones of South Australia. Its cylindrical-conical cup had two porous walls, with pores in neat vertical rows, joined by porous radial partitions, and it could grow alone or bud into small branching clumps. The genus was named in 1910 by Griffith Taylor, later a geologist on Scott's Antarctic expedition. Like other archaeocyaths it pumped seawater through its pores to filter out food.",
+   "v": "캄브리아기 전기에 암초를 쌓은 해면동물인 고배류의 하나로, 남오스트레일리아의 고배류 석회암에서 알려져 있다. 원통-원뿔형 컵은 두 겹의 구멍 뚫린 벽으로 이루어졌는데, 구멍은 세로로 가지런히 줄지어 있었고 두 벽은 구멍 뚫린 방사상 격벽으로 연결되어 있었다. 단독으로 자라거나 출아해 작은 가지 모양 무리를 이루기도 했다. 이 속은 1910년 그리피스 테일러가 명명했는데, 그는 훗날 스콧의 남극 탐험대에서 지질학자로 활동했다. 다른 고배류처럼 구멍으로 바닷물을 뿜어 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "A cup-shaped sponge from late Cambrian reef limestone of the Ellsworth Mountains, Antarctica, described in 1984 as an archaeocyath. For decades it was cited as the last surviving archaeocyath, far younger than all the others. A 2022 restudy of the original specimens found it was instead a lithistid demosponge, which suggests archaeocyaths had already died out by the middle Cambrian. It grew as slender double-walled cups, alone or budding into small clusters.",
+   "v": "남극 엘스워스산맥의 캄브리아기 후기 암초 석회암에서 나온 컵 모양 해면으로, 1984년 고배류로 기재되었다. 수십 년 동안 다른 모든 고배류보다 훨씬 늦게까지 살아남은 마지막 고배류로 인용되었다. 그러나 2022년 원래 표본을 재연구한 결과 고배류가 아니라 석질해면류에 속하는 보통해면으로 밝혀졌으며, 이는 고배류가 캄브리아기 중기에 이미 사라졌음을 시사한다. 가느다란 이중벽 컵 모양으로 단독으로 자라거나 출아해 작은 무리를 이루었다."
+  },
+  {
+   "k": "One of the oldest coral-like cnidarians with a hard skeleton, found in Cambrian rocks of western New South Wales, Australia, and North Greenland, about 510 million years old. Its colonies were clusters of cup-shaped corallites that budded from one another. Each cup had internal septa and was closed by a lid whose inner face also bore septa, something no living coral has. Its relationship to later corals is still debated.",
+   "v": "단단한 골격을 지닌 가장 오래된 산호 같은 자포동물 중 하나로, 약 5억 1000만 년 전 오스트레일리아 뉴사우스웨일스주 서부와 그린란드 북부의 캄브리아기 암석에서 발견된다. 군체는 서로 출아한 컵 모양 산호개체의 무리였다. 각 컵에는 안쪽에 격벽이 있었고, 안쪽 면에도 격벽이 있는 뚜껑으로 닫혀 있었는데, 이는 현생 산호에는 없는 특징이다. 후대 산호와의 관계는 아직 논쟁 중이다."
+  },
+  {
+   "k": "A branching sponge up to about 8 cm tall from the roughly 505-million-year-old Burgess Shale of British Columbia, named after nearby Mount Vaux. Each branch is a slender, almost cylindrical tube with an open central cavity. Its skeleton was a net of flexible spongin fibres with no mineral spicules, like a modern bath sponge, making it one of the earliest known sponges of this kind. It was rare in Walcott's famous quarry but more common at other Burgess Shale sites.",
+   "v": "약 5억 500만 년 전 캐나다 브리티시컬럼비아주 버제스 셰일에서 나온, 높이 최대 약 8cm의 가지 친 해면으로, 근처의 복스산에서 이름을 땄다. 각 가지는 가운데가 뚫린 가늘고 거의 원통형인 관이다. 골격은 광물질 골편 없이 유연한 해면질 섬유로 된 그물이어서 현대의 목욕해면과 비슷했으며, 이런 종류로는 가장 이른 해면 중 하나다. 월컷의 유명한 채석장에서는 드물었지만 다른 버제스 셰일 산지에서는 더 흔했다."
+  },
+  {
+   "k": "A branching sponge described in 2021 from the roughly 518-million-year-old Chengjiang Biota of Yunnan, China, about 13 million years older than the Burgess Shale Vauxia. Its name means 'before gracilenta': it has the same two-layered net skeleton without spicules, but grew from a fan-like holdfast and had branches of very different sizes. Its discovery showed that sponges with organic skeletons had already diversified in the early Cambrian. Its full adult size is not well documented.",
+   "v": "2021년 중국 윈난성의 약 5억 1800만 년 전 청장 생물군에서 기재된 가지 친 해면으로, 버제스 셰일의 바욱시아보다 약 1300만 년 더 오래되었다. 이름은 '그라킬렌타 이전'이라는 뜻이다. 골편 없이 두 층으로 된 그물 골격은 같지만, 부채 모양 부착기에서 자라났고 가지의 크기가 서로 크게 달랐다. 이 발견은 유기질 골격을 지닌 해면이 캄브리아기 전기에 이미 다양해졌음을 보여 주었다. 다 자란 크기는 잘 기록되어 있지 않다."
+  },
+  {
+   "k": "A long, thin, tube-shaped sponge from the early Cambrian Parker Slate of Vermont, about 514 million years old, and the type species of its genus. Specimens reach 7 to 12 cm long but are often only a few millimetres wide. Its wall was stiffened by long, parallel needle-like silica spicules running almost the full length of the body, over a layer of tiny crosswise spicules, and some fossils show a feathery spray of spicules at the top. Charles Walcott described it in 1886, and so far it is known only from that one Vermont locality.",
+   "v": "약 5억 1400만 년 전 미국 버몬트주의 캄브리아기 전기 파커 점판암에서 나온 길고 가는 관 모양 해면으로, 이 속의 모식종이다. 표본은 길이 7~12cm에 이르지만 폭은 몇 밀리미터에 불과한 경우가 많다. 몸벽은 몸 거의 전체 길이로 뻗은 길고 평행한 바늘 모양 규질 골편으로 보강되었고, 그 아래에는 가로로 놓인 아주 작은 골편 층이 있었다. 일부 화석에서는 꼭대기에 깃털처럼 퍼진 골편 다발이 보인다. 1886년 찰스 월컷이 기재했으며, 지금까지 버몬트의 그 한 산지에서만 알려져 있다."
+  },
+  {
+   "k": "A small sponge from the Burgess Shale of British Columbia, about 505 million years old: a low cone about 2 cm across made of fine radiating spicules, ringed by long, stiff spicules that bring its total width to about 5 cm. It was not attached but sat loose on the mud, its spicule fringe probably keeping it above the sea floor while it filtered food from the water. It belongs to an early branch of the demosponges, the group that includes modern bath sponges.",
+   "v": "약 5억 500만 년 전 브리티시컬럼비아주 버제스 셰일에서 나온 작은 해면이다. 가는 골편이 방사상으로 뻗은 지름 약 2cm의 낮은 원뿔 모양이며, 그 둘레를 길고 뻣뻣한 골편이 고리처럼 둘러싸 전체 폭이 약 5cm에 이른다. 바닥에 붙어 있지 않고 진흙 위에 느슨하게 놓여 있었으며, 골편 술이 몸을 해저 위로 받쳐 주는 동안 물속에서 먹이를 걸러 먹었을 것이다. 현대의 목욕해면을 포함하는 보통해면류의 초기 계통에 속한다."
+  },
+  {
+   "k": "A larger relative of Carter's Choia, with a disc up to about 6 cm across, coarser spicules and a ring of stout spicules around its edge. It was first described in 1896 from Little Métis in Quebec as Stephanella hindei, and was later found in Cambrian rocks of Utah and the Burgess Shale, where only a single specimen is known. Like other Choia it lay loose on the sea floor and filtered food from the water.",
+   "v": "카터 초이아 해면의 더 큰 친척으로, 원반 지름이 최대 약 6cm이며 골편이 더 굵고 가장자리에 튼튼한 골편이 고리처럼 둘러져 있다. 1896년 캐나다 퀘벡주 리틀메티스에서 Stephanella hindei라는 이름으로 처음 기재되었고, 이후 유타주의 캄브리아기 암석과 버제스 셰일에서도 발견되었는데, 버제스 셰일에서는 표본이 단 하나뿐이다. 다른 초이아처럼 해저에 느슨하게 놓인 채 물속에서 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "A slender, soft-bodied polyp a few centimetres long from the roughly 520-million-year-old Chengjiang biota of Yunnan, China, with a ring of eight long tentacles around its mouth. Described in 2022, it is thought to be an early relative of sea anemones and corals, and probably anchored itself by burrowing into the mud. One fossil holds a lingulid brachiopod in its tentacles, the oldest direct evidence of an animal catching large prey.",
+   "v": "중국 윈난성의 약 5억 2000만 년 전 청장 생물군에서 나온 길이 몇 센티미터의 가느다란 연체성 폴립으로, 입 둘레에 긴 촉수 여덟 개가 고리처럼 나 있다. 2022년에 기재되었으며 말미잘과 산호의 초기 친척으로 여겨지고, 아마 진흙 속에 몸을 파묻어 고정했을 것이다. 한 화석은 촉수로 링굴라류 완족동물을 붙잡고 있는데, 이는 동물이 큰 먹이를 잡은 가장 오래된 직접 증거다."
+  },
+  {
+   "k": "The type species of Protospongia, named in 1864 from roughly 505-million-year-old Middle Cambrian rocks at St David's in Wales. It was a glass sponge whose thin wall was held up by a single layer of cross-shaped silica spicules in at least three sizes, laid out in a square lattice like a window frame. It is known only from small fragments, so its full shape and size are uncertain.",
+   "v": "프로토스폰기아의 모식종으로, 1864년 웨일스 세인트데이비즈의 약 5억 500만 년 전 캄브리아기 중기 암석에서 명명되었다. 유리해면으로, 얇은 몸벽은 크기가 적어도 세 가지인 십자 모양 규질 골편 한 층이 창틀처럼 정사각형 격자로 배열되어 받쳐 주었다. 작은 조각으로만 알려져 있어 전체 모양과 크기는 불확실하다."
+  },
+  {
+   "k": "A Middle Cambrian glass sponge, about 505 million years old, first named from Wales and later found in the Burgess Shale of Canada and the Marjum Formation of Utah. Its globular to conical, thin-walled body was a square mesh of cross-shaped spicules in up to six sizes, some with rays 1.5 cm long. Fossils are mostly fragments and loose spicules up to about 5 cm across, so its full size is unknown. It was rare in the Burgess Shale, making up about a quarter of one percent of the fossils in the Walcott Quarry.",
+   "v": "약 5억 500만 년 전 캄브리아기 중기의 유리해면으로, 웨일스에서 처음 명명된 뒤 캐나다 버제스 셰일과 유타주 마점층에서도 발견되었다. 공 모양에서 원뿔 모양에 이르는 얇은 벽의 몸은 최대 여섯 가지 크기의 십자 모양 골편이 이룬 정사각형 그물이었으며, 일부 골편은 가지 길이가 1.5cm에 달했다. 화석은 대부분 조각과 흩어진 골편으로, 크기가 최대 약 5cm여서 전체 크기는 알 수 없다. 버제스 셰일에서는 드물어 월컷 채석장 화석의 약 0.25%를 차지할 뿐이다."
+  },
+  {
+   "k": "An Early Ordovician glass sponge from the Klabava Formation of the Prague Basin in Bohemia, Czech Republic, described by Philipp Počta in 1898. It was named from a small piece of wall holding one large cross-shaped spicule with slender rays 1.4 to 2.2 mm long, and it is otherwise known only from scattered fragments in volcanic-ash shales. Its body shape and size are unknown; here it is shown as a small sac with a coarse spicule mesh.",
+   "v": "체코 보헤미아 프라하 분지의 클라바바층에서 나온 오르도비스기 전기 유리해면으로, 1898년 필리프 포치타가 기재했다. 가지 길이 1.4~2.2mm의 가느다란 십자 모양 대형 골편 하나가 박힌 작은 몸벽 조각을 근거로 명명되었으며, 그 밖에는 화산재 셰일 속에 흩어진 조각으로만 알려져 있다. 몸의 모양과 크기는 알 수 없으며, 여기서는 성긴 골편 그물을 지닌 작은 주머니 모양으로 나타냈다."
+  },
+  {
+   "k": "A vase- or flask-shaped glass sponge from the Early Devonian Hunsrück Slate of Bundenbach, Germany, about 407 million years old, often preserved in pyrite. Its wall was a rectangular weave of bundled needle-like spicules with many tiny six-rayed spicules between them, a step between the Protospongia-type and later glass-sponge skeletons. Because of this it has been placed in the genus Cyathophycus since 1996. Specimens are a few centimetres tall.",
+   "v": "약 4억 700만 년 전 독일 분덴바흐의 데본기 전기 훈스뤼크 점판암에서 나온 꽃병 또는 플라스크 모양 유리해면으로, 흔히 황철석으로 치환되어 보존된다. 몸벽은 다발로 묶인 바늘 모양 골편이 직사각형으로 엮이고 그 사이에 육방형의 아주 작은 골편이 많이 끼어 있는 구조로, 프로토스폰기아형 골격과 후대 유리해면 골격의 중간 단계에 해당한다. 이 때문에 1996년부터는 키아토피쿠스(Cyathophycus) 속으로 분류된다. 표본의 높이는 몇 센티미터다."
+  },
+  {
+   "k": "One of the oldest undisputed corals, from early Cambrian (Botoman) reef rocks of the Moorowie Formation in the Flinders Ranges, South Australia. Its colonies were made of tightly packed, many-sided tubes (corallites) sharing their walls, with internal floors (tabulae) and short spines, and grew in mushroom- or pagoda-like shapes among archaeocyath sponges and microbial reef. It was first compared with tabulate corals, but whether it is related to them is still debated.",
+   "v": "가장 오래된 것으로 확실히 인정되는 산호 중 하나로, 남오스트레일리아 플린더스산맥 무로위층의 캄브리아기 전기(보토미절) 암초 암석에서 나왔다. 군체는 벽을 공유하며 빽빽이 들어찬 다각형 관(산호개체)으로 이루어졌고, 안쪽에는 바닥판(평판)과 짧은 가시가 있었으며, 고배류 해면 및 미생물 암초 사이에서 버섯이나 탑 모양으로 자랐다. 처음에는 판상산호와 비교되었지만, 실제로 판상산호와 관련이 있는지는 아직 논쟁 중이다."
+  },
+  {
+   "k": "A small, jellyfish-like animal, only a centimetre or two across, known from a single fossil from the roughly 520-million-year-old Chengjiang biota near Haikou, Yunnan, China. First described in 2007 as a comb jelly because of the dark strips on its bell, it was reinterpreted in 2016 as one of the earliest swimming jellyfish, with 16 lobes around the bell margin, 16 sense organs (rhopalia), 16 pairs of long tentacles and a central mouth tube. If it was a jellyfish it was a drifting predator, though its true identity is still debated.",
+   "v": "지름이 1~2센티미터에 불과한 작은 해파리 같은 동물로, 중국 윈난성 하이커우 근처의 약 5억 2000만 년 전 청장 생물군에서 나온 화석 하나로만 알려져 있다. 2007년 갓에 있는 검은 띠 때문에 빗해파리로 처음 기재되었으나, 2016년 갓 가장자리의 16개 엽, 16개의 감각기관(감각곤봉), 16쌍의 긴 촉수, 가운데 입관을 지닌 가장 이른 헤엄치는 해파리 중 하나로 재해석되었다. 해파리였다면 떠다니는 포식자였겠지만, 진짜 정체는 아직 논쟁 중이다."
+  },
+  {
+   "k": "A demosponge from the roughly 505-million-year-old Burgess Shale of British Columbia, and the type species of its genus. It grew as a broad, thin-walled cup shaped like a cupped hand, up to about 15 cm across, attached to the sea floor at its base. Its wall was a dense net of needle-like spicules arranged in radial tracts, which in this species stick out a few millimetres past the edge. Hazelia is one of the most common sponges in Walcott's quarry, and this species has also been found in the Marjum Formation of Utah.",
+   "v": "약 5억 500만 년 전 브리티시컬럼비아주 버제스 셰일에서 나온 보통해면으로, 이 속의 모식종이다. 오므린 손바닥 모양의 넓고 얇은 벽의 컵 모양으로 자랐으며, 지름이 최대 약 15cm였고 아래쪽 밑동으로 해저에 붙어 있었다. 몸벽은 방사상 다발로 배열된 바늘 모양 골편이 촘촘한 그물을 이루었으며, 이 종에서는 골편이 가장자리 밖으로 몇 밀리미터 삐져나온다. 하젤리아는 월컷 채석장에서 가장 흔한 해면 중 하나이며, 이 종은 유타주 마점층에서도 발견되었다."
+  },
+  {
+   "k": "A wide, cup-shaped species of Hazelia from the roughly 505-million-year-old Burgess Shale of British Columbia, described by the sponge specialist J. Keith Rigby in 1986. Like its relatives it had a thin wall of tightly packed, needle-like spicules in radial tracts, pierced by small canals that carried water through the sponge. It lived attached to the sea floor at its base, filtering food particles from the water.",
+   "v": "약 5억 500만 년 전 브리티시컬럼비아주 버제스 셰일에서 나온 넓은 컵 모양의 하젤리아 종으로, 1986년 해면 전문가 J. 키스 리그비가 기재했다. 친척들처럼 방사상 다발을 이룬 바늘 모양 골편이 빽빽이 들어찬 얇은 벽을 지녔고, 벽에는 해면 속으로 물을 나르는 작은 수로가 뚫려 있었다. 밑동으로 해저에 붙어 살며 물속의 먹이 입자를 걸러 먹었다."
+  },
+  {
+   "k": "A thin-walled glass sponge from the Middle Cambrian, about 505 million years old, found in the Burgess Shale of British Columbia and the Wheeler and Marjum formations of Utah. Its cup-shaped to conical body was a net of cross-shaped silica spicules set diagonally to its length, which gives the genus its name. This is the larger, more elongate species of the genus, reaching about 12 cm, and it was anchored in the mud by a tuft of long root spicules.",
+   "v": "약 5억 500만 년 전 캄브리아기 중기의 얇은 벽을 지닌 유리해면으로, 브리티시컬럼비아주 버제스 셰일과 유타주의 휠러층, 마점층에서 발견된다. 컵 모양에서 원뿔 모양에 이르는 몸은 몸의 길이 방향에 대해 비스듬히 놓인 십자 모양 규질 골편의 그물로 이루어졌는데, 이 속의 이름도 여기서 왔다. 속 안에서 더 크고 길쭉한 종으로 약 12cm까지 자랐으며, 긴 뿌리 골편 다발로 진흙에 고정되어 있었다."
+  },
+  {
+   "k": "A small glass sponge from the early Cambrian of South China, described in 1993 among some of the oldest complete sponge fossils from the Yangtze Platform. Its name refers to a wheat grain, and its thin wall was a lattice of cross-shaped silica spicules. Some Chengjiang fossils once placed in this species have since been moved to a separate genus, Pseudotriticispongia, because their skeleton is built quite differently.",
+   "v": "중국 남부의 캄브리아기 전기에서 나온 작은 유리해면으로, 1993년 양쯔 지대에서 나온 가장 오래된 완전한 해면 화석들과 함께 기재되었다. 이름은 밀알을 뜻하며, 얇은 몸벽은 십자 모양 규질 골편의 격자였다. 한때 이 종으로 분류되었던 청장의 일부 화석은 골격 구조가 상당히 달라 이후 별도의 속인 프세우도트리티키스폰기아(Pseudotriticispongia)로 옮겨졌다."
+  },
+  {
+   "k": "A small sponge from the roughly 505-million-year-old Burgess Shale of British Columbia, named after Takakkaw Falls in nearby Yoho National Park. It was an elongate cone up to about 4 cm tall, rising from a pointed root, with four columns of unusual blade-like spicules that formed eight stiff fins running along its length. It was scarce at most sites but fairly common in the Walcott Quarry, where it makes up about 2.6 percent of the fossils.",
+   "v": "약 5억 500만 년 전 브리티시컬럼비아주 버제스 셰일에서 나온 작은 해면으로, 근처 요호 국립공원의 타카카우 폭포에서 이름을 땄다. 뾰족한 뿌리에서 솟아오른 높이 최대 약 4cm의 길쭉한 원뿔 모양이었으며, 독특한 칼날 모양 골편이 네 줄로 늘어서 몸 길이를 따라 뻣뻣한 지느러미 여덟 개를 이루었다. 대부분의 산지에서는 드물었지만 월컷 채석장에서는 꽤 흔해 화석의 약 2.6%를 차지한다."
+  },
+  {
+   "k": "An irregular archaeocyath, one of the sponges that built the first animal reefs together with microbial crusts in the early Cambrian. Its crooked, lumpy cups varied greatly in shape and budded from their sides into branching clumps. The space between its two porous walls was filled with a tangled network of thin porous plates rather than neat straight partitions. Like other archaeocyaths it pumped seawater through its pores to filter out food.",
+   "v": "불규칙한 형태의 고배류로, 캄브리아기 전기에 미생물 피막과 함께 최초의 동물 암초를 쌓은 해면의 하나다. 구불구불하고 울퉁불퉁한 컵은 모양이 매우 다양했고, 옆면에서 출아해 가지 친 무리를 이루었다. 두 겹의 구멍 뚫린 벽 사이 공간은 가지런한 곧은 격벽 대신 얇은 다공판이 얽힌 그물로 채워져 있었다. 다른 고배류처럼 구멍으로 바닷물을 뿜어 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "A regular archaeocyath, one of the reef-building sponges of the early Cambrian. Its conical cup had porous outer and inner walls joined by straight radial partitions and by stacked porous horizontal plates, which divided the space between the walls into a lattice of small chambers. Archaeocyaths built the first animal reefs together with microbes and almost vanished soon after the early Cambrian. Like the others it pumped seawater through its pores to filter out food.",
+   "v": "규칙적인 형태의 고배류로, 캄브리아기 전기에 암초를 쌓은 해면의 하나다. 원뿔형 컵은 구멍 뚫린 바깥벽과 안벽이 곧은 방사상 격벽과 층층이 쌓인 다공성 수평판으로 연결되어, 두 벽 사이 공간이 작은 방들의 격자로 나뉘어 있었다. 고배류는 미생물과 함께 최초의 동물 암초를 쌓았지만 캄브리아기 전기 직후 거의 자취를 감췄다. 다른 고배류처럼 구멍으로 바닷물을 뿜어 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "An archaeocyath from early Cambrian rocks of Nevada and California. It grew as a tall, slender, horn-shaped cup with two porous walls joined by many closely spaced radial partitions. Archaeocyaths like it built the first animal reefs together with microbes. It pumped seawater through its pores to filter out food.",
+   "v": "미국 네바다주와 캘리포니아주의 캄브리아기 전기 암석에서 나온 고배류다. 키가 크고 가느다란 뿔 모양 컵으로 자랐으며, 두 겹의 구멍 뚫린 벽이 촘촘하게 들어선 많은 방사상 격벽으로 연결되어 있었다. 이와 같은 고배류는 미생물과 함께 최초의 동물 암초를 쌓았다. 구멍으로 바닷물을 뿜어 먹이를 걸러 먹었다."
+  },
+  {
+   "k": "A soft-bodied, anemone-like polyp from the roughly 518-million-year-old Chengjiang biota of Yunnan, China. It was anchored to the seafloor by a bowl-shaped basal disc and carried a crown of eighteen long tentacles fringed with fine pinnules, which it probably used to sieve tiny plankton from the water. Long regarded as an early relative of sea anemones, it has more recently been argued to be a sessile relative of comb jellies instead.",
+   "v": "중국 윈난성의 약 5억 1800만 년 전 청장 생물군에서 나온 말미잘 같은 연체성 폴립이다. 사발 모양의 기저 원반으로 해저에 고정되어 있었고, 가는 우상지가 술처럼 달린 긴 촉수 열여덟 개가 왕관처럼 둘러져 있어 이것으로 물속의 아주 작은 플랑크톤을 걸러 먹었을 것이다. 오랫동안 말미잘의 초기 친척으로 여겨졌으나, 최근에는 고착 생활을 하는 빗해파리의 친척이라는 주장도 나왔다."
+  },
+  {
+   "k": "A tiny colonial animal from middle Cambrian reef rocks of the Zhangxia Formation in Shandong, China, about 500 million years old. Each individual built an eight-sided, cone-shaped calcareous cup about a centimetre tall, with a pair of septa projecting inward from each corner, and new cups budded from the walls and rims of older ones to form small clusters. Described in 2011, it was proposed as an early stem-group cnidarian, and its eight-fold symmetry has been compared with that of octocorals.",
+   "v": "약 5억 년 전 중국 산둥성 장샤층의 캄브리아기 중기 암초 암석에서 나온 아주 작은 군체 동물이다. 각 개체는 높이 약 1센티미터의 팔각형 원뿔 모양 석회질 컵을 만들었고, 모서리마다 한 쌍의 격벽이 안쪽으로 돌출해 있었으며, 새 컵이 오래된 컵의 벽과 가장자리에서 출아해 작은 무리를 이루었다. 2011년에 기재되어 초기 줄기군 자포동물로 제안되었으며, 그 8방사 대칭은 팔방산호류와 비교되어 왔다."
+  },
+  {
+   "k": "A relative of Cambroctoconus orientalis from middle Cambrian limestones at Sauk Tanga in the Alay Range of Kyrgyzstan, roughly 505 million years old, described in 2014. Its horn-shaped calcareous cup, about 7 mm tall, was octagonal in cross-section with broad longitudinal ridges and a deep interior with few septa or only short septal spines. Like the rest of its genus it is thought to be an early cnidarian, but its exact relationships are uncertain.",
+   "v": "캄브로크토코누스 오리엔탈리스의 친척으로, 키르기스스탄 알라이산맥 사우크탄가의 약 5억 500만 년 전 캄브리아기 중기 석회암에서 나왔으며 2014년에 기재되었다. 높이 약 7mm의 뿔 모양 석회질 컵은 단면이 팔각형이고 넓은 세로 융기가 있었으며, 깊은 내부에는 격벽이 적거나 짧은 격벽 가시만 있었다. 같은 속의 다른 종처럼 초기 자포동물로 여겨지지만, 정확한 계통 관계는 불확실하다."
+  },
+  {
+   "k": "A giant straight-shelled endocerid nautiloid from the Late Ordovician of New York, the longest shelled cephalopod known from fossils. Its largest known shell is about 3 m long as preserved and has been estimated at roughly 5.7 m complete, though a second-hand report of a 9 m shell has never been verified. Its slender, ringed shell had a huge siphuncle along the belly, filled with cone-shaped deposits that probably helped keep it level in the water. It was probably a slow ambush predator of trilobites and other animals near the sea floor.",
+   "v": "미국 뉴욕주의 오르도비스기 후기에서 나온 거대한 곧은 껍데기의 내각류 앵무조개로, 화석으로 알려진 껍데기 있는 두족류 가운데 가장 길다. 알려진 가장 큰 껍데기는 보존된 길이가 약 3m이며 완전한 상태로는 약 5.7m로 추정되지만, 9m짜리 껍데기가 있다는 간접 보고는 확인된 적이 없다. 가늘고 고리 무늬가 있는 껍데기에는 배 쪽을 따라 거대한 연실세관이 지나갔고, 그 속을 채운 원뿔 모양 침전물이 물속에서 몸을 수평으로 유지하는 데 도움이 되었을 것이다. 아마 해저 근처에서 삼엽충 등을 노리는 느린 매복 포식자였을 것이다."
+  },
+  {
+   "k": "The classic chain coral of Silurian seas, first named by Linnaeus and best known from Gotland, Sweden. Its colonies were built of walls one tube thick, made of oval corallites about 2 mm across, which joined and branched to enclose open windows of very variable size, often long and arranged in rough parallel rows. Colonies grew to tens of centimetres across and were common in Silurian reefs and coral beds.",
+   "v": "실루리아기 바다의 대표적인 사슬산호로, 린네가 처음 명명했으며 스웨덴 고틀란드섬의 것이 가장 잘 알려져 있다. 군체는 지름 약 2mm의 타원형 산호개체가 한 줄로 이어진 벽으로 이루어졌고, 이 벽들이 서로 만나고 갈라지며 크기가 제각각인 빈 창을 둘러쌌다. 창은 흔히 길쭉하고 대략 평행한 줄을 이루었다. 군체는 지름 수십 센티미터까지 자랐으며, 실루리아기 암초와 산호층에 흔했다."
+  },
+  {
+   "k": "A small chain coral described in 1966 from earliest Silurian rocks of Estonia, known from drill cores. Its small colonies had rounded corallites about 1.5 mm across, a little smaller than those of the common chain coral, enclosing small, rounded windows. The scientist who described it later treated it as the same species as Halysites catenularia, so it may simply be an early form of that coral.",
+   "v": "1966년 에스토니아의 실루리아기 최초기 암석에서 기재된 작은 사슬산호로, 시추 코어를 통해 알려졌다. 작은 군체는 흔한 사슬산호보다 조금 작은 지름 약 1.5mm의 둥근 산호개체로 이루어졌고, 작고 둥근 창을 둘러쌌다. 이 종을 기재한 학자는 나중에 이를 할리시테스 카테눌라리아와 같은 종으로 보았으므로, 단순히 그 산호의 초기 형태일 수도 있다."
+  },
+  {
+   "k": "The original honeycomb coral, first described from Silurian rocks of Gotland, Sweden. Its domed or lumpy colonies were made of thousands of thin-walled, many-sided tubes about 2-3 mm wide, packed together like the cells of a honeycomb and linked by tiny pores in their walls. It was a common reef builder in Silurian seas from Estonia and Scandinavia to Britain.",
+   "v": "스웨덴 고틀란드섬의 실루리아기 암석에서 처음 기재된 원조 벌집산호다. 돔 모양이나 울퉁불퉁한 군체는 폭 약 2~3mm의 얇은 벽을 가진 다각형 관 수천 개가 벌집의 방처럼 빽빽이 들어차 이루어졌고, 관들은 벽에 난 작은 구멍으로 서로 연결되어 있었다. 에스토니아와 스칸디나비아에서 영국에 이르는 실루리아기 바다에서 흔한 암초 형성자였다."
+  },
+  {
+   "k": "A solitary horn coral from Late Ordovician limestones of New York, and one of the early rugose corals. Each polyp lived alone in a curved, cone-shaped skeleton a few centimetres long and about 1.5-2 cm wide at the top, whose deep cup was lined with alternating long and short ridges called septa. It had no holdfast and probably lay on the soft sea floor with its tip in the mud, catching small prey with its tentacles.",
+   "v": "미국 뉴욕주의 오르도비스기 후기 석회암에서 나온 단체 뿔산호로, 초기 사방산호 중 하나다. 각 폴립은 길이 몇 센티미터, 윗부분 폭 약 1.5~2cm의 휘어진 원뿔 모양 골격 속에 홀로 살았으며, 깊은 컵 안쪽에는 격벽이라 불리는 길고 짧은 융기가 번갈아 늘어서 있었다. 부착기가 없어 아마 끝을 진흙에 묻은 채 부드러운 해저에 누워 촉수로 작은 먹이를 잡았을 것이다."
+  },
+  {
+   "k": "A big, smooth-shelled asaphid trilobite from the Late Ordovician seas that covered what is now Ohio, Indiana and Kentucky, recognised by its broad semicircular head and tail shields and backswept cheek spines. Complete specimens reach at least 53 cm. Isotelus, best known from this species, has been Ohio's official state fossil since 1985.",
+   "v": "오늘날의 오하이오주, 인디애나주, 켄터키주를 덮었던 오르도비스기 후기 바다에 살던 크고 매끈한 껍데기의 아사푸스류 삼엽충으로, 넓은 반원형 머리 방패와 꼬리 방패, 뒤로 젖혀진 볼 가시로 알아볼 수 있다. 완전한 표본은 적어도 53cm에 이른다. 이 종으로 가장 잘 알려진 이소텔루스는 1985년부터 오하이오주의 공식 주 화석이다."
+  },
+  {
+   "k": "The largest complete trilobite ever found: the holotype, from Late Ordovician rocks near Churchill in northern Manitoba, is 72 cm long. Its smooth, elongate oval shield lacks cheek spines. It lived in warm, shallow tropical seas and probably ploughed through the seafloor sediment hunting and scavenging soft-bodied prey.",
+   "v": "지금까지 발견된 가장 큰 완전한 삼엽충으로, 캐나다 매니토바주 북부 처칠 근처의 오르도비스기 후기 암석에서 나온 완모식표본의 길이가 72cm다. 매끈하고 길쭉한 타원형 껍데기에는 볼 가시가 없다. 따뜻하고 얕은 열대 바다에 살았으며, 아마 해저 퇴적물을 갈아엎으며 몸이 연한 먹이를 사냥하거나 사체를 뒤졌을 것이다."
+  },
+  {
+   "k": "The type species of Isotelus, described in 1824 from the Trenton rocks of New York and found across much of Middle and Late Ordovician North America. It is slimmer and flatter than Isotelus maximus, with more triangular head and tail shields, and adults have no cheek spines. Most specimens are 20-25 cm long, though some grow to nearly twice that.",
+   "v": "이소텔루스의 모식종으로, 1824년 미국 뉴욕주의 트렌턴 암석에서 기재되었으며 오르도비스기 중기와 후기 북아메리카 곳곳에서 발견된다. 이소텔루스 막시무스보다 더 날씬하고 납작하며, 머리 방패와 꼬리 방패가 더 삼각형에 가깝고, 성체에는 볼 가시가 없다. 대부분의 표본은 길이 20~25cm이지만, 그 두 배 가까이 자라는 개체도 있다."
+  },
+  {
+   "k": "A small blind trilobite, usually 2-4 cm long, from Ordovician mudstones of Wales and the Welsh Borderland, and the type species of its genus. Its swollen head is ringed by a broad fringe pierced by concentric rows of pits, and long spines trail behind it. Nobody is sure what the fringe was for: ideas include sifting food from the sediment, sensing the water, and keeping the animal from sinking into soft mud.",
+   "v": "웨일스와 웨일스 접경 지역의 오르도비스기 이암에서 나온 보통 길이 2~4cm의 작은 눈먼 삼엽충으로, 이 속의 모식종이다. 부푼 머리 둘레에는 동심원 줄로 늘어선 구멍이 뚫린 넓은 테두리가 있고, 뒤쪽으로 긴 가시가 뻗어 있다. 이 테두리의 용도는 아무도 확실히 모른다. 퇴적물에서 먹이를 걸러 내거나, 물의 움직임을 감지하거나, 부드러운 진흙에 가라앉지 않게 하는 데 쓰였다는 견해가 있다."
+  },
+  {
+   "k": "A small fringed trilobite from the Late Ordovician of Scandinavia, especially Norway and Sweden. It is now usually placed in the genus Tretaspis, of which it is the type species. A raised ridge splits its pitted fringe into outer and inner bands; it has small eye bumps but probably could not see, and its very long, thin cheek spines inspired the name 'seticornis', meaning 'bristle-horned'.",
+   "v": "스칸디나비아, 특히 노르웨이와 스웨덴의 오르도비스기 후기에서 나온 테두리가 있는 작은 삼엽충이다. 지금은 보통 트레타스피스(Tretaspis) 속으로 분류되며, 그 속의 모식종이다. 솟아오른 융기가 구멍 뚫린 테두리를 바깥 띠와 안쪽 띠로 나누며, 작은 눈 돌기가 있지만 아마 앞을 보지 못했을 것이다. 매우 길고 가는 볼 가시에서 '강모 뿔'을 뜻하는 '세티코르니스'라는 이름이 붙었다."
+  },
+  {
+   "k": "A North Pacific baleen whale up to about 14 m long that feeds mostly on the seafloor: it rolls onto its side, sucks up mouthfuls of sediment and strains out amphipods and other small invertebrates through its short, pale baleen. Its mottled grey skin is crusted with barnacles and whale lice, and it has a low hump and a row of knuckles instead of a dorsal fin. Eastern Pacific grey whales make one of the longest migrations of any mammal, between Arctic feeding grounds and the warm lagoons of Baja California where their calves are born.",
+   "v": "북태평양에 사는 몸길이 최대 약 14m의 수염고래로, 주로 해저에서 먹이를 먹는다. 몸을 옆으로 눕혀 퇴적물을 한입 가득 빨아들인 뒤 짧고 연한 빛깔의 수염판으로 단각류와 다른 작은 무척추동물을 걸러 낸다. 얼룩덜룩한 회색 피부에는 따개비와 고래이가 덕지덕지 붙어 있고, 등지느러미 대신 낮은 혹과 한 줄로 늘어선 마디 모양 돌기가 있다. 동태평양 귀신고래는 북극의 먹이터와 새끼를 낳는 바하칼리포르니아의 따뜻한 석호 사이를 오가며, 포유류 가운데 가장 긴 이동 중 하나를 한다."
+  },
+  {
+   "k": "The largest known sabre-toothed cat, a heavily built predator of Pleistocene South America estimated at about 220-400 kg, with upper canines up to about 28 cm long. Its massive forelimbs probably pinned large prey while the long, flattened sabres delivered a deep bite to the throat. It disappeared at the end of the Pleistocene, about 10,000 years ago.",
+   "v": "알려진 가장 큰 검치호로, 플라이스토세 남아메리카에 살던 육중한 포식자다. 몸무게는 약 220~400kg으로 추정되며, 위송곳니는 길이가 최대 약 28cm에 이른다. 거대한 앞다리로 큰 먹이를 짓누른 채 길고 납작한 검치로 목을 깊이 물었을 것이다. 약 1만 년 전 플라이스토세 말에 사라졌다."
+  },
+  {
+   "k": "The earliest and smallest species of Smilodon, roughly the size of a jaguar at about 55-100 kg. It lived in North America from about 2.5 million to 500,000 years ago and is generally thought to be the ancestor of the larger S. fatalis and S. populator.",
+   "v": "스밀로돈 가운데 가장 이르고 가장 작은 종으로, 몸무게 약 55~100kg으로 재규어만 했다. 약 250만 년 전부터 50만 년 전까지 북아메리카에 살았으며, 더 큰 S. fatalis와 S. populator의 조상으로 여겨진다."
+  },
+  {
+   "k": "A lion-sized early sabre-toothed cat of Late Miocene Eurasia, best known from the fossil-rich pits of Cerro de los Batallones near Madrid, Spain. Its flattened, serrated upper canines were shorter than those of later sabre-tooths such as Smilodon, and its long legs and back gave it a more lion-like build.",
+   "v": "마이오세 후기 유라시아에 살았던 사자만 한 초기 검치호로, 스페인 마드리드 근처 세로 데 로스 바타요네스의 화석이 풍부한 구덩이에서 나온 표본으로 가장 잘 알려져 있다. 납작하고 톱니가 있는 위송곳니는 스밀로돈 같은 후대 검치호보다 짧았고, 긴 다리와 등 때문에 체형이 더 사자에 가까웠다."
+  },
+  {
+   "k": "One of the largest land mammals of the Ice Age, a ground sloth from South America up to about 6 metres long and weighing several tonnes. It walked on all fours on the outer edges of its feet, with its huge curved claws turned inward, and is thought to have reared up on its hind legs, braced by its thick tail, to pull down branches. Related to today's tree sloths, it died out at the end of the Pleistocene, after people had reached South America.",
+   "v": "빙하기 육상 포유류 가운데 가장 큰 축에 드는 남아메리카의 땅늘보로, 몸길이 최대 약 6미터에 몸무게가 몇 톤에 달했다. 거대한 굽은 발톱을 안쪽으로 접은 채 발의 바깥쪽 가장자리로 네 발 보행을 했으며, 굵은 꼬리로 몸을 받치고 뒷다리로 일어서서 나뭇가지를 끌어당겼을 것으로 보인다. 오늘날 나무늘보의 친척으로, 사람이 남아메리카에 도달한 뒤인 플라이스토세 말에 멸종했다."
+  },
+  {
+   "k": "A giant ground sloth named from Pleistocene fossils found in the Tarija valley of southern Bolivia, in the Andes region. It was smaller than its relative Megatherium americanum of the pampas, but is known from far fewer remains, so its exact size and appearance are less certain.",
+   "v": "볼리비아 남부 안데스 지역의 타리하 계곡에서 발견된 플라이스토세 화석으로 명명된 거대 땅늘보다. 팜파스에 살던 친척 메가테리움 아메리카눔보다 작았지만, 알려진 유해가 훨씬 적어 정확한 크기와 모습은 덜 확실하다."
+  },
+  {
+   "k": "A three-toed sloth of the rainforests of the Guianas and the northern Amazon basin, told apart from the brown-throated sloth by its pale yellowish throat. It spends almost its whole life hanging from branches by its long hooked claws, eating leaves, and its very slow metabolism suits that low-energy diet. Green algae grow in its shaggy coat, and it climbs down about once a week to defecate at the foot of its tree.",
+   "v": "기아나 지역과 아마존 분지 북부의 열대우림에 사는 세발가락나무늘보로, 연한 노르스름한 목으로 갈색목세발가락나무늘보와 구별된다. 일생의 거의 전부를 길고 갈고리 같은 발톱으로 나뭇가지에 매달려 잎을 먹으며 보내고, 매우 느린 물질대사는 이런 저에너지 먹이에 알맞다. 덥수룩한 털에는 녹조류가 자라며, 일주일에 한 번쯤 나무 밑동으로 내려와 배변한다."
+  },
+  {
+   "k": "A mostly nocturnal tree sloth of the rainforests of northern South America that hangs upside down in the canopy and feeds on leaves, shoots and fruit. Despite its name it has three toes on each hind foot; only its hands carry two long claws. Two-toed and three-toed sloths are only distantly related and took up their hanging way of life independently.",
+   "v": "남아메리카 북부 열대우림에 사는 주로 야행성인 나무늘보로, 우림 상층부에 거꾸로 매달려 잎과 새순, 열매를 먹는다. 이름과 달리 뒷발에는 발가락이 세 개씩 있으며, 긴 발톱 두 개가 달린 것은 앞발뿐이다. 두발가락나무늘보와 세발가락나무늘보는 먼 친척일 뿐이며, 매달려 사는 생활 방식을 각자 독립적으로 갖추게 되었다."
+  },
+  {
+   "k": "The oldest known articulated bony fish, about 436 million years old, from early Silurian rocks at Xiushan, Chongqing, China, described in 2026. The near-complete fossil is only about 3 cm long. It already had a bony head and rhombic scales, but also a row of bony plates along its back and spines in front of its fins, features shared with the earliest jawed fishes.",
+   "v": "알려진 가장 오래된 관절이 이어진 경골어류로, 약 4억 3600만 년 전 중국 충칭시 슈산의 실루리아기 전기 암석에서 나왔으며 2026년에 기재되었다. 거의 완전한 화석의 길이는 약 3cm에 불과하다. 이미 뼈로 된 머리와 마름모꼴 비늘을 갖추었지만, 등을 따라 늘어선 뼈판과 지느러미 앞의 가시처럼 가장 이른 턱 있는 물고기들과 공통된 특징도 지녔다."
+  },
+  {
+   "k": "A small jawless, armoured fish (a galeaspid) about 5 cm long, from the early Silurian of Xiushan, Chongqing, China, about 436 million years ago, described in 2022. It lived in shallow coastal seas. Like its relatives it had a broad, flat bony head shield drawn out into horn-like corners, eyes on top of the head and an oval opening on top of the snout. Galeaspids were close relatives of the jawed vertebrates but had no jaws.",
+   "v": "약 4억 3600만 년 전 중국 충칭시 슈산의 실루리아기 전기에서 나온 몸길이 약 5cm의 작은 턱 없는 갑주어(갈레아스피스류)로, 2022년에 기재되었다. 얕은 연안 바다에 살았다. 친척들처럼 모서리가 뿔처럼 뻗은 넓고 납작한 뼈 머리 방패, 머리 위의 눈, 주둥이 윗면의 타원형 구멍을 지녔다. 갈레아스피스류는 턱 있는 척추동물의 가까운 친척이었지만 턱이 없었다."
+  },
+  {
+   "k": "The oldest near-complete bony fish found so far, about 425 million years old, from the late Silurian of Qujing, Yunnan, China, described in 2009. About 33 cm long, it combined a skull like that of early lobe-finned fishes with large spines in front of its fins and bony plates behind its head, features otherwise seen in placoderms. Its body was covered in thick rhombic scales.",
+   "v": "지금까지 발견된 가장 오래된 거의 완전한 경골어류로, 약 4억 2500만 년 전 중국 윈난성 취징의 실루리아기 후기에서 나왔으며 2009년에 기재되었다. 몸길이는 약 33cm로, 초기 육기어류와 같은 두개골에 판피어류에서나 볼 수 있는 지느러미 앞의 큰 가시와 머리 뒤의 뼈판을 함께 갖추었다. 몸은 두꺼운 마름모꼴 비늘로 덮여 있었다."
+  },
+  {
+   "k": "An early bony fish near the base of the lobe-finned fishes, from the late Silurian and Early Devonian (about 418-397 million years ago) of Qujing, Yunnan, China. It is known mainly from skulls, jaws, shoulder girdles and scales. It had a humped snout, a head coated in shiny, pore-covered cosmine, and large spines in front of its pectoral and dorsal fins, features otherwise seen in early jawed fishes.",
+   "v": "육기어류의 기부 근처에 놓이는 초기 경골어류로, 중국 윈난성 취징의 실루리아기 후기와 데본기 전기(약 4억 1800만~3억 9700만 년 전)에서 나왔다. 주로 두개골, 턱, 어깨띠, 비늘로 알려져 있다. 혹처럼 솟은 주둥이, 구멍이 많은 반짝이는 코스민으로 덮인 머리, 가슴지느러미와 등지느러미 앞의 큰 가시를 지녔는데, 이런 특징은 초기 턱 있는 물고기에서나 볼 수 있다."
+  },
+  {
+   "k": "One of the earliest known ray-finned fishes, about 420 million years old, from the late Silurian of Gotland, Sweden, with further finds in Estonia, Latvia and Arctic Russia. It is known only from small rhombic scales with a shiny enamel-like coat and a few bone fragments, so its size and body shape are reconstructed from later relatives.",
+   "v": "가장 이른 조기어류 중 하나로, 약 4억 2000만 년 전 스웨덴 고틀란드섬의 실루리아기 후기에서 나왔으며 에스토니아, 라트비아, 러시아 북극 지역에서도 발견되었다. 법랑질 같은 반짝이는 막으로 덮인 작은 마름모꼴 비늘과 몇몇 뼈 조각으로만 알려져 있어, 크기와 몸 형태는 후대 친척을 바탕으로 복원한다."
+  },
+  {
+   "k": "The earliest known tetrapodomorph, a lobe-finned fish from the lineage that later gave rise to four-legged animals, about 409 million years old, from the Early Devonian of Zhaotong, Yunnan, China, described in 2012. It is known from parts of the skull and lower jaw, which had unusually large notches for the eyes. It was a small predator, under about 20 cm long.",
+   "v": "알려진 가장 이른 사지형류로, 훗날 네발동물을 낳은 계통에 속하는 육기어류다. 약 4억 900만 년 전 중국 윈난성 자오퉁의 데본기 전기에서 나왔으며 2012년에 기재되었다. 두개골과 아래턱 일부로 알려져 있는데, 눈이 들어가는 홈이 유난히 컸다. 몸길이 약 20cm 미만의 작은 포식자였다."
+  },
+  {
+   "k": "The largest bony fish known, a pachycormid of Middle to Late Jurassic seas, first found in the Oxford Clay of England in rocks about 165 million years old. Growth rings in its bones suggest adults of roughly 8-16.5 metres that took decades to reach full size. Its skeleton was largely cartilage, so the fossils are fragmentary, but its huge sieve of gill rakers shows it strained plankton from the water, much like a basking shark.",
+   "v": "알려진 가장 큰 경골어류로, 쥐라기 중기에서 후기 바다에 살았던 파키코르무스류다. 잉글랜드 옥스퍼드 점토층의 약 1억 6500만 년 전 암석에서 처음 발견되었다. 뼈의 성장륜으로 보아 성체는 약 8~16.5미터였고, 다 자라기까지 수십 년이 걸렸던 것으로 보인다. 골격의 대부분이 연골이어서 화석은 조각나 있지만, 거대한 체 같은 아가미갈퀴는 돌묵상어처럼 물속의 플랑크톤을 걸러 먹었음을 보여 준다."
+  },
+  {
+   "k": "A filter-feeding pachycormid fish from the Late Cretaceous chalk sea of southern England, about 95 million years ago. Described in 2010 from a single toothless skull, it had extremely long jaw-supporting bones that swung its mouth open into an enormous gape for straining plankton. Only the skull is known; related species from Colorado and Japan suggest bodies roughly 2-4.5 metres long.",
+   "v": "약 9500만 년 전 잉글랜드 남부의 백악기 후기 백악 바다에 살았던 여과 섭식성 파키코르무스류 물고기다. 2010년 이빨 없는 두개골 하나로 기재되었으며, 턱을 받치는 뼈가 극도로 길어 입을 엄청나게 크게 벌려 플랑크톤을 걸러 먹을 수 있었다. 두개골만 알려져 있으며, 미국 콜로라도주와 일본에서 나온 근연종으로 보아 몸길이는 약 2~4.5미터였을 것이다."
+  },
+  {
+   "k": "A tiny, eel-like vertebrate about 5 cm long, known from thousands of skeletons in the Middle Devonian lake beds of Achanarras, Scotland, about 390 million years ago. Only its cartilage skeleton survives, with no teeth or scales: a small skull with a ring of stiff cirri at the snout, a column of ring-shaped vertebrae and a fin-fringed tail. What kind of fish it was has been debated for more than a century.",
+   "v": "몸길이 약 5cm의 아주 작은 뱀장어 같은 척추동물로, 약 3억 9000만 년 전 스코틀랜드 아카나라스의 데본기 중기 호수 퇴적층에서 수천 개의 골격이 알려져 있다. 이빨도 비늘도 없이 연골 골격만 남아 있는데, 주둥이 끝에 뻣뻣한 촉모가 고리처럼 둘러진 작은 두개골, 고리 모양 척추뼈가 이어진 척주, 지느러미가 둘러진 꼬리로 이루어져 있다. 어떤 물고기였는지는 100년 넘게 논쟁거리다."
+  },
+  {
+   "k": "An older relative of the Scottish Palaeospondylus, described in 2025 from Early Devonian limestone about 400 million years old in western Queensland, Australia, laid down in a shallow sea. Its tiny braincase is preserved uncrushed in three dimensions, showing details of the brain cavity and inner ear, and it is the smallest fossil vertebrate yet described from Queensland. No complete skeleton is known, so its body is reconstructed after its Scottish cousin.",
+   "v": "스코틀랜드 팔레오스폰딜루스보다 더 오래된 친척으로, 2025년 오스트레일리아 퀸즐랜드주 서부의 얕은 바다에서 쌓인 약 4억 년 전 데본기 전기 석회암에서 기재되었다. 아주 작은 뇌머리뼈가 눌리지 않은 채 3차원으로 보존되어 뇌강과 내이의 세부가 드러나며, 퀸즐랜드에서 지금까지 기재된 가장 작은 척추동물 화석이다. 완전한 골격은 알려지지 않아, 몸은 스코틀랜드의 사촌을 본떠 복원했다."
+  },
+  {
+   "k": "A small Carboniferous shark known only from tiny three-cusped teeth, first described in 1933 from marine rocks about 320 million years old in Oklahoma, USA, and at first mistaken for a conodont. It belongs to the Bransonelliformes, early relatives of the eel-like xenacanth sharks, and its teeth suggest a body well under a metre long. Its body is reconstructed here after xenacanths, with a long, low dorsal fin and a tapering tail.",
+   "v": "작은 세 갈래 이빨로만 알려진 석탄기의 작은 상어로, 1933년 미국 오클라호마주의 약 3억 2000만 년 전 해성 암석에서 처음 기재되었으며 처음에는 코노돈트로 오인되었다. 뱀장어 같은 크세나칸투스류 상어의 초기 친척인 브란소넬라목에 속하며, 이빨로 보아 몸길이는 1미터에 훨씬 못 미쳤을 것이다. 여기서는 크세나칸투스류를 본떠 길고 낮은 등지느러미와 끝이 가늘어지는 꼬리를 지닌 모습으로 복원했다."
+  },
+  {
+   "k": "Attack",
+   "v": "공격"
+  },
+  {
+   "k": "Defense",
+   "v": "방어"
+  },
+  {
+   "k": "HP",
+   "v": "체력"
+  },
+  {
+   "k": "Eats it whole (+{0} HP)",
+   "v": "통째로 삼킨다 (체력 +{0})"
+  },
+  {
+   "k": "Expected: the foe is eaten",
+   "v": "예상: 상대를 잡아먹는다"
+  },
+  {
+   "k": "Expected damage dealt: {0} ({1} → {2} HP)",
+   "v": "예상 가하는 피해: {0} (상대 체력 {1} → {2})"
+  },
+  {
+   "k": "Expected damage taken: {0} ({1} → {2} HP)",
+   "v": "예상 받는 피해: {0} (아군 체력 {1} → {2})"
+  },
+  {
+   "k": "An ambush: no counterattack",
+   "v": "매복: 반격 없음"
+  },
+  {
+   "k": "Expected: both are wiped out",
+   "v": "예상: 둘 다 전멸"
+  },
+  {
+   "k": "Expected: the foe is wiped out",
+   "v": "예상: 상대를 전멸시킨다"
+  },
+  {
+   "k": "Expected: your animal dies of the counterattack",
+   "v": "예상: 아군이 반격에 전멸한다"
+  },
+  {
+   "k": "Expected: both survive",
+   "v": "예상: 둘 다 살아남는다"
+  },
+  {
+   "k": "can't reproduce: {0}",
+   "v": "번식 불가: {0}"
   }
  ]
 }

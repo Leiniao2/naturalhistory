@@ -19,6 +19,9 @@ namespace NaturalHistory.UI
         private readonly Label nameLabel, detailLabel;
         private readonly Button reproduceButton, evolveButton, skipButton, restButton;
         private readonly Label restTip;
+        private readonly VisualElement root;
+        private string breedBlocker;   // why reproducing is greyed out (EvolutionManager.ReproduceBlocker), or null
+        private bool breedTipShown;
 
         public OwnedCopy Copy { get; private set; }
 
@@ -30,6 +33,7 @@ namespace NaturalHistory.UI
 
         public UnitPanel(VisualElement root)
         {
+            this.root       = root;
             panel           = root.Q("unit-panel");
             portrait        = root.Q("unit-portrait");
             nameLabel       = root.Q<Label>("unit-name");
@@ -97,6 +101,30 @@ namespace NaturalHistory.UI
                 if (copy != null) Evolution.Focus(copy.species); // the trees follow the selected animal
             }
             if (Copy != null) Refresh();
+            BreedTip();
+        }
+
+        // Why reproducing is greyed out, under the pointer over the button. Polled, because a
+        // disabled button gets no pointer events.
+        private void BreedTip()
+        {
+            bool over = false;
+            Vector2 at = default;
+            if (Copy != null && breedBlocker != null && !reproduceButton.enabledSelf && root.panel != null && !panel.ClassListContains("hidden"))
+            {
+                var mouse = Input.mousePosition;
+                at = RuntimePanelUtils.ScreenToPanel(root.panel, new Vector2(mouse.x, Screen.height - mouse.y));
+                over = reproduceButton.worldBound.Contains(at);
+            }
+            if (over)
+            {
+                restTip.text = breedBlocker;
+                restTip.RemoveFromClassList("hidden");
+                restTip.BringToFront();
+                PlaceTip(root, at);
+            }
+            else if (breedTipShown) restTip.AddToClassList("hidden");
+            breedTipShown = over;
         }
 
         private void Refresh()
@@ -108,12 +136,12 @@ namespace NaturalHistory.UI
             nameLabel.text = Loc.T(def.commonName);
 
             var mine  = Evolution.CopiesOf(Copy.group.Owner).Where(c => c.species == Copy.species).ToList();
-            int wait  = Evolution.TurnsUntilReproduce(Copy);
             int ready = EvolutionData.From(Copy.species).Count(l => Evolution.CanEvolve(l, Copy));
             int total = EvolutionData.From(Copy.species).Count();
+            breedBlocker = Evolution.ReproduceBlocker(Copy);
             var breed = Copy.JustBorn ? Loc.T("New this turn: it can act from the next turn")
-                      : wait > 0 ? Loc.F(wait == 1 ? "reproduce in {0} turn" : "reproduce in {0} turns", wait)
-                      : Loc.T(Evolution.ReproduceCell(Copy) == null ? "no room to reproduce" : "can reproduce");
+                      : breedBlocker == null ? Loc.T("can reproduce")
+                      : Loc.F("can't reproduce: {0}", breedBlocker);
             var evolve = total == 0 ? Loc.T("no known descendants")
                        : ready > 0 ? Loc.F(ready == 1 ? "{0} evolution ready" : "{0} evolutions ready", ready)
                        : Loc.F(total == 1 ? "{0} possible evolution" : "{0} possible evolutions", total);
@@ -129,7 +157,7 @@ namespace NaturalHistory.UI
             detailLabel.text = $"{def.scientificName}  ·  {copies}\n{combat}\n{breed}  ·  {evolve}"
                              + (abilities.Length > 0 ? "\n" + Loc.F("Abilities: {0}", abilities) : "");
 
-            reproduceButton.SetEnabled(wait == 0 && (Copy.group.HasActions() || Evolution.BreedsFree(Copy)) && Evolution.ReproduceCell(Copy) != null && Evolution.CanAffordReproduce(Copy));
+            reproduceButton.SetEnabled(breedBlocker == null);
             evolveButton.EnableInClassList("ready", ready > 0);
             evolveButton.SetEnabled(total > 0);
             skipButton.SetEnabled(UnitCycle.Instance != null && UnitCycle.Instance.Awaits(Copy.group));

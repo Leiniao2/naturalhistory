@@ -425,6 +425,19 @@ namespace NaturalHistory.Evolution
             Spend(copy, cost);
         }
 
+        // Why the copy can't reproduce now (the unit panel greys the button and says this), or null
+        public string ReproduceBlocker(OwnedCopy copy)
+        {
+            if (copy?.group == null) return Loc.T("Nothing selected");
+            if (copy.JustBorn) return Loc.T("New this turn: it can act from the next turn");
+            int wait = TurnsUntilReproduce(copy);
+            if (wait > 0) return Loc.F(wait == 1 ? "Can reproduce again in {0} turn" : "Can reproduce again in {0} turns", wait);
+            if (!BreedEffects(copy).freeBreed && !copy.group.HasActions()) return Loc.T("No actions left this turn");
+            if (!CanAffordReproduce(copy)) return Loc.F("Needs {0} EP (you have {1})", ReproduceCostFor(copy), PointsFor(copy));
+            if (ReproduceCell(copy) == null) return Loc.F("No free {0} next to it", HabitatText(GameDataLoader.GetSpecies(copy.species)));
+            return null;
+        }
+
         // at: the tile the player chose for the young (one of ReproduceCells), or null for the first
         public bool Reproduce(OwnedCopy copy, out string message, HexCell at = null)
         {

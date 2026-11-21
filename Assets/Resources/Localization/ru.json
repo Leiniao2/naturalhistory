@@ -25595,6 +25595,58 @@
   {
    "k": "Stay here until ordered: only stationed animals heal, {0}% of their HP each turn (from the turn after they last acted).",
    "v": "Оставаться здесь до приказа: лечатся только животные на стоянке, {0}% ОЗ каждый ход (со следующего хода после последнего действия)."
+  },
+  {
+   "k": "Attack",
+   "v": "Атака"
+  },
+  {
+   "k": "Defense",
+   "v": "Защита"
+  },
+  {
+   "k": "HP",
+   "v": "ОЗ"
+  },
+  {
+   "k": "Eats it whole (+{0} HP)",
+   "v": "Проглатывает целиком (+{0} ОЗ)"
+  },
+  {
+   "k": "Expected: the foe is eaten",
+   "v": "Ожидается: противник съеден"
+  },
+  {
+   "k": "Expected damage dealt: {0} ({1} → {2} HP)",
+   "v": "Ожидаемый урон противнику: {0} ({1} → {2} ОЗ)"
+  },
+  {
+   "k": "Expected damage taken: {0} ({1} → {2} HP)",
+   "v": "Ожидаемый полученный урон: {0} ({1} → {2} ОЗ)"
+  },
+  {
+   "k": "An ambush: no counterattack",
+   "v": "Засада: без контратаки"
+  },
+  {
+   "k": "Expected: both are wiped out",
+   "v": "Ожидается: гибнут оба"
+  },
+  {
+   "k": "Expected: the foe is wiped out",
+   "v": "Ожидается: противник уничтожен"
+  },
+  {
+   "k": "Expected: your animal dies of the counterattack",
+   "v": "Ожидается: ваше животное погибнет от контратаки"
+  },
+  {
+   "k": "Expected: both survive",
+   "v": "Ожидается: оба выживут"
+  },
+  {
+   "k": "can't reproduce: {0}",
+   "v": "не может размножаться: {0}"
   }
  ]
 }

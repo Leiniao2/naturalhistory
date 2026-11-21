@@ -25595,6 +25595,58 @@
   {
    "k": "Stay here until ordered: only stationed animals heal, {0}% of their HP each turn (from the turn after they last acted).",
    "v": "Hier verharren, bis ein Befehl kommt: Nur verharrende Tiere heilen, jede Runde {0}% ihrer LP (ab der Runde nach ihrer letzten Aktion)."
+  },
+  {
+   "k": "Attack",
+   "v": "Angriff"
+  },
+  {
+   "k": "Defense",
+   "v": "Verteidigung"
+  },
+  {
+   "k": "HP",
+   "v": "LP"
+  },
+  {
+   "k": "Eats it whole (+{0} HP)",
+   "v": "Frisst es im Ganzen (+{0} LP)"
+  },
+  {
+   "k": "Expected: the foe is eaten",
+   "v": "Erwartet: der Gegner wird gefressen"
+  },
+  {
+   "k": "Expected damage dealt: {0} ({1} → {2} HP)",
+   "v": "Erwarteter Schaden: {0} (Gegner {1} → {2} LP)"
+  },
+  {
+   "k": "Expected damage taken: {0} ({1} → {2} HP)",
+   "v": "Erwarteter eigener Schaden: {0} ({1} → {2} LP)"
+  },
+  {
+   "k": "An ambush: no counterattack",
+   "v": "Ein Hinterhalt: kein Gegenangriff"
+  },
+  {
+   "k": "Expected: both are wiped out",
+   "v": "Erwartet: beide werden ausgelöscht"
+  },
+  {
+   "k": "Expected: the foe is wiped out",
+   "v": "Erwartet: der Gegner wird ausgelöscht"
+  },
+  {
+   "k": "Expected: your animal dies of the counterattack",
+   "v": "Erwartet: dein Tier stirbt am Gegenangriff"
+  },
+  {
+   "k": "Expected: both survive",
+   "v": "Erwartet: beide überleben"
+  },
+  {
+   "k": "can't reproduce: {0}",
+   "v": "kann sich nicht fortpflanzen: {0}"
   }
  ]
 }

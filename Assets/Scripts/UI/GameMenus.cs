@@ -24,6 +24,7 @@ namespace NaturalHistory.UI
         private PlayersPanel playersPanel;
         private AdminPanel adminPanel;
         private UnitPanel unitPanel;
+        private AttackPreview attackPreview;
         private UnitCycle unitCycle;
         private AnimalPanel animalPanel;
         private NewGameOptions newGameOptions;
@@ -107,6 +108,7 @@ namespace NaturalHistory.UI
             playersPanel = new PlayersPanel(root);
             adminPanel   = new AdminPanel(root);
             unitPanel    = new UnitPanel(root);
+            attackPreview = new AttackPreview(root);
             unitCycle    = new UnitCycle(root);
             animalPanel  = new AnimalPanel(root);
             newGameOptions = new NewGameOptions(root);
@@ -339,6 +341,7 @@ namespace NaturalHistory.UI
                 ClimateHud.EndTurn(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
             climateHud.RefreshTile();
             unitPanel.Update();
+            attackPreview.Update();
             unitCycle.Update(AnyModalOpen());
             animalPanel.Update();
             miniMap.Update();

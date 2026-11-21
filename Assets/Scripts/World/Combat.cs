@@ -79,6 +79,62 @@ namespace NaturalHistory.World
         public static float BackDamage(ColonyGroup defender, ColonyGroup attacker) =>
             (float)defender.Stats.defense / Mathf.Max(1, attacker.Stats.attack) * CombatStats.Era(defender.Definition) * Difficulty(defender, attacker);
 
+        // What an attack would do, without doing it (the hover preview, UI/AttackPreview): the same
+        // reckoning as Strike, but with no chance in it, so autotomy, poisons and holds over the next
+        // turns are left out. `moved`: the attacker gets there by moving first (a charge, no ambush).
+        // Keep in step with Strike.
+        public struct Forecast
+        {
+            public bool canFight, eats, ambush;
+            public float dealt, back; // HP the defender loses; HP the attacker loses (counterattack and touching it)
+            public bool Kills(ColonyGroup defender) => eats || dealt >= defender.Hp;
+        }
+
+        public static Forecast Predict(ColonyGroup attacker, ColonyGroup defender, bool moved)
+        {
+            var f = new Forecast();
+            if (attacker == null || defender == null) return f;
+            bool overwhelm = !SizesMatch(attacker, defender) && Overwhelms(attacker, defender);
+            f.canFight = SizesMatch(attacker, defender) || overwhelm;
+            if (!f.canFight) return f;
+            bool crush = Abilities.Has(attacker, Abilities.CrushingBite);
+            bool predation = IsPredation(attacker, defender);
+            if (predation && !Unswallowable(defender, crush)) { f.eats = true; f.dealt = Mathf.Max(0f, defender.Hp); return f; }
+
+            bool acted = attacker.ActedThisTurn || moved;
+            float dealt = Damage(attacker, defender);
+            if (overwhelm) dealt = Mathf.Max(dealt, 0.1f * defender.MaxHp);
+            if (Abilities.Has(attacker, Abilities.ElectricShock)) dealt *= 1.5f;
+            if (Abilities.Has(attacker, Abilities.PackHunting) && FriendNear(attacker, defender.Cell, defender)) dealt *= 1.5f;
+            if (Abilities.Has(attacker, Abilities.Charge) && acted) dealt *= 1.5f;
+            bool senses = Abilities.Has(attacker, Abilities.Echolocation) || Abilities.Has(attacker, Abilities.Electroreception);
+            float guard = 1f;
+            if (Abilities.Has(defender, Abilities.InkCloud)) guard *= 0.5f;
+            if (Abilities.Has(defender, Abilities.Camouflage) && !senses) guard *= 0.7f;
+            if (Abilities.Has(defender, Abilities.Burrow) && !Abilities.Has(attacker, Abilities.Electroreception)) guard *= 0.5f;
+            if (Abilities.Has(defender, Abilities.ShellRetreat) && !crush) guard *= 0.5f;
+            else if (Abilities.Has(defender, Abilities.RollUp) && !crush) guard *= 0.6f;
+            if ((Abilities.Has(defender, Abilities.Herding) || Abilities.Has(defender, Abilities.Schooling)) && FriendNear(defender, defender.Cell, attacker)) guard *= 0.7f;
+            var shield = TraitBonuses.Effects(defender);
+            guard *= 1f - shield.guard;
+            if (shield.homeGuard > 0f && defender.Owner != null && TerritoryManager.Instance != null
+                && TerritoryManager.Instance.OwnerOf(defender.Cell) == defender.Owner) guard *= 1f - shield.homeGuard;
+            if (shield.friendGuard > 0f && FriendNear(defender, defender.Cell, attacker)) guard *= 1f - shield.friendGuard;
+            f.dealt = dealt * Mathf.Max(0.25f, guard);
+
+            float hurt = 0f;
+            if (Abilities.Has(defender, Abilities.StingingCells)) hurt += 0.25f * f.dealt;
+            if (Abilities.Has(defender, Abilities.Spines)) hurt += 0.33f * f.dealt;
+            if (Abilities.Has(defender, Abilities.ChemicalSpray)) hurt += 0.1f * attacker.MaxHp;
+            if (f.dealt >= defender.Hp) { f.back = hurt; return f; } // no counterattack from the dead
+            f.ambush = Abilities.Has(attacker, Abilities.Ambush) && !acted
+                       && !Abilities.Has(defender, Abilities.Vigilance) && !shield.ambushImmune;
+            float back = f.ambush ? 0f : BackDamage(defender, attacker) * (Abilities.Has(defender, Abilities.TailWeapon) ? 2f : 1f)
+                                         * (1f + shield.counterBoost) * (1f - TraitBonuses.Effects(attacker).counterResist);
+            f.back = back + hurt;
+            return f;
+        }
+
         // rival or wild animals hit the human player's harder on harder difficulties
         private static float Difficulty(ColonyGroup from, ColonyGroup to) =>
             to.Owner != null && to.Owner.IsHuman && from.Owner != to.Owner ? GameOptions.FoeDamageShare : 1f;

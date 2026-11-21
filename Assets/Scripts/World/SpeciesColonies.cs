@@ -259,6 +259,9 @@ namespace NaturalHistory.World
 
         // Picks one of the player's groups for orders as clicking it would (UnitCycle): shows its
         // layer, selects its tile with it in front and marks where it can go
+        // Nothing picked for orders (UnitCycle: none left awaiting them)
+        public void Deselect() => Select(null);
+
         public void Order(ColonyGroup g)
         {
             if (g == null || g.Cell == null) return;

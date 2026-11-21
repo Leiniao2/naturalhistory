@@ -1,6 +1,5 @@
 Title and loading screen paintings (paintings.json). All public domain, from Wikimedia Commons
-(https://commons.wikimedia.org/wiki/File:<source>). Resized to at most 2400 px wide; wealden_period cropped
-to the picture (caption and margin removed).
+(https://commons.wikimedia.org/wiki/File:<source>). Resized to at most 2400 px wide.
 
   early_land_plants.jpg              Charles R. Knight    Early Land Plants
       File:Early_Land_Plants_by_Knight.jpg
@@ -74,19 +73,3 @@ to the picture (caption and margin removed).
       File:Stego.jpg
   eohippus.jpg                       Charles R. Knight    Eohippus
       File:Eohippus.jpg
-  duria_antiquior.jpg                Henry De la Beche    Duria Antiquior
-      File:Duria_Antiquior.jpg
-  country_of_the_iguanodon.jpg       John Martin          The Country of the Iguanodon
-      File:John_Martin_-_The_country_of_the_Iguanodon_-_Google_Art_Project.jpg
-  wealden_period.jpg                 Joseph Kuwasseg      The Wealden Period
-      File:Joseph_Kuwasseg,_Landschap_met_iguanodonten_uit_het_vroege_krijt.jpg
-  mosasaurus_ichthyosaurus.jpg       Heinrich Harder      Mosasaurus and Ichthyosaurus
-      File:Mosasaurus_ichthyosaurus.jpg
-  pteranodon.jpg                     Heinrich Harder      Pteranodon
-      File:Pterano.jpg
-  rhamphorhynchus.jpg                Heinrich Harder      Rhamphorhynchus
-      File:Rhamphor.jpg
-  sea_lilies.jpg                     Heinrich Harder      Sea Lilies
-      File:Seelilien.jpg
-  laugerie_basse.jpg                 Heinrich Harder      Laugerie-Basse in the Vézère Valley
-      File:Laugerie_basse_im_Vézère-Tal.png
