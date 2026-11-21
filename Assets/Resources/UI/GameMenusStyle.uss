@@ -1006,6 +1006,7 @@
     bottom: 40px;
     left: 30%;
     right: 30%;
+    white-space: normal;
     -unity-text-align: middle-center;
     font-size: 20px;
     color: rgb(240, 236, 220);
@@ -2744,4 +2745,17 @@
 
 .encyclopedia-tree-buttons > .encyclopedia-tree-button {
     margin: 0 8px 4px 0; /* the HUD's spacing */
+}
+
+/* A long message (several lines, e.g. how the land changed): in the middle of the screen, as tall as
+   it needs (GameMenus.ShowToast) */
+.toast.toast-long {
+    bottom: auto;
+    top: 50%;
+    left: 25%;
+    right: 25%;
+    translate: 0 -50%;
+    padding: 20px 28px;
+    font-size: 19px;
+    -unity-text-align: middle-left;
 }

@@ -193,6 +193,7 @@ namespace NaturalHistory.Territory
             {
                 if (cell == null) continue;
                 // a species fits if it can live here and its niche on the tile is free
+                if (colonies.HeldByOther(cell, player)) continue; // one side a tile
                 var fits = alive.Where(d => ColonyGroup.CanPlace(d, cell) && colonies.GroupAt(cell, Niches.Of(d, cell)) == null &&
                                             FoodWeb.HasFood(d, cell, colonies, null)).ToList();
                 if (fits.Count == 0) continue;
@@ -242,7 +243,7 @@ namespace NaturalHistory.Territory
             {
                 var def = GameDataLoader.GetSpecies(id);
                 if (def == null || !colonies.IsAliveNow(def)) continue;
-                var cell = cells.FirstOrDefault(c => c != null && ColonyGroup.CanPlace(def, c) &&
+                var cell = cells.FirstOrDefault(c => c != null && ColonyGroup.CanPlace(def, c) && !colonies.HeldByOther(c, player) &&
                                                      colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, colonies, null));
                 if (cell == null) continue;
                 var group = colonies.SpawnColony(def, cell, player, rng.Next());

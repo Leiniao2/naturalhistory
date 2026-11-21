@@ -24,6 +24,7 @@ namespace NaturalHistory.Save
         public int mapWidth;
         public int mapHeight;
         public int worldSeed;
+        public float mapMillionYearsAgo = -1f; // the date the map's climate was drawn for (-1: older saves)
 
         public int playerCol = -1;         // human player's unit
         public int playerRow = -1;
@@ -149,6 +150,7 @@ namespace NaturalHistory.Save
                 mapWidth   = grid.Width,
                 mapHeight  = grid.Height,
                 worldSeed  = grid.WorldSeed,
+                mapMillionYearsAgo = grid.DisplayedMillionYearsAgo,
                 turn       = TurnManager.Instance != null ? TurnManager.Instance.CurrentTurn : 0,
                 age        = AgeManager.Instance != null ? AgeManager.Instance.CurrentAge.ToString() : "",
                 settings   = GameOptions.Current,
@@ -188,6 +190,9 @@ namespace NaturalHistory.Save
             PlayerManager.Instance?.Restore(data.players);
 
             var grid = HexGrid.Instance;
+            // the map is drawn for the date it showed when saved: within a period it is only redrawn
+            // once the climate has moved enough, so the save's exact date could move the shore
+            grid?.PinDate(Enum.TryParse(data.age, true, out GeologicalAge savedAge) ? savedAge : GeologicalAge.Ediacaran, Enum.TryParse(data.age, true, out GeologicalAge _) ? data.mapMillionYearsAgo : -1f);
             if (grid != null)
             {
                 // Generated listeners (PlayerBall, camera) run inside this call
@@ -202,6 +207,7 @@ namespace NaturalHistory.Save
             // The period, date and climate all follow from the turn number
             if (TurnManager.Instance != null && data.turn > 0)
                 TurnManager.Instance.Restore(data.turn);
+            grid?.PinDate(GeologicalAge.Ediacaran, -1f);
             // a game saved before the Devonian goes on on the seabed
             if (AgeManager.Instance != null) UnderView.Set(GameOptions.StartsUnderSea(AgeManager.Instance.CurrentAge));
 

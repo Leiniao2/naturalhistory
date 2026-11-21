@@ -26003,6 +26003,78 @@
   {
    "k": "can't reproduce: {0}",
    "v": "繁殖できない：{0}"
+  },
+  {
+   "k": ", ",
+   "v": "、"
+  },
+  {
+   "k": "{0}: {1}",
+   "v": "{0}：{1}"
+  },
+  {
+   "k": "the sea rose and flooded {0} land tiles",
+   "v": "海面が上昇し、陸地 {0} マスが水没した"
+  },
+  {
+   "k": "the sea fell and {0} tiles of shallow sea became land",
+   "v": "海面が低下し、浅い海 {0} マスが陸地になった"
+  },
+  {
+   "k": "deserts spread over {0} tiles",
+   "v": "砂漠が {0} マス広がった"
+  },
+  {
+   "k": "deserts shrank by {0} tiles",
+   "v": "砂漠が {0} マス縮小した"
+  },
+  {
+   "k": "ice spread over {0} tiles",
+   "v": "氷床が {0} マス広がった"
+  },
+  {
+   "k": "ice retreated from {0} tiles",
+   "v": "氷床が {0} マスから後退した"
+  },
+  {
+   "k": "forests grew over {0} tiles",
+   "v": "森林が {0} マス増えた"
+  },
+  {
+   "k": "forests were lost from {0} tiles",
+   "v": "森林が {0} マス失われた"
+  },
+  {
+   "k": "The land changes with the {0}",
+   "v": "{0}に入り、地形が変わった"
+  },
+  {
+   "k": "The climate has changed ({0} million years ago)",
+   "v": "気候が変化した（{0} 百万年前）"
+  },
+  {
+   "k": "{0} of your groups had to move: its tile no longer suits it",
+   "v": "あなたの {0} 群は元のマスが合わなくなり、近くへ移った"
+  },
+  {
+   "k": "{0} of your groups had to move: their tiles no longer suit them",
+   "v": "あなたの {0} 群は元のマスが合わなくなり、近くへ移った"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and is off the map until things change",
+   "v": "あなたの {0} 群は住める場所がなく、状況が変わるまで地図から消える"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and are off the map until things change",
+   "v": "あなたの {0} 群は住める場所がなく、状況が変わるまで地図から消える"
+  },
+  {
+   "k": "Your animals set foot on land (+{0} EP)",
+   "v": "あなたの動物が初めて陸に上がった（+{0} EP）"
+  },
+  {
+   "k": "Met {1} (+{0} EP)",
+   "v": "{1}と遭遇した（+{0} EP）"
   }
  ]
 }

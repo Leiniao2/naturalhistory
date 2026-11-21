@@ -25,6 +25,7 @@ namespace NaturalHistory.UI
         private AdminPanel adminPanel;
         private UnitPanel unitPanel;
         private AttackPreview attackPreview;
+        private ClimateNotice climateNotice;
         private UnitCycle unitCycle;
         private AnimalPanel animalPanel;
         private NewGameOptions newGameOptions;
@@ -39,8 +40,10 @@ namespace NaturalHistory.UI
         private bool slotsAreForSaving;
         private bool turnEnded;          // the turn just begun follows End Turn, not a load
         private int autosaveFrame = -1;  // frame to autosave on, once the new turn has settled
-        private float toastHideTime;
-        private int toastFrame = -1;
+        // The messages on show (each until its time is up), newest last: a new one joins them rather
+        // than replacing them, so one from an order isn't lost under the next turn's (ShowToast)
+        private readonly System.Collections.Generic.List<(string text, float until)> toasts = new();
+        private const int MaxToasts = 4;
 
         private CellSelector cellSelector;
         private CameraController cameraController;
@@ -109,6 +112,7 @@ namespace NaturalHistory.UI
             adminPanel   = new AdminPanel(root);
             unitPanel    = new UnitPanel(root);
             attackPreview = new AttackPreview(root);
+            climateNotice = new ClimateNotice(m => ShowToast(m, 8f), () => loading != null && loading.IsOpen);
             unitCycle    = new UnitCycle(root);
             animalPanel  = new AnimalPanel(root);
             newGameOptions = new NewGameOptions(root);
@@ -123,6 +127,7 @@ namespace NaturalHistory.UI
             settings     = new SettingsPanel(root);
             settings.Closed += () => { if (settingsFromPause) pauseOverlay.RemoveFromClassList("hidden"); settingsFromPause = false; };
             CameraController.IsPointerOverUI = PointerOverUI;
+            MovePathView.MapCovered = () => AnyModalOpen() || PointerOverUI(); // no map hover tips through the panels
             unitPanel.OpenTree   += tree => { CloseSidePanels(); treePanel.Open(tree); };
             unitPanel.OpenEvolve += copy => { CloseSidePanels(); zoologyPanel.Open(copy); };
             unitPanel.Message    += ShowToast;
@@ -273,6 +278,7 @@ namespace NaturalHistory.UI
             miniMap?.Dispose();
             mainMenu?.Dispose();
             CameraController.IsPointerOverUI = null;
+            MovePathView.MapCovered = null;
             NaturalEvents.Announced -= OnPhenomenon;
             Combat.Reported -= OnPhenomenon;
             if (Progression != null) Progression.Changed -= OnProgressionChanged;
@@ -342,6 +348,7 @@ namespace NaturalHistory.UI
             climateHud.RefreshTile();
             unitPanel.Update();
             attackPreview.Update();
+            climateNotice.Update();
             unitCycle.Update(AnyModalOpen());
             animalPanel.Update();
             miniMap.Update();
@@ -349,11 +356,7 @@ namespace NaturalHistory.UI
             if (discoveryPanel.IsOpen && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))) discoveryPanel.Next();
             mainMenu.Update();
             UpdateAutosave();
-            if (toastHideTime > 0f && Time.unscaledTime > toastHideTime)
-            {
-                toast.AddToClassList("hidden");
-                toastHideTime = 0f;
-            }
+            if (toasts.RemoveAll(t => Time.unscaledTime > t.until) > 0) RefreshToast();
             UpdateMapInput();
         }
 
@@ -540,18 +543,31 @@ namespace NaturalHistory.UI
             if (ok) { mainMenu.InGame = true; SetPauseOpen(false); }
         }
 
-        // Messages shown in the same frame (e.g. two animals arriving together) are combined
         // Messages that came while the loading screen was up, shown once it closes
         private readonly System.Collections.Generic.List<string> heldToasts = new();
 
-        private void ShowToast(string message)
+        private void ShowToast(string message) => ShowToast(message, 2.5f);
+
+        private void ShowToast(string message, float seconds)
         {
             if (loading != null && loading.IsOpen) { heldToasts.Add(message); return; } // not over the loading screen
 
-            toast.text = toastFrame == Time.frameCount && !toast.ClassListContains("hidden") ? toast.text + "\n" + message : message;
-            toastFrame = Time.frameCount;
+            if (string.IsNullOrEmpty(message)) return;
+            // long ones stay up long enough to read
+            if (message.Length > 70 || message.Contains('\n')) seconds = Mathf.Max(seconds, Mathf.Min(12f, 2.5f + message.Length * 0.05f));
+            toasts.Add((message, Time.unscaledTime + seconds));
+            while (toasts.Count > MaxToasts) toasts.RemoveAt(0);
+            RefreshToast();
+        }
+
+        // The messages on show, one under another; several or long ones in the middle of the screen,
+        // as tall as they need
+        private void RefreshToast()
+        {
+            if (toasts.Count == 0) { toast.AddToClassList("hidden"); return; }
+            toast.text = string.Join("\n", System.Linq.Enumerable.Select(toasts, t => t.text));
+            toast.EnableInClassList("toast-long", toast.text.Length > 70 || toasts.Count > 1 || toast.text.Contains('\n'));
             toast.RemoveFromClassList("hidden");
-            toastHideTime = Time.unscaledTime + 2.5f;
         }
 
         private static bool IsOpen(VisualElement overlay) => !overlay.ClassListContains("hidden");

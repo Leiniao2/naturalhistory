@@ -53,6 +53,7 @@ namespace NaturalHistory.World
                 {
                     if (n == null || range.steps.ContainsKey(n) || !group.CanEnter(n)) continue;
                     if (SpeciesColonies.Attackable(group, n) != null) continue; // a foe's tile: a target, not a way through
+                    if (colonies.HeldByOther(n, group.Owner, group)) continue;   // another side's tile (one side a tile)
                     range.steps[n] = s + 1;
                     range.parent[n] = c;
                     frontier.Enqueue(n);
@@ -86,7 +87,7 @@ namespace NaturalHistory.World
         {
             if (group == null || cell == null || colonies == null || !group.CanLiveAt(cell)) return false;
             var holder = colonies.GroupAt(cell, Niches.Of(group.Definition, cell));
-            return holder == null || holder == group;
+            return (holder == null || holder == group) && !colonies.HeldByOther(cell, group.Owner, group);
         }
 
         // The shortest way over the whole map from the group's tile to `target` (not included its
@@ -108,6 +109,7 @@ namespace NaturalHistory.World
                 {
                     if (n == null || parent.ContainsKey(n) || !group.CanEnter(n)) continue;
                     if (SpeciesColonies.Attackable(group, n) != null) continue;
+                    if (colonies.HeldByOther(n, group.Owner, group)) continue;
                     parent[n] = c;
                     frontier.Enqueue(n);
                 }

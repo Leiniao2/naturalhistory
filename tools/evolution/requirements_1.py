@@ -56,7 +56,7 @@ REVIEWED = {
     "cothonion_sympomatum>moorowipora_chamberensis": (["budding", "filter_apparatus"], ["reef_building"], [], []),
     # deuterostomes and chordates
     "spriggina_floundersi>vetulicola_cuneata": (["through_gut", "segmentation"], ["foraging"], ["pharyngeal_slits"], []),
-    "vetulicola_cuneata>pikaia": (["notochord", "myomeres"], ["light_following"], ["dorsal_nerve_cord"], []),
+    "vetulicola_cuneata>pikaia": (["pharyngeal_slits"], ["light_following"], ["notochord", "myomeres", "dorsal_nerve_cord"], []),
     "vetulicola_cuneata>eldonia_ludwigi": (["through_gut", "filter_apparatus"], ["foraging"], [], []),
     "pikaia>haikouichthys": (["dorsal_nerve_cord", "pharyngeal_slits"], ["light_following"], ["vertebral_column"], []),
     "haikouichthys>myllokunmingia_fengjiaoa": (["notochord", "pharyngeal_slits"], ["aggregation"], [], []),

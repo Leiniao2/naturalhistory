@@ -25647,6 +25647,78 @@
   {
    "k": "can't reproduce: {0}",
    "v": "não pode reproduzir-se: {0}"
+  },
+  {
+   "k": ", ",
+   "v": ", "
+  },
+  {
+   "k": "{0}: {1}",
+   "v": "{0}: {1}"
+  },
+  {
+   "k": "the sea rose and flooded {0} land tiles",
+   "v": "o mar subiu e inundou {0} casas de terra"
+  },
+  {
+   "k": "the sea fell and {0} tiles of shallow sea became land",
+   "v": "o mar desceu e {0} casas de mar raso tornaram-se terra"
+  },
+  {
+   "k": "deserts spread over {0} tiles",
+   "v": "os desertos estenderam-se por {0} casas"
+  },
+  {
+   "k": "deserts shrank by {0} tiles",
+   "v": "os desertos encolheram {0} casas"
+  },
+  {
+   "k": "ice spread over {0} tiles",
+   "v": "o gelo estendeu-se por {0} casas"
+  },
+  {
+   "k": "ice retreated from {0} tiles",
+   "v": "o gelo recuou de {0} casas"
+  },
+  {
+   "k": "forests grew over {0} tiles",
+   "v": "as florestas cresceram em {0} casas"
+  },
+  {
+   "k": "forests were lost from {0} tiles",
+   "v": "perderam-se florestas em {0} casas"
+  },
+  {
+   "k": "The land changes with the {0}",
+   "v": "Com o {0} a paisagem muda"
+  },
+  {
+   "k": "The climate has changed ({0} million years ago)",
+   "v": "O clima mudou (há {0} milhões de anos)"
+  },
+  {
+   "k": "{0} of your groups had to move: its tile no longer suits it",
+   "v": "{0} dos teus grupos teve de mudar: a sua casa já não lhe serve"
+  },
+  {
+   "k": "{0} of your groups had to move: their tiles no longer suit them",
+   "v": "{0} dos teus grupos tiveram de mudar: as suas casas já não lhes servem"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and is off the map until things change",
+   "v": "{0} dos teus grupos não encontrou onde viver e sai do mapa até as coisas mudarem"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and are off the map until things change",
+   "v": "{0} dos teus grupos não encontraram onde viver e saem do mapa até as coisas mudarem"
+  },
+  {
+   "k": "Your animals set foot on land (+{0} EP)",
+   "v": "Seus animais pisam em terra firme pela primeira vez (+{0} EP)"
+  },
+  {
+   "k": "Met {1} (+{0} EP)",
+   "v": "Encontro com {1} (+{0} EP)"
   }
  ]
 }

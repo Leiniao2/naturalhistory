@@ -354,7 +354,7 @@ namespace NaturalHistory.Progression
         // Items the species can acquire now: not had yet, its prerequisites had, its period begun
         private static IEnumerable<TreeNodeDefinition> Available(ProgressionTree tree, SpeciesDefinition def, HashSet<string> owned, bool isFunction, GeologicalAge age) =>
             tree.Nodes.Where(n => n.cost > 0 && !owned.Contains(n.id)
-                && (n.prerequisites ?? new List<string>()).All(owned.Contains)
+                && (n.prerequisites ?? new List<string>()).All(p => owned.Contains(p) || !EvolutionData.Blocks(def, tree.Get(p), isFunction))
                 && (!Enum.TryParse(n.age, true, out GeologicalAge from) || from <= age)
                 && EvolutionData.CanAcquire(def, n, isFunction));
 
@@ -366,7 +366,7 @@ namespace NaturalHistory.Progression
             var cells = new List<HexCell> { by.Cell };
             cells.AddRange(grid.GetNeighbors(by.Cell));
             var cell = cells.FirstOrDefault(c => c != null && ColonyGroup.CanPlace(def, c) // where it can move
-                && colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, colonies, null));
+                && colonies.GroupAt(c, Niches.Of(def, c)) == null && !colonies.HeldByOther(c, owner) && FoodWeb.HasFood(def, c, colonies, null));
             if (cell == null) return null;
             var group = colonies.SpawnColony(def, cell, owner, Environment.TickCount);
             if (group == null) return null;

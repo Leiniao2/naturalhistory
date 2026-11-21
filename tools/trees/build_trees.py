@@ -512,7 +512,7 @@ def build(branches, out_path):
 
     for n in nodes:
         age_index = list(AGES.values()).index(n["age"])
-        n["cost"] = 0 if not n["prerequisites"] else 4 + 2 * n["tier"] + age_index
+        n["cost"] = 0 if not n["prerequisites"] else max(4, round((4 + 2 * n["tier"] + age_index) * 0.65))
 
     data = {"branches": [{"id": b, "displayName": name, "description": desc} for b, name, desc, _ in branches],
             "nodes": nodes}

@@ -26127,6 +26127,78 @@
   {
    "k": "can't reproduce: {0}",
    "v": "无法繁殖：{0}"
+  },
+  {
+   "k": ", ",
+   "v": "，"
+  },
+  {
+   "k": "{0}: {1}",
+   "v": "{0}：{1}"
+  },
+  {
+   "k": "the sea rose and flooded {0} land tiles",
+   "v": "海平面上升，淹没了 {0} 块陆地"
+  },
+  {
+   "k": "the sea fell and {0} tiles of shallow sea became land",
+   "v": "海平面下降，{0} 块浅海露出成为陆地"
+  },
+  {
+   "k": "deserts spread over {0} tiles",
+   "v": "沙漠扩大了 {0} 块"
+  },
+  {
+   "k": "deserts shrank by {0} tiles",
+   "v": "沙漠缩小了 {0} 块"
+  },
+  {
+   "k": "ice spread over {0} tiles",
+   "v": "冰原扩大了 {0} 块"
+  },
+  {
+   "k": "ice retreated from {0} tiles",
+   "v": "冰原从 {0} 块地退去"
+  },
+  {
+   "k": "forests grew over {0} tiles",
+   "v": "森林增加了 {0} 块"
+  },
+  {
+   "k": "forests were lost from {0} tiles",
+   "v": "森林减少了 {0} 块"
+  },
+  {
+   "k": "The land changes with the {0}",
+   "v": "进入{0}，地貌随之改变"
+  },
+  {
+   "k": "The climate has changed ({0} million years ago)",
+   "v": "气候发生了变化（{0} 百万年前）"
+  },
+  {
+   "k": "{0} of your groups had to move: its tile no longer suits it",
+   "v": "你的 {0} 群动物原地块已不适合，被迁到了附近"
+  },
+  {
+   "k": "{0} of your groups had to move: their tiles no longer suit them",
+   "v": "你的 {0} 群动物原地块已不适合，被迁到了附近"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and is off the map until things change",
+   "v": "你的 {0} 群动物找不到合适的栖息地，暂时离开地图，直到环境改变"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and are off the map until things change",
+   "v": "你的 {0} 群动物找不到合适的栖息地，暂时离开地图，直到环境改变"
+  },
+  {
+   "k": "Your animals set foot on land (+{0} EP)",
+   "v": "你的动物首次登上陆地（+{0} EP）"
+  },
+  {
+   "k": "Met {1} (+{0} EP)",
+   "v": "遇到了{1}（+{0} EP）"
   }
  ]
 }

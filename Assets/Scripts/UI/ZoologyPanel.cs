@@ -224,11 +224,13 @@ namespace NaturalHistory.UI
                 {
                     var id = queue.Dequeue();
                     bool isRoot = roots.Contains(id);
-                    int founded = isRoot ? -1 : EvolutionData.To(id).Where(l => roots.Contains(l.from)).Select(l => NewClade(l.from, id)).DefaultIfEmpty(-1).Max();
+                    var foundedBy = isRoot ? null : EvolutionData.To(id).Where(l => roots.Contains(l.from)).OrderByDescending(l => NewClade(l.from, id)).FirstOrDefault();
+                    int founded = foundedBy == null ? -1 : NewClade(foundedBy.from, id);
                     if (founded >= 0)
                     {
                         if (!EvolutionData.From(id).Any()) continue;
-                        var cardKey = $"clade:{founded}:{id}";
+                        // one card per group and parent: sister species that both start it share it
+                        var cardKey = $"clade:{founded}:{foundedBy.from}";
                         if (!nodes.TryGetValue(cardKey, out var card))
                             nodes[cardKey] = card = new Node { key = cardKey, clade = founded.ToString(), founders = new List<string>() };
                         if (!card.founders.Contains(id)) card.founders.Add(id);

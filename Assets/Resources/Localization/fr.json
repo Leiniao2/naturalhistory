@@ -25647,6 +25647,78 @@
   {
    "k": "can't reproduce: {0}",
    "v": "ne peut pas se reproduire : {0}"
+  },
+  {
+   "k": ", ",
+   "v": ", "
+  },
+  {
+   "k": "{0}: {1}",
+   "v": "{0} : {1}"
+  },
+  {
+   "k": "the sea rose and flooded {0} land tiles",
+   "v": "la mer est montée et a inondé {0} cases de terre"
+  },
+  {
+   "k": "the sea fell and {0} tiles of shallow sea became land",
+   "v": "la mer a baissé et {0} cases de mer peu profonde sont devenues terre"
+  },
+  {
+   "k": "deserts spread over {0} tiles",
+   "v": "les déserts se sont étendus sur {0} cases"
+  },
+  {
+   "k": "deserts shrank by {0} tiles",
+   "v": "les déserts ont reculé de {0} cases"
+  },
+  {
+   "k": "ice spread over {0} tiles",
+   "v": "la glace s'est étendue sur {0} cases"
+  },
+  {
+   "k": "ice retreated from {0} tiles",
+   "v": "la glace s'est retirée de {0} cases"
+  },
+  {
+   "k": "forests grew over {0} tiles",
+   "v": "les forêts ont gagné {0} cases"
+  },
+  {
+   "k": "forests were lost from {0} tiles",
+   "v": "les forêts ont disparu de {0} cases"
+  },
+  {
+   "k": "The land changes with the {0}",
+   "v": "Avec le {0}, le paysage change"
+  },
+  {
+   "k": "The climate has changed ({0} million years ago)",
+   "v": "Le climat a changé (il y a {0} millions d'années)"
+  },
+  {
+   "k": "{0} of your groups had to move: its tile no longer suits it",
+   "v": "{0} de tes groupes a dû partir : sa case ne lui convient plus"
+  },
+  {
+   "k": "{0} of your groups had to move: their tiles no longer suit them",
+   "v": "{0} de tes groupes ont dû partir : leurs cases ne leur conviennent plus"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and is off the map until things change",
+   "v": "{0} de tes groupes n'a trouvé nulle part où vivre et quitte la carte jusqu'à ce que les choses changent"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and are off the map until things change",
+   "v": "{0} de tes groupes n'ont trouvé nulle part où vivre et quittent la carte jusqu'à ce que les choses changent"
+  },
+  {
+   "k": "Your animals set foot on land (+{0} EP)",
+   "v": "Vos animaux posent pied à terre (+{0} EP)"
+  },
+  {
+   "k": "Met {1} (+{0} EP)",
+   "v": "Rencontre avec {1} (+{0} EP)"
   }
  ]
 }

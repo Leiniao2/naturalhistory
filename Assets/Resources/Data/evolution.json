@@ -599,8 +599,8 @@
    "from": "spriggina_floundersi",
    "to": "yilingia_spiciformis",
    "functions": [
-    "segmentation",
-    "nephridia"
+    "nephridia",
+    "segmentation"
    ],
    "behaviors": [
     "tube_building"
@@ -631,8 +631,8 @@
    "from": "spriggina_floundersi",
    "to": "uncus_dzaugisi",
    "functions": [
-    "segmentation",
-    "nephridia"
+    "nephridia",
+    "segmentation"
    ],
    "behaviors": [
     "tube_building"
@@ -1332,7 +1332,7 @@
     "foraging"
    ],
    "grantFunctions": [
-    "dorsal_nerve_cord"
+    "pharyngeal_slits"
    ],
    "grantBehaviors": [],
    "description": "Deuterostomes form the anus first in the embryo: the line of echinoderms and chordates."
@@ -1355,8 +1355,8 @@
    "from": "vetulicola_cuneata",
    "to": "banffia_constricta",
    "functions": [
-    "filter_apparatus",
-    "dorsal_nerve_cord"
+    "pharyngeal_slits",
+    "filter_apparatus"
    ],
    "behaviors": [
     "scavenging"
@@ -1369,13 +1369,14 @@
    "from": "vetulicola_cuneata",
    "to": "pikaia",
    "functions": [
-    "notochord",
-    "myomeres"
+    "pharyngeal_slits"
    ],
    "behaviors": [
     "light_following"
    ],
    "grantFunctions": [
+    "notochord",
+    "myomeres",
     "dorsal_nerve_cord"
    ],
    "grantBehaviors": [],

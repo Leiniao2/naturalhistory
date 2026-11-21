@@ -72,7 +72,7 @@
       "branch": "foraging",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "foraging"
@@ -91,7 +91,7 @@
       "branch": "foraging",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "foraging"
@@ -110,7 +110,7 @@
       "branch": "foraging",
       "tier": 2,
       "row": 1,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "active_predation"
@@ -127,7 +127,7 @@
       "branch": "foraging",
       "tier": 1,
       "row": 2,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "foraging"
@@ -144,7 +144,7 @@
       "branch": "foraging",
       "tier": 2,
       "row": 0,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "active_predation"
@@ -161,7 +161,7 @@
       "branch": "foraging",
       "tier": 2,
       "row": 2,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "patch_foraging"
@@ -180,7 +180,7 @@
       "branch": "foraging",
       "tier": 3,
       "row": 0,
-      "cost": 14,
+      "cost": 9,
       "age": "Carboniferous",
       "prerequisites": [
         "ambush_hunting"
@@ -197,7 +197,7 @@
       "branch": "foraging",
       "tier": 3,
       "row": 2,
-      "cost": 15,
+      "cost": 10,
       "age": "Permian",
       "prerequisites": [
         "scavenging",
@@ -217,7 +217,7 @@
       "branch": "foraging",
       "tier": 3,
       "row": 3,
-      "cost": 15,
+      "cost": 10,
       "age": "Permian",
       "prerequisites": [
         "ambush_hunting"
@@ -234,7 +234,7 @@
       "branch": "foraging",
       "tier": 4,
       "row": 3,
-      "cost": 19,
+      "cost": 12,
       "age": "Jurassic",
       "prerequisites": [
         "stalking"
@@ -251,7 +251,7 @@
       "branch": "foraging",
       "tier": 3,
       "row": 4,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "plant_feeding"
@@ -270,7 +270,7 @@
       "branch": "foraging",
       "tier": 3,
       "row": 5,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "plant_feeding"
@@ -287,7 +287,7 @@
       "branch": "foraging",
       "tier": 2,
       "row": 3,
-      "cost": 17,
+      "cost": 11,
       "age": "Paleogene",
       "prerequisites": [
         "patch_foraging"
@@ -304,7 +304,7 @@
       "branch": "foraging",
       "tier": 3,
       "row": 7,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "plant_feeding"
@@ -322,7 +322,7 @@
       "branch": "foraging",
       "tier": 3,
       "row": 8,
-      "cost": 20,
+      "cost": 13,
       "age": "Neogene",
       "prerequisites": [
         "plant_feeding"
@@ -339,7 +339,7 @@
       "branch": "foraging",
       "tier": 3,
       "row": 9,
-      "cost": 20,
+      "cost": 13,
       "age": "Neogene",
       "prerequisites": [
         "food_caching"
@@ -357,7 +357,7 @@
       "branch": "foraging",
       "tier": 3,
       "row": 10,
-      "cost": 21,
+      "cost": 14,
       "age": "Quaternary",
       "prerequisites": [
         "pursuit_hunting"
@@ -386,7 +386,7 @@
       "branch": "antipredator",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "withdrawal"
@@ -405,7 +405,7 @@
       "branch": "antipredator",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "withdrawal"
@@ -424,7 +424,7 @@
       "branch": "antipredator",
       "tier": 1,
       "row": 2,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "withdrawal"
@@ -441,7 +441,7 @@
       "branch": "antipredator",
       "tier": 1,
       "row": 3,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "withdrawal"
@@ -458,7 +458,7 @@
       "branch": "antipredator",
       "tier": 2,
       "row": 0,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "hiding"
@@ -475,7 +475,7 @@
       "branch": "antipredator",
       "tier": 1,
       "row": 4,
-      "cost": 8,
+      "cost": 5,
       "age": "Silurian",
       "prerequisites": [
         "withdrawal"
@@ -492,7 +492,7 @@
       "branch": "antipredator",
       "tier": 3,
       "row": 1,
-      "cost": 15,
+      "cost": 10,
       "age": "Permian",
       "prerequisites": [
         "freezing"
@@ -509,7 +509,7 @@
       "branch": "antipredator",
       "tier": 4,
       "row": 0,
-      "cost": 17,
+      "cost": 11,
       "age": "Permian",
       "prerequisites": [
         "freezing"
@@ -526,7 +526,7 @@
       "branch": "antipredator",
       "tier": 3,
       "row": 2,
-      "cost": 16,
+      "cost": 10,
       "age": "Triassic",
       "prerequisites": [
         "freezing"
@@ -543,7 +543,7 @@
       "branch": "antipredator",
       "tier": 4,
       "row": 2,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "group_vigilance"
@@ -561,7 +561,7 @@
       "branch": "antipredator",
       "tier": 4,
       "row": 3,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "playing_dead"
@@ -578,7 +578,7 @@
       "branch": "antipredator",
       "tier": 2,
       "row": 4,
-      "cost": 18,
+      "cost": 12,
       "age": "Neogene",
       "prerequisites": [
         "startle_escape"
@@ -595,7 +595,7 @@
       "branch": "antipredator",
       "tier": 2,
       "row": 2,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "hiding"
@@ -624,7 +624,7 @@
       "branch": "reproductive",
       "tier": 1,
       "row": 1,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "spawning_aggregations"
@@ -641,7 +641,7 @@
       "branch": "reproductive",
       "tier": 1,
       "row": 2,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "spawning_aggregations"
@@ -658,7 +658,7 @@
       "branch": "reproductive",
       "tier": 1,
       "row": 3,
-      "cost": 8,
+      "cost": 5,
       "age": "Silurian",
       "prerequisites": [
         "spawning_aggregations"
@@ -675,7 +675,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 2,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "egg_sites"
@@ -692,7 +692,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 3,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "mate_guarding"
@@ -709,7 +709,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 4,
-      "cost": 12,
+      "cost": 8,
       "age": "Carboniferous",
       "prerequisites": [
         "mate_guarding"
@@ -726,7 +726,7 @@
       "branch": "reproductive",
       "tier": 3,
       "row": 4,
-      "cost": 15,
+      "cost": 10,
       "age": "Permian",
       "prerequisites": [
         "courtship"
@@ -743,7 +743,7 @@
       "branch": "reproductive",
       "tier": 3,
       "row": 3,
-      "cost": 15,
+      "cost": 10,
       "age": "Permian",
       "prerequisites": [
         "courtship"
@@ -760,7 +760,7 @@
       "branch": "reproductive",
       "tier": 3,
       "row": 5,
-      "cost": 16,
+      "cost": 10,
       "age": "Triassic",
       "prerequisites": [
         "courtship"
@@ -777,7 +777,7 @@
       "branch": "reproductive",
       "tier": 3,
       "row": 2,
-      "cost": 16,
+      "cost": 10,
       "age": "Triassic",
       "prerequisites": [
         "egg_guarding"
@@ -794,7 +794,7 @@
       "branch": "reproductive",
       "tier": 3,
       "row": 6,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "courtship"
@@ -811,7 +811,7 @@
       "branch": "reproductive",
       "tier": 4,
       "row": 5,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "courtship_dance"
@@ -829,7 +829,7 @@
       "branch": "reproductive",
       "tier": 4,
       "row": 1,
-      "cost": 19,
+      "cost": 12,
       "age": "Jurassic",
       "prerequisites": [
         "feeding_young"
@@ -846,7 +846,7 @@
       "branch": "reproductive",
       "tier": 3,
       "row": 1,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "egg_guarding"
@@ -863,7 +863,7 @@
       "branch": "reproductive",
       "tier": 5,
       "row": 1,
-      "cost": 23,
+      "cost": 15,
       "age": "Paleogene",
       "prerequisites": [
         "biparental_care"
@@ -880,7 +880,7 @@
       "branch": "reproductive",
       "tier": 4,
       "row": 3,
-      "cost": 22,
+      "cost": 14,
       "age": "Neogene",
       "prerequisites": [
         "feeding_young"
@@ -897,7 +897,7 @@
       "branch": "reproductive",
       "tier": 6,
       "row": 1,
-      "cost": 26,
+      "cost": 17,
       "age": "Neogene",
       "prerequisites": [
         "alloparenting"
@@ -926,7 +926,7 @@
       "branch": "social",
       "tier": 1,
       "row": 1,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "aggregation"
@@ -945,7 +945,7 @@
       "branch": "social",
       "tier": 1,
       "row": 2,
-      "cost": 8,
+      "cost": 5,
       "age": "Silurian",
       "prerequisites": [
         "aggregation"
@@ -962,7 +962,7 @@
       "branch": "social",
       "tier": 1,
       "row": 3,
-      "cost": 11,
+      "cost": 7,
       "age": "Permian",
       "prerequisites": [
         "aggregation"
@@ -979,7 +979,7 @@
       "branch": "social",
       "tier": 2,
       "row": 1,
-      "cost": 14,
+      "cost": 9,
       "age": "Triassic",
       "prerequisites": [
         "schooling"
@@ -996,7 +996,7 @@
       "branch": "social",
       "tier": 2,
       "row": 3,
-      "cost": 16,
+      "cost": 10,
       "age": "Cretaceous",
       "prerequisites": [
         "family_groups"
@@ -1014,7 +1014,7 @@
       "branch": "social",
       "tier": 3,
       "row": 3,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "eusociality"
@@ -1031,7 +1031,7 @@
       "branch": "social",
       "tier": 3,
       "row": 1,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "herding"
@@ -1048,7 +1048,7 @@
       "branch": "social",
       "tier": 2,
       "row": 2,
-      "cost": 17,
+      "cost": 11,
       "age": "Paleogene",
       "prerequisites": [
         "family_groups"
@@ -1065,7 +1065,7 @@
       "branch": "social",
       "tier": 2,
       "row": 4,
-      "cost": 16,
+      "cost": 10,
       "age": "Cretaceous",
       "prerequisites": [
         "family_groups"
@@ -1082,7 +1082,7 @@
       "branch": "social",
       "tier": 4,
       "row": 1,
-      "cost": 21,
+      "cost": 14,
       "age": "Paleogene",
       "prerequisites": [
         "social_hierarchy"
@@ -1099,7 +1099,7 @@
       "branch": "social",
       "tier": 4,
       "row": 3,
-      "cost": 21,
+      "cost": 14,
       "age": "Paleogene",
       "prerequisites": [
         "castes"
@@ -1116,7 +1116,7 @@
       "branch": "social",
       "tier": 4,
       "row": 0,
-      "cost": 22,
+      "cost": 14,
       "age": "Neogene",
       "prerequisites": [
         "social_hierarchy"
@@ -1133,7 +1133,7 @@
       "branch": "social",
       "tier": 5,
       "row": 0,
-      "cost": 24,
+      "cost": 16,
       "age": "Neogene",
       "prerequisites": [
         "coalitions"
@@ -1150,7 +1150,7 @@
       "branch": "social",
       "tier": 5,
       "row": 1,
-      "cost": 24,
+      "cost": 16,
       "age": "Neogene",
       "prerequisites": [
         "social_grooming"
@@ -1167,7 +1167,7 @@
       "branch": "social",
       "tier": 3,
       "row": 0,
-      "cost": 20,
+      "cost": 13,
       "age": "Neogene",
       "prerequisites": [
         "herding"
@@ -1184,7 +1184,7 @@
       "branch": "social",
       "tier": 6,
       "row": 0,
-      "cost": 26,
+      "cost": 17,
       "age": "Neogene",
       "prerequisites": [
         "fission_fusion"
@@ -1201,7 +1201,7 @@
       "branch": "social",
       "tier": 7,
       "row": 0,
-      "cost": 29,
+      "cost": 19,
       "age": "Quaternary",
       "prerequisites": [
         "matriarchs"
@@ -1218,7 +1218,7 @@
       "branch": "social",
       "tier": 8,
       "row": 0,
-      "cost": 31,
+      "cost": 20,
       "age": "Quaternary",
       "prerequisites": [
         "traditions",
@@ -1248,7 +1248,7 @@
       "branch": "agonistic",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "aggression"
@@ -1265,7 +1265,7 @@
       "branch": "agonistic",
       "tier": 1,
       "row": 1,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "aggression"
@@ -1282,7 +1282,7 @@
       "branch": "agonistic",
       "tier": 1,
       "row": 2,
-      "cost": 8,
+      "cost": 5,
       "age": "Silurian",
       "prerequisites": [
         "aggression"
@@ -1299,7 +1299,7 @@
       "branch": "agonistic",
       "tier": 2,
       "row": 0,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "retreat"
@@ -1316,7 +1316,7 @@
       "branch": "agonistic",
       "tier": 2,
       "row": 2,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "threat_display"
@@ -1333,7 +1333,7 @@
       "branch": "agonistic",
       "tier": 1,
       "row": 3,
-      "cost": 9,
+      "cost": 6,
       "age": "Devonian",
       "prerequisites": [
         "aggression"
@@ -1350,7 +1350,7 @@
       "branch": "agonistic",
       "tier": 2,
       "row": 1,
-      "cost": 11,
+      "cost": 7,
       "age": "Devonian",
       "prerequisites": [
         "threat_display"
@@ -1367,7 +1367,7 @@
       "branch": "agonistic",
       "tier": 2,
       "row": 3,
-      "cost": 13,
+      "cost": 8,
       "age": "Permian",
       "prerequisites": [
         "threat_display"
@@ -1384,7 +1384,7 @@
       "branch": "agonistic",
       "tier": 3,
       "row": 0,
-      "cost": 15,
+      "cost": 10,
       "age": "Permian",
       "prerequisites": [
         "submission"
@@ -1401,7 +1401,7 @@
       "branch": "agonistic",
       "tier": 3,
       "row": 1,
-      "cost": 15,
+      "cost": 10,
       "age": "Permian",
       "prerequisites": [
         "ritualised_fighting"
@@ -1418,7 +1418,7 @@
       "branch": "agonistic",
       "tier": 2,
       "row": 4,
-      "cost": 16,
+      "cost": 10,
       "age": "Cretaceous",
       "prerequisites": [
         "territoriality"
@@ -1435,7 +1435,7 @@
       "branch": "agonistic",
       "tier": 4,
       "row": 1,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "male_combat"
@@ -1452,7 +1452,7 @@
       "branch": "agonistic",
       "tier": 1,
       "row": 4,
-      "cost": 14,
+      "cost": 9,
       "age": "Cretaceous",
       "prerequisites": [
         "aggression"
@@ -1469,7 +1469,7 @@
       "branch": "agonistic",
       "tier": 1,
       "row": 5,
-      "cost": 14,
+      "cost": 9,
       "age": "Cretaceous",
       "prerequisites": [
         "aggression"
@@ -1486,7 +1486,7 @@
       "branch": "agonistic",
       "tier": 4,
       "row": 0,
-      "cost": 21,
+      "cost": 14,
       "age": "Paleogene",
       "prerequisites": [
         "male_combat"
@@ -1503,7 +1503,7 @@
       "branch": "agonistic",
       "tier": 5,
       "row": 0,
-      "cost": 23,
+      "cost": 15,
       "age": "Paleogene",
       "prerequisites": [
         "harems"
@@ -1520,7 +1520,7 @@
       "branch": "agonistic",
       "tier": 4,
       "row": 2,
-      "cost": 22,
+      "cost": 14,
       "age": "Neogene",
       "prerequisites": [
         "male_combat"
@@ -1537,7 +1537,7 @@
       "branch": "agonistic",
       "tier": 4,
       "row": 3,
-      "cost": 22,
+      "cost": 14,
       "age": "Neogene",
       "prerequisites": [
         "male_combat"
@@ -1554,7 +1554,7 @@
       "branch": "agonistic",
       "tier": 2,
       "row": 5,
-      "cost": 18,
+      "cost": 12,
       "age": "Neogene",
       "prerequisites": [
         "territoriality"
@@ -1584,7 +1584,7 @@
       "branch": "communication",
       "tier": 1,
       "row": 0,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "chemical_signals"
@@ -1601,7 +1601,7 @@
       "branch": "communication",
       "tier": 1,
       "row": 1,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "chemical_signals"
@@ -1618,7 +1618,7 @@
       "branch": "communication",
       "tier": 1,
       "row": 2,
-      "cost": 8,
+      "cost": 5,
       "age": "Silurian",
       "prerequisites": [
         "chemical_signals"
@@ -1635,7 +1635,7 @@
       "branch": "communication",
       "tier": 2,
       "row": 2,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "colour_signals"
@@ -1652,7 +1652,7 @@
       "branch": "communication",
       "tier": 2,
       "row": 1,
-      "cost": 12,
+      "cost": 8,
       "age": "Carboniferous",
       "prerequisites": [
         "substrate_vibration"
@@ -1669,7 +1669,7 @@
       "branch": "communication",
       "tier": 2,
       "row": 3,
-      "cost": 13,
+      "cost": 8,
       "age": "Permian",
       "prerequisites": [
         "colour_signals"
@@ -1686,7 +1686,7 @@
       "branch": "communication",
       "tier": 2,
       "row": 0,
-      "cost": 14,
+      "cost": 9,
       "age": "Triassic",
       "prerequisites": [
         "pheromones"
@@ -1703,7 +1703,7 @@
       "branch": "communication",
       "tier": 3,
       "row": 1,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "stridulation"
@@ -1720,7 +1720,7 @@
       "branch": "communication",
       "tier": 4,
       "row": 1,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "vocal_communication"
@@ -1737,7 +1737,7 @@
       "branch": "communication",
       "tier": 1,
       "row": 3,
-      "cost": 15,
+      "cost": 10,
       "age": "Paleogene",
       "prerequisites": [
         "chemical_signals"
@@ -1754,7 +1754,7 @@
       "branch": "communication",
       "tier": 2,
       "row": 4,
-      "cost": 17,
+      "cost": 11,
       "age": "Paleogene",
       "prerequisites": [
         "substrate_vibration"
@@ -1771,7 +1771,7 @@
       "branch": "communication",
       "tier": 4,
       "row": 0,
-      "cost": 21,
+      "cost": 14,
       "age": "Paleogene",
       "prerequisites": [
         "vocal_communication"
@@ -1789,7 +1789,7 @@
       "branch": "communication",
       "tier": 3,
       "row": 3,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "display_postures"
@@ -1806,7 +1806,7 @@
       "branch": "communication",
       "tier": 5,
       "row": 0,
-      "cost": 24,
+      "cost": 16,
       "age": "Neogene",
       "prerequisites": [
         "learned_song"
@@ -1823,7 +1823,7 @@
       "branch": "communication",
       "tier": 5,
       "row": 1,
-      "cost": 24,
+      "cost": 16,
       "age": "Neogene",
       "prerequisites": [
         "alarm_calls"
@@ -1841,7 +1841,7 @@
       "branch": "communication",
       "tier": 4,
       "row": 2,
-      "cost": 22,
+      "cost": 14,
       "age": "Neogene",
       "prerequisites": [
         "vocal_communication"
@@ -1858,7 +1858,7 @@
       "branch": "communication",
       "tier": 5,
       "row": 2,
-      "cost": 24,
+      "cost": 16,
       "age": "Neogene",
       "prerequisites": [
         "learned_song"
@@ -1875,7 +1875,7 @@
       "branch": "communication",
       "tier": 4,
       "row": 3,
-      "cost": 22,
+      "cost": 14,
       "age": "Neogene",
       "prerequisites": [
         "facial_expressions"
@@ -1892,7 +1892,7 @@
       "branch": "communication",
       "tier": 6,
       "row": 2,
-      "cost": 27,
+      "cost": 18,
       "age": "Quaternary",
       "prerequisites": [
         "referential_calls",
@@ -1923,7 +1923,7 @@
       "branch": "migration",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "taxis"
@@ -1940,7 +1940,7 @@
       "branch": "migration",
       "tier": 1,
       "row": 1,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "taxis"
@@ -1957,7 +1957,7 @@
       "branch": "migration",
       "tier": 2,
       "row": 0,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "light_following"
@@ -1974,7 +1974,7 @@
       "branch": "migration",
       "tier": 1,
       "row": 2,
-      "cost": 8,
+      "cost": 5,
       "age": "Silurian",
       "prerequisites": [
         "taxis"
@@ -1991,7 +1991,7 @@
       "branch": "migration",
       "tier": 2,
       "row": 1,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "home_range"
@@ -2008,7 +2008,7 @@
       "branch": "migration",
       "tier": 2,
       "row": 2,
-      "cost": 12,
+      "cost": 8,
       "age": "Carboniferous",
       "prerequisites": [
         "home_range"
@@ -2027,7 +2027,7 @@
       "branch": "migration",
       "tier": 2,
       "row": 3,
-      "cost": 12,
+      "cost": 8,
       "age": "Carboniferous",
       "prerequisites": [
         "light_following"
@@ -2044,7 +2044,7 @@
       "branch": "migration",
       "tier": 3,
       "row": 1,
-      "cost": 14,
+      "cost": 9,
       "age": "Carboniferous",
       "prerequisites": [
         "land_excursions"
@@ -2061,7 +2061,7 @@
       "branch": "migration",
       "tier": 4,
       "row": 1,
-      "cost": 17,
+      "cost": 11,
       "age": "Permian",
       "prerequisites": [
         "mass_dispersal"
@@ -2078,7 +2078,7 @@
       "branch": "migration",
       "tier": 2,
       "row": 4,
-      "cost": 14,
+      "cost": 9,
       "age": "Triassic",
       "prerequisites": [
         "home_range"
@@ -2095,7 +2095,7 @@
       "branch": "migration",
       "tier": 3,
       "row": 2,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "seasonal_migration"
@@ -2112,7 +2112,7 @@
       "branch": "migration",
       "tier": 4,
       "row": 2,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "natal_homing"
@@ -2129,7 +2129,7 @@
       "branch": "migration",
       "tier": 3,
       "row": 3,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "sun_compass"
@@ -2146,7 +2146,7 @@
       "branch": "migration",
       "tier": 3,
       "row": 4,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "sun_compass"
@@ -2163,7 +2163,7 @@
       "branch": "migration",
       "tier": 5,
       "row": 2,
-      "cost": 23,
+      "cost": 15,
       "age": "Paleogene",
       "prerequisites": [
         "magnetic_navigation"
@@ -2180,7 +2180,7 @@
       "branch": "migration",
       "tier": 3,
       "row": 5,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "land_excursions"
@@ -2197,7 +2197,7 @@
       "branch": "migration",
       "tier": 3,
       "row": 6,
-      "cost": 20,
+      "cost": 13,
       "age": "Neogene",
       "prerequisites": [
         "seasonal_migration"
@@ -2214,7 +2214,7 @@
       "branch": "migration",
       "tier": 3,
       "row": 7,
-      "cost": 20,
+      "cost": 13,
       "age": "Neogene",
       "prerequisites": [
         "seasonal_migration"
@@ -2243,7 +2243,7 @@
       "branch": "nest_building",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "settling"
@@ -2260,7 +2260,7 @@
       "branch": "nest_building",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "settling"
@@ -2280,7 +2280,7 @@
       "branch": "nest_building",
       "tier": 2,
       "row": 0,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "tube_building"
@@ -2297,7 +2297,7 @@
       "branch": "nest_building",
       "tier": 2,
       "row": 1,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "burrow_systems"
@@ -2314,7 +2314,7 @@
       "branch": "nest_building",
       "tier": 2,
       "row": 2,
-      "cost": 13,
+      "cost": 8,
       "age": "Permian",
       "prerequisites": [
         "burrow_systems"
@@ -2331,7 +2331,7 @@
       "branch": "nest_building",
       "tier": 2,
       "row": 3,
-      "cost": 13,
+      "cost": 8,
       "age": "Permian",
       "prerequisites": [
         "tube_building"
@@ -2348,7 +2348,7 @@
       "branch": "nest_building",
       "tier": 3,
       "row": 2,
-      "cost": 16,
+      "cost": 10,
       "age": "Triassic",
       "prerequisites": [
         "burrow_nests"
@@ -2367,7 +2367,7 @@
       "branch": "nest_building",
       "tier": 4,
       "row": 2,
-      "cost": 18,
+      "cost": 12,
       "age": "Triassic",
       "prerequisites": [
         "nesting"
@@ -2384,7 +2384,7 @@
       "branch": "nest_building",
       "tier": 3,
       "row": 1,
-      "cost": 17,
+      "cost": 11,
       "age": "Jurassic",
       "prerequisites": [
         "burrow_nests"
@@ -2401,7 +2401,7 @@
       "branch": "nest_building",
       "tier": 4,
       "row": 1,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "nesting"
@@ -2418,7 +2418,7 @@
       "branch": "nest_building",
       "tier": 5,
       "row": 2,
-      "cost": 22,
+      "cost": 14,
       "age": "Cretaceous",
       "prerequisites": [
         "nest_defence"
@@ -2435,7 +2435,7 @@
       "branch": "nest_building",
       "tier": 4,
       "row": 3,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "nesting"
@@ -2452,7 +2452,7 @@
       "branch": "nest_building",
       "tier": 4,
       "row": 0,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "nesting"
@@ -2469,7 +2469,7 @@
       "branch": "nest_building",
       "tier": 4,
       "row": 4,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "provisioned_cells"
@@ -2486,7 +2486,7 @@
       "branch": "nest_building",
       "tier": 2,
       "row": 4,
-      "cost": 17,
+      "cost": 11,
       "age": "Paleogene",
       "prerequisites": [
         "burrow_systems"
@@ -2504,7 +2504,7 @@
       "branch": "nest_building",
       "tier": 4,
       "row": 5,
-      "cost": 21,
+      "cost": 14,
       "age": "Paleogene",
       "prerequisites": [
         "provisioned_cells"
@@ -2521,7 +2521,7 @@
       "branch": "nest_building",
       "tier": 4,
       "row": 6,
-      "cost": 21,
+      "cost": 14,
       "age": "Paleogene",
       "prerequisites": [
         "nesting"
@@ -2538,7 +2538,7 @@
       "branch": "nest_building",
       "tier": 5,
       "row": 3,
-      "cost": 24,
+      "cost": 16,
       "age": "Neogene",
       "prerequisites": [
         "woven_nests"
@@ -2555,7 +2555,7 @@
       "branch": "nest_building",
       "tier": 2,
       "row": 5,
-      "cost": 18,
+      "cost": 12,
       "age": "Neogene",
       "prerequisites": [
         "burrow_systems"
@@ -2585,7 +2585,7 @@
       "branch": "maintenance",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "self_cleaning"
@@ -2602,7 +2602,7 @@
       "branch": "maintenance",
       "tier": 1,
       "row": 1,
-      "cost": 9,
+      "cost": 6,
       "age": "Devonian",
       "prerequisites": [
         "self_cleaning"
@@ -2619,7 +2619,7 @@
       "branch": "maintenance",
       "tier": 2,
       "row": 1,
-      "cost": 11,
+      "cost": 7,
       "age": "Devonian",
       "prerequisites": [
         "basking"
@@ -2636,7 +2636,7 @@
       "branch": "maintenance",
       "tier": 1,
       "row": 2,
-      "cost": 9,
+      "cost": 6,
       "age": "Devonian",
       "prerequisites": [
         "self_cleaning"
@@ -2653,7 +2653,7 @@
       "branch": "maintenance",
       "tier": 1,
       "row": 3,
-      "cost": 10,
+      "cost": 6,
       "age": "Carboniferous",
       "prerequisites": [
         "self_cleaning"
@@ -2670,7 +2670,7 @@
       "branch": "maintenance",
       "tier": 2,
       "row": 3,
-      "cost": 13,
+      "cost": 8,
       "age": "Permian",
       "prerequisites": [
         "scratching"
@@ -2687,7 +2687,7 @@
       "branch": "maintenance",
       "tier": 2,
       "row": 0,
-      "cost": 13,
+      "cost": 8,
       "age": "Permian",
       "prerequisites": [
         "moulting_behaviour"
@@ -2704,7 +2704,7 @@
       "branch": "maintenance",
       "tier": 3,
       "row": 3,
-      "cost": 16,
+      "cost": 10,
       "age": "Triassic",
       "prerequisites": [
         "skin_rubbing"
@@ -2722,7 +2722,7 @@
       "branch": "maintenance",
       "tier": 2,
       "row": 2,
-      "cost": 14,
+      "cost": 9,
       "age": "Triassic",
       "prerequisites": [
         "scratching"
@@ -2739,7 +2739,7 @@
       "branch": "maintenance",
       "tier": 3,
       "row": 1,
-      "cost": 16,
+      "cost": 10,
       "age": "Triassic",
       "prerequisites": [
         "shade_seeking"
@@ -2756,7 +2756,7 @@
       "branch": "maintenance",
       "tier": 2,
       "row": 4,
-      "cost": 15,
+      "cost": 10,
       "age": "Jurassic",
       "prerequisites": [
         "scratching"
@@ -2773,7 +2773,7 @@
       "branch": "maintenance",
       "tier": 2,
       "row": 5,
-      "cost": 16,
+      "cost": 10,
       "age": "Cretaceous",
       "prerequisites": [
         "basking"
@@ -2790,7 +2790,7 @@
       "branch": "maintenance",
       "tier": 1,
       "row": 4,
-      "cost": 14,
+      "cost": 9,
       "age": "Cretaceous",
       "prerequisites": [
         "self_cleaning"
@@ -2808,7 +2808,7 @@
       "branch": "maintenance",
       "tier": 3,
       "row": 4,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "preening"
@@ -2825,7 +2825,7 @@
       "branch": "maintenance",
       "tier": 3,
       "row": 5,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "preening"
@@ -2842,7 +2842,7 @@
       "branch": "maintenance",
       "tier": 1,
       "row": 5,
-      "cost": 14,
+      "cost": 9,
       "age": "Cretaceous",
       "prerequisites": [
         "self_cleaning"
@@ -2859,7 +2859,7 @@
       "branch": "maintenance",
       "tier": 3,
       "row": 2,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "preening"
@@ -2876,7 +2876,7 @@
       "branch": "maintenance",
       "tier": 2,
       "row": 6,
-      "cost": 17,
+      "cost": 11,
       "age": "Paleogene",
       "prerequisites": [
         "nest_sanitation"
@@ -2893,7 +2893,7 @@
       "branch": "maintenance",
       "tier": 3,
       "row": 0,
-      "cost": 20,
+      "cost": 13,
       "age": "Neogene",
       "prerequisites": [
         "wound_licking"
@@ -2922,7 +2922,7 @@
       "branch": "resting",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "quiescence"
@@ -2939,7 +2939,7 @@
       "branch": "resting",
       "tier": 1,
       "row": 1,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "quiescence"
@@ -2956,7 +2956,7 @@
       "branch": "resting",
       "tier": 2,
       "row": 0,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "daily_rhythm"
@@ -2973,7 +2973,7 @@
       "branch": "resting",
       "tier": 2,
       "row": 1,
-      "cost": 11,
+      "cost": 7,
       "age": "Devonian",
       "prerequisites": [
         "shelter_resting"
@@ -2990,7 +2990,7 @@
       "branch": "resting",
       "tier": 3,
       "row": 0,
-      "cost": 15,
+      "cost": 10,
       "age": "Permian",
       "prerequisites": [
         "sleep"
@@ -3007,7 +3007,7 @@
       "branch": "resting",
       "tier": 2,
       "row": 3,
-      "cost": 14,
+      "cost": 9,
       "age": "Triassic",
       "prerequisites": [
         "daily_rhythm"
@@ -3024,7 +3024,7 @@
       "branch": "resting",
       "tier": 2,
       "row": 4,
-      "cost": 15,
+      "cost": 10,
       "age": "Jurassic",
       "prerequisites": [
         "shelter_resting"
@@ -3041,7 +3041,7 @@
       "branch": "resting",
       "tier": 4,
       "row": 0,
-      "cost": 19,
+      "cost": 12,
       "age": "Jurassic",
       "prerequisites": [
         "deep_sleep"
@@ -3058,7 +3058,7 @@
       "branch": "resting",
       "tier": 4,
       "row": 1,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "deep_sleep"
@@ -3075,7 +3075,7 @@
       "branch": "resting",
       "tier": 3,
       "row": 4,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "roosting"
@@ -3092,7 +3092,7 @@
       "branch": "resting",
       "tier": 3,
       "row": 3,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "roosting"
@@ -3109,7 +3109,7 @@
       "branch": "resting",
       "tier": 2,
       "row": 5,
-      "cost": 17,
+      "cost": 11,
       "age": "Paleogene",
       "prerequisites": [
         "daily_rhythm"
@@ -3126,7 +3126,7 @@
       "branch": "resting",
       "tier": 2,
       "row": 6,
-      "cost": 17,
+      "cost": 11,
       "age": "Paleogene",
       "prerequisites": [
         "shelter_resting"
@@ -3143,7 +3143,7 @@
       "branch": "resting",
       "tier": 3,
       "row": 5,
-      "cost": 20,
+      "cost": 13,
       "age": "Neogene",
       "prerequisites": [
         "roosting"
@@ -3160,7 +3160,7 @@
       "branch": "resting",
       "tier": 5,
       "row": 1,
-      "cost": 24,
+      "cost": 16,
       "age": "Neogene",
       "prerequisites": [
         "half_brain_sleep"
@@ -3177,7 +3177,7 @@
       "branch": "resting",
       "tier": 4,
       "row": 4,
-      "cost": 22,
+      "cost": 14,
       "age": "Neogene",
       "prerequisites": [
         "communal_roosts"
@@ -3194,7 +3194,7 @@
       "branch": "resting",
       "tier": 4,
       "row": 3,
-      "cost": 22,
+      "cost": 14,
       "age": "Neogene",
       "prerequisites": [
         "communal_roosts"

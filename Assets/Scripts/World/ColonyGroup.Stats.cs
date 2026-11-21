@@ -77,6 +77,9 @@ namespace NaturalHistory.World
         // Stationed: staying put until given an order (the Station button). Only a stationed group
         // that didn't act the turn before heals; any action (a move, an attack, young) ends it.
         public bool Stationed { get; set; }
+        // Who attacked it last, and in which turn (wild groups strike back: Players/AiPlayers.PlayWild)
+        public ColonyGroup LastAttacker { get; set; }
+        public int LastAttackedTurn { get; set; } = -99;
 
         // Poisoned: loses perTurn HP at the start of each of the next `turns` turns (the stronger dose wins)
         public void Poison(float perTurn, int turns)

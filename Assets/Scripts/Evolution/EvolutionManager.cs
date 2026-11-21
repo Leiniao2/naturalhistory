@@ -131,13 +131,22 @@ namespace NaturalHistory.Evolution
         private static int CurrentTurn => TurnManager.Instance != null ? TurnManager.Instance.CurrentTurn : 0;
 
         // Evolving costs the human player EP (the trees' points, ProgressionManager), so EP set the pace of
-        // evolution: a game starts with 20 and earns 5 a turn from turn 2, so 36 EP first come together
-        // on turn 5 (sooner with bonus EP, later if some go on Functions and Behaviors).
-        public const int EvolveCost = 36; // EP in the Ediacaran; EvolveCostNow grows with the periods (EpCosts)
-        public static int EvolveCostNow => EpCosts.Of(EvolveCost);
-        // What evolving a copy of `from` costs its player: less with the species' items (TraitEffects.evolveDiscount)
-        public static int EvolveCostFor(OwnedCopy copy, string from) =>
-            TraitBonuses.Discounted(EvolveCostNow, GameDataLoader.GetSpecies(from), copy != null ? copy.player : -1);
+        // evolution. The price is the size of the step: a close relative in the same group is cheap
+        // (SmallStep), a new group dearer (NewGroup), and each item the step grants dearer still
+        // (PerGrant): a game starts with 20 EP and earns 5 a turn from turn 2, so the first steps
+        // (12–20 EP) come within a few turns. Prices grow with the periods (EpCosts).
+        public const int SmallStep = 6, NewGroup = 12, PerGrant = 4; // EP in the Ediacaran
+        public static int EvolveCostOf(EvolutionLink link)
+        {
+            var from = GameDataLoader.GetSpecies(link.from);
+            var to   = GameDataLoader.GetSpecies(link.to);
+            int cost = from != null && to != null && from.group == to.group ? SmallStep : NewGroup;
+            cost += PerGrant * ((link.grantFunctions?.Count ?? 0) + (link.grantBehaviors?.Count ?? 0));
+            return EpCosts.Of(cost);
+        }
+        // What evolving a copy along `link` costs its player: less with the species' items (TraitEffects.evolveDiscount)
+        public static int EvolveCostFor(OwnedCopy copy, EvolutionLink link) =>
+            TraitBonuses.Discounted(EvolveCostOf(link), GameDataLoader.GetSpecies(link.from), copy != null ? copy.player : -1);
         // Only the human player has EP; other players' copies evolve without paying
         private static bool PaysEP(OwnedCopy copy) => copy == null || (Human != null && copy.player == Human.Index);
 
@@ -269,7 +278,7 @@ namespace NaturalHistory.Evolution
                 // Not yet evolved in the period the map shows (the admin bar jumped back in time): keep
                 // the copy, but only put it back on the map once its period comes round again
                 if (!HasAppeared(def)) continue;
-                var cell = FreeCellNear(def, copy.cell, RespawnReach) ?? fallback?.FirstOrDefault(c => IsFree(def, c));
+                var cell = FreeCellNear(def, copy.cell, RespawnReach, player) ?? fallback?.FirstOrDefault(c => IsFree(def, c, player));
                 if (cell == null) { Debug.Log($"[Evolution] No room to put back {player.Name}'s {def.commonName}."); continue; }
                 var group = colonies.SpawnColony(def, cell, player, Seed(player.Index, i));
                 if (group == null) continue;
@@ -295,8 +304,10 @@ namespace NaturalHistory.Evolution
 
         private int Seed(int player, int index) => (HexGrid.Instance != null ? HexGrid.Instance.WorldSeed : 0) ^ (player * 7919) ^ (index * 104729);
 
-        private static bool IsFree(SpeciesDefinition def, HexCell cell) =>
-            cell != null && ColonyGroup.CanPlace(def, cell) && SpeciesColonies.Instance.GroupAt(cell, Niches.Of(def, cell)) == null; // where it can move, its niche there free
+        // where it can move, its niche there free, and no other side's group on the tile (one side a tile)
+        private static bool IsFree(SpeciesDefinition def, HexCell cell, Player owner) =>
+            cell != null && ColonyGroup.CanPlace(def, cell) && SpeciesColonies.Instance.GroupAt(cell, Niches.Of(def, cell)) == null
+            && !SpeciesColonies.Instance.HeldByOther(cell, owner);
 
         // Nearest free habitat tile within `radius` steps of `from` (including `from`)
         private const int RespawnReach = 8; // tiles: how far a copy may be moved if its tile no longer suits it
@@ -304,13 +315,13 @@ namespace NaturalHistory.Evolution
         private static bool HasAppeared(SpeciesDefinition def) =>
             HexGrid.Instance == null || !Enum.TryParse(def.firstAge, true, out GeologicalAge first) || HexGrid.Instance.DisplayedAge >= first;
 
-        private static HexCell FreeCellNear(SpeciesDefinition def, HexCell from, int radius)
+        private static HexCell FreeCellNear(SpeciesDefinition def, HexCell from, int radius, Player owner)
         {
             var grid = HexGrid.Instance;
             if (from == null || grid == null) return null;
             for (int r = 0; r <= radius; r++)
                 foreach (var c in grid.GetCellsInRange(from, r))
-                    if (c.Coordinates.DistanceTo(from.Coordinates) == r && IsFree(def, c)) return c;
+                    if (c.Coordinates.DistanceTo(from.Coordinates) == r && IsFree(def, c, owner)) return c;
             return null;
         }
 
@@ -348,7 +359,7 @@ namespace NaturalHistory.Evolution
             foreach (var center in territory.Centers.Where(c => c.Owner == Human && c.Cell != null))
                 for (int r = 0; r <= 2; r++)
                     foreach (var cell in grid.GetCellsInRange(center.Cell, r))
-                        if (cell.Coordinates.DistanceTo(center.Cell.Coordinates) == r && IsFree(def, cell) && FoodWeb.HasFood(def, cell, SpeciesColonies.Instance, null))
+                        if (cell.Coordinates.DistanceTo(center.Cell.Coordinates) == r && IsFree(def, cell, Human) && FoodWeb.HasFood(def, cell, SpeciesColonies.Instance, null))
                             return cell;
             return null;
         }
@@ -385,7 +396,7 @@ namespace NaturalHistory.Evolution
             var def = GameDataLoader.GetSpecies(copy.species);
             var territory = TerritoryManager.Instance;
             return HexGrid.Instance.GetNeighbors(copy.group.Cell)
-                .Where(c => IsFree(def, c))
+                .Where(c => IsFree(def, c, copy.group.Owner))
                 .OrderByDescending(c => territory != null && territory.OwnerOf(c)?.Index == copy.player)
                 .ToList();
         }
@@ -508,7 +519,7 @@ namespace NaturalHistory.Evolution
             if (PaysEP(copy) || IsAi(copy))
             {
                 int ep = PointsFor(copy);
-                int cost = EvolveCostFor(copy, link.from);
+                int cost = EvolveCostFor(copy, link);
                 list.Add(new Requirement(Loc.F("Needs {0} EP (you have {1})", cost, ep), ep >= cost));
             }
             if (copy != null && copy.JustBorn)
@@ -527,7 +538,7 @@ namespace NaturalHistory.Evolution
             var cell = copy?.group != null ? copy.group.Cell : null;
             if (cell == null || target == null) return null;
             if (ColonyGroup.CanPlace(target, cell)) return cell; // where the new species can move
-            return HexGrid.Instance.GetNeighbors(cell).FirstOrDefault(c => IsFree(target, c));
+            return HexGrid.Instance.GetNeighbors(cell).FirstOrDefault(c => IsFree(target, c, copy.group.Owner));
         }
 
         public bool Evolve(EvolutionLink link, OwnedCopy copy, out string message)
@@ -558,7 +569,7 @@ namespace NaturalHistory.Evolution
             to.functions.UnionWith(link.grantFunctions);
             to.behaviors.UnionWith(link.grantBehaviors);
 
-            Spend(copy, EvolveCostFor(copy, link.from));
+            Spend(copy, EvolveCostFor(copy, link));
             EvolvedBy(copy.player).Add(link.Key);
             copy.species  = link.to;
             copy.group    = group;

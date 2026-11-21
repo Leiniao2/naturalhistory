@@ -70,7 +70,7 @@
       "branch": "nervous",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "nerve_net"
@@ -87,7 +87,7 @@
       "branch": "nervous",
       "tier": 2,
       "row": 0,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "nerve_cords"
@@ -104,7 +104,7 @@
       "branch": "nervous",
       "tier": 2,
       "row": 1,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "nerve_cords"
@@ -121,7 +121,7 @@
       "branch": "nervous",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "nerve_net"
@@ -140,7 +140,7 @@
       "branch": "nervous",
       "tier": 3,
       "row": 0,
-      "cost": 10,
+      "cost": 6,
       "age": "Ediacaran",
       "prerequisites": [
         "cephalisation"
@@ -159,7 +159,7 @@
       "branch": "nervous",
       "tier": 3,
       "row": 1,
-      "cost": 10,
+      "cost": 6,
       "age": "Ediacaran",
       "prerequisites": [
         "cephalisation"
@@ -176,7 +176,7 @@
       "branch": "nervous",
       "tier": 4,
       "row": 1,
-      "cost": 13,
+      "cost": 8,
       "age": "Ordovician",
       "prerequisites": [
         "dorsal_nerve_cord"
@@ -193,7 +193,7 @@
       "branch": "nervous",
       "tier": 4,
       "row": 0,
-      "cost": 13,
+      "cost": 8,
       "age": "Ordovician",
       "prerequisites": [
         "dorsal_nerve_cord"
@@ -210,7 +210,7 @@
       "branch": "nervous",
       "tier": 3,
       "row": 2,
-      "cost": 11,
+      "cost": 7,
       "age": "Ordovician",
       "prerequisites": [
         "ganglia"
@@ -227,7 +227,7 @@
       "branch": "nervous",
       "tier": 4,
       "row": 2,
-      "cost": 13,
+      "cost": 8,
       "age": "Ordovician",
       "prerequisites": [
         "dorsal_nerve_cord"
@@ -246,7 +246,7 @@
       "branch": "nervous",
       "tier": 5,
       "row": 0,
-      "cost": 16,
+      "cost": 10,
       "age": "Silurian",
       "prerequisites": [
         "three_part_brain"
@@ -263,7 +263,7 @@
       "branch": "nervous",
       "tier": 5,
       "row": 1,
-      "cost": 16,
+      "cost": 10,
       "age": "Silurian",
       "prerequisites": [
         "three_part_brain"
@@ -280,7 +280,7 @@
       "branch": "nervous",
       "tier": 5,
       "row": 2,
-      "cost": 17,
+      "cost": 11,
       "age": "Devonian",
       "prerequisites": [
         "lateral_line_organ"
@@ -299,7 +299,7 @@
       "branch": "nervous",
       "tier": 6,
       "row": 1,
-      "cost": 19,
+      "cost": 12,
       "age": "Devonian",
       "prerequisites": [
         "cerebellum"
@@ -316,7 +316,7 @@
       "branch": "nervous",
       "tier": 5,
       "row": 3,
-      "cost": 20,
+      "cost": 13,
       "age": "Triassic",
       "prerequisites": [
         "lateral_line_organ"
@@ -333,7 +333,7 @@
       "branch": "nervous",
       "tier": 7,
       "row": 1,
-      "cost": 24,
+      "cost": 16,
       "age": "Triassic",
       "prerequisites": [
         "pallium"
@@ -350,7 +350,7 @@
       "branch": "nervous",
       "tier": 8,
       "row": 1,
-      "cost": 27,
+      "cost": 18,
       "age": "Jurassic",
       "prerequisites": [
         "large_brain"
@@ -367,7 +367,7 @@
       "branch": "nervous",
       "tier": 6,
       "row": 3,
-      "cost": 25,
+      "cost": 16,
       "age": "Paleogene",
       "prerequisites": [
         "eardrums"
@@ -386,7 +386,7 @@
       "branch": "nervous",
       "tier": 9,
       "row": 1,
-      "cost": 32,
+      "cost": 21,
       "age": "Neogene",
       "prerequisites": [
         "neocortex"
@@ -415,7 +415,7 @@
       "branch": "circulatory",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "fluid_circulation"
@@ -432,7 +432,7 @@
       "branch": "circulatory",
       "tier": 2,
       "row": 0,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "pulsing_vessel"
@@ -449,7 +449,7 @@
       "branch": "circulatory",
       "tier": 2,
       "row": 1,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "pulsing_vessel"
@@ -466,7 +466,7 @@
       "branch": "circulatory",
       "tier": 3,
       "row": 0,
-      "cost": 10,
+      "cost": 6,
       "age": "Ediacaran",
       "prerequisites": [
         "open_circulation"
@@ -483,7 +483,7 @@
       "branch": "circulatory",
       "tier": 3,
       "row": 1,
-      "cost": 10,
+      "cost": 6,
       "age": "Ediacaran",
       "prerequisites": [
         "closed_circulation"
@@ -500,7 +500,7 @@
       "branch": "circulatory",
       "tier": 4,
       "row": 1,
-      "cost": 13,
+      "cost": 8,
       "age": "Ordovician",
       "prerequisites": [
         "haemoglobin"
@@ -517,7 +517,7 @@
       "branch": "circulatory",
       "tier": 3,
       "row": 2,
-      "cost": 11,
+      "cost": 7,
       "age": "Ordovician",
       "prerequisites": [
         "closed_circulation"
@@ -534,7 +534,7 @@
       "branch": "circulatory",
       "tier": 3,
       "row": 3,
-      "cost": 11,
+      "cost": 7,
       "age": "Ordovician",
       "prerequisites": [
         "closed_circulation"
@@ -551,7 +551,7 @@
       "branch": "circulatory",
       "tier": 3,
       "row": 4,
-      "cost": 11,
+      "cost": 7,
       "age": "Ordovician",
       "prerequisites": [
         "closed_circulation"
@@ -568,7 +568,7 @@
       "branch": "circulatory",
       "tier": 5,
       "row": 1,
-      "cost": 16,
+      "cost": 10,
       "age": "Silurian",
       "prerequisites": [
         "red_blood_cells"
@@ -585,7 +585,7 @@
       "branch": "circulatory",
       "tier": 4,
       "row": 2,
-      "cost": 14,
+      "cost": 9,
       "age": "Silurian",
       "prerequisites": [
         "two_chambered_heart"
@@ -602,7 +602,7 @@
       "branch": "circulatory",
       "tier": 4,
       "row": 3,
-      "cost": 15,
+      "cost": 10,
       "age": "Devonian",
       "prerequisites": [
         "two_chambered_heart"
@@ -619,7 +619,7 @@
       "branch": "circulatory",
       "tier": 5,
       "row": 3,
-      "cost": 17,
+      "cost": 11,
       "age": "Devonian",
       "prerequisites": [
         "three_chambered_heart"
@@ -636,7 +636,7 @@
       "branch": "circulatory",
       "tier": 3,
       "row": 5,
-      "cost": 14,
+      "cost": 9,
       "age": "Carboniferous",
       "prerequisites": [
         "open_circulation"
@@ -653,7 +653,7 @@
       "branch": "circulatory",
       "tier": 5,
       "row": 2,
-      "cost": 20,
+      "cost": 13,
       "age": "Triassic",
       "prerequisites": [
         "three_chambered_heart"
@@ -670,7 +670,7 @@
       "branch": "circulatory",
       "tier": 6,
       "row": 2,
-      "cost": 23,
+      "cost": 15,
       "age": "Jurassic",
       "prerequisites": [
         "four_chambered_heart"
@@ -687,7 +687,7 @@
       "branch": "circulatory",
       "tier": 6,
       "row": 1,
-      "cost": 24,
+      "cost": 16,
       "age": "Cretaceous",
       "prerequisites": [
         "four_chambered_heart"
@@ -704,7 +704,7 @@
       "branch": "circulatory",
       "tier": 6,
       "row": 3,
-      "cost": 25,
+      "cost": 16,
       "age": "Paleogene",
       "prerequisites": [
         "four_chambered_heart"
@@ -721,7 +721,7 @@
       "branch": "circulatory",
       "tier": 7,
       "row": 3,
-      "cost": 27,
+      "cost": 18,
       "age": "Paleogene",
       "prerequisites": [
         "diving_reflex"
@@ -750,7 +750,7 @@
       "branch": "respiratory",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "skin_breathing"
@@ -767,7 +767,7 @@
       "branch": "respiratory",
       "tier": 2,
       "row": 0,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "gills"
@@ -784,7 +784,7 @@
       "branch": "respiratory",
       "tier": 2,
       "row": 1,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "gills"
@@ -801,7 +801,7 @@
       "branch": "respiratory",
       "tier": 3,
       "row": 0,
-      "cost": 11,
+      "cost": 7,
       "age": "Ordovician",
       "prerequisites": [
         "pharyngeal_slits"
@@ -818,7 +818,7 @@
       "branch": "respiratory",
       "tier": 1,
       "row": 1,
-      "cost": 8,
+      "cost": 5,
       "age": "Silurian",
       "prerequisites": [
         "skin_breathing"
@@ -835,7 +835,7 @@
       "branch": "respiratory",
       "tier": 2,
       "row": 2,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "tracheae"
@@ -852,7 +852,7 @@
       "branch": "respiratory",
       "tier": 3,
       "row": 1,
-      "cost": 12,
+      "cost": 8,
       "age": "Silurian",
       "prerequisites": [
         "book_gills"
@@ -869,7 +869,7 @@
       "branch": "respiratory",
       "tier": 4,
       "row": 0,
-      "cost": 14,
+      "cost": 9,
       "age": "Silurian",
       "prerequisites": [
         "gill_arches"
@@ -886,7 +886,7 @@
       "branch": "respiratory",
       "tier": 4,
       "row": 1,
-      "cost": 15,
+      "cost": 10,
       "age": "Devonian",
       "prerequisites": [
         "gill_arches"
@@ -905,7 +905,7 @@
       "branch": "respiratory",
       "tier": 5,
       "row": 1,
-      "cost": 17,
+      "cost": 11,
       "age": "Devonian",
       "prerequisites": [
         "lungs"
@@ -922,7 +922,7 @@
       "branch": "respiratory",
       "tier": 5,
       "row": 0,
-      "cost": 17,
+      "cost": 11,
       "age": "Devonian",
       "prerequisites": [
         "lungs"
@@ -939,7 +939,7 @@
       "branch": "respiratory",
       "tier": 5,
       "row": 2,
-      "cost": 18,
+      "cost": 12,
       "age": "Carboniferous",
       "prerequisites": [
         "lungs"
@@ -956,7 +956,7 @@
       "branch": "respiratory",
       "tier": 6,
       "row": 0,
-      "cost": 20,
+      "cost": 13,
       "age": "Carboniferous",
       "prerequisites": [
         "throat_pumping"
@@ -973,7 +973,7 @@
       "branch": "respiratory",
       "tier": 7,
       "row": 0,
-      "cost": 23,
+      "cost": 15,
       "age": "Permian",
       "prerequisites": [
         "rib_breathing"
@@ -990,7 +990,7 @@
       "branch": "respiratory",
       "tier": 8,
       "row": 0,
-      "cost": 25,
+      "cost": 16,
       "age": "Permian",
       "prerequisites": [
         "diaphragm"
@@ -1007,7 +1007,7 @@
       "branch": "respiratory",
       "tier": 7,
       "row": 1,
-      "cost": 24,
+      "cost": 16,
       "age": "Triassic",
       "prerequisites": [
         "rib_breathing"
@@ -1024,7 +1024,7 @@
       "branch": "respiratory",
       "tier": 3,
       "row": 2,
-      "cost": 18,
+      "cost": 12,
       "age": "Cretaceous",
       "prerequisites": [
         "spiracles"
@@ -1041,7 +1041,7 @@
       "branch": "respiratory",
       "tier": 8,
       "row": 1,
-      "cost": 28,
+      "cost": 18,
       "age": "Cretaceous",
       "prerequisites": [
         "air_sacs"
@@ -1058,7 +1058,7 @@
       "branch": "respiratory",
       "tier": 5,
       "row": 3,
-      "cost": 23,
+      "cost": 15,
       "age": "Paleogene",
       "prerequisites": [
         "gill_cover"
@@ -1087,7 +1087,7 @@
       "branch": "digestive",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "blind_gut"
@@ -1104,7 +1104,7 @@
       "branch": "digestive",
       "tier": 2,
       "row": 0,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "through_gut"
@@ -1123,7 +1123,7 @@
       "branch": "digestive",
       "tier": 2,
       "row": 1,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "through_gut"
@@ -1140,7 +1140,7 @@
       "branch": "digestive",
       "tier": 2,
       "row": 2,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "through_gut"
@@ -1157,7 +1157,7 @@
       "branch": "digestive",
       "tier": 3,
       "row": 0,
-      "cost": 12,
+      "cost": 8,
       "age": "Silurian",
       "prerequisites": [
         "filter_apparatus"
@@ -1176,7 +1176,7 @@
       "branch": "digestive",
       "tier": 2,
       "row": 3,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "through_gut"
@@ -1193,7 +1193,7 @@
       "branch": "digestive",
       "tier": 4,
       "row": 0,
-      "cost": 14,
+      "cost": 9,
       "age": "Silurian",
       "prerequisites": [
         "jaws"
@@ -1211,7 +1211,7 @@
       "branch": "digestive",
       "tier": 4,
       "row": 1,
-      "cost": 14,
+      "cost": 9,
       "age": "Silurian",
       "prerequisites": [
         "jaws"
@@ -1228,7 +1228,7 @@
       "branch": "digestive",
       "tier": 5,
       "row": 0,
-      "cost": 16,
+      "cost": 10,
       "age": "Silurian",
       "prerequisites": [
         "acid_stomach"
@@ -1245,7 +1245,7 @@
       "branch": "digestive",
       "tier": 5,
       "row": 1,
-      "cost": 17,
+      "cost": 11,
       "age": "Devonian",
       "prerequisites": [
         "teeth"
@@ -1262,7 +1262,7 @@
       "branch": "digestive",
       "tier": 5,
       "row": 2,
-      "cost": 19,
+      "cost": 12,
       "age": "Permian",
       "prerequisites": [
         "acid_stomach"
@@ -1281,7 +1281,7 @@
       "branch": "digestive",
       "tier": 5,
       "row": 3,
-      "cost": 19,
+      "cost": 12,
       "age": "Permian",
       "prerequisites": [
         "teeth"
@@ -1298,7 +1298,7 @@
       "branch": "digestive",
       "tier": 2,
       "row": 4,
-      "cost": 12,
+      "cost": 8,
       "age": "Silurian",
       "prerequisites": [
         "through_gut"
@@ -1315,7 +1315,7 @@
       "branch": "digestive",
       "tier": 6,
       "row": 3,
-      "cost": 22,
+      "cost": 14,
       "age": "Triassic",
       "prerequisites": [
         "differentiated_teeth"
@@ -1332,7 +1332,7 @@
       "branch": "digestive",
       "tier": 3,
       "row": 3,
-      "cost": 17,
+      "cost": 11,
       "age": "Jurassic",
       "prerequisites": [
         "gizzard"
@@ -1349,7 +1349,7 @@
       "branch": "digestive",
       "tier": 5,
       "row": 5,
-      "cost": 21,
+      "cost": 14,
       "age": "Jurassic",
       "prerequisites": [
         "teeth"
@@ -1366,7 +1366,7 @@
       "branch": "digestive",
       "tier": 6,
       "row": 2,
-      "cost": 23,
+      "cost": 15,
       "age": "Jurassic",
       "prerequisites": [
         "differentiated_teeth"
@@ -1383,7 +1383,7 @@
       "branch": "digestive",
       "tier": 6,
       "row": 1,
-      "cost": 24,
+      "cost": 16,
       "age": "Cretaceous",
       "prerequisites": [
         "tooth_replacement"
@@ -1400,7 +1400,7 @@
       "branch": "digestive",
       "tier": 6,
       "row": 0,
-      "cost": 25,
+      "cost": 16,
       "age": "Paleogene",
       "prerequisites": [
         "hindgut_fermentation"
@@ -1429,7 +1429,7 @@
       "branch": "excretory",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "diffusion_waste"
@@ -1446,7 +1446,7 @@
       "branch": "excretory",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "diffusion_waste"
@@ -1463,7 +1463,7 @@
       "branch": "excretory",
       "tier": 1,
       "row": 2,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "diffusion_waste"
@@ -1480,7 +1480,7 @@
       "branch": "excretory",
       "tier": 2,
       "row": 1,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "nephridia"
@@ -1497,7 +1497,7 @@
       "branch": "excretory",
       "tier": 2,
       "row": 0,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "nephridia"
@@ -1514,7 +1514,7 @@
       "branch": "excretory",
       "tier": 2,
       "row": 2,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "nephridia"
@@ -1531,7 +1531,7 @@
       "branch": "excretory",
       "tier": 3,
       "row": 2,
-      "cost": 12,
+      "cost": 8,
       "age": "Silurian",
       "prerequisites": [
         "pronephros"
@@ -1548,7 +1548,7 @@
       "branch": "excretory",
       "tier": 2,
       "row": 3,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "nephridia"
@@ -1565,7 +1565,7 @@
       "branch": "excretory",
       "tier": 3,
       "row": 1,
-      "cost": 12,
+      "cost": 8,
       "age": "Silurian",
       "prerequisites": [
         "ammonia_excretion"
@@ -1582,7 +1582,7 @@
       "branch": "excretory",
       "tier": 3,
       "row": 0,
-      "cost": 12,
+      "cost": 8,
       "age": "Silurian",
       "prerequisites": [
         "ammonia_excretion"
@@ -1599,7 +1599,7 @@
       "branch": "excretory",
       "tier": 4,
       "row": 2,
-      "cost": 15,
+      "cost": 10,
       "age": "Devonian",
       "prerequisites": [
         "glomerular_kidney"
@@ -1616,7 +1616,7 @@
       "branch": "excretory",
       "tier": 4,
       "row": 1,
-      "cost": 15,
+      "cost": 10,
       "age": "Devonian",
       "prerequisites": [
         "glomerular_kidney"
@@ -1633,7 +1633,7 @@
       "branch": "excretory",
       "tier": 4,
       "row": 0,
-      "cost": 15,
+      "cost": 10,
       "age": "Devonian",
       "prerequisites": [
         "gill_salt_cells"
@@ -1650,7 +1650,7 @@
       "branch": "excretory",
       "tier": 3,
       "row": 3,
-      "cost": 14,
+      "cost": 9,
       "age": "Carboniferous",
       "prerequisites": [
         "malpighian_tubules"
@@ -1668,7 +1668,7 @@
       "branch": "excretory",
       "tier": 5,
       "row": 1,
-      "cost": 18,
+      "cost": 12,
       "age": "Carboniferous",
       "prerequisites": [
         "urea_cycle"
@@ -1685,7 +1685,7 @@
       "branch": "excretory",
       "tier": 4,
       "row": 3,
-      "cost": 16,
+      "cost": 10,
       "age": "Carboniferous",
       "prerequisites": [
         "glomerular_kidney"
@@ -1702,7 +1702,7 @@
       "branch": "excretory",
       "tier": 4,
       "row": 4,
-      "cost": 18,
+      "cost": 12,
       "age": "Triassic",
       "prerequisites": [
         "gill_salt_cells"
@@ -1719,7 +1719,7 @@
       "branch": "excretory",
       "tier": 5,
       "row": 3,
-      "cost": 21,
+      "cost": 14,
       "age": "Jurassic",
       "prerequisites": [
         "metanephros"
@@ -1736,7 +1736,7 @@
       "branch": "excretory",
       "tier": 6,
       "row": 3,
-      "cost": 26,
+      "cost": 17,
       "age": "Neogene",
       "prerequisites": [
         "loop_of_henle"
@@ -1767,7 +1767,7 @@
       "branch": "endocrine",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "hormone_signalling"
@@ -1784,7 +1784,7 @@
       "branch": "endocrine",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "hormone_signalling"
@@ -1801,7 +1801,7 @@
       "branch": "endocrine",
       "tier": 2,
       "row": 0,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "neurosecretory_cells"
@@ -1818,7 +1818,7 @@
       "branch": "endocrine",
       "tier": 2,
       "row": 1,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "neurosecretory_cells"
@@ -1835,7 +1835,7 @@
       "branch": "endocrine",
       "tier": 2,
       "row": 2,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "neurosecretory_cells"
@@ -1852,7 +1852,7 @@
       "branch": "endocrine",
       "tier": 2,
       "row": 3,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "insulin_signalling"
@@ -1871,7 +1871,7 @@
       "branch": "endocrine",
       "tier": 3,
       "row": 1,
-      "cost": 11,
+      "cost": 7,
       "age": "Ordovician",
       "prerequisites": [
         "pituitary"
@@ -1888,7 +1888,7 @@
       "branch": "endocrine",
       "tier": 3,
       "row": 0,
-      "cost": 12,
+      "cost": 8,
       "age": "Silurian",
       "prerequisites": [
         "pituitary"
@@ -1905,7 +1905,7 @@
       "branch": "endocrine",
       "tier": 3,
       "row": 2,
-      "cost": 12,
+      "cost": 8,
       "age": "Silurian",
       "prerequisites": [
         "pituitary"
@@ -1922,7 +1922,7 @@
       "branch": "endocrine",
       "tier": 3,
       "row": 3,
-      "cost": 14,
+      "cost": 9,
       "age": "Carboniferous",
       "prerequisites": [
         "moulting_hormone"
@@ -1939,7 +1939,7 @@
       "branch": "endocrine",
       "tier": 4,
       "row": 1,
-      "cost": 16,
+      "cost": 10,
       "age": "Carboniferous",
       "prerequisites": [
         "thyroid"
@@ -1956,7 +1956,7 @@
       "branch": "endocrine",
       "tier": 4,
       "row": 0,
-      "cost": 17,
+      "cost": 11,
       "age": "Permian",
       "prerequisites": [
         "stress_hormones"
@@ -1976,7 +1976,7 @@
       "branch": "endocrine",
       "tier": 4,
       "row": 2,
-      "cost": 17,
+      "cost": 11,
       "age": "Permian",
       "prerequisites": [
         "thyroid"
@@ -1993,7 +1993,7 @@
       "branch": "endocrine",
       "tier": 3,
       "row": 4,
-      "cost": 16,
+      "cost": 10,
       "age": "Triassic",
       "prerequisites": [
         "pituitary"
@@ -2010,7 +2010,7 @@
       "branch": "endocrine",
       "tier": 5,
       "row": 2,
-      "cost": 20,
+      "cost": 13,
       "age": "Triassic",
       "prerequisites": [
         "raised_metabolism"
@@ -2032,7 +2032,7 @@
       "branch": "endocrine",
       "tier": 6,
       "row": 2,
-      "cost": 23,
+      "cost": 15,
       "age": "Jurassic",
       "prerequisites": [
         "endothermy_node"
@@ -2049,7 +2049,7 @@
       "branch": "endocrine",
       "tier": 6,
       "row": 1,
-      "cost": 24,
+      "cost": 16,
       "age": "Cretaceous",
       "prerequisites": [
         "endothermy_node"
@@ -2066,7 +2066,7 @@
       "branch": "endocrine",
       "tier": 4,
       "row": 4,
-      "cost": 20,
+      "cost": 13,
       "age": "Cretaceous",
       "prerequisites": [
         "prolactin"
@@ -2083,7 +2083,7 @@
       "branch": "endocrine",
       "tier": 7,
       "row": 2,
-      "cost": 27,
+      "cost": 18,
       "age": "Paleogene",
       "prerequisites": [
         "torpor"
@@ -2116,7 +2116,7 @@
       "branch": "reproductive",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "broadcast_spawning"
@@ -2135,7 +2135,7 @@
       "branch": "reproductive",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "broadcast_spawning"
@@ -2152,7 +2152,7 @@
       "branch": "reproductive",
       "tier": 1,
       "row": 2,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "broadcast_spawning"
@@ -2171,7 +2171,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 0,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "budding"
@@ -2190,7 +2190,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 2,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "yolky_eggs"
@@ -2207,7 +2207,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 1,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "yolky_eggs"
@@ -2224,7 +2224,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 3,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "budding"
@@ -2241,7 +2241,7 @@
       "branch": "reproductive",
       "tier": 3,
       "row": 2,
-      "cost": 13,
+      "cost": 8,
       "age": "Devonian",
       "prerequisites": [
         "internal_fertilisation"
@@ -2258,7 +2258,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 4,
-      "cost": 11,
+      "cost": 7,
       "age": "Devonian",
       "prerequisites": [
         "yolky_eggs"
@@ -2275,7 +2275,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 5,
-      "cost": 11,
+      "cost": 7,
       "age": "Devonian",
       "prerequisites": [
         "planktonic_larvae"
@@ -2292,7 +2292,7 @@
       "branch": "reproductive",
       "tier": 3,
       "row": 1,
-      "cost": 13,
+      "cost": 8,
       "age": "Devonian",
       "prerequisites": [
         "internal_fertilisation"
@@ -2309,7 +2309,7 @@
       "branch": "reproductive",
       "tier": 3,
       "row": 3,
-      "cost": 14,
+      "cost": 9,
       "age": "Carboniferous",
       "prerequisites": [
         "internal_fertilisation"
@@ -2329,7 +2329,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 6,
-      "cost": 12,
+      "cost": 8,
       "age": "Carboniferous",
       "prerequisites": [
         "planktonic_larvae"
@@ -2347,7 +2347,7 @@
       "branch": "reproductive",
       "tier": 4,
       "row": 3,
-      "cost": 17,
+      "cost": 11,
       "age": "Permian",
       "prerequisites": [
         "amniotic_egg"
@@ -2364,7 +2364,7 @@
       "branch": "reproductive",
       "tier": 4,
       "row": 2,
-      "cost": 19,
+      "cost": 12,
       "age": "Jurassic",
       "prerequisites": [
         "amniotic_egg"
@@ -2381,7 +2381,7 @@
       "branch": "reproductive",
       "tier": 4,
       "row": 4,
-      "cost": 18,
+      "cost": 12,
       "age": "Triassic",
       "prerequisites": [
         "amniotic_egg"
@@ -2398,7 +2398,7 @@
       "branch": "reproductive",
       "tier": 5,
       "row": 4,
-      "cost": 22,
+      "cost": 14,
       "age": "Cretaceous",
       "prerequisites": [
         "mammary_glands"
@@ -2415,7 +2415,7 @@
       "branch": "reproductive",
       "tier": 5,
       "row": 3,
-      "cost": 22,
+      "cost": 14,
       "age": "Cretaceous",
       "prerequisites": [
         "mammary_glands"
@@ -2432,7 +2432,7 @@
       "branch": "reproductive",
       "tier": 6,
       "row": 4,
-      "cost": 26,
+      "cost": 17,
       "age": "Neogene",
       "prerequisites": [
         "placenta"
@@ -2464,7 +2464,7 @@
       "branch": "locomotor",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "bilateral_body"
@@ -2481,7 +2481,7 @@
       "branch": "locomotor",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "bilateral_body"
@@ -2498,7 +2498,7 @@
       "branch": "locomotor",
       "tier": 1,
       "row": 2,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "bilateral_body"
@@ -2515,7 +2515,7 @@
       "branch": "locomotor",
       "tier": 2,
       "row": 1,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "segmentation"
@@ -2534,7 +2534,7 @@
       "branch": "locomotor",
       "tier": 3,
       "row": 0,
-      "cost": 10,
+      "cost": 6,
       "age": "Ediacaran",
       "prerequisites": [
         "exoskeleton",
@@ -2554,7 +2554,7 @@
       "branch": "locomotor",
       "tier": 2,
       "row": 2,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "coelom"
@@ -2573,7 +2573,7 @@
       "branch": "locomotor",
       "tier": 3,
       "row": 1,
-      "cost": 10,
+      "cost": 6,
       "age": "Ediacaran",
       "prerequisites": [
         "notochord",
@@ -2591,7 +2591,7 @@
       "branch": "locomotor",
       "tier": 3,
       "row": 2,
-      "cost": 11,
+      "cost": 7,
       "age": "Ordovician",
       "prerequisites": [
         "notochord"
@@ -2608,7 +2608,7 @@
       "branch": "locomotor",
       "tier": 4,
       "row": 1,
-      "cost": 13,
+      "cost": 8,
       "age": "Ordovician",
       "prerequisites": [
         "myomeres"
@@ -2625,7 +2625,7 @@
       "branch": "locomotor",
       "tier": 5,
       "row": 1,
-      "cost": 16,
+      "cost": 10,
       "age": "Silurian",
       "prerequisites": [
         "tail_fin"
@@ -2644,7 +2644,7 @@
       "branch": "locomotor",
       "tier": 4,
       "row": 2,
-      "cost": 14,
+      "cost": 9,
       "age": "Silurian",
       "prerequisites": [
         "vertebral_column"
@@ -2661,7 +2661,7 @@
       "branch": "locomotor",
       "tier": 4,
       "row": 0,
-      "cost": 14,
+      "cost": 9,
       "age": "Silurian",
       "prerequisites": [
         "jointed_limbs"
@@ -2678,7 +2678,7 @@
       "branch": "locomotor",
       "tier": 6,
       "row": 1,
-      "cost": 19,
+      "cost": 12,
       "age": "Devonian",
       "prerequisites": [
         "paired_fins"
@@ -2697,7 +2697,7 @@
       "branch": "locomotor",
       "tier": 7,
       "row": 1,
-      "cost": 21,
+      "cost": 14,
       "age": "Devonian",
       "prerequisites": [
         "lobe_fins"
@@ -2714,7 +2714,7 @@
       "branch": "locomotor",
       "tier": 5,
       "row": 2,
-      "cost": 17,
+      "cost": 11,
       "age": "Devonian",
       "prerequisites": [
         "endochondral_bone"
@@ -2731,7 +2731,7 @@
       "branch": "locomotor",
       "tier": 5,
       "row": 0,
-      "cost": 18,
+      "cost": 12,
       "age": "Carboniferous",
       "prerequisites": [
         "terrestrial_legs"
@@ -2750,7 +2750,7 @@
       "branch": "locomotor",
       "tier": 8,
       "row": 2,
-      "cost": 26,
+      "cost": 17,
       "age": "Triassic",
       "prerequisites": [
         "digits",
@@ -2768,7 +2768,7 @@
       "branch": "locomotor",
       "tier": 5,
       "row": 3,
-      "cost": 20,
+      "cost": 13,
       "age": "Triassic",
       "prerequisites": [
         "endochondral_bone"
@@ -2785,7 +2785,7 @@
       "branch": "locomotor",
       "tier": 9,
       "row": 2,
-      "cost": 29,
+      "cost": 19,
       "age": "Jurassic",
       "prerequisites": [
         "upright_stance",
@@ -2815,7 +2815,7 @@
       "branch": "immune",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "phagocytes"
@@ -2832,7 +2832,7 @@
       "branch": "immune",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "phagocytes"
@@ -2849,7 +2849,7 @@
       "branch": "immune",
       "tier": 1,
       "row": 2,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "phagocytes"
@@ -2866,7 +2866,7 @@
       "branch": "immune",
       "tier": 2,
       "row": 1,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "pattern_receptors"
@@ -2883,7 +2883,7 @@
       "branch": "immune",
       "tier": 2,
       "row": 2,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "encapsulation"
@@ -2900,7 +2900,7 @@
       "branch": "immune",
       "tier": 3,
       "row": 1,
-      "cost": 11,
+      "cost": 7,
       "age": "Ordovician",
       "prerequisites": [
         "complement"
@@ -2917,7 +2917,7 @@
       "branch": "immune",
       "tier": 2,
       "row": 0,
-      "cost": 9,
+      "cost": 6,
       "age": "Ordovician",
       "prerequisites": [
         "pattern_receptors"
@@ -2934,7 +2934,7 @@
       "branch": "immune",
       "tier": 4,
       "row": 1,
-      "cost": 14,
+      "cost": 9,
       "age": "Silurian",
       "prerequisites": [
         "inflammation"
@@ -2951,7 +2951,7 @@
       "branch": "immune",
       "tier": 5,
       "row": 1,
-      "cost": 16,
+      "cost": 10,
       "age": "Silurian",
       "prerequisites": [
         "adaptive_immunity"
@@ -2968,7 +2968,7 @@
       "branch": "immune",
       "tier": 5,
       "row": 0,
-      "cost": 16,
+      "cost": 10,
       "age": "Silurian",
       "prerequisites": [
         "adaptive_immunity"
@@ -2985,7 +2985,7 @@
       "branch": "immune",
       "tier": 6,
       "row": 0,
-      "cost": 18,
+      "cost": 12,
       "age": "Silurian",
       "prerequisites": [
         "thymus"
@@ -3002,7 +3002,7 @@
       "branch": "immune",
       "tier": 5,
       "row": 2,
-      "cost": 16,
+      "cost": 10,
       "age": "Silurian",
       "prerequisites": [
         "adaptive_immunity"
@@ -3019,7 +3019,7 @@
       "branch": "immune",
       "tier": 6,
       "row": 2,
-      "cost": 19,
+      "cost": 12,
       "age": "Devonian",
       "prerequisites": [
         "spleen"
@@ -3036,7 +3036,7 @@
       "branch": "immune",
       "tier": 6,
       "row": 1,
-      "cost": 19,
+      "cost": 12,
       "age": "Devonian",
       "prerequisites": [
         "antibodies"
@@ -3053,7 +3053,7 @@
       "branch": "immune",
       "tier": 6,
       "row": 3,
-      "cost": 19,
+      "cost": 12,
       "age": "Devonian",
       "prerequisites": [
         "spleen"
@@ -3070,7 +3070,7 @@
       "branch": "immune",
       "tier": 4,
       "row": 0,
-      "cost": 17,
+      "cost": 11,
       "age": "Permian",
       "prerequisites": [
         "inflammation"
@@ -3087,7 +3087,7 @@
       "branch": "immune",
       "tier": 6,
       "row": 4,
-      "cost": 22,
+      "cost": 14,
       "age": "Triassic",
       "prerequisites": [
         "antibodies"
@@ -3104,7 +3104,7 @@
       "branch": "immune",
       "tier": 7,
       "row": 2,
-      "cost": 26,
+      "cost": 17,
       "age": "Cretaceous",
       "prerequisites": [
         "lymphatic_system"
@@ -3121,7 +3121,7 @@
       "branch": "immune",
       "tier": 8,
       "row": 2,
-      "cost": 28,
+      "cost": 18,
       "age": "Cretaceous",
       "prerequisites": [
         "lymph_nodes"
@@ -3150,7 +3150,7 @@
       "branch": "integument",
       "tier": 1,
       "row": 0,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "epidermis"
@@ -3167,7 +3167,7 @@
       "branch": "integument",
       "tier": 1,
       "row": 1,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "epidermis"
@@ -3184,7 +3184,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 1,
-      "cost": 8,
+      "cost": 5,
       "age": "Ediacaran",
       "prerequisites": [
         "chitin_cuticle"
@@ -3201,7 +3201,7 @@
       "branch": "integument",
       "tier": 1,
       "row": 2,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "epidermis"
@@ -3220,7 +3220,7 @@
       "branch": "integument",
       "tier": 1,
       "row": 3,
-      "cost": 7,
+      "cost": 5,
       "age": "Ordovician",
       "prerequisites": [
         "epidermis"
@@ -3239,7 +3239,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 3,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "dermal_armour"
@@ -3256,7 +3256,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 2,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "chromatophores"
@@ -3273,7 +3273,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 0,
-      "cost": 10,
+      "cost": 6,
       "age": "Silurian",
       "prerequisites": [
         "chitin_cuticle"
@@ -3290,7 +3290,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 4,
-      "cost": 12,
+      "cost": 8,
       "age": "Carboniferous",
       "prerequisites": [
         "mucus_coat"
@@ -3309,7 +3309,7 @@
       "branch": "integument",
       "tier": 1,
       "row": 4,
-      "cost": 10,
+      "cost": 6,
       "age": "Carboniferous",
       "prerequisites": [
         "epidermis"
@@ -3329,7 +3329,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 5,
-      "cost": 13,
+      "cost": 8,
       "age": "Permian",
       "prerequisites": [
         "keratin_scales",
@@ -3347,7 +3347,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 6,
-      "cost": 14,
+      "cost": 9,
       "age": "Triassic",
       "prerequisites": [
         "keratin_scales"
@@ -3364,7 +3364,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 7,
-      "cost": 14,
+      "cost": 9,
       "age": "Triassic",
       "prerequisites": [
         "keratin_scales"
@@ -3383,7 +3383,7 @@
       "branch": "integument",
       "tier": 3,
       "row": 6,
-      "cost": 17,
+      "cost": 11,
       "age": "Jurassic",
       "prerequisites": [
         "protofeathers"
@@ -3402,7 +3402,7 @@
       "branch": "integument",
       "tier": 4,
       "row": 6,
-      "cost": 19,
+      "cost": 12,
       "age": "Jurassic",
       "prerequisites": [
         "feathers"
@@ -3419,7 +3419,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 8,
-      "cost": 16,
+      "cost": 10,
       "age": "Cretaceous",
       "prerequisites": [
         "keratin_scales"
@@ -3436,7 +3436,7 @@
       "branch": "integument",
       "tier": 3,
       "row": 7,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "fur_and_glands"
@@ -3453,7 +3453,7 @@
       "branch": "integument",
       "tier": 3,
       "row": 8,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "fur_and_glands"
@@ -3471,7 +3471,7 @@
       "branch": "integument",
       "tier": 3,
       "row": 5,
-      "cost": 19,
+      "cost": 12,
       "age": "Paleogene",
       "prerequisites": [
         "fur_and_glands"
@@ -3488,7 +3488,7 @@
       "branch": "integument",
       "tier": 1,
       "row": 5,
-      "cost": 14,
+      "cost": 9,
       "age": "Carboniferous",
       "prerequisites": [
         "epidermis"
@@ -3507,7 +3507,7 @@
       "branch": "integument",
       "tier": 1,
       "row": 6,
-      "cost": 11,
+      "cost": 7,
       "age": "Devonian",
       "prerequisites": [
         "epidermis"
@@ -3524,7 +3524,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 9,
-      "cost": 10,
+      "cost": 6,
       "age": "Carboniferous",
       "prerequisites": [
         "chromatophores"
@@ -3541,7 +3541,7 @@
       "branch": "integument",
       "tier": 1,
       "row": 7,
-      "cost": 13,
+      "cost": 8,
       "age": "Permian",
       "prerequisites": [
         "epidermis"
@@ -3558,7 +3558,7 @@
       "branch": "integument",
       "tier": 2,
       "row": 10,
-      "cost": 19,
+      "cost": 12,
       "age": "Jurassic",
       "prerequisites": [
         "warning_colours"
@@ -3575,7 +3575,7 @@
       "branch": "locomotor",
       "tier": 1,
       "row": 3,
-      "cost": 13,
+      "cost": 8,
       "age": "Jurassic",
       "prerequisites": [
         "bilateral_body"
@@ -3592,7 +3592,7 @@
       "branch": "reproductive",
       "tier": 1,
       "row": 3,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "broadcast_spawning"
@@ -3609,7 +3609,7 @@
       "branch": "reproductive",
       "tier": 2,
       "row": 7,
-      "cost": 6,
+      "cost": 4,
       "age": "Ediacaran",
       "prerequisites": [
         "budding"
@@ -3626,7 +3626,7 @@
       "branch": "locomotor",
       "tier": 1,
       "row": 4,
-      "cost": 15,
+      "cost": 10,
       "age": "Permian",
       "prerequisites": [
         "bilateral_body"
@@ -3643,7 +3643,7 @@
       "branch": "endocrine",
       "tier": 1,
       "row": 2,
-      "cost": 8,
+      "cost": 5,
       "age": "Silurian",
       "prerequisites": [
         "hormone_signalling"
@@ -3664,7 +3664,7 @@
       ],
       "unlocksGenes": [],
       "description": "Muscle turned into living batteries that discharge to stun prey (electric eels, torpedo rays).",
-      "cost": 21,
+      "cost": 14,
       "tier": 6,
       "row": 0,
       "effects": {

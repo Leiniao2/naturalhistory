@@ -25647,6 +25647,78 @@
   {
    "k": "can't reproduce: {0}",
    "v": "kann sich nicht fortpflanzen: {0}"
+  },
+  {
+   "k": ", ",
+   "v": ", "
+  },
+  {
+   "k": "{0}: {1}",
+   "v": "{0}: {1}"
+  },
+  {
+   "k": "the sea rose and flooded {0} land tiles",
+   "v": "der Meeresspiegel stieg und überflutete {0} Landfelder"
+  },
+  {
+   "k": "the sea fell and {0} tiles of shallow sea became land",
+   "v": "der Meeresspiegel sank und {0} Felder Flachmeer wurden Land"
+  },
+  {
+   "k": "deserts spread over {0} tiles",
+   "v": "Wüsten breiteten sich über {0} Felder aus"
+  },
+  {
+   "k": "deserts shrank by {0} tiles",
+   "v": "Wüsten schrumpften um {0} Felder"
+  },
+  {
+   "k": "ice spread over {0} tiles",
+   "v": "Eis breitete sich über {0} Felder aus"
+  },
+  {
+   "k": "ice retreated from {0} tiles",
+   "v": "Eis zog sich von {0} Feldern zurück"
+  },
+  {
+   "k": "forests grew over {0} tiles",
+   "v": "Wälder wuchsen auf {0} Feldern"
+  },
+  {
+   "k": "forests were lost from {0} tiles",
+   "v": "Wälder verschwanden von {0} Feldern"
+  },
+  {
+   "k": "The land changes with the {0}",
+   "v": "Mit dem {0} verändert sich das Land"
+  },
+  {
+   "k": "The climate has changed ({0} million years ago)",
+   "v": "Das Klima hat sich verändert (vor {0} Millionen Jahren)"
+  },
+  {
+   "k": "{0} of your groups had to move: its tile no longer suits it",
+   "v": "{0} deiner Gruppen musste umziehen: ihr Feld passt nicht mehr"
+  },
+  {
+   "k": "{0} of your groups had to move: their tiles no longer suit them",
+   "v": "{0} deiner Gruppen mussten umziehen: ihre Felder passen nicht mehr"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and is off the map until things change",
+   "v": "{0} deiner Gruppen fand keinen Lebensraum und ist vom Feld, bis sich etwas ändert"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and are off the map until things change",
+   "v": "{0} deiner Gruppen fanden keinen Lebensraum und sind vom Feld, bis sich etwas ändert"
+  },
+  {
+   "k": "Your animals set foot on land (+{0} EP)",
+   "v": "Deine Tiere betreten zum ersten Mal Land (+{0} EP)"
+  },
+  {
+   "k": "Met {1} (+{0} EP)",
+   "v": "{1} getroffen (+{0} EP)"
   }
  ]
 }

@@ -934,7 +934,6 @@
    "tags": [
     "Animal",
     "Bilaterian",
-    "Chordate",
     "Worm"
    ]
   },
@@ -4004,7 +4003,7 @@
    "tags": [
     "Animal",
     "Bilaterian",
-    "Chordate"
+    "Deuterostome"
    ]
   },
   {
@@ -4340,7 +4339,8 @@
   {
    "item": "pharyngeal_slits",
    "tags": [
-    "Chordate"
+    "Chordate",
+    "Deuterostome"
    ]
   },
   {

@@ -26,16 +26,19 @@ namespace NaturalHistory.Players
     //  2. attacks a neighbour (or one a few tiles off, moving there first) it can eat or beat
     //  3. reproduces onto a free neighbouring tile
     //  4. otherwise moves: to food if it is going hungry, else, now and then, outward to spread
-    // Wild groups (no owner) do the same without evolving or EP: hunters go for their prey, hungry
-    // groups move to food, and they reproduce now and then (capped so the map doesn't fill up).
+    // Wild groups (no owner) do the same without evolving or EP: they strike back at whoever attacked
+    // them, hunters go for their prey, now and then one drives off a weaker neighbour of a player's,
+    // hungry groups move to food, they reproduce now and then when healthy (capped so the map doesn't
+    // fill up), and a group that sits a turn out heals as a stationed one does.
     public class AiPlayers : MonoBehaviour
     {
         public static AiPlayers Instance { get; private set; }
 
         private const int WildPerSpecies = 6;    // wild groups of a species reproduce up to this many
         private const int WildTotal      = 220;  // and while the map has fewer wild groups than this
-        private const float WildBreedChance = 0.12f;
+        private const float WildBreedChance = 0.2f;
         private const float WildHuntChance  = 0.6f;
+        private const float WildBullyChance = 0.25f; // a wild group drives off a weak neighbour of a player's
 
         private readonly Dictionary<int, int> points = new();
         private System.Random rng = new();
@@ -244,7 +247,7 @@ namespace NaturalHistory.Players
             if (!EvolutionData.CanAcquire(def, node, isFunction)) return false;
             if (Enum.TryParse(node.age, true, out GeologicalAge from) && from > age) return false;
             foreach (var pre in node.prerequisites ?? new List<string>())
-                if (!BuyWithPrerequisites(player, def, traits, tree, tree.Get(pre), isFunction, age, depth + 1)) return false;
+                if (EvolutionData.Blocks(def, tree.Get(pre), isFunction) && !BuyWithPrerequisites(player, def, traits, tree, tree.Get(pre), isFunction, age, depth + 1)) return false;
             int cost = TraitBonuses.Discounted(EpCosts.Of(node.cost), def, player.Index); // grows with the periods, as for the human
             if (Points(player.Index) < cost) return false;
             Spend(player.Index, cost);
@@ -372,32 +375,74 @@ namespace NaturalHistory.Players
             var wild = Colonies.Groups.Where(g => g != null && g.Owner == null && g.Definition != null && g.Cell != null).ToList();
             int total = wild.Count;
             var perSpecies = wild.GroupBy(g => g.Definition.id).ToDictionary(x => x.Key, x => x.Count());
-            var calm = new FactionPersonality { aggression = 0.3f, caution = 0.8f };
+            int turn = TurnManager.Instance != null ? TurnManager.Instance.CurrentTurn : 0;
             foreach (var g in wild)
             {
                 if (!Colonies.Groups.Contains(g) || g.IsBusy || g.JustBorn) continue;
-                // hunters go for their prey; others only defend themselves (when attacked)
-                if (IsHunter(g) && rng.NextDouble() < WildHuntChance)
+                // sits the turn out unless it acts (any action ends it): then it heals, as a stationed group
+                g.Stationed = true;
+
+                // 1. strikes back at whoever attacked it last turn or this one, if that is still next to it
+                //    and the fight doesn't look like suicide; 2. a hunter goes for its prey; 3. now and then
+                //    it drives off a weaker neighbour of a player's that it can beat cheaply
+                var (foe, tile) = ChooseRevenge(g, turn);
+                if (foe == null && IsHunter(g) && rng.NextDouble() < WildHuntChance) (foe, tile) = ChooseHunt(g);
+                if (foe == null && rng.NextDouble() < WildBullyChance) (foe, tile) = ChooseBully(g);
+                if (foe != null)
                 {
-                    var (prey, tile) = ChooseHunt(g);
-                    if (prey != null)
+                    bool onHuman = foe.Owner != null && foe.Owner.IsHuman;
+                    if (onHuman) { var w = WaitForCamera(); while (w.MoveNext()) yield return w.Current; }
+                    if (Colonies.Groups.Contains(g) && !g.IsBusy && g.Attack(tile))
                     {
-                        bool onHuman = prey.Owner != null && prey.Owner.IsHuman;
-                        if (onHuman) { var w = WaitForCamera(); while (w.MoveNext()) yield return w.Current; }
-                        if (Colonies.Groups.Contains(g) && !g.IsBusy && g.Attack(tile))
-                        {
-                            if (onHuman) { var w = Shown(g); while (w.MoveNext()) yield return w.Current; }
-                            continue;
-                        }
+                        if (onHuman) { var w = Shown(g); while (w.MoveNext()) yield return w.Current; }
+                        continue;
                     }
                 }
                 if (Diets.Starving(g) && TryMove(g, 0f)) continue;
-                if (total < WildTotal && perSpecies[g.Definition.id] < WildPerSpecies && rng.NextDouble() < WildBreedChance && Breed(g))
+                // young only when in good health
+                if (total < WildTotal && perSpecies[g.Definition.id] < WildPerSpecies && g.Hp >= 0.6f * g.MaxHp
+                    && rng.NextDouble() < WildBreedChance && Breed(g))
                 {
+                    g.Stationed = false;
                     total++;
                     perSpecies[g.Definition.id]++;
                 }
             }
+        }
+
+        // A neighbouring foe the wild group could strike now (a fixed colony strikes in place)
+        private static HexCell StrikeTile(ColonyGroup g, ColonyGroup foe)
+        {
+            if (!g.CanAttack || foe == null || foe.Cell == null || !Colonies.Groups.Contains(foe)) return null;
+            if (!HexGrid.Instance.GetNeighbors(g.Cell).Contains(foe.Cell)) return null;
+            if (g.CanMove && !g.CanEnter(foe.Cell)) return null;
+            return Combat.Defender(g, foe.Cell) == foe && Combat.CanFight(g, foe) ? foe.Cell : null;
+        }
+
+        // Its last attacker, if that was this turn or the last and it is still in reach, unless the
+        // counterattack would kill it without killing the foe
+        private static (ColonyGroup, HexCell) ChooseRevenge(ColonyGroup g, int turn)
+        {
+            var foe = g.LastAttacker;
+            if (foe == null || g.LastAttackedTurn < turn - 1) return default;
+            var tile = StrikeTile(g, foe);
+            if (tile == null) return default;
+            var f = Combat.Predict(g, foe, false);
+            return f.back >= g.Hp && !f.Kills(foe) ? default : (foe, tile);
+        }
+
+        // A player's group next to it that it would beat cheaply: it deals at least twice what it takes
+        private static (ColonyGroup, HexCell) ChooseBully(ColonyGroup g)
+        {
+            if (!g.CanAttack) return default;
+            foreach (var n in HexGrid.Instance.GetNeighbors(g.Cell))
+            {
+                var foe = Combat.Defender(g, n);
+                if (foe == null || foe.Owner == null || StrikeTile(g, foe) == null) continue;
+                var f = Combat.Predict(g, foe, false);
+                if (f.Kills(foe) || (f.dealt >= 2f * f.back && f.back < 0.5f * g.Hp)) return (foe, n);
+            }
+            return default;
         }
 
         private static bool IsHunter(ColonyGroup g) =>
@@ -424,7 +469,7 @@ namespace NaturalHistory.Players
             var births = WildBirths.Instance;
             var cells = HexGrid.Instance.GetNeighbors(g.Cell)
                 .Where(c => births != null ? births.CanBeBornAt(def, c)
-                                           : ColonyGroup.CanPlace(def, c) && Colonies.GroupAt(c, Niches.Of(def, c)) == null && FoodWeb.HasFood(def, c, Colonies, null))
+                                           : ColonyGroup.CanPlace(def, c) && Colonies.GroupAt(c, Niches.Of(def, c)) == null && !Colonies.HeldByOther(c, null) && FoodWeb.HasFood(def, c, Colonies, null))
                 .ToList();
             if (cells.Count == 0) return false;
             var young = Colonies.SpawnColony(def, cells[rng.Next(cells.Count)], null, rng.Next());

@@ -156,6 +156,8 @@ namespace NaturalHistory.World
         {
             var defender = Defender(attacker, cell);
             if (attacker == null || defender == null) return;
+            defender.LastAttacker = attacker; // it remembers (wild groups strike back)
+            defender.LastAttackedTurn = Core.TurnManager.Instance != null ? Core.TurnManager.Instance.CurrentTurn : 0;
             string A = Loc.T(attacker.Definition.commonName), D = Loc.T(defender.Definition.commonName);
             bool mine = (attacker.Owner != null && attacker.Owner.IsHuman) || (defender.Owner != null && defender.Owner.IsHuman); // others' fights: no message
             bool overwhelm = !SizesMatch(attacker, defender) && Overwhelms(attacker, defender);
@@ -369,8 +371,18 @@ namespace NaturalHistory.World
         private static void Hook()
         {
             if (TurnManager.Instance != null) TurnManager.Instance.OnTurnBegin += BeginTurn;
-            if (SpeciesColonies.Instance != null) SpeciesColonies.Instance.ColoniesClearing += Remember;
+            // SpeciesColonies is also made at scene load, maybe after this: hook it whenever it comes,
+            // or the players' groups would come back after a map rebuild with old HP, actions and stations
+            SpeciesColonies.Created -= HookColonies;
+            SpeciesColonies.Created += HookColonies;
+            if (SpeciesColonies.Instance != null) HookColonies(SpeciesColonies.Instance);
             wild.Clear();
+        }
+
+        private static void HookColonies(SpeciesColonies colonies)
+        {
+            colonies.ColoniesClearing -= Remember;
+            colonies.ColoniesClearing += Remember;
         }
 
         // ---------- Across re-spawns ----------

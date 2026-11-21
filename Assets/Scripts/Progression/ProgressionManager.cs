@@ -29,6 +29,10 @@ namespace NaturalHistory.Progression
 
         public const int KillReward      = 3; // EP for wiping out a foreign group of average Ediacaran strength (see KillRewardFor)
         public const int DiscoveryReward = 2;
+        // Milestones, once a game, grown with the periods (EpCosts): meeting another player's
+        // animals for the first time, each player once; the human player's first animals on land
+        public const int ContactReward   = 25;
+        public const int LandfallReward  = 50;
 
         public ProgressionTree Morphology { get; private set; } // "Functions" in the game
         public ProgressionTree Ethology   { get; private set; } // "Behaviors" in the game
@@ -132,6 +136,7 @@ namespace NaturalHistory.Progression
             var colonies = SpeciesColonies.Instance;
             var human = Players.PlayerManager.Instance != null ? Players.PlayerManager.Instance.Human : null;
             if (colonies == null || human == null || !FogOfWar.Active || SpeciesColonies.SafariMode) return;
+            CheckMilestones(colonies, human);
             var evolution = EvolutionManager.Instance;
             var found = new List<SpeciesDefinition>();
             foreach (var g in colonies.Groups)
@@ -151,6 +156,30 @@ namespace NaturalHistory.Progression
                                             : Loc.F("Discovered {0} new species (+{1} EP)", found.Count, ep));
         }
 
+        // Milestones are kept with the discovered species, as "#met:<player>" and "#land", so a save keeps them
+        private void CheckMilestones(SpeciesColonies colonies, Players.Player human)
+        {
+            foreach (var g in colonies.Groups)
+            {
+                if (g == null || g.Cell == null) continue;
+                if (g.Owner == human)
+                {
+                    if (!g.Cell.Terrain.IsWater && discovered.Add("#land"))
+                        Reward(LandfallReward, "Your animals set foot on land (+{0} EP)");
+                }
+                else if (g.Owner != null && FogOfWar.IsVisible(g.Cell) && discovered.Add("#met:" + g.Owner.Index))
+                    Reward(ContactReward, "Met {1} (+{0} EP)", g.Owner.Name);
+            }
+        }
+
+        private void Reward(int baseEp, string message, string who = null)
+        {
+            int ep = EpCosts.Of(baseEp);
+            EvolutionPoints += ep;
+            Changed?.Invoke();
+            Earned?.Invoke(Loc.F(message, ep, who));
+        }
+
         // Show and edit `species`' items: functions / behaviors are its sets (used directly).
         public void BindSpecies(SpeciesDefinition species, HashSet<string> functions, HashSet<string> behaviors)
         {
@@ -168,7 +197,7 @@ namespace NaturalHistory.Progression
         {
             if (tree.IsUnlocked(node.id)) return NodeState.Unlocked;
             if (!CanAcquire(tree, node)) return NodeState.Unavailable;
-            return tree.PrerequisitesMet(node) && AgeAllows(node) ? NodeState.Available : NodeState.Locked;
+            return PrerequisitesMet(tree, node) && AgeAllows(node) ? NodeState.Available : NodeState.Locked;
         }
 
         // Null when the node can be unlocked now, otherwise a player-facing reason.
@@ -177,7 +206,7 @@ namespace NaturalHistory.Progression
             if (Species == null)           return Loc.T("None of your species is selected");
             if (tree.IsUnlocked(node.id))  return Loc.T("Already acquired");
             if (!CanAcquire(tree, node))   return Loc.F("Not in the {0}'s {1}", Loc.T(Species?.commonName ?? "species"), Loc.T(tree.DisplayName).ToLowerInvariant());
-            if (!tree.PrerequisitesMet(node)) return Loc.F("Requires: {0}", string.Join(", ", MissingPrerequisites(tree, node)));
+            if (!PrerequisitesMet(tree, node)) return Loc.F("Requires: {0}", string.Join(", ", MissingPrerequisites(tree, node)));
             if (!AgeAllows(node))          return Loc.F("Available from the {0}", Loc.T(node.age));
             int cost = CostOf(node); // grows with the periods
             if (EvolutionPoints < cost) return Loc.F("Needs {0} EP (you have {1})", cost, EvolutionPoints);
@@ -200,7 +229,7 @@ namespace NaturalHistory.Progression
             return true;
         }
 
-        // Points spent outside the trees (evolving a copy, EvolutionManager.EvolveCost)
+        // Points spent outside the trees (evolving a copy, EvolutionManager.EvolveCostOf)
         public void SpendPoints(int amount)
         {
             if (amount <= 0) return;
@@ -227,11 +256,14 @@ namespace NaturalHistory.Progression
             Changed?.Invoke();
         }
 
+        // The bound species has every prerequisite it can have (EvolutionData.Blocks)
+        private bool PrerequisitesMet(ProgressionTree tree, TreeNodeDefinition node) => !MissingPrerequisites(tree, node).Any();
+
         private IEnumerable<string> MissingPrerequisites(ProgressionTree tree, TreeNodeDefinition node)
         {
             foreach (var id in node.prerequisites)
             {
-                if (tree.IsUnlocked(id)) continue;
+                if (tree.IsUnlocked(id) || !EvolutionData.Blocks(Species, tree.Get(id), tree == Morphology)) continue;
                 var pre = tree.Get(id);
                 if (pre == null) yield return id;
                 else yield return pre.branch == node.branch ? Loc.T(pre.displayName) : $"{Loc.T(pre.displayName)} ({Loc.T(tree.BranchName(pre.branch))})";

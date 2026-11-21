@@ -10,7 +10,7 @@ namespace NaturalHistory.World
     // The wild animals of the map. The game starts with only the three founding protists: a group of
     // each for every player (TerritoryManager) and a few wild groups of each far from the habitat
     // centers. At the end of each turn, wild groups are born on BirthShare of the tiles no player can
-    // see (out of every player's groups' vision and territory), one on each such tile that something
+    // see (out of every player's groups' vision and territory; half as many by the late periods), one on each such tile that something
     // suits: one of the players' species, or a relative of one on the evolution tree (a sibling: another
     // species evolving from the same ancestor; for the founders, which have none, what they evolve
     // into), alive in the period the map shows, able to live and eat there with its niche free. In
@@ -24,7 +24,8 @@ namespace NaturalHistory.World
     {
         public static WildBirths Instance { get; private set; }
 
-        private const float BirthShare = 0.05f; // of the tiles out of every player's sight, each turn
+        private const float BirthShare = 0.025f; // of the tiles out of every player's sight, each turn (early periods)
+        private const float LateBirthFactor = 0.5f; // …falling steadily to half that by the present (BirthShareNow)
         private const int   FarFromCenters = 6;  // tiles from every habitat center, at least
         private const int   WildFounders   = 3;  // wild groups of each founding protist at the start
 
@@ -120,7 +121,7 @@ namespace NaturalHistory.World
             var candidates = Siblings().ToList();
             if (candidates.Count == 0) return;
             var blind = BlindCells();
-            int births = 0, tries = Mathf.RoundToInt(blind.Count * BirthShare);
+            int births = 0, tries = Mathf.RoundToInt(blind.Count * BirthShareNow);
             for (int i = 0; i < tries && blind.Count > 0; i++)
             {
                 int k = rng.Next(blind.Count);
@@ -134,13 +135,25 @@ namespace NaturalHistory.World
             if (births > 0) Debug.Log($"[WildBirths] {births} wild groups born out of the players' sight.");
         }
 
-        // Tiles no player sees: out of the vision of every player's groups and off their territory
+        // The birth rate: BirthShare up to the Cambrian, then less each period, down to half by the Quaternary
+        private static float BirthShareNow
+        {
+            get
+            {
+                var age = AgeManager.Instance != null ? AgeManager.Instance.CurrentAge : GeologicalAge.Ediacaran;
+                float t = Mathf.Clamp01((float)(age - GeologicalAge.Cambrian) / (GeologicalAge.Quaternary - GeologicalAge.Cambrian));
+                return BirthShare * Mathf.Lerp(1f, LateBirthFactor, t);
+            }
+        }
+
+        // Tiles no player sees: out of the full vision of every player's groups (as the fog of war
+        // reckons it), off their territory, and out of what the human sees right now
         private List<HexCell> BlindCells()
         {
             var seen = new HashSet<HexCell>();
             foreach (var g in colonies.Groups)
                 if (g != null && g.Owner != null && g.Cell != null)
-                    foreach (var c in grid.GetCellsInRange(g.Cell, Mathf.Max(0, FogOfWar.Vision(g) - 1))) seen.Add(c);
+                    foreach (var c in grid.GetCellsInRange(g.Cell, FogOfWar.Vision(g))) seen.Add(c);
             var territory = Territory.TerritoryManager.Instance;
             var blind = new List<HexCell>();
             for (int r = 0; r < grid.Height; r++)
@@ -148,6 +161,7 @@ namespace NaturalHistory.World
             {
                 var cell = grid.GetCell(q, r);
                 if (cell == null || seen.Contains(cell) || (territory != null && territory.OwnerOf(cell) != null)) continue;
+                if (FogOfWar.Active && FogOfWar.IsVisible(cell)) continue;
                 blind.Add(cell);
             }
             return blind;
@@ -162,7 +176,7 @@ namespace NaturalHistory.World
             if (!ColonyGroup.CanPlace(def, cell)) return false; // its habitat, where it can move
             var niche = Niches.Of(def, cell);
             if (EarlyPeriod && (!cell.IsWater || Niches.LayerOf(niche) != MapLayer.Under)) return false;
-            return colonies.GroupAt(cell, niche) == null && FoodWeb.HasFood(def, cell, colonies, null);
+            return colonies.GroupAt(cell, niche) == null && !colonies.HeldByOther(cell, null) && FoodWeb.HasFood(def, cell, colonies, null);
         }
 
         // Tries the candidate species in random order until one has a far tile to be born on
@@ -220,6 +234,7 @@ namespace NaturalHistory.World
                 var cell = grid.GetCell(q, r);
                 if (cell == null || !CanBeBornAt(def, cell)) continue;
                 if (centers.Any(c => Distance(c, cell) < FarFromCenters)) continue;
+                if (FogOfWar.Active && FogOfWar.IsVisible(cell)) continue; // never in the human's sight
                 result.Add(cell);
             }
             return result;
@@ -278,7 +293,7 @@ namespace NaturalHistory.World
                 var def = GameDataLoader.GetSpecies(species);
                 if (def == null || string.IsNullOrEmpty(def.model) || !colonies.IsAliveNow(def)) continue;
                 var cell = grid.GetCell(col, row);
-                if (cell == null || !ColonyGroup.CanPlace(def, cell) || colonies.GroupAt(cell, Niches.Of(def, cell)) != null)
+                if (cell == null || !ColonyGroup.CanPlace(def, cell) || colonies.GroupAt(cell, Niches.Of(def, cell)) != null || colonies.HeldByOther(cell, null))
                 {
                     var cells = FarCells(def);
                     if (cells.Count == 0) continue;

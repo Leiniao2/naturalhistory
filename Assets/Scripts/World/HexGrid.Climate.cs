@@ -19,13 +19,22 @@ namespace NaturalHistory.World
     // the climate has moved enough to show (a glacial, a hothouse spike).
     public partial class HexGrid
     {
+        public event System.Action TerrainChanging; // the map is about to be redrawn for a new date (then TerrainChanged)
         public WorldGenerator.Conditions DisplayedConditions { get; private set; } = WorldGenerator.Conditions.Today;
         public WorldShares Shares { get; private set; }
         public float DisplayedMillionYearsAgo { get; private set; }
 
+        // A loaded game's map is drawn for the date it showed when saved (SaveSystem), not the
+        // save's exact date: within a period the map is only redrawn once the climate has moved
+        // enough (OnTimeChanged), so the two can differ, and the shore, deserts or ice would shift
+        private float pinnedDate = -1f;
+        private GeologicalAge pinnedAge;
+        public void PinDate(GeologicalAge age, float millionYearsAgo) { pinnedAge = age; pinnedDate = millionYearsAgo; }
+
         // The date shown: AgeManager's once a game is running, else the start of the period
         private float DateFor(GeologicalAge age)
         {
+            if (pinnedDate >= 0f && age == pinnedAge) return pinnedDate;
             var ages = AgeManager.Instance;
             if (Application.isPlaying && ages != null && ages.CurrentTurn > 0 && ages.CurrentAge == age) return ages.MillionYearsAgo;
             if (GameDataLoader.Ages == null) GameDataLoader.Initialize();
@@ -53,6 +62,7 @@ namespace NaturalHistory.World
             if (cells == null || AgeManager.Instance == null) return;
             var age = AgeManager.Instance.CurrentAge;
             if (age == DisplayedAge && !EarthHistory.Differs(DisplayedConditions, ConditionsFor(age))) return;
+            TerrainChanging?.Invoke(); // before the tiles change (UI/ClimateNotice compares)
             DressForAge(age);
             Debug.Log($"[HexGrid] Map now shows the {age} at {DisplayedMillionYearsAgo:0.#} Ma");
             TerrainChanged?.Invoke();

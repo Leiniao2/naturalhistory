@@ -222,6 +222,18 @@ namespace NaturalHistory.World
         public IReadOnlyList<ColonyGroup> Groups => groups;
         public ColonyGroup GroupAt(HexCell cell, Niche niche) => cell != null && occupants.TryGetValue((cell, niche), out var g) ? g : null;
 
+        // One side a tile: whether `cell` holds a group of anyone but `owner` (the wild animals are
+        // one side, each player another). Groups of different sides never share a tile: movement,
+        // births, young and placements all keep to this (MoveRange, WildBirths, EvolutionManager…).
+        public bool HeldByOther(HexCell cell, Player owner, ColonyGroup except = null)
+        {
+            foreach (var g in GroupsAt(cell))
+                if (g != except && !SameSide(g.Owner, owner)) return true;
+            return false;
+        }
+
+        public static bool SameSide(Player a, Player b) => a == null ? b == null : b != null && a.Index == b.Index;
+
         // Every group on a tile, in niche order
         public IEnumerable<ColonyGroup> GroupsAt(HexCell cell)
         {
@@ -295,7 +307,11 @@ namespace NaturalHistory.World
             new GameObject("SpeciesColonies").AddComponent<SpeciesColonies>();
         }
 
-        private void Awake() => Instance = this;
+        // Raised as the component wakes, for hooks made before it existed (Combat: the order of
+        // RuntimeInitializeOnLoadMethod calls isn't defined)
+        public static event System.Action<SpeciesColonies> Created;
+
+        private void Awake() { Instance = this; Created?.Invoke(this); }
 
         private void Start()
         {

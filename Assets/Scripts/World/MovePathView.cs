@@ -58,6 +58,10 @@ namespace NaturalHistory.World
             instance.Refresh();
         }
 
+        // Set by the UI: the map can't be pointed at now (a panel such as the trees or the
+        // Encyclopedia is open, or the pointer is over the UI), so nothing under it counts as hovered
+        public static System.Func<bool> MapCovered;
+
         // The foe's tile under the pointer, while a group's range is on show (UI/AttackPreview)
         public static HexCell HoveredTarget =>
             instance != null && instance.range != null && instance.hovered != null && instance.range.AttackFrom.ContainsKey(instance.hovered) ? instance.hovered : null;
@@ -149,7 +153,8 @@ namespace NaturalHistory.World
             var cam = Camera.main;
             if (cam == null) return;
 
-            var cell = Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out var hit) ? hit.collider.GetComponent<HexCell>() : null;
+            var cell = MapCovered != null && MapCovered() ? null
+                     : Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out var hit) ? hit.collider.GetComponent<HexCell>() : null;
             if (cell == range.Group.Cell) cell = null;
             bool moved = !Mathf.Approximately(builtAtX, range.Group.Cell.transform.position.x);
             if (cell != hovered || moved) { hovered = cell; Refresh(); }

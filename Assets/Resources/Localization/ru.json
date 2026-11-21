@@ -25647,6 +25647,78 @@
   {
    "k": "can't reproduce: {0}",
    "v": "не может размножаться: {0}"
+  },
+  {
+   "k": ", ",
+   "v": ", "
+  },
+  {
+   "k": "{0}: {1}",
+   "v": "{0}: {1}"
+  },
+  {
+   "k": "the sea rose and flooded {0} land tiles",
+   "v": "уровень моря поднялся и затопил {0} клеток суши"
+  },
+  {
+   "k": "the sea fell and {0} tiles of shallow sea became land",
+   "v": "уровень моря упал, и {0} клеток мелководья стали сушей"
+  },
+  {
+   "k": "deserts spread over {0} tiles",
+   "v": "пустыни расширились на {0} клеток"
+  },
+  {
+   "k": "deserts shrank by {0} tiles",
+   "v": "пустыни сократились на {0} клеток"
+  },
+  {
+   "k": "ice spread over {0} tiles",
+   "v": "льды распространились на {0} клеток"
+  },
+  {
+   "k": "ice retreated from {0} tiles",
+   "v": "льды отступили с {0} клеток"
+  },
+  {
+   "k": "forests grew over {0} tiles",
+   "v": "леса разрослись на {0} клеток"
+  },
+  {
+   "k": "forests were lost from {0} tiles",
+   "v": "леса исчезли с {0} клеток"
+  },
+  {
+   "k": "The land changes with the {0}",
+   "v": "С наступлением периода «{0}» меняется ландшафт"
+  },
+  {
+   "k": "The climate has changed ({0} million years ago)",
+   "v": "Климат изменился ({0} млн лет назад)"
+  },
+  {
+   "k": "{0} of your groups had to move: its tile no longer suits it",
+   "v": "{0} ваша группа переселилась: её клетка больше не подходит"
+  },
+  {
+   "k": "{0} of your groups had to move: their tiles no longer suit them",
+   "v": "{0} ваших групп переселились: их клетки больше не подходят"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and is off the map until things change",
+   "v": "{0} ваша группа не нашла, где жить, и покидает карту, пока всё не изменится"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and are off the map until things change",
+   "v": "{0} ваших групп не нашли, где жить, и покидают карту, пока всё не изменится"
+  },
+  {
+   "k": "Your animals set foot on land (+{0} EP)",
+   "v": "Ваши животные впервые выходят на сушу (+{0} EP)"
+  },
+  {
+   "k": "Met {1} (+{0} EP)",
+   "v": "Встреча: {1} (+{0} EP)"
   }
  ]
 }

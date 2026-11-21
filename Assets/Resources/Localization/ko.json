@@ -26003,6 +26003,78 @@
   {
    "k": "can't reproduce: {0}",
    "v": "번식 불가: {0}"
+  },
+  {
+   "k": ", ",
+   "v": ", "
+  },
+  {
+   "k": "{0}: {1}",
+   "v": "{0}: {1}"
+  },
+  {
+   "k": "the sea rose and flooded {0} land tiles",
+   "v": "해수면이 올라 육지 {0}칸이 물에 잠겼다"
+  },
+  {
+   "k": "the sea fell and {0} tiles of shallow sea became land",
+   "v": "해수면이 내려가 얕은 바다 {0}칸이 육지가 되었다"
+  },
+  {
+   "k": "deserts spread over {0} tiles",
+   "v": "사막이 {0}칸 넓어졌다"
+  },
+  {
+   "k": "deserts shrank by {0} tiles",
+   "v": "사막이 {0}칸 줄었다"
+  },
+  {
+   "k": "ice spread over {0} tiles",
+   "v": "빙원이 {0}칸 넓어졌다"
+  },
+  {
+   "k": "ice retreated from {0} tiles",
+   "v": "빙원이 {0}칸에서 물러났다"
+  },
+  {
+   "k": "forests grew over {0} tiles",
+   "v": "숲이 {0}칸 늘었다"
+  },
+  {
+   "k": "forests were lost from {0} tiles",
+   "v": "숲이 {0}칸 사라졌다"
+  },
+  {
+   "k": "The land changes with the {0}",
+   "v": "{0}에 접어들어 지형이 바뀌었다"
+  },
+  {
+   "k": "The climate has changed ({0} million years ago)",
+   "v": "기후가 변했다 ({0}백만 년 전)"
+  },
+  {
+   "k": "{0} of your groups had to move: its tile no longer suits it",
+   "v": "아군 {0}무리는 원래 칸이 맞지 않게 되어 근처로 옮겨졌다"
+  },
+  {
+   "k": "{0} of your groups had to move: their tiles no longer suit them",
+   "v": "아군 {0}무리는 원래 칸이 맞지 않게 되어 근처로 옮겨졌다"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and is off the map until things change",
+   "v": "아군 {0}무리는 살 곳을 찾지 못해 환경이 바뀔 때까지 지도에서 사라진다"
+  },
+  {
+   "k": "{0} of your groups found nowhere to live and are off the map until things change",
+   "v": "아군 {0}무리는 살 곳을 찾지 못해 환경이 바뀔 때까지 지도에서 사라진다"
+  },
+  {
+   "k": "Your animals set foot on land (+{0} EP)",
+   "v": "당신의 동물이 처음으로 육지에 올랐습니다 (+{0} EP)"
+  },
+  {
+   "k": "Met {1} (+{0} EP)",
+   "v": "{1}와(과) 마주쳤습니다 (+{0} EP)"
   }
  ]
 }

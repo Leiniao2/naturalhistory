@@ -81,6 +81,11 @@ namespace NaturalHistory.Evolution
             return needed.Any(tags.Contains);
         }
 
+        // Whether a prerequisite holds `species` back: one its body plan can never have doesn't (a
+        // sponge grows spicules without a chitin cuticle), so no item it can have is out of reach
+        public static bool Blocks(SpeciesDefinition species, TreeNodeDefinition prerequisite, bool isFunction) =>
+            prerequisite == null || CanAcquire(species, prerequisite, isFunction);
+
         private static void Load()
         {
             if (links != null) return;
